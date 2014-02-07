@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: de.uni_paderborn.fujaba.muml.allocation.ilp.edit;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: de.uni_paderborn.fujaba.muml.allocation.ilp.provider.IlpEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: de.uni_paderborn.fujaba.muml.allocation.ilp.provider
+Require-Bundle: org.eclipse.core.runtime,
+ de.uni_paderborn.fujaba.muml.allocation.ilp;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport,
+ org.storydriven.core;visibility:=reexport,
+ org.storydriven.core.edit;visibility:=reexport
+Bundle-ActivationPolicy: lazy
