@@ -39,6 +39,9 @@ public interface IntegerLinearProgram extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The variables that are used in this Integer Linear Program.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Variables</em>' containment reference list.
 	 * @see de.uni_paderborn.fujaba.muml.allocation.ilp.IlpPackage#getIntegerLinearProgram_Variables()
 	 * @model containment="true"
@@ -55,6 +58,9 @@ public interface IntegerLinearProgram extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The constraints expressions for this Integer Linear Program
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constraints</em>' containment reference list.
 	 * @see de.uni_paderborn.fujaba.muml.allocation.ilp.IlpPackage#getIntegerLinearProgram_Constraints()
 	 * @model containment="true"
@@ -70,6 +76,9 @@ public interface IntegerLinearProgram extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The objective funtion to which is to be minimized or maximized of this Integer Linear Program.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Objective Function</em>' containment reference.
 	 * @see #setObjectiveFunction(ObjectiveFunctionExpression)
 	 * @see de.uni_paderborn.fujaba.muml.allocation.ilp.IlpPackage#getIntegerLinearProgram_ObjectiveFunction()

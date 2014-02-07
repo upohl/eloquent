@@ -377,7 +377,7 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 		initEReference(getVariableExpression_Variable(), this.getVariable(), null, "variable", null, 1, 1, VariableExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(objectiveFunctionExpressionEClass, ObjectiveFunctionExpression.class, "ObjectiveFunctionExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getObjectiveFunctionExpression_Goal(), this.getObjectiveGoal(), "goal", null, 1, 1, ObjectiveFunctionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getObjectiveFunctionExpression_Goal(), this.getObjectiveGoal(), "goal", "MAX", 1, 1, ObjectiveFunctionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(ilpDataTypeEEnum, ILPDataType.class, "ILPDataType");
@@ -414,13 +414,13 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
 			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
 			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
-		   });							
+		   });											
 		addAnnotation
 		  (constraintExpressionEClass, 
 		   source, 
 		   new String[] {
 			 "constraints", "ValidOperator"
-		   });				
+		   });						
 	}
 
 	/**
@@ -430,13 +430,13 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 	 * @generated
 	 */
 	protected void createOCLAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";									
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";													
 		addAnnotation
 		  (constraintExpressionEClass, 
 		   source, 
 		   new String[] {
 			 "ValidOperator", "Set{core::expressions::common::ComparingOperator::LESS, core::expressions::common::ComparingOperator::LESS_OR_EQUAL, core::expressions::common::ComparingOperator::EQUAL, core::expressions::common::ComparingOperator::GREATER_OR_EQUAL, core::expressions::common::ComparingOperator::GREATER}->includes(operator)"
-		   });			
+		   });					
 	}
 
 } //IlpPackageImpl

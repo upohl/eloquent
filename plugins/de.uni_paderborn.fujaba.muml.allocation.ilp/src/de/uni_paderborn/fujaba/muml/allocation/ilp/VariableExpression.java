@@ -34,6 +34,9 @@ public interface VariableExpression extends Expression {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The variable to which this VariableExpression references.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Variable</em>' reference.
 	 * @see #setVariable(Variable)
 	 * @see de.uni_paderborn.fujaba.muml.allocation.ilp.IlpPackage#getVariableExpression_Variable()

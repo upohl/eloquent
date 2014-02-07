@@ -11,6 +11,7 @@ import org.storydriven.core.expressions.Expression;
  *
  * <!-- begin-model-doc -->
  * This class represents an Integer Linear Program's objective function.
+ * The Integer Linear Program will be maximzed or minimized to this function.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -27,6 +28,7 @@ import org.storydriven.core.expressions.Expression;
 public interface ObjectiveFunctionExpression extends Expression {
 	/**
 	 * Returns the value of the '<em><b>Goal</b></em>' attribute.
+	 * The default value is <code>"MAX"</code>.
 	 * The literals are from the enumeration {@link de.uni_paderborn.fujaba.muml.allocation.ilp.ObjectiveGoal}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -34,11 +36,14 @@ public interface ObjectiveFunctionExpression extends Expression {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Determines whether the objective function shall be minimized or maximized.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Goal</em>' attribute.
 	 * @see de.uni_paderborn.fujaba.muml.allocation.ilp.ObjectiveGoal
 	 * @see #setGoal(ObjectiveGoal)
 	 * @see de.uni_paderborn.fujaba.muml.allocation.ilp.IlpPackage#getObjectiveFunctionExpression_Goal()
-	 * @model required="true"
+	 * @model default="MAX" required="true"
 	 * @generated
 	 */
 	ObjectiveGoal getGoal();

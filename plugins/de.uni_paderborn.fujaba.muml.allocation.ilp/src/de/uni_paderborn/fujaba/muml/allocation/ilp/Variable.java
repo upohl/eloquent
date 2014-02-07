@@ -34,6 +34,9 @@ public interface Variable extends NamedElement {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Determines the data type of the variable.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Data Type</em>' attribute.
 	 * @see de.uni_paderborn.fujaba.muml.allocation.ilp.ILPDataType
 	 * @see #setDataType(ILPDataType)

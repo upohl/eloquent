@@ -36,7 +36,7 @@ public class ObjectiveFunctionExpressionImpl extends ExpressionImpl implements O
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ObjectiveGoal GOAL_EDEFAULT = ObjectiveGoal.MIN;
+	protected static final ObjectiveGoal GOAL_EDEFAULT = ObjectiveGoal.MAX;
 
 	/**
 	 * The cached value of the '{@link #getGoal() <em>Goal</em>}' attribute.

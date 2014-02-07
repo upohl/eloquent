@@ -10,7 +10,7 @@ import org.storydriven.core.expressions.common.ComparisonExpression;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This class represents a variable, which is used in an Integer Linear Program.
+ * This class represents a constraint of the Integer Linear Program.
  * <!-- end-model-doc -->
  *
  *
