@@ -2,6 +2,7 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.ilp;
 
+import org.eclipse.emf.ecore.EObject;
 import org.storydriven.core.expressions.Expression;
 
 /**
@@ -18,6 +19,7 @@ import org.storydriven.core.expressions.Expression;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.ilp.ObjectiveFunctionExpression#getGoal <em>Goal</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.ilp.ObjectiveFunctionExpression#getObjectiveFunction <em>Objective Function</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,7 +27,7 @@ import org.storydriven.core.expressions.Expression;
  * @model
  * @generated
  */
-public interface ObjectiveFunctionExpression extends Expression {
+public interface ObjectiveFunctionExpression extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Goal</b></em>' attribute.
 	 * The default value is <code>"MAX"</code>.
@@ -58,5 +60,31 @@ public interface ObjectiveFunctionExpression extends Expression {
 	 * @generated
 	 */
 	void setGoal(ObjectiveGoal value);
+
+	/**
+	 * Returns the value of the '<em><b>Objective Function</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Objective Function</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Objective Function</em>' containment reference.
+	 * @see #setObjectiveFunction(Expression)
+	 * @see de.uni_paderborn.fujaba.muml.allocation.ilp.IlpPackage#getObjectiveFunctionExpression_ObjectiveFunction()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Expression getObjectiveFunction();
+
+	/**
+	 * Sets the value of the '{@link de.uni_paderborn.fujaba.muml.allocation.ilp.ObjectiveFunctionExpression#getObjectiveFunction <em>Objective Function</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Objective Function</em>' containment reference.
+	 * @see #getObjectiveFunction()
+	 * @generated
+	 */
+	void setObjectiveFunction(Expression value);
 
 } // ObjectiveFunctionExpression

@@ -1,22 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.0"?>
-
-<!--
--->
-
-<plugin>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.0"?><!--
+--><plugin>
+<extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated ilp -->
+      <factory class="de.uni_paderborn.fujaba.muml.allocation.ilp.provider.IlpItemProviderAdapterFactory" supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider                org.eclipse.emf.edit.provider.IStructuredItemContentProvider                org.eclipse.emf.edit.provider.ITreeItemContentProvider                org.eclipse.emf.edit.provider.IItemLabelProvider                org.eclipse.emf.edit.provider.IItemPropertySource" uri="http://www.fujaba.de/muml/allocation/ilp/0.1.0"/>
+   </extension>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <?emfgen generated="true"?>
       <!-- @generated ilp -->
-      <factory
-            uri="http://www.fujaba.de/muml/allocation/ilp/0.1.0"
-            class="de.uni_paderborn.fujaba.muml.allocation.ilp.provider.IlpItemProviderAdapterFactory"
-            supportedTypes=
-              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
-               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
-               org.eclipse.emf.edit.provider.ITreeItemContentProvider
-               org.eclipse.emf.edit.provider.IItemLabelProvider
-               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+      <factory class="de.uni_paderborn.fujaba.muml.allocation.ilp.provider.IlpItemProviderAdapterFactory" supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider                org.eclipse.emf.edit.provider.IStructuredItemContentProvider                org.eclipse.emf.edit.provider.ITreeItemContentProvider                org.eclipse.emf.edit.provider.IItemLabelProvider                org.eclipse.emf.edit.provider.IItemPropertySource" uri="http://www.fujaba.de/muml/allocation/ilp/0.1.0"/>
    </extension>
 
 </plugin>

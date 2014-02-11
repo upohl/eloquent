@@ -1,17 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.0"?>
-
-<!--
--->
-
-<plugin>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.0"?><!--
+--><plugin>
+<extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ilp -->
+      <package class="de.uni_paderborn.fujaba.muml.allocation.ilp.IlpPackage" genModel="model/ilp.genmodel" uri="http://www.fujaba.de/muml/allocation/ilp/0.1.0"/>
+   </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
+      <?emfgen generated="true"?>
       <!-- @generated ilp -->
-      <package
-            uri="http://www.fujaba.de/muml/allocation/ilp/0.1.0"
-            class="de.uni_paderborn.fujaba.muml.allocation.ilp.IlpPackage"
-            genModel="model/ilp.genmodel"/>
+      <package class="de.uni_paderborn.fujaba.muml.allocation.ilp.IlpPackage" genModel="model/ilp.genmodel" uri="http://www.fujaba.de/muml/allocation/ilp/0.1.0"/>
    </extension>
 
 </plugin>

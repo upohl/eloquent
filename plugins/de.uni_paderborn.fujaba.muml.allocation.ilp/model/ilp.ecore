@@ -74,7 +74,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ObjectiveFunctionExpression" eSuperTypes="../../org.storydriven.core/model/core.ecore#//expressions/Expression">
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectiveFunctionExpression">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class represents an Integer Linear Program's objective function.&#xA;The Integer Linear Program will be maximzed or minimized to this function."/>
     </eAnnotations>
@@ -84,6 +84,9 @@
         <details key="documentation" value="Determines whether the objective function shall be minimized or maximized."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectiveFunction" lowerBound="1"
+        eType="ecore:EClass ../../org.storydriven.core/model/core.ecore#//expressions/Expression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ObjectiveGoal">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

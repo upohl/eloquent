@@ -262,6 +262,15 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getObjectiveFunctionExpression_ObjectiveFunction() {
+		return (EReference)objectiveFunctionExpressionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getILPDataType() {
 		return ilpDataTypeEEnum;
 	}
@@ -318,6 +327,7 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 
 		objectiveFunctionExpressionEClass = createEClass(OBJECTIVE_FUNCTION_EXPRESSION);
 		createEAttribute(objectiveFunctionExpressionEClass, OBJECTIVE_FUNCTION_EXPRESSION__GOAL);
+		createEReference(objectiveFunctionExpressionEClass, OBJECTIVE_FUNCTION_EXPRESSION__OBJECTIVE_FUNCTION);
 
 		// Create enums
 		ilpDataTypeEEnum = createEEnum(ILP_DATA_TYPE);
@@ -360,7 +370,6 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 		variableEClass.getESuperTypes().add(theCorePackage.getNamedElement());
 		constraintExpressionEClass.getESuperTypes().add(theCommonExpressionsPackage.getComparisonExpression());
 		variableExpressionEClass.getESuperTypes().add(theExpressionsPackage.getExpression());
-		objectiveFunctionExpressionEClass.getESuperTypes().add(theExpressionsPackage.getExpression());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(integerLinearProgramEClass, IntegerLinearProgram.class, "IntegerLinearProgram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -378,6 +387,7 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 
 		initEClass(objectiveFunctionExpressionEClass, ObjectiveFunctionExpression.class, "ObjectiveFunctionExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getObjectiveFunctionExpression_Goal(), this.getObjectiveGoal(), "goal", "MAX", 1, 1, ObjectiveFunctionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getObjectiveFunctionExpression_ObjectiveFunction(), theExpressionsPackage.getExpression(), null, "objectiveFunction", null, 1, 1, ObjectiveFunctionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(ilpDataTypeEEnum, ILPDataType.class, "ILPDataType");

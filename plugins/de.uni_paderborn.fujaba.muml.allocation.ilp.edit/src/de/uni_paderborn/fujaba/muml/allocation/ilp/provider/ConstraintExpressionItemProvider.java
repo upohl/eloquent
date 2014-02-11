@@ -125,11 +125,6 @@ public class ConstraintExpressionItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonExpressionsPackage.Literals.BINARY_EXPRESSION__LEFT_EXPRESSION,
-				 IlpFactory.eINSTANCE.createObjectiveFunctionExpression()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(CommonExpressionsPackage.Literals.BINARY_EXPRESSION__RIGHT_EXPRESSION,
 				 IlpFactory.eINSTANCE.createConstraintExpression()));
 
@@ -137,11 +132,6 @@ public class ConstraintExpressionItemProvider
 			(createChildParameter
 				(CommonExpressionsPackage.Literals.BINARY_EXPRESSION__RIGHT_EXPRESSION,
 				 IlpFactory.eINSTANCE.createVariableExpression()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonExpressionsPackage.Literals.BINARY_EXPRESSION__RIGHT_EXPRESSION,
-				 IlpFactory.eINSTANCE.createObjectiveFunctionExpression()));
 	}
 
 	/**

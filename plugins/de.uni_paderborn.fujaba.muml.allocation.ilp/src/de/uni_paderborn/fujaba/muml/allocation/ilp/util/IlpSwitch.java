@@ -112,9 +112,6 @@ public class IlpSwitch<T> extends Switch<T> {
 			case IlpPackage.OBJECTIVE_FUNCTION_EXPRESSION: {
 				ObjectiveFunctionExpression objectiveFunctionExpression = (ObjectiveFunctionExpression)theEObject;
 				T result = caseObjectiveFunctionExpression(objectiveFunctionExpression);
-				if (result == null) result = caseExpression(objectiveFunctionExpression);
-				if (result == null) result = caseCommentableElement(objectiveFunctionExpression);
-				if (result == null) result = caseExtendableElement(objectiveFunctionExpression);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
