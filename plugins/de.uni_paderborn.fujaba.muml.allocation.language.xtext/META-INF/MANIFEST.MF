@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: de.uni_paderborn.fujaba.muml.allocation.language.xtext
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: de.uni_paderborn.fujaba.muml.allocation.language.xtext; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.xtext.xbase;resolution:=optional;visibility:=reexport,
+ org.eclipse.xtext.generator;resolution:=optional,
+ org.apache.commons.logging;bundle-version="1.0.4";resolution:=optional,
+ org.eclipse.emf.codegen.ecore;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ de.uni_paderborn.fujaba.muml.allocation.language,
+ org.storydriven.core;bundle-version="1.0.1",
+ org.eclipse.xtext.util,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types,
+ org.eclipse.ocl.examples.xtext.essentialocl;bundle-version="3.3.1"
+Import-Package: org.apache.log4j,
+ org.eclipse.xtext.xbase.lib
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: de.uni_paderborn.fujaba.muml.allocation.language,
+ de.uni_paderborn.fujaba.muml.allocation.language.services,
+ de.uni_paderborn.fujaba.muml.allocation.language.serializer,
+ de.uni_paderborn.fujaba.muml.allocation.language.parser.antlr,
+ de.uni_paderborn.fujaba.muml.allocation.language.parser.antlr.internal,
+ de.uni_paderborn.fujaba.muml.allocation.language.validation,
+ de.uni_paderborn.fujaba.muml.allocation.language.scoping,
+ de.uni_paderborn.fujaba.muml.allocation.language.generator,
+ de.uni_paderborn.fujaba.muml.allocation.language.formatting
+
