@@ -861,7 +861,7 @@ public interface LanguagePackage extends EPackage {
 	int CONSTRAINT__NAME = OPTIONAL_NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Expression</b></em>' attribute.
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -907,7 +907,7 @@ public interface LanguagePackage extends EPackage {
 	int LOCATION_CONSTRAINT__NAME = CONSTRAINT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Expression</b></em>' attribute.
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -971,7 +971,7 @@ public interface LanguagePackage extends EPackage {
 	int RESOURCE_CONSTRAINT__NAME = CONSTRAINT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Expression</b></em>' attribute.
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1044,7 +1044,7 @@ public interface LanguagePackage extends EPackage {
 	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__NAME = CONSTRAINT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Expression</b></em>' attribute.
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1460,15 +1460,15 @@ public interface LanguagePackage extends EPackage {
 	EClass getConstraint();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.uni_paderborn.fujaba.muml.allocation.language.Constraint#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link de.uni_paderborn.fujaba.muml.allocation.language.Constraint#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Expression</em>'.
+	 * @return the meta object for the containment reference '<em>Expression</em>'.
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.Constraint#getExpression()
 	 * @see #getConstraint()
 	 * @generated
 	 */
-	EAttribute getConstraint_Expression();
+	EReference getConstraint_Expression();
 
 	/**
 	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.LocationConstraint <em>Location Constraint</em>}'.
@@ -1829,12 +1829,12 @@ public interface LanguagePackage extends EPackage {
 		EClass CONSTRAINT = eINSTANCE.getConstraint();
 
 		/**
-		 * The meta object literal for the '<em><b>Expression</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONSTRAINT__EXPRESSION = eINSTANCE.getConstraint_Expression();
+		EReference CONSTRAINT__EXPRESSION = eINSTANCE.getConstraint_Expression();
 
 		/**
 		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.impl.LocationConstraintImpl <em>Location Constraint</em>}' class.

@@ -2,6 +2,8 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.language;
 
+import org.eclipse.ocl.examples.xtext.essentialocl.essentialOCLCST.ContextCS;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +27,7 @@ package de.uni_paderborn.fujaba.muml.allocation.language;
  */
 public interface Constraint extends OptionalNamedElement {
 	/**
-	 * Returns the value of the '<em><b>Expression</b></em>' attribute.
+	 * Returns the value of the '<em><b>Expression</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -33,22 +35,22 @@ public interface Constraint extends OptionalNamedElement {
 	 * Instead of a plain EString a parsed OCL expression should be used
 	 * in the future.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Expression</em>' attribute.
-	 * @see #setExpression(String)
+	 * @return the value of the '<em>Expression</em>' containment reference.
+	 * @see #setExpression(ContextCS)
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.LanguagePackage#getConstraint_Expression()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	String getExpression();
+	ContextCS getExpression();
 
 	/**
-	 * Sets the value of the '{@link de.uni_paderborn.fujaba.muml.allocation.language.Constraint#getExpression <em>Expression</em>}' attribute.
+	 * Sets the value of the '{@link de.uni_paderborn.fujaba.muml.allocation.language.Constraint#getExpression <em>Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Expression</em>' attribute.
+	 * @param value the new value of the '<em>Expression</em>' containment reference.
 	 * @see #getExpression()
 	 * @generated
 	 */
-	void setExpression(String value);
+	void setExpression(ContextCS value);
 
 } // Constraint

@@ -7,9 +7,12 @@ import de.uni_paderborn.fujaba.muml.allocation.language.LanguagePackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.ocl.examples.xtext.essentialocl.essentialOCLCST.ContextCS;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,24 +29,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public abstract class ConstraintImpl extends OptionalNamedElementImpl implements Constraint {
 	/**
-	 * The default value of the '{@link #getExpression() <em>Expression</em>}' attribute.
+	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getExpression()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String EXPRESSION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExpression()
-	 * @generated
-	 * @ordered
-	 */
-	protected String expression = EXPRESSION_EDEFAULT;
+	protected ContextCS expression;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +62,7 @@ public abstract class ConstraintImpl extends OptionalNamedElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getExpression() {
+	public ContextCS getExpression() {
 		return expression;
 	}
 
@@ -78,11 +71,47 @@ public abstract class ConstraintImpl extends OptionalNamedElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExpression(String newExpression) {
-		String oldExpression = expression;
+	public NotificationChain basicSetExpression(ContextCS newExpression, NotificationChain msgs) {
+		ContextCS oldExpression = expression;
 		expression = newExpression;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LanguagePackage.CONSTRAINT__EXPRESSION, oldExpression, expression));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LanguagePackage.CONSTRAINT__EXPRESSION, oldExpression, newExpression);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExpression(ContextCS newExpression) {
+		if (newExpression != expression) {
+			NotificationChain msgs = null;
+			if (expression != null)
+				msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LanguagePackage.CONSTRAINT__EXPRESSION, null, msgs);
+			if (newExpression != null)
+				msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LanguagePackage.CONSTRAINT__EXPRESSION, null, msgs);
+			msgs = basicSetExpression(newExpression, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LanguagePackage.CONSTRAINT__EXPRESSION, newExpression, newExpression));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case LanguagePackage.CONSTRAINT__EXPRESSION:
+				return basicSetExpression(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -108,7 +137,7 @@ public abstract class ConstraintImpl extends OptionalNamedElementImpl implements
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case LanguagePackage.CONSTRAINT__EXPRESSION:
-				setExpression((String)newValue);
+				setExpression((ContextCS)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,7 +152,7 @@ public abstract class ConstraintImpl extends OptionalNamedElementImpl implements
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case LanguagePackage.CONSTRAINT__EXPRESSION:
-				setExpression(EXPRESSION_EDEFAULT);
+				setExpression((ContextCS)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -138,25 +167,9 @@ public abstract class ConstraintImpl extends OptionalNamedElementImpl implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case LanguagePackage.CONSTRAINT__EXPRESSION:
-				return EXPRESSION_EDEFAULT == null ? expression != null : !EXPRESSION_EDEFAULT.equals(expression);
+				return expression != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (expression: ");
-		result.append(expression);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ConstraintImpl

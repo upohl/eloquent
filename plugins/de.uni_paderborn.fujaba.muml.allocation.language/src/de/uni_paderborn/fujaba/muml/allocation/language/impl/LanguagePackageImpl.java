@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.ocl.examples.xtext.essentialocl.essentialOCLCST.EssentialOCLCSTPackage;
 import org.storydriven.core.CorePackage;
 
 /**
@@ -190,6 +191,7 @@ public class LanguagePackageImpl extends EPackageImpl implements LanguagePackage
 
 		// Initialize simple dependencies
 		CorePackage.eINSTANCE.eClass();
+		EssentialOCLCSTPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theLanguagePackage.createPackageContents();
@@ -328,8 +330,8 @@ public class LanguagePackageImpl extends EPackageImpl implements LanguagePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConstraint_Expression() {
-		return (EAttribute)constraintEClass.getEStructuralFeatures().get(0);
+	public EReference getConstraint_Expression() {
+		return (EReference)constraintEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -566,7 +568,7 @@ public class LanguagePackageImpl extends EPackageImpl implements LanguagePackage
 		createEReference(qoSDimensionEClass, QO_SDIMENSION__VALUE);
 
 		constraintEClass = createEClass(CONSTRAINT);
-		createEAttribute(constraintEClass, CONSTRAINT__EXPRESSION);
+		createEReference(constraintEClass, CONSTRAINT__EXPRESSION);
 
 		locationConstraintEClass = createEClass(LOCATION_CONSTRAINT);
 		createEReference(locationConstraintEClass, LOCATION_CONSTRAINT__TUPLE_DESCRIPTORS);
@@ -626,6 +628,7 @@ public class LanguagePackageImpl extends EPackageImpl implements LanguagePackage
 
 		// Obtain other dependent packages
 		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		EssentialOCLCSTPackage theEssentialOCLCSTPackage = (EssentialOCLCSTPackage)EPackage.Registry.INSTANCE.getEPackage(EssentialOCLCSTPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -661,7 +664,7 @@ public class LanguagePackageImpl extends EPackageImpl implements LanguagePackage
 		initEReference(getQoSDimension_Value(), this.getValueTupleDescriptor(), null, "value", null, 1, 1, QoSDimension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constraintEClass, Constraint.class, "Constraint", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getConstraint_Expression(), ecorePackage.getEString(), "expression", null, 1, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstraint_Expression(), theEssentialOCLCSTPackage.getContextCS(), null, "expression", null, 1, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationConstraintEClass, LocationConstraint.class, "LocationConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLocationConstraint_TupleDescriptors(), this.getLocationTupleDescriptor(), null, "tupleDescriptors", null, 1, -1, LocationConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
