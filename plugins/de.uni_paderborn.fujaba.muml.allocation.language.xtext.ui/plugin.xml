@@ -6,48 +6,48 @@
     <extension
             point="org.eclipse.ui.editors">
         <editor
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
             extensions="allocation_language"
-            id="deployment.DeploymentSpecification"
-            name="DeploymentSpecification Editor">
+            id="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification"
+            name="AllocationSpecification Editor">
         </editor>
     </extension>
     <extension
         point="org.eclipse.ui.handlers">
         <handler
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
             commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
             <activeWhen>
                 <reference
-                    definitionId="deployment.DeploymentSpecification.Editor.opened">
+                    definitionId="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.Editor.opened">
                 </reference>
             </activeWhen>
         </handler>
         <handler
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
-            commandId="deployment.DeploymentSpecification.validate">
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
+            commandId="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.validate">
          <activeWhen>
             <reference
-                    definitionId="deployment.DeploymentSpecification.Editor.opened">
+                    definitionId="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.Editor.opened">
             </reference>
          </activeWhen>
       	</handler>
       	<!-- copy qualified name -->
         <handler
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
             commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName">
             <activeWhen>
-				<reference definitionId="deployment.DeploymentSpecification.Editor.opened" />
+				<reference definitionId="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.Editor.opened" />
             </activeWhen>
         </handler>
         <handler
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
             commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName">
             <activeWhen>
             	<and>
-            		<reference definitionId="deployment.DeploymentSpecification.XtextEditor.opened" />
+            		<reference definitionId="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.XtextEditor.opened" />
 	                <iterate>
 						<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 					</iterate>
@@ -56,22 +56,22 @@
         </handler>
     </extension>
     <extension point="org.eclipse.core.expressions.definitions">
-        <definition id="deployment.DeploymentSpecification.Editor.opened">
+        <definition id="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.Editor.opened">
             <and>
                 <reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
                 <with variable="activeEditor">
                     <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-                        value="deployment.DeploymentSpecification" 
+                        value="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification" 
                         forcePluginActivation="true"/>
                 </with>        
             </and>
         </definition>
-        <definition id="deployment.DeploymentSpecification.XtextEditor.opened">
+        <definition id="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.XtextEditor.opened">
             <and>
                 <reference definitionId="isXtextEditorActive"/>
                 <with variable="activeEditor">
                     <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-                        value="deployment.DeploymentSpecification" 
+                        value="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification" 
                         forcePluginActivation="true"/>
                 </with>        
             </and>
@@ -80,33 +80,33 @@
     <extension
             point="org.eclipse.ui.preferencePages">
         <page
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-            id="deployment.DeploymentSpecification"
-            name="DeploymentSpecification">
-            <keywordReference id="deployment.ui.keyword_DeploymentSpecification"/>
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification"
+            name="AllocationSpecification">
+            <keywordReference id="de.uni_paderborn.fujaba.muml.allocation.language.ui.keyword_AllocationSpecification"/>
         </page>
         <page
-            category="deployment.DeploymentSpecification"
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
-            id="deployment.DeploymentSpecification.coloring"
+            category="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+            id="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.coloring"
             name="Syntax Coloring">
-            <keywordReference id="deployment.ui.keyword_DeploymentSpecification"/>
+            <keywordReference id="de.uni_paderborn.fujaba.muml.allocation.language.ui.keyword_AllocationSpecification"/>
         </page>
         <page
-            category="deployment.DeploymentSpecification"
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
-            id="deployment.DeploymentSpecification.templates"
+            category="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
+            id="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.templates"
             name="Templates">
-            <keywordReference id="deployment.ui.keyword_DeploymentSpecification"/>
+            <keywordReference id="de.uni_paderborn.fujaba.muml.allocation.language.ui.keyword_AllocationSpecification"/>
         </page>
     </extension>
     <extension
             point="org.eclipse.ui.propertyPages">
         <page
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-            id="deployment.DeploymentSpecification"
-            name="DeploymentSpecification">
-            <keywordReference id="deployment.ui.keyword_DeploymentSpecification"/>
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification"
+            name="AllocationSpecification">
+            <keywordReference id="de.uni_paderborn.fujaba.muml.allocation.language.ui.keyword_AllocationSpecification"/>
             <enabledWhen>
 	            <adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -116,14 +116,14 @@
     <extension
         point="org.eclipse.ui.keywords">
         <keyword
-            id="deployment.ui.keyword_DeploymentSpecification"
-            label="DeploymentSpecification"/>
+            id="de.uni_paderborn.fujaba.muml.allocation.language.ui.keyword_AllocationSpecification"
+            label="AllocationSpecification"/>
     </extension>
     <extension
          point="org.eclipse.ui.commands">
       <command
             description="Trigger expensive validation"
-            id="deployment.DeploymentSpecification.validate"
+            id="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.validate"
             name="Validate">
       </command>
       <!-- copy qualified name -->
@@ -144,12 +144,12 @@
         <menuContribution
             locationURI="popup:#TextEditorContext?after=group.edit">
              <command
-                 commandId="deployment.DeploymentSpecification.validate"
+                 commandId="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.validate"
                  style="push"
                  tooltip="Trigger expensive validation">
             <visibleWhen checkEnabled="false">
                 <reference
-                    definitionId="deployment.DeploymentSpecification.Editor.opened">
+                    definitionId="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.Editor.opened">
                 </reference>
             </visibleWhen>
          </command>  
@@ -159,7 +159,7 @@
          	<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName" 
          		style="push" tooltip="Copy Qualified Name">
             	<visibleWhen checkEnabled="false">
-                	<reference definitionId="deployment.DeploymentSpecification.Editor.opened" />
+                	<reference definitionId="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.Editor.opened" />
             	</visibleWhen>
          	</command>  
          </menuContribution>
@@ -167,7 +167,7 @@
          	<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
             	style="push" tooltip="Copy Qualified Name">
             	<visibleWhen checkEnabled="false">
-                	<reference definitionId="deployment.DeploymentSpecification.Editor.opened" />
+                	<reference definitionId="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.Editor.opened" />
             	</visibleWhen>
          	</command>  
          </menuContribution>
@@ -176,7 +176,7 @@
 				style="push" tooltip="Copy Qualified Name">
          		<visibleWhen checkEnabled="false">
 	            	<and>
-	            		<reference definitionId="deployment.DeploymentSpecification.XtextEditor.opened" />
+	            		<reference definitionId="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.XtextEditor.opened" />
 						<iterate>
 							<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 						</iterate>
@@ -189,7 +189,7 @@
 		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
 			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
 				<visibleWhen checkEnabled="false">
-                	<reference definitionId="deployment.DeploymentSpecification.Editor.opened">
+                	<reference definitionId="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.Editor.opened">
                 	</reference>
             	</visibleWhen>
 			</command>
@@ -197,11 +197,11 @@
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 	    <handler
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
             commandId="org.eclipse.xtext.ui.editor.FindReferences">
             <activeWhen>
                 <reference
-                    definitionId="deployment.DeploymentSpecification.Editor.opened">
+                    definitionId="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.Editor.opened">
                 </reference>
             </activeWhen>
         </handler>
@@ -212,65 +212,65 @@
 	<extension
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
-			class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
+			class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
 			type="allocation_language">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
         <resourceServiceProvider
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
             uriExtension="allocation_language">
         </resourceServiceProvider>
     </extension>
 
 
-	<!-- marker definitions for deployment.DeploymentSpecification -->
-	<extension
-	        id="deploymentspecification.check.fast"
-	        name="DeploymentSpecification Problem"
-	        point="org.eclipse.core.resources.markers">
-	    <super type="org.eclipse.xtext.ui.check.fast"/>
-	    <persistent value="true"/>
-	</extension>
-	<extension
-	        id="deploymentspecification.check.normal"
-	        name="DeploymentSpecification Problem"
-	        point="org.eclipse.core.resources.markers">
-	    <super type="org.eclipse.xtext.ui.check.normal"/>
-	    <persistent value="true"/>
-	</extension>
-	<extension
-	        id="deploymentspecification.check.expensive"
-	        name="DeploymentSpecification Problem"
-	        point="org.eclipse.core.resources.markers">
-	    <super type="org.eclipse.xtext.ui.check.expensive"/>
-	    <persistent value="true"/>
-	</extension>
+    <!-- marker definitions for de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification -->
+    <extension
+            id="allocationspecification.check.fast"
+            name="AllocationSpecification Problem"
+            point="org.eclipse.core.resources.markers">
+        <super type="org.eclipse.xtext.ui.check.fast"/>
+        <persistent value="true"/>
+    </extension>
+    <extension
+            id="allocationspecification.check.normal"
+            name="AllocationSpecification Problem"
+            point="org.eclipse.core.resources.markers">
+        <super type="org.eclipse.xtext.ui.check.normal"/>
+        <persistent value="true"/>
+    </extension>
+    <extension
+            id="allocationspecification.check.expensive"
+            name="AllocationSpecification Problem"
+            point="org.eclipse.core.resources.markers">
+        <super type="org.eclipse.xtext.ui.check.expensive"/>
+        <persistent value="true"/>
+    </extension>
 
    <extension
          point="org.eclipse.xtext.builder.participant">
       <participant
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant">
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant">
       </participant>
    </extension>
    <extension
             point="org.eclipse.ui.preferencePages">
         <page
-            category="deployment.DeploymentSpecification"
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-            id="deployment.DeploymentSpecification.compiler.preferencePage"
+            category="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+            id="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.compiler.preferencePage"
             name="Compiler">
-            <keywordReference id="deployment.ui.keyword_DeploymentSpecification"/>
+            <keywordReference id="de.uni_paderborn.fujaba.muml.allocation.language.ui.keyword_AllocationSpecification"/>
         </page>
     </extension>
     <extension
             point="org.eclipse.ui.propertyPages">
         <page
-            category="deployment.DeploymentSpecification"
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-            id="deployment.DeploymentSpecification.compiler.propertyPage"
+            category="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+            id="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.compiler.propertyPage"
             name="Compiler">
-            <keywordReference id="deployment.ui.keyword_DeploymentSpecification"/>
+            <keywordReference id="de.uni_paderborn.fujaba.muml.allocation.language.ui.keyword_AllocationSpecification"/>
             <enabledWhen>
 	            <adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -282,11 +282,11 @@
 	<extension
 		point="org.eclipse.ui.handlers">
 		<handler 
-			class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
+			class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
 			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
 			<activeWhen>
 				<reference
-					definitionId="deployment.DeploymentSpecification.Editor.opened">
+					definitionId="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -306,33 +306,33 @@
 				style="push"
 				tooltip="Open Quick Outline">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="deployment.DeploymentSpecification.Editor.opened"/>
+					<reference definitionId="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.Editor.opened"/>
 				</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
-    <!-- quickfix marker resolution generator for deployment.DeploymentSpecification -->
+    <!-- quickfix marker resolution generator for de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification -->
     <extension
             point="org.eclipse.ui.ide.markerResolution">
         <markerResolutionGenerator
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="deployment.ui.deploymentspecification.check.fast">
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="de.uni_paderborn.fujaba.muml.allocation.language.ui.allocationspecification.check.fast">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">
             </attribute>
         </markerResolutionGenerator>
         <markerResolutionGenerator
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="deployment.ui.deploymentspecification.check.normal">
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="de.uni_paderborn.fujaba.muml.allocation.language.ui.allocationspecification.check.normal">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">
             </attribute>
         </markerResolutionGenerator>
         <markerResolutionGenerator
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="deployment.ui.deploymentspecification.check.expensive">
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="de.uni_paderborn.fujaba.muml.allocation.language.ui.allocationspecification.check.expensive">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">
@@ -342,11 +342,11 @@
    	<!-- Rename Refactoring -->
 	<extension point="org.eclipse.ui.handlers">
 		<handler 
-			class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
+			class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
 			commandId="org.eclipse.xtext.ui.refactoring.RenameElement">
 			<activeWhen>
 				<reference
-					definitionId="deployment.DeploymentSpecification.Editor.opened">
+					definitionId="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -358,7 +358,7 @@
                style="push">
             <visibleWhen checkEnabled="false">
                <reference
-                     definitionId="deployment.DeploymentSpecification.Editor.opened">
+                     definitionId="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.Editor.opened">
                </reference>
             </visibleWhen>
          </command>
@@ -366,29 +366,29 @@
    </extension>
    <extension point="org.eclipse.ui.preferencePages">
 	    <page
-	        category="deployment.DeploymentSpecification"
-	        class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
-	        id="deployment.DeploymentSpecification.refactoring"
+	        category="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification"
+	        class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
+	        id="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.refactoring"
 	        name="Refactoring">
-	        <keywordReference id="deployment.ui.keyword_DeploymentSpecification"/>
+	        <keywordReference id="de.uni_paderborn.fujaba.muml.allocation.language.ui.keyword_AllocationSpecification"/>
 	    </page>
 	</extension>
 
   <extension point="org.eclipse.compare.contentViewers">
-    <viewer id="deployment.DeploymentSpecification.compare.contentViewers"
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+    <viewer id="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.compare.contentViewers"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
             extensions="allocation_language">
     </viewer>
   </extension>
   <extension point="org.eclipse.compare.contentMergeViewers">
-    <viewer id="deployment.DeploymentSpecification.compare.contentMergeViewers"
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-            extensions="allocation_language" label="DeploymentSpecification Compare">
+    <viewer id="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.compare.contentMergeViewers"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+            extensions="allocation_language" label="AllocationSpecification Compare">
      </viewer>
   </extension>
   <extension point="org.eclipse.ui.editors.documentProviders">
-    <provider id="deployment.DeploymentSpecification.editors.documentProviders"
-            class="deployment.ui.DeploymentSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
+    <provider id="de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecification.editors.documentProviders"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
             extensions="allocation_language">
     </provider>
   </extension>

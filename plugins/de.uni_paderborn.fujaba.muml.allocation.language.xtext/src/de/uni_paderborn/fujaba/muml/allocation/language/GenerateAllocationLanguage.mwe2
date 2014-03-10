@@ -4,7 +4,7 @@ import org.eclipse.emf.mwe.utils.*
 import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
 
-var grammarURI = "classpath:/de/uni_paderborn/fujaba/muml/allocation/AllocationLanguage.xtext"
+var grammarURI = "classpath:/de/uni_paderborn/fujaba/muml/allocation/language/AllocationLanguage.xtext"
 var fileExtensions = "allocation_language"
 var projectName = "de.uni_paderborn.fujaba.muml.allocation.language.xtext"
 var runtimeProject = "../${projectName}"
