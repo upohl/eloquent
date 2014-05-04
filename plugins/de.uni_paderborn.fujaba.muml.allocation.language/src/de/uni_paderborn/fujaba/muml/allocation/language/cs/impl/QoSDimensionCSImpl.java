@@ -7,6 +7,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptor;
 
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -22,8 +23,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
 import org.eclipse.ocl.examples.xtext.base.basecs.impl.NamedElementCSImpl;
 
+import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
 
 /**
@@ -285,6 +289,16 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 				return value != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public @Nullable <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
+		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitQoSDimensionCS(this);
 	}
 
 } //QoSDimensionCSImpl

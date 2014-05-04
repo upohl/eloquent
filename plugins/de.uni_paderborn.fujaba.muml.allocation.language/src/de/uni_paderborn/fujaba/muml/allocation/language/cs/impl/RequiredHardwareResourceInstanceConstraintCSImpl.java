@@ -6,6 +6,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupl
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -17,6 +18,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
+import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
 
 /**
  * <!-- begin-user-doc -->
@@ -145,6 +149,16 @@ public class RequiredHardwareResourceInstanceConstraintCSImpl extends Constraint
 				return tupleDescriptors != null && !tupleDescriptors.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public @Nullable <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
+		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitRequiredHardwareResourceInstanceConstraintCS(this);
 	}
 
 } //RequiredHardwareResourceInstanceConstraintCSImpl
