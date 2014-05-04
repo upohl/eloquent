@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin
+      name="%pluginName"
+      id="de.uni_paderborn.fujaba.muml.allocation.language"
+      version="1.0.0"
+      provider-name="%providerName">
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.emf.ecore" export="true"/>
+      <import plugin="org.eclipse.ocl.examples.xtext.base" export="true"/>
+      <import plugin="org.eclipse.ocl.examples.xtext.essentialocl" export="true"/>
+      <import plugin="org.eclipse.ocl.examples.pivot" export="true"/>
+   </requires>
+
+   <runtime>
+      <library name=".">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated LanguageSpecificationCS -->
+      <package
+            uri="http://www.fujaba.de/muml/allocation/language/0.1.0/cs"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage"
+            genModel="model/LanguageSpecificationCS.genmodel"/>
+   </extension>
+
+</plugin>
