@@ -1,0 +1,24 @@
+module BuildAS
+
+import org.eclipse.ocl.examples.build.utilities.GenModelSetup
+import org.eclipse.ocl.examples.build.utilities.UMLGenModelSetup
+import org.eclipse.emf.mwe.utils.StandaloneSetup
+import org.eclipse.emf.ecore.resource.impl.*
+import de.uni_paderborn.fujaba.muml.allocation.language.build.PivotModelSetup
+
+Workflow {
+	bean = ResourceSetImpl : resourceSet {}
+	bean = StandaloneSetup { resourceSet = resourceSet
+    	platformUri = ".."
+    	scanClassPath = true
+    }
+    bean = GenModelSetup { resourceSet = resourceSet }
+    bean = UMLGenModelSetup { resourceSet = resourceSet }
+    bean = PivotModelSetup { resourceSet = resourceSet }
+	component = @GenerateLanguageSpecificationAS {
+		resourceSet = resourceSet
+		csModelURI = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.ecore"
+		pivotModelURI = "platform:/resource/org.eclipse.ocl.examples.pivot/model/Pivot.ecore"
+		asModelURI = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/transforms/AS.ecore"
+	}
+}
