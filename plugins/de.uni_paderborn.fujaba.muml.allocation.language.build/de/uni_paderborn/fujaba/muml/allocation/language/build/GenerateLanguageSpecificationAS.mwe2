@@ -1,0 +1,34 @@
+module GenerateLanguageSpecificationAS
+
+import org.eclipse.emf.ecore.resource.ResourceSet
+import de.uni_paderborn.fujaba.muml.allocation.language.build.CS2ASEcore
+
+/**
+ * The resource set
+ */
+var ResourceSet resourceSet
+
+/**
+ * URI to the concrete syntax model
+ */
+var String csModelURI
+
+/**
+ * URI to the pivot model
+ */
+var String pivotModelURI
+
+/**
+ * URI to the abstract syntax model (if it exists, it will be overwritten)
+ */
+var String asModelURI
+
+Workflow {
+	//bean = ResourceSetImpl : resourceSet {}
+	component = CS2ASEcore {
+		resourceSet = resourceSet
+		csModelURI = csModelURI
+		pivotModelURI = pivotModelURI
+		asModelURI = asModelURI
+	}
+}
