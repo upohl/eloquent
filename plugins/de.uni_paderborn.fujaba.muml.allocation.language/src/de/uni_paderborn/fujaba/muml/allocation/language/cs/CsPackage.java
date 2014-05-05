@@ -21,6 +21,10 @@ import org.eclipse.ocl.examples.xtext.base.basecs.BaseCSPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
+ * <!-- begin-model-doc -->
+ * This package describes the abstract syntax of the
+ * allocation specification language.
+ * <!-- end-model-doc -->
  * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsFactory
  * @model kind="package"
  * @generated
