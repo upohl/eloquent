@@ -1,9 +1,11 @@
 package de.uni_paderborn.fujaba.muml.allocation.language.build;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import org.eclipse.emf.mwe.core.WorkflowContext;
+import org.eclipse.emf.mwe.core.issues.Issues;
+import org.eclipse.emf.mwe.core.monitor.ProgressMonitor;
 import org.eclipse.m2m.qvt.oml.ExecutionContextImpl;
+import org.eclipse.m2m.qvt.oml.util.Dictionary;
+import org.eclipse.m2m.qvt.oml.util.Utils;
 import org.eclipse.ocl.examples.build.utilities.PredefinedQVToTransformationExecutor;
 
 public class CS2ASEcore extends PredefinedQVToTransformationExecutor {
@@ -12,43 +14,37 @@ public class CS2ASEcore extends PredefinedQVToTransformationExecutor {
 	
 	private String csModelURI;
 	private String pivotModelURI;
-	private String asModelURI;
 	
-	public String getCsModelURI() {
-		return csModelURI;
-	}
-
 	public void setCsModelURI(String csModelURI) {
 		this.csModelURI = csModelURI;
-	}
-
-	public String getPivotModelURI() {
-		return pivotModelURI;
 	}
 
 	public void setPivotModelURI(String pivotModelURI) {
 		this.pivotModelURI = pivotModelURI;
 	}
-
-	public String getAsModelURI() {
-		return asModelURI;
-	}
-
-	public void setAsModelURI(String asModelURI) {
-		this.asModelURI = asModelURI;
+	
+	public void setasModelURI(String asModelURI) {
+		setOut(asModelURI);
 	}
 	
 	@Override
 	protected String getPredefinedTransformationURI() {
 		return TRANSFORMATION_URI;
 	}
+	
+	@Override
+	protected void invokeInternal(WorkflowContext ctx, ProgressMonitor monitor, Issues issues) {
+		addIn(csModelURI);
+		addIn(pivotModelURI);
+		super.invokeInternal(ctx, monitor, issues);
+	}
 
 	@Override
 	protected void initializeConfigurationProperties(ExecutionContextImpl context) {
-		Map<String, String> map = new HashMap<String, String>();
-		map.put("ModelElementCS", "Element");
-		map.put("NamedElementCS", "NamedElement");
-		map.put("ContextCS", "ExpressionInOCL");
-		context.setConfigProperty(oclCS2PivotClassMap, map);
+		Dictionary<String, String> dict = Utils.<String, String>createDictionary();
+		dict.put("ModelElementCS", "Element");
+		dict.put("NamedElementCS", "NamedElement");
+		dict.put("ContextCS", "ExpressionInOCL");
+		context.setConfigProperty(oclCS2PivotClassMap, dict);
 	}
 }
