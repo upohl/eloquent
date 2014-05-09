@@ -84,7 +84,7 @@ mapping in EClass::ocl2pivot() : EClass
 
 query EClass::getPivotClass() : EClass {
 	var pivotName : String := oclCS2PivotClassMap->get(self.name);
-	assert fatal (not pivotName.oclIsUndefined()) with log("unexpected OCL class: " + self.name);
+	assert fatal (not pivotName.oclIsUndefined()) with log("unexpected OCLCS class: " + self.name);
 	return pivotModel.objects()[EClass]->any(name = pivotName);
 }
 
