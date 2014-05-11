@@ -32,4 +32,13 @@
             genModel="model/LanguageSpecificationCS.genmodel"/>
    </extension>
 
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated AS -->
+      <package
+            uri="http://www.fujaba.de/muml/allocation/language/0.1.0/as"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage"
+            genModel="model-gen/AS.genmodel"/>
+   </extension>
+
 </plugin>

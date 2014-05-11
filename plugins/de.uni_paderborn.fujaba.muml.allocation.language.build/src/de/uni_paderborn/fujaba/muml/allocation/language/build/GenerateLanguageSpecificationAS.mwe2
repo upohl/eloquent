@@ -1,0 +1,74 @@
+module GenerateLanguageSpecificationAS
+
+import org.eclipse.emf.ecore.resource.ResourceSet
+import de.uni_paderborn.fujaba.muml.allocation.language.build.CS2ASEcore
+import de.uni_paderborn.fujaba.muml.allocation.language.build.GenModelCreator
+import de.uni_paderborn.fujaba.muml.allocation.language.build.URIAwareGenerateModel
+
+/**
+ * The resource set
+ */
+var ResourceSet resourceSet
+
+/**
+ * URI to the concrete syntax model ecore file
+ */
+var String csModelURI
+
+/**
+ * URI to the pivot model
+ */
+var String pivotModelURI
+
+/**
+ * URI to the pivot genmodel
+ */
+var String pivotGenModelURI
+
+/**
+ * URI to the abstract syntax model (if it exists, it will be overwritten)
+ */
+var String asModelURI
+
+/**
+ * URI to the abstract syntax' genmodel
+ */
+var String asGenModelURI
+
+/**
+ * The base package of the to be generated as model code
+ */
+var String basePackage
+
+/**
+ * The plugin id of the to be generated model code
+ */
+var String pluginID
+
+/**
+ * The path to the model directory of the to be generated model code
+ */
+var String modelDirectory
+
+Workflow {
+	//bean = ResourceSetImpl : resourceSet {}
+	component = CS2ASEcore {
+		resourceSet = resourceSet
+		csModelURI = csModelURI
+		pivotModelURI = pivotModelURI
+		asModelURI = asModelURI
+	}
+	component = GenModelCreator {
+		resourceSet = resourceSet
+		modelURI = asModelURI
+		genModelURI = asGenModelURI
+		usedGenModelURI = pivotGenModelURI
+		basePackage = basePackage
+		modelDirectory = modelDirectory
+		pluginID = pluginID
+	}
+	component = URIAwareGenerateModel {
+		resourceSet = resourceSet
+		genModel = asGenModelURI
+	}
+}

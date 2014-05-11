@@ -19,6 +19,11 @@ Workflow {
 		resourceSet = resourceSet
 		csModelURI = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.ecore"
 		pivotModelURI = "platform:/resource/org.eclipse.ocl.examples.pivot/model/Pivot.ecore"
-		asModelURI = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/transforms/AS.ecore"
+		pivotGenModelURI = "platform:/resource/org.eclipse.ocl.examples.pivot/model/Pivot.merged.genmodel"
+		asModelURI = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model-gen/AS.ecore"
+		asGenModelURI = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model-gen/AS.genmodel"
+		basePackage = "de.uni_paderborn.fujaba.muml.allocation.language"
+		modelDirectory = "/de.uni_paderborn.fujaba.muml.allocation.language/src-gen"
+		pluginID = "de.uni_paderborn.fujaba.muml.allocation.language"
 	}
 }
