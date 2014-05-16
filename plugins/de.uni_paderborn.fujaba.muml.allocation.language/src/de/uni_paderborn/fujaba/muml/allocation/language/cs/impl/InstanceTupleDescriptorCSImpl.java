@@ -90,6 +90,15 @@ public abstract class InstanceTupleDescriptorCSImpl extends TupleDescriptorCSImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String toString() {
+		return super.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -143,14 +152,5 @@ public abstract class InstanceTupleDescriptorCSImpl extends TupleDescriptorCSImp
 		return super.eIsSet(featureID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		return super.toString();
-	}
 
 } //InstanceTupleDescriptorCSImpl

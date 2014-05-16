@@ -38,4 +38,5 @@ public abstract class TupleDescriptorCSImpl extends ModelElementCSImpl implement
 		return CsPackage.Literals.TUPLE_DESCRIPTOR_CS;
 	}
 
+
 } //TupleDescriptorCSImpl

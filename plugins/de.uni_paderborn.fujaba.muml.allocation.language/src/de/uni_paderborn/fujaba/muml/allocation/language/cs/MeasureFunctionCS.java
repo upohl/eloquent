@@ -8,7 +8,7 @@ import org.eclipse.ocl.examples.xtext.base.basecs.ModelElementCS;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Measure Function</b></em>'.
+ * A representation of the model object '<em><b>Measure Function CS</b></em>'.
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
@@ -18,15 +18,15 @@ import org.eclipse.ocl.examples.xtext.base.basecs.ModelElementCS;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunction#getServices <em>Services</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS#getServices <em>Services</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage#getMeasureFunction()
+ * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage#getMeasureFunctionCS()
  * @model
  * @generated
  */
-public interface MeasureFunction extends ModelElementCS {
+public interface MeasureFunctionCS extends ModelElementCS {
 	/**
 	 * Returns the value of the '<em><b>Services</b></em>' reference list.
 	 * The list contents are of type {@link de.uni_paderborn.fujaba.muml.allocation.language.cs.ServiceCS}.
@@ -36,10 +36,10 @@ public interface MeasureFunction extends ModelElementCS {
 	 * Set of services which are used as summands in the measure function.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Services</em>' reference list.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage#getMeasureFunction_Services()
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage#getMeasureFunctionCS_Services()
 	 * @model
 	 * @generated
 	 */
 	EList<ServiceCS> getServices();
 
-} // MeasureFunction
+} // MeasureFunctionCS

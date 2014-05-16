@@ -1028,14 +1028,14 @@ public interface CsPackage extends EPackage {
 	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT = INSTANCE_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ValueTupleDescriptorImpl <em>Value Tuple Descriptor</em>}' class.
+	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ValueTupleDescriptorCSImpl <em>Value Tuple Descriptor CS</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ValueTupleDescriptorImpl
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getValueTupleDescriptor()
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ValueTupleDescriptorCSImpl
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getValueTupleDescriptorCS()
 	 * @generated
 	 */
-	int VALUE_TUPLE_DESCRIPTOR = 11;
+	int VALUE_TUPLE_DESCRIPTOR_CS = 11;
 
 	/**
 	 * The feature id for the '<em><b>Logical Parent</b></em>' reference.
@@ -1044,7 +1044,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR__LOGICAL_PARENT = TUPLE_DESCRIPTOR_CS__LOGICAL_PARENT;
+	int VALUE_TUPLE_DESCRIPTOR_CS__LOGICAL_PARENT = TUPLE_DESCRIPTOR_CS__LOGICAL_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Pivot</b></em>' reference.
@@ -1053,7 +1053,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR__PIVOT = TUPLE_DESCRIPTOR_CS__PIVOT;
+	int VALUE_TUPLE_DESCRIPTOR_CS__PIVOT = TUPLE_DESCRIPTOR_CS__PIVOT;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
@@ -1062,7 +1062,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR__OWNED_ANNOTATION = TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATION;
+	int VALUE_TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATION = TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATION;
 
 	/**
 	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
@@ -1071,7 +1071,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR__ORIGINAL_XMI_ID = TUPLE_DESCRIPTOR_CS__ORIGINAL_XMI_ID;
+	int VALUE_TUPLE_DESCRIPTOR_CS__ORIGINAL_XMI_ID = TUPLE_DESCRIPTOR_CS__ORIGINAL_XMI_ID;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1080,7 +1080,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR__CSI = TUPLE_DESCRIPTOR_CS__CSI;
+	int VALUE_TUPLE_DESCRIPTOR_CS__CSI = TUPLE_DESCRIPTOR_CS__CSI;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1089,26 +1089,26 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR__VALUE = TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 0;
+	int VALUE_TUPLE_DESCRIPTOR_CS__VALUE = TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Value Tuple Descriptor</em>' class.
+	 * The number of structural features of the '<em>Value Tuple Descriptor CS</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR_FEATURE_COUNT = TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 1;
+	int VALUE_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT = TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.MeasureFunctionImpl <em>Measure Function</em>}' class.
+	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.MeasureFunctionCSImpl <em>Measure Function CS</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.MeasureFunctionImpl
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getMeasureFunction()
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.MeasureFunctionCSImpl
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getMeasureFunctionCS()
 	 * @generated
 	 */
-	int MEASURE_FUNCTION = 12;
+	int MEASURE_FUNCTION_CS = 12;
 
 	/**
 	 * The feature id for the '<em><b>Logical Parent</b></em>' reference.
@@ -1117,7 +1117,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEASURE_FUNCTION__LOGICAL_PARENT = BaseCSPackage.MODEL_ELEMENT_CS__LOGICAL_PARENT;
+	int MEASURE_FUNCTION_CS__LOGICAL_PARENT = BaseCSPackage.MODEL_ELEMENT_CS__LOGICAL_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Pivot</b></em>' reference.
@@ -1126,7 +1126,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEASURE_FUNCTION__PIVOT = BaseCSPackage.MODEL_ELEMENT_CS__PIVOT;
+	int MEASURE_FUNCTION_CS__PIVOT = BaseCSPackage.MODEL_ELEMENT_CS__PIVOT;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
@@ -1135,7 +1135,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEASURE_FUNCTION__OWNED_ANNOTATION = BaseCSPackage.MODEL_ELEMENT_CS__OWNED_ANNOTATION;
+	int MEASURE_FUNCTION_CS__OWNED_ANNOTATION = BaseCSPackage.MODEL_ELEMENT_CS__OWNED_ANNOTATION;
 
 	/**
 	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
@@ -1144,7 +1144,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEASURE_FUNCTION__ORIGINAL_XMI_ID = BaseCSPackage.MODEL_ELEMENT_CS__ORIGINAL_XMI_ID;
+	int MEASURE_FUNCTION_CS__ORIGINAL_XMI_ID = BaseCSPackage.MODEL_ELEMENT_CS__ORIGINAL_XMI_ID;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1153,7 +1153,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEASURE_FUNCTION__CSI = BaseCSPackage.MODEL_ELEMENT_CS__CSI;
+	int MEASURE_FUNCTION_CS__CSI = BaseCSPackage.MODEL_ELEMENT_CS__CSI;
 
 	/**
 	 * The feature id for the '<em><b>Services</b></em>' reference list.
@@ -1162,16 +1162,16 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEASURE_FUNCTION__SERVICES = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 0;
+	int MEASURE_FUNCTION_CS__SERVICES = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Measure Function</em>' class.
+	 * The number of structural features of the '<em>Measure Function CS</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEASURE_FUNCTION_FEATURE_COUNT = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 1;
+	int MEASURE_FUNCTION_CS_FEATURE_COUNT = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.
@@ -1482,46 +1482,46 @@ public interface CsPackage extends EPackage {
 	EAttribute getComponentResourceTupleDescriptorCS_Hwresinstance();
 
 	/**
-	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptor <em>Value Tuple Descriptor</em>}'.
+	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS <em>Value Tuple Descriptor CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Value Tuple Descriptor</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptor
+	 * @return the meta object for class '<em>Value Tuple Descriptor CS</em>'.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS
 	 * @generated
 	 */
-	EClass getValueTupleDescriptor();
+	EClass getValueTupleDescriptorCS();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptor#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptor#getValue()
-	 * @see #getValueTupleDescriptor()
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS#getValue()
+	 * @see #getValueTupleDescriptorCS()
 	 * @generated
 	 */
-	EAttribute getValueTupleDescriptor_Value();
+	EAttribute getValueTupleDescriptorCS_Value();
 
 	/**
-	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunction <em>Measure Function</em>}'.
+	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS <em>Measure Function CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Measure Function</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunction
+	 * @return the meta object for class '<em>Measure Function CS</em>'.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS
 	 * @generated
 	 */
-	EClass getMeasureFunction();
+	EClass getMeasureFunctionCS();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunction#getServices <em>Services</em>}'.
+	 * Returns the meta object for the reference list '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS#getServices <em>Services</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Services</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunction#getServices()
-	 * @see #getMeasureFunction()
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS#getServices()
+	 * @see #getMeasureFunctionCS()
 	 * @generated
 	 */
-	EReference getMeasureFunction_Services();
+	EReference getMeasureFunctionCS_Services();
 
 	/**
 	 * Returns the meta object for enum '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}'.
@@ -1802,14 +1802,14 @@ public interface CsPackage extends EPackage {
 		EAttribute COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS__HWRESINSTANCE = eINSTANCE.getComponentResourceTupleDescriptorCS_Hwresinstance();
 
 		/**
-		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ValueTupleDescriptorImpl <em>Value Tuple Descriptor</em>}' class.
+		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ValueTupleDescriptorCSImpl <em>Value Tuple Descriptor CS</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ValueTupleDescriptorImpl
-		 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getValueTupleDescriptor()
+		 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ValueTupleDescriptorCSImpl
+		 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getValueTupleDescriptorCS()
 		 * @generated
 		 */
-		EClass VALUE_TUPLE_DESCRIPTOR = eINSTANCE.getValueTupleDescriptor();
+		EClass VALUE_TUPLE_DESCRIPTOR_CS = eINSTANCE.getValueTupleDescriptorCS();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -1817,17 +1817,17 @@ public interface CsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VALUE_TUPLE_DESCRIPTOR__VALUE = eINSTANCE.getValueTupleDescriptor_Value();
+		EAttribute VALUE_TUPLE_DESCRIPTOR_CS__VALUE = eINSTANCE.getValueTupleDescriptorCS_Value();
 
 		/**
-		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.MeasureFunctionImpl <em>Measure Function</em>}' class.
+		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.MeasureFunctionCSImpl <em>Measure Function CS</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.MeasureFunctionImpl
-		 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getMeasureFunction()
+		 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.MeasureFunctionCSImpl
+		 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getMeasureFunctionCS()
 		 * @generated
 		 */
-		EClass MEASURE_FUNCTION = eINSTANCE.getMeasureFunction();
+		EClass MEASURE_FUNCTION_CS = eINSTANCE.getMeasureFunctionCS();
 
 		/**
 		 * The meta object literal for the '<em><b>Services</b></em>' reference list feature.
@@ -1835,7 +1835,7 @@ public interface CsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MEASURE_FUNCTION__SERVICES = eINSTANCE.getMeasureFunction_Services();
+		EReference MEASURE_FUNCTION_CS__SERVICES = eINSTANCE.getMeasureFunctionCS_Services();
 
 		/**
 		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.

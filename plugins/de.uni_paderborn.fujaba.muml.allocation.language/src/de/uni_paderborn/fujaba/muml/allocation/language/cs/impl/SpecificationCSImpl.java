@@ -4,11 +4,12 @@ package de.uni_paderborn.fujaba.muml.allocation.language.cs.impl;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunction;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ServiceCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -26,7 +27,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
+
 import org.eclipse.ocl.examples.xtext.base.basecs.impl.NamedElementCSImpl;
+
 import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
 
 /**
@@ -73,7 +76,7 @@ public class SpecificationCSImpl extends NamedElementCSImpl implements Specifica
 	 * @generated
 	 * @ordered
 	 */
-	protected MeasureFunction measure;
+	protected MeasureFunctionCS measure;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,7 +126,7 @@ public class SpecificationCSImpl extends NamedElementCSImpl implements Specifica
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MeasureFunction getMeasure() {
+	public MeasureFunctionCS getMeasure() {
 		return measure;
 	}
 
@@ -132,8 +135,8 @@ public class SpecificationCSImpl extends NamedElementCSImpl implements Specifica
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMeasure(MeasureFunction newMeasure, NotificationChain msgs) {
-		MeasureFunction oldMeasure = measure;
+	public NotificationChain basicSetMeasure(MeasureFunctionCS newMeasure, NotificationChain msgs) {
+		MeasureFunctionCS oldMeasure = measure;
 		measure = newMeasure;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.SPECIFICATION_CS__MEASURE, oldMeasure, newMeasure);
@@ -147,7 +150,7 @@ public class SpecificationCSImpl extends NamedElementCSImpl implements Specifica
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMeasure(MeasureFunction newMeasure) {
+	public void setMeasure(MeasureFunctionCS newMeasure) {
 		if (newMeasure != measure) {
 			NotificationChain msgs = null;
 			if (measure != null)
@@ -215,7 +218,7 @@ public class SpecificationCSImpl extends NamedElementCSImpl implements Specifica
 				getConstraints().addAll((Collection<? extends ConstraintCS>)newValue);
 				return;
 			case CsPackage.SPECIFICATION_CS__MEASURE:
-				setMeasure((MeasureFunction)newValue);
+				setMeasure((MeasureFunctionCS)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -236,7 +239,7 @@ public class SpecificationCSImpl extends NamedElementCSImpl implements Specifica
 				getConstraints().clear();
 				return;
 			case CsPackage.SPECIFICATION_CS__MEASURE:
-				setMeasure((MeasureFunction)null);
+				setMeasure((MeasureFunctionCS)null);
 				return;
 		}
 		super.eUnset(featureID);

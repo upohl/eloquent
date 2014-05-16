@@ -10,14 +10,14 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.InstanceTupleDescript
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintTypes;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS;
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunction;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ResourceConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ServiceCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.TupleDescriptorCS;
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptor;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -120,14 +120,14 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass valueTupleDescriptorEClass = null;
+	private EClass valueTupleDescriptorCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass measureFunctionEClass = null;
+	private EClass measureFunctionCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -457,8 +457,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getValueTupleDescriptor() {
-		return valueTupleDescriptorEClass;
+	public EClass getValueTupleDescriptorCS() {
+		return valueTupleDescriptorCSEClass;
 	}
 
 	/**
@@ -466,8 +466,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getValueTupleDescriptor_Value() {
-		return (EAttribute)valueTupleDescriptorEClass.getEStructuralFeatures().get(0);
+	public EAttribute getValueTupleDescriptorCS_Value() {
+		return (EAttribute)valueTupleDescriptorCSEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -475,8 +475,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMeasureFunction() {
-		return measureFunctionEClass;
+	public EClass getMeasureFunctionCS() {
+		return measureFunctionCSEClass;
 	}
 
 	/**
@@ -484,8 +484,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMeasureFunction_Services() {
-		return (EReference)measureFunctionEClass.getEStructuralFeatures().get(0);
+	public EReference getMeasureFunctionCS_Services() {
+		return (EReference)measureFunctionCSEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -564,11 +564,11 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		componentResourceTupleDescriptorCSEClass = createEClass(COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS);
 		createEAttribute(componentResourceTupleDescriptorCSEClass, COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS__HWRESINSTANCE);
 
-		valueTupleDescriptorEClass = createEClass(VALUE_TUPLE_DESCRIPTOR);
-		createEAttribute(valueTupleDescriptorEClass, VALUE_TUPLE_DESCRIPTOR__VALUE);
+		valueTupleDescriptorCSEClass = createEClass(VALUE_TUPLE_DESCRIPTOR_CS);
+		createEAttribute(valueTupleDescriptorCSEClass, VALUE_TUPLE_DESCRIPTOR_CS__VALUE);
 
-		measureFunctionEClass = createEClass(MEASURE_FUNCTION);
-		createEReference(measureFunctionEClass, MEASURE_FUNCTION__SERVICES);
+		measureFunctionCSEClass = createEClass(MEASURE_FUNCTION_CS);
+		createEReference(measureFunctionCSEClass, MEASURE_FUNCTION_CS__SERVICES);
 
 		// Create enums
 		locationConstraintTypesEEnum = createEEnum(LOCATION_CONSTRAINT_TYPES);
@@ -617,14 +617,14 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		instanceTupleDescriptorCSEClass.getESuperTypes().add(this.getTupleDescriptorCS());
 		locationTupleDescriptorCSEClass.getESuperTypes().add(this.getInstanceTupleDescriptorCS());
 		componentResourceTupleDescriptorCSEClass.getESuperTypes().add(this.getInstanceTupleDescriptorCS());
-		valueTupleDescriptorEClass.getESuperTypes().add(this.getTupleDescriptorCS());
-		measureFunctionEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
+		valueTupleDescriptorCSEClass.getESuperTypes().add(this.getTupleDescriptorCS());
+		measureFunctionCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(specificationCSEClass, SpecificationCS.class, "SpecificationCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSpecificationCS_Services(), this.getServiceCS(), null, "services", null, 0, -1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificationCS_Constraints(), this.getConstraintCS(), null, "constraints", null, 0, -1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSpecificationCS_Measure(), this.getMeasureFunction(), null, "measure", null, 0, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecificationCS_Measure(), this.getMeasureFunctionCS(), null, "measure", null, 0, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(serviceCSEClass, ServiceCS.class, "ServiceCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getServiceCS_Dimensions(), this.getQoSDimensionCS(), null, "dimensions", null, 0, -1, ServiceCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -632,7 +632,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEClass(qoSDimensionCSEClass, QoSDimensionCS.class, "QoSDimensionCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQoSDimensionCS_Metric(), theEssentialOCLCSPackage.getContextCS(), null, "metric", null, 1, 1, QoSDimensionCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQoSDimensionCS_TupleDescriptors(), this.getComponentResourceTupleDescriptorCS(), null, "tupleDescriptors", null, 1, -1, QoSDimensionCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQoSDimensionCS_Value(), this.getValueTupleDescriptor(), null, "value", null, 1, 1, QoSDimensionCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQoSDimensionCS_Value(), this.getValueTupleDescriptorCS(), null, "value", null, 1, 1, QoSDimensionCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constraintCSEClass, ConstraintCS.class, "ConstraintCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConstraintCS_Expression(), theEssentialOCLCSPackage.getContextCS(), null, "expression", null, 1, 1, ConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -643,8 +643,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		initEClass(resourceConstraintCSEClass, ResourceConstraintCS.class, "ResourceConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResourceConstraintCS_TupleDescriptors(), this.getComponentResourceTupleDescriptorCS(), null, "tupleDescriptors", null, 1, -1, ResourceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getResourceConstraintCS_Lhs(), this.getValueTupleDescriptor(), null, "lhs", null, 1, 1, ResourceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getResourceConstraintCS_Rhs(), this.getValueTupleDescriptor(), null, "rhs", null, 1, 1, ResourceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResourceConstraintCS_Lhs(), this.getValueTupleDescriptorCS(), null, "lhs", null, 1, 1, ResourceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResourceConstraintCS_Rhs(), this.getValueTupleDescriptorCS(), null, "rhs", null, 1, 1, ResourceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(requiredHardwareResourceInstanceConstraintCSEClass, RequiredHardwareResourceInstanceConstraintCS.class, "RequiredHardwareResourceInstanceConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRequiredHardwareResourceInstanceConstraintCS_TupleDescriptors(), this.getComponentResourceTupleDescriptorCS(), null, "tupleDescriptors", null, 1, -1, RequiredHardwareResourceInstanceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -660,11 +660,11 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEClass(componentResourceTupleDescriptorCSEClass, ComponentResourceTupleDescriptorCS.class, "ComponentResourceTupleDescriptorCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComponentResourceTupleDescriptorCS_Hwresinstance(), ecorePackage.getEString(), "hwresinstance", null, 1, 1, ComponentResourceTupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(valueTupleDescriptorEClass, ValueTupleDescriptor.class, "ValueTupleDescriptor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getValueTupleDescriptor_Value(), ecorePackage.getEString(), "value", null, 1, 1, ValueTupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(valueTupleDescriptorCSEClass, ValueTupleDescriptorCS.class, "ValueTupleDescriptorCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getValueTupleDescriptorCS_Value(), ecorePackage.getEString(), "value", null, 1, 1, ValueTupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(measureFunctionEClass, MeasureFunction.class, "MeasureFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMeasureFunction_Services(), this.getServiceCS(), null, "services", null, 0, -1, MeasureFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(measureFunctionCSEClass, MeasureFunctionCS.class, "MeasureFunctionCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMeasureFunctionCS_Services(), this.getServiceCS(), null, "services", null, 0, -1, MeasureFunctionCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(locationConstraintTypesEEnum, LocationConstraintTypes.class, "LocationConstraintTypes");

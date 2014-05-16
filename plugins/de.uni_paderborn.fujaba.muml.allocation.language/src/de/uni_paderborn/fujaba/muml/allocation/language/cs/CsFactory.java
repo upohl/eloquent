@@ -94,22 +94,22 @@ public interface CsFactory extends EFactory {
 	ComponentResourceTupleDescriptorCS createComponentResourceTupleDescriptorCS();
 
 	/**
-	 * Returns a new object of class '<em>Value Tuple Descriptor</em>'.
+	 * Returns a new object of class '<em>Value Tuple Descriptor CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Value Tuple Descriptor</em>'.
+	 * @return a new object of class '<em>Value Tuple Descriptor CS</em>'.
 	 * @generated
 	 */
-	ValueTupleDescriptor createValueTupleDescriptor();
+	ValueTupleDescriptorCS createValueTupleDescriptorCS();
 
 	/**
-	 * Returns a new object of class '<em>Measure Function</em>'.
+	 * Returns a new object of class '<em>Measure Function CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Measure Function</em>'.
+	 * @return a new object of class '<em>Measure Function CS</em>'.
 	 * @generated
 	 */
-	MeasureFunction createMeasureFunction();
+	MeasureFunctionCS createMeasureFunctionCS();
 
 	/**
 	 * Returns the package supported by this factory.

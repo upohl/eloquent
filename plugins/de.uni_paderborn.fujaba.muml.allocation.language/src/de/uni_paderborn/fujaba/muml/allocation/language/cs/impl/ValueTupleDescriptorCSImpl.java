@@ -3,32 +3,35 @@
 package de.uni_paderborn.fujaba.muml.allocation.language.cs.impl;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptor;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
+
 import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Value Tuple Descriptor</b></em>'.
+ * An implementation of the model object '<em><b>Value Tuple Descriptor CS</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ValueTupleDescriptorImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ValueTupleDescriptorCSImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ValueTupleDescriptorImpl extends TupleDescriptorCSImpl implements ValueTupleDescriptor {
+public class ValueTupleDescriptorCSImpl extends TupleDescriptorCSImpl implements ValueTupleDescriptorCS {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -54,7 +57,7 @@ public class ValueTupleDescriptorImpl extends TupleDescriptorCSImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ValueTupleDescriptorImpl() {
+	protected ValueTupleDescriptorCSImpl() {
 		super();
 	}
 
@@ -65,7 +68,7 @@ public class ValueTupleDescriptorImpl extends TupleDescriptorCSImpl implements V
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CsPackage.Literals.VALUE_TUPLE_DESCRIPTOR;
+		return CsPackage.Literals.VALUE_TUPLE_DESCRIPTOR_CS;
 	}
 
 	/**
@@ -86,7 +89,16 @@ public class ValueTupleDescriptorImpl extends TupleDescriptorCSImpl implements V
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.VALUE_TUPLE_DESCRIPTOR__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.VALUE_TUPLE_DESCRIPTOR_CS__VALUE, oldValue, value));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String toString() {
+		return super.toString();
 	}
 
 	/**
@@ -97,7 +109,7 @@ public class ValueTupleDescriptorImpl extends TupleDescriptorCSImpl implements V
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CsPackage.VALUE_TUPLE_DESCRIPTOR__VALUE:
+			case CsPackage.VALUE_TUPLE_DESCRIPTOR_CS__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -111,7 +123,7 @@ public class ValueTupleDescriptorImpl extends TupleDescriptorCSImpl implements V
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CsPackage.VALUE_TUPLE_DESCRIPTOR__VALUE:
+			case CsPackage.VALUE_TUPLE_DESCRIPTOR_CS__VALUE:
 				setValue((String)newValue);
 				return;
 		}
@@ -126,7 +138,7 @@ public class ValueTupleDescriptorImpl extends TupleDescriptorCSImpl implements V
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CsPackage.VALUE_TUPLE_DESCRIPTOR__VALUE:
+			case CsPackage.VALUE_TUPLE_DESCRIPTOR_CS__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
 		}
@@ -141,7 +153,7 @@ public class ValueTupleDescriptorImpl extends TupleDescriptorCSImpl implements V
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CsPackage.VALUE_TUPLE_DESCRIPTOR__VALUE:
+			case CsPackage.VALUE_TUPLE_DESCRIPTOR_CS__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);
@@ -154,17 +166,7 @@ public class ValueTupleDescriptorImpl extends TupleDescriptorCSImpl implements V
 	@SuppressWarnings("unchecked")
 	@Override
 	public @Nullable <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
-		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitValueTupleDescriptor(this);
+		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitValueTupleDescriptorCS(this);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		return super.toString();
-	}
-
-} //ValueTupleDescriptorImpl
+} //ValueTupleDescriptorCSImpl

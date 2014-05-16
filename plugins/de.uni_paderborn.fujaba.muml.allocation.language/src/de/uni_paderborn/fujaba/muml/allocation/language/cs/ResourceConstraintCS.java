@@ -52,12 +52,12 @@ public interface ResourceConstraintCS extends ConstraintCS {
 	 * Represents the tuple descriptor for the left-hand side of the inequality.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Lhs</em>' containment reference.
-	 * @see #setLhs(ValueTupleDescriptor)
+	 * @see #setLhs(ValueTupleDescriptorCS)
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage#getResourceConstraintCS_Lhs()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	ValueTupleDescriptor getLhs();
+	ValueTupleDescriptorCS getLhs();
 
 	/**
 	 * Sets the value of the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.ResourceConstraintCS#getLhs <em>Lhs</em>}' containment reference.
@@ -67,7 +67,7 @@ public interface ResourceConstraintCS extends ConstraintCS {
 	 * @see #getLhs()
 	 * @generated
 	 */
-	void setLhs(ValueTupleDescriptor value);
+	void setLhs(ValueTupleDescriptorCS value);
 
 	/**
 	 * Returns the value of the '<em><b>Rhs</b></em>' containment reference.
@@ -77,12 +77,12 @@ public interface ResourceConstraintCS extends ConstraintCS {
 	 * Represents the tuple descriptor for the right-hand side of the inequality.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Rhs</em>' containment reference.
-	 * @see #setRhs(ValueTupleDescriptor)
+	 * @see #setRhs(ValueTupleDescriptorCS)
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage#getResourceConstraintCS_Rhs()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	ValueTupleDescriptor getRhs();
+	ValueTupleDescriptorCS getRhs();
 
 	/**
 	 * Sets the value of the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.ResourceConstraintCS#getRhs <em>Rhs</em>}' containment reference.
@@ -92,6 +92,6 @@ public interface ResourceConstraintCS extends ConstraintCS {
 	 * @see #getRhs()
 	 * @generated
 	 */
-	void setRhs(ValueTupleDescriptor value);
+	void setRhs(ValueTupleDescriptorCS value);
 
 } // ResourceConstraintCS

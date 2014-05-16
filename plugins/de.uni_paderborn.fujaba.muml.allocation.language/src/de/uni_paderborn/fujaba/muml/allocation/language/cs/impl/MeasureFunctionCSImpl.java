@@ -3,10 +3,11 @@
 package de.uni_paderborn.fujaba.muml.allocation.language.cs.impl;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunction;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ServiceCS;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
@@ -17,23 +18,25 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
+
 import org.eclipse.ocl.examples.xtext.base.basecs.impl.ModelElementCSImpl;
+
 import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Measure Function</b></em>'.
+ * An implementation of the model object '<em><b>Measure Function CS</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.MeasureFunctionImpl#getServices <em>Services</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.MeasureFunctionCSImpl#getServices <em>Services</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class MeasureFunctionImpl extends ModelElementCSImpl implements MeasureFunction {
+public class MeasureFunctionCSImpl extends ModelElementCSImpl implements MeasureFunctionCS {
 	/**
 	 * The cached value of the '{@link #getServices() <em>Services</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -49,7 +52,7 @@ public class MeasureFunctionImpl extends ModelElementCSImpl implements MeasureFu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MeasureFunctionImpl() {
+	protected MeasureFunctionCSImpl() {
 		super();
 	}
 
@@ -60,7 +63,7 @@ public class MeasureFunctionImpl extends ModelElementCSImpl implements MeasureFu
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CsPackage.Literals.MEASURE_FUNCTION;
+		return CsPackage.Literals.MEASURE_FUNCTION_CS;
 	}
 
 	/**
@@ -70,7 +73,7 @@ public class MeasureFunctionImpl extends ModelElementCSImpl implements MeasureFu
 	 */
 	public EList<ServiceCS> getServices() {
 		if (services == null) {
-			services = new EObjectResolvingEList<ServiceCS>(ServiceCS.class, this, CsPackage.MEASURE_FUNCTION__SERVICES);
+			services = new EObjectResolvingEList<ServiceCS>(ServiceCS.class, this, CsPackage.MEASURE_FUNCTION_CS__SERVICES);
 		}
 		return services;
 	}
@@ -83,7 +86,7 @@ public class MeasureFunctionImpl extends ModelElementCSImpl implements MeasureFu
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CsPackage.MEASURE_FUNCTION__SERVICES:
+			case CsPackage.MEASURE_FUNCTION_CS__SERVICES:
 				return getServices();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -98,7 +101,7 @@ public class MeasureFunctionImpl extends ModelElementCSImpl implements MeasureFu
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CsPackage.MEASURE_FUNCTION__SERVICES:
+			case CsPackage.MEASURE_FUNCTION_CS__SERVICES:
 				getServices().clear();
 				getServices().addAll((Collection<? extends ServiceCS>)newValue);
 				return;
@@ -114,7 +117,7 @@ public class MeasureFunctionImpl extends ModelElementCSImpl implements MeasureFu
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CsPackage.MEASURE_FUNCTION__SERVICES:
+			case CsPackage.MEASURE_FUNCTION_CS__SERVICES:
 				getServices().clear();
 				return;
 		}
@@ -129,7 +132,7 @@ public class MeasureFunctionImpl extends ModelElementCSImpl implements MeasureFu
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CsPackage.MEASURE_FUNCTION__SERVICES:
+			case CsPackage.MEASURE_FUNCTION_CS__SERVICES:
 				return services != null && !services.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -142,7 +145,7 @@ public class MeasureFunctionImpl extends ModelElementCSImpl implements MeasureFu
 	@SuppressWarnings("unchecked")
 	@Override
 	public @Nullable <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
-		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitMeasureFunction(this);
+		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitMeasureFunctionCS(this);
 	}
 
-} //MeasureFunctionImpl
+} //MeasureFunctionCSImpl

@@ -7,6 +7,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ServiceCS;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -21,7 +22,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
+
 import org.eclipse.ocl.examples.xtext.base.basecs.impl.NamedElementCSImpl;
+
 import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
 
 /**

@@ -56,7 +56,7 @@ public abstract class AbstractLanguageSpecificationCSLeft2RightVisitor
 		return visitInstanceTupleDescriptorCS(csElement);
 	}
 
-	public @Nullable Element visitMeasureFunction(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunction csElement) {
+	public @Nullable Element visitMeasureFunctionCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS csElement) {
 		return visitModelElementCS(csElement);
 	}
 
@@ -84,7 +84,7 @@ public abstract class AbstractLanguageSpecificationCSLeft2RightVisitor
 		return visitModelElementCS(csElement);
 	}
 
-	public @Nullable Element visitValueTupleDescriptor(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptor csElement) {
+	public @Nullable Element visitValueTupleDescriptorCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS csElement) {
 		return visitTupleDescriptorCS(csElement);
 	}
 }

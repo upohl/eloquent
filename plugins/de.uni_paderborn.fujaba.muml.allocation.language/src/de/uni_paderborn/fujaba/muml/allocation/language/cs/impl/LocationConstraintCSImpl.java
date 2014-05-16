@@ -8,6 +8,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintTyp
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -22,8 +23,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
+
 import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
 
 /**
@@ -128,6 +131,15 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String toString() {
+		return super.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -215,16 +227,6 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	@Override
 	public @Nullable <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
 		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitLocationConstraintCS(this);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		return super.toString();
 	}
 
 } //LocationConstraintCSImpl

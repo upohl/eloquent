@@ -6,13 +6,16 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupl
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
+
 import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
 
 /**
@@ -94,6 +97,15 @@ public class ComponentResourceTupleDescriptorCSImpl extends InstanceTupleDescrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String toString() {
+		return super.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -155,16 +167,6 @@ public class ComponentResourceTupleDescriptorCSImpl extends InstanceTupleDescrip
 	@Override
 	public @Nullable <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
 		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitComponentResourceTupleDescriptorCS(this);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		return super.toString();
 	}
 
 } //ComponentResourceTupleDescriptorCSImpl

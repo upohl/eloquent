@@ -67,12 +67,12 @@ public interface SpecificationCS extends NamedElementCS {
 	 * Contains the specification of the measure function.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Measure</em>' containment reference.
-	 * @see #setMeasure(MeasureFunction)
+	 * @see #setMeasure(MeasureFunctionCS)
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage#getSpecificationCS_Measure()
 	 * @model containment="true"
 	 * @generated
 	 */
-	MeasureFunction getMeasure();
+	MeasureFunctionCS getMeasure();
 
 	/**
 	 * Sets the value of the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS#getMeasure <em>Measure</em>}' containment reference.
@@ -82,6 +82,6 @@ public interface SpecificationCS extends NamedElementCS {
 	 * @see #getMeasure()
 	 * @generated
 	 */
-	void setMeasure(MeasureFunction value);
+	void setMeasure(MeasureFunctionCS value);
 
 } // SpecificationCS

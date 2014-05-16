@@ -175,4 +175,5 @@ public abstract class ConstraintCSImpl extends NamedElementCSImpl implements Con
 		return super.eIsSet(featureID);
 	}
 
+
 } //ConstraintCSImpl

@@ -5,9 +5,10 @@ package de.uni_paderborn.fujaba.muml.allocation.language.cs.impl;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupleDescriptorCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ResourceConstraintCS;
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptor;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -22,8 +23,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
+
 import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
 
 /**
@@ -60,7 +63,7 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 	 * @generated
 	 * @ordered
 	 */
-	protected ValueTupleDescriptor lhs;
+	protected ValueTupleDescriptorCS lhs;
 
 	/**
 	 * The cached value of the '{@link #getRhs() <em>Rhs</em>}' containment reference.
@@ -70,7 +73,7 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 	 * @generated
 	 * @ordered
 	 */
-	protected ValueTupleDescriptor rhs;
+	protected ValueTupleDescriptorCS rhs;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -108,7 +111,7 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueTupleDescriptor getLhs() {
+	public ValueTupleDescriptorCS getLhs() {
 		return lhs;
 	}
 
@@ -117,8 +120,8 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLhs(ValueTupleDescriptor newLhs, NotificationChain msgs) {
-		ValueTupleDescriptor oldLhs = lhs;
+	public NotificationChain basicSetLhs(ValueTupleDescriptorCS newLhs, NotificationChain msgs) {
+		ValueTupleDescriptorCS oldLhs = lhs;
 		lhs = newLhs;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.RESOURCE_CONSTRAINT_CS__LHS, oldLhs, newLhs);
@@ -132,7 +135,7 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLhs(ValueTupleDescriptor newLhs) {
+	public void setLhs(ValueTupleDescriptorCS newLhs) {
 		if (newLhs != lhs) {
 			NotificationChain msgs = null;
 			if (lhs != null)
@@ -151,7 +154,7 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueTupleDescriptor getRhs() {
+	public ValueTupleDescriptorCS getRhs() {
 		return rhs;
 	}
 
@@ -160,8 +163,8 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRhs(ValueTupleDescriptor newRhs, NotificationChain msgs) {
-		ValueTupleDescriptor oldRhs = rhs;
+	public NotificationChain basicSetRhs(ValueTupleDescriptorCS newRhs, NotificationChain msgs) {
+		ValueTupleDescriptorCS oldRhs = rhs;
 		rhs = newRhs;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.RESOURCE_CONSTRAINT_CS__RHS, oldRhs, newRhs);
@@ -175,7 +178,7 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRhs(ValueTupleDescriptor newRhs) {
+	public void setRhs(ValueTupleDescriptorCS newRhs) {
 		if (newRhs != rhs) {
 			NotificationChain msgs = null;
 			if (rhs != null)
@@ -239,10 +242,10 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 				getTupleDescriptors().addAll((Collection<? extends ComponentResourceTupleDescriptorCS>)newValue);
 				return;
 			case CsPackage.RESOURCE_CONSTRAINT_CS__LHS:
-				setLhs((ValueTupleDescriptor)newValue);
+				setLhs((ValueTupleDescriptorCS)newValue);
 				return;
 			case CsPackage.RESOURCE_CONSTRAINT_CS__RHS:
-				setRhs((ValueTupleDescriptor)newValue);
+				setRhs((ValueTupleDescriptorCS)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -260,10 +263,10 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 				getTupleDescriptors().clear();
 				return;
 			case CsPackage.RESOURCE_CONSTRAINT_CS__LHS:
-				setLhs((ValueTupleDescriptor)null);
+				setLhs((ValueTupleDescriptorCS)null);
 				return;
 			case CsPackage.RESOURCE_CONSTRAINT_CS__RHS:
-				setRhs((ValueTupleDescriptor)null);
+				setRhs((ValueTupleDescriptorCS)null);
 				return;
 		}
 		super.eUnset(featureID);

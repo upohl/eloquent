@@ -123,12 +123,12 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 				return createComponentResourceTupleDescriptorCSAdapter();
 			}
 			@Override
-			public Adapter caseValueTupleDescriptor(ValueTupleDescriptor object) {
-				return createValueTupleDescriptorAdapter();
+			public Adapter caseValueTupleDescriptorCS(ValueTupleDescriptorCS object) {
+				return createValueTupleDescriptorCSAdapter();
 			}
 			@Override
-			public Adapter caseMeasureFunction(MeasureFunction object) {
-				return createMeasureFunctionAdapter();
+			public Adapter caseMeasureFunctionCS(MeasureFunctionCS object) {
+				return createMeasureFunctionCSAdapter();
 			}
 			@Override
 			public Adapter caseVisitableCS(VisitableCS object) {
@@ -333,30 +333,30 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptor <em>Value Tuple Descriptor</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS <em>Value Tuple Descriptor CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptor
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS
 	 * @generated
 	 */
-	public Adapter createValueTupleDescriptorAdapter() {
+	public Adapter createValueTupleDescriptorCSAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunction <em>Measure Function</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS <em>Measure Function CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunction
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS
 	 * @generated
 	 */
-	public Adapter createMeasureFunctionAdapter() {
+	public Adapter createMeasureFunctionCSAdapter() {
 		return null;
 	}
 

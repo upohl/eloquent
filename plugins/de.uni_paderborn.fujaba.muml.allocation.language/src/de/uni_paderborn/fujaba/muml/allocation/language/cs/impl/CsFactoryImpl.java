@@ -65,8 +65,8 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 			case CsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS: return createRequiredHardwareResourceInstanceConstraintCS();
 			case CsPackage.LOCATION_TUPLE_DESCRIPTOR_CS: return createLocationTupleDescriptorCS();
 			case CsPackage.COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS: return createComponentResourceTupleDescriptorCS();
-			case CsPackage.VALUE_TUPLE_DESCRIPTOR: return createValueTupleDescriptor();
-			case CsPackage.MEASURE_FUNCTION: return createMeasureFunction();
+			case CsPackage.VALUE_TUPLE_DESCRIPTOR_CS: return createValueTupleDescriptorCS();
+			case CsPackage.MEASURE_FUNCTION_CS: return createMeasureFunctionCS();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -187,9 +187,9 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueTupleDescriptor createValueTupleDescriptor() {
-		ValueTupleDescriptorImpl valueTupleDescriptor = new ValueTupleDescriptorImpl();
-		return valueTupleDescriptor;
+	public ValueTupleDescriptorCS createValueTupleDescriptorCS() {
+		ValueTupleDescriptorCSImpl valueTupleDescriptorCS = new ValueTupleDescriptorCSImpl();
+		return valueTupleDescriptorCS;
 	}
 
 	/**
@@ -197,9 +197,9 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MeasureFunction createMeasureFunction() {
-		MeasureFunctionImpl measureFunction = new MeasureFunctionImpl();
-		return measureFunction;
+	public MeasureFunctionCS createMeasureFunctionCS() {
+		MeasureFunctionCSImpl measureFunctionCS = new MeasureFunctionCSImpl();
+		return measureFunctionCS;
 	}
 
 	/**

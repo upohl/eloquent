@@ -5,9 +5,10 @@ package de.uni_paderborn.fujaba.muml.allocation.language.cs.impl;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupleDescriptorCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS;
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptor;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -25,9 +26,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
+
 import org.eclipse.ocl.examples.xtext.base.basecs.impl.NamedElementCSImpl;
 
 import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
+
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
 
 /**
@@ -74,7 +77,7 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	 * @generated
 	 * @ordered
 	 */
-	protected ValueTupleDescriptor value;
+	protected ValueTupleDescriptorCS value;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -155,7 +158,7 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueTupleDescriptor getValue() {
+	public ValueTupleDescriptorCS getValue() {
 		return value;
 	}
 
@@ -164,8 +167,8 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue(ValueTupleDescriptor newValue, NotificationChain msgs) {
-		ValueTupleDescriptor oldValue = value;
+	public NotificationChain basicSetValue(ValueTupleDescriptorCS newValue, NotificationChain msgs) {
+		ValueTupleDescriptorCS oldValue = value;
 		value = newValue;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.QO_SDIMENSION_CS__VALUE, oldValue, newValue);
@@ -179,7 +182,7 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(ValueTupleDescriptor newValue) {
+	public void setValue(ValueTupleDescriptorCS newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
 			if (value != null)
@@ -246,7 +249,7 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 				getTupleDescriptors().addAll((Collection<? extends ComponentResourceTupleDescriptorCS>)newValue);
 				return;
 			case CsPackage.QO_SDIMENSION_CS__VALUE:
-				setValue((ValueTupleDescriptor)newValue);
+				setValue((ValueTupleDescriptorCS)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -267,7 +270,7 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 				getTupleDescriptors().clear();
 				return;
 			case CsPackage.QO_SDIMENSION_CS__VALUE:
-				setValue((ValueTupleDescriptor)null);
+				setValue((ValueTupleDescriptorCS)null);
 				return;
 		}
 		super.eUnset(featureID);

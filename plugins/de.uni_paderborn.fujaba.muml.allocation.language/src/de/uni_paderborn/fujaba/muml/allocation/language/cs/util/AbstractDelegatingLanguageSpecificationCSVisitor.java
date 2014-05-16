@@ -55,8 +55,8 @@ public abstract class AbstractDelegatingLanguageSpecificationCSVisitor<R, C, D e
 	}
 
 	@Override
-	public @Nullable R visitMeasureFunction(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunction object) {
-		return delegate.visitMeasureFunction(object);
+	public @Nullable R visitMeasureFunctionCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS object) {
+		return delegate.visitMeasureFunctionCS(object);
 	}
 
 	@Override
@@ -90,7 +90,7 @@ public abstract class AbstractDelegatingLanguageSpecificationCSVisitor<R, C, D e
 	}
 
 	@Override
-	public @Nullable R visitValueTupleDescriptor(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptor object) {
-		return delegate.visitValueTupleDescriptor(object);
+	public @Nullable R visitValueTupleDescriptorCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS object) {
+		return delegate.visitValueTupleDescriptorCS(object);
 	}
 }

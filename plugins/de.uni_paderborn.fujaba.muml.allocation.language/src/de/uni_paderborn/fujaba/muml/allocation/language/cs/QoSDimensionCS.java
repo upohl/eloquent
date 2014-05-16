@@ -80,12 +80,12 @@ public interface QoSDimensionCS extends NamedElementCS {
 	 * Represents the tuple descriptor for the value.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Value</em>' containment reference.
-	 * @see #setValue(ValueTupleDescriptor)
+	 * @see #setValue(ValueTupleDescriptorCS)
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage#getQoSDimensionCS_Value()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	ValueTupleDescriptor getValue();
+	ValueTupleDescriptorCS getValue();
 
 	/**
 	 * Sets the value of the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS#getValue <em>Value</em>}' containment reference.
@@ -95,6 +95,6 @@ public interface QoSDimensionCS extends NamedElementCS {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(ValueTupleDescriptor value);
+	void setValue(ValueTupleDescriptorCS value);
 
 } // QoSDimensionCS

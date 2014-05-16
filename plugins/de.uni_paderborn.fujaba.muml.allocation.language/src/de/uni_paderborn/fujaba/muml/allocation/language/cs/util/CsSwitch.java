@@ -220,26 +220,26 @@ public class CsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CsPackage.VALUE_TUPLE_DESCRIPTOR: {
-				ValueTupleDescriptor valueTupleDescriptor = (ValueTupleDescriptor)theEObject;
-				T result = caseValueTupleDescriptor(valueTupleDescriptor);
-				if (result == null) result = caseTupleDescriptorCS(valueTupleDescriptor);
-				if (result == null) result = caseModelElementCS(valueTupleDescriptor);
-				if (result == null) result = casePivotableElementCS(valueTupleDescriptor);
-				if (result == null) result = caseElementCS(valueTupleDescriptor);
-				if (result == null) result = casePivotable(valueTupleDescriptor);
-				if (result == null) result = caseVisitableCS(valueTupleDescriptor);
+			case CsPackage.VALUE_TUPLE_DESCRIPTOR_CS: {
+				ValueTupleDescriptorCS valueTupleDescriptorCS = (ValueTupleDescriptorCS)theEObject;
+				T result = caseValueTupleDescriptorCS(valueTupleDescriptorCS);
+				if (result == null) result = caseTupleDescriptorCS(valueTupleDescriptorCS);
+				if (result == null) result = caseModelElementCS(valueTupleDescriptorCS);
+				if (result == null) result = casePivotableElementCS(valueTupleDescriptorCS);
+				if (result == null) result = caseElementCS(valueTupleDescriptorCS);
+				if (result == null) result = casePivotable(valueTupleDescriptorCS);
+				if (result == null) result = caseVisitableCS(valueTupleDescriptorCS);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CsPackage.MEASURE_FUNCTION: {
-				MeasureFunction measureFunction = (MeasureFunction)theEObject;
-				T result = caseMeasureFunction(measureFunction);
-				if (result == null) result = caseModelElementCS(measureFunction);
-				if (result == null) result = casePivotableElementCS(measureFunction);
-				if (result == null) result = caseElementCS(measureFunction);
-				if (result == null) result = casePivotable(measureFunction);
-				if (result == null) result = caseVisitableCS(measureFunction);
+			case CsPackage.MEASURE_FUNCTION_CS: {
+				MeasureFunctionCS measureFunctionCS = (MeasureFunctionCS)theEObject;
+				T result = caseMeasureFunctionCS(measureFunctionCS);
+				if (result == null) result = caseModelElementCS(measureFunctionCS);
+				if (result == null) result = casePivotableElementCS(measureFunctionCS);
+				if (result == null) result = caseElementCS(measureFunctionCS);
+				if (result == null) result = casePivotable(measureFunctionCS);
+				if (result == null) result = caseVisitableCS(measureFunctionCS);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -413,32 +413,32 @@ public class CsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Value Tuple Descriptor</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Value Tuple Descriptor CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Value Tuple Descriptor</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Value Tuple Descriptor CS</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseValueTupleDescriptor(ValueTupleDescriptor object) {
+	public T caseValueTupleDescriptorCS(ValueTupleDescriptorCS object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Measure Function</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Measure Function CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Measure Function</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Measure Function CS</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMeasureFunction(MeasureFunction object) {
+	public T caseMeasureFunctionCS(MeasureFunctionCS object) {
 		return null;
 	}
 
