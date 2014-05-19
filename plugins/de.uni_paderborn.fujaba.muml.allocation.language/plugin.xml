@@ -41,4 +41,12 @@
             genModel="model-gen/LanguageSpecificationAS.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated OCLContext -->
+      <package
+            uri="http://www.fujaba.de/muml/allocation/language/0.1.0/context"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.context.ContextPackage"
+            genModel="model/OCLContext.genmodel"/>
+   </extension>
+
 </plugin>
