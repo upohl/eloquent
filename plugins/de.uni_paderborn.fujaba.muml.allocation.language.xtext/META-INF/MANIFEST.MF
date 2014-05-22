@@ -13,8 +13,22 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.emf.mwe.utils;resolution:=optional,
  org.eclipse.emf.mwe2.launch;resolution:=optional,
  de.uni_paderborn.fujaba.muml.allocation.language,
- org.eclipse.ocl.examples.xtext.essentialocl;bundle-version="3.4.0"
-Import-Package: org.apache.log4j
+ org.eclipse.ocl.examples.xtext.essentialocl;bundle-version="3.4.0",
+ org.eclipse.xtext.util,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types
+Import-Package: org.apache.log4j,
+ org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: de.uni_paderborn.fujaba.muml.allocation.language.cs2as,
- de.uni_paderborn.fujaba.muml.allocation.language.resource
+ de.uni_paderborn.fujaba.muml.allocation.language.resource,
+ de.uni_paderborn.fujaba.muml.allocation.language,
+ de.uni_paderborn.fujaba.muml.allocation.language.services,
+ de.uni_paderborn.fujaba.muml.allocation.language.serializer,
+ de.uni_paderborn.fujaba.muml.allocation.language.parser.antlr,
+ de.uni_paderborn.fujaba.muml.allocation.language.parser.antlr.internal,
+ de.uni_paderborn.fujaba.muml.allocation.language.validation,
+ de.uni_paderborn.fujaba.muml.allocation.language.scoping,
+ de.uni_paderborn.fujaba.muml.allocation.language.generator,
+ de.uni_paderborn.fujaba.muml.allocation.language.formatting
+
