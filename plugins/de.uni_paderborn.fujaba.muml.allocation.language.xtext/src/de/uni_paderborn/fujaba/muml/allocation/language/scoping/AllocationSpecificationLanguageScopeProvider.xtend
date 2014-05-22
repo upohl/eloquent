@@ -3,6 +3,11 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.language.scoping
 
+import org.eclipse.xtext.scoping.IScope
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.EReference
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS
+
 /**
  * This class contains custom scoping description.
  * 
@@ -11,5 +16,25 @@ package de.uni_paderborn.fujaba.muml.allocation.language.scoping
  *
  */
 class AllocationSpecificationLanguageScopeProvider extends org.eclipse.ocl.examples.xtext.essentialocl.scoping.EssentialOCLScopeProvider {
-
+	
+	override IScope getScope(EObject context, EReference reference) {
+		if (context instanceof MeasureFunctionCS) {
+			polymorphicGetScope(context, reference)
+		} else {
+			super.getScope(context, reference)	
+		}
+	}
+	
+	// copied (and xtend-ified) from org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider.getScope
+	// because getScope is overridden by a superclass
+	def protected IScope polymorphicGetScope(EObject context, EReference reference) {
+		var IScope scope = polymorphicFindScopeForReferenceName(context, reference)
+		if (scope == null) {
+			scope = polymorphicFindScopeForClassName(context, reference)
+			if (scope == null) {
+				scope = delegateGetScope(context, reference)
+			}
+		}
+		scope
+	}
 }
