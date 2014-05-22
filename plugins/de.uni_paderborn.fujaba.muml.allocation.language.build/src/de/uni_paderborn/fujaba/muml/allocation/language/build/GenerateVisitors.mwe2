@@ -1,9 +1,6 @@
 module de.uni_paderborn.fujaba.muml.allocation.language.build.GenerateVisitors
 
 import org.eclipse.emf.ecore.resource.ResourceSet
-import org.eclipse.ocl.examples.build.utilities.GenModelSetup
-import org.eclipse.ocl.examples.build.utilities.UMLGenModelSetup
-import de.uni_paderborn.fujaba.muml.allocation.language.build.PivotModelSetup
 
 /**
  * The resourceSet
@@ -21,8 +18,6 @@ var String asGenModelURI = "platform:/resource/de.uni_paderborn.fujaba.muml.allo
 var String visitorPackageDirectory = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/visitor" 
 
 Workflow {
-	bean = GenModelSetup { resourceSet = resourceSet }
-	bean = PivotModelSetup { resourceSet = resourceSet }
 	
 	// generate containment visitor
 	component = GenerateContainmentVisitor {
