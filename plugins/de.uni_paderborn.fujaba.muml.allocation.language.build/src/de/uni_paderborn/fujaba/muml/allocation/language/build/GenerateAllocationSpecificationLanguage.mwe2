@@ -3,6 +3,9 @@ module de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecificationL
 import org.eclipse.emf.mwe.utils.*
 import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
+import org.eclipse.ocl.examples.build.fragments.MarkupHoverFragment
+import de.uni_paderborn.fujaba.muml.allocation.language.build.GenerateVisitors
 import de.uni_paderborn.fujaba.muml.allocation.language.build.GuiceBindingFragment
 
 var grammarURI = "classpath:/de/uni_paderborn/fujaba/muml/allocation/language/AllocationSpecificationLanguage.xtext"
@@ -12,9 +15,11 @@ var runtimeProject = "../${projectName}"
 var generateXtendStub = true
 
 Workflow {
+	bean = ResourceSetImpl : resourceSet {}
 	bean = StandaloneSetup {
 		scanClassPath  = true
 		platformUri = "${runtimeProject}/.."
+		resourceSet = resourceSet
 		registerGeneratedEPackage = "de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage"
 		registerGenModelFile = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.genmodel"
 	}
@@ -25,6 +30,11 @@ Workflow {
 
 	component = DirectoryCleaner {
 		directory = "${runtimeProject}.ui/src-gen"
+	}
+	
+	// generate CS visitors
+	component = @GenerateVisitors {
+		resourceSet = resourceSet
 	}
 
 	component = Generator {
@@ -71,7 +81,8 @@ Workflow {
 			// composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
 			//}
 			
-			// we have to use the old java validator
+			// we have to use the old java validator, because the EssentialOCL
+			// language does so
 			fragment = validation.JavaValidatorFragment {}			
 
 			// old scoping and exporting API 
@@ -133,10 +144,13 @@ Workflow {
 			fragment = templates.CodetemplatesGeneratorFragment auto-inject {}
 
 			// provides a compare view
-            fragment = compare.CompareFragment auto-inject {}
-            
-            // provides our own module bindings
-            fragment = GuiceBindingFragment {}
+			fragment = compare.CompareFragment auto-inject {}
+			
+			// provides our own module bindings + the EssentialOCL specific bindings
+			fragment = GuiceBindingFragment {}
+			
+			// also use EssentialOCL's MarkupHoverFragmet (just needed for the UI (editor))
+			fragment = MarkupHoverFragment {}
 		}
 	}
 }

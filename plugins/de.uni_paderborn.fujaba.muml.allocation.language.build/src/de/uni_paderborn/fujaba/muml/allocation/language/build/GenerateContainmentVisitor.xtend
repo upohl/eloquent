@@ -1,28 +1,22 @@
 package de.uni_paderborn.fujaba.muml.allocation.language.build
 
-import org.eclipse.emf.mwe.core.WorkflowContext
-import org.eclipse.emf.mwe.core.issues.Issues
-import org.eclipse.emf.mwe.core.lib.AbstractWorkflowComponent
-import org.eclipse.emf.mwe.core.monitor.ProgressMonitor
+import java.util.HashMap
+import java.util.Map
+import org.eclipse.emf.codegen.ecore.genmodel.GenClass
+import org.eclipse.emf.codegen.ecore.genmodel.GenFeature
 import org.eclipse.emf.codegen.ecore.genmodel.GenModel
-import org.eclipse.emf.ecore.resource.Resource
-import org.eclipse.emf.ecore.resource.ResourceSet
+import org.eclipse.emf.codegen.ecore.genmodel.GenPackage
 import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.EClass
-import org.eclipse.emf.codegen.ecore.genmodel.GenClass
 import org.eclipse.emf.ecore.EReference
-import org.eclipse.emf.codegen.ecore.genmodel.GenPackage
-import java.util.Map
-import java.util.HashMap
-import org.eclipse.emf.codegen.ecore.genmodel.GenFeature
-import java.io.FileWriter
-import java.io.File
-import org.eclipse.emf.ecore.plugin.EcorePlugin
+import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.emf.ecore.resource.ResourceSet
+import org.eclipse.emf.mwe.core.issues.Issues
 
 // TODO: also set attributes (minor feature)
 // code needs a bit more love and comments
 
-class GenerateContainmentVisitor extends AbstractWorkflowComponent {
+class GenerateContainmentVisitor extends GenerateVisitor {
 	
 	/**
 	 * The uri to the cs genmodel
@@ -35,29 +29,9 @@ class GenerateContainmentVisitor extends AbstractWorkflowComponent {
 	private String asGenModelURI
 	
 	/**
-	 * The class name of the containment visitor
+	 * The resource set
 	 */
-	 private String className
-	 
-	 /**
-	  * The fully qualified name of the abstract containment visitor class
-	  */
-	 private String fqBaseClassName
-	
-	/**
-	 * The qualified package name to which the generated visitor belongs to
-	 */
-	private String packageName
-	
-	/**
-	 * The filename
-	 */
-	private String filename
-	 
-	 /**
-	  * The resource set
-	  */
-	 private ResourceSet resourceSet
+	private ResourceSet resourceSet
 	
 	def public void setCsGenModelURI(String csGenModelURI) {
 		this.csGenModelURI = csGenModelURI
@@ -67,65 +41,31 @@ class GenerateContainmentVisitor extends AbstractWorkflowComponent {
 		this.asGenModelURI = asGenModelURI
 	}
 	
-	def public void setClassName(String className) {
-		this.className = className
-	}
-	
-	def public void setFqBaseClassName(String fqBaseClassName) {
-		this.fqBaseClassName = fqBaseClassName
-	}
-	
-	def public void setPackageName(String packageName) {
-		this.packageName = packageName
-	}
-	
-	def public void setFilename(String filename) {
-		this.filename = filename;
-	}
-	
 	def public void setResourceSet(ResourceSet resourceSet) {
 		this.resourceSet = resourceSet;
 	}
 	
 	override checkConfiguration(Issues issues) {
+		super.checkConfiguration(issues)
 		if (csGenModelURI == null) {
 			issues.addError("csGenModelURI must not be null")
 		}
 		if (asGenModelURI == null) {
 			issues.addError("asGenModelURI must not be null")
 		}
-		if (className == null) {
-			issues.addError("className must not be null")
-		}
-		if (fqBaseClassName == null) {
-			issues.addError("baseClassName must not be null")
-		}
-		if (packageName == null) {
-			issues.addError("packageName must not be null")
-		}
-		if (filename == null) {
-			issues.addError("filename must not be null")
-		}
 		if (resourceSet == null) {
 			issues.addError("resourceSet must not be null")
 		}
 	}
 	
-	def private String calculateFilename() {
-		// this is ugly and insane...
-		val URI filenameURI = URI.createURI(filename)
-		val String projectName = filenameURI.segment(1)
-		val URI projectURI = EcorePlugin.getPlatformResourceMap().get(projectName)
-		val URI relativeURI = filenameURI.deresolve(URI.createURI("platform:/resource/" + projectName + "/", true))
-		relativeURI.resolve(projectURI).toFileString
-	}
-	
-	override protected invokeInternal(WorkflowContext ctx, ProgressMonitor monitor, Issues issues) {
-		val FileWriter fileWriter = new FileWriter(new File(calculateFilename))
-		// this not really clever... in a perfect world we would
-		// write after each template was called
-		fileWriter.write(generateContainmentVisitor) // we do not care about IOExceptions...
-		fileWriter.close()
+	override String generateImports() {
+		'''
+		import org.eclipse.jdt.annotation.NonNull;
+		import org.eclipse.jdt.annotation.Nullable;
+		import org.eclipse.ocl.examples.xtext.base.cs2as.Continuation;
+		import org.eclipse.ocl.examples.pivot.utilities.PivotUtil;
+		«super.generateImports»
+		'''
 	}
 	
 	def private GenModel loadGenModel(String genModelURI) {
@@ -137,41 +77,14 @@ class GenerateContainmentVisitor extends AbstractWorkflowComponent {
 	private GenModel csGenModel;
 	private GenModel asGenModel;
 	
-	def protected String generateContainmentVisitor() {
+	override protected String generateMethods() {
 		csGenModel = loadGenModel(csGenModelURI)
 		asGenModel = loadGenModel(asGenModelURI)
 		'''
-		package «packageName»;
-		«generateImports()»
-		
-		// generated code: do NOT edit (file is overwritten on regeneration)
-		
-		public class «className»«IF fqBaseClassName != null» extends «fqBaseClassName»«ENDIF» {
-			«generateConstructor()»
-			
-			«FOR genClass : csGenModel.genPackages.get(0).genClasses»
+		«FOR genClass : csGenModel.genPackages.get(0).genClasses»
 				«genClass.generateMethod»
 				
-			«ENDFOR»
-		}
-		'''
-	}
-	
-	def protected String generateImports() {
-		'''
-		import org.eclipse.jdt.annotation.NonNull;
-		import org.eclipse.jdt.annotation.Nullable;
-		import org.eclipse.ocl.examples.xtext.base.cs2as.CS2PivotConversion;
-		import org.eclipse.ocl.examples.xtext.base.cs2as.Continuation;
-		import org.eclipse.ocl.examples.pivot.utilities.PivotUtil;
-		'''
-	}
-	
-	def protected String generateConstructor() {
-		'''
-		public «className»(CS2PivotConversion context) {
-			super(context);
-		}
+		«ENDFOR»
 		'''
 	}
 	

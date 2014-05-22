@@ -1,0 +1,61 @@
+module de.uni_paderborn.fujaba.muml.allocation.language.build.GenerateVisitors
+
+import org.eclipse.emf.ecore.resource.ResourceSet
+import org.eclipse.ocl.examples.build.utilities.GenModelSetup
+import org.eclipse.ocl.examples.build.utilities.UMLGenModelSetup
+import de.uni_paderborn.fujaba.muml.allocation.language.build.PivotModelSetup
+
+/**
+ * The resourceSet
+ */
+var ResourceSet resourceSet
+
+var String visitorPackageName = "de.uni_paderborn.fujaba.muml.allocation.language.visitor"
+var String baseClassPackageName = "de.uni_paderborn.fujaba.muml.allocation.language.cs.util"
+var String csGenModelURI = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.genmodel"
+var String asGenModelURI = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model-gen/LanguageSpecificationAS.genmodel"
+
+/**
+ * URI to the visitor package directory (has to be a platform URI)
+ */
+var String visitorPackageDirectory = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/visitor" 
+
+Workflow {
+	bean = GenModelSetup { resourceSet = resourceSet }
+	bean = PivotModelSetup { resourceSet = resourceSet }
+	
+	// generate containment visitor
+	component = GenerateContainmentVisitor {
+		csGenModelURI = csGenModelURI
+		asGenModelURI = asGenModelURI
+		className = "LanguageSpecificationCSContainmentVisitor"
+		fqBaseClassName = "${baseClassPackageName}.AbstractLanguageSpecificationCSContainmentVisitor"
+		packageName = visitorPackageName
+		filename = "${visitorPackageDirectory}/LanguageSpecificationCSContainmentVisitor.java"
+		resourceSet = resourceSet
+	}
+	
+	// generate left2right visitor
+	component = GenerateVisitor {
+		className = "LanguageSpecificationCSLeft2RightVisitor"
+		fqBaseClassName = "${baseClassPackageName}.AbstractLanguageSpecificationCSLeft2RightVisitor"
+		packageName = visitorPackageName
+		filename = "${visitorPackageDirectory}/LanguageSpecificationCSLeft2RightVisitor.java"
+	}
+	
+	// generate post-order visitor
+	component = GenerateVisitor {
+		className = "LanguageSpecificationCSPostOrderVisitor"
+		fqBaseClassName = "${baseClassPackageName}.AbstractLanguageSpecificationCSPostOrderVisitor"
+		packageName = visitorPackageName
+		filename = "${visitorPackageDirectory}/LanguageSpecificationCSPostOrderVisitor.java"
+	}
+	
+	// generate pre-order visitor
+	component = GenerateVisitor {
+		className = "LanguageSpecificationCSPreOrderVisitor"
+		fqBaseClassName = "${baseClassPackageName}.AbstractLanguageSpecificationCSPreOrderVisitor"
+		packageName = visitorPackageName
+		filename = "${visitorPackageDirectory}/LanguageSpecificationCSPreOrderVisitor.java"
+	}
+}
