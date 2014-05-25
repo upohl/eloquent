@@ -10007,29 +10007,40 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "rule__Specification__Group__4__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3122:1: rule__Specification__Group__4__Impl : ( ( rule__Specification__MeasureAssignment_4 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3122:1: rule__Specification__Group__4__Impl : ( ( rule__Specification__MeasureAssignment_4 )? ) ;
     public final void rule__Specification__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3126:1: ( ( ( rule__Specification__MeasureAssignment_4 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3127:1: ( ( rule__Specification__MeasureAssignment_4 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3126:1: ( ( ( rule__Specification__MeasureAssignment_4 )? ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3127:1: ( ( rule__Specification__MeasureAssignment_4 )? )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3127:1: ( ( rule__Specification__MeasureAssignment_4 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3128:1: ( rule__Specification__MeasureAssignment_4 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3127:1: ( ( rule__Specification__MeasureAssignment_4 )? )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3128:1: ( rule__Specification__MeasureAssignment_4 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSpecificationAccess().getMeasureAssignment_4()); 
             }
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3129:1: ( rule__Specification__MeasureAssignment_4 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3129:2: rule__Specification__MeasureAssignment_4
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__Specification__MeasureAssignment_4_in_rule__Specification__Group__4__Impl6779);
-            rule__Specification__MeasureAssignment_4();
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3129:1: ( rule__Specification__MeasureAssignment_4 )?
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            state._fsp--;
-            if (state.failed) return ;
+            if ( (LA29_0==66) ) {
+                alt29=1;
+            }
+            switch (alt29) {
+                case 1 :
+                    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3129:2: rule__Specification__MeasureAssignment_4
+                    {
+                    pushFollow(FollowSets000.FOLLOW_rule__Specification__MeasureAssignment_4_in_rule__Specification__Group__4__Impl6779);
+                    rule__Specification__MeasureAssignment_4();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
 
             }
 
@@ -10067,7 +10078,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3143:1: ( rule__Specification__Group__5__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3144:2: rule__Specification__Group__5__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Specification__Group__5__Impl_in_rule__Specification__Group__56809);
+            pushFollow(FollowSets000.FOLLOW_rule__Specification__Group__5__Impl_in_rule__Specification__Group__56810);
             rule__Specification__Group__5__Impl();
 
             state._fsp--;
@@ -10106,7 +10117,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSpecificationAccess().getRightCurlyBracketKeyword_5()); 
             }
-            match(input,51,FollowSets000.FOLLOW_51_in_rule__Specification__Group__5__Impl6837); if (state.failed) return ;
+            match(input,51,FollowSets000.FOLLOW_51_in_rule__Specification__Group__5__Impl6838); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSpecificationAccess().getRightCurlyBracketKeyword_5()); 
             }
@@ -10141,12 +10152,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3185:1: ( rule__Service__Group__0__Impl rule__Service__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3186:2: rule__Service__Group__0__Impl rule__Service__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__0__Impl_in_rule__Service__Group__06880);
+            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__0__Impl_in_rule__Service__Group__06881);
             rule__Service__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__1_in_rule__Service__Group__06883);
+            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__1_in_rule__Service__Group__06884);
             rule__Service__Group__1();
 
             state._fsp--;
@@ -10185,7 +10196,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getServiceAccess().getServiceKeyword_0()); 
             }
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__Service__Group__0__Impl6911); if (state.failed) return ;
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__Service__Group__0__Impl6912); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getServiceAccess().getServiceKeyword_0()); 
             }
@@ -10220,12 +10231,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3216:1: ( rule__Service__Group__1__Impl rule__Service__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3217:2: rule__Service__Group__1__Impl rule__Service__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__1__Impl_in_rule__Service__Group__16942);
+            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__1__Impl_in_rule__Service__Group__16943);
             rule__Service__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__2_in_rule__Service__Group__16945);
+            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__2_in_rule__Service__Group__16946);
             rule__Service__Group__2();
 
             state._fsp--;
@@ -10267,7 +10278,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3231:1: ( rule__Service__NameAssignment_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3231:2: rule__Service__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Service__NameAssignment_1_in_rule__Service__Group__1__Impl6972);
+            pushFollow(FollowSets000.FOLLOW_rule__Service__NameAssignment_1_in_rule__Service__Group__1__Impl6973);
             rule__Service__NameAssignment_1();
 
             state._fsp--;
@@ -10309,12 +10320,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3245:1: ( rule__Service__Group__2__Impl rule__Service__Group__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3246:2: rule__Service__Group__2__Impl rule__Service__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__2__Impl_in_rule__Service__Group__27002);
+            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__2__Impl_in_rule__Service__Group__27003);
             rule__Service__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__3_in_rule__Service__Group__27005);
+            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__3_in_rule__Service__Group__27006);
             rule__Service__Group__3();
 
             state._fsp--;
@@ -10353,7 +10364,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getServiceAccess().getLeftCurlyBracketKeyword_2()); 
             }
-            match(input,50,FollowSets000.FOLLOW_50_in_rule__Service__Group__2__Impl7033); if (state.failed) return ;
+            match(input,50,FollowSets000.FOLLOW_50_in_rule__Service__Group__2__Impl7034); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getServiceAccess().getLeftCurlyBracketKeyword_2()); 
             }
@@ -10388,12 +10399,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3276:1: ( rule__Service__Group__3__Impl rule__Service__Group__4 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3277:2: rule__Service__Group__3__Impl rule__Service__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__3__Impl_in_rule__Service__Group__37064);
+            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__3__Impl_in_rule__Service__Group__37065);
             rule__Service__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__4_in_rule__Service__Group__37067);
+            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__4_in_rule__Service__Group__37068);
             rule__Service__Group__4();
 
             state._fsp--;
@@ -10433,21 +10444,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getServiceAccess().getDimensionsAssignment_3()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3291:1: ( rule__Service__DimensionsAssignment_3 )*
-            loop29:
+            loop30:
             do {
-                int alt29=2;
-                int LA29_0 = input.LA(1);
+                int alt30=2;
+                int LA30_0 = input.LA(1);
 
-                if ( (LA29_0==53) ) {
-                    alt29=1;
+                if ( (LA30_0==53) ) {
+                    alt30=1;
                 }
 
 
-                switch (alt29) {
+                switch (alt30) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3291:2: rule__Service__DimensionsAssignment_3
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Service__DimensionsAssignment_3_in_rule__Service__Group__3__Impl7094);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Service__DimensionsAssignment_3_in_rule__Service__Group__3__Impl7095);
             	    rule__Service__DimensionsAssignment_3();
 
             	    state._fsp--;
@@ -10457,7 +10468,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop29;
+            	    break loop30;
                 }
             } while (true);
 
@@ -10495,7 +10506,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3305:1: ( rule__Service__Group__4__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3306:2: rule__Service__Group__4__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__4__Impl_in_rule__Service__Group__47125);
+            pushFollow(FollowSets000.FOLLOW_rule__Service__Group__4__Impl_in_rule__Service__Group__47126);
             rule__Service__Group__4__Impl();
 
             state._fsp--;
@@ -10534,7 +10545,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getServiceAccess().getRightCurlyBracketKeyword_4()); 
             }
-            match(input,51,FollowSets000.FOLLOW_51_in_rule__Service__Group__4__Impl7153); if (state.failed) return ;
+            match(input,51,FollowSets000.FOLLOW_51_in_rule__Service__Group__4__Impl7154); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getServiceAccess().getRightCurlyBracketKeyword_4()); 
             }
@@ -10569,12 +10580,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3345:1: ( rule__QosDimension__Group__0__Impl rule__QosDimension__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3346:2: rule__QosDimension__Group__0__Impl rule__QosDimension__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__0__Impl_in_rule__QosDimension__Group__07194);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__0__Impl_in_rule__QosDimension__Group__07195);
             rule__QosDimension__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__1_in_rule__QosDimension__Group__07197);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__1_in_rule__QosDimension__Group__07198);
             rule__QosDimension__Group__1();
 
             state._fsp--;
@@ -10613,7 +10624,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQosDimensionAccess().getQosKeyword_0()); 
             }
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__QosDimension__Group__0__Impl7225); if (state.failed) return ;
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__QosDimension__Group__0__Impl7226); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQosDimensionAccess().getQosKeyword_0()); 
             }
@@ -10648,12 +10659,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3376:1: ( rule__QosDimension__Group__1__Impl rule__QosDimension__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3377:2: rule__QosDimension__Group__1__Impl rule__QosDimension__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__1__Impl_in_rule__QosDimension__Group__17256);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__1__Impl_in_rule__QosDimension__Group__17257);
             rule__QosDimension__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__2_in_rule__QosDimension__Group__17259);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__2_in_rule__QosDimension__Group__17260);
             rule__QosDimension__Group__2();
 
             state._fsp--;
@@ -10695,7 +10706,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3391:1: ( rule__QosDimension__NameAssignment_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3391:2: rule__QosDimension__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__NameAssignment_1_in_rule__QosDimension__Group__1__Impl7286);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__NameAssignment_1_in_rule__QosDimension__Group__1__Impl7287);
             rule__QosDimension__NameAssignment_1();
 
             state._fsp--;
@@ -10737,12 +10748,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3405:1: ( rule__QosDimension__Group__2__Impl rule__QosDimension__Group__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3406:2: rule__QosDimension__Group__2__Impl rule__QosDimension__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__2__Impl_in_rule__QosDimension__Group__27316);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__2__Impl_in_rule__QosDimension__Group__27317);
             rule__QosDimension__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__3_in_rule__QosDimension__Group__27319);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__3_in_rule__QosDimension__Group__27320);
             rule__QosDimension__Group__3();
 
             state._fsp--;
@@ -10781,7 +10792,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQosDimensionAccess().getLeftCurlyBracketKeyword_2()); 
             }
-            match(input,50,FollowSets000.FOLLOW_50_in_rule__QosDimension__Group__2__Impl7347); if (state.failed) return ;
+            match(input,50,FollowSets000.FOLLOW_50_in_rule__QosDimension__Group__2__Impl7348); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQosDimensionAccess().getLeftCurlyBracketKeyword_2()); 
             }
@@ -10816,12 +10827,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3436:1: ( rule__QosDimension__Group__3__Impl rule__QosDimension__Group__4 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3437:2: rule__QosDimension__Group__3__Impl rule__QosDimension__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__3__Impl_in_rule__QosDimension__Group__37378);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__3__Impl_in_rule__QosDimension__Group__37379);
             rule__QosDimension__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__4_in_rule__QosDimension__Group__37381);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__4_in_rule__QosDimension__Group__37382);
             rule__QosDimension__Group__4();
 
             state._fsp--;
@@ -10860,7 +10871,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQosDimensionAccess().getValueKeyword_3()); 
             }
-            match(input,54,FollowSets000.FOLLOW_54_in_rule__QosDimension__Group__3__Impl7409); if (state.failed) return ;
+            match(input,54,FollowSets000.FOLLOW_54_in_rule__QosDimension__Group__3__Impl7410); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQosDimensionAccess().getValueKeyword_3()); 
             }
@@ -10895,12 +10906,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3467:1: ( rule__QosDimension__Group__4__Impl rule__QosDimension__Group__5 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3468:2: rule__QosDimension__Group__4__Impl rule__QosDimension__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__4__Impl_in_rule__QosDimension__Group__47440);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__4__Impl_in_rule__QosDimension__Group__47441);
             rule__QosDimension__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__5_in_rule__QosDimension__Group__47443);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__5_in_rule__QosDimension__Group__47444);
             rule__QosDimension__Group__5();
 
             state._fsp--;
@@ -10942,7 +10953,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3482:1: ( rule__QosDimension__ValueAssignment_4 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3482:2: rule__QosDimension__ValueAssignment_4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__ValueAssignment_4_in_rule__QosDimension__Group__4__Impl7470);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__ValueAssignment_4_in_rule__QosDimension__Group__4__Impl7471);
             rule__QosDimension__ValueAssignment_4();
 
             state._fsp--;
@@ -10984,12 +10995,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3496:1: ( rule__QosDimension__Group__5__Impl rule__QosDimension__Group__6 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3497:2: rule__QosDimension__Group__5__Impl rule__QosDimension__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__5__Impl_in_rule__QosDimension__Group__57500);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__5__Impl_in_rule__QosDimension__Group__57501);
             rule__QosDimension__Group__5__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__6_in_rule__QosDimension__Group__57503);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__6_in_rule__QosDimension__Group__57504);
             rule__QosDimension__Group__6();
 
             state._fsp--;
@@ -11028,7 +11039,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQosDimensionAccess().getSemicolonKeyword_5()); 
             }
-            match(input,55,FollowSets000.FOLLOW_55_in_rule__QosDimension__Group__5__Impl7531); if (state.failed) return ;
+            match(input,55,FollowSets000.FOLLOW_55_in_rule__QosDimension__Group__5__Impl7532); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQosDimensionAccess().getSemicolonKeyword_5()); 
             }
@@ -11063,12 +11074,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3527:1: ( rule__QosDimension__Group__6__Impl rule__QosDimension__Group__7 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3528:2: rule__QosDimension__Group__6__Impl rule__QosDimension__Group__7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__6__Impl_in_rule__QosDimension__Group__67562);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__6__Impl_in_rule__QosDimension__Group__67563);
             rule__QosDimension__Group__6__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__7_in_rule__QosDimension__Group__67565);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__7_in_rule__QosDimension__Group__67566);
             rule__QosDimension__Group__7();
 
             state._fsp--;
@@ -11107,7 +11118,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQosDimensionAccess().getDescriptorsKeyword_6()); 
             }
-            match(input,56,FollowSets000.FOLLOW_56_in_rule__QosDimension__Group__6__Impl7593); if (state.failed) return ;
+            match(input,56,FollowSets000.FOLLOW_56_in_rule__QosDimension__Group__6__Impl7594); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQosDimensionAccess().getDescriptorsKeyword_6()); 
             }
@@ -11142,12 +11153,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3558:1: ( rule__QosDimension__Group__7__Impl rule__QosDimension__Group__8 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3559:2: rule__QosDimension__Group__7__Impl rule__QosDimension__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__7__Impl_in_rule__QosDimension__Group__77624);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__7__Impl_in_rule__QosDimension__Group__77625);
             rule__QosDimension__Group__7__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__8_in_rule__QosDimension__Group__77627);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__8_in_rule__QosDimension__Group__77628);
             rule__QosDimension__Group__8();
 
             state._fsp--;
@@ -11189,7 +11200,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3573:1: ( rule__QosDimension__TupleDescriptorsAssignment_7 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3573:2: rule__QosDimension__TupleDescriptorsAssignment_7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__TupleDescriptorsAssignment_7_in_rule__QosDimension__Group__7__Impl7654);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__TupleDescriptorsAssignment_7_in_rule__QosDimension__Group__7__Impl7655);
             rule__QosDimension__TupleDescriptorsAssignment_7();
 
             state._fsp--;
@@ -11231,12 +11242,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3587:1: ( rule__QosDimension__Group__8__Impl rule__QosDimension__Group__9 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3588:2: rule__QosDimension__Group__8__Impl rule__QosDimension__Group__9
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__8__Impl_in_rule__QosDimension__Group__87684);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__8__Impl_in_rule__QosDimension__Group__87685);
             rule__QosDimension__Group__8__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__9_in_rule__QosDimension__Group__87687);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__9_in_rule__QosDimension__Group__87688);
             rule__QosDimension__Group__9();
 
             state._fsp--;
@@ -11276,21 +11287,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getQosDimensionAccess().getGroup_8()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3602:1: ( rule__QosDimension__Group_8__0 )*
-            loop30:
+            loop31:
             do {
-                int alt30=2;
-                int LA30_0 = input.LA(1);
+                int alt31=2;
+                int LA31_0 = input.LA(1);
 
-                if ( (LA30_0==58) ) {
-                    alt30=1;
+                if ( (LA31_0==58) ) {
+                    alt31=1;
                 }
 
 
-                switch (alt30) {
+                switch (alt31) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3602:2: rule__QosDimension__Group_8__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group_8__0_in_rule__QosDimension__Group__8__Impl7714);
+            	    pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group_8__0_in_rule__QosDimension__Group__8__Impl7715);
             	    rule__QosDimension__Group_8__0();
 
             	    state._fsp--;
@@ -11300,7 +11311,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop30;
+            	    break loop31;
                 }
             } while (true);
 
@@ -11338,12 +11349,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3616:1: ( rule__QosDimension__Group__9__Impl rule__QosDimension__Group__10 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3617:2: rule__QosDimension__Group__9__Impl rule__QosDimension__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__9__Impl_in_rule__QosDimension__Group__97745);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__9__Impl_in_rule__QosDimension__Group__97746);
             rule__QosDimension__Group__9__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__10_in_rule__QosDimension__Group__97748);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__10_in_rule__QosDimension__Group__97749);
             rule__QosDimension__Group__10();
 
             state._fsp--;
@@ -11382,7 +11393,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQosDimensionAccess().getSemicolonKeyword_9()); 
             }
-            match(input,55,FollowSets000.FOLLOW_55_in_rule__QosDimension__Group__9__Impl7776); if (state.failed) return ;
+            match(input,55,FollowSets000.FOLLOW_55_in_rule__QosDimension__Group__9__Impl7777); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQosDimensionAccess().getSemicolonKeyword_9()); 
             }
@@ -11417,12 +11428,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3647:1: ( rule__QosDimension__Group__10__Impl rule__QosDimension__Group__11 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3648:2: rule__QosDimension__Group__10__Impl rule__QosDimension__Group__11
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__10__Impl_in_rule__QosDimension__Group__107807);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__10__Impl_in_rule__QosDimension__Group__107808);
             rule__QosDimension__Group__10__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__11_in_rule__QosDimension__Group__107810);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__11_in_rule__QosDimension__Group__107811);
             rule__QosDimension__Group__11();
 
             state._fsp--;
@@ -11461,7 +11472,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQosDimensionAccess().getOclKeyword_10()); 
             }
-            match(input,57,FollowSets000.FOLLOW_57_in_rule__QosDimension__Group__10__Impl7838); if (state.failed) return ;
+            match(input,57,FollowSets000.FOLLOW_57_in_rule__QosDimension__Group__10__Impl7839); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQosDimensionAccess().getOclKeyword_10()); 
             }
@@ -11496,12 +11507,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3678:1: ( rule__QosDimension__Group__11__Impl rule__QosDimension__Group__12 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3679:2: rule__QosDimension__Group__11__Impl rule__QosDimension__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__11__Impl_in_rule__QosDimension__Group__117869);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__11__Impl_in_rule__QosDimension__Group__117870);
             rule__QosDimension__Group__11__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__12_in_rule__QosDimension__Group__117872);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__12_in_rule__QosDimension__Group__117873);
             rule__QosDimension__Group__12();
 
             state._fsp--;
@@ -11543,7 +11554,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3693:1: ( rule__QosDimension__MetricAssignment_11 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3693:2: rule__QosDimension__MetricAssignment_11
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__MetricAssignment_11_in_rule__QosDimension__Group__11__Impl7899);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__MetricAssignment_11_in_rule__QosDimension__Group__11__Impl7900);
             rule__QosDimension__MetricAssignment_11();
 
             state._fsp--;
@@ -11585,12 +11596,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3707:1: ( rule__QosDimension__Group__12__Impl rule__QosDimension__Group__13 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3708:2: rule__QosDimension__Group__12__Impl rule__QosDimension__Group__13
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__12__Impl_in_rule__QosDimension__Group__127929);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__12__Impl_in_rule__QosDimension__Group__127930);
             rule__QosDimension__Group__12__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__13_in_rule__QosDimension__Group__127932);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__13_in_rule__QosDimension__Group__127933);
             rule__QosDimension__Group__13();
 
             state._fsp--;
@@ -11629,7 +11640,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQosDimensionAccess().getSemicolonKeyword_12()); 
             }
-            match(input,55,FollowSets000.FOLLOW_55_in_rule__QosDimension__Group__12__Impl7960); if (state.failed) return ;
+            match(input,55,FollowSets000.FOLLOW_55_in_rule__QosDimension__Group__12__Impl7961); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQosDimensionAccess().getSemicolonKeyword_12()); 
             }
@@ -11664,7 +11675,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3738:1: ( rule__QosDimension__Group__13__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3739:2: rule__QosDimension__Group__13__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__13__Impl_in_rule__QosDimension__Group__137991);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group__13__Impl_in_rule__QosDimension__Group__137992);
             rule__QosDimension__Group__13__Impl();
 
             state._fsp--;
@@ -11703,7 +11714,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQosDimensionAccess().getRightCurlyBracketKeyword_13()); 
             }
-            match(input,51,FollowSets000.FOLLOW_51_in_rule__QosDimension__Group__13__Impl8019); if (state.failed) return ;
+            match(input,51,FollowSets000.FOLLOW_51_in_rule__QosDimension__Group__13__Impl8020); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQosDimensionAccess().getRightCurlyBracketKeyword_13()); 
             }
@@ -11738,12 +11749,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3796:1: ( rule__QosDimension__Group_8__0__Impl rule__QosDimension__Group_8__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3797:2: rule__QosDimension__Group_8__0__Impl rule__QosDimension__Group_8__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group_8__0__Impl_in_rule__QosDimension__Group_8__08078);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group_8__0__Impl_in_rule__QosDimension__Group_8__08079);
             rule__QosDimension__Group_8__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group_8__1_in_rule__QosDimension__Group_8__08081);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group_8__1_in_rule__QosDimension__Group_8__08082);
             rule__QosDimension__Group_8__1();
 
             state._fsp--;
@@ -11782,7 +11793,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQosDimensionAccess().getCommaKeyword_8_0()); 
             }
-            match(input,58,FollowSets000.FOLLOW_58_in_rule__QosDimension__Group_8__0__Impl8109); if (state.failed) return ;
+            match(input,58,FollowSets000.FOLLOW_58_in_rule__QosDimension__Group_8__0__Impl8110); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQosDimensionAccess().getCommaKeyword_8_0()); 
             }
@@ -11817,7 +11828,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3827:1: ( rule__QosDimension__Group_8__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3828:2: rule__QosDimension__Group_8__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group_8__1__Impl_in_rule__QosDimension__Group_8__18140);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__Group_8__1__Impl_in_rule__QosDimension__Group_8__18141);
             rule__QosDimension__Group_8__1__Impl();
 
             state._fsp--;
@@ -11859,7 +11870,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3841:1: ( rule__QosDimension__TupleDescriptorsAssignment_8_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3841:2: rule__QosDimension__TupleDescriptorsAssignment_8_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__TupleDescriptorsAssignment_8_1_in_rule__QosDimension__Group_8__1__Impl8167);
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__TupleDescriptorsAssignment_8_1_in_rule__QosDimension__Group_8__1__Impl8168);
             rule__QosDimension__TupleDescriptorsAssignment_8_1();
 
             state._fsp--;
@@ -11901,12 +11912,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3859:1: ( rule__Constraint__Group__0__Impl rule__Constraint__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3860:2: rule__Constraint__Group__0__Impl rule__Constraint__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Constraint__Group__0__Impl_in_rule__Constraint__Group__08201);
+            pushFollow(FollowSets000.FOLLOW_rule__Constraint__Group__0__Impl_in_rule__Constraint__Group__08202);
             rule__Constraint__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Constraint__Group__1_in_rule__Constraint__Group__08204);
+            pushFollow(FollowSets000.FOLLOW_rule__Constraint__Group__1_in_rule__Constraint__Group__08205);
             rule__Constraint__Group__1();
 
             state._fsp--;
@@ -11945,7 +11956,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstraintAccess().getConstraintKeyword_0()); 
             }
-            match(input,59,FollowSets000.FOLLOW_59_in_rule__Constraint__Group__0__Impl8232); if (state.failed) return ;
+            match(input,59,FollowSets000.FOLLOW_59_in_rule__Constraint__Group__0__Impl8233); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConstraintAccess().getConstraintKeyword_0()); 
             }
@@ -11980,7 +11991,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3890:1: ( rule__Constraint__Group__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3891:2: rule__Constraint__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Constraint__Group__1__Impl_in_rule__Constraint__Group__18263);
+            pushFollow(FollowSets000.FOLLOW_rule__Constraint__Group__1__Impl_in_rule__Constraint__Group__18264);
             rule__Constraint__Group__1__Impl();
 
             state._fsp--;
@@ -12022,7 +12033,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3904:1: ( rule__Constraint__Alternatives_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3904:2: rule__Constraint__Alternatives_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Constraint__Alternatives_1_in_rule__Constraint__Group__1__Impl8290);
+            pushFollow(FollowSets000.FOLLOW_rule__Constraint__Alternatives_1_in_rule__Constraint__Group__1__Impl8291);
             rule__Constraint__Alternatives_1();
 
             state._fsp--;
@@ -12064,12 +12075,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3922:1: ( rule__LocationConstraint__Group__0__Impl rule__LocationConstraint__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3923:2: rule__LocationConstraint__Group__0__Impl rule__LocationConstraint__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__0__Impl_in_rule__LocationConstraint__Group__08324);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__0__Impl_in_rule__LocationConstraint__Group__08325);
             rule__LocationConstraint__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__1_in_rule__LocationConstraint__Group__08327);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__1_in_rule__LocationConstraint__Group__08328);
             rule__LocationConstraint__Group__1();
 
             state._fsp--;
@@ -12111,7 +12122,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3937:1: ( rule__LocationConstraint__TypeAssignment_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3937:2: rule__LocationConstraint__TypeAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__TypeAssignment_0_in_rule__LocationConstraint__Group__0__Impl8354);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__TypeAssignment_0_in_rule__LocationConstraint__Group__0__Impl8355);
             rule__LocationConstraint__TypeAssignment_0();
 
             state._fsp--;
@@ -12153,12 +12164,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3951:1: ( rule__LocationConstraint__Group__1__Impl rule__LocationConstraint__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3952:2: rule__LocationConstraint__Group__1__Impl rule__LocationConstraint__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__1__Impl_in_rule__LocationConstraint__Group__18384);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__1__Impl_in_rule__LocationConstraint__Group__18385);
             rule__LocationConstraint__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__2_in_rule__LocationConstraint__Group__18387);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__2_in_rule__LocationConstraint__Group__18388);
             rule__LocationConstraint__Group__2();
 
             state._fsp--;
@@ -12198,17 +12209,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getLocationConstraintAccess().getNameAssignment_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3966:1: ( rule__LocationConstraint__NameAssignment_1 )?
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            if ( ((LA31_0>=RULE_SIMPLE_ID && LA31_0<=RULE_ESCAPED_ID)) ) {
-                alt31=1;
+            if ( ((LA32_0>=RULE_SIMPLE_ID && LA32_0<=RULE_ESCAPED_ID)) ) {
+                alt32=1;
             }
-            switch (alt31) {
+            switch (alt32) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3966:2: rule__LocationConstraint__NameAssignment_1
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__NameAssignment_1_in_rule__LocationConstraint__Group__1__Impl8414);
+                    pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__NameAssignment_1_in_rule__LocationConstraint__Group__1__Impl8415);
                     rule__LocationConstraint__NameAssignment_1();
 
                     state._fsp--;
@@ -12253,12 +12264,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3980:1: ( rule__LocationConstraint__Group__2__Impl rule__LocationConstraint__Group__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:3981:2: rule__LocationConstraint__Group__2__Impl rule__LocationConstraint__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__2__Impl_in_rule__LocationConstraint__Group__28445);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__2__Impl_in_rule__LocationConstraint__Group__28446);
             rule__LocationConstraint__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__3_in_rule__LocationConstraint__Group__28448);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__3_in_rule__LocationConstraint__Group__28449);
             rule__LocationConstraint__Group__3();
 
             state._fsp--;
@@ -12297,7 +12308,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationConstraintAccess().getLeftCurlyBracketKeyword_2()); 
             }
-            match(input,50,FollowSets000.FOLLOW_50_in_rule__LocationConstraint__Group__2__Impl8476); if (state.failed) return ;
+            match(input,50,FollowSets000.FOLLOW_50_in_rule__LocationConstraint__Group__2__Impl8477); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLocationConstraintAccess().getLeftCurlyBracketKeyword_2()); 
             }
@@ -12332,12 +12343,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4011:1: ( rule__LocationConstraint__Group__3__Impl rule__LocationConstraint__Group__4 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4012:2: rule__LocationConstraint__Group__3__Impl rule__LocationConstraint__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__3__Impl_in_rule__LocationConstraint__Group__38507);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__3__Impl_in_rule__LocationConstraint__Group__38508);
             rule__LocationConstraint__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__4_in_rule__LocationConstraint__Group__38510);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__4_in_rule__LocationConstraint__Group__38511);
             rule__LocationConstraint__Group__4();
 
             state._fsp--;
@@ -12376,7 +12387,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationConstraintAccess().getDescriptorsKeyword_3()); 
             }
-            match(input,56,FollowSets000.FOLLOW_56_in_rule__LocationConstraint__Group__3__Impl8538); if (state.failed) return ;
+            match(input,56,FollowSets000.FOLLOW_56_in_rule__LocationConstraint__Group__3__Impl8539); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLocationConstraintAccess().getDescriptorsKeyword_3()); 
             }
@@ -12411,12 +12422,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4042:1: ( rule__LocationConstraint__Group__4__Impl rule__LocationConstraint__Group__5 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4043:2: rule__LocationConstraint__Group__4__Impl rule__LocationConstraint__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__4__Impl_in_rule__LocationConstraint__Group__48569);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__4__Impl_in_rule__LocationConstraint__Group__48570);
             rule__LocationConstraint__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__5_in_rule__LocationConstraint__Group__48572);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__5_in_rule__LocationConstraint__Group__48573);
             rule__LocationConstraint__Group__5();
 
             state._fsp--;
@@ -12458,7 +12469,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4057:1: ( rule__LocationConstraint__TupleDescriptorsAssignment_4 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4057:2: rule__LocationConstraint__TupleDescriptorsAssignment_4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__TupleDescriptorsAssignment_4_in_rule__LocationConstraint__Group__4__Impl8599);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__TupleDescriptorsAssignment_4_in_rule__LocationConstraint__Group__4__Impl8600);
             rule__LocationConstraint__TupleDescriptorsAssignment_4();
 
             state._fsp--;
@@ -12500,12 +12511,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4071:1: ( rule__LocationConstraint__Group__5__Impl rule__LocationConstraint__Group__6 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4072:2: rule__LocationConstraint__Group__5__Impl rule__LocationConstraint__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__5__Impl_in_rule__LocationConstraint__Group__58629);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__5__Impl_in_rule__LocationConstraint__Group__58630);
             rule__LocationConstraint__Group__5__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__6_in_rule__LocationConstraint__Group__58632);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__6_in_rule__LocationConstraint__Group__58633);
             rule__LocationConstraint__Group__6();
 
             state._fsp--;
@@ -12545,21 +12556,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getLocationConstraintAccess().getGroup_5()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4086:1: ( rule__LocationConstraint__Group_5__0 )*
-            loop32:
+            loop33:
             do {
-                int alt32=2;
-                int LA32_0 = input.LA(1);
+                int alt33=2;
+                int LA33_0 = input.LA(1);
 
-                if ( (LA32_0==58) ) {
-                    alt32=1;
+                if ( (LA33_0==58) ) {
+                    alt33=1;
                 }
 
 
-                switch (alt32) {
+                switch (alt33) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4086:2: rule__LocationConstraint__Group_5__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group_5__0_in_rule__LocationConstraint__Group__5__Impl8659);
+            	    pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group_5__0_in_rule__LocationConstraint__Group__5__Impl8660);
             	    rule__LocationConstraint__Group_5__0();
 
             	    state._fsp--;
@@ -12569,7 +12580,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop32;
+            	    break loop33;
                 }
             } while (true);
 
@@ -12607,12 +12618,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4100:1: ( rule__LocationConstraint__Group__6__Impl rule__LocationConstraint__Group__7 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4101:2: rule__LocationConstraint__Group__6__Impl rule__LocationConstraint__Group__7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__6__Impl_in_rule__LocationConstraint__Group__68690);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__6__Impl_in_rule__LocationConstraint__Group__68691);
             rule__LocationConstraint__Group__6__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__7_in_rule__LocationConstraint__Group__68693);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__7_in_rule__LocationConstraint__Group__68694);
             rule__LocationConstraint__Group__7();
 
             state._fsp--;
@@ -12651,7 +12662,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_6()); 
             }
-            match(input,55,FollowSets000.FOLLOW_55_in_rule__LocationConstraint__Group__6__Impl8721); if (state.failed) return ;
+            match(input,55,FollowSets000.FOLLOW_55_in_rule__LocationConstraint__Group__6__Impl8722); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_6()); 
             }
@@ -12686,12 +12697,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4131:1: ( rule__LocationConstraint__Group__7__Impl rule__LocationConstraint__Group__8 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4132:2: rule__LocationConstraint__Group__7__Impl rule__LocationConstraint__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__7__Impl_in_rule__LocationConstraint__Group__78752);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__7__Impl_in_rule__LocationConstraint__Group__78753);
             rule__LocationConstraint__Group__7__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__8_in_rule__LocationConstraint__Group__78755);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__8_in_rule__LocationConstraint__Group__78756);
             rule__LocationConstraint__Group__8();
 
             state._fsp--;
@@ -12730,7 +12741,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationConstraintAccess().getOclKeyword_7()); 
             }
-            match(input,57,FollowSets000.FOLLOW_57_in_rule__LocationConstraint__Group__7__Impl8783); if (state.failed) return ;
+            match(input,57,FollowSets000.FOLLOW_57_in_rule__LocationConstraint__Group__7__Impl8784); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLocationConstraintAccess().getOclKeyword_7()); 
             }
@@ -12765,12 +12776,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4162:1: ( rule__LocationConstraint__Group__8__Impl rule__LocationConstraint__Group__9 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4163:2: rule__LocationConstraint__Group__8__Impl rule__LocationConstraint__Group__9
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__8__Impl_in_rule__LocationConstraint__Group__88814);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__8__Impl_in_rule__LocationConstraint__Group__88815);
             rule__LocationConstraint__Group__8__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__9_in_rule__LocationConstraint__Group__88817);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__9_in_rule__LocationConstraint__Group__88818);
             rule__LocationConstraint__Group__9();
 
             state._fsp--;
@@ -12812,7 +12823,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4177:1: ( rule__LocationConstraint__ExpressionAssignment_8 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4177:2: rule__LocationConstraint__ExpressionAssignment_8
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__ExpressionAssignment_8_in_rule__LocationConstraint__Group__8__Impl8844);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__ExpressionAssignment_8_in_rule__LocationConstraint__Group__8__Impl8845);
             rule__LocationConstraint__ExpressionAssignment_8();
 
             state._fsp--;
@@ -12854,12 +12865,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4191:1: ( rule__LocationConstraint__Group__9__Impl rule__LocationConstraint__Group__10 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4192:2: rule__LocationConstraint__Group__9__Impl rule__LocationConstraint__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__9__Impl_in_rule__LocationConstraint__Group__98874);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__9__Impl_in_rule__LocationConstraint__Group__98875);
             rule__LocationConstraint__Group__9__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__10_in_rule__LocationConstraint__Group__98877);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__10_in_rule__LocationConstraint__Group__98878);
             rule__LocationConstraint__Group__10();
 
             state._fsp--;
@@ -12898,7 +12909,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_9()); 
             }
-            match(input,55,FollowSets000.FOLLOW_55_in_rule__LocationConstraint__Group__9__Impl8905); if (state.failed) return ;
+            match(input,55,FollowSets000.FOLLOW_55_in_rule__LocationConstraint__Group__9__Impl8906); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_9()); 
             }
@@ -12933,7 +12944,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4222:1: ( rule__LocationConstraint__Group__10__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4223:2: rule__LocationConstraint__Group__10__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__10__Impl_in_rule__LocationConstraint__Group__108936);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group__10__Impl_in_rule__LocationConstraint__Group__108937);
             rule__LocationConstraint__Group__10__Impl();
 
             state._fsp--;
@@ -12972,7 +12983,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_10()); 
             }
-            match(input,51,FollowSets000.FOLLOW_51_in_rule__LocationConstraint__Group__10__Impl8964); if (state.failed) return ;
+            match(input,51,FollowSets000.FOLLOW_51_in_rule__LocationConstraint__Group__10__Impl8965); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_10()); 
             }
@@ -13007,12 +13018,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4274:1: ( rule__LocationConstraint__Group_5__0__Impl rule__LocationConstraint__Group_5__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4275:2: rule__LocationConstraint__Group_5__0__Impl rule__LocationConstraint__Group_5__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group_5__0__Impl_in_rule__LocationConstraint__Group_5__09017);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group_5__0__Impl_in_rule__LocationConstraint__Group_5__09018);
             rule__LocationConstraint__Group_5__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group_5__1_in_rule__LocationConstraint__Group_5__09020);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group_5__1_in_rule__LocationConstraint__Group_5__09021);
             rule__LocationConstraint__Group_5__1();
 
             state._fsp--;
@@ -13051,7 +13062,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationConstraintAccess().getCommaKeyword_5_0()); 
             }
-            match(input,58,FollowSets000.FOLLOW_58_in_rule__LocationConstraint__Group_5__0__Impl9048); if (state.failed) return ;
+            match(input,58,FollowSets000.FOLLOW_58_in_rule__LocationConstraint__Group_5__0__Impl9049); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLocationConstraintAccess().getCommaKeyword_5_0()); 
             }
@@ -13086,7 +13097,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4305:1: ( rule__LocationConstraint__Group_5__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4306:2: rule__LocationConstraint__Group_5__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group_5__1__Impl_in_rule__LocationConstraint__Group_5__19079);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__Group_5__1__Impl_in_rule__LocationConstraint__Group_5__19080);
             rule__LocationConstraint__Group_5__1__Impl();
 
             state._fsp--;
@@ -13128,7 +13139,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4319:1: ( rule__LocationConstraint__TupleDescriptorsAssignment_5_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4319:2: rule__LocationConstraint__TupleDescriptorsAssignment_5_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__TupleDescriptorsAssignment_5_1_in_rule__LocationConstraint__Group_5__1__Impl9106);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationConstraint__TupleDescriptorsAssignment_5_1_in_rule__LocationConstraint__Group_5__1__Impl9107);
             rule__LocationConstraint__TupleDescriptorsAssignment_5_1();
 
             state._fsp--;
@@ -13170,12 +13181,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4337:1: ( rule__ResourceConstraint__Group__0__Impl rule__ResourceConstraint__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4338:2: rule__ResourceConstraint__Group__0__Impl rule__ResourceConstraint__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__0__Impl_in_rule__ResourceConstraint__Group__09140);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__0__Impl_in_rule__ResourceConstraint__Group__09141);
             rule__ResourceConstraint__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__1_in_rule__ResourceConstraint__Group__09143);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__1_in_rule__ResourceConstraint__Group__09144);
             rule__ResourceConstraint__Group__1();
 
             state._fsp--;
@@ -13214,7 +13225,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getResourceKeyword_0()); 
             }
-            match(input,60,FollowSets000.FOLLOW_60_in_rule__ResourceConstraint__Group__0__Impl9171); if (state.failed) return ;
+            match(input,60,FollowSets000.FOLLOW_60_in_rule__ResourceConstraint__Group__0__Impl9172); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getResourceConstraintAccess().getResourceKeyword_0()); 
             }
@@ -13249,12 +13260,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4368:1: ( rule__ResourceConstraint__Group__1__Impl rule__ResourceConstraint__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4369:2: rule__ResourceConstraint__Group__1__Impl rule__ResourceConstraint__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__1__Impl_in_rule__ResourceConstraint__Group__19202);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__1__Impl_in_rule__ResourceConstraint__Group__19203);
             rule__ResourceConstraint__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__2_in_rule__ResourceConstraint__Group__19205);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__2_in_rule__ResourceConstraint__Group__19206);
             rule__ResourceConstraint__Group__2();
 
             state._fsp--;
@@ -13294,17 +13305,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getResourceConstraintAccess().getNameAssignment_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4383:1: ( rule__ResourceConstraint__NameAssignment_1 )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            int alt34=2;
+            int LA34_0 = input.LA(1);
 
-            if ( ((LA33_0>=RULE_SIMPLE_ID && LA33_0<=RULE_ESCAPED_ID)) ) {
-                alt33=1;
+            if ( ((LA34_0>=RULE_SIMPLE_ID && LA34_0<=RULE_ESCAPED_ID)) ) {
+                alt34=1;
             }
-            switch (alt33) {
+            switch (alt34) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4383:2: rule__ResourceConstraint__NameAssignment_1
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__NameAssignment_1_in_rule__ResourceConstraint__Group__1__Impl9232);
+                    pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__NameAssignment_1_in_rule__ResourceConstraint__Group__1__Impl9233);
                     rule__ResourceConstraint__NameAssignment_1();
 
                     state._fsp--;
@@ -13349,12 +13360,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4397:1: ( rule__ResourceConstraint__Group__2__Impl rule__ResourceConstraint__Group__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4398:2: rule__ResourceConstraint__Group__2__Impl rule__ResourceConstraint__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__2__Impl_in_rule__ResourceConstraint__Group__29263);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__2__Impl_in_rule__ResourceConstraint__Group__29264);
             rule__ResourceConstraint__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__3_in_rule__ResourceConstraint__Group__29266);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__3_in_rule__ResourceConstraint__Group__29267);
             rule__ResourceConstraint__Group__3();
 
             state._fsp--;
@@ -13393,7 +13404,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getLeftCurlyBracketKeyword_2()); 
             }
-            match(input,50,FollowSets000.FOLLOW_50_in_rule__ResourceConstraint__Group__2__Impl9294); if (state.failed) return ;
+            match(input,50,FollowSets000.FOLLOW_50_in_rule__ResourceConstraint__Group__2__Impl9295); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getResourceConstraintAccess().getLeftCurlyBracketKeyword_2()); 
             }
@@ -13428,12 +13439,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4428:1: ( rule__ResourceConstraint__Group__3__Impl rule__ResourceConstraint__Group__4 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4429:2: rule__ResourceConstraint__Group__3__Impl rule__ResourceConstraint__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__3__Impl_in_rule__ResourceConstraint__Group__39325);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__3__Impl_in_rule__ResourceConstraint__Group__39326);
             rule__ResourceConstraint__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__4_in_rule__ResourceConstraint__Group__39328);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__4_in_rule__ResourceConstraint__Group__39329);
             rule__ResourceConstraint__Group__4();
 
             state._fsp--;
@@ -13472,7 +13483,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getLhsKeyword_3()); 
             }
-            match(input,61,FollowSets000.FOLLOW_61_in_rule__ResourceConstraint__Group__3__Impl9356); if (state.failed) return ;
+            match(input,61,FollowSets000.FOLLOW_61_in_rule__ResourceConstraint__Group__3__Impl9357); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getResourceConstraintAccess().getLhsKeyword_3()); 
             }
@@ -13507,12 +13518,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4459:1: ( rule__ResourceConstraint__Group__4__Impl rule__ResourceConstraint__Group__5 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4460:2: rule__ResourceConstraint__Group__4__Impl rule__ResourceConstraint__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__4__Impl_in_rule__ResourceConstraint__Group__49387);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__4__Impl_in_rule__ResourceConstraint__Group__49388);
             rule__ResourceConstraint__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__5_in_rule__ResourceConstraint__Group__49390);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__5_in_rule__ResourceConstraint__Group__49391);
             rule__ResourceConstraint__Group__5();
 
             state._fsp--;
@@ -13554,7 +13565,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4474:1: ( rule__ResourceConstraint__LhsAssignment_4 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4474:2: rule__ResourceConstraint__LhsAssignment_4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__LhsAssignment_4_in_rule__ResourceConstraint__Group__4__Impl9417);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__LhsAssignment_4_in_rule__ResourceConstraint__Group__4__Impl9418);
             rule__ResourceConstraint__LhsAssignment_4();
 
             state._fsp--;
@@ -13596,12 +13607,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4488:1: ( rule__ResourceConstraint__Group__5__Impl rule__ResourceConstraint__Group__6 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4489:2: rule__ResourceConstraint__Group__5__Impl rule__ResourceConstraint__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__5__Impl_in_rule__ResourceConstraint__Group__59447);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__5__Impl_in_rule__ResourceConstraint__Group__59448);
             rule__ResourceConstraint__Group__5__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__6_in_rule__ResourceConstraint__Group__59450);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__6_in_rule__ResourceConstraint__Group__59451);
             rule__ResourceConstraint__Group__6();
 
             state._fsp--;
@@ -13640,7 +13651,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_5()); 
             }
-            match(input,55,FollowSets000.FOLLOW_55_in_rule__ResourceConstraint__Group__5__Impl9478); if (state.failed) return ;
+            match(input,55,FollowSets000.FOLLOW_55_in_rule__ResourceConstraint__Group__5__Impl9479); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_5()); 
             }
@@ -13675,12 +13686,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4519:1: ( rule__ResourceConstraint__Group__6__Impl rule__ResourceConstraint__Group__7 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4520:2: rule__ResourceConstraint__Group__6__Impl rule__ResourceConstraint__Group__7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__6__Impl_in_rule__ResourceConstraint__Group__69509);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__6__Impl_in_rule__ResourceConstraint__Group__69510);
             rule__ResourceConstraint__Group__6__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__7_in_rule__ResourceConstraint__Group__69512);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__7_in_rule__ResourceConstraint__Group__69513);
             rule__ResourceConstraint__Group__7();
 
             state._fsp--;
@@ -13719,7 +13730,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getRhsKeyword_6()); 
             }
-            match(input,62,FollowSets000.FOLLOW_62_in_rule__ResourceConstraint__Group__6__Impl9540); if (state.failed) return ;
+            match(input,62,FollowSets000.FOLLOW_62_in_rule__ResourceConstraint__Group__6__Impl9541); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getResourceConstraintAccess().getRhsKeyword_6()); 
             }
@@ -13754,12 +13765,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4550:1: ( rule__ResourceConstraint__Group__7__Impl rule__ResourceConstraint__Group__8 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4551:2: rule__ResourceConstraint__Group__7__Impl rule__ResourceConstraint__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__7__Impl_in_rule__ResourceConstraint__Group__79571);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__7__Impl_in_rule__ResourceConstraint__Group__79572);
             rule__ResourceConstraint__Group__7__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__8_in_rule__ResourceConstraint__Group__79574);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__8_in_rule__ResourceConstraint__Group__79575);
             rule__ResourceConstraint__Group__8();
 
             state._fsp--;
@@ -13801,7 +13812,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4565:1: ( rule__ResourceConstraint__RhsAssignment_7 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4565:2: rule__ResourceConstraint__RhsAssignment_7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__RhsAssignment_7_in_rule__ResourceConstraint__Group__7__Impl9601);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__RhsAssignment_7_in_rule__ResourceConstraint__Group__7__Impl9602);
             rule__ResourceConstraint__RhsAssignment_7();
 
             state._fsp--;
@@ -13843,12 +13854,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4579:1: ( rule__ResourceConstraint__Group__8__Impl rule__ResourceConstraint__Group__9 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4580:2: rule__ResourceConstraint__Group__8__Impl rule__ResourceConstraint__Group__9
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__8__Impl_in_rule__ResourceConstraint__Group__89631);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__8__Impl_in_rule__ResourceConstraint__Group__89632);
             rule__ResourceConstraint__Group__8__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__9_in_rule__ResourceConstraint__Group__89634);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__9_in_rule__ResourceConstraint__Group__89635);
             rule__ResourceConstraint__Group__9();
 
             state._fsp--;
@@ -13887,7 +13898,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_8()); 
             }
-            match(input,55,FollowSets000.FOLLOW_55_in_rule__ResourceConstraint__Group__8__Impl9662); if (state.failed) return ;
+            match(input,55,FollowSets000.FOLLOW_55_in_rule__ResourceConstraint__Group__8__Impl9663); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_8()); 
             }
@@ -13922,12 +13933,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4610:1: ( rule__ResourceConstraint__Group__9__Impl rule__ResourceConstraint__Group__10 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4611:2: rule__ResourceConstraint__Group__9__Impl rule__ResourceConstraint__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__9__Impl_in_rule__ResourceConstraint__Group__99693);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__9__Impl_in_rule__ResourceConstraint__Group__99694);
             rule__ResourceConstraint__Group__9__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__10_in_rule__ResourceConstraint__Group__99696);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__10_in_rule__ResourceConstraint__Group__99697);
             rule__ResourceConstraint__Group__10();
 
             state._fsp--;
@@ -13966,7 +13977,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getDescriptorsKeyword_9()); 
             }
-            match(input,56,FollowSets000.FOLLOW_56_in_rule__ResourceConstraint__Group__9__Impl9724); if (state.failed) return ;
+            match(input,56,FollowSets000.FOLLOW_56_in_rule__ResourceConstraint__Group__9__Impl9725); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getResourceConstraintAccess().getDescriptorsKeyword_9()); 
             }
@@ -14001,12 +14012,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4641:1: ( rule__ResourceConstraint__Group__10__Impl rule__ResourceConstraint__Group__11 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4642:2: rule__ResourceConstraint__Group__10__Impl rule__ResourceConstraint__Group__11
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__10__Impl_in_rule__ResourceConstraint__Group__109755);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__10__Impl_in_rule__ResourceConstraint__Group__109756);
             rule__ResourceConstraint__Group__10__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__11_in_rule__ResourceConstraint__Group__109758);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__11_in_rule__ResourceConstraint__Group__109759);
             rule__ResourceConstraint__Group__11();
 
             state._fsp--;
@@ -14048,7 +14059,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4656:1: ( rule__ResourceConstraint__TupleDescriptorsAssignment_10 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4656:2: rule__ResourceConstraint__TupleDescriptorsAssignment_10
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__TupleDescriptorsAssignment_10_in_rule__ResourceConstraint__Group__10__Impl9785);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__TupleDescriptorsAssignment_10_in_rule__ResourceConstraint__Group__10__Impl9786);
             rule__ResourceConstraint__TupleDescriptorsAssignment_10();
 
             state._fsp--;
@@ -14090,12 +14101,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4670:1: ( rule__ResourceConstraint__Group__11__Impl rule__ResourceConstraint__Group__12 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4671:2: rule__ResourceConstraint__Group__11__Impl rule__ResourceConstraint__Group__12
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__11__Impl_in_rule__ResourceConstraint__Group__119815);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__11__Impl_in_rule__ResourceConstraint__Group__119816);
             rule__ResourceConstraint__Group__11__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__12_in_rule__ResourceConstraint__Group__119818);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__12_in_rule__ResourceConstraint__Group__119819);
             rule__ResourceConstraint__Group__12();
 
             state._fsp--;
@@ -14135,21 +14146,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getResourceConstraintAccess().getGroup_11()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4685:1: ( rule__ResourceConstraint__Group_11__0 )*
-            loop34:
+            loop35:
             do {
-                int alt34=2;
-                int LA34_0 = input.LA(1);
+                int alt35=2;
+                int LA35_0 = input.LA(1);
 
-                if ( (LA34_0==58) ) {
-                    alt34=1;
+                if ( (LA35_0==58) ) {
+                    alt35=1;
                 }
 
 
-                switch (alt34) {
+                switch (alt35) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4685:2: rule__ResourceConstraint__Group_11__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group_11__0_in_rule__ResourceConstraint__Group__11__Impl9845);
+            	    pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group_11__0_in_rule__ResourceConstraint__Group__11__Impl9846);
             	    rule__ResourceConstraint__Group_11__0();
 
             	    state._fsp--;
@@ -14159,7 +14170,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop34;
+            	    break loop35;
                 }
             } while (true);
 
@@ -14197,12 +14208,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4699:1: ( rule__ResourceConstraint__Group__12__Impl rule__ResourceConstraint__Group__13 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4700:2: rule__ResourceConstraint__Group__12__Impl rule__ResourceConstraint__Group__13
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__12__Impl_in_rule__ResourceConstraint__Group__129876);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__12__Impl_in_rule__ResourceConstraint__Group__129877);
             rule__ResourceConstraint__Group__12__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__13_in_rule__ResourceConstraint__Group__129879);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__13_in_rule__ResourceConstraint__Group__129880);
             rule__ResourceConstraint__Group__13();
 
             state._fsp--;
@@ -14241,7 +14252,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_12()); 
             }
-            match(input,55,FollowSets000.FOLLOW_55_in_rule__ResourceConstraint__Group__12__Impl9907); if (state.failed) return ;
+            match(input,55,FollowSets000.FOLLOW_55_in_rule__ResourceConstraint__Group__12__Impl9908); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_12()); 
             }
@@ -14276,12 +14287,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4730:1: ( rule__ResourceConstraint__Group__13__Impl rule__ResourceConstraint__Group__14 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4731:2: rule__ResourceConstraint__Group__13__Impl rule__ResourceConstraint__Group__14
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__13__Impl_in_rule__ResourceConstraint__Group__139938);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__13__Impl_in_rule__ResourceConstraint__Group__139939);
             rule__ResourceConstraint__Group__13__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__14_in_rule__ResourceConstraint__Group__139941);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__14_in_rule__ResourceConstraint__Group__139942);
             rule__ResourceConstraint__Group__14();
 
             state._fsp--;
@@ -14320,7 +14331,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getOclKeyword_13()); 
             }
-            match(input,57,FollowSets000.FOLLOW_57_in_rule__ResourceConstraint__Group__13__Impl9969); if (state.failed) return ;
+            match(input,57,FollowSets000.FOLLOW_57_in_rule__ResourceConstraint__Group__13__Impl9970); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getResourceConstraintAccess().getOclKeyword_13()); 
             }
@@ -14355,12 +14366,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4761:1: ( rule__ResourceConstraint__Group__14__Impl rule__ResourceConstraint__Group__15 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4762:2: rule__ResourceConstraint__Group__14__Impl rule__ResourceConstraint__Group__15
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__14__Impl_in_rule__ResourceConstraint__Group__1410000);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__14__Impl_in_rule__ResourceConstraint__Group__1410001);
             rule__ResourceConstraint__Group__14__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__15_in_rule__ResourceConstraint__Group__1410003);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__15_in_rule__ResourceConstraint__Group__1410004);
             rule__ResourceConstraint__Group__15();
 
             state._fsp--;
@@ -14402,7 +14413,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4776:1: ( rule__ResourceConstraint__ExpressionAssignment_14 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4776:2: rule__ResourceConstraint__ExpressionAssignment_14
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__ExpressionAssignment_14_in_rule__ResourceConstraint__Group__14__Impl10030);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__ExpressionAssignment_14_in_rule__ResourceConstraint__Group__14__Impl10031);
             rule__ResourceConstraint__ExpressionAssignment_14();
 
             state._fsp--;
@@ -14444,12 +14455,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4790:1: ( rule__ResourceConstraint__Group__15__Impl rule__ResourceConstraint__Group__16 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4791:2: rule__ResourceConstraint__Group__15__Impl rule__ResourceConstraint__Group__16
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__15__Impl_in_rule__ResourceConstraint__Group__1510060);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__15__Impl_in_rule__ResourceConstraint__Group__1510061);
             rule__ResourceConstraint__Group__15__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__16_in_rule__ResourceConstraint__Group__1510063);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__16_in_rule__ResourceConstraint__Group__1510064);
             rule__ResourceConstraint__Group__16();
 
             state._fsp--;
@@ -14488,7 +14499,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_15()); 
             }
-            match(input,55,FollowSets000.FOLLOW_55_in_rule__ResourceConstraint__Group__15__Impl10091); if (state.failed) return ;
+            match(input,55,FollowSets000.FOLLOW_55_in_rule__ResourceConstraint__Group__15__Impl10092); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_15()); 
             }
@@ -14523,7 +14534,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4821:1: ( rule__ResourceConstraint__Group__16__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4822:2: rule__ResourceConstraint__Group__16__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__16__Impl_in_rule__ResourceConstraint__Group__1610122);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group__16__Impl_in_rule__ResourceConstraint__Group__1610123);
             rule__ResourceConstraint__Group__16__Impl();
 
             state._fsp--;
@@ -14562,7 +14573,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getRightCurlyBracketKeyword_16()); 
             }
-            match(input,51,FollowSets000.FOLLOW_51_in_rule__ResourceConstraint__Group__16__Impl10150); if (state.failed) return ;
+            match(input,51,FollowSets000.FOLLOW_51_in_rule__ResourceConstraint__Group__16__Impl10151); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getResourceConstraintAccess().getRightCurlyBracketKeyword_16()); 
             }
@@ -14597,12 +14608,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4885:1: ( rule__ResourceConstraint__Group_11__0__Impl rule__ResourceConstraint__Group_11__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4886:2: rule__ResourceConstraint__Group_11__0__Impl rule__ResourceConstraint__Group_11__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group_11__0__Impl_in_rule__ResourceConstraint__Group_11__010215);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group_11__0__Impl_in_rule__ResourceConstraint__Group_11__010216);
             rule__ResourceConstraint__Group_11__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group_11__1_in_rule__ResourceConstraint__Group_11__010218);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group_11__1_in_rule__ResourceConstraint__Group_11__010219);
             rule__ResourceConstraint__Group_11__1();
 
             state._fsp--;
@@ -14641,7 +14652,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getCommaKeyword_11_0()); 
             }
-            match(input,58,FollowSets000.FOLLOW_58_in_rule__ResourceConstraint__Group_11__0__Impl10246); if (state.failed) return ;
+            match(input,58,FollowSets000.FOLLOW_58_in_rule__ResourceConstraint__Group_11__0__Impl10247); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getResourceConstraintAccess().getCommaKeyword_11_0()); 
             }
@@ -14676,7 +14687,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4916:1: ( rule__ResourceConstraint__Group_11__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4917:2: rule__ResourceConstraint__Group_11__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group_11__1__Impl_in_rule__ResourceConstraint__Group_11__110277);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__Group_11__1__Impl_in_rule__ResourceConstraint__Group_11__110278);
             rule__ResourceConstraint__Group_11__1__Impl();
 
             state._fsp--;
@@ -14718,7 +14729,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4930:1: ( rule__ResourceConstraint__TupleDescriptorsAssignment_11_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4930:2: rule__ResourceConstraint__TupleDescriptorsAssignment_11_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__TupleDescriptorsAssignment_11_1_in_rule__ResourceConstraint__Group_11__1__Impl10304);
+            pushFollow(FollowSets000.FOLLOW_rule__ResourceConstraint__TupleDescriptorsAssignment_11_1_in_rule__ResourceConstraint__Group_11__1__Impl10305);
             rule__ResourceConstraint__TupleDescriptorsAssignment_11_1();
 
             state._fsp--;
@@ -14760,12 +14771,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4948:1: ( rule__RequiredHardwareResourceInstanceConstraint__Group__0__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4949:2: rule__RequiredHardwareResourceInstanceConstraint__Group__0__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__0__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__010338);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__0__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__010339);
             rule__RequiredHardwareResourceInstanceConstraint__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__1_in_rule__RequiredHardwareResourceInstanceConstraint__Group__010341);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__1_in_rule__RequiredHardwareResourceInstanceConstraint__Group__010342);
             rule__RequiredHardwareResourceInstanceConstraint__Group__1();
 
             state._fsp--;
@@ -14804,7 +14815,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRequiredHardwareResourceInstanceKeyword_0()); 
             }
-            match(input,63,FollowSets000.FOLLOW_63_in_rule__RequiredHardwareResourceInstanceConstraint__Group__0__Impl10369); if (state.failed) return ;
+            match(input,63,FollowSets000.FOLLOW_63_in_rule__RequiredHardwareResourceInstanceConstraint__Group__0__Impl10370); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRequiredHardwareResourceInstanceKeyword_0()); 
             }
@@ -14839,12 +14850,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4979:1: ( rule__RequiredHardwareResourceInstanceConstraint__Group__1__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4980:2: rule__RequiredHardwareResourceInstanceConstraint__Group__1__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__1__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__110400);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__1__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__110401);
             rule__RequiredHardwareResourceInstanceConstraint__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__2_in_rule__RequiredHardwareResourceInstanceConstraint__Group__110403);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__2_in_rule__RequiredHardwareResourceInstanceConstraint__Group__110404);
             rule__RequiredHardwareResourceInstanceConstraint__Group__2();
 
             state._fsp--;
@@ -14884,17 +14895,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getNameAssignment_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4994:1: ( rule__RequiredHardwareResourceInstanceConstraint__NameAssignment_1 )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            if ( ((LA35_0>=RULE_SIMPLE_ID && LA35_0<=RULE_ESCAPED_ID)) ) {
-                alt35=1;
+            if ( ((LA36_0>=RULE_SIMPLE_ID && LA36_0<=RULE_ESCAPED_ID)) ) {
+                alt36=1;
             }
-            switch (alt35) {
+            switch (alt36) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4994:2: rule__RequiredHardwareResourceInstanceConstraint__NameAssignment_1
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__NameAssignment_1_in_rule__RequiredHardwareResourceInstanceConstraint__Group__1__Impl10430);
+                    pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__NameAssignment_1_in_rule__RequiredHardwareResourceInstanceConstraint__Group__1__Impl10431);
                     rule__RequiredHardwareResourceInstanceConstraint__NameAssignment_1();
 
                     state._fsp--;
@@ -14939,12 +14950,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5008:1: ( rule__RequiredHardwareResourceInstanceConstraint__Group__2__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5009:2: rule__RequiredHardwareResourceInstanceConstraint__Group__2__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__2__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__210461);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__2__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__210462);
             rule__RequiredHardwareResourceInstanceConstraint__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__3_in_rule__RequiredHardwareResourceInstanceConstraint__Group__210464);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__3_in_rule__RequiredHardwareResourceInstanceConstraint__Group__210465);
             rule__RequiredHardwareResourceInstanceConstraint__Group__3();
 
             state._fsp--;
@@ -14983,7 +14994,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getLeftCurlyBracketKeyword_2()); 
             }
-            match(input,50,FollowSets000.FOLLOW_50_in_rule__RequiredHardwareResourceInstanceConstraint__Group__2__Impl10492); if (state.failed) return ;
+            match(input,50,FollowSets000.FOLLOW_50_in_rule__RequiredHardwareResourceInstanceConstraint__Group__2__Impl10493); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getLeftCurlyBracketKeyword_2()); 
             }
@@ -15018,12 +15029,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5039:1: ( rule__RequiredHardwareResourceInstanceConstraint__Group__3__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__4 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5040:2: rule__RequiredHardwareResourceInstanceConstraint__Group__3__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__3__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__310523);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__3__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__310524);
             rule__RequiredHardwareResourceInstanceConstraint__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__4_in_rule__RequiredHardwareResourceInstanceConstraint__Group__310526);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__4_in_rule__RequiredHardwareResourceInstanceConstraint__Group__310527);
             rule__RequiredHardwareResourceInstanceConstraint__Group__4();
 
             state._fsp--;
@@ -15062,7 +15073,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getDescriptorsKeyword_3()); 
             }
-            match(input,56,FollowSets000.FOLLOW_56_in_rule__RequiredHardwareResourceInstanceConstraint__Group__3__Impl10554); if (state.failed) return ;
+            match(input,56,FollowSets000.FOLLOW_56_in_rule__RequiredHardwareResourceInstanceConstraint__Group__3__Impl10555); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getDescriptorsKeyword_3()); 
             }
@@ -15097,12 +15108,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5070:1: ( rule__RequiredHardwareResourceInstanceConstraint__Group__4__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__5 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5071:2: rule__RequiredHardwareResourceInstanceConstraint__Group__4__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__4__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__410585);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__4__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__410586);
             rule__RequiredHardwareResourceInstanceConstraint__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__5_in_rule__RequiredHardwareResourceInstanceConstraint__Group__410588);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__5_in_rule__RequiredHardwareResourceInstanceConstraint__Group__410589);
             rule__RequiredHardwareResourceInstanceConstraint__Group__5();
 
             state._fsp--;
@@ -15144,7 +15155,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5085:1: ( rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_4 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5085:2: rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_4_in_rule__RequiredHardwareResourceInstanceConstraint__Group__4__Impl10615);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_4_in_rule__RequiredHardwareResourceInstanceConstraint__Group__4__Impl10616);
             rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_4();
 
             state._fsp--;
@@ -15186,12 +15197,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5099:1: ( rule__RequiredHardwareResourceInstanceConstraint__Group__5__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__6 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5100:2: rule__RequiredHardwareResourceInstanceConstraint__Group__5__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__5__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__510645);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__5__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__510646);
             rule__RequiredHardwareResourceInstanceConstraint__Group__5__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__6_in_rule__RequiredHardwareResourceInstanceConstraint__Group__510648);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__6_in_rule__RequiredHardwareResourceInstanceConstraint__Group__510649);
             rule__RequiredHardwareResourceInstanceConstraint__Group__6();
 
             state._fsp--;
@@ -15231,21 +15242,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getGroup_5()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5114:1: ( rule__RequiredHardwareResourceInstanceConstraint__Group_5__0 )*
-            loop36:
+            loop37:
             do {
-                int alt36=2;
-                int LA36_0 = input.LA(1);
+                int alt37=2;
+                int LA37_0 = input.LA(1);
 
-                if ( (LA36_0==58) ) {
-                    alt36=1;
+                if ( (LA37_0==58) ) {
+                    alt37=1;
                 }
 
 
-                switch (alt36) {
+                switch (alt37) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5114:2: rule__RequiredHardwareResourceInstanceConstraint__Group_5__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group_5__0_in_rule__RequiredHardwareResourceInstanceConstraint__Group__5__Impl10675);
+            	    pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group_5__0_in_rule__RequiredHardwareResourceInstanceConstraint__Group__5__Impl10676);
             	    rule__RequiredHardwareResourceInstanceConstraint__Group_5__0();
 
             	    state._fsp--;
@@ -15255,7 +15266,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop36;
+            	    break loop37;
                 }
             } while (true);
 
@@ -15293,12 +15304,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5128:1: ( rule__RequiredHardwareResourceInstanceConstraint__Group__6__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__7 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5129:2: rule__RequiredHardwareResourceInstanceConstraint__Group__6__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__6__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__610706);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__6__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__610707);
             rule__RequiredHardwareResourceInstanceConstraint__Group__6__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__7_in_rule__RequiredHardwareResourceInstanceConstraint__Group__610709);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__7_in_rule__RequiredHardwareResourceInstanceConstraint__Group__610710);
             rule__RequiredHardwareResourceInstanceConstraint__Group__7();
 
             state._fsp--;
@@ -15337,7 +15348,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getSemicolonKeyword_6()); 
             }
-            match(input,55,FollowSets000.FOLLOW_55_in_rule__RequiredHardwareResourceInstanceConstraint__Group__6__Impl10737); if (state.failed) return ;
+            match(input,55,FollowSets000.FOLLOW_55_in_rule__RequiredHardwareResourceInstanceConstraint__Group__6__Impl10738); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getSemicolonKeyword_6()); 
             }
@@ -15372,12 +15383,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5159:1: ( rule__RequiredHardwareResourceInstanceConstraint__Group__7__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__8 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5160:2: rule__RequiredHardwareResourceInstanceConstraint__Group__7__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__7__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__710768);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__7__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__710769);
             rule__RequiredHardwareResourceInstanceConstraint__Group__7__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__8_in_rule__RequiredHardwareResourceInstanceConstraint__Group__710771);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__8_in_rule__RequiredHardwareResourceInstanceConstraint__Group__710772);
             rule__RequiredHardwareResourceInstanceConstraint__Group__8();
 
             state._fsp--;
@@ -15416,7 +15427,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getOclKeyword_7()); 
             }
-            match(input,57,FollowSets000.FOLLOW_57_in_rule__RequiredHardwareResourceInstanceConstraint__Group__7__Impl10799); if (state.failed) return ;
+            match(input,57,FollowSets000.FOLLOW_57_in_rule__RequiredHardwareResourceInstanceConstraint__Group__7__Impl10800); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getOclKeyword_7()); 
             }
@@ -15451,12 +15462,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5190:1: ( rule__RequiredHardwareResourceInstanceConstraint__Group__8__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__9 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5191:2: rule__RequiredHardwareResourceInstanceConstraint__Group__8__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__9
             {
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__8__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__810830);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__8__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__810831);
             rule__RequiredHardwareResourceInstanceConstraint__Group__8__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__9_in_rule__RequiredHardwareResourceInstanceConstraint__Group__810833);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__9_in_rule__RequiredHardwareResourceInstanceConstraint__Group__810834);
             rule__RequiredHardwareResourceInstanceConstraint__Group__9();
 
             state._fsp--;
@@ -15498,7 +15509,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5205:1: ( rule__RequiredHardwareResourceInstanceConstraint__ExpressionAssignment_8 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5205:2: rule__RequiredHardwareResourceInstanceConstraint__ExpressionAssignment_8
             {
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__ExpressionAssignment_8_in_rule__RequiredHardwareResourceInstanceConstraint__Group__8__Impl10860);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__ExpressionAssignment_8_in_rule__RequiredHardwareResourceInstanceConstraint__Group__8__Impl10861);
             rule__RequiredHardwareResourceInstanceConstraint__ExpressionAssignment_8();
 
             state._fsp--;
@@ -15540,12 +15551,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5219:1: ( rule__RequiredHardwareResourceInstanceConstraint__Group__9__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__10 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5220:2: rule__RequiredHardwareResourceInstanceConstraint__Group__9__Impl rule__RequiredHardwareResourceInstanceConstraint__Group__10
             {
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__9__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__910890);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__9__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__910891);
             rule__RequiredHardwareResourceInstanceConstraint__Group__9__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__10_in_rule__RequiredHardwareResourceInstanceConstraint__Group__910893);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__10_in_rule__RequiredHardwareResourceInstanceConstraint__Group__910894);
             rule__RequiredHardwareResourceInstanceConstraint__Group__10();
 
             state._fsp--;
@@ -15584,7 +15595,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getSemicolonKeyword_9()); 
             }
-            match(input,55,FollowSets000.FOLLOW_55_in_rule__RequiredHardwareResourceInstanceConstraint__Group__9__Impl10921); if (state.failed) return ;
+            match(input,55,FollowSets000.FOLLOW_55_in_rule__RequiredHardwareResourceInstanceConstraint__Group__9__Impl10922); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getSemicolonKeyword_9()); 
             }
@@ -15619,7 +15630,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5250:1: ( rule__RequiredHardwareResourceInstanceConstraint__Group__10__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5251:2: rule__RequiredHardwareResourceInstanceConstraint__Group__10__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__10__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__1010952);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__10__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__1010953);
             rule__RequiredHardwareResourceInstanceConstraint__Group__10__Impl();
 
             state._fsp--;
@@ -15658,7 +15669,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRightCurlyBracketKeyword_10()); 
             }
-            match(input,51,FollowSets000.FOLLOW_51_in_rule__RequiredHardwareResourceInstanceConstraint__Group__10__Impl10980); if (state.failed) return ;
+            match(input,51,FollowSets000.FOLLOW_51_in_rule__RequiredHardwareResourceInstanceConstraint__Group__10__Impl10981); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRightCurlyBracketKeyword_10()); 
             }
@@ -15693,12 +15704,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5302:1: ( rule__RequiredHardwareResourceInstanceConstraint__Group_5__0__Impl rule__RequiredHardwareResourceInstanceConstraint__Group_5__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5303:2: rule__RequiredHardwareResourceInstanceConstraint__Group_5__0__Impl rule__RequiredHardwareResourceInstanceConstraint__Group_5__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group_5__0__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__011033);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group_5__0__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__011034);
             rule__RequiredHardwareResourceInstanceConstraint__Group_5__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group_5__1_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__011036);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group_5__1_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__011037);
             rule__RequiredHardwareResourceInstanceConstraint__Group_5__1();
 
             state._fsp--;
@@ -15737,7 +15748,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getCommaKeyword_5_0()); 
             }
-            match(input,58,FollowSets000.FOLLOW_58_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__0__Impl11064); if (state.failed) return ;
+            match(input,58,FollowSets000.FOLLOW_58_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__0__Impl11065); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getCommaKeyword_5_0()); 
             }
@@ -15772,7 +15783,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5333:1: ( rule__RequiredHardwareResourceInstanceConstraint__Group_5__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5334:2: rule__RequiredHardwareResourceInstanceConstraint__Group_5__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group_5__1__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__111095);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group_5__1__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__111096);
             rule__RequiredHardwareResourceInstanceConstraint__Group_5__1__Impl();
 
             state._fsp--;
@@ -15814,7 +15825,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5347:1: ( rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_5_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5347:2: rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_5_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_5_1_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__1__Impl11122);
+            pushFollow(FollowSets000.FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_5_1_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__1__Impl11123);
             rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_5_1();
 
             state._fsp--;
@@ -15856,12 +15867,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5365:1: ( rule__LocationTupleDescriptor__Group__0__Impl rule__LocationTupleDescriptor__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5366:2: rule__LocationTupleDescriptor__Group__0__Impl rule__LocationTupleDescriptor__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__0__Impl_in_rule__LocationTupleDescriptor__Group__011156);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__0__Impl_in_rule__LocationTupleDescriptor__Group__011157);
             rule__LocationTupleDescriptor__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__1_in_rule__LocationTupleDescriptor__Group__011159);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__1_in_rule__LocationTupleDescriptor__Group__011160);
             rule__LocationTupleDescriptor__Group__1();
 
             state._fsp--;
@@ -15900,7 +15911,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationTupleDescriptorAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,64,FollowSets000.FOLLOW_64_in_rule__LocationTupleDescriptor__Group__0__Impl11187); if (state.failed) return ;
+            match(input,64,FollowSets000.FOLLOW_64_in_rule__LocationTupleDescriptor__Group__0__Impl11188); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLocationTupleDescriptorAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -15935,12 +15946,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5396:1: ( rule__LocationTupleDescriptor__Group__1__Impl rule__LocationTupleDescriptor__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5397:2: rule__LocationTupleDescriptor__Group__1__Impl rule__LocationTupleDescriptor__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__1__Impl_in_rule__LocationTupleDescriptor__Group__111218);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__1__Impl_in_rule__LocationTupleDescriptor__Group__111219);
             rule__LocationTupleDescriptor__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__2_in_rule__LocationTupleDescriptor__Group__111221);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__2_in_rule__LocationTupleDescriptor__Group__111222);
             rule__LocationTupleDescriptor__Group__2();
 
             state._fsp--;
@@ -15982,7 +15993,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5411:1: ( rule__LocationTupleDescriptor__InstanceAssignment_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5411:2: rule__LocationTupleDescriptor__InstanceAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__InstanceAssignment_1_in_rule__LocationTupleDescriptor__Group__1__Impl11248);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__InstanceAssignment_1_in_rule__LocationTupleDescriptor__Group__1__Impl11249);
             rule__LocationTupleDescriptor__InstanceAssignment_1();
 
             state._fsp--;
@@ -16024,12 +16035,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5425:1: ( rule__LocationTupleDescriptor__Group__2__Impl rule__LocationTupleDescriptor__Group__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5426:2: rule__LocationTupleDescriptor__Group__2__Impl rule__LocationTupleDescriptor__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__2__Impl_in_rule__LocationTupleDescriptor__Group__211278);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__2__Impl_in_rule__LocationTupleDescriptor__Group__211279);
             rule__LocationTupleDescriptor__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__3_in_rule__LocationTupleDescriptor__Group__211281);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__3_in_rule__LocationTupleDescriptor__Group__211282);
             rule__LocationTupleDescriptor__Group__3();
 
             state._fsp--;
@@ -16068,7 +16079,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationTupleDescriptorAccess().getCommaKeyword_2()); 
             }
-            match(input,58,FollowSets000.FOLLOW_58_in_rule__LocationTupleDescriptor__Group__2__Impl11309); if (state.failed) return ;
+            match(input,58,FollowSets000.FOLLOW_58_in_rule__LocationTupleDescriptor__Group__2__Impl11310); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLocationTupleDescriptorAccess().getCommaKeyword_2()); 
             }
@@ -16103,12 +16114,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5456:1: ( rule__LocationTupleDescriptor__Group__3__Impl rule__LocationTupleDescriptor__Group__4 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5457:2: rule__LocationTupleDescriptor__Group__3__Impl rule__LocationTupleDescriptor__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__3__Impl_in_rule__LocationTupleDescriptor__Group__311340);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__3__Impl_in_rule__LocationTupleDescriptor__Group__311341);
             rule__LocationTupleDescriptor__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__4_in_rule__LocationTupleDescriptor__Group__311343);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__4_in_rule__LocationTupleDescriptor__Group__311344);
             rule__LocationTupleDescriptor__Group__4();
 
             state._fsp--;
@@ -16150,7 +16161,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5471:1: ( rule__LocationTupleDescriptor__InstancesAssignment_3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5471:2: rule__LocationTupleDescriptor__InstancesAssignment_3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__InstancesAssignment_3_in_rule__LocationTupleDescriptor__Group__3__Impl11370);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__InstancesAssignment_3_in_rule__LocationTupleDescriptor__Group__3__Impl11371);
             rule__LocationTupleDescriptor__InstancesAssignment_3();
 
             state._fsp--;
@@ -16192,7 +16203,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5485:1: ( rule__LocationTupleDescriptor__Group__4__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5486:2: rule__LocationTupleDescriptor__Group__4__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__4__Impl_in_rule__LocationTupleDescriptor__Group__411400);
+            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__Group__4__Impl_in_rule__LocationTupleDescriptor__Group__411401);
             rule__LocationTupleDescriptor__Group__4__Impl();
 
             state._fsp--;
@@ -16231,7 +16242,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationTupleDescriptorAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,65,FollowSets000.FOLLOW_65_in_rule__LocationTupleDescriptor__Group__4__Impl11428); if (state.failed) return ;
+            match(input,65,FollowSets000.FOLLOW_65_in_rule__LocationTupleDescriptor__Group__4__Impl11429); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLocationTupleDescriptorAccess().getRightParenthesisKeyword_4()); 
             }
@@ -16266,12 +16277,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5525:1: ( rule__ComponentResourceTupleDescriptor__Group__0__Impl rule__ComponentResourceTupleDescriptor__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5526:2: rule__ComponentResourceTupleDescriptor__Group__0__Impl rule__ComponentResourceTupleDescriptor__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__0__Impl_in_rule__ComponentResourceTupleDescriptor__Group__011469);
+            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__0__Impl_in_rule__ComponentResourceTupleDescriptor__Group__011470);
             rule__ComponentResourceTupleDescriptor__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__1_in_rule__ComponentResourceTupleDescriptor__Group__011472);
+            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__1_in_rule__ComponentResourceTupleDescriptor__Group__011473);
             rule__ComponentResourceTupleDescriptor__Group__1();
 
             state._fsp--;
@@ -16310,7 +16321,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComponentResourceTupleDescriptorAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,64,FollowSets000.FOLLOW_64_in_rule__ComponentResourceTupleDescriptor__Group__0__Impl11500); if (state.failed) return ;
+            match(input,64,FollowSets000.FOLLOW_64_in_rule__ComponentResourceTupleDescriptor__Group__0__Impl11501); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getComponentResourceTupleDescriptorAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -16345,12 +16356,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5556:1: ( rule__ComponentResourceTupleDescriptor__Group__1__Impl rule__ComponentResourceTupleDescriptor__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5557:2: rule__ComponentResourceTupleDescriptor__Group__1__Impl rule__ComponentResourceTupleDescriptor__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__1__Impl_in_rule__ComponentResourceTupleDescriptor__Group__111531);
+            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__1__Impl_in_rule__ComponentResourceTupleDescriptor__Group__111532);
             rule__ComponentResourceTupleDescriptor__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__2_in_rule__ComponentResourceTupleDescriptor__Group__111534);
+            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__2_in_rule__ComponentResourceTupleDescriptor__Group__111535);
             rule__ComponentResourceTupleDescriptor__Group__2();
 
             state._fsp--;
@@ -16392,7 +16403,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5571:1: ( rule__ComponentResourceTupleDescriptor__InstanceAssignment_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5571:2: rule__ComponentResourceTupleDescriptor__InstanceAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__InstanceAssignment_1_in_rule__ComponentResourceTupleDescriptor__Group__1__Impl11561);
+            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__InstanceAssignment_1_in_rule__ComponentResourceTupleDescriptor__Group__1__Impl11562);
             rule__ComponentResourceTupleDescriptor__InstanceAssignment_1();
 
             state._fsp--;
@@ -16434,12 +16445,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5585:1: ( rule__ComponentResourceTupleDescriptor__Group__2__Impl rule__ComponentResourceTupleDescriptor__Group__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5586:2: rule__ComponentResourceTupleDescriptor__Group__2__Impl rule__ComponentResourceTupleDescriptor__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__2__Impl_in_rule__ComponentResourceTupleDescriptor__Group__211591);
+            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__2__Impl_in_rule__ComponentResourceTupleDescriptor__Group__211592);
             rule__ComponentResourceTupleDescriptor__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__3_in_rule__ComponentResourceTupleDescriptor__Group__211594);
+            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__3_in_rule__ComponentResourceTupleDescriptor__Group__211595);
             rule__ComponentResourceTupleDescriptor__Group__3();
 
             state._fsp--;
@@ -16478,7 +16489,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComponentResourceTupleDescriptorAccess().getCommaKeyword_2()); 
             }
-            match(input,58,FollowSets000.FOLLOW_58_in_rule__ComponentResourceTupleDescriptor__Group__2__Impl11622); if (state.failed) return ;
+            match(input,58,FollowSets000.FOLLOW_58_in_rule__ComponentResourceTupleDescriptor__Group__2__Impl11623); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getComponentResourceTupleDescriptorAccess().getCommaKeyword_2()); 
             }
@@ -16513,12 +16524,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5616:1: ( rule__ComponentResourceTupleDescriptor__Group__3__Impl rule__ComponentResourceTupleDescriptor__Group__4 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5617:2: rule__ComponentResourceTupleDescriptor__Group__3__Impl rule__ComponentResourceTupleDescriptor__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__3__Impl_in_rule__ComponentResourceTupleDescriptor__Group__311653);
+            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__3__Impl_in_rule__ComponentResourceTupleDescriptor__Group__311654);
             rule__ComponentResourceTupleDescriptor__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__4_in_rule__ComponentResourceTupleDescriptor__Group__311656);
+            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__4_in_rule__ComponentResourceTupleDescriptor__Group__311657);
             rule__ComponentResourceTupleDescriptor__Group__4();
 
             state._fsp--;
@@ -16560,7 +16571,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5631:1: ( rule__ComponentResourceTupleDescriptor__HwresinstanceAssignment_3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5631:2: rule__ComponentResourceTupleDescriptor__HwresinstanceAssignment_3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__HwresinstanceAssignment_3_in_rule__ComponentResourceTupleDescriptor__Group__3__Impl11683);
+            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__HwresinstanceAssignment_3_in_rule__ComponentResourceTupleDescriptor__Group__3__Impl11684);
             rule__ComponentResourceTupleDescriptor__HwresinstanceAssignment_3();
 
             state._fsp--;
@@ -16602,7 +16613,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5645:1: ( rule__ComponentResourceTupleDescriptor__Group__4__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5646:2: rule__ComponentResourceTupleDescriptor__Group__4__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__4__Impl_in_rule__ComponentResourceTupleDescriptor__Group__411713);
+            pushFollow(FollowSets000.FOLLOW_rule__ComponentResourceTupleDescriptor__Group__4__Impl_in_rule__ComponentResourceTupleDescriptor__Group__411714);
             rule__ComponentResourceTupleDescriptor__Group__4__Impl();
 
             state._fsp--;
@@ -16641,7 +16652,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComponentResourceTupleDescriptorAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,65,FollowSets000.FOLLOW_65_in_rule__ComponentResourceTupleDescriptor__Group__4__Impl11741); if (state.failed) return ;
+            match(input,65,FollowSets000.FOLLOW_65_in_rule__ComponentResourceTupleDescriptor__Group__4__Impl11742); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getComponentResourceTupleDescriptorAccess().getRightParenthesisKeyword_4()); 
             }
@@ -16676,12 +16687,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5685:1: ( rule__MeasureFunction__Group__0__Impl rule__MeasureFunction__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5686:2: rule__MeasureFunction__Group__0__Impl rule__MeasureFunction__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group__0__Impl_in_rule__MeasureFunction__Group__011782);
+            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group__0__Impl_in_rule__MeasureFunction__Group__011783);
             rule__MeasureFunction__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group__1_in_rule__MeasureFunction__Group__011785);
+            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group__1_in_rule__MeasureFunction__Group__011786);
             rule__MeasureFunction__Group__1();
 
             state._fsp--;
@@ -16720,7 +16731,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMeasureFunctionAccess().getMeasureKeyword_0()); 
             }
-            match(input,66,FollowSets000.FOLLOW_66_in_rule__MeasureFunction__Group__0__Impl11813); if (state.failed) return ;
+            match(input,66,FollowSets000.FOLLOW_66_in_rule__MeasureFunction__Group__0__Impl11814); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMeasureFunctionAccess().getMeasureKeyword_0()); 
             }
@@ -16755,12 +16766,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5716:1: ( rule__MeasureFunction__Group__1__Impl rule__MeasureFunction__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5717:2: rule__MeasureFunction__Group__1__Impl rule__MeasureFunction__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group__1__Impl_in_rule__MeasureFunction__Group__111844);
+            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group__1__Impl_in_rule__MeasureFunction__Group__111845);
             rule__MeasureFunction__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group__2_in_rule__MeasureFunction__Group__111847);
+            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group__2_in_rule__MeasureFunction__Group__111848);
             rule__MeasureFunction__Group__2();
 
             state._fsp--;
@@ -16802,7 +16813,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5731:1: ( rule__MeasureFunction__ServicesAssignment_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5731:2: rule__MeasureFunction__ServicesAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__ServicesAssignment_1_in_rule__MeasureFunction__Group__1__Impl11874);
+            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__ServicesAssignment_1_in_rule__MeasureFunction__Group__1__Impl11875);
             rule__MeasureFunction__ServicesAssignment_1();
 
             state._fsp--;
@@ -16844,12 +16855,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5745:1: ( rule__MeasureFunction__Group__2__Impl rule__MeasureFunction__Group__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5746:2: rule__MeasureFunction__Group__2__Impl rule__MeasureFunction__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group__2__Impl_in_rule__MeasureFunction__Group__211904);
+            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group__2__Impl_in_rule__MeasureFunction__Group__211905);
             rule__MeasureFunction__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group__3_in_rule__MeasureFunction__Group__211907);
+            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group__3_in_rule__MeasureFunction__Group__211908);
             rule__MeasureFunction__Group__3();
 
             state._fsp--;
@@ -16889,21 +16900,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getMeasureFunctionAccess().getGroup_2()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5760:1: ( rule__MeasureFunction__Group_2__0 )*
-            loop37:
+            loop38:
             do {
-                int alt37=2;
-                int LA37_0 = input.LA(1);
+                int alt38=2;
+                int LA38_0 = input.LA(1);
 
-                if ( (LA37_0==20) ) {
-                    alt37=1;
+                if ( (LA38_0==20) ) {
+                    alt38=1;
                 }
 
 
-                switch (alt37) {
+                switch (alt38) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5760:2: rule__MeasureFunction__Group_2__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group_2__0_in_rule__MeasureFunction__Group__2__Impl11934);
+            	    pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group_2__0_in_rule__MeasureFunction__Group__2__Impl11935);
             	    rule__MeasureFunction__Group_2__0();
 
             	    state._fsp--;
@@ -16913,7 +16924,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop37;
+            	    break loop38;
                 }
             } while (true);
 
@@ -16951,7 +16962,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5774:1: ( rule__MeasureFunction__Group__3__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5775:2: rule__MeasureFunction__Group__3__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group__3__Impl_in_rule__MeasureFunction__Group__311965);
+            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group__3__Impl_in_rule__MeasureFunction__Group__311966);
             rule__MeasureFunction__Group__3__Impl();
 
             state._fsp--;
@@ -16990,7 +17001,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMeasureFunctionAccess().getSemicolonKeyword_3()); 
             }
-            match(input,55,FollowSets000.FOLLOW_55_in_rule__MeasureFunction__Group__3__Impl11993); if (state.failed) return ;
+            match(input,55,FollowSets000.FOLLOW_55_in_rule__MeasureFunction__Group__3__Impl11994); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMeasureFunctionAccess().getSemicolonKeyword_3()); 
             }
@@ -17025,12 +17036,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5812:1: ( rule__MeasureFunction__Group_2__0__Impl rule__MeasureFunction__Group_2__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5813:2: rule__MeasureFunction__Group_2__0__Impl rule__MeasureFunction__Group_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group_2__0__Impl_in_rule__MeasureFunction__Group_2__012032);
+            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group_2__0__Impl_in_rule__MeasureFunction__Group_2__012033);
             rule__MeasureFunction__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group_2__1_in_rule__MeasureFunction__Group_2__012035);
+            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group_2__1_in_rule__MeasureFunction__Group_2__012036);
             rule__MeasureFunction__Group_2__1();
 
             state._fsp--;
@@ -17069,7 +17080,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMeasureFunctionAccess().getPlusSignKeyword_2_0()); 
             }
-            match(input,20,FollowSets000.FOLLOW_20_in_rule__MeasureFunction__Group_2__0__Impl12063); if (state.failed) return ;
+            match(input,20,FollowSets000.FOLLOW_20_in_rule__MeasureFunction__Group_2__0__Impl12064); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMeasureFunctionAccess().getPlusSignKeyword_2_0()); 
             }
@@ -17104,7 +17115,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5843:1: ( rule__MeasureFunction__Group_2__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5844:2: rule__MeasureFunction__Group_2__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group_2__1__Impl_in_rule__MeasureFunction__Group_2__112094);
+            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__Group_2__1__Impl_in_rule__MeasureFunction__Group_2__112095);
             rule__MeasureFunction__Group_2__1__Impl();
 
             state._fsp--;
@@ -17146,7 +17157,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5857:1: ( rule__MeasureFunction__ServicesAssignment_2_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5857:2: rule__MeasureFunction__ServicesAssignment_2_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__ServicesAssignment_2_1_in_rule__MeasureFunction__Group_2__1__Impl12121);
+            pushFollow(FollowSets000.FOLLOW_rule__MeasureFunction__ServicesAssignment_2_1_in_rule__MeasureFunction__Group_2__1__Impl12122);
             rule__MeasureFunction__ServicesAssignment_2_1();
 
             state._fsp--;
@@ -17188,12 +17199,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5875:1: ( rule__PathNameCS__Group__0__Impl rule__PathNameCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5876:2: rule__PathNameCS__Group__0__Impl rule__PathNameCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__Group__0__Impl_in_rule__PathNameCS__Group__012155);
+            pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__Group__0__Impl_in_rule__PathNameCS__Group__012156);
             rule__PathNameCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__Group__1_in_rule__PathNameCS__Group__012158);
+            pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__Group__1_in_rule__PathNameCS__Group__012159);
             rule__PathNameCS__Group__1();
 
             state._fsp--;
@@ -17235,7 +17246,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5890:1: ( rule__PathNameCS__PathAssignment_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5890:2: rule__PathNameCS__PathAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__PathAssignment_0_in_rule__PathNameCS__Group__0__Impl12185);
+            pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__PathAssignment_0_in_rule__PathNameCS__Group__0__Impl12186);
             rule__PathNameCS__PathAssignment_0();
 
             state._fsp--;
@@ -17277,7 +17288,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5904:1: ( rule__PathNameCS__Group__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5905:2: rule__PathNameCS__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__Group__1__Impl_in_rule__PathNameCS__Group__112215);
+            pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__Group__1__Impl_in_rule__PathNameCS__Group__112216);
             rule__PathNameCS__Group__1__Impl();
 
             state._fsp--;
@@ -17317,21 +17328,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getPathNameCSAccess().getGroup_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5918:1: ( rule__PathNameCS__Group_1__0 )*
-            loop38:
+            loop39:
             do {
-                int alt38=2;
-                int LA38_0 = input.LA(1);
+                int alt39=2;
+                int LA39_0 = input.LA(1);
 
-                if ( (LA38_0==67) ) {
-                    alt38=1;
+                if ( (LA39_0==67) ) {
+                    alt39=1;
                 }
 
 
-                switch (alt38) {
+                switch (alt39) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5918:2: rule__PathNameCS__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__Group_1__0_in_rule__PathNameCS__Group__1__Impl12242);
+            	    pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__Group_1__0_in_rule__PathNameCS__Group__1__Impl12243);
             	    rule__PathNameCS__Group_1__0();
 
             	    state._fsp--;
@@ -17341,7 +17352,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop38;
+            	    break loop39;
                 }
             } while (true);
 
@@ -17379,12 +17390,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5936:1: ( rule__PathNameCS__Group_1__0__Impl rule__PathNameCS__Group_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5937:2: rule__PathNameCS__Group_1__0__Impl rule__PathNameCS__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__Group_1__0__Impl_in_rule__PathNameCS__Group_1__012277);
+            pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__Group_1__0__Impl_in_rule__PathNameCS__Group_1__012278);
             rule__PathNameCS__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__Group_1__1_in_rule__PathNameCS__Group_1__012280);
+            pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__Group_1__1_in_rule__PathNameCS__Group_1__012281);
             rule__PathNameCS__Group_1__1();
 
             state._fsp--;
@@ -17423,7 +17434,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPathNameCSAccess().getColonColonKeyword_1_0()); 
             }
-            match(input,67,FollowSets000.FOLLOW_67_in_rule__PathNameCS__Group_1__0__Impl12308); if (state.failed) return ;
+            match(input,67,FollowSets000.FOLLOW_67_in_rule__PathNameCS__Group_1__0__Impl12309); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPathNameCSAccess().getColonColonKeyword_1_0()); 
             }
@@ -17458,7 +17469,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5967:1: ( rule__PathNameCS__Group_1__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5968:2: rule__PathNameCS__Group_1__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__Group_1__1__Impl_in_rule__PathNameCS__Group_1__112339);
+            pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__Group_1__1__Impl_in_rule__PathNameCS__Group_1__112340);
             rule__PathNameCS__Group_1__1__Impl();
 
             state._fsp--;
@@ -17500,7 +17511,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5981:1: ( rule__PathNameCS__PathAssignment_1_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5981:2: rule__PathNameCS__PathAssignment_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__PathAssignment_1_1_in_rule__PathNameCS__Group_1__1__Impl12366);
+            pushFollow(FollowSets000.FOLLOW_rule__PathNameCS__PathAssignment_1_1_in_rule__PathNameCS__Group_1__1__Impl12367);
             rule__PathNameCS__PathAssignment_1_1();
 
             state._fsp--;
@@ -17542,12 +17553,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6001:1: ( rule__URIFirstPathElementCS__Group_1__0__Impl rule__URIFirstPathElementCS__Group_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6002:2: rule__URIFirstPathElementCS__Group_1__0__Impl rule__URIFirstPathElementCS__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__URIFirstPathElementCS__Group_1__0__Impl_in_rule__URIFirstPathElementCS__Group_1__012402);
+            pushFollow(FollowSets000.FOLLOW_rule__URIFirstPathElementCS__Group_1__0__Impl_in_rule__URIFirstPathElementCS__Group_1__012403);
             rule__URIFirstPathElementCS__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__URIFirstPathElementCS__Group_1__1_in_rule__URIFirstPathElementCS__Group_1__012405);
+            pushFollow(FollowSets000.FOLLOW_rule__URIFirstPathElementCS__Group_1__1_in_rule__URIFirstPathElementCS__Group_1__012406);
             rule__URIFirstPathElementCS__Group_1__1();
 
             state._fsp--;
@@ -17621,7 +17632,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6032:1: ( rule__URIFirstPathElementCS__Group_1__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6033:2: rule__URIFirstPathElementCS__Group_1__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__URIFirstPathElementCS__Group_1__1__Impl_in_rule__URIFirstPathElementCS__Group_1__112463);
+            pushFollow(FollowSets000.FOLLOW_rule__URIFirstPathElementCS__Group_1__1__Impl_in_rule__URIFirstPathElementCS__Group_1__112464);
             rule__URIFirstPathElementCS__Group_1__1__Impl();
 
             state._fsp--;
@@ -17663,7 +17674,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6046:1: ( rule__URIFirstPathElementCS__ElementAssignment_1_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6046:2: rule__URIFirstPathElementCS__ElementAssignment_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__URIFirstPathElementCS__ElementAssignment_1_1_in_rule__URIFirstPathElementCS__Group_1__1__Impl12490);
+            pushFollow(FollowSets000.FOLLOW_rule__URIFirstPathElementCS__ElementAssignment_1_1_in_rule__URIFirstPathElementCS__Group_1__1__Impl12491);
             rule__URIFirstPathElementCS__ElementAssignment_1_1();
 
             state._fsp--;
@@ -17705,12 +17716,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6064:1: ( rule__CollectionTypeCS__Group__0__Impl rule__CollectionTypeCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6065:2: rule__CollectionTypeCS__Group__0__Impl rule__CollectionTypeCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group__0__Impl_in_rule__CollectionTypeCS__Group__012524);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group__0__Impl_in_rule__CollectionTypeCS__Group__012525);
             rule__CollectionTypeCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group__1_in_rule__CollectionTypeCS__Group__012527);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group__1_in_rule__CollectionTypeCS__Group__012528);
             rule__CollectionTypeCS__Group__1();
 
             state._fsp--;
@@ -17752,7 +17763,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6079:1: ( rule__CollectionTypeCS__NameAssignment_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6079:2: rule__CollectionTypeCS__NameAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__NameAssignment_0_in_rule__CollectionTypeCS__Group__0__Impl12554);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__NameAssignment_0_in_rule__CollectionTypeCS__Group__0__Impl12555);
             rule__CollectionTypeCS__NameAssignment_0();
 
             state._fsp--;
@@ -17794,7 +17805,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6093:1: ( rule__CollectionTypeCS__Group__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6094:2: rule__CollectionTypeCS__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group__1__Impl_in_rule__CollectionTypeCS__Group__112584);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group__1__Impl_in_rule__CollectionTypeCS__Group__112585);
             rule__CollectionTypeCS__Group__1__Impl();
 
             state._fsp--;
@@ -17834,17 +17845,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getCollectionTypeCSAccess().getGroup_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6107:1: ( rule__CollectionTypeCS__Group_1__0 )?
-            int alt39=2;
-            int LA39_0 = input.LA(1);
+            int alt40=2;
+            int LA40_0 = input.LA(1);
 
-            if ( (LA39_0==64) ) {
-                alt39=1;
+            if ( (LA40_0==64) ) {
+                alt40=1;
             }
-            switch (alt39) {
+            switch (alt40) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6107:2: rule__CollectionTypeCS__Group_1__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group_1__0_in_rule__CollectionTypeCS__Group__1__Impl12611);
+                    pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group_1__0_in_rule__CollectionTypeCS__Group__1__Impl12612);
                     rule__CollectionTypeCS__Group_1__0();
 
                     state._fsp--;
@@ -17889,12 +17900,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6125:1: ( rule__CollectionTypeCS__Group_1__0__Impl rule__CollectionTypeCS__Group_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6126:2: rule__CollectionTypeCS__Group_1__0__Impl rule__CollectionTypeCS__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group_1__0__Impl_in_rule__CollectionTypeCS__Group_1__012646);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group_1__0__Impl_in_rule__CollectionTypeCS__Group_1__012647);
             rule__CollectionTypeCS__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group_1__1_in_rule__CollectionTypeCS__Group_1__012649);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group_1__1_in_rule__CollectionTypeCS__Group_1__012650);
             rule__CollectionTypeCS__Group_1__1();
 
             state._fsp--;
@@ -17933,7 +17944,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionTypeCSAccess().getLeftParenthesisKeyword_1_0()); 
             }
-            match(input,64,FollowSets000.FOLLOW_64_in_rule__CollectionTypeCS__Group_1__0__Impl12677); if (state.failed) return ;
+            match(input,64,FollowSets000.FOLLOW_64_in_rule__CollectionTypeCS__Group_1__0__Impl12678); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCollectionTypeCSAccess().getLeftParenthesisKeyword_1_0()); 
             }
@@ -17968,12 +17979,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6156:1: ( rule__CollectionTypeCS__Group_1__1__Impl rule__CollectionTypeCS__Group_1__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6157:2: rule__CollectionTypeCS__Group_1__1__Impl rule__CollectionTypeCS__Group_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group_1__1__Impl_in_rule__CollectionTypeCS__Group_1__112708);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group_1__1__Impl_in_rule__CollectionTypeCS__Group_1__112709);
             rule__CollectionTypeCS__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group_1__2_in_rule__CollectionTypeCS__Group_1__112711);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group_1__2_in_rule__CollectionTypeCS__Group_1__112712);
             rule__CollectionTypeCS__Group_1__2();
 
             state._fsp--;
@@ -18015,7 +18026,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6171:1: ( rule__CollectionTypeCS__OwnedTypeAssignment_1_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6171:2: rule__CollectionTypeCS__OwnedTypeAssignment_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__OwnedTypeAssignment_1_1_in_rule__CollectionTypeCS__Group_1__1__Impl12738);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__OwnedTypeAssignment_1_1_in_rule__CollectionTypeCS__Group_1__1__Impl12739);
             rule__CollectionTypeCS__OwnedTypeAssignment_1_1();
 
             state._fsp--;
@@ -18057,7 +18068,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6185:1: ( rule__CollectionTypeCS__Group_1__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6186:2: rule__CollectionTypeCS__Group_1__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group_1__2__Impl_in_rule__CollectionTypeCS__Group_1__212768);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionTypeCS__Group_1__2__Impl_in_rule__CollectionTypeCS__Group_1__212769);
             rule__CollectionTypeCS__Group_1__2__Impl();
 
             state._fsp--;
@@ -18096,7 +18107,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionTypeCSAccess().getRightParenthesisKeyword_1_2()); 
             }
-            match(input,65,FollowSets000.FOLLOW_65_in_rule__CollectionTypeCS__Group_1__2__Impl12796); if (state.failed) return ;
+            match(input,65,FollowSets000.FOLLOW_65_in_rule__CollectionTypeCS__Group_1__2__Impl12797); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCollectionTypeCSAccess().getRightParenthesisKeyword_1_2()); 
             }
@@ -18131,12 +18142,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6221:1: ( rule__MultiplicityBoundsCS__Group__0__Impl rule__MultiplicityBoundsCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6222:2: rule__MultiplicityBoundsCS__Group__0__Impl rule__MultiplicityBoundsCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__Group__0__Impl_in_rule__MultiplicityBoundsCS__Group__012833);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__Group__0__Impl_in_rule__MultiplicityBoundsCS__Group__012834);
             rule__MultiplicityBoundsCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__Group__1_in_rule__MultiplicityBoundsCS__Group__012836);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__Group__1_in_rule__MultiplicityBoundsCS__Group__012837);
             rule__MultiplicityBoundsCS__Group__1();
 
             state._fsp--;
@@ -18178,7 +18189,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6236:1: ( rule__MultiplicityBoundsCS__LowerBoundAssignment_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6236:2: rule__MultiplicityBoundsCS__LowerBoundAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__LowerBoundAssignment_0_in_rule__MultiplicityBoundsCS__Group__0__Impl12863);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__LowerBoundAssignment_0_in_rule__MultiplicityBoundsCS__Group__0__Impl12864);
             rule__MultiplicityBoundsCS__LowerBoundAssignment_0();
 
             state._fsp--;
@@ -18220,7 +18231,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6250:1: ( rule__MultiplicityBoundsCS__Group__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6251:2: rule__MultiplicityBoundsCS__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__Group__1__Impl_in_rule__MultiplicityBoundsCS__Group__112893);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__Group__1__Impl_in_rule__MultiplicityBoundsCS__Group__112894);
             rule__MultiplicityBoundsCS__Group__1__Impl();
 
             state._fsp--;
@@ -18260,17 +18271,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getMultiplicityBoundsCSAccess().getGroup_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6264:1: ( rule__MultiplicityBoundsCS__Group_1__0 )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( (LA40_0==68) ) {
-                alt40=1;
+            if ( (LA41_0==68) ) {
+                alt41=1;
             }
-            switch (alt40) {
+            switch (alt41) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6264:2: rule__MultiplicityBoundsCS__Group_1__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__Group_1__0_in_rule__MultiplicityBoundsCS__Group__1__Impl12920);
+                    pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__Group_1__0_in_rule__MultiplicityBoundsCS__Group__1__Impl12921);
                     rule__MultiplicityBoundsCS__Group_1__0();
 
                     state._fsp--;
@@ -18315,12 +18326,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6282:1: ( rule__MultiplicityBoundsCS__Group_1__0__Impl rule__MultiplicityBoundsCS__Group_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6283:2: rule__MultiplicityBoundsCS__Group_1__0__Impl rule__MultiplicityBoundsCS__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__Group_1__0__Impl_in_rule__MultiplicityBoundsCS__Group_1__012955);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__Group_1__0__Impl_in_rule__MultiplicityBoundsCS__Group_1__012956);
             rule__MultiplicityBoundsCS__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__Group_1__1_in_rule__MultiplicityBoundsCS__Group_1__012958);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__Group_1__1_in_rule__MultiplicityBoundsCS__Group_1__012959);
             rule__MultiplicityBoundsCS__Group_1__1();
 
             state._fsp--;
@@ -18359,7 +18370,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicityBoundsCSAccess().getFullStopFullStopKeyword_1_0()); 
             }
-            match(input,68,FollowSets000.FOLLOW_68_in_rule__MultiplicityBoundsCS__Group_1__0__Impl12986); if (state.failed) return ;
+            match(input,68,FollowSets000.FOLLOW_68_in_rule__MultiplicityBoundsCS__Group_1__0__Impl12987); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMultiplicityBoundsCSAccess().getFullStopFullStopKeyword_1_0()); 
             }
@@ -18394,7 +18405,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6313:1: ( rule__MultiplicityBoundsCS__Group_1__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6314:2: rule__MultiplicityBoundsCS__Group_1__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__Group_1__1__Impl_in_rule__MultiplicityBoundsCS__Group_1__113017);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__Group_1__1__Impl_in_rule__MultiplicityBoundsCS__Group_1__113018);
             rule__MultiplicityBoundsCS__Group_1__1__Impl();
 
             state._fsp--;
@@ -18436,7 +18447,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6327:1: ( rule__MultiplicityBoundsCS__UpperBoundAssignment_1_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6327:2: rule__MultiplicityBoundsCS__UpperBoundAssignment_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__UpperBoundAssignment_1_1_in_rule__MultiplicityBoundsCS__Group_1__1__Impl13044);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityBoundsCS__UpperBoundAssignment_1_1_in_rule__MultiplicityBoundsCS__Group_1__1__Impl13045);
             rule__MultiplicityBoundsCS__UpperBoundAssignment_1_1();
 
             state._fsp--;
@@ -18478,12 +18489,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6345:1: ( rule__MultiplicityCS__Group__0__Impl rule__MultiplicityCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6346:2: rule__MultiplicityCS__Group__0__Impl rule__MultiplicityCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityCS__Group__0__Impl_in_rule__MultiplicityCS__Group__013078);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityCS__Group__0__Impl_in_rule__MultiplicityCS__Group__013079);
             rule__MultiplicityCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityCS__Group__1_in_rule__MultiplicityCS__Group__013081);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityCS__Group__1_in_rule__MultiplicityCS__Group__013082);
             rule__MultiplicityCS__Group__1();
 
             state._fsp--;
@@ -18522,7 +18533,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicityCSAccess().getLeftSquareBracketKeyword_0()); 
             }
-            match(input,69,FollowSets000.FOLLOW_69_in_rule__MultiplicityCS__Group__0__Impl13109); if (state.failed) return ;
+            match(input,69,FollowSets000.FOLLOW_69_in_rule__MultiplicityCS__Group__0__Impl13110); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMultiplicityCSAccess().getLeftSquareBracketKeyword_0()); 
             }
@@ -18557,12 +18568,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6376:1: ( rule__MultiplicityCS__Group__1__Impl rule__MultiplicityCS__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6377:2: rule__MultiplicityCS__Group__1__Impl rule__MultiplicityCS__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityCS__Group__1__Impl_in_rule__MultiplicityCS__Group__113140);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityCS__Group__1__Impl_in_rule__MultiplicityCS__Group__113141);
             rule__MultiplicityCS__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityCS__Group__2_in_rule__MultiplicityCS__Group__113143);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityCS__Group__2_in_rule__MultiplicityCS__Group__113144);
             rule__MultiplicityCS__Group__2();
 
             state._fsp--;
@@ -18604,7 +18615,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6391:1: ( rule__MultiplicityCS__Alternatives_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6391:2: rule__MultiplicityCS__Alternatives_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityCS__Alternatives_1_in_rule__MultiplicityCS__Group__1__Impl13170);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityCS__Alternatives_1_in_rule__MultiplicityCS__Group__1__Impl13171);
             rule__MultiplicityCS__Alternatives_1();
 
             state._fsp--;
@@ -18646,7 +18657,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6405:1: ( rule__MultiplicityCS__Group__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6406:2: rule__MultiplicityCS__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityCS__Group__2__Impl_in_rule__MultiplicityCS__Group__213200);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicityCS__Group__2__Impl_in_rule__MultiplicityCS__Group__213201);
             rule__MultiplicityCS__Group__2__Impl();
 
             state._fsp--;
@@ -18685,7 +18696,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicityCSAccess().getRightSquareBracketKeyword_2()); 
             }
-            match(input,70,FollowSets000.FOLLOW_70_in_rule__MultiplicityCS__Group__2__Impl13228); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_70_in_rule__MultiplicityCS__Group__2__Impl13229); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMultiplicityCSAccess().getRightSquareBracketKeyword_2()); 
             }
@@ -18720,12 +18731,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6441:1: ( rule__TupleTypeCS__Group__0__Impl rule__TupleTypeCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6442:2: rule__TupleTypeCS__Group__0__Impl rule__TupleTypeCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group__0__Impl_in_rule__TupleTypeCS__Group__013265);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group__0__Impl_in_rule__TupleTypeCS__Group__013266);
             rule__TupleTypeCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group__1_in_rule__TupleTypeCS__Group__013268);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group__1_in_rule__TupleTypeCS__Group__013269);
             rule__TupleTypeCS__Group__1();
 
             state._fsp--;
@@ -18767,7 +18778,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6456:1: ( rule__TupleTypeCS__NameAssignment_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6456:2: rule__TupleTypeCS__NameAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__NameAssignment_0_in_rule__TupleTypeCS__Group__0__Impl13295);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__NameAssignment_0_in_rule__TupleTypeCS__Group__0__Impl13296);
             rule__TupleTypeCS__NameAssignment_0();
 
             state._fsp--;
@@ -18809,7 +18820,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6470:1: ( rule__TupleTypeCS__Group__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6471:2: rule__TupleTypeCS__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group__1__Impl_in_rule__TupleTypeCS__Group__113325);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group__1__Impl_in_rule__TupleTypeCS__Group__113326);
             rule__TupleTypeCS__Group__1__Impl();
 
             state._fsp--;
@@ -18849,17 +18860,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getTupleTypeCSAccess().getGroup_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6484:1: ( rule__TupleTypeCS__Group_1__0 )?
-            int alt41=2;
-            int LA41_0 = input.LA(1);
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-            if ( (LA41_0==64) ) {
-                alt41=1;
+            if ( (LA42_0==64) ) {
+                alt42=1;
             }
-            switch (alt41) {
+            switch (alt42) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6484:2: rule__TupleTypeCS__Group_1__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1__0_in_rule__TupleTypeCS__Group__1__Impl13352);
+                    pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1__0_in_rule__TupleTypeCS__Group__1__Impl13353);
                     rule__TupleTypeCS__Group_1__0();
 
                     state._fsp--;
@@ -18904,12 +18915,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6502:1: ( rule__TupleTypeCS__Group_1__0__Impl rule__TupleTypeCS__Group_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6503:2: rule__TupleTypeCS__Group_1__0__Impl rule__TupleTypeCS__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1__0__Impl_in_rule__TupleTypeCS__Group_1__013387);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1__0__Impl_in_rule__TupleTypeCS__Group_1__013388);
             rule__TupleTypeCS__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1__1_in_rule__TupleTypeCS__Group_1__013390);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1__1_in_rule__TupleTypeCS__Group_1__013391);
             rule__TupleTypeCS__Group_1__1();
 
             state._fsp--;
@@ -18948,7 +18959,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleTypeCSAccess().getLeftParenthesisKeyword_1_0()); 
             }
-            match(input,64,FollowSets000.FOLLOW_64_in_rule__TupleTypeCS__Group_1__0__Impl13418); if (state.failed) return ;
+            match(input,64,FollowSets000.FOLLOW_64_in_rule__TupleTypeCS__Group_1__0__Impl13419); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTupleTypeCSAccess().getLeftParenthesisKeyword_1_0()); 
             }
@@ -18983,12 +18994,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6533:1: ( rule__TupleTypeCS__Group_1__1__Impl rule__TupleTypeCS__Group_1__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6534:2: rule__TupleTypeCS__Group_1__1__Impl rule__TupleTypeCS__Group_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1__1__Impl_in_rule__TupleTypeCS__Group_1__113449);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1__1__Impl_in_rule__TupleTypeCS__Group_1__113450);
             rule__TupleTypeCS__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1__2_in_rule__TupleTypeCS__Group_1__113452);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1__2_in_rule__TupleTypeCS__Group_1__113453);
             rule__TupleTypeCS__Group_1__2();
 
             state._fsp--;
@@ -19028,17 +19039,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getTupleTypeCSAccess().getGroup_1_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6548:1: ( rule__TupleTypeCS__Group_1_1__0 )?
-            int alt42=2;
-            int LA42_0 = input.LA(1);
+            int alt43=2;
+            int LA43_0 = input.LA(1);
 
-            if ( ((LA42_0>=RULE_SIMPLE_ID && LA42_0<=RULE_ESCAPED_ID)) ) {
-                alt42=1;
+            if ( ((LA43_0>=RULE_SIMPLE_ID && LA43_0<=RULE_ESCAPED_ID)) ) {
+                alt43=1;
             }
-            switch (alt42) {
+            switch (alt43) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6548:2: rule__TupleTypeCS__Group_1_1__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1_1__0_in_rule__TupleTypeCS__Group_1__1__Impl13479);
+                    pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1_1__0_in_rule__TupleTypeCS__Group_1__1__Impl13480);
                     rule__TupleTypeCS__Group_1_1__0();
 
                     state._fsp--;
@@ -19083,7 +19094,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6562:1: ( rule__TupleTypeCS__Group_1__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6563:2: rule__TupleTypeCS__Group_1__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1__2__Impl_in_rule__TupleTypeCS__Group_1__213510);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1__2__Impl_in_rule__TupleTypeCS__Group_1__213511);
             rule__TupleTypeCS__Group_1__2__Impl();
 
             state._fsp--;
@@ -19122,7 +19133,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleTypeCSAccess().getRightParenthesisKeyword_1_2()); 
             }
-            match(input,65,FollowSets000.FOLLOW_65_in_rule__TupleTypeCS__Group_1__2__Impl13538); if (state.failed) return ;
+            match(input,65,FollowSets000.FOLLOW_65_in_rule__TupleTypeCS__Group_1__2__Impl13539); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTupleTypeCSAccess().getRightParenthesisKeyword_1_2()); 
             }
@@ -19157,12 +19168,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6598:1: ( rule__TupleTypeCS__Group_1_1__0__Impl rule__TupleTypeCS__Group_1_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6599:2: rule__TupleTypeCS__Group_1_1__0__Impl rule__TupleTypeCS__Group_1_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1_1__0__Impl_in_rule__TupleTypeCS__Group_1_1__013575);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1_1__0__Impl_in_rule__TupleTypeCS__Group_1_1__013576);
             rule__TupleTypeCS__Group_1_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1_1__1_in_rule__TupleTypeCS__Group_1_1__013578);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1_1__1_in_rule__TupleTypeCS__Group_1_1__013579);
             rule__TupleTypeCS__Group_1_1__1();
 
             state._fsp--;
@@ -19204,7 +19215,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6613:1: ( rule__TupleTypeCS__OwnedPartsAssignment_1_1_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6613:2: rule__TupleTypeCS__OwnedPartsAssignment_1_1_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__OwnedPartsAssignment_1_1_0_in_rule__TupleTypeCS__Group_1_1__0__Impl13605);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__OwnedPartsAssignment_1_1_0_in_rule__TupleTypeCS__Group_1_1__0__Impl13606);
             rule__TupleTypeCS__OwnedPartsAssignment_1_1_0();
 
             state._fsp--;
@@ -19246,7 +19257,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6627:1: ( rule__TupleTypeCS__Group_1_1__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6628:2: rule__TupleTypeCS__Group_1_1__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1_1__1__Impl_in_rule__TupleTypeCS__Group_1_1__113635);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1_1__1__Impl_in_rule__TupleTypeCS__Group_1_1__113636);
             rule__TupleTypeCS__Group_1_1__1__Impl();
 
             state._fsp--;
@@ -19286,21 +19297,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getTupleTypeCSAccess().getGroup_1_1_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6641:1: ( rule__TupleTypeCS__Group_1_1_1__0 )*
-            loop43:
+            loop44:
             do {
-                int alt43=2;
-                int LA43_0 = input.LA(1);
+                int alt44=2;
+                int LA44_0 = input.LA(1);
 
-                if ( (LA43_0==58) ) {
-                    alt43=1;
+                if ( (LA44_0==58) ) {
+                    alt44=1;
                 }
 
 
-                switch (alt43) {
+                switch (alt44) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6641:2: rule__TupleTypeCS__Group_1_1_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1_1_1__0_in_rule__TupleTypeCS__Group_1_1__1__Impl13662);
+            	    pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1_1_1__0_in_rule__TupleTypeCS__Group_1_1__1__Impl13663);
             	    rule__TupleTypeCS__Group_1_1_1__0();
 
             	    state._fsp--;
@@ -19310,7 +19321,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop43;
+            	    break loop44;
                 }
             } while (true);
 
@@ -19348,12 +19359,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6659:1: ( rule__TupleTypeCS__Group_1_1_1__0__Impl rule__TupleTypeCS__Group_1_1_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6660:2: rule__TupleTypeCS__Group_1_1_1__0__Impl rule__TupleTypeCS__Group_1_1_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1_1_1__0__Impl_in_rule__TupleTypeCS__Group_1_1_1__013697);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1_1_1__0__Impl_in_rule__TupleTypeCS__Group_1_1_1__013698);
             rule__TupleTypeCS__Group_1_1_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1_1_1__1_in_rule__TupleTypeCS__Group_1_1_1__013700);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1_1_1__1_in_rule__TupleTypeCS__Group_1_1_1__013701);
             rule__TupleTypeCS__Group_1_1_1__1();
 
             state._fsp--;
@@ -19392,7 +19403,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleTypeCSAccess().getCommaKeyword_1_1_1_0()); 
             }
-            match(input,58,FollowSets000.FOLLOW_58_in_rule__TupleTypeCS__Group_1_1_1__0__Impl13728); if (state.failed) return ;
+            match(input,58,FollowSets000.FOLLOW_58_in_rule__TupleTypeCS__Group_1_1_1__0__Impl13729); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTupleTypeCSAccess().getCommaKeyword_1_1_1_0()); 
             }
@@ -19427,7 +19438,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6690:1: ( rule__TupleTypeCS__Group_1_1_1__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6691:2: rule__TupleTypeCS__Group_1_1_1__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1_1_1__1__Impl_in_rule__TupleTypeCS__Group_1_1_1__113759);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__Group_1_1_1__1__Impl_in_rule__TupleTypeCS__Group_1_1_1__113760);
             rule__TupleTypeCS__Group_1_1_1__1__Impl();
 
             state._fsp--;
@@ -19469,7 +19480,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6704:1: ( rule__TupleTypeCS__OwnedPartsAssignment_1_1_1_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6704:2: rule__TupleTypeCS__OwnedPartsAssignment_1_1_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__OwnedPartsAssignment_1_1_1_1_in_rule__TupleTypeCS__Group_1_1_1__1__Impl13786);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleTypeCS__OwnedPartsAssignment_1_1_1_1_in_rule__TupleTypeCS__Group_1_1_1__1__Impl13787);
             rule__TupleTypeCS__OwnedPartsAssignment_1_1_1_1();
 
             state._fsp--;
@@ -19511,12 +19522,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6722:1: ( rule__TuplePartCS__Group__0__Impl rule__TuplePartCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6723:2: rule__TuplePartCS__Group__0__Impl rule__TuplePartCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TuplePartCS__Group__0__Impl_in_rule__TuplePartCS__Group__013820);
+            pushFollow(FollowSets000.FOLLOW_rule__TuplePartCS__Group__0__Impl_in_rule__TuplePartCS__Group__013821);
             rule__TuplePartCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TuplePartCS__Group__1_in_rule__TuplePartCS__Group__013823);
+            pushFollow(FollowSets000.FOLLOW_rule__TuplePartCS__Group__1_in_rule__TuplePartCS__Group__013824);
             rule__TuplePartCS__Group__1();
 
             state._fsp--;
@@ -19558,7 +19569,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6737:1: ( rule__TuplePartCS__NameAssignment_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6737:2: rule__TuplePartCS__NameAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TuplePartCS__NameAssignment_0_in_rule__TuplePartCS__Group__0__Impl13850);
+            pushFollow(FollowSets000.FOLLOW_rule__TuplePartCS__NameAssignment_0_in_rule__TuplePartCS__Group__0__Impl13851);
             rule__TuplePartCS__NameAssignment_0();
 
             state._fsp--;
@@ -19600,12 +19611,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6751:1: ( rule__TuplePartCS__Group__1__Impl rule__TuplePartCS__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6752:2: rule__TuplePartCS__Group__1__Impl rule__TuplePartCS__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TuplePartCS__Group__1__Impl_in_rule__TuplePartCS__Group__113880);
+            pushFollow(FollowSets000.FOLLOW_rule__TuplePartCS__Group__1__Impl_in_rule__TuplePartCS__Group__113881);
             rule__TuplePartCS__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TuplePartCS__Group__2_in_rule__TuplePartCS__Group__113883);
+            pushFollow(FollowSets000.FOLLOW_rule__TuplePartCS__Group__2_in_rule__TuplePartCS__Group__113884);
             rule__TuplePartCS__Group__2();
 
             state._fsp--;
@@ -19644,7 +19655,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTuplePartCSAccess().getColonKeyword_1()); 
             }
-            match(input,71,FollowSets000.FOLLOW_71_in_rule__TuplePartCS__Group__1__Impl13911); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_71_in_rule__TuplePartCS__Group__1__Impl13912); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTuplePartCSAccess().getColonKeyword_1()); 
             }
@@ -19679,7 +19690,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6782:1: ( rule__TuplePartCS__Group__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6783:2: rule__TuplePartCS__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TuplePartCS__Group__2__Impl_in_rule__TuplePartCS__Group__213942);
+            pushFollow(FollowSets000.FOLLOW_rule__TuplePartCS__Group__2__Impl_in_rule__TuplePartCS__Group__213943);
             rule__TuplePartCS__Group__2__Impl();
 
             state._fsp--;
@@ -19721,7 +19732,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6796:1: ( rule__TuplePartCS__OwnedTypeAssignment_2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6796:2: rule__TuplePartCS__OwnedTypeAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TuplePartCS__OwnedTypeAssignment_2_in_rule__TuplePartCS__Group__2__Impl13969);
+            pushFollow(FollowSets000.FOLLOW_rule__TuplePartCS__OwnedTypeAssignment_2_in_rule__TuplePartCS__Group__2__Impl13970);
             rule__TuplePartCS__OwnedTypeAssignment_2();
 
             state._fsp--;
@@ -19763,12 +19774,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6816:1: ( rule__CollectionLiteralExpCS__Group__0__Impl rule__CollectionLiteralExpCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6817:2: rule__CollectionLiteralExpCS__Group__0__Impl rule__CollectionLiteralExpCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group__0__Impl_in_rule__CollectionLiteralExpCS__Group__014005);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group__0__Impl_in_rule__CollectionLiteralExpCS__Group__014006);
             rule__CollectionLiteralExpCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group__1_in_rule__CollectionLiteralExpCS__Group__014008);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group__1_in_rule__CollectionLiteralExpCS__Group__014009);
             rule__CollectionLiteralExpCS__Group__1();
 
             state._fsp--;
@@ -19810,7 +19821,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6831:1: ( rule__CollectionLiteralExpCS__OwnedTypeAssignment_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6831:2: rule__CollectionLiteralExpCS__OwnedTypeAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__OwnedTypeAssignment_0_in_rule__CollectionLiteralExpCS__Group__0__Impl14035);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__OwnedTypeAssignment_0_in_rule__CollectionLiteralExpCS__Group__0__Impl14036);
             rule__CollectionLiteralExpCS__OwnedTypeAssignment_0();
 
             state._fsp--;
@@ -19852,12 +19863,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6845:1: ( rule__CollectionLiteralExpCS__Group__1__Impl rule__CollectionLiteralExpCS__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6846:2: rule__CollectionLiteralExpCS__Group__1__Impl rule__CollectionLiteralExpCS__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group__1__Impl_in_rule__CollectionLiteralExpCS__Group__114065);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group__1__Impl_in_rule__CollectionLiteralExpCS__Group__114066);
             rule__CollectionLiteralExpCS__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group__2_in_rule__CollectionLiteralExpCS__Group__114068);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group__2_in_rule__CollectionLiteralExpCS__Group__114069);
             rule__CollectionLiteralExpCS__Group__2();
 
             state._fsp--;
@@ -19896,7 +19907,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionLiteralExpCSAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,50,FollowSets000.FOLLOW_50_in_rule__CollectionLiteralExpCS__Group__1__Impl14096); if (state.failed) return ;
+            match(input,50,FollowSets000.FOLLOW_50_in_rule__CollectionLiteralExpCS__Group__1__Impl14097); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCollectionLiteralExpCSAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -19931,12 +19942,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6876:1: ( rule__CollectionLiteralExpCS__Group__2__Impl rule__CollectionLiteralExpCS__Group__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6877:2: rule__CollectionLiteralExpCS__Group__2__Impl rule__CollectionLiteralExpCS__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group__2__Impl_in_rule__CollectionLiteralExpCS__Group__214127);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group__2__Impl_in_rule__CollectionLiteralExpCS__Group__214128);
             rule__CollectionLiteralExpCS__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group__3_in_rule__CollectionLiteralExpCS__Group__214130);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group__3_in_rule__CollectionLiteralExpCS__Group__214131);
             rule__CollectionLiteralExpCS__Group__3();
 
             state._fsp--;
@@ -19976,17 +19987,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getCollectionLiteralExpCSAccess().getGroup_2()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6891:1: ( rule__CollectionLiteralExpCS__Group_2__0 )?
-            int alt44=2;
-            int LA44_0 = input.LA(1);
+            int alt45=2;
+            int LA45_0 = input.LA(1);
 
-            if ( ((LA44_0>=RULE_INT && LA44_0<=RULE_ESCAPED_ID)||(LA44_0>=16 && LA44_0<=18)||(LA44_0>=33 && LA44_0<=46)||LA44_0==64||(LA44_0>=72 && LA44_0<=73)||LA44_0==75||LA44_0==79||(LA44_0>=81 && LA44_0<=83)) ) {
-                alt44=1;
+            if ( ((LA45_0>=RULE_INT && LA45_0<=RULE_ESCAPED_ID)||(LA45_0>=16 && LA45_0<=18)||(LA45_0>=33 && LA45_0<=46)||LA45_0==64||(LA45_0>=72 && LA45_0<=73)||LA45_0==75||LA45_0==79||(LA45_0>=81 && LA45_0<=83)) ) {
+                alt45=1;
             }
-            switch (alt44) {
+            switch (alt45) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6891:2: rule__CollectionLiteralExpCS__Group_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group_2__0_in_rule__CollectionLiteralExpCS__Group__2__Impl14157);
+                    pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group_2__0_in_rule__CollectionLiteralExpCS__Group__2__Impl14158);
                     rule__CollectionLiteralExpCS__Group_2__0();
 
                     state._fsp--;
@@ -20031,7 +20042,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6905:1: ( rule__CollectionLiteralExpCS__Group__3__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6906:2: rule__CollectionLiteralExpCS__Group__3__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group__3__Impl_in_rule__CollectionLiteralExpCS__Group__314188);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group__3__Impl_in_rule__CollectionLiteralExpCS__Group__314189);
             rule__CollectionLiteralExpCS__Group__3__Impl();
 
             state._fsp--;
@@ -20070,7 +20081,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionLiteralExpCSAccess().getRightCurlyBracketKeyword_3()); 
             }
-            match(input,51,FollowSets000.FOLLOW_51_in_rule__CollectionLiteralExpCS__Group__3__Impl14216); if (state.failed) return ;
+            match(input,51,FollowSets000.FOLLOW_51_in_rule__CollectionLiteralExpCS__Group__3__Impl14217); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCollectionLiteralExpCSAccess().getRightCurlyBracketKeyword_3()); 
             }
@@ -20105,12 +20116,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6943:1: ( rule__CollectionLiteralExpCS__Group_2__0__Impl rule__CollectionLiteralExpCS__Group_2__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6944:2: rule__CollectionLiteralExpCS__Group_2__0__Impl rule__CollectionLiteralExpCS__Group_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group_2__0__Impl_in_rule__CollectionLiteralExpCS__Group_2__014255);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group_2__0__Impl_in_rule__CollectionLiteralExpCS__Group_2__014256);
             rule__CollectionLiteralExpCS__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group_2__1_in_rule__CollectionLiteralExpCS__Group_2__014258);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group_2__1_in_rule__CollectionLiteralExpCS__Group_2__014259);
             rule__CollectionLiteralExpCS__Group_2__1();
 
             state._fsp--;
@@ -20152,7 +20163,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6958:1: ( rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6958:2: rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_0_in_rule__CollectionLiteralExpCS__Group_2__0__Impl14285);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_0_in_rule__CollectionLiteralExpCS__Group_2__0__Impl14286);
             rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_0();
 
             state._fsp--;
@@ -20194,7 +20205,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6972:1: ( rule__CollectionLiteralExpCS__Group_2__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6973:2: rule__CollectionLiteralExpCS__Group_2__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group_2__1__Impl_in_rule__CollectionLiteralExpCS__Group_2__114315);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group_2__1__Impl_in_rule__CollectionLiteralExpCS__Group_2__114316);
             rule__CollectionLiteralExpCS__Group_2__1__Impl();
 
             state._fsp--;
@@ -20234,21 +20245,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getCollectionLiteralExpCSAccess().getGroup_2_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6986:1: ( rule__CollectionLiteralExpCS__Group_2_1__0 )*
-            loop45:
+            loop46:
             do {
-                int alt45=2;
-                int LA45_0 = input.LA(1);
+                int alt46=2;
+                int LA46_0 = input.LA(1);
 
-                if ( (LA45_0==58) ) {
-                    alt45=1;
+                if ( (LA46_0==58) ) {
+                    alt46=1;
                 }
 
 
-                switch (alt45) {
+                switch (alt46) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:6986:2: rule__CollectionLiteralExpCS__Group_2_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group_2_1__0_in_rule__CollectionLiteralExpCS__Group_2__1__Impl14342);
+            	    pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group_2_1__0_in_rule__CollectionLiteralExpCS__Group_2__1__Impl14343);
             	    rule__CollectionLiteralExpCS__Group_2_1__0();
 
             	    state._fsp--;
@@ -20258,7 +20269,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop45;
+            	    break loop46;
                 }
             } while (true);
 
@@ -20296,12 +20307,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7004:1: ( rule__CollectionLiteralExpCS__Group_2_1__0__Impl rule__CollectionLiteralExpCS__Group_2_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7005:2: rule__CollectionLiteralExpCS__Group_2_1__0__Impl rule__CollectionLiteralExpCS__Group_2_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group_2_1__0__Impl_in_rule__CollectionLiteralExpCS__Group_2_1__014377);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group_2_1__0__Impl_in_rule__CollectionLiteralExpCS__Group_2_1__014378);
             rule__CollectionLiteralExpCS__Group_2_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group_2_1__1_in_rule__CollectionLiteralExpCS__Group_2_1__014380);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group_2_1__1_in_rule__CollectionLiteralExpCS__Group_2_1__014381);
             rule__CollectionLiteralExpCS__Group_2_1__1();
 
             state._fsp--;
@@ -20340,7 +20351,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionLiteralExpCSAccess().getCommaKeyword_2_1_0()); 
             }
-            match(input,58,FollowSets000.FOLLOW_58_in_rule__CollectionLiteralExpCS__Group_2_1__0__Impl14408); if (state.failed) return ;
+            match(input,58,FollowSets000.FOLLOW_58_in_rule__CollectionLiteralExpCS__Group_2_1__0__Impl14409); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCollectionLiteralExpCSAccess().getCommaKeyword_2_1_0()); 
             }
@@ -20375,7 +20386,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7035:1: ( rule__CollectionLiteralExpCS__Group_2_1__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7036:2: rule__CollectionLiteralExpCS__Group_2_1__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group_2_1__1__Impl_in_rule__CollectionLiteralExpCS__Group_2_1__114439);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__Group_2_1__1__Impl_in_rule__CollectionLiteralExpCS__Group_2_1__114440);
             rule__CollectionLiteralExpCS__Group_2_1__1__Impl();
 
             state._fsp--;
@@ -20417,7 +20428,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7049:1: ( rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_1_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7049:2: rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_1_1_in_rule__CollectionLiteralExpCS__Group_2_1__1__Impl14466);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_1_1_in_rule__CollectionLiteralExpCS__Group_2_1__1__Impl14467);
             rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_1_1();
 
             state._fsp--;
@@ -20459,12 +20470,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7067:1: ( rule__CollectionLiteralPartCS__Group__0__Impl rule__CollectionLiteralPartCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7068:2: rule__CollectionLiteralPartCS__Group__0__Impl rule__CollectionLiteralPartCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__Group__0__Impl_in_rule__CollectionLiteralPartCS__Group__014500);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__Group__0__Impl_in_rule__CollectionLiteralPartCS__Group__014501);
             rule__CollectionLiteralPartCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__Group__1_in_rule__CollectionLiteralPartCS__Group__014503);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__Group__1_in_rule__CollectionLiteralPartCS__Group__014504);
             rule__CollectionLiteralPartCS__Group__1();
 
             state._fsp--;
@@ -20506,7 +20517,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7082:1: ( rule__CollectionLiteralPartCS__ExpressionCSAssignment_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7082:2: rule__CollectionLiteralPartCS__ExpressionCSAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__ExpressionCSAssignment_0_in_rule__CollectionLiteralPartCS__Group__0__Impl14530);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__ExpressionCSAssignment_0_in_rule__CollectionLiteralPartCS__Group__0__Impl14531);
             rule__CollectionLiteralPartCS__ExpressionCSAssignment_0();
 
             state._fsp--;
@@ -20548,7 +20559,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7096:1: ( rule__CollectionLiteralPartCS__Group__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7097:2: rule__CollectionLiteralPartCS__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__Group__1__Impl_in_rule__CollectionLiteralPartCS__Group__114560);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__Group__1__Impl_in_rule__CollectionLiteralPartCS__Group__114561);
             rule__CollectionLiteralPartCS__Group__1__Impl();
 
             state._fsp--;
@@ -20588,17 +20599,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getCollectionLiteralPartCSAccess().getGroup_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7110:1: ( rule__CollectionLiteralPartCS__Group_1__0 )?
-            int alt46=2;
-            int LA46_0 = input.LA(1);
+            int alt47=2;
+            int LA47_0 = input.LA(1);
 
-            if ( (LA46_0==68) ) {
-                alt46=1;
+            if ( (LA47_0==68) ) {
+                alt47=1;
             }
-            switch (alt46) {
+            switch (alt47) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7110:2: rule__CollectionLiteralPartCS__Group_1__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__Group_1__0_in_rule__CollectionLiteralPartCS__Group__1__Impl14587);
+                    pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__Group_1__0_in_rule__CollectionLiteralPartCS__Group__1__Impl14588);
                     rule__CollectionLiteralPartCS__Group_1__0();
 
                     state._fsp--;
@@ -20643,12 +20654,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7128:1: ( rule__CollectionLiteralPartCS__Group_1__0__Impl rule__CollectionLiteralPartCS__Group_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7129:2: rule__CollectionLiteralPartCS__Group_1__0__Impl rule__CollectionLiteralPartCS__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__Group_1__0__Impl_in_rule__CollectionLiteralPartCS__Group_1__014622);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__Group_1__0__Impl_in_rule__CollectionLiteralPartCS__Group_1__014623);
             rule__CollectionLiteralPartCS__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__Group_1__1_in_rule__CollectionLiteralPartCS__Group_1__014625);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__Group_1__1_in_rule__CollectionLiteralPartCS__Group_1__014626);
             rule__CollectionLiteralPartCS__Group_1__1();
 
             state._fsp--;
@@ -20687,7 +20698,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionLiteralPartCSAccess().getFullStopFullStopKeyword_1_0()); 
             }
-            match(input,68,FollowSets000.FOLLOW_68_in_rule__CollectionLiteralPartCS__Group_1__0__Impl14653); if (state.failed) return ;
+            match(input,68,FollowSets000.FOLLOW_68_in_rule__CollectionLiteralPartCS__Group_1__0__Impl14654); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCollectionLiteralPartCSAccess().getFullStopFullStopKeyword_1_0()); 
             }
@@ -20722,7 +20733,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7159:1: ( rule__CollectionLiteralPartCS__Group_1__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7160:2: rule__CollectionLiteralPartCS__Group_1__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__Group_1__1__Impl_in_rule__CollectionLiteralPartCS__Group_1__114684);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__Group_1__1__Impl_in_rule__CollectionLiteralPartCS__Group_1__114685);
             rule__CollectionLiteralPartCS__Group_1__1__Impl();
 
             state._fsp--;
@@ -20764,7 +20775,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7173:1: ( rule__CollectionLiteralPartCS__LastExpressionCSAssignment_1_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7173:2: rule__CollectionLiteralPartCS__LastExpressionCSAssignment_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__LastExpressionCSAssignment_1_1_in_rule__CollectionLiteralPartCS__Group_1__1__Impl14711);
+            pushFollow(FollowSets000.FOLLOW_rule__CollectionLiteralPartCS__LastExpressionCSAssignment_1_1_in_rule__CollectionLiteralPartCS__Group_1__1__Impl14712);
             rule__CollectionLiteralPartCS__LastExpressionCSAssignment_1_1();
 
             state._fsp--;
@@ -20806,12 +20817,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7191:1: ( rule__ConstructorPartCS__Group__0__Impl rule__ConstructorPartCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7192:2: rule__ConstructorPartCS__Group__0__Impl rule__ConstructorPartCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ConstructorPartCS__Group__0__Impl_in_rule__ConstructorPartCS__Group__014745);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstructorPartCS__Group__0__Impl_in_rule__ConstructorPartCS__Group__014746);
             rule__ConstructorPartCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ConstructorPartCS__Group__1_in_rule__ConstructorPartCS__Group__014748);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstructorPartCS__Group__1_in_rule__ConstructorPartCS__Group__014749);
             rule__ConstructorPartCS__Group__1();
 
             state._fsp--;
@@ -20853,7 +20864,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7206:1: ( rule__ConstructorPartCS__PropertyAssignment_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7206:2: rule__ConstructorPartCS__PropertyAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ConstructorPartCS__PropertyAssignment_0_in_rule__ConstructorPartCS__Group__0__Impl14775);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstructorPartCS__PropertyAssignment_0_in_rule__ConstructorPartCS__Group__0__Impl14776);
             rule__ConstructorPartCS__PropertyAssignment_0();
 
             state._fsp--;
@@ -20895,12 +20906,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7220:1: ( rule__ConstructorPartCS__Group__1__Impl rule__ConstructorPartCS__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7221:2: rule__ConstructorPartCS__Group__1__Impl rule__ConstructorPartCS__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ConstructorPartCS__Group__1__Impl_in_rule__ConstructorPartCS__Group__114805);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstructorPartCS__Group__1__Impl_in_rule__ConstructorPartCS__Group__114806);
             rule__ConstructorPartCS__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ConstructorPartCS__Group__2_in_rule__ConstructorPartCS__Group__114808);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstructorPartCS__Group__2_in_rule__ConstructorPartCS__Group__114809);
             rule__ConstructorPartCS__Group__2();
 
             state._fsp--;
@@ -20939,7 +20950,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstructorPartCSAccess().getEqualsSignKeyword_1()); 
             }
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__ConstructorPartCS__Group__1__Impl14836); if (state.failed) return ;
+            match(input,25,FollowSets000.FOLLOW_25_in_rule__ConstructorPartCS__Group__1__Impl14837); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConstructorPartCSAccess().getEqualsSignKeyword_1()); 
             }
@@ -20974,7 +20985,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7251:1: ( rule__ConstructorPartCS__Group__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7252:2: rule__ConstructorPartCS__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ConstructorPartCS__Group__2__Impl_in_rule__ConstructorPartCS__Group__214867);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstructorPartCS__Group__2__Impl_in_rule__ConstructorPartCS__Group__214868);
             rule__ConstructorPartCS__Group__2__Impl();
 
             state._fsp--;
@@ -21016,7 +21027,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7265:1: ( rule__ConstructorPartCS__InitExpressionAssignment_2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7265:2: rule__ConstructorPartCS__InitExpressionAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ConstructorPartCS__InitExpressionAssignment_2_in_rule__ConstructorPartCS__Group__2__Impl14894);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstructorPartCS__InitExpressionAssignment_2_in_rule__ConstructorPartCS__Group__2__Impl14895);
             rule__ConstructorPartCS__InitExpressionAssignment_2();
 
             state._fsp--;
@@ -21058,12 +21069,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7285:1: ( rule__TupleLiteralExpCS__Group__0__Impl rule__TupleLiteralExpCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7286:2: rule__TupleLiteralExpCS__Group__0__Impl rule__TupleLiteralExpCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__0__Impl_in_rule__TupleLiteralExpCS__Group__014930);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__0__Impl_in_rule__TupleLiteralExpCS__Group__014931);
             rule__TupleLiteralExpCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__1_in_rule__TupleLiteralExpCS__Group__014933);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__1_in_rule__TupleLiteralExpCS__Group__014934);
             rule__TupleLiteralExpCS__Group__1();
 
             state._fsp--;
@@ -21102,7 +21113,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleLiteralExpCSAccess().getTupleKeyword_0()); 
             }
-            match(input,33,FollowSets000.FOLLOW_33_in_rule__TupleLiteralExpCS__Group__0__Impl14961); if (state.failed) return ;
+            match(input,33,FollowSets000.FOLLOW_33_in_rule__TupleLiteralExpCS__Group__0__Impl14962); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTupleLiteralExpCSAccess().getTupleKeyword_0()); 
             }
@@ -21137,12 +21148,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7316:1: ( rule__TupleLiteralExpCS__Group__1__Impl rule__TupleLiteralExpCS__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7317:2: rule__TupleLiteralExpCS__Group__1__Impl rule__TupleLiteralExpCS__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__1__Impl_in_rule__TupleLiteralExpCS__Group__114992);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__1__Impl_in_rule__TupleLiteralExpCS__Group__114993);
             rule__TupleLiteralExpCS__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__2_in_rule__TupleLiteralExpCS__Group__114995);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__2_in_rule__TupleLiteralExpCS__Group__114996);
             rule__TupleLiteralExpCS__Group__2();
 
             state._fsp--;
@@ -21181,7 +21192,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleLiteralExpCSAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,50,FollowSets000.FOLLOW_50_in_rule__TupleLiteralExpCS__Group__1__Impl15023); if (state.failed) return ;
+            match(input,50,FollowSets000.FOLLOW_50_in_rule__TupleLiteralExpCS__Group__1__Impl15024); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTupleLiteralExpCSAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -21216,12 +21227,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7347:1: ( rule__TupleLiteralExpCS__Group__2__Impl rule__TupleLiteralExpCS__Group__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7348:2: rule__TupleLiteralExpCS__Group__2__Impl rule__TupleLiteralExpCS__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__2__Impl_in_rule__TupleLiteralExpCS__Group__215054);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__2__Impl_in_rule__TupleLiteralExpCS__Group__215055);
             rule__TupleLiteralExpCS__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__3_in_rule__TupleLiteralExpCS__Group__215057);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__3_in_rule__TupleLiteralExpCS__Group__215058);
             rule__TupleLiteralExpCS__Group__3();
 
             state._fsp--;
@@ -21263,7 +21274,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7362:1: ( rule__TupleLiteralExpCS__OwnedPartsAssignment_2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7362:2: rule__TupleLiteralExpCS__OwnedPartsAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__OwnedPartsAssignment_2_in_rule__TupleLiteralExpCS__Group__2__Impl15084);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__OwnedPartsAssignment_2_in_rule__TupleLiteralExpCS__Group__2__Impl15085);
             rule__TupleLiteralExpCS__OwnedPartsAssignment_2();
 
             state._fsp--;
@@ -21305,12 +21316,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7376:1: ( rule__TupleLiteralExpCS__Group__3__Impl rule__TupleLiteralExpCS__Group__4 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7377:2: rule__TupleLiteralExpCS__Group__3__Impl rule__TupleLiteralExpCS__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__3__Impl_in_rule__TupleLiteralExpCS__Group__315114);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__3__Impl_in_rule__TupleLiteralExpCS__Group__315115);
             rule__TupleLiteralExpCS__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__4_in_rule__TupleLiteralExpCS__Group__315117);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__4_in_rule__TupleLiteralExpCS__Group__315118);
             rule__TupleLiteralExpCS__Group__4();
 
             state._fsp--;
@@ -21350,21 +21361,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getTupleLiteralExpCSAccess().getGroup_3()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7391:1: ( rule__TupleLiteralExpCS__Group_3__0 )*
-            loop47:
+            loop48:
             do {
-                int alt47=2;
-                int LA47_0 = input.LA(1);
+                int alt48=2;
+                int LA48_0 = input.LA(1);
 
-                if ( (LA47_0==58) ) {
-                    alt47=1;
+                if ( (LA48_0==58) ) {
+                    alt48=1;
                 }
 
 
-                switch (alt47) {
+                switch (alt48) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7391:2: rule__TupleLiteralExpCS__Group_3__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group_3__0_in_rule__TupleLiteralExpCS__Group__3__Impl15144);
+            	    pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group_3__0_in_rule__TupleLiteralExpCS__Group__3__Impl15145);
             	    rule__TupleLiteralExpCS__Group_3__0();
 
             	    state._fsp--;
@@ -21374,7 +21385,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop47;
+            	    break loop48;
                 }
             } while (true);
 
@@ -21412,7 +21423,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7405:1: ( rule__TupleLiteralExpCS__Group__4__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7406:2: rule__TupleLiteralExpCS__Group__4__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__4__Impl_in_rule__TupleLiteralExpCS__Group__415175);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group__4__Impl_in_rule__TupleLiteralExpCS__Group__415176);
             rule__TupleLiteralExpCS__Group__4__Impl();
 
             state._fsp--;
@@ -21451,7 +21462,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleLiteralExpCSAccess().getRightCurlyBracketKeyword_4()); 
             }
-            match(input,51,FollowSets000.FOLLOW_51_in_rule__TupleLiteralExpCS__Group__4__Impl15203); if (state.failed) return ;
+            match(input,51,FollowSets000.FOLLOW_51_in_rule__TupleLiteralExpCS__Group__4__Impl15204); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTupleLiteralExpCSAccess().getRightCurlyBracketKeyword_4()); 
             }
@@ -21486,12 +21497,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7445:1: ( rule__TupleLiteralExpCS__Group_3__0__Impl rule__TupleLiteralExpCS__Group_3__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7446:2: rule__TupleLiteralExpCS__Group_3__0__Impl rule__TupleLiteralExpCS__Group_3__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group_3__0__Impl_in_rule__TupleLiteralExpCS__Group_3__015244);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group_3__0__Impl_in_rule__TupleLiteralExpCS__Group_3__015245);
             rule__TupleLiteralExpCS__Group_3__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group_3__1_in_rule__TupleLiteralExpCS__Group_3__015247);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group_3__1_in_rule__TupleLiteralExpCS__Group_3__015248);
             rule__TupleLiteralExpCS__Group_3__1();
 
             state._fsp--;
@@ -21530,7 +21541,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleLiteralExpCSAccess().getCommaKeyword_3_0()); 
             }
-            match(input,58,FollowSets000.FOLLOW_58_in_rule__TupleLiteralExpCS__Group_3__0__Impl15275); if (state.failed) return ;
+            match(input,58,FollowSets000.FOLLOW_58_in_rule__TupleLiteralExpCS__Group_3__0__Impl15276); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTupleLiteralExpCSAccess().getCommaKeyword_3_0()); 
             }
@@ -21565,7 +21576,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7476:1: ( rule__TupleLiteralExpCS__Group_3__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7477:2: rule__TupleLiteralExpCS__Group_3__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group_3__1__Impl_in_rule__TupleLiteralExpCS__Group_3__115306);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__Group_3__1__Impl_in_rule__TupleLiteralExpCS__Group_3__115307);
             rule__TupleLiteralExpCS__Group_3__1__Impl();
 
             state._fsp--;
@@ -21607,7 +21618,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7490:1: ( rule__TupleLiteralExpCS__OwnedPartsAssignment_3_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7490:2: rule__TupleLiteralExpCS__OwnedPartsAssignment_3_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__OwnedPartsAssignment_3_1_in_rule__TupleLiteralExpCS__Group_3__1__Impl15333);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralExpCS__OwnedPartsAssignment_3_1_in_rule__TupleLiteralExpCS__Group_3__1__Impl15334);
             rule__TupleLiteralExpCS__OwnedPartsAssignment_3_1();
 
             state._fsp--;
@@ -21649,12 +21660,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7508:1: ( rule__TupleLiteralPartCS__Group__0__Impl rule__TupleLiteralPartCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7509:2: rule__TupleLiteralPartCS__Group__0__Impl rule__TupleLiteralPartCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group__0__Impl_in_rule__TupleLiteralPartCS__Group__015367);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group__0__Impl_in_rule__TupleLiteralPartCS__Group__015368);
             rule__TupleLiteralPartCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group__1_in_rule__TupleLiteralPartCS__Group__015370);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group__1_in_rule__TupleLiteralPartCS__Group__015371);
             rule__TupleLiteralPartCS__Group__1();
 
             state._fsp--;
@@ -21696,7 +21707,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7523:1: ( rule__TupleLiteralPartCS__NameAssignment_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7523:2: rule__TupleLiteralPartCS__NameAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__NameAssignment_0_in_rule__TupleLiteralPartCS__Group__0__Impl15397);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__NameAssignment_0_in_rule__TupleLiteralPartCS__Group__0__Impl15398);
             rule__TupleLiteralPartCS__NameAssignment_0();
 
             state._fsp--;
@@ -21738,12 +21749,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7537:1: ( rule__TupleLiteralPartCS__Group__1__Impl rule__TupleLiteralPartCS__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7538:2: rule__TupleLiteralPartCS__Group__1__Impl rule__TupleLiteralPartCS__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group__1__Impl_in_rule__TupleLiteralPartCS__Group__115427);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group__1__Impl_in_rule__TupleLiteralPartCS__Group__115428);
             rule__TupleLiteralPartCS__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group__2_in_rule__TupleLiteralPartCS__Group__115430);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group__2_in_rule__TupleLiteralPartCS__Group__115431);
             rule__TupleLiteralPartCS__Group__2();
 
             state._fsp--;
@@ -21783,17 +21794,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getTupleLiteralPartCSAccess().getGroup_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7552:1: ( rule__TupleLiteralPartCS__Group_1__0 )?
-            int alt48=2;
-            int LA48_0 = input.LA(1);
+            int alt49=2;
+            int LA49_0 = input.LA(1);
 
-            if ( (LA48_0==71) ) {
-                alt48=1;
+            if ( (LA49_0==71) ) {
+                alt49=1;
             }
-            switch (alt48) {
+            switch (alt49) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7552:2: rule__TupleLiteralPartCS__Group_1__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group_1__0_in_rule__TupleLiteralPartCS__Group__1__Impl15457);
+                    pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group_1__0_in_rule__TupleLiteralPartCS__Group__1__Impl15458);
                     rule__TupleLiteralPartCS__Group_1__0();
 
                     state._fsp--;
@@ -21838,12 +21849,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7566:1: ( rule__TupleLiteralPartCS__Group__2__Impl rule__TupleLiteralPartCS__Group__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7567:2: rule__TupleLiteralPartCS__Group__2__Impl rule__TupleLiteralPartCS__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group__2__Impl_in_rule__TupleLiteralPartCS__Group__215488);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group__2__Impl_in_rule__TupleLiteralPartCS__Group__215489);
             rule__TupleLiteralPartCS__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group__3_in_rule__TupleLiteralPartCS__Group__215491);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group__3_in_rule__TupleLiteralPartCS__Group__215492);
             rule__TupleLiteralPartCS__Group__3();
 
             state._fsp--;
@@ -21882,7 +21893,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleLiteralPartCSAccess().getEqualsSignKeyword_2()); 
             }
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__TupleLiteralPartCS__Group__2__Impl15519); if (state.failed) return ;
+            match(input,25,FollowSets000.FOLLOW_25_in_rule__TupleLiteralPartCS__Group__2__Impl15520); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTupleLiteralPartCSAccess().getEqualsSignKeyword_2()); 
             }
@@ -21917,7 +21928,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7597:1: ( rule__TupleLiteralPartCS__Group__3__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7598:2: rule__TupleLiteralPartCS__Group__3__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group__3__Impl_in_rule__TupleLiteralPartCS__Group__315550);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group__3__Impl_in_rule__TupleLiteralPartCS__Group__315551);
             rule__TupleLiteralPartCS__Group__3__Impl();
 
             state._fsp--;
@@ -21959,7 +21970,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7611:1: ( rule__TupleLiteralPartCS__InitExpressionAssignment_3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7611:2: rule__TupleLiteralPartCS__InitExpressionAssignment_3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__InitExpressionAssignment_3_in_rule__TupleLiteralPartCS__Group__3__Impl15577);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__InitExpressionAssignment_3_in_rule__TupleLiteralPartCS__Group__3__Impl15578);
             rule__TupleLiteralPartCS__InitExpressionAssignment_3();
 
             state._fsp--;
@@ -22001,12 +22012,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7633:1: ( rule__TupleLiteralPartCS__Group_1__0__Impl rule__TupleLiteralPartCS__Group_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7634:2: rule__TupleLiteralPartCS__Group_1__0__Impl rule__TupleLiteralPartCS__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group_1__0__Impl_in_rule__TupleLiteralPartCS__Group_1__015615);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group_1__0__Impl_in_rule__TupleLiteralPartCS__Group_1__015616);
             rule__TupleLiteralPartCS__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group_1__1_in_rule__TupleLiteralPartCS__Group_1__015618);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group_1__1_in_rule__TupleLiteralPartCS__Group_1__015619);
             rule__TupleLiteralPartCS__Group_1__1();
 
             state._fsp--;
@@ -22045,7 +22056,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleLiteralPartCSAccess().getColonKeyword_1_0()); 
             }
-            match(input,71,FollowSets000.FOLLOW_71_in_rule__TupleLiteralPartCS__Group_1__0__Impl15646); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_71_in_rule__TupleLiteralPartCS__Group_1__0__Impl15647); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTupleLiteralPartCSAccess().getColonKeyword_1_0()); 
             }
@@ -22080,7 +22091,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7664:1: ( rule__TupleLiteralPartCS__Group_1__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7665:2: rule__TupleLiteralPartCS__Group_1__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group_1__1__Impl_in_rule__TupleLiteralPartCS__Group_1__115677);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__Group_1__1__Impl_in_rule__TupleLiteralPartCS__Group_1__115678);
             rule__TupleLiteralPartCS__Group_1__1__Impl();
 
             state._fsp--;
@@ -22122,7 +22133,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7678:1: ( rule__TupleLiteralPartCS__OwnedTypeAssignment_1_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7678:2: rule__TupleLiteralPartCS__OwnedTypeAssignment_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__OwnedTypeAssignment_1_1_in_rule__TupleLiteralPartCS__Group_1__1__Impl15704);
+            pushFollow(FollowSets000.FOLLOW_rule__TupleLiteralPartCS__OwnedTypeAssignment_1_1_in_rule__TupleLiteralPartCS__Group_1__1__Impl15705);
             rule__TupleLiteralPartCS__OwnedTypeAssignment_1_1();
 
             state._fsp--;
@@ -22164,12 +22175,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7696:1: ( rule__UnlimitedNaturalLiteralExpCS__Group__0__Impl rule__UnlimitedNaturalLiteralExpCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7697:2: rule__UnlimitedNaturalLiteralExpCS__Group__0__Impl rule__UnlimitedNaturalLiteralExpCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__UnlimitedNaturalLiteralExpCS__Group__0__Impl_in_rule__UnlimitedNaturalLiteralExpCS__Group__015738);
+            pushFollow(FollowSets000.FOLLOW_rule__UnlimitedNaturalLiteralExpCS__Group__0__Impl_in_rule__UnlimitedNaturalLiteralExpCS__Group__015739);
             rule__UnlimitedNaturalLiteralExpCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__UnlimitedNaturalLiteralExpCS__Group__1_in_rule__UnlimitedNaturalLiteralExpCS__Group__015741);
+            pushFollow(FollowSets000.FOLLOW_rule__UnlimitedNaturalLiteralExpCS__Group__1_in_rule__UnlimitedNaturalLiteralExpCS__Group__015742);
             rule__UnlimitedNaturalLiteralExpCS__Group__1();
 
             state._fsp--;
@@ -22243,7 +22254,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7727:1: ( rule__UnlimitedNaturalLiteralExpCS__Group__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7728:2: rule__UnlimitedNaturalLiteralExpCS__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__UnlimitedNaturalLiteralExpCS__Group__1__Impl_in_rule__UnlimitedNaturalLiteralExpCS__Group__115799);
+            pushFollow(FollowSets000.FOLLOW_rule__UnlimitedNaturalLiteralExpCS__Group__1__Impl_in_rule__UnlimitedNaturalLiteralExpCS__Group__115800);
             rule__UnlimitedNaturalLiteralExpCS__Group__1__Impl();
 
             state._fsp--;
@@ -22282,7 +22293,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnlimitedNaturalLiteralExpCSAccess().getAsteriskKeyword_1()); 
             }
-            match(input,16,FollowSets000.FOLLOW_16_in_rule__UnlimitedNaturalLiteralExpCS__Group__1__Impl15827); if (state.failed) return ;
+            match(input,16,FollowSets000.FOLLOW_16_in_rule__UnlimitedNaturalLiteralExpCS__Group__1__Impl15828); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnlimitedNaturalLiteralExpCSAccess().getAsteriskKeyword_1()); 
             }
@@ -22317,12 +22328,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7761:1: ( rule__InvalidLiteralExpCS__Group__0__Impl rule__InvalidLiteralExpCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7762:2: rule__InvalidLiteralExpCS__Group__0__Impl rule__InvalidLiteralExpCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__InvalidLiteralExpCS__Group__0__Impl_in_rule__InvalidLiteralExpCS__Group__015862);
+            pushFollow(FollowSets000.FOLLOW_rule__InvalidLiteralExpCS__Group__0__Impl_in_rule__InvalidLiteralExpCS__Group__015863);
             rule__InvalidLiteralExpCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__InvalidLiteralExpCS__Group__1_in_rule__InvalidLiteralExpCS__Group__015865);
+            pushFollow(FollowSets000.FOLLOW_rule__InvalidLiteralExpCS__Group__1_in_rule__InvalidLiteralExpCS__Group__015866);
             rule__InvalidLiteralExpCS__Group__1();
 
             state._fsp--;
@@ -22396,7 +22407,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7792:1: ( rule__InvalidLiteralExpCS__Group__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7793:2: rule__InvalidLiteralExpCS__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__InvalidLiteralExpCS__Group__1__Impl_in_rule__InvalidLiteralExpCS__Group__115923);
+            pushFollow(FollowSets000.FOLLOW_rule__InvalidLiteralExpCS__Group__1__Impl_in_rule__InvalidLiteralExpCS__Group__115924);
             rule__InvalidLiteralExpCS__Group__1__Impl();
 
             state._fsp--;
@@ -22435,7 +22446,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInvalidLiteralExpCSAccess().getInvalidKeyword_1()); 
             }
-            match(input,72,FollowSets000.FOLLOW_72_in_rule__InvalidLiteralExpCS__Group__1__Impl15951); if (state.failed) return ;
+            match(input,72,FollowSets000.FOLLOW_72_in_rule__InvalidLiteralExpCS__Group__1__Impl15952); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInvalidLiteralExpCSAccess().getInvalidKeyword_1()); 
             }
@@ -22470,12 +22481,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7826:1: ( rule__NullLiteralExpCS__Group__0__Impl rule__NullLiteralExpCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7827:2: rule__NullLiteralExpCS__Group__0__Impl rule__NullLiteralExpCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NullLiteralExpCS__Group__0__Impl_in_rule__NullLiteralExpCS__Group__015986);
+            pushFollow(FollowSets000.FOLLOW_rule__NullLiteralExpCS__Group__0__Impl_in_rule__NullLiteralExpCS__Group__015987);
             rule__NullLiteralExpCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NullLiteralExpCS__Group__1_in_rule__NullLiteralExpCS__Group__015989);
+            pushFollow(FollowSets000.FOLLOW_rule__NullLiteralExpCS__Group__1_in_rule__NullLiteralExpCS__Group__015990);
             rule__NullLiteralExpCS__Group__1();
 
             state._fsp--;
@@ -22549,7 +22560,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7857:1: ( rule__NullLiteralExpCS__Group__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7858:2: rule__NullLiteralExpCS__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NullLiteralExpCS__Group__1__Impl_in_rule__NullLiteralExpCS__Group__116047);
+            pushFollow(FollowSets000.FOLLOW_rule__NullLiteralExpCS__Group__1__Impl_in_rule__NullLiteralExpCS__Group__116048);
             rule__NullLiteralExpCS__Group__1__Impl();
 
             state._fsp--;
@@ -22588,7 +22599,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNullLiteralExpCSAccess().getNullKeyword_1()); 
             }
-            match(input,73,FollowSets000.FOLLOW_73_in_rule__NullLiteralExpCS__Group__1__Impl16075); if (state.failed) return ;
+            match(input,73,FollowSets000.FOLLOW_73_in_rule__NullLiteralExpCS__Group__1__Impl16076); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNullLiteralExpCSAccess().getNullKeyword_1()); 
             }
@@ -22623,12 +22634,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7891:1: ( rule__TypeLiteralWithMultiplicityCS__Group__0__Impl rule__TypeLiteralWithMultiplicityCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7892:2: rule__TypeLiteralWithMultiplicityCS__Group__0__Impl rule__TypeLiteralWithMultiplicityCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TypeLiteralWithMultiplicityCS__Group__0__Impl_in_rule__TypeLiteralWithMultiplicityCS__Group__016110);
+            pushFollow(FollowSets000.FOLLOW_rule__TypeLiteralWithMultiplicityCS__Group__0__Impl_in_rule__TypeLiteralWithMultiplicityCS__Group__016111);
             rule__TypeLiteralWithMultiplicityCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TypeLiteralWithMultiplicityCS__Group__1_in_rule__TypeLiteralWithMultiplicityCS__Group__016113);
+            pushFollow(FollowSets000.FOLLOW_rule__TypeLiteralWithMultiplicityCS__Group__1_in_rule__TypeLiteralWithMultiplicityCS__Group__016114);
             rule__TypeLiteralWithMultiplicityCS__Group__1();
 
             state._fsp--;
@@ -22667,7 +22678,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeLiteralWithMultiplicityCSAccess().getTypeLiteralCSParserRuleCall_0()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleTypeLiteralCS_in_rule__TypeLiteralWithMultiplicityCS__Group__0__Impl16140);
+            pushFollow(FollowSets000.FOLLOW_ruleTypeLiteralCS_in_rule__TypeLiteralWithMultiplicityCS__Group__0__Impl16141);
             ruleTypeLiteralCS();
 
             state._fsp--;
@@ -22706,7 +22717,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7920:1: ( rule__TypeLiteralWithMultiplicityCS__Group__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7921:2: rule__TypeLiteralWithMultiplicityCS__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TypeLiteralWithMultiplicityCS__Group__1__Impl_in_rule__TypeLiteralWithMultiplicityCS__Group__116169);
+            pushFollow(FollowSets000.FOLLOW_rule__TypeLiteralWithMultiplicityCS__Group__1__Impl_in_rule__TypeLiteralWithMultiplicityCS__Group__116170);
             rule__TypeLiteralWithMultiplicityCS__Group__1__Impl();
 
             state._fsp--;
@@ -22746,17 +22757,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getTypeLiteralWithMultiplicityCSAccess().getMultiplicityAssignment_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7934:1: ( rule__TypeLiteralWithMultiplicityCS__MultiplicityAssignment_1 )?
-            int alt49=2;
-            int LA49_0 = input.LA(1);
+            int alt50=2;
+            int LA50_0 = input.LA(1);
 
-            if ( (LA49_0==69) ) {
-                alt49=1;
+            if ( (LA50_0==69) ) {
+                alt50=1;
             }
-            switch (alt49) {
+            switch (alt50) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7934:2: rule__TypeLiteralWithMultiplicityCS__MultiplicityAssignment_1
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__TypeLiteralWithMultiplicityCS__MultiplicityAssignment_1_in_rule__TypeLiteralWithMultiplicityCS__Group__1__Impl16196);
+                    pushFollow(FollowSets000.FOLLOW_rule__TypeLiteralWithMultiplicityCS__MultiplicityAssignment_1_in_rule__TypeLiteralWithMultiplicityCS__Group__1__Impl16197);
                     rule__TypeLiteralWithMultiplicityCS__MultiplicityAssignment_1();
 
                     state._fsp--;
@@ -22801,12 +22812,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7952:1: ( rule__TypeExpCS__Group__0__Impl rule__TypeExpCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7953:2: rule__TypeExpCS__Group__0__Impl rule__TypeExpCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TypeExpCS__Group__0__Impl_in_rule__TypeExpCS__Group__016231);
+            pushFollow(FollowSets000.FOLLOW_rule__TypeExpCS__Group__0__Impl_in_rule__TypeExpCS__Group__016232);
             rule__TypeExpCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__TypeExpCS__Group__1_in_rule__TypeExpCS__Group__016234);
+            pushFollow(FollowSets000.FOLLOW_rule__TypeExpCS__Group__1_in_rule__TypeExpCS__Group__016235);
             rule__TypeExpCS__Group__1();
 
             state._fsp--;
@@ -22848,7 +22859,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7967:1: ( rule__TypeExpCS__Alternatives_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7967:2: rule__TypeExpCS__Alternatives_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TypeExpCS__Alternatives_0_in_rule__TypeExpCS__Group__0__Impl16261);
+            pushFollow(FollowSets000.FOLLOW_rule__TypeExpCS__Alternatives_0_in_rule__TypeExpCS__Group__0__Impl16262);
             rule__TypeExpCS__Alternatives_0();
 
             state._fsp--;
@@ -22890,7 +22901,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7981:1: ( rule__TypeExpCS__Group__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7982:2: rule__TypeExpCS__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__TypeExpCS__Group__1__Impl_in_rule__TypeExpCS__Group__116291);
+            pushFollow(FollowSets000.FOLLOW_rule__TypeExpCS__Group__1__Impl_in_rule__TypeExpCS__Group__116292);
             rule__TypeExpCS__Group__1__Impl();
 
             state._fsp--;
@@ -22930,17 +22941,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getTypeExpCSAccess().getMultiplicityAssignment_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7995:1: ( rule__TypeExpCS__MultiplicityAssignment_1 )?
-            int alt50=2;
-            int LA50_0 = input.LA(1);
+            int alt51=2;
+            int LA51_0 = input.LA(1);
 
-            if ( (LA50_0==69) ) {
-                alt50=1;
+            if ( (LA51_0==69) ) {
+                alt51=1;
             }
-            switch (alt50) {
+            switch (alt51) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:7995:2: rule__TypeExpCS__MultiplicityAssignment_1
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__TypeExpCS__MultiplicityAssignment_1_in_rule__TypeExpCS__Group__1__Impl16318);
+                    pushFollow(FollowSets000.FOLLOW_rule__TypeExpCS__MultiplicityAssignment_1_in_rule__TypeExpCS__Group__1__Impl16319);
                     rule__TypeExpCS__MultiplicityAssignment_1();
 
                     state._fsp--;
@@ -22985,12 +22996,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8013:1: ( rule__ExpCS__Group_0__0__Impl rule__ExpCS__Group_0__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8014:2: rule__ExpCS__Group_0__0__Impl rule__ExpCS__Group_0__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0__0__Impl_in_rule__ExpCS__Group_0__016353);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0__0__Impl_in_rule__ExpCS__Group_0__016354);
             rule__ExpCS__Group_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0__1_in_rule__ExpCS__Group_0__016356);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0__1_in_rule__ExpCS__Group_0__016357);
             rule__ExpCS__Group_0__1();
 
             state._fsp--;
@@ -23029,7 +23040,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpCSAccess().getPrefixedExpCSParserRuleCall_0_0()); 
             }
-            pushFollow(FollowSets000.FOLLOW_rulePrefixedExpCS_in_rule__ExpCS__Group_0__0__Impl16383);
+            pushFollow(FollowSets000.FOLLOW_rulePrefixedExpCS_in_rule__ExpCS__Group_0__0__Impl16384);
             rulePrefixedExpCS();
 
             state._fsp--;
@@ -23068,7 +23079,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8042:1: ( rule__ExpCS__Group_0__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8043:2: rule__ExpCS__Group_0__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0__1__Impl_in_rule__ExpCS__Group_0__116412);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0__1__Impl_in_rule__ExpCS__Group_0__116413);
             rule__ExpCS__Group_0__1__Impl();
 
             state._fsp--;
@@ -23108,17 +23119,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getExpCSAccess().getGroup_0_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8056:1: ( rule__ExpCS__Group_0_1__0 )?
-            int alt51=2;
-            int LA51_0 = input.LA(1);
+            int alt52=2;
+            int LA52_0 = input.LA(1);
 
-            if ( ((LA51_0>=16 && LA51_0<=17)||(LA51_0>=19 && LA51_0<=32)) ) {
-                alt51=1;
+            if ( ((LA52_0>=16 && LA52_0<=17)||(LA52_0>=19 && LA52_0<=32)) ) {
+                alt52=1;
             }
-            switch (alt51) {
+            switch (alt52) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8056:2: rule__ExpCS__Group_0_1__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1__0_in_rule__ExpCS__Group_0__1__Impl16439);
+                    pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1__0_in_rule__ExpCS__Group_0__1__Impl16440);
                     rule__ExpCS__Group_0_1__0();
 
                     state._fsp--;
@@ -23163,12 +23174,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8074:1: ( rule__ExpCS__Group_0_1__0__Impl rule__ExpCS__Group_0_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8075:2: rule__ExpCS__Group_0_1__0__Impl rule__ExpCS__Group_0_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1__0__Impl_in_rule__ExpCS__Group_0_1__016474);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1__0__Impl_in_rule__ExpCS__Group_0_1__016475);
             rule__ExpCS__Group_0_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1__1_in_rule__ExpCS__Group_0_1__016477);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1__1_in_rule__ExpCS__Group_0_1__016478);
             rule__ExpCS__Group_0_1__1();
 
             state._fsp--;
@@ -23242,12 +23253,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8105:1: ( rule__ExpCS__Group_0_1__1__Impl rule__ExpCS__Group_0_1__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8106:2: rule__ExpCS__Group_0_1__1__Impl rule__ExpCS__Group_0_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1__1__Impl_in_rule__ExpCS__Group_0_1__116535);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1__1__Impl_in_rule__ExpCS__Group_0_1__116536);
             rule__ExpCS__Group_0_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1__2_in_rule__ExpCS__Group_0_1__116538);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1__2_in_rule__ExpCS__Group_0_1__116539);
             rule__ExpCS__Group_0_1__2();
 
             state._fsp--;
@@ -23289,7 +23300,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8120:1: ( rule__ExpCS__OwnedOperatorAssignment_0_1_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8120:2: rule__ExpCS__OwnedOperatorAssignment_0_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedOperatorAssignment_0_1_1_in_rule__ExpCS__Group_0_1__1__Impl16565);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedOperatorAssignment_0_1_1_in_rule__ExpCS__Group_0_1__1__Impl16566);
             rule__ExpCS__OwnedOperatorAssignment_0_1_1();
 
             state._fsp--;
@@ -23331,7 +23342,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8134:1: ( rule__ExpCS__Group_0_1__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8135:2: rule__ExpCS__Group_0_1__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1__2__Impl_in_rule__ExpCS__Group_0_1__216595);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1__2__Impl_in_rule__ExpCS__Group_0_1__216596);
             rule__ExpCS__Group_0_1__2__Impl();
 
             state._fsp--;
@@ -23373,7 +23384,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8148:1: ( rule__ExpCS__Alternatives_0_1_2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8148:2: rule__ExpCS__Alternatives_0_1_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Alternatives_0_1_2_in_rule__ExpCS__Group_0_1__2__Impl16622);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Alternatives_0_1_2_in_rule__ExpCS__Group_0_1__2__Impl16623);
             rule__ExpCS__Alternatives_0_1_2();
 
             state._fsp--;
@@ -23415,12 +23426,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8168:1: ( rule__ExpCS__Group_0_1_2_0__0__Impl rule__ExpCS__Group_0_1_2_0__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8169:2: rule__ExpCS__Group_0_1_2_0__0__Impl rule__ExpCS__Group_0_1_2_0__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0__0__Impl_in_rule__ExpCS__Group_0_1_2_0__016658);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0__0__Impl_in_rule__ExpCS__Group_0_1_2_0__016659);
             rule__ExpCS__Group_0_1_2_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0__1_in_rule__ExpCS__Group_0_1_2_0__016661);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0__1_in_rule__ExpCS__Group_0_1_2_0__016662);
             rule__ExpCS__Group_0_1_2_0__1();
 
             state._fsp--;
@@ -23462,7 +23473,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8183:1: ( rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8183:2: rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_0_in_rule__ExpCS__Group_0_1_2_0__0__Impl16688);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_0_in_rule__ExpCS__Group_0_1_2_0__0__Impl16689);
             rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_0();
 
             state._fsp--;
@@ -23504,12 +23515,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8197:1: ( rule__ExpCS__Group_0_1_2_0__1__Impl rule__ExpCS__Group_0_1_2_0__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8198:2: rule__ExpCS__Group_0_1_2_0__1__Impl rule__ExpCS__Group_0_1_2_0__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0__1__Impl_in_rule__ExpCS__Group_0_1_2_0__116718);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0__1__Impl_in_rule__ExpCS__Group_0_1_2_0__116719);
             rule__ExpCS__Group_0_1_2_0__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0__2_in_rule__ExpCS__Group_0_1_2_0__116721);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0__2_in_rule__ExpCS__Group_0_1_2_0__116722);
             rule__ExpCS__Group_0_1_2_0__2();
 
             state._fsp--;
@@ -23549,15 +23560,15 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getExpCSAccess().getGroup_0_1_2_0_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8212:1: ( rule__ExpCS__Group_0_1_2_0_1__0 )*
-            loop52:
+            loop53:
             do {
-                int alt52=2;
-                alt52 = dfa52.predict(input);
-                switch (alt52) {
+                int alt53=2;
+                alt53 = dfa53.predict(input);
+                switch (alt53) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8212:2: rule__ExpCS__Group_0_1_2_0_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0_1__0_in_rule__ExpCS__Group_0_1_2_0__1__Impl16748);
+            	    pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0_1__0_in_rule__ExpCS__Group_0_1_2_0__1__Impl16749);
             	    rule__ExpCS__Group_0_1_2_0_1__0();
 
             	    state._fsp--;
@@ -23567,7 +23578,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop52;
+            	    break loop53;
                 }
             } while (true);
 
@@ -23605,7 +23616,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8226:1: ( rule__ExpCS__Group_0_1_2_0__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8227:2: rule__ExpCS__Group_0_1_2_0__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0__2__Impl_in_rule__ExpCS__Group_0_1_2_0__216779);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0__2__Impl_in_rule__ExpCS__Group_0_1_2_0__216780);
             rule__ExpCS__Group_0_1_2_0__2__Impl();
 
             state._fsp--;
@@ -23645,17 +23656,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getExpCSAccess().getGroup_0_1_2_0_2()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8240:1: ( rule__ExpCS__Group_0_1_2_0_2__0 )?
-            int alt53=2;
-            int LA53_0 = input.LA(1);
+            int alt54=2;
+            int LA54_0 = input.LA(1);
 
-            if ( ((LA53_0>=16 && LA53_0<=17)||(LA53_0>=19 && LA53_0<=32)) ) {
-                alt53=1;
+            if ( ((LA54_0>=16 && LA54_0<=17)||(LA54_0>=19 && LA54_0<=32)) ) {
+                alt54=1;
             }
-            switch (alt53) {
+            switch (alt54) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8240:2: rule__ExpCS__Group_0_1_2_0_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0_2__0_in_rule__ExpCS__Group_0_1_2_0__2__Impl16806);
+                    pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0_2__0_in_rule__ExpCS__Group_0_1_2_0__2__Impl16807);
                     rule__ExpCS__Group_0_1_2_0_2__0();
 
                     state._fsp--;
@@ -23700,12 +23711,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8260:1: ( rule__ExpCS__Group_0_1_2_0_1__0__Impl rule__ExpCS__Group_0_1_2_0_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8261:2: rule__ExpCS__Group_0_1_2_0_1__0__Impl rule__ExpCS__Group_0_1_2_0_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0_1__0__Impl_in_rule__ExpCS__Group_0_1_2_0_1__016843);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0_1__0__Impl_in_rule__ExpCS__Group_0_1_2_0_1__016844);
             rule__ExpCS__Group_0_1_2_0_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0_1__1_in_rule__ExpCS__Group_0_1_2_0_1__016846);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0_1__1_in_rule__ExpCS__Group_0_1_2_0_1__016847);
             rule__ExpCS__Group_0_1_2_0_1__1();
 
             state._fsp--;
@@ -23747,7 +23758,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8275:1: ( rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_1_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8275:2: rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_1_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_1_0_in_rule__ExpCS__Group_0_1_2_0_1__0__Impl16873);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_1_0_in_rule__ExpCS__Group_0_1_2_0_1__0__Impl16874);
             rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_1_0();
 
             state._fsp--;
@@ -23789,7 +23800,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8289:1: ( rule__ExpCS__Group_0_1_2_0_1__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8290:2: rule__ExpCS__Group_0_1_2_0_1__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0_1__1__Impl_in_rule__ExpCS__Group_0_1_2_0_1__116903);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0_1__1__Impl_in_rule__ExpCS__Group_0_1_2_0_1__116904);
             rule__ExpCS__Group_0_1_2_0_1__1__Impl();
 
             state._fsp--;
@@ -23831,7 +23842,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8303:1: ( rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_1_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8303:2: rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_1_1_in_rule__ExpCS__Group_0_1_2_0_1__1__Impl16930);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_1_1_in_rule__ExpCS__Group_0_1_2_0_1__1__Impl16931);
             rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_1_1();
 
             state._fsp--;
@@ -23873,12 +23884,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8321:1: ( rule__ExpCS__Group_0_1_2_0_2__0__Impl rule__ExpCS__Group_0_1_2_0_2__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8322:2: rule__ExpCS__Group_0_1_2_0_2__0__Impl rule__ExpCS__Group_0_1_2_0_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0_2__0__Impl_in_rule__ExpCS__Group_0_1_2_0_2__016964);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0_2__0__Impl_in_rule__ExpCS__Group_0_1_2_0_2__016965);
             rule__ExpCS__Group_0_1_2_0_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0_2__1_in_rule__ExpCS__Group_0_1_2_0_2__016967);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0_2__1_in_rule__ExpCS__Group_0_1_2_0_2__016968);
             rule__ExpCS__Group_0_1_2_0_2__1();
 
             state._fsp--;
@@ -23920,7 +23931,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8336:1: ( rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_2_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8336:2: rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_2_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_2_0_in_rule__ExpCS__Group_0_1_2_0_2__0__Impl16994);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_2_0_in_rule__ExpCS__Group_0_1_2_0_2__0__Impl16995);
             rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_2_0();
 
             state._fsp--;
@@ -23962,7 +23973,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8350:1: ( rule__ExpCS__Group_0_1_2_0_2__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8351:2: rule__ExpCS__Group_0_1_2_0_2__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0_2__1__Impl_in_rule__ExpCS__Group_0_1_2_0_2__117024);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_0_1_2_0_2__1__Impl_in_rule__ExpCS__Group_0_1_2_0_2__117025);
             rule__ExpCS__Group_0_1_2_0_2__1__Impl();
 
             state._fsp--;
@@ -24004,7 +24015,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8364:1: ( rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_2_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8364:2: rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_2_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_2_1_in_rule__ExpCS__Group_0_1_2_0_2__1__Impl17051);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_2_1_in_rule__ExpCS__Group_0_1_2_0_2__1__Impl17052);
             rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_2_1();
 
             state._fsp--;
@@ -24046,12 +24057,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8382:1: ( rule__ExpCS__Group_1__0__Impl rule__ExpCS__Group_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8383:2: rule__ExpCS__Group_1__0__Impl rule__ExpCS__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_1__0__Impl_in_rule__ExpCS__Group_1__017085);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_1__0__Impl_in_rule__ExpCS__Group_1__017086);
             rule__ExpCS__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_1__1_in_rule__ExpCS__Group_1__017088);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_1__1_in_rule__ExpCS__Group_1__017089);
             rule__ExpCS__Group_1__1();
 
             state._fsp--;
@@ -24125,12 +24136,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8413:1: ( rule__ExpCS__Group_1__1__Impl rule__ExpCS__Group_1__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8414:2: rule__ExpCS__Group_1__1__Impl rule__ExpCS__Group_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_1__1__Impl_in_rule__ExpCS__Group_1__117146);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_1__1__Impl_in_rule__ExpCS__Group_1__117147);
             rule__ExpCS__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_1__2_in_rule__ExpCS__Group_1__117149);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_1__2_in_rule__ExpCS__Group_1__117150);
             rule__ExpCS__Group_1__2();
 
             state._fsp--;
@@ -24175,7 +24186,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8429:1: ( rule__ExpCS__OwnedOperatorAssignment_1_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8429:2: rule__ExpCS__OwnedOperatorAssignment_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedOperatorAssignment_1_1_in_rule__ExpCS__Group_1__1__Impl17178);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedOperatorAssignment_1_1_in_rule__ExpCS__Group_1__1__Impl17179);
             rule__ExpCS__OwnedOperatorAssignment_1_1();
 
             state._fsp--;
@@ -24196,21 +24207,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getExpCSAccess().getOwnedOperatorAssignment_1_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8434:1: ( rule__ExpCS__OwnedOperatorAssignment_1_1 )*
-            loop54:
+            loop55:
             do {
-                int alt54=2;
-                int LA54_0 = input.LA(1);
+                int alt55=2;
+                int LA55_0 = input.LA(1);
 
-                if ( ((LA54_0>=17 && LA54_0<=18)) ) {
-                    alt54=1;
+                if ( ((LA55_0>=17 && LA55_0<=18)) ) {
+                    alt55=1;
                 }
 
 
-                switch (alt54) {
+                switch (alt55) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8434:2: rule__ExpCS__OwnedOperatorAssignment_1_1
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedOperatorAssignment_1_1_in_rule__ExpCS__Group_1__1__Impl17190);
+            	    pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedOperatorAssignment_1_1_in_rule__ExpCS__Group_1__1__Impl17191);
             	    rule__ExpCS__OwnedOperatorAssignment_1_1();
 
             	    state._fsp--;
@@ -24220,7 +24231,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop54;
+            	    break loop55;
                 }
             } while (true);
 
@@ -24261,7 +24272,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8449:1: ( rule__ExpCS__Group_1__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8450:2: rule__ExpCS__Group_1__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_1__2__Impl_in_rule__ExpCS__Group_1__217223);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__Group_1__2__Impl_in_rule__ExpCS__Group_1__217224);
             rule__ExpCS__Group_1__2__Impl();
 
             state._fsp--;
@@ -24303,7 +24314,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8463:1: ( rule__ExpCS__OwnedExpressionAssignment_1_2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8463:2: rule__ExpCS__OwnedExpressionAssignment_1_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedExpressionAssignment_1_2_in_rule__ExpCS__Group_1__2__Impl17250);
+            pushFollow(FollowSets000.FOLLOW_rule__ExpCS__OwnedExpressionAssignment_1_2_in_rule__ExpCS__Group_1__2__Impl17251);
             rule__ExpCS__OwnedExpressionAssignment_1_2();
 
             state._fsp--;
@@ -24345,12 +24356,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8483:1: ( rule__PrefixedExpCS__Group_0__0__Impl rule__PrefixedExpCS__Group_0__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8484:2: rule__PrefixedExpCS__Group_0__0__Impl rule__PrefixedExpCS__Group_0__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrefixedExpCS__Group_0__0__Impl_in_rule__PrefixedExpCS__Group_0__017286);
+            pushFollow(FollowSets000.FOLLOW_rule__PrefixedExpCS__Group_0__0__Impl_in_rule__PrefixedExpCS__Group_0__017287);
             rule__PrefixedExpCS__Group_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrefixedExpCS__Group_0__1_in_rule__PrefixedExpCS__Group_0__017289);
+            pushFollow(FollowSets000.FOLLOW_rule__PrefixedExpCS__Group_0__1_in_rule__PrefixedExpCS__Group_0__017290);
             rule__PrefixedExpCS__Group_0__1();
 
             state._fsp--;
@@ -24424,12 +24435,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8514:1: ( rule__PrefixedExpCS__Group_0__1__Impl rule__PrefixedExpCS__Group_0__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8515:2: rule__PrefixedExpCS__Group_0__1__Impl rule__PrefixedExpCS__Group_0__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrefixedExpCS__Group_0__1__Impl_in_rule__PrefixedExpCS__Group_0__117347);
+            pushFollow(FollowSets000.FOLLOW_rule__PrefixedExpCS__Group_0__1__Impl_in_rule__PrefixedExpCS__Group_0__117348);
             rule__PrefixedExpCS__Group_0__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrefixedExpCS__Group_0__2_in_rule__PrefixedExpCS__Group_0__117350);
+            pushFollow(FollowSets000.FOLLOW_rule__PrefixedExpCS__Group_0__2_in_rule__PrefixedExpCS__Group_0__117351);
             rule__PrefixedExpCS__Group_0__2();
 
             state._fsp--;
@@ -24474,7 +24485,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8530:1: ( rule__PrefixedExpCS__OwnedOperatorAssignment_0_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8530:2: rule__PrefixedExpCS__OwnedOperatorAssignment_0_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrefixedExpCS__OwnedOperatorAssignment_0_1_in_rule__PrefixedExpCS__Group_0__1__Impl17379);
+            pushFollow(FollowSets000.FOLLOW_rule__PrefixedExpCS__OwnedOperatorAssignment_0_1_in_rule__PrefixedExpCS__Group_0__1__Impl17380);
             rule__PrefixedExpCS__OwnedOperatorAssignment_0_1();
 
             state._fsp--;
@@ -24495,21 +24506,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getPrefixedExpCSAccess().getOwnedOperatorAssignment_0_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8535:1: ( rule__PrefixedExpCS__OwnedOperatorAssignment_0_1 )*
-            loop55:
+            loop56:
             do {
-                int alt55=2;
-                int LA55_0 = input.LA(1);
+                int alt56=2;
+                int LA56_0 = input.LA(1);
 
-                if ( ((LA55_0>=17 && LA55_0<=18)) ) {
-                    alt55=1;
+                if ( ((LA56_0>=17 && LA56_0<=18)) ) {
+                    alt56=1;
                 }
 
 
-                switch (alt55) {
+                switch (alt56) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8535:2: rule__PrefixedExpCS__OwnedOperatorAssignment_0_1
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__PrefixedExpCS__OwnedOperatorAssignment_0_1_in_rule__PrefixedExpCS__Group_0__1__Impl17391);
+            	    pushFollow(FollowSets000.FOLLOW_rule__PrefixedExpCS__OwnedOperatorAssignment_0_1_in_rule__PrefixedExpCS__Group_0__1__Impl17392);
             	    rule__PrefixedExpCS__OwnedOperatorAssignment_0_1();
 
             	    state._fsp--;
@@ -24519,7 +24530,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop55;
+            	    break loop56;
                 }
             } while (true);
 
@@ -24560,7 +24571,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8550:1: ( rule__PrefixedExpCS__Group_0__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8551:2: rule__PrefixedExpCS__Group_0__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrefixedExpCS__Group_0__2__Impl_in_rule__PrefixedExpCS__Group_0__217424);
+            pushFollow(FollowSets000.FOLLOW_rule__PrefixedExpCS__Group_0__2__Impl_in_rule__PrefixedExpCS__Group_0__217425);
             rule__PrefixedExpCS__Group_0__2__Impl();
 
             state._fsp--;
@@ -24602,7 +24613,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8564:1: ( rule__PrefixedExpCS__OwnedExpressionAssignment_0_2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8564:2: rule__PrefixedExpCS__OwnedExpressionAssignment_0_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrefixedExpCS__OwnedExpressionAssignment_0_2_in_rule__PrefixedExpCS__Group_0__2__Impl17451);
+            pushFollow(FollowSets000.FOLLOW_rule__PrefixedExpCS__OwnedExpressionAssignment_0_2_in_rule__PrefixedExpCS__Group_0__2__Impl17452);
             rule__PrefixedExpCS__OwnedExpressionAssignment_0_2();
 
             state._fsp--;
@@ -24644,12 +24655,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8584:1: ( rule__PrimaryExpCS__Group_7__0__Impl rule__PrimaryExpCS__Group_7__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8585:2: rule__PrimaryExpCS__Group_7__0__Impl rule__PrimaryExpCS__Group_7__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7__0__Impl_in_rule__PrimaryExpCS__Group_7__017487);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7__0__Impl_in_rule__PrimaryExpCS__Group_7__017488);
             rule__PrimaryExpCS__Group_7__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7__1_in_rule__PrimaryExpCS__Group_7__017490);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7__1_in_rule__PrimaryExpCS__Group_7__017491);
             rule__PrimaryExpCS__Group_7__1();
 
             state._fsp--;
@@ -24723,12 +24734,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8615:1: ( rule__PrimaryExpCS__Group_7__1__Impl rule__PrimaryExpCS__Group_7__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8616:2: rule__PrimaryExpCS__Group_7__1__Impl rule__PrimaryExpCS__Group_7__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7__1__Impl_in_rule__PrimaryExpCS__Group_7__117548);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7__1__Impl_in_rule__PrimaryExpCS__Group_7__117549);
             rule__PrimaryExpCS__Group_7__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7__2_in_rule__PrimaryExpCS__Group_7__117551);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7__2_in_rule__PrimaryExpCS__Group_7__117552);
             rule__PrimaryExpCS__Group_7__2();
 
             state._fsp--;
@@ -24770,7 +24781,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8630:1: ( rule__PrimaryExpCS__PathNameAssignment_7_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8630:2: rule__PrimaryExpCS__PathNameAssignment_7_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__PathNameAssignment_7_1_in_rule__PrimaryExpCS__Group_7__1__Impl17578);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__PathNameAssignment_7_1_in_rule__PrimaryExpCS__Group_7__1__Impl17579);
             rule__PrimaryExpCS__PathNameAssignment_7_1();
 
             state._fsp--;
@@ -24812,7 +24823,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8644:1: ( rule__PrimaryExpCS__Group_7__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8645:2: rule__PrimaryExpCS__Group_7__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7__2__Impl_in_rule__PrimaryExpCS__Group_7__217608);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7__2__Impl_in_rule__PrimaryExpCS__Group_7__217609);
             rule__PrimaryExpCS__Group_7__2__Impl();
 
             state._fsp--;
@@ -24854,7 +24865,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8658:1: ( rule__PrimaryExpCS__Alternatives_7_2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8658:2: rule__PrimaryExpCS__Alternatives_7_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Alternatives_7_2_in_rule__PrimaryExpCS__Group_7__2__Impl17635);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Alternatives_7_2_in_rule__PrimaryExpCS__Group_7__2__Impl17636);
             rule__PrimaryExpCS__Alternatives_7_2();
 
             state._fsp--;
@@ -24896,12 +24907,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8678:1: ( rule__PrimaryExpCS__Group_7_2_0__0__Impl rule__PrimaryExpCS__Group_7_2_0__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8679:2: rule__PrimaryExpCS__Group_7_2_0__0__Impl rule__PrimaryExpCS__Group_7_2_0__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0__017671);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0__017672);
             rule__PrimaryExpCS__Group_7_2_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__1_in_rule__PrimaryExpCS__Group_7_2_0__017674);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__1_in_rule__PrimaryExpCS__Group_7_2_0__017675);
             rule__PrimaryExpCS__Group_7_2_0__1();
 
             state._fsp--;
@@ -24975,12 +24986,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8709:1: ( rule__PrimaryExpCS__Group_7_2_0__1__Impl rule__PrimaryExpCS__Group_7_2_0__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8710:2: rule__PrimaryExpCS__Group_7_2_0__1__Impl rule__PrimaryExpCS__Group_7_2_0__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0__117732);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0__117733);
             rule__PrimaryExpCS__Group_7_2_0__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__2_in_rule__PrimaryExpCS__Group_7_2_0__117735);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__2_in_rule__PrimaryExpCS__Group_7_2_0__117736);
             rule__PrimaryExpCS__Group_7_2_0__2();
 
             state._fsp--;
@@ -25019,7 +25030,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getLeftSquareBracketKeyword_7_2_0_1()); 
             }
-            match(input,69,FollowSets000.FOLLOW_69_in_rule__PrimaryExpCS__Group_7_2_0__1__Impl17763); if (state.failed) return ;
+            match(input,69,FollowSets000.FOLLOW_69_in_rule__PrimaryExpCS__Group_7_2_0__1__Impl17764); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpCSAccess().getLeftSquareBracketKeyword_7_2_0_1()); 
             }
@@ -25054,12 +25065,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8740:1: ( rule__PrimaryExpCS__Group_7_2_0__2__Impl rule__PrimaryExpCS__Group_7_2_0__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8741:2: rule__PrimaryExpCS__Group_7_2_0__2__Impl rule__PrimaryExpCS__Group_7_2_0__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__2__Impl_in_rule__PrimaryExpCS__Group_7_2_0__217794);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__2__Impl_in_rule__PrimaryExpCS__Group_7_2_0__217795);
             rule__PrimaryExpCS__Group_7_2_0__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__3_in_rule__PrimaryExpCS__Group_7_2_0__217797);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__3_in_rule__PrimaryExpCS__Group_7_2_0__217798);
             rule__PrimaryExpCS__Group_7_2_0__3();
 
             state._fsp--;
@@ -25101,7 +25112,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8755:1: ( rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8755:2: rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_2_in_rule__PrimaryExpCS__Group_7_2_0__2__Impl17824);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_2_in_rule__PrimaryExpCS__Group_7_2_0__2__Impl17825);
             rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_2();
 
             state._fsp--;
@@ -25143,12 +25154,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8769:1: ( rule__PrimaryExpCS__Group_7_2_0__3__Impl rule__PrimaryExpCS__Group_7_2_0__4 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8770:2: rule__PrimaryExpCS__Group_7_2_0__3__Impl rule__PrimaryExpCS__Group_7_2_0__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__3__Impl_in_rule__PrimaryExpCS__Group_7_2_0__317854);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__3__Impl_in_rule__PrimaryExpCS__Group_7_2_0__317855);
             rule__PrimaryExpCS__Group_7_2_0__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__4_in_rule__PrimaryExpCS__Group_7_2_0__317857);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__4_in_rule__PrimaryExpCS__Group_7_2_0__317858);
             rule__PrimaryExpCS__Group_7_2_0__4();
 
             state._fsp--;
@@ -25188,21 +25199,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getPrimaryExpCSAccess().getGroup_7_2_0_3()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8784:1: ( rule__PrimaryExpCS__Group_7_2_0_3__0 )*
-            loop56:
+            loop57:
             do {
-                int alt56=2;
-                int LA56_0 = input.LA(1);
+                int alt57=2;
+                int LA57_0 = input.LA(1);
 
-                if ( (LA56_0==58) ) {
-                    alt56=1;
+                if ( (LA57_0==58) ) {
+                    alt57=1;
                 }
 
 
-                switch (alt56) {
+                switch (alt57) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8784:2: rule__PrimaryExpCS__Group_7_2_0_3__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_3__0_in_rule__PrimaryExpCS__Group_7_2_0__3__Impl17884);
+            	    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_3__0_in_rule__PrimaryExpCS__Group_7_2_0__3__Impl17885);
             	    rule__PrimaryExpCS__Group_7_2_0_3__0();
 
             	    state._fsp--;
@@ -25212,7 +25223,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop56;
+            	    break loop57;
                 }
             } while (true);
 
@@ -25250,12 +25261,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8798:1: ( rule__PrimaryExpCS__Group_7_2_0__4__Impl rule__PrimaryExpCS__Group_7_2_0__5 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8799:2: rule__PrimaryExpCS__Group_7_2_0__4__Impl rule__PrimaryExpCS__Group_7_2_0__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__4__Impl_in_rule__PrimaryExpCS__Group_7_2_0__417915);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__4__Impl_in_rule__PrimaryExpCS__Group_7_2_0__417916);
             rule__PrimaryExpCS__Group_7_2_0__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__5_in_rule__PrimaryExpCS__Group_7_2_0__417918);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__5_in_rule__PrimaryExpCS__Group_7_2_0__417919);
             rule__PrimaryExpCS__Group_7_2_0__5();
 
             state._fsp--;
@@ -25294,7 +25305,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getRightSquareBracketKeyword_7_2_0_4()); 
             }
-            match(input,70,FollowSets000.FOLLOW_70_in_rule__PrimaryExpCS__Group_7_2_0__4__Impl17946); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_70_in_rule__PrimaryExpCS__Group_7_2_0__4__Impl17947); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpCSAccess().getRightSquareBracketKeyword_7_2_0_4()); 
             }
@@ -25329,12 +25340,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8829:1: ( rule__PrimaryExpCS__Group_7_2_0__5__Impl rule__PrimaryExpCS__Group_7_2_0__6 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8830:2: rule__PrimaryExpCS__Group_7_2_0__5__Impl rule__PrimaryExpCS__Group_7_2_0__6
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__5__Impl_in_rule__PrimaryExpCS__Group_7_2_0__517977);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__5__Impl_in_rule__PrimaryExpCS__Group_7_2_0__517978);
             rule__PrimaryExpCS__Group_7_2_0__5__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__6_in_rule__PrimaryExpCS__Group_7_2_0__517980);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__6_in_rule__PrimaryExpCS__Group_7_2_0__517981);
             rule__PrimaryExpCS__Group_7_2_0__6();
 
             state._fsp--;
@@ -25374,17 +25385,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getPrimaryExpCSAccess().getGroup_7_2_0_5()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8844:1: ( rule__PrimaryExpCS__Group_7_2_0_5__0 )?
-            int alt57=2;
-            int LA57_0 = input.LA(1);
+            int alt58=2;
+            int LA58_0 = input.LA(1);
 
-            if ( (LA57_0==69) ) {
-                alt57=1;
+            if ( (LA58_0==69) ) {
+                alt58=1;
             }
-            switch (alt57) {
+            switch (alt58) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8844:2: rule__PrimaryExpCS__Group_7_2_0_5__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__0_in_rule__PrimaryExpCS__Group_7_2_0__5__Impl18007);
+                    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__0_in_rule__PrimaryExpCS__Group_7_2_0__5__Impl18008);
                     rule__PrimaryExpCS__Group_7_2_0_5__0();
 
                     state._fsp--;
@@ -25429,7 +25440,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8858:1: ( rule__PrimaryExpCS__Group_7_2_0__6__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8859:2: rule__PrimaryExpCS__Group_7_2_0__6__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__6__Impl_in_rule__PrimaryExpCS__Group_7_2_0__618038);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0__6__Impl_in_rule__PrimaryExpCS__Group_7_2_0__618039);
             rule__PrimaryExpCS__Group_7_2_0__6__Impl();
 
             state._fsp--;
@@ -25469,17 +25480,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getPrimaryExpCSAccess().getGroup_7_2_0_6()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8872:1: ( rule__PrimaryExpCS__Group_7_2_0_6__0 )?
-            int alt58=2;
-            int LA58_0 = input.LA(1);
+            int alt59=2;
+            int LA59_0 = input.LA(1);
 
-            if ( (LA58_0==84) ) {
-                alt58=1;
+            if ( (LA59_0==84) ) {
+                alt59=1;
             }
-            switch (alt58) {
+            switch (alt59) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8872:2: rule__PrimaryExpCS__Group_7_2_0_6__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_6__0_in_rule__PrimaryExpCS__Group_7_2_0__6__Impl18065);
+                    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_6__0_in_rule__PrimaryExpCS__Group_7_2_0__6__Impl18066);
                     rule__PrimaryExpCS__Group_7_2_0_6__0();
 
                     state._fsp--;
@@ -25524,12 +25535,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8900:1: ( rule__PrimaryExpCS__Group_7_2_0_3__0__Impl rule__PrimaryExpCS__Group_7_2_0_3__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8901:2: rule__PrimaryExpCS__Group_7_2_0_3__0__Impl rule__PrimaryExpCS__Group_7_2_0_3__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_3__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0_3__018110);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_3__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0_3__018111);
             rule__PrimaryExpCS__Group_7_2_0_3__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_3__1_in_rule__PrimaryExpCS__Group_7_2_0_3__018113);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_3__1_in_rule__PrimaryExpCS__Group_7_2_0_3__018114);
             rule__PrimaryExpCS__Group_7_2_0_3__1();
 
             state._fsp--;
@@ -25568,7 +25579,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getCommaKeyword_7_2_0_3_0()); 
             }
-            match(input,58,FollowSets000.FOLLOW_58_in_rule__PrimaryExpCS__Group_7_2_0_3__0__Impl18141); if (state.failed) return ;
+            match(input,58,FollowSets000.FOLLOW_58_in_rule__PrimaryExpCS__Group_7_2_0_3__0__Impl18142); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpCSAccess().getCommaKeyword_7_2_0_3_0()); 
             }
@@ -25603,7 +25614,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8931:1: ( rule__PrimaryExpCS__Group_7_2_0_3__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8932:2: rule__PrimaryExpCS__Group_7_2_0_3__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_3__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0_3__118172);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_3__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0_3__118173);
             rule__PrimaryExpCS__Group_7_2_0_3__1__Impl();
 
             state._fsp--;
@@ -25645,7 +25656,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8945:1: ( rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_3_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8945:2: rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_3_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_3_1_in_rule__PrimaryExpCS__Group_7_2_0_3__1__Impl18199);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_3_1_in_rule__PrimaryExpCS__Group_7_2_0_3__1__Impl18200);
             rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_3_1();
 
             state._fsp--;
@@ -25687,12 +25698,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8963:1: ( rule__PrimaryExpCS__Group_7_2_0_5__0__Impl rule__PrimaryExpCS__Group_7_2_0_5__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8964:2: rule__PrimaryExpCS__Group_7_2_0_5__0__Impl rule__PrimaryExpCS__Group_7_2_0_5__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5__018233);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5__018234);
             rule__PrimaryExpCS__Group_7_2_0_5__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__1_in_rule__PrimaryExpCS__Group_7_2_0_5__018236);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__1_in_rule__PrimaryExpCS__Group_7_2_0_5__018237);
             rule__PrimaryExpCS__Group_7_2_0_5__1();
 
             state._fsp--;
@@ -25731,7 +25742,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getLeftSquareBracketKeyword_7_2_0_5_0()); 
             }
-            match(input,69,FollowSets000.FOLLOW_69_in_rule__PrimaryExpCS__Group_7_2_0_5__0__Impl18264); if (state.failed) return ;
+            match(input,69,FollowSets000.FOLLOW_69_in_rule__PrimaryExpCS__Group_7_2_0_5__0__Impl18265); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpCSAccess().getLeftSquareBracketKeyword_7_2_0_5_0()); 
             }
@@ -25766,12 +25777,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8994:1: ( rule__PrimaryExpCS__Group_7_2_0_5__1__Impl rule__PrimaryExpCS__Group_7_2_0_5__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:8995:2: rule__PrimaryExpCS__Group_7_2_0_5__1__Impl rule__PrimaryExpCS__Group_7_2_0_5__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5__118295);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5__118296);
             rule__PrimaryExpCS__Group_7_2_0_5__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__2_in_rule__PrimaryExpCS__Group_7_2_0_5__118298);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__2_in_rule__PrimaryExpCS__Group_7_2_0_5__118299);
             rule__PrimaryExpCS__Group_7_2_0_5__2();
 
             state._fsp--;
@@ -25813,7 +25824,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9009:1: ( rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9009:2: rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_1_in_rule__PrimaryExpCS__Group_7_2_0_5__1__Impl18325);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_1_in_rule__PrimaryExpCS__Group_7_2_0_5__1__Impl18326);
             rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_1();
 
             state._fsp--;
@@ -25855,12 +25866,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9023:1: ( rule__PrimaryExpCS__Group_7_2_0_5__2__Impl rule__PrimaryExpCS__Group_7_2_0_5__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9024:2: rule__PrimaryExpCS__Group_7_2_0_5__2__Impl rule__PrimaryExpCS__Group_7_2_0_5__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__2__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5__218355);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__2__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5__218356);
             rule__PrimaryExpCS__Group_7_2_0_5__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__3_in_rule__PrimaryExpCS__Group_7_2_0_5__218358);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__3_in_rule__PrimaryExpCS__Group_7_2_0_5__218359);
             rule__PrimaryExpCS__Group_7_2_0_5__3();
 
             state._fsp--;
@@ -25900,21 +25911,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getPrimaryExpCSAccess().getGroup_7_2_0_5_2()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9038:1: ( rule__PrimaryExpCS__Group_7_2_0_5_2__0 )*
-            loop59:
+            loop60:
             do {
-                int alt59=2;
-                int LA59_0 = input.LA(1);
+                int alt60=2;
+                int LA60_0 = input.LA(1);
 
-                if ( (LA59_0==58) ) {
-                    alt59=1;
+                if ( (LA60_0==58) ) {
+                    alt60=1;
                 }
 
 
-                switch (alt59) {
+                switch (alt60) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9038:2: rule__PrimaryExpCS__Group_7_2_0_5_2__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5_2__0_in_rule__PrimaryExpCS__Group_7_2_0_5__2__Impl18385);
+            	    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5_2__0_in_rule__PrimaryExpCS__Group_7_2_0_5__2__Impl18386);
             	    rule__PrimaryExpCS__Group_7_2_0_5_2__0();
 
             	    state._fsp--;
@@ -25924,7 +25935,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop59;
+            	    break loop60;
                 }
             } while (true);
 
@@ -25962,7 +25973,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9052:1: ( rule__PrimaryExpCS__Group_7_2_0_5__3__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9053:2: rule__PrimaryExpCS__Group_7_2_0_5__3__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__3__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5__318416);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__3__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5__318417);
             rule__PrimaryExpCS__Group_7_2_0_5__3__Impl();
 
             state._fsp--;
@@ -26001,7 +26012,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getRightSquareBracketKeyword_7_2_0_5_3()); 
             }
-            match(input,70,FollowSets000.FOLLOW_70_in_rule__PrimaryExpCS__Group_7_2_0_5__3__Impl18444); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_70_in_rule__PrimaryExpCS__Group_7_2_0_5__3__Impl18445); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpCSAccess().getRightSquareBracketKeyword_7_2_0_5_3()); 
             }
@@ -26036,12 +26047,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9090:1: ( rule__PrimaryExpCS__Group_7_2_0_5_2__0__Impl rule__PrimaryExpCS__Group_7_2_0_5_2__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9091:2: rule__PrimaryExpCS__Group_7_2_0_5_2__0__Impl rule__PrimaryExpCS__Group_7_2_0_5_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5_2__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5_2__018483);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5_2__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5_2__018484);
             rule__PrimaryExpCS__Group_7_2_0_5_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5_2__1_in_rule__PrimaryExpCS__Group_7_2_0_5_2__018486);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5_2__1_in_rule__PrimaryExpCS__Group_7_2_0_5_2__018487);
             rule__PrimaryExpCS__Group_7_2_0_5_2__1();
 
             state._fsp--;
@@ -26080,7 +26091,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getCommaKeyword_7_2_0_5_2_0()); 
             }
-            match(input,58,FollowSets000.FOLLOW_58_in_rule__PrimaryExpCS__Group_7_2_0_5_2__0__Impl18514); if (state.failed) return ;
+            match(input,58,FollowSets000.FOLLOW_58_in_rule__PrimaryExpCS__Group_7_2_0_5_2__0__Impl18515); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpCSAccess().getCommaKeyword_7_2_0_5_2_0()); 
             }
@@ -26115,7 +26126,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9121:1: ( rule__PrimaryExpCS__Group_7_2_0_5_2__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9122:2: rule__PrimaryExpCS__Group_7_2_0_5_2__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5_2__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5_2__118545);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5_2__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5_2__118546);
             rule__PrimaryExpCS__Group_7_2_0_5_2__1__Impl();
 
             state._fsp--;
@@ -26157,7 +26168,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9135:1: ( rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_2_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9135:2: rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_2_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_2_1_in_rule__PrimaryExpCS__Group_7_2_0_5_2__1__Impl18572);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_2_1_in_rule__PrimaryExpCS__Group_7_2_0_5_2__1__Impl18573);
             rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_2_1();
 
             state._fsp--;
@@ -26199,12 +26210,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9153:1: ( rule__PrimaryExpCS__Group_7_2_0_6__0__Impl rule__PrimaryExpCS__Group_7_2_0_6__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9154:2: rule__PrimaryExpCS__Group_7_2_0_6__0__Impl rule__PrimaryExpCS__Group_7_2_0_6__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_6__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0_6__018606);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_6__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0_6__018607);
             rule__PrimaryExpCS__Group_7_2_0_6__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_6__1_in_rule__PrimaryExpCS__Group_7_2_0_6__018609);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_6__1_in_rule__PrimaryExpCS__Group_7_2_0_6__018610);
             rule__PrimaryExpCS__Group_7_2_0_6__1();
 
             state._fsp--;
@@ -26246,7 +26257,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9168:1: ( rule__PrimaryExpCS__AtPreAssignment_7_2_0_6_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9168:2: rule__PrimaryExpCS__AtPreAssignment_7_2_0_6_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__AtPreAssignment_7_2_0_6_0_in_rule__PrimaryExpCS__Group_7_2_0_6__0__Impl18636);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__AtPreAssignment_7_2_0_6_0_in_rule__PrimaryExpCS__Group_7_2_0_6__0__Impl18637);
             rule__PrimaryExpCS__AtPreAssignment_7_2_0_6_0();
 
             state._fsp--;
@@ -26288,7 +26299,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9182:1: ( rule__PrimaryExpCS__Group_7_2_0_6__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9183:2: rule__PrimaryExpCS__Group_7_2_0_6__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_6__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0_6__118666);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_0_6__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0_6__118667);
             rule__PrimaryExpCS__Group_7_2_0_6__1__Impl();
 
             state._fsp--;
@@ -26327,7 +26338,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getPreKeyword_7_2_0_6_1()); 
             }
-            match(input,74,FollowSets000.FOLLOW_74_in_rule__PrimaryExpCS__Group_7_2_0_6__1__Impl18694); if (state.failed) return ;
+            match(input,74,FollowSets000.FOLLOW_74_in_rule__PrimaryExpCS__Group_7_2_0_6__1__Impl18695); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpCSAccess().getPreKeyword_7_2_0_6_1()); 
             }
@@ -26362,12 +26373,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9216:1: ( rule__PrimaryExpCS__Group_7_2_1__0__Impl rule__PrimaryExpCS__Group_7_2_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9217:2: rule__PrimaryExpCS__Group_7_2_1__0__Impl rule__PrimaryExpCS__Group_7_2_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1__0__Impl_in_rule__PrimaryExpCS__Group_7_2_1__018729);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1__0__Impl_in_rule__PrimaryExpCS__Group_7_2_1__018730);
             rule__PrimaryExpCS__Group_7_2_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1__1_in_rule__PrimaryExpCS__Group_7_2_1__018732);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1__1_in_rule__PrimaryExpCS__Group_7_2_1__018733);
             rule__PrimaryExpCS__Group_7_2_1__1();
 
             state._fsp--;
@@ -26441,12 +26452,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9247:1: ( rule__PrimaryExpCS__Group_7_2_1__1__Impl rule__PrimaryExpCS__Group_7_2_1__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9248:2: rule__PrimaryExpCS__Group_7_2_1__1__Impl rule__PrimaryExpCS__Group_7_2_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1__1__Impl_in_rule__PrimaryExpCS__Group_7_2_1__118790);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1__1__Impl_in_rule__PrimaryExpCS__Group_7_2_1__118791);
             rule__PrimaryExpCS__Group_7_2_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1__2_in_rule__PrimaryExpCS__Group_7_2_1__118793);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1__2_in_rule__PrimaryExpCS__Group_7_2_1__118794);
             rule__PrimaryExpCS__Group_7_2_1__2();
 
             state._fsp--;
@@ -26485,7 +26496,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getLeftCurlyBracketKeyword_7_2_1_1()); 
             }
-            match(input,50,FollowSets000.FOLLOW_50_in_rule__PrimaryExpCS__Group_7_2_1__1__Impl18821); if (state.failed) return ;
+            match(input,50,FollowSets000.FOLLOW_50_in_rule__PrimaryExpCS__Group_7_2_1__1__Impl18822); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpCSAccess().getLeftCurlyBracketKeyword_7_2_1_1()); 
             }
@@ -26520,12 +26531,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9278:1: ( rule__PrimaryExpCS__Group_7_2_1__2__Impl rule__PrimaryExpCS__Group_7_2_1__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9279:2: rule__PrimaryExpCS__Group_7_2_1__2__Impl rule__PrimaryExpCS__Group_7_2_1__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1__2__Impl_in_rule__PrimaryExpCS__Group_7_2_1__218852);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1__2__Impl_in_rule__PrimaryExpCS__Group_7_2_1__218853);
             rule__PrimaryExpCS__Group_7_2_1__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1__3_in_rule__PrimaryExpCS__Group_7_2_1__218855);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1__3_in_rule__PrimaryExpCS__Group_7_2_1__218856);
             rule__PrimaryExpCS__Group_7_2_1__3();
 
             state._fsp--;
@@ -26567,7 +26578,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9293:1: ( rule__PrimaryExpCS__Alternatives_7_2_1_2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9293:2: rule__PrimaryExpCS__Alternatives_7_2_1_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Alternatives_7_2_1_2_in_rule__PrimaryExpCS__Group_7_2_1__2__Impl18882);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Alternatives_7_2_1_2_in_rule__PrimaryExpCS__Group_7_2_1__2__Impl18883);
             rule__PrimaryExpCS__Alternatives_7_2_1_2();
 
             state._fsp--;
@@ -26609,7 +26620,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9307:1: ( rule__PrimaryExpCS__Group_7_2_1__3__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9308:2: rule__PrimaryExpCS__Group_7_2_1__3__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1__3__Impl_in_rule__PrimaryExpCS__Group_7_2_1__318912);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1__3__Impl_in_rule__PrimaryExpCS__Group_7_2_1__318913);
             rule__PrimaryExpCS__Group_7_2_1__3__Impl();
 
             state._fsp--;
@@ -26648,7 +26659,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getRightCurlyBracketKeyword_7_2_1_3()); 
             }
-            match(input,51,FollowSets000.FOLLOW_51_in_rule__PrimaryExpCS__Group_7_2_1__3__Impl18940); if (state.failed) return ;
+            match(input,51,FollowSets000.FOLLOW_51_in_rule__PrimaryExpCS__Group_7_2_1__3__Impl18941); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpCSAccess().getRightCurlyBracketKeyword_7_2_1_3()); 
             }
@@ -26683,12 +26694,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9345:1: ( rule__PrimaryExpCS__Group_7_2_1_2_0__0__Impl rule__PrimaryExpCS__Group_7_2_1_2_0__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9346:2: rule__PrimaryExpCS__Group_7_2_1_2_0__0__Impl rule__PrimaryExpCS__Group_7_2_1_2_0__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0__0__Impl_in_rule__PrimaryExpCS__Group_7_2_1_2_0__018979);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0__0__Impl_in_rule__PrimaryExpCS__Group_7_2_1_2_0__018980);
             rule__PrimaryExpCS__Group_7_2_1_2_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0__1_in_rule__PrimaryExpCS__Group_7_2_1_2_0__018982);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0__1_in_rule__PrimaryExpCS__Group_7_2_1_2_0__018983);
             rule__PrimaryExpCS__Group_7_2_1_2_0__1();
 
             state._fsp--;
@@ -26730,7 +26741,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9360:1: ( rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9360:2: rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_0_in_rule__PrimaryExpCS__Group_7_2_1_2_0__0__Impl19009);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_0_in_rule__PrimaryExpCS__Group_7_2_1_2_0__0__Impl19010);
             rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_0();
 
             state._fsp--;
@@ -26772,7 +26783,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9374:1: ( rule__PrimaryExpCS__Group_7_2_1_2_0__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9375:2: rule__PrimaryExpCS__Group_7_2_1_2_0__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0__1__Impl_in_rule__PrimaryExpCS__Group_7_2_1_2_0__119039);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0__1__Impl_in_rule__PrimaryExpCS__Group_7_2_1_2_0__119040);
             rule__PrimaryExpCS__Group_7_2_1_2_0__1__Impl();
 
             state._fsp--;
@@ -26812,21 +26823,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getPrimaryExpCSAccess().getGroup_7_2_1_2_0_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9388:1: ( rule__PrimaryExpCS__Group_7_2_1_2_0_1__0 )*
-            loop60:
+            loop61:
             do {
-                int alt60=2;
-                int LA60_0 = input.LA(1);
+                int alt61=2;
+                int LA61_0 = input.LA(1);
 
-                if ( (LA60_0==58) ) {
-                    alt60=1;
+                if ( (LA61_0==58) ) {
+                    alt61=1;
                 }
 
 
-                switch (alt60) {
+                switch (alt61) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9388:2: rule__PrimaryExpCS__Group_7_2_1_2_0_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0_1__0_in_rule__PrimaryExpCS__Group_7_2_1_2_0__1__Impl19066);
+            	    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0_1__0_in_rule__PrimaryExpCS__Group_7_2_1_2_0__1__Impl19067);
             	    rule__PrimaryExpCS__Group_7_2_1_2_0_1__0();
 
             	    state._fsp--;
@@ -26836,7 +26847,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop60;
+            	    break loop61;
                 }
             } while (true);
 
@@ -26874,12 +26885,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9406:1: ( rule__PrimaryExpCS__Group_7_2_1_2_0_1__0__Impl rule__PrimaryExpCS__Group_7_2_1_2_0_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9407:2: rule__PrimaryExpCS__Group_7_2_1_2_0_1__0__Impl rule__PrimaryExpCS__Group_7_2_1_2_0_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0_1__0__Impl_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__019101);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0_1__0__Impl_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__019102);
             rule__PrimaryExpCS__Group_7_2_1_2_0_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0_1__1_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__019104);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0_1__1_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__019105);
             rule__PrimaryExpCS__Group_7_2_1_2_0_1__1();
 
             state._fsp--;
@@ -26918,7 +26929,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getCommaKeyword_7_2_1_2_0_1_0()); 
             }
-            match(input,58,FollowSets000.FOLLOW_58_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__0__Impl19132); if (state.failed) return ;
+            match(input,58,FollowSets000.FOLLOW_58_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__0__Impl19133); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpCSAccess().getCommaKeyword_7_2_1_2_0_1_0()); 
             }
@@ -26953,7 +26964,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9437:1: ( rule__PrimaryExpCS__Group_7_2_1_2_0_1__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9438:2: rule__PrimaryExpCS__Group_7_2_1_2_0_1__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0_1__1__Impl_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__119163);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0_1__1__Impl_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__119164);
             rule__PrimaryExpCS__Group_7_2_1_2_0_1__1__Impl();
 
             state._fsp--;
@@ -26995,7 +27006,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9451:1: ( rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_1_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9451:2: rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_1_1_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__1__Impl19190);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_1_1_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__1__Impl19191);
             rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_1_1();
 
             state._fsp--;
@@ -27037,12 +27048,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9469:1: ( rule__PrimaryExpCS__Group_7_2_2__0__Impl rule__PrimaryExpCS__Group_7_2_2__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9470:2: rule__PrimaryExpCS__Group_7_2_2__0__Impl rule__PrimaryExpCS__Group_7_2_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2__019224);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2__019225);
             rule__PrimaryExpCS__Group_7_2_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2__1_in_rule__PrimaryExpCS__Group_7_2_2__019227);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2__1_in_rule__PrimaryExpCS__Group_7_2_2__019228);
             rule__PrimaryExpCS__Group_7_2_2__1();
 
             state._fsp--;
@@ -27082,17 +27093,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getPrimaryExpCSAccess().getGroup_7_2_2_0()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9484:1: ( rule__PrimaryExpCS__Group_7_2_2_0__0 )?
-            int alt61=2;
-            int LA61_0 = input.LA(1);
+            int alt62=2;
+            int LA62_0 = input.LA(1);
 
-            if ( (LA61_0==84) ) {
-                alt61=1;
+            if ( (LA62_0==84) ) {
+                alt62=1;
             }
-            switch (alt61) {
+            switch (alt62) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9484:2: rule__PrimaryExpCS__Group_7_2_2_0__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_0__0_in_rule__PrimaryExpCS__Group_7_2_2__0__Impl19254);
+                    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_0__0_in_rule__PrimaryExpCS__Group_7_2_2__0__Impl19255);
                     rule__PrimaryExpCS__Group_7_2_2_0__0();
 
                     state._fsp--;
@@ -27137,7 +27148,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9498:1: ( rule__PrimaryExpCS__Group_7_2_2__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9499:2: rule__PrimaryExpCS__Group_7_2_2__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2__119285);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2__119286);
             rule__PrimaryExpCS__Group_7_2_2__1__Impl();
 
             state._fsp--;
@@ -27177,17 +27188,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getPrimaryExpCSAccess().getGroup_7_2_2_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9512:1: ( rule__PrimaryExpCS__Group_7_2_2_1__0 )?
-            int alt62=2;
-            int LA62_0 = input.LA(1);
+            int alt63=2;
+            int LA63_0 = input.LA(1);
 
-            if ( (LA62_0==64) ) {
-                alt62=1;
+            if ( (LA63_0==64) ) {
+                alt63=1;
             }
-            switch (alt62) {
+            switch (alt63) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9512:2: rule__PrimaryExpCS__Group_7_2_2_1__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__0_in_rule__PrimaryExpCS__Group_7_2_2__1__Impl19312);
+                    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__0_in_rule__PrimaryExpCS__Group_7_2_2__1__Impl19313);
                     rule__PrimaryExpCS__Group_7_2_2_1__0();
 
                     state._fsp--;
@@ -27232,12 +27243,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9530:1: ( rule__PrimaryExpCS__Group_7_2_2_0__0__Impl rule__PrimaryExpCS__Group_7_2_2_0__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9531:2: rule__PrimaryExpCS__Group_7_2_2_0__0__Impl rule__PrimaryExpCS__Group_7_2_2_0__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_0__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_0__019347);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_0__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_0__019348);
             rule__PrimaryExpCS__Group_7_2_2_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_0__1_in_rule__PrimaryExpCS__Group_7_2_2_0__019350);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_0__1_in_rule__PrimaryExpCS__Group_7_2_2_0__019351);
             rule__PrimaryExpCS__Group_7_2_2_0__1();
 
             state._fsp--;
@@ -27279,7 +27290,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9545:1: ( rule__PrimaryExpCS__AtPreAssignment_7_2_2_0_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9545:2: rule__PrimaryExpCS__AtPreAssignment_7_2_2_0_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__AtPreAssignment_7_2_2_0_0_in_rule__PrimaryExpCS__Group_7_2_2_0__0__Impl19377);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__AtPreAssignment_7_2_2_0_0_in_rule__PrimaryExpCS__Group_7_2_2_0__0__Impl19378);
             rule__PrimaryExpCS__AtPreAssignment_7_2_2_0_0();
 
             state._fsp--;
@@ -27321,7 +27332,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9559:1: ( rule__PrimaryExpCS__Group_7_2_2_0__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9560:2: rule__PrimaryExpCS__Group_7_2_2_0__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_0__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_0__119407);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_0__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_0__119408);
             rule__PrimaryExpCS__Group_7_2_2_0__1__Impl();
 
             state._fsp--;
@@ -27360,7 +27371,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getPreKeyword_7_2_2_0_1()); 
             }
-            match(input,74,FollowSets000.FOLLOW_74_in_rule__PrimaryExpCS__Group_7_2_2_0__1__Impl19435); if (state.failed) return ;
+            match(input,74,FollowSets000.FOLLOW_74_in_rule__PrimaryExpCS__Group_7_2_2_0__1__Impl19436); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpCSAccess().getPreKeyword_7_2_2_0_1()); 
             }
@@ -27395,12 +27406,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9593:1: ( rule__PrimaryExpCS__Group_7_2_2_1__0__Impl rule__PrimaryExpCS__Group_7_2_2_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9594:2: rule__PrimaryExpCS__Group_7_2_2_1__0__Impl rule__PrimaryExpCS__Group_7_2_2_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1__019470);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1__019471);
             rule__PrimaryExpCS__Group_7_2_2_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__1_in_rule__PrimaryExpCS__Group_7_2_2_1__019473);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__1_in_rule__PrimaryExpCS__Group_7_2_2_1__019474);
             rule__PrimaryExpCS__Group_7_2_2_1__1();
 
             state._fsp--;
@@ -27474,12 +27485,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9624:1: ( rule__PrimaryExpCS__Group_7_2_2_1__1__Impl rule__PrimaryExpCS__Group_7_2_2_1__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9625:2: rule__PrimaryExpCS__Group_7_2_2_1__1__Impl rule__PrimaryExpCS__Group_7_2_2_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1__119531);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1__119532);
             rule__PrimaryExpCS__Group_7_2_2_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__2_in_rule__PrimaryExpCS__Group_7_2_2_1__119534);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__2_in_rule__PrimaryExpCS__Group_7_2_2_1__119535);
             rule__PrimaryExpCS__Group_7_2_2_1__2();
 
             state._fsp--;
@@ -27518,7 +27529,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getLeftParenthesisKeyword_7_2_2_1_1()); 
             }
-            match(input,64,FollowSets000.FOLLOW_64_in_rule__PrimaryExpCS__Group_7_2_2_1__1__Impl19562); if (state.failed) return ;
+            match(input,64,FollowSets000.FOLLOW_64_in_rule__PrimaryExpCS__Group_7_2_2_1__1__Impl19563); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpCSAccess().getLeftParenthesisKeyword_7_2_2_1_1()); 
             }
@@ -27553,12 +27564,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9655:1: ( rule__PrimaryExpCS__Group_7_2_2_1__2__Impl rule__PrimaryExpCS__Group_7_2_2_1__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9656:2: rule__PrimaryExpCS__Group_7_2_2_1__2__Impl rule__PrimaryExpCS__Group_7_2_2_1__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__2__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1__219593);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__2__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1__219594);
             rule__PrimaryExpCS__Group_7_2_2_1__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__3_in_rule__PrimaryExpCS__Group_7_2_2_1__219596);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__3_in_rule__PrimaryExpCS__Group_7_2_2_1__219597);
             rule__PrimaryExpCS__Group_7_2_2_1__3();
 
             state._fsp--;
@@ -27598,17 +27609,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getPrimaryExpCSAccess().getGroup_7_2_2_1_2()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9670:1: ( rule__PrimaryExpCS__Group_7_2_2_1_2__0 )?
-            int alt63=2;
-            int LA63_0 = input.LA(1);
+            int alt64=2;
+            int LA64_0 = input.LA(1);
 
-            if ( ((LA63_0>=RULE_INT && LA63_0<=RULE_ESCAPED_ID)||(LA63_0>=16 && LA63_0<=18)||(LA63_0>=33 && LA63_0<=46)||LA63_0==64||(LA63_0>=72 && LA63_0<=73)||LA63_0==75||LA63_0==79||(LA63_0>=81 && LA63_0<=83)) ) {
-                alt63=1;
+            if ( ((LA64_0>=RULE_INT && LA64_0<=RULE_ESCAPED_ID)||(LA64_0>=16 && LA64_0<=18)||(LA64_0>=33 && LA64_0<=46)||LA64_0==64||(LA64_0>=72 && LA64_0<=73)||LA64_0==75||LA64_0==79||(LA64_0>=81 && LA64_0<=83)) ) {
+                alt64=1;
             }
-            switch (alt63) {
+            switch (alt64) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9670:2: rule__PrimaryExpCS__Group_7_2_2_1_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__0_in_rule__PrimaryExpCS__Group_7_2_2_1__2__Impl19623);
+                    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__0_in_rule__PrimaryExpCS__Group_7_2_2_1__2__Impl19624);
                     rule__PrimaryExpCS__Group_7_2_2_1_2__0();
 
                     state._fsp--;
@@ -27653,7 +27664,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9684:1: ( rule__PrimaryExpCS__Group_7_2_2_1__3__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9685:2: rule__PrimaryExpCS__Group_7_2_2_1__3__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__3__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1__319654);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__3__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1__319655);
             rule__PrimaryExpCS__Group_7_2_2_1__3__Impl();
 
             state._fsp--;
@@ -27692,7 +27703,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getRightParenthesisKeyword_7_2_2_1_3()); 
             }
-            match(input,65,FollowSets000.FOLLOW_65_in_rule__PrimaryExpCS__Group_7_2_2_1__3__Impl19682); if (state.failed) return ;
+            match(input,65,FollowSets000.FOLLOW_65_in_rule__PrimaryExpCS__Group_7_2_2_1__3__Impl19683); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpCSAccess().getRightParenthesisKeyword_7_2_2_1_3()); 
             }
@@ -27727,12 +27738,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9722:1: ( rule__PrimaryExpCS__Group_7_2_2_1_2__0__Impl rule__PrimaryExpCS__Group_7_2_2_1_2__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9723:2: rule__PrimaryExpCS__Group_7_2_2_1_2__0__Impl rule__PrimaryExpCS__Group_7_2_2_1_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2__019721);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2__019722);
             rule__PrimaryExpCS__Group_7_2_2_1_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__1_in_rule__PrimaryExpCS__Group_7_2_2_1_2__019724);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__1_in_rule__PrimaryExpCS__Group_7_2_2_1_2__019725);
             rule__PrimaryExpCS__Group_7_2_2_1_2__1();
 
             state._fsp--;
@@ -27774,7 +27785,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9737:1: ( rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9737:2: rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_0_in_rule__PrimaryExpCS__Group_7_2_2_1_2__0__Impl19751);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_0_in_rule__PrimaryExpCS__Group_7_2_2_1_2__0__Impl19752);
             rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_0();
 
             state._fsp--;
@@ -27816,12 +27827,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9751:1: ( rule__PrimaryExpCS__Group_7_2_2_1_2__1__Impl rule__PrimaryExpCS__Group_7_2_2_1_2__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9752:2: rule__PrimaryExpCS__Group_7_2_2_1_2__1__Impl rule__PrimaryExpCS__Group_7_2_2_1_2__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2__119781);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2__119782);
             rule__PrimaryExpCS__Group_7_2_2_1_2__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__2_in_rule__PrimaryExpCS__Group_7_2_2_1_2__119784);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__2_in_rule__PrimaryExpCS__Group_7_2_2_1_2__119785);
             rule__PrimaryExpCS__Group_7_2_2_1_2__2();
 
             state._fsp--;
@@ -27861,21 +27872,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getPrimaryExpCSAccess().getArgumentAssignment_7_2_2_1_2_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9766:1: ( rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_1 )*
-            loop64:
+            loop65:
             do {
-                int alt64=2;
-                int LA64_0 = input.LA(1);
+                int alt65=2;
+                int LA65_0 = input.LA(1);
 
-                if ( (LA64_0==58) ) {
-                    alt64=1;
+                if ( (LA65_0==58) ) {
+                    alt65=1;
                 }
 
 
-                switch (alt64) {
+                switch (alt65) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9766:2: rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_1
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_1_in_rule__PrimaryExpCS__Group_7_2_2_1_2__1__Impl19811);
+            	    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_1_in_rule__PrimaryExpCS__Group_7_2_2_1_2__1__Impl19812);
             	    rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_1();
 
             	    state._fsp--;
@@ -27885,7 +27896,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop64;
+            	    break loop65;
                 }
             } while (true);
 
@@ -27923,12 +27934,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9780:1: ( rule__PrimaryExpCS__Group_7_2_2_1_2__2__Impl rule__PrimaryExpCS__Group_7_2_2_1_2__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9781:2: rule__PrimaryExpCS__Group_7_2_2_1_2__2__Impl rule__PrimaryExpCS__Group_7_2_2_1_2__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__2__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2__219842);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__2__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2__219843);
             rule__PrimaryExpCS__Group_7_2_2_1_2__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__3_in_rule__PrimaryExpCS__Group_7_2_2_1_2__219845);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__3_in_rule__PrimaryExpCS__Group_7_2_2_1_2__219846);
             rule__PrimaryExpCS__Group_7_2_2_1_2__3();
 
             state._fsp--;
@@ -27968,17 +27979,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getPrimaryExpCSAccess().getGroup_7_2_2_1_2_2()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9795:1: ( rule__PrimaryExpCS__Group_7_2_2_1_2_2__0 )?
-            int alt65=2;
-            int LA65_0 = input.LA(1);
+            int alt66=2;
+            int LA66_0 = input.LA(1);
 
-            if ( (LA65_0==55) ) {
-                alt65=1;
+            if ( (LA66_0==55) ) {
+                alt66=1;
             }
-            switch (alt65) {
+            switch (alt66) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9795:2: rule__PrimaryExpCS__Group_7_2_2_1_2_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_2__0_in_rule__PrimaryExpCS__Group_7_2_2_1_2__2__Impl19872);
+                    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_2__0_in_rule__PrimaryExpCS__Group_7_2_2_1_2__2__Impl19873);
                     rule__PrimaryExpCS__Group_7_2_2_1_2_2__0();
 
                     state._fsp--;
@@ -28023,7 +28034,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9809:1: ( rule__PrimaryExpCS__Group_7_2_2_1_2__3__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9810:2: rule__PrimaryExpCS__Group_7_2_2_1_2__3__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__3__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2__319903);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__3__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2__319904);
             rule__PrimaryExpCS__Group_7_2_2_1_2__3__Impl();
 
             state._fsp--;
@@ -28063,17 +28074,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getPrimaryExpCSAccess().getGroup_7_2_2_1_2_3()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9823:1: ( rule__PrimaryExpCS__Group_7_2_2_1_2_3__0 )?
-            int alt66=2;
-            int LA66_0 = input.LA(1);
+            int alt67=2;
+            int LA67_0 = input.LA(1);
 
-            if ( (LA66_0==85) ) {
-                alt66=1;
+            if ( (LA67_0==85) ) {
+                alt67=1;
             }
-            switch (alt66) {
+            switch (alt67) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9823:2: rule__PrimaryExpCS__Group_7_2_2_1_2_3__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_3__0_in_rule__PrimaryExpCS__Group_7_2_2_1_2__3__Impl19930);
+                    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_3__0_in_rule__PrimaryExpCS__Group_7_2_2_1_2__3__Impl19931);
                     rule__PrimaryExpCS__Group_7_2_2_1_2_3__0();
 
                     state._fsp--;
@@ -28118,12 +28129,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9845:1: ( rule__PrimaryExpCS__Group_7_2_2_1_2_2__0__Impl rule__PrimaryExpCS__Group_7_2_2_1_2_2__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9846:2: rule__PrimaryExpCS__Group_7_2_2_1_2_2__0__Impl rule__PrimaryExpCS__Group_7_2_2_1_2_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_2__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__019969);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_2__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__019970);
             rule__PrimaryExpCS__Group_7_2_2_1_2_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_2__1_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__019972);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_2__1_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__019973);
             rule__PrimaryExpCS__Group_7_2_2_1_2_2__1();
 
             state._fsp--;
@@ -28165,7 +28176,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9860:1: ( rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9860:2: rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_0_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__0__Impl19999);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_0_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__0__Impl20000);
             rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_0();
 
             state._fsp--;
@@ -28207,7 +28218,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9874:1: ( rule__PrimaryExpCS__Group_7_2_2_1_2_2__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9875:2: rule__PrimaryExpCS__Group_7_2_2_1_2_2__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_2__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__120029);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_2__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__120030);
             rule__PrimaryExpCS__Group_7_2_2_1_2_2__1__Impl();
 
             state._fsp--;
@@ -28247,21 +28258,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getPrimaryExpCSAccess().getArgumentAssignment_7_2_2_1_2_2_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9888:1: ( rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_1 )*
-            loop67:
+            loop68:
             do {
-                int alt67=2;
-                int LA67_0 = input.LA(1);
+                int alt68=2;
+                int LA68_0 = input.LA(1);
 
-                if ( (LA67_0==58) ) {
-                    alt67=1;
+                if ( (LA68_0==58) ) {
+                    alt68=1;
                 }
 
 
-                switch (alt67) {
+                switch (alt68) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9888:2: rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_1
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_1_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__1__Impl20056);
+            	    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_1_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__1__Impl20057);
             	    rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_1();
 
             	    state._fsp--;
@@ -28271,7 +28282,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop67;
+            	    break loop68;
                 }
             } while (true);
 
@@ -28309,12 +28320,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9906:1: ( rule__PrimaryExpCS__Group_7_2_2_1_2_3__0__Impl rule__PrimaryExpCS__Group_7_2_2_1_2_3__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9907:2: rule__PrimaryExpCS__Group_7_2_2_1_2_3__0__Impl rule__PrimaryExpCS__Group_7_2_2_1_2_3__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_3__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__020091);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_3__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__020092);
             rule__PrimaryExpCS__Group_7_2_2_1_2_3__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_3__1_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__020094);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_3__1_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__020095);
             rule__PrimaryExpCS__Group_7_2_2_1_2_3__1();
 
             state._fsp--;
@@ -28356,7 +28367,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9921:1: ( rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9921:2: rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_0_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__0__Impl20121);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_0_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__0__Impl20122);
             rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_0();
 
             state._fsp--;
@@ -28398,7 +28409,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9935:1: ( rule__PrimaryExpCS__Group_7_2_2_1_2_3__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9936:2: rule__PrimaryExpCS__Group_7_2_2_1_2_3__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_3__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__120151);
+            pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_3__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__120152);
             rule__PrimaryExpCS__Group_7_2_2_1_2_3__1__Impl();
 
             state._fsp--;
@@ -28438,21 +28449,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getPrimaryExpCSAccess().getArgumentAssignment_7_2_2_1_2_3_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9949:1: ( rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_1 )*
-            loop68:
+            loop69:
             do {
-                int alt68=2;
-                int LA68_0 = input.LA(1);
+                int alt69=2;
+                int LA69_0 = input.LA(1);
 
-                if ( (LA68_0==58) ) {
-                    alt68=1;
+                if ( (LA69_0==58) ) {
+                    alt69=1;
                 }
 
 
-                switch (alt68) {
+                switch (alt69) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9949:2: rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_1
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_1_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__1__Impl20178);
+            	    pushFollow(FollowSets000.FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_1_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__1__Impl20179);
             	    rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_1();
 
             	    state._fsp--;
@@ -28462,7 +28473,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop68;
+            	    break loop69;
                 }
             } while (true);
 
@@ -28500,12 +28511,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9967:1: ( rule__NavigatingArgCS__Group__0__Impl rule__NavigatingArgCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9968:2: rule__NavigatingArgCS__Group__0__Impl rule__NavigatingArgCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group__0__Impl_in_rule__NavigatingArgCS__Group__020213);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group__0__Impl_in_rule__NavigatingArgCS__Group__020214);
             rule__NavigatingArgCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group__1_in_rule__NavigatingArgCS__Group__020216);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group__1_in_rule__NavigatingArgCS__Group__020217);
             rule__NavigatingArgCS__Group__1();
 
             state._fsp--;
@@ -28547,7 +28558,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9982:1: ( rule__NavigatingArgCS__NameAssignment_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9982:2: rule__NavigatingArgCS__NameAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__NameAssignment_0_in_rule__NavigatingArgCS__Group__0__Impl20243);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__NameAssignment_0_in_rule__NavigatingArgCS__Group__0__Impl20244);
             rule__NavigatingArgCS__NameAssignment_0();
 
             state._fsp--;
@@ -28589,7 +28600,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9996:1: ( rule__NavigatingArgCS__Group__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:9997:2: rule__NavigatingArgCS__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group__1__Impl_in_rule__NavigatingArgCS__Group__120273);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group__1__Impl_in_rule__NavigatingArgCS__Group__120274);
             rule__NavigatingArgCS__Group__1__Impl();
 
             state._fsp--;
@@ -28629,17 +28640,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getNavigatingArgCSAccess().getGroup_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10010:1: ( rule__NavigatingArgCS__Group_1__0 )?
-            int alt69=2;
-            int LA69_0 = input.LA(1);
+            int alt70=2;
+            int LA70_0 = input.LA(1);
 
-            if ( (LA69_0==71) ) {
-                alt69=1;
+            if ( (LA70_0==71) ) {
+                alt70=1;
             }
-            switch (alt69) {
+            switch (alt70) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10010:2: rule__NavigatingArgCS__Group_1__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1__0_in_rule__NavigatingArgCS__Group__1__Impl20300);
+                    pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1__0_in_rule__NavigatingArgCS__Group__1__Impl20301);
                     rule__NavigatingArgCS__Group_1__0();
 
                     state._fsp--;
@@ -28684,12 +28695,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10028:1: ( rule__NavigatingArgCS__Group_1__0__Impl rule__NavigatingArgCS__Group_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10029:2: rule__NavigatingArgCS__Group_1__0__Impl rule__NavigatingArgCS__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1__0__Impl_in_rule__NavigatingArgCS__Group_1__020335);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1__0__Impl_in_rule__NavigatingArgCS__Group_1__020336);
             rule__NavigatingArgCS__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1__1_in_rule__NavigatingArgCS__Group_1__020338);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1__1_in_rule__NavigatingArgCS__Group_1__020339);
             rule__NavigatingArgCS__Group_1__1();
 
             state._fsp--;
@@ -28728,7 +28739,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingArgCSAccess().getColonKeyword_1_0()); 
             }
-            match(input,71,FollowSets000.FOLLOW_71_in_rule__NavigatingArgCS__Group_1__0__Impl20366); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_71_in_rule__NavigatingArgCS__Group_1__0__Impl20367); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNavigatingArgCSAccess().getColonKeyword_1_0()); 
             }
@@ -28763,12 +28774,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10059:1: ( rule__NavigatingArgCS__Group_1__1__Impl rule__NavigatingArgCS__Group_1__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10060:2: rule__NavigatingArgCS__Group_1__1__Impl rule__NavigatingArgCS__Group_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1__1__Impl_in_rule__NavigatingArgCS__Group_1__120397);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1__1__Impl_in_rule__NavigatingArgCS__Group_1__120398);
             rule__NavigatingArgCS__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1__2_in_rule__NavigatingArgCS__Group_1__120400);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1__2_in_rule__NavigatingArgCS__Group_1__120401);
             rule__NavigatingArgCS__Group_1__2();
 
             state._fsp--;
@@ -28810,7 +28821,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10074:1: ( rule__NavigatingArgCS__OwnedTypeAssignment_1_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10074:2: rule__NavigatingArgCS__OwnedTypeAssignment_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__OwnedTypeAssignment_1_1_in_rule__NavigatingArgCS__Group_1__1__Impl20427);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__OwnedTypeAssignment_1_1_in_rule__NavigatingArgCS__Group_1__1__Impl20428);
             rule__NavigatingArgCS__OwnedTypeAssignment_1_1();
 
             state._fsp--;
@@ -28852,7 +28863,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10088:1: ( rule__NavigatingArgCS__Group_1__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10089:2: rule__NavigatingArgCS__Group_1__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1__2__Impl_in_rule__NavigatingArgCS__Group_1__220457);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1__2__Impl_in_rule__NavigatingArgCS__Group_1__220458);
             rule__NavigatingArgCS__Group_1__2__Impl();
 
             state._fsp--;
@@ -28892,17 +28903,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getNavigatingArgCSAccess().getGroup_1_2()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10102:1: ( rule__NavigatingArgCS__Group_1_2__0 )?
-            int alt70=2;
-            int LA70_0 = input.LA(1);
+            int alt71=2;
+            int LA71_0 = input.LA(1);
 
-            if ( (LA70_0==25) ) {
-                alt70=1;
+            if ( (LA71_0==25) ) {
+                alt71=1;
             }
-            switch (alt70) {
+            switch (alt71) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10102:2: rule__NavigatingArgCS__Group_1_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1_2__0_in_rule__NavigatingArgCS__Group_1__2__Impl20484);
+                    pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1_2__0_in_rule__NavigatingArgCS__Group_1__2__Impl20485);
                     rule__NavigatingArgCS__Group_1_2__0();
 
                     state._fsp--;
@@ -28947,12 +28958,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10122:1: ( rule__NavigatingArgCS__Group_1_2__0__Impl rule__NavigatingArgCS__Group_1_2__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10123:2: rule__NavigatingArgCS__Group_1_2__0__Impl rule__NavigatingArgCS__Group_1_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1_2__0__Impl_in_rule__NavigatingArgCS__Group_1_2__020521);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1_2__0__Impl_in_rule__NavigatingArgCS__Group_1_2__020522);
             rule__NavigatingArgCS__Group_1_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1_2__1_in_rule__NavigatingArgCS__Group_1_2__020524);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1_2__1_in_rule__NavigatingArgCS__Group_1_2__020525);
             rule__NavigatingArgCS__Group_1_2__1();
 
             state._fsp--;
@@ -28991,7 +29002,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingArgCSAccess().getEqualsSignKeyword_1_2_0()); 
             }
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__NavigatingArgCS__Group_1_2__0__Impl20552); if (state.failed) return ;
+            match(input,25,FollowSets000.FOLLOW_25_in_rule__NavigatingArgCS__Group_1_2__0__Impl20553); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNavigatingArgCSAccess().getEqualsSignKeyword_1_2_0()); 
             }
@@ -29026,7 +29037,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10153:1: ( rule__NavigatingArgCS__Group_1_2__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10154:2: rule__NavigatingArgCS__Group_1_2__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1_2__1__Impl_in_rule__NavigatingArgCS__Group_1_2__120583);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__Group_1_2__1__Impl_in_rule__NavigatingArgCS__Group_1_2__120584);
             rule__NavigatingArgCS__Group_1_2__1__Impl();
 
             state._fsp--;
@@ -29068,7 +29079,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10167:1: ( rule__NavigatingArgCS__InitAssignment_1_2_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10167:2: rule__NavigatingArgCS__InitAssignment_1_2_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__InitAssignment_1_2_1_in_rule__NavigatingArgCS__Group_1_2__1__Impl20610);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingArgCS__InitAssignment_1_2_1_in_rule__NavigatingArgCS__Group_1_2__1__Impl20611);
             rule__NavigatingArgCS__InitAssignment_1_2_1();
 
             state._fsp--;
@@ -29110,12 +29121,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10185:1: ( rule__NavigatingBarArgCS__Group__0__Impl rule__NavigatingBarArgCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10186:2: rule__NavigatingBarArgCS__Group__0__Impl rule__NavigatingBarArgCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group__0__Impl_in_rule__NavigatingBarArgCS__Group__020644);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group__0__Impl_in_rule__NavigatingBarArgCS__Group__020645);
             rule__NavigatingBarArgCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group__1_in_rule__NavigatingBarArgCS__Group__020647);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group__1_in_rule__NavigatingBarArgCS__Group__020648);
             rule__NavigatingBarArgCS__Group__1();
 
             state._fsp--;
@@ -29157,7 +29168,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10200:1: ( rule__NavigatingBarArgCS__PrefixAssignment_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10200:2: rule__NavigatingBarArgCS__PrefixAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__PrefixAssignment_0_in_rule__NavigatingBarArgCS__Group__0__Impl20674);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__PrefixAssignment_0_in_rule__NavigatingBarArgCS__Group__0__Impl20675);
             rule__NavigatingBarArgCS__PrefixAssignment_0();
 
             state._fsp--;
@@ -29199,12 +29210,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10214:1: ( rule__NavigatingBarArgCS__Group__1__Impl rule__NavigatingBarArgCS__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10215:2: rule__NavigatingBarArgCS__Group__1__Impl rule__NavigatingBarArgCS__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group__1__Impl_in_rule__NavigatingBarArgCS__Group__120704);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group__1__Impl_in_rule__NavigatingBarArgCS__Group__120705);
             rule__NavigatingBarArgCS__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group__2_in_rule__NavigatingBarArgCS__Group__120707);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group__2_in_rule__NavigatingBarArgCS__Group__120708);
             rule__NavigatingBarArgCS__Group__2();
 
             state._fsp--;
@@ -29246,7 +29257,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10229:1: ( rule__NavigatingBarArgCS__NameAssignment_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10229:2: rule__NavigatingBarArgCS__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__NameAssignment_1_in_rule__NavigatingBarArgCS__Group__1__Impl20734);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__NameAssignment_1_in_rule__NavigatingBarArgCS__Group__1__Impl20735);
             rule__NavigatingBarArgCS__NameAssignment_1();
 
             state._fsp--;
@@ -29288,7 +29299,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10243:1: ( rule__NavigatingBarArgCS__Group__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10244:2: rule__NavigatingBarArgCS__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group__2__Impl_in_rule__NavigatingBarArgCS__Group__220764);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group__2__Impl_in_rule__NavigatingBarArgCS__Group__220765);
             rule__NavigatingBarArgCS__Group__2__Impl();
 
             state._fsp--;
@@ -29328,17 +29339,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getNavigatingBarArgCSAccess().getGroup_2()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10257:1: ( rule__NavigatingBarArgCS__Group_2__0 )?
-            int alt71=2;
-            int LA71_0 = input.LA(1);
+            int alt72=2;
+            int LA72_0 = input.LA(1);
 
-            if ( (LA71_0==71) ) {
-                alt71=1;
+            if ( (LA72_0==71) ) {
+                alt72=1;
             }
-            switch (alt71) {
+            switch (alt72) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10257:2: rule__NavigatingBarArgCS__Group_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2__0_in_rule__NavigatingBarArgCS__Group__2__Impl20791);
+                    pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2__0_in_rule__NavigatingBarArgCS__Group__2__Impl20792);
                     rule__NavigatingBarArgCS__Group_2__0();
 
                     state._fsp--;
@@ -29383,12 +29394,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10277:1: ( rule__NavigatingBarArgCS__Group_2__0__Impl rule__NavigatingBarArgCS__Group_2__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10278:2: rule__NavigatingBarArgCS__Group_2__0__Impl rule__NavigatingBarArgCS__Group_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2__0__Impl_in_rule__NavigatingBarArgCS__Group_2__020828);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2__0__Impl_in_rule__NavigatingBarArgCS__Group_2__020829);
             rule__NavigatingBarArgCS__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2__1_in_rule__NavigatingBarArgCS__Group_2__020831);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2__1_in_rule__NavigatingBarArgCS__Group_2__020832);
             rule__NavigatingBarArgCS__Group_2__1();
 
             state._fsp--;
@@ -29427,7 +29438,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingBarArgCSAccess().getColonKeyword_2_0()); 
             }
-            match(input,71,FollowSets000.FOLLOW_71_in_rule__NavigatingBarArgCS__Group_2__0__Impl20859); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_71_in_rule__NavigatingBarArgCS__Group_2__0__Impl20860); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNavigatingBarArgCSAccess().getColonKeyword_2_0()); 
             }
@@ -29462,12 +29473,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10308:1: ( rule__NavigatingBarArgCS__Group_2__1__Impl rule__NavigatingBarArgCS__Group_2__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10309:2: rule__NavigatingBarArgCS__Group_2__1__Impl rule__NavigatingBarArgCS__Group_2__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2__1__Impl_in_rule__NavigatingBarArgCS__Group_2__120890);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2__1__Impl_in_rule__NavigatingBarArgCS__Group_2__120891);
             rule__NavigatingBarArgCS__Group_2__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2__2_in_rule__NavigatingBarArgCS__Group_2__120893);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2__2_in_rule__NavigatingBarArgCS__Group_2__120894);
             rule__NavigatingBarArgCS__Group_2__2();
 
             state._fsp--;
@@ -29509,7 +29520,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10323:1: ( rule__NavigatingBarArgCS__OwnedTypeAssignment_2_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10323:2: rule__NavigatingBarArgCS__OwnedTypeAssignment_2_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__OwnedTypeAssignment_2_1_in_rule__NavigatingBarArgCS__Group_2__1__Impl20920);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__OwnedTypeAssignment_2_1_in_rule__NavigatingBarArgCS__Group_2__1__Impl20921);
             rule__NavigatingBarArgCS__OwnedTypeAssignment_2_1();
 
             state._fsp--;
@@ -29551,7 +29562,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10337:1: ( rule__NavigatingBarArgCS__Group_2__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10338:2: rule__NavigatingBarArgCS__Group_2__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2__2__Impl_in_rule__NavigatingBarArgCS__Group_2__220950);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2__2__Impl_in_rule__NavigatingBarArgCS__Group_2__220951);
             rule__NavigatingBarArgCS__Group_2__2__Impl();
 
             state._fsp--;
@@ -29591,17 +29602,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getNavigatingBarArgCSAccess().getGroup_2_2()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10351:1: ( rule__NavigatingBarArgCS__Group_2_2__0 )?
-            int alt72=2;
-            int LA72_0 = input.LA(1);
+            int alt73=2;
+            int LA73_0 = input.LA(1);
 
-            if ( (LA72_0==25) ) {
-                alt72=1;
+            if ( (LA73_0==25) ) {
+                alt73=1;
             }
-            switch (alt72) {
+            switch (alt73) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10351:2: rule__NavigatingBarArgCS__Group_2_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2_2__0_in_rule__NavigatingBarArgCS__Group_2__2__Impl20977);
+                    pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2_2__0_in_rule__NavigatingBarArgCS__Group_2__2__Impl20978);
                     rule__NavigatingBarArgCS__Group_2_2__0();
 
                     state._fsp--;
@@ -29646,12 +29657,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10371:1: ( rule__NavigatingBarArgCS__Group_2_2__0__Impl rule__NavigatingBarArgCS__Group_2_2__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10372:2: rule__NavigatingBarArgCS__Group_2_2__0__Impl rule__NavigatingBarArgCS__Group_2_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2_2__0__Impl_in_rule__NavigatingBarArgCS__Group_2_2__021014);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2_2__0__Impl_in_rule__NavigatingBarArgCS__Group_2_2__021015);
             rule__NavigatingBarArgCS__Group_2_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2_2__1_in_rule__NavigatingBarArgCS__Group_2_2__021017);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2_2__1_in_rule__NavigatingBarArgCS__Group_2_2__021018);
             rule__NavigatingBarArgCS__Group_2_2__1();
 
             state._fsp--;
@@ -29690,7 +29701,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingBarArgCSAccess().getEqualsSignKeyword_2_2_0()); 
             }
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__NavigatingBarArgCS__Group_2_2__0__Impl21045); if (state.failed) return ;
+            match(input,25,FollowSets000.FOLLOW_25_in_rule__NavigatingBarArgCS__Group_2_2__0__Impl21046); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNavigatingBarArgCSAccess().getEqualsSignKeyword_2_2_0()); 
             }
@@ -29725,7 +29736,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10402:1: ( rule__NavigatingBarArgCS__Group_2_2__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10403:2: rule__NavigatingBarArgCS__Group_2_2__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2_2__1__Impl_in_rule__NavigatingBarArgCS__Group_2_2__121076);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__Group_2_2__1__Impl_in_rule__NavigatingBarArgCS__Group_2_2__121077);
             rule__NavigatingBarArgCS__Group_2_2__1__Impl();
 
             state._fsp--;
@@ -29767,7 +29778,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10416:1: ( rule__NavigatingBarArgCS__InitAssignment_2_2_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10416:2: rule__NavigatingBarArgCS__InitAssignment_2_2_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__InitAssignment_2_2_1_in_rule__NavigatingBarArgCS__Group_2_2__1__Impl21103);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingBarArgCS__InitAssignment_2_2_1_in_rule__NavigatingBarArgCS__Group_2_2__1__Impl21104);
             rule__NavigatingBarArgCS__InitAssignment_2_2_1();
 
             state._fsp--;
@@ -29809,12 +29820,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10434:1: ( rule__NavigatingCommaArgCS__Group__0__Impl rule__NavigatingCommaArgCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10435:2: rule__NavigatingCommaArgCS__Group__0__Impl rule__NavigatingCommaArgCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group__0__Impl_in_rule__NavigatingCommaArgCS__Group__021137);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group__0__Impl_in_rule__NavigatingCommaArgCS__Group__021138);
             rule__NavigatingCommaArgCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group__1_in_rule__NavigatingCommaArgCS__Group__021140);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group__1_in_rule__NavigatingCommaArgCS__Group__021141);
             rule__NavigatingCommaArgCS__Group__1();
 
             state._fsp--;
@@ -29856,7 +29867,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10449:1: ( rule__NavigatingCommaArgCS__PrefixAssignment_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10449:2: rule__NavigatingCommaArgCS__PrefixAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__PrefixAssignment_0_in_rule__NavigatingCommaArgCS__Group__0__Impl21167);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__PrefixAssignment_0_in_rule__NavigatingCommaArgCS__Group__0__Impl21168);
             rule__NavigatingCommaArgCS__PrefixAssignment_0();
 
             state._fsp--;
@@ -29898,12 +29909,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10463:1: ( rule__NavigatingCommaArgCS__Group__1__Impl rule__NavigatingCommaArgCS__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10464:2: rule__NavigatingCommaArgCS__Group__1__Impl rule__NavigatingCommaArgCS__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group__1__Impl_in_rule__NavigatingCommaArgCS__Group__121197);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group__1__Impl_in_rule__NavigatingCommaArgCS__Group__121198);
             rule__NavigatingCommaArgCS__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group__2_in_rule__NavigatingCommaArgCS__Group__121200);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group__2_in_rule__NavigatingCommaArgCS__Group__121201);
             rule__NavigatingCommaArgCS__Group__2();
 
             state._fsp--;
@@ -29945,7 +29956,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10478:1: ( rule__NavigatingCommaArgCS__NameAssignment_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10478:2: rule__NavigatingCommaArgCS__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__NameAssignment_1_in_rule__NavigatingCommaArgCS__Group__1__Impl21227);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__NameAssignment_1_in_rule__NavigatingCommaArgCS__Group__1__Impl21228);
             rule__NavigatingCommaArgCS__NameAssignment_1();
 
             state._fsp--;
@@ -29987,7 +29998,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10492:1: ( rule__NavigatingCommaArgCS__Group__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10493:2: rule__NavigatingCommaArgCS__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group__2__Impl_in_rule__NavigatingCommaArgCS__Group__221257);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group__2__Impl_in_rule__NavigatingCommaArgCS__Group__221258);
             rule__NavigatingCommaArgCS__Group__2__Impl();
 
             state._fsp--;
@@ -30027,17 +30038,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getNavigatingCommaArgCSAccess().getGroup_2()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10506:1: ( rule__NavigatingCommaArgCS__Group_2__0 )?
-            int alt73=2;
-            int LA73_0 = input.LA(1);
+            int alt74=2;
+            int LA74_0 = input.LA(1);
 
-            if ( (LA73_0==71) ) {
-                alt73=1;
+            if ( (LA74_0==71) ) {
+                alt74=1;
             }
-            switch (alt73) {
+            switch (alt74) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10506:2: rule__NavigatingCommaArgCS__Group_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2__0_in_rule__NavigatingCommaArgCS__Group__2__Impl21284);
+                    pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2__0_in_rule__NavigatingCommaArgCS__Group__2__Impl21285);
                     rule__NavigatingCommaArgCS__Group_2__0();
 
                     state._fsp--;
@@ -30082,12 +30093,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10526:1: ( rule__NavigatingCommaArgCS__Group_2__0__Impl rule__NavigatingCommaArgCS__Group_2__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10527:2: rule__NavigatingCommaArgCS__Group_2__0__Impl rule__NavigatingCommaArgCS__Group_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2__0__Impl_in_rule__NavigatingCommaArgCS__Group_2__021321);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2__0__Impl_in_rule__NavigatingCommaArgCS__Group_2__021322);
             rule__NavigatingCommaArgCS__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2__1_in_rule__NavigatingCommaArgCS__Group_2__021324);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2__1_in_rule__NavigatingCommaArgCS__Group_2__021325);
             rule__NavigatingCommaArgCS__Group_2__1();
 
             state._fsp--;
@@ -30126,7 +30137,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingCommaArgCSAccess().getColonKeyword_2_0()); 
             }
-            match(input,71,FollowSets000.FOLLOW_71_in_rule__NavigatingCommaArgCS__Group_2__0__Impl21352); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_71_in_rule__NavigatingCommaArgCS__Group_2__0__Impl21353); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNavigatingCommaArgCSAccess().getColonKeyword_2_0()); 
             }
@@ -30161,12 +30172,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10557:1: ( rule__NavigatingCommaArgCS__Group_2__1__Impl rule__NavigatingCommaArgCS__Group_2__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10558:2: rule__NavigatingCommaArgCS__Group_2__1__Impl rule__NavigatingCommaArgCS__Group_2__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2__1__Impl_in_rule__NavigatingCommaArgCS__Group_2__121383);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2__1__Impl_in_rule__NavigatingCommaArgCS__Group_2__121384);
             rule__NavigatingCommaArgCS__Group_2__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2__2_in_rule__NavigatingCommaArgCS__Group_2__121386);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2__2_in_rule__NavigatingCommaArgCS__Group_2__121387);
             rule__NavigatingCommaArgCS__Group_2__2();
 
             state._fsp--;
@@ -30208,7 +30219,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10572:1: ( rule__NavigatingCommaArgCS__OwnedTypeAssignment_2_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10572:2: rule__NavigatingCommaArgCS__OwnedTypeAssignment_2_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__OwnedTypeAssignment_2_1_in_rule__NavigatingCommaArgCS__Group_2__1__Impl21413);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__OwnedTypeAssignment_2_1_in_rule__NavigatingCommaArgCS__Group_2__1__Impl21414);
             rule__NavigatingCommaArgCS__OwnedTypeAssignment_2_1();
 
             state._fsp--;
@@ -30250,7 +30261,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10586:1: ( rule__NavigatingCommaArgCS__Group_2__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10587:2: rule__NavigatingCommaArgCS__Group_2__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2__2__Impl_in_rule__NavigatingCommaArgCS__Group_2__221443);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2__2__Impl_in_rule__NavigatingCommaArgCS__Group_2__221444);
             rule__NavigatingCommaArgCS__Group_2__2__Impl();
 
             state._fsp--;
@@ -30290,17 +30301,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getNavigatingCommaArgCSAccess().getGroup_2_2()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10600:1: ( rule__NavigatingCommaArgCS__Group_2_2__0 )?
-            int alt74=2;
-            int LA74_0 = input.LA(1);
+            int alt75=2;
+            int LA75_0 = input.LA(1);
 
-            if ( (LA74_0==25) ) {
-                alt74=1;
+            if ( (LA75_0==25) ) {
+                alt75=1;
             }
-            switch (alt74) {
+            switch (alt75) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10600:2: rule__NavigatingCommaArgCS__Group_2_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2_2__0_in_rule__NavigatingCommaArgCS__Group_2__2__Impl21470);
+                    pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2_2__0_in_rule__NavigatingCommaArgCS__Group_2__2__Impl21471);
                     rule__NavigatingCommaArgCS__Group_2_2__0();
 
                     state._fsp--;
@@ -30345,12 +30356,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10620:1: ( rule__NavigatingCommaArgCS__Group_2_2__0__Impl rule__NavigatingCommaArgCS__Group_2_2__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10621:2: rule__NavigatingCommaArgCS__Group_2_2__0__Impl rule__NavigatingCommaArgCS__Group_2_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2_2__0__Impl_in_rule__NavigatingCommaArgCS__Group_2_2__021507);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2_2__0__Impl_in_rule__NavigatingCommaArgCS__Group_2_2__021508);
             rule__NavigatingCommaArgCS__Group_2_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2_2__1_in_rule__NavigatingCommaArgCS__Group_2_2__021510);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2_2__1_in_rule__NavigatingCommaArgCS__Group_2_2__021511);
             rule__NavigatingCommaArgCS__Group_2_2__1();
 
             state._fsp--;
@@ -30389,7 +30400,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingCommaArgCSAccess().getEqualsSignKeyword_2_2_0()); 
             }
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__NavigatingCommaArgCS__Group_2_2__0__Impl21538); if (state.failed) return ;
+            match(input,25,FollowSets000.FOLLOW_25_in_rule__NavigatingCommaArgCS__Group_2_2__0__Impl21539); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNavigatingCommaArgCSAccess().getEqualsSignKeyword_2_2_0()); 
             }
@@ -30424,7 +30435,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10651:1: ( rule__NavigatingCommaArgCS__Group_2_2__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10652:2: rule__NavigatingCommaArgCS__Group_2_2__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2_2__1__Impl_in_rule__NavigatingCommaArgCS__Group_2_2__121569);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__Group_2_2__1__Impl_in_rule__NavigatingCommaArgCS__Group_2_2__121570);
             rule__NavigatingCommaArgCS__Group_2_2__1__Impl();
 
             state._fsp--;
@@ -30466,7 +30477,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10665:1: ( rule__NavigatingCommaArgCS__InitAssignment_2_2_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10665:2: rule__NavigatingCommaArgCS__InitAssignment_2_2_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__InitAssignment_2_2_1_in_rule__NavigatingCommaArgCS__Group_2_2__1__Impl21596);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingCommaArgCS__InitAssignment_2_2_1_in_rule__NavigatingCommaArgCS__Group_2_2__1__Impl21597);
             rule__NavigatingCommaArgCS__InitAssignment_2_2_1();
 
             state._fsp--;
@@ -30508,12 +30519,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10683:1: ( rule__NavigatingSemiArgCS__Group__0__Impl rule__NavigatingSemiArgCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10684:2: rule__NavigatingSemiArgCS__Group__0__Impl rule__NavigatingSemiArgCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group__0__Impl_in_rule__NavigatingSemiArgCS__Group__021630);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group__0__Impl_in_rule__NavigatingSemiArgCS__Group__021631);
             rule__NavigatingSemiArgCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group__1_in_rule__NavigatingSemiArgCS__Group__021633);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group__1_in_rule__NavigatingSemiArgCS__Group__021634);
             rule__NavigatingSemiArgCS__Group__1();
 
             state._fsp--;
@@ -30555,7 +30566,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10698:1: ( rule__NavigatingSemiArgCS__PrefixAssignment_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10698:2: rule__NavigatingSemiArgCS__PrefixAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__PrefixAssignment_0_in_rule__NavigatingSemiArgCS__Group__0__Impl21660);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__PrefixAssignment_0_in_rule__NavigatingSemiArgCS__Group__0__Impl21661);
             rule__NavigatingSemiArgCS__PrefixAssignment_0();
 
             state._fsp--;
@@ -30597,12 +30608,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10712:1: ( rule__NavigatingSemiArgCS__Group__1__Impl rule__NavigatingSemiArgCS__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10713:2: rule__NavigatingSemiArgCS__Group__1__Impl rule__NavigatingSemiArgCS__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group__1__Impl_in_rule__NavigatingSemiArgCS__Group__121690);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group__1__Impl_in_rule__NavigatingSemiArgCS__Group__121691);
             rule__NavigatingSemiArgCS__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group__2_in_rule__NavigatingSemiArgCS__Group__121693);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group__2_in_rule__NavigatingSemiArgCS__Group__121694);
             rule__NavigatingSemiArgCS__Group__2();
 
             state._fsp--;
@@ -30644,7 +30655,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10727:1: ( rule__NavigatingSemiArgCS__NameAssignment_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10727:2: rule__NavigatingSemiArgCS__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__NameAssignment_1_in_rule__NavigatingSemiArgCS__Group__1__Impl21720);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__NameAssignment_1_in_rule__NavigatingSemiArgCS__Group__1__Impl21721);
             rule__NavigatingSemiArgCS__NameAssignment_1();
 
             state._fsp--;
@@ -30686,7 +30697,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10741:1: ( rule__NavigatingSemiArgCS__Group__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10742:2: rule__NavigatingSemiArgCS__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group__2__Impl_in_rule__NavigatingSemiArgCS__Group__221750);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group__2__Impl_in_rule__NavigatingSemiArgCS__Group__221751);
             rule__NavigatingSemiArgCS__Group__2__Impl();
 
             state._fsp--;
@@ -30726,17 +30737,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getNavigatingSemiArgCSAccess().getGroup_2()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10755:1: ( rule__NavigatingSemiArgCS__Group_2__0 )?
-            int alt75=2;
-            int LA75_0 = input.LA(1);
+            int alt76=2;
+            int LA76_0 = input.LA(1);
 
-            if ( (LA75_0==71) ) {
-                alt75=1;
+            if ( (LA76_0==71) ) {
+                alt76=1;
             }
-            switch (alt75) {
+            switch (alt76) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10755:2: rule__NavigatingSemiArgCS__Group_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2__0_in_rule__NavigatingSemiArgCS__Group__2__Impl21777);
+                    pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2__0_in_rule__NavigatingSemiArgCS__Group__2__Impl21778);
                     rule__NavigatingSemiArgCS__Group_2__0();
 
                     state._fsp--;
@@ -30781,12 +30792,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10775:1: ( rule__NavigatingSemiArgCS__Group_2__0__Impl rule__NavigatingSemiArgCS__Group_2__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10776:2: rule__NavigatingSemiArgCS__Group_2__0__Impl rule__NavigatingSemiArgCS__Group_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2__0__Impl_in_rule__NavigatingSemiArgCS__Group_2__021814);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2__0__Impl_in_rule__NavigatingSemiArgCS__Group_2__021815);
             rule__NavigatingSemiArgCS__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2__1_in_rule__NavigatingSemiArgCS__Group_2__021817);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2__1_in_rule__NavigatingSemiArgCS__Group_2__021818);
             rule__NavigatingSemiArgCS__Group_2__1();
 
             state._fsp--;
@@ -30825,7 +30836,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingSemiArgCSAccess().getColonKeyword_2_0()); 
             }
-            match(input,71,FollowSets000.FOLLOW_71_in_rule__NavigatingSemiArgCS__Group_2__0__Impl21845); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_71_in_rule__NavigatingSemiArgCS__Group_2__0__Impl21846); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNavigatingSemiArgCSAccess().getColonKeyword_2_0()); 
             }
@@ -30860,12 +30871,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10806:1: ( rule__NavigatingSemiArgCS__Group_2__1__Impl rule__NavigatingSemiArgCS__Group_2__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10807:2: rule__NavigatingSemiArgCS__Group_2__1__Impl rule__NavigatingSemiArgCS__Group_2__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2__1__Impl_in_rule__NavigatingSemiArgCS__Group_2__121876);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2__1__Impl_in_rule__NavigatingSemiArgCS__Group_2__121877);
             rule__NavigatingSemiArgCS__Group_2__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2__2_in_rule__NavigatingSemiArgCS__Group_2__121879);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2__2_in_rule__NavigatingSemiArgCS__Group_2__121880);
             rule__NavigatingSemiArgCS__Group_2__2();
 
             state._fsp--;
@@ -30907,7 +30918,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10821:1: ( rule__NavigatingSemiArgCS__OwnedTypeAssignment_2_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10821:2: rule__NavigatingSemiArgCS__OwnedTypeAssignment_2_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__OwnedTypeAssignment_2_1_in_rule__NavigatingSemiArgCS__Group_2__1__Impl21906);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__OwnedTypeAssignment_2_1_in_rule__NavigatingSemiArgCS__Group_2__1__Impl21907);
             rule__NavigatingSemiArgCS__OwnedTypeAssignment_2_1();
 
             state._fsp--;
@@ -30949,7 +30960,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10835:1: ( rule__NavigatingSemiArgCS__Group_2__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10836:2: rule__NavigatingSemiArgCS__Group_2__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2__2__Impl_in_rule__NavigatingSemiArgCS__Group_2__221936);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2__2__Impl_in_rule__NavigatingSemiArgCS__Group_2__221937);
             rule__NavigatingSemiArgCS__Group_2__2__Impl();
 
             state._fsp--;
@@ -30989,17 +31000,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getNavigatingSemiArgCSAccess().getGroup_2_2()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10849:1: ( rule__NavigatingSemiArgCS__Group_2_2__0 )?
-            int alt76=2;
-            int LA76_0 = input.LA(1);
+            int alt77=2;
+            int LA77_0 = input.LA(1);
 
-            if ( (LA76_0==25) ) {
-                alt76=1;
+            if ( (LA77_0==25) ) {
+                alt77=1;
             }
-            switch (alt76) {
+            switch (alt77) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10849:2: rule__NavigatingSemiArgCS__Group_2_2__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2_2__0_in_rule__NavigatingSemiArgCS__Group_2__2__Impl21963);
+                    pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2_2__0_in_rule__NavigatingSemiArgCS__Group_2__2__Impl21964);
                     rule__NavigatingSemiArgCS__Group_2_2__0();
 
                     state._fsp--;
@@ -31044,12 +31055,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10869:1: ( rule__NavigatingSemiArgCS__Group_2_2__0__Impl rule__NavigatingSemiArgCS__Group_2_2__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10870:2: rule__NavigatingSemiArgCS__Group_2_2__0__Impl rule__NavigatingSemiArgCS__Group_2_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2_2__0__Impl_in_rule__NavigatingSemiArgCS__Group_2_2__022000);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2_2__0__Impl_in_rule__NavigatingSemiArgCS__Group_2_2__022001);
             rule__NavigatingSemiArgCS__Group_2_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2_2__1_in_rule__NavigatingSemiArgCS__Group_2_2__022003);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2_2__1_in_rule__NavigatingSemiArgCS__Group_2_2__022004);
             rule__NavigatingSemiArgCS__Group_2_2__1();
 
             state._fsp--;
@@ -31088,7 +31099,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingSemiArgCSAccess().getEqualsSignKeyword_2_2_0()); 
             }
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__NavigatingSemiArgCS__Group_2_2__0__Impl22031); if (state.failed) return ;
+            match(input,25,FollowSets000.FOLLOW_25_in_rule__NavigatingSemiArgCS__Group_2_2__0__Impl22032); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNavigatingSemiArgCSAccess().getEqualsSignKeyword_2_2_0()); 
             }
@@ -31123,7 +31134,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10900:1: ( rule__NavigatingSemiArgCS__Group_2_2__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10901:2: rule__NavigatingSemiArgCS__Group_2_2__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2_2__1__Impl_in_rule__NavigatingSemiArgCS__Group_2_2__122062);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__Group_2_2__1__Impl_in_rule__NavigatingSemiArgCS__Group_2_2__122063);
             rule__NavigatingSemiArgCS__Group_2_2__1__Impl();
 
             state._fsp--;
@@ -31165,7 +31176,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10914:1: ( rule__NavigatingSemiArgCS__InitAssignment_2_2_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10914:2: rule__NavigatingSemiArgCS__InitAssignment_2_2_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__InitAssignment_2_2_1_in_rule__NavigatingSemiArgCS__Group_2_2__1__Impl22089);
+            pushFollow(FollowSets000.FOLLOW_rule__NavigatingSemiArgCS__InitAssignment_2_2_1_in_rule__NavigatingSemiArgCS__Group_2_2__1__Impl22090);
             rule__NavigatingSemiArgCS__InitAssignment_2_2_1();
 
             state._fsp--;
@@ -31207,12 +31218,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10932:1: ( rule__IfExpCS__Group__0__Impl rule__IfExpCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10933:2: rule__IfExpCS__Group__0__Impl rule__IfExpCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__0__Impl_in_rule__IfExpCS__Group__022123);
+            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__0__Impl_in_rule__IfExpCS__Group__022124);
             rule__IfExpCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__1_in_rule__IfExpCS__Group__022126);
+            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__1_in_rule__IfExpCS__Group__022127);
             rule__IfExpCS__Group__1();
 
             state._fsp--;
@@ -31251,7 +31262,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfExpCSAccess().getIfKeyword_0()); 
             }
-            match(input,75,FollowSets000.FOLLOW_75_in_rule__IfExpCS__Group__0__Impl22154); if (state.failed) return ;
+            match(input,75,FollowSets000.FOLLOW_75_in_rule__IfExpCS__Group__0__Impl22155); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIfExpCSAccess().getIfKeyword_0()); 
             }
@@ -31286,12 +31297,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10963:1: ( rule__IfExpCS__Group__1__Impl rule__IfExpCS__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10964:2: rule__IfExpCS__Group__1__Impl rule__IfExpCS__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__1__Impl_in_rule__IfExpCS__Group__122185);
+            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__1__Impl_in_rule__IfExpCS__Group__122186);
             rule__IfExpCS__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__2_in_rule__IfExpCS__Group__122188);
+            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__2_in_rule__IfExpCS__Group__122189);
             rule__IfExpCS__Group__2();
 
             state._fsp--;
@@ -31333,7 +31344,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10978:1: ( rule__IfExpCS__ConditionAssignment_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10978:2: rule__IfExpCS__ConditionAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__ConditionAssignment_1_in_rule__IfExpCS__Group__1__Impl22215);
+            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__ConditionAssignment_1_in_rule__IfExpCS__Group__1__Impl22216);
             rule__IfExpCS__ConditionAssignment_1();
 
             state._fsp--;
@@ -31375,12 +31386,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10992:1: ( rule__IfExpCS__Group__2__Impl rule__IfExpCS__Group__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:10993:2: rule__IfExpCS__Group__2__Impl rule__IfExpCS__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__2__Impl_in_rule__IfExpCS__Group__222245);
+            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__2__Impl_in_rule__IfExpCS__Group__222246);
             rule__IfExpCS__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__3_in_rule__IfExpCS__Group__222248);
+            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__3_in_rule__IfExpCS__Group__222249);
             rule__IfExpCS__Group__3();
 
             state._fsp--;
@@ -31419,7 +31430,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfExpCSAccess().getThenKeyword_2()); 
             }
-            match(input,76,FollowSets000.FOLLOW_76_in_rule__IfExpCS__Group__2__Impl22276); if (state.failed) return ;
+            match(input,76,FollowSets000.FOLLOW_76_in_rule__IfExpCS__Group__2__Impl22277); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIfExpCSAccess().getThenKeyword_2()); 
             }
@@ -31454,12 +31465,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11023:1: ( rule__IfExpCS__Group__3__Impl rule__IfExpCS__Group__4 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11024:2: rule__IfExpCS__Group__3__Impl rule__IfExpCS__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__3__Impl_in_rule__IfExpCS__Group__322307);
+            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__3__Impl_in_rule__IfExpCS__Group__322308);
             rule__IfExpCS__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__4_in_rule__IfExpCS__Group__322310);
+            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__4_in_rule__IfExpCS__Group__322311);
             rule__IfExpCS__Group__4();
 
             state._fsp--;
@@ -31501,7 +31512,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11038:1: ( rule__IfExpCS__ThenExpressionAssignment_3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11038:2: rule__IfExpCS__ThenExpressionAssignment_3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__ThenExpressionAssignment_3_in_rule__IfExpCS__Group__3__Impl22337);
+            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__ThenExpressionAssignment_3_in_rule__IfExpCS__Group__3__Impl22338);
             rule__IfExpCS__ThenExpressionAssignment_3();
 
             state._fsp--;
@@ -31543,12 +31554,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11052:1: ( rule__IfExpCS__Group__4__Impl rule__IfExpCS__Group__5 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11053:2: rule__IfExpCS__Group__4__Impl rule__IfExpCS__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__4__Impl_in_rule__IfExpCS__Group__422367);
+            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__4__Impl_in_rule__IfExpCS__Group__422368);
             rule__IfExpCS__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__5_in_rule__IfExpCS__Group__422370);
+            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__5_in_rule__IfExpCS__Group__422371);
             rule__IfExpCS__Group__5();
 
             state._fsp--;
@@ -31587,7 +31598,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfExpCSAccess().getElseKeyword_4()); 
             }
-            match(input,77,FollowSets000.FOLLOW_77_in_rule__IfExpCS__Group__4__Impl22398); if (state.failed) return ;
+            match(input,77,FollowSets000.FOLLOW_77_in_rule__IfExpCS__Group__4__Impl22399); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIfExpCSAccess().getElseKeyword_4()); 
             }
@@ -31622,12 +31633,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11083:1: ( rule__IfExpCS__Group__5__Impl rule__IfExpCS__Group__6 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11084:2: rule__IfExpCS__Group__5__Impl rule__IfExpCS__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__5__Impl_in_rule__IfExpCS__Group__522429);
+            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__5__Impl_in_rule__IfExpCS__Group__522430);
             rule__IfExpCS__Group__5__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__6_in_rule__IfExpCS__Group__522432);
+            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__6_in_rule__IfExpCS__Group__522433);
             rule__IfExpCS__Group__6();
 
             state._fsp--;
@@ -31669,7 +31680,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11098:1: ( rule__IfExpCS__ElseExpressionAssignment_5 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11098:2: rule__IfExpCS__ElseExpressionAssignment_5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__ElseExpressionAssignment_5_in_rule__IfExpCS__Group__5__Impl22459);
+            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__ElseExpressionAssignment_5_in_rule__IfExpCS__Group__5__Impl22460);
             rule__IfExpCS__ElseExpressionAssignment_5();
 
             state._fsp--;
@@ -31711,7 +31722,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11112:1: ( rule__IfExpCS__Group__6__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11113:2: rule__IfExpCS__Group__6__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__6__Impl_in_rule__IfExpCS__Group__622489);
+            pushFollow(FollowSets000.FOLLOW_rule__IfExpCS__Group__6__Impl_in_rule__IfExpCS__Group__622490);
             rule__IfExpCS__Group__6__Impl();
 
             state._fsp--;
@@ -31750,7 +31761,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfExpCSAccess().getEndifKeyword_6()); 
             }
-            match(input,78,FollowSets000.FOLLOW_78_in_rule__IfExpCS__Group__6__Impl22517); if (state.failed) return ;
+            match(input,78,FollowSets000.FOLLOW_78_in_rule__IfExpCS__Group__6__Impl22518); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIfExpCSAccess().getEndifKeyword_6()); 
             }
@@ -31785,12 +31796,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11156:1: ( rule__LetExpCS__Group__0__Impl rule__LetExpCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11157:2: rule__LetExpCS__Group__0__Impl rule__LetExpCS__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LetExpCS__Group__0__Impl_in_rule__LetExpCS__Group__022562);
+            pushFollow(FollowSets000.FOLLOW_rule__LetExpCS__Group__0__Impl_in_rule__LetExpCS__Group__022563);
             rule__LetExpCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LetExpCS__Group__1_in_rule__LetExpCS__Group__022565);
+            pushFollow(FollowSets000.FOLLOW_rule__LetExpCS__Group__1_in_rule__LetExpCS__Group__022566);
             rule__LetExpCS__Group__1();
 
             state._fsp--;
@@ -31829,7 +31840,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpCSAccess().getLetKeyword_0()); 
             }
-            match(input,79,FollowSets000.FOLLOW_79_in_rule__LetExpCS__Group__0__Impl22593); if (state.failed) return ;
+            match(input,79,FollowSets000.FOLLOW_79_in_rule__LetExpCS__Group__0__Impl22594); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLetExpCSAccess().getLetKeyword_0()); 
             }
@@ -31864,12 +31875,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11187:1: ( rule__LetExpCS__Group__1__Impl rule__LetExpCS__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11188:2: rule__LetExpCS__Group__1__Impl rule__LetExpCS__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LetExpCS__Group__1__Impl_in_rule__LetExpCS__Group__122624);
+            pushFollow(FollowSets000.FOLLOW_rule__LetExpCS__Group__1__Impl_in_rule__LetExpCS__Group__122625);
             rule__LetExpCS__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__LetExpCS__Group__2_in_rule__LetExpCS__Group__122627);
+            pushFollow(FollowSets000.FOLLOW_rule__LetExpCS__Group__2_in_rule__LetExpCS__Group__122628);
             rule__LetExpCS__Group__2();
 
             state._fsp--;
@@ -31911,7 +31922,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11202:1: ( rule__LetExpCS__VariableAssignment_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11202:2: rule__LetExpCS__VariableAssignment_1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__VariableAssignment_1_in_rule__LetExpCS__Group__1__Impl22654);
+            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__VariableAssignment_1_in_rule__LetExpCS__Group__1__Impl22655);
             rule__LetExpCS__VariableAssignment_1();
 
             state._fsp--;
@@ -31953,12 +31964,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11216:1: ( rule__LetExpCS__Group__2__Impl rule__LetExpCS__Group__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11217:2: rule__LetExpCS__Group__2__Impl rule__LetExpCS__Group__3
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group__2__Impl_in_rule__LetExpCS__Group__222684);
+            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group__2__Impl_in_rule__LetExpCS__Group__222685);
             rule__LetExpCS__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group__3_in_rule__LetExpCS__Group__222687);
+            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group__3_in_rule__LetExpCS__Group__222688);
             rule__LetExpCS__Group__3();
 
             state._fsp--;
@@ -31998,21 +32009,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getLetExpCSAccess().getGroup_2()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11231:1: ( rule__LetExpCS__Group_2__0 )*
-            loop77:
+            loop78:
             do {
-                int alt77=2;
-                int LA77_0 = input.LA(1);
+                int alt78=2;
+                int LA78_0 = input.LA(1);
 
-                if ( (LA77_0==58) ) {
-                    alt77=1;
+                if ( (LA78_0==58) ) {
+                    alt78=1;
                 }
 
 
-                switch (alt77) {
+                switch (alt78) {
             	case 1 :
             	    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11231:2: rule__LetExpCS__Group_2__0
             	    {
-            	    pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group_2__0_in_rule__LetExpCS__Group__2__Impl22714);
+            	    pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group_2__0_in_rule__LetExpCS__Group__2__Impl22715);
             	    rule__LetExpCS__Group_2__0();
 
             	    state._fsp--;
@@ -32022,7 +32033,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop77;
+            	    break loop78;
                 }
             } while (true);
 
@@ -32060,12 +32071,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11245:1: ( rule__LetExpCS__Group__3__Impl rule__LetExpCS__Group__4 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11246:2: rule__LetExpCS__Group__3__Impl rule__LetExpCS__Group__4
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group__3__Impl_in_rule__LetExpCS__Group__322745);
+            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group__3__Impl_in_rule__LetExpCS__Group__322746);
             rule__LetExpCS__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group__4_in_rule__LetExpCS__Group__322748);
+            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group__4_in_rule__LetExpCS__Group__322749);
             rule__LetExpCS__Group__4();
 
             state._fsp--;
@@ -32104,7 +32115,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpCSAccess().getInKeyword_3()); 
             }
-            match(input,80,FollowSets001.FOLLOW_80_in_rule__LetExpCS__Group__3__Impl22776); if (state.failed) return ;
+            match(input,80,FollowSets001.FOLLOW_80_in_rule__LetExpCS__Group__3__Impl22777); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLetExpCSAccess().getInKeyword_3()); 
             }
@@ -32139,7 +32150,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11276:1: ( rule__LetExpCS__Group__4__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11277:2: rule__LetExpCS__Group__4__Impl
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group__4__Impl_in_rule__LetExpCS__Group__422807);
+            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group__4__Impl_in_rule__LetExpCS__Group__422808);
             rule__LetExpCS__Group__4__Impl();
 
             state._fsp--;
@@ -32181,7 +32192,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11290:1: ( rule__LetExpCS__InAssignment_4 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11290:2: rule__LetExpCS__InAssignment_4
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__InAssignment_4_in_rule__LetExpCS__Group__4__Impl22834);
+            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__InAssignment_4_in_rule__LetExpCS__Group__4__Impl22835);
             rule__LetExpCS__InAssignment_4();
 
             state._fsp--;
@@ -32223,12 +32234,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11314:1: ( rule__LetExpCS__Group_2__0__Impl rule__LetExpCS__Group_2__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11315:2: rule__LetExpCS__Group_2__0__Impl rule__LetExpCS__Group_2__1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group_2__0__Impl_in_rule__LetExpCS__Group_2__022874);
+            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group_2__0__Impl_in_rule__LetExpCS__Group_2__022875);
             rule__LetExpCS__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group_2__1_in_rule__LetExpCS__Group_2__022877);
+            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group_2__1_in_rule__LetExpCS__Group_2__022878);
             rule__LetExpCS__Group_2__1();
 
             state._fsp--;
@@ -32267,7 +32278,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpCSAccess().getCommaKeyword_2_0()); 
             }
-            match(input,58,FollowSets001.FOLLOW_58_in_rule__LetExpCS__Group_2__0__Impl22905); if (state.failed) return ;
+            match(input,58,FollowSets001.FOLLOW_58_in_rule__LetExpCS__Group_2__0__Impl22906); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLetExpCSAccess().getCommaKeyword_2_0()); 
             }
@@ -32302,7 +32313,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11345:1: ( rule__LetExpCS__Group_2__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11346:2: rule__LetExpCS__Group_2__1__Impl
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group_2__1__Impl_in_rule__LetExpCS__Group_2__122936);
+            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__Group_2__1__Impl_in_rule__LetExpCS__Group_2__122937);
             rule__LetExpCS__Group_2__1__Impl();
 
             state._fsp--;
@@ -32344,7 +32355,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11359:1: ( rule__LetExpCS__VariableAssignment_2_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11359:2: rule__LetExpCS__VariableAssignment_2_1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__VariableAssignment_2_1_in_rule__LetExpCS__Group_2__1__Impl22963);
+            pushFollow(FollowSets001.FOLLOW_rule__LetExpCS__VariableAssignment_2_1_in_rule__LetExpCS__Group_2__1__Impl22964);
             rule__LetExpCS__VariableAssignment_2_1();
 
             state._fsp--;
@@ -32386,12 +32397,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11377:1: ( rule__LetVariableCS__Group__0__Impl rule__LetVariableCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11378:2: rule__LetVariableCS__Group__0__Impl rule__LetVariableCS__Group__1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group__0__Impl_in_rule__LetVariableCS__Group__022997);
+            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group__0__Impl_in_rule__LetVariableCS__Group__022998);
             rule__LetVariableCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group__1_in_rule__LetVariableCS__Group__023000);
+            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group__1_in_rule__LetVariableCS__Group__023001);
             rule__LetVariableCS__Group__1();
 
             state._fsp--;
@@ -32433,7 +32444,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11392:1: ( rule__LetVariableCS__NameAssignment_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11392:2: rule__LetVariableCS__NameAssignment_0
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__NameAssignment_0_in_rule__LetVariableCS__Group__0__Impl23027);
+            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__NameAssignment_0_in_rule__LetVariableCS__Group__0__Impl23028);
             rule__LetVariableCS__NameAssignment_0();
 
             state._fsp--;
@@ -32475,12 +32486,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11406:1: ( rule__LetVariableCS__Group__1__Impl rule__LetVariableCS__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11407:2: rule__LetVariableCS__Group__1__Impl rule__LetVariableCS__Group__2
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group__1__Impl_in_rule__LetVariableCS__Group__123057);
+            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group__1__Impl_in_rule__LetVariableCS__Group__123058);
             rule__LetVariableCS__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group__2_in_rule__LetVariableCS__Group__123060);
+            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group__2_in_rule__LetVariableCS__Group__123061);
             rule__LetVariableCS__Group__2();
 
             state._fsp--;
@@ -32520,17 +32531,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                before(grammarAccess.getLetVariableCSAccess().getGroup_1()); 
             }
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11421:1: ( rule__LetVariableCS__Group_1__0 )?
-            int alt78=2;
-            int LA78_0 = input.LA(1);
+            int alt79=2;
+            int LA79_0 = input.LA(1);
 
-            if ( (LA78_0==71) ) {
-                alt78=1;
+            if ( (LA79_0==71) ) {
+                alt79=1;
             }
-            switch (alt78) {
+            switch (alt79) {
                 case 1 :
                     // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11421:2: rule__LetVariableCS__Group_1__0
                     {
-                    pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group_1__0_in_rule__LetVariableCS__Group__1__Impl23087);
+                    pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group_1__0_in_rule__LetVariableCS__Group__1__Impl23088);
                     rule__LetVariableCS__Group_1__0();
 
                     state._fsp--;
@@ -32575,12 +32586,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11435:1: ( rule__LetVariableCS__Group__2__Impl rule__LetVariableCS__Group__3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11436:2: rule__LetVariableCS__Group__2__Impl rule__LetVariableCS__Group__3
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group__2__Impl_in_rule__LetVariableCS__Group__223118);
+            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group__2__Impl_in_rule__LetVariableCS__Group__223119);
             rule__LetVariableCS__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group__3_in_rule__LetVariableCS__Group__223121);
+            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group__3_in_rule__LetVariableCS__Group__223122);
             rule__LetVariableCS__Group__3();
 
             state._fsp--;
@@ -32619,7 +32630,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetVariableCSAccess().getEqualsSignKeyword_2()); 
             }
-            match(input,25,FollowSets001.FOLLOW_25_in_rule__LetVariableCS__Group__2__Impl23149); if (state.failed) return ;
+            match(input,25,FollowSets001.FOLLOW_25_in_rule__LetVariableCS__Group__2__Impl23150); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLetVariableCSAccess().getEqualsSignKeyword_2()); 
             }
@@ -32654,7 +32665,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11466:1: ( rule__LetVariableCS__Group__3__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11467:2: rule__LetVariableCS__Group__3__Impl
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group__3__Impl_in_rule__LetVariableCS__Group__323180);
+            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group__3__Impl_in_rule__LetVariableCS__Group__323181);
             rule__LetVariableCS__Group__3__Impl();
 
             state._fsp--;
@@ -32696,7 +32707,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11480:1: ( rule__LetVariableCS__InitExpressionAssignment_3 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11480:2: rule__LetVariableCS__InitExpressionAssignment_3
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__InitExpressionAssignment_3_in_rule__LetVariableCS__Group__3__Impl23207);
+            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__InitExpressionAssignment_3_in_rule__LetVariableCS__Group__3__Impl23208);
             rule__LetVariableCS__InitExpressionAssignment_3();
 
             state._fsp--;
@@ -32738,12 +32749,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11502:1: ( rule__LetVariableCS__Group_1__0__Impl rule__LetVariableCS__Group_1__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11503:2: rule__LetVariableCS__Group_1__0__Impl rule__LetVariableCS__Group_1__1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group_1__0__Impl_in_rule__LetVariableCS__Group_1__023245);
+            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group_1__0__Impl_in_rule__LetVariableCS__Group_1__023246);
             rule__LetVariableCS__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group_1__1_in_rule__LetVariableCS__Group_1__023248);
+            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group_1__1_in_rule__LetVariableCS__Group_1__023249);
             rule__LetVariableCS__Group_1__1();
 
             state._fsp--;
@@ -32782,7 +32793,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetVariableCSAccess().getColonKeyword_1_0()); 
             }
-            match(input,71,FollowSets001.FOLLOW_71_in_rule__LetVariableCS__Group_1__0__Impl23276); if (state.failed) return ;
+            match(input,71,FollowSets001.FOLLOW_71_in_rule__LetVariableCS__Group_1__0__Impl23277); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLetVariableCSAccess().getColonKeyword_1_0()); 
             }
@@ -32817,7 +32828,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11533:1: ( rule__LetVariableCS__Group_1__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11534:2: rule__LetVariableCS__Group_1__1__Impl
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group_1__1__Impl_in_rule__LetVariableCS__Group_1__123307);
+            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__Group_1__1__Impl_in_rule__LetVariableCS__Group_1__123308);
             rule__LetVariableCS__Group_1__1__Impl();
 
             state._fsp--;
@@ -32859,7 +32870,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11547:1: ( rule__LetVariableCS__OwnedTypeAssignment_1_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11547:2: rule__LetVariableCS__OwnedTypeAssignment_1_1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__OwnedTypeAssignment_1_1_in_rule__LetVariableCS__Group_1__1__Impl23334);
+            pushFollow(FollowSets001.FOLLOW_rule__LetVariableCS__OwnedTypeAssignment_1_1_in_rule__LetVariableCS__Group_1__1__Impl23335);
             rule__LetVariableCS__OwnedTypeAssignment_1_1();
 
             state._fsp--;
@@ -32901,12 +32912,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11565:1: ( rule__NestedExpCS__Group__0__Impl rule__NestedExpCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11566:2: rule__NestedExpCS__Group__0__Impl rule__NestedExpCS__Group__1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__NestedExpCS__Group__0__Impl_in_rule__NestedExpCS__Group__023368);
+            pushFollow(FollowSets001.FOLLOW_rule__NestedExpCS__Group__0__Impl_in_rule__NestedExpCS__Group__023369);
             rule__NestedExpCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__NestedExpCS__Group__1_in_rule__NestedExpCS__Group__023371);
+            pushFollow(FollowSets001.FOLLOW_rule__NestedExpCS__Group__1_in_rule__NestedExpCS__Group__023372);
             rule__NestedExpCS__Group__1();
 
             state._fsp--;
@@ -32945,7 +32956,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNestedExpCSAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,64,FollowSets001.FOLLOW_64_in_rule__NestedExpCS__Group__0__Impl23399); if (state.failed) return ;
+            match(input,64,FollowSets001.FOLLOW_64_in_rule__NestedExpCS__Group__0__Impl23400); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNestedExpCSAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -32980,12 +32991,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11596:1: ( rule__NestedExpCS__Group__1__Impl rule__NestedExpCS__Group__2 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11597:2: rule__NestedExpCS__Group__1__Impl rule__NestedExpCS__Group__2
             {
-            pushFollow(FollowSets001.FOLLOW_rule__NestedExpCS__Group__1__Impl_in_rule__NestedExpCS__Group__123430);
+            pushFollow(FollowSets001.FOLLOW_rule__NestedExpCS__Group__1__Impl_in_rule__NestedExpCS__Group__123431);
             rule__NestedExpCS__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__NestedExpCS__Group__2_in_rule__NestedExpCS__Group__123433);
+            pushFollow(FollowSets001.FOLLOW_rule__NestedExpCS__Group__2_in_rule__NestedExpCS__Group__123434);
             rule__NestedExpCS__Group__2();
 
             state._fsp--;
@@ -33027,7 +33038,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11611:1: ( rule__NestedExpCS__SourceAssignment_1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11611:2: rule__NestedExpCS__SourceAssignment_1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__NestedExpCS__SourceAssignment_1_in_rule__NestedExpCS__Group__1__Impl23460);
+            pushFollow(FollowSets001.FOLLOW_rule__NestedExpCS__SourceAssignment_1_in_rule__NestedExpCS__Group__1__Impl23461);
             rule__NestedExpCS__SourceAssignment_1();
 
             state._fsp--;
@@ -33069,7 +33080,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11625:1: ( rule__NestedExpCS__Group__2__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11626:2: rule__NestedExpCS__Group__2__Impl
             {
-            pushFollow(FollowSets001.FOLLOW_rule__NestedExpCS__Group__2__Impl_in_rule__NestedExpCS__Group__223490);
+            pushFollow(FollowSets001.FOLLOW_rule__NestedExpCS__Group__2__Impl_in_rule__NestedExpCS__Group__223491);
             rule__NestedExpCS__Group__2__Impl();
 
             state._fsp--;
@@ -33108,7 +33119,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNestedExpCSAccess().getRightParenthesisKeyword_2()); 
             }
-            match(input,65,FollowSets001.FOLLOW_65_in_rule__NestedExpCS__Group__2__Impl23518); if (state.failed) return ;
+            match(input,65,FollowSets001.FOLLOW_65_in_rule__NestedExpCS__Group__2__Impl23519); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNestedExpCSAccess().getRightParenthesisKeyword_2()); 
             }
@@ -33143,12 +33154,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11661:1: ( rule__SelfExpCS__Group__0__Impl rule__SelfExpCS__Group__1 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11662:2: rule__SelfExpCS__Group__0__Impl rule__SelfExpCS__Group__1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__SelfExpCS__Group__0__Impl_in_rule__SelfExpCS__Group__023555);
+            pushFollow(FollowSets001.FOLLOW_rule__SelfExpCS__Group__0__Impl_in_rule__SelfExpCS__Group__023556);
             rule__SelfExpCS__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__SelfExpCS__Group__1_in_rule__SelfExpCS__Group__023558);
+            pushFollow(FollowSets001.FOLLOW_rule__SelfExpCS__Group__1_in_rule__SelfExpCS__Group__023559);
             rule__SelfExpCS__Group__1();
 
             state._fsp--;
@@ -33222,7 +33233,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11692:1: ( rule__SelfExpCS__Group__1__Impl )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11693:2: rule__SelfExpCS__Group__1__Impl
             {
-            pushFollow(FollowSets001.FOLLOW_rule__SelfExpCS__Group__1__Impl_in_rule__SelfExpCS__Group__123616);
+            pushFollow(FollowSets001.FOLLOW_rule__SelfExpCS__Group__1__Impl_in_rule__SelfExpCS__Group__123617);
             rule__SelfExpCS__Group__1__Impl();
 
             state._fsp--;
@@ -33261,7 +33272,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelfExpCSAccess().getSelfKeyword_1()); 
             }
-            match(input,81,FollowSets001.FOLLOW_81_in_rule__SelfExpCS__Group__1__Impl23644); if (state.failed) return ;
+            match(input,81,FollowSets001.FOLLOW_81_in_rule__SelfExpCS__Group__1__Impl23645); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSelfExpCSAccess().getSelfKeyword_1()); 
             }
@@ -33302,7 +33313,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSpecificationAccess().getNameIDParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__Specification__NameAssignment_123684);
+            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__Specification__NameAssignment_123685);
             ruleID();
 
             state._fsp--;
@@ -33347,7 +33358,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSpecificationAccess().getServicesServiceParserRuleCall_3_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleService_in_rule__Specification__ServicesAssignment_3_023715);
+            pushFollow(FollowSets001.FOLLOW_ruleService_in_rule__Specification__ServicesAssignment_3_023716);
             ruleService();
 
             state._fsp--;
@@ -33392,7 +33403,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSpecificationAccess().getConstraintsConstraintParserRuleCall_3_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleConstraint_in_rule__Specification__ConstraintsAssignment_3_123746);
+            pushFollow(FollowSets001.FOLLOW_ruleConstraint_in_rule__Specification__ConstraintsAssignment_3_123747);
             ruleConstraint();
 
             state._fsp--;
@@ -33437,7 +33448,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSpecificationAccess().getMeasureMeasureFunctionParserRuleCall_4_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleMeasureFunction_in_rule__Specification__MeasureAssignment_423777);
+            pushFollow(FollowSets001.FOLLOW_ruleMeasureFunction_in_rule__Specification__MeasureAssignment_423778);
             ruleMeasureFunction();
 
             state._fsp--;
@@ -33482,7 +33493,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getServiceAccess().getNameIDParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__Service__NameAssignment_123808);
+            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__Service__NameAssignment_123809);
             ruleID();
 
             state._fsp--;
@@ -33527,7 +33538,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getServiceAccess().getDimensionsQosDimensionParserRuleCall_3_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleQosDimension_in_rule__Service__DimensionsAssignment_323839);
+            pushFollow(FollowSets001.FOLLOW_ruleQosDimension_in_rule__Service__DimensionsAssignment_323840);
             ruleQosDimension();
 
             state._fsp--;
@@ -33572,7 +33583,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQosDimensionAccess().getNameIDParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__QosDimension__NameAssignment_123870);
+            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__QosDimension__NameAssignment_123871);
             ruleID();
 
             state._fsp--;
@@ -33617,7 +33628,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQosDimensionAccess().getValueValueTupleDescriptorParserRuleCall_4_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleValueTupleDescriptor_in_rule__QosDimension__ValueAssignment_423901);
+            pushFollow(FollowSets001.FOLLOW_ruleValueTupleDescriptor_in_rule__QosDimension__ValueAssignment_423902);
             ruleValueTupleDescriptor();
 
             state._fsp--;
@@ -33662,7 +33673,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQosDimensionAccess().getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_7_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__QosDimension__TupleDescriptorsAssignment_723932);
+            pushFollow(FollowSets001.FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__QosDimension__TupleDescriptorsAssignment_723933);
             ruleComponentResourceTupleDescriptor();
 
             state._fsp--;
@@ -33707,7 +33718,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQosDimensionAccess().getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_8_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__QosDimension__TupleDescriptorsAssignment_8_123963);
+            pushFollow(FollowSets001.FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__QosDimension__TupleDescriptorsAssignment_8_123964);
             ruleComponentResourceTupleDescriptor();
 
             state._fsp--;
@@ -33752,7 +33763,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQosDimensionAccess().getMetricModelParserRuleCall_11_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleModel_in_rule__QosDimension__MetricAssignment_1123994);
+            pushFollow(FollowSets001.FOLLOW_ruleModel_in_rule__QosDimension__MetricAssignment_1123995);
             ruleModel();
 
             state._fsp--;
@@ -33797,7 +33808,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationConstraintAccess().getTypeLocationConstraintTypeEnumRuleCall_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleLocationConstraintType_in_rule__LocationConstraint__TypeAssignment_024025);
+            pushFollow(FollowSets001.FOLLOW_ruleLocationConstraintType_in_rule__LocationConstraint__TypeAssignment_024026);
             ruleLocationConstraintType();
 
             state._fsp--;
@@ -33842,7 +33853,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationConstraintAccess().getNameIDParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__LocationConstraint__NameAssignment_124056);
+            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__LocationConstraint__NameAssignment_124057);
             ruleID();
 
             state._fsp--;
@@ -33887,7 +33898,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationConstraintAccess().getTupleDescriptorsLocationTupleDescriptorParserRuleCall_4_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleLocationTupleDescriptor_in_rule__LocationConstraint__TupleDescriptorsAssignment_424087);
+            pushFollow(FollowSets001.FOLLOW_ruleLocationTupleDescriptor_in_rule__LocationConstraint__TupleDescriptorsAssignment_424088);
             ruleLocationTupleDescriptor();
 
             state._fsp--;
@@ -33932,7 +33943,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationConstraintAccess().getTupleDescriptorsLocationTupleDescriptorParserRuleCall_5_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleLocationTupleDescriptor_in_rule__LocationConstraint__TupleDescriptorsAssignment_5_124118);
+            pushFollow(FollowSets001.FOLLOW_ruleLocationTupleDescriptor_in_rule__LocationConstraint__TupleDescriptorsAssignment_5_124119);
             ruleLocationTupleDescriptor();
 
             state._fsp--;
@@ -33977,7 +33988,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_8_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleModel_in_rule__LocationConstraint__ExpressionAssignment_824149);
+            pushFollow(FollowSets001.FOLLOW_ruleModel_in_rule__LocationConstraint__ExpressionAssignment_824150);
             ruleModel();
 
             state._fsp--;
@@ -34022,7 +34033,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getNameIDParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__ResourceConstraint__NameAssignment_124180);
+            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__ResourceConstraint__NameAssignment_124181);
             ruleID();
 
             state._fsp--;
@@ -34067,7 +34078,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getLhsValueTupleDescriptorParserRuleCall_4_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleValueTupleDescriptor_in_rule__ResourceConstraint__LhsAssignment_424211);
+            pushFollow(FollowSets001.FOLLOW_ruleValueTupleDescriptor_in_rule__ResourceConstraint__LhsAssignment_424212);
             ruleValueTupleDescriptor();
 
             state._fsp--;
@@ -34112,7 +34123,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getRhsValueTupleDescriptorParserRuleCall_7_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleValueTupleDescriptor_in_rule__ResourceConstraint__RhsAssignment_724242);
+            pushFollow(FollowSets001.FOLLOW_ruleValueTupleDescriptor_in_rule__ResourceConstraint__RhsAssignment_724243);
             ruleValueTupleDescriptor();
 
             state._fsp--;
@@ -34157,7 +34168,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_10_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__ResourceConstraint__TupleDescriptorsAssignment_1024273);
+            pushFollow(FollowSets001.FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__ResourceConstraint__TupleDescriptorsAssignment_1024274);
             ruleComponentResourceTupleDescriptor();
 
             state._fsp--;
@@ -34202,7 +34213,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_11_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__ResourceConstraint__TupleDescriptorsAssignment_11_124304);
+            pushFollow(FollowSets001.FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__ResourceConstraint__TupleDescriptorsAssignment_11_124305);
             ruleComponentResourceTupleDescriptor();
 
             state._fsp--;
@@ -34247,7 +34258,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResourceConstraintAccess().getExpressionModelParserRuleCall_14_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleModel_in_rule__ResourceConstraint__ExpressionAssignment_1424335);
+            pushFollow(FollowSets001.FOLLOW_ruleModel_in_rule__ResourceConstraint__ExpressionAssignment_1424336);
             ruleModel();
 
             state._fsp--;
@@ -34292,7 +34303,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getNameIDParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__RequiredHardwareResourceInstanceConstraint__NameAssignment_124366);
+            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__RequiredHardwareResourceInstanceConstraint__NameAssignment_124367);
             ruleID();
 
             state._fsp--;
@@ -34337,7 +34348,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_4_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_424397);
+            pushFollow(FollowSets001.FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_424398);
             ruleComponentResourceTupleDescriptor();
 
             state._fsp--;
@@ -34382,7 +34393,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_5_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_5_124428);
+            pushFollow(FollowSets001.FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_5_124429);
             ruleComponentResourceTupleDescriptor();
 
             state._fsp--;
@@ -34427,7 +34438,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getExpressionModelParserRuleCall_8_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleModel_in_rule__RequiredHardwareResourceInstanceConstraint__ExpressionAssignment_824459);
+            pushFollow(FollowSets001.FOLLOW_ruleModel_in_rule__RequiredHardwareResourceInstanceConstraint__ExpressionAssignment_824460);
             ruleModel();
 
             state._fsp--;
@@ -34472,7 +34483,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationTupleDescriptorAccess().getInstanceIDParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__LocationTupleDescriptor__InstanceAssignment_124490);
+            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__LocationTupleDescriptor__InstanceAssignment_124491);
             ruleID();
 
             state._fsp--;
@@ -34517,7 +34528,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLocationTupleDescriptorAccess().getInstancesIDParserRuleCall_3_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__LocationTupleDescriptor__InstancesAssignment_324521);
+            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__LocationTupleDescriptor__InstancesAssignment_324522);
             ruleID();
 
             state._fsp--;
@@ -34562,7 +34573,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getValueTupleDescriptorAccess().getValueIDParserRuleCall_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__ValueTupleDescriptor__ValueAssignment24552);
+            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__ValueTupleDescriptor__ValueAssignment24553);
             ruleID();
 
             state._fsp--;
@@ -34607,7 +34618,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComponentResourceTupleDescriptorAccess().getInstanceIDParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__ComponentResourceTupleDescriptor__InstanceAssignment_124583);
+            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__ComponentResourceTupleDescriptor__InstanceAssignment_124584);
             ruleID();
 
             state._fsp--;
@@ -34652,7 +34663,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComponentResourceTupleDescriptorAccess().getHwresinstanceIDParserRuleCall_3_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__ComponentResourceTupleDescriptor__HwresinstanceAssignment_324614);
+            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__ComponentResourceTupleDescriptor__HwresinstanceAssignment_324615);
             ruleID();
 
             state._fsp--;
@@ -34703,7 +34714,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMeasureFunctionAccess().getServicesServiceCSIDParserRuleCall_1_0_1()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__MeasureFunction__ServicesAssignment_124649);
+            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__MeasureFunction__ServicesAssignment_124650);
             ruleID();
 
             state._fsp--;
@@ -34760,7 +34771,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMeasureFunctionAccess().getServicesServiceCSIDParserRuleCall_2_1_0_1()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__MeasureFunction__ServicesAssignment_2_124688);
+            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__MeasureFunction__ServicesAssignment_2_124689);
             ruleID();
 
             state._fsp--;
@@ -34811,7 +34822,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModelAccess().getOwnedExpressionExpCSParserRuleCall_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__Model__OwnedExpressionAssignment24723);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__Model__OwnedExpressionAssignment24724);
             ruleExpCS();
 
             state._fsp--;
@@ -34859,7 +34870,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:12248:1: ( rule__EssentialOCLUnaryOperatorCS__NameAlternatives_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:12248:2: rule__EssentialOCLUnaryOperatorCS__NameAlternatives_0
             {
-            pushFollow(FollowSets001.FOLLOW_rule__EssentialOCLUnaryOperatorCS__NameAlternatives_0_in_rule__EssentialOCLUnaryOperatorCS__NameAssignment24754);
+            pushFollow(FollowSets001.FOLLOW_rule__EssentialOCLUnaryOperatorCS__NameAlternatives_0_in_rule__EssentialOCLUnaryOperatorCS__NameAssignment24755);
             rule__EssentialOCLUnaryOperatorCS__NameAlternatives_0();
 
             state._fsp--;
@@ -34910,7 +34921,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:12264:1: ( rule__EssentialOCLInfixOperatorCS__NameAlternatives_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:12264:2: rule__EssentialOCLInfixOperatorCS__NameAlternatives_0
             {
-            pushFollow(FollowSets001.FOLLOW_rule__EssentialOCLInfixOperatorCS__NameAlternatives_0_in_rule__EssentialOCLInfixOperatorCS__NameAssignment24787);
+            pushFollow(FollowSets001.FOLLOW_rule__EssentialOCLInfixOperatorCS__NameAlternatives_0_in_rule__EssentialOCLInfixOperatorCS__NameAssignment24788);
             rule__EssentialOCLInfixOperatorCS__NameAlternatives_0();
 
             state._fsp--;
@@ -34961,7 +34972,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:12280:1: ( rule__EssentialOCLNavigationOperatorCS__NameAlternatives_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:12280:2: rule__EssentialOCLNavigationOperatorCS__NameAlternatives_0
             {
-            pushFollow(FollowSets001.FOLLOW_rule__EssentialOCLNavigationOperatorCS__NameAlternatives_0_in_rule__EssentialOCLNavigationOperatorCS__NameAssignment24820);
+            pushFollow(FollowSets001.FOLLOW_rule__EssentialOCLNavigationOperatorCS__NameAlternatives_0_in_rule__EssentialOCLNavigationOperatorCS__NameAssignment24821);
             rule__EssentialOCLNavigationOperatorCS__NameAlternatives_0();
 
             state._fsp--;
@@ -35009,7 +35020,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPathNameCSAccess().getPathFirstPathElementCSParserRuleCall_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleFirstPathElementCS_in_rule__PathNameCS__PathAssignment_024853);
+            pushFollow(FollowSets001.FOLLOW_ruleFirstPathElementCS_in_rule__PathNameCS__PathAssignment_024854);
             ruleFirstPathElementCS();
 
             state._fsp--;
@@ -35054,7 +35065,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPathNameCSAccess().getPathNextPathElementCSParserRuleCall_1_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleNextPathElementCS_in_rule__PathNameCS__PathAssignment_1_124884);
+            pushFollow(FollowSets001.FOLLOW_ruleNextPathElementCS_in_rule__PathNameCS__PathAssignment_1_124885);
             ruleNextPathElementCS();
 
             state._fsp--;
@@ -35105,7 +35116,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFirstPathElementCSAccess().getElementNamedElementUnrestrictedNameParserRuleCall_0_1()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleUnrestrictedName_in_rule__FirstPathElementCS__ElementAssignment24919);
+            pushFollow(FollowSets001.FOLLOW_ruleUnrestrictedName_in_rule__FirstPathElementCS__ElementAssignment24920);
             ruleUnrestrictedName();
 
             state._fsp--;
@@ -35162,7 +35173,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNextPathElementCSAccess().getElementNamedElementUnreservedNameParserRuleCall_0_1()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleUnreservedName_in_rule__NextPathElementCS__ElementAssignment24958);
+            pushFollow(FollowSets001.FOLLOW_ruleUnreservedName_in_rule__NextPathElementCS__ElementAssignment24959);
             ruleUnreservedName();
 
             state._fsp--;
@@ -35219,7 +35230,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getURIFirstPathElementCSAccess().getElementNamedElementUnrestrictedNameParserRuleCall_0_0_1()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleUnrestrictedName_in_rule__URIFirstPathElementCS__ElementAssignment_024999);
+            pushFollow(FollowSets001.FOLLOW_ruleUnrestrictedName_in_rule__URIFirstPathElementCS__ElementAssignment_025000);
             ruleUnrestrictedName();
 
             state._fsp--;
@@ -35276,7 +35287,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getURIFirstPathElementCSAccess().getElementNamespaceURIParserRuleCall_1_1_0_1()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleURI_in_rule__URIFirstPathElementCS__ElementAssignment_1_125038);
+            pushFollow(FollowSets001.FOLLOW_ruleURI_in_rule__URIFirstPathElementCS__ElementAssignment_1_125039);
             ruleURI();
 
             state._fsp--;
@@ -35327,7 +35338,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimitiveTypeCSAccess().getNamePrimitiveTypeIdentifierParserRuleCall_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulePrimitiveTypeIdentifier_in_rule__PrimitiveTypeCS__NameAssignment25073);
+            pushFollow(FollowSets001.FOLLOW_rulePrimitiveTypeIdentifier_in_rule__PrimitiveTypeCS__NameAssignment25074);
             rulePrimitiveTypeIdentifier();
 
             state._fsp--;
@@ -35372,7 +35383,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionTypeCSAccess().getNameCollectionTypeIdentifierParserRuleCall_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleCollectionTypeIdentifier_in_rule__CollectionTypeCS__NameAssignment_025104);
+            pushFollow(FollowSets001.FOLLOW_ruleCollectionTypeIdentifier_in_rule__CollectionTypeCS__NameAssignment_025105);
             ruleCollectionTypeIdentifier();
 
             state._fsp--;
@@ -35417,7 +35428,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionTypeCSAccess().getOwnedTypeTypeExpCSParserRuleCall_1_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleTypeExpCS_in_rule__CollectionTypeCS__OwnedTypeAssignment_1_125135);
+            pushFollow(FollowSets001.FOLLOW_ruleTypeExpCS_in_rule__CollectionTypeCS__OwnedTypeAssignment_1_125136);
             ruleTypeExpCS();
 
             state._fsp--;
@@ -35462,7 +35473,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicityBoundsCSAccess().getLowerBoundLOWERParserRuleCall_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleLOWER_in_rule__MultiplicityBoundsCS__LowerBoundAssignment_025166);
+            pushFollow(FollowSets001.FOLLOW_ruleLOWER_in_rule__MultiplicityBoundsCS__LowerBoundAssignment_025167);
             ruleLOWER();
 
             state._fsp--;
@@ -35507,7 +35518,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicityBoundsCSAccess().getUpperBoundUPPERParserRuleCall_1_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleUPPER_in_rule__MultiplicityBoundsCS__UpperBoundAssignment_1_125197);
+            pushFollow(FollowSets001.FOLLOW_ruleUPPER_in_rule__MultiplicityBoundsCS__UpperBoundAssignment_1_125198);
             ruleUPPER();
 
             state._fsp--;
@@ -35555,7 +35566,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:12479:1: ( rule__MultiplicityStringCS__StringBoundsAlternatives_0 )
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:12479:2: rule__MultiplicityStringCS__StringBoundsAlternatives_0
             {
-            pushFollow(FollowSets001.FOLLOW_rule__MultiplicityStringCS__StringBoundsAlternatives_0_in_rule__MultiplicityStringCS__StringBoundsAssignment25228);
+            pushFollow(FollowSets001.FOLLOW_rule__MultiplicityStringCS__StringBoundsAlternatives_0_in_rule__MultiplicityStringCS__StringBoundsAssignment25229);
             rule__MultiplicityStringCS__StringBoundsAlternatives_0();
 
             state._fsp--;
@@ -35609,7 +35620,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleTypeCSAccess().getNameTupleKeyword_0_0()); 
             }
-            match(input,33,FollowSets001.FOLLOW_33_in_rule__TupleTypeCS__NameAssignment_025266); if (state.failed) return ;
+            match(input,33,FollowSets001.FOLLOW_33_in_rule__TupleTypeCS__NameAssignment_025267); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTupleTypeCSAccess().getNameTupleKeyword_0_0()); 
             }
@@ -35656,7 +35667,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleTypeCSAccess().getOwnedPartsTuplePartCSParserRuleCall_1_1_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleTuplePartCS_in_rule__TupleTypeCS__OwnedPartsAssignment_1_1_025305);
+            pushFollow(FollowSets001.FOLLOW_ruleTuplePartCS_in_rule__TupleTypeCS__OwnedPartsAssignment_1_1_025306);
             ruleTuplePartCS();
 
             state._fsp--;
@@ -35701,7 +35712,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleTypeCSAccess().getOwnedPartsTuplePartCSParserRuleCall_1_1_1_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleTuplePartCS_in_rule__TupleTypeCS__OwnedPartsAssignment_1_1_1_125336);
+            pushFollow(FollowSets001.FOLLOW_ruleTuplePartCS_in_rule__TupleTypeCS__OwnedPartsAssignment_1_1_1_125337);
             ruleTuplePartCS();
 
             state._fsp--;
@@ -35746,7 +35757,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTuplePartCSAccess().getNameUnrestrictedNameParserRuleCall_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleUnrestrictedName_in_rule__TuplePartCS__NameAssignment_025367);
+            pushFollow(FollowSets001.FOLLOW_ruleUnrestrictedName_in_rule__TuplePartCS__NameAssignment_025368);
             ruleUnrestrictedName();
 
             state._fsp--;
@@ -35791,7 +35802,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTuplePartCSAccess().getOwnedTypeTypeExpCSParserRuleCall_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleTypeExpCS_in_rule__TuplePartCS__OwnedTypeAssignment_225398);
+            pushFollow(FollowSets001.FOLLOW_ruleTypeExpCS_in_rule__TuplePartCS__OwnedTypeAssignment_225399);
             ruleTypeExpCS();
 
             state._fsp--;
@@ -35836,7 +35847,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionLiteralExpCSAccess().getOwnedTypeCollectionTypeCSParserRuleCall_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleCollectionTypeCS_in_rule__CollectionLiteralExpCS__OwnedTypeAssignment_025429);
+            pushFollow(FollowSets001.FOLLOW_ruleCollectionTypeCS_in_rule__CollectionLiteralExpCS__OwnedTypeAssignment_025430);
             ruleCollectionTypeCS();
 
             state._fsp--;
@@ -35881,7 +35892,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionLiteralExpCSAccess().getOwnedPartsCollectionLiteralPartCSParserRuleCall_2_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleCollectionLiteralPartCS_in_rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_025460);
+            pushFollow(FollowSets001.FOLLOW_ruleCollectionLiteralPartCS_in_rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_025461);
             ruleCollectionLiteralPartCS();
 
             state._fsp--;
@@ -35926,7 +35937,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionLiteralExpCSAccess().getOwnedPartsCollectionLiteralPartCSParserRuleCall_2_1_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleCollectionLiteralPartCS_in_rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_1_125491);
+            pushFollow(FollowSets001.FOLLOW_ruleCollectionLiteralPartCS_in_rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_1_125492);
             ruleCollectionLiteralPartCS();
 
             state._fsp--;
@@ -35971,7 +35982,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionLiteralPartCSAccess().getExpressionCSExpCSParserRuleCall_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__CollectionLiteralPartCS__ExpressionCSAssignment_025522);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__CollectionLiteralPartCS__ExpressionCSAssignment_025523);
             ruleExpCS();
 
             state._fsp--;
@@ -36016,7 +36027,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionLiteralPartCSAccess().getLastExpressionCSExpCSParserRuleCall_1_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__CollectionLiteralPartCS__LastExpressionCSAssignment_1_125553);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__CollectionLiteralPartCS__LastExpressionCSAssignment_1_125554);
             ruleExpCS();
 
             state._fsp--;
@@ -36067,7 +36078,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstructorPartCSAccess().getPropertyPropertyUnrestrictedNameParserRuleCall_0_0_1()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleUnrestrictedName_in_rule__ConstructorPartCS__PropertyAssignment_025588);
+            pushFollow(FollowSets001.FOLLOW_ruleUnrestrictedName_in_rule__ConstructorPartCS__PropertyAssignment_025589);
             ruleUnrestrictedName();
 
             state._fsp--;
@@ -36118,7 +36129,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstructorPartCSAccess().getInitExpressionExpCSParserRuleCall_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__ConstructorPartCS__InitExpressionAssignment_225623);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__ConstructorPartCS__InitExpressionAssignment_225624);
             ruleExpCS();
 
             state._fsp--;
@@ -36163,7 +36174,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleLiteralExpCSAccess().getOwnedPartsTupleLiteralPartCSParserRuleCall_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleTupleLiteralPartCS_in_rule__TupleLiteralExpCS__OwnedPartsAssignment_225654);
+            pushFollow(FollowSets001.FOLLOW_ruleTupleLiteralPartCS_in_rule__TupleLiteralExpCS__OwnedPartsAssignment_225655);
             ruleTupleLiteralPartCS();
 
             state._fsp--;
@@ -36208,7 +36219,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleLiteralExpCSAccess().getOwnedPartsTupleLiteralPartCSParserRuleCall_3_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleTupleLiteralPartCS_in_rule__TupleLiteralExpCS__OwnedPartsAssignment_3_125685);
+            pushFollow(FollowSets001.FOLLOW_ruleTupleLiteralPartCS_in_rule__TupleLiteralExpCS__OwnedPartsAssignment_3_125686);
             ruleTupleLiteralPartCS();
 
             state._fsp--;
@@ -36253,7 +36264,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleLiteralPartCSAccess().getNameUnrestrictedNameParserRuleCall_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleUnrestrictedName_in_rule__TupleLiteralPartCS__NameAssignment_025716);
+            pushFollow(FollowSets001.FOLLOW_ruleUnrestrictedName_in_rule__TupleLiteralPartCS__NameAssignment_025717);
             ruleUnrestrictedName();
 
             state._fsp--;
@@ -36298,7 +36309,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleLiteralPartCSAccess().getOwnedTypeTypeExpCSParserRuleCall_1_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleTypeExpCS_in_rule__TupleLiteralPartCS__OwnedTypeAssignment_1_125747);
+            pushFollow(FollowSets001.FOLLOW_ruleTypeExpCS_in_rule__TupleLiteralPartCS__OwnedTypeAssignment_1_125748);
             ruleTypeExpCS();
 
             state._fsp--;
@@ -36343,7 +36354,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTupleLiteralPartCSAccess().getInitExpressionExpCSParserRuleCall_3_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__TupleLiteralPartCS__InitExpressionAssignment_325778);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__TupleLiteralPartCS__InitExpressionAssignment_325779);
             ruleExpCS();
 
             state._fsp--;
@@ -36388,7 +36399,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumberLiteralExpCSAccess().getNameNUMBER_LITERALParserRuleCall_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleNUMBER_LITERAL_in_rule__NumberLiteralExpCS__NameAssignment25809);
+            pushFollow(FollowSets001.FOLLOW_ruleNUMBER_LITERAL_in_rule__NumberLiteralExpCS__NameAssignment25810);
             ruleNUMBER_LITERAL();
 
             state._fsp--;
@@ -36433,7 +36444,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringLiteralExpCSAccess().getNameStringLiteralParserRuleCall_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleStringLiteral_in_rule__StringLiteralExpCS__NameAssignment25840);
+            pushFollow(FollowSets001.FOLLOW_ruleStringLiteral_in_rule__StringLiteralExpCS__NameAssignment25841);
             ruleStringLiteral();
 
             state._fsp--;
@@ -36484,7 +36495,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBooleanLiteralExpCSAccess().getNameTrueKeyword_0_0()); 
             }
-            match(input,82,FollowSets001.FOLLOW_82_in_rule__BooleanLiteralExpCS__NameAssignment_025876); if (state.failed) return ;
+            match(input,82,FollowSets001.FOLLOW_82_in_rule__BooleanLiteralExpCS__NameAssignment_025877); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBooleanLiteralExpCSAccess().getNameTrueKeyword_0_0()); 
             }
@@ -36537,7 +36548,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBooleanLiteralExpCSAccess().getNameFalseKeyword_1_0()); 
             }
-            match(input,83,FollowSets001.FOLLOW_83_in_rule__BooleanLiteralExpCS__NameAssignment_125920); if (state.failed) return ;
+            match(input,83,FollowSets001.FOLLOW_83_in_rule__BooleanLiteralExpCS__NameAssignment_125921); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBooleanLiteralExpCSAccess().getNameFalseKeyword_1_0()); 
             }
@@ -36584,7 +36595,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeLiteralWithMultiplicityCSAccess().getMultiplicityMultiplicityCSParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleMultiplicityCS_in_rule__TypeLiteralWithMultiplicityCS__MultiplicityAssignment_125959);
+            pushFollow(FollowSets001.FOLLOW_ruleMultiplicityCS_in_rule__TypeLiteralWithMultiplicityCS__MultiplicityAssignment_125960);
             ruleMultiplicityCS();
 
             state._fsp--;
@@ -36629,7 +36640,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeLiteralExpCSAccess().getOwnedTypeTypeLiteralWithMultiplicityCSParserRuleCall_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleTypeLiteralWithMultiplicityCS_in_rule__TypeLiteralExpCS__OwnedTypeAssignment25990);
+            pushFollow(FollowSets001.FOLLOW_ruleTypeLiteralWithMultiplicityCS_in_rule__TypeLiteralExpCS__OwnedTypeAssignment25991);
             ruleTypeLiteralWithMultiplicityCS();
 
             state._fsp--;
@@ -36674,7 +36685,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeNameExpCSAccess().getPathNamePathNameCSParserRuleCall_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulePathNameCS_in_rule__TypeNameExpCS__PathNameAssignment26021);
+            pushFollow(FollowSets001.FOLLOW_rulePathNameCS_in_rule__TypeNameExpCS__PathNameAssignment26022);
             rulePathNameCS();
 
             state._fsp--;
@@ -36719,7 +36730,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeExpCSAccess().getMultiplicityMultiplicityCSParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleMultiplicityCS_in_rule__TypeExpCS__MultiplicityAssignment_126052);
+            pushFollow(FollowSets001.FOLLOW_ruleMultiplicityCS_in_rule__TypeExpCS__MultiplicityAssignment_126053);
             ruleMultiplicityCS();
 
             state._fsp--;
@@ -36764,7 +36775,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpCSAccess().getOwnedOperatorBinaryOperatorCSParserRuleCall_0_1_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleBinaryOperatorCS_in_rule__ExpCS__OwnedOperatorAssignment_0_1_126083);
+            pushFollow(FollowSets001.FOLLOW_ruleBinaryOperatorCS_in_rule__ExpCS__OwnedOperatorAssignment_0_1_126084);
             ruleBinaryOperatorCS();
 
             state._fsp--;
@@ -36809,7 +36820,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpCSAccess().getOwnedExpressionPrefixedExpCSParserRuleCall_0_1_2_0_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulePrefixedExpCS_in_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_026114);
+            pushFollow(FollowSets001.FOLLOW_rulePrefixedExpCS_in_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_026115);
             rulePrefixedExpCS();
 
             state._fsp--;
@@ -36854,7 +36865,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpCSAccess().getOwnedOperatorBinaryOperatorCSParserRuleCall_0_1_2_0_1_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleBinaryOperatorCS_in_rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_1_026145);
+            pushFollow(FollowSets001.FOLLOW_ruleBinaryOperatorCS_in_rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_1_026146);
             ruleBinaryOperatorCS();
 
             state._fsp--;
@@ -36899,7 +36910,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpCSAccess().getOwnedExpressionPrefixedExpCSParserRuleCall_0_1_2_0_1_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulePrefixedExpCS_in_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_1_126176);
+            pushFollow(FollowSets001.FOLLOW_rulePrefixedExpCS_in_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_1_126177);
             rulePrefixedExpCS();
 
             state._fsp--;
@@ -36944,7 +36955,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpCSAccess().getOwnedOperatorBinaryOperatorCSParserRuleCall_0_1_2_0_2_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleBinaryOperatorCS_in_rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_2_026207);
+            pushFollow(FollowSets001.FOLLOW_ruleBinaryOperatorCS_in_rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_2_026208);
             ruleBinaryOperatorCS();
 
             state._fsp--;
@@ -36989,7 +37000,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpCSAccess().getOwnedExpressionLetExpCSParserRuleCall_0_1_2_0_2_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleLetExpCS_in_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_2_126238);
+            pushFollow(FollowSets001.FOLLOW_ruleLetExpCS_in_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_2_126239);
             ruleLetExpCS();
 
             state._fsp--;
@@ -37034,7 +37045,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpCSAccess().getOwnedExpressionLetExpCSParserRuleCall_0_1_2_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleLetExpCS_in_rule__ExpCS__OwnedExpressionAssignment_0_1_2_126269);
+            pushFollow(FollowSets001.FOLLOW_ruleLetExpCS_in_rule__ExpCS__OwnedExpressionAssignment_0_1_2_126270);
             ruleLetExpCS();
 
             state._fsp--;
@@ -37079,7 +37090,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpCSAccess().getOwnedOperatorUnaryOperatorCSParserRuleCall_1_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleUnaryOperatorCS_in_rule__ExpCS__OwnedOperatorAssignment_1_126300);
+            pushFollow(FollowSets001.FOLLOW_ruleUnaryOperatorCS_in_rule__ExpCS__OwnedOperatorAssignment_1_126301);
             ruleUnaryOperatorCS();
 
             state._fsp--;
@@ -37124,7 +37135,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpCSAccess().getOwnedExpressionLetExpCSParserRuleCall_1_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleLetExpCS_in_rule__ExpCS__OwnedExpressionAssignment_1_226331);
+            pushFollow(FollowSets001.FOLLOW_ruleLetExpCS_in_rule__ExpCS__OwnedExpressionAssignment_1_226332);
             ruleLetExpCS();
 
             state._fsp--;
@@ -37169,7 +37180,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrefixedExpCSAccess().getOwnedOperatorUnaryOperatorCSParserRuleCall_0_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleUnaryOperatorCS_in_rule__PrefixedExpCS__OwnedOperatorAssignment_0_126362);
+            pushFollow(FollowSets001.FOLLOW_ruleUnaryOperatorCS_in_rule__PrefixedExpCS__OwnedOperatorAssignment_0_126363);
             ruleUnaryOperatorCS();
 
             state._fsp--;
@@ -37214,7 +37225,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrefixedExpCSAccess().getOwnedExpressionPrimaryExpCSParserRuleCall_0_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulePrimaryExpCS_in_rule__PrefixedExpCS__OwnedExpressionAssignment_0_226393);
+            pushFollow(FollowSets001.FOLLOW_rulePrimaryExpCS_in_rule__PrefixedExpCS__OwnedExpressionAssignment_0_226394);
             rulePrimaryExpCS();
 
             state._fsp--;
@@ -37259,7 +37270,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getPathNamePathNameCSParserRuleCall_7_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulePathNameCS_in_rule__PrimaryExpCS__PathNameAssignment_7_126424);
+            pushFollow(FollowSets001.FOLLOW_rulePathNameCS_in_rule__PrimaryExpCS__PathNameAssignment_7_126425);
             rulePathNameCS();
 
             state._fsp--;
@@ -37304,7 +37315,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getFirstIndexesExpCSParserRuleCall_7_2_0_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_226455);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_226456);
             ruleExpCS();
 
             state._fsp--;
@@ -37349,7 +37360,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getFirstIndexesExpCSParserRuleCall_7_2_0_3_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_3_126486);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_3_126487);
             ruleExpCS();
 
             state._fsp--;
@@ -37394,7 +37405,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getSecondIndexesExpCSParserRuleCall_7_2_0_5_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_126517);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_126518);
             ruleExpCS();
 
             state._fsp--;
@@ -37439,7 +37450,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getSecondIndexesExpCSParserRuleCall_7_2_0_5_2_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_2_126548);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_2_126549);
             ruleExpCS();
 
             state._fsp--;
@@ -37490,7 +37501,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getAtPreCommercialAtKeyword_7_2_0_6_0_0()); 
             }
-            match(input,84,FollowSets001.FOLLOW_84_in_rule__PrimaryExpCS__AtPreAssignment_7_2_0_6_026584); if (state.failed) return ;
+            match(input,84,FollowSets001.FOLLOW_84_in_rule__PrimaryExpCS__AtPreAssignment_7_2_0_6_026585); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpCSAccess().getAtPreCommercialAtKeyword_7_2_0_6_0_0()); 
             }
@@ -37537,7 +37548,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getOwnedPartsConstructorPartCSParserRuleCall_7_2_1_2_0_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleConstructorPartCS_in_rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_026623);
+            pushFollow(FollowSets001.FOLLOW_ruleConstructorPartCS_in_rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_026624);
             ruleConstructorPartCS();
 
             state._fsp--;
@@ -37582,7 +37593,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getOwnedPartsConstructorPartCSParserRuleCall_7_2_1_2_0_1_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleConstructorPartCS_in_rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_1_126654);
+            pushFollow(FollowSets001.FOLLOW_ruleConstructorPartCS_in_rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_1_126655);
             ruleConstructorPartCS();
 
             state._fsp--;
@@ -37627,7 +37638,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getValueStringLiteralParserRuleCall_7_2_1_2_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleStringLiteral_in_rule__PrimaryExpCS__ValueAssignment_7_2_1_2_126685);
+            pushFollow(FollowSets001.FOLLOW_ruleStringLiteral_in_rule__PrimaryExpCS__ValueAssignment_7_2_1_2_126686);
             ruleStringLiteral();
 
             state._fsp--;
@@ -37678,7 +37689,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getAtPreCommercialAtKeyword_7_2_2_0_0_0()); 
             }
-            match(input,84,FollowSets001.FOLLOW_84_in_rule__PrimaryExpCS__AtPreAssignment_7_2_2_0_026721); if (state.failed) return ;
+            match(input,84,FollowSets001.FOLLOW_84_in_rule__PrimaryExpCS__AtPreAssignment_7_2_2_0_026722); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpCSAccess().getAtPreCommercialAtKeyword_7_2_2_0_0_0()); 
             }
@@ -37725,7 +37736,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getArgumentNavigatingArgCSParserRuleCall_7_2_2_1_2_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleNavigatingArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_026760);
+            pushFollow(FollowSets001.FOLLOW_ruleNavigatingArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_026761);
             ruleNavigatingArgCS();
 
             state._fsp--;
@@ -37770,7 +37781,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getArgumentNavigatingCommaArgCSParserRuleCall_7_2_2_1_2_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleNavigatingCommaArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_126791);
+            pushFollow(FollowSets001.FOLLOW_ruleNavigatingCommaArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_126792);
             ruleNavigatingCommaArgCS();
 
             state._fsp--;
@@ -37815,7 +37826,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getArgumentNavigatingSemiArgCSParserRuleCall_7_2_2_1_2_2_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleNavigatingSemiArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_026822);
+            pushFollow(FollowSets001.FOLLOW_ruleNavigatingSemiArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_026823);
             ruleNavigatingSemiArgCS();
 
             state._fsp--;
@@ -37860,7 +37871,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getArgumentNavigatingCommaArgCSParserRuleCall_7_2_2_1_2_2_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleNavigatingCommaArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_126853);
+            pushFollow(FollowSets001.FOLLOW_ruleNavigatingCommaArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_126854);
             ruleNavigatingCommaArgCS();
 
             state._fsp--;
@@ -37905,7 +37916,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getArgumentNavigatingBarArgCSParserRuleCall_7_2_2_1_2_3_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleNavigatingBarArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_026884);
+            pushFollow(FollowSets001.FOLLOW_ruleNavigatingBarArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_026885);
             ruleNavigatingBarArgCS();
 
             state._fsp--;
@@ -37950,7 +37961,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpCSAccess().getArgumentNavigatingCommaArgCSParserRuleCall_7_2_2_1_2_3_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleNavigatingCommaArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_126915);
+            pushFollow(FollowSets001.FOLLOW_ruleNavigatingCommaArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_126916);
             ruleNavigatingCommaArgCS();
 
             state._fsp--;
@@ -37995,7 +38006,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingArgCSAccess().getNameNavigatingArgExpCSParserRuleCall_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleNavigatingArgExpCS_in_rule__NavigatingArgCS__NameAssignment_026946);
+            pushFollow(FollowSets001.FOLLOW_ruleNavigatingArgExpCS_in_rule__NavigatingArgCS__NameAssignment_026947);
             ruleNavigatingArgExpCS();
 
             state._fsp--;
@@ -38040,7 +38051,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingArgCSAccess().getOwnedTypeTypeExpCSParserRuleCall_1_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleTypeExpCS_in_rule__NavigatingArgCS__OwnedTypeAssignment_1_126977);
+            pushFollow(FollowSets001.FOLLOW_ruleTypeExpCS_in_rule__NavigatingArgCS__OwnedTypeAssignment_1_126978);
             ruleTypeExpCS();
 
             state._fsp--;
@@ -38085,7 +38096,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingArgCSAccess().getInitExpCSParserRuleCall_1_2_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__NavigatingArgCS__InitAssignment_1_2_127008);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__NavigatingArgCS__InitAssignment_1_2_127009);
             ruleExpCS();
 
             state._fsp--;
@@ -38136,7 +38147,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingBarArgCSAccess().getPrefixVerticalLineKeyword_0_0()); 
             }
-            match(input,85,FollowSets001.FOLLOW_85_in_rule__NavigatingBarArgCS__PrefixAssignment_027044); if (state.failed) return ;
+            match(input,85,FollowSets001.FOLLOW_85_in_rule__NavigatingBarArgCS__PrefixAssignment_027045); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNavigatingBarArgCSAccess().getPrefixVerticalLineKeyword_0_0()); 
             }
@@ -38183,7 +38194,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingBarArgCSAccess().getNameNavigatingArgExpCSParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleNavigatingArgExpCS_in_rule__NavigatingBarArgCS__NameAssignment_127083);
+            pushFollow(FollowSets001.FOLLOW_ruleNavigatingArgExpCS_in_rule__NavigatingBarArgCS__NameAssignment_127084);
             ruleNavigatingArgExpCS();
 
             state._fsp--;
@@ -38228,7 +38239,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingBarArgCSAccess().getOwnedTypeTypeExpCSParserRuleCall_2_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleTypeExpCS_in_rule__NavigatingBarArgCS__OwnedTypeAssignment_2_127114);
+            pushFollow(FollowSets001.FOLLOW_ruleTypeExpCS_in_rule__NavigatingBarArgCS__OwnedTypeAssignment_2_127115);
             ruleTypeExpCS();
 
             state._fsp--;
@@ -38273,7 +38284,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingBarArgCSAccess().getInitExpCSParserRuleCall_2_2_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__NavigatingBarArgCS__InitAssignment_2_2_127145);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__NavigatingBarArgCS__InitAssignment_2_2_127146);
             ruleExpCS();
 
             state._fsp--;
@@ -38324,7 +38335,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingCommaArgCSAccess().getPrefixCommaKeyword_0_0()); 
             }
-            match(input,58,FollowSets001.FOLLOW_58_in_rule__NavigatingCommaArgCS__PrefixAssignment_027181); if (state.failed) return ;
+            match(input,58,FollowSets001.FOLLOW_58_in_rule__NavigatingCommaArgCS__PrefixAssignment_027182); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNavigatingCommaArgCSAccess().getPrefixCommaKeyword_0_0()); 
             }
@@ -38371,7 +38382,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingCommaArgCSAccess().getNameNavigatingArgExpCSParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleNavigatingArgExpCS_in_rule__NavigatingCommaArgCS__NameAssignment_127220);
+            pushFollow(FollowSets001.FOLLOW_ruleNavigatingArgExpCS_in_rule__NavigatingCommaArgCS__NameAssignment_127221);
             ruleNavigatingArgExpCS();
 
             state._fsp--;
@@ -38416,7 +38427,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingCommaArgCSAccess().getOwnedTypeTypeExpCSParserRuleCall_2_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleTypeExpCS_in_rule__NavigatingCommaArgCS__OwnedTypeAssignment_2_127251);
+            pushFollow(FollowSets001.FOLLOW_ruleTypeExpCS_in_rule__NavigatingCommaArgCS__OwnedTypeAssignment_2_127252);
             ruleTypeExpCS();
 
             state._fsp--;
@@ -38461,7 +38472,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingCommaArgCSAccess().getInitExpCSParserRuleCall_2_2_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__NavigatingCommaArgCS__InitAssignment_2_2_127282);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__NavigatingCommaArgCS__InitAssignment_2_2_127283);
             ruleExpCS();
 
             state._fsp--;
@@ -38512,7 +38523,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingSemiArgCSAccess().getPrefixSemicolonKeyword_0_0()); 
             }
-            match(input,55,FollowSets001.FOLLOW_55_in_rule__NavigatingSemiArgCS__PrefixAssignment_027318); if (state.failed) return ;
+            match(input,55,FollowSets001.FOLLOW_55_in_rule__NavigatingSemiArgCS__PrefixAssignment_027319); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNavigatingSemiArgCSAccess().getPrefixSemicolonKeyword_0_0()); 
             }
@@ -38559,7 +38570,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingSemiArgCSAccess().getNameNavigatingArgExpCSParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleNavigatingArgExpCS_in_rule__NavigatingSemiArgCS__NameAssignment_127357);
+            pushFollow(FollowSets001.FOLLOW_ruleNavigatingArgExpCS_in_rule__NavigatingSemiArgCS__NameAssignment_127358);
             ruleNavigatingArgExpCS();
 
             state._fsp--;
@@ -38604,7 +38615,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingSemiArgCSAccess().getOwnedTypeTypeExpCSParserRuleCall_2_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleTypeExpCS_in_rule__NavigatingSemiArgCS__OwnedTypeAssignment_2_127388);
+            pushFollow(FollowSets001.FOLLOW_ruleTypeExpCS_in_rule__NavigatingSemiArgCS__OwnedTypeAssignment_2_127389);
             ruleTypeExpCS();
 
             state._fsp--;
@@ -38649,7 +38660,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNavigatingSemiArgCSAccess().getInitExpCSParserRuleCall_2_2_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__NavigatingSemiArgCS__InitAssignment_2_2_127419);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__NavigatingSemiArgCS__InitAssignment_2_2_127420);
             ruleExpCS();
 
             state._fsp--;
@@ -38694,7 +38705,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfExpCSAccess().getConditionExpCSParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__IfExpCS__ConditionAssignment_127450);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__IfExpCS__ConditionAssignment_127451);
             ruleExpCS();
 
             state._fsp--;
@@ -38739,7 +38750,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfExpCSAccess().getThenExpressionExpCSParserRuleCall_3_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__IfExpCS__ThenExpressionAssignment_327481);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__IfExpCS__ThenExpressionAssignment_327482);
             ruleExpCS();
 
             state._fsp--;
@@ -38784,7 +38795,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfExpCSAccess().getElseExpressionExpCSParserRuleCall_5_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__IfExpCS__ElseExpressionAssignment_527512);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__IfExpCS__ElseExpressionAssignment_527513);
             ruleExpCS();
 
             state._fsp--;
@@ -38829,7 +38840,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpCSAccess().getVariableLetVariableCSParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleLetVariableCS_in_rule__LetExpCS__VariableAssignment_127543);
+            pushFollow(FollowSets001.FOLLOW_ruleLetVariableCS_in_rule__LetExpCS__VariableAssignment_127544);
             ruleLetVariableCS();
 
             state._fsp--;
@@ -38874,7 +38885,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpCSAccess().getVariableLetVariableCSParserRuleCall_2_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleLetVariableCS_in_rule__LetExpCS__VariableAssignment_2_127574);
+            pushFollow(FollowSets001.FOLLOW_ruleLetVariableCS_in_rule__LetExpCS__VariableAssignment_2_127575);
             ruleLetVariableCS();
 
             state._fsp--;
@@ -38919,7 +38930,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpCSAccess().getInExpCSParserRuleCall_4_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__LetExpCS__InAssignment_427605);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__LetExpCS__InAssignment_427606);
             ruleExpCS();
 
             state._fsp--;
@@ -38964,7 +38975,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetVariableCSAccess().getNameUnrestrictedNameParserRuleCall_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleUnrestrictedName_in_rule__LetVariableCS__NameAssignment_027636);
+            pushFollow(FollowSets001.FOLLOW_ruleUnrestrictedName_in_rule__LetVariableCS__NameAssignment_027637);
             ruleUnrestrictedName();
 
             state._fsp--;
@@ -39009,7 +39020,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetVariableCSAccess().getOwnedTypeTypeExpCSParserRuleCall_1_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleTypeExpCS_in_rule__LetVariableCS__OwnedTypeAssignment_1_127667);
+            pushFollow(FollowSets001.FOLLOW_ruleTypeExpCS_in_rule__LetVariableCS__OwnedTypeAssignment_1_127668);
             ruleTypeExpCS();
 
             state._fsp--;
@@ -39054,7 +39065,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetVariableCSAccess().getInitExpressionExpCSParserRuleCall_3_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__LetVariableCS__InitExpressionAssignment_327698);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__LetVariableCS__InitExpressionAssignment_327699);
             ruleExpCS();
 
             state._fsp--;
@@ -39099,7 +39110,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNestedExpCSAccess().getSourceExpCSParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__NestedExpCS__SourceAssignment_127729);
+            pushFollow(FollowSets001.FOLLOW_ruleExpCS_in_rule__NestedExpCS__SourceAssignment_127730);
             ruleExpCS();
 
             state._fsp--;
@@ -39247,7 +39258,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
     protected DFA20 dfa20 = new DFA20(this);
     protected DFA23 dfa23 = new DFA23(this);
-    protected DFA52 dfa52 = new DFA52(this);
+    protected DFA53 dfa53 = new DFA53(this);
     static final String DFA20_eotS =
         "\10\uffff";
     static final String DFA20_eofS =
@@ -39490,19 +39501,19 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             throw nvae;
         }
     }
-    static final String DFA52_eotS =
+    static final String DFA53_eotS =
         "\23\uffff";
-    static final String DFA52_eofS =
+    static final String DFA53_eofS =
         "\1\21\22\uffff";
-    static final String DFA52_minS =
+    static final String DFA53_minS =
         "\1\20\20\4\2\uffff";
-    static final String DFA52_maxS =
+    static final String DFA53_maxS =
         "\1\125\20\123\2\uffff";
-    static final String DFA52_acceptS =
+    static final String DFA53_acceptS =
         "\21\uffff\1\2\1\1";
-    static final String DFA52_specialS =
+    static final String DFA53_specialS =
         "\23\uffff}>";
-    static final String[] DFA52_transitionS = {
+    static final String[] DFA53_transitionS = {
             "\1\1\1\4\1\uffff\1\2\1\3\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14"+
             "\1\15\1\16\1\17\1\20\22\uffff\1\21\3\uffff\1\21\2\uffff\1\21"+
             "\6\uffff\1\21\2\uffff\1\21\1\uffff\2\21\4\uffff\3\21\1\uffff"+
@@ -39543,34 +39554,34 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             ""
     };
 
-    static final short[] DFA52_eot = DFA.unpackEncodedString(DFA52_eotS);
-    static final short[] DFA52_eof = DFA.unpackEncodedString(DFA52_eofS);
-    static final char[] DFA52_min = DFA.unpackEncodedStringToUnsignedChars(DFA52_minS);
-    static final char[] DFA52_max = DFA.unpackEncodedStringToUnsignedChars(DFA52_maxS);
-    static final short[] DFA52_accept = DFA.unpackEncodedString(DFA52_acceptS);
-    static final short[] DFA52_special = DFA.unpackEncodedString(DFA52_specialS);
-    static final short[][] DFA52_transition;
+    static final short[] DFA53_eot = DFA.unpackEncodedString(DFA53_eotS);
+    static final short[] DFA53_eof = DFA.unpackEncodedString(DFA53_eofS);
+    static final char[] DFA53_min = DFA.unpackEncodedStringToUnsignedChars(DFA53_minS);
+    static final char[] DFA53_max = DFA.unpackEncodedStringToUnsignedChars(DFA53_maxS);
+    static final short[] DFA53_accept = DFA.unpackEncodedString(DFA53_acceptS);
+    static final short[] DFA53_special = DFA.unpackEncodedString(DFA53_specialS);
+    static final short[][] DFA53_transition;
 
     static {
-        int numStates = DFA52_transitionS.length;
-        DFA52_transition = new short[numStates][];
+        int numStates = DFA53_transitionS.length;
+        DFA53_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA52_transition[i] = DFA.unpackEncodedString(DFA52_transitionS[i]);
+            DFA53_transition[i] = DFA.unpackEncodedString(DFA53_transitionS[i]);
         }
     }
 
-    class DFA52 extends DFA {
+    class DFA53 extends DFA {
 
-        public DFA52(BaseRecognizer recognizer) {
+        public DFA53(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 52;
-            this.eot = DFA52_eot;
-            this.eof = DFA52_eof;
-            this.min = DFA52_min;
-            this.max = DFA52_max;
-            this.accept = DFA52_accept;
-            this.special = DFA52_special;
-            this.transition = DFA52_transition;
+            this.decisionNumber = 53;
+            this.eot = DFA53_eot;
+            this.eof = DFA53_eof;
+            this.min = DFA53_min;
+            this.max = DFA53_max;
+            this.accept = DFA53_accept;
+            this.special = DFA53_special;
+            this.transition = DFA53_transition;
         }
         public String getDescription() {
             return "()* loopback of 8212:1: ( rule__ExpCS__Group_0_1_2_0_1__0 )*";
@@ -39894,863 +39905,863 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         public static final BitSet FOLLOW_rule__Specification__Group__1__Impl_in_rule__Specification__Group__16566 = new BitSet(new long[]{0x0004000000000000L});
         public static final BitSet FOLLOW_rule__Specification__Group__2_in_rule__Specification__Group__16569 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Specification__NameAssignment_1_in_rule__Specification__Group__1__Impl6596 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Specification__Group__2__Impl_in_rule__Specification__Group__26626 = new BitSet(new long[]{0x0810000000000000L,0x0000000000000004L});
+        public static final BitSet FOLLOW_rule__Specification__Group__2__Impl_in_rule__Specification__Group__26626 = new BitSet(new long[]{0x0818000000000000L,0x0000000000000004L});
         public static final BitSet FOLLOW_rule__Specification__Group__3_in_rule__Specification__Group__26629 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_50_in_rule__Specification__Group__2__Impl6657 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Specification__Group__3__Impl_in_rule__Specification__Group__36688 = new BitSet(new long[]{0x0810000000000000L,0x0000000000000004L});
+        public static final BitSet FOLLOW_rule__Specification__Group__3__Impl_in_rule__Specification__Group__36688 = new BitSet(new long[]{0x0818000000000000L,0x0000000000000004L});
         public static final BitSet FOLLOW_rule__Specification__Group__4_in_rule__Specification__Group__36691 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Specification__Alternatives_3_in_rule__Specification__Group__3__Impl6718 = new BitSet(new long[]{0x0810000000000002L});
-        public static final BitSet FOLLOW_rule__Specification__Group__4__Impl_in_rule__Specification__Group__46749 = new BitSet(new long[]{0x0008000000000000L});
+        public static final BitSet FOLLOW_rule__Specification__Group__4__Impl_in_rule__Specification__Group__46749 = new BitSet(new long[]{0x0818000000000000L,0x0000000000000004L});
         public static final BitSet FOLLOW_rule__Specification__Group__5_in_rule__Specification__Group__46752 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Specification__MeasureAssignment_4_in_rule__Specification__Group__4__Impl6779 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Specification__Group__5__Impl_in_rule__Specification__Group__56809 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_51_in_rule__Specification__Group__5__Impl6837 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Service__Group__0__Impl_in_rule__Service__Group__06880 = new BitSet(new long[]{0x00000000000000C0L});
-        public static final BitSet FOLLOW_rule__Service__Group__1_in_rule__Service__Group__06883 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__Service__Group__0__Impl6911 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Service__Group__1__Impl_in_rule__Service__Group__16942 = new BitSet(new long[]{0x0004000000000000L});
-        public static final BitSet FOLLOW_rule__Service__Group__2_in_rule__Service__Group__16945 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Service__NameAssignment_1_in_rule__Service__Group__1__Impl6972 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Service__Group__2__Impl_in_rule__Service__Group__27002 = new BitSet(new long[]{0x0028000000000000L});
-        public static final BitSet FOLLOW_rule__Service__Group__3_in_rule__Service__Group__27005 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_50_in_rule__Service__Group__2__Impl7033 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Service__Group__3__Impl_in_rule__Service__Group__37064 = new BitSet(new long[]{0x0028000000000000L});
-        public static final BitSet FOLLOW_rule__Service__Group__4_in_rule__Service__Group__37067 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Service__DimensionsAssignment_3_in_rule__Service__Group__3__Impl7094 = new BitSet(new long[]{0x0020000000000002L});
-        public static final BitSet FOLLOW_rule__Service__Group__4__Impl_in_rule__Service__Group__47125 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_51_in_rule__Service__Group__4__Impl7153 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__0__Impl_in_rule__QosDimension__Group__07194 = new BitSet(new long[]{0x00000000000000C0L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__1_in_rule__QosDimension__Group__07197 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__QosDimension__Group__0__Impl7225 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__1__Impl_in_rule__QosDimension__Group__17256 = new BitSet(new long[]{0x0004000000000000L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__2_in_rule__QosDimension__Group__17259 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__NameAssignment_1_in_rule__QosDimension__Group__1__Impl7286 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__2__Impl_in_rule__QosDimension__Group__27316 = new BitSet(new long[]{0x0040000000000000L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__3_in_rule__QosDimension__Group__27319 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_50_in_rule__QosDimension__Group__2__Impl7347 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__3__Impl_in_rule__QosDimension__Group__37378 = new BitSet(new long[]{0x00000000000000C0L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__4_in_rule__QosDimension__Group__37381 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_54_in_rule__QosDimension__Group__3__Impl7409 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__4__Impl_in_rule__QosDimension__Group__47440 = new BitSet(new long[]{0x0080000000000000L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__5_in_rule__QosDimension__Group__47443 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__ValueAssignment_4_in_rule__QosDimension__Group__4__Impl7470 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__5__Impl_in_rule__QosDimension__Group__57500 = new BitSet(new long[]{0x0100000000000000L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__6_in_rule__QosDimension__Group__57503 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_55_in_rule__QosDimension__Group__5__Impl7531 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__6__Impl_in_rule__QosDimension__Group__67562 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__7_in_rule__QosDimension__Group__67565 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_56_in_rule__QosDimension__Group__6__Impl7593 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__7__Impl_in_rule__QosDimension__Group__77624 = new BitSet(new long[]{0x0480000000000000L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__8_in_rule__QosDimension__Group__77627 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__TupleDescriptorsAssignment_7_in_rule__QosDimension__Group__7__Impl7654 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__8__Impl_in_rule__QosDimension__Group__87684 = new BitSet(new long[]{0x0480000000000000L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__9_in_rule__QosDimension__Group__87687 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group_8__0_in_rule__QosDimension__Group__8__Impl7714 = new BitSet(new long[]{0x0400000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__9__Impl_in_rule__QosDimension__Group__97745 = new BitSet(new long[]{0x0200000000000000L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__10_in_rule__QosDimension__Group__97748 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_55_in_rule__QosDimension__Group__9__Impl7776 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__10__Impl_in_rule__QosDimension__Group__107807 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__11_in_rule__QosDimension__Group__107810 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_57_in_rule__QosDimension__Group__10__Impl7838 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__11__Impl_in_rule__QosDimension__Group__117869 = new BitSet(new long[]{0x0080000000000000L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__12_in_rule__QosDimension__Group__117872 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__MetricAssignment_11_in_rule__QosDimension__Group__11__Impl7899 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__12__Impl_in_rule__QosDimension__Group__127929 = new BitSet(new long[]{0x0008000000000000L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__13_in_rule__QosDimension__Group__127932 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_55_in_rule__QosDimension__Group__12__Impl7960 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group__13__Impl_in_rule__QosDimension__Group__137991 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_51_in_rule__QosDimension__Group__13__Impl8019 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group_8__0__Impl_in_rule__QosDimension__Group_8__08078 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group_8__1_in_rule__QosDimension__Group_8__08081 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_58_in_rule__QosDimension__Group_8__0__Impl8109 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__Group_8__1__Impl_in_rule__QosDimension__Group_8__18140 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__TupleDescriptorsAssignment_8_1_in_rule__QosDimension__Group_8__1__Impl8167 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Constraint__Group__0__Impl_in_rule__Constraint__Group__08201 = new BitSet(new long[]{0x9003000000000000L});
-        public static final BitSet FOLLOW_rule__Constraint__Group__1_in_rule__Constraint__Group__08204 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_59_in_rule__Constraint__Group__0__Impl8232 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Constraint__Group__1__Impl_in_rule__Constraint__Group__18263 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Constraint__Alternatives_1_in_rule__Constraint__Group__1__Impl8290 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__0__Impl_in_rule__LocationConstraint__Group__08324 = new BitSet(new long[]{0x00040000000000C0L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__1_in_rule__LocationConstraint__Group__08327 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__TypeAssignment_0_in_rule__LocationConstraint__Group__0__Impl8354 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__1__Impl_in_rule__LocationConstraint__Group__18384 = new BitSet(new long[]{0x00040000000000C0L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__2_in_rule__LocationConstraint__Group__18387 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__NameAssignment_1_in_rule__LocationConstraint__Group__1__Impl8414 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__2__Impl_in_rule__LocationConstraint__Group__28445 = new BitSet(new long[]{0x0100000000000000L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__3_in_rule__LocationConstraint__Group__28448 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_50_in_rule__LocationConstraint__Group__2__Impl8476 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__3__Impl_in_rule__LocationConstraint__Group__38507 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__4_in_rule__LocationConstraint__Group__38510 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_56_in_rule__LocationConstraint__Group__3__Impl8538 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__4__Impl_in_rule__LocationConstraint__Group__48569 = new BitSet(new long[]{0x0480000000000000L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__5_in_rule__LocationConstraint__Group__48572 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__TupleDescriptorsAssignment_4_in_rule__LocationConstraint__Group__4__Impl8599 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__5__Impl_in_rule__LocationConstraint__Group__58629 = new BitSet(new long[]{0x0480000000000000L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__6_in_rule__LocationConstraint__Group__58632 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group_5__0_in_rule__LocationConstraint__Group__5__Impl8659 = new BitSet(new long[]{0x0400000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__6__Impl_in_rule__LocationConstraint__Group__68690 = new BitSet(new long[]{0x0200000000000000L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__7_in_rule__LocationConstraint__Group__68693 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_55_in_rule__LocationConstraint__Group__6__Impl8721 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__7__Impl_in_rule__LocationConstraint__Group__78752 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__8_in_rule__LocationConstraint__Group__78755 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_57_in_rule__LocationConstraint__Group__7__Impl8783 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__8__Impl_in_rule__LocationConstraint__Group__88814 = new BitSet(new long[]{0x0080000000000000L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__9_in_rule__LocationConstraint__Group__88817 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__ExpressionAssignment_8_in_rule__LocationConstraint__Group__8__Impl8844 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__9__Impl_in_rule__LocationConstraint__Group__98874 = new BitSet(new long[]{0x0008000000000000L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__10_in_rule__LocationConstraint__Group__98877 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_55_in_rule__LocationConstraint__Group__9__Impl8905 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group__10__Impl_in_rule__LocationConstraint__Group__108936 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_51_in_rule__LocationConstraint__Group__10__Impl8964 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group_5__0__Impl_in_rule__LocationConstraint__Group_5__09017 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group_5__1_in_rule__LocationConstraint__Group_5__09020 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_58_in_rule__LocationConstraint__Group_5__0__Impl9048 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__Group_5__1__Impl_in_rule__LocationConstraint__Group_5__19079 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationConstraint__TupleDescriptorsAssignment_5_1_in_rule__LocationConstraint__Group_5__1__Impl9106 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__0__Impl_in_rule__ResourceConstraint__Group__09140 = new BitSet(new long[]{0x00040000000000C0L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__1_in_rule__ResourceConstraint__Group__09143 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_60_in_rule__ResourceConstraint__Group__0__Impl9171 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__1__Impl_in_rule__ResourceConstraint__Group__19202 = new BitSet(new long[]{0x00040000000000C0L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__2_in_rule__ResourceConstraint__Group__19205 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__NameAssignment_1_in_rule__ResourceConstraint__Group__1__Impl9232 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__2__Impl_in_rule__ResourceConstraint__Group__29263 = new BitSet(new long[]{0x2000000000000000L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__3_in_rule__ResourceConstraint__Group__29266 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_50_in_rule__ResourceConstraint__Group__2__Impl9294 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__3__Impl_in_rule__ResourceConstraint__Group__39325 = new BitSet(new long[]{0x00000000000000C0L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__4_in_rule__ResourceConstraint__Group__39328 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_61_in_rule__ResourceConstraint__Group__3__Impl9356 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__4__Impl_in_rule__ResourceConstraint__Group__49387 = new BitSet(new long[]{0x0080000000000000L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__5_in_rule__ResourceConstraint__Group__49390 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__LhsAssignment_4_in_rule__ResourceConstraint__Group__4__Impl9417 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__5__Impl_in_rule__ResourceConstraint__Group__59447 = new BitSet(new long[]{0x4000000000000000L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__6_in_rule__ResourceConstraint__Group__59450 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_55_in_rule__ResourceConstraint__Group__5__Impl9478 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__6__Impl_in_rule__ResourceConstraint__Group__69509 = new BitSet(new long[]{0x00000000000000C0L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__7_in_rule__ResourceConstraint__Group__69512 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_62_in_rule__ResourceConstraint__Group__6__Impl9540 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__7__Impl_in_rule__ResourceConstraint__Group__79571 = new BitSet(new long[]{0x0080000000000000L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__8_in_rule__ResourceConstraint__Group__79574 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__RhsAssignment_7_in_rule__ResourceConstraint__Group__7__Impl9601 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__8__Impl_in_rule__ResourceConstraint__Group__89631 = new BitSet(new long[]{0x0100000000000000L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__9_in_rule__ResourceConstraint__Group__89634 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_55_in_rule__ResourceConstraint__Group__8__Impl9662 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__9__Impl_in_rule__ResourceConstraint__Group__99693 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__10_in_rule__ResourceConstraint__Group__99696 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_56_in_rule__ResourceConstraint__Group__9__Impl9724 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__10__Impl_in_rule__ResourceConstraint__Group__109755 = new BitSet(new long[]{0x0480000000000000L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__11_in_rule__ResourceConstraint__Group__109758 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__TupleDescriptorsAssignment_10_in_rule__ResourceConstraint__Group__10__Impl9785 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__11__Impl_in_rule__ResourceConstraint__Group__119815 = new BitSet(new long[]{0x0480000000000000L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__12_in_rule__ResourceConstraint__Group__119818 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group_11__0_in_rule__ResourceConstraint__Group__11__Impl9845 = new BitSet(new long[]{0x0400000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__12__Impl_in_rule__ResourceConstraint__Group__129876 = new BitSet(new long[]{0x0200000000000000L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__13_in_rule__ResourceConstraint__Group__129879 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_55_in_rule__ResourceConstraint__Group__12__Impl9907 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__13__Impl_in_rule__ResourceConstraint__Group__139938 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__14_in_rule__ResourceConstraint__Group__139941 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_57_in_rule__ResourceConstraint__Group__13__Impl9969 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__14__Impl_in_rule__ResourceConstraint__Group__1410000 = new BitSet(new long[]{0x0080000000000000L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__15_in_rule__ResourceConstraint__Group__1410003 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__ExpressionAssignment_14_in_rule__ResourceConstraint__Group__14__Impl10030 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__15__Impl_in_rule__ResourceConstraint__Group__1510060 = new BitSet(new long[]{0x0008000000000000L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__16_in_rule__ResourceConstraint__Group__1510063 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_55_in_rule__ResourceConstraint__Group__15__Impl10091 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__16__Impl_in_rule__ResourceConstraint__Group__1610122 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_51_in_rule__ResourceConstraint__Group__16__Impl10150 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group_11__0__Impl_in_rule__ResourceConstraint__Group_11__010215 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group_11__1_in_rule__ResourceConstraint__Group_11__010218 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_58_in_rule__ResourceConstraint__Group_11__0__Impl10246 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__Group_11__1__Impl_in_rule__ResourceConstraint__Group_11__110277 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ResourceConstraint__TupleDescriptorsAssignment_11_1_in_rule__ResourceConstraint__Group_11__1__Impl10304 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__0__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__010338 = new BitSet(new long[]{0x00040000000000C0L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__1_in_rule__RequiredHardwareResourceInstanceConstraint__Group__010341 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_63_in_rule__RequiredHardwareResourceInstanceConstraint__Group__0__Impl10369 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__1__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__110400 = new BitSet(new long[]{0x00040000000000C0L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__2_in_rule__RequiredHardwareResourceInstanceConstraint__Group__110403 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__NameAssignment_1_in_rule__RequiredHardwareResourceInstanceConstraint__Group__1__Impl10430 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__2__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__210461 = new BitSet(new long[]{0x0100000000000000L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__3_in_rule__RequiredHardwareResourceInstanceConstraint__Group__210464 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_50_in_rule__RequiredHardwareResourceInstanceConstraint__Group__2__Impl10492 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__3__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__310523 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__4_in_rule__RequiredHardwareResourceInstanceConstraint__Group__310526 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_56_in_rule__RequiredHardwareResourceInstanceConstraint__Group__3__Impl10554 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__4__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__410585 = new BitSet(new long[]{0x0480000000000000L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__5_in_rule__RequiredHardwareResourceInstanceConstraint__Group__410588 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_4_in_rule__RequiredHardwareResourceInstanceConstraint__Group__4__Impl10615 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__5__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__510645 = new BitSet(new long[]{0x0480000000000000L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__6_in_rule__RequiredHardwareResourceInstanceConstraint__Group__510648 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group_5__0_in_rule__RequiredHardwareResourceInstanceConstraint__Group__5__Impl10675 = new BitSet(new long[]{0x0400000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__6__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__610706 = new BitSet(new long[]{0x0200000000000000L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__7_in_rule__RequiredHardwareResourceInstanceConstraint__Group__610709 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_55_in_rule__RequiredHardwareResourceInstanceConstraint__Group__6__Impl10737 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__7__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__710768 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__8_in_rule__RequiredHardwareResourceInstanceConstraint__Group__710771 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_57_in_rule__RequiredHardwareResourceInstanceConstraint__Group__7__Impl10799 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__8__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__810830 = new BitSet(new long[]{0x0080000000000000L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__9_in_rule__RequiredHardwareResourceInstanceConstraint__Group__810833 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__ExpressionAssignment_8_in_rule__RequiredHardwareResourceInstanceConstraint__Group__8__Impl10860 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__9__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__910890 = new BitSet(new long[]{0x0008000000000000L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__10_in_rule__RequiredHardwareResourceInstanceConstraint__Group__910893 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_55_in_rule__RequiredHardwareResourceInstanceConstraint__Group__9__Impl10921 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__10__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__1010952 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_51_in_rule__RequiredHardwareResourceInstanceConstraint__Group__10__Impl10980 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group_5__0__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__011033 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group_5__1_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__011036 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_58_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__0__Impl11064 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group_5__1__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__111095 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_5_1_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__1__Impl11122 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__0__Impl_in_rule__LocationTupleDescriptor__Group__011156 = new BitSet(new long[]{0x00000000000000C0L});
-        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__1_in_rule__LocationTupleDescriptor__Group__011159 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_64_in_rule__LocationTupleDescriptor__Group__0__Impl11187 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__1__Impl_in_rule__LocationTupleDescriptor__Group__111218 = new BitSet(new long[]{0x0400000000000000L});
-        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__2_in_rule__LocationTupleDescriptor__Group__111221 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__InstanceAssignment_1_in_rule__LocationTupleDescriptor__Group__1__Impl11248 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__2__Impl_in_rule__LocationTupleDescriptor__Group__211278 = new BitSet(new long[]{0x00000000000000C0L});
-        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__3_in_rule__LocationTupleDescriptor__Group__211281 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_58_in_rule__LocationTupleDescriptor__Group__2__Impl11309 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__3__Impl_in_rule__LocationTupleDescriptor__Group__311340 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__4_in_rule__LocationTupleDescriptor__Group__311343 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__InstancesAssignment_3_in_rule__LocationTupleDescriptor__Group__3__Impl11370 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__4__Impl_in_rule__LocationTupleDescriptor__Group__411400 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_65_in_rule__LocationTupleDescriptor__Group__4__Impl11428 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__0__Impl_in_rule__ComponentResourceTupleDescriptor__Group__011469 = new BitSet(new long[]{0x00000000000000C0L});
-        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__1_in_rule__ComponentResourceTupleDescriptor__Group__011472 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_64_in_rule__ComponentResourceTupleDescriptor__Group__0__Impl11500 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__1__Impl_in_rule__ComponentResourceTupleDescriptor__Group__111531 = new BitSet(new long[]{0x0400000000000000L});
-        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__2_in_rule__ComponentResourceTupleDescriptor__Group__111534 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__InstanceAssignment_1_in_rule__ComponentResourceTupleDescriptor__Group__1__Impl11561 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__2__Impl_in_rule__ComponentResourceTupleDescriptor__Group__211591 = new BitSet(new long[]{0x00000000000000C0L});
-        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__3_in_rule__ComponentResourceTupleDescriptor__Group__211594 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_58_in_rule__ComponentResourceTupleDescriptor__Group__2__Impl11622 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__3__Impl_in_rule__ComponentResourceTupleDescriptor__Group__311653 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__4_in_rule__ComponentResourceTupleDescriptor__Group__311656 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__HwresinstanceAssignment_3_in_rule__ComponentResourceTupleDescriptor__Group__3__Impl11683 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__4__Impl_in_rule__ComponentResourceTupleDescriptor__Group__411713 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_65_in_rule__ComponentResourceTupleDescriptor__Group__4__Impl11741 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MeasureFunction__Group__0__Impl_in_rule__MeasureFunction__Group__011782 = new BitSet(new long[]{0x00000000000000C0L});
-        public static final BitSet FOLLOW_rule__MeasureFunction__Group__1_in_rule__MeasureFunction__Group__011785 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_66_in_rule__MeasureFunction__Group__0__Impl11813 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MeasureFunction__Group__1__Impl_in_rule__MeasureFunction__Group__111844 = new BitSet(new long[]{0x0080000000100000L});
-        public static final BitSet FOLLOW_rule__MeasureFunction__Group__2_in_rule__MeasureFunction__Group__111847 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MeasureFunction__ServicesAssignment_1_in_rule__MeasureFunction__Group__1__Impl11874 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MeasureFunction__Group__2__Impl_in_rule__MeasureFunction__Group__211904 = new BitSet(new long[]{0x0080000000100000L});
-        public static final BitSet FOLLOW_rule__MeasureFunction__Group__3_in_rule__MeasureFunction__Group__211907 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MeasureFunction__Group_2__0_in_rule__MeasureFunction__Group__2__Impl11934 = new BitSet(new long[]{0x0000000000100002L});
-        public static final BitSet FOLLOW_rule__MeasureFunction__Group__3__Impl_in_rule__MeasureFunction__Group__311965 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_55_in_rule__MeasureFunction__Group__3__Impl11993 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MeasureFunction__Group_2__0__Impl_in_rule__MeasureFunction__Group_2__012032 = new BitSet(new long[]{0x00000000000000C0L});
-        public static final BitSet FOLLOW_rule__MeasureFunction__Group_2__1_in_rule__MeasureFunction__Group_2__012035 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_20_in_rule__MeasureFunction__Group_2__0__Impl12063 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MeasureFunction__Group_2__1__Impl_in_rule__MeasureFunction__Group_2__112094 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MeasureFunction__ServicesAssignment_2_1_in_rule__MeasureFunction__Group_2__1__Impl12121 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PathNameCS__Group__0__Impl_in_rule__PathNameCS__Group__012155 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-        public static final BitSet FOLLOW_rule__PathNameCS__Group__1_in_rule__PathNameCS__Group__012158 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PathNameCS__PathAssignment_0_in_rule__PathNameCS__Group__0__Impl12185 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PathNameCS__Group__1__Impl_in_rule__PathNameCS__Group__112215 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PathNameCS__Group_1__0_in_rule__PathNameCS__Group__1__Impl12242 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000008L});
-        public static final BitSet FOLLOW_rule__PathNameCS__Group_1__0__Impl_in_rule__PathNameCS__Group_1__012277 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__PathNameCS__Group_1__1_in_rule__PathNameCS__Group_1__012280 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_67_in_rule__PathNameCS__Group_1__0__Impl12308 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PathNameCS__Group_1__1__Impl_in_rule__PathNameCS__Group_1__112339 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PathNameCS__PathAssignment_1_1_in_rule__PathNameCS__Group_1__1__Impl12366 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__URIFirstPathElementCS__Group_1__0__Impl_in_rule__URIFirstPathElementCS__Group_1__012402 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_rule__URIFirstPathElementCS__Group_1__1_in_rule__URIFirstPathElementCS__Group_1__012405 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__URIFirstPathElementCS__Group_1__1__Impl_in_rule__URIFirstPathElementCS__Group_1__112463 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__URIFirstPathElementCS__ElementAssignment_1_1_in_rule__URIFirstPathElementCS__Group_1__1__Impl12490 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group__0__Impl_in_rule__CollectionTypeCS__Group__012524 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group__1_in_rule__CollectionTypeCS__Group__012527 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionTypeCS__NameAssignment_0_in_rule__CollectionTypeCS__Group__0__Impl12554 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group__1__Impl_in_rule__CollectionTypeCS__Group__112584 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group_1__0_in_rule__CollectionTypeCS__Group__1__Impl12611 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group_1__0__Impl_in_rule__CollectionTypeCS__Group_1__012646 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group_1__1_in_rule__CollectionTypeCS__Group_1__012649 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_64_in_rule__CollectionTypeCS__Group_1__0__Impl12677 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group_1__1__Impl_in_rule__CollectionTypeCS__Group_1__112708 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group_1__2_in_rule__CollectionTypeCS__Group_1__112711 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionTypeCS__OwnedTypeAssignment_1_1_in_rule__CollectionTypeCS__Group_1__1__Impl12738 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group_1__2__Impl_in_rule__CollectionTypeCS__Group_1__212768 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_65_in_rule__CollectionTypeCS__Group_1__2__Impl12796 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__Group__0__Impl_in_rule__MultiplicityBoundsCS__Group__012833 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__Group__1_in_rule__MultiplicityBoundsCS__Group__012836 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__LowerBoundAssignment_0_in_rule__MultiplicityBoundsCS__Group__0__Impl12863 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__Group__1__Impl_in_rule__MultiplicityBoundsCS__Group__112893 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__Group_1__0_in_rule__MultiplicityBoundsCS__Group__1__Impl12920 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__Group_1__0__Impl_in_rule__MultiplicityBoundsCS__Group_1__012955 = new BitSet(new long[]{0x0000000000010010L});
-        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__Group_1__1_in_rule__MultiplicityBoundsCS__Group_1__012958 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_68_in_rule__MultiplicityBoundsCS__Group_1__0__Impl12986 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__Group_1__1__Impl_in_rule__MultiplicityBoundsCS__Group_1__113017 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__UpperBoundAssignment_1_1_in_rule__MultiplicityBoundsCS__Group_1__1__Impl13044 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicityCS__Group__0__Impl_in_rule__MultiplicityCS__Group__013078 = new BitSet(new long[]{0x0000800000110010L});
-        public static final BitSet FOLLOW_rule__MultiplicityCS__Group__1_in_rule__MultiplicityCS__Group__013081 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_69_in_rule__MultiplicityCS__Group__0__Impl13109 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicityCS__Group__1__Impl_in_rule__MultiplicityCS__Group__113140 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
-        public static final BitSet FOLLOW_rule__MultiplicityCS__Group__2_in_rule__MultiplicityCS__Group__113143 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicityCS__Alternatives_1_in_rule__MultiplicityCS__Group__1__Impl13170 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicityCS__Group__2__Impl_in_rule__MultiplicityCS__Group__213200 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_70_in_rule__MultiplicityCS__Group__2__Impl13228 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group__0__Impl_in_rule__TupleTypeCS__Group__013265 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group__1_in_rule__TupleTypeCS__Group__013268 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__NameAssignment_0_in_rule__TupleTypeCS__Group__0__Impl13295 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group__1__Impl_in_rule__TupleTypeCS__Group__113325 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1__0_in_rule__TupleTypeCS__Group__1__Impl13352 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1__0__Impl_in_rule__TupleTypeCS__Group_1__013387 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B03L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1__1_in_rule__TupleTypeCS__Group_1__013390 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_64_in_rule__TupleTypeCS__Group_1__0__Impl13418 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1__1__Impl_in_rule__TupleTypeCS__Group_1__113449 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B03L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1__2_in_rule__TupleTypeCS__Group_1__113452 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1_1__0_in_rule__TupleTypeCS__Group_1__1__Impl13479 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1__2__Impl_in_rule__TupleTypeCS__Group_1__213510 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_65_in_rule__TupleTypeCS__Group_1__2__Impl13538 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1_1__0__Impl_in_rule__TupleTypeCS__Group_1_1__013575 = new BitSet(new long[]{0x0400000000000000L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1_1__1_in_rule__TupleTypeCS__Group_1_1__013578 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__OwnedPartsAssignment_1_1_0_in_rule__TupleTypeCS__Group_1_1__0__Impl13605 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1_1__1__Impl_in_rule__TupleTypeCS__Group_1_1__113635 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1_1_1__0_in_rule__TupleTypeCS__Group_1_1__1__Impl13662 = new BitSet(new long[]{0x0400000000000002L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1_1_1__0__Impl_in_rule__TupleTypeCS__Group_1_1_1__013697 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1_1_1__1_in_rule__TupleTypeCS__Group_1_1_1__013700 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_58_in_rule__TupleTypeCS__Group_1_1_1__0__Impl13728 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1_1_1__1__Impl_in_rule__TupleTypeCS__Group_1_1_1__113759 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleTypeCS__OwnedPartsAssignment_1_1_1_1_in_rule__TupleTypeCS__Group_1_1_1__1__Impl13786 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TuplePartCS__Group__0__Impl_in_rule__TuplePartCS__Group__013820 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-        public static final BitSet FOLLOW_rule__TuplePartCS__Group__1_in_rule__TuplePartCS__Group__013823 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TuplePartCS__NameAssignment_0_in_rule__TuplePartCS__Group__0__Impl13850 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TuplePartCS__Group__1__Impl_in_rule__TuplePartCS__Group__113880 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__TuplePartCS__Group__2_in_rule__TuplePartCS__Group__113883 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_71_in_rule__TuplePartCS__Group__1__Impl13911 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TuplePartCS__Group__2__Impl_in_rule__TuplePartCS__Group__213942 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TuplePartCS__OwnedTypeAssignment_2_in_rule__TuplePartCS__Group__2__Impl13969 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group__0__Impl_in_rule__CollectionLiteralExpCS__Group__014005 = new BitSet(new long[]{0x0004000000000000L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group__1_in_rule__CollectionLiteralExpCS__Group__014008 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__OwnedTypeAssignment_0_in_rule__CollectionLiteralExpCS__Group__0__Impl14035 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group__1__Impl_in_rule__CollectionLiteralExpCS__Group__114065 = new BitSet(new long[]{0x00087FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group__2_in_rule__CollectionLiteralExpCS__Group__114068 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_50_in_rule__CollectionLiteralExpCS__Group__1__Impl14096 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group__2__Impl_in_rule__CollectionLiteralExpCS__Group__214127 = new BitSet(new long[]{0x00087FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group__3_in_rule__CollectionLiteralExpCS__Group__214130 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group_2__0_in_rule__CollectionLiteralExpCS__Group__2__Impl14157 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group__3__Impl_in_rule__CollectionLiteralExpCS__Group__314188 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_51_in_rule__CollectionLiteralExpCS__Group__3__Impl14216 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group_2__0__Impl_in_rule__CollectionLiteralExpCS__Group_2__014255 = new BitSet(new long[]{0x0400000000000000L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group_2__1_in_rule__CollectionLiteralExpCS__Group_2__014258 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_0_in_rule__CollectionLiteralExpCS__Group_2__0__Impl14285 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group_2__1__Impl_in_rule__CollectionLiteralExpCS__Group_2__114315 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group_2_1__0_in_rule__CollectionLiteralExpCS__Group_2__1__Impl14342 = new BitSet(new long[]{0x0400000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group_2_1__0__Impl_in_rule__CollectionLiteralExpCS__Group_2_1__014377 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group_2_1__1_in_rule__CollectionLiteralExpCS__Group_2_1__014380 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_58_in_rule__CollectionLiteralExpCS__Group_2_1__0__Impl14408 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group_2_1__1__Impl_in_rule__CollectionLiteralExpCS__Group_2_1__114439 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_1_1_in_rule__CollectionLiteralExpCS__Group_2_1__1__Impl14466 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__Group__0__Impl_in_rule__CollectionLiteralPartCS__Group__014500 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__Group__1_in_rule__CollectionLiteralPartCS__Group__014503 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__ExpressionCSAssignment_0_in_rule__CollectionLiteralPartCS__Group__0__Impl14530 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__Group__1__Impl_in_rule__CollectionLiteralPartCS__Group__114560 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__Group_1__0_in_rule__CollectionLiteralPartCS__Group__1__Impl14587 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__Group_1__0__Impl_in_rule__CollectionLiteralPartCS__Group_1__014622 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__Group_1__1_in_rule__CollectionLiteralPartCS__Group_1__014625 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_68_in_rule__CollectionLiteralPartCS__Group_1__0__Impl14653 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__Group_1__1__Impl_in_rule__CollectionLiteralPartCS__Group_1__114684 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__LastExpressionCSAssignment_1_1_in_rule__CollectionLiteralPartCS__Group_1__1__Impl14711 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstructorPartCS__Group__0__Impl_in_rule__ConstructorPartCS__Group__014745 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_rule__ConstructorPartCS__Group__1_in_rule__ConstructorPartCS__Group__014748 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstructorPartCS__PropertyAssignment_0_in_rule__ConstructorPartCS__Group__0__Impl14775 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstructorPartCS__Group__1__Impl_in_rule__ConstructorPartCS__Group__114805 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__ConstructorPartCS__Group__2_in_rule__ConstructorPartCS__Group__114808 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__ConstructorPartCS__Group__1__Impl14836 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstructorPartCS__Group__2__Impl_in_rule__ConstructorPartCS__Group__214867 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstructorPartCS__InitExpressionAssignment_2_in_rule__ConstructorPartCS__Group__2__Impl14894 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__0__Impl_in_rule__TupleLiteralExpCS__Group__014930 = new BitSet(new long[]{0x0004000000000000L});
-        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__1_in_rule__TupleLiteralExpCS__Group__014933 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_33_in_rule__TupleLiteralExpCS__Group__0__Impl14961 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__1__Impl_in_rule__TupleLiteralExpCS__Group__114992 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__2_in_rule__TupleLiteralExpCS__Group__114995 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_50_in_rule__TupleLiteralExpCS__Group__1__Impl15023 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__2__Impl_in_rule__TupleLiteralExpCS__Group__215054 = new BitSet(new long[]{0x0408000000000000L});
-        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__3_in_rule__TupleLiteralExpCS__Group__215057 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__OwnedPartsAssignment_2_in_rule__TupleLiteralExpCS__Group__2__Impl15084 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__3__Impl_in_rule__TupleLiteralExpCS__Group__315114 = new BitSet(new long[]{0x0408000000000000L});
-        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__4_in_rule__TupleLiteralExpCS__Group__315117 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group_3__0_in_rule__TupleLiteralExpCS__Group__3__Impl15144 = new BitSet(new long[]{0x0400000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__4__Impl_in_rule__TupleLiteralExpCS__Group__415175 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_51_in_rule__TupleLiteralExpCS__Group__4__Impl15203 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group_3__0__Impl_in_rule__TupleLiteralExpCS__Group_3__015244 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group_3__1_in_rule__TupleLiteralExpCS__Group_3__015247 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_58_in_rule__TupleLiteralExpCS__Group_3__0__Impl15275 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group_3__1__Impl_in_rule__TupleLiteralExpCS__Group_3__115306 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__OwnedPartsAssignment_3_1_in_rule__TupleLiteralExpCS__Group_3__1__Impl15333 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group__0__Impl_in_rule__TupleLiteralPartCS__Group__015367 = new BitSet(new long[]{0x0000000002000000L,0x0000000000000080L});
-        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group__1_in_rule__TupleLiteralPartCS__Group__015370 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__NameAssignment_0_in_rule__TupleLiteralPartCS__Group__0__Impl15397 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group__1__Impl_in_rule__TupleLiteralPartCS__Group__115427 = new BitSet(new long[]{0x0000000002000000L,0x0000000000000080L});
-        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group__2_in_rule__TupleLiteralPartCS__Group__115430 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group_1__0_in_rule__TupleLiteralPartCS__Group__1__Impl15457 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group__2__Impl_in_rule__TupleLiteralPartCS__Group__215488 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group__3_in_rule__TupleLiteralPartCS__Group__215491 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__TupleLiteralPartCS__Group__2__Impl15519 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group__3__Impl_in_rule__TupleLiteralPartCS__Group__315550 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__InitExpressionAssignment_3_in_rule__TupleLiteralPartCS__Group__3__Impl15577 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group_1__0__Impl_in_rule__TupleLiteralPartCS__Group_1__015615 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group_1__1_in_rule__TupleLiteralPartCS__Group_1__015618 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_71_in_rule__TupleLiteralPartCS__Group_1__0__Impl15646 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group_1__1__Impl_in_rule__TupleLiteralPartCS__Group_1__115677 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__OwnedTypeAssignment_1_1_in_rule__TupleLiteralPartCS__Group_1__1__Impl15704 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__UnlimitedNaturalLiteralExpCS__Group__0__Impl_in_rule__UnlimitedNaturalLiteralExpCS__Group__015738 = new BitSet(new long[]{0x0000000000010000L});
-        public static final BitSet FOLLOW_rule__UnlimitedNaturalLiteralExpCS__Group__1_in_rule__UnlimitedNaturalLiteralExpCS__Group__015741 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__UnlimitedNaturalLiteralExpCS__Group__1__Impl_in_rule__UnlimitedNaturalLiteralExpCS__Group__115799 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_rule__UnlimitedNaturalLiteralExpCS__Group__1__Impl15827 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__InvalidLiteralExpCS__Group__0__Impl_in_rule__InvalidLiteralExpCS__Group__015862 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-        public static final BitSet FOLLOW_rule__InvalidLiteralExpCS__Group__1_in_rule__InvalidLiteralExpCS__Group__015865 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__InvalidLiteralExpCS__Group__1__Impl_in_rule__InvalidLiteralExpCS__Group__115923 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_72_in_rule__InvalidLiteralExpCS__Group__1__Impl15951 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NullLiteralExpCS__Group__0__Impl_in_rule__NullLiteralExpCS__Group__015986 = new BitSet(new long[]{0x0000000000010030L,0x00000000000C0300L});
-        public static final BitSet FOLLOW_rule__NullLiteralExpCS__Group__1_in_rule__NullLiteralExpCS__Group__015989 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NullLiteralExpCS__Group__1__Impl_in_rule__NullLiteralExpCS__Group__116047 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_73_in_rule__NullLiteralExpCS__Group__1__Impl16075 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TypeLiteralWithMultiplicityCS__Group__0__Impl_in_rule__TypeLiteralWithMultiplicityCS__Group__016110 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
-        public static final BitSet FOLLOW_rule__TypeLiteralWithMultiplicityCS__Group__1_in_rule__TypeLiteralWithMultiplicityCS__Group__016113 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleTypeLiteralCS_in_rule__TypeLiteralWithMultiplicityCS__Group__0__Impl16140 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TypeLiteralWithMultiplicityCS__Group__1__Impl_in_rule__TypeLiteralWithMultiplicityCS__Group__116169 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TypeLiteralWithMultiplicityCS__MultiplicityAssignment_1_in_rule__TypeLiteralWithMultiplicityCS__Group__1__Impl16196 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TypeExpCS__Group__0__Impl_in_rule__TypeExpCS__Group__016231 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
-        public static final BitSet FOLLOW_rule__TypeExpCS__Group__1_in_rule__TypeExpCS__Group__016234 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TypeExpCS__Alternatives_0_in_rule__TypeExpCS__Group__0__Impl16261 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TypeExpCS__Group__1__Impl_in_rule__TypeExpCS__Group__116291 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__TypeExpCS__MultiplicityAssignment_1_in_rule__TypeExpCS__Group__1__Impl16318 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0__0__Impl_in_rule__ExpCS__Group_0__016353 = new BitSet(new long[]{0x00000001FFFB0000L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0__1_in_rule__ExpCS__Group_0__016356 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulePrefixedExpCS_in_rule__ExpCS__Group_0__0__Impl16383 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0__1__Impl_in_rule__ExpCS__Group_0__116412 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1__0_in_rule__ExpCS__Group_0__1__Impl16439 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1__0__Impl_in_rule__ExpCS__Group_0_1__016474 = new BitSet(new long[]{0x00000001FFFB0000L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1__1_in_rule__ExpCS__Group_0_1__016477 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1__1__Impl_in_rule__ExpCS__Group_0_1__116535 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1__2_in_rule__ExpCS__Group_0_1__116538 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__OwnedOperatorAssignment_0_1_1_in_rule__ExpCS__Group_0_1__1__Impl16565 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1__2__Impl_in_rule__ExpCS__Group_0_1__216595 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Alternatives_0_1_2_in_rule__ExpCS__Group_0_1__2__Impl16622 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0__0__Impl_in_rule__ExpCS__Group_0_1_2_0__016658 = new BitSet(new long[]{0x00000001FFFB0000L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0__1_in_rule__ExpCS__Group_0_1_2_0__016661 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_0_in_rule__ExpCS__Group_0_1_2_0__0__Impl16688 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0__1__Impl_in_rule__ExpCS__Group_0_1_2_0__116718 = new BitSet(new long[]{0x00000001FFFB0000L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0__2_in_rule__ExpCS__Group_0_1_2_0__116721 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0_1__0_in_rule__ExpCS__Group_0_1_2_0__1__Impl16748 = new BitSet(new long[]{0x00000001FFFB0002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0__2__Impl_in_rule__ExpCS__Group_0_1_2_0__216779 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0_2__0_in_rule__ExpCS__Group_0_1_2_0__2__Impl16806 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0_1__0__Impl_in_rule__ExpCS__Group_0_1_2_0_1__016843 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0_1__1_in_rule__ExpCS__Group_0_1_2_0_1__016846 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_1_0_in_rule__ExpCS__Group_0_1_2_0_1__0__Impl16873 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0_1__1__Impl_in_rule__ExpCS__Group_0_1_2_0_1__116903 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_1_1_in_rule__ExpCS__Group_0_1_2_0_1__1__Impl16930 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0_2__0__Impl_in_rule__ExpCS__Group_0_1_2_0_2__016964 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0_2__1_in_rule__ExpCS__Group_0_1_2_0_2__016967 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_2_0_in_rule__ExpCS__Group_0_1_2_0_2__0__Impl16994 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0_2__1__Impl_in_rule__ExpCS__Group_0_1_2_0_2__117024 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_2_1_in_rule__ExpCS__Group_0_1_2_0_2__1__Impl17051 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_1__0__Impl_in_rule__ExpCS__Group_1__017085 = new BitSet(new long[]{0x0000000000060000L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_1__1_in_rule__ExpCS__Group_1__017088 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_1__1__Impl_in_rule__ExpCS__Group_1__117146 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_1__2_in_rule__ExpCS__Group_1__117149 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__OwnedOperatorAssignment_1_1_in_rule__ExpCS__Group_1__1__Impl17178 = new BitSet(new long[]{0x0000000000060002L});
-        public static final BitSet FOLLOW_rule__ExpCS__OwnedOperatorAssignment_1_1_in_rule__ExpCS__Group_1__1__Impl17190 = new BitSet(new long[]{0x0000000000060002L});
-        public static final BitSet FOLLOW_rule__ExpCS__Group_1__2__Impl_in_rule__ExpCS__Group_1__217223 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ExpCS__OwnedExpressionAssignment_1_2_in_rule__ExpCS__Group_1__2__Impl17250 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrefixedExpCS__Group_0__0__Impl_in_rule__PrefixedExpCS__Group_0__017286 = new BitSet(new long[]{0x0000000000060000L});
-        public static final BitSet FOLLOW_rule__PrefixedExpCS__Group_0__1_in_rule__PrefixedExpCS__Group_0__017289 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrefixedExpCS__Group_0__1__Impl_in_rule__PrefixedExpCS__Group_0__117347 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__PrefixedExpCS__Group_0__2_in_rule__PrefixedExpCS__Group_0__117350 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrefixedExpCS__OwnedOperatorAssignment_0_1_in_rule__PrefixedExpCS__Group_0__1__Impl17379 = new BitSet(new long[]{0x0000000000060002L});
-        public static final BitSet FOLLOW_rule__PrefixedExpCS__OwnedOperatorAssignment_0_1_in_rule__PrefixedExpCS__Group_0__1__Impl17391 = new BitSet(new long[]{0x0000000000060002L});
-        public static final BitSet FOLLOW_rule__PrefixedExpCS__Group_0__2__Impl_in_rule__PrefixedExpCS__Group_0__217424 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrefixedExpCS__OwnedExpressionAssignment_0_2_in_rule__PrefixedExpCS__Group_0__2__Impl17451 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7__0__Impl_in_rule__PrimaryExpCS__Group_7__017487 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7__1_in_rule__PrimaryExpCS__Group_7__017490 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7__1__Impl_in_rule__PrimaryExpCS__Group_7__117548 = new BitSet(new long[]{0x0004000000000000L,0x0000000000100021L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7__2_in_rule__PrimaryExpCS__Group_7__117551 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__PathNameAssignment_7_1_in_rule__PrimaryExpCS__Group_7__1__Impl17578 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7__2__Impl_in_rule__PrimaryExpCS__Group_7__217608 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Alternatives_7_2_in_rule__PrimaryExpCS__Group_7__2__Impl17635 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0__017671 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__1_in_rule__PrimaryExpCS__Group_7_2_0__017674 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0__117732 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__2_in_rule__PrimaryExpCS__Group_7_2_0__117735 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_69_in_rule__PrimaryExpCS__Group_7_2_0__1__Impl17763 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__2__Impl_in_rule__PrimaryExpCS__Group_7_2_0__217794 = new BitSet(new long[]{0x0400000000000000L,0x0000000000000040L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__3_in_rule__PrimaryExpCS__Group_7_2_0__217797 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_2_in_rule__PrimaryExpCS__Group_7_2_0__2__Impl17824 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__3__Impl_in_rule__PrimaryExpCS__Group_7_2_0__317854 = new BitSet(new long[]{0x0400000000000000L,0x0000000000000040L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__4_in_rule__PrimaryExpCS__Group_7_2_0__317857 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_3__0_in_rule__PrimaryExpCS__Group_7_2_0__3__Impl17884 = new BitSet(new long[]{0x0400000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__4__Impl_in_rule__PrimaryExpCS__Group_7_2_0__417915 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100020L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__5_in_rule__PrimaryExpCS__Group_7_2_0__417918 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_70_in_rule__PrimaryExpCS__Group_7_2_0__4__Impl17946 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__5__Impl_in_rule__PrimaryExpCS__Group_7_2_0__517977 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100020L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__6_in_rule__PrimaryExpCS__Group_7_2_0__517980 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__0_in_rule__PrimaryExpCS__Group_7_2_0__5__Impl18007 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__6__Impl_in_rule__PrimaryExpCS__Group_7_2_0__618038 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_6__0_in_rule__PrimaryExpCS__Group_7_2_0__6__Impl18065 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_3__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0_3__018110 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_3__1_in_rule__PrimaryExpCS__Group_7_2_0_3__018113 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_58_in_rule__PrimaryExpCS__Group_7_2_0_3__0__Impl18141 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_3__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0_3__118172 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_3_1_in_rule__PrimaryExpCS__Group_7_2_0_3__1__Impl18199 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5__018233 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__1_in_rule__PrimaryExpCS__Group_7_2_0_5__018236 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_69_in_rule__PrimaryExpCS__Group_7_2_0_5__0__Impl18264 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5__118295 = new BitSet(new long[]{0x0400000000000000L,0x0000000000000040L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__2_in_rule__PrimaryExpCS__Group_7_2_0_5__118298 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_1_in_rule__PrimaryExpCS__Group_7_2_0_5__1__Impl18325 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__2__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5__218355 = new BitSet(new long[]{0x0400000000000000L,0x0000000000000040L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__3_in_rule__PrimaryExpCS__Group_7_2_0_5__218358 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5_2__0_in_rule__PrimaryExpCS__Group_7_2_0_5__2__Impl18385 = new BitSet(new long[]{0x0400000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__3__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5__318416 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_70_in_rule__PrimaryExpCS__Group_7_2_0_5__3__Impl18444 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5_2__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5_2__018483 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5_2__1_in_rule__PrimaryExpCS__Group_7_2_0_5_2__018486 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_58_in_rule__PrimaryExpCS__Group_7_2_0_5_2__0__Impl18514 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5_2__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5_2__118545 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_2_1_in_rule__PrimaryExpCS__Group_7_2_0_5_2__1__Impl18572 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_6__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0_6__018606 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_6__1_in_rule__PrimaryExpCS__Group_7_2_0_6__018609 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__AtPreAssignment_7_2_0_6_0_in_rule__PrimaryExpCS__Group_7_2_0_6__0__Impl18636 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_6__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0_6__118666 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_74_in_rule__PrimaryExpCS__Group_7_2_0_6__1__Impl18694 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1__0__Impl_in_rule__PrimaryExpCS__Group_7_2_1__018729 = new BitSet(new long[]{0x0004000000000000L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1__1_in_rule__PrimaryExpCS__Group_7_2_1__018732 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1__1__Impl_in_rule__PrimaryExpCS__Group_7_2_1__118790 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1__2_in_rule__PrimaryExpCS__Group_7_2_1__118793 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_50_in_rule__PrimaryExpCS__Group_7_2_1__1__Impl18821 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1__2__Impl_in_rule__PrimaryExpCS__Group_7_2_1__218852 = new BitSet(new long[]{0x0008000000000000L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1__3_in_rule__PrimaryExpCS__Group_7_2_1__218855 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Alternatives_7_2_1_2_in_rule__PrimaryExpCS__Group_7_2_1__2__Impl18882 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1__3__Impl_in_rule__PrimaryExpCS__Group_7_2_1__318912 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_51_in_rule__PrimaryExpCS__Group_7_2_1__3__Impl18940 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0__0__Impl_in_rule__PrimaryExpCS__Group_7_2_1_2_0__018979 = new BitSet(new long[]{0x0400000000000000L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0__1_in_rule__PrimaryExpCS__Group_7_2_1_2_0__018982 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_0_in_rule__PrimaryExpCS__Group_7_2_1_2_0__0__Impl19009 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0__1__Impl_in_rule__PrimaryExpCS__Group_7_2_1_2_0__119039 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0_1__0_in_rule__PrimaryExpCS__Group_7_2_1_2_0__1__Impl19066 = new BitSet(new long[]{0x0400000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0_1__0__Impl_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__019101 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0_1__1_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__019104 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_58_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__0__Impl19132 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0_1__1__Impl_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__119163 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_1_1_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__1__Impl19190 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2__019224 = new BitSet(new long[]{0x0004000000000000L,0x0000000000100021L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2__1_in_rule__PrimaryExpCS__Group_7_2_2__019227 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_0__0_in_rule__PrimaryExpCS__Group_7_2_2__0__Impl19254 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2__119285 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__0_in_rule__PrimaryExpCS__Group_7_2_2__1__Impl19312 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_0__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_0__019347 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_0__1_in_rule__PrimaryExpCS__Group_7_2_2_0__019350 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__AtPreAssignment_7_2_2_0_0_in_rule__PrimaryExpCS__Group_7_2_2_0__0__Impl19377 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_0__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_0__119407 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_74_in_rule__PrimaryExpCS__Group_7_2_2_0__1__Impl19435 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1__019470 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__1_in_rule__PrimaryExpCS__Group_7_2_2_1__019473 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1__119531 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B03L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__2_in_rule__PrimaryExpCS__Group_7_2_2_1__119534 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_64_in_rule__PrimaryExpCS__Group_7_2_2_1__1__Impl19562 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__2__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1__219593 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B03L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__3_in_rule__PrimaryExpCS__Group_7_2_2_1__219596 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__0_in_rule__PrimaryExpCS__Group_7_2_2_1__2__Impl19623 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__3__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1__319654 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_65_in_rule__PrimaryExpCS__Group_7_2_2_1__3__Impl19682 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2__019721 = new BitSet(new long[]{0x0480000000000000L,0x0000000000200000L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__1_in_rule__PrimaryExpCS__Group_7_2_2_1_2__019724 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_0_in_rule__PrimaryExpCS__Group_7_2_2_1_2__0__Impl19751 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2__119781 = new BitSet(new long[]{0x0480000000000000L,0x0000000000200000L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__2_in_rule__PrimaryExpCS__Group_7_2_2_1_2__119784 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_1_in_rule__PrimaryExpCS__Group_7_2_2_1_2__1__Impl19811 = new BitSet(new long[]{0x0400000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__2__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2__219842 = new BitSet(new long[]{0x0480000000000000L,0x0000000000200000L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__3_in_rule__PrimaryExpCS__Group_7_2_2_1_2__219845 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_2__0_in_rule__PrimaryExpCS__Group_7_2_2_1_2__2__Impl19872 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__3__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2__319903 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_3__0_in_rule__PrimaryExpCS__Group_7_2_2_1_2__3__Impl19930 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_2__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__019969 = new BitSet(new long[]{0x0400000000000000L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_2__1_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__019972 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_0_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__0__Impl19999 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_2__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__120029 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_1_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__1__Impl20056 = new BitSet(new long[]{0x0400000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_3__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__020091 = new BitSet(new long[]{0x0400000000000000L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_3__1_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__020094 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_0_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__0__Impl20121 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_3__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__120151 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_1_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__1__Impl20178 = new BitSet(new long[]{0x0400000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group__0__Impl_in_rule__NavigatingArgCS__Group__020213 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group__1_in_rule__NavigatingArgCS__Group__020216 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingArgCS__NameAssignment_0_in_rule__NavigatingArgCS__Group__0__Impl20243 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group__1__Impl_in_rule__NavigatingArgCS__Group__120273 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1__0_in_rule__NavigatingArgCS__Group__1__Impl20300 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1__0__Impl_in_rule__NavigatingArgCS__Group_1__020335 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1__1_in_rule__NavigatingArgCS__Group_1__020338 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_71_in_rule__NavigatingArgCS__Group_1__0__Impl20366 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1__1__Impl_in_rule__NavigatingArgCS__Group_1__120397 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1__2_in_rule__NavigatingArgCS__Group_1__120400 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingArgCS__OwnedTypeAssignment_1_1_in_rule__NavigatingArgCS__Group_1__1__Impl20427 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1__2__Impl_in_rule__NavigatingArgCS__Group_1__220457 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1_2__0_in_rule__NavigatingArgCS__Group_1__2__Impl20484 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1_2__0__Impl_in_rule__NavigatingArgCS__Group_1_2__020521 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1_2__1_in_rule__NavigatingArgCS__Group_1_2__020524 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__NavigatingArgCS__Group_1_2__0__Impl20552 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1_2__1__Impl_in_rule__NavigatingArgCS__Group_1_2__120583 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingArgCS__InitAssignment_1_2_1_in_rule__NavigatingArgCS__Group_1_2__1__Impl20610 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group__0__Impl_in_rule__NavigatingBarArgCS__Group__020644 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group__1_in_rule__NavigatingBarArgCS__Group__020647 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__PrefixAssignment_0_in_rule__NavigatingBarArgCS__Group__0__Impl20674 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group__1__Impl_in_rule__NavigatingBarArgCS__Group__120704 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group__2_in_rule__NavigatingBarArgCS__Group__120707 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__NameAssignment_1_in_rule__NavigatingBarArgCS__Group__1__Impl20734 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group__2__Impl_in_rule__NavigatingBarArgCS__Group__220764 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2__0_in_rule__NavigatingBarArgCS__Group__2__Impl20791 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2__0__Impl_in_rule__NavigatingBarArgCS__Group_2__020828 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2__1_in_rule__NavigatingBarArgCS__Group_2__020831 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_71_in_rule__NavigatingBarArgCS__Group_2__0__Impl20859 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2__1__Impl_in_rule__NavigatingBarArgCS__Group_2__120890 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2__2_in_rule__NavigatingBarArgCS__Group_2__120893 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__OwnedTypeAssignment_2_1_in_rule__NavigatingBarArgCS__Group_2__1__Impl20920 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2__2__Impl_in_rule__NavigatingBarArgCS__Group_2__220950 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2_2__0_in_rule__NavigatingBarArgCS__Group_2__2__Impl20977 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2_2__0__Impl_in_rule__NavigatingBarArgCS__Group_2_2__021014 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2_2__1_in_rule__NavigatingBarArgCS__Group_2_2__021017 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__NavigatingBarArgCS__Group_2_2__0__Impl21045 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2_2__1__Impl_in_rule__NavigatingBarArgCS__Group_2_2__121076 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__InitAssignment_2_2_1_in_rule__NavigatingBarArgCS__Group_2_2__1__Impl21103 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group__0__Impl_in_rule__NavigatingCommaArgCS__Group__021137 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group__1_in_rule__NavigatingCommaArgCS__Group__021140 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__PrefixAssignment_0_in_rule__NavigatingCommaArgCS__Group__0__Impl21167 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group__1__Impl_in_rule__NavigatingCommaArgCS__Group__121197 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group__2_in_rule__NavigatingCommaArgCS__Group__121200 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__NameAssignment_1_in_rule__NavigatingCommaArgCS__Group__1__Impl21227 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group__2__Impl_in_rule__NavigatingCommaArgCS__Group__221257 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2__0_in_rule__NavigatingCommaArgCS__Group__2__Impl21284 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2__0__Impl_in_rule__NavigatingCommaArgCS__Group_2__021321 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2__1_in_rule__NavigatingCommaArgCS__Group_2__021324 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_71_in_rule__NavigatingCommaArgCS__Group_2__0__Impl21352 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2__1__Impl_in_rule__NavigatingCommaArgCS__Group_2__121383 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2__2_in_rule__NavigatingCommaArgCS__Group_2__121386 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__OwnedTypeAssignment_2_1_in_rule__NavigatingCommaArgCS__Group_2__1__Impl21413 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2__2__Impl_in_rule__NavigatingCommaArgCS__Group_2__221443 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2_2__0_in_rule__NavigatingCommaArgCS__Group_2__2__Impl21470 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2_2__0__Impl_in_rule__NavigatingCommaArgCS__Group_2_2__021507 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2_2__1_in_rule__NavigatingCommaArgCS__Group_2_2__021510 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__NavigatingCommaArgCS__Group_2_2__0__Impl21538 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2_2__1__Impl_in_rule__NavigatingCommaArgCS__Group_2_2__121569 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__InitAssignment_2_2_1_in_rule__NavigatingCommaArgCS__Group_2_2__1__Impl21596 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group__0__Impl_in_rule__NavigatingSemiArgCS__Group__021630 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group__1_in_rule__NavigatingSemiArgCS__Group__021633 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__PrefixAssignment_0_in_rule__NavigatingSemiArgCS__Group__0__Impl21660 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group__1__Impl_in_rule__NavigatingSemiArgCS__Group__121690 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group__2_in_rule__NavigatingSemiArgCS__Group__121693 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__NameAssignment_1_in_rule__NavigatingSemiArgCS__Group__1__Impl21720 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group__2__Impl_in_rule__NavigatingSemiArgCS__Group__221750 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2__0_in_rule__NavigatingSemiArgCS__Group__2__Impl21777 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2__0__Impl_in_rule__NavigatingSemiArgCS__Group_2__021814 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2__1_in_rule__NavigatingSemiArgCS__Group_2__021817 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_71_in_rule__NavigatingSemiArgCS__Group_2__0__Impl21845 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2__1__Impl_in_rule__NavigatingSemiArgCS__Group_2__121876 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2__2_in_rule__NavigatingSemiArgCS__Group_2__121879 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__OwnedTypeAssignment_2_1_in_rule__NavigatingSemiArgCS__Group_2__1__Impl21906 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2__2__Impl_in_rule__NavigatingSemiArgCS__Group_2__221936 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2_2__0_in_rule__NavigatingSemiArgCS__Group_2__2__Impl21963 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2_2__0__Impl_in_rule__NavigatingSemiArgCS__Group_2_2__022000 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2_2__1_in_rule__NavigatingSemiArgCS__Group_2_2__022003 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__NavigatingSemiArgCS__Group_2_2__0__Impl22031 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2_2__1__Impl_in_rule__NavigatingSemiArgCS__Group_2_2__122062 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__InitAssignment_2_2_1_in_rule__NavigatingSemiArgCS__Group_2_2__1__Impl22089 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__IfExpCS__Group__0__Impl_in_rule__IfExpCS__Group__022123 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__IfExpCS__Group__1_in_rule__IfExpCS__Group__022126 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_75_in_rule__IfExpCS__Group__0__Impl22154 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__IfExpCS__Group__1__Impl_in_rule__IfExpCS__Group__122185 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
-        public static final BitSet FOLLOW_rule__IfExpCS__Group__2_in_rule__IfExpCS__Group__122188 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__IfExpCS__ConditionAssignment_1_in_rule__IfExpCS__Group__1__Impl22215 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__IfExpCS__Group__2__Impl_in_rule__IfExpCS__Group__222245 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__IfExpCS__Group__3_in_rule__IfExpCS__Group__222248 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_76_in_rule__IfExpCS__Group__2__Impl22276 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__IfExpCS__Group__3__Impl_in_rule__IfExpCS__Group__322307 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
-        public static final BitSet FOLLOW_rule__IfExpCS__Group__4_in_rule__IfExpCS__Group__322310 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__IfExpCS__ThenExpressionAssignment_3_in_rule__IfExpCS__Group__3__Impl22337 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__IfExpCS__Group__4__Impl_in_rule__IfExpCS__Group__422367 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__IfExpCS__Group__5_in_rule__IfExpCS__Group__422370 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_77_in_rule__IfExpCS__Group__4__Impl22398 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__IfExpCS__Group__5__Impl_in_rule__IfExpCS__Group__522429 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
-        public static final BitSet FOLLOW_rule__IfExpCS__Group__6_in_rule__IfExpCS__Group__522432 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__IfExpCS__ElseExpressionAssignment_5_in_rule__IfExpCS__Group__5__Impl22459 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__IfExpCS__Group__6__Impl_in_rule__IfExpCS__Group__622489 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_78_in_rule__IfExpCS__Group__6__Impl22517 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetExpCS__Group__0__Impl_in_rule__LetExpCS__Group__022562 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__LetExpCS__Group__1_in_rule__LetExpCS__Group__022565 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_79_in_rule__LetExpCS__Group__0__Impl22593 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetExpCS__Group__1__Impl_in_rule__LetExpCS__Group__122624 = new BitSet(new long[]{0x0400000000000000L,0x0000000000010000L});
-        public static final BitSet FOLLOW_rule__LetExpCS__Group__2_in_rule__LetExpCS__Group__122627 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Specification__Group__5__Impl_in_rule__Specification__Group__56810 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_rule__Specification__Group__5__Impl6838 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Service__Group__0__Impl_in_rule__Service__Group__06881 = new BitSet(new long[]{0x00000000000000C0L});
+        public static final BitSet FOLLOW_rule__Service__Group__1_in_rule__Service__Group__06884 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__Service__Group__0__Impl6912 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Service__Group__1__Impl_in_rule__Service__Group__16943 = new BitSet(new long[]{0x0004000000000000L});
+        public static final BitSet FOLLOW_rule__Service__Group__2_in_rule__Service__Group__16946 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Service__NameAssignment_1_in_rule__Service__Group__1__Impl6973 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Service__Group__2__Impl_in_rule__Service__Group__27003 = new BitSet(new long[]{0x0028000000000000L});
+        public static final BitSet FOLLOW_rule__Service__Group__3_in_rule__Service__Group__27006 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_50_in_rule__Service__Group__2__Impl7034 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Service__Group__3__Impl_in_rule__Service__Group__37065 = new BitSet(new long[]{0x0028000000000000L});
+        public static final BitSet FOLLOW_rule__Service__Group__4_in_rule__Service__Group__37068 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Service__DimensionsAssignment_3_in_rule__Service__Group__3__Impl7095 = new BitSet(new long[]{0x0020000000000002L});
+        public static final BitSet FOLLOW_rule__Service__Group__4__Impl_in_rule__Service__Group__47126 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_rule__Service__Group__4__Impl7154 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__0__Impl_in_rule__QosDimension__Group__07195 = new BitSet(new long[]{0x00000000000000C0L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__1_in_rule__QosDimension__Group__07198 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__QosDimension__Group__0__Impl7226 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__1__Impl_in_rule__QosDimension__Group__17257 = new BitSet(new long[]{0x0004000000000000L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__2_in_rule__QosDimension__Group__17260 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__NameAssignment_1_in_rule__QosDimension__Group__1__Impl7287 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__2__Impl_in_rule__QosDimension__Group__27317 = new BitSet(new long[]{0x0040000000000000L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__3_in_rule__QosDimension__Group__27320 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_50_in_rule__QosDimension__Group__2__Impl7348 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__3__Impl_in_rule__QosDimension__Group__37379 = new BitSet(new long[]{0x00000000000000C0L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__4_in_rule__QosDimension__Group__37382 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_54_in_rule__QosDimension__Group__3__Impl7410 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__4__Impl_in_rule__QosDimension__Group__47441 = new BitSet(new long[]{0x0080000000000000L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__5_in_rule__QosDimension__Group__47444 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__ValueAssignment_4_in_rule__QosDimension__Group__4__Impl7471 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__5__Impl_in_rule__QosDimension__Group__57501 = new BitSet(new long[]{0x0100000000000000L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__6_in_rule__QosDimension__Group__57504 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_55_in_rule__QosDimension__Group__5__Impl7532 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__6__Impl_in_rule__QosDimension__Group__67563 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__7_in_rule__QosDimension__Group__67566 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_56_in_rule__QosDimension__Group__6__Impl7594 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__7__Impl_in_rule__QosDimension__Group__77625 = new BitSet(new long[]{0x0480000000000000L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__8_in_rule__QosDimension__Group__77628 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__TupleDescriptorsAssignment_7_in_rule__QosDimension__Group__7__Impl7655 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__8__Impl_in_rule__QosDimension__Group__87685 = new BitSet(new long[]{0x0480000000000000L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__9_in_rule__QosDimension__Group__87688 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group_8__0_in_rule__QosDimension__Group__8__Impl7715 = new BitSet(new long[]{0x0400000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__9__Impl_in_rule__QosDimension__Group__97746 = new BitSet(new long[]{0x0200000000000000L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__10_in_rule__QosDimension__Group__97749 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_55_in_rule__QosDimension__Group__9__Impl7777 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__10__Impl_in_rule__QosDimension__Group__107808 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__11_in_rule__QosDimension__Group__107811 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_57_in_rule__QosDimension__Group__10__Impl7839 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__11__Impl_in_rule__QosDimension__Group__117870 = new BitSet(new long[]{0x0080000000000000L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__12_in_rule__QosDimension__Group__117873 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__MetricAssignment_11_in_rule__QosDimension__Group__11__Impl7900 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__12__Impl_in_rule__QosDimension__Group__127930 = new BitSet(new long[]{0x0008000000000000L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__13_in_rule__QosDimension__Group__127933 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_55_in_rule__QosDimension__Group__12__Impl7961 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group__13__Impl_in_rule__QosDimension__Group__137992 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_rule__QosDimension__Group__13__Impl8020 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group_8__0__Impl_in_rule__QosDimension__Group_8__08079 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group_8__1_in_rule__QosDimension__Group_8__08082 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_58_in_rule__QosDimension__Group_8__0__Impl8110 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__Group_8__1__Impl_in_rule__QosDimension__Group_8__18141 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__TupleDescriptorsAssignment_8_1_in_rule__QosDimension__Group_8__1__Impl8168 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Constraint__Group__0__Impl_in_rule__Constraint__Group__08202 = new BitSet(new long[]{0x9003000000000000L});
+        public static final BitSet FOLLOW_rule__Constraint__Group__1_in_rule__Constraint__Group__08205 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_59_in_rule__Constraint__Group__0__Impl8233 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Constraint__Group__1__Impl_in_rule__Constraint__Group__18264 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Constraint__Alternatives_1_in_rule__Constraint__Group__1__Impl8291 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__0__Impl_in_rule__LocationConstraint__Group__08325 = new BitSet(new long[]{0x00040000000000C0L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__1_in_rule__LocationConstraint__Group__08328 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__TypeAssignment_0_in_rule__LocationConstraint__Group__0__Impl8355 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__1__Impl_in_rule__LocationConstraint__Group__18385 = new BitSet(new long[]{0x00040000000000C0L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__2_in_rule__LocationConstraint__Group__18388 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__NameAssignment_1_in_rule__LocationConstraint__Group__1__Impl8415 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__2__Impl_in_rule__LocationConstraint__Group__28446 = new BitSet(new long[]{0x0100000000000000L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__3_in_rule__LocationConstraint__Group__28449 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_50_in_rule__LocationConstraint__Group__2__Impl8477 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__3__Impl_in_rule__LocationConstraint__Group__38508 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__4_in_rule__LocationConstraint__Group__38511 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_56_in_rule__LocationConstraint__Group__3__Impl8539 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__4__Impl_in_rule__LocationConstraint__Group__48570 = new BitSet(new long[]{0x0480000000000000L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__5_in_rule__LocationConstraint__Group__48573 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__TupleDescriptorsAssignment_4_in_rule__LocationConstraint__Group__4__Impl8600 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__5__Impl_in_rule__LocationConstraint__Group__58630 = new BitSet(new long[]{0x0480000000000000L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__6_in_rule__LocationConstraint__Group__58633 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group_5__0_in_rule__LocationConstraint__Group__5__Impl8660 = new BitSet(new long[]{0x0400000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__6__Impl_in_rule__LocationConstraint__Group__68691 = new BitSet(new long[]{0x0200000000000000L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__7_in_rule__LocationConstraint__Group__68694 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_55_in_rule__LocationConstraint__Group__6__Impl8722 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__7__Impl_in_rule__LocationConstraint__Group__78753 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__8_in_rule__LocationConstraint__Group__78756 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_57_in_rule__LocationConstraint__Group__7__Impl8784 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__8__Impl_in_rule__LocationConstraint__Group__88815 = new BitSet(new long[]{0x0080000000000000L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__9_in_rule__LocationConstraint__Group__88818 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__ExpressionAssignment_8_in_rule__LocationConstraint__Group__8__Impl8845 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__9__Impl_in_rule__LocationConstraint__Group__98875 = new BitSet(new long[]{0x0008000000000000L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__10_in_rule__LocationConstraint__Group__98878 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_55_in_rule__LocationConstraint__Group__9__Impl8906 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group__10__Impl_in_rule__LocationConstraint__Group__108937 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_rule__LocationConstraint__Group__10__Impl8965 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group_5__0__Impl_in_rule__LocationConstraint__Group_5__09018 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group_5__1_in_rule__LocationConstraint__Group_5__09021 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_58_in_rule__LocationConstraint__Group_5__0__Impl9049 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__Group_5__1__Impl_in_rule__LocationConstraint__Group_5__19080 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationConstraint__TupleDescriptorsAssignment_5_1_in_rule__LocationConstraint__Group_5__1__Impl9107 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__0__Impl_in_rule__ResourceConstraint__Group__09141 = new BitSet(new long[]{0x00040000000000C0L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__1_in_rule__ResourceConstraint__Group__09144 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_60_in_rule__ResourceConstraint__Group__0__Impl9172 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__1__Impl_in_rule__ResourceConstraint__Group__19203 = new BitSet(new long[]{0x00040000000000C0L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__2_in_rule__ResourceConstraint__Group__19206 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__NameAssignment_1_in_rule__ResourceConstraint__Group__1__Impl9233 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__2__Impl_in_rule__ResourceConstraint__Group__29264 = new BitSet(new long[]{0x2000000000000000L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__3_in_rule__ResourceConstraint__Group__29267 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_50_in_rule__ResourceConstraint__Group__2__Impl9295 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__3__Impl_in_rule__ResourceConstraint__Group__39326 = new BitSet(new long[]{0x00000000000000C0L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__4_in_rule__ResourceConstraint__Group__39329 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_61_in_rule__ResourceConstraint__Group__3__Impl9357 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__4__Impl_in_rule__ResourceConstraint__Group__49388 = new BitSet(new long[]{0x0080000000000000L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__5_in_rule__ResourceConstraint__Group__49391 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__LhsAssignment_4_in_rule__ResourceConstraint__Group__4__Impl9418 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__5__Impl_in_rule__ResourceConstraint__Group__59448 = new BitSet(new long[]{0x4000000000000000L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__6_in_rule__ResourceConstraint__Group__59451 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_55_in_rule__ResourceConstraint__Group__5__Impl9479 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__6__Impl_in_rule__ResourceConstraint__Group__69510 = new BitSet(new long[]{0x00000000000000C0L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__7_in_rule__ResourceConstraint__Group__69513 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_62_in_rule__ResourceConstraint__Group__6__Impl9541 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__7__Impl_in_rule__ResourceConstraint__Group__79572 = new BitSet(new long[]{0x0080000000000000L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__8_in_rule__ResourceConstraint__Group__79575 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__RhsAssignment_7_in_rule__ResourceConstraint__Group__7__Impl9602 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__8__Impl_in_rule__ResourceConstraint__Group__89632 = new BitSet(new long[]{0x0100000000000000L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__9_in_rule__ResourceConstraint__Group__89635 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_55_in_rule__ResourceConstraint__Group__8__Impl9663 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__9__Impl_in_rule__ResourceConstraint__Group__99694 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__10_in_rule__ResourceConstraint__Group__99697 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_56_in_rule__ResourceConstraint__Group__9__Impl9725 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__10__Impl_in_rule__ResourceConstraint__Group__109756 = new BitSet(new long[]{0x0480000000000000L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__11_in_rule__ResourceConstraint__Group__109759 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__TupleDescriptorsAssignment_10_in_rule__ResourceConstraint__Group__10__Impl9786 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__11__Impl_in_rule__ResourceConstraint__Group__119816 = new BitSet(new long[]{0x0480000000000000L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__12_in_rule__ResourceConstraint__Group__119819 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group_11__0_in_rule__ResourceConstraint__Group__11__Impl9846 = new BitSet(new long[]{0x0400000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__12__Impl_in_rule__ResourceConstraint__Group__129877 = new BitSet(new long[]{0x0200000000000000L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__13_in_rule__ResourceConstraint__Group__129880 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_55_in_rule__ResourceConstraint__Group__12__Impl9908 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__13__Impl_in_rule__ResourceConstraint__Group__139939 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__14_in_rule__ResourceConstraint__Group__139942 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_57_in_rule__ResourceConstraint__Group__13__Impl9970 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__14__Impl_in_rule__ResourceConstraint__Group__1410001 = new BitSet(new long[]{0x0080000000000000L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__15_in_rule__ResourceConstraint__Group__1410004 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__ExpressionAssignment_14_in_rule__ResourceConstraint__Group__14__Impl10031 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__15__Impl_in_rule__ResourceConstraint__Group__1510061 = new BitSet(new long[]{0x0008000000000000L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__16_in_rule__ResourceConstraint__Group__1510064 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_55_in_rule__ResourceConstraint__Group__15__Impl10092 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group__16__Impl_in_rule__ResourceConstraint__Group__1610123 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_rule__ResourceConstraint__Group__16__Impl10151 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group_11__0__Impl_in_rule__ResourceConstraint__Group_11__010216 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group_11__1_in_rule__ResourceConstraint__Group_11__010219 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_58_in_rule__ResourceConstraint__Group_11__0__Impl10247 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__Group_11__1__Impl_in_rule__ResourceConstraint__Group_11__110278 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ResourceConstraint__TupleDescriptorsAssignment_11_1_in_rule__ResourceConstraint__Group_11__1__Impl10305 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__0__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__010339 = new BitSet(new long[]{0x00040000000000C0L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__1_in_rule__RequiredHardwareResourceInstanceConstraint__Group__010342 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_63_in_rule__RequiredHardwareResourceInstanceConstraint__Group__0__Impl10370 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__1__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__110401 = new BitSet(new long[]{0x00040000000000C0L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__2_in_rule__RequiredHardwareResourceInstanceConstraint__Group__110404 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__NameAssignment_1_in_rule__RequiredHardwareResourceInstanceConstraint__Group__1__Impl10431 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__2__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__210462 = new BitSet(new long[]{0x0100000000000000L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__3_in_rule__RequiredHardwareResourceInstanceConstraint__Group__210465 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_50_in_rule__RequiredHardwareResourceInstanceConstraint__Group__2__Impl10493 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__3__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__310524 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__4_in_rule__RequiredHardwareResourceInstanceConstraint__Group__310527 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_56_in_rule__RequiredHardwareResourceInstanceConstraint__Group__3__Impl10555 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__4__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__410586 = new BitSet(new long[]{0x0480000000000000L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__5_in_rule__RequiredHardwareResourceInstanceConstraint__Group__410589 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_4_in_rule__RequiredHardwareResourceInstanceConstraint__Group__4__Impl10616 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__5__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__510646 = new BitSet(new long[]{0x0480000000000000L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__6_in_rule__RequiredHardwareResourceInstanceConstraint__Group__510649 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group_5__0_in_rule__RequiredHardwareResourceInstanceConstraint__Group__5__Impl10676 = new BitSet(new long[]{0x0400000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__6__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__610707 = new BitSet(new long[]{0x0200000000000000L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__7_in_rule__RequiredHardwareResourceInstanceConstraint__Group__610710 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_55_in_rule__RequiredHardwareResourceInstanceConstraint__Group__6__Impl10738 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__7__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__710769 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__8_in_rule__RequiredHardwareResourceInstanceConstraint__Group__710772 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_57_in_rule__RequiredHardwareResourceInstanceConstraint__Group__7__Impl10800 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__8__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__810831 = new BitSet(new long[]{0x0080000000000000L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__9_in_rule__RequiredHardwareResourceInstanceConstraint__Group__810834 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__ExpressionAssignment_8_in_rule__RequiredHardwareResourceInstanceConstraint__Group__8__Impl10861 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__9__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__910891 = new BitSet(new long[]{0x0008000000000000L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__10_in_rule__RequiredHardwareResourceInstanceConstraint__Group__910894 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_55_in_rule__RequiredHardwareResourceInstanceConstraint__Group__9__Impl10922 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group__10__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group__1010953 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_rule__RequiredHardwareResourceInstanceConstraint__Group__10__Impl10981 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group_5__0__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__011034 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group_5__1_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__011037 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_58_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__0__Impl11065 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__Group_5__1__Impl_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__111096 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_5_1_in_rule__RequiredHardwareResourceInstanceConstraint__Group_5__1__Impl11123 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__0__Impl_in_rule__LocationTupleDescriptor__Group__011157 = new BitSet(new long[]{0x00000000000000C0L});
+        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__1_in_rule__LocationTupleDescriptor__Group__011160 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_64_in_rule__LocationTupleDescriptor__Group__0__Impl11188 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__1__Impl_in_rule__LocationTupleDescriptor__Group__111219 = new BitSet(new long[]{0x0400000000000000L});
+        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__2_in_rule__LocationTupleDescriptor__Group__111222 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__InstanceAssignment_1_in_rule__LocationTupleDescriptor__Group__1__Impl11249 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__2__Impl_in_rule__LocationTupleDescriptor__Group__211279 = new BitSet(new long[]{0x00000000000000C0L});
+        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__3_in_rule__LocationTupleDescriptor__Group__211282 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_58_in_rule__LocationTupleDescriptor__Group__2__Impl11310 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__3__Impl_in_rule__LocationTupleDescriptor__Group__311341 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__4_in_rule__LocationTupleDescriptor__Group__311344 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__InstancesAssignment_3_in_rule__LocationTupleDescriptor__Group__3__Impl11371 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__4__Impl_in_rule__LocationTupleDescriptor__Group__411401 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_65_in_rule__LocationTupleDescriptor__Group__4__Impl11429 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__0__Impl_in_rule__ComponentResourceTupleDescriptor__Group__011470 = new BitSet(new long[]{0x00000000000000C0L});
+        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__1_in_rule__ComponentResourceTupleDescriptor__Group__011473 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_64_in_rule__ComponentResourceTupleDescriptor__Group__0__Impl11501 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__1__Impl_in_rule__ComponentResourceTupleDescriptor__Group__111532 = new BitSet(new long[]{0x0400000000000000L});
+        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__2_in_rule__ComponentResourceTupleDescriptor__Group__111535 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__InstanceAssignment_1_in_rule__ComponentResourceTupleDescriptor__Group__1__Impl11562 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__2__Impl_in_rule__ComponentResourceTupleDescriptor__Group__211592 = new BitSet(new long[]{0x00000000000000C0L});
+        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__3_in_rule__ComponentResourceTupleDescriptor__Group__211595 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_58_in_rule__ComponentResourceTupleDescriptor__Group__2__Impl11623 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__3__Impl_in_rule__ComponentResourceTupleDescriptor__Group__311654 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__4_in_rule__ComponentResourceTupleDescriptor__Group__311657 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__HwresinstanceAssignment_3_in_rule__ComponentResourceTupleDescriptor__Group__3__Impl11684 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__4__Impl_in_rule__ComponentResourceTupleDescriptor__Group__411714 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_65_in_rule__ComponentResourceTupleDescriptor__Group__4__Impl11742 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MeasureFunction__Group__0__Impl_in_rule__MeasureFunction__Group__011783 = new BitSet(new long[]{0x00000000000000C0L});
+        public static final BitSet FOLLOW_rule__MeasureFunction__Group__1_in_rule__MeasureFunction__Group__011786 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_66_in_rule__MeasureFunction__Group__0__Impl11814 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MeasureFunction__Group__1__Impl_in_rule__MeasureFunction__Group__111845 = new BitSet(new long[]{0x0080000000100000L});
+        public static final BitSet FOLLOW_rule__MeasureFunction__Group__2_in_rule__MeasureFunction__Group__111848 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MeasureFunction__ServicesAssignment_1_in_rule__MeasureFunction__Group__1__Impl11875 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MeasureFunction__Group__2__Impl_in_rule__MeasureFunction__Group__211905 = new BitSet(new long[]{0x0080000000100000L});
+        public static final BitSet FOLLOW_rule__MeasureFunction__Group__3_in_rule__MeasureFunction__Group__211908 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MeasureFunction__Group_2__0_in_rule__MeasureFunction__Group__2__Impl11935 = new BitSet(new long[]{0x0000000000100002L});
+        public static final BitSet FOLLOW_rule__MeasureFunction__Group__3__Impl_in_rule__MeasureFunction__Group__311966 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_55_in_rule__MeasureFunction__Group__3__Impl11994 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MeasureFunction__Group_2__0__Impl_in_rule__MeasureFunction__Group_2__012033 = new BitSet(new long[]{0x00000000000000C0L});
+        public static final BitSet FOLLOW_rule__MeasureFunction__Group_2__1_in_rule__MeasureFunction__Group_2__012036 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_20_in_rule__MeasureFunction__Group_2__0__Impl12064 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MeasureFunction__Group_2__1__Impl_in_rule__MeasureFunction__Group_2__112095 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MeasureFunction__ServicesAssignment_2_1_in_rule__MeasureFunction__Group_2__1__Impl12122 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PathNameCS__Group__0__Impl_in_rule__PathNameCS__Group__012156 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
+        public static final BitSet FOLLOW_rule__PathNameCS__Group__1_in_rule__PathNameCS__Group__012159 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PathNameCS__PathAssignment_0_in_rule__PathNameCS__Group__0__Impl12186 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PathNameCS__Group__1__Impl_in_rule__PathNameCS__Group__112216 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PathNameCS__Group_1__0_in_rule__PathNameCS__Group__1__Impl12243 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000008L});
+        public static final BitSet FOLLOW_rule__PathNameCS__Group_1__0__Impl_in_rule__PathNameCS__Group_1__012278 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__PathNameCS__Group_1__1_in_rule__PathNameCS__Group_1__012281 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_67_in_rule__PathNameCS__Group_1__0__Impl12309 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PathNameCS__Group_1__1__Impl_in_rule__PathNameCS__Group_1__112340 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PathNameCS__PathAssignment_1_1_in_rule__PathNameCS__Group_1__1__Impl12367 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__URIFirstPathElementCS__Group_1__0__Impl_in_rule__URIFirstPathElementCS__Group_1__012403 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_rule__URIFirstPathElementCS__Group_1__1_in_rule__URIFirstPathElementCS__Group_1__012406 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__URIFirstPathElementCS__Group_1__1__Impl_in_rule__URIFirstPathElementCS__Group_1__112464 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__URIFirstPathElementCS__ElementAssignment_1_1_in_rule__URIFirstPathElementCS__Group_1__1__Impl12491 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group__0__Impl_in_rule__CollectionTypeCS__Group__012525 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group__1_in_rule__CollectionTypeCS__Group__012528 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionTypeCS__NameAssignment_0_in_rule__CollectionTypeCS__Group__0__Impl12555 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group__1__Impl_in_rule__CollectionTypeCS__Group__112585 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group_1__0_in_rule__CollectionTypeCS__Group__1__Impl12612 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group_1__0__Impl_in_rule__CollectionTypeCS__Group_1__012647 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group_1__1_in_rule__CollectionTypeCS__Group_1__012650 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_64_in_rule__CollectionTypeCS__Group_1__0__Impl12678 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group_1__1__Impl_in_rule__CollectionTypeCS__Group_1__112709 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group_1__2_in_rule__CollectionTypeCS__Group_1__112712 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionTypeCS__OwnedTypeAssignment_1_1_in_rule__CollectionTypeCS__Group_1__1__Impl12739 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionTypeCS__Group_1__2__Impl_in_rule__CollectionTypeCS__Group_1__212769 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_65_in_rule__CollectionTypeCS__Group_1__2__Impl12797 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__Group__0__Impl_in_rule__MultiplicityBoundsCS__Group__012834 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__Group__1_in_rule__MultiplicityBoundsCS__Group__012837 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__LowerBoundAssignment_0_in_rule__MultiplicityBoundsCS__Group__0__Impl12864 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__Group__1__Impl_in_rule__MultiplicityBoundsCS__Group__112894 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__Group_1__0_in_rule__MultiplicityBoundsCS__Group__1__Impl12921 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__Group_1__0__Impl_in_rule__MultiplicityBoundsCS__Group_1__012956 = new BitSet(new long[]{0x0000000000010010L});
+        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__Group_1__1_in_rule__MultiplicityBoundsCS__Group_1__012959 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_68_in_rule__MultiplicityBoundsCS__Group_1__0__Impl12987 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__Group_1__1__Impl_in_rule__MultiplicityBoundsCS__Group_1__113018 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicityBoundsCS__UpperBoundAssignment_1_1_in_rule__MultiplicityBoundsCS__Group_1__1__Impl13045 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicityCS__Group__0__Impl_in_rule__MultiplicityCS__Group__013079 = new BitSet(new long[]{0x0000800000110010L});
+        public static final BitSet FOLLOW_rule__MultiplicityCS__Group__1_in_rule__MultiplicityCS__Group__013082 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_69_in_rule__MultiplicityCS__Group__0__Impl13110 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicityCS__Group__1__Impl_in_rule__MultiplicityCS__Group__113141 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
+        public static final BitSet FOLLOW_rule__MultiplicityCS__Group__2_in_rule__MultiplicityCS__Group__113144 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicityCS__Alternatives_1_in_rule__MultiplicityCS__Group__1__Impl13171 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicityCS__Group__2__Impl_in_rule__MultiplicityCS__Group__213201 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_70_in_rule__MultiplicityCS__Group__2__Impl13229 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group__0__Impl_in_rule__TupleTypeCS__Group__013266 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group__1_in_rule__TupleTypeCS__Group__013269 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__NameAssignment_0_in_rule__TupleTypeCS__Group__0__Impl13296 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group__1__Impl_in_rule__TupleTypeCS__Group__113326 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1__0_in_rule__TupleTypeCS__Group__1__Impl13353 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1__0__Impl_in_rule__TupleTypeCS__Group_1__013388 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B03L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1__1_in_rule__TupleTypeCS__Group_1__013391 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_64_in_rule__TupleTypeCS__Group_1__0__Impl13419 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1__1__Impl_in_rule__TupleTypeCS__Group_1__113450 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B03L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1__2_in_rule__TupleTypeCS__Group_1__113453 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1_1__0_in_rule__TupleTypeCS__Group_1__1__Impl13480 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1__2__Impl_in_rule__TupleTypeCS__Group_1__213511 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_65_in_rule__TupleTypeCS__Group_1__2__Impl13539 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1_1__0__Impl_in_rule__TupleTypeCS__Group_1_1__013576 = new BitSet(new long[]{0x0400000000000000L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1_1__1_in_rule__TupleTypeCS__Group_1_1__013579 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__OwnedPartsAssignment_1_1_0_in_rule__TupleTypeCS__Group_1_1__0__Impl13606 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1_1__1__Impl_in_rule__TupleTypeCS__Group_1_1__113636 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1_1_1__0_in_rule__TupleTypeCS__Group_1_1__1__Impl13663 = new BitSet(new long[]{0x0400000000000002L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1_1_1__0__Impl_in_rule__TupleTypeCS__Group_1_1_1__013698 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1_1_1__1_in_rule__TupleTypeCS__Group_1_1_1__013701 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_58_in_rule__TupleTypeCS__Group_1_1_1__0__Impl13729 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__Group_1_1_1__1__Impl_in_rule__TupleTypeCS__Group_1_1_1__113760 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleTypeCS__OwnedPartsAssignment_1_1_1_1_in_rule__TupleTypeCS__Group_1_1_1__1__Impl13787 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TuplePartCS__Group__0__Impl_in_rule__TuplePartCS__Group__013821 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+        public static final BitSet FOLLOW_rule__TuplePartCS__Group__1_in_rule__TuplePartCS__Group__013824 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TuplePartCS__NameAssignment_0_in_rule__TuplePartCS__Group__0__Impl13851 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TuplePartCS__Group__1__Impl_in_rule__TuplePartCS__Group__113881 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__TuplePartCS__Group__2_in_rule__TuplePartCS__Group__113884 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_71_in_rule__TuplePartCS__Group__1__Impl13912 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TuplePartCS__Group__2__Impl_in_rule__TuplePartCS__Group__213943 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TuplePartCS__OwnedTypeAssignment_2_in_rule__TuplePartCS__Group__2__Impl13970 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group__0__Impl_in_rule__CollectionLiteralExpCS__Group__014006 = new BitSet(new long[]{0x0004000000000000L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group__1_in_rule__CollectionLiteralExpCS__Group__014009 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__OwnedTypeAssignment_0_in_rule__CollectionLiteralExpCS__Group__0__Impl14036 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group__1__Impl_in_rule__CollectionLiteralExpCS__Group__114066 = new BitSet(new long[]{0x00087FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group__2_in_rule__CollectionLiteralExpCS__Group__114069 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_50_in_rule__CollectionLiteralExpCS__Group__1__Impl14097 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group__2__Impl_in_rule__CollectionLiteralExpCS__Group__214128 = new BitSet(new long[]{0x00087FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group__3_in_rule__CollectionLiteralExpCS__Group__214131 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group_2__0_in_rule__CollectionLiteralExpCS__Group__2__Impl14158 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group__3__Impl_in_rule__CollectionLiteralExpCS__Group__314189 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_rule__CollectionLiteralExpCS__Group__3__Impl14217 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group_2__0__Impl_in_rule__CollectionLiteralExpCS__Group_2__014256 = new BitSet(new long[]{0x0400000000000000L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group_2__1_in_rule__CollectionLiteralExpCS__Group_2__014259 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_0_in_rule__CollectionLiteralExpCS__Group_2__0__Impl14286 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group_2__1__Impl_in_rule__CollectionLiteralExpCS__Group_2__114316 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group_2_1__0_in_rule__CollectionLiteralExpCS__Group_2__1__Impl14343 = new BitSet(new long[]{0x0400000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group_2_1__0__Impl_in_rule__CollectionLiteralExpCS__Group_2_1__014378 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group_2_1__1_in_rule__CollectionLiteralExpCS__Group_2_1__014381 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_58_in_rule__CollectionLiteralExpCS__Group_2_1__0__Impl14409 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__Group_2_1__1__Impl_in_rule__CollectionLiteralExpCS__Group_2_1__114440 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_1_1_in_rule__CollectionLiteralExpCS__Group_2_1__1__Impl14467 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__Group__0__Impl_in_rule__CollectionLiteralPartCS__Group__014501 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__Group__1_in_rule__CollectionLiteralPartCS__Group__014504 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__ExpressionCSAssignment_0_in_rule__CollectionLiteralPartCS__Group__0__Impl14531 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__Group__1__Impl_in_rule__CollectionLiteralPartCS__Group__114561 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__Group_1__0_in_rule__CollectionLiteralPartCS__Group__1__Impl14588 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__Group_1__0__Impl_in_rule__CollectionLiteralPartCS__Group_1__014623 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__Group_1__1_in_rule__CollectionLiteralPartCS__Group_1__014626 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_68_in_rule__CollectionLiteralPartCS__Group_1__0__Impl14654 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__Group_1__1__Impl_in_rule__CollectionLiteralPartCS__Group_1__114685 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__CollectionLiteralPartCS__LastExpressionCSAssignment_1_1_in_rule__CollectionLiteralPartCS__Group_1__1__Impl14712 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstructorPartCS__Group__0__Impl_in_rule__ConstructorPartCS__Group__014746 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__ConstructorPartCS__Group__1_in_rule__ConstructorPartCS__Group__014749 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstructorPartCS__PropertyAssignment_0_in_rule__ConstructorPartCS__Group__0__Impl14776 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstructorPartCS__Group__1__Impl_in_rule__ConstructorPartCS__Group__114806 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__ConstructorPartCS__Group__2_in_rule__ConstructorPartCS__Group__114809 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_rule__ConstructorPartCS__Group__1__Impl14837 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstructorPartCS__Group__2__Impl_in_rule__ConstructorPartCS__Group__214868 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstructorPartCS__InitExpressionAssignment_2_in_rule__ConstructorPartCS__Group__2__Impl14895 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__0__Impl_in_rule__TupleLiteralExpCS__Group__014931 = new BitSet(new long[]{0x0004000000000000L});
+        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__1_in_rule__TupleLiteralExpCS__Group__014934 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_33_in_rule__TupleLiteralExpCS__Group__0__Impl14962 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__1__Impl_in_rule__TupleLiteralExpCS__Group__114993 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__2_in_rule__TupleLiteralExpCS__Group__114996 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_50_in_rule__TupleLiteralExpCS__Group__1__Impl15024 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__2__Impl_in_rule__TupleLiteralExpCS__Group__215055 = new BitSet(new long[]{0x0408000000000000L});
+        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__3_in_rule__TupleLiteralExpCS__Group__215058 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__OwnedPartsAssignment_2_in_rule__TupleLiteralExpCS__Group__2__Impl15085 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__3__Impl_in_rule__TupleLiteralExpCS__Group__315115 = new BitSet(new long[]{0x0408000000000000L});
+        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__4_in_rule__TupleLiteralExpCS__Group__315118 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group_3__0_in_rule__TupleLiteralExpCS__Group__3__Impl15145 = new BitSet(new long[]{0x0400000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group__4__Impl_in_rule__TupleLiteralExpCS__Group__415176 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_rule__TupleLiteralExpCS__Group__4__Impl15204 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group_3__0__Impl_in_rule__TupleLiteralExpCS__Group_3__015245 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group_3__1_in_rule__TupleLiteralExpCS__Group_3__015248 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_58_in_rule__TupleLiteralExpCS__Group_3__0__Impl15276 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__Group_3__1__Impl_in_rule__TupleLiteralExpCS__Group_3__115307 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralExpCS__OwnedPartsAssignment_3_1_in_rule__TupleLiteralExpCS__Group_3__1__Impl15334 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group__0__Impl_in_rule__TupleLiteralPartCS__Group__015368 = new BitSet(new long[]{0x0000000002000000L,0x0000000000000080L});
+        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group__1_in_rule__TupleLiteralPartCS__Group__015371 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__NameAssignment_0_in_rule__TupleLiteralPartCS__Group__0__Impl15398 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group__1__Impl_in_rule__TupleLiteralPartCS__Group__115428 = new BitSet(new long[]{0x0000000002000000L,0x0000000000000080L});
+        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group__2_in_rule__TupleLiteralPartCS__Group__115431 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group_1__0_in_rule__TupleLiteralPartCS__Group__1__Impl15458 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group__2__Impl_in_rule__TupleLiteralPartCS__Group__215489 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group__3_in_rule__TupleLiteralPartCS__Group__215492 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_rule__TupleLiteralPartCS__Group__2__Impl15520 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group__3__Impl_in_rule__TupleLiteralPartCS__Group__315551 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__InitExpressionAssignment_3_in_rule__TupleLiteralPartCS__Group__3__Impl15578 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group_1__0__Impl_in_rule__TupleLiteralPartCS__Group_1__015616 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group_1__1_in_rule__TupleLiteralPartCS__Group_1__015619 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_71_in_rule__TupleLiteralPartCS__Group_1__0__Impl15647 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__Group_1__1__Impl_in_rule__TupleLiteralPartCS__Group_1__115678 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TupleLiteralPartCS__OwnedTypeAssignment_1_1_in_rule__TupleLiteralPartCS__Group_1__1__Impl15705 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__UnlimitedNaturalLiteralExpCS__Group__0__Impl_in_rule__UnlimitedNaturalLiteralExpCS__Group__015739 = new BitSet(new long[]{0x0000000000010000L});
+        public static final BitSet FOLLOW_rule__UnlimitedNaturalLiteralExpCS__Group__1_in_rule__UnlimitedNaturalLiteralExpCS__Group__015742 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__UnlimitedNaturalLiteralExpCS__Group__1__Impl_in_rule__UnlimitedNaturalLiteralExpCS__Group__115800 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_16_in_rule__UnlimitedNaturalLiteralExpCS__Group__1__Impl15828 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__InvalidLiteralExpCS__Group__0__Impl_in_rule__InvalidLiteralExpCS__Group__015863 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+        public static final BitSet FOLLOW_rule__InvalidLiteralExpCS__Group__1_in_rule__InvalidLiteralExpCS__Group__015866 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__InvalidLiteralExpCS__Group__1__Impl_in_rule__InvalidLiteralExpCS__Group__115924 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_72_in_rule__InvalidLiteralExpCS__Group__1__Impl15952 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NullLiteralExpCS__Group__0__Impl_in_rule__NullLiteralExpCS__Group__015987 = new BitSet(new long[]{0x0000000000010030L,0x00000000000C0300L});
+        public static final BitSet FOLLOW_rule__NullLiteralExpCS__Group__1_in_rule__NullLiteralExpCS__Group__015990 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NullLiteralExpCS__Group__1__Impl_in_rule__NullLiteralExpCS__Group__116048 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_73_in_rule__NullLiteralExpCS__Group__1__Impl16076 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TypeLiteralWithMultiplicityCS__Group__0__Impl_in_rule__TypeLiteralWithMultiplicityCS__Group__016111 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+        public static final BitSet FOLLOW_rule__TypeLiteralWithMultiplicityCS__Group__1_in_rule__TypeLiteralWithMultiplicityCS__Group__016114 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleTypeLiteralCS_in_rule__TypeLiteralWithMultiplicityCS__Group__0__Impl16141 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TypeLiteralWithMultiplicityCS__Group__1__Impl_in_rule__TypeLiteralWithMultiplicityCS__Group__116170 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TypeLiteralWithMultiplicityCS__MultiplicityAssignment_1_in_rule__TypeLiteralWithMultiplicityCS__Group__1__Impl16197 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TypeExpCS__Group__0__Impl_in_rule__TypeExpCS__Group__016232 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+        public static final BitSet FOLLOW_rule__TypeExpCS__Group__1_in_rule__TypeExpCS__Group__016235 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TypeExpCS__Alternatives_0_in_rule__TypeExpCS__Group__0__Impl16262 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TypeExpCS__Group__1__Impl_in_rule__TypeExpCS__Group__116292 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__TypeExpCS__MultiplicityAssignment_1_in_rule__TypeExpCS__Group__1__Impl16319 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0__0__Impl_in_rule__ExpCS__Group_0__016354 = new BitSet(new long[]{0x00000001FFFB0000L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0__1_in_rule__ExpCS__Group_0__016357 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulePrefixedExpCS_in_rule__ExpCS__Group_0__0__Impl16384 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0__1__Impl_in_rule__ExpCS__Group_0__116413 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1__0_in_rule__ExpCS__Group_0__1__Impl16440 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1__0__Impl_in_rule__ExpCS__Group_0_1__016475 = new BitSet(new long[]{0x00000001FFFB0000L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1__1_in_rule__ExpCS__Group_0_1__016478 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1__1__Impl_in_rule__ExpCS__Group_0_1__116536 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1__2_in_rule__ExpCS__Group_0_1__116539 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__OwnedOperatorAssignment_0_1_1_in_rule__ExpCS__Group_0_1__1__Impl16566 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1__2__Impl_in_rule__ExpCS__Group_0_1__216596 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Alternatives_0_1_2_in_rule__ExpCS__Group_0_1__2__Impl16623 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0__0__Impl_in_rule__ExpCS__Group_0_1_2_0__016659 = new BitSet(new long[]{0x00000001FFFB0000L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0__1_in_rule__ExpCS__Group_0_1_2_0__016662 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_0_in_rule__ExpCS__Group_0_1_2_0__0__Impl16689 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0__1__Impl_in_rule__ExpCS__Group_0_1_2_0__116719 = new BitSet(new long[]{0x00000001FFFB0000L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0__2_in_rule__ExpCS__Group_0_1_2_0__116722 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0_1__0_in_rule__ExpCS__Group_0_1_2_0__1__Impl16749 = new BitSet(new long[]{0x00000001FFFB0002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0__2__Impl_in_rule__ExpCS__Group_0_1_2_0__216780 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0_2__0_in_rule__ExpCS__Group_0_1_2_0__2__Impl16807 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0_1__0__Impl_in_rule__ExpCS__Group_0_1_2_0_1__016844 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0_1__1_in_rule__ExpCS__Group_0_1_2_0_1__016847 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_1_0_in_rule__ExpCS__Group_0_1_2_0_1__0__Impl16874 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0_1__1__Impl_in_rule__ExpCS__Group_0_1_2_0_1__116904 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_1_1_in_rule__ExpCS__Group_0_1_2_0_1__1__Impl16931 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0_2__0__Impl_in_rule__ExpCS__Group_0_1_2_0_2__016965 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0_2__1_in_rule__ExpCS__Group_0_1_2_0_2__016968 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_2_0_in_rule__ExpCS__Group_0_1_2_0_2__0__Impl16995 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_0_1_2_0_2__1__Impl_in_rule__ExpCS__Group_0_1_2_0_2__117025 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_2_1_in_rule__ExpCS__Group_0_1_2_0_2__1__Impl17052 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_1__0__Impl_in_rule__ExpCS__Group_1__017086 = new BitSet(new long[]{0x0000000000060000L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_1__1_in_rule__ExpCS__Group_1__017089 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_1__1__Impl_in_rule__ExpCS__Group_1__117147 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_1__2_in_rule__ExpCS__Group_1__117150 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__OwnedOperatorAssignment_1_1_in_rule__ExpCS__Group_1__1__Impl17179 = new BitSet(new long[]{0x0000000000060002L});
+        public static final BitSet FOLLOW_rule__ExpCS__OwnedOperatorAssignment_1_1_in_rule__ExpCS__Group_1__1__Impl17191 = new BitSet(new long[]{0x0000000000060002L});
+        public static final BitSet FOLLOW_rule__ExpCS__Group_1__2__Impl_in_rule__ExpCS__Group_1__217224 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ExpCS__OwnedExpressionAssignment_1_2_in_rule__ExpCS__Group_1__2__Impl17251 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrefixedExpCS__Group_0__0__Impl_in_rule__PrefixedExpCS__Group_0__017287 = new BitSet(new long[]{0x0000000000060000L});
+        public static final BitSet FOLLOW_rule__PrefixedExpCS__Group_0__1_in_rule__PrefixedExpCS__Group_0__017290 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrefixedExpCS__Group_0__1__Impl_in_rule__PrefixedExpCS__Group_0__117348 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__PrefixedExpCS__Group_0__2_in_rule__PrefixedExpCS__Group_0__117351 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrefixedExpCS__OwnedOperatorAssignment_0_1_in_rule__PrefixedExpCS__Group_0__1__Impl17380 = new BitSet(new long[]{0x0000000000060002L});
+        public static final BitSet FOLLOW_rule__PrefixedExpCS__OwnedOperatorAssignment_0_1_in_rule__PrefixedExpCS__Group_0__1__Impl17392 = new BitSet(new long[]{0x0000000000060002L});
+        public static final BitSet FOLLOW_rule__PrefixedExpCS__Group_0__2__Impl_in_rule__PrefixedExpCS__Group_0__217425 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrefixedExpCS__OwnedExpressionAssignment_0_2_in_rule__PrefixedExpCS__Group_0__2__Impl17452 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7__0__Impl_in_rule__PrimaryExpCS__Group_7__017488 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7__1_in_rule__PrimaryExpCS__Group_7__017491 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7__1__Impl_in_rule__PrimaryExpCS__Group_7__117549 = new BitSet(new long[]{0x0004000000000000L,0x0000000000100021L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7__2_in_rule__PrimaryExpCS__Group_7__117552 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__PathNameAssignment_7_1_in_rule__PrimaryExpCS__Group_7__1__Impl17579 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7__2__Impl_in_rule__PrimaryExpCS__Group_7__217609 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Alternatives_7_2_in_rule__PrimaryExpCS__Group_7__2__Impl17636 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0__017672 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__1_in_rule__PrimaryExpCS__Group_7_2_0__017675 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0__117733 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__2_in_rule__PrimaryExpCS__Group_7_2_0__117736 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_69_in_rule__PrimaryExpCS__Group_7_2_0__1__Impl17764 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__2__Impl_in_rule__PrimaryExpCS__Group_7_2_0__217795 = new BitSet(new long[]{0x0400000000000000L,0x0000000000000040L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__3_in_rule__PrimaryExpCS__Group_7_2_0__217798 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_2_in_rule__PrimaryExpCS__Group_7_2_0__2__Impl17825 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__3__Impl_in_rule__PrimaryExpCS__Group_7_2_0__317855 = new BitSet(new long[]{0x0400000000000000L,0x0000000000000040L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__4_in_rule__PrimaryExpCS__Group_7_2_0__317858 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_3__0_in_rule__PrimaryExpCS__Group_7_2_0__3__Impl17885 = new BitSet(new long[]{0x0400000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__4__Impl_in_rule__PrimaryExpCS__Group_7_2_0__417916 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100020L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__5_in_rule__PrimaryExpCS__Group_7_2_0__417919 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_70_in_rule__PrimaryExpCS__Group_7_2_0__4__Impl17947 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__5__Impl_in_rule__PrimaryExpCS__Group_7_2_0__517978 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100020L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__6_in_rule__PrimaryExpCS__Group_7_2_0__517981 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__0_in_rule__PrimaryExpCS__Group_7_2_0__5__Impl18008 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0__6__Impl_in_rule__PrimaryExpCS__Group_7_2_0__618039 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_6__0_in_rule__PrimaryExpCS__Group_7_2_0__6__Impl18066 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_3__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0_3__018111 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_3__1_in_rule__PrimaryExpCS__Group_7_2_0_3__018114 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_58_in_rule__PrimaryExpCS__Group_7_2_0_3__0__Impl18142 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_3__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0_3__118173 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_3_1_in_rule__PrimaryExpCS__Group_7_2_0_3__1__Impl18200 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5__018234 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__1_in_rule__PrimaryExpCS__Group_7_2_0_5__018237 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_69_in_rule__PrimaryExpCS__Group_7_2_0_5__0__Impl18265 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5__118296 = new BitSet(new long[]{0x0400000000000000L,0x0000000000000040L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__2_in_rule__PrimaryExpCS__Group_7_2_0_5__118299 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_1_in_rule__PrimaryExpCS__Group_7_2_0_5__1__Impl18326 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__2__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5__218356 = new BitSet(new long[]{0x0400000000000000L,0x0000000000000040L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__3_in_rule__PrimaryExpCS__Group_7_2_0_5__218359 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5_2__0_in_rule__PrimaryExpCS__Group_7_2_0_5__2__Impl18386 = new BitSet(new long[]{0x0400000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5__3__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5__318417 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_70_in_rule__PrimaryExpCS__Group_7_2_0_5__3__Impl18445 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5_2__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5_2__018484 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5_2__1_in_rule__PrimaryExpCS__Group_7_2_0_5_2__018487 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_58_in_rule__PrimaryExpCS__Group_7_2_0_5_2__0__Impl18515 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_5_2__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0_5_2__118546 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_2_1_in_rule__PrimaryExpCS__Group_7_2_0_5_2__1__Impl18573 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_6__0__Impl_in_rule__PrimaryExpCS__Group_7_2_0_6__018607 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_6__1_in_rule__PrimaryExpCS__Group_7_2_0_6__018610 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__AtPreAssignment_7_2_0_6_0_in_rule__PrimaryExpCS__Group_7_2_0_6__0__Impl18637 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_0_6__1__Impl_in_rule__PrimaryExpCS__Group_7_2_0_6__118667 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_74_in_rule__PrimaryExpCS__Group_7_2_0_6__1__Impl18695 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1__0__Impl_in_rule__PrimaryExpCS__Group_7_2_1__018730 = new BitSet(new long[]{0x0004000000000000L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1__1_in_rule__PrimaryExpCS__Group_7_2_1__018733 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1__1__Impl_in_rule__PrimaryExpCS__Group_7_2_1__118791 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1__2_in_rule__PrimaryExpCS__Group_7_2_1__118794 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_50_in_rule__PrimaryExpCS__Group_7_2_1__1__Impl18822 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1__2__Impl_in_rule__PrimaryExpCS__Group_7_2_1__218853 = new BitSet(new long[]{0x0008000000000000L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1__3_in_rule__PrimaryExpCS__Group_7_2_1__218856 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Alternatives_7_2_1_2_in_rule__PrimaryExpCS__Group_7_2_1__2__Impl18883 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1__3__Impl_in_rule__PrimaryExpCS__Group_7_2_1__318913 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_rule__PrimaryExpCS__Group_7_2_1__3__Impl18941 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0__0__Impl_in_rule__PrimaryExpCS__Group_7_2_1_2_0__018980 = new BitSet(new long[]{0x0400000000000000L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0__1_in_rule__PrimaryExpCS__Group_7_2_1_2_0__018983 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_0_in_rule__PrimaryExpCS__Group_7_2_1_2_0__0__Impl19010 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0__1__Impl_in_rule__PrimaryExpCS__Group_7_2_1_2_0__119040 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0_1__0_in_rule__PrimaryExpCS__Group_7_2_1_2_0__1__Impl19067 = new BitSet(new long[]{0x0400000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0_1__0__Impl_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__019102 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0_1__1_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__019105 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_58_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__0__Impl19133 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_1_2_0_1__1__Impl_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__119164 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_1_1_in_rule__PrimaryExpCS__Group_7_2_1_2_0_1__1__Impl19191 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2__019225 = new BitSet(new long[]{0x0004000000000000L,0x0000000000100021L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2__1_in_rule__PrimaryExpCS__Group_7_2_2__019228 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_0__0_in_rule__PrimaryExpCS__Group_7_2_2__0__Impl19255 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2__119286 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__0_in_rule__PrimaryExpCS__Group_7_2_2__1__Impl19313 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_0__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_0__019348 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_0__1_in_rule__PrimaryExpCS__Group_7_2_2_0__019351 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__AtPreAssignment_7_2_2_0_0_in_rule__PrimaryExpCS__Group_7_2_2_0__0__Impl19378 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_0__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_0__119408 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_74_in_rule__PrimaryExpCS__Group_7_2_2_0__1__Impl19436 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1__019471 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__1_in_rule__PrimaryExpCS__Group_7_2_2_1__019474 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1__119532 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B03L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__2_in_rule__PrimaryExpCS__Group_7_2_2_1__119535 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_64_in_rule__PrimaryExpCS__Group_7_2_2_1__1__Impl19563 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__2__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1__219594 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B03L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__3_in_rule__PrimaryExpCS__Group_7_2_2_1__219597 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__0_in_rule__PrimaryExpCS__Group_7_2_2_1__2__Impl19624 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1__3__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1__319655 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_65_in_rule__PrimaryExpCS__Group_7_2_2_1__3__Impl19683 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2__019722 = new BitSet(new long[]{0x0480000000000000L,0x0000000000200000L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__1_in_rule__PrimaryExpCS__Group_7_2_2_1_2__019725 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_0_in_rule__PrimaryExpCS__Group_7_2_2_1_2__0__Impl19752 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2__119782 = new BitSet(new long[]{0x0480000000000000L,0x0000000000200000L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__2_in_rule__PrimaryExpCS__Group_7_2_2_1_2__119785 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_1_in_rule__PrimaryExpCS__Group_7_2_2_1_2__1__Impl19812 = new BitSet(new long[]{0x0400000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__2__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2__219843 = new BitSet(new long[]{0x0480000000000000L,0x0000000000200000L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__3_in_rule__PrimaryExpCS__Group_7_2_2_1_2__219846 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_2__0_in_rule__PrimaryExpCS__Group_7_2_2_1_2__2__Impl19873 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2__3__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2__319904 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_3__0_in_rule__PrimaryExpCS__Group_7_2_2_1_2__3__Impl19931 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_2__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__019970 = new BitSet(new long[]{0x0400000000000000L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_2__1_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__019973 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_0_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__0__Impl20000 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_2__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__120030 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_1_in_rule__PrimaryExpCS__Group_7_2_2_1_2_2__1__Impl20057 = new BitSet(new long[]{0x0400000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_3__0__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__020092 = new BitSet(new long[]{0x0400000000000000L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_3__1_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__020095 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_0_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__0__Impl20122 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__Group_7_2_2_1_2_3__1__Impl_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__120152 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_1_in_rule__PrimaryExpCS__Group_7_2_2_1_2_3__1__Impl20179 = new BitSet(new long[]{0x0400000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group__0__Impl_in_rule__NavigatingArgCS__Group__020214 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group__1_in_rule__NavigatingArgCS__Group__020217 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingArgCS__NameAssignment_0_in_rule__NavigatingArgCS__Group__0__Impl20244 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group__1__Impl_in_rule__NavigatingArgCS__Group__120274 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1__0_in_rule__NavigatingArgCS__Group__1__Impl20301 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1__0__Impl_in_rule__NavigatingArgCS__Group_1__020336 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1__1_in_rule__NavigatingArgCS__Group_1__020339 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_71_in_rule__NavigatingArgCS__Group_1__0__Impl20367 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1__1__Impl_in_rule__NavigatingArgCS__Group_1__120398 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1__2_in_rule__NavigatingArgCS__Group_1__120401 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingArgCS__OwnedTypeAssignment_1_1_in_rule__NavigatingArgCS__Group_1__1__Impl20428 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1__2__Impl_in_rule__NavigatingArgCS__Group_1__220458 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1_2__0_in_rule__NavigatingArgCS__Group_1__2__Impl20485 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1_2__0__Impl_in_rule__NavigatingArgCS__Group_1_2__020522 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1_2__1_in_rule__NavigatingArgCS__Group_1_2__020525 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_rule__NavigatingArgCS__Group_1_2__0__Impl20553 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingArgCS__Group_1_2__1__Impl_in_rule__NavigatingArgCS__Group_1_2__120584 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingArgCS__InitAssignment_1_2_1_in_rule__NavigatingArgCS__Group_1_2__1__Impl20611 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group__0__Impl_in_rule__NavigatingBarArgCS__Group__020645 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group__1_in_rule__NavigatingBarArgCS__Group__020648 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__PrefixAssignment_0_in_rule__NavigatingBarArgCS__Group__0__Impl20675 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group__1__Impl_in_rule__NavigatingBarArgCS__Group__120705 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group__2_in_rule__NavigatingBarArgCS__Group__120708 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__NameAssignment_1_in_rule__NavigatingBarArgCS__Group__1__Impl20735 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group__2__Impl_in_rule__NavigatingBarArgCS__Group__220765 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2__0_in_rule__NavigatingBarArgCS__Group__2__Impl20792 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2__0__Impl_in_rule__NavigatingBarArgCS__Group_2__020829 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2__1_in_rule__NavigatingBarArgCS__Group_2__020832 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_71_in_rule__NavigatingBarArgCS__Group_2__0__Impl20860 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2__1__Impl_in_rule__NavigatingBarArgCS__Group_2__120891 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2__2_in_rule__NavigatingBarArgCS__Group_2__120894 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__OwnedTypeAssignment_2_1_in_rule__NavigatingBarArgCS__Group_2__1__Impl20921 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2__2__Impl_in_rule__NavigatingBarArgCS__Group_2__220951 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2_2__0_in_rule__NavigatingBarArgCS__Group_2__2__Impl20978 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2_2__0__Impl_in_rule__NavigatingBarArgCS__Group_2_2__021015 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2_2__1_in_rule__NavigatingBarArgCS__Group_2_2__021018 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_rule__NavigatingBarArgCS__Group_2_2__0__Impl21046 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__Group_2_2__1__Impl_in_rule__NavigatingBarArgCS__Group_2_2__121077 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingBarArgCS__InitAssignment_2_2_1_in_rule__NavigatingBarArgCS__Group_2_2__1__Impl21104 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group__0__Impl_in_rule__NavigatingCommaArgCS__Group__021138 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group__1_in_rule__NavigatingCommaArgCS__Group__021141 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__PrefixAssignment_0_in_rule__NavigatingCommaArgCS__Group__0__Impl21168 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group__1__Impl_in_rule__NavigatingCommaArgCS__Group__121198 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group__2_in_rule__NavigatingCommaArgCS__Group__121201 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__NameAssignment_1_in_rule__NavigatingCommaArgCS__Group__1__Impl21228 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group__2__Impl_in_rule__NavigatingCommaArgCS__Group__221258 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2__0_in_rule__NavigatingCommaArgCS__Group__2__Impl21285 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2__0__Impl_in_rule__NavigatingCommaArgCS__Group_2__021322 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2__1_in_rule__NavigatingCommaArgCS__Group_2__021325 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_71_in_rule__NavigatingCommaArgCS__Group_2__0__Impl21353 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2__1__Impl_in_rule__NavigatingCommaArgCS__Group_2__121384 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2__2_in_rule__NavigatingCommaArgCS__Group_2__121387 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__OwnedTypeAssignment_2_1_in_rule__NavigatingCommaArgCS__Group_2__1__Impl21414 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2__2__Impl_in_rule__NavigatingCommaArgCS__Group_2__221444 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2_2__0_in_rule__NavigatingCommaArgCS__Group_2__2__Impl21471 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2_2__0__Impl_in_rule__NavigatingCommaArgCS__Group_2_2__021508 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2_2__1_in_rule__NavigatingCommaArgCS__Group_2_2__021511 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_rule__NavigatingCommaArgCS__Group_2_2__0__Impl21539 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__Group_2_2__1__Impl_in_rule__NavigatingCommaArgCS__Group_2_2__121570 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingCommaArgCS__InitAssignment_2_2_1_in_rule__NavigatingCommaArgCS__Group_2_2__1__Impl21597 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group__0__Impl_in_rule__NavigatingSemiArgCS__Group__021631 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group__1_in_rule__NavigatingSemiArgCS__Group__021634 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__PrefixAssignment_0_in_rule__NavigatingSemiArgCS__Group__0__Impl21661 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group__1__Impl_in_rule__NavigatingSemiArgCS__Group__121691 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group__2_in_rule__NavigatingSemiArgCS__Group__121694 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__NameAssignment_1_in_rule__NavigatingSemiArgCS__Group__1__Impl21721 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group__2__Impl_in_rule__NavigatingSemiArgCS__Group__221751 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2__0_in_rule__NavigatingSemiArgCS__Group__2__Impl21778 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2__0__Impl_in_rule__NavigatingSemiArgCS__Group_2__021815 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2__1_in_rule__NavigatingSemiArgCS__Group_2__021818 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_71_in_rule__NavigatingSemiArgCS__Group_2__0__Impl21846 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2__1__Impl_in_rule__NavigatingSemiArgCS__Group_2__121877 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2__2_in_rule__NavigatingSemiArgCS__Group_2__121880 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__OwnedTypeAssignment_2_1_in_rule__NavigatingSemiArgCS__Group_2__1__Impl21907 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2__2__Impl_in_rule__NavigatingSemiArgCS__Group_2__221937 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2_2__0_in_rule__NavigatingSemiArgCS__Group_2__2__Impl21964 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2_2__0__Impl_in_rule__NavigatingSemiArgCS__Group_2_2__022001 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2_2__1_in_rule__NavigatingSemiArgCS__Group_2_2__022004 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_rule__NavigatingSemiArgCS__Group_2_2__0__Impl22032 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__Group_2_2__1__Impl_in_rule__NavigatingSemiArgCS__Group_2_2__122063 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NavigatingSemiArgCS__InitAssignment_2_2_1_in_rule__NavigatingSemiArgCS__Group_2_2__1__Impl22090 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__IfExpCS__Group__0__Impl_in_rule__IfExpCS__Group__022124 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__IfExpCS__Group__1_in_rule__IfExpCS__Group__022127 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_75_in_rule__IfExpCS__Group__0__Impl22155 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__IfExpCS__Group__1__Impl_in_rule__IfExpCS__Group__122186 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
+        public static final BitSet FOLLOW_rule__IfExpCS__Group__2_in_rule__IfExpCS__Group__122189 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__IfExpCS__ConditionAssignment_1_in_rule__IfExpCS__Group__1__Impl22216 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__IfExpCS__Group__2__Impl_in_rule__IfExpCS__Group__222246 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__IfExpCS__Group__3_in_rule__IfExpCS__Group__222249 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_76_in_rule__IfExpCS__Group__2__Impl22277 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__IfExpCS__Group__3__Impl_in_rule__IfExpCS__Group__322308 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
+        public static final BitSet FOLLOW_rule__IfExpCS__Group__4_in_rule__IfExpCS__Group__322311 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__IfExpCS__ThenExpressionAssignment_3_in_rule__IfExpCS__Group__3__Impl22338 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__IfExpCS__Group__4__Impl_in_rule__IfExpCS__Group__422368 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__IfExpCS__Group__5_in_rule__IfExpCS__Group__422371 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_77_in_rule__IfExpCS__Group__4__Impl22399 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__IfExpCS__Group__5__Impl_in_rule__IfExpCS__Group__522430 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+        public static final BitSet FOLLOW_rule__IfExpCS__Group__6_in_rule__IfExpCS__Group__522433 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__IfExpCS__ElseExpressionAssignment_5_in_rule__IfExpCS__Group__5__Impl22460 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__IfExpCS__Group__6__Impl_in_rule__IfExpCS__Group__622490 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_78_in_rule__IfExpCS__Group__6__Impl22518 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetExpCS__Group__0__Impl_in_rule__LetExpCS__Group__022563 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__LetExpCS__Group__1_in_rule__LetExpCS__Group__022566 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_79_in_rule__LetExpCS__Group__0__Impl22594 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetExpCS__Group__1__Impl_in_rule__LetExpCS__Group__122625 = new BitSet(new long[]{0x0400000000000000L,0x0000000000010000L});
+        public static final BitSet FOLLOW_rule__LetExpCS__Group__2_in_rule__LetExpCS__Group__122628 = new BitSet(new long[]{0x0000000000000002L});
     }
 
     private static class FollowSets001 {
-        public static final BitSet FOLLOW_rule__LetExpCS__VariableAssignment_1_in_rule__LetExpCS__Group__1__Impl22654 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetExpCS__Group__2__Impl_in_rule__LetExpCS__Group__222684 = new BitSet(new long[]{0x0400000000000000L,0x0000000000010000L});
-        public static final BitSet FOLLOW_rule__LetExpCS__Group__3_in_rule__LetExpCS__Group__222687 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetExpCS__Group_2__0_in_rule__LetExpCS__Group__2__Impl22714 = new BitSet(new long[]{0x0400000000000002L});
-        public static final BitSet FOLLOW_rule__LetExpCS__Group__3__Impl_in_rule__LetExpCS__Group__322745 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__LetExpCS__Group__4_in_rule__LetExpCS__Group__322748 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_80_in_rule__LetExpCS__Group__3__Impl22776 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetExpCS__Group__4__Impl_in_rule__LetExpCS__Group__422807 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetExpCS__InAssignment_4_in_rule__LetExpCS__Group__4__Impl22834 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetExpCS__Group_2__0__Impl_in_rule__LetExpCS__Group_2__022874 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__LetExpCS__Group_2__1_in_rule__LetExpCS__Group_2__022877 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_58_in_rule__LetExpCS__Group_2__0__Impl22905 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetExpCS__Group_2__1__Impl_in_rule__LetExpCS__Group_2__122936 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetExpCS__VariableAssignment_2_1_in_rule__LetExpCS__Group_2__1__Impl22963 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetVariableCS__Group__0__Impl_in_rule__LetVariableCS__Group__022997 = new BitSet(new long[]{0x0000000002000000L,0x0000000000000080L});
-        public static final BitSet FOLLOW_rule__LetVariableCS__Group__1_in_rule__LetVariableCS__Group__023000 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetVariableCS__NameAssignment_0_in_rule__LetVariableCS__Group__0__Impl23027 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetVariableCS__Group__1__Impl_in_rule__LetVariableCS__Group__123057 = new BitSet(new long[]{0x0000000002000000L,0x0000000000000080L});
-        public static final BitSet FOLLOW_rule__LetVariableCS__Group__2_in_rule__LetVariableCS__Group__123060 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetVariableCS__Group_1__0_in_rule__LetVariableCS__Group__1__Impl23087 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetVariableCS__Group__2__Impl_in_rule__LetVariableCS__Group__223118 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__LetVariableCS__Group__3_in_rule__LetVariableCS__Group__223121 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__LetVariableCS__Group__2__Impl23149 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetVariableCS__Group__3__Impl_in_rule__LetVariableCS__Group__323180 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetVariableCS__InitExpressionAssignment_3_in_rule__LetVariableCS__Group__3__Impl23207 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetVariableCS__Group_1__0__Impl_in_rule__LetVariableCS__Group_1__023245 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
-        public static final BitSet FOLLOW_rule__LetVariableCS__Group_1__1_in_rule__LetVariableCS__Group_1__023248 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_71_in_rule__LetVariableCS__Group_1__0__Impl23276 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetVariableCS__Group_1__1__Impl_in_rule__LetVariableCS__Group_1__123307 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LetVariableCS__OwnedTypeAssignment_1_1_in_rule__LetVariableCS__Group_1__1__Impl23334 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NestedExpCS__Group__0__Impl_in_rule__NestedExpCS__Group__023368 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
-        public static final BitSet FOLLOW_rule__NestedExpCS__Group__1_in_rule__NestedExpCS__Group__023371 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_64_in_rule__NestedExpCS__Group__0__Impl23399 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NestedExpCS__Group__1__Impl_in_rule__NestedExpCS__Group__123430 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NestedExpCS__Group__2_in_rule__NestedExpCS__Group__123433 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NestedExpCS__SourceAssignment_1_in_rule__NestedExpCS__Group__1__Impl23460 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__NestedExpCS__Group__2__Impl_in_rule__NestedExpCS__Group__223490 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_65_in_rule__NestedExpCS__Group__2__Impl23518 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__SelfExpCS__Group__0__Impl_in_rule__SelfExpCS__Group__023555 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-        public static final BitSet FOLLOW_rule__SelfExpCS__Group__1_in_rule__SelfExpCS__Group__023558 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__SelfExpCS__Group__1__Impl_in_rule__SelfExpCS__Group__123616 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_81_in_rule__SelfExpCS__Group__1__Impl23644 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleID_in_rule__Specification__NameAssignment_123684 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleService_in_rule__Specification__ServicesAssignment_3_023715 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleConstraint_in_rule__Specification__ConstraintsAssignment_3_123746 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMeasureFunction_in_rule__Specification__MeasureAssignment_423777 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleID_in_rule__Service__NameAssignment_123808 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleQosDimension_in_rule__Service__DimensionsAssignment_323839 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleID_in_rule__QosDimension__NameAssignment_123870 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleValueTupleDescriptor_in_rule__QosDimension__ValueAssignment_423901 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__QosDimension__TupleDescriptorsAssignment_723932 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__QosDimension__TupleDescriptorsAssignment_8_123963 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleModel_in_rule__QosDimension__MetricAssignment_1123994 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLocationConstraintType_in_rule__LocationConstraint__TypeAssignment_024025 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleID_in_rule__LocationConstraint__NameAssignment_124056 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLocationTupleDescriptor_in_rule__LocationConstraint__TupleDescriptorsAssignment_424087 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLocationTupleDescriptor_in_rule__LocationConstraint__TupleDescriptorsAssignment_5_124118 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleModel_in_rule__LocationConstraint__ExpressionAssignment_824149 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleID_in_rule__ResourceConstraint__NameAssignment_124180 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleValueTupleDescriptor_in_rule__ResourceConstraint__LhsAssignment_424211 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleValueTupleDescriptor_in_rule__ResourceConstraint__RhsAssignment_724242 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__ResourceConstraint__TupleDescriptorsAssignment_1024273 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__ResourceConstraint__TupleDescriptorsAssignment_11_124304 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleModel_in_rule__ResourceConstraint__ExpressionAssignment_1424335 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleID_in_rule__RequiredHardwareResourceInstanceConstraint__NameAssignment_124366 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_424397 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_5_124428 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleModel_in_rule__RequiredHardwareResourceInstanceConstraint__ExpressionAssignment_824459 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleID_in_rule__LocationTupleDescriptor__InstanceAssignment_124490 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleID_in_rule__LocationTupleDescriptor__InstancesAssignment_324521 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleID_in_rule__ValueTupleDescriptor__ValueAssignment24552 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleID_in_rule__ComponentResourceTupleDescriptor__InstanceAssignment_124583 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleID_in_rule__ComponentResourceTupleDescriptor__HwresinstanceAssignment_324614 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleID_in_rule__MeasureFunction__ServicesAssignment_124649 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleID_in_rule__MeasureFunction__ServicesAssignment_2_124688 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__Model__OwnedExpressionAssignment24723 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EssentialOCLUnaryOperatorCS__NameAlternatives_0_in_rule__EssentialOCLUnaryOperatorCS__NameAssignment24754 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EssentialOCLInfixOperatorCS__NameAlternatives_0_in_rule__EssentialOCLInfixOperatorCS__NameAssignment24787 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EssentialOCLNavigationOperatorCS__NameAlternatives_0_in_rule__EssentialOCLNavigationOperatorCS__NameAssignment24820 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleFirstPathElementCS_in_rule__PathNameCS__PathAssignment_024853 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNextPathElementCS_in_rule__PathNameCS__PathAssignment_1_124884 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleUnrestrictedName_in_rule__FirstPathElementCS__ElementAssignment24919 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleUnreservedName_in_rule__NextPathElementCS__ElementAssignment24958 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleUnrestrictedName_in_rule__URIFirstPathElementCS__ElementAssignment_024999 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleURI_in_rule__URIFirstPathElementCS__ElementAssignment_1_125038 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulePrimitiveTypeIdentifier_in_rule__PrimitiveTypeCS__NameAssignment25073 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCollectionTypeIdentifier_in_rule__CollectionTypeCS__NameAssignment_025104 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleTypeExpCS_in_rule__CollectionTypeCS__OwnedTypeAssignment_1_125135 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLOWER_in_rule__MultiplicityBoundsCS__LowerBoundAssignment_025166 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleUPPER_in_rule__MultiplicityBoundsCS__UpperBoundAssignment_1_125197 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicityStringCS__StringBoundsAlternatives_0_in_rule__MultiplicityStringCS__StringBoundsAssignment25228 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_33_in_rule__TupleTypeCS__NameAssignment_025266 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleTuplePartCS_in_rule__TupleTypeCS__OwnedPartsAssignment_1_1_025305 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleTuplePartCS_in_rule__TupleTypeCS__OwnedPartsAssignment_1_1_1_125336 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleUnrestrictedName_in_rule__TuplePartCS__NameAssignment_025367 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleTypeExpCS_in_rule__TuplePartCS__OwnedTypeAssignment_225398 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCollectionTypeCS_in_rule__CollectionLiteralExpCS__OwnedTypeAssignment_025429 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCollectionLiteralPartCS_in_rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_025460 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleCollectionLiteralPartCS_in_rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_1_125491 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__CollectionLiteralPartCS__ExpressionCSAssignment_025522 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__CollectionLiteralPartCS__LastExpressionCSAssignment_1_125553 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleUnrestrictedName_in_rule__ConstructorPartCS__PropertyAssignment_025588 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__ConstructorPartCS__InitExpressionAssignment_225623 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleTupleLiteralPartCS_in_rule__TupleLiteralExpCS__OwnedPartsAssignment_225654 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleTupleLiteralPartCS_in_rule__TupleLiteralExpCS__OwnedPartsAssignment_3_125685 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleUnrestrictedName_in_rule__TupleLiteralPartCS__NameAssignment_025716 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleTypeExpCS_in_rule__TupleLiteralPartCS__OwnedTypeAssignment_1_125747 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__TupleLiteralPartCS__InitExpressionAssignment_325778 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNUMBER_LITERAL_in_rule__NumberLiteralExpCS__NameAssignment25809 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleStringLiteral_in_rule__StringLiteralExpCS__NameAssignment25840 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_82_in_rule__BooleanLiteralExpCS__NameAssignment_025876 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_83_in_rule__BooleanLiteralExpCS__NameAssignment_125920 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMultiplicityCS_in_rule__TypeLiteralWithMultiplicityCS__MultiplicityAssignment_125959 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleTypeLiteralWithMultiplicityCS_in_rule__TypeLiteralExpCS__OwnedTypeAssignment25990 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulePathNameCS_in_rule__TypeNameExpCS__PathNameAssignment26021 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMultiplicityCS_in_rule__TypeExpCS__MultiplicityAssignment_126052 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleBinaryOperatorCS_in_rule__ExpCS__OwnedOperatorAssignment_0_1_126083 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulePrefixedExpCS_in_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_026114 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleBinaryOperatorCS_in_rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_1_026145 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulePrefixedExpCS_in_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_1_126176 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleBinaryOperatorCS_in_rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_2_026207 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLetExpCS_in_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_2_126238 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLetExpCS_in_rule__ExpCS__OwnedExpressionAssignment_0_1_2_126269 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleUnaryOperatorCS_in_rule__ExpCS__OwnedOperatorAssignment_1_126300 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLetExpCS_in_rule__ExpCS__OwnedExpressionAssignment_1_226331 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleUnaryOperatorCS_in_rule__PrefixedExpCS__OwnedOperatorAssignment_0_126362 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulePrimaryExpCS_in_rule__PrefixedExpCS__OwnedExpressionAssignment_0_226393 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulePathNameCS_in_rule__PrimaryExpCS__PathNameAssignment_7_126424 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_226455 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_3_126486 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_126517 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_2_126548 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_84_in_rule__PrimaryExpCS__AtPreAssignment_7_2_0_6_026584 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleConstructorPartCS_in_rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_026623 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleConstructorPartCS_in_rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_1_126654 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleStringLiteral_in_rule__PrimaryExpCS__ValueAssignment_7_2_1_2_126685 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_84_in_rule__PrimaryExpCS__AtPreAssignment_7_2_2_0_026721 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNavigatingArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_026760 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNavigatingCommaArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_126791 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNavigatingSemiArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_026822 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNavigatingCommaArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_126853 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNavigatingBarArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_026884 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNavigatingCommaArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_126915 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNavigatingArgExpCS_in_rule__NavigatingArgCS__NameAssignment_026946 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleTypeExpCS_in_rule__NavigatingArgCS__OwnedTypeAssignment_1_126977 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__NavigatingArgCS__InitAssignment_1_2_127008 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_85_in_rule__NavigatingBarArgCS__PrefixAssignment_027044 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNavigatingArgExpCS_in_rule__NavigatingBarArgCS__NameAssignment_127083 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleTypeExpCS_in_rule__NavigatingBarArgCS__OwnedTypeAssignment_2_127114 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__NavigatingBarArgCS__InitAssignment_2_2_127145 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_58_in_rule__NavigatingCommaArgCS__PrefixAssignment_027181 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNavigatingArgExpCS_in_rule__NavigatingCommaArgCS__NameAssignment_127220 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleTypeExpCS_in_rule__NavigatingCommaArgCS__OwnedTypeAssignment_2_127251 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__NavigatingCommaArgCS__InitAssignment_2_2_127282 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_55_in_rule__NavigatingSemiArgCS__PrefixAssignment_027318 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNavigatingArgExpCS_in_rule__NavigatingSemiArgCS__NameAssignment_127357 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleTypeExpCS_in_rule__NavigatingSemiArgCS__OwnedTypeAssignment_2_127388 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__NavigatingSemiArgCS__InitAssignment_2_2_127419 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__IfExpCS__ConditionAssignment_127450 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__IfExpCS__ThenExpressionAssignment_327481 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__IfExpCS__ElseExpressionAssignment_527512 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLetVariableCS_in_rule__LetExpCS__VariableAssignment_127543 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLetVariableCS_in_rule__LetExpCS__VariableAssignment_2_127574 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__LetExpCS__InAssignment_427605 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleUnrestrictedName_in_rule__LetVariableCS__NameAssignment_027636 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleTypeExpCS_in_rule__LetVariableCS__OwnedTypeAssignment_1_127667 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__LetVariableCS__InitExpressionAssignment_327698 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleExpCS_in_rule__NestedExpCS__SourceAssignment_127729 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetExpCS__VariableAssignment_1_in_rule__LetExpCS__Group__1__Impl22655 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetExpCS__Group__2__Impl_in_rule__LetExpCS__Group__222685 = new BitSet(new long[]{0x0400000000000000L,0x0000000000010000L});
+        public static final BitSet FOLLOW_rule__LetExpCS__Group__3_in_rule__LetExpCS__Group__222688 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetExpCS__Group_2__0_in_rule__LetExpCS__Group__2__Impl22715 = new BitSet(new long[]{0x0400000000000002L});
+        public static final BitSet FOLLOW_rule__LetExpCS__Group__3__Impl_in_rule__LetExpCS__Group__322746 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__LetExpCS__Group__4_in_rule__LetExpCS__Group__322749 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_80_in_rule__LetExpCS__Group__3__Impl22777 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetExpCS__Group__4__Impl_in_rule__LetExpCS__Group__422808 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetExpCS__InAssignment_4_in_rule__LetExpCS__Group__4__Impl22835 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetExpCS__Group_2__0__Impl_in_rule__LetExpCS__Group_2__022875 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__LetExpCS__Group_2__1_in_rule__LetExpCS__Group_2__022878 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_58_in_rule__LetExpCS__Group_2__0__Impl22906 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetExpCS__Group_2__1__Impl_in_rule__LetExpCS__Group_2__122937 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetExpCS__VariableAssignment_2_1_in_rule__LetExpCS__Group_2__1__Impl22964 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetVariableCS__Group__0__Impl_in_rule__LetVariableCS__Group__022998 = new BitSet(new long[]{0x0000000002000000L,0x0000000000000080L});
+        public static final BitSet FOLLOW_rule__LetVariableCS__Group__1_in_rule__LetVariableCS__Group__023001 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetVariableCS__NameAssignment_0_in_rule__LetVariableCS__Group__0__Impl23028 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetVariableCS__Group__1__Impl_in_rule__LetVariableCS__Group__123058 = new BitSet(new long[]{0x0000000002000000L,0x0000000000000080L});
+        public static final BitSet FOLLOW_rule__LetVariableCS__Group__2_in_rule__LetVariableCS__Group__123061 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetVariableCS__Group_1__0_in_rule__LetVariableCS__Group__1__Impl23088 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetVariableCS__Group__2__Impl_in_rule__LetVariableCS__Group__223119 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__LetVariableCS__Group__3_in_rule__LetVariableCS__Group__223122 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_rule__LetVariableCS__Group__2__Impl23150 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetVariableCS__Group__3__Impl_in_rule__LetVariableCS__Group__323181 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetVariableCS__InitExpressionAssignment_3_in_rule__LetVariableCS__Group__3__Impl23208 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetVariableCS__Group_1__0__Impl_in_rule__LetVariableCS__Group_1__023246 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E0B01L});
+        public static final BitSet FOLLOW_rule__LetVariableCS__Group_1__1_in_rule__LetVariableCS__Group_1__023249 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_71_in_rule__LetVariableCS__Group_1__0__Impl23277 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetVariableCS__Group_1__1__Impl_in_rule__LetVariableCS__Group_1__123308 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LetVariableCS__OwnedTypeAssignment_1_1_in_rule__LetVariableCS__Group_1__1__Impl23335 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NestedExpCS__Group__0__Impl_in_rule__NestedExpCS__Group__023369 = new BitSet(new long[]{0x00007FFE000700F0L,0x00000000000E8B01L});
+        public static final BitSet FOLLOW_rule__NestedExpCS__Group__1_in_rule__NestedExpCS__Group__023372 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_64_in_rule__NestedExpCS__Group__0__Impl23400 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NestedExpCS__Group__1__Impl_in_rule__NestedExpCS__Group__123431 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NestedExpCS__Group__2_in_rule__NestedExpCS__Group__123434 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NestedExpCS__SourceAssignment_1_in_rule__NestedExpCS__Group__1__Impl23461 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__NestedExpCS__Group__2__Impl_in_rule__NestedExpCS__Group__223491 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_65_in_rule__NestedExpCS__Group__2__Impl23519 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__SelfExpCS__Group__0__Impl_in_rule__SelfExpCS__Group__023556 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+        public static final BitSet FOLLOW_rule__SelfExpCS__Group__1_in_rule__SelfExpCS__Group__023559 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__SelfExpCS__Group__1__Impl_in_rule__SelfExpCS__Group__123617 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_81_in_rule__SelfExpCS__Group__1__Impl23645 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleID_in_rule__Specification__NameAssignment_123685 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleService_in_rule__Specification__ServicesAssignment_3_023716 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleConstraint_in_rule__Specification__ConstraintsAssignment_3_123747 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMeasureFunction_in_rule__Specification__MeasureAssignment_423778 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleID_in_rule__Service__NameAssignment_123809 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleQosDimension_in_rule__Service__DimensionsAssignment_323840 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleID_in_rule__QosDimension__NameAssignment_123871 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleValueTupleDescriptor_in_rule__QosDimension__ValueAssignment_423902 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__QosDimension__TupleDescriptorsAssignment_723933 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__QosDimension__TupleDescriptorsAssignment_8_123964 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleModel_in_rule__QosDimension__MetricAssignment_1123995 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLocationConstraintType_in_rule__LocationConstraint__TypeAssignment_024026 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleID_in_rule__LocationConstraint__NameAssignment_124057 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLocationTupleDescriptor_in_rule__LocationConstraint__TupleDescriptorsAssignment_424088 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLocationTupleDescriptor_in_rule__LocationConstraint__TupleDescriptorsAssignment_5_124119 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleModel_in_rule__LocationConstraint__ExpressionAssignment_824150 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleID_in_rule__ResourceConstraint__NameAssignment_124181 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleValueTupleDescriptor_in_rule__ResourceConstraint__LhsAssignment_424212 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleValueTupleDescriptor_in_rule__ResourceConstraint__RhsAssignment_724243 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__ResourceConstraint__TupleDescriptorsAssignment_1024274 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__ResourceConstraint__TupleDescriptorsAssignment_11_124305 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleModel_in_rule__ResourceConstraint__ExpressionAssignment_1424336 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleID_in_rule__RequiredHardwareResourceInstanceConstraint__NameAssignment_124367 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_424398 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_5_124429 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleModel_in_rule__RequiredHardwareResourceInstanceConstraint__ExpressionAssignment_824460 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleID_in_rule__LocationTupleDescriptor__InstanceAssignment_124491 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleID_in_rule__LocationTupleDescriptor__InstancesAssignment_324522 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleID_in_rule__ValueTupleDescriptor__ValueAssignment24553 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleID_in_rule__ComponentResourceTupleDescriptor__InstanceAssignment_124584 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleID_in_rule__ComponentResourceTupleDescriptor__HwresinstanceAssignment_324615 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleID_in_rule__MeasureFunction__ServicesAssignment_124650 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleID_in_rule__MeasureFunction__ServicesAssignment_2_124689 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__Model__OwnedExpressionAssignment24724 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EssentialOCLUnaryOperatorCS__NameAlternatives_0_in_rule__EssentialOCLUnaryOperatorCS__NameAssignment24755 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EssentialOCLInfixOperatorCS__NameAlternatives_0_in_rule__EssentialOCLInfixOperatorCS__NameAssignment24788 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EssentialOCLNavigationOperatorCS__NameAlternatives_0_in_rule__EssentialOCLNavigationOperatorCS__NameAssignment24821 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleFirstPathElementCS_in_rule__PathNameCS__PathAssignment_024854 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleNextPathElementCS_in_rule__PathNameCS__PathAssignment_1_124885 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleUnrestrictedName_in_rule__FirstPathElementCS__ElementAssignment24920 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleUnreservedName_in_rule__NextPathElementCS__ElementAssignment24959 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleUnrestrictedName_in_rule__URIFirstPathElementCS__ElementAssignment_025000 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleURI_in_rule__URIFirstPathElementCS__ElementAssignment_1_125039 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulePrimitiveTypeIdentifier_in_rule__PrimitiveTypeCS__NameAssignment25074 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCollectionTypeIdentifier_in_rule__CollectionTypeCS__NameAssignment_025105 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleTypeExpCS_in_rule__CollectionTypeCS__OwnedTypeAssignment_1_125136 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLOWER_in_rule__MultiplicityBoundsCS__LowerBoundAssignment_025167 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleUPPER_in_rule__MultiplicityBoundsCS__UpperBoundAssignment_1_125198 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicityStringCS__StringBoundsAlternatives_0_in_rule__MultiplicityStringCS__StringBoundsAssignment25229 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_33_in_rule__TupleTypeCS__NameAssignment_025267 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleTuplePartCS_in_rule__TupleTypeCS__OwnedPartsAssignment_1_1_025306 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleTuplePartCS_in_rule__TupleTypeCS__OwnedPartsAssignment_1_1_1_125337 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleUnrestrictedName_in_rule__TuplePartCS__NameAssignment_025368 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleTypeExpCS_in_rule__TuplePartCS__OwnedTypeAssignment_225399 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCollectionTypeCS_in_rule__CollectionLiteralExpCS__OwnedTypeAssignment_025430 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCollectionLiteralPartCS_in_rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_025461 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleCollectionLiteralPartCS_in_rule__CollectionLiteralExpCS__OwnedPartsAssignment_2_1_125492 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__CollectionLiteralPartCS__ExpressionCSAssignment_025523 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__CollectionLiteralPartCS__LastExpressionCSAssignment_1_125554 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleUnrestrictedName_in_rule__ConstructorPartCS__PropertyAssignment_025589 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__ConstructorPartCS__InitExpressionAssignment_225624 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleTupleLiteralPartCS_in_rule__TupleLiteralExpCS__OwnedPartsAssignment_225655 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleTupleLiteralPartCS_in_rule__TupleLiteralExpCS__OwnedPartsAssignment_3_125686 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleUnrestrictedName_in_rule__TupleLiteralPartCS__NameAssignment_025717 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleTypeExpCS_in_rule__TupleLiteralPartCS__OwnedTypeAssignment_1_125748 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__TupleLiteralPartCS__InitExpressionAssignment_325779 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleNUMBER_LITERAL_in_rule__NumberLiteralExpCS__NameAssignment25810 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleStringLiteral_in_rule__StringLiteralExpCS__NameAssignment25841 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_82_in_rule__BooleanLiteralExpCS__NameAssignment_025877 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_83_in_rule__BooleanLiteralExpCS__NameAssignment_125921 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMultiplicityCS_in_rule__TypeLiteralWithMultiplicityCS__MultiplicityAssignment_125960 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleTypeLiteralWithMultiplicityCS_in_rule__TypeLiteralExpCS__OwnedTypeAssignment25991 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulePathNameCS_in_rule__TypeNameExpCS__PathNameAssignment26022 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMultiplicityCS_in_rule__TypeExpCS__MultiplicityAssignment_126053 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleBinaryOperatorCS_in_rule__ExpCS__OwnedOperatorAssignment_0_1_126084 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulePrefixedExpCS_in_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_026115 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleBinaryOperatorCS_in_rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_1_026146 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulePrefixedExpCS_in_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_1_126177 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleBinaryOperatorCS_in_rule__ExpCS__OwnedOperatorAssignment_0_1_2_0_2_026208 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLetExpCS_in_rule__ExpCS__OwnedExpressionAssignment_0_1_2_0_2_126239 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLetExpCS_in_rule__ExpCS__OwnedExpressionAssignment_0_1_2_126270 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleUnaryOperatorCS_in_rule__ExpCS__OwnedOperatorAssignment_1_126301 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLetExpCS_in_rule__ExpCS__OwnedExpressionAssignment_1_226332 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleUnaryOperatorCS_in_rule__PrefixedExpCS__OwnedOperatorAssignment_0_126363 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulePrimaryExpCS_in_rule__PrefixedExpCS__OwnedExpressionAssignment_0_226394 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulePathNameCS_in_rule__PrimaryExpCS__PathNameAssignment_7_126425 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_226456 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__PrimaryExpCS__FirstIndexesAssignment_7_2_0_3_126487 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_126518 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__PrimaryExpCS__SecondIndexesAssignment_7_2_0_5_2_126549 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_84_in_rule__PrimaryExpCS__AtPreAssignment_7_2_0_6_026585 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleConstructorPartCS_in_rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_026624 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleConstructorPartCS_in_rule__PrimaryExpCS__OwnedPartsAssignment_7_2_1_2_0_1_126655 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleStringLiteral_in_rule__PrimaryExpCS__ValueAssignment_7_2_1_2_126686 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_84_in_rule__PrimaryExpCS__AtPreAssignment_7_2_2_0_026722 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleNavigatingArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_026761 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleNavigatingCommaArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_126792 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleNavigatingSemiArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_026823 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleNavigatingCommaArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_2_126854 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleNavigatingBarArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_026885 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleNavigatingCommaArgCS_in_rule__PrimaryExpCS__ArgumentAssignment_7_2_2_1_2_3_126916 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleNavigatingArgExpCS_in_rule__NavigatingArgCS__NameAssignment_026947 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleTypeExpCS_in_rule__NavigatingArgCS__OwnedTypeAssignment_1_126978 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__NavigatingArgCS__InitAssignment_1_2_127009 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_85_in_rule__NavigatingBarArgCS__PrefixAssignment_027045 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleNavigatingArgExpCS_in_rule__NavigatingBarArgCS__NameAssignment_127084 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleTypeExpCS_in_rule__NavigatingBarArgCS__OwnedTypeAssignment_2_127115 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__NavigatingBarArgCS__InitAssignment_2_2_127146 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_58_in_rule__NavigatingCommaArgCS__PrefixAssignment_027182 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleNavigatingArgExpCS_in_rule__NavigatingCommaArgCS__NameAssignment_127221 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleTypeExpCS_in_rule__NavigatingCommaArgCS__OwnedTypeAssignment_2_127252 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__NavigatingCommaArgCS__InitAssignment_2_2_127283 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_55_in_rule__NavigatingSemiArgCS__PrefixAssignment_027319 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleNavigatingArgExpCS_in_rule__NavigatingSemiArgCS__NameAssignment_127358 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleTypeExpCS_in_rule__NavigatingSemiArgCS__OwnedTypeAssignment_2_127389 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__NavigatingSemiArgCS__InitAssignment_2_2_127420 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__IfExpCS__ConditionAssignment_127451 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__IfExpCS__ThenExpressionAssignment_327482 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__IfExpCS__ElseExpressionAssignment_527513 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLetVariableCS_in_rule__LetExpCS__VariableAssignment_127544 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLetVariableCS_in_rule__LetExpCS__VariableAssignment_2_127575 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__LetExpCS__InAssignment_427606 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleUnrestrictedName_in_rule__LetVariableCS__NameAssignment_027637 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleTypeExpCS_in_rule__LetVariableCS__OwnedTypeAssignment_1_127668 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__LetVariableCS__InitExpressionAssignment_327699 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleExpCS_in_rule__NestedExpCS__SourceAssignment_127730 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleTupleLiteralExpCS_in_synpred58_InternalAllocationSpecificationLanguage6245 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleCollectionLiteralExpCS_in_synpred59_InternalAllocationSpecificationLanguage6262 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleTypeLiteralExpCS_in_synpred60_InternalAllocationSpecificationLanguage6279 = new BitSet(new long[]{0x0000000000000002L});

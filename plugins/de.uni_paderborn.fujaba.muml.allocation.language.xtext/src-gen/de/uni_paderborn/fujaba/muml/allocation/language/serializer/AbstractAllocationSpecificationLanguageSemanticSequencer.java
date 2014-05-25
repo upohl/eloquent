@@ -616,7 +616,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	
 	/**
 	 * Constraint:
-	 *     (name=ID (services+=Service | constraints+=Constraint)* measure=MeasureFunction)
+	 *     (name=ID (services+=Service | constraints+=Constraint)* measure=MeasureFunction?)
 	 */
 	protected void sequence_Specification(EObject context, SpecificationCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

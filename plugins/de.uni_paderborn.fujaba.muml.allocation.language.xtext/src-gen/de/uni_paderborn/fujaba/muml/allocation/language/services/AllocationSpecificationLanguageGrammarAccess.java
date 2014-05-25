@@ -36,10 +36,10 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		
 		////import "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.ecore#/cs" as cs
 		//Specification returns cs::SpecificationCS:
-		//	{cs::SpecificationCS} name=ID "{" (services+=Service | constraints+=Constraint)* measure=MeasureFunction "}";
+		//	{cs::SpecificationCS} name=ID "{" (services+=Service | constraints+=Constraint)* measure=MeasureFunction? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{cs::SpecificationCS} name=ID "{" (services+=Service | constraints+=Constraint)* measure=MeasureFunction "}"
+		//{cs::SpecificationCS} name=ID "{" (services+=Service | constraints+=Constraint)* measure=MeasureFunction? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{cs::SpecificationCS}
@@ -69,7 +69,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//Constraint
 		public RuleCall getConstraintsConstraintParserRuleCall_3_1_0() { return cConstraintsConstraintParserRuleCall_3_1_0; }
 
-		//measure=MeasureFunction
+		//measure=MeasureFunction?
 		public Assignment getMeasureAssignment_4() { return cMeasureAssignment_4; }
 
 		//MeasureFunction
@@ -765,7 +765,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	
 	////import "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.ecore#/cs" as cs
 	//Specification returns cs::SpecificationCS:
-	//	{cs::SpecificationCS} name=ID "{" (services+=Service | constraints+=Constraint)* measure=MeasureFunction "}";
+	//	{cs::SpecificationCS} name=ID "{" (services+=Service | constraints+=Constraint)* measure=MeasureFunction? "}";
 	public SpecificationElements getSpecificationAccess() {
 		return (pSpecification != null) ? pSpecification : (pSpecification = new SpecificationElements());
 	}

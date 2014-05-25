@@ -8,7 +8,7 @@ Specification returns cs::SpecificationCS:
 	{cs::SpecificationCS}
 	name=ID '{'
 		(services += Service | constraints += Constraint)*
-		measure=MeasureFunction 
+		(measure=MeasureFunction)? 
 	'}'
 ;
 

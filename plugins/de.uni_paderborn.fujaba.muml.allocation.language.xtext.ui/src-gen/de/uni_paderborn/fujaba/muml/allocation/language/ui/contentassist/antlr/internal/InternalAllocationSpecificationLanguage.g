@@ -3126,7 +3126,7 @@ rule__Specification__Group__4__Impl
 :
 (
 { before(grammarAccess.getSpecificationAccess().getMeasureAssignment_4()); }
-(rule__Specification__MeasureAssignment_4)
+(rule__Specification__MeasureAssignment_4)?
 { after(grammarAccess.getSpecificationAccess().getMeasureAssignment_4()); }
 )
 
