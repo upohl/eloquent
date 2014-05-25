@@ -5,6 +5,7 @@ package de.uni_paderborn.fujaba.muml.allocation.language.cs;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.ocl.examples.xtext.base.basecs.NamedElementCS;
+import org.storydriven.core.ExtendableElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +29,7 @@ import org.eclipse.ocl.examples.xtext.base.basecs.NamedElementCS;
  * @model
  * @generated
  */
-public interface SpecificationCS extends NamedElementCS {
+public interface SpecificationCS extends NamedElementCS, ExtendableElement {
 	/**
 	 * Returns the value of the '<em><b>Services</b></em>' containment reference list.
 	 * The list contents are of type {@link de.uni_paderborn.fujaba.muml.allocation.language.cs.ServiceCS}.

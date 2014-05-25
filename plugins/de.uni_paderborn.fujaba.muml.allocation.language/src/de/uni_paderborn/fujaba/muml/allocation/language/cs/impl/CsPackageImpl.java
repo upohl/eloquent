@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.ocl.examples.xtext.base.basecs.BaseCSPackage;
 
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.EssentialOCLCSPackage;
+import org.storydriven.core.CorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -183,6 +184,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
+		CorePackage.eINSTANCE.eClass();
 		EssentialOCLCSPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -599,6 +601,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		// Obtain other dependent packages
 		BaseCSPackage theBaseCSPackage = (BaseCSPackage)EPackage.Registry.INSTANCE.getEPackage(BaseCSPackage.eNS_URI);
+		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
 		EssentialOCLCSPackage theEssentialOCLCSPackage = (EssentialOCLCSPackage)EPackage.Registry.INSTANCE.getEPackage(EssentialOCLCSPackage.eNS_URI);
 
 		// Create type parameters
@@ -607,6 +610,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		// Add supertypes to classes
 		specificationCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
+		specificationCSEClass.getESuperTypes().add(theCorePackage.getExtendableElement());
 		serviceCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
 		qoSDimensionCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
 		constraintCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());

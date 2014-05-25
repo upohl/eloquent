@@ -90,6 +90,7 @@ public abstract class InstanceTupleDescriptorCSImpl extends TupleDescriptorCSImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String toString() {
 		return super.toString();
 	}
