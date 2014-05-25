@@ -1,0 +1,130 @@
+modeltype ECORE "strict" uses ecore('http://www.eclipse.org/emf/2002/Ecore');
+modeltype PIVOT "strict" uses pivot('http://www.eclipse.org/ocl/3.1.0/Pivot');
+
+// TODO: mapping names need a bit more love + unify naming scheme
+// TODO: some more comments
+
+transformation CS2ASTransformation(in csModel : ECORE, in pivotModel : PIVOT, out asModel : ECORE);
+
+// maps an ocl cs class name to a pivot class name
+configuration property oclCS2PivotClassMap : Dict(String, String);
+
+main() {
+	csModel.rootObjects()![EPackage]->map csEPackage2asEPackage();
+	// defer EAnnotation creation in order to avoid mapping "cluttering"
+	// (it is not possible to inherit/merge a general mapping, because
+	// there is no common concrete base class)
+	asModel.objects()[EModelElement]->createEAnnotations();
+}
+
+query EClassifier::isCSClassifier() : Boolean {
+	return csModel.objects()[EClassifier]->includes(self);
+}
+
+query String::csName2asName(suffix : String) : String {
+	return self.csName2asName() + suffix;
+}
+
+query String::csName2asName() : String {
+	return	if self.toLower().endsWith('cs') then
+		if self.size() - 2 > 0 then self.substring(1, self.size() - 2) else '' endif
+	else
+		self
+	endif;
+}
+
+mapping in EPackage::csEPackage2asEPackage() : EPackage {
+	name := self.name.csName2asName("as");
+	nsPrefix := self.nsPrefix.csName2asName("as");
+	nsURI := self.nsURI.csName2asName("as");
+	eClassifiers += self.eClassifiers->map eClassifier2eClassifier();
+}
+
+mapping in EClassifier::eClassifier2eClassifier() : EClassifier
+	disjuncts EClass::eClass2eClass, EEnum::csEEnum2csEEnum, EDataType::eDataType2eDataType;
+	
+mapping in EClass::eClass2eClass() : EClass
+	disjuncts EClass::csEClass2asEClass, EClass::ocl2pivot;
+
+mapping in EClass::csEClass2asEClass() : EClass
+	when {self.isCSClassifier()}
+{
+	name := self.name.csName2asName();
+	_abstract := self._abstract;
+	eSuperTypes += self.eSuperTypes->map eClass2eClass();
+	eStructuralFeatures += self.eStructuralFeatures->map eStructuralFeature2eStructuralFeature();
+}
+
+mapping in EStructuralFeature::eStructuralFeature2eStructuralFeature() : EStructuralFeature
+	disjuncts EReference::eReference2eReference, EAttribute::eAttribute2eAttribute;
+
+mapping in EReference::eReference2eReference() : EReference {
+	name := self.name;
+	containment := self.containment;
+	_ordered := self._ordered;
+	lowerBound := self.lowerBound;
+	upperBound := self.upperBound;
+	eType := self.eType.map eClassifier2eClassifier();
+}
+
+mapping in EAttribute::eAttribute2eAttribute() : EAttribute {
+	name := self.name;
+	eType := self.eType.map eClassifier2eClassifier(); 
+}
+
+mapping in EClass::ocl2pivot() : EClass
+	when {not self.isCSClassifier() and self.isPivotClassifier()}
+{
+	init {
+		// the cs model just references this (self) class and so
+		// does the as model with the returned pivot class
+		result := self.getPivotClass();
+	}
+}
+
+query EClass::isPivotClassifier() : Boolean {
+	return oclCS2PivotClassMap->keys()->includes(self.name);
+}
+
+query EClass::getPivotClass() : EClass {
+	var pivotName : String := oclCS2PivotClassMap->get(self.name);
+	assert fatal (not pivotName.oclIsUndefined()) with log("unexpected OCLCS class: " + self.name);
+	return pivotModel.objects()[EClass]->any(name = pivotName);
+}
+
+mapping in EDataType::eDataType2eDataType() : EDataType {
+	init {
+		// for our current use-case, no "real" mapping is needed here
+		result := self;
+	}
+}
+
+mapping in EEnum::csEEnum2csEEnum() : EEnum
+	when {self.isCSClassifier()}
+{
+	name := self.name.csName2asName();
+	eLiterals := self.eLiterals->map eLiteral2eLiteral();
+}
+
+mapping in EEnumLiteral::eLiteral2eLiteral() : EEnumLiteral {
+	name := self.name;
+	value := self.value;
+	_literal := self._literal;
+}
+
+mapping inout EModelElement::createEAnnotations() {
+	// self is an as element
+	var element : EModelElement := self.invresolveone(EModelElement);
+	assert fatal (not element.oclIsUndefined()) with log("illegal state: no inverse for " + self.toString());
+	eAnnotations += element.eAnnotations->map eAnnotation2eAnnotation();
+}
+
+mapping in EAnnotation::eAnnotation2eAnnotation() : EAnnotation {
+	source := self.source;
+	details := self.details->map eStringToStringMapEntry2eStringToStringMapEntry();
+}
+
+mapping in EStringToStringMapEntry::eStringToStringMapEntry2eStringToStringMapEntry() : EStringToStringMapEntry {
+	key := self.key;
+	value := self.value;
+}
