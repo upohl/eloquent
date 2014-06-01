@@ -3,6 +3,22 @@
 */
 package de.uni_paderborn.fujaba.muml.allocation.language.validation;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import org.eclipse.ocl.examples.domain.elements.DomainType;
+import org.eclipse.ocl.examples.pivot.ExpressionInOCL;
+import org.eclipse.ocl.examples.pivot.TupleType;
+import org.eclipse.ocl.examples.pivot.Type;
+import org.eclipse.ocl.examples.pivot.manager.MetaModelManager;
+import org.eclipse.ocl.examples.pivot.manager.TupleTypeManager;
+import org.eclipse.ocl.examples.pivot.utilities.PivotUtil;
+import org.eclipse.xtext.validation.Check;
+
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
+import de.uni_paderborn.fujaba.muml.instance.InstancePackage;
+
 /**
  * Custom validation rules. 
  *
@@ -16,4 +32,28 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 //			warning("Name should start with a capital", MyDslPackage.Literals.GREETING__NAME);
 //		}
 //	}
+	
+	@Check
+	public void checkRequiredHardwareResourceInstanceConstraintCSExpressionType(RequiredHardwareResourceInstanceConstraintCS constraint) {
+		System.out.println("called");
+		Type constraintType = ((ExpressionInOCL) constraint.getExpression()
+				.getPivot()).getType();
+		System.out.println(constraintType);
+		MetaModelManager metaModelManager = PivotUtil.findMetaModelManager(constraint);
+		TupleTypeManager tupleTypeManager = metaModelManager.getTupleManager();
+		DomainType domainType = metaModelManager.getIdResolver().getType(
+				InstancePackage.Literals.COMPONENT_INSTANCE);
+		Type componentType = metaModelManager.getType(domainType);
+		Map<String, Type> map = new HashMap<String, Type>();
+		map.put("first", componentType);
+		TupleType tupleType = tupleTypeManager.getTupleType("Tuple", map);
+		Type expectedType = metaModelManager.getSetType(tupleType, null, null);
+		System.out.println(expectedType);
+		boolean conformsTo = metaModelManager.conformsTo(constraintType, expectedType, null); 
+		System.out.println(conformsTo);
+		if (!conformsTo) {
+			error(constraintType + " does not conform to " + expectedType,
+					CsPackage.Literals.CONSTRAINT_CS__EXPRESSION);
+		}
+	}
 }
