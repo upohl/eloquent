@@ -154,9 +154,10 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 	}
 	
 	def protected String getSetterName(GenFeature genFeature) {
-		// XXX: assumption genFeature's ecoreFeature is an EReference
-		val EReference ref = genFeature.ecoreFeature as EReference
-		if (ref.isMany) '''«genFeature.getGetAccessor»().add''' else '''set«genFeature.getAccessorName»'''
+		if (genFeature.ecoreFeature.isMany)
+			'''«genFeature.getGetAccessor»().add'''
+		else
+			'''set«genFeature.getAccessorName»'''
 	}
 	
 	def protected String getPivotName() {
