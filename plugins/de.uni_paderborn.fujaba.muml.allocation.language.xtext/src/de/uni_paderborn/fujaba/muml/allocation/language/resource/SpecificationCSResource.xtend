@@ -1,9 +1,9 @@
 package de.uni_paderborn.fujaba.muml.allocation.language.resource
 
-import de.uni_paderborn.fujaba.muml.allocation.language.context.ContextFactory
+import de.uni_paderborn.fujaba.muml.allocation.language.context.ContextPackage
 import de.uni_paderborn.fujaba.muml.allocation.language.cs2as.SpecificationCS2Pivot
 import java.util.Map
-import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.jdt.annotation.NonNull
 import org.eclipse.ocl.examples.domain.elements.DomainType
@@ -18,7 +18,7 @@ import org.eclipse.ocl.examples.xtext.essentialocl.utilities.EssentialOCLCSResou
 
 class SpecificationCSResource extends EssentialOCLCSResource {
 	
-	private static final EObject contextObject = ContextFactory.eINSTANCE.createOCLContext
+	private static final EClass contextClass = ContextPackage.Literals.OCL_CONTEXT
 	
 	@NonNull override CS2Pivot createCS2Pivot(@NonNull Map<? extends /*BaseCS*/Resource, ? extends ASResource> cs2asResourceMap,
 		@NonNull MetaModelManager metaModelManager) {
@@ -31,7 +31,7 @@ class SpecificationCSResource extends EssentialOCLCSResource {
 		// hrm should we postpone the context setup?
 		val MetaModelManager metaModelManager = super.createMetaModelManager()
 		val PivotIdResolver idResolver = metaModelManager.getIdResolver()
-		val DomainType staticType = idResolver.getStaticTypeOf(contextObject)
+		val DomainType staticType = idResolver.getType(contextClass)
 		val Type contextType = metaModelManager.getType(staticType)
 		val ParserContext parserContext = new ClassContext(metaModelManager, null, contextType)
 		setParserContext(parserContext)
