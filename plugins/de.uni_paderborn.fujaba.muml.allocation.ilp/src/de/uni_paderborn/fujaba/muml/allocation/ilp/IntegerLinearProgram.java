@@ -82,7 +82,7 @@ public interface IntegerLinearProgram extends EObject {
 	 * @return the value of the '<em>Objective Function</em>' containment reference.
 	 * @see #setObjectiveFunction(ObjectiveFunctionExpression)
 	 * @see de.uni_paderborn.fujaba.muml.allocation.ilp.IlpPackage#getIntegerLinearProgram_ObjectiveFunction()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	ObjectiveFunctionExpression getObjectiveFunction();

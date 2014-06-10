@@ -26,8 +26,8 @@
         <details key="documentation" value="The constraints expressions for this Integer Linear Program"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="objectiveFunction" lowerBound="1"
-        eType="#//ObjectiveFunctionExpression" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectiveFunction" eType="#//ObjectiveFunctionExpression"
+        containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The objective funtion to which is to be minimized or maximized of this Integer Linear Program."/>
       </eAnnotations>

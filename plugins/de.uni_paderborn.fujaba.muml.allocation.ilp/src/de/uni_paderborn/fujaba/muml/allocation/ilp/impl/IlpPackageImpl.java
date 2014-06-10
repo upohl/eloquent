@@ -375,7 +375,7 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 		initEClass(integerLinearProgramEClass, IntegerLinearProgram.class, "IntegerLinearProgram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIntegerLinearProgram_Variables(), this.getVariable(), null, "variables", null, 0, -1, IntegerLinearProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIntegerLinearProgram_Constraints(), this.getConstraintExpression(), null, "constraints", null, 0, -1, IntegerLinearProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIntegerLinearProgram_ObjectiveFunction(), this.getObjectiveFunctionExpression(), null, "objectiveFunction", null, 1, 1, IntegerLinearProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIntegerLinearProgram_ObjectiveFunction(), this.getObjectiveFunctionExpression(), null, "objectiveFunction", null, 0, 1, IntegerLinearProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVariable_DataType(), this.getILPDataType(), "dataType", null, 1, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -416,7 +416,7 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 	 * @generated
 	 */
 	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";		
+		String source = "http://www.eclipse.org/emf/2002/Ecore";	
 		addAnnotation
 		  (this, 
 		   source, 
@@ -424,13 +424,13 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
 			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
 			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
-		   });											
+		   });	
 		addAnnotation
 		  (constraintExpressionEClass, 
 		   source, 
 		   new String[] {
 			 "constraints", "ValidOperator"
-		   });						
+		   });
 	}
 
 	/**
@@ -440,13 +440,13 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 	 * @generated
 	 */
 	protected void createOCLAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";													
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";	
 		addAnnotation
 		  (constraintExpressionEClass, 
 		   source, 
 		   new String[] {
 			 "ValidOperator", "Set{core::expressions::common::ComparingOperator::LESS, core::expressions::common::ComparingOperator::LESS_OR_EQUAL, core::expressions::common::ComparingOperator::EQUAL, core::expressions::common::ComparingOperator::GREATER_OR_EQUAL, core::expressions::common::ComparingOperator::GREATER}->includes(operator)"
-		   });					
+		   });
 	}
 
 } //IlpPackageImpl

@@ -3,10 +3,7 @@
 package de.uni_paderborn.fujaba.muml.allocation.ilp.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 import org.storydriven.core.provider.CoreEditPlugin;
 
 /**
@@ -42,7 +39,6 @@ public final class IlpEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     CoreEditPlugin.INSTANCE,
-		     EcoreEditPlugin.INSTANCE,
 		   });
 	}
 
