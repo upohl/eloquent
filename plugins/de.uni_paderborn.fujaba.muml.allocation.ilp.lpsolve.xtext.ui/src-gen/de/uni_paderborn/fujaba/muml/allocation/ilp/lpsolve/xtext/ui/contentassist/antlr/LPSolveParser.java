@@ -37,6 +37,8 @@ public class LPSolveParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getObjectiveFunctionExpressionAccess().getAlternatives(), "rule__ObjectiveFunctionExpression__Alternatives");
+					put(grammarAccess.getObjectiveFunctionExpressionAccess().getAlternatives_0_0(), "rule__ObjectiveFunctionExpression__Alternatives_0_0");
 					put(grammarAccess.getOperandAccess().getAlternatives(), "rule__Operand__Alternatives");
 					put(grammarAccess.getNumberAccess().getAlternatives(), "rule__Number__Alternatives");
 					put(grammarAccess.getObjectiveGoalAccess().getAlternatives(), "rule__ObjectiveGoal__Alternatives");
@@ -44,7 +46,8 @@ public class LPSolveParser extends AbstractContentAssistParser {
 					put(grammarAccess.getILPDataTypeAccess().getAlternatives(), "rule__ILPDataType__Alternatives");
 					put(grammarAccess.getAdditionOperatorAccess().getAlternatives(), "rule__AdditionOperator__Alternatives");
 					put(grammarAccess.getIntegerLinearProgramAccess().getGroup(), "rule__IntegerLinearProgram__Group__0");
-					put(grammarAccess.getObjectiveFunctionExpressionAccess().getGroup(), "rule__ObjectiveFunctionExpression__Group__0");
+					put(grammarAccess.getObjectiveFunctionExpressionAccess().getGroup_0(), "rule__ObjectiveFunctionExpression__Group_0__0");
+					put(grammarAccess.getObjectiveFunctionExpressionAccess().getGroup_1(), "rule__ObjectiveFunctionExpression__Group_1__0");
 					put(grammarAccess.getConstraintExpressionAccess().getGroup(), "rule__ConstraintExpression__Group__0");
 					put(grammarAccess.getConstraintExpressionAccess().getGroup_0(), "rule__ConstraintExpression__Group_0__0");
 					put(grammarAccess.getVariableAccess().getGroup(), "rule__Variable__Group__0");
@@ -55,8 +58,8 @@ public class LPSolveParser extends AbstractContentAssistParser {
 					put(grammarAccess.getIntegerLinearProgramAccess().getObjectiveFunctionAssignment_0(), "rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0");
 					put(grammarAccess.getIntegerLinearProgramAccess().getConstraintsAssignment_1(), "rule__IntegerLinearProgram__ConstraintsAssignment_1");
 					put(grammarAccess.getIntegerLinearProgramAccess().getVariablesAssignment_2(), "rule__IntegerLinearProgram__VariablesAssignment_2");
-					put(grammarAccess.getObjectiveFunctionExpressionAccess().getGoalAssignment_0(), "rule__ObjectiveFunctionExpression__GoalAssignment_0");
-					put(grammarAccess.getObjectiveFunctionExpressionAccess().getObjectiveFunctionAssignment_2(), "rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_2");
+					put(grammarAccess.getObjectiveFunctionExpressionAccess().getGoalAssignment_1_0(), "rule__ObjectiveFunctionExpression__GoalAssignment_1_0");
+					put(grammarAccess.getObjectiveFunctionExpressionAccess().getObjectiveFunctionAssignment_1_2(), "rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2");
 					put(grammarAccess.getConstraintExpressionAccess().getCommentAssignment_0_0(), "rule__ConstraintExpression__CommentAssignment_0_0");
 					put(grammarAccess.getConstraintExpressionAccess().getLeftExpressionAssignment_1(), "rule__ConstraintExpression__LeftExpressionAssignment_1");
 					put(grammarAccess.getConstraintExpressionAccess().getOperatorAssignment_2(), "rule__ConstraintExpression__OperatorAssignment_2");

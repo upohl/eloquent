@@ -362,8 +362,8 @@ public class InternalLPSolveLexer extends Lexer {
         try {
             int _type = RULE_DECIMAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1765:14: ( RULE_INT '.' RULE_INT )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1765:16: RULE_INT '.' RULE_INT
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1909:14: ( RULE_INT '.' RULE_INT )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1909:16: RULE_INT '.' RULE_INT
             {
             mRULE_INT(); 
             match('.'); 
@@ -384,10 +384,10 @@ public class InternalLPSolveLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1767:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1767:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1911:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1911:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1767:11: ( '^' )?
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1911:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -396,7 +396,7 @@ public class InternalLPSolveLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1767:11: '^'
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1911:11: '^'
                     {
                     match('^'); 
 
@@ -414,7 +414,7 @@ public class InternalLPSolveLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1767:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1911:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -463,10 +463,10 @@ public class InternalLPSolveLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1769:10: ( ( '0' .. '9' )+ )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1769:12: ( '0' .. '9' )+
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1913:10: ( ( '0' .. '9' )+ )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1913:12: ( '0' .. '9' )+
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1769:12: ( '0' .. '9' )+
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1913:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -480,7 +480,7 @@ public class InternalLPSolveLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1769:13: '0' .. '9'
+            	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1913:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -512,10 +512,10 @@ public class InternalLPSolveLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1771:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1771:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1915:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1915:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1771:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1915:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -533,10 +533,10 @@ public class InternalLPSolveLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1771:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1915:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1771:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1915:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -552,7 +552,7 @@ public class InternalLPSolveLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1771:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1915:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -568,7 +568,7 @@ public class InternalLPSolveLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1771:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1915:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -593,10 +593,10 @@ public class InternalLPSolveLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1771:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1915:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1771:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1915:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -612,7 +612,7 @@ public class InternalLPSolveLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1771:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1915:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -628,7 +628,7 @@ public class InternalLPSolveLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1771:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1915:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -671,12 +671,12 @@ public class InternalLPSolveLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1773:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1773:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1917:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1917:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1773:24: ( options {greedy=false; } : . )*
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1917:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -701,7 +701,7 @@ public class InternalLPSolveLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1773:52: .
+            	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1917:52: .
             	    {
             	    matchAny(); 
 
@@ -731,12 +731,12 @@ public class InternalLPSolveLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1775:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1775:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1919:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1919:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1775:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1919:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -749,7 +749,7 @@ public class InternalLPSolveLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1775:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1919:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -769,7 +769,7 @@ public class InternalLPSolveLexer extends Lexer {
                 }
             } while (true);
 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1775:40: ( ( '\\r' )? '\\n' )?
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1919:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -778,9 +778,9 @@ public class InternalLPSolveLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1775:41: ( '\\r' )? '\\n'
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1919:41: ( '\\r' )? '\\n'
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1775:41: ( '\\r' )?
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1919:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -789,7 +789,7 @@ public class InternalLPSolveLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1775:41: '\\r'
+                            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1919:41: '\\r'
                             {
                             match('\r'); 
 
@@ -821,10 +821,10 @@ public class InternalLPSolveLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1777:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1777:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1921:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1921:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1777:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1921:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -878,8 +878,8 @@ public class InternalLPSolveLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1779:16: ( . )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1779:18: .
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1923:16: ( . )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1923:18: .
             {
             matchAny(); 
 

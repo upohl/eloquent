@@ -17,7 +17,9 @@ IntegerLinearProgram returns ilp::IntegerLinearProgram:
 ;
 
 ObjectiveFunctionExpression returns ilp::ObjectiveFunctionExpression:
-	goal=ObjectiveGoal':' objectiveFunction=LinearExpression?';'
+	// support lpsolve's (strange) specification of a non-existent objective function
+	// (in this case _no_ ObjectiveFunctionExpression object should be created)
+	(('min' | 'max') ':' ';') | goal=ObjectiveGoal':' objectiveFunction=LinearExpression';'
 ;
 
 enum ObjectiveGoal returns ilp::ObjectiveGoal:

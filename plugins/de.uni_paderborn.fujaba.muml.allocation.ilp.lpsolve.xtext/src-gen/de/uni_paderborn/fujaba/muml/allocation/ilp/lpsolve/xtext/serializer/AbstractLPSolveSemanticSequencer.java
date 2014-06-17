@@ -11,12 +11,15 @@ import de.uni_paderborn.fujaba.muml.allocation.ilp.VariableExpression;
 import de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.services.LPSolveGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
+import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
 import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
+import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEObjectProvider;
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
+import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.storydriven.core.expressions.common.ArithmeticExpression;
 import org.storydriven.core.expressions.common.CommonExpressionsPackage;
 import org.storydriven.core.expressions.common.LiteralExpression;
@@ -148,10 +151,20 @@ public abstract class AbstractLPSolveSemanticSequencer extends AbstractDelegatin
 	
 	/**
 	 * Constraint:
-	 *     (goal=ObjectiveGoal objectiveFunction=LinearExpression?)
+	 *     (goal=ObjectiveGoal objectiveFunction=LinearExpression)?
 	 */
 	protected void sequence_ObjectiveFunctionExpression(EObject context, ObjectiveFunctionExpression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, IlpPackage.Literals.OBJECTIVE_FUNCTION_EXPRESSION__GOAL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, IlpPackage.Literals.OBJECTIVE_FUNCTION_EXPRESSION__GOAL));
+			if(transientValues.isValueTransient(semanticObject, IlpPackage.Literals.OBJECTIVE_FUNCTION_EXPRESSION__OBJECTIVE_FUNCTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, IlpPackage.Literals.OBJECTIVE_FUNCTION_EXPRESSION__OBJECTIVE_FUNCTION));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getObjectiveFunctionExpressionAccess().getGoalObjectiveGoalEnumRuleCall_1_0_0(), semanticObject.getGoal());
+		feeder.accept(grammarAccess.getObjectiveFunctionExpressionAccess().getObjectiveFunctionLinearExpressionParserRuleCall_1_2_0(), semanticObject.getObjectiveFunction());
+		feeder.finish();
 	}
 	
 	

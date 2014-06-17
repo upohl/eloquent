@@ -57,38 +57,70 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class ObjectiveFunctionExpressionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ObjectiveFunctionExpression");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cGoalAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cGoalObjectiveGoalEnumRuleCall_0_0 = (RuleCall)cGoalAssignment_0.eContents().get(0);
-		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cObjectiveFunctionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cObjectiveFunctionLinearExpressionParserRuleCall_2_0 = (RuleCall)cObjectiveFunctionAssignment_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Alternatives cAlternatives_0_0 = (Alternatives)cGroup_0.eContents().get(0);
+		private final Keyword cMinKeyword_0_0_0 = (Keyword)cAlternatives_0_0.eContents().get(0);
+		private final Keyword cMaxKeyword_0_0_1 = (Keyword)cAlternatives_0_0.eContents().get(1);
+		private final Keyword cColonKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Assignment cGoalAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final RuleCall cGoalObjectiveGoalEnumRuleCall_1_0_0 = (RuleCall)cGoalAssignment_1_0.eContents().get(0);
+		private final Keyword cColonKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cObjectiveFunctionAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cObjectiveFunctionLinearExpressionParserRuleCall_1_2_0 = (RuleCall)cObjectiveFunctionAssignment_1_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
 		
 		//ObjectiveFunctionExpression returns ilp::ObjectiveFunctionExpression:
-		//	goal=ObjectiveGoal ":" objectiveFunction=LinearExpression? ";";
+		//	("min" | "max") ":" ";" // support lpsolve's (strange) specification of a non-existent objective function
+		//	// (in this case _no_ ObjectiveFunctionExpression object should be created)
+		//	| goal=ObjectiveGoal ":" objectiveFunction=LinearExpression ";";
 		public ParserRule getRule() { return rule; }
 
-		//goal=ObjectiveGoal ":" objectiveFunction=LinearExpression? ";"
-		public Group getGroup() { return cGroup; }
+		//("min" | "max") ":" ";" // support lpsolve's (strange) specification of a non-existent objective function
+		//// (in this case _no_ ObjectiveFunctionExpression object should be created)
+		//| goal=ObjectiveGoal ":" objectiveFunction=LinearExpression ";"
+		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//goal=ObjectiveGoal
-		public Assignment getGoalAssignment_0() { return cGoalAssignment_0; }
+		//("min" | "max") ":" ";"
+		public Group getGroup_0() { return cGroup_0; }
 
-		//ObjectiveGoal
-		public RuleCall getGoalObjectiveGoalEnumRuleCall_0_0() { return cGoalObjectiveGoalEnumRuleCall_0_0; }
+		//"min" | "max"
+		public Alternatives getAlternatives_0_0() { return cAlternatives_0_0; }
+
+		//"min"
+		public Keyword getMinKeyword_0_0_0() { return cMinKeyword_0_0_0; }
+
+		//"max"
+		public Keyword getMaxKeyword_0_0_1() { return cMaxKeyword_0_0_1; }
 
 		//":"
-		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
-
-		//objectiveFunction=LinearExpression?
-		public Assignment getObjectiveFunctionAssignment_2() { return cObjectiveFunctionAssignment_2; }
-
-		//LinearExpression
-		public RuleCall getObjectiveFunctionLinearExpressionParserRuleCall_2_0() { return cObjectiveFunctionLinearExpressionParserRuleCall_2_0; }
+		public Keyword getColonKeyword_0_1() { return cColonKeyword_0_1; }
 
 		//";"
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+		public Keyword getSemicolonKeyword_0_2() { return cSemicolonKeyword_0_2; }
+
+		//goal=ObjectiveGoal ":" objectiveFunction=LinearExpression ";"
+		public Group getGroup_1() { return cGroup_1; }
+
+		//goal=ObjectiveGoal
+		public Assignment getGoalAssignment_1_0() { return cGoalAssignment_1_0; }
+
+		//ObjectiveGoal
+		public RuleCall getGoalObjectiveGoalEnumRuleCall_1_0_0() { return cGoalObjectiveGoalEnumRuleCall_1_0_0; }
+
+		//":"
+		public Keyword getColonKeyword_1_1() { return cColonKeyword_1_1; }
+
+		//objectiveFunction=LinearExpression
+		public Assignment getObjectiveFunctionAssignment_1_2() { return cObjectiveFunctionAssignment_1_2; }
+
+		//LinearExpression
+		public RuleCall getObjectiveFunctionLinearExpressionParserRuleCall_1_2_0() { return cObjectiveFunctionLinearExpressionParserRuleCall_1_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_1_3() { return cSemicolonKeyword_1_3; }
 	}
 
 	public class ConstraintExpressionElements extends AbstractParserRuleElementFinder {
@@ -597,7 +629,9 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ObjectiveFunctionExpression returns ilp::ObjectiveFunctionExpression:
-	//	goal=ObjectiveGoal ":" objectiveFunction=LinearExpression? ";";
+	//	("min" | "max") ":" ";" // support lpsolve's (strange) specification of a non-existent objective function
+	//	// (in this case _no_ ObjectiveFunctionExpression object should be created)
+	//	| goal=ObjectiveGoal ":" objectiveFunction=LinearExpression ";";
 	public ObjectiveFunctionExpressionElements getObjectiveFunctionExpressionAccess() {
 		return (pObjectiveFunctionExpression != null) ? pObjectiveFunctionExpression : (pObjectiveFunctionExpression = new ObjectiveFunctionExpressionElements());
 	}

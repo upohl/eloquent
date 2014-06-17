@@ -153,51 +153,69 @@ ruleObjectiveFunctionExpression returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
+(((	otherlv_0='min' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getObjectiveFunctionExpressionAccess().getMinKeyword_0_0_0());
+    }
+
+    |	otherlv_1='max' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getObjectiveFunctionExpressionAccess().getMaxKeyword_0_0_1());
+    }
+)	otherlv_2=':' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getObjectiveFunctionExpressionAccess().getColonKeyword_0_1());
+    }
+	otherlv_3=';' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getObjectiveFunctionExpressionAccess().getSemicolonKeyword_0_2());
+    }
+)
+    |((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getObjectiveFunctionExpressionAccess().getGoalObjectiveGoalEnumRuleCall_0_0()); 
+	        newCompositeNode(grammarAccess.getObjectiveFunctionExpressionAccess().getGoalObjectiveGoalEnumRuleCall_1_0_0()); 
 	    }
-		lv_goal_0_0=ruleObjectiveGoal		{
+		lv_goal_4_0=ruleObjectiveGoal		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getObjectiveFunctionExpressionRule());
 	        }
        		set(
        			$current, 
        			"goal",
-        		lv_goal_0_0, 
+        		lv_goal_4_0, 
         		"ObjectiveGoal");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_1=':' 
+)	otherlv_5=':' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getObjectiveFunctionExpressionAccess().getColonKeyword_1());
+    	newLeafNode(otherlv_5, grammarAccess.getObjectiveFunctionExpressionAccess().getColonKeyword_1_1());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getObjectiveFunctionExpressionAccess().getObjectiveFunctionLinearExpressionParserRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getObjectiveFunctionExpressionAccess().getObjectiveFunctionLinearExpressionParserRuleCall_1_2_0()); 
 	    }
-		lv_objectiveFunction_2_0=ruleLinearExpression		{
+		lv_objectiveFunction_6_0=ruleLinearExpression		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getObjectiveFunctionExpressionRule());
 	        }
        		set(
        			$current, 
        			"objectiveFunction",
-        		lv_objectiveFunction_2_0, 
+        		lv_objectiveFunction_6_0, 
         		"LinearExpression");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)?	otherlv_3=';' 
+)	otherlv_7=';' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getObjectiveFunctionExpressionAccess().getSemicolonKeyword_3());
+    	newLeafNode(otherlv_7, grammarAccess.getObjectiveFunctionExpressionAccess().getSemicolonKeyword_1_3());
     }
-)
+))
 ;
 
 
