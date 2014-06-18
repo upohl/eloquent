@@ -7,6 +7,7 @@ import org.junit.runners.Parameterized
 
 @RunWith(value = typeof(Parameterized))
 class InfrastructureTest extends QVToTransformationSingleOutExtentTest {
+	private static final String uriPrefix = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.tests/fixtures/infrastructure/"
 	
 	new(String expectedURI, String transformationURI, String... inputObjectURIs) {
 		super(expectedURI, transformationURI, inputObjectURIs)
@@ -15,9 +16,11 @@ class InfrastructureTest extends QVToTransformationSingleOutExtentTest {
 	@Parameters
 	def static Collection<Object[]> getTestData() {
 		TestDataUtil.createTestData(2,
-				#["platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.tests/fixtures/infrastructure/My.ecore",
-				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.tests/fixtures/infrastructure/test.qvto",
-				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.tests/fixtures/infrastructure/My.ecore"])
+				#[uriPrefix + "My.ecore", uriPrefix + "test.qvto", uriPrefix + "My.ecore"],
+				// test fragment uris
+				#[uriPrefix + "NestedEPackage.ecore#//@eSubpackages.0",
+				  uriPrefix + "test.qvto",
+				  uriPrefix + "NestedEPackage.ecore#//@eSubpackages.0"])
 	}
 	
 }
