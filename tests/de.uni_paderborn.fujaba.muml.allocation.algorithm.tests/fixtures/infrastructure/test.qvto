@@ -1,0 +1,18 @@
+modeltype ecore uses ecore ('http://www.eclipse.org/emf/2002/Ecore');
+
+transformation test(in source : ecore, out output : ecore);
+
+main() {
+	map createEPackage();
+}
+
+mapping createEPackage() : EPackage {
+	name := "test";
+	nsURI := "test";
+	nsPrefix := "test";
+	eClassifiers += map createEClass("foo");
+}
+
+mapping createEClass(name : String) : EClass {
+	result.name := name;
+}
