@@ -6,8 +6,8 @@
  * This code is auto-generated
  * from: de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.genmodel
  *
- * Do not edit it.
- */
+ * Only the copyright statement is editable.
+ *******************************************************************************/
 package	de.uni_paderborn.fujaba.muml.allocation.language.cs.util;
 
 import org.eclipse.jdt.annotation.NonNull;
