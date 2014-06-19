@@ -1,0 +1,11 @@
+import de.uni_paderborn.fujaba.muml.allocation.algorithm.ocl.OCLEvaluatorBlackboxUnit;
+
+modeltype ocl uses essentialoclcs('http://www.eclipse.org/ocl/3.1.0/EssentialOCLCST');
+
+library OCLEvaluator;
+
+//blackbox query evaluate(oclExpression : ContextCS, contextObject : OclAny) : OclAny;
+
+query evaluateOCL(oclExpression : ContextCS, contextObject : OclAny) : OclAny {
+	return evaluate(oclExpression, contextObject);
+}
