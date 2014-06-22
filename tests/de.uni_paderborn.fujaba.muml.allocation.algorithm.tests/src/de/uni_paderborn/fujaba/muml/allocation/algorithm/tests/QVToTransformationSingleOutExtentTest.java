@@ -1,5 +1,6 @@
 package de.uni_paderborn.fujaba.muml.allocation.algorithm.tests;
 
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -11,12 +12,14 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.m2m.qvt.oml.BasicModelExtent;
 import org.eclipse.m2m.qvt.oml.ExecutionContext;
 import org.eclipse.m2m.qvt.oml.ExecutionContextImpl;
 import org.eclipse.m2m.qvt.oml.ExecutionDiagnostic;
 import org.eclipse.m2m.qvt.oml.ModelExtent;
 import org.eclipse.m2m.qvt.oml.TransformationExecutor;
+import org.eclipse.m2m.qvt.oml.util.WriterLog;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -77,6 +80,7 @@ public class QVToTransformationSingleOutExtentTest {
 		for (String key : configurationPropertyMap.keySet()) {
 			context.setConfigProperty(key, configurationPropertyMap.get(key));
 		}
+		context.setLog(new WriterLog(new OutputStreamWriter(System.out)));
 	}
 	
 	protected ExecutionDiagnostic runTransformation() {
@@ -127,6 +131,9 @@ public class QVToTransformationSingleOutExtentTest {
 			ResourceSet resourceSet = new ResourceSetImpl();
 			Resource resource = resourceSet.getResource(loadURI, true);
 			assert resource.getContents().size() > 0;
+			// resolve all proxies, otherwise EMFCompare complains (this is
+			// especially needed for xtext resources)
+			EcoreUtil.resolveAll(resource);
 			return uri.hasFragment() ? resource.getEObject(uri.fragment())
 					: resource.getContents().get(0);
 		}
