@@ -58,10 +58,6 @@
       name="instance">
     <modelElements
         xsi:type="instance:ComponentInstanceConfiguration"
-        xmi:id="_pYc-APZPEeOttsqmrEn09g"
-        name="root-cic"/>
-    <modelElements
-        xsi:type="instance:ComponentInstanceConfiguration"
         xmi:id="_bwQB8PZaEeOJBJMtyzAqyw"
         name="cic">
       <componentInstances

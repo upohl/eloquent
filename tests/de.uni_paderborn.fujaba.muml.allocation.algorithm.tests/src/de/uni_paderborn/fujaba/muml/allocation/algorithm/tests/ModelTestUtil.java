@@ -10,6 +10,7 @@ public class ModelTestUtil {
 	public static void assertModelEquals(EObject expected, EObject actual) {
 		Comparison comparison = EMFCompare.builder().build().compare(
 				new DefaultComparisonScope(expected, actual, null));
+		//EMFComparePrettyPrinter.printComparison(comparison, new PrintStream(System.out));
 		Assert.assertEquals(0, comparison.getDifferences().size());
 	}
 }
