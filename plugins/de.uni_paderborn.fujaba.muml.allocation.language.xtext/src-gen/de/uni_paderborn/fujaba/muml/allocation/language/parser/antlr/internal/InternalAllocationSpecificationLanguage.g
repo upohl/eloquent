@@ -948,16 +948,16 @@ ruleLocationTupleDescriptor returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLocationTupleDescriptorAccess().getInstancesIDParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getLocationTupleDescriptorAccess().getSecondInstanceIDParserRuleCall_3_0()); 
 	    }
-		lv_instances_3_0=ruleID		{
+		lv_secondInstance_3_0=ruleID		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getLocationTupleDescriptorRule());
 	        }
        		set(
        			$current, 
-       			"instances",
-        		lv_instances_3_0, 
+       			"secondInstance",
+        		lv_secondInstance_3_0, 
         		"ID");
 	        afterParserOrEnumRuleCall();
 	    }

@@ -428,7 +428,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLocationTupleDescriptor_Instances() {
+	public EAttribute getLocationTupleDescriptor_SecondInstance() {
 		return (EAttribute)locationTupleDescriptorEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -557,7 +557,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		createEAttribute(instanceTupleDescriptorEClass, INSTANCE_TUPLE_DESCRIPTOR__INSTANCE);
 
 		locationTupleDescriptorEClass = createEClass(LOCATION_TUPLE_DESCRIPTOR);
-		createEAttribute(locationTupleDescriptorEClass, LOCATION_TUPLE_DESCRIPTOR__INSTANCES);
+		createEAttribute(locationTupleDescriptorEClass, LOCATION_TUPLE_DESCRIPTOR__SECOND_INSTANCE);
 
 		componentResourceTupleDescriptorEClass = createEClass(COMPONENT_RESOURCE_TUPLE_DESCRIPTOR);
 		createEAttribute(componentResourceTupleDescriptorEClass, COMPONENT_RESOURCE_TUPLE_DESCRIPTOR__HWRESINSTANCE);
@@ -652,7 +652,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		initEAttribute(getInstanceTupleDescriptor_Instance(), ecorePackage.getEString(), "instance", null, 0, 1, InstanceTupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationTupleDescriptorEClass, LocationTupleDescriptor.class, "LocationTupleDescriptor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLocationTupleDescriptor_Instances(), ecorePackage.getEString(), "instances", null, 0, 1, LocationTupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLocationTupleDescriptor_SecondInstance(), ecorePackage.getEString(), "secondInstance", null, 0, 1, LocationTupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(componentResourceTupleDescriptorEClass, ComponentResourceTupleDescriptor.class, "ComponentResourceTupleDescriptor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComponentResourceTupleDescriptor_Hwresinstance(), ecorePackage.getEString(), "hwresinstance", null, 0, 1, ComponentResourceTupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -154,10 +154,10 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Describes the two named parts of a tuple of a SAME_LOCATION or&#xA;DIFFERENT_LOCATION constraint."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instances" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="secondInstance" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Name of the named part which represents the set of component instances."/>
+        <details key="documentation" value="Name of the named part, which represents the other component instance."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>

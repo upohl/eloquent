@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.LocationTupleDescriptorImpl#getInstances <em>Instances</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.LocationTupleDescriptorImpl#getSecondInstance <em>Second Instance</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,24 +26,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl implements LocationTupleDescriptor {
 	/**
-	 * The default value of the '{@link #getInstances() <em>Instances</em>}' attribute.
+	 * The default value of the '{@link #getSecondInstance() <em>Second Instance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInstances()
+	 * @see #getSecondInstance()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INSTANCES_EDEFAULT = null;
+	protected static final String SECOND_INSTANCE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getInstances() <em>Instances</em>}' attribute.
+	 * The cached value of the '{@link #getSecondInstance() <em>Second Instance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInstances()
+	 * @see #getSecondInstance()
 	 * @generated
 	 * @ordered
 	 */
-	protected String instances = INSTANCES_EDEFAULT;
+	protected String secondInstance = SECOND_INSTANCE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,8 +69,8 @@ public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getInstances() {
-		return instances;
+	public String getSecondInstance() {
+		return secondInstance;
 	}
 
 	/**
@@ -78,11 +78,11 @@ public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInstances(String newInstances) {
-		String oldInstances = instances;
-		instances = newInstances;
+	public void setSecondInstance(String newSecondInstance) {
+		String oldSecondInstance = secondInstance;
+		secondInstance = newSecondInstance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.LOCATION_TUPLE_DESCRIPTOR__INSTANCES, oldInstances, instances));
+			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.LOCATION_TUPLE_DESCRIPTOR__SECOND_INSTANCE, oldSecondInstance, secondInstance));
 	}
 
 	/**
@@ -93,8 +93,8 @@ public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AsPackage.LOCATION_TUPLE_DESCRIPTOR__INSTANCES:
-				return getInstances();
+			case AsPackage.LOCATION_TUPLE_DESCRIPTOR__SECOND_INSTANCE:
+				return getSecondInstance();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,8 +107,8 @@ public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AsPackage.LOCATION_TUPLE_DESCRIPTOR__INSTANCES:
-				setInstances((String)newValue);
+			case AsPackage.LOCATION_TUPLE_DESCRIPTOR__SECOND_INSTANCE:
+				setSecondInstance((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +122,8 @@ public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AsPackage.LOCATION_TUPLE_DESCRIPTOR__INSTANCES:
-				setInstances(INSTANCES_EDEFAULT);
+			case AsPackage.LOCATION_TUPLE_DESCRIPTOR__SECOND_INSTANCE:
+				setSecondInstance(SECOND_INSTANCE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,8 +137,8 @@ public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AsPackage.LOCATION_TUPLE_DESCRIPTOR__INSTANCES:
-				return INSTANCES_EDEFAULT == null ? instances != null : !INSTANCES_EDEFAULT.equals(instances);
+			case AsPackage.LOCATION_TUPLE_DESCRIPTOR__SECOND_INSTANCE:
+				return SECOND_INSTANCE_EDEFAULT == null ? secondInstance != null : !SECOND_INSTANCE_EDEFAULT.equals(secondInstance);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -153,8 +153,8 @@ public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl imp
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (instances: ");
-		result.append(instances);
+		result.append(" (secondInstance: ");
+		result.append(secondInstance);
 		result.append(')');
 		return result.toString();
 	}

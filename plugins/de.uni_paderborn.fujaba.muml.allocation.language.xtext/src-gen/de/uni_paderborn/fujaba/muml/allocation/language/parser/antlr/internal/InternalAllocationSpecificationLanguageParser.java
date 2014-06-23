@@ -2322,7 +2322,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleLocationTupleDescriptor"
-    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:918:1: ruleLocationTupleDescriptor returns [EObject current=null] : (otherlv_0= '(' ( (lv_instance_1_0= ruleID ) ) otherlv_2= ',' ( (lv_instances_3_0= ruleID ) ) otherlv_4= ')' ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:918:1: ruleLocationTupleDescriptor returns [EObject current=null] : (otherlv_0= '(' ( (lv_instance_1_0= ruleID ) ) otherlv_2= ',' ( (lv_secondInstance_3_0= ruleID ) ) otherlv_4= ')' ) ;
     public final EObject ruleLocationTupleDescriptor() throws RecognitionException {
         EObject current = null;
 
@@ -2331,17 +2331,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         Token otherlv_4=null;
         AntlrDatatypeRuleToken lv_instance_1_0 = null;
 
-        AntlrDatatypeRuleToken lv_instances_3_0 = null;
+        AntlrDatatypeRuleToken lv_secondInstance_3_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:921:28: ( (otherlv_0= '(' ( (lv_instance_1_0= ruleID ) ) otherlv_2= ',' ( (lv_instances_3_0= ruleID ) ) otherlv_4= ')' ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:922:1: (otherlv_0= '(' ( (lv_instance_1_0= ruleID ) ) otherlv_2= ',' ( (lv_instances_3_0= ruleID ) ) otherlv_4= ')' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:921:28: ( (otherlv_0= '(' ( (lv_instance_1_0= ruleID ) ) otherlv_2= ',' ( (lv_secondInstance_3_0= ruleID ) ) otherlv_4= ')' ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:922:1: (otherlv_0= '(' ( (lv_instance_1_0= ruleID ) ) otherlv_2= ',' ( (lv_secondInstance_3_0= ruleID ) ) otherlv_4= ')' )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:922:1: (otherlv_0= '(' ( (lv_instance_1_0= ruleID ) ) otherlv_2= ',' ( (lv_instances_3_0= ruleID ) ) otherlv_4= ')' )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:922:3: otherlv_0= '(' ( (lv_instance_1_0= ruleID ) ) otherlv_2= ',' ( (lv_instances_3_0= ruleID ) ) otherlv_4= ')'
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:922:1: (otherlv_0= '(' ( (lv_instance_1_0= ruleID ) ) otherlv_2= ',' ( (lv_secondInstance_3_0= ruleID ) ) otherlv_4= ')' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:922:3: otherlv_0= '(' ( (lv_instance_1_0= ruleID ) ) otherlv_2= ',' ( (lv_secondInstance_3_0= ruleID ) ) otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,30,FollowSets000.FOLLOW_30_in_ruleLocationTupleDescriptor1811); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2390,19 +2390,19 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_2, grammarAccess.getLocationTupleDescriptorAccess().getCommaKeyword_2());
                   
             }
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:948:1: ( (lv_instances_3_0= ruleID ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:949:1: (lv_instances_3_0= ruleID )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:948:1: ( (lv_secondInstance_3_0= ruleID ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:949:1: (lv_secondInstance_3_0= ruleID )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:949:1: (lv_instances_3_0= ruleID )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:950:3: lv_instances_3_0= ruleID
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:949:1: (lv_secondInstance_3_0= ruleID )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:950:3: lv_secondInstance_3_0= ruleID
             {
             if ( state.backtracking==0 ) {
                
-              	        newCompositeNode(grammarAccess.getLocationTupleDescriptorAccess().getInstancesIDParserRuleCall_3_0()); 
+              	        newCompositeNode(grammarAccess.getLocationTupleDescriptorAccess().getSecondInstanceIDParserRuleCall_3_0()); 
               	    
             }
             pushFollow(FollowSets000.FOLLOW_ruleID_in_ruleLocationTupleDescriptor1865);
-            lv_instances_3_0=ruleID();
+            lv_secondInstance_3_0=ruleID();
 
             state._fsp--;
             if (state.failed) return current;
@@ -2413,8 +2413,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
               	        }
                      		set(
                      			current, 
-                     			"instances",
-                      		lv_instances_3_0, 
+                     			"secondInstance",
+                      		lv_secondInstance_3_0, 
                       		"ID");
               	        afterParserOrEnumRuleCall();
               	    

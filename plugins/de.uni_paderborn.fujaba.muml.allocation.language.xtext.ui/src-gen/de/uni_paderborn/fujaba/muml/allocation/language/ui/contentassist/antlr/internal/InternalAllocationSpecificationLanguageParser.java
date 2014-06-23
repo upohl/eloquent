@@ -16143,26 +16143,26 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "rule__LocationTupleDescriptor__Group__3__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5464:1: rule__LocationTupleDescriptor__Group__3__Impl : ( ( rule__LocationTupleDescriptor__InstancesAssignment_3 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5464:1: rule__LocationTupleDescriptor__Group__3__Impl : ( ( rule__LocationTupleDescriptor__SecondInstanceAssignment_3 ) ) ;
     public final void rule__LocationTupleDescriptor__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5468:1: ( ( ( rule__LocationTupleDescriptor__InstancesAssignment_3 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5469:1: ( ( rule__LocationTupleDescriptor__InstancesAssignment_3 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5468:1: ( ( ( rule__LocationTupleDescriptor__SecondInstanceAssignment_3 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5469:1: ( ( rule__LocationTupleDescriptor__SecondInstanceAssignment_3 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5469:1: ( ( rule__LocationTupleDescriptor__InstancesAssignment_3 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5470:1: ( rule__LocationTupleDescriptor__InstancesAssignment_3 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5469:1: ( ( rule__LocationTupleDescriptor__SecondInstanceAssignment_3 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5470:1: ( rule__LocationTupleDescriptor__SecondInstanceAssignment_3 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationTupleDescriptorAccess().getInstancesAssignment_3()); 
+               before(grammarAccess.getLocationTupleDescriptorAccess().getSecondInstanceAssignment_3()); 
             }
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5471:1: ( rule__LocationTupleDescriptor__InstancesAssignment_3 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5471:2: rule__LocationTupleDescriptor__InstancesAssignment_3
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5471:1: ( rule__LocationTupleDescriptor__SecondInstanceAssignment_3 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:5471:2: rule__LocationTupleDescriptor__SecondInstanceAssignment_3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__InstancesAssignment_3_in_rule__LocationTupleDescriptor__Group__3__Impl11371);
-            rule__LocationTupleDescriptor__InstancesAssignment_3();
+            pushFollow(FollowSets000.FOLLOW_rule__LocationTupleDescriptor__SecondInstanceAssignment_3_in_rule__LocationTupleDescriptor__Group__3__Impl11371);
+            rule__LocationTupleDescriptor__SecondInstanceAssignment_3();
 
             state._fsp--;
             if (state.failed) return ;
@@ -16170,7 +16170,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationTupleDescriptorAccess().getInstancesAssignment_3()); 
+               after(grammarAccess.getLocationTupleDescriptorAccess().getSecondInstanceAssignment_3()); 
             }
 
             }
@@ -34512,9 +34512,9 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     // $ANTLR end "rule__LocationTupleDescriptor__InstanceAssignment_1"
 
 
-    // $ANTLR start "rule__LocationTupleDescriptor__InstancesAssignment_3"
-    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:12128:1: rule__LocationTupleDescriptor__InstancesAssignment_3 : ( ruleID ) ;
-    public final void rule__LocationTupleDescriptor__InstancesAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__LocationTupleDescriptor__SecondInstanceAssignment_3"
+    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:12128:1: rule__LocationTupleDescriptor__SecondInstanceAssignment_3 : ( ruleID ) ;
+    public final void rule__LocationTupleDescriptor__SecondInstanceAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -34526,15 +34526,15 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:12134:1: ruleID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationTupleDescriptorAccess().getInstancesIDParserRuleCall_3_0()); 
+               before(grammarAccess.getLocationTupleDescriptorAccess().getSecondInstanceIDParserRuleCall_3_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__LocationTupleDescriptor__InstancesAssignment_324522);
+            pushFollow(FollowSets001.FOLLOW_ruleID_in_rule__LocationTupleDescriptor__SecondInstanceAssignment_324522);
             ruleID();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationTupleDescriptorAccess().getInstancesIDParserRuleCall_3_0()); 
+               after(grammarAccess.getLocationTupleDescriptorAccess().getSecondInstanceIDParserRuleCall_3_0()); 
             }
 
             }
@@ -34554,7 +34554,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationTupleDescriptor__InstancesAssignment_3"
+    // $ANTLR end "rule__LocationTupleDescriptor__SecondInstanceAssignment_3"
 
 
     // $ANTLR start "rule__ValueTupleDescriptor__ValueAssignment"
@@ -40121,7 +40121,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         public static final BitSet FOLLOW_58_in_rule__LocationTupleDescriptor__Group__2__Impl11310 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__3__Impl_in_rule__LocationTupleDescriptor__Group__311341 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
         public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__4_in_rule__LocationTupleDescriptor__Group__311344 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__InstancesAssignment_3_in_rule__LocationTupleDescriptor__Group__3__Impl11371 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__LocationTupleDescriptor__SecondInstanceAssignment_3_in_rule__LocationTupleDescriptor__Group__3__Impl11371 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__LocationTupleDescriptor__Group__4__Impl_in_rule__LocationTupleDescriptor__Group__411401 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_65_in_rule__LocationTupleDescriptor__Group__4__Impl11429 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__ComponentResourceTupleDescriptor__Group__0__Impl_in_rule__ComponentResourceTupleDescriptor__Group__011470 = new BitSet(new long[]{0x00000000000000C0L});
@@ -40663,7 +40663,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         public static final BitSet FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_5_124429 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleModel_in_rule__RequiredHardwareResourceInstanceConstraint__ExpressionAssignment_824460 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleID_in_rule__LocationTupleDescriptor__InstanceAssignment_124491 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleID_in_rule__LocationTupleDescriptor__InstancesAssignment_324522 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleID_in_rule__LocationTupleDescriptor__SecondInstanceAssignment_324522 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleID_in_rule__ValueTupleDescriptor__ValueAssignment24553 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleID_in_rule__ComponentResourceTupleDescriptor__InstanceAssignment_124584 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleID_in_rule__ComponentResourceTupleDescriptor__HwresinstanceAssignment_324615 = new BitSet(new long[]{0x0000000000000002L});

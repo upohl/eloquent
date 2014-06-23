@@ -16,7 +16,7 @@ package de.uni_paderborn.fujaba.muml.allocation.language.as;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.LocationTupleDescriptor#getInstances <em>Instances</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.LocationTupleDescriptor#getSecondInstance <em>Second Instance</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,28 +26,28 @@ package de.uni_paderborn.fujaba.muml.allocation.language.as;
  */
 public interface LocationTupleDescriptor extends InstanceTupleDescriptor {
 	/**
-	 * Returns the value of the '<em><b>Instances</b></em>' attribute.
+	 * Returns the value of the '<em><b>Second Instance</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Name of the named part which represents the set of component instances.
+	 * Name of the named part, which represents the other component instance.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Instances</em>' attribute.
-	 * @see #setInstances(String)
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage#getLocationTupleDescriptor_Instances()
+	 * @return the value of the '<em>Second Instance</em>' attribute.
+	 * @see #setSecondInstance(String)
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage#getLocationTupleDescriptor_SecondInstance()
 	 * @model
 	 * @generated
 	 */
-	String getInstances();
+	String getSecondInstance();
 
 	/**
-	 * Sets the value of the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.LocationTupleDescriptor#getInstances <em>Instances</em>}' attribute.
+	 * Sets the value of the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.LocationTupleDescriptor#getSecondInstance <em>Second Instance</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Instances</em>' attribute.
-	 * @see #getInstances()
+	 * @param value the new value of the '<em>Second Instance</em>' attribute.
+	 * @see #getSecondInstance()
 	 * @generated
 	 */
-	void setInstances(String value);
+	void setSecondInstance(String value);
 
 } // LocationTupleDescriptor

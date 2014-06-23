@@ -176,7 +176,7 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getTupleDescriptorsAssignment_5_1(), "rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorsAssignment_5_1");
 					put(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getExpressionAssignment_8(), "rule__RequiredHardwareResourceInstanceConstraint__ExpressionAssignment_8");
 					put(grammarAccess.getLocationTupleDescriptorAccess().getInstanceAssignment_1(), "rule__LocationTupleDescriptor__InstanceAssignment_1");
-					put(grammarAccess.getLocationTupleDescriptorAccess().getInstancesAssignment_3(), "rule__LocationTupleDescriptor__InstancesAssignment_3");
+					put(grammarAccess.getLocationTupleDescriptorAccess().getSecondInstanceAssignment_3(), "rule__LocationTupleDescriptor__SecondInstanceAssignment_3");
 					put(grammarAccess.getValueTupleDescriptorAccess().getValueAssignment(), "rule__ValueTupleDescriptor__ValueAssignment");
 					put(grammarAccess.getComponentResourceTupleDescriptorAccess().getInstanceAssignment_1(), "rule__ComponentResourceTupleDescriptor__InstanceAssignment_1");
 					put(grammarAccess.getComponentResourceTupleDescriptorAccess().getHwresinstanceAssignment_3(), "rule__ComponentResourceTupleDescriptor__HwresinstanceAssignment_3");

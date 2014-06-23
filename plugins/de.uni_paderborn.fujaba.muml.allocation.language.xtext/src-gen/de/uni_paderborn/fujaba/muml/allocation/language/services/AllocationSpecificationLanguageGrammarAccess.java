@@ -542,15 +542,15 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Assignment cInstanceAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cInstanceIDParserRuleCall_1_0 = (RuleCall)cInstanceAssignment_1.eContents().get(0);
 		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cInstancesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cInstancesIDParserRuleCall_3_0 = (RuleCall)cInstancesAssignment_3.eContents().get(0);
+		private final Assignment cSecondInstanceAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSecondInstanceIDParserRuleCall_3_0 = (RuleCall)cSecondInstanceAssignment_3.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//LocationTupleDescriptor returns cs::LocationTupleDescriptorCS:
-		//	"(" instance=ID "," instances=ID ")";
+		//	"(" instance=ID "," secondInstance=ID ")";
 		public ParserRule getRule() { return rule; }
 
-		//"(" instance=ID "," instances=ID ")"
+		//"(" instance=ID "," secondInstance=ID ")"
 		public Group getGroup() { return cGroup; }
 
 		//"("
@@ -565,11 +565,11 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//","
 		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
 
-		//instances=ID
-		public Assignment getInstancesAssignment_3() { return cInstancesAssignment_3; }
+		//secondInstance=ID
+		public Assignment getSecondInstanceAssignment_3() { return cSecondInstanceAssignment_3; }
 
 		//ID
-		public RuleCall getInstancesIDParserRuleCall_3_0() { return cInstancesIDParserRuleCall_3_0; }
+		public RuleCall getSecondInstanceIDParserRuleCall_3_0() { return cSecondInstanceIDParserRuleCall_3_0; }
 
 		//")"
 		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
@@ -851,7 +851,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//LocationTupleDescriptor returns cs::LocationTupleDescriptorCS:
-	//	"(" instance=ID "," instances=ID ")";
+	//	"(" instance=ID "," secondInstance=ID ")";
 	public LocationTupleDescriptorElements getLocationTupleDescriptorAccess() {
 		return (pLocationTupleDescriptor != null) ? pLocationTupleDescriptor : (pLocationTupleDescriptor = new LocationTupleDescriptorElements());
 	}

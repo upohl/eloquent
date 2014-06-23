@@ -58,7 +58,7 @@ enum LocationConstraintType returns cs::LocationConstraintTypes:
 ;
 
 LocationTupleDescriptor returns cs::LocationTupleDescriptorCS:
-	'(' instance=ID ',' instances=ID ')'
+	'(' instance=ID ',' secondInstance=ID ')'
 ;
 
 ValueTupleDescriptor returns cs::ValueTupleDescriptorCS:

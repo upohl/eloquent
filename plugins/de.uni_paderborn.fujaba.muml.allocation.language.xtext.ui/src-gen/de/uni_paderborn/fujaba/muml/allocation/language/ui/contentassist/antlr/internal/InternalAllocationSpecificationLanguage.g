@@ -5467,9 +5467,9 @@ rule__LocationTupleDescriptor__Group__3__Impl
     }
 :
 (
-{ before(grammarAccess.getLocationTupleDescriptorAccess().getInstancesAssignment_3()); }
-(rule__LocationTupleDescriptor__InstancesAssignment_3)
-{ after(grammarAccess.getLocationTupleDescriptorAccess().getInstancesAssignment_3()); }
+{ before(grammarAccess.getLocationTupleDescriptorAccess().getSecondInstanceAssignment_3()); }
+(rule__LocationTupleDescriptor__SecondInstanceAssignment_3)
+{ after(grammarAccess.getLocationTupleDescriptorAccess().getSecondInstanceAssignment_3()); }
 )
 
 ;
@@ -12125,14 +12125,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__LocationTupleDescriptor__InstancesAssignment_3
+rule__LocationTupleDescriptor__SecondInstanceAssignment_3
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getLocationTupleDescriptorAccess().getInstancesIDParserRuleCall_3_0()); }
-	ruleID{ after(grammarAccess.getLocationTupleDescriptorAccess().getInstancesIDParserRuleCall_3_0()); }
+{ before(grammarAccess.getLocationTupleDescriptorAccess().getSecondInstanceIDParserRuleCall_3_0()); }
+	ruleID{ after(grammarAccess.getLocationTupleDescriptorAccess().getSecondInstanceIDParserRuleCall_3_0()); }
 )
 
 ;

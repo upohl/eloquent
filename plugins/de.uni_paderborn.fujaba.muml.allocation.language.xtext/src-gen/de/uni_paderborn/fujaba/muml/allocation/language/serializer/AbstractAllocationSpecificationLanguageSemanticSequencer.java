@@ -549,7 +549,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	
 	/**
 	 * Constraint:
-	 *     (instance=ID instances=ID)
+	 *     (instance=ID secondInstance=ID)
 	 */
 	protected void sequence_LocationTupleDescriptor(EObject context, LocationTupleDescriptorCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

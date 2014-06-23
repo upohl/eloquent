@@ -43,7 +43,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationAS.ecore#//InstanceTupleDescriptor/instance"/>
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//LocationTupleDescriptor">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationAS.ecore#//LocationTupleDescriptor/instances"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationAS.ecore#//LocationTupleDescriptor/secondInstance"/>
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//ComponentResourceTupleDescriptor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationAS.ecore#//ComponentResourceTupleDescriptor/hwresinstance"/>

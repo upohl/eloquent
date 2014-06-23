@@ -946,13 +946,13 @@ public interface CsPackage extends EPackage {
 	int LOCATION_TUPLE_DESCRIPTOR_CS__INSTANCE = INSTANCE_TUPLE_DESCRIPTOR_CS__INSTANCE;
 
 	/**
-	 * The feature id for the '<em><b>Instances</b></em>' attribute.
+	 * The feature id for the '<em><b>Second Instance</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR_CS__INSTANCES = INSTANCE_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 0;
+	int LOCATION_TUPLE_DESCRIPTOR_CS__SECOND_INSTANCE = INSTANCE_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Location Tuple Descriptor CS</em>' class.
@@ -1468,15 +1468,15 @@ public interface CsPackage extends EPackage {
 	EClass getLocationTupleDescriptorCS();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS#getInstances <em>Instances</em>}'.
+	 * Returns the meta object for the attribute '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS#getSecondInstance <em>Second Instance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Instances</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS#getInstances()
+	 * @return the meta object for the attribute '<em>Second Instance</em>'.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS#getSecondInstance()
 	 * @see #getLocationTupleDescriptorCS()
 	 * @generated
 	 */
-	EAttribute getLocationTupleDescriptorCS_Instances();
+	EAttribute getLocationTupleDescriptorCS_SecondInstance();
 
 	/**
 	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupleDescriptorCS <em>Component Resource Tuple Descriptor CS</em>}'.
@@ -1794,12 +1794,12 @@ public interface CsPackage extends EPackage {
 		EClass LOCATION_TUPLE_DESCRIPTOR_CS = eINSTANCE.getLocationTupleDescriptorCS();
 
 		/**
-		 * The meta object literal for the '<em><b>Instances</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Second Instance</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOCATION_TUPLE_DESCRIPTOR_CS__INSTANCES = eINSTANCE.getLocationTupleDescriptorCS_Instances();
+		EAttribute LOCATION_TUPLE_DESCRIPTOR_CS__SECOND_INSTANCE = eINSTANCE.getLocationTupleDescriptorCS_SecondInstance();
 
 		/**
 		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ComponentResourceTupleDescriptorCSImpl <em>Component Resource Tuple Descriptor CS</em>}' class.
