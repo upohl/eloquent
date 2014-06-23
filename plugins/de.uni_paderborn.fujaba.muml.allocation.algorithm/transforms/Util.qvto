@@ -1,0 +1,18 @@
+library Util;
+
+query String::join(wordList : Sequence(String)) : String {
+	return wordList->iterate(s : String; acc : String = '' |
+		if acc = '' then
+			s
+		else
+			acc + self + s
+		endif
+	)
+}
+
+// hmm this is a standard ocl library operation - why doesn't qvto provide it?
+query OrderedSet(OclAny)::reverse() : OrderedSet(OclAny) {
+	return OrderedSet{1 .. self->size()}->iterate(i : Integer; acc : OrderedSet(OclAny) = OrderedSet{} |
+		acc->append(self->at(self->size() - i + 1))
+	);
+}
