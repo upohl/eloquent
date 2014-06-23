@@ -40,11 +40,13 @@ mapping inout IntegerLinearProgram::createGeneralConstraints(cic : ComponentInst
 query ComponentInstanceConfiguration::getAllComponentInstances() : OrderedSet(ComponentInstance) {
 	return self.componentInstances->closure(ci : ComponentInstance |
 		if ci.oclIsKindOf(StructuredComponentInstance) then
-			ci.oclAsType(StructuredComponentInstance).embeddedCIC.componentInstances
+			ci->asSet()->union(
+				ci.oclAsType(StructuredComponentInstance).embeddedCIC.componentInstances
+			)
 		else
 			ci->asSet()
 		endif			
-	)->sortedBy(name)
+	)->sortedBy(getVariableName())
 }
 
 query HWPlatformInstanceConfiguration::getRootResourceInstances() : OrderedSet(ResourceInstance) {
@@ -56,9 +58,35 @@ query Tuple(first : ComponentInstance, second : ResourceInstance)::toSequence() 
 }
 
 mapping Sequence(NamedElement)::createBinaryVariable() : Variable {
-	log("binary called for: " + '_'.join(self->collect(name)));
-	name := '_'.join(self->collect(name));
+	log("binary called for: " + '_'.join(self->collect(getVariableName())));
+	name := '_'.join(self->collect(getVariableName()));
 	dataType := ILPDataType::BINARY;
+}
+
+query NamedElement::getVariableName() : String {
+	// fail in order to detect potential errors
+	assert fatal (false) with log("implement me");
+	return '';
+}
+
+query ComponentInstance::getVariableName() : String {
+	return '.'.join(self.getParentComponents()->collect(name));
+}
+
+query ResourceInstance::getVariableName() : String {
+	return self.name;
+}
+
+query ComponentInstance::getParentComponents() : OrderedSet(ComponentInstance) {
+	return self->asOrderedSet()->closure(ci : ComponentInstance |
+		let sci : StructuredComponentInstance = ci.parentCIC.parentStructuredComponentInstance
+		in
+		if sci.oclIsUndefined() then
+			ci->asOrderedSet()
+		else
+			OrderedSet{ci, sci}
+		endif
+	)->reverse()->collect(oclAsType(ComponentInstance))->asOrderedSet();
 }
 
 // mapping just for syntactic sugar reasons: use when statement
@@ -78,7 +106,7 @@ mapping ComponentInstance::createGeneralConstraint(resourceInstanceSet : Ordered
 			endif;
 		};
 		result := new ConstraintExpression(lhs, new LiteralExpression('1'),
-			ComparingOperator::EQUAL, self.name);
+			ComparingOperator::EQUAL, self.getVariableName());
 	}
 }
 
