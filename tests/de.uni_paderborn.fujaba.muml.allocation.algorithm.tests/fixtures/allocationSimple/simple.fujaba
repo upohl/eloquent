@@ -76,6 +76,79 @@
           name="c3"
           componentType="_bj1K0PY_EeOj7bbnOoJljg"/>
     </modelElements>
+    <modelElements
+        xsi:type="instance:ComponentInstanceConfiguration"
+        xmi:id="_W4nHAPpfEeOEq7hr2BhR2w"
+        name="cicStructured">
+      <componentInstances
+          xsi:type="instance:AtomicComponentInstance"
+          xmi:id="_W4nHAfpfEeOEq7hr2BhR2w"
+          name="c1"
+          componentType="_bj1K0PY_EeOj7bbnOoJljg"/>
+      <componentInstances
+          xsi:type="instance:AtomicComponentInstance"
+          xmi:id="_W4nHAvpfEeOEq7hr2BhR2w"
+          name="c2"
+          componentType="_bj1K0PY_EeOj7bbnOoJljg"/>
+      <componentInstances
+          xsi:type="instance:StructuredComponentInstance"
+          xmi:id="_Z1aPUPpfEeOEq7hr2BhR2w"
+          name="sc1"
+          componentType="_ovh6sPpeEeOEq7hr2BhR2w">
+        <embeddedCIC
+            xmi:id="_e4dScPpfEeOEq7hr2BhR2w"
+            name="foo">
+          <componentInstances
+              xsi:type="instance:AtomicComponentInstance"
+              xmi:id="_feHkQPpfEeOEq7hr2BhR2w"
+              name="c1"
+              componentType="_bj1K0PY_EeOj7bbnOoJljg"
+              componentPart="_9xaZEPpeEeOEq7hr2BhR2w"/>
+        </embeddedCIC>
+      </componentInstances>
+    </modelElements>
+    <modelElements
+        xsi:type="instance:ComponentInstanceConfiguration"
+        xmi:id="_57MOcPqrEeOkWvnt644Uqg"
+        name="cicStructured">
+      <componentInstances
+          xsi:type="instance:AtomicComponentInstance"
+          xmi:id="_57MOcfqrEeOkWvnt644Uqg"
+          name="c1"
+          componentType="_bj1K0PY_EeOj7bbnOoJljg"/>
+      <componentInstances
+          xsi:type="instance:AtomicComponentInstance"
+          xmi:id="_57MOcvqrEeOkWvnt644Uqg"
+          name="c2"
+          componentType="_bj1K0PY_EeOj7bbnOoJljg"/>
+      <componentInstances
+          xsi:type="instance:StructuredComponentInstance"
+          xmi:id="_57MOc_qrEeOkWvnt644Uqg"
+          name="sc1"
+          componentType="_O1UmAPpfEeOEq7hr2BhR2w">
+        <embeddedCIC
+            xmi:id="_57MOdPqrEeOkWvnt644Uqg"
+            name="bar">
+          <componentInstances
+              xsi:type="instance:StructuredComponentInstance"
+              xmi:id="_D5JFUPqsEeOkWvnt644Uqg"
+              name="sc2"
+              componentType="_ovh6sPpeEeOEq7hr2BhR2w"
+              componentPart="_O1UmAfpfEeOEq7hr2BhR2w">
+            <embeddedCIC
+                xmi:id="_IE1psPqsEeOkWvnt644Uqg"
+                name="foo">
+              <componentInstances
+                  xsi:type="instance:AtomicComponentInstance"
+                  xmi:id="_JDMvYPqsEeOkWvnt644Uqg"
+                  name="c1"
+                  componentType="_bj1K0PY_EeOj7bbnOoJljg"
+                  componentPart="_9xaZEPpeEeOEq7hr2BhR2w"/>
+            </embeddedCIC>
+          </componentInstances>
+        </embeddedCIC>
+      </componentInstances>
+    </modelElements>
   </categories>
   <categories
       xmi:id="_YcXK-PY8EeOqWs4IacUwuQ"
@@ -85,6 +158,24 @@
         xsi:type="component:StaticAtomicComponent"
         xmi:id="_bj1K0PY_EeOj7bbnOoJljg"
         name="AType"/>
+    <modelElements
+        xsi:type="component:StaticStructuredComponent"
+        xmi:id="_ovh6sPpeEeOEq7hr2BhR2w"
+        name="SimpleSType">
+      <embeddedComponentParts
+          xmi:id="_9xaZEPpeEeOEq7hr2BhR2w"
+          name="part"
+          componentType="_bj1K0PY_EeOj7bbnOoJljg"/>
+    </modelElements>
+    <modelElements
+        xsi:type="component:StaticStructuredComponent"
+        xmi:id="_O1UmAPpfEeOEq7hr2BhR2w"
+        name="NestedSType">
+      <embeddedComponentParts
+          xmi:id="_O1UmAfpfEeOEq7hr2BhR2w"
+          name="part"
+          componentType="_ovh6sPpeEeOEq7hr2BhR2w"/>
+    </modelElements>
   </categories>
   <categories
       xmi:id="_YcXK-fY8EeOqWs4IacUwuQ"
