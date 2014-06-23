@@ -51,6 +51,8 @@ public class LPSolveParser extends AbstractContentAssistParser {
 					put(grammarAccess.getConstraintExpressionAccess().getGroup(), "rule__ConstraintExpression__Group__0");
 					put(grammarAccess.getConstraintExpressionAccess().getGroup_0(), "rule__ConstraintExpression__Group_0__0");
 					put(grammarAccess.getVariableAccess().getGroup(), "rule__Variable__Group__0");
+					put(grammarAccess.getVariableIDAccess().getGroup(), "rule__VariableID__Group__0");
+					put(grammarAccess.getVariableIDAccess().getGroup_1(), "rule__VariableID__Group_1__0");
 					put(grammarAccess.getAdditionExpressionAccess().getGroup(), "rule__AdditionExpression__Group__0");
 					put(grammarAccess.getAdditionExpressionAccess().getGroup_1(), "rule__AdditionExpression__Group_1__0");
 					put(grammarAccess.getMultiplicationExpressionAccess().getGroup(), "rule__MultiplicationExpression__Group__0");

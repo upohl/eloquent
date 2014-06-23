@@ -128,7 +128,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
 		private final Assignment cCommentAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final RuleCall cCommentIDTerminalRuleCall_0_0_0 = (RuleCall)cCommentAssignment_0_0.eContents().get(0);
+		private final RuleCall cCommentVariableIDParserRuleCall_0_0_0 = (RuleCall)cCommentAssignment_0_0.eContents().get(0);
 		private final Keyword cColonKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
 		private final Assignment cLeftExpressionAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cLeftExpressionSimpleLinearExpressionParserRuleCall_1_0 = (RuleCall)cLeftExpressionAssignment_1.eContents().get(0);
@@ -139,22 +139,22 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//ConstraintExpression returns ilp::ConstraintExpression:
-		//	(comment=ID ":")? // the comment represents an optional name of a restriction
+		//	(comment=VariableID ":")? // the comment represents an optional name of a restriction
 		//	leftExpression=SimpleLinearExpression operator=ComparingOperator rightExpression=SimpleLinearExpression ";";
 		public ParserRule getRule() { return rule; }
 
-		//(comment=ID ":")? // the comment represents an optional name of a restriction
+		//(comment=VariableID ":")? // the comment represents an optional name of a restriction
 		//leftExpression=SimpleLinearExpression operator=ComparingOperator rightExpression=SimpleLinearExpression ";"
 		public Group getGroup() { return cGroup; }
 
-		//(comment=ID ":")?
+		//(comment=VariableID ":")?
 		public Group getGroup_0() { return cGroup_0; }
 
-		//comment=ID
+		//comment=VariableID
 		public Assignment getCommentAssignment_0_0() { return cCommentAssignment_0_0; }
 
-		//ID
-		public RuleCall getCommentIDTerminalRuleCall_0_0_0() { return cCommentIDTerminalRuleCall_0_0_0; }
+		//VariableID
+		public RuleCall getCommentVariableIDParserRuleCall_0_0_0() { return cCommentVariableIDParserRuleCall_0_0_0; }
 
 		//":"
 		public Keyword getColonKeyword_0_1() { return cColonKeyword_0_1; }
@@ -187,14 +187,14 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cDataTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cDataTypeILPDataTypeEnumRuleCall_0_0 = (RuleCall)cDataTypeAssignment_0.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNameVariableIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//Variable returns ilp::Variable:
-		//	dataType=ILPDataType name=ID ";";
+		//	dataType=ILPDataType name=VariableID ";";
 		public ParserRule getRule() { return rule; }
 
-		//dataType=ILPDataType name=ID ";"
+		//dataType=ILPDataType name=VariableID ";"
 		public Group getGroup() { return cGroup; }
 
 		//dataType=ILPDataType
@@ -203,14 +203,42 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		//ILPDataType
 		public RuleCall getDataTypeILPDataTypeEnumRuleCall_0_0() { return cDataTypeILPDataTypeEnumRuleCall_0_0; }
 
-		//name=ID
+		//name=VariableID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		//VariableID
+		public RuleCall getNameVariableIDParserRuleCall_1_0() { return cNameVariableIDParserRuleCall_1_0; }
 
 		//";"
 		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+	}
+
+	public class VariableIDElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VariableID");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//VariableID returns ecore::EString:
+		//	ID ("." ID)*;
+		public ParserRule getRule() { return rule; }
+
+		//ID ("." ID)*
+		public Group getGroup() { return cGroup; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+
+		//("." ID)*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"."
+		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
 	}
 
 	public class LinearExpressionElements extends AbstractParserRuleElementFinder {
@@ -383,20 +411,20 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VariableExpression");
 		private final Assignment cVariableAssignment = (Assignment)rule.eContents().get(1);
 		private final CrossReference cVariableVariableCrossReference_0 = (CrossReference)cVariableAssignment.eContents().get(0);
-		private final RuleCall cVariableVariableIDTerminalRuleCall_0_1 = (RuleCall)cVariableVariableCrossReference_0.eContents().get(1);
+		private final RuleCall cVariableVariableVariableIDParserRuleCall_0_1 = (RuleCall)cVariableVariableCrossReference_0.eContents().get(1);
 		
 		//VariableExpression returns ilp::VariableExpression:
-		//	variable=[ilp::Variable];
+		//	variable=[ilp::Variable|VariableID];
 		public ParserRule getRule() { return rule; }
 
-		//variable=[ilp::Variable]
+		//variable=[ilp::Variable|VariableID]
 		public Assignment getVariableAssignment() { return cVariableAssignment; }
 
-		//[ilp::Variable]
+		//[ilp::Variable|VariableID]
 		public CrossReference getVariableVariableCrossReference_0() { return cVariableVariableCrossReference_0; }
 
-		//ID
-		public RuleCall getVariableVariableIDTerminalRuleCall_0_1() { return cVariableVariableIDTerminalRuleCall_0_1; }
+		//VariableID
+		public RuleCall getVariableVariableVariableIDParserRuleCall_0_1() { return cVariableVariableVariableIDParserRuleCall_0_1; }
 	}
 	
 	
@@ -566,6 +594,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 	private ConstraintExpressionElements pConstraintExpression;
 	private ComparingOperatorElements unknownRuleComparingOperator;
 	private VariableElements pVariable;
+	private VariableIDElements pVariableID;
 	private ILPDataTypeElements unknownRuleILPDataType;
 	private LinearExpressionElements pLinearExpression;
 	private SimpleLinearExpressionElements pSimpleLinearExpression;
@@ -651,7 +680,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ConstraintExpression returns ilp::ConstraintExpression:
-	//	(comment=ID ":")? // the comment represents an optional name of a restriction
+	//	(comment=VariableID ":")? // the comment represents an optional name of a restriction
 	//	leftExpression=SimpleLinearExpression operator=ComparingOperator rightExpression=SimpleLinearExpression ";";
 	public ConstraintExpressionElements getConstraintExpressionAccess() {
 		return (pConstraintExpression != null) ? pConstraintExpression : (pConstraintExpression = new ConstraintExpressionElements());
@@ -672,13 +701,23 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Variable returns ilp::Variable:
-	//	dataType=ILPDataType name=ID ";";
+	//	dataType=ILPDataType name=VariableID ";";
 	public VariableElements getVariableAccess() {
 		return (pVariable != null) ? pVariable : (pVariable = new VariableElements());
 	}
 	
 	public ParserRule getVariableRule() {
 		return getVariableAccess().getRule();
+	}
+
+	//VariableID returns ecore::EString:
+	//	ID ("." ID)*;
+	public VariableIDElements getVariableIDAccess() {
+		return (pVariableID != null) ? pVariableID : (pVariableID = new VariableIDElements());
+	}
+	
+	public ParserRule getVariableIDRule() {
+		return getVariableIDAccess().getRule();
 	}
 
 	//enum ILPDataType returns ilp::ILPDataType:
@@ -792,7 +831,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//VariableExpression returns ilp::VariableExpression:
-	//	variable=[ilp::Variable];
+	//	variable=[ilp::Variable|VariableID];
 	public VariableExpressionElements getVariableExpressionAccess() {
 		return (pVariableExpression != null) ? pVariableExpression : (pVariableExpression = new VariableExpressionElements());
 	}

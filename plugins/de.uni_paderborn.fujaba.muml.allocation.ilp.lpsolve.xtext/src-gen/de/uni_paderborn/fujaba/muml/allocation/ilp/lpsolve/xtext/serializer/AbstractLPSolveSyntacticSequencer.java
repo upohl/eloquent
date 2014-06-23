@@ -46,7 +46,7 @@ public abstract class AbstractLPSolveSyntacticSequencer extends AbstractSyntacti
 
 	/**
 	 * Syntax:
-	 *     'max' | 'min'
+	 *     'min' | 'max'
 	 */
 	protected void emit_ObjectiveFunctionExpression_MaxKeyword_0_0_1_or_MinKeyword_0_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

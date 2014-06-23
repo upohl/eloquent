@@ -115,7 +115,7 @@ public abstract class AbstractLPSolveSemanticSequencer extends AbstractDelegatin
 	
 	/**
 	 * Constraint:
-	 *     (comment=ID? leftExpression=SimpleLinearExpression operator=ComparingOperator rightExpression=SimpleLinearExpression)
+	 *     (comment=VariableID? leftExpression=SimpleLinearExpression operator=ComparingOperator rightExpression=SimpleLinearExpression)
 	 */
 	protected void sequence_ConstraintExpression(EObject context, ConstraintExpression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -170,7 +170,7 @@ public abstract class AbstractLPSolveSemanticSequencer extends AbstractDelegatin
 	
 	/**
 	 * Constraint:
-	 *     variable=[Variable|ID]
+	 *     variable=[Variable|VariableID]
 	 */
 	protected void sequence_VariableExpression(EObject context, VariableExpression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -179,7 +179,7 @@ public abstract class AbstractLPSolveSemanticSequencer extends AbstractDelegatin
 	
 	/**
 	 * Constraint:
-	 *     (dataType=ILPDataType name=ID)
+	 *     (dataType=ILPDataType name=VariableID)
 	 */
 	protected void sequence_Variable(EObject context, Variable semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

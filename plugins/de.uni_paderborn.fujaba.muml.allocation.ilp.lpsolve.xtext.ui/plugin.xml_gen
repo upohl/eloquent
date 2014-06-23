@@ -250,7 +250,9 @@
    <extension
          point="org.eclipse.xtext.builder.participant">
       <participant
-            class="de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui.LPSolveExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant">
+            class="de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui.LPSolveExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
+            fileExtensions="lp"
+            >
       </participant>
    </extension>
    <extension

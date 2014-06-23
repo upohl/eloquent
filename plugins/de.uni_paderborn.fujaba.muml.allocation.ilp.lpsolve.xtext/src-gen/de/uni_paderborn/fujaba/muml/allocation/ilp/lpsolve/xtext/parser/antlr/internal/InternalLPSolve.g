@@ -238,19 +238,19 @@ ruleConstraintExpression returns [EObject current=null]
     @after { leaveRule(); }:
 (((
 (
-		lv_comment_0_0=RULE_ID
-		{
-			newLeafNode(lv_comment_0_0, grammarAccess.getConstraintExpressionAccess().getCommentIDTerminalRuleCall_0_0_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getConstraintExpressionAccess().getCommentVariableIDParserRuleCall_0_0_0()); 
+	    }
+		lv_comment_0_0=ruleVariableID		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getConstraintExpressionRule());
+	            $current = createModelElementForParent(grammarAccess.getConstraintExpressionRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"comment",
         		lv_comment_0_0, 
-        		"ID");
+        		"VariableID");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -357,19 +357,19 @@ ruleVariable returns [EObject current=null]
 )
 )(
 (
-		lv_name_1_0=RULE_ID
-		{
-			newLeafNode(lv_name_1_0, grammarAccess.getVariableAccess().getNameIDTerminalRuleCall_1_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getVariableAccess().getNameVariableIDParserRuleCall_1_0()); 
+	    }
+		lv_name_1_0=ruleVariableID		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getVariableRule());
+	            $current = createModelElementForParent(grammarAccess.getVariableRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"VariableID");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -379,6 +379,47 @@ ruleVariable returns [EObject current=null]
     }
 )
 ;
+
+
+
+
+
+// Entry rule entryRuleVariableID
+entryRuleVariableID returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getVariableIDRule()); } 
+	 iv_ruleVariableID=ruleVariableID 
+	 { $current=$iv_ruleVariableID.current.getText(); }  
+	 EOF 
+;
+
+// Rule VariableID
+ruleVariableID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(    this_ID_0=RULE_ID    {
+		$current.merge(this_ID_0);
+    }
+
+    { 
+    newLeafNode(this_ID_0, grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_0()); 
+    }
+(
+	kw='.' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getVariableIDAccess().getFullStopKeyword_1_0()); 
+    }
+    this_ID_2=RULE_ID    {
+		$current.merge(this_ID_2);
+    }
+
+    { 
+    newLeafNode(this_ID_2, grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_1_1()); 
+    }
+)*)
+    ;
 
 
 
@@ -724,10 +765,12 @@ ruleVariableExpression returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getVariableExpressionRule());
 	        }
         }
-	otherlv_0=RULE_ID
-	{
-		newLeafNode(otherlv_0, grammarAccess.getVariableExpressionAccess().getVariableVariableCrossReference_0()); 
-	}
+		{ 
+	        newCompositeNode(grammarAccess.getVariableExpressionAccess().getVariableVariableCrossReference_0()); 
+	    }
+		ruleVariableID		{ 
+	        afterParserOrEnumRuleCall();
+	    }
 
 )
 )

@@ -168,6 +168,34 @@ finally {
 
 
 
+// Entry rule entryRuleVariableID
+entryRuleVariableID 
+:
+{ before(grammarAccess.getVariableIDRule()); }
+	 ruleVariableID
+{ after(grammarAccess.getVariableIDRule()); } 
+	 EOF 
+;
+
+// Rule VariableID
+ruleVariableID
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getVariableIDAccess().getGroup()); }
+(rule__VariableID__Group__0)
+{ after(grammarAccess.getVariableIDAccess().getGroup()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
 // Entry rule entryRuleLinearExpression
 entryRuleLinearExpression 
 :
@@ -1335,6 +1363,130 @@ finally {
 
 
 
+rule__VariableID__Group__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__VariableID__Group__0__Impl
+	rule__VariableID__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VariableID__Group__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_0()); }
+	RULE_ID
+{ after(grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__VariableID__Group__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__VariableID__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VariableID__Group__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getVariableIDAccess().getGroup_1()); }
+(rule__VariableID__Group_1__0)*
+{ after(grammarAccess.getVariableIDAccess().getGroup_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+rule__VariableID__Group_1__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__VariableID__Group_1__0__Impl
+	rule__VariableID__Group_1__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VariableID__Group_1__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getVariableIDAccess().getFullStopKeyword_1_0()); }
+
+	'.' 
+
+{ after(grammarAccess.getVariableIDAccess().getFullStopKeyword_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__VariableID__Group_1__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__VariableID__Group_1__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VariableID__Group_1__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_1_1()); }
+	RULE_ID
+{ after(grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_1_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
 rule__AdditionExpression__Group__0
     @init {
 		int stackSize = keepStackSize();
@@ -1727,8 +1879,8 @@ rule__ConstraintExpression__CommentAssignment_0_0
     }
 :
 (
-{ before(grammarAccess.getConstraintExpressionAccess().getCommentIDTerminalRuleCall_0_0_0()); }
-	RULE_ID{ after(grammarAccess.getConstraintExpressionAccess().getCommentIDTerminalRuleCall_0_0_0()); }
+{ before(grammarAccess.getConstraintExpressionAccess().getCommentVariableIDParserRuleCall_0_0_0()); }
+	ruleVariableID{ after(grammarAccess.getConstraintExpressionAccess().getCommentVariableIDParserRuleCall_0_0_0()); }
 )
 
 ;
@@ -1802,8 +1954,8 @@ rule__Variable__NameAssignment_1
     }
 :
 (
-{ before(grammarAccess.getVariableAccess().getNameIDTerminalRuleCall_1_0()); }
-	RULE_ID{ after(grammarAccess.getVariableAccess().getNameIDTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getVariableAccess().getNameVariableIDParserRuleCall_1_0()); }
+	ruleVariableID{ after(grammarAccess.getVariableAccess().getNameVariableIDParserRuleCall_1_0()); }
 )
 
 ;
@@ -1894,8 +2046,8 @@ rule__VariableExpression__VariableAssignment
 (
 { before(grammarAccess.getVariableExpressionAccess().getVariableVariableCrossReference_0()); }
 (
-{ before(grammarAccess.getVariableExpressionAccess().getVariableVariableIDTerminalRuleCall_0_1()); }
-	RULE_ID{ after(grammarAccess.getVariableExpressionAccess().getVariableVariableIDTerminalRuleCall_0_1()); }
+{ before(grammarAccess.getVariableExpressionAccess().getVariableVariableVariableIDParserRuleCall_0_1()); }
+	ruleVariableID{ after(grammarAccess.getVariableExpressionAccess().getVariableVariableVariableIDParserRuleCall_0_1()); }
 )
 { after(grammarAccess.getVariableExpressionAccess().getVariableVariableCrossReference_0()); }
 )

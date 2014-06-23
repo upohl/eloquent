@@ -28,7 +28,7 @@ enum ObjectiveGoal returns ilp::ObjectiveGoal:
 
 ConstraintExpression returns ilp::ConstraintExpression:
 	// the comment represents an optional name of a restriction
-	(comment=ID ':')? leftExpression=SimpleLinearExpression operator=ComparingOperator rightExpression=SimpleLinearExpression';'
+	(comment=VariableID ':')? leftExpression=SimpleLinearExpression operator=ComparingOperator rightExpression=SimpleLinearExpression';'
 ;
 
 enum ComparingOperator returns common::ComparingOperator:
@@ -36,7 +36,11 @@ enum ComparingOperator returns common::ComparingOperator:
 ;
 
 Variable returns ilp::Variable:
-	dataType=ILPDataType name=ID';'
+	dataType=ILPDataType name=VariableID';'
+;
+
+VariableID returns ecore::EString:
+	ID ('.' ID)*
 ;
 
 enum ILPDataType returns ilp::ILPDataType:
@@ -91,5 +95,5 @@ terminal DECIMAL returns ecore::EString:
 ;
 
 VariableExpression returns ilp::VariableExpression:
-	variable=[ilp::Variable]
+	variable=[ilp::Variable|VariableID]
 ;
