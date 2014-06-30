@@ -1,0 +1,10 @@
+testSpecificationName {
+	constraint sameLocation foo {
+		descriptors (a, b);
+		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->select(name='c1')
+		in
+		let c2 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->select(name='c2')
+		in
+		Set{Tuple{a : instance::ComponentInstance = c1, b : instance::ComponentInstance = c2}};
+	}
+}
