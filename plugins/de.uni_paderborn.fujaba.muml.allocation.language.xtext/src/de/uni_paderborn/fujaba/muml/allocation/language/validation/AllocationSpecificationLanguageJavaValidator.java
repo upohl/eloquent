@@ -6,6 +6,7 @@ package de.uni_paderborn.fujaba.muml.allocation.language.validation;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.ocl.examples.domain.elements.DomainType;
 import org.eclipse.ocl.examples.pivot.ExpressionInOCL;
 import org.eclipse.ocl.examples.pivot.TupleType;
@@ -13,10 +14,14 @@ import org.eclipse.ocl.examples.pivot.Type;
 import org.eclipse.ocl.examples.pivot.manager.MetaModelManager;
 import org.eclipse.ocl.examples.pivot.manager.TupleTypeManager;
 import org.eclipse.ocl.examples.pivot.utilities.PivotUtil;
+import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
 import org.eclipse.xtext.validation.Check;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
+import de.uni_paderborn.fujaba.muml.allocation.language.typing.TypesUtil;
 import de.uni_paderborn.fujaba.muml.instance.InstancePackage;
 
 /**
@@ -25,6 +30,7 @@ import de.uni_paderborn.fujaba.muml.instance.InstancePackage;
  * see http://www.eclipse.org/Xtext/documentation.html#validation
  */
 public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderborn.fujaba.muml.allocation.language.validation.AbstractAllocationSpecificationLanguageJavaValidator {
+	private static final String typeMismatch = "Type mismatch: expected %s but got %s"; 
 
 //	@Check
 //	public void checkGreetingStartsWithCapital(Greeting greeting) {
@@ -32,6 +38,29 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 //			warning("Name should start with a capital", MyDslPackage.Literals.GREETING__NAME);
 //		}
 //	}
+
+	@Check
+	public void checkLocationConstraintCS(LocationConstraintCS locationConstraintCS) {
+		LocationTupleDescriptorCS tupleDescriptor = locationConstraintCS.getTupleDescriptor();
+		ContextCS oclExpression = locationConstraintCS.getExpression();
+		if (tupleDescriptor == null || oclExpression == null) {
+			// in this case a different error is displayed
+			return;
+		}
+		MetaModelManager metaModelManager = TypesUtil.getMetaModelManager(locationConstraintCS);
+		checkTypes(metaModelManager,
+				TypesUtil.createLocationConstraintType(locationConstraintCS),
+				((ExpressionInOCL) oclExpression.getPivot()).getType(),
+				CsPackage.Literals.CONSTRAINT_CS__EXPRESSION);
+	}
+	
+	private void checkTypes(MetaModelManager metaModelManager, Type expectedType, Type actualType, EReference reference) {
+		boolean conformsTo = metaModelManager.conformsTo(expectedType, actualType, null);
+		if (!conformsTo) {
+			error(String.format(typeMismatch, expectedType, actualType),
+					reference);
+		}
+	}
 	
 	@Check
 	public void checkRequiredHardwareResourceInstanceConstraintCSExpressionType(RequiredHardwareResourceInstanceConstraintCS constraint) {
