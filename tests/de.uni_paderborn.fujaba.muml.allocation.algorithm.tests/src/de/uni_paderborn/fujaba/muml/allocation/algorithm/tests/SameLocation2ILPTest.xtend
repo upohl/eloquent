@@ -27,14 +27,14 @@ class SameLocation2ILPTest extends QVToTransformationSingleOutExtentTest {
 				#[uriPrefix + "locationConstraintSimple.lp",
 				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/Specification2ILP.qvto",
 				  uriPrefix + "locationConstraintSimple.allocation_specification",
-				  Specification2ILPTest.uriPrefix + "simple.fujaba#//@categories.1/@modelElements.0",
-				  Specification2ILPTest.uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0"],
+				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.1/@modelElements.0",
+				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0"],
 				// two sameLocation constraints
 				#[uriPrefix + "locationConstraintStructured.lp",
 				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/Specification2ILP.qvto",
 				  uriPrefix + "locationConstraintStructured.allocation_specification",
-				  Specification2ILPTest.uriPrefix + "simple.fujaba#//@categories.1/@modelElements.1",
-				  Specification2ILPTest.uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0"])
+				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.1/@modelElements.1",
+				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0"])
 	}
 	
 	// just for debugging purposes

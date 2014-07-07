@@ -12,8 +12,8 @@ import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.Resource
 
 @RunWith(value = typeof(Parameterized))
-class Specification2ILPTest extends QVToTransformationSingleOutExtentTest {
-	public static String uriPrefix = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.tests/fixtures/allocationSimple/"
+class GeneralConstraint2ILPTest extends QVToTransformationSingleOutExtentTest {
+	public static String uriPrefix = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.tests/fixtures/generalConstraint/"
 	
 	new(String expectedURI, String transformationURI, String... inputObjectURIs) {
 		super(expectedURI, transformationURI, inputObjectURIs)
