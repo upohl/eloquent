@@ -1,7 +1,9 @@
+import Expressions;
 import OCLEvaluator;
 import TupleAccessor;
 import Util;
 import Variables;
+import VariableHelper;
 
 modeltype allocationSpecification uses cs('http://www.fujaba.de/muml/allocation/language/0.1.0/cs');
 modeltype context uses context('http://www.fujaba.de/muml/allocation/language/0.1.0/context');
@@ -32,37 +34,59 @@ helper RequiredHardwareResourceInstanceConstraintCS::createHwResInstanceConstrai
 	cic : ComponentInstanceConfiguration,
 	hpic : HWPlatformInstanceConfiguration) {
 	var oclContext : OCLContext := createOCLContext(cic, hpic);
-	var res : Sequence(TupleValue) := self.evaluateOCL(oclContext);
-	res->forEach(tv) {
-		log("createhwres");
-		tv.toSequence()->forEach(elm) {
-			log(elm.name);
-		};
+	log("SORT");
+	var sequences : Sequence(Sequence(NamedElement)) := self.evaluateOCL(oclContext)
+		->collectNested(toSequence())
+		->sortTupleDescriptorEntries(); 
+	log("SORT");
+	sequences->createHelperVariablesAndConstraints(ilp);
+	while (sequences->notEmpty()) {
+		var cur : Sequence(NamedElement) := sequences->first();
+		var todo : Sequence(Sequence(NamedElement)) := cur->getAssociatedSequences(sequences);
+		sequences := sequences->reject(seq | todo->includes(seq));
+		todo->createConstraintExpression(ilp, self)
 	};
 }
 
-helper Sequence(NamedElement)::createConstraintExpression(inout ilp : IntegerLinearProgram,
+query getOddNumbers(lower : Integer, upper : Integer) : OrderedSet(Integer) {
+	return OrderedSet{lower .. upper}->select(i | i.mod(2) = 1);
+}
+
+query Sequence(Sequence(NamedElement))::sortTupleDescriptorEntries() : Sequence(Sequence(NamedElement)) {
+	return self->collectNested(seq |
+		let indexes : OrderedSet(Integer) = getOddNumbers(1, seq->size())
+		in
+		indexes->collectNested(i | Sequence{seq->at(i), seq->at(i + 1)})
+			->sortedBy(s | s->getVariableName())->flatten()
+	)->sortedBy(seq | seq->getVariableName()); // this sort is needed, because we have just ordered the "internal" sequences so far
+}
+
+/*query TupleValue::toSequences() : Sequence(Sequence(NamedElement)) {
+	return let sequence : Sequence(NamedElement) = self.toSequence()
+	in
+	let indexes : OrderedSet(Integer) = getOddNumbers(1, sequence->size())
+	in
+	indexes->collectNested(i | sequence->subSequence(i, i + 1));
+}*/
+
+query Sequence(NamedElement)::getAssociatedSequences(sequence : Sequence(Sequence(NamedElement)))
+	: Sequence(Sequence(NamedElement)) {
+	return sequence->select(seq |
+		let indexes : OrderedSet(Integer) = getOddNumbers(1, sequence->size())
+		in
+		indexes->collect(i |
+			seq->at(i)
+		)->asBag() = indexes->collect(i | self->at(i))->asBag()
+	);
+}
+
+helper Sequence(Sequence(NamedElement))::createConstraintExpression(inout ilp : IntegerLinearProgram,
 	constraintCS : RequiredHardwareResourceInstanceConstraintCS) {
-	var comment : String := if constraintCS.name <> '' then constraintCS.name else constraintCS.repr() endif;
-	var lhs : Expression := null;
-	var sequences : Sequence(Sequence(NamedElement)) := Sequence{};
-	var i : Integer := 1;
-	var n : Integer := constraintCS.tupleDescriptors->size();
-	var maxNum : Integer := self->size().div(n);
-	while (i < maxNum) {
-		sequences := sequences->append(self->subSequence(i, i + 2 * n));
-	};
-	/* self.getSequences(sequences)->reverse()->collectNested(oclAsType(Sequence(NamedElement)))->forEach(seq) {
-		var variableExpression : VariableExpression := new VariableExpression(seq->getVariable()); 
-		if (lhs.oclIsUndefined()) then
-			lhs := variableExpression
-		else
-			lhs := new ArithmeticExpression(variableExpression, lhs, ArithmeticOperator::PLUS)
-		endif;
-	};
-	var lit : String := if locationConstraint.type = LocationConstraintTypes::SAME_LOCATION then '1' else '0' endif;
-	return new ConstraintExpression(lhs, new LiteralExpression(lit),
-		ComparingOperator::EQUAL, comment);*/
+	log("createHWRESConstraintExpression");
+	self->print();
+	var comment : String := if constraintCS.name <> '' then constraintCS.name else null endif;
+	ilp.constraints += self->createAdditionConstraintExpression('1', comment);
+	log("createHWRESConstraintExpression");
 }
 
 query SpecificationCS::getHWResInstanceConstraints() : OrderedSet(RequiredHardwareResourceInstanceConstraintCS) {
