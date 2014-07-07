@@ -525,76 +525,54 @@ ruleLocationConstraint returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getTupleDescriptorsLocationTupleDescriptorParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getTupleDescriptorLocationTupleDescriptorParserRuleCall_4_0()); 
 	    }
-		lv_tupleDescriptors_4_0=ruleLocationTupleDescriptor		{
+		lv_tupleDescriptor_4_0=ruleLocationTupleDescriptor		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getLocationConstraintRule());
 	        }
-       		add(
+       		set(
        			$current, 
-       			"tupleDescriptors",
-        		lv_tupleDescriptors_4_0, 
+       			"tupleDescriptor",
+        		lv_tupleDescriptor_4_0, 
         		"LocationTupleDescriptor");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_5=',' 
+)	otherlv_5=';' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getLocationConstraintAccess().getCommaKeyword_5_0());
+    	newLeafNode(otherlv_5, grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_5());
+    }
+	otherlv_6='ocl' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getLocationConstraintAccess().getOclKeyword_6());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getTupleDescriptorsLocationTupleDescriptorParserRuleCall_5_1_0()); 
+	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_7_0()); 
 	    }
-		lv_tupleDescriptors_6_0=ruleLocationTupleDescriptor		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLocationConstraintRule());
-	        }
-       		add(
-       			$current, 
-       			"tupleDescriptors",
-        		lv_tupleDescriptors_6_0, 
-        		"LocationTupleDescriptor");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))*	otherlv_7=';' 
-    {
-    	newLeafNode(otherlv_7, grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_6());
-    }
-	otherlv_8='ocl' 
-    {
-    	newLeafNode(otherlv_8, grammarAccess.getLocationConstraintAccess().getOclKeyword_7());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_8_0()); 
-	    }
-		lv_expression_9_0=ruleModel		{
+		lv_expression_7_0=ruleModel		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getLocationConstraintRule());
 	        }
        		set(
        			$current, 
        			"expression",
-        		lv_expression_9_0, 
+        		lv_expression_7_0, 
         		"Model");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_10=';' 
+)	otherlv_8=';' 
     {
-    	newLeafNode(otherlv_10, grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_9());
+    	newLeafNode(otherlv_8, grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_8());
     }
-	otherlv_11='}' 
+	otherlv_9='}' 
     {
-    	newLeafNode(otherlv_11, grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_10());
+    	newLeafNode(otherlv_9, grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_9());
     }
 )
 ;

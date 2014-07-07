@@ -15,19 +15,32 @@ import org.eclipse.ocl.examples.pivot.manager.MetaModelManager
 import org.eclipse.ocl.examples.pivot.manager.TupleTypeManager
 import org.eclipse.ocl.examples.pivot.utilities.PivotUtil
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupleDescriptorCS
+import java.util.List
+import de.uni_paderborn.fujaba.muml.hardware.hwresourceinstance.HwresourceinstancePackage
 
 class TypesUtil {
 	private static final String tupleName = "Tuple"
 	
 	@NonNull
-	public static def TupleType createTupleType(MetaModelManager metaModelManager, Map<String, EClass> namedParts) {
-		val IdResolver idResolver = metaModelManager.idResolver
+	public static def TupleType createTupleTypeHelper(MetaModelManager metaModelManager, Map<String, EClass> namedParts) {
 		val Map<String, Type> newNamedParts = namedParts.mapValues[EClass eClass |
-			val DomainType domainType = idResolver.getType(eClass)
-			metaModelManager.getType(domainType)
+			getType(metaModelManager, eClass)
 		]
+		createTupleType(metaModelManager, newNamedParts)
+	}
+	
+	@NonNull static def TupleType createTupleType(MetaModelManager metaModelManager, Map<String, Type> namedParts) {
 		val TupleTypeManager tupleTypeManager = metaModelManager.tupleManager
-		tupleTypeManager.getTupleType(tupleName, newNamedParts)
+		tupleTypeManager.getTupleType(tupleName, namedParts)
+	}
+	
+	@NonNull
+	private static def Type getType(MetaModelManager metaModelManager, EClass eClass) {
+		val IdResolver idResolver = metaModelManager.idResolver
+		val DomainType domainType = idResolver.getType(eClass)
+		metaModelManager.getType(domainType)
 	}
 		
 	@NonNull
@@ -45,6 +58,9 @@ class TypesUtil {
 	}
 	
 	// language specific constraint types are created below
+	
+	// location constraint
+	
 	@NonNull
 	public static def TupleType createLocationConstraintTupleType(LocationConstraintCS locationConstraintCS) {
 		createLocationConstraintTupleType(getMetaModelManager(locationConstraintCS),
@@ -57,7 +73,7 @@ class TypesUtil {
 		val namedParts =  #{tupleDescriptor.instance -> InstancePackage.Literals.COMPONENT_INSTANCE,
 			tupleDescriptor.secondInstance -> InstancePackage.Literals.COMPONENT_INSTANCE
 		}
-		createTupleType(metaModelManager, namedParts)
+		createTupleTypeHelper(metaModelManager, namedParts)
 	}
 	
 	@NonNull
@@ -65,6 +81,33 @@ class TypesUtil {
 		val MetaModelManager metaModelManager = getMetaModelManager(locationConstraintCS) 
 		createSetType(metaModelManager,
 			createLocationConstraintTupleType(metaModelManager, locationConstraintCS.tupleDescriptor)
+		)
+	}
+	
+	// requiredHardwareResourceInstance constraint
+	@NonNull static def TupleType createReqHWResInstanceConstraintTupleType(RequiredHardwareResourceInstanceConstraintCS constraintCS) {
+		val MetaModelManager metaModelManager = getMetaModelManager(constraintCS)
+		createReqHWResInstanceConstraintTupleType(metaModelManager,
+			constraintCS.tupleDescriptors
+		)
+	}
+	
+	@NonNull static def TupleType createReqHWResInstanceConstraintTupleType(MetaModelManager metaModelManager, 
+		List<ComponentResourceTupleDescriptorCS> tupleDescriptorList) {
+		val namedParts = <String, Type>newHashMap()
+		tupleDescriptorList.forEach[t |
+			namedParts.putAll(#{
+				t.instance -> getType(metaModelManager, InstancePackage.Literals.COMPONENT_INSTANCE),
+				t.hwresinstance -> createSetType(metaModelManager,
+					getType(metaModelManager, HwresourceinstancePackage.Literals.RESOURCE_INSTANCE))
+		})]
+		createTupleType(metaModelManager, namedParts)
+	}
+	
+	@NonNull static def Type createReqHWResInstanceConstraintType(RequiredHardwareResourceInstanceConstraintCS constraintCS) {
+		val MetaModelManager metaModelManager = getMetaModelManager(constraintCS)
+		createSetType(metaModelManager,
+			createReqHWResInstanceConstraintTupleType(metaModelManager, constraintCS.tupleDescriptors)
 		)
 	}
 }

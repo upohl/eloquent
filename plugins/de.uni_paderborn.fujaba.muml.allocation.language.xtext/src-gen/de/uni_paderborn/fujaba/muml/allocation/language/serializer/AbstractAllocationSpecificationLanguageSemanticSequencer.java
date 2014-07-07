@@ -540,7 +540,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	
 	/**
 	 * Constraint:
-	 *     (type=LocationConstraintType name=ID? tupleDescriptors+=LocationTupleDescriptor tupleDescriptors+=LocationTupleDescriptor* expression=Model)
+	 *     (type=LocationConstraintType name=ID? tupleDescriptor=LocationTupleDescriptor expression=Model)
 	 */
 	protected void sequence_LocationConstraint(EObject context, LocationConstraintCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -71,11 +71,9 @@ public class LanguageSpecificationCSContainmentVisitor extends de.uni_paderborn.
 	@Override
 	public @Nullable Continuation<?> visitLocationConstraintCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS csElement) {
 		de.uni_paderborn.fujaba.muml.allocation.language.as.LocationConstraint pivotElement = context.refreshModelElement(de.uni_paderborn.fujaba.muml.allocation.language.as.LocationConstraint.class, de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage.Literals.LOCATION_CONSTRAINT, csElement);
-		for (de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS it : csElement.getTupleDescriptors()) {
-			pivotElement.getTupleDescriptors().add(
-				PivotUtil.getPivot(de.uni_paderborn.fujaba.muml.allocation.language.as.LocationTupleDescriptor.class, it)
-			);
-		}
+		pivotElement.setTupleDescriptor(
+			PivotUtil.getPivot(de.uni_paderborn.fujaba.muml.allocation.language.as.LocationTupleDescriptor.class, csElement.getTupleDescriptor())
+		);
 		return visitConstraintCS(csElement);
 	}
 	

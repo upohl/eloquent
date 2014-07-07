@@ -260,26 +260,22 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final RuleCall cNameIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cDescriptorsKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cTupleDescriptorsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cTupleDescriptorsLocationTupleDescriptorParserRuleCall_4_0 = (RuleCall)cTupleDescriptorsAssignment_4.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cCommaKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cTupleDescriptorsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cTupleDescriptorsLocationTupleDescriptorParserRuleCall_5_1_0 = (RuleCall)cTupleDescriptorsAssignment_5_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Keyword cOclKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cExpressionAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cExpressionModelParserRuleCall_8_0 = (RuleCall)cExpressionAssignment_8.eContents().get(0);
-		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Assignment cTupleDescriptorAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cTupleDescriptorLocationTupleDescriptorParserRuleCall_4_0 = (RuleCall)cTupleDescriptorAssignment_4.eContents().get(0);
+		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cOclKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cExpressionAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cExpressionModelParserRuleCall_7_0 = (RuleCall)cExpressionAssignment_7.eContents().get(0);
+		private final Keyword cSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//LocationConstraint returns cs::LocationConstraintCS:
-		//	type=LocationConstraintType name=ID? "{" "descriptors" tupleDescriptors+=LocationTupleDescriptor (","
-		//	tupleDescriptors+=LocationTupleDescriptor)* ";" "ocl" expression=Model ";" "}";
+		//	type=LocationConstraintType name=ID? "{" "descriptors" tupleDescriptor=LocationTupleDescriptor ";" "ocl"
+		//	expression=Model ";" "}";
 		public ParserRule getRule() { return rule; }
 
-		//type=LocationConstraintType name=ID? "{" "descriptors" tupleDescriptors+=LocationTupleDescriptor (","
-		//tupleDescriptors+=LocationTupleDescriptor)* ";" "ocl" expression=Model ";" "}"
+		//type=LocationConstraintType name=ID? "{" "descriptors" tupleDescriptor=LocationTupleDescriptor ";" "ocl"
+		//expression=Model ";" "}"
 		public Group getGroup() { return cGroup; }
 
 		//type=LocationConstraintType
@@ -300,41 +296,29 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//"descriptors"
 		public Keyword getDescriptorsKeyword_3() { return cDescriptorsKeyword_3; }
 
-		//tupleDescriptors+=LocationTupleDescriptor
-		public Assignment getTupleDescriptorsAssignment_4() { return cTupleDescriptorsAssignment_4; }
+		//tupleDescriptor=LocationTupleDescriptor
+		public Assignment getTupleDescriptorAssignment_4() { return cTupleDescriptorAssignment_4; }
 
 		//LocationTupleDescriptor
-		public RuleCall getTupleDescriptorsLocationTupleDescriptorParserRuleCall_4_0() { return cTupleDescriptorsLocationTupleDescriptorParserRuleCall_4_0; }
-
-		//("," tupleDescriptors+=LocationTupleDescriptor)*
-		public Group getGroup_5() { return cGroup_5; }
-
-		//","
-		public Keyword getCommaKeyword_5_0() { return cCommaKeyword_5_0; }
-
-		//tupleDescriptors+=LocationTupleDescriptor
-		public Assignment getTupleDescriptorsAssignment_5_1() { return cTupleDescriptorsAssignment_5_1; }
-
-		//LocationTupleDescriptor
-		public RuleCall getTupleDescriptorsLocationTupleDescriptorParserRuleCall_5_1_0() { return cTupleDescriptorsLocationTupleDescriptorParserRuleCall_5_1_0; }
+		public RuleCall getTupleDescriptorLocationTupleDescriptorParserRuleCall_4_0() { return cTupleDescriptorLocationTupleDescriptorParserRuleCall_4_0; }
 
 		//";"
-		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
+		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 
 		//"ocl"
-		public Keyword getOclKeyword_7() { return cOclKeyword_7; }
+		public Keyword getOclKeyword_6() { return cOclKeyword_6; }
 
 		//expression=Model
-		public Assignment getExpressionAssignment_8() { return cExpressionAssignment_8; }
+		public Assignment getExpressionAssignment_7() { return cExpressionAssignment_7; }
 
 		//Model
-		public RuleCall getExpressionModelParserRuleCall_8_0() { return cExpressionModelParserRuleCall_8_0; }
+		public RuleCall getExpressionModelParserRuleCall_7_0() { return cExpressionModelParserRuleCall_7_0; }
 
 		//";"
-		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
+		public Keyword getSemicolonKeyword_8() { return cSemicolonKeyword_8; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
+		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 
 	public class ResourceConstraintElements extends AbstractParserRuleElementFinder {
@@ -807,8 +791,8 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//LocationConstraint returns cs::LocationConstraintCS:
-	//	type=LocationConstraintType name=ID? "{" "descriptors" tupleDescriptors+=LocationTupleDescriptor (","
-	//	tupleDescriptors+=LocationTupleDescriptor)* ";" "ocl" expression=Model ";" "}";
+	//	type=LocationConstraintType name=ID? "{" "descriptors" tupleDescriptor=LocationTupleDescriptor ";" "ocl"
+	//	expression=Model ";" "}";
 	public LocationConstraintElements getLocationConstraintAccess() {
 		return (pLocationConstraint != null) ? pLocationConstraint : (pLocationConstraint = new LocationConstraintElements());
 	}

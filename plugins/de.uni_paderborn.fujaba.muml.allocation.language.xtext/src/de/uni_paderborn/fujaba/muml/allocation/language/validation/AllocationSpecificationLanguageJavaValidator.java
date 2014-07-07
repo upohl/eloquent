@@ -3,26 +3,21 @@
 */
 package de.uni_paderborn.fujaba.muml.allocation.language.validation;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.ocl.examples.domain.elements.DomainType;
 import org.eclipse.ocl.examples.pivot.ExpressionInOCL;
-import org.eclipse.ocl.examples.pivot.TupleType;
 import org.eclipse.ocl.examples.pivot.Type;
 import org.eclipse.ocl.examples.pivot.manager.MetaModelManager;
-import org.eclipse.ocl.examples.pivot.manager.TupleTypeManager;
-import org.eclipse.ocl.examples.pivot.utilities.PivotUtil;
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
 import org.eclipse.xtext.validation.Check;
 
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupleDescriptorCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.typing.TypesUtil;
-import de.uni_paderborn.fujaba.muml.instance.InstancePackage;
 
 /**
  * Custom validation rules. 
@@ -54,15 +49,30 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 				CsPackage.Literals.CONSTRAINT_CS__EXPRESSION);
 	}
 	
+	@Check
+	public void checkRequiredHardwareResourceInstanceConstraintCS(RequiredHardwareResourceInstanceConstraintCS constraintCS) {
+		List<ComponentResourceTupleDescriptorCS> tupleDescriptorList = constraintCS.getTupleDescriptors();
+		ContextCS oclExpression = constraintCS.getExpression();
+		if (tupleDescriptorList.isEmpty() || oclExpression == null) {
+			// in this case a different error is displayed
+			return;
+		}
+		MetaModelManager metaModelManager = TypesUtil.getMetaModelManager(constraintCS);
+		checkTypes(metaModelManager,
+				TypesUtil.createReqHWResInstanceConstraintType(constraintCS),
+				((ExpressionInOCL) oclExpression.getPivot()).getType(),
+				CsPackage.Literals.CONSTRAINT_CS__EXPRESSION);
+	}
+	
 	private void checkTypes(MetaModelManager metaModelManager, Type expectedType, Type actualType, EReference reference) {
-		boolean conformsTo = metaModelManager.conformsTo(expectedType, actualType, null);
+		boolean conformsTo = metaModelManager.conformsTo(actualType, expectedType, null);
 		if (!conformsTo) {
 			error(String.format(typeMismatch, expectedType, actualType),
 					reference);
 		}
 	}
 	
-	@Check
+/*	@Check
 	public void checkRequiredHardwareResourceInstanceConstraintCSExpressionType(RequiredHardwareResourceInstanceConstraintCS constraint) {
 		System.out.println("called");
 		Type constraintType = ((ExpressionInOCL) constraint.getExpression()
@@ -84,5 +94,5 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 			error(constraintType + " does not conform to " + expectedType,
 					CsPackage.Literals.CONSTRAINT_CS__EXPRESSION);
 		}
-	}
+	}*/
 }

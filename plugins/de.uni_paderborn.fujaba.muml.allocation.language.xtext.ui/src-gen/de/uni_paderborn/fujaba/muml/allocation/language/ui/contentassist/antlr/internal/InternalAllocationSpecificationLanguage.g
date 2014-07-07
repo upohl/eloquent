@@ -4053,9 +4053,9 @@ rule__LocationConstraint__Group__4__Impl
     }
 :
 (
-{ before(grammarAccess.getLocationConstraintAccess().getTupleDescriptorsAssignment_4()); }
-(rule__LocationConstraint__TupleDescriptorsAssignment_4)
-{ after(grammarAccess.getLocationConstraintAccess().getTupleDescriptorsAssignment_4()); }
+{ before(grammarAccess.getLocationConstraintAccess().getTupleDescriptorAssignment_4()); }
+(rule__LocationConstraint__TupleDescriptorAssignment_4)
+{ after(grammarAccess.getLocationConstraintAccess().getTupleDescriptorAssignment_4()); }
 )
 
 ;
@@ -4082,9 +4082,11 @@ rule__LocationConstraint__Group__5__Impl
     }
 :
 (
-{ before(grammarAccess.getLocationConstraintAccess().getGroup_5()); }
-(rule__LocationConstraint__Group_5__0)*
-{ after(grammarAccess.getLocationConstraintAccess().getGroup_5()); }
+{ before(grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_5()); }
+
+	';' 
+
+{ after(grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_5()); }
 )
 
 ;
@@ -4111,11 +4113,11 @@ rule__LocationConstraint__Group__6__Impl
     }
 :
 (
-{ before(grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_6()); }
+{ before(grammarAccess.getLocationConstraintAccess().getOclKeyword_6()); }
 
-	';' 
+	'ocl' 
 
-{ after(grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_6()); }
+{ after(grammarAccess.getLocationConstraintAccess().getOclKeyword_6()); }
 )
 
 ;
@@ -4142,11 +4144,9 @@ rule__LocationConstraint__Group__7__Impl
     }
 :
 (
-{ before(grammarAccess.getLocationConstraintAccess().getOclKeyword_7()); }
-
-	'ocl' 
-
-{ after(grammarAccess.getLocationConstraintAccess().getOclKeyword_7()); }
+{ before(grammarAccess.getLocationConstraintAccess().getExpressionAssignment_7()); }
+(rule__LocationConstraint__ExpressionAssignment_7)
+{ after(grammarAccess.getLocationConstraintAccess().getExpressionAssignment_7()); }
 )
 
 ;
@@ -4173,9 +4173,11 @@ rule__LocationConstraint__Group__8__Impl
     }
 :
 (
-{ before(grammarAccess.getLocationConstraintAccess().getExpressionAssignment_8()); }
-(rule__LocationConstraint__ExpressionAssignment_8)
-{ after(grammarAccess.getLocationConstraintAccess().getExpressionAssignment_8()); }
+{ before(grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_8()); }
+
+	';' 
+
+{ after(grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_8()); }
 )
 
 ;
@@ -4190,7 +4192,6 @@ rule__LocationConstraint__Group__9
     }
 :
 	rule__LocationConstraint__Group__9__Impl
-	rule__LocationConstraint__Group__10
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -4202,41 +4203,11 @@ rule__LocationConstraint__Group__9__Impl
     }
 :
 (
-{ before(grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_9()); }
-
-	';' 
-
-{ after(grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_9()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__LocationConstraint__Group__10
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__LocationConstraint__Group__10__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__LocationConstraint__Group__10__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_10()); }
+{ before(grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_9()); }
 
 	'}' 
 
-{ after(grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_10()); }
+{ after(grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_9()); }
 )
 
 ;
@@ -4259,71 +4230,6 @@ finally {
 
 
 
-
-
-
-
-
-
-
-
-rule__LocationConstraint__Group_5__0
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__LocationConstraint__Group_5__0__Impl
-	rule__LocationConstraint__Group_5__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__LocationConstraint__Group_5__0__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getLocationConstraintAccess().getCommaKeyword_5_0()); }
-
-	',' 
-
-{ after(grammarAccess.getLocationConstraintAccess().getCommaKeyword_5_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__LocationConstraint__Group_5__1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__LocationConstraint__Group_5__1__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__LocationConstraint__Group_5__1__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getLocationConstraintAccess().getTupleDescriptorsAssignment_5_1()); }
-(rule__LocationConstraint__TupleDescriptorsAssignment_5_1)
-{ after(grammarAccess.getLocationConstraintAccess().getTupleDescriptorsAssignment_5_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
 
 
 
@@ -11915,14 +11821,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__LocationConstraint__TupleDescriptorsAssignment_4
+rule__LocationConstraint__TupleDescriptorAssignment_4
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getLocationConstraintAccess().getTupleDescriptorsLocationTupleDescriptorParserRuleCall_4_0()); }
-	ruleLocationTupleDescriptor{ after(grammarAccess.getLocationConstraintAccess().getTupleDescriptorsLocationTupleDescriptorParserRuleCall_4_0()); }
+{ before(grammarAccess.getLocationConstraintAccess().getTupleDescriptorLocationTupleDescriptorParserRuleCall_4_0()); }
+	ruleLocationTupleDescriptor{ after(grammarAccess.getLocationConstraintAccess().getTupleDescriptorLocationTupleDescriptorParserRuleCall_4_0()); }
 )
 
 ;
@@ -11930,29 +11836,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__LocationConstraint__TupleDescriptorsAssignment_5_1
+rule__LocationConstraint__ExpressionAssignment_7
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getLocationConstraintAccess().getTupleDescriptorsLocationTupleDescriptorParserRuleCall_5_1_0()); }
-	ruleLocationTupleDescriptor{ after(grammarAccess.getLocationConstraintAccess().getTupleDescriptorsLocationTupleDescriptorParserRuleCall_5_1_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__LocationConstraint__ExpressionAssignment_8
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_8_0()); }
-	ruleModel{ after(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_8_0()); }
+{ before(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_7_0()); }
+	ruleModel{ after(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_7_0()); }
 )
 
 ;

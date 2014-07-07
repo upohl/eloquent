@@ -18,19 +18,22 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.antlr.runtime,
  org.eclipse.xtext.common.types,
  de.uni_paderborn.fujaba.muml,
- org.eclipse.jdt.annotation;bundle-version="[1.1.0,2.0.0)"
+ org.eclipse.jdt.annotation;bundle-version="[1.1.0,2.0.0)",
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional,
+ de.uni_paderborn.fujaba.muml.hardware;bundle-version="1.0.0"
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: de.uni_paderborn.fujaba.muml.allocation.language.cs2as,
- de.uni_paderborn.fujaba.muml.allocation.language.resource,
- de.uni_paderborn.fujaba.muml.allocation.language,
- de.uni_paderborn.fujaba.muml.allocation.language.services,
- de.uni_paderborn.fujaba.muml.allocation.language.serializer,
+Export-Package: de.uni_paderborn.fujaba.muml.allocation.language,
+ de.uni_paderborn.fujaba.muml.allocation.language.cs2as,
+ de.uni_paderborn.fujaba.muml.allocation.language.formatting,
+ de.uni_paderborn.fujaba.muml.allocation.language.generator,
  de.uni_paderborn.fujaba.muml.allocation.language.parser.antlr,
  de.uni_paderborn.fujaba.muml.allocation.language.parser.antlr.internal,
- de.uni_paderborn.fujaba.muml.allocation.language.validation,
+ de.uni_paderborn.fujaba.muml.allocation.language.resource,
  de.uni_paderborn.fujaba.muml.allocation.language.scoping,
- de.uni_paderborn.fujaba.muml.allocation.language.generator,
- de.uni_paderborn.fujaba.muml.allocation.language.formatting
+ de.uni_paderborn.fujaba.muml.allocation.language.serializer,
+ de.uni_paderborn.fujaba.muml.allocation.language.services,
+ de.uni_paderborn.fujaba.muml.allocation.language.typing,
+ de.uni_paderborn.fujaba.muml.allocation.language.validation
 

@@ -69,7 +69,6 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getQosDimensionAccess().getGroup_8(), "rule__QosDimension__Group_8__0");
 					put(grammarAccess.getConstraintAccess().getGroup(), "rule__Constraint__Group__0");
 					put(grammarAccess.getLocationConstraintAccess().getGroup(), "rule__LocationConstraint__Group__0");
-					put(grammarAccess.getLocationConstraintAccess().getGroup_5(), "rule__LocationConstraint__Group_5__0");
 					put(grammarAccess.getResourceConstraintAccess().getGroup(), "rule__ResourceConstraint__Group__0");
 					put(grammarAccess.getResourceConstraintAccess().getGroup_11(), "rule__ResourceConstraint__Group_11__0");
 					put(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getGroup(), "rule__RequiredHardwareResourceInstanceConstraint__Group__0");
@@ -162,9 +161,8 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getQosDimensionAccess().getMetricAssignment_11(), "rule__QosDimension__MetricAssignment_11");
 					put(grammarAccess.getLocationConstraintAccess().getTypeAssignment_0(), "rule__LocationConstraint__TypeAssignment_0");
 					put(grammarAccess.getLocationConstraintAccess().getNameAssignment_1(), "rule__LocationConstraint__NameAssignment_1");
-					put(grammarAccess.getLocationConstraintAccess().getTupleDescriptorsAssignment_4(), "rule__LocationConstraint__TupleDescriptorsAssignment_4");
-					put(grammarAccess.getLocationConstraintAccess().getTupleDescriptorsAssignment_5_1(), "rule__LocationConstraint__TupleDescriptorsAssignment_5_1");
-					put(grammarAccess.getLocationConstraintAccess().getExpressionAssignment_8(), "rule__LocationConstraint__ExpressionAssignment_8");
+					put(grammarAccess.getLocationConstraintAccess().getTupleDescriptorAssignment_4(), "rule__LocationConstraint__TupleDescriptorAssignment_4");
+					put(grammarAccess.getLocationConstraintAccess().getExpressionAssignment_7(), "rule__LocationConstraint__ExpressionAssignment_7");
 					put(grammarAccess.getResourceConstraintAccess().getNameAssignment_1(), "rule__ResourceConstraint__NameAssignment_1");
 					put(grammarAccess.getResourceConstraintAccess().getLhsAssignment_4(), "rule__ResourceConstraint__LhsAssignment_4");
 					put(grammarAccess.getResourceConstraintAccess().getRhsAssignment_7(), "rule__ResourceConstraint__RhsAssignment_7");

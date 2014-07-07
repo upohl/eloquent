@@ -32,7 +32,7 @@ Constraint returns cs::ConstraintCS:
 
 LocationConstraint returns cs::LocationConstraintCS:
 	type=LocationConstraintType (name=ID)? '{'
-		'descriptors' tupleDescriptors+=LocationTupleDescriptor (',' tupleDescriptors+=LocationTupleDescriptor)*';'
+		'descriptors' tupleDescriptor=LocationTupleDescriptor ';'
 		'ocl' expression=Model ';'
 	'}'
 ;
