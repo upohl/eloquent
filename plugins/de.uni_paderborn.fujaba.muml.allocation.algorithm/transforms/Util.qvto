@@ -1,3 +1,4 @@
+modeltype core uses core('http://www.storydriven.org/core/0.3.1');
 modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.0/');
 modeltype hwrinstance uses hardware::hwresourceinstance('http://www.fujaba.de/muml/hardware/hwresourceinstance/1.0/');
 
@@ -37,4 +38,20 @@ query Sequence(OclAny)::orderedProduct(sequence : Sequence(OclAny)) : OrderedSet
 
 query HWPlatformInstanceConfiguration::getRootResourceInstances() : OrderedSet(ResourceInstance) {
 	return self.resources->sortedBy(name);
+}
+
+helper Sequence(NamedElement)::print() {
+	log("##: " + self->size().toString());
+	self->forEach(itm) {
+		log(itm.name);
+	};
+	log("##")
+}
+
+helper Sequence(OclAny)::print() {
+	log("##: " + self->size().toString());
+	self->forEach(itm) {
+		log(itm.toString());
+	};
+	log("##")
 }
