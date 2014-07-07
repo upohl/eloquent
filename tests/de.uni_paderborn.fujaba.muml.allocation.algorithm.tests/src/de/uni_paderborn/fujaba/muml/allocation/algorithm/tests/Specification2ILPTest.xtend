@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.resource.Resource
 
 @RunWith(value = typeof(Parameterized))
 class Specification2ILPTest extends QVToTransformationSingleOutExtentTest {
-	private static String uriPrefix = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.tests/fixtures/allocationSimple/"
+	public static String uriPrefix = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.tests/fixtures/allocationSimple/"
 	
 	new(String expectedURI, String transformationURI, String... inputObjectURIs) {
 		super(expectedURI, transformationURI, inputObjectURIs)
@@ -25,19 +25,19 @@ class Specification2ILPTest extends QVToTransformationSingleOutExtentTest {
 				// atomic component instances only
 				#[uriPrefix + "simple.lp",
 				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/Specification2ILP.qvto",
-				  uriPrefix + "ocltest.allocation_specification",
+				  uriPrefix + "simple.allocation_specification",
 				  uriPrefix + "simple.fujaba#//@categories.1/@modelElements.0",
 				  uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0"],
 				// simple structured component instances
 				#[uriPrefix + "simpleStructured.lp",
 				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/Specification2ILP.qvto",
-				  uriPrefix + "ocltest.allocation_specification",
+				  uriPrefix + "simple.allocation_specification",
 				  uriPrefix + "simple.fujaba#//@categories.1/@modelElements.1",
 				  uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0"],
 				// nested structured component instances
 				#[uriPrefix + "simpleNestedStructured.lp",
 				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/Specification2ILP.qvto",
-				  uriPrefix + "ocltest.allocation_specification",
+				  uriPrefix + "simple.allocation_specification",
 				  uriPrefix + "simple.fujaba#//@categories.1/@modelElements.2",
 				  uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0"])
 	}

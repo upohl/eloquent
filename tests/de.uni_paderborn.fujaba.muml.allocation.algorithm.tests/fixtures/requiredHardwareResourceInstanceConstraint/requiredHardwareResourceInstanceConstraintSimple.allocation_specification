@@ -1,0 +1,12 @@
+testSpecificationName {
+	constraint requiredHardwareResourceInstance foo {
+		descriptors (ins, res);
+		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+		in
+		let e1 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
+		in
+		let e2 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
+		in
+		Set{Tuple{ins : instance::ComponentInstance = c1, res : Set(hwresourceinstance::ResourceInstance) = Set{e1, e2}}};
+	}
+}
