@@ -94,14 +94,21 @@ class TypesUtil {
 	
 	@NonNull static def TupleType createReqHWResInstanceConstraintTupleType(MetaModelManager metaModelManager, 
 		List<ComponentResourceTupleDescriptorCS> tupleDescriptorList) {
-		val namedParts = <String, Type>newHashMap()
+		/*val namedParts = <String, Type>newHashMap()
 		tupleDescriptorList.forEach[t |
 			namedParts.putAll(#{
 				t.instance -> getType(metaModelManager, InstancePackage.Literals.COMPONENT_INSTANCE),
 				t.hwresinstance -> createSetType(metaModelManager,
 					getType(metaModelManager, HwresourceinstancePackage.Literals.RESOURCE_INSTANCE))
-		})]
-		createTupleType(metaModelManager, namedParts)
+		})]*/
+		val namedParts = <String, EClass>newHashMap()
+		tupleDescriptorList.forEach[t |
+			namedParts.putAll(#{
+				t.instance -> InstancePackage.Literals.COMPONENT_INSTANCE,
+				t.hwresinstance -> HwresourceinstancePackage.Literals.RESOURCE_INSTANCE
+			})
+		]
+		createTupleTypeHelper(metaModelManager, namedParts)
 	}
 	
 	@NonNull static def Type createReqHWResInstanceConstraintType(RequiredHardwareResourceInstanceConstraintCS constraintCS) {
