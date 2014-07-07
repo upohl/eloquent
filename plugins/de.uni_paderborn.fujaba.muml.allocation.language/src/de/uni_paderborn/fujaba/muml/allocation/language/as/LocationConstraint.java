@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.LocationConstraint#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.LocationConstraint#getTupleDescriptor <em>Tuple Descriptor</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.LocationConstraint#getType <em>Type</em>}</li>
  * </ul>
  * </p>
@@ -31,19 +31,29 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface LocationConstraint extends Constraint {
 	/**
-	 * Returns the value of the '<em><b>Tuple Descriptors</b></em>' containment reference list.
-	 * The list contents are of type {@link de.uni_paderborn.fujaba.muml.allocation.language.as.LocationTupleDescriptor}.
+	 * Returns the value of the '<em><b>Tuple Descriptor</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * A set of location tuple descriptors.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Tuple Descriptors</em>' containment reference list.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage#getLocationConstraint_TupleDescriptors()
+	 * @return the value of the '<em>Tuple Descriptor</em>' containment reference.
+	 * @see #setTupleDescriptor(LocationTupleDescriptor)
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage#getLocationConstraint_TupleDescriptor()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<LocationTupleDescriptor> getTupleDescriptors();
+	LocationTupleDescriptor getTupleDescriptor();
+
+	/**
+	 * Sets the value of the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.LocationConstraint#getTupleDescriptor <em>Tuple Descriptor</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Tuple Descriptor</em>' containment reference.
+	 * @see #getTupleDescriptor()
+	 * @generated
+	 */
+	void setTupleDescriptor(LocationTupleDescriptor value);
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.

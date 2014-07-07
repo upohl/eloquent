@@ -86,8 +86,8 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class either represents a SAME_LOCATION or DIFFERENT_LOCATION&#xA;constraint. A constraint of the type SAME_LOCATION specifies that a set of&#xA;component instances have to be allocated to the same hardware resource&#xA;instance. The DIFFERENT_LOCATION type constraint is the opposite&#xA;of the SAME_LOCATION type."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tupleDescriptors" lowerBound="1"
-        upperBound="-1" eType="#//LocationTupleDescriptorCS" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tupleDescriptor" lowerBound="1"
+        eType="#//LocationTupleDescriptorCS" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A set of location tuple descriptors."/>
       </eAnnotations>

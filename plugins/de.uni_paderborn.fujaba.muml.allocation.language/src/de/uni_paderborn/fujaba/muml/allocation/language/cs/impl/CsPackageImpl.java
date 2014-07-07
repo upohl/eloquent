@@ -324,7 +324,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLocationConstraintCS_TupleDescriptors() {
+	public EReference getLocationConstraintCS_TupleDescriptor() {
 		return (EReference)locationConstraintCSEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -544,7 +544,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		createEReference(constraintCSEClass, CONSTRAINT_CS__EXPRESSION);
 
 		locationConstraintCSEClass = createEClass(LOCATION_CONSTRAINT_CS);
-		createEReference(locationConstraintCSEClass, LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTORS);
+		createEReference(locationConstraintCSEClass, LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR);
 		createEAttribute(locationConstraintCSEClass, LOCATION_CONSTRAINT_CS__TYPE);
 
 		resourceConstraintCSEClass = createEClass(RESOURCE_CONSTRAINT_CS);
@@ -642,7 +642,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEReference(getConstraintCS_Expression(), theEssentialOCLCSPackage.getContextCS(), null, "expression", null, 1, 1, ConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationConstraintCSEClass, LocationConstraintCS.class, "LocationConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLocationConstraintCS_TupleDescriptors(), this.getLocationTupleDescriptorCS(), null, "tupleDescriptors", null, 1, -1, LocationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLocationConstraintCS_TupleDescriptor(), this.getLocationTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, LocationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLocationConstraintCS_Type(), this.getLocationConstraintTypes(), "type", null, 1, 1, LocationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceConstraintCSEClass, ResourceConstraintCS.class, "ResourceConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

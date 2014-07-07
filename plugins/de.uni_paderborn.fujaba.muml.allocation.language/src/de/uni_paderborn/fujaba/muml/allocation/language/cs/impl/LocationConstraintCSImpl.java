@@ -27,7 +27,7 @@ import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.LocationConstraintCSImpl#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.LocationConstraintCSImpl#getTupleDescriptor <em>Tuple Descriptor</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.LocationConstraintCSImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
@@ -36,14 +36,14 @@ import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
  */
 public class LocationConstraintCSImpl extends ConstraintCSImpl implements LocationConstraintCS {
 	/**
-	 * The cached value of the '{@link #getTupleDescriptors() <em>Tuple Descriptors</em>}' containment reference list.
+	 * The cached value of the '{@link #getTupleDescriptor() <em>Tuple Descriptor</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTupleDescriptors()
+	 * @see #getTupleDescriptor()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<LocationTupleDescriptorCS> tupleDescriptors;
+	protected LocationTupleDescriptorCS tupleDescriptor;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -89,11 +89,42 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<LocationTupleDescriptorCS> getTupleDescriptors() {
-		if (tupleDescriptors == null) {
-			tupleDescriptors = new EObjectContainmentEList<LocationTupleDescriptorCS>(LocationTupleDescriptorCS.class, this, CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTORS);
+	public LocationTupleDescriptorCS getTupleDescriptor() {
+		return tupleDescriptor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTupleDescriptor(LocationTupleDescriptorCS newTupleDescriptor, NotificationChain msgs) {
+		LocationTupleDescriptorCS oldTupleDescriptor = tupleDescriptor;
+		tupleDescriptor = newTupleDescriptor;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR, oldTupleDescriptor, newTupleDescriptor);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return tupleDescriptors;
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTupleDescriptor(LocationTupleDescriptorCS newTupleDescriptor) {
+		if (newTupleDescriptor != tupleDescriptor) {
+			NotificationChain msgs = null;
+			if (tupleDescriptor != null)
+				msgs = ((InternalEObject)tupleDescriptor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR, null, msgs);
+			if (newTupleDescriptor != null)
+				msgs = ((InternalEObject)newTupleDescriptor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR, null, msgs);
+			msgs = basicSetTupleDescriptor(newTupleDescriptor, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR, newTupleDescriptor, newTupleDescriptor));
 	}
 
 	/**
@@ -135,8 +166,8 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTORS:
-				return ((InternalEList<?>)getTupleDescriptors()).basicRemove(otherEnd, msgs);
+			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
+				return basicSetTupleDescriptor(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -149,8 +180,8 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTORS:
-				return getTupleDescriptors();
+			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
+				return getTupleDescriptor();
 			case CsPackage.LOCATION_CONSTRAINT_CS__TYPE:
 				return getType();
 		}
@@ -166,9 +197,8 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTORS:
-				getTupleDescriptors().clear();
-				getTupleDescriptors().addAll((Collection<? extends LocationTupleDescriptorCS>)newValue);
+			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
+				setTupleDescriptor((LocationTupleDescriptorCS)newValue);
 				return;
 			case CsPackage.LOCATION_CONSTRAINT_CS__TYPE:
 				setType((LocationConstraintTypes)newValue);
@@ -185,8 +215,8 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTORS:
-				getTupleDescriptors().clear();
+			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
+				setTupleDescriptor((LocationTupleDescriptorCS)null);
 				return;
 			case CsPackage.LOCATION_CONSTRAINT_CS__TYPE:
 				setType(TYPE_EDEFAULT);
@@ -203,8 +233,8 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTORS:
-				return tupleDescriptors != null && !tupleDescriptors.isEmpty();
+			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
+				return tupleDescriptor != null;
 			case CsPackage.LOCATION_CONSTRAINT_CS__TYPE:
 				return type != TYPE_EDEFAULT;
 		}

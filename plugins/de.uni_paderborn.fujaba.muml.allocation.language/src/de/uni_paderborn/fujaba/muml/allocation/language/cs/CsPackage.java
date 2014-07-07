@@ -518,13 +518,13 @@ public interface CsPackage extends EPackage {
 	int LOCATION_CONSTRAINT_CS__EXPRESSION = CONSTRAINT_CS__EXPRESSION;
 
 	/**
-	 * The feature id for the '<em><b>Tuple Descriptors</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTORS = CONSTRAINT_CS_FEATURE_COUNT + 0;
+	int LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR = CONSTRAINT_CS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1341,15 +1341,15 @@ public interface CsPackage extends EPackage {
 	EClass getLocationConstraintCS();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS#getTupleDescriptors <em>Tuple Descriptors</em>}'.
+	 * Returns the meta object for the containment reference '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tuple Descriptors</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS#getTupleDescriptors()
+	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS#getTupleDescriptor()
 	 * @see #getLocationConstraintCS()
 	 * @generated
 	 */
-	EReference getLocationConstraintCS_TupleDescriptors();
+	EReference getLocationConstraintCS_TupleDescriptor();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS#getType <em>Type</em>}'.
@@ -1688,12 +1688,12 @@ public interface CsPackage extends EPackage {
 		EClass LOCATION_CONSTRAINT_CS = eINSTANCE.getLocationConstraintCS();
 
 		/**
-		 * The meta object literal for the '<em><b>Tuple Descriptors</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTORS = eINSTANCE.getLocationConstraintCS_TupleDescriptors();
+		EReference LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR = eINSTANCE.getLocationConstraintCS_TupleDescriptor();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.

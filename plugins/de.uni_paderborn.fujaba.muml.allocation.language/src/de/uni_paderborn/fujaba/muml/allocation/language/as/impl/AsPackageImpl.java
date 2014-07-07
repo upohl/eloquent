@@ -320,7 +320,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLocationConstraint_TupleDescriptors() {
+	public EReference getLocationConstraint_TupleDescriptor() {
 		return (EReference)locationConstraintEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -540,7 +540,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		createEReference(constraintEClass, CONSTRAINT__EXPRESSION);
 
 		locationConstraintEClass = createEClass(LOCATION_CONSTRAINT);
-		createEReference(locationConstraintEClass, LOCATION_CONSTRAINT__TUPLE_DESCRIPTORS);
+		createEReference(locationConstraintEClass, LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR);
 		createEAttribute(locationConstraintEClass, LOCATION_CONSTRAINT__TYPE);
 
 		resourceConstraintEClass = createEClass(RESOURCE_CONSTRAINT);
@@ -635,7 +635,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		initEReference(getConstraint_Expression(), thePivotPackage.getExpressionInOCL(), null, "expression", null, 1, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationConstraintEClass, LocationConstraint.class, "LocationConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLocationConstraint_TupleDescriptors(), this.getLocationTupleDescriptor(), null, "tupleDescriptors", null, 1, -1, LocationConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLocationConstraint_TupleDescriptor(), this.getLocationTupleDescriptor(), null, "tupleDescriptor", null, 1, 1, LocationConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLocationConstraint_Type(), this.getLocationConstraintTypes(), "type", null, 0, 1, LocationConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceConstraintEClass, ResourceConstraint.class, "ResourceConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

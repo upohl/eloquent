@@ -27,7 +27,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//Constraint/expression"/>
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//LocationConstraint">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//LocationConstraint/tupleDescriptors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//LocationConstraint/tupleDescriptor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationAS.ecore#//LocationConstraint/type"/>
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//ResourceConstraint">

@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.LocationConstraintImpl#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.LocationConstraintImpl#getTupleDescriptor <em>Tuple Descriptor</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.LocationConstraintImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
@@ -38,14 +38,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class LocationConstraintImpl extends ConstraintImpl implements LocationConstraint {
 	/**
-	 * The cached value of the '{@link #getTupleDescriptors() <em>Tuple Descriptors</em>}' containment reference list.
+	 * The cached value of the '{@link #getTupleDescriptor() <em>Tuple Descriptor</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTupleDescriptors()
+	 * @see #getTupleDescriptor()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<LocationTupleDescriptor> tupleDescriptors;
+	protected LocationTupleDescriptor tupleDescriptor;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -91,11 +91,42 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<LocationTupleDescriptor> getTupleDescriptors() {
-		if (tupleDescriptors == null) {
-			tupleDescriptors = new EObjectContainmentEList<LocationTupleDescriptor>(LocationTupleDescriptor.class, this, AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTORS);
+	public LocationTupleDescriptor getTupleDescriptor() {
+		return tupleDescriptor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTupleDescriptor(LocationTupleDescriptor newTupleDescriptor, NotificationChain msgs) {
+		LocationTupleDescriptor oldTupleDescriptor = tupleDescriptor;
+		tupleDescriptor = newTupleDescriptor;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR, oldTupleDescriptor, newTupleDescriptor);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return tupleDescriptors;
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTupleDescriptor(LocationTupleDescriptor newTupleDescriptor) {
+		if (newTupleDescriptor != tupleDescriptor) {
+			NotificationChain msgs = null;
+			if (tupleDescriptor != null)
+				msgs = ((InternalEObject)tupleDescriptor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR, null, msgs);
+			if (newTupleDescriptor != null)
+				msgs = ((InternalEObject)newTupleDescriptor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR, null, msgs);
+			msgs = basicSetTupleDescriptor(newTupleDescriptor, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR, newTupleDescriptor, newTupleDescriptor));
 	}
 
 	/**
@@ -127,8 +158,8 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTORS:
-				return ((InternalEList<?>)getTupleDescriptors()).basicRemove(otherEnd, msgs);
+			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
+				return basicSetTupleDescriptor(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -141,8 +172,8 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTORS:
-				return getTupleDescriptors();
+			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
+				return getTupleDescriptor();
 			case AsPackage.LOCATION_CONSTRAINT__TYPE:
 				return getType();
 		}
@@ -158,9 +189,8 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTORS:
-				getTupleDescriptors().clear();
-				getTupleDescriptors().addAll((Collection<? extends LocationTupleDescriptor>)newValue);
+			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
+				setTupleDescriptor((LocationTupleDescriptor)newValue);
 				return;
 			case AsPackage.LOCATION_CONSTRAINT__TYPE:
 				setType((LocationConstraintTypes)newValue);
@@ -177,8 +207,8 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTORS:
-				getTupleDescriptors().clear();
+			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
+				setTupleDescriptor((LocationTupleDescriptor)null);
 				return;
 			case AsPackage.LOCATION_CONSTRAINT__TYPE:
 				setType(TYPE_EDEFAULT);
@@ -195,8 +225,8 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTORS:
-				return tupleDescriptors != null && !tupleDescriptors.isEmpty();
+			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
+				return tupleDescriptor != null;
 			case AsPackage.LOCATION_CONSTRAINT__TYPE:
 				return type != TYPE_EDEFAULT;
 		}
