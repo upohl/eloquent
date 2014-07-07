@@ -1,3 +1,5 @@
+import Expressions;
+import VariableHelper;
 import Variables;
 import Util;
 
@@ -38,20 +40,10 @@ mapping ComponentInstance::createGeneralConstraint(resourceInstanceSet : Ordered
 	when {resourceInstanceSet->size() > 1}
 {
 	init {
-		var lhs : Expression := null;
-		resourceInstanceSet->reverse()->collect(oclAsType(ResourceInstance))->forEach(resourceInstance) {
-			log("before getVariable");
-			var variable : Variable := getVariable(self, resourceInstance);
-			log("got variable: " + variable.oclIsUndefined().toString());
-			var variableExpression : VariableExpression := new VariableExpression(variable);
-			if (lhs.oclIsUndefined()) then
-				lhs := variableExpression
-			else
-				lhs := new ArithmeticExpression(variableExpression, lhs, ArithmeticOperator::PLUS)
-			endif;
-		};
-		result := new ConstraintExpression(lhs, new LiteralExpression('1'),
-			ComparingOperator::EQUAL, self.getVariableName());
+		result := self->asSequence()->product(
+			resourceInstanceSet
+		)->collectNested(Sequence{first, second})
+		->sortedBy(s | s->getVariableName())->createAdditionConstraintExpression('1', self.getVariableName());
 	}
 }
 

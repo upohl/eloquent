@@ -1,3 +1,6 @@
+import Util;
+import VariableHelper;
+
 modeltype core uses core('http://www.storydriven.org/core/0.3.1');
 modeltype expressions uses core::expressions('http://www.storydriven.org/core/expressions/0.3.1');
 modeltype common uses core::expressions::common('http://www.storydriven.org/core/expressions/common/0.3.1');
@@ -28,4 +31,19 @@ constructor ConstraintExpression::ConstraintExpression(lhs : Expression, rhs : E
 	if (not comment.oclIsUndefined()) then {
 		result.comment := comment;
 	} endif;
+}
+
+helper Sequence(Sequence(NamedElement))::createAdditionConstraintExpression(lit : String, comment : String)
+	: ConstraintExpression {
+	var lhs : Expression := null;
+	self->asOrderedSet()->reverse()->collectNested(oclAsType(Sequence(NamedElement)))->forEach(seq) {
+		var variableExpression : VariableExpression := new VariableExpression(seq->getVariable()); 
+		if (lhs.oclIsUndefined()) then
+			lhs := variableExpression
+		else
+			lhs := new ArithmeticExpression(variableExpression, lhs, ArithmeticOperator::PLUS)
+		endif;
+	};
+	return new ConstraintExpression(lhs, new LiteralExpression(lit),
+		ComparingOperator::EQUAL, comment);
 }

@@ -1,5 +1,6 @@
 import Expressions;
 import Util;
+import VariableHelper;
 
 modeltype core uses core('http://www.storydriven.org/core/0.3.1');
 modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
@@ -24,10 +25,6 @@ helper Sequence(NamedElement)::createHelperVariablesAndConstraints(inout ilp : I
 	ilp.variables += variable;
 	createHelperVariableConstraints(ilp, leftVariable, rightVariable, variable);
 	return variable;
-}
-
-query Sequence(NamedElement)::getVariable() : Variable {
-	return Sequence{self}.resolveone(Variable);
 }
 
 helper createHelperVariableConstraints(inout ilp : IntegerLinearProgram, leftVariable : Variable,
@@ -64,43 +61,4 @@ mapping Sequence(NamedElement)::createBinaryVariable() : Variable {
 	log("binary called for: " + self->getVariableName());
 	name := self->getVariableName();
 	dataType := ILPDataType::BINARY;
-}
-
-query Sequence(NamedElement)::getVariableName() : String {
-	return '_'.join(self->collect(getVariableName()));
-}
-
-query NamedElement::getVariableName() : String {
-	// fail in order to detect potential errors
-	assert fatal (false) with log("implement me");
-	return '';
-}
-
-query ComponentInstance::getVariableName() : String {
-	return '.'.join(self.getParentComponents()->collect(name));
-}
-
-query ComponentInstance::getParentComponents() : OrderedSet(ComponentInstance) {
-	return self->asOrderedSet()->closure(ci : ComponentInstance |
-		let sci : StructuredComponentInstance = ci.parentCIC.parentStructuredComponentInstance
-		in
-		if sci.oclIsUndefined() then
-			ci->asOrderedSet()
-		else
-			OrderedSet{ci, sci}
-		endif
-	)->reverse()->collect(oclAsType(ComponentInstance))->asOrderedSet();
-}
-
-query ResourceInstance::getVariableName() : String {
-	return self.name;
-}
-
-query getVariable(componentInstance : ComponentInstance, resourceInstance : ResourceInstance) : Variable {
-	return Sequence{componentInstance, resourceInstance}->map createBinaryVariable();
-	/* var varBag : Bag(Variable) := Set{Sequence{componentInstance, resourceInstance}}
-		->map createBinaryVariable();
-	log("varBag: " + varBag->size().toString());
-	assert fatal (varBag->size() = 1) with log("unexpected varBag size (expected: 1)");
-	return varBag->any(true);*/
 }

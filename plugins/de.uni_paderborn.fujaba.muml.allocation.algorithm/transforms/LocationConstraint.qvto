@@ -1,6 +1,8 @@
+import Expressions;
 import OCLEvaluator;
 import TupleAccessor;
 import Util;
+import VariableHelper;
 import Variables;
 
 modeltype allocationSpecification uses cs('http://www.fujaba.de/muml/allocation/language/0.1.0/cs');
@@ -41,18 +43,8 @@ helper LocationConstraintCS::createLocationConstraint(inout ilp : IntegerLinearP
 helper NamedElement::createLocationConstraintConstraintExpression(sequences : Sequence(Sequence(NamedElement)),
 	locationConstraint : LocationConstraintCS) : ConstraintExpression {
 	var comment : String := if locationConstraint.name <> '' then locationConstraint.name else locationConstraint.repr() endif;
-	var lhs : Expression := null;
-	self.getSequences(sequences)->reverse()->collectNested(oclAsType(Sequence(NamedElement)))->forEach(seq) {
-		var variableExpression : VariableExpression := new VariableExpression(seq->getVariable()); 
-		if (lhs.oclIsUndefined()) then
-			lhs := variableExpression
-		else
-			lhs := new ArithmeticExpression(variableExpression, lhs, ArithmeticOperator::PLUS)
-		endif;
-	};
 	var lit : String := if locationConstraint.type = LocationConstraintTypes::SAME_LOCATION then '1' else '0' endif;
-	return new ConstraintExpression(lhs, new LiteralExpression(lit),
-		ComparingOperator::EQUAL, comment);
+	return self.getSequences(sequences)->asSequence()->createAdditionConstraintExpression(lit, comment);
 }
 
 // returns "my" sequences
@@ -72,7 +64,7 @@ query LocationConstraintCS::getHelperVariableSequences(cic : ComponentInstanceCo
 
 query Sequence(TupleValue)::getLocationConstraintHelperVariableSequences(resourceInstanceSet : OrderedSet(ResourceInstance))
 	: Sequence(Sequence(NamedElement)) {
-	var sequence : Sequence(NamedElement) := self.toSequence();
+	var sequence : Sequence(NamedElement) := self->collect(toSequence());
 	assert fatal (sequence->size() = 2) with log("unexpected sequence size");
 	return resourceInstanceSet->collectNested(ri : ResourceInstance |
 		Sequence{sequence->at(1), ri, sequence->at(2), ri}
