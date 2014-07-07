@@ -37,6 +37,16 @@ class RequiredHardwareResourceInstance2ILPTest extends QVToTransformationSingleO
 				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/Specification2ILP.qvto",
 				  uriPrefix + "requiredHardwareResourceInstanceConstraintTwoDescriptorsMixedResult.allocation_specification",
 				  Specification2ILPTest.uriPrefix + "simple.fujaba#//@categories.1/@modelElements.0",
+				  Specification2ILPTest.uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0"],
+				#[uriPrefix + "requiredHardwareResourceInstanceConstraintMultipleConstraints.lp",
+				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/Specification2ILP.qvto",
+				  uriPrefix + "requiredHardwareResourceInstanceConstraintMultipleConstraints.allocation_specification",
+				  Specification2ILPTest.uriPrefix + "simple.fujaba#//@categories.1/@modelElements.0",
+				  Specification2ILPTest.uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0"],
+				#[uriPrefix + "requiredHardwareResourceInstanceConstraintThreeDescriptors.lp",
+				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/Specification2ILP.qvto",
+				  uriPrefix + "requiredHardwareResourceInstanceConstraintThreeDescriptors.allocation_specification",
+				  Specification2ILPTest.uriPrefix + "simple.fujaba#//@categories.1/@modelElements.0",
 				  Specification2ILPTest.uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0"])
 	}
 	
