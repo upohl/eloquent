@@ -7,6 +7,7 @@ testSpecificationName {
 		in
 		let e2 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
 		in
-		Set{Tuple{ins : instance::ComponentInstance = c1, res : Set(hwresourceinstance::ResourceInstance) = Set{e1, e2}}};
+		Set{Tuple{ins : instance::ComponentInstance = c1, res : hwresourceinstance::ResourceInstance = e1},
+			Tuple{ins : instance::ComponentInstance = c1, res : hwresourceinstance::ResourceInstance =e2}};
 	}
 }
