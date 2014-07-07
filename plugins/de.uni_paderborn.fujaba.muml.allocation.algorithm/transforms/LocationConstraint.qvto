@@ -1,0 +1,99 @@
+import OCLEvaluator;
+import TupleAccessor;
+import Util;
+import Variables;
+
+modeltype allocationSpecification uses cs('http://www.fujaba.de/muml/allocation/language/0.1.0/cs');
+modeltype context uses context('http://www.fujaba.de/muml/allocation/language/0.1.0/context');
+modeltype core uses core('http://www.storydriven.org/core/0.3.1');
+modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
+modeltype expressions uses core::expressions('http://www.storydriven.org/core/expressions/0.3.1');
+modeltype common uses core::expressions::common('http://www.storydriven.org/core/expressions/common/0.3.1');
+modeltype instance uses muml::instance('http://www.fujaba.de/muml/instance/0.4.0');
+modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.0/');
+modeltype hwrinstance uses hardware::hwresourceinstance('http://www.fujaba.de/muml/hardware/hwresourceinstance/1.0/');
+modeltype values uses values('http://ww.eclipse.org/OCL/Values');
+
+
+library LocationConstraint;
+
+// the implementation of the differentLocation constraint differs from the approach,
+// which was described in my thesis
+
+helper SpecificationCS::createLocationConstraints(inout ilp : IntegerLinearProgram,
+	cic : ComponentInstanceConfiguration,
+	hpic : HWPlatformInstanceConfiguration) {
+	self.getSameLocationConstraints()->createLocationConstraint(ilp, cic, hpic);
+	self.getDifferentLocationConstraints()->createLocationConstraint(ilp, cic, hpic);
+}
+
+helper LocationConstraintCS::createLocationConstraint(inout ilp : IntegerLinearProgram,
+	cic : ComponentInstanceConfiguration,
+	hpic : HWPlatformInstanceConfiguration) {
+	var sequences : Sequence(Sequence(NamedElement)) := self.getHelperVariableSequences(cic, hpic);
+	sequences->createHelperVariablesAndConstraints(ilp);
+	var instances : OrderedSet(NamedElement) := sequences->collect(seq : Sequence(NamedElement) |
+		seq->at(1)
+	)->asOrderedSet()->sortedBy(name);
+	ilp.constraints += instances->createLocationConstraintConstraintExpression(sequences, self);
+}
+
+helper NamedElement::createLocationConstraintConstraintExpression(sequences : Sequence(Sequence(NamedElement)),
+	locationConstraint : LocationConstraintCS) : ConstraintExpression {
+	var comment : String := if locationConstraint.name <> '' then locationConstraint.name else locationConstraint.repr() endif;
+	var lhs : Expression := null;
+	self.getSequences(sequences)->reverse()->collectNested(oclAsType(Sequence(NamedElement)))->forEach(seq) {
+		var variableExpression : VariableExpression := new VariableExpression(seq->getVariable()); 
+		if (lhs.oclIsUndefined()) then
+			lhs := variableExpression
+		else
+			lhs := new ArithmeticExpression(variableExpression, lhs, ArithmeticOperator::PLUS)
+		endif;
+	};
+	var lit : String := if locationConstraint.type = LocationConstraintTypes::SAME_LOCATION then '1' else '0' endif;
+	return new ConstraintExpression(lhs, new LiteralExpression(lit),
+		ComparingOperator::EQUAL, comment);
+}
+
+// returns "my" sequences
+query NamedElement::getSequences(sequences : Sequence(Sequence(NamedElement))) : OrderedSet(Sequence(NamedElement)) {
+	return sequences->select(seq : Sequence(NamedElement) | seq->at(1) = self)
+		->asOrderedSet()->sortedBy(getVariableName());
+}
+
+// removed
+
+query LocationConstraintCS::getHelperVariableSequences(cic : ComponentInstanceConfiguration,
+	hpic : HWPlatformInstanceConfiguration) : Sequence(Sequence(NamedElement)) {
+	var oclContext : OCLContext := createOCLContext(cic, hpic);
+	var res : Sequence(TupleValue) := self.evaluateOCL(oclContext);
+	return res->getLocationConstraintHelperVariableSequences(hpic.getRootResourceInstances());
+}
+
+query Sequence(TupleValue)::getLocationConstraintHelperVariableSequences(resourceInstanceSet : OrderedSet(ResourceInstance))
+	: Sequence(Sequence(NamedElement)) {
+	var sequence : Sequence(NamedElement) := self.toSequence();
+	assert fatal (sequence->size() = 2) with log("unexpected sequence size");
+	return resourceInstanceSet->collectNested(ri : ResourceInstance |
+		Sequence{sequence->at(1), ri, sequence->at(2), ri}
+	);
+}
+
+mapping inout IntegerLinearProgram::createSameLocationConstraints(cic : ComponentInstanceConfiguration,
+	hpic : HWPlatformInstanceConfiguration) {
+}
+
+query SpecificationCS::getLocationConstraints(wantedType : LocationConstraintTypes) : OrderedSet(LocationConstraintCS) {
+	return self.constraints->select(oclIsKindOf(LocationConstraintCS))
+		->collect(oclAsType(LocationConstraintCS))
+		->select(type = wantedType)
+		->asOrderedSet();	
+}
+
+query SpecificationCS::getSameLocationConstraints() : OrderedSet(LocationConstraintCS) {
+	return self.getLocationConstraints(LocationConstraintTypes::SAME_LOCATION);
+}
+
+query SpecificationCS::getDifferentLocationConstraints() : OrderedSet(LocationConstraintCS) {
+	return self.getLocationConstraints(LocationConstraintTypes::DIFFERENT_LOCATION);
+}

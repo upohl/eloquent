@@ -1,0 +1,77 @@
+import de.uni_paderborn.fujaba.muml.allocation.algorithm.ocl.TupleAccessorBlackboxUnit;
+import Util;
+
+modeltype allocationSpecification uses cs('http://www.fujaba.de/muml/allocation/language/0.1.0/cs');
+modeltype core uses core('http://www.storydriven.org/core/0.3.1');
+modeltype values uses values('http://ww.eclipse.org/OCL/Values');
+
+library TupleAccessor;
+
+helper TupleValue::get(namedPart : String) : OclAny {
+	//log("resolve call: ");
+	var source : ConstraintCS := self.invresolveone(ConstraintCS);
+	//log(source.toString());
+	return getPart(self, namedPart, source);
+}
+
+helper TupleValue::getSequence(namedPart : String) : Sequence(OclAny) {
+	var source : ConstraintCS := self.invresolveone(ConstraintCS);
+	return getSequencePart(self, namedPart, source);
+}
+
+query TupleValue::toSequence() : Sequence(NamedElement) {
+	// it might be possible that source is not the source we expect:
+	// source might be a previously transformed constraint. This is no problem
+	// because we the toSequence call will return the _expected_ sequence.
+	// Alternatively, we can fix this be doing an invresolve(...)->last() or
+	// ->first() (to be investigated) to get the "correct"/expected constraint
+	// (implicit assumption: the tuple value is only accessed during the transformation
+	// of the constraint)
+	var source : ConstraintCS := self.invresolveone(ConstraintCS);
+	return source.toSequence(self);
+}
+
+query LocationConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+	var tupleDescriptor : LocationTupleDescriptorCS := self.tupleDescriptor;
+	return Sequence{tupleValue.get(tupleDescriptor.instance).oclAsType(NamedElement),
+		tupleValue.get(tupleDescriptor.secondInstance).oclAsType(NamedElement)}; 
+}
+
+query RequiredHardwareResourceInstanceConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+	var tupleDescriptors : Set(ComponentResourceTupleDescriptorCS) := self.tupleDescriptors;
+	var res : Sequence(Sequence(NamedElement)) := Sequence{};
+	var i : Integer := 1;
+	tupleDescriptors->forEach(td) {
+		log("## TD OK");
+		var instance : NamedElement := tupleValue.get(td.instance).oclAsType(NamedElement);
+		var hwresinstanceSet : Sequence(NamedElement) := tupleValue.getSequence(td.hwresinstance)
+			->collect(oclAsType(NamedElement))->sortedBy(name);
+		var cur : Sequence(Sequence(NamedElement)) := instance->asSequence()->orderedProduct(hwresinstanceSet)
+			->collectNested(Sequence{first.oclAsType(NamedElement), second.oclAsType(NamedElement)});
+		log("invalid? " + cur->oclIsInvalid().toString());
+		var ores : Sequence(Sequence(NamedElement)) := res;
+		res := Sequence{};
+		if (ores->isEmpty()) then
+			res := cur
+		else
+			//res := res->collectNested(seq1 | cur->collectNested(seq2 | seq1->union(seq2)))
+			ores->forEach(seq1) {
+				cur->forEach(seq2) {
+					res := res->append(seq1->union(seq2))
+				}
+			}
+		endif;
+		log("invalid? " + res->oclIsInvalid().toString());
+		hwresinstanceSet->forEach(n) {
+			log(n.name);
+		};
+		log("## TD still OK");
+	};
+	return res->flatten(); 
+}
+
+query ConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+	// should not happen
+	assert fatal (false) with log("add constraint specific ::toSequence mapping for " + self.toString());
+	return null;
+}

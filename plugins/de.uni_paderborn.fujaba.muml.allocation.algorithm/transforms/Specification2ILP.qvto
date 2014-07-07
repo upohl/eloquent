@@ -1,5 +1,11 @@
+import Expressions;
+import GeneralConstraint;
+import LocationConstraint;
+import RequiredHardwareResourceInstanceConstraint;
 import OCLEvaluator;
+import TupleAccessor;
 import Util;
+import Variables;
 
 modeltype allocationSpecification uses cs('http://www.fujaba.de/muml/allocation/language/0.1.0/cs');
 modeltype context uses context('http://www.fujaba.de/muml/allocation/language/0.1.0/context');
@@ -12,142 +18,28 @@ modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/mu
 modeltype hwrinstance uses hardware::hwresourceinstance('http://www.fujaba.de/muml/hardware/hwresourceinstance/1.0/');
 modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
 modeltype ocl uses essentialoclcs('http://www.eclipse.org/ocl/3.1.0/EssentialOCLCST');
+modeltype values uses values('http://ww.eclipse.org/OCL/Values');
 
-transformation Specification2ILP(in specification : allocationSpecification, in ins : instance, in hwpi : hwpinstance, out ilp : ilptype);
+transformation Specification2ILP(in specification : allocationSpecification, in ins : instance, in hwpi : hwpinstance, out ilpOut : ilptype);
 
 main() {
-	var contextCS : ContextCS := specification.objects()![ContextCS];
+	var specificationCS : SpecificationCS := specification.getSpecification();
 	var cic : ComponentInstanceConfiguration := ins.getRootCIC();
 	var hpic : HWPlatformInstanceConfiguration := hwpi.getRootHPIC();
 	var ilp : IntegerLinearProgram := object IntegerLinearProgram {};
 	ilp.map createGeneralConstraints(cic, hpic);
+	specificationCS.createLocationConstraints(ilp, cic, hpic);
+	specificationCS.createHWResInstanceConstraints(ilp, cic, hpic);
+	//specificationCS.getSameLocationConstraints()->createSameLocationConstraint(ilp, cic, hpic);
+	ilpOut.removeOrphans();
 	//log(cic.toString());
-	//var ctx : OCLContext := createOCLContextObject(cic);
+	//var ctx : OCLContext := createOCLContext(cic, null);
 	//log(ctx.toString());
-	//log("in qvto ocl result: " + evaluateOCL(contextCS, ctx).toString());
+	//log("in qvto ocl result: " + evaluateOCL(null, ctx).toString());
 }
 
-mapping inout IntegerLinearProgram::createGeneralConstraints(cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) {
-	var vars : Bag(Variable) := cic.getAllComponentInstances()
-		->product(hpic.getRootResourceInstances())
-		->toSequence()->map createBinaryVariable();
-	variables += vars->sortedBy(name);
-	constraints += cic.getAllComponentInstances()
-		->createGeneralConstraint(hpic.getRootResourceInstances());
-}
-
-query ComponentInstanceConfiguration::getAllComponentInstances() : OrderedSet(ComponentInstance) {
-	return self.componentInstances->closure(ci : ComponentInstance |
-		if ci.oclIsKindOf(StructuredComponentInstance) then
-			ci->asSet()->union(
-				ci.oclAsType(StructuredComponentInstance).embeddedCIC.componentInstances
-			)
-		else
-			ci->asSet()
-		endif			
-	)->sortedBy(getVariableName())
-}
-
-query HWPlatformInstanceConfiguration::getRootResourceInstances() : OrderedSet(ResourceInstance) {
-	return self.resources->sortedBy(name);
-}
-
-query Tuple(first : ComponentInstance, second : ResourceInstance)::toSequence() : Sequence(NamedElement) {
-	return Sequence{self.first, self.second};
-}
-
-mapping Sequence(NamedElement)::createBinaryVariable() : Variable {
-	log("binary called for: " + '_'.join(self->collect(getVariableName())));
-	name := '_'.join(self->collect(getVariableName()));
-	dataType := ILPDataType::BINARY;
-}
-
-query NamedElement::getVariableName() : String {
-	// fail in order to detect potential errors
-	assert fatal (false) with log("implement me");
-	return '';
-}
-
-query ComponentInstance::getVariableName() : String {
-	return '.'.join(self.getParentComponents()->collect(name));
-}
-
-query ResourceInstance::getVariableName() : String {
-	return self.name;
-}
-
-query ComponentInstance::getParentComponents() : OrderedSet(ComponentInstance) {
-	return self->asOrderedSet()->closure(ci : ComponentInstance |
-		let sci : StructuredComponentInstance = ci.parentCIC.parentStructuredComponentInstance
-		in
-		if sci.oclIsUndefined() then
-			ci->asOrderedSet()
-		else
-			OrderedSet{ci, sci}
-		endif
-	)->reverse()->collect(oclAsType(ComponentInstance))->asOrderedSet();
-}
-
-// mapping just for syntactic sugar reasons: use when statement
-mapping ComponentInstance::createGeneralConstraint(resourceInstanceSet : OrderedSet(ResourceInstance)) : ConstraintExpression
-	when {resourceInstanceSet->size() > 1}
-{
-	init {
-		var lhs : Expression := null;
-		resourceInstanceSet->reverse()->collect(oclAsType(ResourceInstance))->forEach(resourceInstance) {
-			var variable : Variable := getVariable(self, resourceInstance);
-			log("got variable: " + variable.oclIsUndefined().toString());
-			var variableExpression : VariableExpression := new VariableExpression(variable);
-			if (lhs.oclIsUndefined()) then
-				lhs := variableExpression
-			else
-				lhs := new ArithmeticExpression(variableExpression, lhs, ArithmeticOperator::PLUS)
-			endif;
-		};
-		result := new ConstraintExpression(lhs, new LiteralExpression('1'),
-			ComparingOperator::EQUAL, self.getVariableName());
-	}
-}
-
-query getVariable(componentInstance : ComponentInstance, resourceInstance : ResourceInstance) : Variable {
-	//return Sequence{componentInstance, resourceInstance}->collect(oclAsType(NamedElement))
-	//		.resolveoneIn(Sequence(NamedElement)::createBinaryVariable, Variable);
-	var varBag : Bag(Variable) := Set{Sequence{componentInstance, resourceInstance}}
-		->map createBinaryVariable();
-	log("varBag: " + varBag->size().toString());
-	assert fatal (varBag->size() = 1) with log("unexpected varBag size (expected: 1)");
-	return varBag->any(true);
-}
-
-constructor LiteralExpression::LiteralExpression(value : String) {
-	result.value := value;
-}
-
-constructor VariableExpression::VariableExpression(variable : Variable) {
-	result.variable := variable;
-}
-
-constructor ArithmeticExpression::ArithmeticExpression(lhs : Expression, rhs : Expression,
-	operator : ArithmeticOperator) {
-	leftExpression := lhs;
-	rightExpression := rhs;
-	result.operator := operator;
-}
-
-constructor ConstraintExpression::ConstraintExpression(lhs : Expression, rhs : Expression,
-	operator : ComparingOperator, comment : String) {
-	leftExpression := lhs;
-	rightExpression := rhs;
-	result.operator := operator;
-	result.comment := comment;
-}
-
-helper createOCLContextObject(cic : ComponentInstanceConfiguration) : OCLContext {
-	log('createOCLContextObject');
-	return object OCLContext {
-		componentInstanceConfiguration := cic;
-	};
+helper ilptype::removeOrphans() {
+	self.removeElement(createOCLContext(ins.getRootCIC(), hwpi.getRootHPIC()));
 }
 
 query instance::getRootCIC() : ComponentInstanceConfiguration {
@@ -161,4 +53,10 @@ query hwpinstance::getRootHPIC() : HWPlatformInstanceConfiguration {
 	log("hpiSet: " + hpiSet->size().toString());
 	assert fatal (hpiSet->size() = 1) with log("expected exactly one root hpi");
 	return hpiSet->any(true).embeddedHPIC;
+}
+
+query allocationSpecification::getSpecification() : SpecificationCS {
+	var specificationSet : Set(SpecificationCS) := self.rootObjects()[SpecificationCS];
+	assert fatal (specificationSet->size() = 1) with log("expected exactly one allocation specification");
+	return specificationSet->any(true);
 }

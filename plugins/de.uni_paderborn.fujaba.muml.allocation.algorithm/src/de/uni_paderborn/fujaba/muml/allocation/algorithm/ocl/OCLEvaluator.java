@@ -1,7 +1,15 @@
 package de.uni_paderborn.fujaba.muml.allocation.algorithm.ocl;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.m2m.qvt.oml.blackbox.java.Operation;
+import org.eclipse.m2m.qvt.oml.blackbox.java.Operation.Kind;
 import org.eclipse.ocl.examples.domain.evaluation.DomainModelManager;
+import org.eclipse.ocl.examples.domain.values.SetValue;
+import org.eclipse.ocl.examples.domain.values.TupleValue;
 import org.eclipse.ocl.examples.pivot.Element;
 import org.eclipse.ocl.examples.pivot.ExpressionInOCL;
 import org.eclipse.ocl.examples.pivot.evaluation.EvaluationEnvironment;
@@ -9,13 +17,20 @@ import org.eclipse.ocl.examples.pivot.evaluation.EvaluationVisitorImpl;
 import org.eclipse.ocl.examples.pivot.manager.MetaModelManager;
 import org.eclipse.ocl.examples.pivot.utilities.PivotEnvironment;
 import org.eclipse.ocl.examples.pivot.utilities.PivotEnvironmentFactory;
+import org.eclipse.ocl.examples.pivot.utilities.PivotUtil;
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
 
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.ConstraintCS;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS;
+
 public class OCLEvaluator {
+	private static final String noMetaModelManager = "cannot find a MetaModelManager for %s";
+	
 	/**
 	 * Evaluates the given OCL expression in the context of
 	 * the specified contextObject.
 	 */
+	@Operation (kind=Kind.QUERY)
 	public static Object evaluate(@NonNull ContextCS csExpression, @NonNull Object contextObject) {
 		Element element = csExpression.getPivot();
 		if (!(element instanceof ExpressionInOCL)) {
@@ -30,7 +45,7 @@ public class OCLEvaluator {
 	 */
 	public static Object evaluate(@NonNull ExpressionInOCL expressionInOCL, @NonNull Object contextObject) {
 		// code is taken from org.eclipse.ocl.examples.xtext.console.OCLConsolePage
-		MetaModelManager metaModelManager = getMetaModelManager();
+		MetaModelManager metaModelManager = getMetaModelManager(expressionInOCL);
 		PivotEnvironmentFactory factory = new PivotEnvironmentFactory(null,
 				metaModelManager);
 		PivotEnvironment environment = factory.createEnvironment();
@@ -43,9 +58,33 @@ public class OCLEvaluator {
 	}
 		
 	@NonNull
-	private static MetaModelManager getMetaModelManager() {
-		// investigate if it makes sense to reuse a metamodelmanager
-		// via PivotUtil.findMetaModelManager(...)
-		return new MetaModelManager();
+	private static MetaModelManager getMetaModelManager(EObject object) {
+		// we have to _reuse_ the metamodel manager - otherwise subsequent OCL
+		// evaluations fail
+		MetaModelManager metaModelManager = PivotUtil.findMetaModelManager(object);
+		if (metaModelManager == null) {
+			throw new IllegalStateException(String.format(noMetaModelManager, object));
+		}
+		return metaModelManager;
 	}
+	
+	@Operation (kind=Kind.QUERY)
+	// List corresponds to Sequence, LinkedHashSet to OrderedSet
+	public static List<TupleValue> evaluateConstraintCS(@NonNull Object lc, @NonNull Object contextObject) {
+		System.out.println(lc);
+		SetValue result = (SetValue) evaluate(((ConstraintCS) lc).getExpression(), contextObject);
+		// unboxing does not work because all elements are unboxed
+		// in an incompatible way (that is the unboxed elements do not have type TupleValue
+		// anymore)
+		/* IdResolver idResolver = TypesUtil.getMetaModelManager((LocationConstraintCS) lc)
+				.getIdResolver();
+		// XXX: unchecked
+		return (List<TupleValue>) idResolver.unboxedValueOf(result);*/
+		List<TupleValue> resultList = new ArrayList<TupleValue>(result.size().signum());
+		for (Object element : result.getElements()) {
+			resultList.add((TupleValue) element);
+		}
+		return resultList;
+	}
+	
 }

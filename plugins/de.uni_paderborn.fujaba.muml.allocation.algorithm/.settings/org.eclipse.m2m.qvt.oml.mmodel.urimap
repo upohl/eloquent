@@ -9,4 +9,5 @@
   <mapping sourceURI="http://www.storydriven.org/core/0.3.1" targetURI="platform:/resource/org.storydriven.core/model/core.ecore"/>
   <mapping sourceURI="http://www.storydriven.org/core/expressions/common/0.3.1" targetURI="platform:/resource/org.storydriven.core/model/core.ecore"/>
   <mapping sourceURI="http://www.storydriven.org/core/expressions/0.3.1" targetURI="platform:/resource/org.storydriven.core/model/core.ecore"/>
+  <mapping sourceURI="http://ww.eclipse.org/OCL/Values" targetURI="platform:/resource/org.eclipse.ocl.examples.domain/model/Values.ecore"/>
 </uriMap:MappingContainer>

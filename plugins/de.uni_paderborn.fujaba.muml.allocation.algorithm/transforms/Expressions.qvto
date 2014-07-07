@@ -1,0 +1,31 @@
+modeltype core uses core('http://www.storydriven.org/core/0.3.1');
+modeltype expressions uses core::expressions('http://www.storydriven.org/core/expressions/0.3.1');
+modeltype common uses core::expressions::common('http://www.storydriven.org/core/expressions/common/0.3.1');
+modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
+
+library Expressions;
+
+constructor LiteralExpression::LiteralExpression(value : String) {
+	result.value := value;
+}
+
+constructor VariableExpression::VariableExpression(variable : Variable) {
+	result.variable := variable;
+}
+
+constructor ArithmeticExpression::ArithmeticExpression(lhs : Expression, rhs : Expression,
+	operator : ArithmeticOperator) {
+	leftExpression := lhs;
+	rightExpression := rhs;
+	result.operator := operator;
+}
+
+constructor ConstraintExpression::ConstraintExpression(lhs : Expression, rhs : Expression,
+	operator : ComparingOperator, comment : String) {
+	leftExpression := lhs;
+	rightExpression := rhs;
+	result.operator := operator;
+	if (not comment.oclIsUndefined()) then {
+		result.comment := comment;
+	} endif;
+}

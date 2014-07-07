@@ -1,0 +1,60 @@
+import Variables;
+import Util;
+
+modeltype core uses core('http://www.storydriven.org/core/0.3.1');
+modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
+modeltype expressions uses core::expressions('http://www.storydriven.org/core/expressions/0.3.1');
+modeltype common uses core::expressions::common('http://www.storydriven.org/core/expressions/common/0.3.1');
+modeltype instance uses muml::instance('http://www.fujaba.de/muml/instance/0.4.0');
+modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.0/');
+modeltype hwrinstance uses hardware::hwresourceinstance('http://www.fujaba.de/muml/hardware/hwresourceinstance/1.0/');
+
+library GeneralConstraint;
+
+mapping inout IntegerLinearProgram::createGeneralConstraints(cic : ComponentInstanceConfiguration,
+	hpic : HWPlatformInstanceConfiguration) {
+	var vars : Bag(Variable) := cic.getAllComponentInstances()
+		->product(hpic.getRootResourceInstances())
+		->toSequence()->map createBinaryVariable();
+	variables += vars->sortedBy(name);
+	constraints += cic.getAllComponentInstances()
+		->createGeneralConstraint(hpic.getRootResourceInstances());
+}
+
+query ComponentInstanceConfiguration::getAllComponentInstances() : OrderedSet(ComponentInstance) {
+	return self.componentInstances->closure(ci : ComponentInstance |
+		if ci.oclIsKindOf(StructuredComponentInstance) then
+			ci->asSet()->union(
+				ci.oclAsType(StructuredComponentInstance).embeddedCIC.componentInstances
+			)
+		else
+			ci->asSet()
+		endif			
+	)->sortedBy(getVariableName())
+}
+
+// mapping just for syntactic sugar reasons: use when statement
+mapping ComponentInstance::createGeneralConstraint(resourceInstanceSet : OrderedSet(ResourceInstance)) : ConstraintExpression
+	when {resourceInstanceSet->size() > 1}
+{
+	init {
+		var lhs : Expression := null;
+		resourceInstanceSet->reverse()->collect(oclAsType(ResourceInstance))->forEach(resourceInstance) {
+			log("before getVariable");
+			var variable : Variable := getVariable(self, resourceInstance);
+			log("got variable: " + variable.oclIsUndefined().toString());
+			var variableExpression : VariableExpression := new VariableExpression(variable);
+			if (lhs.oclIsUndefined()) then
+				lhs := variableExpression
+			else
+				lhs := new ArithmeticExpression(variableExpression, lhs, ArithmeticOperator::PLUS)
+			endif;
+		};
+		result := new ConstraintExpression(lhs, new LiteralExpression('1'),
+			ComparingOperator::EQUAL, self.getVariableName());
+	}
+}
+
+query Tuple(first : ComponentInstance, second : ResourceInstance)::toSequence() : Sequence(NamedElement) {
+	return Sequence{self.first, self.second};
+}
