@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.EReference
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.emf.mwe.core.issues.Issues
+import java.util.List
+import java.util.ArrayList
 
 // TODO: also set attributes (minor feature)
 // code needs a bit more love and comments
@@ -33,6 +35,16 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 	 */
 	private ResourceSet resourceSet
 	
+	/**
+	 * If a class name appears in this list, the generated visitor
+	 * calls the "primary" superclass' visitor and returns the value
+	 * of this call. It is only necessary to add the names of classes
+	 * that have an "external" primary super class (that is the super class
+	 * is not contained in the csModel (for contained classes, the super call
+	 * is always generated)).
+	 */
+	private List<String> primarySuperCallWhitelist = new ArrayList<String>()
+	
 	def public void setCsGenModelURI(String csGenModelURI) {
 		this.csGenModelURI = csGenModelURI
 	}
@@ -42,7 +54,11 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 	}
 	
 	def public void setResourceSet(ResourceSet resourceSet) {
-		this.resourceSet = resourceSet;
+		this.resourceSet = resourceSet
+	}
+	
+	def public void addgeneratePrimarySuperCallFor(String className) {
+		primarySuperCallWhitelist.add(className)
 	}
 	
 	override checkConfiguration(Issues issues) {
@@ -95,13 +111,23 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 		public @Nullable Continuation<?> visit«eClass.getName»(@NonNull «genClass.qualifiedInterfaceName» csElement) {
 			«genClass.generatePivot»
 			«genClass.generateFeatures»
-			«IF !eClass.ESuperTypes.empty && eClass.ESuperTypes.get(0).eResource == eClass.eResource /* only call super methods for "our" classes */»
-			return visit«csGenModel.findGenClass(eClass.ESuperTypes.get(0).name).name»(csElement);
+			«IF eClass.primarySuperCallAllowed»
+			return visit«csGenModel.findGenClass(eClass.getPrimarySuperClass.name).name»(csElement);
 			«ELSE»
 			return null;
 			«ENDIF»
 		}
 		'''
+	}
+	
+	def private boolean primarySuperCallAllowed(EClass eClass) {
+		val EClass primarySuperClass = eClass.getPrimarySuperClass
+		primarySuperClass != null
+			&& (primarySuperClass.eResource == eClass.eResource || primarySuperCallWhitelist.contains(eClass.name))
+	}
+	
+	def private EClass getPrimarySuperClass(EClass eClass) {
+		eClass.ESuperTypes.head
 	}
 	
 	def protected String generatePivot(GenClass genClass) {
