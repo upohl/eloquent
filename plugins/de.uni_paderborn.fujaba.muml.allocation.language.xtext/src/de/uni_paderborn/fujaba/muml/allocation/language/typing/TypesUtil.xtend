@@ -37,7 +37,7 @@ class TypesUtil {
 	}
 	
 	@NonNull
-	private static def Type getType(MetaModelManager metaModelManager, EClass eClass) {
+	public static def Type getType(MetaModelManager metaModelManager, EClass eClass) {
 		val IdResolver idResolver = metaModelManager.idResolver
 		val DomainType domainType = idResolver.getType(eClass)
 		metaModelManager.getType(domainType)
