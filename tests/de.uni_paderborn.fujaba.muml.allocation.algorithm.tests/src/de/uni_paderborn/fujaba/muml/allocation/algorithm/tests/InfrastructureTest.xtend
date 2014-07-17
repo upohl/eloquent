@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized
 
 @RunWith(value = typeof(Parameterized))
 class InfrastructureTest extends QVToTransformationSingleOutExtentTest {
-	private static final String uriPrefix = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.tests/fixtures/infrastructure/"
+	public static final String uriPrefix = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.tests/fixtures/infrastructure/"
 	
 	new(String expectedURI, String transformationURI, String... inputObjectURIs) {
 		super(expectedURI, transformationURI, inputObjectURIs)

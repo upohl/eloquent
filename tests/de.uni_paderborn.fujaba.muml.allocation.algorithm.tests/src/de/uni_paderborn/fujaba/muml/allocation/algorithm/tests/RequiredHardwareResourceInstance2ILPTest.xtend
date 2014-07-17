@@ -13,7 +13,7 @@ import org.junit.runners.Parameterized.Parameters
 
 @RunWith(value = typeof(Parameterized))
 class RequiredHardwareResourceInstance2ILPTest extends QVToTransformationSingleOutExtentTest {
-	public static String uriPrefix = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.tests/fixtures/requiredHardwareResourceInstanceConstraint/"
+	public static final String uriPrefix = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.tests/fixtures/requiredHardwareResourceInstanceConstraint/"
 	
 	new(String expectedURI, String transformationURI, String... inputObjectURIs) {
 		super(expectedURI, transformationURI, inputObjectURIs)
