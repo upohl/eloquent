@@ -24,4 +24,4 @@ Export-Package: de.uni_paderborn.fujaba.muml.allocation.language.ui.quickfix,
  de.uni_paderborn.fujaba.muml.allocation.language.ui.contentassist,
  de.uni_paderborn.fujaba.muml.allocation.language.ui.contentassist.antlr,
  de.uni_paderborn.fujaba.muml.allocation.language.ui.internal
-Bundle-Activator: de.uni_paderborn.fujaba.muml.allocation.language.ui.internal.AllocationSpecificationLanguageActivator
+Bundle-Activator: de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationLanguagePluginActivator
