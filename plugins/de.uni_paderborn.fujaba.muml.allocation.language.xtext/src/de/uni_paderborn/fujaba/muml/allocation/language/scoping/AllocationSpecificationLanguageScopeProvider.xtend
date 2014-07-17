@@ -7,6 +7,9 @@ import org.eclipse.xtext.scoping.IScope
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EReference
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS
+import org.eclipse.ocl.examples.pivot.scoping.Attribution
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage
+import de.uni_paderborn.fujaba.muml.allocation.language.attributes.SpecificationCSAttribution
 
 /**
  * This class contains custom scoping description.
@@ -16,6 +19,11 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS
  *
  */
 class AllocationSpecificationLanguageScopeProvider extends org.eclipse.ocl.examples.xtext.essentialocl.scoping.EssentialOCLScopeProvider {
+	
+	def public static void init() {
+		// register our Attribution (this method is called from the .ui plugin's activator)
+		Attribution.REGISTRY.put(CsPackage.Literals.SPECIFICATION_CS, SpecificationCSAttribution.INSTANCE)
+	}
 	
 	override IScope getScope(EObject context, EReference reference) {
 		if (context instanceof MeasureFunctionCS) {
