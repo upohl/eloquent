@@ -19,9 +19,9 @@ Workflow {
 		projectName = "de.uni_paderborn.fujaba.muml.allocation.language"
 		modelName = "cs"
 		projectPrefix = "LanguageSpecificationCS"
-		superProjectName = "org.eclipse.ocl.examples.xtext.essentialocl"
-		superModelName = "essentialoclcs"
-		superProjectPrefix = "EssentialOCLCS"
+		superProjectName = "org.eclipse.ocl.examples.xtext.completeocl"
+		superModelName = "completeoclcs"
+		superProjectPrefix = "CompleteOCLCS"
 		javaFolder = "src"
 	}
 	component = URIAwareGenerateModel {
