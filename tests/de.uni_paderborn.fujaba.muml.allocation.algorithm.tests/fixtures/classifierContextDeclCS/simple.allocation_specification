@@ -1,0 +1,25 @@
+testSpecificationName {
+	
+	context hwplatforminstance::HWPlatformInstanceConfiguration
+		def: getECUs(ecuNames : Set(String)) : Sequence(hwresourceinstance::ResourceInstance) =
+			self.resources->select(ecuNames->includes(name))
+		def: getECU(ecuName : String) : hwresourceinstance::ResourceInstance =
+			self.resources->any(name = ecuName)
+			
+	context instance::ComponentInstanceConfiguration
+		def: getInstance(instanceName : String) : instance::ComponentInstance =
+			self.componentInstances->any(name = instanceName)
+			
+
+	constraint requiredHardwareResourceInstance foo {
+		descriptors (ins, res);
+		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.getInstance('c1')
+		in
+		let e1 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.getECU('e1')
+		in
+		let e2 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.getECU('e2')
+		in
+		Set{Tuple{ins : instance::ComponentInstance = c1, res : hwresourceinstance::ResourceInstance = e1},
+			Tuple{ins : instance::ComponentInstance = c1, res : hwresourceinstance::ResourceInstance =e2}};
+	}
+}

@@ -9,7 +9,8 @@ import org.junit.runners.Suite.SuiteClasses;
 	GeneralConstraint2ILPTest.class,
 	SameLocation2ILPTest.class,
 	DifferentLocation2ILPTest.class,
-	RequiredHardwareResourceInstance2ILPTest.class
+	RequiredHardwareResourceInstance2ILPTest.class,
+	ClassifierContextDeclCS2ILPTest.class
 })
 public class Specification2ILPTestSuite {
 
