@@ -8,12 +8,13 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EPackage;
 
-public class AbstractAllocationSpecificationLanguageJavaValidator extends org.eclipse.ocl.examples.xtext.essentialocl.validation.EssentialOCLJavaValidator {
+public class AbstractAllocationSpecificationLanguageJavaValidator extends org.eclipse.ocl.examples.xtext.completeocl.validation.CompleteOCLJavaValidator {
 
 	@Override
 	protected List<EPackage> getEPackages() {
 	    List<EPackage> result = new ArrayList<EPackage>();
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.fujaba.de/muml/allocation/language/0.1.0/cs"));
+	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.eclipse.org/ocl/3.1.0/CompleteOCLCST"));
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.eclipse.org/ocl/3.1.0/EssentialOCLCST"));
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.eclipse.org/ocl/3.1.0/BaseCST"));
 		return result;

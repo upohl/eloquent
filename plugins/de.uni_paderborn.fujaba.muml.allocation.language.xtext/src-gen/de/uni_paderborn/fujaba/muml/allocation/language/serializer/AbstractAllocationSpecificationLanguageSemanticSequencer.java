@@ -16,14 +16,29 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorC
 import de.uni_paderborn.fujaba.muml.allocation.language.services.AllocationSpecificationLanguageGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.ocl.examples.xtext.base.basecs.BaseCSPackage;
+import org.eclipse.ocl.examples.xtext.base.basecs.ConstraintCS;
+import org.eclipse.ocl.examples.xtext.base.basecs.ImportCS;
+import org.eclipse.ocl.examples.xtext.base.basecs.LibraryCS;
 import org.eclipse.ocl.examples.xtext.base.basecs.MultiplicityBoundsCS;
 import org.eclipse.ocl.examples.xtext.base.basecs.MultiplicityStringCS;
+import org.eclipse.ocl.examples.xtext.base.basecs.ParameterCS;
 import org.eclipse.ocl.examples.xtext.base.basecs.PathElementCS;
 import org.eclipse.ocl.examples.xtext.base.basecs.PathElementWithURICS;
 import org.eclipse.ocl.examples.xtext.base.basecs.PathNameCS;
 import org.eclipse.ocl.examples.xtext.base.basecs.PrimitiveTypeRefCS;
 import org.eclipse.ocl.examples.xtext.base.basecs.TuplePartCS;
 import org.eclipse.ocl.examples.xtext.base.basecs.TupleTypeCS;
+import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.ClassifierContextDeclCS;
+import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.CompleteOCLCSPackage;
+import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.CompleteOCLDocumentCS;
+import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.DefOperationCS;
+import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.DefPropertyCS;
+import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.IncludeCS;
+import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.OCLMessageArgCS;
+import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.OperationContextDeclCS;
+import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.PackageDeclarationCS;
+import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.PropertyContextDeclCS;
+import org.eclipse.ocl.examples.xtext.completeocl.serializer.CompleteOCLSemanticSequencer;
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.BinaryOperatorCS;
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.BooleanLiteralExpCS;
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.CollectionLiteralExpCS;
@@ -33,6 +48,7 @@ import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ConstructorExp
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ConstructorPartCS;
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.EssentialOCLCSPackage;
+import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ExpSpecificationCS;
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.IfExpCS;
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.IndexExpCS;
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.InfixExpCS;
@@ -55,7 +71,6 @@ import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.TypeLiteralExp
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.TypeNameExpCS;
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.UnaryOperatorCS;
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.UnlimitedNaturalLiteralExpCS;
-import org.eclipse.ocl.examples.xtext.essentialocl.serializer.EssentialOCLSemanticSequencer;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
 import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
 import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
@@ -64,13 +79,31 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 
 @SuppressWarnings("all")
-public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer extends EssentialOCLSemanticSequencer {
+public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer extends CompleteOCLSemanticSequencer {
 
 	@Inject
 	private AllocationSpecificationLanguageGrammarAccess grammarAccess;
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == BaseCSPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case BaseCSPackage.CONSTRAINT_CS:
+				if(context == grammarAccess.getConstraintCSRule()) {
+					sequence_ConstraintCS(context, (ConstraintCS) semanticObject); 
+					return; 
+				}
+				else break;
+			case BaseCSPackage.IMPORT_CS:
+				if(context == grammarAccess.getImportCSRule()) {
+					sequence_ImportCS(context, (ImportCS) semanticObject); 
+					return; 
+				}
+				else break;
+			case BaseCSPackage.LIBRARY_CS:
+				if(context == grammarAccess.getLibraryCSRule()) {
+					sequence_LibraryCS(context, (LibraryCS) semanticObject); 
+					return; 
+				}
+				else break;
 			case BaseCSPackage.MULTIPLICITY_BOUNDS_CS:
 				if(context == grammarAccess.getMultiplicityBoundsCSRule() ||
 				   context == grammarAccess.getMultiplicityCSRule()) {
@@ -82,6 +115,16 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				if(context == grammarAccess.getMultiplicityCSRule() ||
 				   context == grammarAccess.getMultiplicityStringCSRule()) {
 					sequence_MultiplicityStringCS(context, (MultiplicityStringCS) semanticObject); 
+					return; 
+				}
+				else break;
+			case BaseCSPackage.PARAMETER_CS:
+				if(context == grammarAccess.getDefParameterCSRule()) {
+					sequence_DefParameterCS(context, (ParameterCS) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getParameterCSRule()) {
+					sequence_ParameterCS(context, (ParameterCS) semanticObject); 
 					return; 
 				}
 				else break;
@@ -148,6 +191,67 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				}
 				else if(context == grammarAccess.getTypeLiteralWithMultiplicityCSRule()) {
 					sequence_TupleTypeCS_TypeLiteralWithMultiplicityCS(context, (TupleTypeCS) semanticObject); 
+					return; 
+				}
+				else break;
+			}
+		else if(semanticObject.eClass().getEPackage() == CompleteOCLCSPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case CompleteOCLCSPackage.CLASSIFIER_CONTEXT_DECL_CS:
+				if(context == grammarAccess.getClassifierContextDeclCSRule() ||
+				   context == grammarAccess.getContextDeclCSRule()) {
+					sequence_ClassifierContextDeclCS(context, (ClassifierContextDeclCS) semanticObject); 
+					return; 
+				}
+				else break;
+			case CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS:
+				if(context == grammarAccess.getCompleteOCLDocumentCSRule()) {
+					sequence_CompleteOCLDocumentCS(context, (CompleteOCLDocumentCS) semanticObject); 
+					return; 
+				}
+				else break;
+			case CompleteOCLCSPackage.DEF_OPERATION_CS:
+				if(context == grammarAccess.getDefCSRule() ||
+				   context == grammarAccess.getDefOperationCSRule()) {
+					sequence_DefOperationCS(context, (DefOperationCS) semanticObject); 
+					return; 
+				}
+				else break;
+			case CompleteOCLCSPackage.DEF_PROPERTY_CS:
+				if(context == grammarAccess.getDefCSRule() ||
+				   context == grammarAccess.getDefPropertyCSRule()) {
+					sequence_DefPropertyCS(context, (DefPropertyCS) semanticObject); 
+					return; 
+				}
+				else break;
+			case CompleteOCLCSPackage.INCLUDE_CS:
+				if(context == grammarAccess.getIncludeCSRule()) {
+					sequence_IncludeCS(context, (IncludeCS) semanticObject); 
+					return; 
+				}
+				else break;
+			case CompleteOCLCSPackage.OCL_MESSAGE_ARG_CS:
+				if(context == grammarAccess.getNavigatingArgExpCSRule()) {
+					sequence_NavigatingArgExpCS(context, (OCLMessageArgCS) semanticObject); 
+					return; 
+				}
+				else break;
+			case CompleteOCLCSPackage.OPERATION_CONTEXT_DECL_CS:
+				if(context == grammarAccess.getContextDeclCSRule() ||
+				   context == grammarAccess.getOperationContextDeclCSRule()) {
+					sequence_OperationContextDeclCS(context, (OperationContextDeclCS) semanticObject); 
+					return; 
+				}
+				else break;
+			case CompleteOCLCSPackage.PACKAGE_DECLARATION_CS:
+				if(context == grammarAccess.getPackageDeclarationCSRule()) {
+					sequence_PackageDeclarationCS(context, (PackageDeclarationCS) semanticObject); 
+					return; 
+				}
+				else break;
+			case CompleteOCLCSPackage.PROPERTY_CONTEXT_DECL_CS:
+				if(context == grammarAccess.getContextDeclCSRule() ||
+				   context == grammarAccess.getPropertyContextDeclCSRule()) {
+					sequence_PropertyContextDeclCS(context, (PropertyContextDeclCS) semanticObject); 
 					return; 
 				}
 				else break;
@@ -292,6 +396,12 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 					return; 
 				}
 				else break;
+			case EssentialOCLCSPackage.EXP_SPECIFICATION_CS:
+				if(context == grammarAccess.getSpecificationCSRule()) {
+					sequence_SpecificationCS(context, (ExpSpecificationCS) semanticObject); 
+					return; 
+				}
+				else break;
 			case EssentialOCLCSPackage.IF_EXP_CS:
 				if(context == grammarAccess.getExpCSRule() ||
 				   context == grammarAccess.getExpCSAccess().getInfixExpCSOwnedExpressionAction_0_1_0() ||
@@ -392,8 +502,15 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				else break;
 			case EssentialOCLCSPackage.NAVIGATION_OPERATOR_CS:
 				if(context == grammarAccess.getBinaryOperatorCSRule() ||
-				   context == grammarAccess.getEssentialOCLNavigationOperatorCSRule() ||
 				   context == grammarAccess.getNavigationOperatorCSRule()) {
+					sequence_CompleteOCLNavigationOperatorCS_EssentialOCLNavigationOperatorCS_NavigationOperatorCS(context, (NavigationOperatorCS) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getCompleteOCLNavigationOperatorCSRule()) {
+					sequence_CompleteOCLNavigationOperatorCS(context, (NavigationOperatorCS) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getEssentialOCLNavigationOperatorCSRule()) {
 					sequence_EssentialOCLNavigationOperatorCS(context, (NavigationOperatorCS) semanticObject); 
 					return; 
 				}
@@ -616,7 +733,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	
 	/**
 	 * Constraint:
-	 *     (name=ID (services+=Service | constraints+=Constraint)* measure=MeasureFunction?)
+	 *     (name=ID ownedImport+=ImportCS* (services+=Service | constraints+=Constraint | contexts+=ClassifierContextDeclCS)* measure=MeasureFunction?)
 	 */
 	protected void sequence_Specification(EObject context, SpecificationCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

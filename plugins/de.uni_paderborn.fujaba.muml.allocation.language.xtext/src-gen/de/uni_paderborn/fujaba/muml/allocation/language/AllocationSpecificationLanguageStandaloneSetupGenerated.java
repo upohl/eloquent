@@ -17,7 +17,7 @@ import com.google.inject.Injector;
 public class AllocationSpecificationLanguageStandaloneSetupGenerated implements ISetup {
 
 	public Injector createInjectorAndDoEMFRegistration() {
-		org.eclipse.ocl.examples.xtext.essentialocl.EssentialOCLStandaloneSetup.doSetup();
+		org.eclipse.ocl.examples.xtext.completeocl.CompleteOCLStandaloneSetup.doSetup();
 
 		Injector injector = createInjector();
 		register(injector);

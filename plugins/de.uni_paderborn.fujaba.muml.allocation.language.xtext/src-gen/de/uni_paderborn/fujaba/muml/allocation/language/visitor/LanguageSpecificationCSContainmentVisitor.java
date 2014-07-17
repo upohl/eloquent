@@ -28,7 +28,7 @@ public class LanguageSpecificationCSContainmentVisitor extends de.uni_paderborn.
 		pivotElement.setMeasure(
 			PivotUtil.getPivot(de.uni_paderborn.fujaba.muml.allocation.language.as.MeasureFunction.class, csElement.getMeasure())
 		);
-		return null;
+		return visitCompleteOCLDocumentCS(csElement);
 	}
 	
 	@Override
