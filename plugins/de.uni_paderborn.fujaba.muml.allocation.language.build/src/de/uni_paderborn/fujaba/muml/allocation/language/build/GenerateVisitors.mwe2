@@ -28,6 +28,10 @@ Workflow {
 		packageName = visitorPackageName
 		filename = "${visitorPackageDirectory}/LanguageSpecificationCSContainmentVisitor.java"
 		resourceSet = resourceSet
+		// it is crucial that SpecificationCS' primary super class containment
+		// visitor method is called, because it "installs" the classifier context
+		// operation decls etc. 
+		generatePrimarySuperCallFor = "SpecificationCS"
 	}
 	
 	// generate left2right visitor
