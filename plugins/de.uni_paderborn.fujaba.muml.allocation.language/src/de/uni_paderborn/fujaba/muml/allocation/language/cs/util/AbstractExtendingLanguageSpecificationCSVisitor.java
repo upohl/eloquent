@@ -21,7 +21,7 @@ import org.eclipse.jdt.annotation.Nullable;
  * suitable first super class, the method delegates to visiting().
  */
 public abstract class AbstractExtendingLanguageSpecificationCSVisitor<R, C>
-	extends org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.util.AbstractExtendingEssentialOCLCSVisitor<R, C>
+	extends org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.util.AbstractExtendingCompleteOCLCSVisitor<R, C>
 	implements LanguageSpecificationCSVisitor<R>
 {
 	/**
@@ -85,7 +85,7 @@ public abstract class AbstractExtendingLanguageSpecificationCSVisitor<R, C>
 
 	@Override
 	public @Nullable R visitSpecificationCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS object) {
-		return visitNamedElementCS(object);
+		return visitCompleteOCLDocumentCS(object);
 	}
 
 	@Override

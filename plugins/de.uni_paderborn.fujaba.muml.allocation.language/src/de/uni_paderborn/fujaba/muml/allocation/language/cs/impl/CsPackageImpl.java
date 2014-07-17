@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.ocl.examples.xtext.base.basecs.BaseCSPackage;
 
+import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.CompleteOCLCSPackage;
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.EssentialOCLCSPackage;
 import org.storydriven.core.CorePackage;
 
@@ -184,8 +185,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
+		CompleteOCLCSPackage.eINSTANCE.eClass();
 		CorePackage.eINSTANCE.eClass();
-		EssentialOCLCSPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theCsPackage.createPackageContents();
@@ -600,8 +601,9 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		BaseCSPackage theBaseCSPackage = (BaseCSPackage)EPackage.Registry.INSTANCE.getEPackage(BaseCSPackage.eNS_URI);
+		CompleteOCLCSPackage theCompleteOCLCSPackage = (CompleteOCLCSPackage)EPackage.Registry.INSTANCE.getEPackage(CompleteOCLCSPackage.eNS_URI);
 		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		BaseCSPackage theBaseCSPackage = (BaseCSPackage)EPackage.Registry.INSTANCE.getEPackage(BaseCSPackage.eNS_URI);
 		EssentialOCLCSPackage theEssentialOCLCSPackage = (EssentialOCLCSPackage)EPackage.Registry.INSTANCE.getEPackage(EssentialOCLCSPackage.eNS_URI);
 
 		// Create type parameters
@@ -609,7 +611,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		specificationCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
+		specificationCSEClass.getESuperTypes().add(theCompleteOCLCSPackage.getCompleteOCLDocumentCS());
 		specificationCSEClass.getESuperTypes().add(theCorePackage.getExtendableElement());
 		serviceCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
 		qoSDimensionCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());

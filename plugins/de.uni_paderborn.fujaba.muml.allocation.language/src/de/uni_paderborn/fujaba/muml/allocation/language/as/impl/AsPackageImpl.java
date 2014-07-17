@@ -603,7 +603,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		specificationEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
+		specificationEClass.getESuperTypes().add(thePivotPackage.getRoot());
 		serviceEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
 		qoSDimensionEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
 		constraintEClass.getESuperTypes().add(thePivotPackage.getNamedElement());

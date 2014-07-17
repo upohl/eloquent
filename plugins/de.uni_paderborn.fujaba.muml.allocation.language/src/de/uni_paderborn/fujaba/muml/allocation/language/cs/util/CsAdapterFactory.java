@@ -18,9 +18,12 @@ import org.eclipse.ocl.examples.pivot.util.Pivotable;
 import org.eclipse.ocl.examples.xtext.base.basecs.ElementCS;
 import org.eclipse.ocl.examples.xtext.base.basecs.ModelElementCS;
 import org.eclipse.ocl.examples.xtext.base.basecs.NamedElementCS;
+import org.eclipse.ocl.examples.xtext.base.basecs.NamespaceCS;
 import org.eclipse.ocl.examples.xtext.base.basecs.PivotableElementCS;
 
+import org.eclipse.ocl.examples.xtext.base.basecs.RootCS;
 import org.eclipse.ocl.examples.xtext.base.basecs.util.VisitableCS;
+import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.CompleteOCLDocumentCS;
 import org.storydriven.core.ExtendableElement;
 
 /**
@@ -158,6 +161,18 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseNamedElementCS(NamedElementCS object) {
 				return createNamedElementCSAdapter();
+			}
+			@Override
+			public Adapter caseNamespaceCS(NamespaceCS object) {
+				return createNamespaceCSAdapter();
+			}
+			@Override
+			public Adapter caseRootCS(RootCS object) {
+				return createRootCSAdapter();
+			}
+			@Override
+			public Adapter caseCompleteOCLDocumentCS(CompleteOCLDocumentCS object) {
+				return createCompleteOCLDocumentCSAdapter();
 			}
 			@Override
 			public Adapter caseExtendableElement(ExtendableElement object) {
@@ -460,6 +475,48 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createNamedElementCSAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.examples.xtext.base.basecs.NamespaceCS <em>Namespace CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.ocl.examples.xtext.base.basecs.NamespaceCS
+	 * @generated
+	 */
+	public Adapter createNamespaceCSAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.examples.xtext.base.basecs.RootCS <em>Root CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.ocl.examples.xtext.base.basecs.RootCS
+	 * @generated
+	 */
+	public Adapter createRootCSAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.CompleteOCLDocumentCS <em>Complete OCL Document CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.CompleteOCLDocumentCS
+	 * @generated
+	 */
+	public Adapter createCompleteOCLDocumentCSAdapter() {
 		return null;
 	}
 

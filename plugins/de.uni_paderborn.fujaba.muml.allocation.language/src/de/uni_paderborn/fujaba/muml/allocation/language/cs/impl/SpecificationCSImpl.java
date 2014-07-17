@@ -26,6 +26,7 @@ import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
 import org.eclipse.ocl.examples.xtext.base.basecs.impl.NamedElementCSImpl;
 import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
+import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.impl.CompleteOCLDocumentCSImpl;
 import org.storydriven.core.CorePackage;
 import org.storydriven.core.ExtendableElement;
 import org.storydriven.core.Extension;
@@ -48,7 +49,7 @@ import org.storydriven.core.util.ExtendableElementOperations;
  *
  * @generated
  */
-public class SpecificationCSImpl extends NamedElementCSImpl implements SpecificationCS {
+public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements SpecificationCS {
 	/**
 	 * The cached value of the '{@link #getAnnotations() <em>Annotation</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

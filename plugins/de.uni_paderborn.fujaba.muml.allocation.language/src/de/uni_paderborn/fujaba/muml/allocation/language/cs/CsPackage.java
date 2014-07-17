@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.ocl.examples.xtext.base.basecs.BaseCSPackage;
+import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.CompleteOCLCSPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -79,7 +80,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__LOGICAL_PARENT = BaseCSPackage.NAMED_ELEMENT_CS__LOGICAL_PARENT;
+	int SPECIFICATION_CS__LOGICAL_PARENT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS__LOGICAL_PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Pivot</b></em>' reference.
@@ -88,7 +89,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__PIVOT = BaseCSPackage.NAMED_ELEMENT_CS__PIVOT;
+	int SPECIFICATION_CS__PIVOT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS__PIVOT;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
@@ -97,7 +98,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__OWNED_ANNOTATION = BaseCSPackage.NAMED_ELEMENT_CS__OWNED_ANNOTATION;
+	int SPECIFICATION_CS__OWNED_ANNOTATION = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS__OWNED_ANNOTATION;
 
 	/**
 	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
@@ -106,7 +107,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__ORIGINAL_XMI_ID = BaseCSPackage.NAMED_ELEMENT_CS__ORIGINAL_XMI_ID;
+	int SPECIFICATION_CS__ORIGINAL_XMI_ID = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS__ORIGINAL_XMI_ID;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -115,7 +116,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__CSI = BaseCSPackage.NAMED_ELEMENT_CS__CSI;
+	int SPECIFICATION_CS__CSI = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS__CSI;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -124,7 +125,52 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__NAME = BaseCSPackage.NAMED_ELEMENT_CS__NAME;
+	int SPECIFICATION_CS__NAME = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owned Import</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_CS__OWNED_IMPORT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS__OWNED_IMPORT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Library</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_CS__OWNED_LIBRARY = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS__OWNED_LIBRARY;
+
+	/**
+	 * The feature id for the '<em><b>Packages</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_CS__PACKAGES = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS__PACKAGES;
+
+	/**
+	 * The feature id for the '<em><b>Contexts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_CS__CONTEXTS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS__CONTEXTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Include</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_CS__OWNED_INCLUDE = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS__OWNED_INCLUDE;
 
 	/**
 	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
@@ -133,7 +179,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__ANNOTATION = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 0;
+	int SPECIFICATION_CS__ANNOTATION = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -142,7 +188,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__EXTENSION = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 1;
+	int SPECIFICATION_CS__EXTENSION = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Services</b></em>' containment reference list.
@@ -151,7 +197,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__SERVICES = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 2;
+	int SPECIFICATION_CS__SERVICES = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
@@ -160,7 +206,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__CONSTRAINTS = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 3;
+	int SPECIFICATION_CS__CONSTRAINTS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Measure</b></em>' containment reference.
@@ -169,7 +215,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__MEASURE = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 4;
+	int SPECIFICATION_CS__MEASURE = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Specification CS</em>' class.
@@ -178,7 +224,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS_FEATURE_COUNT = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 5;
+	int SPECIFICATION_CS_FEATURE_COUNT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ServiceCSImpl <em>Service CS</em>}' class.

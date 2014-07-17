@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.ocl.examples.pivot.internal.impl.NamedElementImpl;
+import org.eclipse.ocl.examples.pivot.internal.impl.RootImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +41,7 @@ import org.eclipse.ocl.examples.pivot.internal.impl.NamedElementImpl;
  *
  * @generated
  */
-public class SpecificationImpl extends NamedElementImpl implements Specification {
+public class SpecificationImpl extends RootImpl implements Specification {
 	/**
 	 * The cached value of the '{@link #getServices() <em>Services</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

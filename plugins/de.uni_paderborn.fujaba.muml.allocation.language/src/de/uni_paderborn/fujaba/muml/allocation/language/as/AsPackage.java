@@ -79,7 +79,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__EXTENSION = PivotPackage.NAMED_ELEMENT__EXTENSION;
+	int SPECIFICATION__EXTENSION = PivotPackage.ROOT__EXTENSION;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
@@ -88,7 +88,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__OWNED_ANNOTATION = PivotPackage.NAMED_ELEMENT__OWNED_ANNOTATION;
+	int SPECIFICATION__OWNED_ANNOTATION = PivotPackage.ROOT__OWNED_ANNOTATION;
 
 	/**
 	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
@@ -97,7 +97,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__OWNED_COMMENT = PivotPackage.NAMED_ELEMENT__OWNED_COMMENT;
+	int SPECIFICATION__OWNED_COMMENT = PivotPackage.ROOT__OWNED_COMMENT;
 
 	/**
 	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
@@ -106,7 +106,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__IS_STATIC = PivotPackage.NAMED_ELEMENT__IS_STATIC;
+	int SPECIFICATION__IS_STATIC = PivotPackage.ROOT__IS_STATIC;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -115,7 +115,43 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__NAME = PivotPackage.NAMED_ELEMENT__NAME;
+	int SPECIFICATION__NAME = PivotPackage.ROOT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owned Rule</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__OWNED_RULE = PivotPackage.ROOT__OWNED_RULE;
+
+	/**
+	 * The feature id for the '<em><b>External URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__EXTERNAL_URI = PivotPackage.ROOT__EXTERNAL_URI;
+
+	/**
+	 * The feature id for the '<em><b>Imports</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__IMPORTS = PivotPackage.ROOT__IMPORTS;
+
+	/**
+	 * The feature id for the '<em><b>Nested Package</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__NESTED_PACKAGE = PivotPackage.ROOT__NESTED_PACKAGE;
 
 	/**
 	 * The feature id for the '<em><b>Services</b></em>' containment reference list.
@@ -124,7 +160,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__SERVICES = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int SPECIFICATION__SERVICES = PivotPackage.ROOT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
@@ -133,7 +169,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__CONSTRAINTS = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int SPECIFICATION__CONSTRAINTS = PivotPackage.ROOT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Measure</b></em>' containment reference.
@@ -142,7 +178,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__MEASURE = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int SPECIFICATION__MEASURE = PivotPackage.ROOT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Specification</em>' class.
@@ -151,7 +187,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_FEATURE_COUNT = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int SPECIFICATION_FEATURE_COUNT = PivotPackage.ROOT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.ServiceImpl <em>Service</em>}' class.

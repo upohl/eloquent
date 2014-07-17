@@ -18,7 +18,7 @@ import org.eclipse.jdt.annotation.Nullable;
  * visitXxx method that returns null.
  */
 public abstract class AbstractNullLanguageSpecificationCSVisitor<R, C>
-	extends org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.util.AbstractNullEssentialOCLCSVisitor<R, C> implements LanguageSpecificationCSVisitor<R>
+	extends org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.util.AbstractNullCompleteOCLCSVisitor<R, C> implements LanguageSpecificationCSVisitor<R>
 {
 	/**
 	 * Initializes me with an initial value for my result.

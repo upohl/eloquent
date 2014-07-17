@@ -16,9 +16,12 @@ import org.eclipse.ocl.examples.pivot.util.Pivotable;
 import org.eclipse.ocl.examples.xtext.base.basecs.ElementCS;
 import org.eclipse.ocl.examples.xtext.base.basecs.ModelElementCS;
 import org.eclipse.ocl.examples.xtext.base.basecs.NamedElementCS;
+import org.eclipse.ocl.examples.xtext.base.basecs.NamespaceCS;
 import org.eclipse.ocl.examples.xtext.base.basecs.PivotableElementCS;
 
+import org.eclipse.ocl.examples.xtext.base.basecs.RootCS;
 import org.eclipse.ocl.examples.xtext.base.basecs.util.VisitableCS;
+import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.CompleteOCLDocumentCS;
 import org.storydriven.core.ExtendableElement;
 
 /**
@@ -81,8 +84,11 @@ public class CsSwitch<T> extends Switch<T> {
 			case CsPackage.SPECIFICATION_CS: {
 				SpecificationCS specificationCS = (SpecificationCS)theEObject;
 				T result = caseSpecificationCS(specificationCS);
-				if (result == null) result = caseNamedElementCS(specificationCS);
+				if (result == null) result = caseCompleteOCLDocumentCS(specificationCS);
 				if (result == null) result = caseExtendableElement(specificationCS);
+				if (result == null) result = caseNamespaceCS(specificationCS);
+				if (result == null) result = caseRootCS(specificationCS);
+				if (result == null) result = caseNamedElementCS(specificationCS);
 				if (result == null) result = caseModelElementCS(specificationCS);
 				if (result == null) result = caseNameable(specificationCS);
 				if (result == null) result = casePivotableElementCS(specificationCS);
@@ -546,6 +552,51 @@ public class CsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNamedElementCS(NamedElementCS object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Namespace CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Namespace CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamespaceCS(NamespaceCS object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Root CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Root CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRootCS(RootCS object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Complete OCL Document CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Complete OCL Document CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCompleteOCLDocumentCS(CompleteOCLDocumentCS object) {
 		return null;
 	}
 

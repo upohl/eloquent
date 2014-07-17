@@ -5,7 +5,7 @@
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
     <details key="documentation" value="This package describes the abstract syntax of the&#xA;allocation specification language."/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="SpecificationCS" eSuperTypes="../../org.eclipse.ocl.examples.xtext.base/model/BaseCS.ecore#//NamedElementCS ../../org.storydriven.core/model/core.ecore#//ExtendableElement">
+  <eClassifiers xsi:type="ecore:EClass" name="SpecificationCS" eSuperTypes="../../org.eclipse.ocl.examples.xtext.completeocl/model/CompleteOCLCS.ecore#//CompleteOCLDocumentCS ../../org.storydriven.core/model/core.ecore#//ExtendableElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class represents the complete allocation specification."/>
     </eAnnotations>

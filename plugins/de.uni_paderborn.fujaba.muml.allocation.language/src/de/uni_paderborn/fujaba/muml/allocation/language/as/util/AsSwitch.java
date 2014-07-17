@@ -14,6 +14,8 @@ import org.eclipse.ocl.examples.domain.elements.Nameable;
 import org.eclipse.ocl.examples.pivot.Element;
 import org.eclipse.ocl.examples.pivot.NamedElement;
 
+import org.eclipse.ocl.examples.pivot.Namespace;
+import org.eclipse.ocl.examples.pivot.Root;
 import org.eclipse.ocl.examples.pivot.util.Visitable;
 
 /**
@@ -76,6 +78,8 @@ public class AsSwitch<T> extends Switch<T> {
 			case AsPackage.SPECIFICATION: {
 				Specification specification = (Specification)theEObject;
 				T result = caseSpecification(specification);
+				if (result == null) result = caseRoot(specification);
+				if (result == null) result = caseNamespace(specification);
 				if (result == null) result = caseNamedElement(specification);
 				if (result == null) result = caseElement(specification);
 				if (result == null) result = caseNameable(specification);
@@ -456,6 +460,36 @@ public class AsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNamedElement(NamedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Namespace</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Namespace</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamespace(Namespace object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Root</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Root</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRoot(Root object) {
 		return null;
 	}
 

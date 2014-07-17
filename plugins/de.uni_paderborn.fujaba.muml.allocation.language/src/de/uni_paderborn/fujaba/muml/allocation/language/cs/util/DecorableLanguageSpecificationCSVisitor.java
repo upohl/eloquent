@@ -14,7 +14,7 @@ import org.eclipse.jdt.annotation.NonNull;
 
 /**
  */
-public interface DecorableLanguageSpecificationCSVisitor<R> extends LanguageSpecificationCSVisitor<R>, org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.util.DecorableEssentialOCLCSVisitor<R>
+public interface DecorableLanguageSpecificationCSVisitor<R> extends LanguageSpecificationCSVisitor<R>, org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.util.DecorableCompleteOCLCSVisitor<R>
 {
 	void setUndecoratedVisitor(@NonNull org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor<R> visitor);
 }

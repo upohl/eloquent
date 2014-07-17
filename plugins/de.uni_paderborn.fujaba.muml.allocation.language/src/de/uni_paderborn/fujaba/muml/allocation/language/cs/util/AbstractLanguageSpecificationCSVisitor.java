@@ -17,7 +17,7 @@ import org.eclipse.jdt.annotation.NonNull;
  * but n implementations of the visitXXX methods..
  */
 public abstract class AbstractLanguageSpecificationCSVisitor<R, C>
-	extends org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.util.AbstractEssentialOCLCSVisitor<R, C>
+	extends org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.util.AbstractCompleteOCLCSVisitor<R, C>
 	implements LanguageSpecificationCSVisitor<R>
 {
 	/**

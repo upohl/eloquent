@@ -13,7 +13,7 @@ package	de.uni_paderborn.fujaba.muml.allocation.language.cs.util;
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
 import org.eclipse.ocl.examples.xtext.base.cs2as.CS2PivotConversion;
-import org.eclipse.ocl.examples.xtext.essentialocl.cs2as.EssentialOCLCSContainmentVisitor;
+import org.eclipse.ocl.examples.xtext.completeocl.cs2as.CompleteOCLCSContainmentVisitor;
 import org.eclipse.ocl.examples.xtext.base.cs2as.Continuation;
 
 /**
@@ -24,7 +24,7 @@ import org.eclipse.ocl.examples.xtext.base.cs2as.Continuation;
  * suitable first super class, the method delegates to visiting().
  */
 public abstract class AbstractLanguageSpecificationCSContainmentVisitor
-	extends EssentialOCLCSContainmentVisitor
+	extends CompleteOCLCSContainmentVisitor
 	implements LanguageSpecificationCSVisitor<Continuation<?>>
 {
 	/**
@@ -77,7 +77,7 @@ public abstract class AbstractLanguageSpecificationCSContainmentVisitor
 	}
 
 	public @Nullable Continuation<?> visitSpecificationCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS csElement) {
-		return visitNamedElementCS(csElement);
+		return visitCompleteOCLDocumentCS(csElement);
 	}
 
 	public @Nullable Continuation<?> visitTupleDescriptorCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.TupleDescriptorCS csElement) {

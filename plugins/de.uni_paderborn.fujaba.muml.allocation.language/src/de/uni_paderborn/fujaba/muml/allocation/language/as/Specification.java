@@ -7,6 +7,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.ocl.examples.pivot.NamedElement;
+import org.eclipse.ocl.examples.pivot.Root;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +31,7 @@ import org.eclipse.ocl.examples.pivot.NamedElement;
  * @model
  * @generated
  */
-public interface Specification extends EObject, NamedElement {
+public interface Specification extends EObject, Root {
 	/**
 	 * Returns the value of the '<em><b>Services</b></em>' containment reference list.
 	 * The list contents are of type {@link de.uni_paderborn.fujaba.muml.allocation.language.as.Service}.

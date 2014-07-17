@@ -17,7 +17,7 @@ import org.eclipse.jdt.annotation.Nullable;
  * An AbstractDelegatingLanguageSpecificationCSVisitor delegates all visits.
  */
 public abstract class AbstractDelegatingLanguageSpecificationCSVisitor<R, C, D extends LanguageSpecificationCSVisitor<R>>
-	extends org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.util.AbstractDelegatingEssentialOCLCSVisitor<R, C, D>
+	extends org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.util.AbstractDelegatingCompleteOCLCSVisitor<R, C, D>
 	implements LanguageSpecificationCSVisitor<R>
 {
 	protected AbstractDelegatingLanguageSpecificationCSVisitor(@NonNull D delegate, @NonNull C context) {
