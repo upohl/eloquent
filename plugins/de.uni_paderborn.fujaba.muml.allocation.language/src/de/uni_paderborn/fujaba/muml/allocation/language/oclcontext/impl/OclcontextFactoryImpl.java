@@ -1,8 +1,8 @@
 /**
  */
-package de.uni_paderborn.fujaba.muml.allocation.language.context.impl;
+package de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl;
 
-import de.uni_paderborn.fujaba.muml.allocation.language.context.*;
+import de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.*;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -18,24 +18,24 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
+public class OclcontextFactoryImpl extends EFactoryImpl implements OclcontextFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static ContextFactory init() {
+	public static OclcontextFactory init() {
 		try {
-			ContextFactory theContextFactory = (ContextFactory)EPackage.Registry.INSTANCE.getEFactory(ContextPackage.eNS_URI);
-			if (theContextFactory != null) {
-				return theContextFactory;
+			OclcontextFactory theOclcontextFactory = (OclcontextFactory)EPackage.Registry.INSTANCE.getEFactory(OclcontextPackage.eNS_URI);
+			if (theOclcontextFactory != null) {
+				return theOclcontextFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new ContextFactoryImpl();
+		return new OclcontextFactoryImpl();
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContextFactoryImpl() {
+	public OclcontextFactoryImpl() {
 		super();
 	}
 
@@ -56,7 +56,7 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ContextPackage.OCL_CONTEXT: return createOCLContext();
+			case OclcontextPackage.OCL_CONTEXT: return createOCLContext();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -77,8 +77,8 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContextPackage getContextPackage() {
-		return (ContextPackage)getEPackage();
+	public OclcontextPackage getOclcontextPackage() {
+		return (OclcontextPackage)getEPackage();
 	}
 
 	/**
@@ -88,8 +88,8 @@ public class ContextFactoryImpl extends EFactoryImpl implements ContextFactory {
 	 * @generated
 	 */
 	@Deprecated
-	public static ContextPackage getPackage() {
-		return ContextPackage.eINSTANCE;
+	public static OclcontextPackage getPackage() {
+		return OclcontextPackage.eINSTANCE;
 	}
 
-} //ContextFactoryImpl
+} //OclcontextFactoryImpl

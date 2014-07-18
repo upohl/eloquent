@@ -1,10 +1,10 @@
 /**
  */
-package de.uni_paderborn.fujaba.muml.allocation.language.context.impl;
+package de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl;
 
-import de.uni_paderborn.fujaba.muml.allocation.language.context.ContextFactory;
-import de.uni_paderborn.fujaba.muml.allocation.language.context.ContextPackage;
-import de.uni_paderborn.fujaba.muml.allocation.language.context.OCLContext;
+import de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OCLContext;
+import de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OclcontextFactory;
+import de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OclcontextPackage;
 
 import de.uni_paderborn.fujaba.muml.hardware.hwplatform.HwplatformPackage;
 
@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
+public class OclcontextPackageImpl extends EPackageImpl implements OclcontextPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -49,12 +49,12 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.context.ContextPackage#eNS_URI
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OclcontextPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private ContextPackageImpl() {
-		super(eNS_URI, ContextFactory.eINSTANCE);
+	private OclcontextPackageImpl() {
+		super(eNS_URI, OclcontextFactory.eINSTANCE);
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link ContextPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link OclcontextPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,11 +76,11 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static ContextPackage init() {
-		if (isInited) return (ContextPackage)EPackage.Registry.INSTANCE.getEPackage(ContextPackage.eNS_URI);
+	public static OclcontextPackage init() {
+		if (isInited) return (OclcontextPackage)EPackage.Registry.INSTANCE.getEPackage(OclcontextPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ContextPackageImpl theContextPackage = (ContextPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ContextPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ContextPackageImpl());
+		OclcontextPackageImpl theOclcontextPackage = (OclcontextPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof OclcontextPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new OclcontextPackageImpl());
 
 		isInited = true;
 
@@ -92,18 +92,18 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		HwresourceinstancePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theContextPackage.createPackageContents();
+		theOclcontextPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theContextPackage.initializePackageContents();
+		theOclcontextPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theContextPackage.freeze();
+		theOclcontextPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(ContextPackage.eNS_URI, theContextPackage);
-		return theContextPackage;
+		EPackage.Registry.INSTANCE.put(OclcontextPackage.eNS_URI, theOclcontextPackage);
+		return theOclcontextPackage;
 	}
 
 	/**
@@ -138,8 +138,8 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContextFactory getContextFactory() {
-		return (ContextFactory)getEFactoryInstance();
+	public OclcontextFactory getOclcontextFactory() {
+		return (OclcontextFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -208,4 +208,4 @@ public class ContextPackageImpl extends EPackageImpl implements ContextPackage {
 		createResource(eNS_URI);
 	}
 
-} //ContextPackageImpl
+} //OclcontextPackageImpl

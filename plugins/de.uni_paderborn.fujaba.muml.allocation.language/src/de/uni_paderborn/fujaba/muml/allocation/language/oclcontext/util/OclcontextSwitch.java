@@ -1,8 +1,8 @@
 /**
  */
-package de.uni_paderborn.fujaba.muml.allocation.language.context.util;
+package de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.util;
 
-import de.uni_paderborn.fujaba.muml.allocation.language.context.*;
+import de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.*;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -19,17 +19,17 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see de.uni_paderborn.fujaba.muml.allocation.language.context.ContextPackage
+ * @see de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OclcontextPackage
  * @generated
  */
-public class ContextSwitch<T> extends Switch<T> {
+public class OclcontextSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static ContextPackage modelPackage;
+	protected static OclcontextPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -37,9 +37,9 @@ public class ContextSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContextSwitch() {
+	public OclcontextSwitch() {
 		if (modelPackage == null) {
-			modelPackage = ContextPackage.eINSTANCE;
+			modelPackage = OclcontextPackage.eINSTANCE;
 		}
 	}
 
@@ -66,7 +66,7 @@ public class ContextSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case ContextPackage.OCL_CONTEXT: {
+			case OclcontextPackage.OCL_CONTEXT: {
 				OCLContext oclContext = (OCLContext)theEObject;
 				T result = caseOCLContext(oclContext);
 				if (result == null) result = defaultCase(theEObject);
@@ -107,4 +107,4 @@ public class ContextSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //ContextSwitch
+} //OclcontextSwitch

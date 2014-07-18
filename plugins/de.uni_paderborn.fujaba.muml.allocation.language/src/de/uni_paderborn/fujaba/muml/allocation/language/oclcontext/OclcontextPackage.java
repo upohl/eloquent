@@ -1,6 +1,6 @@
 /**
  */
-package de.uni_paderborn.fujaba.muml.allocation.language.context;
+package de.uni_paderborn.fujaba.muml.allocation.language.oclcontext;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -21,18 +21,18 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- begin-model-doc -->
  * This package provides the OCL context class.
  * <!-- end-model-doc -->
- * @see de.uni_paderborn.fujaba.muml.allocation.language.context.ContextFactory
+ * @see de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OclcontextFactory
  * @model kind="package"
  * @generated
  */
-public interface ContextPackage extends EPackage {
+public interface OclcontextPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "context";
+	String eNAME = "oclcontext";
 
 	/**
 	 * The package namespace URI.
@@ -40,7 +40,7 @@ public interface ContextPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.fujaba.de/muml/allocation/language/0.1.0/context";
+	String eNS_URI = "http://www.fujaba.de/muml/allocation/language/0.1.0/oclcontext";
 
 	/**
 	 * The package namespace name.
@@ -48,7 +48,7 @@ public interface ContextPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "context";
+	String eNS_PREFIX = "oclcontext";
 
 	/**
 	 * The singleton instance of the package.
@@ -56,14 +56,14 @@ public interface ContextPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	ContextPackage eINSTANCE = de.uni_paderborn.fujaba.muml.allocation.language.context.impl.ContextPackageImpl.init();
+	OclcontextPackage eINSTANCE = de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl.OclcontextPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.context.impl.OCLContextImpl <em>OCL Context</em>}' class.
+	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl.OCLContextImpl <em>OCL Context</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.context.impl.OCLContextImpl
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.context.impl.ContextPackageImpl#getOCLContext()
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl.OCLContextImpl
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl.OclcontextPackageImpl#getOCLContext()
 	 * @generated
 	 */
 	int OCL_CONTEXT = 0;
@@ -106,32 +106,32 @@ public interface ContextPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.context.OCLContext <em>OCL Context</em>}'.
+	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OCLContext <em>OCL Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>OCL Context</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.context.OCLContext
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OCLContext
 	 * @generated
 	 */
 	EClass getOCLContext();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.uni_paderborn.fujaba.muml.allocation.language.context.OCLContext#getComponentInstanceConfiguration <em>Component Instance Configuration</em>}'.
+	 * Returns the meta object for the reference '{@link de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OCLContext#getComponentInstanceConfiguration <em>Component Instance Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Component Instance Configuration</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.context.OCLContext#getComponentInstanceConfiguration()
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OCLContext#getComponentInstanceConfiguration()
 	 * @see #getOCLContext()
 	 * @generated
 	 */
 	EReference getOCLContext_ComponentInstanceConfiguration();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.uni_paderborn.fujaba.muml.allocation.language.context.OCLContext#getHardwarePlatformInstanceConfiguration <em>Hardware Platform Instance Configuration</em>}'.
+	 * Returns the meta object for the reference '{@link de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OCLContext#getHardwarePlatformInstanceConfiguration <em>Hardware Platform Instance Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Hardware Platform Instance Configuration</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.context.OCLContext#getHardwarePlatformInstanceConfiguration()
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OCLContext#getHardwarePlatformInstanceConfiguration()
 	 * @see #getOCLContext()
 	 * @generated
 	 */
@@ -144,7 +144,7 @@ public interface ContextPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	ContextFactory getContextFactory();
+	OclcontextFactory getOclcontextFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -161,11 +161,11 @@ public interface ContextPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.context.impl.OCLContextImpl <em>OCL Context</em>}' class.
+		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl.OCLContextImpl <em>OCL Context</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.uni_paderborn.fujaba.muml.allocation.language.context.impl.OCLContextImpl
-		 * @see de.uni_paderborn.fujaba.muml.allocation.language.context.impl.ContextPackageImpl#getOCLContext()
+		 * @see de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl.OCLContextImpl
+		 * @see de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl.OclcontextPackageImpl#getOCLContext()
 		 * @generated
 		 */
 		EClass OCL_CONTEXT = eINSTANCE.getOCLContext();
@@ -188,4 +188,4 @@ public interface ContextPackage extends EPackage {
 
 	}
 
-} //ContextPackage
+} //OclcontextPackage

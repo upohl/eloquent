@@ -1,9 +1,9 @@
 /**
  */
-package de.uni_paderborn.fujaba.muml.allocation.language.context.impl;
+package de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl;
 
-import de.uni_paderborn.fujaba.muml.allocation.language.context.ContextPackage;
-import de.uni_paderborn.fujaba.muml.allocation.language.context.OCLContext;
+import de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OCLContext;
+import de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OclcontextPackage;
 
 import de.uni_paderborn.fujaba.muml.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 
@@ -24,8 +24,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.context.impl.OCLContextImpl#getComponentInstanceConfiguration <em>Component Instance Configuration</em>}</li>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.context.impl.OCLContextImpl#getHardwarePlatformInstanceConfiguration <em>Hardware Platform Instance Configuration</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl.OCLContextImpl#getComponentInstanceConfiguration <em>Component Instance Configuration</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl.OCLContextImpl#getHardwarePlatformInstanceConfiguration <em>Hardware Platform Instance Configuration</em>}</li>
  * </ul>
  * </p>
  *
@@ -68,7 +68,7 @@ public class OCLContextImpl extends MinimalEObjectImpl.Container implements OCLC
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ContextPackage.Literals.OCL_CONTEXT;
+		return OclcontextPackage.Literals.OCL_CONTEXT;
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class OCLContextImpl extends MinimalEObjectImpl.Container implements OCLC
 			componentInstanceConfiguration = (ComponentInstanceConfiguration)eResolveProxy(oldComponentInstanceConfiguration);
 			if (componentInstanceConfiguration != oldComponentInstanceConfiguration) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ContextPackage.OCL_CONTEXT__COMPONENT_INSTANCE_CONFIGURATION, oldComponentInstanceConfiguration, componentInstanceConfiguration));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OclcontextPackage.OCL_CONTEXT__COMPONENT_INSTANCE_CONFIGURATION, oldComponentInstanceConfiguration, componentInstanceConfiguration));
 			}
 		}
 		return componentInstanceConfiguration;
@@ -106,7 +106,7 @@ public class OCLContextImpl extends MinimalEObjectImpl.Container implements OCLC
 		ComponentInstanceConfiguration oldComponentInstanceConfiguration = componentInstanceConfiguration;
 		componentInstanceConfiguration = newComponentInstanceConfiguration;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContextPackage.OCL_CONTEXT__COMPONENT_INSTANCE_CONFIGURATION, oldComponentInstanceConfiguration, componentInstanceConfiguration));
+			eNotify(new ENotificationImpl(this, Notification.SET, OclcontextPackage.OCL_CONTEXT__COMPONENT_INSTANCE_CONFIGURATION, oldComponentInstanceConfiguration, componentInstanceConfiguration));
 	}
 
 	/**
@@ -120,7 +120,7 @@ public class OCLContextImpl extends MinimalEObjectImpl.Container implements OCLC
 			hardwarePlatformInstanceConfiguration = (HWPlatformInstanceConfiguration)eResolveProxy(oldHardwarePlatformInstanceConfiguration);
 			if (hardwarePlatformInstanceConfiguration != oldHardwarePlatformInstanceConfiguration) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ContextPackage.OCL_CONTEXT__HARDWARE_PLATFORM_INSTANCE_CONFIGURATION, oldHardwarePlatformInstanceConfiguration, hardwarePlatformInstanceConfiguration));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OclcontextPackage.OCL_CONTEXT__HARDWARE_PLATFORM_INSTANCE_CONFIGURATION, oldHardwarePlatformInstanceConfiguration, hardwarePlatformInstanceConfiguration));
 			}
 		}
 		return hardwarePlatformInstanceConfiguration;
@@ -144,7 +144,7 @@ public class OCLContextImpl extends MinimalEObjectImpl.Container implements OCLC
 		HWPlatformInstanceConfiguration oldHardwarePlatformInstanceConfiguration = hardwarePlatformInstanceConfiguration;
 		hardwarePlatformInstanceConfiguration = newHardwarePlatformInstanceConfiguration;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContextPackage.OCL_CONTEXT__HARDWARE_PLATFORM_INSTANCE_CONFIGURATION, oldHardwarePlatformInstanceConfiguration, hardwarePlatformInstanceConfiguration));
+			eNotify(new ENotificationImpl(this, Notification.SET, OclcontextPackage.OCL_CONTEXT__HARDWARE_PLATFORM_INSTANCE_CONFIGURATION, oldHardwarePlatformInstanceConfiguration, hardwarePlatformInstanceConfiguration));
 	}
 
 	/**
@@ -155,10 +155,10 @@ public class OCLContextImpl extends MinimalEObjectImpl.Container implements OCLC
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ContextPackage.OCL_CONTEXT__COMPONENT_INSTANCE_CONFIGURATION:
+			case OclcontextPackage.OCL_CONTEXT__COMPONENT_INSTANCE_CONFIGURATION:
 				if (resolve) return getComponentInstanceConfiguration();
 				return basicGetComponentInstanceConfiguration();
-			case ContextPackage.OCL_CONTEXT__HARDWARE_PLATFORM_INSTANCE_CONFIGURATION:
+			case OclcontextPackage.OCL_CONTEXT__HARDWARE_PLATFORM_INSTANCE_CONFIGURATION:
 				if (resolve) return getHardwarePlatformInstanceConfiguration();
 				return basicGetHardwarePlatformInstanceConfiguration();
 		}
@@ -173,10 +173,10 @@ public class OCLContextImpl extends MinimalEObjectImpl.Container implements OCLC
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ContextPackage.OCL_CONTEXT__COMPONENT_INSTANCE_CONFIGURATION:
+			case OclcontextPackage.OCL_CONTEXT__COMPONENT_INSTANCE_CONFIGURATION:
 				setComponentInstanceConfiguration((ComponentInstanceConfiguration)newValue);
 				return;
-			case ContextPackage.OCL_CONTEXT__HARDWARE_PLATFORM_INSTANCE_CONFIGURATION:
+			case OclcontextPackage.OCL_CONTEXT__HARDWARE_PLATFORM_INSTANCE_CONFIGURATION:
 				setHardwarePlatformInstanceConfiguration((HWPlatformInstanceConfiguration)newValue);
 				return;
 		}
@@ -191,10 +191,10 @@ public class OCLContextImpl extends MinimalEObjectImpl.Container implements OCLC
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ContextPackage.OCL_CONTEXT__COMPONENT_INSTANCE_CONFIGURATION:
+			case OclcontextPackage.OCL_CONTEXT__COMPONENT_INSTANCE_CONFIGURATION:
 				setComponentInstanceConfiguration((ComponentInstanceConfiguration)null);
 				return;
-			case ContextPackage.OCL_CONTEXT__HARDWARE_PLATFORM_INSTANCE_CONFIGURATION:
+			case OclcontextPackage.OCL_CONTEXT__HARDWARE_PLATFORM_INSTANCE_CONFIGURATION:
 				setHardwarePlatformInstanceConfiguration((HWPlatformInstanceConfiguration)null);
 				return;
 		}
@@ -209,9 +209,9 @@ public class OCLContextImpl extends MinimalEObjectImpl.Container implements OCLC
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ContextPackage.OCL_CONTEXT__COMPONENT_INSTANCE_CONFIGURATION:
+			case OclcontextPackage.OCL_CONTEXT__COMPONENT_INSTANCE_CONFIGURATION:
 				return componentInstanceConfiguration != null;
-			case ContextPackage.OCL_CONTEXT__HARDWARE_PLATFORM_INSTANCE_CONFIGURATION:
+			case OclcontextPackage.OCL_CONTEXT__HARDWARE_PLATFORM_INSTANCE_CONFIGURATION:
 				return hardwarePlatformInstanceConfiguration != null;
 		}
 		return super.eIsSet(featureID);

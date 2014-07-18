@@ -6,7 +6,7 @@
     complianceLevel="6.0" copyrightFields="false" usedGenPackages="../../org.storydriven.core/model/core.uml.genmodel#//core ../../de.uni_paderborn.fujaba.muml.hardware/model/hardware.genmodel#//hardware ../../de.uni_paderborn.fujaba.muml/model/muml.genmodel#//muml"
     operationReflection="true" importOrganizing="true">
   <foreignModel>OCLContext.ecore</foreignModel>
-  <genPackages prefix="Context" basePackage="de.uni_paderborn.fujaba.muml.allocation.language"
+  <genPackages prefix="Oclcontext" basePackage="de.uni_paderborn.fujaba.muml.allocation.language"
       disposableProviderFactory="true" ecorePackage="OCLContext.ecore#/">
     <genClasses ecoreClass="OCLContext.ecore#//OCLContext">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCLContext.ecore#//OCLContext/componentInstanceConfiguration"/>

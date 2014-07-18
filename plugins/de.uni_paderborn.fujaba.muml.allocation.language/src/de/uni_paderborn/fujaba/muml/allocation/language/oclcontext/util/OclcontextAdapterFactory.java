@@ -1,8 +1,8 @@
 /**
  */
-package de.uni_paderborn.fujaba.muml.allocation.language.context.util;
+package de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.util;
 
-import de.uni_paderborn.fujaba.muml.allocation.language.context.*;
+import de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.*;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -16,17 +16,17 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see de.uni_paderborn.fujaba.muml.allocation.language.context.ContextPackage
+ * @see de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OclcontextPackage
  * @generated
  */
-public class ContextAdapterFactory extends AdapterFactoryImpl {
+public class OclcontextAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static ContextPackage modelPackage;
+	protected static OclcontextPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -34,9 +34,9 @@ public class ContextAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContextAdapterFactory() {
+	public OclcontextAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = ContextPackage.eINSTANCE;
+			modelPackage = OclcontextPackage.eINSTANCE;
 		}
 	}
 
@@ -65,8 +65,8 @@ public class ContextAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ContextSwitch<Adapter> modelSwitch =
-		new ContextSwitch<Adapter>() {
+	protected OclcontextSwitch<Adapter> modelSwitch =
+		new OclcontextSwitch<Adapter>() {
 			@Override
 			public Adapter caseOCLContext(OCLContext object) {
 				return createOCLContextAdapter();
@@ -92,13 +92,13 @@ public class ContextAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.uni_paderborn.fujaba.muml.allocation.language.context.OCLContext <em>OCL Context</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OCLContext <em>OCL Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.context.OCLContext
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OCLContext
 	 * @generated
 	 */
 	public Adapter createOCLContextAdapter() {
@@ -117,4 +117,4 @@ public class ContextAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //ContextAdapterFactory
+} //OclcontextAdapterFactory

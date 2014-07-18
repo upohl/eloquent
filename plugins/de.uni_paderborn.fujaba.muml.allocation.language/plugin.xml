@@ -44,8 +44,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated OCLContext -->
       <package
-            uri="http://www.fujaba.de/muml/allocation/language/0.1.0/context"
-            class="de.uni_paderborn.fujaba.muml.allocation.language.context.ContextPackage"
+            uri="http://www.fujaba.de/muml/allocation/language/0.1.0/oclcontext"
+            class="de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OclcontextPackage"
             genModel="model/OCLContext.genmodel"/>
    </extension>
 
