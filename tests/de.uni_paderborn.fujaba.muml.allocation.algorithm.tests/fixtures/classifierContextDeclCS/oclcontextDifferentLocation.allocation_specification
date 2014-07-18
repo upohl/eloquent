@@ -1,0 +1,36 @@
+testSpecificationName {
+	
+	context oclcontext::OCLContext
+		def: getECUs(ecuNames : Set(String)) : Sequence(hwresourceinstance::ResourceInstance) =
+			self.hardwarePlatformInstanceConfiguration.resources->select(ecuNames->includes(name) or ecuNames->isEmpty())
+			
+		def: getECU(ecuName : String) : hwresourceinstance::ResourceInstance =
+			self.hardwarePlatformInstanceConfiguration.resources->any(name = ecuName)
+			
+		def: getInstance(instanceName : String) : instance::ComponentInstance =
+			self.componentInstanceConfiguration.componentInstances->any(name = instanceName)
+		
+		def: getInstances(instanceNames : Set(String)) : Set(instance::ComponentInstance) =
+			self.componentInstanceConfiguration.componentInstances->select(instanceNames->includes(name))
+			
+		def: allocateToDifferentECUs(instanceNames : Set(String))
+			: Set(Tuple(first : instance::ComponentInstance,
+						second : instance::ComponentInstance))
+			=
+			let instances : Set(instance::ComponentInstance) = self.getInstances(instanceNames)
+			in
+			instances->product(instances)->reject(first = second)
+			->iterate(it : Tuple(first : instance::ComponentInstance, second : instance::ComponentInstance); acc : Set(Tuple(first : instance::ComponentInstance, second : instance::ComponentInstance)) = Set{} |
+				if acc->exists(Set{first, second} = Set{it.first, it.second}) then
+					acc
+				else
+					acc->including(it)
+				endif
+			)
+			
+
+	constraint differentLocation foo {
+		descriptors (first, second);
+		ocl self.allocateToDifferentECUs(Set{'c1', 'c2', 'c3'});
+	}
+}
