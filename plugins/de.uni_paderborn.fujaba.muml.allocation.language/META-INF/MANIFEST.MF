@@ -13,9 +13,9 @@ Export-Package: de.uni_paderborn.fujaba.muml.allocation.language.as,
  de.uni_paderborn.fujaba.muml.allocation.language.cs,
  de.uni_paderborn.fujaba.muml.allocation.language.cs.impl,
  de.uni_paderborn.fujaba.muml.allocation.language.cs.util,
- de.uni_paderborn.fujaba.muml.allocation.language.context,
- de.uni_paderborn.fujaba.muml.allocation.language.context.impl,
- de.uni_paderborn.fujaba.muml.allocation.language.context.util
+ de.uni_paderborn.fujaba.muml.allocation.language.oclcontext,
+ de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl,
+ de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore,
  org.storydriven.core;visibility:=reexport,
