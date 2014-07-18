@@ -1,0 +1,24 @@
+testSpecificationName {
+	
+	context oclcontext::OCLContext
+		def: getECUs(ecuNames : Set(String)) : Sequence(hwresourceinstance::ResourceInstance) =
+			self.hardwarePlatformInstanceConfiguration.resources->select(ecuNames->includes(name))
+			
+		-- unused in this testcase
+		def: getECU(ecuName : String) : hwresourceinstance::ResourceInstance =
+			self.hardwarePlatformInstanceConfiguration.resources->any(name = ecuName)
+			
+		def: getInstance(instanceName : String) : instance::ComponentInstance =
+			self.componentInstanceConfiguration.componentInstances->any(name = instanceName)
+			
+		def: allocateToOneECU(instanceName : String, ecuNames : Set(String))
+			: Set(Tuple(first : instance::ComponentInstance, second : hwresourceinstance::ResourceInstance))
+			=
+			self.getInstance(instanceName)->asSet()->product(self.getECUs(ecuNames))->asSet()
+			
+
+	constraint requiredHardwareResourceInstance foo {
+		descriptors (first, second);
+		ocl self.allocateToOneECU('c1', Set{'e1', 'e2'});
+	}
+}
