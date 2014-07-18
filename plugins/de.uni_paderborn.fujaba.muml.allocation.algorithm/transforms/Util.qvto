@@ -36,6 +36,10 @@ query Sequence(OclAny)::orderedProduct(sequence : Sequence(OclAny)) : OrderedSet
 	return res;
 }
 
+query getOddNumbers(lower : Integer, upper : Integer) : OrderedSet(Integer) {
+	return OrderedSet{lower .. upper}->select(i | i.mod(2) = 1);
+}
+
 query HWPlatformInstanceConfiguration::getRootResourceInstances() : OrderedSet(ResourceInstance) {
 	return self.resources->sortedBy(name);
 }

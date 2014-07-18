@@ -48,10 +48,6 @@ helper RequiredHardwareResourceInstanceConstraintCS::createHwResInstanceConstrai
 	};
 }
 
-query getOddNumbers(lower : Integer, upper : Integer) : OrderedSet(Integer) {
-	return OrderedSet{lower .. upper}->select(i | i.mod(2) = 1);
-}
-
 query Sequence(Sequence(NamedElement))::sortTupleDescriptorEntries() : Sequence(Sequence(NamedElement)) {
 	return self->collectNested(seq |
 		let indexes : OrderedSet(Integer) = getOddNumbers(1, seq->size())
