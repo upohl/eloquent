@@ -64,9 +64,18 @@ query LocationConstraintCS::getHelperVariableSequences(cic : ComponentInstanceCo
 
 query Sequence(TupleValue)::getLocationConstraintHelperVariableSequences(resourceInstanceSet : OrderedSet(ResourceInstance))
 	: Sequence(Sequence(NamedElement)) {
-	var sequence : Sequence(NamedElement) := self->collect(toSequence());
-	assert fatal (sequence->size() = 2) with log("unexpected sequence size");
-	return resourceInstanceSet->collectNested(ri : ResourceInstance |
+	return self->iterate(it : TupleValue; acc : Sequence(Sequence(NamedElement)) = Sequence{} |
+		acc->union(it.getLocationConstraintHelpverVariableSequences(resourceInstanceSet))
+	)->sortedBy(getVariableName());
+}
+
+query TupleValue::getLocationConstraintHelpverVariableSequences(resourceInstanceSet : OrderedSet(ResourceInstance))
+	: Sequence(Sequence(NamedElement)) {
+	// sort by instance set by variable name
+	var sequence : Sequence(NamedElement) := self.toSequence()->sortedBy(getVariableName());
+	var size : Integer = sequence->size();
+	assert fatal (size = 2) with log("unexpected sequence size: " + size.toString());
+	return resourceInstanceSet->sortedBy(getVariableName())->collectNested(ri : ResourceInstance |
 		Sequence{sequence->at(1), ri, sequence->at(2), ri}
 	);
 }
