@@ -6,7 +6,7 @@ import Variables;
 import VariableHelper;
 
 modeltype allocationSpecification uses cs('http://www.fujaba.de/muml/allocation/language/0.1.0/cs');
-modeltype context uses context('http://www.fujaba.de/muml/allocation/language/0.1.0/context');
+modeltype oclcontext uses oclcontext('http://www.fujaba.de/muml/allocation/language/0.1.0/oclcontext');
 modeltype core uses core('http://www.storydriven.org/core/0.3.1');
 modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
 modeltype expressions uses core::expressions('http://www.storydriven.org/core/expressions/0.3.1');
