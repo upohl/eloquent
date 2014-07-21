@@ -30,6 +30,7 @@ import org.junit.Test;
 // TODO: document me
 
 public class QVToTransformationSingleOutExtentTest {
+	private static final String RESOURCE_ERRORS = "The resource %s has errors: %s";
 	protected URI expectedURI;
 	protected URI transformationURI;
 	protected Map<String, Object> configurationPropertyMap;
@@ -125,17 +126,26 @@ public class QVToTransformationSingleOutExtentTest {
 		outExtent = new BasicModelExtent();
 	}
 	
-	public static class Util {		
-		public static EObject loadURI(URI uri) {
+	public static class Util {
+		public static EObject loadURI(URI uri, boolean ignoreErrors) {
 			URI loadURI = uri.hasFragment() ? uri.trimFragment() : uri;
 			ResourceSet resourceSet = new ResourceSetImpl();
 			Resource resource = resourceSet.getResource(loadURI, true);
+			if (!resource.getErrors().isEmpty()) {
+				throw new IllegalStateException(
+						String.format(RESOURCE_ERRORS, uri.toPlatformString(false),
+								resource.getErrors()));
+			}
 			assert resource.getContents().size() > 0;
 			// resolve all proxies, otherwise EMFCompare complains (this is
 			// especially needed for xtext resources)
 			EcoreUtil.resolveAll(resource);
 			return uri.hasFragment() ? resource.getEObject(uri.fragment())
 					: resource.getContents().get(0);
+		}
+		
+		public static EObject loadURI(URI uri) {
+			return loadURI(uri, false);
 		}
 	}
 	
