@@ -27,7 +27,7 @@ class DifferentLocation2ILPTest extends QVToTransformationSingleOutExtentTest {
 				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/Specification2ILP.qvto",
 				  uriPrefix + "locationConstraintSimple.allocation_specification",
 				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.1/@modelElements.0",
-				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0"])
+				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0/@embeddedHPIC"])
 	}
 	
 	// just for debugging purposes
