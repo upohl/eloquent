@@ -22,33 +22,32 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_DECIMAL", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'*'", "'min'", "'max'", "'='", "'>'", "'>='", "'<'", "'<='", "'bin'", "'int'", "'real'", "'+'", "'-'", "':'", "';'", "'.'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'*'", "'min'", "'max'", "'='", "'>'", "'>='", "'<'", "'<='", "'bin'", "'int'", "'real'", "'+'", "'-'", "':'", "';'", "'.'"
     };
-    public static final int RULE_ID=6;
-    public static final int T__27=27;
+    public static final int RULE_ID=4;
     public static final int T__26=26;
     public static final int T__25=25;
     public static final int T__24=24;
     public static final int T__23=23;
     public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=11;
+    public static final int RULE_ANY_OTHER=10;
     public static final int T__21=21;
     public static final int T__20=20;
-    public static final int RULE_SL_COMMENT=9;
+    public static final int RULE_SL_COMMENT=8;
     public static final int EOF=-1;
-    public static final int RULE_ML_COMMENT=8;
+    public static final int RULE_ML_COMMENT=7;
     public static final int T__19=19;
-    public static final int RULE_STRING=7;
+    public static final int RULE_STRING=6;
     public static final int T__16=16;
     public static final int T__15=15;
     public static final int T__18=18;
     public static final int T__17=17;
     public static final int T__12=12;
+    public static final int T__11=11;
     public static final int T__14=14;
     public static final int T__13=13;
     public static final int RULE_INT=5;
-    public static final int RULE_WS=10;
-    public static final int RULE_DECIMAL=4;
+    public static final int RULE_WS=9;
 
     // delegates
     // delegators
@@ -999,21 +998,98 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleNumber"
 
 
+    // $ANTLR start "entryRuleDecimal"
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:396:1: entryRuleDecimal : ruleDecimal EOF ;
+    public final void entryRuleDecimal() throws RecognitionException {
+        try {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:397:1: ( ruleDecimal EOF )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:398:1: ruleDecimal EOF
+            {
+             before(grammarAccess.getDecimalRule()); 
+            pushFollow(FollowSets000.FOLLOW_ruleDecimal_in_entryRuleDecimal779);
+            ruleDecimal();
+
+            state._fsp--;
+
+             after(grammarAccess.getDecimalRule()); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleDecimal786); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleDecimal"
+
+
+    // $ANTLR start "ruleDecimal"
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:405:1: ruleDecimal : ( ( rule__Decimal__Group__0 ) ) ;
+    public final void ruleDecimal() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:409:2: ( ( ( rule__Decimal__Group__0 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:410:1: ( ( rule__Decimal__Group__0 ) )
+            {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:410:1: ( ( rule__Decimal__Group__0 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:411:1: ( rule__Decimal__Group__0 )
+            {
+             before(grammarAccess.getDecimalAccess().getGroup()); 
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:412:1: ( rule__Decimal__Group__0 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:412:2: rule__Decimal__Group__0
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Decimal__Group__0_in_ruleDecimal812);
+            rule__Decimal__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getDecimalAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleDecimal"
+
+
     // $ANTLR start "entryRuleVariableExpression"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:396:1: entryRuleVariableExpression : ruleVariableExpression EOF ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:424:1: entryRuleVariableExpression : ruleVariableExpression EOF ;
     public final void entryRuleVariableExpression() throws RecognitionException {
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:397:1: ( ruleVariableExpression EOF )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:398:1: ruleVariableExpression EOF
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:425:1: ( ruleVariableExpression EOF )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:426:1: ruleVariableExpression EOF
             {
              before(grammarAccess.getVariableExpressionRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleVariableExpression_in_entryRuleVariableExpression779);
+            pushFollow(FollowSets000.FOLLOW_ruleVariableExpression_in_entryRuleVariableExpression839);
             ruleVariableExpression();
 
             state._fsp--;
 
              after(grammarAccess.getVariableExpressionRule()); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleVariableExpression786); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleVariableExpression846); 
 
             }
 
@@ -1030,23 +1106,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleVariableExpression"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:405:1: ruleVariableExpression : ( ( rule__VariableExpression__VariableAssignment ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:433:1: ruleVariableExpression : ( ( rule__VariableExpression__VariableAssignment ) ) ;
     public final void ruleVariableExpression() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:409:2: ( ( ( rule__VariableExpression__VariableAssignment ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:410:1: ( ( rule__VariableExpression__VariableAssignment ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:437:2: ( ( ( rule__VariableExpression__VariableAssignment ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:438:1: ( ( rule__VariableExpression__VariableAssignment ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:410:1: ( ( rule__VariableExpression__VariableAssignment ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:411:1: ( rule__VariableExpression__VariableAssignment )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:438:1: ( ( rule__VariableExpression__VariableAssignment ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:439:1: ( rule__VariableExpression__VariableAssignment )
             {
              before(grammarAccess.getVariableExpressionAccess().getVariableAssignment()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:412:1: ( rule__VariableExpression__VariableAssignment )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:412:2: rule__VariableExpression__VariableAssignment
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:440:1: ( rule__VariableExpression__VariableAssignment )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:440:2: rule__VariableExpression__VariableAssignment
             {
-            pushFollow(FollowSets000.FOLLOW_rule__VariableExpression__VariableAssignment_in_ruleVariableExpression812);
+            pushFollow(FollowSets000.FOLLOW_rule__VariableExpression__VariableAssignment_in_ruleVariableExpression872);
             rule__VariableExpression__VariableAssignment();
 
             state._fsp--;
@@ -1077,23 +1153,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleObjectiveGoal"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:425:1: ruleObjectiveGoal : ( ( rule__ObjectiveGoal__Alternatives ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:453:1: ruleObjectiveGoal : ( ( rule__ObjectiveGoal__Alternatives ) ) ;
     public final void ruleObjectiveGoal() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:429:1: ( ( ( rule__ObjectiveGoal__Alternatives ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:430:1: ( ( rule__ObjectiveGoal__Alternatives ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:457:1: ( ( ( rule__ObjectiveGoal__Alternatives ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:458:1: ( ( rule__ObjectiveGoal__Alternatives ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:430:1: ( ( rule__ObjectiveGoal__Alternatives ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:431:1: ( rule__ObjectiveGoal__Alternatives )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:458:1: ( ( rule__ObjectiveGoal__Alternatives ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:459:1: ( rule__ObjectiveGoal__Alternatives )
             {
              before(grammarAccess.getObjectiveGoalAccess().getAlternatives()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:432:1: ( rule__ObjectiveGoal__Alternatives )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:432:2: rule__ObjectiveGoal__Alternatives
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:460:1: ( rule__ObjectiveGoal__Alternatives )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:460:2: rule__ObjectiveGoal__Alternatives
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveGoal__Alternatives_in_ruleObjectiveGoal849);
+            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveGoal__Alternatives_in_ruleObjectiveGoal909);
             rule__ObjectiveGoal__Alternatives();
 
             state._fsp--;
@@ -1124,23 +1200,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleComparingOperator"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:444:1: ruleComparingOperator : ( ( rule__ComparingOperator__Alternatives ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:472:1: ruleComparingOperator : ( ( rule__ComparingOperator__Alternatives ) ) ;
     public final void ruleComparingOperator() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:448:1: ( ( ( rule__ComparingOperator__Alternatives ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:449:1: ( ( rule__ComparingOperator__Alternatives ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:476:1: ( ( ( rule__ComparingOperator__Alternatives ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:477:1: ( ( rule__ComparingOperator__Alternatives ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:449:1: ( ( rule__ComparingOperator__Alternatives ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:450:1: ( rule__ComparingOperator__Alternatives )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:477:1: ( ( rule__ComparingOperator__Alternatives ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:478:1: ( rule__ComparingOperator__Alternatives )
             {
              before(grammarAccess.getComparingOperatorAccess().getAlternatives()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:451:1: ( rule__ComparingOperator__Alternatives )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:451:2: rule__ComparingOperator__Alternatives
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:479:1: ( rule__ComparingOperator__Alternatives )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:479:2: rule__ComparingOperator__Alternatives
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ComparingOperator__Alternatives_in_ruleComparingOperator885);
+            pushFollow(FollowSets000.FOLLOW_rule__ComparingOperator__Alternatives_in_ruleComparingOperator945);
             rule__ComparingOperator__Alternatives();
 
             state._fsp--;
@@ -1171,23 +1247,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleILPDataType"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:463:1: ruleILPDataType : ( ( rule__ILPDataType__Alternatives ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:491:1: ruleILPDataType : ( ( rule__ILPDataType__Alternatives ) ) ;
     public final void ruleILPDataType() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:467:1: ( ( ( rule__ILPDataType__Alternatives ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:468:1: ( ( rule__ILPDataType__Alternatives ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:495:1: ( ( ( rule__ILPDataType__Alternatives ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:496:1: ( ( rule__ILPDataType__Alternatives ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:468:1: ( ( rule__ILPDataType__Alternatives ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:469:1: ( rule__ILPDataType__Alternatives )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:496:1: ( ( rule__ILPDataType__Alternatives ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:497:1: ( rule__ILPDataType__Alternatives )
             {
              before(grammarAccess.getILPDataTypeAccess().getAlternatives()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:470:1: ( rule__ILPDataType__Alternatives )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:470:2: rule__ILPDataType__Alternatives
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:498:1: ( rule__ILPDataType__Alternatives )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:498:2: rule__ILPDataType__Alternatives
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ILPDataType__Alternatives_in_ruleILPDataType921);
+            pushFollow(FollowSets000.FOLLOW_rule__ILPDataType__Alternatives_in_ruleILPDataType981);
             rule__ILPDataType__Alternatives();
 
             state._fsp--;
@@ -1218,23 +1294,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleAdditionOperator"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:482:1: ruleAdditionOperator : ( ( rule__AdditionOperator__Alternatives ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:510:1: ruleAdditionOperator : ( ( rule__AdditionOperator__Alternatives ) ) ;
     public final void ruleAdditionOperator() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:486:1: ( ( ( rule__AdditionOperator__Alternatives ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:487:1: ( ( rule__AdditionOperator__Alternatives ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:514:1: ( ( ( rule__AdditionOperator__Alternatives ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:515:1: ( ( rule__AdditionOperator__Alternatives ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:487:1: ( ( rule__AdditionOperator__Alternatives ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:488:1: ( rule__AdditionOperator__Alternatives )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:515:1: ( ( rule__AdditionOperator__Alternatives ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:516:1: ( rule__AdditionOperator__Alternatives )
             {
              before(grammarAccess.getAdditionOperatorAccess().getAlternatives()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:489:1: ( rule__AdditionOperator__Alternatives )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:489:2: rule__AdditionOperator__Alternatives
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:517:1: ( rule__AdditionOperator__Alternatives )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:517:2: rule__AdditionOperator__Alternatives
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AdditionOperator__Alternatives_in_ruleAdditionOperator957);
+            pushFollow(FollowSets000.FOLLOW_rule__AdditionOperator__Alternatives_in_ruleAdditionOperator1017);
             rule__AdditionOperator__Alternatives();
 
             state._fsp--;
@@ -1265,23 +1341,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleMultiplicationOperator"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:501:1: ruleMultiplicationOperator : ( ( '*' ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:529:1: ruleMultiplicationOperator : ( ( '*' ) ) ;
     public final void ruleMultiplicationOperator() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:505:1: ( ( ( '*' ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:506:1: ( ( '*' ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:533:1: ( ( ( '*' ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:534:1: ( ( '*' ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:506:1: ( ( '*' ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:507:1: ( '*' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:534:1: ( ( '*' ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:535:1: ( '*' )
             {
              before(grammarAccess.getMultiplicationOperatorAccess().getTIMESEnumLiteralDeclaration()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:508:1: ( '*' )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:508:3: '*'
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:536:1: ( '*' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:536:3: '*'
             {
-            match(input,12,FollowSets000.FOLLOW_12_in_ruleMultiplicationOperator994); 
+            match(input,11,FollowSets000.FOLLOW_11_in_ruleMultiplicationOperator1054); 
 
             }
 
@@ -1308,27 +1384,27 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__Alternatives"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:520:1: rule__ObjectiveFunctionExpression__Alternatives : ( ( ( rule__ObjectiveFunctionExpression__Group_0__0 ) ) | ( ( rule__ObjectiveFunctionExpression__Group_1__0 ) ) );
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:548:1: rule__ObjectiveFunctionExpression__Alternatives : ( ( ( rule__ObjectiveFunctionExpression__Group_0__0 ) ) | ( ( rule__ObjectiveFunctionExpression__Group_1__0 ) ) );
     public final void rule__ObjectiveFunctionExpression__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:524:1: ( ( ( rule__ObjectiveFunctionExpression__Group_0__0 ) ) | ( ( rule__ObjectiveFunctionExpression__Group_1__0 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:552:1: ( ( ( rule__ObjectiveFunctionExpression__Group_0__0 ) ) | ( ( rule__ObjectiveFunctionExpression__Group_1__0 ) ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==13) ) {
+            if ( (LA1_0==12) ) {
                 int LA1_1 = input.LA(2);
 
-                if ( (LA1_1==25) ) {
+                if ( (LA1_1==24) ) {
                     int LA1_3 = input.LA(3);
 
-                    if ( (LA1_3==26) ) {
-                        alt1=1;
-                    }
-                    else if ( ((LA1_3>=RULE_DECIMAL && LA1_3<=RULE_ID)) ) {
+                    if ( ((LA1_3>=RULE_ID && LA1_3<=RULE_INT)) ) {
                         alt1=2;
+                    }
+                    else if ( (LA1_3==25) ) {
+                        alt1=1;
                     }
                     else {
                         NoViableAltException nvae =
@@ -1344,17 +1420,17 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
                     throw nvae;
                 }
             }
-            else if ( (LA1_0==14) ) {
+            else if ( (LA1_0==13) ) {
                 int LA1_2 = input.LA(2);
 
-                if ( (LA1_2==25) ) {
+                if ( (LA1_2==24) ) {
                     int LA1_3 = input.LA(3);
 
-                    if ( (LA1_3==26) ) {
-                        alt1=1;
-                    }
-                    else if ( ((LA1_3>=RULE_DECIMAL && LA1_3<=RULE_ID)) ) {
+                    if ( ((LA1_3>=RULE_ID && LA1_3<=RULE_INT)) ) {
                         alt1=2;
+                    }
+                    else if ( (LA1_3==25) ) {
+                        alt1=1;
                     }
                     else {
                         NoViableAltException nvae =
@@ -1378,16 +1454,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
             }
             switch (alt1) {
                 case 1 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:525:1: ( ( rule__ObjectiveFunctionExpression__Group_0__0 ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:553:1: ( ( rule__ObjectiveFunctionExpression__Group_0__0 ) )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:525:1: ( ( rule__ObjectiveFunctionExpression__Group_0__0 ) )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:526:1: ( rule__ObjectiveFunctionExpression__Group_0__0 )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:553:1: ( ( rule__ObjectiveFunctionExpression__Group_0__0 ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:554:1: ( rule__ObjectiveFunctionExpression__Group_0__0 )
                     {
                      before(grammarAccess.getObjectiveFunctionExpressionAccess().getGroup_0()); 
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:527:1: ( rule__ObjectiveFunctionExpression__Group_0__0 )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:527:2: rule__ObjectiveFunctionExpression__Group_0__0
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:555:1: ( rule__ObjectiveFunctionExpression__Group_0__0 )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:555:2: rule__ObjectiveFunctionExpression__Group_0__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_0__0_in_rule__ObjectiveFunctionExpression__Alternatives1031);
+                    pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_0__0_in_rule__ObjectiveFunctionExpression__Alternatives1091);
                     rule__ObjectiveFunctionExpression__Group_0__0();
 
                     state._fsp--;
@@ -1403,16 +1479,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:531:6: ( ( rule__ObjectiveFunctionExpression__Group_1__0 ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:559:6: ( ( rule__ObjectiveFunctionExpression__Group_1__0 ) )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:531:6: ( ( rule__ObjectiveFunctionExpression__Group_1__0 ) )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:532:1: ( rule__ObjectiveFunctionExpression__Group_1__0 )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:559:6: ( ( rule__ObjectiveFunctionExpression__Group_1__0 ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:560:1: ( rule__ObjectiveFunctionExpression__Group_1__0 )
                     {
                      before(grammarAccess.getObjectiveFunctionExpressionAccess().getGroup_1()); 
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:533:1: ( rule__ObjectiveFunctionExpression__Group_1__0 )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:533:2: rule__ObjectiveFunctionExpression__Group_1__0
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:561:1: ( rule__ObjectiveFunctionExpression__Group_1__0 )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:561:2: rule__ObjectiveFunctionExpression__Group_1__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_1__0_in_rule__ObjectiveFunctionExpression__Alternatives1049);
+                    pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_1__0_in_rule__ObjectiveFunctionExpression__Alternatives1109);
                     rule__ObjectiveFunctionExpression__Group_1__0();
 
                     state._fsp--;
@@ -1445,20 +1521,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__Alternatives_0_0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:542:1: rule__ObjectiveFunctionExpression__Alternatives_0_0 : ( ( 'min' ) | ( 'max' ) );
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:570:1: rule__ObjectiveFunctionExpression__Alternatives_0_0 : ( ( 'min' ) | ( 'max' ) );
     public final void rule__ObjectiveFunctionExpression__Alternatives_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:546:1: ( ( 'min' ) | ( 'max' ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:574:1: ( ( 'min' ) | ( 'max' ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
-            if ( (LA2_0==13) ) {
+            if ( (LA2_0==12) ) {
                 alt2=1;
             }
-            else if ( (LA2_0==14) ) {
+            else if ( (LA2_0==13) ) {
                 alt2=2;
             }
             else {
@@ -1469,13 +1545,13 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
             }
             switch (alt2) {
                 case 1 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:547:1: ( 'min' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:575:1: ( 'min' )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:547:1: ( 'min' )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:548:1: 'min'
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:575:1: ( 'min' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:576:1: 'min'
                     {
                      before(grammarAccess.getObjectiveFunctionExpressionAccess().getMinKeyword_0_0_0()); 
-                    match(input,13,FollowSets000.FOLLOW_13_in_rule__ObjectiveFunctionExpression__Alternatives_0_01083); 
+                    match(input,12,FollowSets000.FOLLOW_12_in_rule__ObjectiveFunctionExpression__Alternatives_0_01143); 
                      after(grammarAccess.getObjectiveFunctionExpressionAccess().getMinKeyword_0_0_0()); 
 
                     }
@@ -1484,13 +1560,13 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:555:6: ( 'max' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:583:6: ( 'max' )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:555:6: ( 'max' )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:556:1: 'max'
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:583:6: ( 'max' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:584:1: 'max'
                     {
                      before(grammarAccess.getObjectiveFunctionExpressionAccess().getMaxKeyword_0_0_1()); 
-                    match(input,14,FollowSets000.FOLLOW_14_in_rule__ObjectiveFunctionExpression__Alternatives_0_01103); 
+                    match(input,13,FollowSets000.FOLLOW_13_in_rule__ObjectiveFunctionExpression__Alternatives_0_01163); 
                      after(grammarAccess.getObjectiveFunctionExpressionAccess().getMaxKeyword_0_0_1()); 
 
                     }
@@ -1515,21 +1591,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__ObjectiveFunctionExpression__Alternatives_0_0"
 
 
-    // $ANTLR start "rule__Operand__Alternatives"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:568:1: rule__Operand__Alternatives : ( ( ruleNumberLiteralExpression ) | ( ruleVariableExpression ) );
-    public final void rule__Operand__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__VariableID__Alternatives_1_1"
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:596:1: rule__VariableID__Alternatives_1_1 : ( ( RULE_ID ) | ( ( rule__VariableID__Group_1_1_1__0 ) ) );
+    public final void rule__VariableID__Alternatives_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:572:1: ( ( ruleNumberLiteralExpression ) | ( ruleVariableExpression ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:600:1: ( ( RULE_ID ) | ( ( rule__VariableID__Group_1_1_1__0 ) ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( ((LA3_0>=RULE_DECIMAL && LA3_0<=RULE_INT)) ) {
+            if ( (LA3_0==RULE_ID) ) {
                 alt3=1;
             }
-            else if ( (LA3_0==RULE_ID) ) {
+            else if ( (LA3_0==RULE_INT) ) {
                 alt3=2;
             }
             else {
@@ -1540,13 +1616,94 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
             }
             switch (alt3) {
                 case 1 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:573:1: ( ruleNumberLiteralExpression )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:601:1: ( RULE_ID )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:573:1: ( ruleNumberLiteralExpression )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:574:1: ruleNumberLiteralExpression
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:601:1: ( RULE_ID )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:602:1: RULE_ID
+                    {
+                     before(grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_1_1_0()); 
+                    match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__VariableID__Alternatives_1_11197); 
+                     after(grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_1_1_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:607:6: ( ( rule__VariableID__Group_1_1_1__0 ) )
+                    {
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:607:6: ( ( rule__VariableID__Group_1_1_1__0 ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:608:1: ( rule__VariableID__Group_1_1_1__0 )
+                    {
+                     before(grammarAccess.getVariableIDAccess().getGroup_1_1_1()); 
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:609:1: ( rule__VariableID__Group_1_1_1__0 )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:609:2: rule__VariableID__Group_1_1_1__0
+                    {
+                    pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group_1_1_1__0_in_rule__VariableID__Alternatives_1_11214);
+                    rule__VariableID__Group_1_1_1__0();
+
+                    state._fsp--;
+
+
+                    }
+
+                     after(grammarAccess.getVariableIDAccess().getGroup_1_1_1()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VariableID__Alternatives_1_1"
+
+
+    // $ANTLR start "rule__Operand__Alternatives"
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:618:1: rule__Operand__Alternatives : ( ( ruleNumberLiteralExpression ) | ( ruleVariableExpression ) );
+    public final void rule__Operand__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:622:1: ( ( ruleNumberLiteralExpression ) | ( ruleVariableExpression ) )
+            int alt4=2;
+            int LA4_0 = input.LA(1);
+
+            if ( (LA4_0==RULE_INT) ) {
+                alt4=1;
+            }
+            else if ( (LA4_0==RULE_ID) ) {
+                alt4=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 4, 0, input);
+
+                throw nvae;
+            }
+            switch (alt4) {
+                case 1 :
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:623:1: ( ruleNumberLiteralExpression )
+                    {
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:623:1: ( ruleNumberLiteralExpression )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:624:1: ruleNumberLiteralExpression
                     {
                      before(grammarAccess.getOperandAccess().getNumberLiteralExpressionParserRuleCall_0()); 
-                    pushFollow(FollowSets000.FOLLOW_ruleNumberLiteralExpression_in_rule__Operand__Alternatives1137);
+                    pushFollow(FollowSets000.FOLLOW_ruleNumberLiteralExpression_in_rule__Operand__Alternatives1247);
                     ruleNumberLiteralExpression();
 
                     state._fsp--;
@@ -1559,13 +1716,13 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:579:6: ( ruleVariableExpression )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:629:6: ( ruleVariableExpression )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:579:6: ( ruleVariableExpression )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:580:1: ruleVariableExpression
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:629:6: ( ruleVariableExpression )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:630:1: ruleVariableExpression
                     {
                      before(grammarAccess.getOperandAccess().getVariableExpressionParserRuleCall_1()); 
-                    pushFollow(FollowSets000.FOLLOW_ruleVariableExpression_in_rule__Operand__Alternatives1154);
+                    pushFollow(FollowSets000.FOLLOW_ruleVariableExpression_in_rule__Operand__Alternatives1264);
                     ruleVariableExpression();
 
                     state._fsp--;
@@ -1595,38 +1752,52 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Number__Alternatives"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:590:1: rule__Number__Alternatives : ( ( RULE_DECIMAL ) | ( RULE_INT ) );
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:640:1: rule__Number__Alternatives : ( ( ruleDecimal ) | ( RULE_INT ) );
     public final void rule__Number__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:594:1: ( ( RULE_DECIMAL ) | ( RULE_INT ) )
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:644:1: ( ( ruleDecimal ) | ( RULE_INT ) )
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA4_0==RULE_DECIMAL) ) {
-                alt4=1;
-            }
-            else if ( (LA4_0==RULE_INT) ) {
-                alt4=2;
+            if ( (LA5_0==RULE_INT) ) {
+                int LA5_1 = input.LA(2);
+
+                if ( (LA5_1==26) ) {
+                    alt5=1;
+                }
+                else if ( (LA5_1==EOF||LA5_1==11||(LA5_1>=14 && LA5_1<=18)||(LA5_1>=22 && LA5_1<=23)||LA5_1==25) ) {
+                    alt5=2;
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 5, 1, input);
+
+                    throw nvae;
+                }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
-            switch (alt4) {
+            switch (alt5) {
                 case 1 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:595:1: ( RULE_DECIMAL )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:645:1: ( ruleDecimal )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:595:1: ( RULE_DECIMAL )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:596:1: RULE_DECIMAL
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:645:1: ( ruleDecimal )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:646:1: ruleDecimal
                     {
-                     before(grammarAccess.getNumberAccess().getDECIMALTerminalRuleCall_0()); 
-                    match(input,RULE_DECIMAL,FollowSets000.FOLLOW_RULE_DECIMAL_in_rule__Number__Alternatives1186); 
-                     after(grammarAccess.getNumberAccess().getDECIMALTerminalRuleCall_0()); 
+                     before(grammarAccess.getNumberAccess().getDecimalParserRuleCall_0()); 
+                    pushFollow(FollowSets000.FOLLOW_ruleDecimal_in_rule__Number__Alternatives1296);
+                    ruleDecimal();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getNumberAccess().getDecimalParserRuleCall_0()); 
 
                     }
 
@@ -1634,13 +1805,13 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:601:6: ( RULE_INT )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:651:6: ( RULE_INT )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:601:6: ( RULE_INT )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:602:1: RULE_INT
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:651:6: ( RULE_INT )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:652:1: RULE_INT
                     {
                      before(grammarAccess.getNumberAccess().getINTTerminalRuleCall_1()); 
-                    match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_rule__Number__Alternatives1203); 
+                    match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_rule__Number__Alternatives1313); 
                      after(grammarAccess.getNumberAccess().getINTTerminalRuleCall_1()); 
 
                     }
@@ -1666,40 +1837,40 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveGoal__Alternatives"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:612:1: rule__ObjectiveGoal__Alternatives : ( ( ( 'min' ) ) | ( ( 'max' ) ) );
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:662:1: rule__ObjectiveGoal__Alternatives : ( ( ( 'min' ) ) | ( ( 'max' ) ) );
     public final void rule__ObjectiveGoal__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:616:1: ( ( ( 'min' ) ) | ( ( 'max' ) ) )
-            int alt5=2;
-            int LA5_0 = input.LA(1);
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:666:1: ( ( ( 'min' ) ) | ( ( 'max' ) ) )
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA5_0==13) ) {
-                alt5=1;
+            if ( (LA6_0==12) ) {
+                alt6=1;
             }
-            else if ( (LA5_0==14) ) {
-                alt5=2;
+            else if ( (LA6_0==13) ) {
+                alt6=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
+                    new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
-            switch (alt5) {
+            switch (alt6) {
                 case 1 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:617:1: ( ( 'min' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:667:1: ( ( 'min' ) )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:617:1: ( ( 'min' ) )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:618:1: ( 'min' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:667:1: ( ( 'min' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:668:1: ( 'min' )
                     {
                      before(grammarAccess.getObjectiveGoalAccess().getMINEnumLiteralDeclaration_0()); 
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:619:1: ( 'min' )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:619:3: 'min'
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:669:1: ( 'min' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:669:3: 'min'
                     {
-                    match(input,13,FollowSets000.FOLLOW_13_in_rule__ObjectiveGoal__Alternatives1236); 
+                    match(input,12,FollowSets000.FOLLOW_12_in_rule__ObjectiveGoal__Alternatives1346); 
 
                     }
 
@@ -1711,16 +1882,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:624:6: ( ( 'max' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:674:6: ( ( 'max' ) )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:624:6: ( ( 'max' ) )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:625:1: ( 'max' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:674:6: ( ( 'max' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:675:1: ( 'max' )
                     {
                      before(grammarAccess.getObjectiveGoalAccess().getMAXEnumLiteralDeclaration_1()); 
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:626:1: ( 'max' )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:626:3: 'max'
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:676:1: ( 'max' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:676:3: 'max'
                     {
-                    match(input,14,FollowSets000.FOLLOW_14_in_rule__ObjectiveGoal__Alternatives1257); 
+                    match(input,13,FollowSets000.FOLLOW_13_in_rule__ObjectiveGoal__Alternatives1367); 
 
                     }
 
@@ -1749,59 +1920,59 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ComparingOperator__Alternatives"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:636:1: rule__ComparingOperator__Alternatives : ( ( ( '=' ) ) | ( ( '>' ) ) | ( ( '>=' ) ) | ( ( '<' ) ) | ( ( '<=' ) ) );
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:686:1: rule__ComparingOperator__Alternatives : ( ( ( '=' ) ) | ( ( '>' ) ) | ( ( '>=' ) ) | ( ( '<' ) ) | ( ( '<=' ) ) );
     public final void rule__ComparingOperator__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:640:1: ( ( ( '=' ) ) | ( ( '>' ) ) | ( ( '>=' ) ) | ( ( '<' ) ) | ( ( '<=' ) ) )
-            int alt6=5;
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:690:1: ( ( ( '=' ) ) | ( ( '>' ) ) | ( ( '>=' ) ) | ( ( '<' ) ) | ( ( '<=' ) ) )
+            int alt7=5;
             switch ( input.LA(1) ) {
+            case 14:
+                {
+                alt7=1;
+                }
+                break;
             case 15:
                 {
-                alt6=1;
+                alt7=2;
                 }
                 break;
             case 16:
                 {
-                alt6=2;
+                alt7=3;
                 }
                 break;
             case 17:
                 {
-                alt6=3;
+                alt7=4;
                 }
                 break;
             case 18:
                 {
-                alt6=4;
-                }
-                break;
-            case 19:
-                {
-                alt6=5;
+                alt7=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt6) {
+            switch (alt7) {
                 case 1 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:641:1: ( ( '=' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:691:1: ( ( '=' ) )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:641:1: ( ( '=' ) )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:642:1: ( '=' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:691:1: ( ( '=' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:692:1: ( '=' )
                     {
                      before(grammarAccess.getComparingOperatorAccess().getEQUALEnumLiteralDeclaration_0()); 
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:643:1: ( '=' )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:643:3: '='
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:693:1: ( '=' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:693:3: '='
                     {
-                    match(input,15,FollowSets000.FOLLOW_15_in_rule__ComparingOperator__Alternatives1293); 
+                    match(input,14,FollowSets000.FOLLOW_14_in_rule__ComparingOperator__Alternatives1403); 
 
                     }
 
@@ -1813,16 +1984,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:648:6: ( ( '>' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:698:6: ( ( '>' ) )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:648:6: ( ( '>' ) )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:649:1: ( '>' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:698:6: ( ( '>' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:699:1: ( '>' )
                     {
                      before(grammarAccess.getComparingOperatorAccess().getGREATEREnumLiteralDeclaration_1()); 
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:650:1: ( '>' )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:650:3: '>'
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:700:1: ( '>' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:700:3: '>'
                     {
-                    match(input,16,FollowSets000.FOLLOW_16_in_rule__ComparingOperator__Alternatives1314); 
+                    match(input,15,FollowSets000.FOLLOW_15_in_rule__ComparingOperator__Alternatives1424); 
 
                     }
 
@@ -1834,16 +2005,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:655:6: ( ( '>=' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:705:6: ( ( '>=' ) )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:655:6: ( ( '>=' ) )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:656:1: ( '>=' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:705:6: ( ( '>=' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:706:1: ( '>=' )
                     {
                      before(grammarAccess.getComparingOperatorAccess().getGREATER_OR_EQUALEnumLiteralDeclaration_2()); 
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:657:1: ( '>=' )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:657:3: '>='
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:707:1: ( '>=' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:707:3: '>='
                     {
-                    match(input,17,FollowSets000.FOLLOW_17_in_rule__ComparingOperator__Alternatives1335); 
+                    match(input,16,FollowSets000.FOLLOW_16_in_rule__ComparingOperator__Alternatives1445); 
 
                     }
 
@@ -1855,16 +2026,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:662:6: ( ( '<' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:712:6: ( ( '<' ) )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:662:6: ( ( '<' ) )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:663:1: ( '<' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:712:6: ( ( '<' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:713:1: ( '<' )
                     {
                      before(grammarAccess.getComparingOperatorAccess().getLESSEnumLiteralDeclaration_3()); 
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:664:1: ( '<' )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:664:3: '<'
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:714:1: ( '<' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:714:3: '<'
                     {
-                    match(input,18,FollowSets000.FOLLOW_18_in_rule__ComparingOperator__Alternatives1356); 
+                    match(input,17,FollowSets000.FOLLOW_17_in_rule__ComparingOperator__Alternatives1466); 
 
                     }
 
@@ -1876,16 +2047,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:669:6: ( ( '<=' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:719:6: ( ( '<=' ) )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:669:6: ( ( '<=' ) )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:670:1: ( '<=' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:719:6: ( ( '<=' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:720:1: ( '<=' )
                     {
                      before(grammarAccess.getComparingOperatorAccess().getLESS_OR_EQUALEnumLiteralDeclaration_4()); 
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:671:1: ( '<=' )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:671:3: '<='
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:721:1: ( '<=' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:721:3: '<='
                     {
-                    match(input,19,FollowSets000.FOLLOW_19_in_rule__ComparingOperator__Alternatives1377); 
+                    match(input,18,FollowSets000.FOLLOW_18_in_rule__ComparingOperator__Alternatives1487); 
 
                     }
 
@@ -1914,49 +2085,49 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ILPDataType__Alternatives"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:681:1: rule__ILPDataType__Alternatives : ( ( ( 'bin' ) ) | ( ( 'int' ) ) | ( ( 'real' ) ) );
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:731:1: rule__ILPDataType__Alternatives : ( ( ( 'bin' ) ) | ( ( 'int' ) ) | ( ( 'real' ) ) );
     public final void rule__ILPDataType__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:685:1: ( ( ( 'bin' ) ) | ( ( 'int' ) ) | ( ( 'real' ) ) )
-            int alt7=3;
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:735:1: ( ( ( 'bin' ) ) | ( ( 'int' ) ) | ( ( 'real' ) ) )
+            int alt8=3;
             switch ( input.LA(1) ) {
+            case 19:
+                {
+                alt8=1;
+                }
+                break;
             case 20:
                 {
-                alt7=1;
+                alt8=2;
                 }
                 break;
             case 21:
                 {
-                alt7=2;
-                }
-                break;
-            case 22:
-                {
-                alt7=3;
+                alt8=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 7, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt7) {
+            switch (alt8) {
                 case 1 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:686:1: ( ( 'bin' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:736:1: ( ( 'bin' ) )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:686:1: ( ( 'bin' ) )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:687:1: ( 'bin' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:736:1: ( ( 'bin' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:737:1: ( 'bin' )
                     {
                      before(grammarAccess.getILPDataTypeAccess().getBINARYEnumLiteralDeclaration_0()); 
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:688:1: ( 'bin' )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:688:3: 'bin'
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:738:1: ( 'bin' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:738:3: 'bin'
                     {
-                    match(input,20,FollowSets000.FOLLOW_20_in_rule__ILPDataType__Alternatives1413); 
+                    match(input,19,FollowSets000.FOLLOW_19_in_rule__ILPDataType__Alternatives1523); 
 
                     }
 
@@ -1968,16 +2139,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:693:6: ( ( 'int' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:743:6: ( ( 'int' ) )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:693:6: ( ( 'int' ) )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:694:1: ( 'int' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:743:6: ( ( 'int' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:744:1: ( 'int' )
                     {
                      before(grammarAccess.getILPDataTypeAccess().getINTEGEREnumLiteralDeclaration_1()); 
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:695:1: ( 'int' )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:695:3: 'int'
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:745:1: ( 'int' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:745:3: 'int'
                     {
-                    match(input,21,FollowSets000.FOLLOW_21_in_rule__ILPDataType__Alternatives1434); 
+                    match(input,20,FollowSets000.FOLLOW_20_in_rule__ILPDataType__Alternatives1544); 
 
                     }
 
@@ -1989,16 +2160,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:700:6: ( ( 'real' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:750:6: ( ( 'real' ) )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:700:6: ( ( 'real' ) )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:701:1: ( 'real' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:750:6: ( ( 'real' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:751:1: ( 'real' )
                     {
                      before(grammarAccess.getILPDataTypeAccess().getREALEnumLiteralDeclaration_2()); 
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:702:1: ( 'real' )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:702:3: 'real'
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:752:1: ( 'real' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:752:3: 'real'
                     {
-                    match(input,22,FollowSets000.FOLLOW_22_in_rule__ILPDataType__Alternatives1455); 
+                    match(input,21,FollowSets000.FOLLOW_21_in_rule__ILPDataType__Alternatives1565); 
 
                     }
 
@@ -2027,40 +2198,40 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionOperator__Alternatives"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:712:1: rule__AdditionOperator__Alternatives : ( ( ( '+' ) ) | ( ( '-' ) ) );
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:762:1: rule__AdditionOperator__Alternatives : ( ( ( '+' ) ) | ( ( '-' ) ) );
     public final void rule__AdditionOperator__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:716:1: ( ( ( '+' ) ) | ( ( '-' ) ) )
-            int alt8=2;
-            int LA8_0 = input.LA(1);
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:766:1: ( ( ( '+' ) ) | ( ( '-' ) ) )
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA8_0==23) ) {
-                alt8=1;
+            if ( (LA9_0==22) ) {
+                alt9=1;
             }
-            else if ( (LA8_0==24) ) {
-                alt8=2;
+            else if ( (LA9_0==23) ) {
+                alt9=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
+                    new NoViableAltException("", 9, 0, input);
 
                 throw nvae;
             }
-            switch (alt8) {
+            switch (alt9) {
                 case 1 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:717:1: ( ( '+' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:767:1: ( ( '+' ) )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:717:1: ( ( '+' ) )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:718:1: ( '+' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:767:1: ( ( '+' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:768:1: ( '+' )
                     {
                      before(grammarAccess.getAdditionOperatorAccess().getPLUSEnumLiteralDeclaration_0()); 
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:719:1: ( '+' )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:719:3: '+'
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:769:1: ( '+' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:769:3: '+'
                     {
-                    match(input,23,FollowSets000.FOLLOW_23_in_rule__AdditionOperator__Alternatives1491); 
+                    match(input,22,FollowSets000.FOLLOW_22_in_rule__AdditionOperator__Alternatives1601); 
 
                     }
 
@@ -2072,16 +2243,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:724:6: ( ( '-' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:774:6: ( ( '-' ) )
                     {
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:724:6: ( ( '-' ) )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:725:1: ( '-' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:774:6: ( ( '-' ) )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:775:1: ( '-' )
                     {
                      before(grammarAccess.getAdditionOperatorAccess().getMINUSEnumLiteralDeclaration_1()); 
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:726:1: ( '-' )
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:726:3: '-'
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:776:1: ( '-' )
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:776:3: '-'
                     {
-                    match(input,24,FollowSets000.FOLLOW_24_in_rule__AdditionOperator__Alternatives1512); 
+                    match(input,23,FollowSets000.FOLLOW_23_in_rule__AdditionOperator__Alternatives1622); 
 
                     }
 
@@ -2110,21 +2281,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntegerLinearProgram__Group__0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:738:1: rule__IntegerLinearProgram__Group__0 : rule__IntegerLinearProgram__Group__0__Impl rule__IntegerLinearProgram__Group__1 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:788:1: rule__IntegerLinearProgram__Group__0 : rule__IntegerLinearProgram__Group__0__Impl rule__IntegerLinearProgram__Group__1 ;
     public final void rule__IntegerLinearProgram__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:742:1: ( rule__IntegerLinearProgram__Group__0__Impl rule__IntegerLinearProgram__Group__1 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:743:2: rule__IntegerLinearProgram__Group__0__Impl rule__IntegerLinearProgram__Group__1
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:792:1: ( rule__IntegerLinearProgram__Group__0__Impl rule__IntegerLinearProgram__Group__1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:793:2: rule__IntegerLinearProgram__Group__0__Impl rule__IntegerLinearProgram__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__IntegerLinearProgram__Group__0__Impl_in_rule__IntegerLinearProgram__Group__01545);
+            pushFollow(FollowSets000.FOLLOW_rule__IntegerLinearProgram__Group__0__Impl_in_rule__IntegerLinearProgram__Group__01655);
             rule__IntegerLinearProgram__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__IntegerLinearProgram__Group__1_in_rule__IntegerLinearProgram__Group__01548);
+            pushFollow(FollowSets000.FOLLOW_rule__IntegerLinearProgram__Group__1_in_rule__IntegerLinearProgram__Group__01658);
             rule__IntegerLinearProgram__Group__1();
 
             state._fsp--;
@@ -2148,23 +2319,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntegerLinearProgram__Group__0__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:750:1: rule__IntegerLinearProgram__Group__0__Impl : ( ( rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:800:1: rule__IntegerLinearProgram__Group__0__Impl : ( ( rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0 ) ) ;
     public final void rule__IntegerLinearProgram__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:754:1: ( ( ( rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:755:1: ( ( rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:804:1: ( ( ( rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:805:1: ( ( rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:755:1: ( ( rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:756:1: ( rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:805:1: ( ( rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:806:1: ( rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0 )
             {
              before(grammarAccess.getIntegerLinearProgramAccess().getObjectiveFunctionAssignment_0()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:757:1: ( rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:757:2: rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:807:1: ( rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:807:2: rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0_in_rule__IntegerLinearProgram__Group__0__Impl1575);
+            pushFollow(FollowSets000.FOLLOW_rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0_in_rule__IntegerLinearProgram__Group__0__Impl1685);
             rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0();
 
             state._fsp--;
@@ -2195,21 +2366,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntegerLinearProgram__Group__1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:767:1: rule__IntegerLinearProgram__Group__1 : rule__IntegerLinearProgram__Group__1__Impl rule__IntegerLinearProgram__Group__2 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:817:1: rule__IntegerLinearProgram__Group__1 : rule__IntegerLinearProgram__Group__1__Impl rule__IntegerLinearProgram__Group__2 ;
     public final void rule__IntegerLinearProgram__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:771:1: ( rule__IntegerLinearProgram__Group__1__Impl rule__IntegerLinearProgram__Group__2 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:772:2: rule__IntegerLinearProgram__Group__1__Impl rule__IntegerLinearProgram__Group__2
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:821:1: ( rule__IntegerLinearProgram__Group__1__Impl rule__IntegerLinearProgram__Group__2 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:822:2: rule__IntegerLinearProgram__Group__1__Impl rule__IntegerLinearProgram__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__IntegerLinearProgram__Group__1__Impl_in_rule__IntegerLinearProgram__Group__11605);
+            pushFollow(FollowSets000.FOLLOW_rule__IntegerLinearProgram__Group__1__Impl_in_rule__IntegerLinearProgram__Group__11715);
             rule__IntegerLinearProgram__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__IntegerLinearProgram__Group__2_in_rule__IntegerLinearProgram__Group__11608);
+            pushFollow(FollowSets000.FOLLOW_rule__IntegerLinearProgram__Group__2_in_rule__IntegerLinearProgram__Group__11718);
             rule__IntegerLinearProgram__Group__2();
 
             state._fsp--;
@@ -2233,35 +2404,35 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntegerLinearProgram__Group__1__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:779:1: rule__IntegerLinearProgram__Group__1__Impl : ( ( rule__IntegerLinearProgram__ConstraintsAssignment_1 )* ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:829:1: rule__IntegerLinearProgram__Group__1__Impl : ( ( rule__IntegerLinearProgram__ConstraintsAssignment_1 )* ) ;
     public final void rule__IntegerLinearProgram__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:783:1: ( ( ( rule__IntegerLinearProgram__ConstraintsAssignment_1 )* ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:784:1: ( ( rule__IntegerLinearProgram__ConstraintsAssignment_1 )* )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:833:1: ( ( ( rule__IntegerLinearProgram__ConstraintsAssignment_1 )* ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:834:1: ( ( rule__IntegerLinearProgram__ConstraintsAssignment_1 )* )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:784:1: ( ( rule__IntegerLinearProgram__ConstraintsAssignment_1 )* )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:785:1: ( rule__IntegerLinearProgram__ConstraintsAssignment_1 )*
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:834:1: ( ( rule__IntegerLinearProgram__ConstraintsAssignment_1 )* )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:835:1: ( rule__IntegerLinearProgram__ConstraintsAssignment_1 )*
             {
              before(grammarAccess.getIntegerLinearProgramAccess().getConstraintsAssignment_1()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:786:1: ( rule__IntegerLinearProgram__ConstraintsAssignment_1 )*
-            loop9:
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:836:1: ( rule__IntegerLinearProgram__ConstraintsAssignment_1 )*
+            loop10:
             do {
-                int alt9=2;
-                int LA9_0 = input.LA(1);
+                int alt10=2;
+                int LA10_0 = input.LA(1);
 
-                if ( ((LA9_0>=RULE_DECIMAL && LA9_0<=RULE_ID)) ) {
-                    alt9=1;
+                if ( ((LA10_0>=RULE_ID && LA10_0<=RULE_INT)) ) {
+                    alt10=1;
                 }
 
 
-                switch (alt9) {
+                switch (alt10) {
             	case 1 :
-            	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:786:2: rule__IntegerLinearProgram__ConstraintsAssignment_1
+            	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:836:2: rule__IntegerLinearProgram__ConstraintsAssignment_1
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__IntegerLinearProgram__ConstraintsAssignment_1_in_rule__IntegerLinearProgram__Group__1__Impl1635);
+            	    pushFollow(FollowSets000.FOLLOW_rule__IntegerLinearProgram__ConstraintsAssignment_1_in_rule__IntegerLinearProgram__Group__1__Impl1745);
             	    rule__IntegerLinearProgram__ConstraintsAssignment_1();
 
             	    state._fsp--;
@@ -2271,7 +2442,7 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop9;
+            	    break loop10;
                 }
             } while (true);
 
@@ -2298,16 +2469,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntegerLinearProgram__Group__2"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:796:1: rule__IntegerLinearProgram__Group__2 : rule__IntegerLinearProgram__Group__2__Impl ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:846:1: rule__IntegerLinearProgram__Group__2 : rule__IntegerLinearProgram__Group__2__Impl ;
     public final void rule__IntegerLinearProgram__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:800:1: ( rule__IntegerLinearProgram__Group__2__Impl )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:801:2: rule__IntegerLinearProgram__Group__2__Impl
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:850:1: ( rule__IntegerLinearProgram__Group__2__Impl )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:851:2: rule__IntegerLinearProgram__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__IntegerLinearProgram__Group__2__Impl_in_rule__IntegerLinearProgram__Group__21666);
+            pushFollow(FollowSets000.FOLLOW_rule__IntegerLinearProgram__Group__2__Impl_in_rule__IntegerLinearProgram__Group__21776);
             rule__IntegerLinearProgram__Group__2__Impl();
 
             state._fsp--;
@@ -2331,35 +2502,35 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntegerLinearProgram__Group__2__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:807:1: rule__IntegerLinearProgram__Group__2__Impl : ( ( rule__IntegerLinearProgram__VariablesAssignment_2 )* ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:857:1: rule__IntegerLinearProgram__Group__2__Impl : ( ( rule__IntegerLinearProgram__VariablesAssignment_2 )* ) ;
     public final void rule__IntegerLinearProgram__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:811:1: ( ( ( rule__IntegerLinearProgram__VariablesAssignment_2 )* ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:812:1: ( ( rule__IntegerLinearProgram__VariablesAssignment_2 )* )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:861:1: ( ( ( rule__IntegerLinearProgram__VariablesAssignment_2 )* ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:862:1: ( ( rule__IntegerLinearProgram__VariablesAssignment_2 )* )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:812:1: ( ( rule__IntegerLinearProgram__VariablesAssignment_2 )* )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:813:1: ( rule__IntegerLinearProgram__VariablesAssignment_2 )*
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:862:1: ( ( rule__IntegerLinearProgram__VariablesAssignment_2 )* )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:863:1: ( rule__IntegerLinearProgram__VariablesAssignment_2 )*
             {
              before(grammarAccess.getIntegerLinearProgramAccess().getVariablesAssignment_2()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:814:1: ( rule__IntegerLinearProgram__VariablesAssignment_2 )*
-            loop10:
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:864:1: ( rule__IntegerLinearProgram__VariablesAssignment_2 )*
+            loop11:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-                if ( ((LA10_0>=20 && LA10_0<=22)) ) {
-                    alt10=1;
+                if ( ((LA11_0>=19 && LA11_0<=21)) ) {
+                    alt11=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt11) {
             	case 1 :
-            	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:814:2: rule__IntegerLinearProgram__VariablesAssignment_2
+            	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:864:2: rule__IntegerLinearProgram__VariablesAssignment_2
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__IntegerLinearProgram__VariablesAssignment_2_in_rule__IntegerLinearProgram__Group__2__Impl1693);
+            	    pushFollow(FollowSets000.FOLLOW_rule__IntegerLinearProgram__VariablesAssignment_2_in_rule__IntegerLinearProgram__Group__2__Impl1803);
             	    rule__IntegerLinearProgram__VariablesAssignment_2();
 
             	    state._fsp--;
@@ -2369,7 +2540,7 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop10;
+            	    break loop11;
                 }
             } while (true);
 
@@ -2396,21 +2567,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__Group_0__0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:830:1: rule__ObjectiveFunctionExpression__Group_0__0 : rule__ObjectiveFunctionExpression__Group_0__0__Impl rule__ObjectiveFunctionExpression__Group_0__1 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:880:1: rule__ObjectiveFunctionExpression__Group_0__0 : rule__ObjectiveFunctionExpression__Group_0__0__Impl rule__ObjectiveFunctionExpression__Group_0__1 ;
     public final void rule__ObjectiveFunctionExpression__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:834:1: ( rule__ObjectiveFunctionExpression__Group_0__0__Impl rule__ObjectiveFunctionExpression__Group_0__1 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:835:2: rule__ObjectiveFunctionExpression__Group_0__0__Impl rule__ObjectiveFunctionExpression__Group_0__1
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:884:1: ( rule__ObjectiveFunctionExpression__Group_0__0__Impl rule__ObjectiveFunctionExpression__Group_0__1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:885:2: rule__ObjectiveFunctionExpression__Group_0__0__Impl rule__ObjectiveFunctionExpression__Group_0__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_0__0__Impl_in_rule__ObjectiveFunctionExpression__Group_0__01730);
+            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_0__0__Impl_in_rule__ObjectiveFunctionExpression__Group_0__01840);
             rule__ObjectiveFunctionExpression__Group_0__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_0__1_in_rule__ObjectiveFunctionExpression__Group_0__01733);
+            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_0__1_in_rule__ObjectiveFunctionExpression__Group_0__01843);
             rule__ObjectiveFunctionExpression__Group_0__1();
 
             state._fsp--;
@@ -2434,23 +2605,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__Group_0__0__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:842:1: rule__ObjectiveFunctionExpression__Group_0__0__Impl : ( ( rule__ObjectiveFunctionExpression__Alternatives_0_0 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:892:1: rule__ObjectiveFunctionExpression__Group_0__0__Impl : ( ( rule__ObjectiveFunctionExpression__Alternatives_0_0 ) ) ;
     public final void rule__ObjectiveFunctionExpression__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:846:1: ( ( ( rule__ObjectiveFunctionExpression__Alternatives_0_0 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:847:1: ( ( rule__ObjectiveFunctionExpression__Alternatives_0_0 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:896:1: ( ( ( rule__ObjectiveFunctionExpression__Alternatives_0_0 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:897:1: ( ( rule__ObjectiveFunctionExpression__Alternatives_0_0 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:847:1: ( ( rule__ObjectiveFunctionExpression__Alternatives_0_0 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:848:1: ( rule__ObjectiveFunctionExpression__Alternatives_0_0 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:897:1: ( ( rule__ObjectiveFunctionExpression__Alternatives_0_0 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:898:1: ( rule__ObjectiveFunctionExpression__Alternatives_0_0 )
             {
              before(grammarAccess.getObjectiveFunctionExpressionAccess().getAlternatives_0_0()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:849:1: ( rule__ObjectiveFunctionExpression__Alternatives_0_0 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:849:2: rule__ObjectiveFunctionExpression__Alternatives_0_0
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:899:1: ( rule__ObjectiveFunctionExpression__Alternatives_0_0 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:899:2: rule__ObjectiveFunctionExpression__Alternatives_0_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Alternatives_0_0_in_rule__ObjectiveFunctionExpression__Group_0__0__Impl1760);
+            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Alternatives_0_0_in_rule__ObjectiveFunctionExpression__Group_0__0__Impl1870);
             rule__ObjectiveFunctionExpression__Alternatives_0_0();
 
             state._fsp--;
@@ -2481,21 +2652,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__Group_0__1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:859:1: rule__ObjectiveFunctionExpression__Group_0__1 : rule__ObjectiveFunctionExpression__Group_0__1__Impl rule__ObjectiveFunctionExpression__Group_0__2 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:909:1: rule__ObjectiveFunctionExpression__Group_0__1 : rule__ObjectiveFunctionExpression__Group_0__1__Impl rule__ObjectiveFunctionExpression__Group_0__2 ;
     public final void rule__ObjectiveFunctionExpression__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:863:1: ( rule__ObjectiveFunctionExpression__Group_0__1__Impl rule__ObjectiveFunctionExpression__Group_0__2 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:864:2: rule__ObjectiveFunctionExpression__Group_0__1__Impl rule__ObjectiveFunctionExpression__Group_0__2
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:913:1: ( rule__ObjectiveFunctionExpression__Group_0__1__Impl rule__ObjectiveFunctionExpression__Group_0__2 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:914:2: rule__ObjectiveFunctionExpression__Group_0__1__Impl rule__ObjectiveFunctionExpression__Group_0__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_0__1__Impl_in_rule__ObjectiveFunctionExpression__Group_0__11790);
+            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_0__1__Impl_in_rule__ObjectiveFunctionExpression__Group_0__11900);
             rule__ObjectiveFunctionExpression__Group_0__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_0__2_in_rule__ObjectiveFunctionExpression__Group_0__11793);
+            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_0__2_in_rule__ObjectiveFunctionExpression__Group_0__11903);
             rule__ObjectiveFunctionExpression__Group_0__2();
 
             state._fsp--;
@@ -2519,20 +2690,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__Group_0__1__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:871:1: rule__ObjectiveFunctionExpression__Group_0__1__Impl : ( ':' ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:921:1: rule__ObjectiveFunctionExpression__Group_0__1__Impl : ( ':' ) ;
     public final void rule__ObjectiveFunctionExpression__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:875:1: ( ( ':' ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:876:1: ( ':' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:925:1: ( ( ':' ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:926:1: ( ':' )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:876:1: ( ':' )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:877:1: ':'
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:926:1: ( ':' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:927:1: ':'
             {
              before(grammarAccess.getObjectiveFunctionExpressionAccess().getColonKeyword_0_1()); 
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__ObjectiveFunctionExpression__Group_0__1__Impl1821); 
+            match(input,24,FollowSets000.FOLLOW_24_in_rule__ObjectiveFunctionExpression__Group_0__1__Impl1931); 
              after(grammarAccess.getObjectiveFunctionExpressionAccess().getColonKeyword_0_1()); 
 
             }
@@ -2556,16 +2727,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__Group_0__2"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:890:1: rule__ObjectiveFunctionExpression__Group_0__2 : rule__ObjectiveFunctionExpression__Group_0__2__Impl ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:940:1: rule__ObjectiveFunctionExpression__Group_0__2 : rule__ObjectiveFunctionExpression__Group_0__2__Impl ;
     public final void rule__ObjectiveFunctionExpression__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:894:1: ( rule__ObjectiveFunctionExpression__Group_0__2__Impl )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:895:2: rule__ObjectiveFunctionExpression__Group_0__2__Impl
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:944:1: ( rule__ObjectiveFunctionExpression__Group_0__2__Impl )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:945:2: rule__ObjectiveFunctionExpression__Group_0__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_0__2__Impl_in_rule__ObjectiveFunctionExpression__Group_0__21852);
+            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_0__2__Impl_in_rule__ObjectiveFunctionExpression__Group_0__21962);
             rule__ObjectiveFunctionExpression__Group_0__2__Impl();
 
             state._fsp--;
@@ -2589,20 +2760,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__Group_0__2__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:901:1: rule__ObjectiveFunctionExpression__Group_0__2__Impl : ( ';' ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:951:1: rule__ObjectiveFunctionExpression__Group_0__2__Impl : ( ';' ) ;
     public final void rule__ObjectiveFunctionExpression__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:905:1: ( ( ';' ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:906:1: ( ';' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:955:1: ( ( ';' ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:956:1: ( ';' )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:906:1: ( ';' )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:907:1: ';'
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:956:1: ( ';' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:957:1: ';'
             {
              before(grammarAccess.getObjectiveFunctionExpressionAccess().getSemicolonKeyword_0_2()); 
-            match(input,26,FollowSets000.FOLLOW_26_in_rule__ObjectiveFunctionExpression__Group_0__2__Impl1880); 
+            match(input,25,FollowSets000.FOLLOW_25_in_rule__ObjectiveFunctionExpression__Group_0__2__Impl1990); 
              after(grammarAccess.getObjectiveFunctionExpressionAccess().getSemicolonKeyword_0_2()); 
 
             }
@@ -2626,21 +2797,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__Group_1__0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:926:1: rule__ObjectiveFunctionExpression__Group_1__0 : rule__ObjectiveFunctionExpression__Group_1__0__Impl rule__ObjectiveFunctionExpression__Group_1__1 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:976:1: rule__ObjectiveFunctionExpression__Group_1__0 : rule__ObjectiveFunctionExpression__Group_1__0__Impl rule__ObjectiveFunctionExpression__Group_1__1 ;
     public final void rule__ObjectiveFunctionExpression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:930:1: ( rule__ObjectiveFunctionExpression__Group_1__0__Impl rule__ObjectiveFunctionExpression__Group_1__1 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:931:2: rule__ObjectiveFunctionExpression__Group_1__0__Impl rule__ObjectiveFunctionExpression__Group_1__1
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:980:1: ( rule__ObjectiveFunctionExpression__Group_1__0__Impl rule__ObjectiveFunctionExpression__Group_1__1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:981:2: rule__ObjectiveFunctionExpression__Group_1__0__Impl rule__ObjectiveFunctionExpression__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_1__0__Impl_in_rule__ObjectiveFunctionExpression__Group_1__01917);
+            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_1__0__Impl_in_rule__ObjectiveFunctionExpression__Group_1__02027);
             rule__ObjectiveFunctionExpression__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_1__1_in_rule__ObjectiveFunctionExpression__Group_1__01920);
+            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_1__1_in_rule__ObjectiveFunctionExpression__Group_1__02030);
             rule__ObjectiveFunctionExpression__Group_1__1();
 
             state._fsp--;
@@ -2664,23 +2835,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__Group_1__0__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:938:1: rule__ObjectiveFunctionExpression__Group_1__0__Impl : ( ( rule__ObjectiveFunctionExpression__GoalAssignment_1_0 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:988:1: rule__ObjectiveFunctionExpression__Group_1__0__Impl : ( ( rule__ObjectiveFunctionExpression__GoalAssignment_1_0 ) ) ;
     public final void rule__ObjectiveFunctionExpression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:942:1: ( ( ( rule__ObjectiveFunctionExpression__GoalAssignment_1_0 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:943:1: ( ( rule__ObjectiveFunctionExpression__GoalAssignment_1_0 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:992:1: ( ( ( rule__ObjectiveFunctionExpression__GoalAssignment_1_0 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:993:1: ( ( rule__ObjectiveFunctionExpression__GoalAssignment_1_0 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:943:1: ( ( rule__ObjectiveFunctionExpression__GoalAssignment_1_0 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:944:1: ( rule__ObjectiveFunctionExpression__GoalAssignment_1_0 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:993:1: ( ( rule__ObjectiveFunctionExpression__GoalAssignment_1_0 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:994:1: ( rule__ObjectiveFunctionExpression__GoalAssignment_1_0 )
             {
              before(grammarAccess.getObjectiveFunctionExpressionAccess().getGoalAssignment_1_0()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:945:1: ( rule__ObjectiveFunctionExpression__GoalAssignment_1_0 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:945:2: rule__ObjectiveFunctionExpression__GoalAssignment_1_0
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:995:1: ( rule__ObjectiveFunctionExpression__GoalAssignment_1_0 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:995:2: rule__ObjectiveFunctionExpression__GoalAssignment_1_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__GoalAssignment_1_0_in_rule__ObjectiveFunctionExpression__Group_1__0__Impl1947);
+            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__GoalAssignment_1_0_in_rule__ObjectiveFunctionExpression__Group_1__0__Impl2057);
             rule__ObjectiveFunctionExpression__GoalAssignment_1_0();
 
             state._fsp--;
@@ -2711,21 +2882,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__Group_1__1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:955:1: rule__ObjectiveFunctionExpression__Group_1__1 : rule__ObjectiveFunctionExpression__Group_1__1__Impl rule__ObjectiveFunctionExpression__Group_1__2 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1005:1: rule__ObjectiveFunctionExpression__Group_1__1 : rule__ObjectiveFunctionExpression__Group_1__1__Impl rule__ObjectiveFunctionExpression__Group_1__2 ;
     public final void rule__ObjectiveFunctionExpression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:959:1: ( rule__ObjectiveFunctionExpression__Group_1__1__Impl rule__ObjectiveFunctionExpression__Group_1__2 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:960:2: rule__ObjectiveFunctionExpression__Group_1__1__Impl rule__ObjectiveFunctionExpression__Group_1__2
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1009:1: ( rule__ObjectiveFunctionExpression__Group_1__1__Impl rule__ObjectiveFunctionExpression__Group_1__2 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1010:2: rule__ObjectiveFunctionExpression__Group_1__1__Impl rule__ObjectiveFunctionExpression__Group_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_1__1__Impl_in_rule__ObjectiveFunctionExpression__Group_1__11977);
+            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_1__1__Impl_in_rule__ObjectiveFunctionExpression__Group_1__12087);
             rule__ObjectiveFunctionExpression__Group_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_1__2_in_rule__ObjectiveFunctionExpression__Group_1__11980);
+            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_1__2_in_rule__ObjectiveFunctionExpression__Group_1__12090);
             rule__ObjectiveFunctionExpression__Group_1__2();
 
             state._fsp--;
@@ -2749,20 +2920,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__Group_1__1__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:967:1: rule__ObjectiveFunctionExpression__Group_1__1__Impl : ( ':' ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1017:1: rule__ObjectiveFunctionExpression__Group_1__1__Impl : ( ':' ) ;
     public final void rule__ObjectiveFunctionExpression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:971:1: ( ( ':' ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:972:1: ( ':' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1021:1: ( ( ':' ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1022:1: ( ':' )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:972:1: ( ':' )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:973:1: ':'
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1022:1: ( ':' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1023:1: ':'
             {
              before(grammarAccess.getObjectiveFunctionExpressionAccess().getColonKeyword_1_1()); 
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__ObjectiveFunctionExpression__Group_1__1__Impl2008); 
+            match(input,24,FollowSets000.FOLLOW_24_in_rule__ObjectiveFunctionExpression__Group_1__1__Impl2118); 
              after(grammarAccess.getObjectiveFunctionExpressionAccess().getColonKeyword_1_1()); 
 
             }
@@ -2786,21 +2957,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__Group_1__2"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:986:1: rule__ObjectiveFunctionExpression__Group_1__2 : rule__ObjectiveFunctionExpression__Group_1__2__Impl rule__ObjectiveFunctionExpression__Group_1__3 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1036:1: rule__ObjectiveFunctionExpression__Group_1__2 : rule__ObjectiveFunctionExpression__Group_1__2__Impl rule__ObjectiveFunctionExpression__Group_1__3 ;
     public final void rule__ObjectiveFunctionExpression__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:990:1: ( rule__ObjectiveFunctionExpression__Group_1__2__Impl rule__ObjectiveFunctionExpression__Group_1__3 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:991:2: rule__ObjectiveFunctionExpression__Group_1__2__Impl rule__ObjectiveFunctionExpression__Group_1__3
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1040:1: ( rule__ObjectiveFunctionExpression__Group_1__2__Impl rule__ObjectiveFunctionExpression__Group_1__3 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1041:2: rule__ObjectiveFunctionExpression__Group_1__2__Impl rule__ObjectiveFunctionExpression__Group_1__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_1__2__Impl_in_rule__ObjectiveFunctionExpression__Group_1__22039);
+            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_1__2__Impl_in_rule__ObjectiveFunctionExpression__Group_1__22149);
             rule__ObjectiveFunctionExpression__Group_1__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_1__3_in_rule__ObjectiveFunctionExpression__Group_1__22042);
+            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_1__3_in_rule__ObjectiveFunctionExpression__Group_1__22152);
             rule__ObjectiveFunctionExpression__Group_1__3();
 
             state._fsp--;
@@ -2824,23 +2995,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__Group_1__2__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:998:1: rule__ObjectiveFunctionExpression__Group_1__2__Impl : ( ( rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1048:1: rule__ObjectiveFunctionExpression__Group_1__2__Impl : ( ( rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2 ) ) ;
     public final void rule__ObjectiveFunctionExpression__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1002:1: ( ( ( rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1003:1: ( ( rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1052:1: ( ( ( rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1053:1: ( ( rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1003:1: ( ( rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1004:1: ( rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1053:1: ( ( rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1054:1: ( rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2 )
             {
              before(grammarAccess.getObjectiveFunctionExpressionAccess().getObjectiveFunctionAssignment_1_2()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1005:1: ( rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1005:2: rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1055:1: ( rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1055:2: rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2_in_rule__ObjectiveFunctionExpression__Group_1__2__Impl2069);
+            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2_in_rule__ObjectiveFunctionExpression__Group_1__2__Impl2179);
             rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2();
 
             state._fsp--;
@@ -2871,16 +3042,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__Group_1__3"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1015:1: rule__ObjectiveFunctionExpression__Group_1__3 : rule__ObjectiveFunctionExpression__Group_1__3__Impl ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1065:1: rule__ObjectiveFunctionExpression__Group_1__3 : rule__ObjectiveFunctionExpression__Group_1__3__Impl ;
     public final void rule__ObjectiveFunctionExpression__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1019:1: ( rule__ObjectiveFunctionExpression__Group_1__3__Impl )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1020:2: rule__ObjectiveFunctionExpression__Group_1__3__Impl
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1069:1: ( rule__ObjectiveFunctionExpression__Group_1__3__Impl )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1070:2: rule__ObjectiveFunctionExpression__Group_1__3__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_1__3__Impl_in_rule__ObjectiveFunctionExpression__Group_1__32099);
+            pushFollow(FollowSets000.FOLLOW_rule__ObjectiveFunctionExpression__Group_1__3__Impl_in_rule__ObjectiveFunctionExpression__Group_1__32209);
             rule__ObjectiveFunctionExpression__Group_1__3__Impl();
 
             state._fsp--;
@@ -2904,20 +3075,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__Group_1__3__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1026:1: rule__ObjectiveFunctionExpression__Group_1__3__Impl : ( ';' ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1076:1: rule__ObjectiveFunctionExpression__Group_1__3__Impl : ( ';' ) ;
     public final void rule__ObjectiveFunctionExpression__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1030:1: ( ( ';' ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1031:1: ( ';' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1080:1: ( ( ';' ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1081:1: ( ';' )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1031:1: ( ';' )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1032:1: ';'
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1081:1: ( ';' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1082:1: ';'
             {
              before(grammarAccess.getObjectiveFunctionExpressionAccess().getSemicolonKeyword_1_3()); 
-            match(input,26,FollowSets000.FOLLOW_26_in_rule__ObjectiveFunctionExpression__Group_1__3__Impl2127); 
+            match(input,25,FollowSets000.FOLLOW_25_in_rule__ObjectiveFunctionExpression__Group_1__3__Impl2237); 
              after(grammarAccess.getObjectiveFunctionExpressionAccess().getSemicolonKeyword_1_3()); 
 
             }
@@ -2941,21 +3112,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__Group__0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1053:1: rule__ConstraintExpression__Group__0 : rule__ConstraintExpression__Group__0__Impl rule__ConstraintExpression__Group__1 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1103:1: rule__ConstraintExpression__Group__0 : rule__ConstraintExpression__Group__0__Impl rule__ConstraintExpression__Group__1 ;
     public final void rule__ConstraintExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1057:1: ( rule__ConstraintExpression__Group__0__Impl rule__ConstraintExpression__Group__1 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1058:2: rule__ConstraintExpression__Group__0__Impl rule__ConstraintExpression__Group__1
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1107:1: ( rule__ConstraintExpression__Group__0__Impl rule__ConstraintExpression__Group__1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1108:2: rule__ConstraintExpression__Group__0__Impl rule__ConstraintExpression__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__0__Impl_in_rule__ConstraintExpression__Group__02166);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__0__Impl_in_rule__ConstraintExpression__Group__02276);
             rule__ConstraintExpression__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__1_in_rule__ConstraintExpression__Group__02169);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__1_in_rule__ConstraintExpression__Group__02279);
             rule__ConstraintExpression__Group__1();
 
             state._fsp--;
@@ -2979,27 +3150,27 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__Group__0__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1065:1: rule__ConstraintExpression__Group__0__Impl : ( ( rule__ConstraintExpression__Group_0__0 )? ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1115:1: rule__ConstraintExpression__Group__0__Impl : ( ( rule__ConstraintExpression__Group_0__0 )? ) ;
     public final void rule__ConstraintExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1069:1: ( ( ( rule__ConstraintExpression__Group_0__0 )? ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1070:1: ( ( rule__ConstraintExpression__Group_0__0 )? )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1119:1: ( ( ( rule__ConstraintExpression__Group_0__0 )? ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1120:1: ( ( rule__ConstraintExpression__Group_0__0 )? )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1070:1: ( ( rule__ConstraintExpression__Group_0__0 )? )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1071:1: ( rule__ConstraintExpression__Group_0__0 )?
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1120:1: ( ( rule__ConstraintExpression__Group_0__0 )? )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1121:1: ( rule__ConstraintExpression__Group_0__0 )?
             {
              before(grammarAccess.getConstraintExpressionAccess().getGroup_0()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1072:1: ( rule__ConstraintExpression__Group_0__0 )?
-            int alt11=2;
-            alt11 = dfa11.predict(input);
-            switch (alt11) {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1122:1: ( rule__ConstraintExpression__Group_0__0 )?
+            int alt12=2;
+            alt12 = dfa12.predict(input);
+            switch (alt12) {
                 case 1 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1072:2: rule__ConstraintExpression__Group_0__0
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1122:2: rule__ConstraintExpression__Group_0__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group_0__0_in_rule__ConstraintExpression__Group__0__Impl2196);
+                    pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group_0__0_in_rule__ConstraintExpression__Group__0__Impl2306);
                     rule__ConstraintExpression__Group_0__0();
 
                     state._fsp--;
@@ -3033,21 +3204,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__Group__1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1082:1: rule__ConstraintExpression__Group__1 : rule__ConstraintExpression__Group__1__Impl rule__ConstraintExpression__Group__2 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1132:1: rule__ConstraintExpression__Group__1 : rule__ConstraintExpression__Group__1__Impl rule__ConstraintExpression__Group__2 ;
     public final void rule__ConstraintExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1086:1: ( rule__ConstraintExpression__Group__1__Impl rule__ConstraintExpression__Group__2 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1087:2: rule__ConstraintExpression__Group__1__Impl rule__ConstraintExpression__Group__2
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1136:1: ( rule__ConstraintExpression__Group__1__Impl rule__ConstraintExpression__Group__2 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1137:2: rule__ConstraintExpression__Group__1__Impl rule__ConstraintExpression__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__1__Impl_in_rule__ConstraintExpression__Group__12227);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__1__Impl_in_rule__ConstraintExpression__Group__12337);
             rule__ConstraintExpression__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__2_in_rule__ConstraintExpression__Group__12230);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__2_in_rule__ConstraintExpression__Group__12340);
             rule__ConstraintExpression__Group__2();
 
             state._fsp--;
@@ -3071,23 +3242,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__Group__1__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1094:1: rule__ConstraintExpression__Group__1__Impl : ( ( rule__ConstraintExpression__LeftExpressionAssignment_1 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1144:1: rule__ConstraintExpression__Group__1__Impl : ( ( rule__ConstraintExpression__LeftExpressionAssignment_1 ) ) ;
     public final void rule__ConstraintExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1098:1: ( ( ( rule__ConstraintExpression__LeftExpressionAssignment_1 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1099:1: ( ( rule__ConstraintExpression__LeftExpressionAssignment_1 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1148:1: ( ( ( rule__ConstraintExpression__LeftExpressionAssignment_1 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1149:1: ( ( rule__ConstraintExpression__LeftExpressionAssignment_1 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1099:1: ( ( rule__ConstraintExpression__LeftExpressionAssignment_1 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1100:1: ( rule__ConstraintExpression__LeftExpressionAssignment_1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1149:1: ( ( rule__ConstraintExpression__LeftExpressionAssignment_1 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1150:1: ( rule__ConstraintExpression__LeftExpressionAssignment_1 )
             {
              before(grammarAccess.getConstraintExpressionAccess().getLeftExpressionAssignment_1()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1101:1: ( rule__ConstraintExpression__LeftExpressionAssignment_1 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1101:2: rule__ConstraintExpression__LeftExpressionAssignment_1
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1151:1: ( rule__ConstraintExpression__LeftExpressionAssignment_1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1151:2: rule__ConstraintExpression__LeftExpressionAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__LeftExpressionAssignment_1_in_rule__ConstraintExpression__Group__1__Impl2257);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__LeftExpressionAssignment_1_in_rule__ConstraintExpression__Group__1__Impl2367);
             rule__ConstraintExpression__LeftExpressionAssignment_1();
 
             state._fsp--;
@@ -3118,21 +3289,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__Group__2"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1111:1: rule__ConstraintExpression__Group__2 : rule__ConstraintExpression__Group__2__Impl rule__ConstraintExpression__Group__3 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1161:1: rule__ConstraintExpression__Group__2 : rule__ConstraintExpression__Group__2__Impl rule__ConstraintExpression__Group__3 ;
     public final void rule__ConstraintExpression__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1115:1: ( rule__ConstraintExpression__Group__2__Impl rule__ConstraintExpression__Group__3 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1116:2: rule__ConstraintExpression__Group__2__Impl rule__ConstraintExpression__Group__3
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1165:1: ( rule__ConstraintExpression__Group__2__Impl rule__ConstraintExpression__Group__3 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1166:2: rule__ConstraintExpression__Group__2__Impl rule__ConstraintExpression__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__2__Impl_in_rule__ConstraintExpression__Group__22287);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__2__Impl_in_rule__ConstraintExpression__Group__22397);
             rule__ConstraintExpression__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__3_in_rule__ConstraintExpression__Group__22290);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__3_in_rule__ConstraintExpression__Group__22400);
             rule__ConstraintExpression__Group__3();
 
             state._fsp--;
@@ -3156,23 +3327,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__Group__2__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1123:1: rule__ConstraintExpression__Group__2__Impl : ( ( rule__ConstraintExpression__OperatorAssignment_2 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1173:1: rule__ConstraintExpression__Group__2__Impl : ( ( rule__ConstraintExpression__OperatorAssignment_2 ) ) ;
     public final void rule__ConstraintExpression__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1127:1: ( ( ( rule__ConstraintExpression__OperatorAssignment_2 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1128:1: ( ( rule__ConstraintExpression__OperatorAssignment_2 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1177:1: ( ( ( rule__ConstraintExpression__OperatorAssignment_2 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1178:1: ( ( rule__ConstraintExpression__OperatorAssignment_2 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1128:1: ( ( rule__ConstraintExpression__OperatorAssignment_2 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1129:1: ( rule__ConstraintExpression__OperatorAssignment_2 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1178:1: ( ( rule__ConstraintExpression__OperatorAssignment_2 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1179:1: ( rule__ConstraintExpression__OperatorAssignment_2 )
             {
              before(grammarAccess.getConstraintExpressionAccess().getOperatorAssignment_2()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1130:1: ( rule__ConstraintExpression__OperatorAssignment_2 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1130:2: rule__ConstraintExpression__OperatorAssignment_2
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1180:1: ( rule__ConstraintExpression__OperatorAssignment_2 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1180:2: rule__ConstraintExpression__OperatorAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__OperatorAssignment_2_in_rule__ConstraintExpression__Group__2__Impl2317);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__OperatorAssignment_2_in_rule__ConstraintExpression__Group__2__Impl2427);
             rule__ConstraintExpression__OperatorAssignment_2();
 
             state._fsp--;
@@ -3203,21 +3374,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__Group__3"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1140:1: rule__ConstraintExpression__Group__3 : rule__ConstraintExpression__Group__3__Impl rule__ConstraintExpression__Group__4 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1190:1: rule__ConstraintExpression__Group__3 : rule__ConstraintExpression__Group__3__Impl rule__ConstraintExpression__Group__4 ;
     public final void rule__ConstraintExpression__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1144:1: ( rule__ConstraintExpression__Group__3__Impl rule__ConstraintExpression__Group__4 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1145:2: rule__ConstraintExpression__Group__3__Impl rule__ConstraintExpression__Group__4
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1194:1: ( rule__ConstraintExpression__Group__3__Impl rule__ConstraintExpression__Group__4 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1195:2: rule__ConstraintExpression__Group__3__Impl rule__ConstraintExpression__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__3__Impl_in_rule__ConstraintExpression__Group__32347);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__3__Impl_in_rule__ConstraintExpression__Group__32457);
             rule__ConstraintExpression__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__4_in_rule__ConstraintExpression__Group__32350);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__4_in_rule__ConstraintExpression__Group__32460);
             rule__ConstraintExpression__Group__4();
 
             state._fsp--;
@@ -3241,23 +3412,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__Group__3__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1152:1: rule__ConstraintExpression__Group__3__Impl : ( ( rule__ConstraintExpression__RightExpressionAssignment_3 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1202:1: rule__ConstraintExpression__Group__3__Impl : ( ( rule__ConstraintExpression__RightExpressionAssignment_3 ) ) ;
     public final void rule__ConstraintExpression__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1156:1: ( ( ( rule__ConstraintExpression__RightExpressionAssignment_3 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1157:1: ( ( rule__ConstraintExpression__RightExpressionAssignment_3 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1206:1: ( ( ( rule__ConstraintExpression__RightExpressionAssignment_3 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1207:1: ( ( rule__ConstraintExpression__RightExpressionAssignment_3 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1157:1: ( ( rule__ConstraintExpression__RightExpressionAssignment_3 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1158:1: ( rule__ConstraintExpression__RightExpressionAssignment_3 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1207:1: ( ( rule__ConstraintExpression__RightExpressionAssignment_3 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1208:1: ( rule__ConstraintExpression__RightExpressionAssignment_3 )
             {
              before(grammarAccess.getConstraintExpressionAccess().getRightExpressionAssignment_3()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1159:1: ( rule__ConstraintExpression__RightExpressionAssignment_3 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1159:2: rule__ConstraintExpression__RightExpressionAssignment_3
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1209:1: ( rule__ConstraintExpression__RightExpressionAssignment_3 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1209:2: rule__ConstraintExpression__RightExpressionAssignment_3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__RightExpressionAssignment_3_in_rule__ConstraintExpression__Group__3__Impl2377);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__RightExpressionAssignment_3_in_rule__ConstraintExpression__Group__3__Impl2487);
             rule__ConstraintExpression__RightExpressionAssignment_3();
 
             state._fsp--;
@@ -3288,16 +3459,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__Group__4"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1169:1: rule__ConstraintExpression__Group__4 : rule__ConstraintExpression__Group__4__Impl ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1219:1: rule__ConstraintExpression__Group__4 : rule__ConstraintExpression__Group__4__Impl ;
     public final void rule__ConstraintExpression__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1173:1: ( rule__ConstraintExpression__Group__4__Impl )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1174:2: rule__ConstraintExpression__Group__4__Impl
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1223:1: ( rule__ConstraintExpression__Group__4__Impl )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1224:2: rule__ConstraintExpression__Group__4__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__4__Impl_in_rule__ConstraintExpression__Group__42407);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group__4__Impl_in_rule__ConstraintExpression__Group__42517);
             rule__ConstraintExpression__Group__4__Impl();
 
             state._fsp--;
@@ -3321,20 +3492,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__Group__4__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1180:1: rule__ConstraintExpression__Group__4__Impl : ( ';' ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1230:1: rule__ConstraintExpression__Group__4__Impl : ( ';' ) ;
     public final void rule__ConstraintExpression__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1184:1: ( ( ';' ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1185:1: ( ';' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1234:1: ( ( ';' ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1235:1: ( ';' )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1185:1: ( ';' )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1186:1: ';'
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1235:1: ( ';' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1236:1: ';'
             {
              before(grammarAccess.getConstraintExpressionAccess().getSemicolonKeyword_4()); 
-            match(input,26,FollowSets000.FOLLOW_26_in_rule__ConstraintExpression__Group__4__Impl2435); 
+            match(input,25,FollowSets000.FOLLOW_25_in_rule__ConstraintExpression__Group__4__Impl2545); 
              after(grammarAccess.getConstraintExpressionAccess().getSemicolonKeyword_4()); 
 
             }
@@ -3358,21 +3529,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__Group_0__0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1209:1: rule__ConstraintExpression__Group_0__0 : rule__ConstraintExpression__Group_0__0__Impl rule__ConstraintExpression__Group_0__1 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1259:1: rule__ConstraintExpression__Group_0__0 : rule__ConstraintExpression__Group_0__0__Impl rule__ConstraintExpression__Group_0__1 ;
     public final void rule__ConstraintExpression__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1213:1: ( rule__ConstraintExpression__Group_0__0__Impl rule__ConstraintExpression__Group_0__1 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1214:2: rule__ConstraintExpression__Group_0__0__Impl rule__ConstraintExpression__Group_0__1
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1263:1: ( rule__ConstraintExpression__Group_0__0__Impl rule__ConstraintExpression__Group_0__1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1264:2: rule__ConstraintExpression__Group_0__0__Impl rule__ConstraintExpression__Group_0__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group_0__0__Impl_in_rule__ConstraintExpression__Group_0__02476);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group_0__0__Impl_in_rule__ConstraintExpression__Group_0__02586);
             rule__ConstraintExpression__Group_0__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group_0__1_in_rule__ConstraintExpression__Group_0__02479);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group_0__1_in_rule__ConstraintExpression__Group_0__02589);
             rule__ConstraintExpression__Group_0__1();
 
             state._fsp--;
@@ -3396,23 +3567,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__Group_0__0__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1221:1: rule__ConstraintExpression__Group_0__0__Impl : ( ( rule__ConstraintExpression__CommentAssignment_0_0 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1271:1: rule__ConstraintExpression__Group_0__0__Impl : ( ( rule__ConstraintExpression__CommentAssignment_0_0 ) ) ;
     public final void rule__ConstraintExpression__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1225:1: ( ( ( rule__ConstraintExpression__CommentAssignment_0_0 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1226:1: ( ( rule__ConstraintExpression__CommentAssignment_0_0 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1275:1: ( ( ( rule__ConstraintExpression__CommentAssignment_0_0 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1276:1: ( ( rule__ConstraintExpression__CommentAssignment_0_0 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1226:1: ( ( rule__ConstraintExpression__CommentAssignment_0_0 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1227:1: ( rule__ConstraintExpression__CommentAssignment_0_0 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1276:1: ( ( rule__ConstraintExpression__CommentAssignment_0_0 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1277:1: ( rule__ConstraintExpression__CommentAssignment_0_0 )
             {
              before(grammarAccess.getConstraintExpressionAccess().getCommentAssignment_0_0()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1228:1: ( rule__ConstraintExpression__CommentAssignment_0_0 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1228:2: rule__ConstraintExpression__CommentAssignment_0_0
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1278:1: ( rule__ConstraintExpression__CommentAssignment_0_0 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1278:2: rule__ConstraintExpression__CommentAssignment_0_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__CommentAssignment_0_0_in_rule__ConstraintExpression__Group_0__0__Impl2506);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__CommentAssignment_0_0_in_rule__ConstraintExpression__Group_0__0__Impl2616);
             rule__ConstraintExpression__CommentAssignment_0_0();
 
             state._fsp--;
@@ -3443,16 +3614,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__Group_0__1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1238:1: rule__ConstraintExpression__Group_0__1 : rule__ConstraintExpression__Group_0__1__Impl ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1288:1: rule__ConstraintExpression__Group_0__1 : rule__ConstraintExpression__Group_0__1__Impl ;
     public final void rule__ConstraintExpression__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1242:1: ( rule__ConstraintExpression__Group_0__1__Impl )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1243:2: rule__ConstraintExpression__Group_0__1__Impl
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1292:1: ( rule__ConstraintExpression__Group_0__1__Impl )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1293:2: rule__ConstraintExpression__Group_0__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group_0__1__Impl_in_rule__ConstraintExpression__Group_0__12536);
+            pushFollow(FollowSets000.FOLLOW_rule__ConstraintExpression__Group_0__1__Impl_in_rule__ConstraintExpression__Group_0__12646);
             rule__ConstraintExpression__Group_0__1__Impl();
 
             state._fsp--;
@@ -3476,20 +3647,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__Group_0__1__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1249:1: rule__ConstraintExpression__Group_0__1__Impl : ( ':' ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1299:1: rule__ConstraintExpression__Group_0__1__Impl : ( ':' ) ;
     public final void rule__ConstraintExpression__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1253:1: ( ( ':' ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1254:1: ( ':' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1303:1: ( ( ':' ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1304:1: ( ':' )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1254:1: ( ':' )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1255:1: ':'
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1304:1: ( ':' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1305:1: ':'
             {
              before(grammarAccess.getConstraintExpressionAccess().getColonKeyword_0_1()); 
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__ConstraintExpression__Group_0__1__Impl2564); 
+            match(input,24,FollowSets000.FOLLOW_24_in_rule__ConstraintExpression__Group_0__1__Impl2674); 
              after(grammarAccess.getConstraintExpressionAccess().getColonKeyword_0_1()); 
 
             }
@@ -3513,21 +3684,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Variable__Group__0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1272:1: rule__Variable__Group__0 : rule__Variable__Group__0__Impl rule__Variable__Group__1 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1322:1: rule__Variable__Group__0 : rule__Variable__Group__0__Impl rule__Variable__Group__1 ;
     public final void rule__Variable__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1276:1: ( rule__Variable__Group__0__Impl rule__Variable__Group__1 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1277:2: rule__Variable__Group__0__Impl rule__Variable__Group__1
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1326:1: ( rule__Variable__Group__0__Impl rule__Variable__Group__1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1327:2: rule__Variable__Group__0__Impl rule__Variable__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Variable__Group__0__Impl_in_rule__Variable__Group__02599);
+            pushFollow(FollowSets000.FOLLOW_rule__Variable__Group__0__Impl_in_rule__Variable__Group__02709);
             rule__Variable__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Variable__Group__1_in_rule__Variable__Group__02602);
+            pushFollow(FollowSets000.FOLLOW_rule__Variable__Group__1_in_rule__Variable__Group__02712);
             rule__Variable__Group__1();
 
             state._fsp--;
@@ -3551,23 +3722,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Variable__Group__0__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1284:1: rule__Variable__Group__0__Impl : ( ( rule__Variable__DataTypeAssignment_0 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1334:1: rule__Variable__Group__0__Impl : ( ( rule__Variable__DataTypeAssignment_0 ) ) ;
     public final void rule__Variable__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1288:1: ( ( ( rule__Variable__DataTypeAssignment_0 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1289:1: ( ( rule__Variable__DataTypeAssignment_0 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1338:1: ( ( ( rule__Variable__DataTypeAssignment_0 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1339:1: ( ( rule__Variable__DataTypeAssignment_0 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1289:1: ( ( rule__Variable__DataTypeAssignment_0 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1290:1: ( rule__Variable__DataTypeAssignment_0 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1339:1: ( ( rule__Variable__DataTypeAssignment_0 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1340:1: ( rule__Variable__DataTypeAssignment_0 )
             {
              before(grammarAccess.getVariableAccess().getDataTypeAssignment_0()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1291:1: ( rule__Variable__DataTypeAssignment_0 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1291:2: rule__Variable__DataTypeAssignment_0
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1341:1: ( rule__Variable__DataTypeAssignment_0 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1341:2: rule__Variable__DataTypeAssignment_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Variable__DataTypeAssignment_0_in_rule__Variable__Group__0__Impl2629);
+            pushFollow(FollowSets000.FOLLOW_rule__Variable__DataTypeAssignment_0_in_rule__Variable__Group__0__Impl2739);
             rule__Variable__DataTypeAssignment_0();
 
             state._fsp--;
@@ -3598,21 +3769,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Variable__Group__1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1301:1: rule__Variable__Group__1 : rule__Variable__Group__1__Impl rule__Variable__Group__2 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1351:1: rule__Variable__Group__1 : rule__Variable__Group__1__Impl rule__Variable__Group__2 ;
     public final void rule__Variable__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1305:1: ( rule__Variable__Group__1__Impl rule__Variable__Group__2 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1306:2: rule__Variable__Group__1__Impl rule__Variable__Group__2
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1355:1: ( rule__Variable__Group__1__Impl rule__Variable__Group__2 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1356:2: rule__Variable__Group__1__Impl rule__Variable__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Variable__Group__1__Impl_in_rule__Variable__Group__12659);
+            pushFollow(FollowSets000.FOLLOW_rule__Variable__Group__1__Impl_in_rule__Variable__Group__12769);
             rule__Variable__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Variable__Group__2_in_rule__Variable__Group__12662);
+            pushFollow(FollowSets000.FOLLOW_rule__Variable__Group__2_in_rule__Variable__Group__12772);
             rule__Variable__Group__2();
 
             state._fsp--;
@@ -3636,23 +3807,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Variable__Group__1__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1313:1: rule__Variable__Group__1__Impl : ( ( rule__Variable__NameAssignment_1 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1363:1: rule__Variable__Group__1__Impl : ( ( rule__Variable__NameAssignment_1 ) ) ;
     public final void rule__Variable__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1317:1: ( ( ( rule__Variable__NameAssignment_1 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1318:1: ( ( rule__Variable__NameAssignment_1 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1367:1: ( ( ( rule__Variable__NameAssignment_1 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1368:1: ( ( rule__Variable__NameAssignment_1 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1318:1: ( ( rule__Variable__NameAssignment_1 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1319:1: ( rule__Variable__NameAssignment_1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1368:1: ( ( rule__Variable__NameAssignment_1 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1369:1: ( rule__Variable__NameAssignment_1 )
             {
              before(grammarAccess.getVariableAccess().getNameAssignment_1()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1320:1: ( rule__Variable__NameAssignment_1 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1320:2: rule__Variable__NameAssignment_1
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1370:1: ( rule__Variable__NameAssignment_1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1370:2: rule__Variable__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Variable__NameAssignment_1_in_rule__Variable__Group__1__Impl2689);
+            pushFollow(FollowSets000.FOLLOW_rule__Variable__NameAssignment_1_in_rule__Variable__Group__1__Impl2799);
             rule__Variable__NameAssignment_1();
 
             state._fsp--;
@@ -3683,16 +3854,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Variable__Group__2"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1330:1: rule__Variable__Group__2 : rule__Variable__Group__2__Impl ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1380:1: rule__Variable__Group__2 : rule__Variable__Group__2__Impl ;
     public final void rule__Variable__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1334:1: ( rule__Variable__Group__2__Impl )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1335:2: rule__Variable__Group__2__Impl
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1384:1: ( rule__Variable__Group__2__Impl )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1385:2: rule__Variable__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Variable__Group__2__Impl_in_rule__Variable__Group__22719);
+            pushFollow(FollowSets000.FOLLOW_rule__Variable__Group__2__Impl_in_rule__Variable__Group__22829);
             rule__Variable__Group__2__Impl();
 
             state._fsp--;
@@ -3716,20 +3887,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Variable__Group__2__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1341:1: rule__Variable__Group__2__Impl : ( ';' ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1391:1: rule__Variable__Group__2__Impl : ( ';' ) ;
     public final void rule__Variable__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1345:1: ( ( ';' ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1346:1: ( ';' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1395:1: ( ( ';' ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1396:1: ( ';' )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1346:1: ( ';' )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1347:1: ';'
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1396:1: ( ';' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1397:1: ';'
             {
              before(grammarAccess.getVariableAccess().getSemicolonKeyword_2()); 
-            match(input,26,FollowSets000.FOLLOW_26_in_rule__Variable__Group__2__Impl2747); 
+            match(input,25,FollowSets000.FOLLOW_25_in_rule__Variable__Group__2__Impl2857); 
              after(grammarAccess.getVariableAccess().getSemicolonKeyword_2()); 
 
             }
@@ -3753,21 +3924,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VariableID__Group__0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1366:1: rule__VariableID__Group__0 : rule__VariableID__Group__0__Impl rule__VariableID__Group__1 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1416:1: rule__VariableID__Group__0 : rule__VariableID__Group__0__Impl rule__VariableID__Group__1 ;
     public final void rule__VariableID__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1370:1: ( rule__VariableID__Group__0__Impl rule__VariableID__Group__1 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1371:2: rule__VariableID__Group__0__Impl rule__VariableID__Group__1
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1420:1: ( rule__VariableID__Group__0__Impl rule__VariableID__Group__1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1421:2: rule__VariableID__Group__0__Impl rule__VariableID__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group__0__Impl_in_rule__VariableID__Group__02784);
+            pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group__0__Impl_in_rule__VariableID__Group__02894);
             rule__VariableID__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group__1_in_rule__VariableID__Group__02787);
+            pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group__1_in_rule__VariableID__Group__02897);
             rule__VariableID__Group__1();
 
             state._fsp--;
@@ -3791,20 +3962,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VariableID__Group__0__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1378:1: rule__VariableID__Group__0__Impl : ( RULE_ID ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1428:1: rule__VariableID__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__VariableID__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1382:1: ( ( RULE_ID ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1383:1: ( RULE_ID )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1432:1: ( ( RULE_ID ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1433:1: ( RULE_ID )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1383:1: ( RULE_ID )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1384:1: RULE_ID
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1433:1: ( RULE_ID )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1434:1: RULE_ID
             {
              before(grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__VariableID__Group__0__Impl2814); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__VariableID__Group__0__Impl2924); 
              after(grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_0()); 
 
             }
@@ -3828,16 +3999,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VariableID__Group__1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1395:1: rule__VariableID__Group__1 : rule__VariableID__Group__1__Impl ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1445:1: rule__VariableID__Group__1 : rule__VariableID__Group__1__Impl ;
     public final void rule__VariableID__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1399:1: ( rule__VariableID__Group__1__Impl )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1400:2: rule__VariableID__Group__1__Impl
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1449:1: ( rule__VariableID__Group__1__Impl )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1450:2: rule__VariableID__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group__1__Impl_in_rule__VariableID__Group__12843);
+            pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group__1__Impl_in_rule__VariableID__Group__12953);
             rule__VariableID__Group__1__Impl();
 
             state._fsp--;
@@ -3861,35 +4032,35 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VariableID__Group__1__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1406:1: rule__VariableID__Group__1__Impl : ( ( rule__VariableID__Group_1__0 )* ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1456:1: rule__VariableID__Group__1__Impl : ( ( rule__VariableID__Group_1__0 )* ) ;
     public final void rule__VariableID__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1410:1: ( ( ( rule__VariableID__Group_1__0 )* ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1411:1: ( ( rule__VariableID__Group_1__0 )* )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1460:1: ( ( ( rule__VariableID__Group_1__0 )* ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1461:1: ( ( rule__VariableID__Group_1__0 )* )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1411:1: ( ( rule__VariableID__Group_1__0 )* )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1412:1: ( rule__VariableID__Group_1__0 )*
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1461:1: ( ( rule__VariableID__Group_1__0 )* )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1462:1: ( rule__VariableID__Group_1__0 )*
             {
              before(grammarAccess.getVariableIDAccess().getGroup_1()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1413:1: ( rule__VariableID__Group_1__0 )*
-            loop12:
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1463:1: ( rule__VariableID__Group_1__0 )*
+            loop13:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA12_0==27) ) {
-                    alt12=1;
+                if ( (LA13_0==26) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt12) {
+                switch (alt13) {
             	case 1 :
-            	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1413:2: rule__VariableID__Group_1__0
+            	    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1463:2: rule__VariableID__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group_1__0_in_rule__VariableID__Group__1__Impl2870);
+            	    pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group_1__0_in_rule__VariableID__Group__1__Impl2980);
             	    rule__VariableID__Group_1__0();
 
             	    state._fsp--;
@@ -3899,7 +4070,7 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop12;
+            	    break loop13;
                 }
             } while (true);
 
@@ -3926,21 +4097,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VariableID__Group_1__0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1427:1: rule__VariableID__Group_1__0 : rule__VariableID__Group_1__0__Impl rule__VariableID__Group_1__1 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1477:1: rule__VariableID__Group_1__0 : rule__VariableID__Group_1__0__Impl rule__VariableID__Group_1__1 ;
     public final void rule__VariableID__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1431:1: ( rule__VariableID__Group_1__0__Impl rule__VariableID__Group_1__1 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1432:2: rule__VariableID__Group_1__0__Impl rule__VariableID__Group_1__1
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1481:1: ( rule__VariableID__Group_1__0__Impl rule__VariableID__Group_1__1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1482:2: rule__VariableID__Group_1__0__Impl rule__VariableID__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group_1__0__Impl_in_rule__VariableID__Group_1__02905);
+            pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group_1__0__Impl_in_rule__VariableID__Group_1__03015);
             rule__VariableID__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group_1__1_in_rule__VariableID__Group_1__02908);
+            pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group_1__1_in_rule__VariableID__Group_1__03018);
             rule__VariableID__Group_1__1();
 
             state._fsp--;
@@ -3964,20 +4135,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VariableID__Group_1__0__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1439:1: rule__VariableID__Group_1__0__Impl : ( '.' ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1489:1: rule__VariableID__Group_1__0__Impl : ( '.' ) ;
     public final void rule__VariableID__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1443:1: ( ( '.' ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1444:1: ( '.' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1493:1: ( ( '.' ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1494:1: ( '.' )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1444:1: ( '.' )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1445:1: '.'
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1494:1: ( '.' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1495:1: '.'
             {
              before(grammarAccess.getVariableIDAccess().getFullStopKeyword_1_0()); 
-            match(input,27,FollowSets000.FOLLOW_27_in_rule__VariableID__Group_1__0__Impl2936); 
+            match(input,26,FollowSets000.FOLLOW_26_in_rule__VariableID__Group_1__0__Impl3046); 
              after(grammarAccess.getVariableIDAccess().getFullStopKeyword_1_0()); 
 
             }
@@ -4001,16 +4172,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VariableID__Group_1__1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1458:1: rule__VariableID__Group_1__1 : rule__VariableID__Group_1__1__Impl ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1508:1: rule__VariableID__Group_1__1 : rule__VariableID__Group_1__1__Impl ;
     public final void rule__VariableID__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1462:1: ( rule__VariableID__Group_1__1__Impl )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1463:2: rule__VariableID__Group_1__1__Impl
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1512:1: ( rule__VariableID__Group_1__1__Impl )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1513:2: rule__VariableID__Group_1__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group_1__1__Impl_in_rule__VariableID__Group_1__12967);
+            pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group_1__1__Impl_in_rule__VariableID__Group_1__13077);
             rule__VariableID__Group_1__1__Impl();
 
             state._fsp--;
@@ -4034,21 +4205,31 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VariableID__Group_1__1__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1469:1: rule__VariableID__Group_1__1__Impl : ( RULE_ID ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1519:1: rule__VariableID__Group_1__1__Impl : ( ( rule__VariableID__Alternatives_1_1 ) ) ;
     public final void rule__VariableID__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1473:1: ( ( RULE_ID ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1474:1: ( RULE_ID )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1523:1: ( ( ( rule__VariableID__Alternatives_1_1 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1524:1: ( ( rule__VariableID__Alternatives_1_1 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1474:1: ( RULE_ID )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1475:1: RULE_ID
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1524:1: ( ( rule__VariableID__Alternatives_1_1 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1525:1: ( rule__VariableID__Alternatives_1_1 )
             {
-             before(grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_1_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__VariableID__Group_1__1__Impl2994); 
-             after(grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_1_1()); 
+             before(grammarAccess.getVariableIDAccess().getAlternatives_1_1()); 
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1526:1: ( rule__VariableID__Alternatives_1_1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1526:2: rule__VariableID__Alternatives_1_1
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__VariableID__Alternatives_1_1_in_rule__VariableID__Group_1__1__Impl3104);
+            rule__VariableID__Alternatives_1_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getVariableIDAccess().getAlternatives_1_1()); 
 
             }
 
@@ -4070,22 +4251,184 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__VariableID__Group_1__1__Impl"
 
 
+    // $ANTLR start "rule__VariableID__Group_1_1_1__0"
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1540:1: rule__VariableID__Group_1_1_1__0 : rule__VariableID__Group_1_1_1__0__Impl rule__VariableID__Group_1_1_1__1 ;
+    public final void rule__VariableID__Group_1_1_1__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1544:1: ( rule__VariableID__Group_1_1_1__0__Impl rule__VariableID__Group_1_1_1__1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1545:2: rule__VariableID__Group_1_1_1__0__Impl rule__VariableID__Group_1_1_1__1
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group_1_1_1__0__Impl_in_rule__VariableID__Group_1_1_1__03138);
+            rule__VariableID__Group_1_1_1__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group_1_1_1__1_in_rule__VariableID__Group_1_1_1__03141);
+            rule__VariableID__Group_1_1_1__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VariableID__Group_1_1_1__0"
+
+
+    // $ANTLR start "rule__VariableID__Group_1_1_1__0__Impl"
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1552:1: rule__VariableID__Group_1_1_1__0__Impl : ( RULE_INT ) ;
+    public final void rule__VariableID__Group_1_1_1__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1556:1: ( ( RULE_INT ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1557:1: ( RULE_INT )
+            {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1557:1: ( RULE_INT )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1558:1: RULE_INT
+            {
+             before(grammarAccess.getVariableIDAccess().getINTTerminalRuleCall_1_1_1_0()); 
+            match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_rule__VariableID__Group_1_1_1__0__Impl3168); 
+             after(grammarAccess.getVariableIDAccess().getINTTerminalRuleCall_1_1_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VariableID__Group_1_1_1__0__Impl"
+
+
+    // $ANTLR start "rule__VariableID__Group_1_1_1__1"
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1569:1: rule__VariableID__Group_1_1_1__1 : rule__VariableID__Group_1_1_1__1__Impl ;
+    public final void rule__VariableID__Group_1_1_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1573:1: ( rule__VariableID__Group_1_1_1__1__Impl )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1574:2: rule__VariableID__Group_1_1_1__1__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__VariableID__Group_1_1_1__1__Impl_in_rule__VariableID__Group_1_1_1__13197);
+            rule__VariableID__Group_1_1_1__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VariableID__Group_1_1_1__1"
+
+
+    // $ANTLR start "rule__VariableID__Group_1_1_1__1__Impl"
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1580:1: rule__VariableID__Group_1_1_1__1__Impl : ( ( RULE_ID )? ) ;
+    public final void rule__VariableID__Group_1_1_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1584:1: ( ( ( RULE_ID )? ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1585:1: ( ( RULE_ID )? )
+            {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1585:1: ( ( RULE_ID )? )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1586:1: ( RULE_ID )?
+            {
+             before(grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_1_1_1_1()); 
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1587:1: ( RULE_ID )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
+
+            if ( (LA14_0==RULE_ID) ) {
+                alt14=1;
+            }
+            switch (alt14) {
+                case 1 :
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1587:3: RULE_ID
+                    {
+                    match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__VariableID__Group_1_1_1__1__Impl3225); 
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_1_1_1_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VariableID__Group_1_1_1__1__Impl"
+
+
     // $ANTLR start "rule__AdditionExpression__Group__0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1490:1: rule__AdditionExpression__Group__0 : rule__AdditionExpression__Group__0__Impl rule__AdditionExpression__Group__1 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1601:1: rule__AdditionExpression__Group__0 : rule__AdditionExpression__Group__0__Impl rule__AdditionExpression__Group__1 ;
     public final void rule__AdditionExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1494:1: ( rule__AdditionExpression__Group__0__Impl rule__AdditionExpression__Group__1 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1495:2: rule__AdditionExpression__Group__0__Impl rule__AdditionExpression__Group__1
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1605:1: ( rule__AdditionExpression__Group__0__Impl rule__AdditionExpression__Group__1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1606:2: rule__AdditionExpression__Group__0__Impl rule__AdditionExpression__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group__0__Impl_in_rule__AdditionExpression__Group__03027);
+            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group__0__Impl_in_rule__AdditionExpression__Group__03260);
             rule__AdditionExpression__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group__1_in_rule__AdditionExpression__Group__03030);
+            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group__1_in_rule__AdditionExpression__Group__03263);
             rule__AdditionExpression__Group__1();
 
             state._fsp--;
@@ -4109,20 +4452,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group__0__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1502:1: rule__AdditionExpression__Group__0__Impl : ( ruleMultiplicationExpression ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1613:1: rule__AdditionExpression__Group__0__Impl : ( ruleMultiplicationExpression ) ;
     public final void rule__AdditionExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1506:1: ( ( ruleMultiplicationExpression ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1507:1: ( ruleMultiplicationExpression )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1617:1: ( ( ruleMultiplicationExpression ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1618:1: ( ruleMultiplicationExpression )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1507:1: ( ruleMultiplicationExpression )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1508:1: ruleMultiplicationExpression
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1618:1: ( ruleMultiplicationExpression )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1619:1: ruleMultiplicationExpression
             {
              before(grammarAccess.getAdditionExpressionAccess().getMultiplicationExpressionParserRuleCall_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleMultiplicationExpression_in_rule__AdditionExpression__Group__0__Impl3057);
+            pushFollow(FollowSets000.FOLLOW_ruleMultiplicationExpression_in_rule__AdditionExpression__Group__0__Impl3290);
             ruleMultiplicationExpression();
 
             state._fsp--;
@@ -4150,16 +4493,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group__1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1519:1: rule__AdditionExpression__Group__1 : rule__AdditionExpression__Group__1__Impl ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1630:1: rule__AdditionExpression__Group__1 : rule__AdditionExpression__Group__1__Impl ;
     public final void rule__AdditionExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1523:1: ( rule__AdditionExpression__Group__1__Impl )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1524:2: rule__AdditionExpression__Group__1__Impl
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1634:1: ( rule__AdditionExpression__Group__1__Impl )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1635:2: rule__AdditionExpression__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group__1__Impl_in_rule__AdditionExpression__Group__13086);
+            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group__1__Impl_in_rule__AdditionExpression__Group__13319);
             rule__AdditionExpression__Group__1__Impl();
 
             state._fsp--;
@@ -4183,31 +4526,31 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group__1__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1530:1: rule__AdditionExpression__Group__1__Impl : ( ( rule__AdditionExpression__Group_1__0 )? ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1641:1: rule__AdditionExpression__Group__1__Impl : ( ( rule__AdditionExpression__Group_1__0 )? ) ;
     public final void rule__AdditionExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1534:1: ( ( ( rule__AdditionExpression__Group_1__0 )? ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1535:1: ( ( rule__AdditionExpression__Group_1__0 )? )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1645:1: ( ( ( rule__AdditionExpression__Group_1__0 )? ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1646:1: ( ( rule__AdditionExpression__Group_1__0 )? )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1535:1: ( ( rule__AdditionExpression__Group_1__0 )? )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1536:1: ( rule__AdditionExpression__Group_1__0 )?
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1646:1: ( ( rule__AdditionExpression__Group_1__0 )? )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1647:1: ( rule__AdditionExpression__Group_1__0 )?
             {
              before(grammarAccess.getAdditionExpressionAccess().getGroup_1()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1537:1: ( rule__AdditionExpression__Group_1__0 )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1648:1: ( rule__AdditionExpression__Group_1__0 )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( ((LA13_0>=23 && LA13_0<=24)) ) {
-                alt13=1;
+            if ( ((LA15_0>=22 && LA15_0<=23)) ) {
+                alt15=1;
             }
-            switch (alt13) {
+            switch (alt15) {
                 case 1 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1537:2: rule__AdditionExpression__Group_1__0
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1648:2: rule__AdditionExpression__Group_1__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group_1__0_in_rule__AdditionExpression__Group__1__Impl3113);
+                    pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group_1__0_in_rule__AdditionExpression__Group__1__Impl3346);
                     rule__AdditionExpression__Group_1__0();
 
                     state._fsp--;
@@ -4241,21 +4584,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1__0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1551:1: rule__AdditionExpression__Group_1__0 : rule__AdditionExpression__Group_1__0__Impl rule__AdditionExpression__Group_1__1 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1662:1: rule__AdditionExpression__Group_1__0 : rule__AdditionExpression__Group_1__0__Impl rule__AdditionExpression__Group_1__1 ;
     public final void rule__AdditionExpression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1555:1: ( rule__AdditionExpression__Group_1__0__Impl rule__AdditionExpression__Group_1__1 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1556:2: rule__AdditionExpression__Group_1__0__Impl rule__AdditionExpression__Group_1__1
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1666:1: ( rule__AdditionExpression__Group_1__0__Impl rule__AdditionExpression__Group_1__1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1667:2: rule__AdditionExpression__Group_1__0__Impl rule__AdditionExpression__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group_1__0__Impl_in_rule__AdditionExpression__Group_1__03148);
+            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group_1__0__Impl_in_rule__AdditionExpression__Group_1__03381);
             rule__AdditionExpression__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group_1__1_in_rule__AdditionExpression__Group_1__03151);
+            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group_1__1_in_rule__AdditionExpression__Group_1__03384);
             rule__AdditionExpression__Group_1__1();
 
             state._fsp--;
@@ -4279,21 +4622,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1__0__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1563:1: rule__AdditionExpression__Group_1__0__Impl : ( () ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1674:1: rule__AdditionExpression__Group_1__0__Impl : ( () ) ;
     public final void rule__AdditionExpression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1567:1: ( ( () ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1568:1: ( () )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1678:1: ( ( () ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1679:1: ( () )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1568:1: ( () )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1569:1: ()
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1679:1: ( () )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1680:1: ()
             {
              before(grammarAccess.getAdditionExpressionAccess().getArithmeticExpressionLeftExpressionAction_1_0()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1570:1: ()
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1572:1: 
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1681:1: ()
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1683:1: 
             {
             }
 
@@ -4316,21 +4659,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1__1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1582:1: rule__AdditionExpression__Group_1__1 : rule__AdditionExpression__Group_1__1__Impl rule__AdditionExpression__Group_1__2 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1693:1: rule__AdditionExpression__Group_1__1 : rule__AdditionExpression__Group_1__1__Impl rule__AdditionExpression__Group_1__2 ;
     public final void rule__AdditionExpression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1586:1: ( rule__AdditionExpression__Group_1__1__Impl rule__AdditionExpression__Group_1__2 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1587:2: rule__AdditionExpression__Group_1__1__Impl rule__AdditionExpression__Group_1__2
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1697:1: ( rule__AdditionExpression__Group_1__1__Impl rule__AdditionExpression__Group_1__2 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1698:2: rule__AdditionExpression__Group_1__1__Impl rule__AdditionExpression__Group_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group_1__1__Impl_in_rule__AdditionExpression__Group_1__13209);
+            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group_1__1__Impl_in_rule__AdditionExpression__Group_1__13442);
             rule__AdditionExpression__Group_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group_1__2_in_rule__AdditionExpression__Group_1__13212);
+            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group_1__2_in_rule__AdditionExpression__Group_1__13445);
             rule__AdditionExpression__Group_1__2();
 
             state._fsp--;
@@ -4354,23 +4697,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1__1__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1594:1: rule__AdditionExpression__Group_1__1__Impl : ( ( rule__AdditionExpression__OperatorAssignment_1_1 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1705:1: rule__AdditionExpression__Group_1__1__Impl : ( ( rule__AdditionExpression__OperatorAssignment_1_1 ) ) ;
     public final void rule__AdditionExpression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1598:1: ( ( ( rule__AdditionExpression__OperatorAssignment_1_1 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1599:1: ( ( rule__AdditionExpression__OperatorAssignment_1_1 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1709:1: ( ( ( rule__AdditionExpression__OperatorAssignment_1_1 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1710:1: ( ( rule__AdditionExpression__OperatorAssignment_1_1 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1599:1: ( ( rule__AdditionExpression__OperatorAssignment_1_1 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1600:1: ( rule__AdditionExpression__OperatorAssignment_1_1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1710:1: ( ( rule__AdditionExpression__OperatorAssignment_1_1 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1711:1: ( rule__AdditionExpression__OperatorAssignment_1_1 )
             {
              before(grammarAccess.getAdditionExpressionAccess().getOperatorAssignment_1_1()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1601:1: ( rule__AdditionExpression__OperatorAssignment_1_1 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1601:2: rule__AdditionExpression__OperatorAssignment_1_1
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1712:1: ( rule__AdditionExpression__OperatorAssignment_1_1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1712:2: rule__AdditionExpression__OperatorAssignment_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__OperatorAssignment_1_1_in_rule__AdditionExpression__Group_1__1__Impl3239);
+            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__OperatorAssignment_1_1_in_rule__AdditionExpression__Group_1__1__Impl3472);
             rule__AdditionExpression__OperatorAssignment_1_1();
 
             state._fsp--;
@@ -4401,16 +4744,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1__2"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1611:1: rule__AdditionExpression__Group_1__2 : rule__AdditionExpression__Group_1__2__Impl ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1722:1: rule__AdditionExpression__Group_1__2 : rule__AdditionExpression__Group_1__2__Impl ;
     public final void rule__AdditionExpression__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1615:1: ( rule__AdditionExpression__Group_1__2__Impl )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1616:2: rule__AdditionExpression__Group_1__2__Impl
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1726:1: ( rule__AdditionExpression__Group_1__2__Impl )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1727:2: rule__AdditionExpression__Group_1__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group_1__2__Impl_in_rule__AdditionExpression__Group_1__23269);
+            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__Group_1__2__Impl_in_rule__AdditionExpression__Group_1__23502);
             rule__AdditionExpression__Group_1__2__Impl();
 
             state._fsp--;
@@ -4434,23 +4777,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1__2__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1622:1: rule__AdditionExpression__Group_1__2__Impl : ( ( rule__AdditionExpression__RightExpressionAssignment_1_2 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1733:1: rule__AdditionExpression__Group_1__2__Impl : ( ( rule__AdditionExpression__RightExpressionAssignment_1_2 ) ) ;
     public final void rule__AdditionExpression__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1626:1: ( ( ( rule__AdditionExpression__RightExpressionAssignment_1_2 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1627:1: ( ( rule__AdditionExpression__RightExpressionAssignment_1_2 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1737:1: ( ( ( rule__AdditionExpression__RightExpressionAssignment_1_2 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1738:1: ( ( rule__AdditionExpression__RightExpressionAssignment_1_2 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1627:1: ( ( rule__AdditionExpression__RightExpressionAssignment_1_2 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1628:1: ( rule__AdditionExpression__RightExpressionAssignment_1_2 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1738:1: ( ( rule__AdditionExpression__RightExpressionAssignment_1_2 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1739:1: ( rule__AdditionExpression__RightExpressionAssignment_1_2 )
             {
              before(grammarAccess.getAdditionExpressionAccess().getRightExpressionAssignment_1_2()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1629:1: ( rule__AdditionExpression__RightExpressionAssignment_1_2 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1629:2: rule__AdditionExpression__RightExpressionAssignment_1_2
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1740:1: ( rule__AdditionExpression__RightExpressionAssignment_1_2 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1740:2: rule__AdditionExpression__RightExpressionAssignment_1_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__RightExpressionAssignment_1_2_in_rule__AdditionExpression__Group_1__2__Impl3296);
+            pushFollow(FollowSets000.FOLLOW_rule__AdditionExpression__RightExpressionAssignment_1_2_in_rule__AdditionExpression__Group_1__2__Impl3529);
             rule__AdditionExpression__RightExpressionAssignment_1_2();
 
             state._fsp--;
@@ -4481,21 +4824,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group__0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1645:1: rule__MultiplicationExpression__Group__0 : rule__MultiplicationExpression__Group__0__Impl rule__MultiplicationExpression__Group__1 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1756:1: rule__MultiplicationExpression__Group__0 : rule__MultiplicationExpression__Group__0__Impl rule__MultiplicationExpression__Group__1 ;
     public final void rule__MultiplicationExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1649:1: ( rule__MultiplicationExpression__Group__0__Impl rule__MultiplicationExpression__Group__1 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1650:2: rule__MultiplicationExpression__Group__0__Impl rule__MultiplicationExpression__Group__1
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1760:1: ( rule__MultiplicationExpression__Group__0__Impl rule__MultiplicationExpression__Group__1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1761:2: rule__MultiplicationExpression__Group__0__Impl rule__MultiplicationExpression__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group__0__Impl_in_rule__MultiplicationExpression__Group__03332);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group__0__Impl_in_rule__MultiplicationExpression__Group__03565);
             rule__MultiplicationExpression__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group__1_in_rule__MultiplicationExpression__Group__03335);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group__1_in_rule__MultiplicationExpression__Group__03568);
             rule__MultiplicationExpression__Group__1();
 
             state._fsp--;
@@ -4519,20 +4862,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group__0__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1657:1: rule__MultiplicationExpression__Group__0__Impl : ( ruleOperand ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1768:1: rule__MultiplicationExpression__Group__0__Impl : ( ruleOperand ) ;
     public final void rule__MultiplicationExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1661:1: ( ( ruleOperand ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1662:1: ( ruleOperand )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1772:1: ( ( ruleOperand ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1773:1: ( ruleOperand )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1662:1: ( ruleOperand )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1663:1: ruleOperand
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1773:1: ( ruleOperand )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1774:1: ruleOperand
             {
              before(grammarAccess.getMultiplicationExpressionAccess().getOperandParserRuleCall_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleOperand_in_rule__MultiplicationExpression__Group__0__Impl3362);
+            pushFollow(FollowSets000.FOLLOW_ruleOperand_in_rule__MultiplicationExpression__Group__0__Impl3595);
             ruleOperand();
 
             state._fsp--;
@@ -4560,16 +4903,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group__1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1674:1: rule__MultiplicationExpression__Group__1 : rule__MultiplicationExpression__Group__1__Impl ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1785:1: rule__MultiplicationExpression__Group__1 : rule__MultiplicationExpression__Group__1__Impl ;
     public final void rule__MultiplicationExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1678:1: ( rule__MultiplicationExpression__Group__1__Impl )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1679:2: rule__MultiplicationExpression__Group__1__Impl
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1789:1: ( rule__MultiplicationExpression__Group__1__Impl )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1790:2: rule__MultiplicationExpression__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group__1__Impl_in_rule__MultiplicationExpression__Group__13391);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group__1__Impl_in_rule__MultiplicationExpression__Group__13624);
             rule__MultiplicationExpression__Group__1__Impl();
 
             state._fsp--;
@@ -4593,31 +4936,31 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group__1__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1685:1: rule__MultiplicationExpression__Group__1__Impl : ( ( rule__MultiplicationExpression__Group_1__0 )? ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1796:1: rule__MultiplicationExpression__Group__1__Impl : ( ( rule__MultiplicationExpression__Group_1__0 )? ) ;
     public final void rule__MultiplicationExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1689:1: ( ( ( rule__MultiplicationExpression__Group_1__0 )? ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1690:1: ( ( rule__MultiplicationExpression__Group_1__0 )? )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1800:1: ( ( ( rule__MultiplicationExpression__Group_1__0 )? ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1801:1: ( ( rule__MultiplicationExpression__Group_1__0 )? )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1690:1: ( ( rule__MultiplicationExpression__Group_1__0 )? )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1691:1: ( rule__MultiplicationExpression__Group_1__0 )?
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1801:1: ( ( rule__MultiplicationExpression__Group_1__0 )? )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1802:1: ( rule__MultiplicationExpression__Group_1__0 )?
             {
              before(grammarAccess.getMultiplicationExpressionAccess().getGroup_1()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1692:1: ( rule__MultiplicationExpression__Group_1__0 )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1803:1: ( rule__MultiplicationExpression__Group_1__0 )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA14_0==12) ) {
-                alt14=1;
+            if ( (LA16_0==11) ) {
+                alt16=1;
             }
-            switch (alt14) {
+            switch (alt16) {
                 case 1 :
-                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1692:2: rule__MultiplicationExpression__Group_1__0
+                    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1803:2: rule__MultiplicationExpression__Group_1__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group_1__0_in_rule__MultiplicationExpression__Group__1__Impl3418);
+                    pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group_1__0_in_rule__MultiplicationExpression__Group__1__Impl3651);
                     rule__MultiplicationExpression__Group_1__0();
 
                     state._fsp--;
@@ -4651,21 +4994,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1__0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1706:1: rule__MultiplicationExpression__Group_1__0 : rule__MultiplicationExpression__Group_1__0__Impl rule__MultiplicationExpression__Group_1__1 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1817:1: rule__MultiplicationExpression__Group_1__0 : rule__MultiplicationExpression__Group_1__0__Impl rule__MultiplicationExpression__Group_1__1 ;
     public final void rule__MultiplicationExpression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1710:1: ( rule__MultiplicationExpression__Group_1__0__Impl rule__MultiplicationExpression__Group_1__1 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1711:2: rule__MultiplicationExpression__Group_1__0__Impl rule__MultiplicationExpression__Group_1__1
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1821:1: ( rule__MultiplicationExpression__Group_1__0__Impl rule__MultiplicationExpression__Group_1__1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1822:2: rule__MultiplicationExpression__Group_1__0__Impl rule__MultiplicationExpression__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group_1__0__Impl_in_rule__MultiplicationExpression__Group_1__03453);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group_1__0__Impl_in_rule__MultiplicationExpression__Group_1__03686);
             rule__MultiplicationExpression__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group_1__1_in_rule__MultiplicationExpression__Group_1__03456);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group_1__1_in_rule__MultiplicationExpression__Group_1__03689);
             rule__MultiplicationExpression__Group_1__1();
 
             state._fsp--;
@@ -4689,21 +5032,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1__0__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1718:1: rule__MultiplicationExpression__Group_1__0__Impl : ( () ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1829:1: rule__MultiplicationExpression__Group_1__0__Impl : ( () ) ;
     public final void rule__MultiplicationExpression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1722:1: ( ( () ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1723:1: ( () )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1833:1: ( ( () ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1834:1: ( () )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1723:1: ( () )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1724:1: ()
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1834:1: ( () )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1835:1: ()
             {
              before(grammarAccess.getMultiplicationExpressionAccess().getArithmeticExpressionLeftExpressionAction_1_0()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1725:1: ()
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1727:1: 
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1836:1: ()
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1838:1: 
             {
             }
 
@@ -4726,21 +5069,21 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1__1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1737:1: rule__MultiplicationExpression__Group_1__1 : rule__MultiplicationExpression__Group_1__1__Impl rule__MultiplicationExpression__Group_1__2 ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1848:1: rule__MultiplicationExpression__Group_1__1 : rule__MultiplicationExpression__Group_1__1__Impl rule__MultiplicationExpression__Group_1__2 ;
     public final void rule__MultiplicationExpression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1741:1: ( rule__MultiplicationExpression__Group_1__1__Impl rule__MultiplicationExpression__Group_1__2 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1742:2: rule__MultiplicationExpression__Group_1__1__Impl rule__MultiplicationExpression__Group_1__2
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1852:1: ( rule__MultiplicationExpression__Group_1__1__Impl rule__MultiplicationExpression__Group_1__2 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1853:2: rule__MultiplicationExpression__Group_1__1__Impl rule__MultiplicationExpression__Group_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group_1__1__Impl_in_rule__MultiplicationExpression__Group_1__13514);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group_1__1__Impl_in_rule__MultiplicationExpression__Group_1__13747);
             rule__MultiplicationExpression__Group_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group_1__2_in_rule__MultiplicationExpression__Group_1__13517);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group_1__2_in_rule__MultiplicationExpression__Group_1__13750);
             rule__MultiplicationExpression__Group_1__2();
 
             state._fsp--;
@@ -4764,23 +5107,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1__1__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1749:1: rule__MultiplicationExpression__Group_1__1__Impl : ( ( rule__MultiplicationExpression__OperatorAssignment_1_1 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1860:1: rule__MultiplicationExpression__Group_1__1__Impl : ( ( rule__MultiplicationExpression__OperatorAssignment_1_1 ) ) ;
     public final void rule__MultiplicationExpression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1753:1: ( ( ( rule__MultiplicationExpression__OperatorAssignment_1_1 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1754:1: ( ( rule__MultiplicationExpression__OperatorAssignment_1_1 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1864:1: ( ( ( rule__MultiplicationExpression__OperatorAssignment_1_1 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1865:1: ( ( rule__MultiplicationExpression__OperatorAssignment_1_1 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1754:1: ( ( rule__MultiplicationExpression__OperatorAssignment_1_1 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1755:1: ( rule__MultiplicationExpression__OperatorAssignment_1_1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1865:1: ( ( rule__MultiplicationExpression__OperatorAssignment_1_1 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1866:1: ( rule__MultiplicationExpression__OperatorAssignment_1_1 )
             {
              before(grammarAccess.getMultiplicationExpressionAccess().getOperatorAssignment_1_1()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1756:1: ( rule__MultiplicationExpression__OperatorAssignment_1_1 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1756:2: rule__MultiplicationExpression__OperatorAssignment_1_1
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1867:1: ( rule__MultiplicationExpression__OperatorAssignment_1_1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1867:2: rule__MultiplicationExpression__OperatorAssignment_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__OperatorAssignment_1_1_in_rule__MultiplicationExpression__Group_1__1__Impl3544);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__OperatorAssignment_1_1_in_rule__MultiplicationExpression__Group_1__1__Impl3777);
             rule__MultiplicationExpression__OperatorAssignment_1_1();
 
             state._fsp--;
@@ -4811,16 +5154,16 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1__2"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1766:1: rule__MultiplicationExpression__Group_1__2 : rule__MultiplicationExpression__Group_1__2__Impl ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1877:1: rule__MultiplicationExpression__Group_1__2 : rule__MultiplicationExpression__Group_1__2__Impl ;
     public final void rule__MultiplicationExpression__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1770:1: ( rule__MultiplicationExpression__Group_1__2__Impl )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1771:2: rule__MultiplicationExpression__Group_1__2__Impl
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1881:1: ( rule__MultiplicationExpression__Group_1__2__Impl )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1882:2: rule__MultiplicationExpression__Group_1__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group_1__2__Impl_in_rule__MultiplicationExpression__Group_1__23574);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__Group_1__2__Impl_in_rule__MultiplicationExpression__Group_1__23807);
             rule__MultiplicationExpression__Group_1__2__Impl();
 
             state._fsp--;
@@ -4844,23 +5187,23 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1__2__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1777:1: rule__MultiplicationExpression__Group_1__2__Impl : ( ( rule__MultiplicationExpression__RightExpressionAssignment_1_2 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1888:1: rule__MultiplicationExpression__Group_1__2__Impl : ( ( rule__MultiplicationExpression__RightExpressionAssignment_1_2 ) ) ;
     public final void rule__MultiplicationExpression__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1781:1: ( ( ( rule__MultiplicationExpression__RightExpressionAssignment_1_2 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1782:1: ( ( rule__MultiplicationExpression__RightExpressionAssignment_1_2 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1892:1: ( ( ( rule__MultiplicationExpression__RightExpressionAssignment_1_2 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1893:1: ( ( rule__MultiplicationExpression__RightExpressionAssignment_1_2 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1782:1: ( ( rule__MultiplicationExpression__RightExpressionAssignment_1_2 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1783:1: ( rule__MultiplicationExpression__RightExpressionAssignment_1_2 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1893:1: ( ( rule__MultiplicationExpression__RightExpressionAssignment_1_2 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1894:1: ( rule__MultiplicationExpression__RightExpressionAssignment_1_2 )
             {
              before(grammarAccess.getMultiplicationExpressionAccess().getRightExpressionAssignment_1_2()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1784:1: ( rule__MultiplicationExpression__RightExpressionAssignment_1_2 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1784:2: rule__MultiplicationExpression__RightExpressionAssignment_1_2
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1895:1: ( rule__MultiplicationExpression__RightExpressionAssignment_1_2 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1895:2: rule__MultiplicationExpression__RightExpressionAssignment_1_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__RightExpressionAssignment_1_2_in_rule__MultiplicationExpression__Group_1__2__Impl3601);
+            pushFollow(FollowSets000.FOLLOW_rule__MultiplicationExpression__RightExpressionAssignment_1_2_in_rule__MultiplicationExpression__Group_1__2__Impl3834);
             rule__MultiplicationExpression__RightExpressionAssignment_1_2();
 
             state._fsp--;
@@ -4890,21 +5233,241 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__MultiplicationExpression__Group_1__2__Impl"
 
 
+    // $ANTLR start "rule__Decimal__Group__0"
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1911:1: rule__Decimal__Group__0 : rule__Decimal__Group__0__Impl rule__Decimal__Group__1 ;
+    public final void rule__Decimal__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1915:1: ( rule__Decimal__Group__0__Impl rule__Decimal__Group__1 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1916:2: rule__Decimal__Group__0__Impl rule__Decimal__Group__1
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Decimal__Group__0__Impl_in_rule__Decimal__Group__03870);
+            rule__Decimal__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FollowSets000.FOLLOW_rule__Decimal__Group__1_in_rule__Decimal__Group__03873);
+            rule__Decimal__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Decimal__Group__0"
+
+
+    // $ANTLR start "rule__Decimal__Group__0__Impl"
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1923:1: rule__Decimal__Group__0__Impl : ( RULE_INT ) ;
+    public final void rule__Decimal__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1927:1: ( ( RULE_INT ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1928:1: ( RULE_INT )
+            {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1928:1: ( RULE_INT )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1929:1: RULE_INT
+            {
+             before(grammarAccess.getDecimalAccess().getINTTerminalRuleCall_0()); 
+            match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_rule__Decimal__Group__0__Impl3900); 
+             after(grammarAccess.getDecimalAccess().getINTTerminalRuleCall_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Decimal__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Decimal__Group__1"
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1940:1: rule__Decimal__Group__1 : rule__Decimal__Group__1__Impl rule__Decimal__Group__2 ;
+    public final void rule__Decimal__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1944:1: ( rule__Decimal__Group__1__Impl rule__Decimal__Group__2 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1945:2: rule__Decimal__Group__1__Impl rule__Decimal__Group__2
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Decimal__Group__1__Impl_in_rule__Decimal__Group__13929);
+            rule__Decimal__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FollowSets000.FOLLOW_rule__Decimal__Group__2_in_rule__Decimal__Group__13932);
+            rule__Decimal__Group__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Decimal__Group__1"
+
+
+    // $ANTLR start "rule__Decimal__Group__1__Impl"
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1952:1: rule__Decimal__Group__1__Impl : ( '.' ) ;
+    public final void rule__Decimal__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1956:1: ( ( '.' ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1957:1: ( '.' )
+            {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1957:1: ( '.' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1958:1: '.'
+            {
+             before(grammarAccess.getDecimalAccess().getFullStopKeyword_1()); 
+            match(input,26,FollowSets000.FOLLOW_26_in_rule__Decimal__Group__1__Impl3960); 
+             after(grammarAccess.getDecimalAccess().getFullStopKeyword_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Decimal__Group__1__Impl"
+
+
+    // $ANTLR start "rule__Decimal__Group__2"
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1971:1: rule__Decimal__Group__2 : rule__Decimal__Group__2__Impl ;
+    public final void rule__Decimal__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1975:1: ( rule__Decimal__Group__2__Impl )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1976:2: rule__Decimal__Group__2__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Decimal__Group__2__Impl_in_rule__Decimal__Group__23991);
+            rule__Decimal__Group__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Decimal__Group__2"
+
+
+    // $ANTLR start "rule__Decimal__Group__2__Impl"
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1982:1: rule__Decimal__Group__2__Impl : ( RULE_INT ) ;
+    public final void rule__Decimal__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1986:1: ( ( RULE_INT ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1987:1: ( RULE_INT )
+            {
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1987:1: ( RULE_INT )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1988:1: RULE_INT
+            {
+             before(grammarAccess.getDecimalAccess().getINTTerminalRuleCall_2()); 
+            match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_rule__Decimal__Group__2__Impl4018); 
+             after(grammarAccess.getDecimalAccess().getINTTerminalRuleCall_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Decimal__Group__2__Impl"
+
+
     // $ANTLR start "rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1801:1: rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0 : ( ruleObjectiveFunctionExpression ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2006:1: rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0 : ( ruleObjectiveFunctionExpression ) ;
     public final void rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1805:1: ( ( ruleObjectiveFunctionExpression ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1806:1: ( ruleObjectiveFunctionExpression )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2010:1: ( ( ruleObjectiveFunctionExpression ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2011:1: ( ruleObjectiveFunctionExpression )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1806:1: ( ruleObjectiveFunctionExpression )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1807:1: ruleObjectiveFunctionExpression
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2011:1: ( ruleObjectiveFunctionExpression )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2012:1: ruleObjectiveFunctionExpression
             {
              before(grammarAccess.getIntegerLinearProgramAccess().getObjectiveFunctionObjectiveFunctionExpressionParserRuleCall_0_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleObjectiveFunctionExpression_in_rule__IntegerLinearProgram__ObjectiveFunctionAssignment_03642);
+            pushFollow(FollowSets000.FOLLOW_ruleObjectiveFunctionExpression_in_rule__IntegerLinearProgram__ObjectiveFunctionAssignment_04058);
             ruleObjectiveFunctionExpression();
 
             state._fsp--;
@@ -4932,20 +5495,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntegerLinearProgram__ConstraintsAssignment_1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1816:1: rule__IntegerLinearProgram__ConstraintsAssignment_1 : ( ruleConstraintExpression ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2021:1: rule__IntegerLinearProgram__ConstraintsAssignment_1 : ( ruleConstraintExpression ) ;
     public final void rule__IntegerLinearProgram__ConstraintsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1820:1: ( ( ruleConstraintExpression ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1821:1: ( ruleConstraintExpression )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2025:1: ( ( ruleConstraintExpression ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2026:1: ( ruleConstraintExpression )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1821:1: ( ruleConstraintExpression )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1822:1: ruleConstraintExpression
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2026:1: ( ruleConstraintExpression )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2027:1: ruleConstraintExpression
             {
              before(grammarAccess.getIntegerLinearProgramAccess().getConstraintsConstraintExpressionParserRuleCall_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleConstraintExpression_in_rule__IntegerLinearProgram__ConstraintsAssignment_13673);
+            pushFollow(FollowSets000.FOLLOW_ruleConstraintExpression_in_rule__IntegerLinearProgram__ConstraintsAssignment_14089);
             ruleConstraintExpression();
 
             state._fsp--;
@@ -4973,20 +5536,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntegerLinearProgram__VariablesAssignment_2"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1831:1: rule__IntegerLinearProgram__VariablesAssignment_2 : ( ruleVariable ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2036:1: rule__IntegerLinearProgram__VariablesAssignment_2 : ( ruleVariable ) ;
     public final void rule__IntegerLinearProgram__VariablesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1835:1: ( ( ruleVariable ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1836:1: ( ruleVariable )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2040:1: ( ( ruleVariable ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2041:1: ( ruleVariable )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1836:1: ( ruleVariable )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1837:1: ruleVariable
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2041:1: ( ruleVariable )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2042:1: ruleVariable
             {
              before(grammarAccess.getIntegerLinearProgramAccess().getVariablesVariableParserRuleCall_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleVariable_in_rule__IntegerLinearProgram__VariablesAssignment_23704);
+            pushFollow(FollowSets000.FOLLOW_ruleVariable_in_rule__IntegerLinearProgram__VariablesAssignment_24120);
             ruleVariable();
 
             state._fsp--;
@@ -5014,20 +5577,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__GoalAssignment_1_0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1846:1: rule__ObjectiveFunctionExpression__GoalAssignment_1_0 : ( ruleObjectiveGoal ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2051:1: rule__ObjectiveFunctionExpression__GoalAssignment_1_0 : ( ruleObjectiveGoal ) ;
     public final void rule__ObjectiveFunctionExpression__GoalAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1850:1: ( ( ruleObjectiveGoal ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1851:1: ( ruleObjectiveGoal )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2055:1: ( ( ruleObjectiveGoal ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2056:1: ( ruleObjectiveGoal )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1851:1: ( ruleObjectiveGoal )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1852:1: ruleObjectiveGoal
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2056:1: ( ruleObjectiveGoal )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2057:1: ruleObjectiveGoal
             {
              before(grammarAccess.getObjectiveFunctionExpressionAccess().getGoalObjectiveGoalEnumRuleCall_1_0_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleObjectiveGoal_in_rule__ObjectiveFunctionExpression__GoalAssignment_1_03735);
+            pushFollow(FollowSets000.FOLLOW_ruleObjectiveGoal_in_rule__ObjectiveFunctionExpression__GoalAssignment_1_04151);
             ruleObjectiveGoal();
 
             state._fsp--;
@@ -5055,20 +5618,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1861:1: rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2 : ( ruleLinearExpression ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2066:1: rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2 : ( ruleLinearExpression ) ;
     public final void rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1865:1: ( ( ruleLinearExpression ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1866:1: ( ruleLinearExpression )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2070:1: ( ( ruleLinearExpression ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2071:1: ( ruleLinearExpression )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1866:1: ( ruleLinearExpression )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1867:1: ruleLinearExpression
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2071:1: ( ruleLinearExpression )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2072:1: ruleLinearExpression
             {
              before(grammarAccess.getObjectiveFunctionExpressionAccess().getObjectiveFunctionLinearExpressionParserRuleCall_1_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleLinearExpression_in_rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_23766);
+            pushFollow(FollowSets000.FOLLOW_ruleLinearExpression_in_rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_24182);
             ruleLinearExpression();
 
             state._fsp--;
@@ -5096,20 +5659,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__CommentAssignment_0_0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1876:1: rule__ConstraintExpression__CommentAssignment_0_0 : ( ruleVariableID ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2081:1: rule__ConstraintExpression__CommentAssignment_0_0 : ( ruleVariableID ) ;
     public final void rule__ConstraintExpression__CommentAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1880:1: ( ( ruleVariableID ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1881:1: ( ruleVariableID )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2085:1: ( ( ruleVariableID ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2086:1: ( ruleVariableID )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1881:1: ( ruleVariableID )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1882:1: ruleVariableID
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2086:1: ( ruleVariableID )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2087:1: ruleVariableID
             {
              before(grammarAccess.getConstraintExpressionAccess().getCommentVariableIDParserRuleCall_0_0_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleVariableID_in_rule__ConstraintExpression__CommentAssignment_0_03797);
+            pushFollow(FollowSets000.FOLLOW_ruleVariableID_in_rule__ConstraintExpression__CommentAssignment_0_04213);
             ruleVariableID();
 
             state._fsp--;
@@ -5137,20 +5700,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__LeftExpressionAssignment_1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1891:1: rule__ConstraintExpression__LeftExpressionAssignment_1 : ( ruleSimpleLinearExpression ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2096:1: rule__ConstraintExpression__LeftExpressionAssignment_1 : ( ruleSimpleLinearExpression ) ;
     public final void rule__ConstraintExpression__LeftExpressionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1895:1: ( ( ruleSimpleLinearExpression ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1896:1: ( ruleSimpleLinearExpression )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2100:1: ( ( ruleSimpleLinearExpression ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2101:1: ( ruleSimpleLinearExpression )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1896:1: ( ruleSimpleLinearExpression )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1897:1: ruleSimpleLinearExpression
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2101:1: ( ruleSimpleLinearExpression )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2102:1: ruleSimpleLinearExpression
             {
              before(grammarAccess.getConstraintExpressionAccess().getLeftExpressionSimpleLinearExpressionParserRuleCall_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleSimpleLinearExpression_in_rule__ConstraintExpression__LeftExpressionAssignment_13828);
+            pushFollow(FollowSets000.FOLLOW_ruleSimpleLinearExpression_in_rule__ConstraintExpression__LeftExpressionAssignment_14244);
             ruleSimpleLinearExpression();
 
             state._fsp--;
@@ -5178,20 +5741,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__OperatorAssignment_2"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1906:1: rule__ConstraintExpression__OperatorAssignment_2 : ( ruleComparingOperator ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2111:1: rule__ConstraintExpression__OperatorAssignment_2 : ( ruleComparingOperator ) ;
     public final void rule__ConstraintExpression__OperatorAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1910:1: ( ( ruleComparingOperator ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1911:1: ( ruleComparingOperator )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2115:1: ( ( ruleComparingOperator ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2116:1: ( ruleComparingOperator )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1911:1: ( ruleComparingOperator )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1912:1: ruleComparingOperator
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2116:1: ( ruleComparingOperator )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2117:1: ruleComparingOperator
             {
              before(grammarAccess.getConstraintExpressionAccess().getOperatorComparingOperatorEnumRuleCall_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleComparingOperator_in_rule__ConstraintExpression__OperatorAssignment_23859);
+            pushFollow(FollowSets000.FOLLOW_ruleComparingOperator_in_rule__ConstraintExpression__OperatorAssignment_24275);
             ruleComparingOperator();
 
             state._fsp--;
@@ -5219,20 +5782,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstraintExpression__RightExpressionAssignment_3"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1921:1: rule__ConstraintExpression__RightExpressionAssignment_3 : ( ruleSimpleLinearExpression ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2126:1: rule__ConstraintExpression__RightExpressionAssignment_3 : ( ruleSimpleLinearExpression ) ;
     public final void rule__ConstraintExpression__RightExpressionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1925:1: ( ( ruleSimpleLinearExpression ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1926:1: ( ruleSimpleLinearExpression )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2130:1: ( ( ruleSimpleLinearExpression ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2131:1: ( ruleSimpleLinearExpression )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1926:1: ( ruleSimpleLinearExpression )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1927:1: ruleSimpleLinearExpression
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2131:1: ( ruleSimpleLinearExpression )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2132:1: ruleSimpleLinearExpression
             {
              before(grammarAccess.getConstraintExpressionAccess().getRightExpressionSimpleLinearExpressionParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleSimpleLinearExpression_in_rule__ConstraintExpression__RightExpressionAssignment_33890);
+            pushFollow(FollowSets000.FOLLOW_ruleSimpleLinearExpression_in_rule__ConstraintExpression__RightExpressionAssignment_34306);
             ruleSimpleLinearExpression();
 
             state._fsp--;
@@ -5260,20 +5823,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Variable__DataTypeAssignment_0"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1936:1: rule__Variable__DataTypeAssignment_0 : ( ruleILPDataType ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2141:1: rule__Variable__DataTypeAssignment_0 : ( ruleILPDataType ) ;
     public final void rule__Variable__DataTypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1940:1: ( ( ruleILPDataType ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1941:1: ( ruleILPDataType )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2145:1: ( ( ruleILPDataType ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2146:1: ( ruleILPDataType )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1941:1: ( ruleILPDataType )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1942:1: ruleILPDataType
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2146:1: ( ruleILPDataType )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2147:1: ruleILPDataType
             {
              before(grammarAccess.getVariableAccess().getDataTypeILPDataTypeEnumRuleCall_0_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleILPDataType_in_rule__Variable__DataTypeAssignment_03921);
+            pushFollow(FollowSets000.FOLLOW_ruleILPDataType_in_rule__Variable__DataTypeAssignment_04337);
             ruleILPDataType();
 
             state._fsp--;
@@ -5301,20 +5864,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Variable__NameAssignment_1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1951:1: rule__Variable__NameAssignment_1 : ( ruleVariableID ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2156:1: rule__Variable__NameAssignment_1 : ( ruleVariableID ) ;
     public final void rule__Variable__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1955:1: ( ( ruleVariableID ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1956:1: ( ruleVariableID )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2160:1: ( ( ruleVariableID ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2161:1: ( ruleVariableID )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1956:1: ( ruleVariableID )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1957:1: ruleVariableID
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2161:1: ( ruleVariableID )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2162:1: ruleVariableID
             {
              before(grammarAccess.getVariableAccess().getNameVariableIDParserRuleCall_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleVariableID_in_rule__Variable__NameAssignment_13952);
+            pushFollow(FollowSets000.FOLLOW_ruleVariableID_in_rule__Variable__NameAssignment_14368);
             ruleVariableID();
 
             state._fsp--;
@@ -5342,20 +5905,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__OperatorAssignment_1_1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1966:1: rule__AdditionExpression__OperatorAssignment_1_1 : ( ruleAdditionOperator ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2171:1: rule__AdditionExpression__OperatorAssignment_1_1 : ( ruleAdditionOperator ) ;
     public final void rule__AdditionExpression__OperatorAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1970:1: ( ( ruleAdditionOperator ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1971:1: ( ruleAdditionOperator )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2175:1: ( ( ruleAdditionOperator ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2176:1: ( ruleAdditionOperator )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1971:1: ( ruleAdditionOperator )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1972:1: ruleAdditionOperator
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2176:1: ( ruleAdditionOperator )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2177:1: ruleAdditionOperator
             {
              before(grammarAccess.getAdditionExpressionAccess().getOperatorAdditionOperatorEnumRuleCall_1_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAdditionOperator_in_rule__AdditionExpression__OperatorAssignment_1_13983);
+            pushFollow(FollowSets000.FOLLOW_ruleAdditionOperator_in_rule__AdditionExpression__OperatorAssignment_1_14399);
             ruleAdditionOperator();
 
             state._fsp--;
@@ -5383,20 +5946,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__RightExpressionAssignment_1_2"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1981:1: rule__AdditionExpression__RightExpressionAssignment_1_2 : ( ruleLinearExpression ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2186:1: rule__AdditionExpression__RightExpressionAssignment_1_2 : ( ruleLinearExpression ) ;
     public final void rule__AdditionExpression__RightExpressionAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1985:1: ( ( ruleLinearExpression ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1986:1: ( ruleLinearExpression )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2190:1: ( ( ruleLinearExpression ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2191:1: ( ruleLinearExpression )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1986:1: ( ruleLinearExpression )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1987:1: ruleLinearExpression
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2191:1: ( ruleLinearExpression )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2192:1: ruleLinearExpression
             {
              before(grammarAccess.getAdditionExpressionAccess().getRightExpressionLinearExpressionParserRuleCall_1_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleLinearExpression_in_rule__AdditionExpression__RightExpressionAssignment_1_24014);
+            pushFollow(FollowSets000.FOLLOW_ruleLinearExpression_in_rule__AdditionExpression__RightExpressionAssignment_1_24430);
             ruleLinearExpression();
 
             state._fsp--;
@@ -5424,20 +5987,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__OperatorAssignment_1_1"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:1996:1: rule__MultiplicationExpression__OperatorAssignment_1_1 : ( ruleMultiplicationOperator ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2201:1: rule__MultiplicationExpression__OperatorAssignment_1_1 : ( ruleMultiplicationOperator ) ;
     public final void rule__MultiplicationExpression__OperatorAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2000:1: ( ( ruleMultiplicationOperator ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2001:1: ( ruleMultiplicationOperator )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2205:1: ( ( ruleMultiplicationOperator ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2206:1: ( ruleMultiplicationOperator )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2001:1: ( ruleMultiplicationOperator )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2002:1: ruleMultiplicationOperator
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2206:1: ( ruleMultiplicationOperator )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2207:1: ruleMultiplicationOperator
             {
              before(grammarAccess.getMultiplicationExpressionAccess().getOperatorMultiplicationOperatorEnumRuleCall_1_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleMultiplicationOperator_in_rule__MultiplicationExpression__OperatorAssignment_1_14045);
+            pushFollow(FollowSets000.FOLLOW_ruleMultiplicationOperator_in_rule__MultiplicationExpression__OperatorAssignment_1_14461);
             ruleMultiplicationOperator();
 
             state._fsp--;
@@ -5465,20 +6028,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__RightExpressionAssignment_1_2"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2011:1: rule__MultiplicationExpression__RightExpressionAssignment_1_2 : ( ruleOperand ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2216:1: rule__MultiplicationExpression__RightExpressionAssignment_1_2 : ( ruleOperand ) ;
     public final void rule__MultiplicationExpression__RightExpressionAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2015:1: ( ( ruleOperand ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2016:1: ( ruleOperand )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2220:1: ( ( ruleOperand ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2221:1: ( ruleOperand )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2016:1: ( ruleOperand )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2017:1: ruleOperand
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2221:1: ( ruleOperand )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2222:1: ruleOperand
             {
              before(grammarAccess.getMultiplicationExpressionAccess().getRightExpressionOperandParserRuleCall_1_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleOperand_in_rule__MultiplicationExpression__RightExpressionAssignment_1_24076);
+            pushFollow(FollowSets000.FOLLOW_ruleOperand_in_rule__MultiplicationExpression__RightExpressionAssignment_1_24492);
             ruleOperand();
 
             state._fsp--;
@@ -5506,20 +6069,20 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NumberLiteralExpression__ValueAssignment"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2026:1: rule__NumberLiteralExpression__ValueAssignment : ( ruleNumber ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2231:1: rule__NumberLiteralExpression__ValueAssignment : ( ruleNumber ) ;
     public final void rule__NumberLiteralExpression__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2030:1: ( ( ruleNumber ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2031:1: ( ruleNumber )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2235:1: ( ( ruleNumber ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2236:1: ( ruleNumber )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2031:1: ( ruleNumber )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2032:1: ruleNumber
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2236:1: ( ruleNumber )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2237:1: ruleNumber
             {
              before(grammarAccess.getNumberLiteralExpressionAccess().getValueNumberParserRuleCall_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleNumber_in_rule__NumberLiteralExpression__ValueAssignment4107);
+            pushFollow(FollowSets000.FOLLOW_ruleNumber_in_rule__NumberLiteralExpression__ValueAssignment4523);
             ruleNumber();
 
             state._fsp--;
@@ -5547,24 +6110,24 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VariableExpression__VariableAssignment"
-    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2041:1: rule__VariableExpression__VariableAssignment : ( ( ruleVariableID ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2246:1: rule__VariableExpression__VariableAssignment : ( ( ruleVariableID ) ) ;
     public final void rule__VariableExpression__VariableAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2045:1: ( ( ( ruleVariableID ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2046:1: ( ( ruleVariableID ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2250:1: ( ( ( ruleVariableID ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2251:1: ( ( ruleVariableID ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2046:1: ( ( ruleVariableID ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2047:1: ( ruleVariableID )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2251:1: ( ( ruleVariableID ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2252:1: ( ruleVariableID )
             {
              before(grammarAccess.getVariableExpressionAccess().getVariableVariableCrossReference_0()); 
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2048:1: ( ruleVariableID )
-            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2049:1: ruleVariableID
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2253:1: ( ruleVariableID )
+            // ../de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/ui/contentassist/antlr/internal/InternalLPSolve.g:2254:1: ruleVariableID
             {
              before(grammarAccess.getVariableExpressionAccess().getVariableVariableVariableIDParserRuleCall_0_1()); 
-            pushFollow(FollowSets000.FOLLOW_ruleVariableID_in_rule__VariableExpression__VariableAssignment4142);
+            pushFollow(FollowSets000.FOLLOW_ruleVariableID_in_rule__VariableExpression__VariableAssignment4558);
             ruleVariableID();
 
             state._fsp--;
@@ -5597,59 +6160,61 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
     // Delegated rules
 
 
-    protected DFA11 dfa11 = new DFA11(this);
-    static final String DFA11_eotS =
-        "\6\uffff";
-    static final String DFA11_eofS =
-        "\6\uffff";
-    static final String DFA11_minS =
-        "\1\4\1\14\1\uffff\1\6\1\uffff\1\14";
-    static final String DFA11_maxS =
-        "\1\6\1\33\1\uffff\1\6\1\uffff\1\33";
-    static final String DFA11_acceptS =
-        "\2\uffff\1\2\1\uffff\1\1\1\uffff";
-    static final String DFA11_specialS =
-        "\6\uffff}>";
-    static final String[] DFA11_transitionS = {
-            "\2\2\1\1",
+    protected DFA12 dfa12 = new DFA12(this);
+    static final String DFA12_eotS =
+        "\10\uffff";
+    static final String DFA12_eofS =
+        "\10\uffff";
+    static final String DFA12_minS =
+        "\1\4\1\13\1\uffff\1\4\1\uffff\1\13\1\4\1\13";
+    static final String DFA12_maxS =
+        "\1\5\1\32\1\uffff\1\5\1\uffff\3\32";
+    static final String DFA12_acceptS =
+        "\2\uffff\1\2\1\uffff\1\1\3\uffff";
+    static final String DFA12_specialS =
+        "\10\uffff}>";
+    static final String[] DFA12_transitionS = {
+            "\1\1\1\2",
             "\1\2\2\uffff\5\2\3\uffff\2\2\1\4\1\uffff\1\3",
             "",
-            "\1\5",
+            "\1\5\1\6",
             "",
+            "\1\2\2\uffff\5\2\3\uffff\2\2\1\4\1\uffff\1\3",
+            "\1\7\6\uffff\1\2\2\uffff\5\2\3\uffff\2\2\1\4\1\uffff\1\3",
             "\1\2\2\uffff\5\2\3\uffff\2\2\1\4\1\uffff\1\3"
     };
 
-    static final short[] DFA11_eot = DFA.unpackEncodedString(DFA11_eotS);
-    static final short[] DFA11_eof = DFA.unpackEncodedString(DFA11_eofS);
-    static final char[] DFA11_min = DFA.unpackEncodedStringToUnsignedChars(DFA11_minS);
-    static final char[] DFA11_max = DFA.unpackEncodedStringToUnsignedChars(DFA11_maxS);
-    static final short[] DFA11_accept = DFA.unpackEncodedString(DFA11_acceptS);
-    static final short[] DFA11_special = DFA.unpackEncodedString(DFA11_specialS);
-    static final short[][] DFA11_transition;
+    static final short[] DFA12_eot = DFA.unpackEncodedString(DFA12_eotS);
+    static final short[] DFA12_eof = DFA.unpackEncodedString(DFA12_eofS);
+    static final char[] DFA12_min = DFA.unpackEncodedStringToUnsignedChars(DFA12_minS);
+    static final char[] DFA12_max = DFA.unpackEncodedStringToUnsignedChars(DFA12_maxS);
+    static final short[] DFA12_accept = DFA.unpackEncodedString(DFA12_acceptS);
+    static final short[] DFA12_special = DFA.unpackEncodedString(DFA12_specialS);
+    static final short[][] DFA12_transition;
 
     static {
-        int numStates = DFA11_transitionS.length;
-        DFA11_transition = new short[numStates][];
+        int numStates = DFA12_transitionS.length;
+        DFA12_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA11_transition[i] = DFA.unpackEncodedString(DFA11_transitionS[i]);
+            DFA12_transition[i] = DFA.unpackEncodedString(DFA12_transitionS[i]);
         }
     }
 
-    class DFA11 extends DFA {
+    class DFA12 extends DFA {
 
-        public DFA11(BaseRecognizer recognizer) {
+        public DFA12(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 11;
-            this.eot = DFA11_eot;
-            this.eof = DFA11_eof;
-            this.min = DFA11_min;
-            this.max = DFA11_max;
-            this.accept = DFA11_accept;
-            this.special = DFA11_special;
-            this.transition = DFA11_transition;
+            this.decisionNumber = 12;
+            this.eot = DFA12_eot;
+            this.eof = DFA12_eof;
+            this.min = DFA12_min;
+            this.max = DFA12_max;
+            this.accept = DFA12_accept;
+            this.special = DFA12_special;
+            this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1072:1: ( rule__ConstraintExpression__Group_0__0 )?";
+            return "1122:1: ( rule__ConstraintExpression__Group_0__0 )?";
         }
     }
  
@@ -5692,139 +6257,157 @@ public class InternalLPSolveParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_ruleNumber_in_entryRuleNumber719 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleNumber726 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Number__Alternatives_in_ruleNumber752 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleVariableExpression_in_entryRuleVariableExpression779 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleVariableExpression786 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__VariableExpression__VariableAssignment_in_ruleVariableExpression812 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ObjectiveGoal__Alternatives_in_ruleObjectiveGoal849 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ComparingOperator__Alternatives_in_ruleComparingOperator885 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ILPDataType__Alternatives_in_ruleILPDataType921 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AdditionOperator__Alternatives_in_ruleAdditionOperator957 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_ruleMultiplicationOperator994 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_0__0_in_rule__ObjectiveFunctionExpression__Alternatives1031 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_1__0_in_rule__ObjectiveFunctionExpression__Alternatives1049 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_13_in_rule__ObjectiveFunctionExpression__Alternatives_0_01083 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__ObjectiveFunctionExpression__Alternatives_0_01103 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNumberLiteralExpression_in_rule__Operand__Alternatives1137 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleVariableExpression_in_rule__Operand__Alternatives1154 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_DECIMAL_in_rule__Number__Alternatives1186 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_INT_in_rule__Number__Alternatives1203 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_13_in_rule__ObjectiveGoal__Alternatives1236 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__ObjectiveGoal__Alternatives1257 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_15_in_rule__ComparingOperator__Alternatives1293 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_rule__ComparingOperator__Alternatives1314 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_17_in_rule__ComparingOperator__Alternatives1335 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_rule__ComparingOperator__Alternatives1356 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__ComparingOperator__Alternatives1377 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_20_in_rule__ILPDataType__Alternatives1413 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_21_in_rule__ILPDataType__Alternatives1434 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_22_in_rule__ILPDataType__Alternatives1455 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_rule__AdditionOperator__Alternatives1491 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_24_in_rule__AdditionOperator__Alternatives1512 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__IntegerLinearProgram__Group__0__Impl_in_rule__IntegerLinearProgram__Group__01545 = new BitSet(new long[]{0x0000000000700070L});
-        public static final BitSet FOLLOW_rule__IntegerLinearProgram__Group__1_in_rule__IntegerLinearProgram__Group__01548 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0_in_rule__IntegerLinearProgram__Group__0__Impl1575 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__IntegerLinearProgram__Group__1__Impl_in_rule__IntegerLinearProgram__Group__11605 = new BitSet(new long[]{0x0000000000700070L});
-        public static final BitSet FOLLOW_rule__IntegerLinearProgram__Group__2_in_rule__IntegerLinearProgram__Group__11608 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__IntegerLinearProgram__ConstraintsAssignment_1_in_rule__IntegerLinearProgram__Group__1__Impl1635 = new BitSet(new long[]{0x0000000000000072L});
-        public static final BitSet FOLLOW_rule__IntegerLinearProgram__Group__2__Impl_in_rule__IntegerLinearProgram__Group__21666 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__IntegerLinearProgram__VariablesAssignment_2_in_rule__IntegerLinearProgram__Group__2__Impl1693 = new BitSet(new long[]{0x0000000000700002L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_0__0__Impl_in_rule__ObjectiveFunctionExpression__Group_0__01730 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_0__1_in_rule__ObjectiveFunctionExpression__Group_0__01733 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Alternatives_0_0_in_rule__ObjectiveFunctionExpression__Group_0__0__Impl1760 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_0__1__Impl_in_rule__ObjectiveFunctionExpression__Group_0__11790 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_0__2_in_rule__ObjectiveFunctionExpression__Group_0__11793 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__ObjectiveFunctionExpression__Group_0__1__Impl1821 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_0__2__Impl_in_rule__ObjectiveFunctionExpression__Group_0__21852 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_26_in_rule__ObjectiveFunctionExpression__Group_0__2__Impl1880 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_1__0__Impl_in_rule__ObjectiveFunctionExpression__Group_1__01917 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_1__1_in_rule__ObjectiveFunctionExpression__Group_1__01920 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__GoalAssignment_1_0_in_rule__ObjectiveFunctionExpression__Group_1__0__Impl1947 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_1__1__Impl_in_rule__ObjectiveFunctionExpression__Group_1__11977 = new BitSet(new long[]{0x0000000000000070L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_1__2_in_rule__ObjectiveFunctionExpression__Group_1__11980 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__ObjectiveFunctionExpression__Group_1__1__Impl2008 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_1__2__Impl_in_rule__ObjectiveFunctionExpression__Group_1__22039 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_1__3_in_rule__ObjectiveFunctionExpression__Group_1__22042 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2_in_rule__ObjectiveFunctionExpression__Group_1__2__Impl2069 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_1__3__Impl_in_rule__ObjectiveFunctionExpression__Group_1__32099 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_26_in_rule__ObjectiveFunctionExpression__Group_1__3__Impl2127 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__0__Impl_in_rule__ConstraintExpression__Group__02166 = new BitSet(new long[]{0x0000000000000070L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__1_in_rule__ConstraintExpression__Group__02169 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__Group_0__0_in_rule__ConstraintExpression__Group__0__Impl2196 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__1__Impl_in_rule__ConstraintExpression__Group__12227 = new BitSet(new long[]{0x00000000000F8000L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__2_in_rule__ConstraintExpression__Group__12230 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__LeftExpressionAssignment_1_in_rule__ConstraintExpression__Group__1__Impl2257 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__2__Impl_in_rule__ConstraintExpression__Group__22287 = new BitSet(new long[]{0x0000000000000070L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__3_in_rule__ConstraintExpression__Group__22290 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__OperatorAssignment_2_in_rule__ConstraintExpression__Group__2__Impl2317 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__3__Impl_in_rule__ConstraintExpression__Group__32347 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__4_in_rule__ConstraintExpression__Group__32350 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__RightExpressionAssignment_3_in_rule__ConstraintExpression__Group__3__Impl2377 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__4__Impl_in_rule__ConstraintExpression__Group__42407 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_26_in_rule__ConstraintExpression__Group__4__Impl2435 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__Group_0__0__Impl_in_rule__ConstraintExpression__Group_0__02476 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__Group_0__1_in_rule__ConstraintExpression__Group_0__02479 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__CommentAssignment_0_0_in_rule__ConstraintExpression__Group_0__0__Impl2506 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__ConstraintExpression__Group_0__1__Impl_in_rule__ConstraintExpression__Group_0__12536 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__ConstraintExpression__Group_0__1__Impl2564 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Variable__Group__0__Impl_in_rule__Variable__Group__02599 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_rule__Variable__Group__1_in_rule__Variable__Group__02602 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Variable__DataTypeAssignment_0_in_rule__Variable__Group__0__Impl2629 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Variable__Group__1__Impl_in_rule__Variable__Group__12659 = new BitSet(new long[]{0x0000000004000000L});
-        public static final BitSet FOLLOW_rule__Variable__Group__2_in_rule__Variable__Group__12662 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Variable__NameAssignment_1_in_rule__Variable__Group__1__Impl2689 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Variable__Group__2__Impl_in_rule__Variable__Group__22719 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_26_in_rule__Variable__Group__2__Impl2747 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__VariableID__Group__0__Impl_in_rule__VariableID__Group__02784 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_rule__VariableID__Group__1_in_rule__VariableID__Group__02787 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__VariableID__Group__0__Impl2814 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__VariableID__Group__1__Impl_in_rule__VariableID__Group__12843 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__VariableID__Group_1__0_in_rule__VariableID__Group__1__Impl2870 = new BitSet(new long[]{0x0000000008000002L});
-        public static final BitSet FOLLOW_rule__VariableID__Group_1__0__Impl_in_rule__VariableID__Group_1__02905 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_rule__VariableID__Group_1__1_in_rule__VariableID__Group_1__02908 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_27_in_rule__VariableID__Group_1__0__Impl2936 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__VariableID__Group_1__1__Impl_in_rule__VariableID__Group_1__12967 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__VariableID__Group_1__1__Impl2994 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AdditionExpression__Group__0__Impl_in_rule__AdditionExpression__Group__03027 = new BitSet(new long[]{0x0000000001800000L});
-        public static final BitSet FOLLOW_rule__AdditionExpression__Group__1_in_rule__AdditionExpression__Group__03030 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMultiplicationExpression_in_rule__AdditionExpression__Group__0__Impl3057 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AdditionExpression__Group__1__Impl_in_rule__AdditionExpression__Group__13086 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__0_in_rule__AdditionExpression__Group__1__Impl3113 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__0__Impl_in_rule__AdditionExpression__Group_1__03148 = new BitSet(new long[]{0x0000000001800000L});
-        public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__1_in_rule__AdditionExpression__Group_1__03151 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__1__Impl_in_rule__AdditionExpression__Group_1__13209 = new BitSet(new long[]{0x0000000000000070L});
-        public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__2_in_rule__AdditionExpression__Group_1__13212 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AdditionExpression__OperatorAssignment_1_1_in_rule__AdditionExpression__Group_1__1__Impl3239 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__2__Impl_in_rule__AdditionExpression__Group_1__23269 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AdditionExpression__RightExpressionAssignment_1_2_in_rule__AdditionExpression__Group_1__2__Impl3296 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group__0__Impl_in_rule__MultiplicationExpression__Group__03332 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group__1_in_rule__MultiplicationExpression__Group__03335 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleOperand_in_rule__MultiplicationExpression__Group__0__Impl3362 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group__1__Impl_in_rule__MultiplicationExpression__Group__13391 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__0_in_rule__MultiplicationExpression__Group__1__Impl3418 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__0__Impl_in_rule__MultiplicationExpression__Group_1__03453 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__1_in_rule__MultiplicationExpression__Group_1__03456 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__1__Impl_in_rule__MultiplicationExpression__Group_1__13514 = new BitSet(new long[]{0x0000000000000070L});
-        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__2_in_rule__MultiplicationExpression__Group_1__13517 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicationExpression__OperatorAssignment_1_1_in_rule__MultiplicationExpression__Group_1__1__Impl3544 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__2__Impl_in_rule__MultiplicationExpression__Group_1__23574 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__MultiplicationExpression__RightExpressionAssignment_1_2_in_rule__MultiplicationExpression__Group_1__2__Impl3601 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleObjectiveFunctionExpression_in_rule__IntegerLinearProgram__ObjectiveFunctionAssignment_03642 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleConstraintExpression_in_rule__IntegerLinearProgram__ConstraintsAssignment_13673 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleVariable_in_rule__IntegerLinearProgram__VariablesAssignment_23704 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleObjectiveGoal_in_rule__ObjectiveFunctionExpression__GoalAssignment_1_03735 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLinearExpression_in_rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_23766 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleVariableID_in_rule__ConstraintExpression__CommentAssignment_0_03797 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleSimpleLinearExpression_in_rule__ConstraintExpression__LeftExpressionAssignment_13828 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleComparingOperator_in_rule__ConstraintExpression__OperatorAssignment_23859 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleSimpleLinearExpression_in_rule__ConstraintExpression__RightExpressionAssignment_33890 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleILPDataType_in_rule__Variable__DataTypeAssignment_03921 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleVariableID_in_rule__Variable__NameAssignment_13952 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAdditionOperator_in_rule__AdditionExpression__OperatorAssignment_1_13983 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLinearExpression_in_rule__AdditionExpression__RightExpressionAssignment_1_24014 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMultiplicationOperator_in_rule__MultiplicationExpression__OperatorAssignment_1_14045 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleOperand_in_rule__MultiplicationExpression__RightExpressionAssignment_1_24076 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNumber_in_rule__NumberLiteralExpression__ValueAssignment4107 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleVariableID_in_rule__VariableExpression__VariableAssignment4142 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDecimal_in_entryRuleDecimal779 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleDecimal786 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Decimal__Group__0_in_ruleDecimal812 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleVariableExpression_in_entryRuleVariableExpression839 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleVariableExpression846 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__VariableExpression__VariableAssignment_in_ruleVariableExpression872 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ObjectiveGoal__Alternatives_in_ruleObjectiveGoal909 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ComparingOperator__Alternatives_in_ruleComparingOperator945 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ILPDataType__Alternatives_in_ruleILPDataType981 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AdditionOperator__Alternatives_in_ruleAdditionOperator1017 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_11_in_ruleMultiplicationOperator1054 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_0__0_in_rule__ObjectiveFunctionExpression__Alternatives1091 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_1__0_in_rule__ObjectiveFunctionExpression__Alternatives1109 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_12_in_rule__ObjectiveFunctionExpression__Alternatives_0_01143 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_13_in_rule__ObjectiveFunctionExpression__Alternatives_0_01163 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__VariableID__Alternatives_1_11197 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__VariableID__Group_1_1_1__0_in_rule__VariableID__Alternatives_1_11214 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleNumberLiteralExpression_in_rule__Operand__Alternatives1247 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleVariableExpression_in_rule__Operand__Alternatives1264 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDecimal_in_rule__Number__Alternatives1296 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_INT_in_rule__Number__Alternatives1313 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_12_in_rule__ObjectiveGoal__Alternatives1346 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_13_in_rule__ObjectiveGoal__Alternatives1367 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_14_in_rule__ComparingOperator__Alternatives1403 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_15_in_rule__ComparingOperator__Alternatives1424 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_16_in_rule__ComparingOperator__Alternatives1445 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_17_in_rule__ComparingOperator__Alternatives1466 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_18_in_rule__ComparingOperator__Alternatives1487 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_rule__ILPDataType__Alternatives1523 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_20_in_rule__ILPDataType__Alternatives1544 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_21_in_rule__ILPDataType__Alternatives1565 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_22_in_rule__AdditionOperator__Alternatives1601 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_23_in_rule__AdditionOperator__Alternatives1622 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__IntegerLinearProgram__Group__0__Impl_in_rule__IntegerLinearProgram__Group__01655 = new BitSet(new long[]{0x0000000000380030L});
+        public static final BitSet FOLLOW_rule__IntegerLinearProgram__Group__1_in_rule__IntegerLinearProgram__Group__01658 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0_in_rule__IntegerLinearProgram__Group__0__Impl1685 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__IntegerLinearProgram__Group__1__Impl_in_rule__IntegerLinearProgram__Group__11715 = new BitSet(new long[]{0x0000000000380030L});
+        public static final BitSet FOLLOW_rule__IntegerLinearProgram__Group__2_in_rule__IntegerLinearProgram__Group__11718 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__IntegerLinearProgram__ConstraintsAssignment_1_in_rule__IntegerLinearProgram__Group__1__Impl1745 = new BitSet(new long[]{0x0000000000000032L});
+        public static final BitSet FOLLOW_rule__IntegerLinearProgram__Group__2__Impl_in_rule__IntegerLinearProgram__Group__21776 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__IntegerLinearProgram__VariablesAssignment_2_in_rule__IntegerLinearProgram__Group__2__Impl1803 = new BitSet(new long[]{0x0000000000380002L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_0__0__Impl_in_rule__ObjectiveFunctionExpression__Group_0__01840 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_0__1_in_rule__ObjectiveFunctionExpression__Group_0__01843 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Alternatives_0_0_in_rule__ObjectiveFunctionExpression__Group_0__0__Impl1870 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_0__1__Impl_in_rule__ObjectiveFunctionExpression__Group_0__11900 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_0__2_in_rule__ObjectiveFunctionExpression__Group_0__11903 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_24_in_rule__ObjectiveFunctionExpression__Group_0__1__Impl1931 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_0__2__Impl_in_rule__ObjectiveFunctionExpression__Group_0__21962 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_rule__ObjectiveFunctionExpression__Group_0__2__Impl1990 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_1__0__Impl_in_rule__ObjectiveFunctionExpression__Group_1__02027 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_1__1_in_rule__ObjectiveFunctionExpression__Group_1__02030 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__GoalAssignment_1_0_in_rule__ObjectiveFunctionExpression__Group_1__0__Impl2057 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_1__1__Impl_in_rule__ObjectiveFunctionExpression__Group_1__12087 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_1__2_in_rule__ObjectiveFunctionExpression__Group_1__12090 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_24_in_rule__ObjectiveFunctionExpression__Group_1__1__Impl2118 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_1__2__Impl_in_rule__ObjectiveFunctionExpression__Group_1__22149 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_1__3_in_rule__ObjectiveFunctionExpression__Group_1__22152 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_2_in_rule__ObjectiveFunctionExpression__Group_1__2__Impl2179 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ObjectiveFunctionExpression__Group_1__3__Impl_in_rule__ObjectiveFunctionExpression__Group_1__32209 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_rule__ObjectiveFunctionExpression__Group_1__3__Impl2237 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__0__Impl_in_rule__ConstraintExpression__Group__02276 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__1_in_rule__ConstraintExpression__Group__02279 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__Group_0__0_in_rule__ConstraintExpression__Group__0__Impl2306 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__1__Impl_in_rule__ConstraintExpression__Group__12337 = new BitSet(new long[]{0x000000000007C000L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__2_in_rule__ConstraintExpression__Group__12340 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__LeftExpressionAssignment_1_in_rule__ConstraintExpression__Group__1__Impl2367 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__2__Impl_in_rule__ConstraintExpression__Group__22397 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__3_in_rule__ConstraintExpression__Group__22400 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__OperatorAssignment_2_in_rule__ConstraintExpression__Group__2__Impl2427 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__3__Impl_in_rule__ConstraintExpression__Group__32457 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__4_in_rule__ConstraintExpression__Group__32460 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__RightExpressionAssignment_3_in_rule__ConstraintExpression__Group__3__Impl2487 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__Group__4__Impl_in_rule__ConstraintExpression__Group__42517 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_rule__ConstraintExpression__Group__4__Impl2545 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__Group_0__0__Impl_in_rule__ConstraintExpression__Group_0__02586 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__Group_0__1_in_rule__ConstraintExpression__Group_0__02589 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__CommentAssignment_0_0_in_rule__ConstraintExpression__Group_0__0__Impl2616 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__ConstraintExpression__Group_0__1__Impl_in_rule__ConstraintExpression__Group_0__12646 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_24_in_rule__ConstraintExpression__Group_0__1__Impl2674 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Variable__Group__0__Impl_in_rule__Variable__Group__02709 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Variable__Group__1_in_rule__Variable__Group__02712 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Variable__DataTypeAssignment_0_in_rule__Variable__Group__0__Impl2739 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Variable__Group__1__Impl_in_rule__Variable__Group__12769 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_rule__Variable__Group__2_in_rule__Variable__Group__12772 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Variable__NameAssignment_1_in_rule__Variable__Group__1__Impl2799 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Variable__Group__2__Impl_in_rule__Variable__Group__22829 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_rule__Variable__Group__2__Impl2857 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__VariableID__Group__0__Impl_in_rule__VariableID__Group__02894 = new BitSet(new long[]{0x0000000004000000L});
+        public static final BitSet FOLLOW_rule__VariableID__Group__1_in_rule__VariableID__Group__02897 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__VariableID__Group__0__Impl2924 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__VariableID__Group__1__Impl_in_rule__VariableID__Group__12953 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__VariableID__Group_1__0_in_rule__VariableID__Group__1__Impl2980 = new BitSet(new long[]{0x0000000004000002L});
+        public static final BitSet FOLLOW_rule__VariableID__Group_1__0__Impl_in_rule__VariableID__Group_1__03015 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__VariableID__Group_1__1_in_rule__VariableID__Group_1__03018 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_26_in_rule__VariableID__Group_1__0__Impl3046 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__VariableID__Group_1__1__Impl_in_rule__VariableID__Group_1__13077 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__VariableID__Alternatives_1_1_in_rule__VariableID__Group_1__1__Impl3104 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__VariableID__Group_1_1_1__0__Impl_in_rule__VariableID__Group_1_1_1__03138 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__VariableID__Group_1_1_1__1_in_rule__VariableID__Group_1_1_1__03141 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_INT_in_rule__VariableID__Group_1_1_1__0__Impl3168 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__VariableID__Group_1_1_1__1__Impl_in_rule__VariableID__Group_1_1_1__13197 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__VariableID__Group_1_1_1__1__Impl3225 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AdditionExpression__Group__0__Impl_in_rule__AdditionExpression__Group__03260 = new BitSet(new long[]{0x0000000000C00000L});
+        public static final BitSet FOLLOW_rule__AdditionExpression__Group__1_in_rule__AdditionExpression__Group__03263 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMultiplicationExpression_in_rule__AdditionExpression__Group__0__Impl3290 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AdditionExpression__Group__1__Impl_in_rule__AdditionExpression__Group__13319 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__0_in_rule__AdditionExpression__Group__1__Impl3346 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__0__Impl_in_rule__AdditionExpression__Group_1__03381 = new BitSet(new long[]{0x0000000000C00000L});
+        public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__1_in_rule__AdditionExpression__Group_1__03384 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__1__Impl_in_rule__AdditionExpression__Group_1__13442 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__2_in_rule__AdditionExpression__Group_1__13445 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AdditionExpression__OperatorAssignment_1_1_in_rule__AdditionExpression__Group_1__1__Impl3472 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__2__Impl_in_rule__AdditionExpression__Group_1__23502 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AdditionExpression__RightExpressionAssignment_1_2_in_rule__AdditionExpression__Group_1__2__Impl3529 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group__0__Impl_in_rule__MultiplicationExpression__Group__03565 = new BitSet(new long[]{0x0000000000000800L});
+        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group__1_in_rule__MultiplicationExpression__Group__03568 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleOperand_in_rule__MultiplicationExpression__Group__0__Impl3595 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group__1__Impl_in_rule__MultiplicationExpression__Group__13624 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__0_in_rule__MultiplicationExpression__Group__1__Impl3651 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__0__Impl_in_rule__MultiplicationExpression__Group_1__03686 = new BitSet(new long[]{0x0000000000000800L});
+        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__1_in_rule__MultiplicationExpression__Group_1__03689 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__1__Impl_in_rule__MultiplicationExpression__Group_1__13747 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__2_in_rule__MultiplicationExpression__Group_1__13750 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicationExpression__OperatorAssignment_1_1_in_rule__MultiplicationExpression__Group_1__1__Impl3777 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__2__Impl_in_rule__MultiplicationExpression__Group_1__23807 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__MultiplicationExpression__RightExpressionAssignment_1_2_in_rule__MultiplicationExpression__Group_1__2__Impl3834 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Decimal__Group__0__Impl_in_rule__Decimal__Group__03870 = new BitSet(new long[]{0x0000000004000000L});
+        public static final BitSet FOLLOW_rule__Decimal__Group__1_in_rule__Decimal__Group__03873 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_INT_in_rule__Decimal__Group__0__Impl3900 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Decimal__Group__1__Impl_in_rule__Decimal__Group__13929 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_rule__Decimal__Group__2_in_rule__Decimal__Group__13932 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_26_in_rule__Decimal__Group__1__Impl3960 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Decimal__Group__2__Impl_in_rule__Decimal__Group__23991 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_INT_in_rule__Decimal__Group__2__Impl4018 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleObjectiveFunctionExpression_in_rule__IntegerLinearProgram__ObjectiveFunctionAssignment_04058 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleConstraintExpression_in_rule__IntegerLinearProgram__ConstraintsAssignment_14089 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleVariable_in_rule__IntegerLinearProgram__VariablesAssignment_24120 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleObjectiveGoal_in_rule__ObjectiveFunctionExpression__GoalAssignment_1_04151 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLinearExpression_in_rule__ObjectiveFunctionExpression__ObjectiveFunctionAssignment_1_24182 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleVariableID_in_rule__ConstraintExpression__CommentAssignment_0_04213 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleSimpleLinearExpression_in_rule__ConstraintExpression__LeftExpressionAssignment_14244 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleComparingOperator_in_rule__ConstraintExpression__OperatorAssignment_24275 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleSimpleLinearExpression_in_rule__ConstraintExpression__RightExpressionAssignment_34306 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleILPDataType_in_rule__Variable__DataTypeAssignment_04337 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleVariableID_in_rule__Variable__NameAssignment_14368 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAdditionOperator_in_rule__AdditionExpression__OperatorAssignment_1_14399 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLinearExpression_in_rule__AdditionExpression__RightExpressionAssignment_1_24430 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleMultiplicationOperator_in_rule__MultiplicationExpression__OperatorAssignment_1_14461 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleOperand_in_rule__MultiplicationExpression__RightExpressionAssignment_1_24492 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleNumber_in_rule__NumberLiteralExpression__ValueAssignment4523 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleVariableID_in_rule__VariableExpression__VariableAssignment4558 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 

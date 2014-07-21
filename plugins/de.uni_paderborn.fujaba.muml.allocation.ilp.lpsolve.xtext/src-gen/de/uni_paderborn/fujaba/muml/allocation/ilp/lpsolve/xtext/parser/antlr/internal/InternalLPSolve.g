@@ -411,14 +411,29 @@ ruleVariableID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToke
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVariableIDAccess().getFullStopKeyword_1_0()); 
     }
-    this_ID_2=RULE_ID    {
+(    this_ID_2=RULE_ID    {
 		$current.merge(this_ID_2);
     }
 
     { 
-    newLeafNode(this_ID_2, grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_1_1()); 
+    newLeafNode(this_ID_2, grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_1_1_0()); 
     }
-)*)
+
+    |(    this_INT_3=RULE_INT    {
+		$current.merge(this_INT_3);
+    }
+
+    { 
+    newLeafNode(this_INT_3, grammarAccess.getVariableIDAccess().getINTTerminalRuleCall_1_1_1_0()); 
+    }
+(    this_ID_4=RULE_ID    {
+		$current.merge(this_ID_4);
+    }
+
+    { 
+    newLeafNode(this_ID_4, grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_1_1_1_1()); 
+    }
+)?)))*)
     ;
 
 
@@ -722,12 +737,16 @@ ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(    this_DECIMAL_0=RULE_DECIMAL    {
-		$current.merge(this_DECIMAL_0);
+(
+    { 
+        newCompositeNode(grammarAccess.getNumberAccess().getDecimalParserRuleCall_0()); 
+    }
+    this_Decimal_0=ruleDecimal    {
+		$current.merge(this_Decimal_0);
     }
 
     { 
-    newLeafNode(this_DECIMAL_0, grammarAccess.getNumberAccess().getDECIMALTerminalRuleCall_0()); 
+        afterParserOrEnumRuleCall();
     }
 
     |    this_INT_1=RULE_INT    {
@@ -736,6 +755,47 @@ ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 
     { 
     newLeafNode(this_INT_1, grammarAccess.getNumberAccess().getINTTerminalRuleCall_1()); 
+    }
+)
+    ;
+
+
+
+
+
+// Entry rule entryRuleDecimal
+entryRuleDecimal returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getDecimalRule()); } 
+	 iv_ruleDecimal=ruleDecimal 
+	 { $current=$iv_ruleDecimal.current.getText(); }  
+	 EOF 
+;
+
+// Rule Decimal
+ruleDecimal returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(    this_INT_0=RULE_INT    {
+		$current.merge(this_INT_0);
+    }
+
+    { 
+    newLeafNode(this_INT_0, grammarAccess.getDecimalAccess().getINTTerminalRuleCall_0()); 
+    }
+
+	kw='.' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getDecimalAccess().getFullStopKeyword_1()); 
+    }
+    this_INT_2=RULE_INT    {
+		$current.merge(this_INT_2);
+    }
+
+    { 
+    newLeafNode(this_INT_2, grammarAccess.getDecimalAccess().getINTTerminalRuleCall_2()); 
     }
 )
     ;
@@ -892,8 +952,6 @@ ruleMultiplicationOperator returns [Enumerator current=null]
 );
 
 
-
-RULE_DECIMAL : RULE_INT '.' RULE_INT;
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

@@ -40,7 +40,7 @@ Variable returns ilp::Variable:
 ;
 
 VariableID returns ecore::EString:
-	ID ('.' ID)*
+	ID ('.' (ID | INT ID?))*
 ;
 
 enum ILPDataType returns ilp::ILPDataType:
@@ -87,10 +87,10 @@ NumberLiteralExpression returns common::LiteralExpression:
 ;
 
 Number returns ecore::EString:
-	DECIMAL | INT
+	Decimal | INT
 ;
 
-terminal DECIMAL returns ecore::EString:
+Decimal returns ecore::EString:
 	INT '.' INT	
 ;
 

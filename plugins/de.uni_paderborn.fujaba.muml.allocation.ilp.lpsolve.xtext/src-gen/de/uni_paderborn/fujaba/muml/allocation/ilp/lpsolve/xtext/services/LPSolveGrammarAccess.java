@@ -219,26 +219,42 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Alternatives cAlternatives_1_1 = (Alternatives)cGroup_1.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_1_1_0 = (RuleCall)cAlternatives_1_1.eContents().get(0);
+		private final Group cGroup_1_1_1 = (Group)cAlternatives_1_1.eContents().get(1);
+		private final RuleCall cINTTerminalRuleCall_1_1_1_0 = (RuleCall)cGroup_1_1_1.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1_1_1_1 = (RuleCall)cGroup_1_1_1.eContents().get(1);
 		
 		//VariableID returns ecore::EString:
-		//	ID ("." ID)*;
+		//	ID ("." (ID | INT ID?))*;
 		public ParserRule getRule() { return rule; }
 
-		//ID ("." ID)*
+		//ID ("." (ID | INT ID?))*
 		public Group getGroup() { return cGroup; }
 
 		//ID
 		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
 
-		//("." ID)*
+		//("." (ID | INT ID?))*
 		public Group getGroup_1() { return cGroup_1; }
 
 		//"."
 		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
 
+		//ID | INT ID?
+		public Alternatives getAlternatives_1_1() { return cAlternatives_1_1; }
+
 		//ID
-		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
+		public RuleCall getIDTerminalRuleCall_1_1_0() { return cIDTerminalRuleCall_1_1_0; }
+
+		//INT ID?
+		public Group getGroup_1_1_1() { return cGroup_1_1_1; }
+
+		//INT
+		public RuleCall getINTTerminalRuleCall_1_1_1_0() { return cINTTerminalRuleCall_1_1_1_0; }
+
+		//ID?
+		public RuleCall getIDTerminalRuleCall_1_1_1_1() { return cIDTerminalRuleCall_1_1_1_1; }
 	}
 
 	public class LinearExpressionElements extends AbstractParserRuleElementFinder {
@@ -390,21 +406,45 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 	public class NumberElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Number");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cDECIMALTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cDecimalParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Number returns ecore::EString:
-		//	DECIMAL | INT;
+		//	Decimal | INT;
 		public ParserRule getRule() { return rule; }
 
-		//DECIMAL | INT
+		//Decimal | INT
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//DECIMAL
-		public RuleCall getDECIMALTerminalRuleCall_0() { return cDECIMALTerminalRuleCall_0; }
+		//Decimal
+		public RuleCall getDecimalParserRuleCall_0() { return cDecimalParserRuleCall_0; }
 
 		//INT
 		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
+	}
+
+	public class DecimalElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Decimal");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Keyword cFullStopKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cINTTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		
+		//Decimal returns ecore::EString:
+		//	INT "." INT;
+		public ParserRule getRule() { return rule; }
+
+		//INT "." INT
+		public Group getGroup() { return cGroup; }
+
+		//INT
+		public RuleCall getINTTerminalRuleCall_0() { return cINTTerminalRuleCall_0; }
+
+		//"."
+		public Keyword getFullStopKeyword_1() { return cFullStopKeyword_1; }
+
+		//INT
+		public RuleCall getINTTerminalRuleCall_2() { return cINTTerminalRuleCall_2; }
 	}
 
 	public class VariableExpressionElements extends AbstractParserRuleElementFinder {
@@ -605,7 +645,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 	private OperandElements pOperand;
 	private NumberLiteralExpressionElements pNumberLiteralExpression;
 	private NumberElements pNumber;
-	private TerminalRule tDECIMAL;
+	private DecimalElements pDecimal;
 	private VariableExpressionElements pVariableExpression;
 	
 	private final Grammar grammar;
@@ -711,7 +751,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//VariableID returns ecore::EString:
-	//	ID ("." ID)*;
+	//	ID ("." (ID | INT ID?))*;
 	public VariableIDElements getVariableIDAccess() {
 		return (pVariableID != null) ? pVariableID : (pVariableID = new VariableIDElements());
 	}
@@ -815,7 +855,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Number returns ecore::EString:
-	//	DECIMAL | INT;
+	//	Decimal | INT;
 	public NumberElements getNumberAccess() {
 		return (pNumber != null) ? pNumber : (pNumber = new NumberElements());
 	}
@@ -824,11 +864,15 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		return getNumberAccess().getRule();
 	}
 
-	//terminal DECIMAL:
+	//Decimal returns ecore::EString:
 	//	INT "." INT;
-	public TerminalRule getDECIMALRule() {
-		return (tDECIMAL != null) ? tDECIMAL : (tDECIMAL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "DECIMAL"));
-	} 
+	public DecimalElements getDecimalAccess() {
+		return (pDecimal != null) ? pDecimal : (pDecimal = new DecimalElements());
+	}
+	
+	public ParserRule getDecimalRule() {
+		return getDecimalAccess().getRule();
+	}
 
 	//VariableExpression returns ilp::VariableExpression:
 	//	variable=[ilp::Variable|VariableID];
