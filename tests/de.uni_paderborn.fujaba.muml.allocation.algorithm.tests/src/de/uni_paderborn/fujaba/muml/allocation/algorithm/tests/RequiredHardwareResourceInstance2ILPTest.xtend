@@ -47,6 +47,11 @@ class RequiredHardwareResourceInstance2ILPTest extends QVToTransformationSingleO
 				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/Specification2ILP.qvto",
 				  uriPrefix + "requiredHardwareResourceInstanceConstraintThreeDescriptors.allocation_specification",
 				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.1/@modelElements.0",
+				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0"],
+				#[uriPrefix + "requiredHardwareResourceInstanceConstraintResultSizeGT3Bug.lp",
+				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/Specification2ILP.qvto",
+				  uriPrefix + "requiredHardwareResourceInstanceConstraintResultSizeGT3Bug.allocation_specification",
+				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.1/@modelElements.0",
 				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0"])
 	}
 	
