@@ -1,4 +1,4 @@
-max: ;
+max: 1;
 // each component has to be allocated to exactly one ECU
 c1: c1_e1 + c1_e2 + c1_e3 = 1;
 c2: c2_e1 + c2_e2 + c2_e3 = 1;
