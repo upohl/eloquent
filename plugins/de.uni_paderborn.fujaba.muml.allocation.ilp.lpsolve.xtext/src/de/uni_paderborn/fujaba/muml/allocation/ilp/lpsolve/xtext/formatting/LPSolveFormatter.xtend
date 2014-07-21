@@ -27,10 +27,16 @@ public class LPSolveFormatter extends AbstractDeclarativeFormatter {
 			c.setLinewrap(1).before(pair.second)
 			c.setLinewrap(1).after(pair.second)
 		}
-		for(comma: findKeywords(',')) {
-			c.setNoLinewrap().before(comma)
-			c.setNoSpace().before(comma)
-			c.setLinewrap().after(comma)
+		// added to ';' to the array
+		for(kw : findKeywords(',', ';')) {
+			c.setNoLinewrap().before(kw)
+			c.setNoSpace().before(kw)
+			c.setLinewrap().after(kw)
+		}
+		// no space before a colon
+		for (colon : findKeywords(':')) {
+			println(colon)
+			c.setNoSpace().before(colon)
 		}
 		c.setLinewrap(0, 1, 2).before(SL_COMMENTRule)
 		c.setLinewrap(0, 1, 2).before(ML_COMMENTRule)
