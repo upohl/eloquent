@@ -1,0 +1,18 @@
+import de.uni_paderborn.fujaba.muml.allocation.algorithm.lpsolve.LPSolveBlackboxUnit;
+
+modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
+
+library LPSolve;
+
+helper IntegerLinearProgram::solveLP() : Dict(Variable, Integer) {
+	var ilpResult : Dict(String, Integer) := solve(self);
+	var res : Dict(Variable, Integer) := Dict{};
+	ilpResult->keys()->forEach(k) {
+		res->put(self.getVariable(k), ilpResult->get(k));
+	};
+	return res;
+}
+
+query IntegerLinearProgram::getVariable(variableName : String) : Variable {
+	return self.variables->any(name = variableName);
+}
