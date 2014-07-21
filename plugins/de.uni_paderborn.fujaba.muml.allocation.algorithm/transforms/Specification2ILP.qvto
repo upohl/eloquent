@@ -51,10 +51,10 @@ query instance::getRootCIC() : ComponentInstanceConfiguration {
 }
 
 query hwpinstance::getRootHPIC() : HWPlatformInstanceConfiguration {
-	var hpiSet : Set(HWPlatformInstance) := self.rootObjects()[HWPlatformInstance];
-	log("hpiSet: " + hpiSet->size().toString());
-	assert fatal (hpiSet->size() = 1) with log("expected exactly one root hpi");
-	return hpiSet->any(true).embeddedHPIC;
+	var hpicSet : Set(HWPlatformInstanceConfiguration) := self.rootObjects()[HWPlatformInstanceConfiguration];
+	log("hpicSet: " + hpicSet->size().toString());
+	assert fatal (hpicSet->size() = 1) with log("expected exactly one root hpic");
+	return hpicSet->any(true);
 }
 
 query allocationSpecification::getSpecification() : SpecificationCS {
