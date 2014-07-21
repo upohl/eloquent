@@ -68,7 +68,7 @@ query Sequence(Sequence(NamedElement))::sortTupleDescriptorEntries() : Sequence(
 query Sequence(NamedElement)::getAssociatedSequences(sequence : Sequence(Sequence(NamedElement)))
 	: Sequence(Sequence(NamedElement)) {
 	return sequence->select(seq |
-		let indexes : OrderedSet(Integer) = getOddNumbers(1, sequence->size())
+		let indexes : OrderedSet(Integer) = getOddNumbers(1, self->size())
 		in
 		indexes->collect(i |
 			seq->at(i)
