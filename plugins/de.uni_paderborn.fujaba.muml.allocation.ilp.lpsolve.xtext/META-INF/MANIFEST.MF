@@ -24,12 +24,13 @@ Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext,
- de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.services,
- de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.serializer,
+ de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.formatting,
+ de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.generator,
  de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.parser.antlr,
  de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.parser.antlr.internal,
- de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.validation,
+ de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.resource,
  de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.scoping,
- de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.generator,
- de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.formatting
+ de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.serializer,
+ de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.services,
+ de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.validation
 
