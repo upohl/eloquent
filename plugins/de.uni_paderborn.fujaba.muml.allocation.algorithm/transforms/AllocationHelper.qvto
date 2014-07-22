@@ -1,0 +1,30 @@
+import LPSolve;
+
+modeltype core uses core('http://www.storydriven.org/core/0.3.1');
+modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
+modeltype allocation uses psm::allocation('http://www.fujaba.de/muml/psm/allocation/0.1.0/');
+modeltype instance uses muml::instance('http://www.fujaba.de/muml/instance/0.4.0');
+modeltype hwrinstance uses hardware::hwresourceinstance('http://www.fujaba.de/muml/hardware/hwresourceinstance/1.0/');
+
+library AllocationHelper;
+
+helper IntegerLinearProgram::createAllocation() : SystemAllocation {
+	var assignment : Dict(Variable, Integer) := self.solveLP();
+	var todo : OrderedSet(Variable) := assignment->keys()
+		->select(k | assignment->get(k) = 1)
+		->sortedBy(name)->asOrderedSet();
+	var systemAllocation : SystemAllocation := object SystemAllocation{};
+	todo->addAllocation(systemAllocation);
+	return systemAllocation;
+}
+
+helper Variable::addAllocation(inout systemAllocation : SystemAllocation) {
+	var seq : Sequence(NamedElement) := self.invresolveone(Sequence(NamedElement));
+	assert fatal (seq->size() = 2) with log("unexpected size: " + seq->size().toString());
+	systemAllocation.allocations += new Allocation(seq);
+}
+
+constructor Allocation::Allocation(seq : Sequence(NamedElement)) {
+	componentInstance := seq->at(1).oclAsType(ComponentInstance);
+	resourceInstance := seq->at(2).oclAsType(StructuredResourceInstance);
+}

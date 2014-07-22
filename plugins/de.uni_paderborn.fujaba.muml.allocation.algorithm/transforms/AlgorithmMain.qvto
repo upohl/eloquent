@@ -1,0 +1,19 @@
+import Specification2ILP;
+import AllocationHelper;
+
+modeltype allocationSpecification uses cs('http://www.fujaba.de/muml/allocation/language/0.1.0/cs');
+modeltype instance uses muml::instance('http://www.fujaba.de/muml/instance/0.4.0');
+modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.0/');
+modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
+modeltype allocation uses psm::allocation('http://www.fujaba.de/muml/psm/allocation/0.1.0/');
+
+transformation AlgorithmMain(in specification : allocationSpecification, in ins : instance, in hwpi : hwpinstance, out allocationOut : allocation);
+
+main() {
+	var ilpOut : ilptype := ilptype.createEmptyModel().oclAsType(ilptype);
+	var ret : Status := new Specification2ILP(specification, ins, hwpi, ilpOut).transform();
+	log("ret: " + ret.toString());
+	assert fatal (ret.succeeded()) with log("Specification2ILP transformation failed: " + ret.toString());
+	var ilpModel : IntegerLinearProgram := ilpOut.rootObjects()![IntegerLinearProgram];
+	ilpModel.createAllocation();
+}
