@@ -21,7 +21,6 @@ import org.eclipse.ocl.examples.pivot.utilities.PivotUtil;
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ConstraintCS;
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS;
 
 public class OCLEvaluator {
 	private static final String noMetaModelManager = "cannot find a MetaModelManager for %s";
@@ -30,7 +29,7 @@ public class OCLEvaluator {
 	 * Evaluates the given OCL expression in the context of
 	 * the specified contextObject.
 	 */
-	@Operation (kind=Kind.QUERY)
+	@Operation(kind=Kind.QUERY)
 	public static Object evaluate(@NonNull ContextCS csExpression, @NonNull Object contextObject) {
 		Element element = csExpression.getPivot();
 		if (!(element instanceof ExpressionInOCL)) {
@@ -68,7 +67,7 @@ public class OCLEvaluator {
 		return metaModelManager;
 	}
 	
-	@Operation (kind=Kind.QUERY)
+	@Operation(kind=Kind.QUERY)
 	// List corresponds to Sequence, LinkedHashSet to OrderedSet
 	public static List<TupleValue> evaluateConstraintCS(@NonNull Object lc, @NonNull Object contextObject) {
 		System.out.println(lc);

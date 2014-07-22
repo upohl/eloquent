@@ -35,7 +35,7 @@ public class TupleAccessor {
 		return unboxedValue;
 	}	
 	
-	@Operation (kind=Kind.QUERY)
+	@Operation(kind=Kind.QUERY)
 	public static Object getPart(TupleValue tupleValue, String namedPart, Object object) {
 		TupleType tupleType = null;
 		if (object instanceof LocationConstraintCS) {
@@ -49,7 +49,7 @@ public class TupleAccessor {
 		return getPart(tupleValue, namedPart, (ConstraintCS) object, tupleType);
 	}
 	
-	@Operation (kind=Kind.QUERY)
+	@Operation(kind=Kind.QUERY)
 	@SuppressWarnings("unchecked")
 	public static List<Object> getSequencePart(TupleValue tupleValue, String namedPart, Object object) {
 		return (List<Object>) getPart(tupleValue, namedPart, object);
