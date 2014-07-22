@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import org.eclipse.m2m.qvt.oml.blackbox.java.Operation;
+import org.eclipse.m2m.qvt.oml.blackbox.java.Operation.Kind;
 import org.eclipse.m2m.qvt.oml.util.Dictionary;
 import org.eclipse.m2m.qvt.oml.util.Utils;
 
@@ -20,6 +22,7 @@ public class LPSolve {
 		return new LPSolveResource().serializeEObject(ilp, null);
 	}
 	
+	@Operation(kind=Kind.QUERY)
 	public static Dictionary<String, Integer> solve(IntegerLinearProgram ilp) {
 		return run(serialize(ilp));
 	}
