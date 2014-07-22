@@ -532,6 +532,36 @@
           </resources>
         </embeddedHPIC>
       </hwplatformInstances>
+      <hwplatformInstances
+          xmi:id="_AkBIgBDlEeSimc3eukHRXw"
+          name="test"
+          hwplatformType="_8cwQAfY8EeOqWs4IacUwuQ">
+        <embeddedHPIC
+            xmi:id="_Fi9uwBDlEeSimc3eukHRXw">
+          <resources
+              xsi:type="hwresourceinstance:StructuredResourceInstance"
+              xmi:id="_Df3ZIBDmEeSimc3eukHRXw"
+              name="e1"
+              resourceType="_erbVQPY8EeOqWs4IacUwuQ">
+            <embeddedAtomicResourceInstances
+                xsi:type="hwresourceinstance:ProcessorInstance"
+                xmi:id="_Df3ZIRDmEeSimc3eukHRXw"
+                name="processor"
+                resourceType="_kXYLcPY8EeOqWs4IacUwuQ">
+              <frequency
+                  xmi:id="_Df3ZIhDmEeSimc3eukHRXw"/>
+            </embeddedAtomicResourceInstances>
+            <embeddedAtomicResourceInstances
+                xsi:type="hwresourceinstance:StorageMemoryInstance"
+                xmi:id="_Df3ZIxDmEeSimc3eukHRXw"
+                name="ram"
+                resourceType="_gKsIkPY8EeOqWs4IacUwuQ">
+              <memorySize
+                  xmi:id="_Df3ZJBDmEeSimc3eukHRXw"/>
+            </embeddedAtomicResourceInstances>
+          </resources>
+        </embeddedHPIC>
+      </hwplatformInstances>
     </modelElements>
   </categories>
 </modelinstance:RootNode>

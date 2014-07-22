@@ -39,7 +39,13 @@ class GeneralConstraint2ILPTest extends QVToTransformationSingleOutExtentTest {
 				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/Specification2ILP.qvto",
 				  uriPrefix + "simple.allocation_specification",
 				  uriPrefix + "simple.fujaba#//@categories.1/@modelElements.2",
-				  uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0/@embeddedHPIC"])
+				  uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0/@embeddedHPIC"],
+				// atomic component instances only and two platform instances
+				#[uriPrefix + "simpleMultiplePlatformInstances.lp",
+				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/Specification2ILP.qvto",
+				  uriPrefix + "simple.allocation_specification",
+				  uriPrefix + "simple.fujaba#//@categories.1/@modelElements.0",
+				  uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0"])
 	}
 	
 	// just for debugging purposes
