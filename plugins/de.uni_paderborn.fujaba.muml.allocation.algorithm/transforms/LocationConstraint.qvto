@@ -1,4 +1,5 @@
 import Expressions;
+import HWUtil;
 import OCLEvaluator;
 import TupleAccessor;
 import Util;
@@ -59,7 +60,7 @@ query LocationConstraintCS::getHelperVariableSequences(cic : ComponentInstanceCo
 	hpic : HWPlatformInstanceConfiguration) : Sequence(Sequence(NamedElement)) {
 	var oclContext : OCLContext := createOCLContext(cic, hpic);
 	var res : Sequence(TupleValue) := self.evaluateOCL(oclContext);
-	return res->getLocationConstraintHelperVariableSequences(hpic.getRootResourceInstances());
+	return res->getLocationConstraintHelperVariableSequences(hpic.getResourceInstances());
 }
 
 query Sequence(TupleValue)::getLocationConstraintHelperVariableSequences(resourceInstanceSet : OrderedSet(ResourceInstance))

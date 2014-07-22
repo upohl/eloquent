@@ -1,6 +1,4 @@
 modeltype core uses core('http://www.storydriven.org/core/0.3.1');
-modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.0/');
-modeltype hwrinstance uses hardware::hwresourceinstance('http://www.fujaba.de/muml/hardware/hwresourceinstance/1.0/');
 
 library Util;
 
@@ -38,10 +36,6 @@ query Sequence(OclAny)::orderedProduct(sequence : Sequence(OclAny)) : OrderedSet
 
 query getOddNumbers(lower : Integer, upper : Integer) : OrderedSet(Integer) {
 	return OrderedSet{lower .. upper}->select(i | i.mod(2) = 1);
-}
-
-query HWPlatformInstanceConfiguration::getRootResourceInstances() : OrderedSet(ResourceInstance) {
-	return self.resources->sortedBy(name);
 }
 
 helper Sequence(NamedElement)::print() {

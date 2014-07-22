@@ -1,4 +1,5 @@
 import Expressions;
+import HWUtil;
 import VariableHelper;
 import Variables;
 import Util;
@@ -15,12 +16,13 @@ library GeneralConstraint;
 
 mapping inout IntegerLinearProgram::createGeneralConstraints(cic : ComponentInstanceConfiguration,
 	hpic : HWPlatformInstanceConfiguration) {
+	var resourceInstances : OrderedSet(hwrinstance::ResourceInstance) := hpic.getResourceInstances();
 	var vars : Bag(Variable) := cic.getAllComponentInstances()
-		->product(hpic.getRootResourceInstances())
+		->product(resourceInstances)
 		->toSequence()->map createBinaryVariable();
 	variables += vars->sortedBy(name);
 	constraints += cic.getAllComponentInstances()
-		->createGeneralConstraint(hpic.getRootResourceInstances());
+		->createGeneralConstraint(resourceInstances);
 }
 
 query ComponentInstanceConfiguration::getAllComponentInstances() : OrderedSet(ComponentInstance) {
@@ -32,7 +34,7 @@ query ComponentInstanceConfiguration::getAllComponentInstances() : OrderedSet(Co
 		else
 			ci->asSet()
 		endif			
-	)->sortedBy(getVariableName())
+	)->sortedBy(getVariableName());
 }
 
 // mapping just for syntactic sugar reasons: use when statement

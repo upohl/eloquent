@@ -37,7 +37,29 @@ query ComponentInstance::getParentComponents() : OrderedSet(ComponentInstance) {
 }
 
 query ResourceInstance::getVariableName() : String {
-	return self.name;
+	return '.'.join(self.getParentHPICs()
+		->collect(parentHWPlatformInstance.name)
+		->append(self.name)
+	); 
+}
+
+query ResourceInstance::getParentHPIC() : HWPlatformInstanceConfiguration {
+	// eek!
+	return self.container().oclAsType(HWPlatformInstanceConfiguration);
+}
+
+query ResourceInstance::getParentHPICs() : OrderedSet(HWPlatformInstanceConfiguration) {
+	return
+	let hpics : OrderedSet(HWPlatformInstanceConfiguration)= self.getParentHPIC()->asOrderedSet()
+		->closure(hpic : HWPlatformInstanceConfiguration |
+			if hpic.parentHWPlatformInstance.oclIsUndefined() then
+				OrderedSet{}
+			else
+				OrderedSet{hpic, hpic.parentHWPlatformInstance.parentHPIC}
+			endif
+		)
+	in
+	hpics->subOrderedSet(1, hpics->size() - 1);
 }
 
 query Sequence(NamedElement)::getVariable() : Variable {
