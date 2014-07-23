@@ -1,6 +1,5 @@
 import Expressions;
 import OCLEvaluator;
-import TupleAccessor;
 import Util;
 import Variables;
 import VariableHelper;

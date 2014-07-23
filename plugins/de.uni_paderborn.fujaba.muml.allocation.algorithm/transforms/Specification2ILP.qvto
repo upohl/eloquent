@@ -3,8 +3,6 @@ import GeneralConstraint;
 import LocationConstraint;
 import RequiredHardwareResourceInstanceConstraint;
 import ObjectiveFunction;
-import OCLEvaluator;
-import TupleAccessor;
 import Util;
 import Variables;
 
