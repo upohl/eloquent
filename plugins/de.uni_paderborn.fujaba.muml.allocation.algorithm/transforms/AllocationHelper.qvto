@@ -9,9 +9,16 @@ modeltype hwrinstance uses hardware::hwresourceinstance('http://www.fujaba.de/mu
 library AllocationHelper;
 
 helper IntegerLinearProgram::createAllocation() : SystemAllocation {
-	var assignment : Dict(Variable, Integer) := self.solveLP();
-	var todo : OrderedSet(Variable) := assignment->keys()
-		->select(k | assignment->get(k) = 1)
+	var solution : Dict(Variable, Integer) := Dict{};
+	var ret : Integer := self.solveLP(solution);
+	// in case of an error an empty SystemAllocation is returned 
+	if (ret = INFEASIBLE()) then {
+		log("solveLP: problem is infeasible (no allocation exists)");
+	} elif (ret != SUCCESS()) then {
+		log("solveLP: solver returned code " + ret.toString());
+	} endif;
+	var todo : OrderedSet(Variable) := solution->keys()
+		->select(k | solution->get(k) = 1)
 		->sortedBy(name)->asOrderedSet();
 	var systemAllocation : SystemAllocation := object SystemAllocation{};
 	todo->addAllocation(systemAllocation);
