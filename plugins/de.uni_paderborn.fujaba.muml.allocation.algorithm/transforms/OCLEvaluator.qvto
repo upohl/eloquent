@@ -13,19 +13,7 @@ library OCLEvaluator;
 //blackbox query evaluate(oclExpression : ContextCS, contextObject : OclAny) : OclAny;
 //blackbox query evaluateLocationConstraintCS(oclExpression : ContextCS, contextObject : OclAny) : OrderedSet(TupleValue);
 
-query evaluateOCL(oclExpression : ContextCS, contextObject : OclAny) : OclAny {
-	return evaluate(oclExpression, contextObject);
-}
-
-helper LocationConstraintCS::evaluateOCL(contextObject : OclAny) : Sequence(TupleValue) {
-	//return evaluateOCL(oclExpression, contextObject).oclAsType(OrderedSet(OclAny));
-	//var res : Sequence(TupleValue) := evaluateLocationConstraintCS(self, contextObject);
-	var res : Sequence(TupleValue) := evaluateConstraintCS(self, contextObject);
-	res->createTraceHelper(self);
-	return res;
-}
-
-helper RequiredHardwareResourceInstanceConstraintCS::evaluateOCL(contextObject : OclAny) : Sequence(TupleValue) {
+helper ConstraintCS::evaluateOCL(contextObject : OclAny) : Sequence(TupleValue) {
 	var res : Sequence(TupleValue) := evaluateConstraintCS(self, contextObject);
 	res->createTraceHelper(self);
 	return res;
@@ -33,46 +21,22 @@ helper RequiredHardwareResourceInstanceConstraintCS::evaluateOCL(contextObject :
 
 helper ResourceConstraintCS::evaluateOCL(contextObject : OclAny) : Sequence(TupleValue) {
 	var res : Sequence(TupleValue) := evaluateConstraintCS(self, contextObject);
-	res->createTraceHelper(self);
+	res->createTraceHelper(self); // do this first, otherwise the subsequent tv.getSequence fails
 	res->collect(tv : TupleValue | tv.getSequence(self.lhs.value))
 		->collect(oclAsType(TupleValue))
 		->createTraceHelper(self);
 	return res;
 }
 
-helper TupleValue::createTraceHelper(cs : LocationConstraintCS) {
+helper TupleValue::createTraceHelper(cs : ConstraintCS) {
 	cs.map createTrace(self);
 	return null;
 }
 
-mapping LocationConstraintCS::createTrace(tv : TupleValue) : TupleValue {
+mapping ConstraintCS::createTrace(tv : TupleValue) : TupleValue {
 	init {
 		result := tv;
-		log("create trace (location) called");
-	}
-}
-
-helper TupleValue::createTraceHelper(cs : RequiredHardwareResourceInstanceConstraintCS) {
-	cs.map createTrace(self);
-	return null;
-}
-
-mapping RequiredHardwareResourceInstanceConstraintCS::createTrace(tv : TupleValue) : TupleValue {
-	init {
-		result := tv;
-		log("create trace (hwresinstance) called");
-	}
-}
-
-helper TupleValue::createTraceHelper(cs : ResourceConstraintCS) {
-	cs.map createTrace(self);
-	return null;
-}
-
-mapping ResourceConstraintCS::createTrace(tv : TupleValue) : TupleValue {
-	init {
-		result := tv;
-		log("create trace (resource) called");
+		log("create trace (constraintCS) called");
 	}
 }
 
