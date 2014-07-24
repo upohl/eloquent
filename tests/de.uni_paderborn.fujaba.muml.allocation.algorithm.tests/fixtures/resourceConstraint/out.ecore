@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilp:IntegerLinearProgram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ilp="http://www.fujaba.de/muml/allocation/ilp/0.1.0" xmlns:sdcec="http://www.storydriven.org/core/expressions/common/0.3.1">
+  <variables name="c1_platformtype.0.e1"/>
+  <variables name="c1_platformtype.0.e2"/>
+  <variables name="c1_platformtype.0.e3"/>
+  <variables name="c2_platformtype.0.e1"/>
+  <variables name="c2_platformtype.0.e2"/>
+  <variables name="c2_platformtype.0.e3"/>
+  <variables name="c3_platformtype.0.e1"/>
+  <variables name="c3_platformtype.0.e2"/>
+  <variables name="c3_platformtype.0.e3"/>
+  <variables name="c1_platformtype.0.e1_c2_platformtype.0.e1"/>
+  <variables name="c1_platformtype.0.e1_c2_platformtype.0.e2"/>
+  <variables name="c2_platformtype.0.e3_c3_platformtype.0.e1"/>
+  <constraints comment="c1" operator="EQUAL">
+    <leftExpression xsi:type="sdcec:ArithmeticExpression">
+      <leftExpression xsi:type="ilp:VariableExpression" variable="#//@variables.0"/>
+      <rightExpression xsi:type="sdcec:ArithmeticExpression">
+        <leftExpression xsi:type="ilp:VariableExpression" variable="#//@variables.1"/>
+        <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.2"/>
+      </rightExpression>
+    </leftExpression>
+    <rightExpression xsi:type="sdcec:LiteralExpression" value="1"/>
+  </constraints>
+  <constraints comment="c2" operator="EQUAL">
+    <leftExpression xsi:type="sdcec:ArithmeticExpression">
+      <leftExpression xsi:type="ilp:VariableExpression" variable="#//@variables.3"/>
+      <rightExpression xsi:type="sdcec:ArithmeticExpression">
+        <leftExpression xsi:type="ilp:VariableExpression" variable="#//@variables.4"/>
+        <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.5"/>
+      </rightExpression>
+    </leftExpression>
+    <rightExpression xsi:type="sdcec:LiteralExpression" value="1"/>
+  </constraints>
+  <constraints comment="c3" operator="EQUAL">
+    <leftExpression xsi:type="sdcec:ArithmeticExpression">
+      <leftExpression xsi:type="ilp:VariableExpression" variable="#//@variables.6"/>
+      <rightExpression xsi:type="sdcec:ArithmeticExpression">
+        <leftExpression xsi:type="ilp:VariableExpression" variable="#//@variables.7"/>
+        <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.8"/>
+      </rightExpression>
+    </leftExpression>
+    <rightExpression xsi:type="sdcec:LiteralExpression" value="1"/>
+  </constraints>
+  <constraints comment="foo" operator="LESS_OR_EQUAL">
+    <leftExpression xsi:type="sdcec:ArithmeticExpression">
+      <leftExpression xsi:type="sdcec:ArithmeticExpression" operator="TIMES">
+        <leftExpression xsi:type="sdcec:LiteralExpression" value="20"/>
+        <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.0"/>
+      </leftExpression>
+      <rightExpression xsi:type="sdcec:ArithmeticExpression">
+        <leftExpression xsi:type="sdcec:ArithmeticExpression" operator="TIMES">
+          <leftExpression xsi:type="sdcec:LiteralExpression" value="1"/>
+          <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.3"/>
+        </leftExpression>
+        <rightExpression xsi:type="sdcec:ArithmeticExpression" operator="TIMES">
+          <leftExpression xsi:type="sdcec:LiteralExpression" value="180"/>
+          <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.6"/>
+        </rightExpression>
+      </rightExpression>
+    </leftExpression>
+    <rightExpression xsi:type="sdcec:LiteralExpression" value="42"/>
+  </constraints>
+  <constraints operator="LESS_OR_EQUAL">
+    <leftExpression xsi:type="ilp:VariableExpression" variable="#//@variables.9"/>
+    <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.0"/>
+  </constraints>
+  <constraints operator="LESS_OR_EQUAL">
+    <leftExpression xsi:type="ilp:VariableExpression" variable="#//@variables.9"/>
+    <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.3"/>
+  </constraints>
+  <constraints operator="LESS_OR_EQUAL">
+    <leftExpression xsi:type="sdcec:ArithmeticExpression">
+      <leftExpression xsi:type="ilp:VariableExpression" variable="#//@variables.0"/>
+      <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.3"/>
+    </leftExpression>
+    <rightExpression xsi:type="sdcec:ArithmeticExpression">
+      <leftExpression xsi:type="sdcec:LiteralExpression" value="1"/>
+      <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.9"/>
+    </rightExpression>
+  </constraints>
+  <constraints operator="LESS_OR_EQUAL">
+    <leftExpression xsi:type="ilp:VariableExpression" variable="#//@variables.10"/>
+    <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.0"/>
+  </constraints>
+  <constraints operator="LESS_OR_EQUAL">
+    <leftExpression xsi:type="ilp:VariableExpression" variable="#//@variables.10"/>
+    <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.4"/>
+  </constraints>
+  <constraints operator="LESS_OR_EQUAL">
+    <leftExpression xsi:type="sdcec:ArithmeticExpression">
+      <leftExpression xsi:type="ilp:VariableExpression" variable="#//@variables.0"/>
+      <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.4"/>
+    </leftExpression>
+    <rightExpression xsi:type="sdcec:ArithmeticExpression">
+      <leftExpression xsi:type="sdcec:LiteralExpression" value="1"/>
+      <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.10"/>
+    </rightExpression>
+  </constraints>
+  <constraints operator="LESS_OR_EQUAL">
+    <leftExpression xsi:type="ilp:VariableExpression" variable="#//@variables.11"/>
+    <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.5"/>
+  </constraints>
+  <constraints operator="LESS_OR_EQUAL">
+    <leftExpression xsi:type="ilp:VariableExpression" variable="#//@variables.11"/>
+    <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.6"/>
+  </constraints>
+  <constraints operator="LESS_OR_EQUAL">
+    <leftExpression xsi:type="sdcec:ArithmeticExpression">
+      <leftExpression xsi:type="ilp:VariableExpression" variable="#//@variables.5"/>
+      <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.6"/>
+    </leftExpression>
+    <rightExpression xsi:type="sdcec:ArithmeticExpression">
+      <leftExpression xsi:type="sdcec:LiteralExpression" value="1"/>
+      <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.11"/>
+    </rightExpression>
+  </constraints>
+  <constraints comment="bar" operator="LESS_OR_EQUAL">
+    <leftExpression xsi:type="sdcec:ArithmeticExpression">
+      <leftExpression xsi:type="sdcec:ArithmeticExpression" operator="TIMES">
+        <leftExpression xsi:type="sdcec:LiteralExpression" value="20"/>
+        <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.9"/>
+      </leftExpression>
+      <rightExpression xsi:type="sdcec:ArithmeticExpression">
+        <leftExpression xsi:type="sdcec:ArithmeticExpression" operator="TIMES">
+          <leftExpression xsi:type="sdcec:LiteralExpression" value="1"/>
+          <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.10"/>
+        </leftExpression>
+        <rightExpression xsi:type="sdcec:ArithmeticExpression" operator="TIMES">
+          <leftExpression xsi:type="sdcec:LiteralExpression" value="180"/>
+          <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.11"/>
+        </rightExpression>
+      </rightExpression>
+    </leftExpression>
+    <rightExpression xsi:type="sdcec:LiteralExpression" value="42"/>
+  </constraints>
+  <constraints comment="bar" operator="LESS_OR_EQUAL">
+    <leftExpression xsi:type="sdcec:ArithmeticExpression">
+      <leftExpression xsi:type="sdcec:ArithmeticExpression" operator="TIMES">
+        <leftExpression xsi:type="sdcec:LiteralExpression" value="20"/>
+        <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.9"/>
+      </leftExpression>
+      <rightExpression xsi:type="sdcec:ArithmeticExpression">
+        <leftExpression xsi:type="sdcec:ArithmeticExpression" operator="TIMES">
+          <leftExpression xsi:type="sdcec:LiteralExpression" value="3"/>
+          <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.10"/>
+        </leftExpression>
+        <rightExpression xsi:type="sdcec:ArithmeticExpression" operator="TIMES">
+          <leftExpression xsi:type="sdcec:LiteralExpression" value="180"/>
+          <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.11"/>
+        </rightExpression>
+      </rightExpression>
+    </leftExpression>
+    <rightExpression xsi:type="sdcec:LiteralExpression" value="42"/>
+  </constraints>
+  <constraints comment="bar" operator="LESS_OR_EQUAL">
+    <leftExpression xsi:type="sdcec:ArithmeticExpression">
+      <leftExpression xsi:type="sdcec:ArithmeticExpression" operator="TIMES">
+        <leftExpression xsi:type="sdcec:LiteralExpression" value="20"/>
+        <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.9"/>
+      </leftExpression>
+      <rightExpression xsi:type="sdcec:ArithmeticExpression">
+        <leftExpression xsi:type="sdcec:ArithmeticExpression" operator="TIMES">
+          <leftExpression xsi:type="sdcec:LiteralExpression" value="1"/>
+          <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.10"/>
+        </leftExpression>
+        <rightExpression xsi:type="sdcec:ArithmeticExpression" operator="TIMES">
+          <leftExpression xsi:type="sdcec:LiteralExpression" value="180"/>
+          <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.11"/>
+        </rightExpression>
+      </rightExpression>
+    </leftExpression>
+    <rightExpression xsi:type="sdcec:LiteralExpression" value="9"/>
+  </constraints>
+  <constraints comment="bar" operator="LESS_OR_EQUAL">
+    <leftExpression xsi:type="sdcec:ArithmeticExpression">
+      <leftExpression xsi:type="sdcec:ArithmeticExpression" operator="TIMES">
+        <leftExpression xsi:type="sdcec:LiteralExpression" value="20"/>
+        <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.9"/>
+      </leftExpression>
+      <rightExpression xsi:type="sdcec:ArithmeticExpression">
+        <leftExpression xsi:type="sdcec:ArithmeticExpression" operator="TIMES">
+          <leftExpression xsi:type="sdcec:LiteralExpression" value="1"/>
+          <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.10"/>
+        </leftExpression>
+        <rightExpression xsi:type="sdcec:ArithmeticExpression">
+          <leftExpression xsi:type="sdcec:ArithmeticExpression" operator="TIMES">
+            <leftExpression xsi:type="sdcec:LiteralExpression" value="180"/>
+            <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.11"/>
+          </leftExpression>
+          <rightExpression xsi:type="sdcec:ArithmeticExpression" operator="TIMES">
+            <leftExpression xsi:type="sdcec:LiteralExpression" value="2"/>
+            <rightExpression xsi:type="ilp:VariableExpression" variable="#//@variables.11"/>
+          </rightExpression>
+        </rightExpression>
+      </rightExpression>
+    </leftExpression>
+    <rightExpression xsi:type="sdcec:LiteralExpression" value="9"/>
+  </constraints>
+  <objectiveFunction>
+    <objectiveFunction xsi:type="sdcec:LiteralExpression" value="1"/>
+  </objectiveFunction>
+</ilp:IntegerLinearProgram>
