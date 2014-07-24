@@ -2,6 +2,7 @@ import Expressions;
 import GeneralConstraint;
 import LocationConstraint;
 import RequiredHardwareResourceInstanceConstraint;
+import ResourceConstraint;
 import ObjectiveFunction;
 import Util;
 import Variables;
@@ -29,6 +30,7 @@ main() {
 	ilp.map createGeneralConstraints(cic, hpic);
 	specificationCS.createLocationConstraints(ilp, cic, hpic);
 	specificationCS.createHWResInstanceConstraints(ilp, cic, hpic);
+	specificationCS.createResourceConstraints(ilp, cic, hpic);
 	specificationCS.createObjectiveFunction(ilp, cic, hpic);
 	//specificationCS.getSameLocationConstraints()->createSameLocationConstraint(ilp, cic, hpic);
 	ilpOut.removeOrphans();

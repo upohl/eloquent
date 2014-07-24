@@ -1,4 +1,5 @@
 import de.uni_paderborn.fujaba.muml.allocation.algorithm.ocl.OCLEvaluatorBlackboxUnit;
+import TupleAccessor;
 
 modeltype oclcontext uses oclcontext('http://www.fujaba.de/muml/allocation/language/0.1.0/oclcontext');
 modeltype instance uses muml::instance('http://www.fujaba.de/muml/instance/0.4.0');
@@ -30,6 +31,15 @@ helper RequiredHardwareResourceInstanceConstraintCS::evaluateOCL(contextObject :
 	return res;
 }
 
+helper ResourceConstraintCS::evaluateOCL(contextObject : OclAny) : Sequence(TupleValue) {
+	var res : Sequence(TupleValue) := evaluateConstraintCS(self, contextObject);
+	res->createTraceHelper(self);
+	res->collect(tv : TupleValue | tv.getSequence(self.lhs.value))
+		->collect(oclAsType(TupleValue))
+		->createTraceHelper(self);
+	return res;
+}
+
 helper TupleValue::createTraceHelper(cs : LocationConstraintCS) {
 	cs.map createTrace(self);
 	return null;
@@ -51,6 +61,18 @@ mapping RequiredHardwareResourceInstanceConstraintCS::createTrace(tv : TupleValu
 	init {
 		result := tv;
 		log("create trace (hwresinstance) called");
+	}
+}
+
+helper TupleValue::createTraceHelper(cs : ResourceConstraintCS) {
+	cs.map createTrace(self);
+	return null;
+}
+
+mapping ResourceConstraintCS::createTrace(tv : TupleValue) : TupleValue {
+	init {
+		result := tv;
+		log("create trace (resource) called");
 	}
 }
 

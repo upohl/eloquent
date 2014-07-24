@@ -14,7 +14,7 @@ helper TupleValue::get(namedPart : String) : OclAny {
 	return getPart(self, namedPart, source);
 }
 
-helper TupleValue::getSequence(namedPart : String) : Sequence(OclAny) {
+helper TupleValue::getSequence(namedPart : String) : Sequence(TupleValue) {
 	var source : ConstraintCS := self.invresolveone(ConstraintCS);
 	return getSequencePart(self, namedPart, source);
 }
@@ -37,13 +37,24 @@ query LocationConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(Named
 		tupleValue.get(tupleDescriptor.secondInstance).oclAsType(NamedElement)}; 
 }
 
-query RequiredHardwareResourceInstanceConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
-	return self.tupleDescriptors->collect(td |
+query OrderedSet(ComponentResourceTupleDescriptorCS)::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+	return self->collect(td |
 		Sequence{
 			tupleValue.get(td.instance).oclAsType(NamedElement),
 			tupleValue.get(td.hwresinstance).oclAsType(NamedElement)
 		}
-	); 
+	);
+}
+
+query RequiredHardwareResourceInstanceConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+	return self.tupleDescriptors->toSequence(tupleValue);
+}
+
+query ResourceConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+	// unfortunately we cannot check if tupleValue corresponds to an "inner" tuple
+	// (well... we could do this via a blackbox but it is probably not worth the effort)
+	// => we assume that the caller knows what he/she is doing
+	return self.tupleDescriptors->toSequence(tupleValue);
 }
 
 query ConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {

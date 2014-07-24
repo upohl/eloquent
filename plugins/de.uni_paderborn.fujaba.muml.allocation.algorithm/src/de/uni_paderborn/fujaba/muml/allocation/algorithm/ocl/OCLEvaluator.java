@@ -1,6 +1,5 @@
 package de.uni_paderborn.fujaba.muml.allocation.algorithm.ocl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
@@ -79,11 +78,7 @@ public class OCLEvaluator {
 				.getIdResolver();
 		// XXX: unchecked
 		return (List<TupleValue>) idResolver.unboxedValueOf(result);*/
-		List<TupleValue> resultList = new ArrayList<TupleValue>(result.size().signum());
-		for (Object element : result.getElements()) {
-			resultList.add((TupleValue) element);
-		}
-		return resultList;
+		return TupleAccessor.createTupleValueList(result);
 	}
 	
 }

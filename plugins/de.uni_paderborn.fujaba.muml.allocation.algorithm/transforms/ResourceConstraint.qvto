@@ -1,0 +1,128 @@
+import Expressions;
+import OCLEvaluator;
+import TupleAccessor;
+import RequiredHardwareResourceInstanceConstraint; // XXX: get rid of this import (aka move required query to lib)
+import Util;
+import Variables;
+import VariableHelper;
+
+modeltype allocationSpecification uses cs('http://www.fujaba.de/muml/allocation/language/0.1.0/cs');
+modeltype oclcontext uses oclcontext('http://www.fujaba.de/muml/allocation/language/0.1.0/oclcontext');
+modeltype core uses core('http://www.storydriven.org/core/0.3.1');
+modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
+modeltype expressions uses core::expressions('http://www.storydriven.org/core/expressions/0.3.1');
+modeltype common uses core::expressions::common('http://www.storydriven.org/core/expressions/common/0.3.1');
+modeltype instance uses muml::instance('http://www.fujaba.de/muml/instance/0.4.0');
+modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.0/');
+modeltype hwrinstance uses hardware::hwresourceinstance('http://www.fujaba.de/muml/hardware/hwresourceinstance/1.0/');
+modeltype values uses values('http://ww.eclipse.org/OCL/Values');
+
+
+library ResourceConstraint;
+
+// In this lib we do a lot of sorting: this is only needed to get
+// a reproducable output (and it indirectly reduces the number of
+// needed variables in some cases (see
+// resourceConstraint/resourceConstraintMultipleConstraintsAndDescriptorsOrder.allocation_specification
+// fixture file)). All this sorting is needed, because we often
+// switch between a tuple value and its sequence representation
+// (we cannot solely use the sequence representation, because we need access
+// to the lhs value (and maintaining the lhs value in the sequence is awkward
+// (NamedElement + Real => common supertype OclAny))).
+
+helper SpecificationCS::createResourceConstraints(inout ilp : IntegerLinearProgram,
+	cic : ComponentInstanceConfiguration,
+	hpic : HWPlatformInstanceConfiguration) {
+	self.getResourceConstraints()->createResourceConstraint(ilp, cic, hpic);
+}
+
+helper ResourceConstraintCS::createResourceConstraint(inout ilp : IntegerLinearProgram,
+	cic : ComponentInstanceConfiguration,
+	hpic : HWPlatformInstanceConfiguration) {
+	var oclContext : OCLContext := createOCLContext(cic, hpic);
+	var sequences : Sequence(TupleValue) := self.evaluateOCL(oclContext);
+	sequences->sortOuterResultSequence(self)->createResourceConstraint(ilp, self);
+}
+
+query Sequence(TupleValue)::sortOuterResultSequence(constraintCS : ResourceConstraintCS) : Sequence(TupleValue) {
+	return self->sortedBy(tv : TupleValue | tv.getOuterId(constraintCS));
+}
+
+query TupleValue::getOuterId(constraintCS : ResourceConstraintCS) : String {
+	// the outer id consists of the rhs + the join of all inner ids
+	// this uniquely identifies an outer tuple (because the outer tuples
+	// are contained in a set => no duplicates)
+	return let char : String = ILLEGAL_VARIABLE_CHARS()->at(1)
+	in
+	self.getRhsValue(constraintCS) + char + char.join(
+		self.getSequence(constraintCS.lhs.value)->sortInnerResultSequence(constraintCS)
+			->collect(tv : TupleValue | tv.getInnerId(constraintCS))
+	);
+}
+
+query Sequence(TupleValue)::sortInnerResultSequence(constraintCS : ResourceConstraintCS) : Sequence(TupleValue) {
+	return self->sortedBy(tv : TupleValue | tv.getInnerId(constraintCS));
+}
+
+query TupleValue::getInnerId(constraintCS : ResourceConstraintCS) : String {
+	// Order by component_ecu names and add the coefficient/LhsValue as a tie breaker
+	// for the sort algo
+	// this uniquely identifies an inner tuple (because the inner tuples are
+	// contained in a set => no duplicates)
+	return self.toSequence()->sortComponentResourceSequence()->getVariableName()
+		+ ILLEGAL_VARIABLE_CHARS()->at(1) + self.getLhsValue(constraintCS); 
+}
+
+helper TupleValue::createResourceConstraint(inout ilp : IntegerLinearProgram, constraintCS : ResourceConstraintCS) {
+	var sequence : Sequence(TupleValue) := self.getSortedInnerResultSequence(constraintCS);
+	log("invalid? " + sequence->oclIsInvalid().toString());
+	sequence->collectNested(tv : TupleValue |
+		tv.toSequence()->sortComponentResourceSequence() // sort the sequence
+	)->createHelperVariablesAndConstraints(ilp);
+	sequence->createResourceConstraintExpression(ilp, constraintCS, self.getRhsValue(constraintCS));
+}
+
+query TupleValue::getSortedInnerResultSequence(constraintCS : ResourceConstraintCS) : Sequence(TupleValue) {
+	return self.getSequence(constraintCS.lhs.value)
+		->sortInnerResultSequence(constraintCS);
+}
+
+helper Sequence(TupleValue)::createResourceConstraintExpression(inout ilp : IntegerLinearProgram,
+	constraintCS : ResourceConstraintCS, rhsValue : String) {
+	var comment : String := if constraintCS.name <> '' then constraintCS.name else constraintCS.repr() endif;
+	var lhs : Expression := null;
+	self->asOrderedSet()->reverse()->collect(oclAsType(TupleValue))->forEach(tv) {
+		var expression : Expression := new ArithmeticExpression(
+			new LiteralExpression(tv.getLhsValue(constraintCS)),
+			new VariableExpression(tv.toSequence()->sortComponentResourceSequence()->getVariable()),
+			ArithmeticOperator::TIMES
+		);
+		if (lhs.oclIsUndefined()) then
+			lhs := expression
+		else
+			lhs := new ArithmeticExpression(expression, lhs, ArithmeticOperator::PLUS)
+		endif;
+	};
+	ilp.constraints += new ConstraintExpression(lhs,
+		new LiteralExpression(rhsValue),
+		ComparingOperator::LESS_OR_EQUAL, comment);
+}
+
+query TupleValue::getLhsValue(constraintCS : ResourceConstraintCS) : String {
+	return self.getValue(constraintCS.lhs.value);
+}
+
+query TupleValue::getRhsValue(constraintCS : ResourceConstraintCS) : String {
+	return self.getValue(constraintCS.rhs.value);
+}
+
+query TupleValue::getValue(namedPart : String) : String {
+	return self.get(namedPart).oclAsType(Real).toString();
+}
+
+query SpecificationCS::getResourceConstraints() : OrderedSet(ResourceConstraintCS) {
+	return self.constraints
+		->select(oclIsKindOf(ResourceConstraintCS))
+		->collect(oclAsType(ResourceConstraintCS))
+		->asOrderedSet();
+}
