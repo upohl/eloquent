@@ -10,6 +10,10 @@ modeltype hwrinstance uses hardware::hwresourceinstance('http://www.fujaba.de/mu
 
 library VariableHelper;
 
+query ILLEGAL_VARIABLE_CHARS() : OrderedSet(String) {
+	return OrderedSet{' '};
+}
+
 query Sequence(NamedElement)::getVariableName() : String {
 	return '_'.join(self->collect(getVariableName()));
 }
