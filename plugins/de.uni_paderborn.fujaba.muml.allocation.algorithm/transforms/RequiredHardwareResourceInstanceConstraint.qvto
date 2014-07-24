@@ -36,7 +36,7 @@ helper RequiredHardwareResourceInstanceConstraintCS::createHwResInstanceConstrai
 	log("SORT");
 	var sequences : Sequence(Sequence(NamedElement)) := self.evaluateOCL(oclContext)
 		->collectNested(toSequence())
-		->sortTupleDescriptorEntries(); 
+		->sortComponentResourceSequences(); 
 	log("SORT");
 	sequences->createHelperVariablesAndConstraints(ilp);
 	while (sequences->notEmpty()) {
@@ -47,13 +47,18 @@ helper RequiredHardwareResourceInstanceConstraintCS::createHwResInstanceConstrai
 	};
 }
 
-query Sequence(Sequence(NamedElement))::sortTupleDescriptorEntries() : Sequence(Sequence(NamedElement)) {
+query Sequence(Sequence(NamedElement))::sortComponentResourceSequences() : Sequence(Sequence(NamedElement)) {
 	return self->collectNested(seq |
-		let indexes : OrderedSet(Integer) = getOddNumbers(1, seq->size())
-		in
-		indexes->collectNested(i | Sequence{seq->at(i), seq->at(i + 1)})
-			->sortedBy(s | s->getVariableName())->flatten()
-	)->sortedBy(seq | seq->getVariableName()); // this sort is needed, because we have just ordered the "internal" sequences so far
+		seq->sortComponentResourceSequence()
+	)->sortedBy(seq | seq->getVariableName());
+}
+
+// TODO: move into library?
+query Sequence(NamedElement)::sortComponentResourceSequence() : Sequence(NamedElement) {
+	return let indexes : OrderedSet(Integer) = getOddNumbers(1, self->size())
+	in
+	indexes->collectNested(i | Sequence{self->at(i), self->at(i + 1)})
+		->sortedBy(s | s->getVariableName())->flatten()
 }
 
 /*query TupleValue::toSequences() : Sequence(Sequence(NamedElement)) {
