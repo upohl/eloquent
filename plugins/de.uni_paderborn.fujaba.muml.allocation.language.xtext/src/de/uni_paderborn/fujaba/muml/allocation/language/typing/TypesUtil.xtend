@@ -1,7 +1,13 @@
 package de.uni_paderborn.fujaba.muml.allocation.language.typing
 
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupleDescriptorCS
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.ResourceConstraintCS
+import de.uni_paderborn.fujaba.muml.hardware.hwresourceinstance.HwresourceinstancePackage
 import de.uni_paderborn.fujaba.muml.instance.InstancePackage
+import java.util.List
 import java.util.Map
 import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.EObject
@@ -14,11 +20,6 @@ import org.eclipse.ocl.examples.pivot.Type
 import org.eclipse.ocl.examples.pivot.manager.MetaModelManager
 import org.eclipse.ocl.examples.pivot.manager.TupleTypeManager
 import org.eclipse.ocl.examples.pivot.utilities.PivotUtil
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupleDescriptorCS
-import java.util.List
-import de.uni_paderborn.fujaba.muml.hardware.hwresourceinstance.HwresourceinstancePackage
 
 class TypesUtil {
 	private static final String tupleName = "Tuple"
@@ -40,6 +41,13 @@ class TypesUtil {
 	public static def Type getType(MetaModelManager metaModelManager, EClass eClass) {
 		val IdResolver idResolver = metaModelManager.idResolver
 		val DomainType domainType = idResolver.getType(eClass)
+		metaModelManager.getType(domainType)
+	}
+	
+	@NonNull
+	public static def Type getRealType(MetaModelManager metaModelManager) {
+		val IdResolver idResolver = metaModelManager.idResolver
+		val DomainType domainType = idResolver.standardLibrary.realType
 		metaModelManager.getType(domainType)
 	}
 		
@@ -92,6 +100,18 @@ class TypesUtil {
 		)
 	}
 	
+	@NonNull static def Map<String, EClass>createNamedPartsFromComponentResourceTupleDescriptors(
+		List<ComponentResourceTupleDescriptorCS> tupleDescriptorList) {
+		val namedParts = <String, EClass>newHashMap()
+		tupleDescriptorList.forEach[t |
+			namedParts.putAll(#{
+				t.instance -> InstancePackage.Literals.COMPONENT_INSTANCE,
+				t.hwresinstance -> HwresourceinstancePackage.Literals.RESOURCE_INSTANCE
+			})
+		]
+		namedParts
+	}
+	
 	@NonNull static def TupleType createReqHWResInstanceConstraintTupleType(MetaModelManager metaModelManager, 
 		List<ComponentResourceTupleDescriptorCS> tupleDescriptorList) {
 		/*val namedParts = <String, Type>newHashMap()
@@ -101,13 +121,7 @@ class TypesUtil {
 				t.hwresinstance -> createSetType(metaModelManager,
 					getType(metaModelManager, HwresourceinstancePackage.Literals.RESOURCE_INSTANCE))
 		})]*/
-		val namedParts = <String, EClass>newHashMap()
-		tupleDescriptorList.forEach[t |
-			namedParts.putAll(#{
-				t.instance -> InstancePackage.Literals.COMPONENT_INSTANCE,
-				t.hwresinstance -> HwresourceinstancePackage.Literals.RESOURCE_INSTANCE
-			})
-		]
+		val namedParts = createNamedPartsFromComponentResourceTupleDescriptors(tupleDescriptorList)
 		createTupleTypeHelper(metaModelManager, namedParts)
 	}
 	
@@ -115,6 +129,41 @@ class TypesUtil {
 		val MetaModelManager metaModelManager = getMetaModelManager(constraintCS)
 		createSetType(metaModelManager,
 			createReqHWResInstanceConstraintTupleType(metaModelManager, constraintCS.tupleDescriptors)
+		)
+	}
+	
+	// resource constraint
+	@NonNull static def TupleType createResourceConstraintInnerTupleType(MetaModelManager metaModelManager, ResourceConstraintCS constraintCS) {
+		var Map<String, Type> namedParts = <String, Type>newHashMap()
+		namedParts.putAll(createNamedPartsFromComponentResourceTupleDescriptors(constraintCS.tupleDescriptors)
+			.mapValues[EClass eClass | getType(metaModelManager, eClass)])
+		namedParts.put(constraintCS.lhs.value, getRealType(metaModelManager))
+		createTupleType(metaModelManager, namedParts)
+	}
+	
+	@NonNull static def TupleType createResourceConstraintInnerTupleType(ResourceConstraintCS constraintCS) {
+		val MetaModelManager metaModelManager = getMetaModelManager(constraintCS)
+		createResourceConstraintInnerTupleType(metaModelManager, constraintCS)
+	}
+	
+	@NonNull static def TupleType createResourceConstraintOuterTupleType(MetaModelManager metaModelManager, ResourceConstraintCS constraintCS) {
+		val Type innerTupleType = createResourceConstraintInnerTupleType(metaModelManager, constraintCS)
+		val Map<String, Type> namedParts = #{
+			constraintCS.lhs.value -> createSetType(metaModelManager, innerTupleType),
+			constraintCS.rhs.value -> getRealType(metaModelManager)
+		}
+		createTupleType(metaModelManager, namedParts)
+	}
+	
+	@NonNull static def TupleType createResourceConstraintOuterTupleType(ResourceConstraintCS constraintCS) {
+		val MetaModelManager metaModelManager = getMetaModelManager(constraintCS)
+		createResourceConstraintOuterTupleType(metaModelManager, constraintCS)
+	}
+	
+	@NonNull static def Type createResourceConstraintType(ResourceConstraintCS constraintCS) {
+		val MetaModelManager metaModelManager = getMetaModelManager(constraintCS)
+		createSetType(metaModelManager,
+			createResourceConstraintOuterTupleType(metaModelManager, constraintCS)
 		)
 	}
 }

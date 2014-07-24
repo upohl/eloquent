@@ -17,6 +17,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.ResourceConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.typing.TypesUtil;
 
 /**
@@ -60,6 +61,22 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 		MetaModelManager metaModelManager = TypesUtil.getMetaModelManager(constraintCS);
 		checkTypes(metaModelManager,
 				TypesUtil.createReqHWResInstanceConstraintType(constraintCS),
+				((ExpressionInOCL) oclExpression.getPivot()).getType(),
+				CsPackage.Literals.CONSTRAINT_CS__EXPRESSION);
+	}
+	
+	@Check
+	public void checkResourceConstraintCS(ResourceConstraintCS constraintCS) {
+		List<ComponentResourceTupleDescriptorCS> tupleDescriptorList = constraintCS.getTupleDescriptors();
+		ContextCS oclExpression = constraintCS.getExpression();
+		if (tupleDescriptorList.isEmpty() || oclExpression == null
+				|| constraintCS.getLhs() == null || constraintCS.getRhs() == null) {
+			// parser/ui will display an error
+			return;
+		}
+		MetaModelManager metaModelManager = TypesUtil.getMetaModelManager(constraintCS);
+		checkTypes(metaModelManager,
+				TypesUtil.createResourceConstraintType(constraintCS),
 				((ExpressionInOCL) oclExpression.getPivot()).getType(),
 				CsPackage.Literals.CONSTRAINT_CS__EXPRESSION);
 	}
