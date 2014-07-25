@@ -44,6 +44,11 @@ public abstract class AbstractExtendingLanguageSpecificationCSVisitor<R, C>
 	}
 
 	@Override
+	public @Nullable R visitEvaluatableElementCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS object) {
+		return visitModelElementCS(object);
+	}
+
+	@Override
 	public @Nullable R visitInstanceTupleDescriptorCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.InstanceTupleDescriptorCS object) {
 		return visitTupleDescriptorCS(object);
 	}

@@ -190,6 +190,61 @@ public interface AsPackage extends EPackage {
 	int SPECIFICATION_FEATURE_COUNT = PivotPackage.ROOT_FEATURE_COUNT + 3;
 
 	/**
+	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.EvaluatableElementImpl <em>Evaluatable Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.EvaluatableElementImpl
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getEvaluatableElement()
+	 * @generated
+	 */
+	int EVALUATABLE_ELEMENT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATABLE_ELEMENT__EXTENSION = PivotPackage.ELEMENT__EXTENSION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATABLE_ELEMENT__OWNED_ANNOTATION = PivotPackage.ELEMENT__OWNED_ANNOTATION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATABLE_ELEMENT__OWNED_COMMENT = PivotPackage.ELEMENT__OWNED_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATABLE_ELEMENT__EXPRESSION = PivotPackage.ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Evaluatable Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATABLE_ELEMENT_FEATURE_COUNT = PivotPackage.ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.ServiceImpl <em>Service</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -197,7 +252,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getService()
 	 * @generated
 	 */
-	int SERVICE = 1;
+	int SERVICE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -270,7 +325,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getQoSDimension()
 	 * @generated
 	 */
-	int QO_SDIMENSION = 2;
+	int QO_SDIMENSION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -318,13 +373,13 @@ public interface AsPackage extends EPackage {
 	int QO_SDIMENSION__NAME = PivotPackage.NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Metric</b></em>' containment reference.
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QO_SDIMENSION__METRIC = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int QO_SDIMENSION__EXPRESSION = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Tuple Descriptors</b></em>' containment reference list.
@@ -361,7 +416,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getConstraint()
 	 * @generated
 	 */
-	int CONSTRAINT = 3;
+	int CONSTRAINT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -434,7 +489,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getLocationConstraint()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT = 4;
+	int LOCATION_CONSTRAINT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -525,7 +580,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getResourceConstraint()
 	 * @generated
 	 */
-	int RESOURCE_CONSTRAINT = 5;
+	int RESOURCE_CONSTRAINT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -625,7 +680,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getRequiredHardwareResourceInstanceConstraint()
 	 * @generated
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT = 6;
+	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -707,7 +762,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getTupleDescriptor()
 	 * @generated
 	 */
-	int TUPLE_DESCRIPTOR = 7;
+	int TUPLE_DESCRIPTOR = 8;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -753,7 +808,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getInstanceTupleDescriptor()
 	 * @generated
 	 */
-	int INSTANCE_TUPLE_DESCRIPTOR = 8;
+	int INSTANCE_TUPLE_DESCRIPTOR = 9;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -808,7 +863,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getLocationTupleDescriptor()
 	 * @generated
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR = 9;
+	int LOCATION_TUPLE_DESCRIPTOR = 10;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -872,7 +927,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getComponentResourceTupleDescriptor()
 	 * @generated
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR = 10;
+	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR = 11;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -936,7 +991,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getValueTupleDescriptor()
 	 * @generated
 	 */
-	int VALUE_TUPLE_DESCRIPTOR = 11;
+	int VALUE_TUPLE_DESCRIPTOR = 12;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -991,7 +1046,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getMeasureFunction()
 	 * @generated
 	 */
-	int MEASURE_FUNCTION = 12;
+	int MEASURE_FUNCTION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -1046,7 +1101,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getLocationConstraintTypes()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_TYPES = 13;
+	int LOCATION_CONSTRAINT_TYPES = 14;
 
 
 	/**
@@ -1093,6 +1148,27 @@ public interface AsPackage extends EPackage {
 	EReference getSpecification_Measure();
 
 	/**
+	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement <em>Evaluatable Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Evaluatable Element</em>'.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement
+	 * @generated
+	 */
+	EClass getEvaluatableElement();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement#getExpression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Expression</em>'.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement#getExpression()
+	 * @see #getEvaluatableElement()
+	 * @generated
+	 */
+	EReference getEvaluatableElement_Expression();
+
+	/**
 	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Service <em>Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1122,17 +1198,6 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getQoSDimension();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.QoSDimension#getMetric <em>Metric</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Metric</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.QoSDimension#getMetric()
-	 * @see #getQoSDimension()
-	 * @generated
-	 */
-	EReference getQoSDimension_Metric();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.QoSDimension#getTupleDescriptors <em>Tuple Descriptors</em>}'.
@@ -1165,17 +1230,6 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getConstraint();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Constraint#getExpression <em>Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.Constraint#getExpression()
-	 * @see #getConstraint()
-	 * @generated
-	 */
-	EReference getConstraint_Expression();
 
 	/**
 	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.LocationConstraint <em>Location Constraint</em>}'.
@@ -1455,6 +1509,24 @@ public interface AsPackage extends EPackage {
 		EReference SPECIFICATION__MEASURE = eINSTANCE.getSpecification_Measure();
 
 		/**
+		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.EvaluatableElementImpl <em>Evaluatable Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.EvaluatableElementImpl
+		 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getEvaluatableElement()
+		 * @generated
+		 */
+		EClass EVALUATABLE_ELEMENT = eINSTANCE.getEvaluatableElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EVALUATABLE_ELEMENT__EXPRESSION = eINSTANCE.getEvaluatableElement_Expression();
+
+		/**
 		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.ServiceImpl <em>Service</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1483,14 +1555,6 @@ public interface AsPackage extends EPackage {
 		EClass QO_SDIMENSION = eINSTANCE.getQoSDimension();
 
 		/**
-		 * The meta object literal for the '<em><b>Metric</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QO_SDIMENSION__METRIC = eINSTANCE.getQoSDimension_Metric();
-
-		/**
 		 * The meta object literal for the '<em><b>Tuple Descriptors</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1515,14 +1579,6 @@ public interface AsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONSTRAINT = eINSTANCE.getConstraint();
-
-		/**
-		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONSTRAINT__EXPRESSION = eINSTANCE.getConstraint_Expression();
 
 		/**
 		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.LocationConstraintImpl <em>Location Constraint</em>}' class.

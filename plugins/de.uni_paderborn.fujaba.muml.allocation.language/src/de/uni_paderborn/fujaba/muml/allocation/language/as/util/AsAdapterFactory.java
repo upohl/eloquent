@@ -81,6 +81,10 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 				return createSpecificationAdapter();
 			}
 			@Override
+			public Adapter caseEvaluatableElement(EvaluatableElement object) {
+				return createEvaluatableElementAdapter();
+			}
+			@Override
 			public Adapter caseService(Service object) {
 				return createServiceAdapter();
 			}
@@ -183,6 +187,20 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSpecificationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement <em>Evaluatable Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement
+	 * @generated
+	 */
+	public Adapter createEvaluatableElementAdapter() {
 		return null;
 	}
 

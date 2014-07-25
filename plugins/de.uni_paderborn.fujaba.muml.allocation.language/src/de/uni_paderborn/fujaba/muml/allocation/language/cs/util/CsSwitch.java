@@ -98,6 +98,17 @@ public class CsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CsPackage.EVALUATABLE_ELEMENT_CS: {
+				EvaluatableElementCS evaluatableElementCS = (EvaluatableElementCS)theEObject;
+				T result = caseEvaluatableElementCS(evaluatableElementCS);
+				if (result == null) result = caseModelElementCS(evaluatableElementCS);
+				if (result == null) result = casePivotableElementCS(evaluatableElementCS);
+				if (result == null) result = caseElementCS(evaluatableElementCS);
+				if (result == null) result = casePivotable(evaluatableElementCS);
+				if (result == null) result = caseVisitableCS(evaluatableElementCS);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case CsPackage.SERVICE_CS: {
 				ServiceCS serviceCS = (ServiceCS)theEObject;
 				T result = caseServiceCS(serviceCS);
@@ -115,6 +126,7 @@ public class CsSwitch<T> extends Switch<T> {
 				QoSDimensionCS qoSDimensionCS = (QoSDimensionCS)theEObject;
 				T result = caseQoSDimensionCS(qoSDimensionCS);
 				if (result == null) result = caseNamedElementCS(qoSDimensionCS);
+				if (result == null) result = caseEvaluatableElementCS(qoSDimensionCS);
 				if (result == null) result = caseModelElementCS(qoSDimensionCS);
 				if (result == null) result = caseNameable(qoSDimensionCS);
 				if (result == null) result = casePivotableElementCS(qoSDimensionCS);
@@ -128,6 +140,7 @@ public class CsSwitch<T> extends Switch<T> {
 				ConstraintCS constraintCS = (ConstraintCS)theEObject;
 				T result = caseConstraintCS(constraintCS);
 				if (result == null) result = caseNamedElementCS(constraintCS);
+				if (result == null) result = caseEvaluatableElementCS(constraintCS);
 				if (result == null) result = caseModelElementCS(constraintCS);
 				if (result == null) result = caseNameable(constraintCS);
 				if (result == null) result = casePivotableElementCS(constraintCS);
@@ -142,6 +155,7 @@ public class CsSwitch<T> extends Switch<T> {
 				T result = caseLocationConstraintCS(locationConstraintCS);
 				if (result == null) result = caseConstraintCS(locationConstraintCS);
 				if (result == null) result = caseNamedElementCS(locationConstraintCS);
+				if (result == null) result = caseEvaluatableElementCS(locationConstraintCS);
 				if (result == null) result = caseModelElementCS(locationConstraintCS);
 				if (result == null) result = caseNameable(locationConstraintCS);
 				if (result == null) result = casePivotableElementCS(locationConstraintCS);
@@ -156,6 +170,7 @@ public class CsSwitch<T> extends Switch<T> {
 				T result = caseResourceConstraintCS(resourceConstraintCS);
 				if (result == null) result = caseConstraintCS(resourceConstraintCS);
 				if (result == null) result = caseNamedElementCS(resourceConstraintCS);
+				if (result == null) result = caseEvaluatableElementCS(resourceConstraintCS);
 				if (result == null) result = caseModelElementCS(resourceConstraintCS);
 				if (result == null) result = caseNameable(resourceConstraintCS);
 				if (result == null) result = casePivotableElementCS(resourceConstraintCS);
@@ -170,6 +185,7 @@ public class CsSwitch<T> extends Switch<T> {
 				T result = caseRequiredHardwareResourceInstanceConstraintCS(requiredHardwareResourceInstanceConstraintCS);
 				if (result == null) result = caseConstraintCS(requiredHardwareResourceInstanceConstraintCS);
 				if (result == null) result = caseNamedElementCS(requiredHardwareResourceInstanceConstraintCS);
+				if (result == null) result = caseEvaluatableElementCS(requiredHardwareResourceInstanceConstraintCS);
 				if (result == null) result = caseModelElementCS(requiredHardwareResourceInstanceConstraintCS);
 				if (result == null) result = caseNameable(requiredHardwareResourceInstanceConstraintCS);
 				if (result == null) result = casePivotableElementCS(requiredHardwareResourceInstanceConstraintCS);
@@ -267,6 +283,21 @@ public class CsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSpecificationCS(SpecificationCS object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Evaluatable Element CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Evaluatable Element CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEvaluatableElementCS(EvaluatableElementCS object) {
 		return null;
 	}
 

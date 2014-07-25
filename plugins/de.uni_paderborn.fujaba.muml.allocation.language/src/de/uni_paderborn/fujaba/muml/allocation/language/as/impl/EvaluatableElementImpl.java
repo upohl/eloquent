@@ -3,9 +3,8 @@
 package de.uni_paderborn.fujaba.muml.allocation.language.as.impl;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage;
-import de.uni_paderborn.fujaba.muml.allocation.language.as.Constraint;
-
 import de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -16,22 +15,22 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.ocl.examples.pivot.ExpressionInOCL;
 
-import org.eclipse.ocl.examples.pivot.internal.impl.NamedElementImpl;
+import org.eclipse.ocl.examples.pivot.internal.impl.ElementImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Constraint</b></em>'.
+ * An implementation of the model object '<em><b>Evaluatable Element</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.ConstraintImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.EvaluatableElementImpl#getExpression <em>Expression</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public abstract class ConstraintImpl extends NamedElementImpl implements Constraint {
+public abstract class EvaluatableElementImpl extends ElementImpl implements EvaluatableElement {
 	/**
 	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -47,7 +46,7 @@ public abstract class ConstraintImpl extends NamedElementImpl implements Constra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConstraintImpl() {
+	protected EvaluatableElementImpl() {
 		super();
 	}
 
@@ -58,7 +57,7 @@ public abstract class ConstraintImpl extends NamedElementImpl implements Constra
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return AsPackage.Literals.CONSTRAINT;
+		return AsPackage.Literals.EVALUATABLE_ELEMENT;
 	}
 
 	/**
@@ -79,7 +78,7 @@ public abstract class ConstraintImpl extends NamedElementImpl implements Constra
 		ExpressionInOCL oldExpression = expression;
 		expression = newExpression;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AsPackage.CONSTRAINT__EXPRESSION, oldExpression, newExpression);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AsPackage.EVALUATABLE_ELEMENT__EXPRESSION, oldExpression, newExpression);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -94,14 +93,14 @@ public abstract class ConstraintImpl extends NamedElementImpl implements Constra
 		if (newExpression != expression) {
 			NotificationChain msgs = null;
 			if (expression != null)
-				msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AsPackage.CONSTRAINT__EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AsPackage.EVALUATABLE_ELEMENT__EXPRESSION, null, msgs);
 			if (newExpression != null)
-				msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AsPackage.CONSTRAINT__EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AsPackage.EVALUATABLE_ELEMENT__EXPRESSION, null, msgs);
 			msgs = basicSetExpression(newExpression, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.CONSTRAINT__EXPRESSION, newExpression, newExpression));
+			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.EVALUATABLE_ELEMENT__EXPRESSION, newExpression, newExpression));
 	}
 
 	/**
@@ -112,7 +111,7 @@ public abstract class ConstraintImpl extends NamedElementImpl implements Constra
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case AsPackage.CONSTRAINT__EXPRESSION:
+			case AsPackage.EVALUATABLE_ELEMENT__EXPRESSION:
 				return basicSetExpression(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -126,7 +125,7 @@ public abstract class ConstraintImpl extends NamedElementImpl implements Constra
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AsPackage.CONSTRAINT__EXPRESSION:
+			case AsPackage.EVALUATABLE_ELEMENT__EXPRESSION:
 				return getExpression();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -140,7 +139,7 @@ public abstract class ConstraintImpl extends NamedElementImpl implements Constra
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AsPackage.CONSTRAINT__EXPRESSION:
+			case AsPackage.EVALUATABLE_ELEMENT__EXPRESSION:
 				setExpression((ExpressionInOCL)newValue);
 				return;
 		}
@@ -155,7 +154,7 @@ public abstract class ConstraintImpl extends NamedElementImpl implements Constra
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AsPackage.CONSTRAINT__EXPRESSION:
+			case AsPackage.EVALUATABLE_ELEMENT__EXPRESSION:
 				setExpression((ExpressionInOCL)null);
 				return;
 		}
@@ -170,43 +169,11 @@ public abstract class ConstraintImpl extends NamedElementImpl implements Constra
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AsPackage.CONSTRAINT__EXPRESSION:
+			case AsPackage.EVALUATABLE_ELEMENT__EXPRESSION:
 				return expression != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == EvaluatableElement.class) {
-			switch (derivedFeatureID) {
-				case AsPackage.CONSTRAINT__EXPRESSION: return AsPackage.EVALUATABLE_ELEMENT__EXPRESSION;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == EvaluatableElement.class) {
-			switch (baseFeatureID) {
-				case AsPackage.EVALUATABLE_ELEMENT__EXPRESSION: return AsPackage.CONSTRAINT__EXPRESSION;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-
-} //ConstraintImpl
+} //EvaluatableElementImpl

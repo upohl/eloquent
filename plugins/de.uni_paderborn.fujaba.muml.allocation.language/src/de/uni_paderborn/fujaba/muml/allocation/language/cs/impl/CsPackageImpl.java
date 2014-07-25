@@ -6,6 +6,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupl
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsFactory;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.InstanceTupleDescriptorCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintTypes;
@@ -46,6 +47,13 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * @generated
 	 */
 	private EClass specificationCSEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass evaluatableElementCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -244,6 +252,24 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEvaluatableElementCS() {
+		return evaluatableElementCSEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEvaluatableElementCS_Expression() {
+		return (EReference)evaluatableElementCSEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getServiceCS() {
 		return serviceCSEClass;
 	}
@@ -271,7 +297,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getQoSDimensionCS_Metric() {
+	public EReference getQoSDimensionCS_TupleDescriptors() {
 		return (EReference)qoSDimensionCSEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -280,17 +306,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getQoSDimensionCS_TupleDescriptors() {
-		return (EReference)qoSDimensionCSEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getQoSDimensionCS_Value() {
-		return (EReference)qoSDimensionCSEClass.getEStructuralFeatures().get(2);
+		return (EReference)qoSDimensionCSEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -300,15 +317,6 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 */
 	public EClass getConstraintCS() {
 		return constraintCSEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConstraintCS_Expression() {
-		return (EReference)constraintCSEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -533,16 +541,17 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		createEReference(specificationCSEClass, SPECIFICATION_CS__CONSTRAINTS);
 		createEReference(specificationCSEClass, SPECIFICATION_CS__MEASURE);
 
+		evaluatableElementCSEClass = createEClass(EVALUATABLE_ELEMENT_CS);
+		createEReference(evaluatableElementCSEClass, EVALUATABLE_ELEMENT_CS__EXPRESSION);
+
 		serviceCSEClass = createEClass(SERVICE_CS);
 		createEReference(serviceCSEClass, SERVICE_CS__DIMENSIONS);
 
 		qoSDimensionCSEClass = createEClass(QO_SDIMENSION_CS);
-		createEReference(qoSDimensionCSEClass, QO_SDIMENSION_CS__METRIC);
 		createEReference(qoSDimensionCSEClass, QO_SDIMENSION_CS__TUPLE_DESCRIPTORS);
 		createEReference(qoSDimensionCSEClass, QO_SDIMENSION_CS__VALUE);
 
 		constraintCSEClass = createEClass(CONSTRAINT_CS);
-		createEReference(constraintCSEClass, CONSTRAINT_CS__EXPRESSION);
 
 		locationConstraintCSEClass = createEClass(LOCATION_CONSTRAINT_CS);
 		createEReference(locationConstraintCSEClass, LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR);
@@ -613,9 +622,12 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		// Add supertypes to classes
 		specificationCSEClass.getESuperTypes().add(theCompleteOCLCSPackage.getCompleteOCLDocumentCS());
 		specificationCSEClass.getESuperTypes().add(theCorePackage.getExtendableElement());
+		evaluatableElementCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
 		serviceCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
 		qoSDimensionCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
+		qoSDimensionCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
 		constraintCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
+		constraintCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
 		locationConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		resourceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		requiredHardwareResourceInstanceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
@@ -632,16 +644,17 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEReference(getSpecificationCS_Constraints(), this.getConstraintCS(), null, "constraints", null, 0, -1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificationCS_Measure(), this.getMeasureFunctionCS(), null, "measure", null, 0, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(evaluatableElementCSEClass, EvaluatableElementCS.class, "EvaluatableElementCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEvaluatableElementCS_Expression(), theEssentialOCLCSPackage.getContextCS(), null, "expression", null, 1, 1, EvaluatableElementCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(serviceCSEClass, ServiceCS.class, "ServiceCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getServiceCS_Dimensions(), this.getQoSDimensionCS(), null, "dimensions", null, 0, -1, ServiceCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(qoSDimensionCSEClass, QoSDimensionCS.class, "QoSDimensionCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getQoSDimensionCS_Metric(), theEssentialOCLCSPackage.getContextCS(), null, "metric", null, 1, 1, QoSDimensionCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQoSDimensionCS_TupleDescriptors(), this.getComponentResourceTupleDescriptorCS(), null, "tupleDescriptors", null, 1, -1, QoSDimensionCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQoSDimensionCS_Value(), this.getValueTupleDescriptorCS(), null, "value", null, 1, 1, QoSDimensionCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constraintCSEClass, ConstraintCS.class, "ConstraintCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConstraintCS_Expression(), theEssentialOCLCSPackage.getContextCS(), null, "expression", null, 1, 1, ConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationConstraintCSEClass, LocationConstraintCS.class, "LocationConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLocationConstraintCS_TupleDescriptor(), this.getLocationTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, LocationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

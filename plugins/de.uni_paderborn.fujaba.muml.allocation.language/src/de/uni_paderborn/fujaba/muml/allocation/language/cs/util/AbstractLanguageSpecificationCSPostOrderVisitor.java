@@ -44,6 +44,10 @@ public abstract class AbstractLanguageSpecificationCSPostOrderVisitor
 		return visitNamedElementCS(csElement);
 	}
 
+	public @Nullable Continuation<?> visitEvaluatableElementCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS csElement) {
+		return visitModelElementCS(csElement);
+	}
+
 	public @Nullable Continuation<?> visitInstanceTupleDescriptorCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.InstanceTupleDescriptorCS csElement) {
 		return visitTupleDescriptorCS(csElement);
 	}

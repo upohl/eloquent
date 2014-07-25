@@ -15,13 +15,14 @@ import org.eclipse.ocl.examples.pivot.NamedElement;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This class represents a quality of service dimension.
+ * This class represents a quality of service dimension. The metric of the
+ * quality of service dimension is specified via the inherited "expression"
+ * reference
  * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.QoSDimension#getMetric <em>Metric</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.QoSDimension#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.QoSDimension#getValue <em>Value</em>}</li>
  * </ul>
@@ -31,33 +32,7 @@ import org.eclipse.ocl.examples.pivot.NamedElement;
  * @model
  * @generated
  */
-public interface QoSDimension extends EObject, NamedElement {
-	/**
-	 * Returns the value of the '<em><b>Metric</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Stores the OCL expression, which represents the metric of this quality of
-	 * service dimension.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Metric</em>' containment reference.
-	 * @see #setMetric(ExpressionInOCL)
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage#getQoSDimension_Metric()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	ExpressionInOCL getMetric();
-
-	/**
-	 * Sets the value of the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.QoSDimension#getMetric <em>Metric</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Metric</em>' containment reference.
-	 * @see #getMetric()
-	 * @generated
-	 */
-	void setMetric(ExpressionInOCL value);
-
+public interface QoSDimension extends NamedElement, EvaluatableElement {
 	/**
 	 * Returns the value of the '<em><b>Tuple Descriptors</b></em>' containment reference list.
 	 * The list contents are of type {@link de.uni_paderborn.fujaba.muml.allocation.language.as.ComponentResourceTupleDescriptor}.

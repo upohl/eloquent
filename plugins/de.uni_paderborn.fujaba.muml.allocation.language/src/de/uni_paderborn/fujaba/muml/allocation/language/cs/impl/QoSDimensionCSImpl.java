@@ -4,6 +4,7 @@ package de.uni_paderborn.fujaba.muml.allocation.language.cs.impl;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupleDescriptorCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
@@ -29,7 +30,7 @@ import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.QoSDimensionCSImpl#getMetric <em>Metric</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.QoSDimensionCSImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.QoSDimensionCSImpl#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.QoSDimensionCSImpl#getValue <em>Value</em>}</li>
  * </ul>
@@ -39,14 +40,14 @@ import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
  */
 public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensionCS {
 	/**
-	 * The cached value of the '{@link #getMetric() <em>Metric</em>}' containment reference.
+	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMetric()
+	 * @see #getExpression()
 	 * @generated
 	 * @ordered
 	 */
-	protected ContextCS metric;
+	protected ContextCS expression;
 
 	/**
 	 * The cached value of the '{@link #getTupleDescriptors() <em>Tuple Descriptors</em>}' containment reference list.
@@ -92,8 +93,8 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContextCS getMetric() {
-		return metric;
+	public ContextCS getExpression() {
+		return expression;
 	}
 
 	/**
@@ -101,11 +102,11 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMetric(ContextCS newMetric, NotificationChain msgs) {
-		ContextCS oldMetric = metric;
-		metric = newMetric;
+	public NotificationChain basicSetExpression(ContextCS newExpression, NotificationChain msgs) {
+		ContextCS oldExpression = expression;
+		expression = newExpression;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.QO_SDIMENSION_CS__METRIC, oldMetric, newMetric);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.QO_SDIMENSION_CS__EXPRESSION, oldExpression, newExpression);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -116,18 +117,18 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMetric(ContextCS newMetric) {
-		if (newMetric != metric) {
+	public void setExpression(ContextCS newExpression) {
+		if (newExpression != expression) {
 			NotificationChain msgs = null;
-			if (metric != null)
-				msgs = ((InternalEObject)metric).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CsPackage.QO_SDIMENSION_CS__METRIC, null, msgs);
-			if (newMetric != null)
-				msgs = ((InternalEObject)newMetric).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CsPackage.QO_SDIMENSION_CS__METRIC, null, msgs);
-			msgs = basicSetMetric(newMetric, msgs);
+			if (expression != null)
+				msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CsPackage.QO_SDIMENSION_CS__EXPRESSION, null, msgs);
+			if (newExpression != null)
+				msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CsPackage.QO_SDIMENSION_CS__EXPRESSION, null, msgs);
+			msgs = basicSetExpression(newExpression, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.QO_SDIMENSION_CS__METRIC, newMetric, newMetric));
+			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.QO_SDIMENSION_CS__EXPRESSION, newExpression, newExpression));
 	}
 
 	/**
@@ -193,8 +194,8 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CsPackage.QO_SDIMENSION_CS__METRIC:
-				return basicSetMetric(null, msgs);
+			case CsPackage.QO_SDIMENSION_CS__EXPRESSION:
+				return basicSetExpression(null, msgs);
 			case CsPackage.QO_SDIMENSION_CS__TUPLE_DESCRIPTORS:
 				return ((InternalEList<?>)getTupleDescriptors()).basicRemove(otherEnd, msgs);
 			case CsPackage.QO_SDIMENSION_CS__VALUE:
@@ -211,8 +212,8 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CsPackage.QO_SDIMENSION_CS__METRIC:
-				return getMetric();
+			case CsPackage.QO_SDIMENSION_CS__EXPRESSION:
+				return getExpression();
 			case CsPackage.QO_SDIMENSION_CS__TUPLE_DESCRIPTORS:
 				return getTupleDescriptors();
 			case CsPackage.QO_SDIMENSION_CS__VALUE:
@@ -230,8 +231,8 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CsPackage.QO_SDIMENSION_CS__METRIC:
-				setMetric((ContextCS)newValue);
+			case CsPackage.QO_SDIMENSION_CS__EXPRESSION:
+				setExpression((ContextCS)newValue);
 				return;
 			case CsPackage.QO_SDIMENSION_CS__TUPLE_DESCRIPTORS:
 				getTupleDescriptors().clear();
@@ -252,8 +253,8 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CsPackage.QO_SDIMENSION_CS__METRIC:
-				setMetric((ContextCS)null);
+			case CsPackage.QO_SDIMENSION_CS__EXPRESSION:
+				setExpression((ContextCS)null);
 				return;
 			case CsPackage.QO_SDIMENSION_CS__TUPLE_DESCRIPTORS:
 				getTupleDescriptors().clear();
@@ -273,14 +274,46 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CsPackage.QO_SDIMENSION_CS__METRIC:
-				return metric != null;
+			case CsPackage.QO_SDIMENSION_CS__EXPRESSION:
+				return expression != null;
 			case CsPackage.QO_SDIMENSION_CS__TUPLE_DESCRIPTORS:
 				return tupleDescriptors != null && !tupleDescriptors.isEmpty();
 			case CsPackage.QO_SDIMENSION_CS__VALUE:
 				return value != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == EvaluatableElementCS.class) {
+			switch (derivedFeatureID) {
+				case CsPackage.QO_SDIMENSION_CS__EXPRESSION: return CsPackage.EVALUATABLE_ELEMENT_CS__EXPRESSION;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == EvaluatableElementCS.class) {
+			switch (baseFeatureID) {
+				case CsPackage.EVALUATABLE_ELEMENT_CS__EXPRESSION: return CsPackage.QO_SDIMENSION_CS__EXPRESSION;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**

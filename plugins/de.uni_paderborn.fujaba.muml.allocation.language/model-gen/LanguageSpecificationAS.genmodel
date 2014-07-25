@@ -15,17 +15,17 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//Specification/constraints"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//Specification/measure"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="LanguageSpecificationAS.ecore#//EvaluatableElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//EvaluatableElement/expression"/>
+    </genClasses>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//Service">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//Service/dimensions"/>
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//QoSDimension">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//QoSDimension/metric"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//QoSDimension/tupleDescriptors"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//QoSDimension/value"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="LanguageSpecificationAS.ecore#//Constraint">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//Constraint/expression"/>
-    </genClasses>
+    <genClasses image="false" ecoreClass="LanguageSpecificationAS.ecore#//Constraint"/>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//LocationConstraint">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//LocationConstraint/tupleDescriptor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationAS.ecore#//LocationConstraint/type"/>

@@ -87,6 +87,10 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 				return createSpecificationCSAdapter();
 			}
 			@Override
+			public Adapter caseEvaluatableElementCS(EvaluatableElementCS object) {
+				return createEvaluatableElementCSAdapter();
+			}
+			@Override
 			public Adapter caseServiceCS(ServiceCS object) {
 				return createServiceCSAdapter();
 			}
@@ -209,6 +213,20 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSpecificationCSAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS <em>Evaluatable Element CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS
+	 * @generated
+	 */
+	public Adapter createEvaluatableElementCSAdapter() {
 		return null;
 	}
 

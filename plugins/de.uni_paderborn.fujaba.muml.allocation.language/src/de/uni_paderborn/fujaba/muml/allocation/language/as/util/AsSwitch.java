@@ -87,6 +87,14 @@ public class AsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AsPackage.EVALUATABLE_ELEMENT: {
+				EvaluatableElement evaluatableElement = (EvaluatableElement)theEObject;
+				T result = caseEvaluatableElement(evaluatableElement);
+				if (result == null) result = caseElement(evaluatableElement);
+				if (result == null) result = caseVisitable(evaluatableElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case AsPackage.SERVICE: {
 				Service service = (Service)theEObject;
 				T result = caseService(service);
@@ -101,6 +109,7 @@ public class AsSwitch<T> extends Switch<T> {
 				QoSDimension qoSDimension = (QoSDimension)theEObject;
 				T result = caseQoSDimension(qoSDimension);
 				if (result == null) result = caseNamedElement(qoSDimension);
+				if (result == null) result = caseEvaluatableElement(qoSDimension);
 				if (result == null) result = caseElement(qoSDimension);
 				if (result == null) result = caseNameable(qoSDimension);
 				if (result == null) result = caseVisitable(qoSDimension);
@@ -111,6 +120,7 @@ public class AsSwitch<T> extends Switch<T> {
 				Constraint constraint = (Constraint)theEObject;
 				T result = caseConstraint(constraint);
 				if (result == null) result = caseNamedElement(constraint);
+				if (result == null) result = caseEvaluatableElement(constraint);
 				if (result == null) result = caseElement(constraint);
 				if (result == null) result = caseNameable(constraint);
 				if (result == null) result = caseVisitable(constraint);
@@ -122,6 +132,7 @@ public class AsSwitch<T> extends Switch<T> {
 				T result = caseLocationConstraint(locationConstraint);
 				if (result == null) result = caseConstraint(locationConstraint);
 				if (result == null) result = caseNamedElement(locationConstraint);
+				if (result == null) result = caseEvaluatableElement(locationConstraint);
 				if (result == null) result = caseElement(locationConstraint);
 				if (result == null) result = caseNameable(locationConstraint);
 				if (result == null) result = caseVisitable(locationConstraint);
@@ -133,6 +144,7 @@ public class AsSwitch<T> extends Switch<T> {
 				T result = caseResourceConstraint(resourceConstraint);
 				if (result == null) result = caseConstraint(resourceConstraint);
 				if (result == null) result = caseNamedElement(resourceConstraint);
+				if (result == null) result = caseEvaluatableElement(resourceConstraint);
 				if (result == null) result = caseElement(resourceConstraint);
 				if (result == null) result = caseNameable(resourceConstraint);
 				if (result == null) result = caseVisitable(resourceConstraint);
@@ -144,6 +156,7 @@ public class AsSwitch<T> extends Switch<T> {
 				T result = caseRequiredHardwareResourceInstanceConstraint(requiredHardwareResourceInstanceConstraint);
 				if (result == null) result = caseConstraint(requiredHardwareResourceInstanceConstraint);
 				if (result == null) result = caseNamedElement(requiredHardwareResourceInstanceConstraint);
+				if (result == null) result = caseEvaluatableElement(requiredHardwareResourceInstanceConstraint);
 				if (result == null) result = caseElement(requiredHardwareResourceInstanceConstraint);
 				if (result == null) result = caseNameable(requiredHardwareResourceInstanceConstraint);
 				if (result == null) result = caseVisitable(requiredHardwareResourceInstanceConstraint);
@@ -220,6 +233,21 @@ public class AsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSpecification(Specification object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Evaluatable Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Evaluatable Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEvaluatableElement(EvaluatableElement object) {
 		return null;
 	}
 

@@ -227,6 +227,79 @@ public interface CsPackage extends EPackage {
 	int SPECIFICATION_CS_FEATURE_COUNT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 5;
 
 	/**
+	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.EvaluatableElementCSImpl <em>Evaluatable Element CS</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.EvaluatableElementCSImpl
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getEvaluatableElementCS()
+	 * @generated
+	 */
+	int EVALUATABLE_ELEMENT_CS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Logical Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATABLE_ELEMENT_CS__LOGICAL_PARENT = BaseCSPackage.MODEL_ELEMENT_CS__LOGICAL_PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Pivot</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATABLE_ELEMENT_CS__PIVOT = BaseCSPackage.MODEL_ELEMENT_CS__PIVOT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATABLE_ELEMENT_CS__OWNED_ANNOTATION = BaseCSPackage.MODEL_ELEMENT_CS__OWNED_ANNOTATION;
+
+	/**
+	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATABLE_ELEMENT_CS__ORIGINAL_XMI_ID = BaseCSPackage.MODEL_ELEMENT_CS__ORIGINAL_XMI_ID;
+
+	/**
+	 * The feature id for the '<em><b>Csi</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATABLE_ELEMENT_CS__CSI = BaseCSPackage.MODEL_ELEMENT_CS__CSI;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATABLE_ELEMENT_CS__EXPRESSION = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Evaluatable Element CS</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATABLE_ELEMENT_CS_FEATURE_COUNT = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ServiceCSImpl <em>Service CS</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -234,7 +307,7 @@ public interface CsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getServiceCS()
 	 * @generated
 	 */
-	int SERVICE_CS = 1;
+	int SERVICE_CS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Logical Parent</b></em>' reference.
@@ -316,7 +389,7 @@ public interface CsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getQoSDimensionCS()
 	 * @generated
 	 */
-	int QO_SDIMENSION_CS = 2;
+	int QO_SDIMENSION_CS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Logical Parent</b></em>' reference.
@@ -373,13 +446,13 @@ public interface CsPackage extends EPackage {
 	int QO_SDIMENSION_CS__NAME = BaseCSPackage.NAMED_ELEMENT_CS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Metric</b></em>' containment reference.
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QO_SDIMENSION_CS__METRIC = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 0;
+	int QO_SDIMENSION_CS__EXPRESSION = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Tuple Descriptors</b></em>' containment reference list.
@@ -416,7 +489,7 @@ public interface CsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getConstraintCS()
 	 * @generated
 	 */
-	int CONSTRAINT_CS = 3;
+	int CONSTRAINT_CS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Logical Parent</b></em>' reference.
@@ -498,7 +571,7 @@ public interface CsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getLocationConstraintCS()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_CS = 4;
+	int LOCATION_CONSTRAINT_CS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Logical Parent</b></em>' reference.
@@ -598,7 +671,7 @@ public interface CsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getResourceConstraintCS()
 	 * @generated
 	 */
-	int RESOURCE_CONSTRAINT_CS = 5;
+	int RESOURCE_CONSTRAINT_CS = 6;
 
 	/**
 	 * The feature id for the '<em><b>Logical Parent</b></em>' reference.
@@ -707,7 +780,7 @@ public interface CsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getRequiredHardwareResourceInstanceConstraintCS()
 	 * @generated
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS = 6;
+	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Logical Parent</b></em>' reference.
@@ -798,7 +871,7 @@ public interface CsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getTupleDescriptorCS()
 	 * @generated
 	 */
-	int TUPLE_DESCRIPTOR_CS = 7;
+	int TUPLE_DESCRIPTOR_CS = 8;
 
 	/**
 	 * The feature id for the '<em><b>Logical Parent</b></em>' reference.
@@ -862,7 +935,7 @@ public interface CsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getInstanceTupleDescriptorCS()
 	 * @generated
 	 */
-	int INSTANCE_TUPLE_DESCRIPTOR_CS = 8;
+	int INSTANCE_TUPLE_DESCRIPTOR_CS = 9;
 
 	/**
 	 * The feature id for the '<em><b>Logical Parent</b></em>' reference.
@@ -935,7 +1008,7 @@ public interface CsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getLocationTupleDescriptorCS()
 	 * @generated
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR_CS = 9;
+	int LOCATION_TUPLE_DESCRIPTOR_CS = 10;
 
 	/**
 	 * The feature id for the '<em><b>Logical Parent</b></em>' reference.
@@ -1017,7 +1090,7 @@ public interface CsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getComponentResourceTupleDescriptorCS()
 	 * @generated
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS = 10;
+	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS = 11;
 
 	/**
 	 * The feature id for the '<em><b>Logical Parent</b></em>' reference.
@@ -1099,7 +1172,7 @@ public interface CsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getValueTupleDescriptorCS()
 	 * @generated
 	 */
-	int VALUE_TUPLE_DESCRIPTOR_CS = 11;
+	int VALUE_TUPLE_DESCRIPTOR_CS = 12;
 
 	/**
 	 * The feature id for the '<em><b>Logical Parent</b></em>' reference.
@@ -1172,7 +1245,7 @@ public interface CsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getMeasureFunctionCS()
 	 * @generated
 	 */
-	int MEASURE_FUNCTION_CS = 12;
+	int MEASURE_FUNCTION_CS = 13;
 
 	/**
 	 * The feature id for the '<em><b>Logical Parent</b></em>' reference.
@@ -1245,7 +1318,7 @@ public interface CsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getLocationConstraintTypes()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_TYPES = 13;
+	int LOCATION_CONSTRAINT_TYPES = 14;
 
 
 	/**
@@ -1292,6 +1365,27 @@ public interface CsPackage extends EPackage {
 	EReference getSpecificationCS_Measure();
 
 	/**
+	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS <em>Evaluatable Element CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Evaluatable Element CS</em>'.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS
+	 * @generated
+	 */
+	EClass getEvaluatableElementCS();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS#getExpression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Expression</em>'.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS#getExpression()
+	 * @see #getEvaluatableElementCS()
+	 * @generated
+	 */
+	EReference getEvaluatableElementCS_Expression();
+
+	/**
 	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.ServiceCS <em>Service CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1321,17 +1415,6 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getQoSDimensionCS();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS#getMetric <em>Metric</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Metric</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS#getMetric()
-	 * @see #getQoSDimensionCS()
-	 * @generated
-	 */
-	EReference getQoSDimensionCS_Metric();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS#getTupleDescriptors <em>Tuple Descriptors</em>}'.
@@ -1364,17 +1447,6 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getConstraintCS();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.ConstraintCS#getExpression <em>Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.ConstraintCS#getExpression()
-	 * @see #getConstraintCS()
-	 * @generated
-	 */
-	EReference getConstraintCS_Expression();
 
 	/**
 	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS <em>Location Constraint CS</em>}'.
@@ -1654,6 +1726,24 @@ public interface CsPackage extends EPackage {
 		EReference SPECIFICATION_CS__MEASURE = eINSTANCE.getSpecificationCS_Measure();
 
 		/**
+		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.EvaluatableElementCSImpl <em>Evaluatable Element CS</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.EvaluatableElementCSImpl
+		 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getEvaluatableElementCS()
+		 * @generated
+		 */
+		EClass EVALUATABLE_ELEMENT_CS = eINSTANCE.getEvaluatableElementCS();
+
+		/**
+		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EVALUATABLE_ELEMENT_CS__EXPRESSION = eINSTANCE.getEvaluatableElementCS_Expression();
+
+		/**
 		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ServiceCSImpl <em>Service CS</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1682,14 +1772,6 @@ public interface CsPackage extends EPackage {
 		EClass QO_SDIMENSION_CS = eINSTANCE.getQoSDimensionCS();
 
 		/**
-		 * The meta object literal for the '<em><b>Metric</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QO_SDIMENSION_CS__METRIC = eINSTANCE.getQoSDimensionCS_Metric();
-
-		/**
 		 * The meta object literal for the '<em><b>Tuple Descriptors</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1714,14 +1796,6 @@ public interface CsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONSTRAINT_CS = eINSTANCE.getConstraintCS();
-
-		/**
-		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONSTRAINT_CS__EXPRESSION = eINSTANCE.getConstraintCS_Expression();
 
 		/**
 		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.LocationConstraintCSImpl <em>Location Constraint CS</em>}' class.

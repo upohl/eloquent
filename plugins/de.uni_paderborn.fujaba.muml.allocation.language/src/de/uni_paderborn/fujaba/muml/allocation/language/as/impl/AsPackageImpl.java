@@ -6,6 +6,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.as.AsFactory;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.ComponentResourceTupleDescriptor;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.Constraint;
+import de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.InstanceTupleDescriptor;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.LocationConstraint;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.LocationConstraintTypes;
@@ -42,6 +43,13 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * @generated
 	 */
 	private EClass specificationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass evaluatableElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -239,6 +247,24 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEvaluatableElement() {
+		return evaluatableElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEvaluatableElement_Expression() {
+		return (EReference)evaluatableElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getService() {
 		return serviceEClass;
 	}
@@ -266,7 +292,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getQoSDimension_Metric() {
+	public EReference getQoSDimension_TupleDescriptors() {
 		return (EReference)qoSDimensionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -275,17 +301,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getQoSDimension_TupleDescriptors() {
-		return (EReference)qoSDimensionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getQoSDimension_Value() {
-		return (EReference)qoSDimensionEClass.getEStructuralFeatures().get(2);
+		return (EReference)qoSDimensionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -295,15 +312,6 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 */
 	public EClass getConstraint() {
 		return constraintEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConstraint_Expression() {
-		return (EReference)constraintEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -528,16 +536,17 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		createEReference(specificationEClass, SPECIFICATION__CONSTRAINTS);
 		createEReference(specificationEClass, SPECIFICATION__MEASURE);
 
+		evaluatableElementEClass = createEClass(EVALUATABLE_ELEMENT);
+		createEReference(evaluatableElementEClass, EVALUATABLE_ELEMENT__EXPRESSION);
+
 		serviceEClass = createEClass(SERVICE);
 		createEReference(serviceEClass, SERVICE__DIMENSIONS);
 
 		qoSDimensionEClass = createEClass(QO_SDIMENSION);
-		createEReference(qoSDimensionEClass, QO_SDIMENSION__METRIC);
 		createEReference(qoSDimensionEClass, QO_SDIMENSION__TUPLE_DESCRIPTORS);
 		createEReference(qoSDimensionEClass, QO_SDIMENSION__VALUE);
 
 		constraintEClass = createEClass(CONSTRAINT);
-		createEReference(constraintEClass, CONSTRAINT__EXPRESSION);
 
 		locationConstraintEClass = createEClass(LOCATION_CONSTRAINT);
 		createEReference(locationConstraintEClass, LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR);
@@ -604,9 +613,12 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		// Add supertypes to classes
 		specificationEClass.getESuperTypes().add(thePivotPackage.getRoot());
+		evaluatableElementEClass.getESuperTypes().add(thePivotPackage.getElement());
 		serviceEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
 		qoSDimensionEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
+		qoSDimensionEClass.getESuperTypes().add(this.getEvaluatableElement());
 		constraintEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
+		constraintEClass.getESuperTypes().add(this.getEvaluatableElement());
 		locationConstraintEClass.getESuperTypes().add(this.getConstraint());
 		resourceConstraintEClass.getESuperTypes().add(this.getConstraint());
 		requiredHardwareResourceInstanceConstraintEClass.getESuperTypes().add(this.getConstraint());
@@ -623,16 +635,17 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		initEReference(getSpecification_Constraints(), this.getConstraint(), null, "constraints", null, 0, -1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecification_Measure(), this.getMeasureFunction(), null, "measure", null, 0, 1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(evaluatableElementEClass, EvaluatableElement.class, "EvaluatableElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEvaluatableElement_Expression(), thePivotPackage.getExpressionInOCL(), null, "expression", null, 1, 1, EvaluatableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getService_Dimensions(), this.getQoSDimension(), null, "dimensions", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(qoSDimensionEClass, QoSDimension.class, "QoSDimension", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getQoSDimension_Metric(), thePivotPackage.getExpressionInOCL(), null, "metric", null, 1, 1, QoSDimension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQoSDimension_TupleDescriptors(), this.getComponentResourceTupleDescriptor(), null, "tupleDescriptors", null, 1, -1, QoSDimension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQoSDimension_Value(), this.getValueTupleDescriptor(), null, "value", null, 1, 1, QoSDimension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constraintEClass, Constraint.class, "Constraint", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConstraint_Expression(), thePivotPackage.getExpressionInOCL(), null, "expression", null, 1, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationConstraintEClass, LocationConstraint.class, "LocationConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLocationConstraint_TupleDescriptor(), this.getLocationTupleDescriptor(), null, "tupleDescriptor", null, 1, 1, LocationConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
