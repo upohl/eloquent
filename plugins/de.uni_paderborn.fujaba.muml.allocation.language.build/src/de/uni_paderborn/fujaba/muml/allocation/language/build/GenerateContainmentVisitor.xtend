@@ -1,6 +1,7 @@
 package de.uni_paderborn.fujaba.muml.allocation.language.build
 
 import java.util.HashMap
+import java.util.List
 import java.util.Map
 import org.eclipse.emf.codegen.ecore.genmodel.GenClass
 import org.eclipse.emf.codegen.ecore.genmodel.GenFeature
@@ -12,8 +13,6 @@ import org.eclipse.emf.ecore.EReference
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.emf.mwe.core.issues.Issues
-import java.util.List
-import java.util.ArrayList
 
 // TODO: also set attributes (minor feature)
 // code needs a bit more love and comments
@@ -43,7 +42,14 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 	 * is not contained in the csModel (for contained classes, the super call
 	 * is always generated)).
 	 */
-	private List<String> primarySuperCallWhitelist = new ArrayList<String>()
+	private List<String> primarySuperCallWhitelist = <String>newArrayList()
+	
+	/**
+	 * Map represents a clazz -> [class_1 ... class_n] mapping. The visitor
+	 * of class clazz calls the visitor of class_1, ..., class_n. Note: clazz
+	 * has to be a subtype of class_i.
+	 */
+	private Map<String, List<String>> otherVisitorsMap = <String, List<String>>newHashMap() 
 	
 	def public void setCsGenModelURI(String csGenModelURI) {
 		this.csGenModelURI = csGenModelURI
@@ -59,6 +65,13 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 	
 	def public void addgeneratePrimarySuperCallFor(String className) {
 		primarySuperCallWhitelist.add(className)
+	}
+	
+	def public void addgenerateOtherVisitorCallFor(String classToVisitor) {
+		val String[] split = classToVisitor.split(':', 2)
+		val list = otherVisitorsMap.get(split.get(0)) ?: <String>newArrayList()
+		list += split.get(1)
+		otherVisitorsMap.put(split.get(0), list)
 	}
 	
 	override checkConfiguration(Issues issues) {
@@ -111,12 +124,25 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 		public @Nullable Continuation<?> visit«eClass.getName»(@NonNull «genClass.qualifiedInterfaceName» csElement) {
 			«genClass.generatePivot»
 			«genClass.generateFeatures»
+			«eClass.generateOtherVisitorCalls»
 			«IF eClass.primarySuperCallAllowed»
-			return visit«csGenModel.findGenClass(eClass.getPrimarySuperClass.name).name»(csElement);
+			return «eClass.primarySuperClass.name.generateVisitorCall»;
 			«ELSE»
 			return null;
 			«ENDIF»
 		}
+		'''
+	}
+	
+	def private String generateVisitorCall(String visitorClassName) {
+		'''visit«csGenModel.findGenClass(visitorClassName).name»(csElement)'''
+	}
+	
+	def private String generateOtherVisitorCalls(EClass eClass) {
+		'''
+		«FOR String className : otherVisitorsMap.get(eClass.name) ?: <String>emptyList»
+		«className.generateVisitorCall»;
+		«ENDFOR»
 		'''
 	}
 	
