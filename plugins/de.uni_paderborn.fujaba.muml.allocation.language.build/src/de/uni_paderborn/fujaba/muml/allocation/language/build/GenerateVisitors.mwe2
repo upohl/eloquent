@@ -32,6 +32,8 @@ Workflow {
 		// visitor method is called, because it "installs" the classifier context
 		// operation decls etc. 
 		generatePrimarySuperCallFor = "SpecificationCS"
+		generateOtherVisitorCallFor = "ConstraintCS:EvaluatableElementCS"
+		generateOtherVisitorCallFor = "QoSDimensionCS:EvaluatableElementCS"
 	}
 	
 	// generate left2right visitor
