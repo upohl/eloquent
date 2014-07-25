@@ -87,7 +87,7 @@ NumberLiteralExpression returns common::LiteralExpression:
 ;
 
 Number returns ecore::EString:
-	Decimal | INT
+	'-'? (Decimal | INT)
 ;
 
 Decimal returns ecore::EString:

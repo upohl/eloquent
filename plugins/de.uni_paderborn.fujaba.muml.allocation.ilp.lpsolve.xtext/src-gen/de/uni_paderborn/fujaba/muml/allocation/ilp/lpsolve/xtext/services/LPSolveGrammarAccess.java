@@ -405,22 +405,30 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class NumberElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Number");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cDecimalParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final RuleCall cDecimalParserRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
+		private final RuleCall cINTTerminalRuleCall_1_1 = (RuleCall)cAlternatives_1.eContents().get(1);
 		
 		//Number returns ecore::EString:
-		//	Decimal | INT;
+		//	"-"? (Decimal | INT);
 		public ParserRule getRule() { return rule; }
 
+		//"-"? (Decimal | INT)
+		public Group getGroup() { return cGroup; }
+
+		//"-"?
+		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
+
 		//Decimal | INT
-		public Alternatives getAlternatives() { return cAlternatives; }
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//Decimal
-		public RuleCall getDecimalParserRuleCall_0() { return cDecimalParserRuleCall_0; }
+		public RuleCall getDecimalParserRuleCall_1_0() { return cDecimalParserRuleCall_1_0; }
 
 		//INT
-		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
+		public RuleCall getINTTerminalRuleCall_1_1() { return cINTTerminalRuleCall_1_1; }
 	}
 
 	public class DecimalElements extends AbstractParserRuleElementFinder {
@@ -855,7 +863,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Number returns ecore::EString:
-	//	Decimal | INT;
+	//	"-"? (Decimal | INT);
 	public NumberElements getNumberAccess() {
 		return (pNumber != null) ? pNumber : (pNumber = new NumberElements());
 	}

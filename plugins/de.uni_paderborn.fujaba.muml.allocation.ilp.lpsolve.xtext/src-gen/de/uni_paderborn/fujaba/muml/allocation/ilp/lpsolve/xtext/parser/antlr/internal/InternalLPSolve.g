@@ -737,26 +737,32 @@ ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(
-    { 
-        newCompositeNode(grammarAccess.getNumberAccess().getDecimalParserRuleCall_0()); 
+((
+	kw='-' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getNumberAccess().getHyphenMinusKeyword_0()); 
     }
-    this_Decimal_0=ruleDecimal    {
-		$current.merge(this_Decimal_0);
+)?(
+    { 
+        newCompositeNode(grammarAccess.getNumberAccess().getDecimalParserRuleCall_1_0()); 
+    }
+    this_Decimal_1=ruleDecimal    {
+		$current.merge(this_Decimal_1);
     }
 
     { 
         afterParserOrEnumRuleCall();
     }
 
-    |    this_INT_1=RULE_INT    {
-		$current.merge(this_INT_1);
+    |    this_INT_2=RULE_INT    {
+		$current.merge(this_INT_2);
     }
 
     { 
-    newLeafNode(this_INT_1, grammarAccess.getNumberAccess().getINTTerminalRuleCall_1()); 
+    newLeafNode(this_INT_2, grammarAccess.getNumberAccess().getINTTerminalRuleCall_1_1()); 
     }
-)
+))
     ;
 
 

@@ -380,9 +380,9 @@ ruleNumber
     }
 	:
 (
-{ before(grammarAccess.getNumberAccess().getAlternatives()); }
-(rule__Number__Alternatives)
-{ after(grammarAccess.getNumberAccess().getAlternatives()); }
+{ before(grammarAccess.getNumberAccess().getGroup()); }
+(rule__Number__Group__0)
+{ after(grammarAccess.getNumberAccess().getGroup()); }
 )
 
 ;
@@ -637,21 +637,21 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Number__Alternatives
+rule__Number__Alternatives_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getNumberAccess().getDecimalParserRuleCall_0()); }
+{ before(grammarAccess.getNumberAccess().getDecimalParserRuleCall_1_0()); }
 	ruleDecimal
-{ after(grammarAccess.getNumberAccess().getDecimalParserRuleCall_0()); }
+{ after(grammarAccess.getNumberAccess().getDecimalParserRuleCall_1_0()); }
 )
 
     |(
-{ before(grammarAccess.getNumberAccess().getINTTerminalRuleCall_1()); }
+{ before(grammarAccess.getNumberAccess().getINTTerminalRuleCall_1_1()); }
 	RULE_INT
-{ after(grammarAccess.getNumberAccess().getINTTerminalRuleCall_1()); }
+{ after(grammarAccess.getNumberAccess().getINTTerminalRuleCall_1_1()); }
 )
 
 ;
@@ -1902,6 +1902,69 @@ finally {
 }
 
 
+
+
+
+
+
+
+rule__Number__Group__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__Number__Group__0__Impl
+	rule__Number__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Number__Group__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getNumberAccess().getHyphenMinusKeyword_0()); }
+(
+	'-' 
+)?
+{ after(grammarAccess.getNumberAccess().getHyphenMinusKeyword_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__Number__Group__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__Number__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Number__Group__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getNumberAccess().getAlternatives_1()); }
+(rule__Number__Alternatives_1)
+{ after(grammarAccess.getNumberAccess().getAlternatives_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
 
 
 

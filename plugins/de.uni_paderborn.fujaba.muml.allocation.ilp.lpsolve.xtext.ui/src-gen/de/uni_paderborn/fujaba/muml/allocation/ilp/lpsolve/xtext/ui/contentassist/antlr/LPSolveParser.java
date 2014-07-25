@@ -41,7 +41,7 @@ public class LPSolveParser extends AbstractContentAssistParser {
 					put(grammarAccess.getObjectiveFunctionExpressionAccess().getAlternatives_0_0(), "rule__ObjectiveFunctionExpression__Alternatives_0_0");
 					put(grammarAccess.getVariableIDAccess().getAlternatives_1_1(), "rule__VariableID__Alternatives_1_1");
 					put(grammarAccess.getOperandAccess().getAlternatives(), "rule__Operand__Alternatives");
-					put(grammarAccess.getNumberAccess().getAlternatives(), "rule__Number__Alternatives");
+					put(grammarAccess.getNumberAccess().getAlternatives_1(), "rule__Number__Alternatives_1");
 					put(grammarAccess.getObjectiveGoalAccess().getAlternatives(), "rule__ObjectiveGoal__Alternatives");
 					put(grammarAccess.getComparingOperatorAccess().getAlternatives(), "rule__ComparingOperator__Alternatives");
 					put(grammarAccess.getILPDataTypeAccess().getAlternatives(), "rule__ILPDataType__Alternatives");
@@ -59,6 +59,7 @@ public class LPSolveParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAdditionExpressionAccess().getGroup_1(), "rule__AdditionExpression__Group_1__0");
 					put(grammarAccess.getMultiplicationExpressionAccess().getGroup(), "rule__MultiplicationExpression__Group__0");
 					put(grammarAccess.getMultiplicationExpressionAccess().getGroup_1(), "rule__MultiplicationExpression__Group_1__0");
+					put(grammarAccess.getNumberAccess().getGroup(), "rule__Number__Group__0");
 					put(grammarAccess.getDecimalAccess().getGroup(), "rule__Decimal__Group__0");
 					put(grammarAccess.getIntegerLinearProgramAccess().getObjectiveFunctionAssignment_0(), "rule__IntegerLinearProgram__ObjectiveFunctionAssignment_0");
 					put(grammarAccess.getIntegerLinearProgramAccess().getConstraintsAssignment_1(), "rule__IntegerLinearProgram__ConstraintsAssignment_1");
