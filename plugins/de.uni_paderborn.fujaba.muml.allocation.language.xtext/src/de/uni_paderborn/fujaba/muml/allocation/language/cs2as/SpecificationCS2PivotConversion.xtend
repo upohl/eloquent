@@ -1,6 +1,6 @@
 package de.uni_paderborn.fujaba.muml.allocation.language.cs2as
 
-import de.uni_paderborn.fujaba.muml.allocation.language.^as.Constraint
+import de.uni_paderborn.fujaba.muml.allocation.language.^as.EvaluatableElement
 import de.uni_paderborn.fujaba.muml.allocation.language.typing.TypesUtil
 import java.util.Collection
 import org.eclipse.emf.ecore.EClass
@@ -23,7 +23,7 @@ class SpecificationCS2PivotConversion extends CS2PivotConversion {
 	}
 			
 	override public void refreshContextVariable(@NonNull ExpressionInOCL pivotSpecification) {
-		if (pivotSpecification.eContainer instanceof Constraint) {
+		if (pivotSpecification.eContainer instanceof EvaluatableElement) {
 			// set the context variable
 			val Type contextType = TypesUtil.getType(metaModelManager, contextClass)
 			setContextVariable(pivotSpecification, Environment.SELF_VARIABLE_NAME, contextType)

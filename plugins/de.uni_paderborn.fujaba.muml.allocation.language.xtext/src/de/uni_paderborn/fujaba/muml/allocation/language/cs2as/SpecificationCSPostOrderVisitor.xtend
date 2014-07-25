@@ -12,6 +12,7 @@ import org.eclipse.ocl.examples.xtext.base.cs2as.CS2PivotConversion
 import org.eclipse.ocl.examples.xtext.base.cs2as.Continuation
 import org.eclipse.ocl.examples.xtext.base.cs2as.Dependency
 import org.eclipse.ocl.examples.xtext.base.cs2as.SingleContinuation
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS
 
 class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVisitor {
 	
@@ -19,10 +20,10 @@ class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVi
 		super(context)
 	}
 	
-	protected static class PreContextCSCompletion extends SingleContinuation<ConstraintCS> {
+	protected static class PreContextCSCompletion extends SingleContinuation<EvaluatableElementCS> {
 		private static final String MISSING_ContextCSCompletion = "Expected an instance of type ContextCSCompletion in %s"
 		
-		new(CS2PivotConversion context,	ConstraintCS csElement) {
+		new(CS2PivotConversion context,	EvaluatableElementCS csElement) {
 			super(context, null, null, csElement, Collections.<Dependency>emptyList)
 		}
 
@@ -52,11 +53,17 @@ class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVi
 		}
 	}
 	
+	override public Continuation<?> visitEvaluatableElementCS(@NonNull EvaluatableElementCS csElement) {
+		new PreContextCSCompletion(context, csElement)
+	}
+	
 	override public Continuation<?> visitConstraintCS(@NonNull ConstraintCS csElement) {
 		// this should not return a Continuation (it should
 		// end up with a call to visitNamedElement)
 		super.visitConstraintCS(csElement)
-		new SpecificationCSPostOrderVisitor.PreContextCSCompletion(context, csElement)
+		// no idea why xtend insists on this explicit type cast
+		// (even if we omit it, the generated java code is correct)
+		visitEvaluatableElementCS(csElement as EvaluatableElementCS)		
 	}
 	
 }
