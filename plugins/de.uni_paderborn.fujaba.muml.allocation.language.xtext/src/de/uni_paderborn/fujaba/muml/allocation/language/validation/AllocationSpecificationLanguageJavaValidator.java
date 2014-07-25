@@ -47,7 +47,7 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 		checkTypes(metaModelManager,
 				TypesUtil.createLocationConstraintType(locationConstraintCS),
 				((ExpressionInOCL) oclExpression.getPivot()).getType(),
-				CsPackage.Literals.CONSTRAINT_CS__EXPRESSION);
+				CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION);
 	}
 	
 	@Check
@@ -62,7 +62,7 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 		checkTypes(metaModelManager,
 				TypesUtil.createReqHWResInstanceConstraintType(constraintCS),
 				((ExpressionInOCL) oclExpression.getPivot()).getType(),
-				CsPackage.Literals.CONSTRAINT_CS__EXPRESSION);
+				CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION);
 	}
 	
 	@Check
@@ -78,7 +78,7 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 		checkTypes(metaModelManager,
 				TypesUtil.createResourceConstraintType(constraintCS),
 				((ExpressionInOCL) oclExpression.getPivot()).getType(),
-				CsPackage.Literals.CONSTRAINT_CS__EXPRESSION);
+				CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION);
 	}
 	
 	private void checkTypes(MetaModelManager metaModelManager, Type expectedType, Type actualType, EReference reference) {
