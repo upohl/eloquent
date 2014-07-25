@@ -689,7 +689,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 *         value=ValueTupleDescriptor 
 	 *         tupleDescriptors+=ComponentResourceTupleDescriptor 
 	 *         tupleDescriptors+=ComponentResourceTupleDescriptor* 
-	 *         metric=Model
+	 *         expression=Model
 	 *     )
 	 */
 	protected void sequence_QosDimension(EObject context, QoSDimensionCS semanticObject) {

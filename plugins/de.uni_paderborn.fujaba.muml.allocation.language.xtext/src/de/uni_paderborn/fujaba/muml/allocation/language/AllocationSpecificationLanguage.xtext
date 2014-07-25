@@ -23,7 +23,7 @@ QosDimension returns cs::QoSDimensionCS:
 	'qos' name=ID '{'
 		'value' value=ValueTupleDescriptor';'
 		'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor (',' tupleDescriptors+=ComponentResourceTupleDescriptor)*';'
-		'ocl' metric=Model ';'
+		'ocl' expression=Model ';'
 	'}'
 ;
 

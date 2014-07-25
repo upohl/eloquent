@@ -32,6 +32,15 @@ public class LanguageSpecificationCSContainmentVisitor extends de.uni_paderborn.
 	}
 	
 	@Override
+	public @Nullable Continuation<?> visitEvaluatableElementCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS csElement) {
+		de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement pivotElement = PivotUtil.getPivot(de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement.class, csElement);
+		pivotElement.setExpression(
+			PivotUtil.getPivot(org.eclipse.ocl.examples.pivot.ExpressionInOCL.class, csElement.getExpression())
+		);
+		return null;
+	}
+	
+	@Override
 	public @Nullable Continuation<?> visitServiceCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.ServiceCS csElement) {
 		de.uni_paderborn.fujaba.muml.allocation.language.as.Service pivotElement = context.refreshModelElement(de.uni_paderborn.fujaba.muml.allocation.language.as.Service.class, de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage.Literals.SERVICE, csElement);
 		for (de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS it : csElement.getDimensions()) {
@@ -45,9 +54,6 @@ public class LanguageSpecificationCSContainmentVisitor extends de.uni_paderborn.
 	@Override
 	public @Nullable Continuation<?> visitQoSDimensionCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS csElement) {
 		de.uni_paderborn.fujaba.muml.allocation.language.as.QoSDimension pivotElement = context.refreshModelElement(de.uni_paderborn.fujaba.muml.allocation.language.as.QoSDimension.class, de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage.Literals.QO_SDIMENSION, csElement);
-		pivotElement.setMetric(
-			PivotUtil.getPivot(org.eclipse.ocl.examples.pivot.ExpressionInOCL.class, csElement.getMetric())
-		);
 		for (de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupleDescriptorCS it : csElement.getTupleDescriptors()) {
 			pivotElement.getTupleDescriptors().add(
 				PivotUtil.getPivot(de.uni_paderborn.fujaba.muml.allocation.language.as.ComponentResourceTupleDescriptor.class, it)
@@ -56,15 +62,14 @@ public class LanguageSpecificationCSContainmentVisitor extends de.uni_paderborn.
 		pivotElement.setValue(
 			PivotUtil.getPivot(de.uni_paderborn.fujaba.muml.allocation.language.as.ValueTupleDescriptor.class, csElement.getValue())
 		);
+		visitEvaluatableElementCS(csElement);
 		return null;
 	}
 	
 	@Override
 	public @Nullable Continuation<?> visitConstraintCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.ConstraintCS csElement) {
 		de.uni_paderborn.fujaba.muml.allocation.language.as.Constraint pivotElement = PivotUtil.getPivot(de.uni_paderborn.fujaba.muml.allocation.language.as.Constraint.class, csElement);
-		pivotElement.setExpression(
-			PivotUtil.getPivot(org.eclipse.ocl.examples.pivot.ExpressionInOCL.class, csElement.getExpression())
-		);
+		visitEvaluatableElementCS(csElement);
 		return null;
 	}
 	

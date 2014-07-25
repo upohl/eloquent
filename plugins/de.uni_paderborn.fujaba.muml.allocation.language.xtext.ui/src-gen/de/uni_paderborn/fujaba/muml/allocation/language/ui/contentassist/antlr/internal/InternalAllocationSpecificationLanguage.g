@@ -4490,9 +4490,9 @@ rule__QosDimension__Group__11__Impl
     }
 :
 (
-{ before(grammarAccess.getQosDimensionAccess().getMetricAssignment_11()); }
-(rule__QosDimension__MetricAssignment_11)
-{ after(grammarAccess.getQosDimensionAccess().getMetricAssignment_11()); }
+{ before(grammarAccess.getQosDimensionAccess().getExpressionAssignment_11()); }
+(rule__QosDimension__ExpressionAssignment_11)
+{ after(grammarAccess.getQosDimensionAccess().getExpressionAssignment_11()); }
 )
 
 ;
@@ -15705,14 +15705,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QosDimension__MetricAssignment_11
+rule__QosDimension__ExpressionAssignment_11
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQosDimensionAccess().getMetricModelParserRuleCall_11_0()); }
-	ruleModel{ after(grammarAccess.getQosDimensionAccess().getMetricModelParserRuleCall_11_0()); }
+{ before(grammarAccess.getQosDimensionAccess().getExpressionModelParserRuleCall_11_0()); }
+	ruleModel{ after(grammarAccess.getQosDimensionAccess().getExpressionModelParserRuleCall_11_0()); }
 )
 
 ;

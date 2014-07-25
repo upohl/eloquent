@@ -408,16 +408,16 @@ ruleQosDimension returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQosDimensionAccess().getMetricModelParserRuleCall_11_0()); 
+	        newCompositeNode(grammarAccess.getQosDimensionAccess().getExpressionModelParserRuleCall_11_0()); 
 	    }
-		lv_metric_12_0=ruleModel		{
+		lv_expression_12_0=ruleModel		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getQosDimensionRule());
 	        }
        		set(
        			$current, 
-       			"metric",
-        		lv_metric_12_0, 
+       			"expression",
+        		lv_expression_12_0, 
         		"Model");
 	        afterParserOrEnumRuleCall();
 	    }

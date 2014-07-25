@@ -158,20 +158,20 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final RuleCall cTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_8_1_0 = (RuleCall)cTupleDescriptorsAssignment_8_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Keyword cOclKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final Assignment cMetricAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cMetricModelParserRuleCall_11_0 = (RuleCall)cMetricAssignment_11.eContents().get(0);
+		private final Assignment cExpressionAssignment_11 = (Assignment)cGroup.eContents().get(11);
+		private final RuleCall cExpressionModelParserRuleCall_11_0 = (RuleCall)cExpressionAssignment_11.eContents().get(0);
 		private final Keyword cSemicolonKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
 		//QosDimension returns cs::QoSDimensionCS:
 		//	"qos" name=ID "{" "value" value=ValueTupleDescriptor ";" "descriptors"
 		//	tupleDescriptors+=ComponentResourceTupleDescriptor ("," tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl"
-		//	metric=Model ";" "}";
+		//	expression=Model ";" "}";
 		public ParserRule getRule() { return rule; }
 
 		//"qos" name=ID "{" "value" value=ValueTupleDescriptor ";" "descriptors"
 		//tupleDescriptors+=ComponentResourceTupleDescriptor ("," tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl"
-		//metric=Model ";" "}"
+		//expression=Model ";" "}"
 		public Group getGroup() { return cGroup; }
 
 		//"qos"
@@ -225,11 +225,11 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//"ocl"
 		public Keyword getOclKeyword_10() { return cOclKeyword_10; }
 
-		//metric=Model
-		public Assignment getMetricAssignment_11() { return cMetricAssignment_11; }
+		//expression=Model
+		public Assignment getExpressionAssignment_11() { return cExpressionAssignment_11; }
 
 		//Model
-		public RuleCall getMetricModelParserRuleCall_11_0() { return cMetricModelParserRuleCall_11_0; }
+		public RuleCall getExpressionModelParserRuleCall_11_0() { return cExpressionModelParserRuleCall_11_0; }
 
 		//";"
 		public Keyword getSemicolonKeyword_12() { return cSemicolonKeyword_12; }
@@ -791,7 +791,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//QosDimension returns cs::QoSDimensionCS:
 	//	"qos" name=ID "{" "value" value=ValueTupleDescriptor ";" "descriptors"
 	//	tupleDescriptors+=ComponentResourceTupleDescriptor ("," tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl"
-	//	metric=Model ";" "}";
+	//	expression=Model ";" "}";
 	public QosDimensionElements getQosDimensionAccess() {
 		return (pQosDimension != null) ? pQosDimension : (pQosDimension = new QosDimensionElements());
 	}

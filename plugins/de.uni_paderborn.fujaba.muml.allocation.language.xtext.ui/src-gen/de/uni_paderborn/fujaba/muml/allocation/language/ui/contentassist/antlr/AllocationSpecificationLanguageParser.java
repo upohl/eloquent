@@ -201,7 +201,7 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getQosDimensionAccess().getValueAssignment_4(), "rule__QosDimension__ValueAssignment_4");
 					put(grammarAccess.getQosDimensionAccess().getTupleDescriptorsAssignment_7(), "rule__QosDimension__TupleDescriptorsAssignment_7");
 					put(grammarAccess.getQosDimensionAccess().getTupleDescriptorsAssignment_8_1(), "rule__QosDimension__TupleDescriptorsAssignment_8_1");
-					put(grammarAccess.getQosDimensionAccess().getMetricAssignment_11(), "rule__QosDimension__MetricAssignment_11");
+					put(grammarAccess.getQosDimensionAccess().getExpressionAssignment_11(), "rule__QosDimension__ExpressionAssignment_11");
 					put(grammarAccess.getLocationConstraintAccess().getTypeAssignment_0(), "rule__LocationConstraint__TypeAssignment_0");
 					put(grammarAccess.getLocationConstraintAccess().getNameAssignment_1(), "rule__LocationConstraint__NameAssignment_1");
 					put(grammarAccess.getLocationConstraintAccess().getTupleDescriptorAssignment_4(), "rule__LocationConstraint__TupleDescriptorAssignment_4");

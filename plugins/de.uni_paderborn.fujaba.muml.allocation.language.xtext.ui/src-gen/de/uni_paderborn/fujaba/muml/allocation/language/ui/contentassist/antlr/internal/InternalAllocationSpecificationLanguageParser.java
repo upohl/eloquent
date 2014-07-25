@@ -14290,26 +14290,26 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "rule__QosDimension__Group__11__Impl"
-    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4487:1: rule__QosDimension__Group__11__Impl : ( ( rule__QosDimension__MetricAssignment_11 ) ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4487:1: rule__QosDimension__Group__11__Impl : ( ( rule__QosDimension__ExpressionAssignment_11 ) ) ;
     public final void rule__QosDimension__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4491:1: ( ( ( rule__QosDimension__MetricAssignment_11 ) ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4492:1: ( ( rule__QosDimension__MetricAssignment_11 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4491:1: ( ( ( rule__QosDimension__ExpressionAssignment_11 ) ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4492:1: ( ( rule__QosDimension__ExpressionAssignment_11 ) )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4492:1: ( ( rule__QosDimension__MetricAssignment_11 ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4493:1: ( rule__QosDimension__MetricAssignment_11 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4492:1: ( ( rule__QosDimension__ExpressionAssignment_11 ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4493:1: ( rule__QosDimension__ExpressionAssignment_11 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getQosDimensionAccess().getMetricAssignment_11()); 
+               before(grammarAccess.getQosDimensionAccess().getExpressionAssignment_11()); 
             }
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4494:1: ( rule__QosDimension__MetricAssignment_11 )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4494:2: rule__QosDimension__MetricAssignment_11
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4494:1: ( rule__QosDimension__ExpressionAssignment_11 )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:4494:2: rule__QosDimension__ExpressionAssignment_11
             {
-            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__MetricAssignment_11_in_rule__QosDimension__Group__11__Impl9669);
-            rule__QosDimension__MetricAssignment_11();
+            pushFollow(FollowSets000.FOLLOW_rule__QosDimension__ExpressionAssignment_11_in_rule__QosDimension__Group__11__Impl9669);
+            rule__QosDimension__ExpressionAssignment_11();
 
             state._fsp--;
             if (state.failed) return ;
@@ -14317,7 +14317,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getQosDimensionAccess().getMetricAssignment_11()); 
+               after(grammarAccess.getQosDimensionAccess().getExpressionAssignment_11()); 
             }
 
             }
@@ -44809,9 +44809,9 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     // $ANTLR end "rule__QosDimension__TupleDescriptorsAssignment_8_1"
 
 
-    // $ANTLR start "rule__QosDimension__MetricAssignment_11"
-    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:15708:1: rule__QosDimension__MetricAssignment_11 : ( ruleModel ) ;
-    public final void rule__QosDimension__MetricAssignment_11() throws RecognitionException {
+    // $ANTLR start "rule__QosDimension__ExpressionAssignment_11"
+    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:15708:1: rule__QosDimension__ExpressionAssignment_11 : ( ruleModel ) ;
+    public final void rule__QosDimension__ExpressionAssignment_11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -44823,15 +44823,15 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:15714:1: ruleModel
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getQosDimensionAccess().getMetricModelParserRuleCall_11_0()); 
+               before(grammarAccess.getQosDimensionAccess().getExpressionModelParserRuleCall_11_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleModel_in_rule__QosDimension__MetricAssignment_1131750);
+            pushFollow(FollowSets001.FOLLOW_ruleModel_in_rule__QosDimension__ExpressionAssignment_1131750);
             ruleModel();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getQosDimensionAccess().getMetricModelParserRuleCall_11_0()); 
+               after(grammarAccess.getQosDimensionAccess().getExpressionModelParserRuleCall_11_0()); 
             }
 
             }
@@ -44851,7 +44851,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__QosDimension__MetricAssignment_11"
+    // $ANTLR end "rule__QosDimension__ExpressionAssignment_11"
 
 
     // $ANTLR start "rule__LocationConstraint__TypeAssignment_0"
@@ -53542,7 +53542,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         public static final BitSet FOLLOW_67_in_rule__QosDimension__Group__10__Impl9608 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__QosDimension__Group__11__Impl_in_rule__QosDimension__Group__119639 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
         public static final BitSet FOLLOW_rule__QosDimension__Group__12_in_rule__QosDimension__Group__119642 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__QosDimension__MetricAssignment_11_in_rule__QosDimension__Group__11__Impl9669 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__QosDimension__ExpressionAssignment_11_in_rule__QosDimension__Group__11__Impl9669 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__QosDimension__Group__12__Impl_in_rule__QosDimension__Group__129699 = new BitSet(new long[]{0x2000000000000000L});
         public static final BitSet FOLLOW_rule__QosDimension__Group__13_in_rule__QosDimension__Group__129702 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_65_in_rule__QosDimension__Group__12__Impl9730 = new BitSet(new long[]{0x0000000000000002L});
@@ -54481,7 +54481,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         public static final BitSet FOLLOW_ruleValueTupleDescriptor_in_rule__QosDimension__ValueAssignment_431657 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__QosDimension__TupleDescriptorsAssignment_731688 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleComponentResourceTupleDescriptor_in_rule__QosDimension__TupleDescriptorsAssignment_8_131719 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleModel_in_rule__QosDimension__MetricAssignment_1131750 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleModel_in_rule__QosDimension__ExpressionAssignment_1131750 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleLocationConstraintType_in_rule__LocationConstraint__TypeAssignment_031781 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleID_in_rule__LocationConstraint__NameAssignment_131812 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleLocationTupleDescriptor_in_rule__LocationConstraint__TupleDescriptorAssignment_431843 = new BitSet(new long[]{0x0000000000000002L});
