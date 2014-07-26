@@ -98,4 +98,9 @@ public abstract class AbstractDelegatingLanguageSpecificationCSVisitor<R, C, D e
 	public @Nullable R visitValueTupleDescriptorCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS object) {
 		return delegate.visitValueTupleDescriptorCS(object);
 	}
+
+	@Override
+	public @Nullable R visitWeightingComponentResourceTupleElementCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.WeightingComponentResourceTupleElementCS object) {
+		return delegate.visitWeightingComponentResourceTupleElementCS(object);
+	}
 }

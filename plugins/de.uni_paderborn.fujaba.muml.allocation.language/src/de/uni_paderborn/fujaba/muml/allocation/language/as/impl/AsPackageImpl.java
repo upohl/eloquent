@@ -20,6 +20,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.as.Specification;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.TupleDescriptor;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.ValueTupleDescriptor;
 
+import de.uni_paderborn.fujaba.muml.allocation.language.as.WeightingComponentResourceTupleElement;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -50,6 +51,13 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * @generated
 	 */
 	private EClass evaluatableElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass weightingComponentResourceTupleElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -265,6 +273,33 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getWeightingComponentResourceTupleElement() {
+		return weightingComponentResourceTupleElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWeightingComponentResourceTupleElement_TupleDescriptors() {
+		return (EReference)weightingComponentResourceTupleElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWeightingComponentResourceTupleElement_Weighting() {
+		return (EReference)weightingComponentResourceTupleElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getService() {
 		return serviceEClass;
 	}
@@ -285,24 +320,6 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 */
 	public EClass getQoSDimension() {
 		return qoSDimensionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQoSDimension_TupleDescriptors() {
-		return (EReference)qoSDimensionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQoSDimension_Value() {
-		return (EReference)qoSDimensionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -355,26 +372,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResourceConstraint_TupleDescriptors() {
-		return (EReference)resourceConstraintEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getResourceConstraint_Lhs() {
-		return (EReference)resourceConstraintEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getResourceConstraint_Rhs() {
-		return (EReference)resourceConstraintEClass.getEStructuralFeatures().get(2);
+		return (EReference)resourceConstraintEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -539,12 +538,14 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		evaluatableElementEClass = createEClass(EVALUATABLE_ELEMENT);
 		createEReference(evaluatableElementEClass, EVALUATABLE_ELEMENT__EXPRESSION);
 
+		weightingComponentResourceTupleElementEClass = createEClass(WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT);
+		createEReference(weightingComponentResourceTupleElementEClass, WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__TUPLE_DESCRIPTORS);
+		createEReference(weightingComponentResourceTupleElementEClass, WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__WEIGHTING);
+
 		serviceEClass = createEClass(SERVICE);
 		createEReference(serviceEClass, SERVICE__DIMENSIONS);
 
 		qoSDimensionEClass = createEClass(QO_SDIMENSION);
-		createEReference(qoSDimensionEClass, QO_SDIMENSION__TUPLE_DESCRIPTORS);
-		createEReference(qoSDimensionEClass, QO_SDIMENSION__VALUE);
 
 		constraintEClass = createEClass(CONSTRAINT);
 
@@ -553,8 +554,6 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		createEAttribute(locationConstraintEClass, LOCATION_CONSTRAINT__TYPE);
 
 		resourceConstraintEClass = createEClass(RESOURCE_CONSTRAINT);
-		createEReference(resourceConstraintEClass, RESOURCE_CONSTRAINT__TUPLE_DESCRIPTORS);
-		createEReference(resourceConstraintEClass, RESOURCE_CONSTRAINT__LHS);
 		createEReference(resourceConstraintEClass, RESOURCE_CONSTRAINT__RHS);
 
 		requiredHardwareResourceInstanceConstraintEClass = createEClass(REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT);
@@ -614,13 +613,16 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		// Add supertypes to classes
 		specificationEClass.getESuperTypes().add(thePivotPackage.getRoot());
 		evaluatableElementEClass.getESuperTypes().add(thePivotPackage.getElement());
+		weightingComponentResourceTupleElementEClass.getESuperTypes().add(thePivotPackage.getElement());
 		serviceEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
 		qoSDimensionEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
 		qoSDimensionEClass.getESuperTypes().add(this.getEvaluatableElement());
+		qoSDimensionEClass.getESuperTypes().add(this.getWeightingComponentResourceTupleElement());
 		constraintEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
 		constraintEClass.getESuperTypes().add(this.getEvaluatableElement());
 		locationConstraintEClass.getESuperTypes().add(this.getConstraint());
 		resourceConstraintEClass.getESuperTypes().add(this.getConstraint());
+		resourceConstraintEClass.getESuperTypes().add(this.getWeightingComponentResourceTupleElement());
 		requiredHardwareResourceInstanceConstraintEClass.getESuperTypes().add(this.getConstraint());
 		tupleDescriptorEClass.getESuperTypes().add(thePivotPackage.getElement());
 		instanceTupleDescriptorEClass.getESuperTypes().add(this.getTupleDescriptor());
@@ -638,12 +640,14 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		initEClass(evaluatableElementEClass, EvaluatableElement.class, "EvaluatableElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEvaluatableElement_Expression(), thePivotPackage.getExpressionInOCL(), null, "expression", null, 1, 1, EvaluatableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(weightingComponentResourceTupleElementEClass, WeightingComponentResourceTupleElement.class, "WeightingComponentResourceTupleElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getWeightingComponentResourceTupleElement_TupleDescriptors(), this.getComponentResourceTupleDescriptor(), null, "tupleDescriptors", null, 1, -1, WeightingComponentResourceTupleElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWeightingComponentResourceTupleElement_Weighting(), this.getValueTupleDescriptor(), null, "weighting", null, 1, 1, WeightingComponentResourceTupleElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getService_Dimensions(), this.getQoSDimension(), null, "dimensions", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(qoSDimensionEClass, QoSDimension.class, "QoSDimension", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getQoSDimension_TupleDescriptors(), this.getComponentResourceTupleDescriptor(), null, "tupleDescriptors", null, 1, -1, QoSDimension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQoSDimension_Value(), this.getValueTupleDescriptor(), null, "value", null, 1, 1, QoSDimension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constraintEClass, Constraint.class, "Constraint", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -652,8 +656,6 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		initEAttribute(getLocationConstraint_Type(), this.getLocationConstraintTypes(), "type", null, 0, 1, LocationConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceConstraintEClass, ResourceConstraint.class, "ResourceConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResourceConstraint_TupleDescriptors(), this.getComponentResourceTupleDescriptor(), null, "tupleDescriptors", null, 1, -1, ResourceConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getResourceConstraint_Lhs(), this.getValueTupleDescriptor(), null, "lhs", null, 1, 1, ResourceConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResourceConstraint_Rhs(), this.getValueTupleDescriptor(), null, "rhs", null, 1, 1, ResourceConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(requiredHardwareResourceInstanceConstraintEClass, RequiredHardwareResourceInstanceConstraint.class, "RequiredHardwareResourceInstanceConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

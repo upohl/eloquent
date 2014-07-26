@@ -245,6 +245,70 @@ public interface AsPackage extends EPackage {
 	int EVALUATABLE_ELEMENT_FEATURE_COUNT = PivotPackage.ELEMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.WeightingComponentResourceTupleElementImpl <em>Weighting Component Resource Tuple Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.WeightingComponentResourceTupleElementImpl
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getWeightingComponentResourceTupleElement()
+	 * @generated
+	 */
+	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__EXTENSION = PivotPackage.ELEMENT__EXTENSION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__OWNED_ANNOTATION = PivotPackage.ELEMENT__OWNED_ANNOTATION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__OWNED_COMMENT = PivotPackage.ELEMENT__OWNED_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Tuple Descriptors</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__TUPLE_DESCRIPTORS = PivotPackage.ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Weighting</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__WEIGHTING = PivotPackage.ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Weighting Component Resource Tuple Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_FEATURE_COUNT = PivotPackage.ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.ServiceImpl <em>Service</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -252,7 +316,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getService()
 	 * @generated
 	 */
-	int SERVICE = 2;
+	int SERVICE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -325,7 +389,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getQoSDimension()
 	 * @generated
 	 */
-	int QO_SDIMENSION = 3;
+	int QO_SDIMENSION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -391,13 +455,13 @@ public interface AsPackage extends EPackage {
 	int QO_SDIMENSION__TUPLE_DESCRIPTORS = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * The feature id for the '<em><b>Weighting</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QO_SDIMENSION__VALUE = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int QO_SDIMENSION__WEIGHTING = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Qo SDimension</em>' class.
@@ -416,7 +480,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getConstraint()
 	 * @generated
 	 */
-	int CONSTRAINT = 4;
+	int CONSTRAINT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -489,7 +553,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getLocationConstraint()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT = 5;
+	int LOCATION_CONSTRAINT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -580,7 +644,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getResourceConstraint()
 	 * @generated
 	 */
-	int RESOURCE_CONSTRAINT = 6;
+	int RESOURCE_CONSTRAINT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -646,13 +710,13 @@ public interface AsPackage extends EPackage {
 	int RESOURCE_CONSTRAINT__TUPLE_DESCRIPTORS = CONSTRAINT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Lhs</b></em>' containment reference.
+	 * The feature id for the '<em><b>Weighting</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSTRAINT__LHS = CONSTRAINT_FEATURE_COUNT + 1;
+	int RESOURCE_CONSTRAINT__WEIGHTING = CONSTRAINT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Rhs</b></em>' containment reference.
@@ -680,7 +744,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getRequiredHardwareResourceInstanceConstraint()
 	 * @generated
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT = 7;
+	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT = 8;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -762,7 +826,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getTupleDescriptor()
 	 * @generated
 	 */
-	int TUPLE_DESCRIPTOR = 8;
+	int TUPLE_DESCRIPTOR = 9;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -808,7 +872,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getInstanceTupleDescriptor()
 	 * @generated
 	 */
-	int INSTANCE_TUPLE_DESCRIPTOR = 9;
+	int INSTANCE_TUPLE_DESCRIPTOR = 10;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -863,7 +927,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getLocationTupleDescriptor()
 	 * @generated
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR = 10;
+	int LOCATION_TUPLE_DESCRIPTOR = 11;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -927,7 +991,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getComponentResourceTupleDescriptor()
 	 * @generated
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR = 11;
+	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR = 12;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -991,7 +1055,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getValueTupleDescriptor()
 	 * @generated
 	 */
-	int VALUE_TUPLE_DESCRIPTOR = 12;
+	int VALUE_TUPLE_DESCRIPTOR = 13;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -1046,7 +1110,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getMeasureFunction()
 	 * @generated
 	 */
-	int MEASURE_FUNCTION = 13;
+	int MEASURE_FUNCTION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -1101,7 +1165,7 @@ public interface AsPackage extends EPackage {
 	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getLocationConstraintTypes()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_TYPES = 14;
+	int LOCATION_CONSTRAINT_TYPES = 15;
 
 
 	/**
@@ -1169,6 +1233,38 @@ public interface AsPackage extends EPackage {
 	EReference getEvaluatableElement_Expression();
 
 	/**
+	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.WeightingComponentResourceTupleElement <em>Weighting Component Resource Tuple Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Weighting Component Resource Tuple Element</em>'.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.WeightingComponentResourceTupleElement
+	 * @generated
+	 */
+	EClass getWeightingComponentResourceTupleElement();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.WeightingComponentResourceTupleElement#getTupleDescriptors <em>Tuple Descriptors</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tuple Descriptors</em>'.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.WeightingComponentResourceTupleElement#getTupleDescriptors()
+	 * @see #getWeightingComponentResourceTupleElement()
+	 * @generated
+	 */
+	EReference getWeightingComponentResourceTupleElement_TupleDescriptors();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.WeightingComponentResourceTupleElement#getWeighting <em>Weighting</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Weighting</em>'.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.WeightingComponentResourceTupleElement#getWeighting()
+	 * @see #getWeightingComponentResourceTupleElement()
+	 * @generated
+	 */
+	EReference getWeightingComponentResourceTupleElement_Weighting();
+
+	/**
 	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Service <em>Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1198,28 +1294,6 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getQoSDimension();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.QoSDimension#getTupleDescriptors <em>Tuple Descriptors</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tuple Descriptors</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.QoSDimension#getTupleDescriptors()
-	 * @see #getQoSDimension()
-	 * @generated
-	 */
-	EReference getQoSDimension_TupleDescriptors();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.QoSDimension#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Value</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.QoSDimension#getValue()
-	 * @see #getQoSDimension()
-	 * @generated
-	 */
-	EReference getQoSDimension_Value();
 
 	/**
 	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Constraint <em>Constraint</em>}'.
@@ -1272,28 +1346,6 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getResourceConstraint();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.ResourceConstraint#getTupleDescriptors <em>Tuple Descriptors</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tuple Descriptors</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.ResourceConstraint#getTupleDescriptors()
-	 * @see #getResourceConstraint()
-	 * @generated
-	 */
-	EReference getResourceConstraint_TupleDescriptors();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.ResourceConstraint#getLhs <em>Lhs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Lhs</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.ResourceConstraint#getLhs()
-	 * @see #getResourceConstraint()
-	 * @generated
-	 */
-	EReference getResourceConstraint_Lhs();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.ResourceConstraint#getRhs <em>Rhs</em>}'.
@@ -1527,6 +1579,32 @@ public interface AsPackage extends EPackage {
 		EReference EVALUATABLE_ELEMENT__EXPRESSION = eINSTANCE.getEvaluatableElement_Expression();
 
 		/**
+		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.WeightingComponentResourceTupleElementImpl <em>Weighting Component Resource Tuple Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.WeightingComponentResourceTupleElementImpl
+		 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getWeightingComponentResourceTupleElement()
+		 * @generated
+		 */
+		EClass WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT = eINSTANCE.getWeightingComponentResourceTupleElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Tuple Descriptors</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__TUPLE_DESCRIPTORS = eINSTANCE.getWeightingComponentResourceTupleElement_TupleDescriptors();
+
+		/**
+		 * The meta object literal for the '<em><b>Weighting</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__WEIGHTING = eINSTANCE.getWeightingComponentResourceTupleElement_Weighting();
+
+		/**
 		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.ServiceImpl <em>Service</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1553,22 +1631,6 @@ public interface AsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass QO_SDIMENSION = eINSTANCE.getQoSDimension();
-
-		/**
-		 * The meta object literal for the '<em><b>Tuple Descriptors</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QO_SDIMENSION__TUPLE_DESCRIPTORS = eINSTANCE.getQoSDimension_TupleDescriptors();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QO_SDIMENSION__VALUE = eINSTANCE.getQoSDimension_Value();
 
 		/**
 		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.ConstraintImpl <em>Constraint</em>}' class.
@@ -1615,22 +1677,6 @@ public interface AsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass RESOURCE_CONSTRAINT = eINSTANCE.getResourceConstraint();
-
-		/**
-		 * The meta object literal for the '<em><b>Tuple Descriptors</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RESOURCE_CONSTRAINT__TUPLE_DESCRIPTORS = eINSTANCE.getResourceConstraint_TupleDescriptors();
-
-		/**
-		 * The meta object literal for the '<em><b>Lhs</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RESOURCE_CONSTRAINT__LHS = eINSTANCE.getResourceConstraint_Lhs();
 
 		/**
 		 * The meta object literal for the '<em><b>Rhs</b></em>' containment reference feature.

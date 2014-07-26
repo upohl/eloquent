@@ -28,21 +28,20 @@
     <genClasses image="false" ecoreClass="LanguageSpecificationCS.ecore#//EvaluatableElementCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//EvaluatableElementCS/expression"/>
     </genClasses>
+    <genClasses ecoreClass="LanguageSpecificationCS.ecore#//WeightingComponentResourceTupleElementCS">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//WeightingComponentResourceTupleElementCS/tupleDescriptors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//WeightingComponentResourceTupleElementCS/weighting"/>
+    </genClasses>
     <genClasses ecoreClass="LanguageSpecificationCS.ecore#//ServiceCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//ServiceCS/dimensions"/>
     </genClasses>
-    <genClasses ecoreClass="LanguageSpecificationCS.ecore#//QoSDimensionCS">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//QoSDimensionCS/tupleDescriptors"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//QoSDimensionCS/value"/>
-    </genClasses>
+    <genClasses ecoreClass="LanguageSpecificationCS.ecore#//QoSDimensionCS"/>
     <genClasses image="false" ecoreClass="LanguageSpecificationCS.ecore#//ConstraintCS"/>
     <genClasses ecoreClass="LanguageSpecificationCS.ecore#//LocationConstraintCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//LocationConstraintCS/tupleDescriptor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationCS.ecore#//LocationConstraintCS/type"/>
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationCS.ecore#//ResourceConstraintCS">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//ResourceConstraintCS/tupleDescriptors"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//ResourceConstraintCS/lhs"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//ResourceConstraintCS/rhs"/>
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationCS.ecore#//RequiredHardwareResourceInstanceConstraintCS">

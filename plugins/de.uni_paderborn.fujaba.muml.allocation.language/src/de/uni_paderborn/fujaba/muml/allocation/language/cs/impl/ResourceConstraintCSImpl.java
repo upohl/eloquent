@@ -6,6 +6,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupl
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ResourceConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.WeightingComponentResourceTupleElementCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
@@ -28,7 +29,7 @@ import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ResourceConstraintCSImpl#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ResourceConstraintCSImpl#getLhs <em>Lhs</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ResourceConstraintCSImpl#getWeighting <em>Weighting</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ResourceConstraintCSImpl#getRhs <em>Rhs</em>}</li>
  * </ul>
  * </p>
@@ -47,14 +48,14 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 	protected EList<ComponentResourceTupleDescriptorCS> tupleDescriptors;
 
 	/**
-	 * The cached value of the '{@link #getLhs() <em>Lhs</em>}' containment reference.
+	 * The cached value of the '{@link #getWeighting() <em>Weighting</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLhs()
+	 * @see #getWeighting()
 	 * @generated
 	 * @ordered
 	 */
-	protected ValueTupleDescriptorCS lhs;
+	protected ValueTupleDescriptorCS weighting;
 
 	/**
 	 * The cached value of the '{@link #getRhs() <em>Rhs</em>}' containment reference.
@@ -102,8 +103,8 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueTupleDescriptorCS getLhs() {
-		return lhs;
+	public ValueTupleDescriptorCS getWeighting() {
+		return weighting;
 	}
 
 	/**
@@ -111,11 +112,11 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLhs(ValueTupleDescriptorCS newLhs, NotificationChain msgs) {
-		ValueTupleDescriptorCS oldLhs = lhs;
-		lhs = newLhs;
+	public NotificationChain basicSetWeighting(ValueTupleDescriptorCS newWeighting, NotificationChain msgs) {
+		ValueTupleDescriptorCS oldWeighting = weighting;
+		weighting = newWeighting;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.RESOURCE_CONSTRAINT_CS__LHS, oldLhs, newLhs);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.RESOURCE_CONSTRAINT_CS__WEIGHTING, oldWeighting, newWeighting);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -126,18 +127,18 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLhs(ValueTupleDescriptorCS newLhs) {
-		if (newLhs != lhs) {
+	public void setWeighting(ValueTupleDescriptorCS newWeighting) {
+		if (newWeighting != weighting) {
 			NotificationChain msgs = null;
-			if (lhs != null)
-				msgs = ((InternalEObject)lhs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CsPackage.RESOURCE_CONSTRAINT_CS__LHS, null, msgs);
-			if (newLhs != null)
-				msgs = ((InternalEObject)newLhs).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CsPackage.RESOURCE_CONSTRAINT_CS__LHS, null, msgs);
-			msgs = basicSetLhs(newLhs, msgs);
+			if (weighting != null)
+				msgs = ((InternalEObject)weighting).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CsPackage.RESOURCE_CONSTRAINT_CS__WEIGHTING, null, msgs);
+			if (newWeighting != null)
+				msgs = ((InternalEObject)newWeighting).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CsPackage.RESOURCE_CONSTRAINT_CS__WEIGHTING, null, msgs);
+			msgs = basicSetWeighting(newWeighting, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.RESOURCE_CONSTRAINT_CS__LHS, newLhs, newLhs));
+			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.RESOURCE_CONSTRAINT_CS__WEIGHTING, newWeighting, newWeighting));
 	}
 
 	/**
@@ -193,8 +194,8 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 		switch (featureID) {
 			case CsPackage.RESOURCE_CONSTRAINT_CS__TUPLE_DESCRIPTORS:
 				return ((InternalEList<?>)getTupleDescriptors()).basicRemove(otherEnd, msgs);
-			case CsPackage.RESOURCE_CONSTRAINT_CS__LHS:
-				return basicSetLhs(null, msgs);
+			case CsPackage.RESOURCE_CONSTRAINT_CS__WEIGHTING:
+				return basicSetWeighting(null, msgs);
 			case CsPackage.RESOURCE_CONSTRAINT_CS__RHS:
 				return basicSetRhs(null, msgs);
 		}
@@ -211,8 +212,8 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 		switch (featureID) {
 			case CsPackage.RESOURCE_CONSTRAINT_CS__TUPLE_DESCRIPTORS:
 				return getTupleDescriptors();
-			case CsPackage.RESOURCE_CONSTRAINT_CS__LHS:
-				return getLhs();
+			case CsPackage.RESOURCE_CONSTRAINT_CS__WEIGHTING:
+				return getWeighting();
 			case CsPackage.RESOURCE_CONSTRAINT_CS__RHS:
 				return getRhs();
 		}
@@ -232,8 +233,8 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 				getTupleDescriptors().clear();
 				getTupleDescriptors().addAll((Collection<? extends ComponentResourceTupleDescriptorCS>)newValue);
 				return;
-			case CsPackage.RESOURCE_CONSTRAINT_CS__LHS:
-				setLhs((ValueTupleDescriptorCS)newValue);
+			case CsPackage.RESOURCE_CONSTRAINT_CS__WEIGHTING:
+				setWeighting((ValueTupleDescriptorCS)newValue);
 				return;
 			case CsPackage.RESOURCE_CONSTRAINT_CS__RHS:
 				setRhs((ValueTupleDescriptorCS)newValue);
@@ -253,8 +254,8 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 			case CsPackage.RESOURCE_CONSTRAINT_CS__TUPLE_DESCRIPTORS:
 				getTupleDescriptors().clear();
 				return;
-			case CsPackage.RESOURCE_CONSTRAINT_CS__LHS:
-				setLhs((ValueTupleDescriptorCS)null);
+			case CsPackage.RESOURCE_CONSTRAINT_CS__WEIGHTING:
+				setWeighting((ValueTupleDescriptorCS)null);
 				return;
 			case CsPackage.RESOURCE_CONSTRAINT_CS__RHS:
 				setRhs((ValueTupleDescriptorCS)null);
@@ -273,12 +274,46 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 		switch (featureID) {
 			case CsPackage.RESOURCE_CONSTRAINT_CS__TUPLE_DESCRIPTORS:
 				return tupleDescriptors != null && !tupleDescriptors.isEmpty();
-			case CsPackage.RESOURCE_CONSTRAINT_CS__LHS:
-				return lhs != null;
+			case CsPackage.RESOURCE_CONSTRAINT_CS__WEIGHTING:
+				return weighting != null;
 			case CsPackage.RESOURCE_CONSTRAINT_CS__RHS:
 				return rhs != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == WeightingComponentResourceTupleElementCS.class) {
+			switch (derivedFeatureID) {
+				case CsPackage.RESOURCE_CONSTRAINT_CS__TUPLE_DESCRIPTORS: return CsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__TUPLE_DESCRIPTORS;
+				case CsPackage.RESOURCE_CONSTRAINT_CS__WEIGHTING: return CsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__WEIGHTING;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == WeightingComponentResourceTupleElementCS.class) {
+			switch (baseFeatureID) {
+				case CsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__TUPLE_DESCRIPTORS: return CsPackage.RESOURCE_CONSTRAINT_CS__TUPLE_DESCRIPTORS;
+				case CsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__WEIGHTING: return CsPackage.RESOURCE_CONSTRAINT_CS__WEIGHTING;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**

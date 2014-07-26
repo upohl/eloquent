@@ -7,6 +7,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.as.ComponentResourceTupl
 import de.uni_paderborn.fujaba.muml.allocation.language.as.ResourceConstraint;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.ValueTupleDescriptor;
 
+import de.uni_paderborn.fujaba.muml.allocation.language.as.WeightingComponentResourceTupleElement;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -30,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.ResourceConstraintImpl#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.ResourceConstraintImpl#getLhs <em>Lhs</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.ResourceConstraintImpl#getWeighting <em>Weighting</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.ResourceConstraintImpl#getRhs <em>Rhs</em>}</li>
  * </ul>
  * </p>
@@ -49,14 +50,14 @@ public class ResourceConstraintImpl extends ConstraintImpl implements ResourceCo
 	protected EList<ComponentResourceTupleDescriptor> tupleDescriptors;
 
 	/**
-	 * The cached value of the '{@link #getLhs() <em>Lhs</em>}' containment reference.
+	 * The cached value of the '{@link #getWeighting() <em>Weighting</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLhs()
+	 * @see #getWeighting()
 	 * @generated
 	 * @ordered
 	 */
-	protected ValueTupleDescriptor lhs;
+	protected ValueTupleDescriptor weighting;
 
 	/**
 	 * The cached value of the '{@link #getRhs() <em>Rhs</em>}' containment reference.
@@ -104,8 +105,8 @@ public class ResourceConstraintImpl extends ConstraintImpl implements ResourceCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueTupleDescriptor getLhs() {
-		return lhs;
+	public ValueTupleDescriptor getWeighting() {
+		return weighting;
 	}
 
 	/**
@@ -113,11 +114,11 @@ public class ResourceConstraintImpl extends ConstraintImpl implements ResourceCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLhs(ValueTupleDescriptor newLhs, NotificationChain msgs) {
-		ValueTupleDescriptor oldLhs = lhs;
-		lhs = newLhs;
+	public NotificationChain basicSetWeighting(ValueTupleDescriptor newWeighting, NotificationChain msgs) {
+		ValueTupleDescriptor oldWeighting = weighting;
+		weighting = newWeighting;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AsPackage.RESOURCE_CONSTRAINT__LHS, oldLhs, newLhs);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AsPackage.RESOURCE_CONSTRAINT__WEIGHTING, oldWeighting, newWeighting);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -128,18 +129,18 @@ public class ResourceConstraintImpl extends ConstraintImpl implements ResourceCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLhs(ValueTupleDescriptor newLhs) {
-		if (newLhs != lhs) {
+	public void setWeighting(ValueTupleDescriptor newWeighting) {
+		if (newWeighting != weighting) {
 			NotificationChain msgs = null;
-			if (lhs != null)
-				msgs = ((InternalEObject)lhs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AsPackage.RESOURCE_CONSTRAINT__LHS, null, msgs);
-			if (newLhs != null)
-				msgs = ((InternalEObject)newLhs).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AsPackage.RESOURCE_CONSTRAINT__LHS, null, msgs);
-			msgs = basicSetLhs(newLhs, msgs);
+			if (weighting != null)
+				msgs = ((InternalEObject)weighting).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AsPackage.RESOURCE_CONSTRAINT__WEIGHTING, null, msgs);
+			if (newWeighting != null)
+				msgs = ((InternalEObject)newWeighting).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AsPackage.RESOURCE_CONSTRAINT__WEIGHTING, null, msgs);
+			msgs = basicSetWeighting(newWeighting, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.RESOURCE_CONSTRAINT__LHS, newLhs, newLhs));
+			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.RESOURCE_CONSTRAINT__WEIGHTING, newWeighting, newWeighting));
 	}
 
 	/**
@@ -195,8 +196,8 @@ public class ResourceConstraintImpl extends ConstraintImpl implements ResourceCo
 		switch (featureID) {
 			case AsPackage.RESOURCE_CONSTRAINT__TUPLE_DESCRIPTORS:
 				return ((InternalEList<?>)getTupleDescriptors()).basicRemove(otherEnd, msgs);
-			case AsPackage.RESOURCE_CONSTRAINT__LHS:
-				return basicSetLhs(null, msgs);
+			case AsPackage.RESOURCE_CONSTRAINT__WEIGHTING:
+				return basicSetWeighting(null, msgs);
 			case AsPackage.RESOURCE_CONSTRAINT__RHS:
 				return basicSetRhs(null, msgs);
 		}
@@ -213,8 +214,8 @@ public class ResourceConstraintImpl extends ConstraintImpl implements ResourceCo
 		switch (featureID) {
 			case AsPackage.RESOURCE_CONSTRAINT__TUPLE_DESCRIPTORS:
 				return getTupleDescriptors();
-			case AsPackage.RESOURCE_CONSTRAINT__LHS:
-				return getLhs();
+			case AsPackage.RESOURCE_CONSTRAINT__WEIGHTING:
+				return getWeighting();
 			case AsPackage.RESOURCE_CONSTRAINT__RHS:
 				return getRhs();
 		}
@@ -234,8 +235,8 @@ public class ResourceConstraintImpl extends ConstraintImpl implements ResourceCo
 				getTupleDescriptors().clear();
 				getTupleDescriptors().addAll((Collection<? extends ComponentResourceTupleDescriptor>)newValue);
 				return;
-			case AsPackage.RESOURCE_CONSTRAINT__LHS:
-				setLhs((ValueTupleDescriptor)newValue);
+			case AsPackage.RESOURCE_CONSTRAINT__WEIGHTING:
+				setWeighting((ValueTupleDescriptor)newValue);
 				return;
 			case AsPackage.RESOURCE_CONSTRAINT__RHS:
 				setRhs((ValueTupleDescriptor)newValue);
@@ -255,8 +256,8 @@ public class ResourceConstraintImpl extends ConstraintImpl implements ResourceCo
 			case AsPackage.RESOURCE_CONSTRAINT__TUPLE_DESCRIPTORS:
 				getTupleDescriptors().clear();
 				return;
-			case AsPackage.RESOURCE_CONSTRAINT__LHS:
-				setLhs((ValueTupleDescriptor)null);
+			case AsPackage.RESOURCE_CONSTRAINT__WEIGHTING:
+				setWeighting((ValueTupleDescriptor)null);
 				return;
 			case AsPackage.RESOURCE_CONSTRAINT__RHS:
 				setRhs((ValueTupleDescriptor)null);
@@ -275,12 +276,46 @@ public class ResourceConstraintImpl extends ConstraintImpl implements ResourceCo
 		switch (featureID) {
 			case AsPackage.RESOURCE_CONSTRAINT__TUPLE_DESCRIPTORS:
 				return tupleDescriptors != null && !tupleDescriptors.isEmpty();
-			case AsPackage.RESOURCE_CONSTRAINT__LHS:
-				return lhs != null;
+			case AsPackage.RESOURCE_CONSTRAINT__WEIGHTING:
+				return weighting != null;
 			case AsPackage.RESOURCE_CONSTRAINT__RHS:
 				return rhs != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == WeightingComponentResourceTupleElement.class) {
+			switch (derivedFeatureID) {
+				case AsPackage.RESOURCE_CONSTRAINT__TUPLE_DESCRIPTORS: return AsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__TUPLE_DESCRIPTORS;
+				case AsPackage.RESOURCE_CONSTRAINT__WEIGHTING: return AsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__WEIGHTING;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == WeightingComponentResourceTupleElement.class) {
+			switch (baseFeatureID) {
+				case AsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__TUPLE_DESCRIPTORS: return AsPackage.RESOURCE_CONSTRAINT__TUPLE_DESCRIPTORS;
+				case AsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__WEIGHTING: return AsPackage.RESOURCE_CONSTRAINT__WEIGHTING;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 

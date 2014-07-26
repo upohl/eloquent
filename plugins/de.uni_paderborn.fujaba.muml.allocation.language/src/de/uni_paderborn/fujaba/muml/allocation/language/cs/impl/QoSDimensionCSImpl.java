@@ -7,6 +7,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.WeightingComponentResourceTupleElementCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
@@ -32,7 +33,7 @@ import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.QoSDimensionCSImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.QoSDimensionCSImpl#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.QoSDimensionCSImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.QoSDimensionCSImpl#getWeighting <em>Weighting</em>}</li>
  * </ul>
  * </p>
  *
@@ -60,14 +61,14 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	protected EList<ComponentResourceTupleDescriptorCS> tupleDescriptors;
 
 	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
+	 * The cached value of the '{@link #getWeighting() <em>Weighting</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #getWeighting()
 	 * @generated
 	 * @ordered
 	 */
-	protected ValueTupleDescriptorCS value;
+	protected ValueTupleDescriptorCS weighting;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -148,8 +149,8 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueTupleDescriptorCS getValue() {
-		return value;
+	public ValueTupleDescriptorCS getWeighting() {
+		return weighting;
 	}
 
 	/**
@@ -157,11 +158,11 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue(ValueTupleDescriptorCS newValue, NotificationChain msgs) {
-		ValueTupleDescriptorCS oldValue = value;
-		value = newValue;
+	public NotificationChain basicSetWeighting(ValueTupleDescriptorCS newWeighting, NotificationChain msgs) {
+		ValueTupleDescriptorCS oldWeighting = weighting;
+		weighting = newWeighting;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.QO_SDIMENSION_CS__VALUE, oldValue, newValue);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.QO_SDIMENSION_CS__WEIGHTING, oldWeighting, newWeighting);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -172,18 +173,18 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(ValueTupleDescriptorCS newValue) {
-		if (newValue != value) {
+	public void setWeighting(ValueTupleDescriptorCS newWeighting) {
+		if (newWeighting != weighting) {
 			NotificationChain msgs = null;
-			if (value != null)
-				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CsPackage.QO_SDIMENSION_CS__VALUE, null, msgs);
-			if (newValue != null)
-				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CsPackage.QO_SDIMENSION_CS__VALUE, null, msgs);
-			msgs = basicSetValue(newValue, msgs);
+			if (weighting != null)
+				msgs = ((InternalEObject)weighting).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CsPackage.QO_SDIMENSION_CS__WEIGHTING, null, msgs);
+			if (newWeighting != null)
+				msgs = ((InternalEObject)newWeighting).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CsPackage.QO_SDIMENSION_CS__WEIGHTING, null, msgs);
+			msgs = basicSetWeighting(newWeighting, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.QO_SDIMENSION_CS__VALUE, newValue, newValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.QO_SDIMENSION_CS__WEIGHTING, newWeighting, newWeighting));
 	}
 
 	/**
@@ -198,8 +199,8 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 				return basicSetExpression(null, msgs);
 			case CsPackage.QO_SDIMENSION_CS__TUPLE_DESCRIPTORS:
 				return ((InternalEList<?>)getTupleDescriptors()).basicRemove(otherEnd, msgs);
-			case CsPackage.QO_SDIMENSION_CS__VALUE:
-				return basicSetValue(null, msgs);
+			case CsPackage.QO_SDIMENSION_CS__WEIGHTING:
+				return basicSetWeighting(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -216,8 +217,8 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 				return getExpression();
 			case CsPackage.QO_SDIMENSION_CS__TUPLE_DESCRIPTORS:
 				return getTupleDescriptors();
-			case CsPackage.QO_SDIMENSION_CS__VALUE:
-				return getValue();
+			case CsPackage.QO_SDIMENSION_CS__WEIGHTING:
+				return getWeighting();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -238,8 +239,8 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 				getTupleDescriptors().clear();
 				getTupleDescriptors().addAll((Collection<? extends ComponentResourceTupleDescriptorCS>)newValue);
 				return;
-			case CsPackage.QO_SDIMENSION_CS__VALUE:
-				setValue((ValueTupleDescriptorCS)newValue);
+			case CsPackage.QO_SDIMENSION_CS__WEIGHTING:
+				setWeighting((ValueTupleDescriptorCS)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -259,8 +260,8 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 			case CsPackage.QO_SDIMENSION_CS__TUPLE_DESCRIPTORS:
 				getTupleDescriptors().clear();
 				return;
-			case CsPackage.QO_SDIMENSION_CS__VALUE:
-				setValue((ValueTupleDescriptorCS)null);
+			case CsPackage.QO_SDIMENSION_CS__WEIGHTING:
+				setWeighting((ValueTupleDescriptorCS)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -278,8 +279,8 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 				return expression != null;
 			case CsPackage.QO_SDIMENSION_CS__TUPLE_DESCRIPTORS:
 				return tupleDescriptors != null && !tupleDescriptors.isEmpty();
-			case CsPackage.QO_SDIMENSION_CS__VALUE:
-				return value != null;
+			case CsPackage.QO_SDIMENSION_CS__WEIGHTING:
+				return weighting != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -297,6 +298,13 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 				default: return -1;
 			}
 		}
+		if (baseClass == WeightingComponentResourceTupleElementCS.class) {
+			switch (derivedFeatureID) {
+				case CsPackage.QO_SDIMENSION_CS__TUPLE_DESCRIPTORS: return CsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__TUPLE_DESCRIPTORS;
+				case CsPackage.QO_SDIMENSION_CS__WEIGHTING: return CsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__WEIGHTING;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -310,6 +318,13 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 		if (baseClass == EvaluatableElementCS.class) {
 			switch (baseFeatureID) {
 				case CsPackage.EVALUATABLE_ELEMENT_CS__EXPRESSION: return CsPackage.QO_SDIMENSION_CS__EXPRESSION;
+				default: return -1;
+			}
+		}
+		if (baseClass == WeightingComponentResourceTupleElementCS.class) {
+			switch (baseFeatureID) {
+				case CsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__TUPLE_DESCRIPTORS: return CsPackage.QO_SDIMENSION_CS__TUPLE_DESCRIPTORS;
+				case CsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__WEIGHTING: return CsPackage.QO_SDIMENSION_CS__WEIGHTING;
 				default: return -1;
 			}
 		}

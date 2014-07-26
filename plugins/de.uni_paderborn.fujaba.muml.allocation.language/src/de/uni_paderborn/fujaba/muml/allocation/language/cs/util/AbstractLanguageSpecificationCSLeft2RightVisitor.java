@@ -91,4 +91,8 @@ public abstract class AbstractLanguageSpecificationCSLeft2RightVisitor
 	public @Nullable Element visitValueTupleDescriptorCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS csElement) {
 		return visitTupleDescriptorCS(csElement);
 	}
+
+	public @Nullable Element visitWeightingComponentResourceTupleElementCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.WeightingComponentResourceTupleElementCS csElement) {
+		return visitModelElementCS(csElement);
+	}
 }

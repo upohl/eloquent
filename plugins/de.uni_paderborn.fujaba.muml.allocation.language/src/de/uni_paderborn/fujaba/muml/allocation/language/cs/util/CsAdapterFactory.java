@@ -91,6 +91,10 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 				return createEvaluatableElementCSAdapter();
 			}
 			@Override
+			public Adapter caseWeightingComponentResourceTupleElementCS(WeightingComponentResourceTupleElementCS object) {
+				return createWeightingComponentResourceTupleElementCSAdapter();
+			}
+			@Override
 			public Adapter caseServiceCS(ServiceCS object) {
 				return createServiceCSAdapter();
 			}
@@ -227,6 +231,20 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEvaluatableElementCSAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.WeightingComponentResourceTupleElementCS <em>Weighting Component Resource Tuple Element CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.WeightingComponentResourceTupleElementCS
+	 * @generated
+	 */
+	public Adapter createWeightingComponentResourceTupleElementCSAdapter() {
 		return null;
 	}
 

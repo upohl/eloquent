@@ -20,6 +20,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.TupleDescriptorCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS;
 
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.WeightingComponentResourceTupleElementCS;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -54,6 +55,13 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * @generated
 	 */
 	private EClass evaluatableElementCSEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass weightingComponentResourceTupleElementCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -270,6 +278,33 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getWeightingComponentResourceTupleElementCS() {
+		return weightingComponentResourceTupleElementCSEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWeightingComponentResourceTupleElementCS_TupleDescriptors() {
+		return (EReference)weightingComponentResourceTupleElementCSEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWeightingComponentResourceTupleElementCS_Weighting() {
+		return (EReference)weightingComponentResourceTupleElementCSEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getServiceCS() {
 		return serviceCSEClass;
 	}
@@ -290,24 +325,6 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 */
 	public EClass getQoSDimensionCS() {
 		return qoSDimensionCSEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQoSDimensionCS_TupleDescriptors() {
-		return (EReference)qoSDimensionCSEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQoSDimensionCS_Value() {
-		return (EReference)qoSDimensionCSEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -360,26 +377,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResourceConstraintCS_TupleDescriptors() {
-		return (EReference)resourceConstraintCSEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getResourceConstraintCS_Lhs() {
-		return (EReference)resourceConstraintCSEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getResourceConstraintCS_Rhs() {
-		return (EReference)resourceConstraintCSEClass.getEStructuralFeatures().get(2);
+		return (EReference)resourceConstraintCSEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -544,12 +543,14 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		evaluatableElementCSEClass = createEClass(EVALUATABLE_ELEMENT_CS);
 		createEReference(evaluatableElementCSEClass, EVALUATABLE_ELEMENT_CS__EXPRESSION);
 
+		weightingComponentResourceTupleElementCSEClass = createEClass(WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS);
+		createEReference(weightingComponentResourceTupleElementCSEClass, WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__TUPLE_DESCRIPTORS);
+		createEReference(weightingComponentResourceTupleElementCSEClass, WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__WEIGHTING);
+
 		serviceCSEClass = createEClass(SERVICE_CS);
 		createEReference(serviceCSEClass, SERVICE_CS__DIMENSIONS);
 
 		qoSDimensionCSEClass = createEClass(QO_SDIMENSION_CS);
-		createEReference(qoSDimensionCSEClass, QO_SDIMENSION_CS__TUPLE_DESCRIPTORS);
-		createEReference(qoSDimensionCSEClass, QO_SDIMENSION_CS__VALUE);
 
 		constraintCSEClass = createEClass(CONSTRAINT_CS);
 
@@ -558,8 +559,6 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		createEAttribute(locationConstraintCSEClass, LOCATION_CONSTRAINT_CS__TYPE);
 
 		resourceConstraintCSEClass = createEClass(RESOURCE_CONSTRAINT_CS);
-		createEReference(resourceConstraintCSEClass, RESOURCE_CONSTRAINT_CS__TUPLE_DESCRIPTORS);
-		createEReference(resourceConstraintCSEClass, RESOURCE_CONSTRAINT_CS__LHS);
 		createEReference(resourceConstraintCSEClass, RESOURCE_CONSTRAINT_CS__RHS);
 
 		requiredHardwareResourceInstanceConstraintCSEClass = createEClass(REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS);
@@ -623,13 +622,16 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		specificationCSEClass.getESuperTypes().add(theCompleteOCLCSPackage.getCompleteOCLDocumentCS());
 		specificationCSEClass.getESuperTypes().add(theCorePackage.getExtendableElement());
 		evaluatableElementCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
+		weightingComponentResourceTupleElementCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
 		serviceCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
 		qoSDimensionCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
 		qoSDimensionCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
+		qoSDimensionCSEClass.getESuperTypes().add(this.getWeightingComponentResourceTupleElementCS());
 		constraintCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
 		constraintCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
 		locationConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		resourceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
+		resourceConstraintCSEClass.getESuperTypes().add(this.getWeightingComponentResourceTupleElementCS());
 		requiredHardwareResourceInstanceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		tupleDescriptorCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
 		instanceTupleDescriptorCSEClass.getESuperTypes().add(this.getTupleDescriptorCS());
@@ -647,12 +649,14 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEClass(evaluatableElementCSEClass, EvaluatableElementCS.class, "EvaluatableElementCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEvaluatableElementCS_Expression(), theEssentialOCLCSPackage.getContextCS(), null, "expression", null, 1, 1, EvaluatableElementCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(weightingComponentResourceTupleElementCSEClass, WeightingComponentResourceTupleElementCS.class, "WeightingComponentResourceTupleElementCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getWeightingComponentResourceTupleElementCS_TupleDescriptors(), this.getComponentResourceTupleDescriptorCS(), null, "tupleDescriptors", null, 1, -1, WeightingComponentResourceTupleElementCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWeightingComponentResourceTupleElementCS_Weighting(), this.getValueTupleDescriptorCS(), null, "weighting", null, 1, 1, WeightingComponentResourceTupleElementCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(serviceCSEClass, ServiceCS.class, "ServiceCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getServiceCS_Dimensions(), this.getQoSDimensionCS(), null, "dimensions", null, 0, -1, ServiceCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(qoSDimensionCSEClass, QoSDimensionCS.class, "QoSDimensionCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getQoSDimensionCS_TupleDescriptors(), this.getComponentResourceTupleDescriptorCS(), null, "tupleDescriptors", null, 1, -1, QoSDimensionCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQoSDimensionCS_Value(), this.getValueTupleDescriptorCS(), null, "value", null, 1, 1, QoSDimensionCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constraintCSEClass, ConstraintCS.class, "ConstraintCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -661,8 +665,6 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEAttribute(getLocationConstraintCS_Type(), this.getLocationConstraintTypes(), "type", null, 1, 1, LocationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceConstraintCSEClass, ResourceConstraintCS.class, "ResourceConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResourceConstraintCS_TupleDescriptors(), this.getComponentResourceTupleDescriptorCS(), null, "tupleDescriptors", null, 1, -1, ResourceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getResourceConstraintCS_Lhs(), this.getValueTupleDescriptorCS(), null, "lhs", null, 1, 1, ResourceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResourceConstraintCS_Rhs(), this.getValueTupleDescriptorCS(), null, "rhs", null, 1, 1, ResourceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(requiredHardwareResourceInstanceConstraintCSEClass, RequiredHardwareResourceInstanceConstraintCS.class, "RequiredHardwareResourceInstanceConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

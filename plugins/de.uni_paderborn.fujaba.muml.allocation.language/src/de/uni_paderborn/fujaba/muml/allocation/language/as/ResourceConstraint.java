@@ -18,8 +18,6 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.ResourceConstraint#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.ResourceConstraint#getLhs <em>Lhs</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.ResourceConstraint#getRhs <em>Rhs</em>}</li>
  * </ul>
  * </p>
@@ -28,47 +26,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ResourceConstraint extends Constraint {
-	/**
-	 * Returns the value of the '<em><b>Tuple Descriptors</b></em>' containment reference list.
-	 * The list contents are of type {@link de.uni_paderborn.fujaba.muml.allocation.language.as.ComponentResourceTupleDescriptor}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * A set of component resource tuple descriptors.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Tuple Descriptors</em>' containment reference list.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage#getResourceConstraint_TupleDescriptors()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	EList<ComponentResourceTupleDescriptor> getTupleDescriptors();
-
-	/**
-	 * Returns the value of the '<em><b>Lhs</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Represents the tuple descriptor for the left-hand side of the inequality.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Lhs</em>' containment reference.
-	 * @see #setLhs(ValueTupleDescriptor)
-	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage#getResourceConstraint_Lhs()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	ValueTupleDescriptor getLhs();
-
-	/**
-	 * Sets the value of the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.ResourceConstraint#getLhs <em>Lhs</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Lhs</em>' containment reference.
-	 * @see #getLhs()
-	 * @generated
-	 */
-	void setLhs(ValueTupleDescriptor value);
-
+public interface ResourceConstraint extends Constraint, WeightingComponentResourceTupleElement {
 	/**
 	 * Returns the value of the '<em><b>Rhs</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

@@ -95,6 +95,14 @@ public class AsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT: {
+				WeightingComponentResourceTupleElement weightingComponentResourceTupleElement = (WeightingComponentResourceTupleElement)theEObject;
+				T result = caseWeightingComponentResourceTupleElement(weightingComponentResourceTupleElement);
+				if (result == null) result = caseElement(weightingComponentResourceTupleElement);
+				if (result == null) result = caseVisitable(weightingComponentResourceTupleElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case AsPackage.SERVICE: {
 				Service service = (Service)theEObject;
 				T result = caseService(service);
@@ -110,6 +118,7 @@ public class AsSwitch<T> extends Switch<T> {
 				T result = caseQoSDimension(qoSDimension);
 				if (result == null) result = caseNamedElement(qoSDimension);
 				if (result == null) result = caseEvaluatableElement(qoSDimension);
+				if (result == null) result = caseWeightingComponentResourceTupleElement(qoSDimension);
 				if (result == null) result = caseElement(qoSDimension);
 				if (result == null) result = caseNameable(qoSDimension);
 				if (result == null) result = caseVisitable(qoSDimension);
@@ -143,6 +152,7 @@ public class AsSwitch<T> extends Switch<T> {
 				ResourceConstraint resourceConstraint = (ResourceConstraint)theEObject;
 				T result = caseResourceConstraint(resourceConstraint);
 				if (result == null) result = caseConstraint(resourceConstraint);
+				if (result == null) result = caseWeightingComponentResourceTupleElement(resourceConstraint);
 				if (result == null) result = caseNamedElement(resourceConstraint);
 				if (result == null) result = caseEvaluatableElement(resourceConstraint);
 				if (result == null) result = caseElement(resourceConstraint);
@@ -248,6 +258,21 @@ public class AsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEvaluatableElement(EvaluatableElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Weighting Component Resource Tuple Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Weighting Component Resource Tuple Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWeightingComponentResourceTupleElement(WeightingComponentResourceTupleElement object) {
 		return null;
 	}
 

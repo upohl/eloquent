@@ -85,6 +85,10 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 				return createEvaluatableElementAdapter();
 			}
 			@Override
+			public Adapter caseWeightingComponentResourceTupleElement(WeightingComponentResourceTupleElement object) {
+				return createWeightingComponentResourceTupleElementAdapter();
+			}
+			@Override
 			public Adapter caseService(Service object) {
 				return createServiceAdapter();
 			}
@@ -201,6 +205,20 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEvaluatableElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.WeightingComponentResourceTupleElement <em>Weighting Component Resource Tuple Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.WeightingComponentResourceTupleElement
+	 * @generated
+	 */
+	public Adapter createWeightingComponentResourceTupleElementAdapter() {
 		return null;
 	}
 

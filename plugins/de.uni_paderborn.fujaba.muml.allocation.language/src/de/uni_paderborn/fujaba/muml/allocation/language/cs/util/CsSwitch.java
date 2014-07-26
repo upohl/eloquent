@@ -109,6 +109,17 @@ public class CsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS: {
+				WeightingComponentResourceTupleElementCS weightingComponentResourceTupleElementCS = (WeightingComponentResourceTupleElementCS)theEObject;
+				T result = caseWeightingComponentResourceTupleElementCS(weightingComponentResourceTupleElementCS);
+				if (result == null) result = caseModelElementCS(weightingComponentResourceTupleElementCS);
+				if (result == null) result = casePivotableElementCS(weightingComponentResourceTupleElementCS);
+				if (result == null) result = caseElementCS(weightingComponentResourceTupleElementCS);
+				if (result == null) result = casePivotable(weightingComponentResourceTupleElementCS);
+				if (result == null) result = caseVisitableCS(weightingComponentResourceTupleElementCS);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case CsPackage.SERVICE_CS: {
 				ServiceCS serviceCS = (ServiceCS)theEObject;
 				T result = caseServiceCS(serviceCS);
@@ -127,6 +138,7 @@ public class CsSwitch<T> extends Switch<T> {
 				T result = caseQoSDimensionCS(qoSDimensionCS);
 				if (result == null) result = caseNamedElementCS(qoSDimensionCS);
 				if (result == null) result = caseEvaluatableElementCS(qoSDimensionCS);
+				if (result == null) result = caseWeightingComponentResourceTupleElementCS(qoSDimensionCS);
 				if (result == null) result = caseModelElementCS(qoSDimensionCS);
 				if (result == null) result = caseNameable(qoSDimensionCS);
 				if (result == null) result = casePivotableElementCS(qoSDimensionCS);
@@ -169,6 +181,7 @@ public class CsSwitch<T> extends Switch<T> {
 				ResourceConstraintCS resourceConstraintCS = (ResourceConstraintCS)theEObject;
 				T result = caseResourceConstraintCS(resourceConstraintCS);
 				if (result == null) result = caseConstraintCS(resourceConstraintCS);
+				if (result == null) result = caseWeightingComponentResourceTupleElementCS(resourceConstraintCS);
 				if (result == null) result = caseNamedElementCS(resourceConstraintCS);
 				if (result == null) result = caseEvaluatableElementCS(resourceConstraintCS);
 				if (result == null) result = caseModelElementCS(resourceConstraintCS);
@@ -298,6 +311,21 @@ public class CsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEvaluatableElementCS(EvaluatableElementCS object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Weighting Component Resource Tuple Element CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Weighting Component Resource Tuple Element CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWeightingComponentResourceTupleElementCS(WeightingComponentResourceTupleElementCS object) {
 		return null;
 	}
 
