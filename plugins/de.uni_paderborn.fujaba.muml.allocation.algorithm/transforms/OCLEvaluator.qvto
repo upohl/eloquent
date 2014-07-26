@@ -22,7 +22,7 @@ helper ConstraintCS::evaluateOCL(contextObject : OclAny) : Sequence(TupleValue) 
 helper ResourceConstraintCS::evaluateOCL(contextObject : OclAny) : Sequence(TupleValue) {
 	var res : Sequence(TupleValue) := evaluateConstraintCS(self, contextObject);
 	res->createTraceHelper(self); // do this first, otherwise the subsequent tv.getSequence fails
-	res->collect(tv : TupleValue | tv.getSequence(self.lhs.value))
+	res->collect(tv : TupleValue | tv.getSequence(self.weighting.value))
 		->collect(oclAsType(TupleValue))
 		->createTraceHelper(self);
 	return res;
