@@ -44,13 +44,6 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 	 */
 	private List<String> primarySuperCallWhitelist = <String>newArrayList()
 	
-	/**
-	 * Map represents a clazz -> [class_1 ... class_n] mapping. The visitor
-	 * of class clazz calls the visitor of class_1, ..., class_n. Note: clazz
-	 * has to be a subtype of class_i.
-	 */
-	private Map<String, List<String>> otherVisitorsMap = <String, List<String>>newHashMap() 
-	
 	def public void setCsGenModelURI(String csGenModelURI) {
 		this.csGenModelURI = csGenModelURI
 	}
@@ -65,13 +58,6 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 	
 	def public void addgeneratePrimarySuperCallFor(String className) {
 		primarySuperCallWhitelist.add(className)
-	}
-	
-	def public void addgenerateOtherVisitorCallFor(String classToVisitor) {
-		val String[] split = classToVisitor.split(':', 2)
-		val list = otherVisitorsMap.get(split.get(0)) ?: <String>newArrayList()
-		list += split.get(1)
-		otherVisitorsMap.put(split.get(0), list)
 	}
 	
 	override checkConfiguration(Issues issues) {
@@ -124,7 +110,7 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 		public @Nullable Continuation<?> visit«eClass.getName»(@NonNull «genClass.qualifiedInterfaceName» csElement) {
 			«genClass.generatePivot»
 			«genClass.generateFeatures»
-			«eClass.generateOtherVisitorCalls»
+			«eClass.generateSecondarySuperCalls»
 			«IF eClass.primarySuperCallAllowed»
 			return «eClass.primarySuperClass.name.generateVisitorCall»;
 			«ELSE»
@@ -138,19 +124,27 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 		'''visit«csGenModel.findGenClass(visitorClassName).name»(csElement)'''
 	}
 	
-	def private String generateOtherVisitorCalls(EClass eClass) {
+	def private String generateSecondarySuperCalls(EClass eClass) {
 		'''
-		«FOR String className : otherVisitorsMap.get(eClass.name) ?: <String>emptyList»
-		«className.generateVisitorCall»;
+		«FOR EClass cls : eClass.ESuperTypes.filter[superClass | eClass.secondarySuperCallAllowed(superClass)]»
+		«cls.name.generateVisitorCall»;
 		«ENDFOR»
 		'''
 	}
 	
+	def private boolean secondarySuperCallAllowed(EClass eClass, EClass superClass) {
+		eClass.primarySuperClass != superClass && eClass.sameResource(superClass)
+	} 
+	
 	def private boolean primarySuperCallAllowed(EClass eClass) {
 		val EClass primarySuperClass = eClass.getPrimarySuperClass
 		primarySuperClass != null
-			&& (primarySuperClass.eResource == eClass.eResource || primarySuperCallWhitelist.contains(eClass.name))
+			&& (eClass.sameResource(primarySuperClass) || primarySuperCallWhitelist.contains(eClass.name))
 	}
+	
+	def private boolean sameResource(EClass first, EClass second) {
+		first.eResource == second.eResource
+	} 
 	
 	def private EClass getPrimarySuperClass(EClass eClass) {
 		eClass.ESuperTypes.head
