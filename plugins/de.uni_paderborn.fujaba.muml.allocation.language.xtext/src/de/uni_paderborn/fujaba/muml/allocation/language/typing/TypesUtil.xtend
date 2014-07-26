@@ -137,7 +137,7 @@ class TypesUtil {
 		var Map<String, Type> namedParts = <String, Type>newHashMap()
 		namedParts.putAll(createNamedPartsFromComponentResourceTupleDescriptors(constraintCS.tupleDescriptors)
 			.mapValues[EClass eClass | getType(metaModelManager, eClass)])
-		namedParts.put(constraintCS.lhs.value, getRealType(metaModelManager))
+		namedParts.put(constraintCS.weighting.value, getRealType(metaModelManager))
 		createTupleType(metaModelManager, namedParts)
 	}
 	
@@ -149,7 +149,7 @@ class TypesUtil {
 	@NonNull static def TupleType createResourceConstraintOuterTupleType(MetaModelManager metaModelManager, ResourceConstraintCS constraintCS) {
 		val Type innerTupleType = createResourceConstraintInnerTupleType(metaModelManager, constraintCS)
 		val Map<String, Type> namedParts = #{
-			constraintCS.lhs.value -> createSetType(metaModelManager, innerTupleType),
+			constraintCS.weighting.value -> createSetType(metaModelManager, innerTupleType),
 			constraintCS.rhs.value -> getRealType(metaModelManager)
 		}
 		createTupleType(metaModelManager, namedParts)

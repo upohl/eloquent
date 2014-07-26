@@ -43,7 +43,7 @@ public class AbstractAllocationSpecificationLanguageProposalProvider extends org
 	public void completeQosDimension_Name(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
 	}
-	public void completeQosDimension_Value(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+	public void completeQosDimension_Weighting(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
 	}
 	public void completeQosDimension_TupleDescriptors(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
@@ -67,7 +67,7 @@ public class AbstractAllocationSpecificationLanguageProposalProvider extends org
 	public void completeResourceConstraint_Name(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
 	}
-	public void completeResourceConstraint_Lhs(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+	public void completeResourceConstraint_Weighting(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
 	}
 	public void completeResourceConstraint_Rhs(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {

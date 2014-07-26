@@ -70,7 +70,7 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 		List<ComponentResourceTupleDescriptorCS> tupleDescriptorList = constraintCS.getTupleDescriptors();
 		ContextCS oclExpression = constraintCS.getExpression();
 		if (tupleDescriptorList.isEmpty() || oclExpression == null
-				|| constraintCS.getLhs() == null || constraintCS.getRhs() == null) {
+				|| constraintCS.getWeighting() == null || constraintCS.getRhs() == null) {
 			// parser/ui will display an error
 			return;
 		}

@@ -334,16 +334,16 @@ ruleQosDimension returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQosDimensionAccess().getValueValueTupleDescriptorParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getQosDimensionAccess().getWeightingValueTupleDescriptorParserRuleCall_4_0()); 
 	    }
-		lv_value_4_0=ruleValueTupleDescriptor		{
+		lv_weighting_4_0=ruleValueTupleDescriptor		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getQosDimensionRule());
 	        }
        		set(
        			$current, 
-       			"value",
-        		lv_value_4_0, 
+       			"weighting",
+        		lv_weighting_4_0, 
         		"ValueTupleDescriptor");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -665,16 +665,16 @@ ruleResourceConstraint returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getLhsValueTupleDescriptorParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getWeightingValueTupleDescriptorParserRuleCall_4_0()); 
 	    }
-		lv_lhs_4_0=ruleValueTupleDescriptor		{
+		lv_weighting_4_0=ruleValueTupleDescriptor		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getResourceConstraintRule());
 	        }
        		set(
        			$current, 
-       			"lhs",
-        		lv_lhs_4_0, 
+       			"weighting",
+        		lv_weighting_4_0, 
         		"ValueTupleDescriptor");
 	        afterParserOrEnumRuleCall();
 	    }

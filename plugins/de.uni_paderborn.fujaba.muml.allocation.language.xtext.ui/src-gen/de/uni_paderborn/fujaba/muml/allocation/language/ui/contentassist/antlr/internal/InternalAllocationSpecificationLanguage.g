@@ -4279,9 +4279,9 @@ rule__QosDimension__Group__4__Impl
     }
 :
 (
-{ before(grammarAccess.getQosDimensionAccess().getValueAssignment_4()); }
-(rule__QosDimension__ValueAssignment_4)
-{ after(grammarAccess.getQosDimensionAccess().getValueAssignment_4()); }
+{ before(grammarAccess.getQosDimensionAccess().getWeightingAssignment_4()); }
+(rule__QosDimension__WeightingAssignment_4)
+{ after(grammarAccess.getQosDimensionAccess().getWeightingAssignment_4()); }
 )
 
 ;
@@ -5177,9 +5177,9 @@ rule__ResourceConstraint__Group__4__Impl
     }
 :
 (
-{ before(grammarAccess.getResourceConstraintAccess().getLhsAssignment_4()); }
-(rule__ResourceConstraint__LhsAssignment_4)
-{ after(grammarAccess.getResourceConstraintAccess().getLhsAssignment_4()); }
+{ before(grammarAccess.getResourceConstraintAccess().getWeightingAssignment_4()); }
+(rule__ResourceConstraint__WeightingAssignment_4)
+{ after(grammarAccess.getResourceConstraintAccess().getWeightingAssignment_4()); }
 )
 
 ;
@@ -15660,14 +15660,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__QosDimension__ValueAssignment_4
+rule__QosDimension__WeightingAssignment_4
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getQosDimensionAccess().getValueValueTupleDescriptorParserRuleCall_4_0()); }
-	ruleValueTupleDescriptor{ after(grammarAccess.getQosDimensionAccess().getValueValueTupleDescriptorParserRuleCall_4_0()); }
+{ before(grammarAccess.getQosDimensionAccess().getWeightingValueTupleDescriptorParserRuleCall_4_0()); }
+	ruleValueTupleDescriptor{ after(grammarAccess.getQosDimensionAccess().getWeightingValueTupleDescriptorParserRuleCall_4_0()); }
 )
 
 ;
@@ -15795,14 +15795,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ResourceConstraint__LhsAssignment_4
+rule__ResourceConstraint__WeightingAssignment_4
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getResourceConstraintAccess().getLhsValueTupleDescriptorParserRuleCall_4_0()); }
-	ruleValueTupleDescriptor{ after(grammarAccess.getResourceConstraintAccess().getLhsValueTupleDescriptorParserRuleCall_4_0()); }
+{ before(grammarAccess.getResourceConstraintAccess().getWeightingValueTupleDescriptorParserRuleCall_4_0()); }
+	ruleValueTupleDescriptor{ after(grammarAccess.getResourceConstraintAccess().getWeightingValueTupleDescriptorParserRuleCall_4_0()); }
 )
 
 ;

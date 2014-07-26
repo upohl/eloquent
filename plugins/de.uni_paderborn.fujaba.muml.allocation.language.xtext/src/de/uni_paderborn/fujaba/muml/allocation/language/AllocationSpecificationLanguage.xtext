@@ -21,7 +21,7 @@ Service returns cs::ServiceCS:
 
 QosDimension returns cs::QoSDimensionCS:
 	'qos' name=ID '{'
-		'value' value=ValueTupleDescriptor';'
+		'value' weighting=ValueTupleDescriptor';'
 		'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor (',' tupleDescriptors+=ComponentResourceTupleDescriptor)*';'
 		'ocl' expression=Model ';'
 	'}'
@@ -40,7 +40,7 @@ LocationConstraint returns cs::LocationConstraintCS:
 
 ResourceConstraint returns cs::ResourceConstraintCS:
 	'resource' (name=ID)? '{'
-		'lhs' lhs=ValueTupleDescriptor';'
+		'lhs' weighting=ValueTupleDescriptor';'
 		'rhs' rhs=ValueTupleDescriptor';'
 		'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor (',' tupleDescriptors+=ComponentResourceTupleDescriptor)*';'
 		'ocl' expression=Model ';'

@@ -198,7 +198,7 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getServiceAccess().getNameAssignment_1(), "rule__Service__NameAssignment_1");
 					put(grammarAccess.getServiceAccess().getDimensionsAssignment_3(), "rule__Service__DimensionsAssignment_3");
 					put(grammarAccess.getQosDimensionAccess().getNameAssignment_1(), "rule__QosDimension__NameAssignment_1");
-					put(grammarAccess.getQosDimensionAccess().getValueAssignment_4(), "rule__QosDimension__ValueAssignment_4");
+					put(grammarAccess.getQosDimensionAccess().getWeightingAssignment_4(), "rule__QosDimension__WeightingAssignment_4");
 					put(grammarAccess.getQosDimensionAccess().getTupleDescriptorsAssignment_7(), "rule__QosDimension__TupleDescriptorsAssignment_7");
 					put(grammarAccess.getQosDimensionAccess().getTupleDescriptorsAssignment_8_1(), "rule__QosDimension__TupleDescriptorsAssignment_8_1");
 					put(grammarAccess.getQosDimensionAccess().getExpressionAssignment_11(), "rule__QosDimension__ExpressionAssignment_11");
@@ -207,7 +207,7 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getLocationConstraintAccess().getTupleDescriptorAssignment_4(), "rule__LocationConstraint__TupleDescriptorAssignment_4");
 					put(grammarAccess.getLocationConstraintAccess().getExpressionAssignment_7(), "rule__LocationConstraint__ExpressionAssignment_7");
 					put(grammarAccess.getResourceConstraintAccess().getNameAssignment_1(), "rule__ResourceConstraint__NameAssignment_1");
-					put(grammarAccess.getResourceConstraintAccess().getLhsAssignment_4(), "rule__ResourceConstraint__LhsAssignment_4");
+					put(grammarAccess.getResourceConstraintAccess().getWeightingAssignment_4(), "rule__ResourceConstraint__WeightingAssignment_4");
 					put(grammarAccess.getResourceConstraintAccess().getRhsAssignment_7(), "rule__ResourceConstraint__RhsAssignment_7");
 					put(grammarAccess.getResourceConstraintAccess().getTupleDescriptorsAssignment_10(), "rule__ResourceConstraint__TupleDescriptorsAssignment_10");
 					put(grammarAccess.getResourceConstraintAccess().getTupleDescriptorsAssignment_11_1(), "rule__ResourceConstraint__TupleDescriptorsAssignment_11_1");

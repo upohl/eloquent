@@ -809,7 +809,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleQosDimension"
-    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:300:1: ruleQosDimension returns [EObject current=null] : (otherlv_0= 'qos' ( (lv_name_1_0= ruleID ) ) otherlv_2= '{' otherlv_3= 'value' ( (lv_value_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'descriptors' ( (lv_tupleDescriptors_7_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_8= ',' ( (lv_tupleDescriptors_9_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_10= ';' otherlv_11= 'ocl' ( (lv_expression_12_0= ruleModel ) ) otherlv_13= ';' otherlv_14= '}' ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:300:1: ruleQosDimension returns [EObject current=null] : (otherlv_0= 'qos' ( (lv_name_1_0= ruleID ) ) otherlv_2= '{' otherlv_3= 'value' ( (lv_weighting_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'descriptors' ( (lv_tupleDescriptors_7_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_8= ',' ( (lv_tupleDescriptors_9_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_10= ';' otherlv_11= 'ocl' ( (lv_expression_12_0= ruleModel ) ) otherlv_13= ';' otherlv_14= '}' ) ;
     public final EObject ruleQosDimension() throws RecognitionException {
         EObject current = null;
 
@@ -825,7 +825,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         Token otherlv_14=null;
         AntlrDatatypeRuleToken lv_name_1_0 = null;
 
-        EObject lv_value_4_0 = null;
+        EObject lv_weighting_4_0 = null;
 
         EObject lv_tupleDescriptors_7_0 = null;
 
@@ -837,11 +837,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:303:28: ( (otherlv_0= 'qos' ( (lv_name_1_0= ruleID ) ) otherlv_2= '{' otherlv_3= 'value' ( (lv_value_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'descriptors' ( (lv_tupleDescriptors_7_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_8= ',' ( (lv_tupleDescriptors_9_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_10= ';' otherlv_11= 'ocl' ( (lv_expression_12_0= ruleModel ) ) otherlv_13= ';' otherlv_14= '}' ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:304:1: (otherlv_0= 'qos' ( (lv_name_1_0= ruleID ) ) otherlv_2= '{' otherlv_3= 'value' ( (lv_value_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'descriptors' ( (lv_tupleDescriptors_7_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_8= ',' ( (lv_tupleDescriptors_9_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_10= ';' otherlv_11= 'ocl' ( (lv_expression_12_0= ruleModel ) ) otherlv_13= ';' otherlv_14= '}' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:303:28: ( (otherlv_0= 'qos' ( (lv_name_1_0= ruleID ) ) otherlv_2= '{' otherlv_3= 'value' ( (lv_weighting_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'descriptors' ( (lv_tupleDescriptors_7_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_8= ',' ( (lv_tupleDescriptors_9_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_10= ';' otherlv_11= 'ocl' ( (lv_expression_12_0= ruleModel ) ) otherlv_13= ';' otherlv_14= '}' ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:304:1: (otherlv_0= 'qos' ( (lv_name_1_0= ruleID ) ) otherlv_2= '{' otherlv_3= 'value' ( (lv_weighting_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'descriptors' ( (lv_tupleDescriptors_7_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_8= ',' ( (lv_tupleDescriptors_9_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_10= ';' otherlv_11= 'ocl' ( (lv_expression_12_0= ruleModel ) ) otherlv_13= ';' otherlv_14= '}' )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:304:1: (otherlv_0= 'qos' ( (lv_name_1_0= ruleID ) ) otherlv_2= '{' otherlv_3= 'value' ( (lv_value_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'descriptors' ( (lv_tupleDescriptors_7_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_8= ',' ( (lv_tupleDescriptors_9_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_10= ';' otherlv_11= 'ocl' ( (lv_expression_12_0= ruleModel ) ) otherlv_13= ';' otherlv_14= '}' )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:304:3: otherlv_0= 'qos' ( (lv_name_1_0= ruleID ) ) otherlv_2= '{' otherlv_3= 'value' ( (lv_value_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'descriptors' ( (lv_tupleDescriptors_7_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_8= ',' ( (lv_tupleDescriptors_9_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_10= ';' otherlv_11= 'ocl' ( (lv_expression_12_0= ruleModel ) ) otherlv_13= ';' otherlv_14= '}'
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:304:1: (otherlv_0= 'qos' ( (lv_name_1_0= ruleID ) ) otherlv_2= '{' otherlv_3= 'value' ( (lv_weighting_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'descriptors' ( (lv_tupleDescriptors_7_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_8= ',' ( (lv_tupleDescriptors_9_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_10= ';' otherlv_11= 'ocl' ( (lv_expression_12_0= ruleModel ) ) otherlv_13= ';' otherlv_14= '}' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:304:3: otherlv_0= 'qos' ( (lv_name_1_0= ruleID ) ) otherlv_2= '{' otherlv_3= 'value' ( (lv_weighting_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'descriptors' ( (lv_tupleDescriptors_7_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_8= ',' ( (lv_tupleDescriptors_9_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_10= ';' otherlv_11= 'ocl' ( (lv_expression_12_0= ruleModel ) ) otherlv_13= ';' otherlv_14= '}'
             {
             otherlv_0=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleQosDimension528); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -896,19 +896,19 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_3, grammarAccess.getQosDimensionAccess().getValueKeyword_3());
                   
             }
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:334:1: ( (lv_value_4_0= ruleValueTupleDescriptor ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:335:1: (lv_value_4_0= ruleValueTupleDescriptor )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:334:1: ( (lv_weighting_4_0= ruleValueTupleDescriptor ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:335:1: (lv_weighting_4_0= ruleValueTupleDescriptor )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:335:1: (lv_value_4_0= ruleValueTupleDescriptor )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:336:3: lv_value_4_0= ruleValueTupleDescriptor
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:335:1: (lv_weighting_4_0= ruleValueTupleDescriptor )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:336:3: lv_weighting_4_0= ruleValueTupleDescriptor
             {
             if ( state.backtracking==0 ) {
                
-              	        newCompositeNode(grammarAccess.getQosDimensionAccess().getValueValueTupleDescriptorParserRuleCall_4_0()); 
+              	        newCompositeNode(grammarAccess.getQosDimensionAccess().getWeightingValueTupleDescriptorParserRuleCall_4_0()); 
               	    
             }
             pushFollow(FollowSets000.FOLLOW_ruleValueTupleDescriptor_in_ruleQosDimension594);
-            lv_value_4_0=ruleValueTupleDescriptor();
+            lv_weighting_4_0=ruleValueTupleDescriptor();
 
             state._fsp--;
             if (state.failed) return current;
@@ -919,8 +919,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
               	        }
                      		set(
                      			current, 
-                     			"value",
-                      		lv_value_4_0, 
+                     			"weighting",
+                      		lv_weighting_4_0, 
                       		"ValueTupleDescriptor");
               	        afterParserOrEnumRuleCall();
               	    
@@ -1645,7 +1645,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleResourceConstraint"
-    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:631:1: ruleResourceConstraint returns [EObject current=null] : (otherlv_0= 'resource' ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' otherlv_3= 'lhs' ( (lv_lhs_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'rhs' ( (lv_rhs_7_0= ruleValueTupleDescriptor ) ) otherlv_8= ';' otherlv_9= 'descriptors' ( (lv_tupleDescriptors_10_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_11= ',' ( (lv_tupleDescriptors_12_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_13= ';' otherlv_14= 'ocl' ( (lv_expression_15_0= ruleModel ) ) otherlv_16= ';' otherlv_17= '}' ) ;
+    // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:631:1: ruleResourceConstraint returns [EObject current=null] : (otherlv_0= 'resource' ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' otherlv_3= 'lhs' ( (lv_weighting_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'rhs' ( (lv_rhs_7_0= ruleValueTupleDescriptor ) ) otherlv_8= ';' otherlv_9= 'descriptors' ( (lv_tupleDescriptors_10_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_11= ',' ( (lv_tupleDescriptors_12_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_13= ';' otherlv_14= 'ocl' ( (lv_expression_15_0= ruleModel ) ) otherlv_16= ';' otherlv_17= '}' ) ;
     public final EObject ruleResourceConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -1663,7 +1663,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         Token otherlv_17=null;
         AntlrDatatypeRuleToken lv_name_1_0 = null;
 
-        EObject lv_lhs_4_0 = null;
+        EObject lv_weighting_4_0 = null;
 
         EObject lv_rhs_7_0 = null;
 
@@ -1677,11 +1677,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:634:28: ( (otherlv_0= 'resource' ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' otherlv_3= 'lhs' ( (lv_lhs_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'rhs' ( (lv_rhs_7_0= ruleValueTupleDescriptor ) ) otherlv_8= ';' otherlv_9= 'descriptors' ( (lv_tupleDescriptors_10_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_11= ',' ( (lv_tupleDescriptors_12_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_13= ';' otherlv_14= 'ocl' ( (lv_expression_15_0= ruleModel ) ) otherlv_16= ';' otherlv_17= '}' ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:635:1: (otherlv_0= 'resource' ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' otherlv_3= 'lhs' ( (lv_lhs_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'rhs' ( (lv_rhs_7_0= ruleValueTupleDescriptor ) ) otherlv_8= ';' otherlv_9= 'descriptors' ( (lv_tupleDescriptors_10_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_11= ',' ( (lv_tupleDescriptors_12_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_13= ';' otherlv_14= 'ocl' ( (lv_expression_15_0= ruleModel ) ) otherlv_16= ';' otherlv_17= '}' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:634:28: ( (otherlv_0= 'resource' ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' otherlv_3= 'lhs' ( (lv_weighting_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'rhs' ( (lv_rhs_7_0= ruleValueTupleDescriptor ) ) otherlv_8= ';' otherlv_9= 'descriptors' ( (lv_tupleDescriptors_10_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_11= ',' ( (lv_tupleDescriptors_12_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_13= ';' otherlv_14= 'ocl' ( (lv_expression_15_0= ruleModel ) ) otherlv_16= ';' otherlv_17= '}' ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:635:1: (otherlv_0= 'resource' ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' otherlv_3= 'lhs' ( (lv_weighting_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'rhs' ( (lv_rhs_7_0= ruleValueTupleDescriptor ) ) otherlv_8= ';' otherlv_9= 'descriptors' ( (lv_tupleDescriptors_10_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_11= ',' ( (lv_tupleDescriptors_12_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_13= ';' otherlv_14= 'ocl' ( (lv_expression_15_0= ruleModel ) ) otherlv_16= ';' otherlv_17= '}' )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:635:1: (otherlv_0= 'resource' ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' otherlv_3= 'lhs' ( (lv_lhs_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'rhs' ( (lv_rhs_7_0= ruleValueTupleDescriptor ) ) otherlv_8= ';' otherlv_9= 'descriptors' ( (lv_tupleDescriptors_10_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_11= ',' ( (lv_tupleDescriptors_12_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_13= ';' otherlv_14= 'ocl' ( (lv_expression_15_0= ruleModel ) ) otherlv_16= ';' otherlv_17= '}' )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:635:3: otherlv_0= 'resource' ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' otherlv_3= 'lhs' ( (lv_lhs_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'rhs' ( (lv_rhs_7_0= ruleValueTupleDescriptor ) ) otherlv_8= ';' otherlv_9= 'descriptors' ( (lv_tupleDescriptors_10_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_11= ',' ( (lv_tupleDescriptors_12_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_13= ';' otherlv_14= 'ocl' ( (lv_expression_15_0= ruleModel ) ) otherlv_16= ';' otherlv_17= '}'
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:635:1: (otherlv_0= 'resource' ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' otherlv_3= 'lhs' ( (lv_weighting_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'rhs' ( (lv_rhs_7_0= ruleValueTupleDescriptor ) ) otherlv_8= ';' otherlv_9= 'descriptors' ( (lv_tupleDescriptors_10_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_11= ',' ( (lv_tupleDescriptors_12_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_13= ';' otherlv_14= 'ocl' ( (lv_expression_15_0= ruleModel ) ) otherlv_16= ';' otherlv_17= '}' )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:635:3: otherlv_0= 'resource' ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' otherlv_3= 'lhs' ( (lv_weighting_4_0= ruleValueTupleDescriptor ) ) otherlv_5= ';' otherlv_6= 'rhs' ( (lv_rhs_7_0= ruleValueTupleDescriptor ) ) otherlv_8= ';' otherlv_9= 'descriptors' ( (lv_tupleDescriptors_10_0= ruleComponentResourceTupleDescriptor ) ) (otherlv_11= ',' ( (lv_tupleDescriptors_12_0= ruleComponentResourceTupleDescriptor ) ) )* otherlv_13= ';' otherlv_14= 'ocl' ( (lv_expression_15_0= ruleModel ) ) otherlv_16= ';' otherlv_17= '}'
             {
             otherlv_0=(Token)match(input,27,FollowSets000.FOLLOW_27_in_ruleResourceConstraint1224); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1747,19 +1747,19 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_3, grammarAccess.getResourceConstraintAccess().getLhsKeyword_3());
                   
             }
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:665:1: ( (lv_lhs_4_0= ruleValueTupleDescriptor ) )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:666:1: (lv_lhs_4_0= ruleValueTupleDescriptor )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:665:1: ( (lv_weighting_4_0= ruleValueTupleDescriptor ) )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:666:1: (lv_weighting_4_0= ruleValueTupleDescriptor )
             {
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:666:1: (lv_lhs_4_0= ruleValueTupleDescriptor )
-            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:667:3: lv_lhs_4_0= ruleValueTupleDescriptor
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:666:1: (lv_weighting_4_0= ruleValueTupleDescriptor )
+            // ../de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/parser/antlr/internal/InternalAllocationSpecificationLanguage.g:667:3: lv_weighting_4_0= ruleValueTupleDescriptor
             {
             if ( state.backtracking==0 ) {
                
-              	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getLhsValueTupleDescriptorParserRuleCall_4_0()); 
+              	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getWeightingValueTupleDescriptorParserRuleCall_4_0()); 
               	    
             }
             pushFollow(FollowSets000.FOLLOW_ruleValueTupleDescriptor_in_ruleResourceConstraint1291);
-            lv_lhs_4_0=ruleValueTupleDescriptor();
+            lv_weighting_4_0=ruleValueTupleDescriptor();
 
             state._fsp--;
             if (state.failed) return current;
@@ -1770,8 +1770,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
               	        }
                      		set(
                      			current, 
-                     			"lhs",
-                      		lv_lhs_4_0, 
+                     			"weighting",
+                      		lv_weighting_4_0, 
                       		"ValueTupleDescriptor");
               	        afterParserOrEnumRuleCall();
               	    

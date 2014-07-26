@@ -686,7 +686,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         value=ValueTupleDescriptor 
+	 *         weighting=ValueTupleDescriptor 
 	 *         tupleDescriptors+=ComponentResourceTupleDescriptor 
 	 *         tupleDescriptors+=ComponentResourceTupleDescriptor* 
 	 *         expression=Model
@@ -710,7 +710,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 * Constraint:
 	 *     (
 	 *         name=ID? 
-	 *         lhs=ValueTupleDescriptor 
+	 *         weighting=ValueTupleDescriptor 
 	 *         rhs=ValueTupleDescriptor 
 	 *         tupleDescriptors+=ComponentResourceTupleDescriptor 
 	 *         tupleDescriptors+=ComponentResourceTupleDescriptor* 
