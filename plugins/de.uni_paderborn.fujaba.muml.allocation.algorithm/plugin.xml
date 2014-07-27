@@ -18,6 +18,9 @@
             <metamodel
                   nsURI="http://ww.eclipse.org/OCL/Values">
             </metamodel>
+            <metamodel
+                  nsURI="http://www.fujaba.de/muml/allocation/language/0.1.0/cs">
+            </metamodel>
          </library>
       </unit>
       <unit
