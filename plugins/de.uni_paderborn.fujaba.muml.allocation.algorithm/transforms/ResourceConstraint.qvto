@@ -1,7 +1,7 @@
 import Expressions;
 import OCLEvaluator;
 import TupleAccessor;
-import RequiredHardwareResourceInstanceConstraint; // XXX: get rid of this import (aka move required query to lib)
+import Sort;
 import Util;
 import Variables;
 import VariableHelper;
@@ -55,22 +55,10 @@ query TupleValue::getOuterId(constraintCS : ResourceConstraintCS) : String {
 	return let char : String = ILLEGAL_VARIABLE_CHARS()->at(1)
 	in
 	self.getRhsValue(constraintCS) + char + char.join(
-		self.getSequence(constraintCS.weighting.value)->sortInnerResultSequence(constraintCS)
-			->collect(tv : TupleValue | tv.getInnerId(constraintCS))
+		self.getSequence(constraintCS.weighting.value)
+			->sortWeightingComponentResourceTuples(constraintCS)
+			->collect(tv : TupleValue | tv.getWeightingComponentResourceTupleSortId(constraintCS))
 	);
-}
-
-query Sequence(TupleValue)::sortInnerResultSequence(elementCS : WeightingComponentResourceTupleElementCS) : Sequence(TupleValue) {
-	return self->sortedBy(tv : TupleValue | tv.getInnerId(elementCS));
-}
-
-query TupleValue::getInnerId(elementCS : WeightingComponentResourceTupleElementCS) : String {
-	// Order by component_ecu names and add the coefficient/LhsValue as a tie breaker
-	// for the sort algo
-	// this uniquely identifies an inner tuple (because the inner tuples are
-	// contained in a set => no duplicates)
-	return self.toSequence()->sortComponentResourceSequence()->getVariableName()
-		+ ILLEGAL_VARIABLE_CHARS()->at(1) + self.getLhsValue(elementCS); 
 }
 
 helper TupleValue::createResourceConstraint(inout ilp : IntegerLinearProgram, constraintCS : ResourceConstraintCS) {
@@ -84,37 +72,16 @@ helper TupleValue::createResourceConstraint(inout ilp : IntegerLinearProgram, co
 
 query TupleValue::getSortedInnerResultSequence(constraintCS : ResourceConstraintCS) : Sequence(TupleValue) {
 	return self.getSequence(constraintCS.weighting.value)
-		->sortInnerResultSequence(constraintCS);
-}
-
-helper Sequence(TupleValue)::createAdditionExpression(elementCS : WeightingComponentResourceTupleElementCS, expression : Expression) : Expression {
-	var expr : Expression := expression;
-	self->asOrderedSet()->reverse()->collect(oclAsType(TupleValue))->forEach(tv) {
-		var tmp : Expression := new ArithmeticExpression(
-			new LiteralExpression(tv.getLhsValue(elementCS)),
-			new VariableExpression(tv.toSequence()->sortComponentResourceSequence()->getVariable()),
-			ArithmeticOperator::TIMES
-		);
-		if (expr.oclIsUndefined()) then
-			expr := tmp
-		else
-			expr := new ArithmeticExpression(tmp, expr, ArithmeticOperator::PLUS)
-		endif;
-	};
-	return expr;
+		->sortWeightingComponentResourceTuples(constraintCS);
 }
 
 helper Sequence(TupleValue)::createResourceConstraintExpression(inout ilp : IntegerLinearProgram,
 	constraintCS : ResourceConstraintCS, rhsValue : String) {
 	var comment : String := if constraintCS.name <> '' then constraintCS.name else constraintCS.repr() endif;
 	ilp.constraints += new ConstraintExpression(
-		self->createAdditionExpression(constraintCS, null),
+		self->createWeightingComponentResourceTuplesAdditionExpression(constraintCS, null),
 		new LiteralExpression(rhsValue),
 		ComparingOperator::LESS_OR_EQUAL, comment);
-}
-
-query TupleValue::getLhsValue(constraintCS : WeightingComponentResourceTupleElementCS) : String {
-	return self.getValue(constraintCS.weighting.value);
 }
 
 query TupleValue::getRhsValue(constraintCS : ResourceConstraintCS) : String {

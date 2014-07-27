@@ -1,8 +1,7 @@
 import Expressions;
 import OCLEvaluator;
 import TupleAccessor;
-import RequiredHardwareResourceInstanceConstraint; // get rid of this import
-import ResourceConstraint; // get rid of this import
+import Sort;
 import Variables;
 import Util;
 
@@ -36,11 +35,11 @@ helper SpecificationCS::createAdditionExpression(inout ilp : IntegerLinearProgra
 	var expression : Expression := null;
 	self.getQoSDimensions()->asOrderedSet()->reverse()->collect(oclAsType(QoSDimensionCS))->forEach(qosDimension) {
 		var sequence : Sequence(TupleValue) := qosDimension.evaluateOCL(oclContext)
-			->sortInnerResultSequence(qosDimension);
+			->sortWeightingComponentResourceTuples(qosDimension);
 		sequence->collectNested(tv : TupleValue |
 			tv.toSequence()->sortComponentResourceSequence()
 		)->createHelperVariablesAndConstraints(ilp);
-		expression := sequence->createAdditionExpression(qosDimension, expression);
+		expression := sequence->createWeightingComponentResourceTuplesAdditionExpression(qosDimension, expression);
 	};
 	return expression;
 }

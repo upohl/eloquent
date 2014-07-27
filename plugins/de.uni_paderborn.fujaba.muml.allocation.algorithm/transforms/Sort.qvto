@@ -1,0 +1,34 @@
+import VariableHelper;
+import TupleAccessor;
+
+modeltype allocationSpecification uses cs('http://www.fujaba.de/muml/allocation/language/0.1.0/cs');
+modeltype core uses core('http://www.storydriven.org/core/0.3.1');
+modeltype values uses values('http://ww.eclipse.org/OCL/Values');
+
+library Sort;
+
+// common sorting code
+
+query Sequence(NamedElement)::sortComponentResourceSequence() : Sequence(NamedElement) {
+	return let indexes : OrderedSet(Integer) = getOddNumbers(1, self->size())
+	in
+	indexes->collectNested(i | Sequence{self->at(i), self->at(i + 1)})
+		->sortedBy(s | s->getVariableName())->flatten()
+}
+
+query Sequence(TupleValue)::sortWeightingComponentResourceTuples(elementCS : WeightingComponentResourceTupleElementCS) : Sequence(TupleValue) {
+	return self->sortedBy(tv : TupleValue | tv.getWeightingComponentResourceTupleSortId(elementCS));
+}
+
+query TupleValue::getWeightingComponentResourceTupleSortId(elementCS : WeightingComponentResourceTupleElementCS) : String {
+	// Order by component_ecu names and add the coefficient/LhsValue as a tie breaker
+	// for the sort algo
+	// this uniquely identifies a WeightingComponentResourceTuple tuple (because
+	// the WeightingComponentResourceTuple tuples are contained in a set => no duplicates)
+	return self.toSequence()->sortComponentResourceSequence()->getVariableName()
+		+ ILLEGAL_VARIABLE_CHARS()->at(1) + self.getWeighting(elementCS); 
+}
+
+query TupleValue::getWeighting(elementCS : WeightingComponentResourceTupleElementCS) : String {
+	return self.get(elementCS.weighting.value).oclAsType(Real).toString();
+}

@@ -1,5 +1,6 @@
 import Expressions;
 import OCLEvaluator;
+import Sort;
 import Util;
 import Variables;
 import VariableHelper;
@@ -51,14 +52,6 @@ query Sequence(Sequence(NamedElement))::sortComponentResourceSequences() : Seque
 	return self->collectNested(seq |
 		seq->sortComponentResourceSequence()
 	)->sortedBy(seq | seq->getVariableName());
-}
-
-// TODO: move into library?
-query Sequence(NamedElement)::sortComponentResourceSequence() : Sequence(NamedElement) {
-	return let indexes : OrderedSet(Integer) = getOddNumbers(1, self->size())
-	in
-	indexes->collectNested(i | Sequence{self->at(i), self->at(i + 1)})
-		->sortedBy(s | s->getVariableName())->flatten()
 }
 
 /*query TupleValue::toSequences() : Sequence(Sequence(NamedElement)) {
