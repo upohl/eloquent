@@ -5,6 +5,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ResourceConstraintCS
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.WeightingComponentResourceTupleElementCS
 import de.uni_paderborn.fujaba.muml.hardware.hwresourceinstance.HwresourceinstancePackage
 import de.uni_paderborn.fujaba.muml.instance.InstancePackage
 import java.util.List
@@ -63,6 +64,10 @@ class TypesUtil {
 			throw new IllegalStateException("A MetaModelManager should be associated with " + object)
 		}
 		metaModelManager
+	}
+	
+	public static def conformsTo(MetaModelManager metaModelManager, Type actualType, Type expectedType) {
+		metaModelManager.conformsTo(actualType, expectedType, null);
 	}
 	
 	// language specific constraint types are created below
@@ -133,21 +138,13 @@ class TypesUtil {
 	}
 	
 	// resource constraint
-	@NonNull static def TupleType createResourceConstraintInnerTupleType(MetaModelManager metaModelManager, ResourceConstraintCS constraintCS) {
-		var Map<String, Type> namedParts = <String, Type>newHashMap()
-		namedParts.putAll(createNamedPartsFromComponentResourceTupleDescriptors(constraintCS.tupleDescriptors)
-			.mapValues[EClass eClass | getType(metaModelManager, eClass)])
-		namedParts.put(constraintCS.weighting.value, getRealType(metaModelManager))
-		createTupleType(metaModelManager, namedParts)
-	}
-	
 	@NonNull static def TupleType createResourceConstraintInnerTupleType(ResourceConstraintCS constraintCS) {
 		val MetaModelManager metaModelManager = getMetaModelManager(constraintCS)
-		createResourceConstraintInnerTupleType(metaModelManager, constraintCS)
+		createWeightingComponentResourceTupleElementCSTupleType(metaModelManager, constraintCS)
 	}
 	
 	@NonNull static def TupleType createResourceConstraintOuterTupleType(MetaModelManager metaModelManager, ResourceConstraintCS constraintCS) {
-		val Type innerTupleType = createResourceConstraintInnerTupleType(metaModelManager, constraintCS)
+		val Type innerTupleType = createWeightingComponentResourceTupleElementCSTupleType(metaModelManager, constraintCS)
 		val Map<String, Type> namedParts = #{
 			constraintCS.weighting.value -> createSetType(metaModelManager, innerTupleType),
 			constraintCS.rhs.value -> getRealType(metaModelManager)
@@ -165,5 +162,13 @@ class TypesUtil {
 		createSetType(metaModelManager,
 			createResourceConstraintOuterTupleType(metaModelManager, constraintCS)
 		)
+	}
+	
+	@NonNull static def TupleType createWeightingComponentResourceTupleElementCSTupleType(MetaModelManager metaModelManager, WeightingComponentResourceTupleElementCS elementCS) {
+		var Map<String, Type> namedParts = <String, Type>newHashMap()
+		namedParts.putAll(createNamedPartsFromComponentResourceTupleDescriptors(elementCS.tupleDescriptors)
+			.mapValues[EClass eClass | getType(metaModelManager, eClass)])
+		namedParts.put(elementCS.weighting.value, getRealType(metaModelManager))
+		createTupleType(metaModelManager, namedParts)
 	}
 }
