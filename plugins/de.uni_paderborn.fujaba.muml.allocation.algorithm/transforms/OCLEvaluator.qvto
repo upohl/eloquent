@@ -13,14 +13,14 @@ library OCLEvaluator;
 //blackbox query evaluate(oclExpression : ContextCS, contextObject : OclAny) : OclAny;
 //blackbox query evaluateLocationConstraintCS(oclExpression : ContextCS, contextObject : OclAny) : OrderedSet(TupleValue);
 
-helper ConstraintCS::evaluateOCL(contextObject : OclAny) : Sequence(TupleValue) {
-	var res : Sequence(TupleValue) := evaluateConstraintCS(self, contextObject);
+helper EvaluatableElementCS::evaluateOCL(contextObject : OclAny) : Sequence(TupleValue) {
+	var res : Sequence(TupleValue) := evaluateEvaluatableElementCS(self, contextObject);
 	res->createTraceHelper(self);
 	return res;
 }
 
 helper ResourceConstraintCS::evaluateOCL(contextObject : OclAny) : Sequence(TupleValue) {
-	var res : Sequence(TupleValue) := evaluateConstraintCS(self, contextObject);
+	var res : Sequence(TupleValue) := evaluateEvaluatableElementCS(self, contextObject);
 	res->createTraceHelper(self); // do this first, otherwise the subsequent tv.getSequence fails
 	res->collect(tv : TupleValue | tv.getSequence(self.weighting.value))
 		->collect(oclAsType(TupleValue))
@@ -28,15 +28,15 @@ helper ResourceConstraintCS::evaluateOCL(contextObject : OclAny) : Sequence(Tupl
 	return res;
 }
 
-helper TupleValue::createTraceHelper(cs : ConstraintCS) {
+helper TupleValue::createTraceHelper(cs : EvaluatableElementCS) {
 	cs.map createTrace(self);
 	return null;
 }
 
-mapping ConstraintCS::createTrace(tv : TupleValue) : TupleValue {
+mapping EvaluatableElementCS::createTrace(tv : TupleValue) : TupleValue {
 	init {
 		result := tv;
-		log("create trace (constraintCS) called");
+		log("create trace (EvaluatableElementCS) called");
 	}
 }
 

@@ -19,7 +19,7 @@ import org.eclipse.ocl.examples.pivot.utilities.PivotEnvironmentFactory;
 import org.eclipse.ocl.examples.pivot.utilities.PivotUtil;
 import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
 
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.ConstraintCS;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS;
 
 public class OCLEvaluator {
 	private static final String noMetaModelManager = "cannot find a MetaModelManager for %s";
@@ -68,9 +68,9 @@ public class OCLEvaluator {
 	
 	@Operation(kind=Kind.QUERY)
 	// List corresponds to Sequence, LinkedHashSet to OrderedSet
-	public static List<TupleValue> evaluateConstraintCS(@NonNull Object lc, @NonNull Object contextObject) {
-		System.out.println(lc);
-		SetValue result = (SetValue) evaluate(((ConstraintCS) lc).getExpression(), contextObject);
+	public static List<TupleValue> evaluateEvaluatableElementCS(@NonNull EvaluatableElementCS evaluatableElementCS, @NonNull Object contextObject) {
+		System.out.println(evaluatableElementCS);
+		SetValue result = (SetValue) evaluate(evaluatableElementCS.getExpression(), contextObject);
 		// unboxing does not work because all elements are unboxed
 		// in an incompatible way (that is the unboxed elements do not have type TupleValue
 		// anymore)
