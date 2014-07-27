@@ -13,6 +13,7 @@ import org.eclipse.ocl.examples.pivot.TupleType;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ResourceConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.typing.TypesUtil;
@@ -61,6 +62,8 @@ public class TupleAccessor {
 			} else {
 				tupleType = TypesUtil.createResourceConstraintInnerTupleType((ResourceConstraintCS) object);
 			}
+		} else if (object instanceof QoSDimensionCS) {
+			tupleType = TypesUtil.createQoSDimensionTupleType((QoSDimensionCS) object);
 		} else {
 			throw new IllegalArgumentException(
 					String.format(unexpectedObject, object));

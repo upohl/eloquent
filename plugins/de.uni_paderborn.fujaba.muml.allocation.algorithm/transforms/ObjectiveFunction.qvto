@@ -1,4 +1,10 @@
 import Expressions;
+import OCLEvaluator;
+import TupleAccessor;
+import RequiredHardwareResourceInstanceConstraint; // get rid of this import
+import ResourceConstraint; // get rid of this import
+import Variables;
+import Util;
 
 modeltype allocationSpecification uses cs('http://www.fujaba.de/muml/allocation/language/0.1.0/cs');
 modeltype oclcontext uses oclcontext('http://www.fujaba.de/muml/allocation/language/0.1.0/oclcontext');
@@ -8,18 +14,55 @@ modeltype expressions uses core::expressions('http://www.storydriven.org/core/ex
 modeltype common uses core::expressions::common('http://www.storydriven.org/core/expressions/common/0.3.1');
 modeltype instance uses muml::instance('http://www.fujaba.de/muml/instance/0.4.0');
 modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.0/');
+modeltype values uses values('http://ww.eclipse.org/OCL/Values');
 
 library ObjectiveFunction;
 
 helper SpecificationCS::createObjectiveFunction(inout ilp : IntegerLinearProgram,
 	cic : ComponentInstanceConfiguration,
 	hpic : HWPlatformInstanceConfiguration) {
-	ilp.objectiveFunction := new ObjectiveFunctionExpression(ObjectiveGoal::MAX,
-			new LiteralExpression('1'));
+	var expression : Expression := self.createAdditionExpression(ilp, cic, hpic);
+	if (expression.oclIsUndefined()) then {
+		expression := new LiteralExpression('1');
+	} endif;
+	ilp.objectiveFunction := new ObjectiveFunctionExpression(self.getGoal(),
+		expression);
+}
+
+helper SpecificationCS::createAdditionExpression(inout ilp : IntegerLinearProgram,
+	cic : ComponentInstanceConfiguration,
+	hpic : HWPlatformInstanceConfiguration) : Expression {
+	var oclContext : OCLContext := createOCLContext(cic, hpic);
+	var expression : Expression := null;
+	self.getQoSDimensions()->asOrderedSet()->reverse()->collect(oclAsType(QoSDimensionCS))->forEach(qosDimension) {
+		var sequence : Sequence(TupleValue) := qosDimension.evaluateOCL(oclContext)
+			->sortInnerResultSequence(qosDimension);
+		sequence->collectNested(tv : TupleValue |
+			tv.toSequence()->sortComponentResourceSequence()
+		)->createHelperVariablesAndConstraints(ilp);
+		expression := sequence->createAdditionExpression(qosDimension, expression);
+	};
+	return expression;
 }
 
 constructor ObjectiveFunctionExpression::ObjectiveFunctionExpression(goal : ObjectiveGoal,
 	objectiveFunction : Expression) {
 	result.goal := goal;
 	result.objectiveFunction := objectiveFunction;
+}
+
+query SpecificationCS::getQoSDimensions() : Sequence(QoSDimensionCS) {
+	return if self.measure.oclIsUndefined() then
+		Sequence{}
+	else
+		self.measure.services->collect(dimensions)
+	endif
+}
+
+query SpecificationCS::getGoal() : ObjectiveGoal {
+	return if self.goal = Goal::MAX then
+		ObjectiveGoal::MAX
+	else
+		ObjectiveGoal::MIN
+	endif;
 }

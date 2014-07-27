@@ -57,6 +57,10 @@ query ResourceConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(Named
 	return self.tupleDescriptors->toSequence(tupleValue);
 }
 
+query QoSDimensionCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+	return self.tupleDescriptors->toSequence(tupleValue);
+}
+
 query EvaluatableElementCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
 	// should not happen
 	assert fatal (false) with log("add element specific ::toSequence mapping for " + self.toString());
