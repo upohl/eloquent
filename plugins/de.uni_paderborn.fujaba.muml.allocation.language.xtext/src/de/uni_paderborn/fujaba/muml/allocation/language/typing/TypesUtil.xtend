@@ -21,6 +21,7 @@ import org.eclipse.ocl.examples.pivot.Type
 import org.eclipse.ocl.examples.pivot.manager.MetaModelManager
 import org.eclipse.ocl.examples.pivot.manager.TupleTypeManager
 import org.eclipse.ocl.examples.pivot.utilities.PivotUtil
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS
 
 class TypesUtil {
 	private static final String tupleName = "Tuple"
@@ -161,6 +162,19 @@ class TypesUtil {
 		val MetaModelManager metaModelManager = getMetaModelManager(constraintCS)
 		createSetType(metaModelManager,
 			createResourceConstraintOuterTupleType(metaModelManager, constraintCS)
+		)
+	}
+	
+	// QoS dimension
+	@NonNull static def TupleType createQoSDimensionTupleType(QoSDimensionCS qosDimensionCS) {
+		val MetaModelManager metaModelManager = getMetaModelManager(qosDimensionCS)
+		createWeightingComponentResourceTupleElementCSTupleType(metaModelManager, qosDimensionCS)
+	}
+
+	@NonNull static def Type createQoSDimensionType(QoSDimensionCS qosDimensionCS) {
+		val MetaModelManager metaModelManager = getMetaModelManager(qosDimensionCS)
+		createSetType(metaModelManager,  
+			createWeightingComponentResourceTupleElementCSTupleType(metaModelManager, qosDimensionCS)
 		)
 	}
 	

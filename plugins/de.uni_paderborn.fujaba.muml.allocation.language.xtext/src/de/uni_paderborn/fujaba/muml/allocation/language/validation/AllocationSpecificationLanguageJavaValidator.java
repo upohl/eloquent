@@ -16,6 +16,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ResourceConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.typing.TypesUtil;
@@ -70,6 +71,17 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 		}
 		checkTypes(constraintCS,
 				TypesUtil.createResourceConstraintType(constraintCS));
+	}
+	
+	@Check
+	public void checkQoSDimensionCS(QoSDimensionCS qosDimensionCS) {
+		List<ComponentResourceTupleDescriptorCS> tupleDescriptorList = qosDimensionCS.getTupleDescriptors();
+		ContextCS oclExpression = qosDimensionCS.getExpression();
+		if (tupleDescriptorList.isEmpty() || oclExpression == null) {
+			return;
+		}
+		checkTypes(qosDimensionCS,
+				TypesUtil.createQoSDimensionType(qosDimensionCS));
 	}
 	
 	private void checkTypes(EvaluatableElementCS elementCS, Type expectedType) {
