@@ -4,6 +4,7 @@ package de.uni_paderborn.fujaba.muml.allocation.language.cs.impl;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.Goal;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ServiceCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS;
@@ -44,6 +45,7 @@ import org.storydriven.core.util.ExtendableElementOperations;
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.SpecificationCSImpl#getServices <em>Services</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.SpecificationCSImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.SpecificationCSImpl#getMeasure <em>Measure</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.SpecificationCSImpl#getGoal <em>Goal</em>}</li>
  * </ul>
  * </p>
  *
@@ -99,6 +101,26 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 * @ordered
 	 */
 	protected MeasureFunctionCS measure;
+
+	/**
+	 * The default value of the '{@link #getGoal() <em>Goal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGoal()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Goal GOAL_EDEFAULT = Goal.MIN;
+
+	/**
+	 * The cached value of the '{@link #getGoal() <em>Goal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGoal()
+	 * @generated
+	 * @ordered
+	 */
+	protected Goal goal = GOAL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -215,6 +237,36 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Goal getGoal() {
+		return goal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGoal(Goal newGoal) {
+		Goal oldGoal = goal;
+		goal = newGoal == null ? GOAL_EDEFAULT : newGoal;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.SPECIFICATION_CS__GOAL, oldGoal, goal));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String toString() {
+		return super.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Extension getExtension(final EClass type) {
 		return ExtendableElementOperations.getExtension(this, type);
 	}
@@ -301,6 +353,8 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 				return getConstraints();
 			case CsPackage.SPECIFICATION_CS__MEASURE:
 				return getMeasure();
+			case CsPackage.SPECIFICATION_CS__GOAL:
+				return getGoal();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -333,6 +387,9 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 			case CsPackage.SPECIFICATION_CS__MEASURE:
 				setMeasure((MeasureFunctionCS)newValue);
 				return;
+			case CsPackage.SPECIFICATION_CS__GOAL:
+				setGoal((Goal)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -360,6 +417,9 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 			case CsPackage.SPECIFICATION_CS__MEASURE:
 				setMeasure((MeasureFunctionCS)null);
 				return;
+			case CsPackage.SPECIFICATION_CS__GOAL:
+				setGoal(GOAL_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -382,6 +442,8 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 				return constraints != null && !constraints.isEmpty();
 			case CsPackage.SPECIFICATION_CS__MEASURE:
 				return measure != null;
+			case CsPackage.SPECIFICATION_CS__GOAL:
+				return goal != GOAL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

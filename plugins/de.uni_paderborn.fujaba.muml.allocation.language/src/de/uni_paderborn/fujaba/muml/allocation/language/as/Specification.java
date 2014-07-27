@@ -24,6 +24,7 @@ import org.eclipse.ocl.examples.pivot.Root;
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Specification#getServices <em>Services</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Specification#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Specification#getMeasure <em>Measure</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Specification#getGoal <em>Goal</em>}</li>
  * </ul>
  * </p>
  *
@@ -86,5 +87,33 @@ public interface Specification extends EObject, Root {
 	 * @generated
 	 */
 	void setMeasure(MeasureFunction value);
+
+	/**
+	 * Returns the value of the '<em><b>Goal</b></em>' attribute.
+	 * The literals are from the enumeration {@link de.uni_paderborn.fujaba.muml.allocation.language.as.Goal}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Represents the optimization goal.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Goal</em>' attribute.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.Goal
+	 * @see #setGoal(Goal)
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage#getSpecification_Goal()
+	 * @model
+	 * @generated
+	 */
+	Goal getGoal();
+
+	/**
+	 * Sets the value of the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Specification#getGoal <em>Goal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Goal</em>' attribute.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.Goal
+	 * @see #getGoal()
+	 * @generated
+	 */
+	void setGoal(Goal value);
 
 } // Specification

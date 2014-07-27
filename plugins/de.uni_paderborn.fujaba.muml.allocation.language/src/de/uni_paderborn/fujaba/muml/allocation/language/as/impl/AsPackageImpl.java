@@ -7,6 +7,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.ComponentResourceTupleDescriptor;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.Constraint;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement;
+import de.uni_paderborn.fujaba.muml.allocation.language.as.Goal;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.InstanceTupleDescriptor;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.LocationConstraint;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.LocationConstraintTypes;
@@ -151,6 +152,13 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	private EEnum locationConstraintTypesEEnum = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum goalEEnum = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -248,6 +256,15 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 */
 	public EReference getSpecification_Measure() {
 		return (EReference)specificationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSpecification_Goal() {
+		return (EAttribute)specificationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -507,6 +524,15 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getGoal() {
+		return goalEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public AsFactory getAsFactory() {
 		return (AsFactory)getEFactoryInstance();
 	}
@@ -534,6 +560,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		createEReference(specificationEClass, SPECIFICATION__SERVICES);
 		createEReference(specificationEClass, SPECIFICATION__CONSTRAINTS);
 		createEReference(specificationEClass, SPECIFICATION__MEASURE);
+		createEAttribute(specificationEClass, SPECIFICATION__GOAL);
 
 		evaluatableElementEClass = createEClass(EVALUATABLE_ELEMENT);
 		createEReference(evaluatableElementEClass, EVALUATABLE_ELEMENT__EXPRESSION);
@@ -578,6 +605,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		// Create enums
 		locationConstraintTypesEEnum = createEEnum(LOCATION_CONSTRAINT_TYPES);
+		goalEEnum = createEEnum(GOAL);
 	}
 
 	/**
@@ -636,6 +664,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		initEReference(getSpecification_Services(), this.getService(), null, "services", null, 0, -1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecification_Constraints(), this.getConstraint(), null, "constraints", null, 0, -1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecification_Measure(), this.getMeasureFunction(), null, "measure", null, 0, 1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSpecification_Goal(), this.getGoal(), "goal", null, 0, 1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(evaluatableElementEClass, EvaluatableElement.class, "EvaluatableElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEvaluatableElement_Expression(), thePivotPackage.getExpressionInOCL(), null, "expression", null, 1, 1, EvaluatableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -682,6 +711,10 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		initEEnum(locationConstraintTypesEEnum, LocationConstraintTypes.class, "LocationConstraintTypes");
 		addEEnumLiteral(locationConstraintTypesEEnum, LocationConstraintTypes.SAME_LOCATION);
 		addEEnumLiteral(locationConstraintTypesEEnum, LocationConstraintTypes.DIFFERENT_LOCATION);
+
+		initEEnum(goalEEnum, Goal.class, "Goal");
+		addEEnumLiteral(goalEEnum, Goal.MIN);
+		addEEnumLiteral(goalEEnum, Goal.MAX);
 
 		// Create resource
 		createResource(eNS_URI);

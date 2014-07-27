@@ -27,6 +27,11 @@
         <details key="documentation" value="Contains the specification of the measure function."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="goal" eType="#//Goal">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Represents the optimization goal."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EvaluatableElement" abstract="true"
       eSuperTypes="../../org.eclipse.ocl.examples.pivot/model/Pivot.ecore#//Element">
@@ -182,5 +187,12 @@
         <details key="documentation" value="Set of services which are used as summands in the measure function."/>
       </eAnnotations>
     </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Goal">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Declares possible values for an optimzation goal."/>
+    </eAnnotations>
+    <eLiterals name="MIN" literal="MIN"/>
+    <eLiterals name="MAX" value="1" literal="MAX"/>
   </eClassifiers>
 </ecore:EPackage>

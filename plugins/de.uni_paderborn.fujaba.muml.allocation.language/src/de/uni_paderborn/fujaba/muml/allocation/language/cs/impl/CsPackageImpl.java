@@ -7,6 +7,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.ConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsFactory;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.Goal;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.InstanceTupleDescriptorCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintTypes;
@@ -155,6 +156,13 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	private EEnum locationConstraintTypesEEnum = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum goalEEnum = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -253,6 +261,15 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 */
 	public EReference getSpecificationCS_Measure() {
 		return (EReference)specificationCSEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSpecificationCS_Goal() {
+		return (EAttribute)specificationCSEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -512,6 +529,15 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getGoal() {
+		return goalEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CsFactory getCsFactory() {
 		return (CsFactory)getEFactoryInstance();
 	}
@@ -539,6 +565,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		createEReference(specificationCSEClass, SPECIFICATION_CS__SERVICES);
 		createEReference(specificationCSEClass, SPECIFICATION_CS__CONSTRAINTS);
 		createEReference(specificationCSEClass, SPECIFICATION_CS__MEASURE);
+		createEAttribute(specificationCSEClass, SPECIFICATION_CS__GOAL);
 
 		evaluatableElementCSEClass = createEClass(EVALUATABLE_ELEMENT_CS);
 		createEReference(evaluatableElementCSEClass, EVALUATABLE_ELEMENT_CS__EXPRESSION);
@@ -583,6 +610,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		// Create enums
 		locationConstraintTypesEEnum = createEEnum(LOCATION_CONSTRAINT_TYPES);
+		goalEEnum = createEEnum(GOAL);
 	}
 
 	/**
@@ -645,6 +673,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEReference(getSpecificationCS_Services(), this.getServiceCS(), null, "services", null, 0, -1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificationCS_Constraints(), this.getConstraintCS(), null, "constraints", null, 0, -1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificationCS_Measure(), this.getMeasureFunctionCS(), null, "measure", null, 0, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSpecificationCS_Goal(), this.getGoal(), "goal", null, 0, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(evaluatableElementCSEClass, EvaluatableElementCS.class, "EvaluatableElementCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEvaluatableElementCS_Expression(), theEssentialOCLCSPackage.getContextCS(), null, "expression", null, 1, 1, EvaluatableElementCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -691,6 +720,10 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEEnum(locationConstraintTypesEEnum, LocationConstraintTypes.class, "LocationConstraintTypes");
 		addEEnumLiteral(locationConstraintTypesEEnum, LocationConstraintTypes.SAME_LOCATION);
 		addEEnumLiteral(locationConstraintTypesEEnum, LocationConstraintTypes.DIFFERENT_LOCATION);
+
+		initEEnum(goalEEnum, Goal.class, "Goal");
+		addEEnumLiteral(goalEEnum, Goal.MIN);
+		addEEnumLiteral(goalEEnum, Goal.MAX);
 
 		// Create resource
 		createResource(eNS_URI);

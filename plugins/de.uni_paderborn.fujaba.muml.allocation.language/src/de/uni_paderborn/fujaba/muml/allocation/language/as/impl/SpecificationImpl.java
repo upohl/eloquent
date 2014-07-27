@@ -4,6 +4,7 @@ package de.uni_paderborn.fujaba.muml.allocation.language.as.impl;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.Constraint;
+import de.uni_paderborn.fujaba.muml.allocation.language.as.Goal;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.MeasureFunction;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.Service;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.Specification;
@@ -36,6 +37,7 @@ import org.eclipse.ocl.examples.pivot.internal.impl.RootImpl;
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.SpecificationImpl#getServices <em>Services</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.SpecificationImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.SpecificationImpl#getMeasure <em>Measure</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.SpecificationImpl#getGoal <em>Goal</em>}</li>
  * </ul>
  * </p>
  *
@@ -71,6 +73,26 @@ public class SpecificationImpl extends RootImpl implements Specification {
 	 * @ordered
 	 */
 	protected MeasureFunction measure;
+
+	/**
+	 * The default value of the '{@link #getGoal() <em>Goal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGoal()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Goal GOAL_EDEFAULT = Goal.MIN;
+
+	/**
+	 * The cached value of the '{@link #getGoal() <em>Goal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGoal()
+	 * @generated
+	 * @ordered
+	 */
+	protected Goal goal = GOAL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -163,6 +185,27 @@ public class SpecificationImpl extends RootImpl implements Specification {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Goal getGoal() {
+		return goal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGoal(Goal newGoal) {
+		Goal oldGoal = goal;
+		goal = newGoal == null ? GOAL_EDEFAULT : newGoal;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.SPECIFICATION__GOAL, oldGoal, goal));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -190,6 +233,8 @@ public class SpecificationImpl extends RootImpl implements Specification {
 				return getConstraints();
 			case AsPackage.SPECIFICATION__MEASURE:
 				return getMeasure();
+			case AsPackage.SPECIFICATION__GOAL:
+				return getGoal();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -214,6 +259,9 @@ public class SpecificationImpl extends RootImpl implements Specification {
 			case AsPackage.SPECIFICATION__MEASURE:
 				setMeasure((MeasureFunction)newValue);
 				return;
+			case AsPackage.SPECIFICATION__GOAL:
+				setGoal((Goal)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -235,6 +283,9 @@ public class SpecificationImpl extends RootImpl implements Specification {
 			case AsPackage.SPECIFICATION__MEASURE:
 				setMeasure((MeasureFunction)null);
 				return;
+			case AsPackage.SPECIFICATION__GOAL:
+				setGoal(GOAL_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -253,8 +304,26 @@ public class SpecificationImpl extends RootImpl implements Specification {
 				return constraints != null && !constraints.isEmpty();
 			case AsPackage.SPECIFICATION__MEASURE:
 				return measure != null;
+			case AsPackage.SPECIFICATION__GOAL:
+				return goal != GOAL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (goal: ");
+		result.append(goal);
+		result.append(')');
+		return result.toString();
 	}
 
 

@@ -82,6 +82,8 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 		switch (eDataType.getClassifierID()) {
 			case AsPackage.LOCATION_CONSTRAINT_TYPES:
 				return createLocationConstraintTypesFromString(eDataType, initialValue);
+			case AsPackage.GOAL:
+				return createGoalFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -97,6 +99,8 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 		switch (eDataType.getClassifierID()) {
 			case AsPackage.LOCATION_CONSTRAINT_TYPES:
 				return convertLocationConstraintTypesToString(eDataType, instanceValue);
+			case AsPackage.GOAL:
+				return convertGoalToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -219,6 +223,26 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	 * @generated
 	 */
 	public String convertLocationConstraintTypesToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Goal createGoalFromString(EDataType eDataType, String initialValue) {
+		Goal result = Goal.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertGoalToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

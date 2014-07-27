@@ -218,13 +218,22 @@ public interface CsPackage extends EPackage {
 	int SPECIFICATION_CS__MEASURE = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Goal</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_CS__GOAL = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Specification CS</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS_FEATURE_COUNT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 5;
+	int SPECIFICATION_CS_FEATURE_COUNT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.EvaluatableElementCSImpl <em>Evaluatable Element CS</em>}' class.
@@ -1404,6 +1413,17 @@ public interface CsPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.Goal <em>Goal</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.Goal
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getGoal()
+	 * @generated
+	 */
+	int GOAL = 16;
+
+
+	/**
 	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS <em>Specification CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1445,6 +1465,17 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSpecificationCS_Measure();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS#getGoal <em>Goal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Goal</em>'.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS#getGoal()
+	 * @see #getSpecificationCS()
+	 * @generated
+	 */
+	EAttribute getSpecificationCS_Goal();
 
 	/**
 	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS <em>Evaluatable Element CS</em>}'.
@@ -1740,6 +1771,16 @@ public interface CsPackage extends EPackage {
 	EEnum getLocationConstraintTypes();
 
 	/**
+	 * Returns the meta object for enum '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.Goal <em>Goal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Goal</em>'.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.Goal
+	 * @generated
+	 */
+	EEnum getGoal();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1794,6 +1835,14 @@ public interface CsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SPECIFICATION_CS__MEASURE = eINSTANCE.getSpecificationCS_Measure();
+
+		/**
+		 * The meta object literal for the '<em><b>Goal</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SPECIFICATION_CS__GOAL = eINSTANCE.getSpecificationCS_Goal();
 
 		/**
 		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.EvaluatableElementCSImpl <em>Evaluatable Element CS</em>}' class.
@@ -2048,6 +2097,16 @@ public interface CsPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum LOCATION_CONSTRAINT_TYPES = eINSTANCE.getLocationConstraintTypes();
+
+		/**
+		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.Goal <em>Goal</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.Goal
+		 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.CsPackageImpl#getGoal()
+		 * @generated
+		 */
+		EEnum GOAL = eINSTANCE.getGoal();
 
 	}
 

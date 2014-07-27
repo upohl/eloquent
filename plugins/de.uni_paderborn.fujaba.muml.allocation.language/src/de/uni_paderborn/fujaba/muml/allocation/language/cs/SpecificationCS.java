@@ -23,6 +23,7 @@ import org.storydriven.core.ExtendableElement;
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS#getServices <em>Services</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS#getMeasure <em>Measure</em>}</li>
+ *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS#getGoal <em>Goal</em>}</li>
  * </ul>
  * </p>
  *
@@ -85,5 +86,33 @@ public interface SpecificationCS extends CompleteOCLDocumentCS, ExtendableElemen
 	 * @generated
 	 */
 	void setMeasure(MeasureFunctionCS value);
+
+	/**
+	 * Returns the value of the '<em><b>Goal</b></em>' attribute.
+	 * The literals are from the enumeration {@link de.uni_paderborn.fujaba.muml.allocation.language.cs.Goal}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Represents the optimization goal.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Goal</em>' attribute.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.Goal
+	 * @see #setGoal(Goal)
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage#getSpecificationCS_Goal()
+	 * @model
+	 * @generated
+	 */
+	Goal getGoal();
+
+	/**
+	 * Sets the value of the '{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS#getGoal <em>Goal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Goal</em>' attribute.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.Goal
+	 * @see #getGoal()
+	 * @generated
+	 */
+	void setGoal(Goal value);
 
 } // SpecificationCS

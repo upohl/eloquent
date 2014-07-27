@@ -20,10 +20,15 @@
       <genEnumLiterals ecoreEnumLiteral="LanguageSpecificationCS.ecore#//LocationConstraintTypes/SAME_LOCATION"/>
       <genEnumLiterals ecoreEnumLiteral="LanguageSpecificationCS.ecore#//LocationConstraintTypes/DIFFERENT_LOCATION"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="LanguageSpecificationCS.ecore#//Goal">
+      <genEnumLiterals ecoreEnumLiteral="LanguageSpecificationCS.ecore#//Goal/MIN"/>
+      <genEnumLiterals ecoreEnumLiteral="LanguageSpecificationCS.ecore#//Goal/MAX"/>
+    </genEnums>
     <genClasses ecoreClass="LanguageSpecificationCS.ecore#//SpecificationCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/services"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/constraints"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/measure"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationCS.ecore#//SpecificationCS/goal"/>
     </genClasses>
     <genClasses image="false" ecoreClass="LanguageSpecificationCS.ecore#//EvaluatableElementCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//EvaluatableElementCS/expression"/>

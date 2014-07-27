@@ -181,13 +181,22 @@ public interface AsPackage extends EPackage {
 	int SPECIFICATION__MEASURE = PivotPackage.ROOT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Goal</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__GOAL = PivotPackage.ROOT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_FEATURE_COUNT = PivotPackage.ROOT_FEATURE_COUNT + 3;
+	int SPECIFICATION_FEATURE_COUNT = PivotPackage.ROOT_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.EvaluatableElementImpl <em>Evaluatable Element</em>}' class.
@@ -1169,6 +1178,17 @@ public interface AsPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Goal <em>Goal</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.Goal
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getGoal()
+	 * @generated
+	 */
+	int GOAL = 16;
+
+
+	/**
 	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Specification <em>Specification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1210,6 +1230,17 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSpecification_Measure();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Specification#getGoal <em>Goal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Goal</em>'.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.Specification#getGoal()
+	 * @see #getSpecification()
+	 * @generated
+	 */
+	EAttribute getSpecification_Goal();
 
 	/**
 	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement <em>Evaluatable Element</em>}'.
@@ -1505,6 +1536,16 @@ public interface AsPackage extends EPackage {
 	EEnum getLocationConstraintTypes();
 
 	/**
+	 * Returns the meta object for enum '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Goal <em>Goal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Goal</em>'.
+	 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.Goal
+	 * @generated
+	 */
+	EEnum getGoal();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1559,6 +1600,14 @@ public interface AsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SPECIFICATION__MEASURE = eINSTANCE.getSpecification_Measure();
+
+		/**
+		 * The meta object literal for the '<em><b>Goal</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SPECIFICATION__GOAL = eINSTANCE.getSpecification_Goal();
 
 		/**
 		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.EvaluatableElementImpl <em>Evaluatable Element</em>}' class.
@@ -1813,6 +1862,16 @@ public interface AsPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum LOCATION_CONSTRAINT_TYPES = eINSTANCE.getLocationConstraintTypes();
+
+		/**
+		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Goal <em>Goal</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.Goal
+		 * @see de.uni_paderborn.fujaba.muml.allocation.language.as.impl.AsPackageImpl#getGoal()
+		 * @generated
+		 */
+		EEnum GOAL = eINSTANCE.getGoal();
 
 	}
 
