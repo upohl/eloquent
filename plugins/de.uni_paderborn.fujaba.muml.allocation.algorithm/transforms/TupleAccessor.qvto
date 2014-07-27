@@ -9,13 +9,13 @@ library TupleAccessor;
 
 helper TupleValue::get(namedPart : String) : OclAny {
 	//log("resolve call: ");
-	var source : ConstraintCS := self.invresolveone(ConstraintCS);
+	var source : EvaluatableElementCS := self.invresolveone(EvaluatableElementCS);
 	//log(source.toString());
 	return getPart(self, namedPart, source);
 }
 
 helper TupleValue::getSequence(namedPart : String) : Sequence(TupleValue) {
-	var source : ConstraintCS := self.invresolveone(ConstraintCS);
+	var source : EvaluatableElementCS := self.invresolveone(EvaluatableElementCS);
 	return getSequencePart(self, namedPart, source);
 }
 
@@ -27,7 +27,7 @@ query TupleValue::toSequence() : Sequence(NamedElement) {
 	// ->first() (to be investigated) to get the "correct"/expected constraint
 	// (implicit assumption: the tuple value is only accessed during the transformation
 	// of the constraint)
-	var source : ConstraintCS := self.invresolveone(ConstraintCS);
+	var source : EvaluatableElementCS := self.invresolveone(EvaluatableElementCS);
 	return source.toSequence(self);
 }
 
@@ -57,8 +57,8 @@ query ResourceConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(Named
 	return self.tupleDescriptors->toSequence(tupleValue);
 }
 
-query ConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+query EvaluatableElementCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
 	// should not happen
-	assert fatal (false) with log("add constraint specific ::toSequence mapping for " + self.toString());
+	assert fatal (false) with log("add element specific ::toSequence mapping for " + self.toString());
 	return null;
 }

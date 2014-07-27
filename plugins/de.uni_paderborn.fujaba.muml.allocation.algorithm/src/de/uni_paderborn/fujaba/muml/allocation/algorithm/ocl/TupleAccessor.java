@@ -11,7 +11,7 @@ import org.eclipse.ocl.examples.domain.values.CollectionValue;
 import org.eclipse.ocl.examples.domain.values.TupleValue;
 import org.eclipse.ocl.examples.pivot.TupleType;
 
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.ConstraintCS;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ResourceConstraintCS;
@@ -22,7 +22,7 @@ public class TupleAccessor {
 	private static final String unexpectedObject = "unexpected object %s";
 	private static final String noTupleValue = "object %s is not a TupleValue instance";
 	
-	private static Object getPart(TupleValue tupleValue, String namedPart, ConstraintCS constraintCS,
+	private static Object getPart(TupleValue tupleValue, String namedPart, EvaluatableElementCS elementCS,
 			TupleType tupleType, boolean unboxValue) {
 		//TupleType tupleType = TypesUtil.createLocationConstraintTupleType(locationConstraintCS);
 		TuplePartId partId = tupleType.getTupleTypeId().getPartId(namedPart);
@@ -34,7 +34,7 @@ public class TupleAccessor {
 		if (!unboxValue) {
 			return partValue;
 		}
-		IdResolver idResolver = TypesUtil.getMetaModelManager(constraintCS)
+		IdResolver idResolver = TypesUtil.getMetaModelManager(elementCS)
 				.getIdResolver();
 		Object unboxedValue = idResolver.unboxedValueOf(partValue);
 		System.out.println("accessed: " + unboxedValue);
@@ -65,7 +65,7 @@ public class TupleAccessor {
 			throw new IllegalArgumentException(
 					String.format(unexpectedObject, object));
 		}
-		return getPart(tupleValue, namedPart, (ConstraintCS) object, tupleType, unboxValue);
+		return getPart(tupleValue, namedPart, (EvaluatableElementCS) object, tupleType, unboxValue);
 	}
 	
 	@Operation(kind=Kind.QUERY)
