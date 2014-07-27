@@ -196,7 +196,7 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Declares possible values for an optimzation goal."/>
     </eAnnotations>
-    <eLiterals name="MIN"/>
-    <eLiterals name="MAX" value="1"/>
+    <eLiterals name="MAX"/>
+    <eLiterals name="MIN" value="1"/>
   </eClassifiers>
 </ecore:EPackage>

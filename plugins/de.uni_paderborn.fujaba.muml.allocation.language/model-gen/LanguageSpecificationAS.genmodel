@@ -11,8 +11,8 @@
       <genEnumLiterals ecoreEnumLiteral="LanguageSpecificationAS.ecore#//LocationConstraintTypes/DIFFERENT_LOCATION"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="LanguageSpecificationAS.ecore#//Goal">
-      <genEnumLiterals ecoreEnumLiteral="LanguageSpecificationAS.ecore#//Goal/MIN"/>
       <genEnumLiterals ecoreEnumLiteral="LanguageSpecificationAS.ecore#//Goal/MAX"/>
+      <genEnumLiterals ecoreEnumLiteral="LanguageSpecificationAS.ecore#//Goal/MIN"/>
     </genEnums>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//Specification">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//Specification/services"/>

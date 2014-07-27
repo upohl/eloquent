@@ -82,7 +82,7 @@ public class SpecificationImpl extends RootImpl implements Specification {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Goal GOAL_EDEFAULT = Goal.MIN;
+	protected static final Goal GOAL_EDEFAULT = Goal.MAX;
 
 	/**
 	 * The cached value of the '{@link #getGoal() <em>Goal</em>}' attribute.

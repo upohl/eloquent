@@ -722,8 +722,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		addEEnumLiteral(locationConstraintTypesEEnum, LocationConstraintTypes.DIFFERENT_LOCATION);
 
 		initEEnum(goalEEnum, Goal.class, "Goal");
-		addEEnumLiteral(goalEEnum, Goal.MIN);
 		addEEnumLiteral(goalEEnum, Goal.MAX);
+		addEEnumLiteral(goalEEnum, Goal.MIN);
 
 		// Create resource
 		createResource(eNS_URI);

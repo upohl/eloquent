@@ -22,16 +22,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Goal implements Enumerator {
 	/**
-	 * The '<em><b>MIN</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #MIN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	MIN(0, "MIN", "MIN"),
-
-	/**
 	 * The '<em><b>MAX</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -39,22 +29,15 @@ public enum Goal implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MAX(1, "MAX", "MAX");
-
-	/**
-	 * The '<em><b>MIN</b></em>' literal value.
+	MAX(0, "MAX", "MAX"), /**
+	 * The '<em><b>MIN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>MIN</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #MIN
-	 * @model
+	 * @see #MIN_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MIN_VALUE = 0;
+	MIN(1, "MIN", "MIN");
 
 	/**
 	 * The '<em><b>MAX</b></em>' literal value.
@@ -69,7 +52,22 @@ public enum Goal implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MAX_VALUE = 1;
+	public static final int MAX_VALUE = 0;
+
+	/**
+	 * The '<em><b>MIN</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>MIN</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #MIN
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MIN_VALUE = 1;
 
 	/**
 	 * An array of all the '<em><b>Goal</b></em>' enumerators.
@@ -79,8 +77,8 @@ public enum Goal implements Enumerator {
 	 */
 	private static final Goal[] VALUES_ARRAY =
 		new Goal[] {
-			MIN,
 			MAX,
+			MIN,
 		};
 
 	/**
@@ -131,8 +129,8 @@ public enum Goal implements Enumerator {
 	 */
 	public static Goal get(int value) {
 		switch (value) {
-			case MIN_VALUE: return MIN;
 			case MAX_VALUE: return MAX;
+			case MIN_VALUE: return MIN;
 		}
 		return null;
 	}

@@ -110,7 +110,7 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Goal GOAL_EDEFAULT = Goal.MIN;
+	protected static final Goal GOAL_EDEFAULT = Goal.MAX;
 
 	/**
 	 * The cached value of the '{@link #getGoal() <em>Goal</em>}' attribute.
