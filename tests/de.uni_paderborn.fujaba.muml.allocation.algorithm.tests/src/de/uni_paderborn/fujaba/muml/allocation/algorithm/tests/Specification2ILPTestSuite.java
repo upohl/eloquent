@@ -11,6 +11,7 @@ import org.junit.runners.Suite.SuiteClasses;
 	DifferentLocation2ILPTest.class,
 	RequiredHardwareResourceInstance2ILPTest.class,
 	ResourceConstraint2ILPTest.class,
+	MeasureFunction2ILPTest.class,
 	ClassifierContextDeclCS2ILPTest.class
 })
 public class Specification2ILPTestSuite {

@@ -1,0 +1,58 @@
+testSpecificationName {
+    service foo {
+    	qos a {
+    		value coefficient;
+    		descriptors (foo, bar);
+    		ocl	let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+			in
+			let c2 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
+			in
+			let c3 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c3')
+			in
+			let e1 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
+			in
+			Set{Tuple{foo : instance::ComponentInstance = c1, bar : hwresourceinstance::ResourceInstance = e1, coefficient = -1},
+				Tuple{foo : instance::ComponentInstance = c2, bar : hwresourceinstance::ResourceInstance = e1, coefficient = 42},
+				Tuple{foo : instance::ComponentInstance = c3, bar : hwresourceinstance::ResourceInstance = e1, coefficient = 4711}
+
+            };
+    	}
+    	
+    	qos b {
+    		value val;
+    		descriptors (x, y);
+    		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+			in
+			let c2 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
+			in
+			let e1 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
+			in
+			let e3 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e3')
+			in
+			Set{Tuple{x : instance::ComponentInstance = c1, y : hwresourceinstance::ResourceInstance = e3, val = 80},
+				Tuple{x : instance::ComponentInstance = c1, y : hwresourceinstance::ResourceInstance = e1, val = 9},
+				Tuple{x : instance::ComponentInstance = c1, y : hwresourceinstance::ResourceInstance = e1, val = 8},
+				Tuple{x : instance::ComponentInstance = c2, y : hwresourceinstance::ResourceInstance = e3, val = 11}
+
+            };
+    	}
+    }
+    
+    service bar {
+    	qos x {
+    		value val;
+    		descriptors (x, y);
+    		ocl let c2 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
+			in
+			let e2 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
+			in
+			let e3 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e3')
+			in
+			Set{Tuple{x : instance::ComponentInstance = c2, y : hwresourceinstance::ResourceInstance = e3, val = 0},
+				Tuple{x : instance::ComponentInstance = c2, y : hwresourceinstance::ResourceInstance = e2, val = 7}
+            }; 
+    	}
+    }
+    
+    max measure foo + bar;
+}
