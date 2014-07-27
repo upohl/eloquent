@@ -9,7 +9,7 @@ Specification returns cs::SpecificationCS:
 	name=ID '{'
 		(ownedImport += ImportCS)*
 		(services += Service | constraints += Constraint | contexts += ClassifierContextDeclCS)*
-		(measure=MeasureFunction)? 
+		(goal=Goal measure=MeasureFunction)? 
 	'}'
 ;
 
@@ -72,4 +72,8 @@ ComponentResourceTupleDescriptor returns cs::ComponentResourceTupleDescriptorCS:
 
 MeasureFunction returns cs::MeasureFunctionCS:
 	'measure' services+=[cs::ServiceCS] ('+' services+=[cs::ServiceCS])*';'
+;
+
+enum Goal returns cs::Goal:
+	MIN='min' | MAX='max'
 ;

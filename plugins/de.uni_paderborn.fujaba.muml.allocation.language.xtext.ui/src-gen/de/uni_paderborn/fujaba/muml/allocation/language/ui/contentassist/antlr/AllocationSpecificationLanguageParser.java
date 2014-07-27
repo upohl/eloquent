@@ -75,7 +75,9 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getPrimaryExpCSAccess().getAlternatives_7_2(), "rule__PrimaryExpCS__Alternatives_7_2");
 					put(grammarAccess.getPrimaryExpCSAccess().getAlternatives_7_2_1_2(), "rule__PrimaryExpCS__Alternatives_7_2_1_2");
 					put(grammarAccess.getLocationConstraintTypeAccess().getAlternatives(), "rule__LocationConstraintType__Alternatives");
+					put(grammarAccess.getGoalAccess().getAlternatives(), "rule__Goal__Alternatives");
 					put(grammarAccess.getSpecificationAccess().getGroup(), "rule__Specification__Group__0");
+					put(grammarAccess.getSpecificationAccess().getGroup_5(), "rule__Specification__Group_5__0");
 					put(grammarAccess.getServiceAccess().getGroup(), "rule__Service__Group__0");
 					put(grammarAccess.getQosDimensionAccess().getGroup(), "rule__QosDimension__Group__0");
 					put(grammarAccess.getQosDimensionAccess().getGroup_8(), "rule__QosDimension__Group_8__0");
@@ -194,7 +196,8 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getSpecificationAccess().getServicesAssignment_4_0(), "rule__Specification__ServicesAssignment_4_0");
 					put(grammarAccess.getSpecificationAccess().getConstraintsAssignment_4_1(), "rule__Specification__ConstraintsAssignment_4_1");
 					put(grammarAccess.getSpecificationAccess().getContextsAssignment_4_2(), "rule__Specification__ContextsAssignment_4_2");
-					put(grammarAccess.getSpecificationAccess().getMeasureAssignment_5(), "rule__Specification__MeasureAssignment_5");
+					put(grammarAccess.getSpecificationAccess().getGoalAssignment_5_0(), "rule__Specification__GoalAssignment_5_0");
+					put(grammarAccess.getSpecificationAccess().getMeasureAssignment_5_1(), "rule__Specification__MeasureAssignment_5_1");
 					put(grammarAccess.getServiceAccess().getNameAssignment_1(), "rule__Service__NameAssignment_1");
 					put(grammarAccess.getServiceAccess().getDimensionsAssignment_3(), "rule__Service__DimensionsAssignment_3");
 					put(grammarAccess.getQosDimensionAccess().getNameAssignment_1(), "rule__QosDimension__NameAssignment_1");

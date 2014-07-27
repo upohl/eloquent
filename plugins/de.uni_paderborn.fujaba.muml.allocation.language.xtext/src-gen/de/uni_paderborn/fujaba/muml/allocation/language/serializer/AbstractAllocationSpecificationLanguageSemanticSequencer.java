@@ -733,7 +733,12 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	
 	/**
 	 * Constraint:
-	 *     (name=ID ownedImport+=ImportCS* (services+=Service | constraints+=Constraint | contexts+=ClassifierContextDeclCS)* measure=MeasureFunction?)
+	 *     (
+	 *         name=ID 
+	 *         ownedImport+=ImportCS* 
+	 *         (services+=Service | constraints+=Constraint | contexts+=ClassifierContextDeclCS)* 
+	 *         (goal=Goal measure=MeasureFunction)?
+	 *     )
 	 */
 	protected void sequence_Specification(EObject context, SpecificationCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

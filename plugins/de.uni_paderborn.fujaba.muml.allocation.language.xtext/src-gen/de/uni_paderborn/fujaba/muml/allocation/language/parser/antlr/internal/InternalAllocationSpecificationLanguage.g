@@ -189,27 +189,45 @@ ruleSpecification returns [EObject current=null]
 	    }
 
 )
-))*(
+))*((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSpecificationAccess().getMeasureMeasureFunctionParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getSpecificationAccess().getGoalGoalEnumRuleCall_5_0_0()); 
 	    }
-		lv_measure_7_0=ruleMeasureFunction		{
+		lv_goal_7_0=ruleGoal		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getSpecificationRule());
+	        }
+       		set(
+       			$current, 
+       			"goal",
+        		lv_goal_7_0, 
+        		"Goal");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getSpecificationAccess().getMeasureMeasureFunctionParserRuleCall_5_1_0()); 
+	    }
+		lv_measure_8_0=ruleMeasureFunction		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSpecificationRule());
 	        }
        		set(
        			$current, 
        			"measure",
-        		lv_measure_7_0, 
+        		lv_measure_8_0, 
         		"MeasureFunction");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)?	otherlv_8='}' 
+))?	otherlv_9='}' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getSpecificationAccess().getRightCurlyBracketKeyword_6());
+    	newLeafNode(otherlv_9, grammarAccess.getSpecificationAccess().getRightCurlyBracketKeyword_6());
     }
 )
 ;
@@ -6783,6 +6801,25 @@ ruleLocationConstraintType returns [Enumerator current=null]
 	{
         $current = grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_1, grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_1()); 
+    }
+));
+
+
+
+// Rule Goal
+ruleGoal returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='min' 
+	{
+        $current = grammarAccess.getGoalAccess().getMINEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getGoalAccess().getMINEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='max' 
+	{
+        $current = grammarAccess.getGoalAccess().getMAXEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getGoalAccess().getMAXEnumLiteralDeclaration_1()); 
     }
 ));
 

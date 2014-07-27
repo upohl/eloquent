@@ -13,6 +13,7 @@ import org.eclipse.ocl.examples.xtext.base.cs2as.Continuation
 import org.eclipse.ocl.examples.xtext.base.cs2as.Dependency
 import org.eclipse.ocl.examples.xtext.base.cs2as.SingleContinuation
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS
 
 class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVisitor {
 	
@@ -64,6 +65,13 @@ class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVi
 		// no idea why xtend insists on this explicit type cast
 		// (even if we omit it, the generated java code is correct)
 		visitEvaluatableElementCS(csElement as EvaluatableElementCS)		
+	}
+	
+	override public Continuation<?> visitQoSDimensionCS(@NonNull QoSDimensionCS csElement) {
+		// this should not return a Continuation (it should
+		// end up with a call to visitNamedElement)
+		super.visitQoSDimensionCS(csElement)
+		visitEvaluatableElementCS(csElement as EvaluatableElementCS)
 	}
 	
 }

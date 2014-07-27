@@ -35,18 +35,21 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final RuleCall cConstraintsConstraintParserRuleCall_4_1_0 = (RuleCall)cConstraintsAssignment_4_1.eContents().get(0);
 		private final Assignment cContextsAssignment_4_2 = (Assignment)cAlternatives_4.eContents().get(2);
 		private final RuleCall cContextsClassifierContextDeclCSParserRuleCall_4_2_0 = (RuleCall)cContextsAssignment_4_2.eContents().get(0);
-		private final Assignment cMeasureAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cMeasureMeasureFunctionParserRuleCall_5_0 = (RuleCall)cMeasureAssignment_5.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Assignment cGoalAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
+		private final RuleCall cGoalGoalEnumRuleCall_5_0_0 = (RuleCall)cGoalAssignment_5_0.eContents().get(0);
+		private final Assignment cMeasureAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cMeasureMeasureFunctionParserRuleCall_5_1_0 = (RuleCall)cMeasureAssignment_5_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		////import "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.ecore#/cs" as cs
 		//Specification returns cs::SpecificationCS:
 		//	{cs::SpecificationCS} name=ID "{" ownedImport+=ImportCS* (services+=Service | constraints+=Constraint |
-		//	contexts+=ClassifierContextDeclCS)* measure=MeasureFunction? "}";
+		//	contexts+=ClassifierContextDeclCS)* (goal=Goal measure=MeasureFunction)? "}";
 		public ParserRule getRule() { return rule; }
 
 		//{cs::SpecificationCS} name=ID "{" ownedImport+=ImportCS* (services+=Service | constraints+=Constraint |
-		//contexts+=ClassifierContextDeclCS)* measure=MeasureFunction? "}"
+		//contexts+=ClassifierContextDeclCS)* (goal=Goal measure=MeasureFunction)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{cs::SpecificationCS}
@@ -88,11 +91,20 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//ClassifierContextDeclCS
 		public RuleCall getContextsClassifierContextDeclCSParserRuleCall_4_2_0() { return cContextsClassifierContextDeclCSParserRuleCall_4_2_0; }
 
-		//measure=MeasureFunction?
-		public Assignment getMeasureAssignment_5() { return cMeasureAssignment_5; }
+		//(goal=Goal measure=MeasureFunction)?
+		public Group getGroup_5() { return cGroup_5; }
+
+		//goal=Goal
+		public Assignment getGoalAssignment_5_0() { return cGoalAssignment_5_0; }
+
+		//Goal
+		public RuleCall getGoalGoalEnumRuleCall_5_0_0() { return cGoalGoalEnumRuleCall_5_0_0; }
+
+		//measure=MeasureFunction
+		public Assignment getMeasureAssignment_5_1() { return cMeasureAssignment_5_1; }
 
 		//MeasureFunction
-		public RuleCall getMeasureMeasureFunctionParserRuleCall_5_0() { return cMeasureMeasureFunctionParserRuleCall_5_0; }
+		public RuleCall getMeasureMeasureFunctionParserRuleCall_5_1_0() { return cMeasureMeasureFunctionParserRuleCall_5_1_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
@@ -714,6 +726,34 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//"differentLocation"
 		public Keyword getDIFFERENT_LOCATIONDifferentLocationKeyword_1_0() { return cDIFFERENT_LOCATIONDifferentLocationKeyword_1_0; }
 	}
+
+	public class GoalElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "Goal");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cMINEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cMINMinKeyword_0_0 = (Keyword)cMINEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cMAXEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cMAXMaxKeyword_1_0 = (Keyword)cMAXEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum Goal returns cs::Goal:
+		//	MIN="min" | MAX="max";
+		public EnumRule getRule() { return rule; }
+
+		//MIN="min" | MAX="max"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//MIN="min"
+		public EnumLiteralDeclaration getMINEnumLiteralDeclaration_0() { return cMINEnumLiteralDeclaration_0; }
+
+		//"min"
+		public Keyword getMINMinKeyword_0_0() { return cMINMinKeyword_0_0; }
+
+		//MAX="max"
+		public EnumLiteralDeclaration getMAXEnumLiteralDeclaration_1() { return cMAXEnumLiteralDeclaration_1; }
+
+		//"max"
+		public Keyword getMAXMaxKeyword_1_0() { return cMAXMaxKeyword_1_0; }
+	}
 	
 	private SpecificationElements pSpecification;
 	private ServiceElements pService;
@@ -727,6 +767,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	private ValueTupleDescriptorElements pValueTupleDescriptor;
 	private ComponentResourceTupleDescriptorElements pComponentResourceTupleDescriptor;
 	private MeasureFunctionElements pMeasureFunction;
+	private GoalElements unknownRuleGoal;
 	
 	private final Grammar grammar;
 
@@ -769,7 +810,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	////import "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.ecore#/cs" as cs
 	//Specification returns cs::SpecificationCS:
 	//	{cs::SpecificationCS} name=ID "{" ownedImport+=ImportCS* (services+=Service | constraints+=Constraint |
-	//	contexts+=ClassifierContextDeclCS)* measure=MeasureFunction? "}";
+	//	contexts+=ClassifierContextDeclCS)* (goal=Goal measure=MeasureFunction)? "}";
 	public SpecificationElements getSpecificationAccess() {
 		return (pSpecification != null) ? pSpecification : (pSpecification = new SpecificationElements());
 	}
@@ -892,6 +933,16 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	
 	public ParserRule getMeasureFunctionRule() {
 		return getMeasureFunctionAccess().getRule();
+	}
+
+	//enum Goal returns cs::Goal:
+	//	MIN="min" | MAX="max";
+	public GoalElements getGoalAccess() {
+		return (unknownRuleGoal != null) ? unknownRuleGoal : (unknownRuleGoal = new GoalElements());
+	}
+	
+	public EnumRule getGoalRule() {
+		return getGoalAccess().getRule();
 	}
 
 	////generate completeOCL "http://www.eclipse.org/ocl/examples/xtext/completeocl/CompleteOCL"
