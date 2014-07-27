@@ -5,7 +5,6 @@ package de.uni_paderborn.fujaba.muml.allocation.language.validation;
 
 import java.util.List;
 
-import org.eclipse.emf.ecore.EReference;
 import org.eclipse.ocl.examples.pivot.ExpressionInOCL;
 import org.eclipse.ocl.examples.pivot.Type;
 import org.eclipse.ocl.examples.pivot.manager.MetaModelManager;
@@ -14,6 +13,7 @@ import org.eclipse.xtext.validation.Check;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupleDescriptorCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
@@ -36,18 +36,15 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 //	}
 
 	@Check
-	public void checkLocationConstraintCS(LocationConstraintCS locationConstraintCS) {
-		LocationTupleDescriptorCS tupleDescriptor = locationConstraintCS.getTupleDescriptor();
-		ContextCS oclExpression = locationConstraintCS.getExpression();
+	public void checkLocationConstraintCS(LocationConstraintCS constraintCS) {
+		LocationTupleDescriptorCS tupleDescriptor = constraintCS.getTupleDescriptor();
+		ContextCS oclExpression = constraintCS.getExpression();
 		if (tupleDescriptor == null || oclExpression == null) {
 			// in this case a different error is displayed
 			return;
 		}
-		MetaModelManager metaModelManager = TypesUtil.getMetaModelManager(locationConstraintCS);
-		checkTypes(metaModelManager,
-				TypesUtil.createLocationConstraintType(locationConstraintCS),
-				((ExpressionInOCL) oclExpression.getPivot()).getType(),
-				CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION);
+		checkTypes(constraintCS,
+				TypesUtil.createLocationConstraintType(constraintCS));
 	}
 	
 	@Check
@@ -58,11 +55,8 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 			// in this case a different error is displayed
 			return;
 		}
-		MetaModelManager metaModelManager = TypesUtil.getMetaModelManager(constraintCS);
-		checkTypes(metaModelManager,
-				TypesUtil.createReqHWResInstanceConstraintType(constraintCS),
-				((ExpressionInOCL) oclExpression.getPivot()).getType(),
-				CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION);
+		checkTypes(constraintCS,
+				TypesUtil.createReqHWResInstanceConstraintType(constraintCS));
 	}
 	
 	@Check
@@ -74,18 +68,17 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 			// parser/ui will display an error
 			return;
 		}
-		MetaModelManager metaModelManager = TypesUtil.getMetaModelManager(constraintCS);
-		checkTypes(metaModelManager,
-				TypesUtil.createResourceConstraintType(constraintCS),
-				((ExpressionInOCL) oclExpression.getPivot()).getType(),
-				CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION);
+		checkTypes(constraintCS,
+				TypesUtil.createResourceConstraintType(constraintCS));
 	}
 	
-	private void checkTypes(MetaModelManager metaModelManager, Type expectedType, Type actualType, EReference reference) {
-		boolean conformsTo = metaModelManager.conformsTo(actualType, expectedType, null);
+	private void checkTypes(EvaluatableElementCS elementCS, Type expectedType) {
+		MetaModelManager metaModelManager = TypesUtil.getMetaModelManager(elementCS);
+		Type actualType = ((ExpressionInOCL) elementCS.getExpression().getPivot()).getType();
+		boolean conformsTo = TypesUtil.conformsTo(metaModelManager, actualType, expectedType);
 		if (!conformsTo) {
 			error(String.format(typeMismatch, expectedType, actualType),
-					reference);
+					CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION);
 		}
 	}
 	
