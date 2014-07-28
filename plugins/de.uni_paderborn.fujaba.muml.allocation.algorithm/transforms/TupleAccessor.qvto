@@ -50,6 +50,11 @@ query RequiredHardwareResourceInstanceConstraintCS::toSequence(tupleValue : Tupl
 	return self.tupleDescriptors->toSequence(tupleValue);
 }
 
+// Note: it is not possible to generalize the next two queries into
+// WeightingComponentResourceTupleElementCS::toSequence, because WeightingComponentResourceTupleElementCS
+// is just a "secondary" superclass in ResourceConstraintCS' and QoSDimensionConstraintCS'
+// inheritance hierarchy. As a consequence the "catch-call" EvaluatableElementCS::toSequence
+// query is called and the transformation fails. XXX: how does qvto's "linearization" algo work?
 query ResourceConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
 	// unfortunately we cannot check if tupleValue corresponds to an "inner" tuple
 	// (well... we could do this via a blackbox but it is probably not worth the effort)
