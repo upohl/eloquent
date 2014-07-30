@@ -735,8 +735,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         ownedImport+=ImportCS* 
-	 *         (services+=Service | constraints+=Constraint | contexts+=ClassifierContextDeclCS)* 
+	 *         (ownedImport+=ImportCS | ownedInclude+=IncludeCS | contexts+=ClassifierContextDeclCS | services+=Service | constraints+=Constraint)* 
 	 *         (goal=Goal measure=MeasureFunction)?
 	 *     )
 	 */

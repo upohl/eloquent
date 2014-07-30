@@ -115,10 +115,10 @@ ruleSpecification returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getSpecificationAccess().getLeftCurlyBracketKeyword_2());
     }
-(
+((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSpecificationAccess().getOwnedImportImportCSParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getSpecificationAccess().getOwnedImportImportCSParserRuleCall_3_0_0()); 
 	    }
 		lv_ownedImport_3_0=ruleImportCS		{
 	        if ($current==null) {
@@ -133,19 +133,58 @@ ruleSpecification returns [EObject current=null]
 	    }
 
 )
-)*((
+)
+    |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSpecificationAccess().getServicesServiceParserRuleCall_4_0_0()); 
+	        newCompositeNode(grammarAccess.getSpecificationAccess().getOwnedIncludeIncludeCSParserRuleCall_3_1_0()); 
 	    }
-		lv_services_4_0=ruleService		{
+		lv_ownedInclude_4_0=ruleIncludeCS		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getSpecificationRule());
+	        }
+       		add(
+       			$current, 
+       			"ownedInclude",
+        		lv_ownedInclude_4_0, 
+        		"IncludeCS");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)
+    |(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getSpecificationAccess().getContextsClassifierContextDeclCSParserRuleCall_3_2_0()); 
+	    }
+		lv_contexts_5_0=ruleClassifierContextDeclCS		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getSpecificationRule());
+	        }
+       		add(
+       			$current, 
+       			"contexts",
+        		lv_contexts_5_0, 
+        		"ClassifierContextDeclCS");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)
+    |(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getSpecificationAccess().getServicesServiceParserRuleCall_3_3_0()); 
+	    }
+		lv_services_6_0=ruleService		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSpecificationRule());
 	        }
        		add(
        			$current, 
        			"services",
-        		lv_services_4_0, 
+        		lv_services_6_0, 
         		"Service");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -155,36 +194,17 @@ ruleSpecification returns [EObject current=null]
     |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSpecificationAccess().getConstraintsConstraintParserRuleCall_4_1_0()); 
+	        newCompositeNode(grammarAccess.getSpecificationAccess().getConstraintsConstraintParserRuleCall_3_4_0()); 
 	    }
-		lv_constraints_5_0=ruleConstraint		{
+		lv_constraints_7_0=ruleConstraint		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSpecificationRule());
 	        }
        		add(
        			$current, 
        			"constraints",
-        		lv_constraints_5_0, 
+        		lv_constraints_7_0, 
         		"Constraint");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)
-    |(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getSpecificationAccess().getContextsClassifierContextDeclCSParserRuleCall_4_2_0()); 
-	    }
-		lv_contexts_6_0=ruleClassifierContextDeclCS		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getSpecificationRule());
-	        }
-       		add(
-       			$current, 
-       			"contexts",
-        		lv_contexts_6_0, 
-        		"ClassifierContextDeclCS");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -192,16 +212,16 @@ ruleSpecification returns [EObject current=null]
 ))*((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSpecificationAccess().getGoalGoalEnumRuleCall_5_0_0()); 
+	        newCompositeNode(grammarAccess.getSpecificationAccess().getGoalGoalEnumRuleCall_4_0_0()); 
 	    }
-		lv_goal_7_0=ruleGoal		{
+		lv_goal_8_0=ruleGoal		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSpecificationRule());
 	        }
        		set(
        			$current, 
        			"goal",
-        		lv_goal_7_0, 
+        		lv_goal_8_0, 
         		"Goal");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -210,24 +230,24 @@ ruleSpecification returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSpecificationAccess().getMeasureMeasureFunctionParserRuleCall_5_1_0()); 
+	        newCompositeNode(grammarAccess.getSpecificationAccess().getMeasureMeasureFunctionParserRuleCall_4_1_0()); 
 	    }
-		lv_measure_8_0=ruleMeasureFunction		{
+		lv_measure_9_0=ruleMeasureFunction		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSpecificationRule());
 	        }
        		set(
        			$current, 
        			"measure",
-        		lv_measure_8_0, 
+        		lv_measure_9_0, 
         		"MeasureFunction");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))?	otherlv_9='}' 
+))?	otherlv_10='}' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getSpecificationAccess().getRightCurlyBracketKeyword_6());
+    	newLeafNode(otherlv_10, grammarAccess.getSpecificationAccess().getRightCurlyBracketKeyword_5());
     }
 )
 ;

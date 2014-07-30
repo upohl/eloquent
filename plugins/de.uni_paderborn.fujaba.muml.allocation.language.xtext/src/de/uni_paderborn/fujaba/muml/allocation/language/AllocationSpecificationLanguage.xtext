@@ -7,8 +7,9 @@ import "http://www.fujaba.de/muml/allocation/language/0.1.0/cs" as cs
 Specification returns cs::SpecificationCS:
 	{cs::SpecificationCS}
 	name=ID '{'
-		(ownedImport += ImportCS)*
-		(services += Service | constraints += Constraint | contexts += ClassifierContextDeclCS)*
+		(ownedImport += ImportCS | ownedInclude += IncludeCS
+			| contexts += ClassifierContextDeclCS | services += Service | constraints += Constraint
+		)*
 		(goal=Goal measure=MeasureFunction)? 
 	'}'
 ;
