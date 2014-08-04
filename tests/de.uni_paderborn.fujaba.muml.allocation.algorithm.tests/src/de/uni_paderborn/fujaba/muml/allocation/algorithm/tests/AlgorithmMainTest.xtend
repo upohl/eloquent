@@ -25,6 +25,12 @@ class AlgorithmMainTest extends QVToTransformationSingleOutExtentTest {
 				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/AlgorithmMain.qvto",
 				  uriPrefix + "nonexistentAllocation.allocation_specification",
 				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.1/@modelElements.0",
+				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0/@embeddedHPIC"],
+				// simplified version of the M3 meeting's bug
+				#[uriPrefix + "sameLocationM3MeetingBug.allocation",
+				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/AlgorithmMain.qvto",
+				  uriPrefix + "sameLocationM3MeetingBug.allocation_specification",
+				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.1/@modelElements.0",
 				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0/@embeddedHPIC"])
 	}
 }

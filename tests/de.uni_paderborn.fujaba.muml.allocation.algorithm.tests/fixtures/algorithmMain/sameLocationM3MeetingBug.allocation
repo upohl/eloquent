@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allocation:SystemAllocation
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:allocation="http://www.fujaba.de/muml/psm/allocation/0.1.0/"
+    xmlns:instance="http://www.fujaba.de/muml/instance/0.4.0">
+  <allocations>
+    <componentInstance
+        xsi:type="instance:AtomicComponentInstance"
+        href="../generalConstraint/simple.fujaba#_hKUd8PZaEeOJBJMtyzAqyw"/>
+    <resourceInstance
+        href="../generalConstraint/simple.fujaba#_p2GzIPY-EeOj7bbnOoJljg"/>
+  </allocations>
+  <allocations>
+    <componentInstance
+        xsi:type="instance:AtomicComponentInstance"
+        href="../generalConstraint/simple.fujaba#_imF4YPZaEeOJBJMtyzAqyw"/>
+    <resourceInstance
+        href="../generalConstraint/simple.fujaba#_p2GzIPY-EeOj7bbnOoJljg"/>
+  </allocations>
+  <allocations>
+    <componentInstance
+        xsi:type="instance:AtomicComponentInstance"
+        href="../generalConstraint/simple.fujaba#_jfKOYPZaEeOJBJMtyzAqyw"/>
+    <resourceInstance
+        href="../generalConstraint/simple.fujaba#_p2GzIPY-EeOj7bbnOoJljg"/>
+  </allocations>
+</allocation:SystemAllocation>
