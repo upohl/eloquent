@@ -1,4 +1,6 @@
 import LPSolve;
+import Util;
+import Variables; // just for the getBinaryVariableSequence query
 
 modeltype core uses core('http://www.storydriven.org/core/0.3.1');
 modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
@@ -26,8 +28,15 @@ helper IntegerLinearProgram::createAllocation() : SystemAllocation {
 }
 
 helper Variable::addAllocation(inout systemAllocation : SystemAllocation) {
-	var seq : Sequence(NamedElement) := self.invresolveone(Sequence(NamedElement));
-	assert fatal (seq->size() = 2) with log("unexpected size: " + seq->size().toString());
+	var seq : Sequence(NamedElement) := self.getBinaryVariableSequence();
+	// just some sanity checks (should never happen in "production")
+	assert fatal (not seq->oclIsUndefined()) with log("seq is undefined");
+	assert fatal (not seq->oclIsInvalid()) with log("seq is invalid");
+	assert fatal (seq->notEmpty()) with log("seq is empty");
+	assert fatal (seq->size().mod(2) = 0) with log("unexpected size: " + seq->size().toString());
+	if (seq->size() != 2) then {
+		return;
+	} endif;
 	systemAllocation.allocations += new Allocation(seq);
 }
 

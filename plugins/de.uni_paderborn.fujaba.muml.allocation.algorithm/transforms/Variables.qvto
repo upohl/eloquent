@@ -62,3 +62,10 @@ mapping Sequence(NamedElement)::createBinaryVariable() : Variable {
 	name := self->getVariableName();
 	dataType := ILPDataType::BINARY;
 }
+
+query Variable::getBinaryVariableSequence() : Sequence(NamedElement) {
+	return self.invresolveoneIn(
+		Sequence(NamedElement)::createBinaryVariable,
+		Sequence(NamedElement)
+	);
+}
