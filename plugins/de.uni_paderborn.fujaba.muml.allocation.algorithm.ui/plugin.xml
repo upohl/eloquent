@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="de.uni_paderborn.fujaba"
+            defaultHandler="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.OpenAllocationWizardHandler"
+            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.OpenAllocationWizardCommand"
+            name="Create Allocation">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:de.uni_paderborn.fujaba">
+         <command
+               commandId="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.OpenAllocationWizardCommand"
+               label="Create Allocation"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <or>
+                  <reference
+                        definitionId="de.uni_paderborn.fujaba.expression.fujabafile">
+                  </reference>
+                  <iterate
+                        ifEmpty="false"
+                        operator="and">
+                     <adapt
+                           type="org.eclipse.core.resources.IResource">
+                        <test
+                              property="org.eclipse.core.resources.name"
+                              value="*.allocation_specification">
+                        </test>
+                     </adapt>
+                  </iterate>
+               </or>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>
