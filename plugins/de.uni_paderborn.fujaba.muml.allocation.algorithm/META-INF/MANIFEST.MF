@@ -16,4 +16,6 @@ Require-Bundle: org.eclipse.ocl.examples.pivot;bundle-version="3.4.0",
  de.uni_paderborn.fujaba.common;bundle-version="0.4.0",
  de.uni_paderborn.fujaba.muml.psm;bundle-version="0.1.0"
 Export-Package: de.uni_paderborn.fujaba.muml.allocation.algorithm.lpsolve,
- de.uni_paderborn.fujaba.muml.allocation.algorithm.ocl
+ de.uni_paderborn.fujaba.muml.allocation.algorithm.main,
+ de.uni_paderborn.fujaba.muml.allocation.algorithm.ocl,
+ de.uni_paderborn.fujaba.muml.allocation.algorithm.util
