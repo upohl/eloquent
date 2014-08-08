@@ -41,5 +41,14 @@
          </command>
       </menuContribution>
    </extension>
+   <extension
+         point="org.eclipse.ui.exportWizards">
+      <wizard
+            category="de.uni_paderborn.fujaba.export"
+            class="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.wizard.AllocationWizard"
+            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.wizard.AllocationWizard"
+            name="Allocation">
+      </wizard>
+   </extension>
 
 </plugin>
