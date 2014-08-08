@@ -13,7 +13,6 @@ public class TestDataUtil {
 			System.arraycopy(data, varargsStartPos, varargs, 0, varargs.length);
 			System.arraycopy(data, 0, newData, 0, varargsStartPos);
 			newData[newData.length - 1] = varargs;
-			System.out.println(newData.length);
 			collection.add(newData);
 		}
 		return collection;
