@@ -41,6 +41,12 @@ helper Variable::addAllocation(inout systemAllocation : SystemAllocation) {
 }
 
 constructor Allocation::Allocation(seq : Sequence(NamedElement)) {
+	// this should never fail
+	assert fatal (seq->at(1).oclIsKindOf(ComponentInstance)) with
+		log(seq->at(1).toString() + " is not a ComponentInstance");
+	// this fails if a user allocates a component to an ActuatorInstance or SensorInstance
+	assert fatal (seq->at(2).oclIsKindOf(StructuredResourceInstance)) with
+		log(seq->at(2).toString() + " is not a StructuredResourceInstance");
 	componentInstance := seq->at(1).oclAsType(ComponentInstance);
 	resourceInstance := seq->at(2).oclAsType(StructuredResourceInstance);
 }
