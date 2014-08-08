@@ -19,3 +19,4 @@ Export-Package: de.uni_paderborn.fujaba.muml.allocation.algorithm.lpsolve,
  de.uni_paderborn.fujaba.muml.allocation.algorithm.main,
  de.uni_paderborn.fujaba.muml.allocation.algorithm.ocl,
  de.uni_paderborn.fujaba.muml.allocation.algorithm.util
+Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn, Germany
