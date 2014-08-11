@@ -1,0 +1,92 @@
+	import 'http://www.fujaba.de/muml/hardware/hwplatforminstance/1.0/'
+	import 'http://www.fujaba.de/muml/hardware/hwresourceinstance/1.0/'
+	import 'http://www.fujaba.de/muml/instance/0.4.0'
+	import 'http://www.fujaba.de/muml/allocation/language/0.1.0/oclcontext'
+	
+	-- The OCLContext operations represent some kind of public API that can/should be used
+	-- when specifying constraints; The other operations are "internal" helpers that may change in the
+	-- future. TODO: more documentation.	
+	context oclcontext::OCLContext
+		-- unused here
+		def: getECUs(ecuNames : Set(String)) : Sequence(hwresourceinstance::ResourceInstance) =
+			self.hardwarePlatformInstanceConfiguration.resources->select(ecuNames->includes(name))
+		
+		def: getECU(ecuName : String) : hwresourceinstance::ResourceInstance =
+			self.getAllHWInstances()->any(name = ecuName)
+			
+		def: getAllSWInstances() : Set(instance::ComponentInstance) =
+			self.componentInstanceConfiguration.getAllEmbeddedInstances()
+		
+		def: getSWInstance(instanceName : String) : instance::ComponentInstance =
+			self.getAllSWInstances()->any(name = instanceName)
+		
+		def: getAllHWInstances() : Set(hwresourceinstance::ResourceInstance) =
+			self.getAllHWPlatformInstances()->collect(embeddedHPIC.resources)
+			
+		def: getAllHWPlatformInstances() : Set(hwplatforminstance::HWPlatformInstance) =
+			self.hardwarePlatformInstanceConfiguration.getAllEmbeddedPlatformInstances()
+			
+		def: getHWPlatformInstance(platformInstanceName : String) : hwplatforminstance::HWPlatformInstance =
+			self.getAllHWPlatformInstances()->any(name = platformInstanceName)
+			
+		def: allocateToECU(instanceName : String, ecuName : String)
+			: Set(Tuple(first : instance::ComponentInstance, second : hwresourceinstance::ResourceInstance))
+			=
+			self.getSWInstance(instanceName)->asSet()->product(self.getECU(ecuName).resolveToStructuredResourceInstances())->asSet()
+			
+		def: allocateEmbeddedToPlatformInstance(swInstanceName : String, platformInstanceName : String)
+			: Set(Tuple(first : instance::ComponentInstance, second : hwresourceinstance::ResourceInstance
+			))
+			=
+			self.getSWInstance(swInstanceName).getAllEmbeddedInstances()->product(
+				-- only to direct embedded instances
+				self.getHWPlatformInstance(platformInstanceName).embeddedHPIC.resources
+			)
+		
+		def: allocateToDifferentECUs(instance1 : String, instance2 : String)
+			: Set(Tuple(first : instance::ComponentInstance, second : instance::ComponentInstance))
+			=
+			Set{Tuple{first = self.getSWInstance(instance1), second = self.getSWInstance(instance2)}}
+			
+		def: allocateToSameECUs(instance1 : String, instance2 : String)
+			: Set(Tuple(first : instance::ComponentInstance, second : instance::ComponentInstance))
+			=
+			self.allocateToDifferentECUs(instance1, instance2)
+			
+	context hwplatforminstance::HWPlatformInstanceConfiguration
+		def: getAllEmbeddedPlatformInstances() : Set(hwplatforminstance::HWPlatformInstance) =
+			self.hwplatformInstances->closure(h |
+				h->asSet()->union(h.embeddedHPIC.hwplatformInstances)
+			)
+	
+	-- XXX: hacky
+	context hwresourceinstance::ResourceInstance
+		def: resolveToStructuredResourceInstances() : Set(hwresourceinstance::ResourceInstance) =
+			if self.oclIsKindOf(hwresourceinstance::DeviceInstance) then
+				self.hwports->select(oclIsKindOf(hwplatforminstance::HWPortInstance))
+					->collect(oclAsType(hwplatforminstance::HWPortInstance))
+					->collect(connectorInstances.connectorEndpointInstances)
+					->reject(ep | self.hwports->includes(ep))
+					->select(oclIsKindOf(hwplatforminstance::HWPortInstance))
+					->collect(eContainer())->select(oclIsKindOf(hwresourceinstance::ResourceInstance))
+			else
+				self->asSet()
+			endif
+		
+	context instance::ComponentInstanceConfiguration
+		def: getAllEmbeddedInstances() : Set(instance::ComponentInstance) =
+			self.componentInstances->closure(c |
+				if c.oclIsKindOf(instance::StructuredComponentInstance) then
+					c->asSet()->union(c.oclAsType(instance::StructuredComponentInstance).embeddedCIC.componentInstances)
+				else
+					c->asSet()
+				endif
+			)
+			
+	context instance::ComponentInstance
+		def: getAllEmbeddedInstances() : Set(instance::ComponentInstance) =
+			if self.oclIsKindOf(instance::StructuredComponentInstance) then
+				self->asSet()->union(self.oclAsType(instance::StructuredComponentInstance).embeddedCIC.getAllEmbeddedInstances())
+			else
+				self->asSet()
+			endif
