@@ -36,11 +36,9 @@ public class LPSolve {
 			Process process = pb.start();
 			process.getOutputStream().write(ilpString.getBytes());
 			process.getOutputStream().close();
+			parseOutput(process.getInputStream(), solution);
 			ret = process.waitFor();
 			System.out.println("lp_solve: " + ret);
-			if (ret == 0) {
-				parseOutput(process.getInputStream(), solution);
-			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (InterruptedException e) {
