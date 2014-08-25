@@ -1,55 +1,47 @@
 package de.uni_paderborn.fujaba.muml.allocation.algorithm.tests;
 
 import java.util.Collections;
-import java.util.List;
 import java.util.Map;
 
-import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.m2m.qvt.oml.ExecutionDiagnostic;
-import org.junit.Assert;
-import org.junit.Test;
-
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.util.QVToSingleOutExtentTransformationRunner;
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.util.QVToSingleOutExtentTransformationRunner.Util;
 
 // all the good bits are taken from de.uni_paderborn.fujaba.muml.verification.uppaal.tests
 
 // TODO: document me
 
-public class QVToTransformationSingleOutExtentTest {
+public class QVToTransformationSingleOutExtentTest extends QVToTransformationTest {
 	protected URI expectedURI;
-	protected QVToSingleOutExtentTransformationRunner runner;
+	
 	
 	public QVToTransformationSingleOutExtentTest(String expectedURI, String transformationURI,
 			Map<String, Object> configurationPropertyMap, String... inputObjectURIs) {
-		runner = new QVToSingleOutExtentTransformationRunner(transformationURI,
-				configurationPropertyMap, inputObjectURIs);
-		this.expectedURI = URI.createURI(expectedURI);
+		super(createExpectedURIs(expectedURI, inputObjectURIs),
+				transformationURI, configurationPropertyMap,
+				createInOrOutObjectURIs(inputObjectURIs));
+	}
+	
+	// maybe provide explicit setters in the super class instead of fooling
+	// around with these static methods...
+	private static String[] createExpectedURIs(String expectedURI, String[] inputObjectURIs) {
+		String[] expectedURIs = new String[inputObjectURIs.length + 1];
+		expectedURIs[inputObjectURIs.length] = expectedURI;
+		return expectedURIs;
+	}
+	
+	private static String[] createInOrOutObjectURIs(String[] inputObjectURIs) {
+		String[] inOrOutObjectURIs = new String[inputObjectURIs.length + 1];
+		for (int i = 0; i < inputObjectURIs.length; i++) {
+			inOrOutObjectURIs[i] = inputObjectURIs[i];
+		}
+		// this is already done implicitly
+		inOrOutObjectURIs[inputObjectURIs.length] = null;
+		return inOrOutObjectURIs;
 	}
 	
 	public QVToTransformationSingleOutExtentTest(String expectedURI, String transformationURI,
 			String... inputObjectURIs) {
 		this(expectedURI, transformationURI, Collections.<String, Object>emptyMap(),
 				inputObjectURIs);
-	}
-	
-	@Test
-	public void test() {
-		checkTransformationRun(runner.runTransformation());
-		checkTransformationResult();
-	}
-	
-	protected void checkTransformationRun(ExecutionDiagnostic result) {
-		Assert.assertEquals(Diagnostic.OK, result.getCode());
-	}
-	
-	protected void checkTransformationResult() {
-		List<EObject> transformationResultList = runner.getOutExtent().getContents();
-		Assert.assertEquals(1, transformationResultList.size());
-		ModelTestUtil.assertModelEquals(Util.loadURI(expectedURI),
-				transformationResultList.get(0));
 	}
 	
 }
