@@ -28,7 +28,7 @@ import de.uni_paderborn.fujaba.muml.psm.allocation.SystemAllocation;
 
 public class CreateAllocationOperation extends AbstractFujabaExportOperation {
 	private static final String nullProgressMonitor = "progressMonitor must not be null";
-	private static final String allocationModelElementCategoryKey = "de.uni_paderborn.fujaba.muml.allocation.category";
+	private static final String allocationModelElementCategoryKey = "de.uni_paderborn.fujaba.muml.psm.allocation.category";
 	private static final String allocationModelElementCategoryName = "allocation";
 	private static final String inconsistentContainmentHierarchy = "Containment hierarchy of %s is inconsistent (expected RootNode (at top))";
 	private static final String saveSystemAllocationTaskName = "Save computed System Allocation";
