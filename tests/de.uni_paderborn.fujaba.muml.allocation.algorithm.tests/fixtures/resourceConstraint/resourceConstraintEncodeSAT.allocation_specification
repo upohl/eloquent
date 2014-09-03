@@ -1,0 +1,46 @@
+testSpecificationName {
+
+	-- basically encodes the following SAT (e1 corresponds to true and e2 corresponds to false)
+	-- clause1: !c1 or !c2
+	-- clause2: c1 or c2 or !c3
+	-- (note: the model also has a third resource e3)
+
+	constraint resource clause1 {
+		lhs coefficient;
+		rhs upperBound;
+		descriptors (ins, res);
+		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+		in
+		let c2 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
+		in
+		let e2 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
+		in
+		Set{
+			Tuple{coefficient = Set{Tuple{ins : instance::ComponentInstance = c1, res : hwresourceinstance::ResourceInstance = e2, coefficient = -1},
+									Tuple{ins : instance::ComponentInstance = c2, res : hwresourceinstance::ResourceInstance = e2, coefficient = -1}},
+				  upperBound : Integer = -1
+			}};
+	}
+
+	constraint resource clause2 {
+		lhs coefficient;
+		rhs upperBound;
+		descriptors (ins, res);
+		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+		in
+		let c2 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
+		in
+		let c3 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c3')
+		in
+		let e1 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
+		in
+		let e2 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
+		in
+		Set{
+			Tuple{coefficient = Set{Tuple{ins : instance::ComponentInstance = c1, res : hwresourceinstance::ResourceInstance = e1, coefficient = -1},
+									Tuple{ins : instance::ComponentInstance = c2, res : hwresourceinstance::ResourceInstance = e1, coefficient = -1},
+									Tuple{ins : instance::ComponentInstance = c3, res : hwresourceinstance::ResourceInstance = e2, coefficient = -1}},
+				  upperBound : Integer = -1
+			}};
+	}
+}

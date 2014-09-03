@@ -16,10 +16,14 @@ class RequiredHardwareResourceInstance2ILPTest extends QVToTransformationSingleO
 	@Parameters
 	def static Collection<Object[]> getTestData() {
 		TestDataUtil.createTestData(2,
-				// atomic component instances only
 				#[uriPrefix + "requiredHardwareResourceInstanceConstraintSimple.lp",
 				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/Specification2ILP.qvto",
 				  uriPrefix + "requiredHardwareResourceInstanceConstraintSimple.allocation_specification",
+				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.1/@modelElements.0",
+				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0/@embeddedHPIC"],
+				#[uriPrefix + "requiredHardwareResourceInstanceConstraintMixedResult.lp",
+				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/Specification2ILP.qvto",
+				  uriPrefix + "requiredHardwareResourceInstanceConstraintMixedResult.allocation_specification",
 				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.1/@modelElements.0",
 				  GeneralConstraint2ILPTest.uriPrefix + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0/@embeddedHPIC"],
 				#[uriPrefix + "requiredHardwareResourceInstanceConstraintTwoDescriptors.lp",
