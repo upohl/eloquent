@@ -65,11 +65,11 @@ query LocationConstraintCS::getHelperVariableSequences(cic : ComponentInstanceCo
 query Sequence(TupleValue)::getLocationConstraintHelperVariableSequences(resourceInstanceSet : OrderedSet(ResourceInstance))
 	: Sequence(Sequence(NamedElement)) {
 	return self->iterate(it : TupleValue; acc : Sequence(Sequence(NamedElement)) = Sequence{} |
-		acc->union(it.getLocationConstraintHelpverVariableSequences(resourceInstanceSet))
+		acc->union(it.getLocationConstraintHelperVariableSequences(resourceInstanceSet))
 	)->sortedBy(getVariableName());
 }
 
-query TupleValue::getLocationConstraintHelpverVariableSequences(resourceInstanceSet : OrderedSet(ResourceInstance))
+query TupleValue::getLocationConstraintHelperVariableSequences(resourceInstanceSet : OrderedSet(ResourceInstance))
 	: Sequence(Sequence(NamedElement)) {
 	// sort by instance set by variable name
 	var sequence : Sequence(NamedElement) := self.toSequence()->sortedBy(getVariableName());
