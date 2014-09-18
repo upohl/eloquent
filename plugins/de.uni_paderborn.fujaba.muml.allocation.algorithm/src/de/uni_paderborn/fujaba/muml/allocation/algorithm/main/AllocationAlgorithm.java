@@ -8,7 +8,7 @@ import org.eclipse.m2m.qvt.oml.ExecutionDiagnostic;
 import de.uni_paderborn.fujaba.muml.allocation.algorithm.util.QVToSingleOutExtentTransformationRunner;
 import de.uni_paderborn.fujaba.muml.psm.allocation.SystemAllocation;
 
-/**
+/** 
  * Main entry point for computing an allocation. In order to
  * compute an allocation, just instantiate this class and call
  * its computeAllocation method. Afterwards, the allocation can
