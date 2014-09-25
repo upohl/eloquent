@@ -5,6 +5,7 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:component="http://www.fujaba.de/muml/component/0.4.0"
+    xmlns:extension="http://example.com/extension"
     xmlns:hwplatform="http://www.fujaba.de/muml/hardware/hwplatform/1.0/"
     xmlns:hwplatforminstance="http://www.fujaba.de/muml/hardware/hwplatforminstance/1.0/"
     xmlns:hwresource="http://www.fujaba.de/muml/hardware/hwresource/1.0/"
@@ -147,6 +148,36 @@
             </embeddedCIC>
           </componentInstances>
         </embeddedCIC>
+      </componentInstances>
+    </modelElements>
+    <modelElements
+        xsi:type="instance:ComponentInstanceConfiguration"
+        xmi:id="_m3oYgESaEeSHztxuV_x_Gw"
+        name="cicExtension">
+      <componentInstances
+          xsi:type="instance:AtomicComponentInstance"
+          xmi:id="_m3oYgUSaEeSHztxuV_x_Gw"
+          name="c1"
+          componentType="_bj1K0PY_EeOj7bbnOoJljg">
+        <extension
+            xsi:type="extension:MemoryExtension"
+            xmi:id="__sd5MEScEeST-LaBdY9E0g"
+            amountNeeded="42"/>
+      </componentInstances>
+      <componentInstances
+          xsi:type="instance:AtomicComponentInstance"
+          xmi:id="_m3oYgkSaEeSHztxuV_x_Gw"
+          name="c2"
+          componentType="_bj1K0PY_EeOj7bbnOoJljg"/>
+      <componentInstances
+          xsi:type="instance:AtomicComponentInstance"
+          xmi:id="_m3oYg0SaEeSHztxuV_x_Gw"
+          name="c3"
+          componentType="_bj1K0PY_EeOj7bbnOoJljg">
+        <extension
+            xsi:type="extension:MemoryExtension"
+            xmi:id="__sd5MUScEeST-LaBdY9E0g"
+            amountNeeded="256"/>
       </componentInstances>
     </modelElements>
   </categories>
