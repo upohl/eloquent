@@ -1,5 +1,6 @@
 package de.uni_paderborn.fujaba.muml.allocation.algorithm.tests;
 
+import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -7,8 +8,12 @@ import java.util.Map;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.m2m.qvt.oml.ExecutionDiagnostic;
+import org.eclipse.m2m.qvt.oml.ModelExtent;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -63,5 +68,28 @@ public class QVToTransformationTest {
 			ModelTestUtil.assertModelEquals(Util.loadURI(expectedURI),
 					transformationResultList.get(0));
 		}
+	}
+	
+	/*
+	 * Useful for debugging:
+	 * - create a new method in the subclass
+	 * - annotate this method with an @After annotation
+	 * - call one of the save methods in the newly created method
+	 */
+	protected void save(URI uri) {
+		ResourceSet resSet = new ResourceSetImpl();
+		Resource resource = resSet.createResource(uri);
+		for (ModelExtent modelExtent : runner.getOutOrInOutExtents()) {
+			resource.getContents().addAll(modelExtent.getContents());
+		}
+		try {
+			resource.save(Collections.EMPTY_MAP);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	protected void save(String uri) {
+		save(URI.createURI(uri, true));
 	}
 }
