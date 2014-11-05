@@ -1,7 +1,6 @@
 package de.uni_paderborn.fujaba.muml.allocation.language.typing;
 
 import com.google.common.base.Objects;
-import com.google.common.collect.Maps;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupleDescriptorCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS;
@@ -33,6 +32,7 @@ import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.MapExtensions;
+import org.eclipse.xtext.xbase.lib.Pair;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 
 @SuppressWarnings("all")
@@ -121,14 +121,11 @@ public class TypesUtil {
   public static TupleType createLocationConstraintTupleType(final MetaModelManager metaModelManager, final LocationTupleDescriptorCS tupleDescriptor) {
     TupleType _xblockexpression = null;
     {
-      Map<String, EClass> _xsetliteral = null;
       String _instance = tupleDescriptor.getInstance();
+      Pair<String, EClass> _mappedTo = Pair.<String, EClass>of(_instance, InstancePackage.Literals.COMPONENT_INSTANCE);
       String _secondInstance = tupleDescriptor.getSecondInstance();
-      Map<String, EClass> _tempMap = Maps.<String, EClass>newHashMap();
-      _tempMap.put(_instance, InstancePackage.Literals.COMPONENT_INSTANCE);
-      _tempMap.put(_secondInstance, InstancePackage.Literals.COMPONENT_INSTANCE);
-      _xsetliteral = Collections.<String, EClass>unmodifiableMap(_tempMap);
-      final Map<String, EClass> namedParts = _xsetliteral;
+      Pair<String, EClass> _mappedTo_1 = Pair.<String, EClass>of(_secondInstance, InstancePackage.Literals.COMPONENT_INSTANCE);
+      final Map<String, EClass> namedParts = Collections.<String, EClass>unmodifiableMap(CollectionLiterals.<String, EClass>newHashMap(_mappedTo, _mappedTo_1));
       _xblockexpression = TypesUtil.createTupleTypeHelper(metaModelManager, namedParts);
     }
     return _xblockexpression;
@@ -164,14 +161,12 @@ public class TypesUtil {
       final HashMap<String, EClass> namedParts = CollectionLiterals.<String, EClass>newHashMap();
       final Procedure1<ComponentResourceTupleDescriptorCS> _function = new Procedure1<ComponentResourceTupleDescriptorCS>() {
         public void apply(final ComponentResourceTupleDescriptorCS t) {
-          Map<String, EClass> _xsetliteral = null;
           String _instance = t.getInstance();
+          Pair<String, EClass> _mappedTo = Pair.<String, EClass>of(_instance, InstancePackage.Literals.COMPONENT_INSTANCE);
           String _hwresinstance = t.getHwresinstance();
-          Map<String, EClass> _tempMap = Maps.<String, EClass>newHashMap();
-          _tempMap.put(_instance, InstancePackage.Literals.COMPONENT_INSTANCE);
-          _tempMap.put(_hwresinstance, HwresourceinstancePackage.Literals.RESOURCE_INSTANCE);
-          _xsetliteral = Collections.<String, EClass>unmodifiableMap(_tempMap);
-          namedParts.putAll(_xsetliteral);
+          Pair<String, EClass> _mappedTo_1 = Pair.<String, EClass>of(_hwresinstance, HwresourceinstancePackage.Literals.RESOURCE_INSTANCE);
+          namedParts.putAll(
+            Collections.<String, EClass>unmodifiableMap(CollectionLiterals.<String, EClass>newHashMap(_mappedTo, _mappedTo_1)));
         }
       };
       IterableExtensions.<ComponentResourceTupleDescriptorCS>forEach(tupleDescriptorList, _function);
@@ -217,18 +212,15 @@ public class TypesUtil {
     TupleType _xblockexpression = null;
     {
       final Type innerTupleType = TypesUtil.createWeightingComponentResourceTupleElementCSTupleType(metaModelManager, constraintCS);
-      Map<String, Type> _xsetliteral = null;
       ValueTupleDescriptorCS _weighting = constraintCS.getWeighting();
       String _value = _weighting.getValue();
       CollectionType _createSetType = TypesUtil.createSetType(metaModelManager, innerTupleType);
+      Pair<String, CollectionType> _mappedTo = Pair.<String, CollectionType>of(_value, _createSetType);
       ValueTupleDescriptorCS _rhs = constraintCS.getRhs();
       String _value_1 = _rhs.getValue();
       Type _realType = TypesUtil.getRealType(metaModelManager);
-      Map<String, Type> _tempMap = Maps.<String, Type>newHashMap();
-      _tempMap.put(_value, _createSetType);
-      _tempMap.put(_value_1, _realType);
-      _xsetliteral = Collections.<String, Type>unmodifiableMap(_tempMap);
-      final Map<String, Type> namedParts = _xsetliteral;
+      Pair<String, Type> _mappedTo_1 = Pair.<String, Type>of(_value_1, _realType);
+      final Map<String, Type> namedParts = Collections.<String, Type>unmodifiableMap(CollectionLiterals.<String, Type>newHashMap(_mappedTo, _mappedTo_1));
       _xblockexpression = TypesUtil.createTupleType(metaModelManager, namedParts);
     }
     return _xblockexpression;

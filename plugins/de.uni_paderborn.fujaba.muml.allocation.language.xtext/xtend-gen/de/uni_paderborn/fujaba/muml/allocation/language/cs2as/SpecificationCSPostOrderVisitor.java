@@ -30,7 +30,7 @@ public class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPost
     }
     
     public BasicContinuation<?> execute() {
-      BasicContinuation<?> _xblockexpression = null;
+      Object _xblockexpression = null;
       {
         ContextCS _expression = this.csElement.getExpression();
         final ExpressionInOCL expressionInOCL = PivotUtil.<ExpressionInOCL>getPivot(
@@ -38,7 +38,7 @@ public class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPost
         this.context.refreshContextVariable(expressionInOCL);
         _xblockexpression = null;
       }
-      return _xblockexpression;
+      return ((BasicContinuation<?>)_xblockexpression);
     }
     
     public void addTo(@NonNull final List<BasicContinuation<?>> simpleContinuations) {
