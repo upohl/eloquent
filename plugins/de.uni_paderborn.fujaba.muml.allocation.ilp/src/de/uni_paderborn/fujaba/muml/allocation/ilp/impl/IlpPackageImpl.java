@@ -445,7 +445,7 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 		  (constraintExpressionEClass, 
 		   source, 
 		   new String[] {
-			 "ValidOperator", "Set{core::expressions::common::ComparingOperator::LESS, core::expressions::common::ComparingOperator::LESS_OR_EQUAL, core::expressions::common::ComparingOperator::EQUAL, core::expressions::common::ComparingOperator::GREATER_OR_EQUAL, core::expressions::common::ComparingOperator::GREATER}->includes(operator)"
+			 "ValidOperator", "-- Invalid comparison operator (allowed <, <=, =, >=, >)\nSet{core::expressions::common::ComparingOperator::LESS, core::expressions::common::ComparingOperator::LESS_OR_EQUAL, core::expressions::common::ComparingOperator::EQUAL, core::expressions::common::ComparingOperator::GREATER_OR_EQUAL, core::expressions::common::ComparingOperator::GREATER}->includes(operator)"
 		   });
 	}
 

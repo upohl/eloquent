@@ -148,7 +148,8 @@ public class IlpValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CONSTRAINT_EXPRESSION__VALID_OPERATOR__EEXPRESSION = "Set{core::expressions::common::ComparingOperator::LESS, core::expressions::common::ComparingOperator::LESS_OR_EQUAL, core::expressions::common::ComparingOperator::EQUAL, core::expressions::common::ComparingOperator::GREATER_OR_EQUAL, core::expressions::common::ComparingOperator::GREATER}->includes(operator)";
+	protected static final String CONSTRAINT_EXPRESSION__VALID_OPERATOR__EEXPRESSION = "-- Invalid comparison operator (allowed <, <=, =, >=, >)\n" +
+		"Set{core::expressions::common::ComparingOperator::LESS, core::expressions::common::ComparingOperator::LESS_OR_EQUAL, core::expressions::common::ComparingOperator::EQUAL, core::expressions::common::ComparingOperator::GREATER_OR_EQUAL, core::expressions::common::ComparingOperator::GREATER}->includes(operator)";
 
 	/**
 	 * Validates the ValidOperator constraint of '<em>Constraint Expression</em>'.
