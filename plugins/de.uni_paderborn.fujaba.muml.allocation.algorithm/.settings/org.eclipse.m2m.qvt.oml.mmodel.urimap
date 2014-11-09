@@ -10,5 +10,5 @@
   <mapping sourceURI="http://www.storydriven.org/core/expressions/common/0.3.1" targetURI="platform:/resource/org.storydriven.core/model/core.ecore"/>
   <mapping sourceURI="http://www.storydriven.org/core/expressions/0.3.1" targetURI="platform:/resource/org.storydriven.core/model/core.ecore"/>
   <mapping sourceURI="http://ww.eclipse.org/OCL/Values" targetURI="platform:/resource/org.eclipse.ocl.examples.domain/model/Values.ecore"/>
-  <mapping sourceURI="http://www.fujaba.de/muml/psm/allocation/0.1.0/" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.psm/model/psm.ecore"/>
+  <mapping sourceURI="http://www.fujaba.de/muml/psm/allocation/0.4.0/" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.psm/model/psm.ecore"/>
 </uriMap:MappingContainer>
