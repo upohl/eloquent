@@ -1,30 +1,23 @@
 import de.uni_paderborn.fujaba.muml.allocation.algorithm.lpsolve.LPSolveBlackboxUnit;
+import SolverConstants;
 
 modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
 
 library LPSolve;
 
-helper IntegerLinearProgram::solveLP(inout solution : Dict(Variable, Integer)) : Integer {
+helper lpsolve(ilpModel : IntegerLinearProgram, inout solution : Dict(Variable, Integer)) : Integer {
 	var completeSolution : Dict(String, Integer) := Dict{}; 
-	var ret : Integer := solve(self, completeSolution);
+	var ret : Integer := solve(ilpModel, completeSolution);
 	if (ret != SUCCESS()) then {
 		return ret;
 	} endif;
 	var res : Dict(Variable, Integer) := Dict{};
 	completeSolution->keys()->forEach(k) {
-		solution->put(self.getVariable(k), completeSolution->get(k));
+		solution->put(ilpModel.getVariable(k), completeSolution->get(k));
 	};
 	return SUCCESS();
 }
 
 query IntegerLinearProgram::getVariable(variableName : String) : Variable {
 	return self.variables->any(name = variableName);
-}
-
-query SUCCESS() : Integer {
-	return 0;
-}
-
-query INFEASIBLE() : Integer {
-	return 2;
 }

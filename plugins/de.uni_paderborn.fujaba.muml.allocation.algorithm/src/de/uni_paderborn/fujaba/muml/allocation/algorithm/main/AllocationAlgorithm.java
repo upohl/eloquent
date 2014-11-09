@@ -19,7 +19,7 @@ public class AllocationAlgorithm {
 	private static final String runnerNull = "runner is null: computeAllocation has to be called before getSystemAlloction";
 	private static final String unexpectedResult = "Expected type SystemAllocation but got: %s";
 	private static final String unexpectedResultSize = "Expected exactly one transformation result";
-	private static final String transformationURI = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/AlgorithmMain.qvto";
+	private static final String transformationURI = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/LPSolveBasedAlgorithm.qvto";
 	
 	private String allocationSpecificationURI;
 	private String cicURI;

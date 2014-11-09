@@ -1,0 +1,9 @@
+library SolverConstants;
+
+query SUCCESS() : Integer {
+	return 0;
+}
+
+query INFEASIBLE() : Integer {
+	return 2;
+}

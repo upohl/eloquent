@@ -1,0 +1,86 @@
+import Specification2ILP;
+import SolverConstants;
+
+modeltype allocationSpecification uses cs('http://www.fujaba.de/muml/allocation/language/0.1.0/cs');
+modeltype core uses core('http://www.storydriven.org/core/0.3.1');
+modeltype instance uses muml::instance('http://www.fujaba.de/muml/instance/0.4.0');
+modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.0/');
+modeltype hwrinstance uses hardware::hwresourceinstance('http://www.fujaba.de/muml/hardware/hwresourceinstance/1.0/');
+modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
+modeltype allocation uses psm::allocation('http://www.fujaba.de/muml/psm/allocation/0.4.0/');
+
+/* Abstract library for ILP-based algorithms */
+library AbstractILPBasedAlgorithm;
+
+helper computeAllocation() {
+	var ilpOut : ilptype := ilptype.createEmptyModel().oclAsType(ilptype);
+	var ret : Status := new Specification2ILP(getSpecification().oclAsType(allocationSpecification),
+		getInstance().oclAsType(instance),
+		getHwpi().oclAsType(hwpinstance),
+		ilpOut).transform();
+	log("ret: " + ret.toString());
+	assert fatal (ret.succeeded()) with log("Specification2ILP transformation failed: " + ret.toString());
+	var ilpModel : IntegerLinearProgram := ilpOut.rootObjects()![IntegerLinearProgram];
+	createAllocation(ilpModel);
+}
+
+query getSpecification() : OclAny {
+	assert fatal (false) with log("implement me in a sub transformation");
+	return null;  // never reached
+}
+
+query getInstance() : OclAny {
+	assert fatal (false) with log("implement me in a sub transformation");
+	return null;  // never reached
+}
+
+query getHwpi() : OclAny {
+	assert fatal (false) with log("implement me in a sub transformation");
+	return null;  // never reached
+}
+
+helper createAllocation(ilpModel : IntegerLinearProgram) : SystemAllocation {
+	var solution : Dict(Variable, Integer) := Dict{};
+	var ret : Integer := solveILP(ilpModel, solution);
+	// in case of an error an empty SystemAllocation is returned 
+	if (ret = INFEASIBLE()) then {
+		log("solveILP: problem is infeasible (no allocation exists)");
+	} elif (ret != SUCCESS()) then {
+		log("solveILP: solver returned code " + ret.toString());
+	} endif;
+	var todo : OrderedSet(Variable) := solution->keys()
+		->select(k | solution->get(k) = 1)
+		->sortedBy(name)->asOrderedSet();
+	var systemAllocation : SystemAllocation := object SystemAllocation{};
+	todo->addAllocation(systemAllocation);
+	return systemAllocation;
+}
+
+helper solveILP(ilpModel : IntegerLinearProgram, solution : Dict(Variable, Integer)) : Integer {
+	assert fatal (false) with log("solveILP has be implemented in a sub transformation");
+	return INFEASIBLE();  // never reached
+}
+
+helper Variable::addAllocation(inout systemAllocation : SystemAllocation) {
+	var seq : Sequence(NamedElement) := self.getBinaryVariableSequence();
+	// just some sanity checks (should never happen in "production")
+	assert fatal (not seq->oclIsUndefined()) with log("seq is undefined");
+	assert fatal (not seq->oclIsInvalid()) with log("seq is invalid");
+	assert fatal (seq->notEmpty()) with log("seq is empty");
+	assert fatal (seq->size().mod(2) = 0) with log("unexpected size: " + seq->size().toString());
+	if (seq->size() != 2) then {
+		return;
+	} endif;
+	systemAllocation.allocations += new Allocation(seq);
+}
+
+constructor Allocation::Allocation(seq : Sequence(NamedElement)) {
+	// this should never fail
+	assert fatal (seq->at(1).oclIsKindOf(ComponentInstance)) with
+		log(seq->at(1).toString() + " is not a ComponentInstance");
+	// this fails if a user allocates a component to an ActuatorInstance or SensorInstance
+	assert fatal (seq->at(2).oclIsKindOf(StructuredResourceInstance)) with
+		log(seq->at(2).toString() + " is not a StructuredResourceInstance");
+	componentInstance := seq->at(1).oclAsType(ComponentInstance);
+	resourceInstance := seq->at(2).oclAsType(StructuredResourceInstance);
+}

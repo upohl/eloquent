@@ -1,0 +1,31 @@
+import AbstractILPBasedAlgorithm;
+import LPSolve;
+
+modeltype allocationSpecification uses cs('http://www.fujaba.de/muml/allocation/language/0.1.0/cs');
+modeltype instance uses muml::instance('http://www.fujaba.de/muml/instance/0.4.0');
+modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.0/');
+modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
+modeltype allocation uses psm::allocation('http://www.fujaba.de/muml/psm/allocation/0.4.0/');
+
+transformation LPSolveBasedAlgorithm(in specification : allocationSpecification, in ins : instance, in hwpi : hwpinstance, out allocationOut : allocation)
+	extends AbstractILPBasedAlgorithm;
+
+main() {
+	computeAllocation();
+}
+
+query getSpecification() : allocationSpecification {
+	return specification;
+}
+
+query getInstance() : instance {
+	return ins;
+}
+
+query getHwpi() : hwpinstance {
+	return hwpi;
+}
+
+helper solveILP(ilpModel : IntegerLinearProgram, solution : Dict(Variable, Integer)) : Integer {
+	return lpsolve(ilpModel, solution);
+}

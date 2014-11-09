@@ -7,7 +7,7 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({
 	Specification2ILPTestSuite.class,
-	AlgorithmMainTest.class
+	LPSolveBasedAlgorithmTest.class
 })
 public class AllTestsSuite {
 
