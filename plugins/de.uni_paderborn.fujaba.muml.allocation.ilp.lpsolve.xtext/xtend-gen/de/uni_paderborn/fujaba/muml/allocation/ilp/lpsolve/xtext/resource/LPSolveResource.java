@@ -2,6 +2,7 @@ package de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.resource;
 
 import com.google.inject.Injector;
 import de.uni_paderborn.fujaba.common.xtext.AbstractLanguageResource;
+import de.uni_paderborn.fujaba.muml.allocation.ilp.IntegerLinearProgram;
 import de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.LPSolveStandaloneSetup;
 import org.eclipse.emf.ecore.EObject;
 
@@ -13,7 +14,6 @@ public class LPSolveResource extends AbstractLanguageResource {
   }
   
   protected boolean isSerializable(final EObject object) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nIntegerLinearProgram cannot be resolved to a type.");
+    return (object instanceof IntegerLinearProgram);
   }
 }
