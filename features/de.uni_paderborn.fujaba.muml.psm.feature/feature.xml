@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="de.uni_paderborn.fujaba.muml.psm.feature"
-      label="Platform Specific Modeling Feature"
+      label="%featureName"
       version="0.4.0.qualifier"
-      provider-name="Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn, Germany and Software Engineering, Project Group Mechatronic Systems Design, Fraunhofer Institute for Production Technology IPT, Germany">
+      provider-name="%providerName">
 
-   <description url="http://www.example.com/description">
-      [Enter Feature Description here.]
+   <description url="www.muml.org">
+      %description
    </description>
 
-   <copyright url="http://www.example.com/copyright">
-      [Enter Copyright Description here.]
+   <copyright>
+      %copyright
    </copyright>
 
-   <license url="http://www.example.com/license">
-      [Enter License Description here.]
+   <license url="%licenseURL">
+      %license
    </license>
 
    <requires>
