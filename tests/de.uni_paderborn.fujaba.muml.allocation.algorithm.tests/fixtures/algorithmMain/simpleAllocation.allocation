@@ -8,22 +8,22 @@
   <allocations>
     <componentInstance
         xsi:type="instance:AtomicComponentInstance"
-        href="../generalConstraint/simple.fujaba#_hKUd8PZaEeOJBJMtyzAqyw"/>
+        href="../models/simple.fujaba#_hKUd8PZaEeOJBJMtyzAqyw"/>
     <resourceInstance
-        href="../generalConstraint/simple.fujaba#_p2GzFfY-EeOj7bbnOoJljg"/>
+        href="../models/simple.fujaba#_p2GzFfY-EeOj7bbnOoJljg"/>
   </allocations>
   <allocations>
     <componentInstance
         xsi:type="instance:AtomicComponentInstance"
-        href="../generalConstraint/simple.fujaba#_imF4YPZaEeOJBJMtyzAqyw"/>
+        href="../models/simple.fujaba#_imF4YPZaEeOJBJMtyzAqyw"/>
     <resourceInstance
-        href="../generalConstraint/simple.fujaba#_p2GzIPY-EeOj7bbnOoJljg"/>
+        href="../models/simple.fujaba#_p2GzIPY-EeOj7bbnOoJljg"/>
   </allocations>
   <allocations>
     <componentInstance
         xsi:type="instance:AtomicComponentInstance"
-        href="../generalConstraint/simple.fujaba#_jfKOYPZaEeOJBJMtyzAqyw"/>
+        href="../models/simple.fujaba#_jfKOYPZaEeOJBJMtyzAqyw"/>
     <resourceInstance
-        href="../generalConstraint/simple.fujaba#_p2GzGvY-EeOj7bbnOoJljg"/>
+        href="../models/simple.fujaba#_p2GzGvY-EeOj7bbnOoJljg"/>
   </allocations>
 </allocation:SystemAllocation>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.m2m.qvt.oml.javaBlackboxUnits">
+      <unit
+            name="OCLEvaluatorBlackboxUnit"
+            namespace="de.uni_paderborn.fujaba.muml.allocation.algorithm.ocl">
+         <library
+               class="de.uni_paderborn.fujaba.muml.allocation.algorithm.ocl.OCLEvaluator"
+               name="OCLEvaluatorBlackbox">
+            <metamodel
+                  nsURI="http://www.eclipse.org/ocl/3.1.0/EssentialOCLCST">
+            </metamodel>
+            <metamodel
+                  nsURI="http://www.eclipse.org/ocl/3.1.0/Pivot">
+            </metamodel>
+            <metamodel
+                  nsURI="http://ww.eclipse.org/OCL/Values">
+            </metamodel>
+            <metamodel
+                  nsURI="http://www.fujaba.de/muml/allocation/language/0.1.0/cs">
+            </metamodel>
+         </library>
+      </unit>
+      <unit
+            name="TupleAccessorBlackboxUnit"
+            namespace="de.uni_paderborn.fujaba.muml.allocation.algorithm.ocl">
+         <library
+               class="de.uni_paderborn.fujaba.muml.allocation.algorithm.ocl.TupleAccessor"
+               name="TupleAccessorBlackbox">
+            <metamodel
+                  nsURI="http://www.fujaba.de/muml/allocation/language/0.1.0/cs">
+            </metamodel>
+            <metamodel
+                  nsURI="http://www.storydriven.org/core/0.3.1">
+            </metamodel>
+            <metamodel
+                  nsURI="http://ww.eclipse.org/OCL/Values">
+            </metamodel>
+         </library>
+      </unit>
+   </extension>
+</plugin>

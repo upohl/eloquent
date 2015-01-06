@@ -1,7 +1,7 @@
 package de.uni_paderborn.fujaba.muml.allocation.algorithm.tests;
 
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.QVToTransformationSingleOutExtentTest;
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.TestDataUtil;
+import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.qvto.QVToTransformationSingleOutExtentTest;
+import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.util.TestDataUtil;
 import java.util.Collection;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;

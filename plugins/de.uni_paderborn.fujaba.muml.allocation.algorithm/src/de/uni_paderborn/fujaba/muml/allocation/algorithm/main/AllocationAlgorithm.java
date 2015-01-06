@@ -1,64 +1,77 @@
 package de.uni_paderborn.fujaba.muml.allocation.algorithm.main;
 
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
-import org.eclipse.m2m.qvt.oml.ExecutionDiagnostic;
 
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.util.QVToSingleOutExtentTransformationRunner;
 import de.uni_paderborn.fujaba.muml.psm.allocation.SystemAllocation;
 
 /** 
- * Main entry point for computing an allocation. In order to
- * compute an allocation, just instantiate this class and call
- * its computeAllocation method. Afterwards, the allocation can
- * be accessed by calling getSystemAllocation.
+ * Main entry point for computing an allocation. The
+ * <code>computeAllocation</code> method computes and allocation,
+ * which can be accessed via the <code>getSystemAllocation</code>
+ * method.
  *
  */
 public class AllocationAlgorithm {
-	private static final String runnerNull = "runner is null: computeAllocation has to be called before getSystemAlloction";
-	private static final String unexpectedResult = "Expected type SystemAllocation but got: %s";
-	private static final String unexpectedResultSize = "Expected exactly one transformation result";
-	private static final String transformationURI = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm/transforms/LPSolveBasedAlgorithm.qvto";
+	private static final String resultNull =
+			"result is null: computeAllocation has to be called before getSystemAlloction";
+	private EObject allocationSpecification;
+	private EObject cic;
+	private EObject hpic;
+	private IComputationResult result;
 	
-	private String allocationSpecificationURI;
-	private String cicURI;
-	private String hpicURI;
-	private QVToSingleOutExtentTransformationRunner runner;
+	/**
+	 * Constructs a new <code>AllocationAlgorithm</code> instance.
+	 * 
+	 * @param allocationSpecification	the allocation specification model element
+	 * @param cic						the component instance configuration model element
+	 * @param hpic						the hardware platform instance configuration model element
+	 */
+	public AllocationAlgorithm(EObject allocationSpecification,
+		EObject cic, EObject hpic) {
+		this.allocationSpecification = allocationSpecification;
+		this.cic = cic;
+		this.hpic = hpic;
+	}
 	
-	public AllocationAlgorithm(String allocationSpecificationURI,
-			String cicURI, String hpicURI) {
-		this.allocationSpecificationURI = allocationSpecificationURI;
-		this.cicURI = cicURI;
-		this.hpicURI = hpicURI;
-		this.runner = null;
+	/**
+	 * Computes an allocation. The returned <code>Diagnostic</code> provides
+	 * computation details, for example if the computation was successful.
+	 * 
+	 * @param acs				the allocation computation strategy, which represents the main algorithm
+	 * @param progressMonitor	the iProgressMonitor or <code>null</code>
+	 * @return					the diagnostic, which provides details about the computation
+	 */
+	@NonNull
+	public Diagnostic computeAllocation(@NonNull IAllocationComputationStrategy acs,
+			@Nullable IProgressMonitor progressMonitor) {
+		result = acs.computeAllocation(allocationSpecification, cic, hpic,
+				progressMonitor);
+		return result.getDiagnostic();
+	}
+	
+	@NonNull
+	public Diagnostic computeAllocation(IAllocationComputationStrategy acs) {
+		return computeAllocation(acs, null);
+	}
+	
+	/**
+	 * Returns a previously computed <code>SystemAllocation</code>. Throws an
+	 * <code>IllegalStateException</code>, if it was called before the
+	 * <code>computeAllocation</code>
+	 * method.
+	 * 
+	 * @return the systemAllocation or <code>null</code>
+	 */
+	@Nullable
+	public SystemAllocation getSystemAllocation() {
+		if (result == null) {
+			throw new IllegalStateException(resultNull);
+		}
+		return result.getSystemAllocation();
 	}
 
-	public ExecutionDiagnostic computeAllocation(@Nullable IProgressMonitor progressMonitor) {
-		runner = new QVToSingleOutExtentTransformationRunner(transformationURI,
-				allocationSpecificationURI, cicURI, hpicURI);
-		ExecutionDiagnostic diagnostic = runner.runTransformation(progressMonitor);
-		// error handling is up to the caller
-		return diagnostic;
-	}
-	
-	public SystemAllocation getSystemAllocation() {
-		if (runner == null) {
-			throw new IllegalStateException(runnerNull);
-		}
-		// some sanity checks
-		checkResult(runner);
-		return (SystemAllocation) runner.getOutExtent().getContents().get(0);
-	}
-	
-	private static void checkResult(QVToSingleOutExtentTransformationRunner runner) {
-		if (runner.getOutExtent().getContents().size() != 1) {
-			throw new IllegalStateException(unexpectedResultSize);
-		}
-		EObject object = runner.getOutExtent().getContents().get(0);
-		if (!(object instanceof SystemAllocation)) {
-			throw new IllegalStateException(String.format(unexpectedResult, object.getClass().getName()));
-		}
-	}
-	
 }

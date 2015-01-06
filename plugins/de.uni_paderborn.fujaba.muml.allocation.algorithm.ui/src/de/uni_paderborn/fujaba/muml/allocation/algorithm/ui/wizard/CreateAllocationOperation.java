@@ -8,19 +8,19 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.emf.common.util.BasicDiagnostic;
+import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.command.ChangeCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.m2m.qvt.oml.ExecutionDiagnostic;
 
 import de.uni_paderborn.fujaba.export.operation.AbstractFujabaExportOperation;
 import de.uni_paderborn.fujaba.modelinstance.ModelElementCategory;
 import de.uni_paderborn.fujaba.modelinstance.RootNode;
 import de.uni_paderborn.fujaba.modelinstance.categories.ModelElementCategoryRegistry;
 import de.uni_paderborn.fujaba.muml.allocation.algorithm.main.AllocationAlgorithm;
+import de.uni_paderborn.fujaba.muml.allocation.algorithm.main.IAllocationComputationStrategy;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS;
 import de.uni_paderborn.fujaba.muml.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 import de.uni_paderborn.fujaba.muml.instance.ComponentInstanceConfiguration;
@@ -38,27 +38,26 @@ public class CreateAllocationOperation extends AbstractFujabaExportOperation {
 	@NonNull private ComponentInstanceConfiguration cic;
 	@NonNull private HWPlatformInstanceConfiguration hpic;
 	@NonNull private EObject target;
+	@NonNull private IAllocationComputationStrategy allocationComputationStrategy;
 	
 	public CreateAllocationOperation(@NonNull EditingDomain editingDomain,
 			@NonNull SpecificationCS allocationSpecification,
 			@NonNull ComponentInstanceConfiguration cic, @NonNull HWPlatformInstanceConfiguration hpic,
-			@NonNull EObject target) {
+			@NonNull EObject target,
+			@NonNull IAllocationComputationStrategy allocationComputationStrategy) {
 		this.editingDomain = editingDomain;
 		this.allocationSpecification = allocationSpecification;
 		this.cic = cic;
 		this.hpic = hpic;
 		this.target = target;
+		this.allocationComputationStrategy = allocationComputationStrategy;
 	}
 	
 	private AllocationAlgorithm createAllocationAlgorithm() {
 		return new AllocationAlgorithm(
-				eObjectToURI(allocationSpecification),
-				eObjectToURI(cic),
-				eObjectToURI(hpic));
-	}
-	
-	private static String eObjectToURI(EObject eObject) {
-		return EcoreUtil.getURI(eObject).toString();
+				allocationSpecification,
+				cic,
+				hpic);
 	}
 	
 	@Override
@@ -70,8 +69,10 @@ public class CreateAllocationOperation extends AbstractFujabaExportOperation {
 		}
 		SubMonitor progress = SubMonitor.convert(progressMonitor, 100);
 		AllocationAlgorithm algorithm = createAllocationAlgorithm();
-		ExecutionDiagnostic diagnostic = algorithm.computeAllocation(progress.newChild(90));
-		if (diagnostic.getCode() != Status.OK) {
+		Diagnostic diagnostic = algorithm.computeAllocation(
+				allocationComputationStrategy,
+				progress.newChild(90));
+		if (diagnostic.getSeverity() != Status.OK) {
 			return BasicDiagnostic.toIStatus(diagnostic);
 		}
 		if (!progress.isCanceled()) {
