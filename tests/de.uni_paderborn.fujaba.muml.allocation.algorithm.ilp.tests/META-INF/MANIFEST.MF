@@ -14,3 +14,7 @@ Require-Bundle: org.eclipse.emf.ecore;bundle-version="2.10.1",
  de.uni_paderborn.fujaba.muml.allocation.language.xtext;bundle-version="1.0.0",
  de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
+Export-Package: de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.tests,
+ de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension,
+ de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.impl,
+ de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.util

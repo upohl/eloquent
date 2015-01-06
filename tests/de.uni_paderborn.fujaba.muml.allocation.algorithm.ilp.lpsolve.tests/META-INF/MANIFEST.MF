@@ -11,3 +11,4 @@ Require-Bundle: org.eclipse.xtext.xbase.lib;bundle-version="2.7.2",
  de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.lpsolve;bundle-version="1.0.0",
  de.uni_paderborn.fujaba.muml.allocation.language.xtext;bundle-version="1.0.0",
  de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext;bundle-version="1.0.0"
+Export-Package: de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.lpsolve.tests
