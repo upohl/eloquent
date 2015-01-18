@@ -40,9 +40,9 @@ public class LPSolve {
 			ret = process.waitFor();
 			System.out.println("lp_solve: " + ret);
 		} catch (IOException e) {
-			e.printStackTrace();
+			throw new IllegalStateException(e);
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			throw new IllegalStateException(e);
 		}
 		return ret;
 	}
