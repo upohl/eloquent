@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.m2m.qvt.oml.javaBlackboxUnits">
+      <unit
+            name="Opt4JBlackboxUnit"
+            namespace="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j">
+         <library
+               class="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.Opt4J"
+               name="Opt4JBlackbox">
+            <metamodel
+                  nsURI="http://www.fujaba.de/muml/allocation/ilp/0.1.0">
+            </metamodel>
+         </library>
+      </unit>
+   </extension>
+   <extension
+         point="de.uni_paderborn.fujaba.muml.allocation.algorithm.strategy">
+      <strategy
+            class="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.Opt4JAllocationComputationStrategy"
+            description="Opt4J-based allocation computation strategy (using opt4j)"
+            name="Opt4J Allocation Computation Strategy">
+      </strategy>
+   </extension>
+
+</plugin>
