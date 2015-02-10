@@ -2,6 +2,7 @@ package de.uni_paderborn.fujaba.muml.allocation.language.typing;
 
 import com.google.common.base.Objects;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupleDescriptorCS;
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS;
@@ -11,6 +12,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorC
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.WeightingComponentResourceTupleElementCS;
 import de.uni_paderborn.fujaba.muml.hardware.hwresourceinstance.HwresourceinstancePackage;
 import de.uni_paderborn.fujaba.muml.instance.InstancePackage;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -289,5 +291,42 @@ public class TypesUtil {
       _xblockexpression = TypesUtil.createTupleType(metaModelManager, namedParts);
     }
     return _xblockexpression;
+  }
+  
+  protected static Type _createType(final EvaluatableElementCS element) {
+    throw new IllegalArgumentException(("unexpected element: " + element));
+  }
+  
+  protected static Type _createType(final LocationConstraintCS constraintCS) {
+    return TypesUtil.createLocationConstraintType(constraintCS);
+  }
+  
+  protected static Type _createType(final RequiredHardwareResourceInstanceConstraintCS constraintCS) {
+    return TypesUtil.createReqHWResInstanceConstraintType(constraintCS);
+  }
+  
+  protected static Type _createType(final ResourceConstraintCS constraintCS) {
+    return TypesUtil.createResourceConstraintType(constraintCS);
+  }
+  
+  protected static Type _createType(final QoSDimensionCS qosDimensionCS) {
+    return TypesUtil.createQoSDimensionType(qosDimensionCS);
+  }
+  
+  public static Type createType(final EvaluatableElementCS constraintCS) {
+    if (constraintCS instanceof LocationConstraintCS) {
+      return _createType((LocationConstraintCS)constraintCS);
+    } else if (constraintCS instanceof RequiredHardwareResourceInstanceConstraintCS) {
+      return _createType((RequiredHardwareResourceInstanceConstraintCS)constraintCS);
+    } else if (constraintCS instanceof ResourceConstraintCS) {
+      return _createType((ResourceConstraintCS)constraintCS);
+    } else if (constraintCS instanceof QoSDimensionCS) {
+      return _createType((QoSDimensionCS)constraintCS);
+    } else if (constraintCS != null) {
+      return _createType(constraintCS);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(constraintCS).toString());
+    }
   }
 }
