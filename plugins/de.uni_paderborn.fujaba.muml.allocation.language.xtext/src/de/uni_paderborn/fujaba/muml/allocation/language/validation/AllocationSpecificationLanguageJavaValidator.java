@@ -29,6 +29,13 @@ import de.uni_paderborn.fujaba.muml.allocation.language.typing.TypesUtil;
 public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderborn.fujaba.muml.allocation.language.validation.AbstractAllocationSpecificationLanguageJavaValidator {
 	private static final String typeMismatch = "Type mismatch: expected %s but got %s"; 
 
+//	@Check
+//	public void checkGreetingStartsWithCapital(Greeting greeting) {
+//		if (!Character.isUpperCase(greeting.getName().charAt(0))) {
+//			warning("Name should start with a capital", MyDslPackage.Literals.GREETING__NAME);
+//		}
+//	}
+
 	@Check
 	public void checkLocationConstraintCS(LocationConstraintCS constraintCS) {
 		LocationTupleDescriptorCS tupleDescriptor = constraintCS.getTupleDescriptor();
@@ -37,7 +44,8 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 			// in this case a different error is displayed
 			return;
 		}
-		checkTypes(constraintCS);
+		checkTypes(constraintCS,
+				TypesUtil.createLocationConstraintType(constraintCS));
 	}
 	
 	@Check
@@ -48,7 +56,8 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 			// in this case a different error is displayed
 			return;
 		}
-		checkTypes(constraintCS);
+		checkTypes(constraintCS,
+				TypesUtil.createReqHWResInstanceConstraintType(constraintCS));
 	}
 	
 	@Check
@@ -60,7 +69,8 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 			// parser/ui will display an error
 			return;
 		}
-		checkTypes(constraintCS);
+		checkTypes(constraintCS,
+				TypesUtil.createResourceConstraintType(constraintCS));
 	}
 	
 	@Check
@@ -70,12 +80,12 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 		if (tupleDescriptorList.isEmpty() || oclExpression == null) {
 			return;
 		}
-		checkTypes(qosDimensionCS);
+		checkTypes(qosDimensionCS,
+				TypesUtil.createQoSDimensionType(qosDimensionCS));
 	}
 	
-	private void checkTypes(EvaluatableElementCS elementCS) {
+	private void checkTypes(EvaluatableElementCS elementCS, Type expectedType) {
 		MetaModelManager metaModelManager = TypesUtil.getMetaModelManager(elementCS);
-		Type expectedType = TypesUtil.createType(elementCS);
 		Type actualType = ((ExpressionInOCL) elementCS.getExpression().getPivot()).getType();
 		boolean conformsTo = TypesUtil.conformsTo(metaModelManager, actualType, expectedType);
 		if (!conformsTo) {
@@ -83,4 +93,28 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 					CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION);
 		}
 	}
+	
+/*	@Check
+	public void checkRequiredHardwareResourceInstanceConstraintCSExpressionType(RequiredHardwareResourceInstanceConstraintCS constraint) {
+		System.out.println("called");
+		Type constraintType = ((ExpressionInOCL) constraint.getExpression()
+				.getPivot()).getType();
+		System.out.println(constraintType);
+		MetaModelManager metaModelManager = PivotUtil.findMetaModelManager(constraint);
+		TupleTypeManager tupleTypeManager = metaModelManager.getTupleManager();
+		DomainType domainType = metaModelManager.getIdResolver().getType(
+				InstancePackage.Literals.COMPONENT_INSTANCE);
+		Type componentType = metaModelManager.getType(domainType);
+		Map<String, Type> map = new HashMap<String, Type>();
+		map.put("first", componentType);
+		TupleType tupleType = tupleTypeManager.getTupleType("Tuple", map);
+		Type expectedType = metaModelManager.getSetType(tupleType, null, null);
+		System.out.println(expectedType);
+		boolean conformsTo = metaModelManager.conformsTo(constraintType, expectedType, null); 
+		System.out.println(conformsTo);
+		if (!conformsTo) {
+			error(constraintType + " does not conform to " + expectedType,
+					CsPackage.Literals.CONSTRAINT_CS__EXPRESSION);
+		}
+	}*/
 }

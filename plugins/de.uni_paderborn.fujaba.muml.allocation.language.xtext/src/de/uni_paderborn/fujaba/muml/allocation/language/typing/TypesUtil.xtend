@@ -1,10 +1,8 @@
 package de.uni_paderborn.fujaba.muml.allocation.language.typing
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupleDescriptorCS
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ResourceConstraintCS
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.WeightingComponentResourceTupleElementCS
@@ -23,6 +21,7 @@ import org.eclipse.ocl.examples.pivot.Type
 import org.eclipse.ocl.examples.pivot.manager.MetaModelManager
 import org.eclipse.ocl.examples.pivot.manager.TupleTypeManager
 import org.eclipse.ocl.examples.pivot.utilities.PivotUtil
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS
 
 class TypesUtil {
 	private static final String tupleName = "Tuple"
@@ -185,27 +184,5 @@ class TypesUtil {
 			.mapValues[EClass eClass | getType(metaModelManager, eClass)])
 		namedParts.put(elementCS.weighting.value, getRealType(metaModelManager))
 		createTupleType(metaModelManager, namedParts)
-	}
-	
-	// for convenience:
-	
-	static def dispatch createType(EvaluatableElementCS element) {
-		throw new IllegalArgumentException("unexpected element: " + element)
-	}
-	
-	static def dispatch createType(LocationConstraintCS constraintCS) {
-		createLocationConstraintType(constraintCS)
-	}
-	
-	static def dispatch createType(RequiredHardwareResourceInstanceConstraintCS constraintCS) {
-		createReqHWResInstanceConstraintType(constraintCS)
-	}
-	
-	static def dispatch createType(ResourceConstraintCS constraintCS) {
-		createResourceConstraintType(constraintCS)
-	}
-	
-	static def dispatch createType(QoSDimensionCS qosDimensionCS) {
-		createQoSDimensionType(qosDimensionCS)
 	}
 }
