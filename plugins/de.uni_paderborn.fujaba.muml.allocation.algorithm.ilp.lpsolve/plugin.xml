@@ -23,13 +23,5 @@
             name="LPSolve Allocation Computation Strategy">
       </strategy>
    </extension>
-   <extension
-         point="de.uni_paderborn.fujaba.muml.allocation.algorithm.strategy">
-      <strategy
-            class="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.lpsolve.LPSolveAllocationComputationStrategy"
-            description="foobar strategy"
-            name="Foo">
-      </strategy>
-   </extension>
 
 </plugin>
