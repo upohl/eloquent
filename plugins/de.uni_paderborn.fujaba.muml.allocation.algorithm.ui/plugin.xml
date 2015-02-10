@@ -57,7 +57,7 @@
             name="allocation">
          <child
                class="SystemAllocation"
-               packageNsUri="http://www.fujaba.de/muml/psm/allocation/0.1.0/">
+               packageNsUri="http://www.fujaba.de/muml/psm/allocation/0.4.0/">
          </child>
       </category>
    </extension>
