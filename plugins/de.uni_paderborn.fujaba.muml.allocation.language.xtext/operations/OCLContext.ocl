@@ -39,8 +39,9 @@
 			))
 			=
 			self.getSWInstance(swInstanceName).getAllEmbeddedInstances()->product(
-				-- only to direct embedded instances
+				-- only to direct embedded StructuredResourceInstances
 				self.getHWPlatformInstance(platformInstanceName).embeddedHPIC.resources
+					->select(oclIsKindOf(hwresourceinstance::StructuredResourceInstance))
 			)
 		
 		def: allocateToDifferentECUs(instance1 : String, instance2 : String)
