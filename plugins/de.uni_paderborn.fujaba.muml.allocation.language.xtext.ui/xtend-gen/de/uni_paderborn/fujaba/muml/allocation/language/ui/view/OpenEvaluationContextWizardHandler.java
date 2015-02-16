@@ -7,6 +7,7 @@ import de.uni_paderborn.fujaba.muml.hardware.hwplatforminstance.HWPlatformInstan
 import de.uni_paderborn.fujaba.muml.instance.ComponentInstanceConfiguration;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.widgets.Shell;
@@ -27,7 +28,15 @@ public class OpenEvaluationContextWizardHandler extends BaseHandler {
         final IWorkbench workbench = _activeWorkbenchWindow.getWorkbench();
         final Shell shell = HandlerUtil.getActiveShell(event);
         final EvaluationContextWizard wizard = new EvaluationContextWizard();
-        wizard.init(workbench, StructuredSelection.EMPTY);
+        final ISelection selection = HandlerUtil.getCurrentSelection(event);
+        StructuredSelection _xifexpression = null;
+        if ((selection instanceof StructuredSelection)) {
+          _xifexpression = ((StructuredSelection) selection);
+        } else {
+          _xifexpression = StructuredSelection.EMPTY;
+        }
+        final StructuredSelection ssel = _xifexpression;
+        wizard.init(workbench, ssel);
         final WizardDialog wizardDialog = new WizardDialog(shell, wizard);
         wizardDialog.open();
         IWorkbenchWindow _activeWorkbenchWindow_1 = HandlerUtil.getActiveWorkbenchWindow(event);

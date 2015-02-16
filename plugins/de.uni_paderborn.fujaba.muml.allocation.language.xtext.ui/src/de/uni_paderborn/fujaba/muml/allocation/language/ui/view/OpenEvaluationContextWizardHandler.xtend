@@ -15,7 +15,13 @@ class OpenEvaluationContextWizardHandler extends BaseHandler {
 				.workbench
 		val Shell shell = HandlerUtil.getActiveShell(event)
 		val wizard = new EvaluationContextWizard()
-		wizard.init(workbench, StructuredSelection.EMPTY)
+		val selection = HandlerUtil.getCurrentSelection(event)
+		val ssel = if (selection instanceof StructuredSelection) {
+			selection as StructuredSelection
+		} else {
+			StructuredSelection.EMPTY
+		}
+		wizard.init(workbench, ssel)
 		val WizardDialog wizardDialog = new WizardDialog(shell, wizard)
 		wizardDialog.open
 		val view = HandlerUtil.getActiveWorkbenchWindow(event).activePage.showView(viewID)
