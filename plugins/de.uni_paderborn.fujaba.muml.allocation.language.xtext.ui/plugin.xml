@@ -392,5 +392,51 @@
             extensions="allocation_specification">
     </provider>
   </extension>
+  <extension
+        point="org.eclipse.ui.views">
+     <view
+           class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationLanguageExecutableExtensionFactory:de.uni_paderborn.fujaba.muml.allocation.language.ui.view.AllocationSpecificationLanguageEvaluationView"
+           id="de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui.view.evaluation"
+           name="ASL Evaluation View"
+           restorable="true">
+     </view>
+  </extension>
+  <extension
+        point="org.eclipse.ui.commands">
+     <command
+           defaultHandler="de.uni_paderborn.fujaba.muml.allocation.language.ui.view.OpenEvaluationContextWizardHandler"
+           id="de.uni_paderborn.fujaba.muml.allocation.language.ui.view.OpenEvaluationContextWizardHandler"
+           name="Open Evaluation Context Wizard">
+     </command>
+  </extension>
+  <extension
+        point="org.eclipse.ui.menus">
+     <menuContribution
+           allPopups="false"
+           locationURI="toolbar:de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui.view.evaluation">
+        <command
+              commandId="de.uni_paderborn.fujaba.muml.allocation.language.ui.view.OpenEvaluationContextWizardHandler"
+              label="Evaluation Context"
+              style="push">
+        </command>
+     </menuContribution>
+     <menuContribution
+           allPopups="false"
+           locationURI="toolbar:de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui.view.evaluation">
+        <command
+              commandId="de.uni_paderborn.fujaba.muml.allocation.language.ui.view.EvaluationHandler"
+              label="Evaluate"
+              style="push">
+        </command>
+     </menuContribution>
+  </extension>
+  <extension
+        point="org.eclipse.ui.commands">
+     <command
+           defaultHandler="de.uni_paderborn.fujaba.muml.allocation.language.ui.view.EvaluationHandler"
+           id="de.uni_paderborn.fujaba.muml.allocation.language.ui.view.EvaluationHandler"
+           name="Evaluate">
+     </command>
+  </extension>
 
 </plugin>
