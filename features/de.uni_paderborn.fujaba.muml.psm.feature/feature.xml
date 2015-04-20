@@ -123,20 +123,6 @@
          unpack="false"/>
 
    <plugin
-         id="de.uni_paderborn.fujaba.muml.psm.codegen"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.uni_paderborn.fujaba.muml.psm.codegen.edit"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="de.uni_paderborn.fujaba.muml.psm.codegen.transformation.ui"
          download-size="0"
          install-size="0"
