@@ -110,12 +110,6 @@
          unpack="false"/>
 
    <plugin
-         id="de.uni_paderborn.fujaba.muml.psm.api.transformation"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"/>
-
-   <plugin
          id="de.uni_paderborn.fujaba.muml.psm.api.transformation.blackbox"
          download-size="0"
          install-size="0"
@@ -128,12 +122,6 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
-   <plugin
-         id="de.uni_paderborn.fujaba.muml.psm.codegentransformation"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"/>
 
    <plugin
          id="de.uni_paderborn.fujaba.muml.psm.edit"
@@ -232,5 +220,11 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+
+   <plugin
+         id="de.uni_paderborn.fujaba.muml.psm.transformation"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
 
 </feature>
