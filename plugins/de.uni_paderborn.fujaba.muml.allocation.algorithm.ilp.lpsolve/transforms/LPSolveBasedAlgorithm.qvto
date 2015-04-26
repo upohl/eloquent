@@ -14,7 +14,7 @@ main() {
 	computeAllocation();
 }
 
-query getSpecification() : allocationSpecification {
+query getAllocationSpecification() : allocationSpecification {
 	return specification;
 }
 

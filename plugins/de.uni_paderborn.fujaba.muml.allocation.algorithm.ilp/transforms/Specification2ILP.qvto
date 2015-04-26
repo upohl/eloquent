@@ -1,3 +1,4 @@
+import InputHelper;
 import Expressions;
 import GeneralConstraint;
 import LocationConstraint;
@@ -42,23 +43,4 @@ main() {
 
 helper ilptype::removeOrphans() {
 	self.removeElement(createOCLContext(ins.getRootCIC(), hwpi.getRootHPIC()));
-}
-
-query instance::getRootCIC() : ComponentInstanceConfiguration {
-	var cicSet : Set(ComponentInstanceConfiguration) := self.rootObjects()[ComponentInstanceConfiguration];
-	assert fatal (cicSet->size() = 1) with log("expected exactly one root cic");
-	return cicSet->any(true);
-}
-
-query hwpinstance::getRootHPIC() : HWPlatformInstanceConfiguration {
-	var hpicSet : Set(HWPlatformInstanceConfiguration) := self.rootObjects()[HWPlatformInstanceConfiguration];
-	log("hpicSet: " + hpicSet->size().toString());
-	assert fatal (hpicSet->size() = 1) with log("expected exactly one root hpic");
-	return hpicSet->any(true);
-}
-
-query allocationSpecification::getSpecification() : SpecificationCS {
-	var specificationSet : Set(SpecificationCS) := self.rootObjects()[SpecificationCS];
-	assert fatal (specificationSet->size() = 1) with log("expected exactly one allocation specification");
-	return specificationSet->any(true);
 }

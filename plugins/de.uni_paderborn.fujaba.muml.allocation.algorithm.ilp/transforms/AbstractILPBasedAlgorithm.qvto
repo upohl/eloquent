@@ -1,3 +1,4 @@
+import InputHelper;
 import Specification2ILP;
 import SolverConstants;
 
@@ -14,7 +15,7 @@ library AbstractILPBasedAlgorithm;
 
 helper computeAllocation() {
 	var ilpOut : ilptype := ilptype.createEmptyModel().oclAsType(ilptype);
-	var ret : Status := new Specification2ILP(getSpecification().oclAsType(allocationSpecification),
+	var ret : Status := new Specification2ILP(getAllocationSpecification().oclAsType(allocationSpecification),
 		getInstance().oclAsType(instance),
 		getHwpi().oclAsType(hwpinstance),
 		ilpOut).transform();
@@ -24,7 +25,7 @@ helper computeAllocation() {
 	createAllocation(ilpModel);
 }
 
-query getSpecification() : OclAny {
+query getAllocationSpecification() : OclAny {
 	assert fatal (false) with log("implement me in a sub transformation");
 	return null;  // never reached
 }
@@ -51,7 +52,7 @@ helper createAllocation(ilpModel : IntegerLinearProgram) : SystemAllocation {
 	var todo : OrderedSet(Variable) := solution->keys()
 		->select(k | solution->get(k) = 1)
 		->sortedBy(name)->asOrderedSet();
-	var systemAllocation : SystemAllocation := object SystemAllocation{};
+	var systemAllocation : SystemAllocation := new SystemAllocation();
 	todo->addAllocation(systemAllocation);
 	return systemAllocation;
 }
@@ -72,6 +73,11 @@ helper Variable::addAllocation(inout systemAllocation : SystemAllocation) {
 		return;
 	} endif;
 	systemAllocation.allocations += new Allocation(seq);
+}
+
+constructor SystemAllocation::SystemAllocation() {
+	cic := getInstance().oclAsType(instance).getRootCIC();
+	hpic := getHwpi().oclAsType(hwpinstance).getRootHPIC();
 }
 
 constructor Allocation::Allocation(seq : Sequence(NamedElement)) {
