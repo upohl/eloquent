@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--muml metamodel version 0.3.2 (r2996)-->
+<!--muml metamodel version 0.3.2 (r14616)-->
 <modelinstance:RootNode
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
@@ -14,18 +14,64 @@
     xmlns:modelinstance="http://www.fujaba.de/modelinstance/0.4.0"
     xmlns:types="http://www.fujaba.de/muml/types/0.4.0"
     xmi:id="_YcQdQPY8EeOqWs4IacUwuQ">
-  <categories xmi:id="_wbmdQewLEeSuJ6Pj2Em3zQ" key="de.uni_paderborn.fujaba.muml.types.category" name="types">
-    <modelElements xsi:type="types:PrimitiveDataType" xmi:id="_wbmdQuwLEeSuJ6Pj2Em3zQ" name="void"/>
-    <modelElements xsi:type="types:PrimitiveDataType" xmi:id="_wbmdQ-wLEeSuJ6Pj2Em3zQ" name="boolean" primitiveType="BOOLEAN"/>
-    <modelElements xsi:type="types:PrimitiveDataType" xmi:id="_wbmdROwLEeSuJ6Pj2Em3zQ" name="int8" primitiveType="INT8"/>
-    <modelElements xsi:type="types:PrimitiveDataType" xmi:id="_wbmdRewLEeSuJ6Pj2Em3zQ" name="int16" primitiveType="INT16"/>
-    <modelElements xsi:type="types:PrimitiveDataType" xmi:id="_wbmdRuwLEeSuJ6Pj2Em3zQ" name="int32" primitiveType="INT32"/>
-    <modelElements xsi:type="types:PrimitiveDataType" xmi:id="_wbmdR-wLEeSuJ6Pj2Em3zQ" name="int64" primitiveType="INT64"/>
-    <modelElements xsi:type="types:PrimitiveDataType" xmi:id="_wbmdSOwLEeSuJ6Pj2Em3zQ" name="double" primitiveType="DOUBLE"/>
-    <modelElements xsi:type="types:PrimitiveDataType" xmi:id="_wbmdSewLEeSuJ6Pj2Em3zQ" name="uint8" primitiveType="UINT8"/>
-    <modelElements xsi:type="types:PrimitiveDataType" xmi:id="_wbmdSuwLEeSuJ6Pj2Em3zQ" name="uint16" primitiveType="UINT16"/>
-    <modelElements xsi:type="types:PrimitiveDataType" xmi:id="_wbmdS-wLEeSuJ6Pj2Em3zQ" name="uint32" primitiveType="UINT32"/>
-    <modelElements xsi:type="types:PrimitiveDataType" xmi:id="_wbmdTOwLEeSuJ6Pj2Em3zQ" name="uint64" primitiveType="UINT64"/>
+  <categories
+      xmi:id="_wbmdQewLEeSuJ6Pj2Em3zQ"
+      key="de.uni_paderborn.fujaba.muml.types.category"
+      name="types">
+    <modelElements
+        xsi:type="types:PrimitiveDataType"
+        xmi:id="_wbmdQuwLEeSuJ6Pj2Em3zQ"
+        name="void"/>
+    <modelElements
+        xsi:type="types:PrimitiveDataType"
+        xmi:id="_wbmdQ-wLEeSuJ6Pj2Em3zQ"
+        name="boolean"
+        primitiveType="BOOLEAN"/>
+    <modelElements
+        xsi:type="types:PrimitiveDataType"
+        xmi:id="_wbmdROwLEeSuJ6Pj2Em3zQ"
+        name="int8"
+        primitiveType="INT8"/>
+    <modelElements
+        xsi:type="types:PrimitiveDataType"
+        xmi:id="_wbmdRewLEeSuJ6Pj2Em3zQ"
+        name="int16"
+        primitiveType="INT16"/>
+    <modelElements
+        xsi:type="types:PrimitiveDataType"
+        xmi:id="_wbmdRuwLEeSuJ6Pj2Em3zQ"
+        name="int32"
+        primitiveType="INT32"/>
+    <modelElements
+        xsi:type="types:PrimitiveDataType"
+        xmi:id="_wbmdR-wLEeSuJ6Pj2Em3zQ"
+        name="int64"
+        primitiveType="INT64"/>
+    <modelElements
+        xsi:type="types:PrimitiveDataType"
+        xmi:id="_wbmdSOwLEeSuJ6Pj2Em3zQ"
+        name="double"
+        primitiveType="DOUBLE"/>
+    <modelElements
+        xsi:type="types:PrimitiveDataType"
+        xmi:id="_wbmdSewLEeSuJ6Pj2Em3zQ"
+        name="uint8"
+        primitiveType="UINT8"/>
+    <modelElements
+        xsi:type="types:PrimitiveDataType"
+        xmi:id="_wbmdSuwLEeSuJ6Pj2Em3zQ"
+        name="uint16"
+        primitiveType="UINT16"/>
+    <modelElements
+        xsi:type="types:PrimitiveDataType"
+        xmi:id="_wbmdS-wLEeSuJ6Pj2Em3zQ"
+        name="uint32"
+        primitiveType="UINT32"/>
+    <modelElements
+        xsi:type="types:PrimitiveDataType"
+        xmi:id="_wbmdTOwLEeSuJ6Pj2Em3zQ"
+        name="uint64"
+        primitiveType="UINT64"/>
   </categories>
   <categories
       xmi:id="_YcXK9_Y8EeOqWs4IacUwuQ"
@@ -154,6 +200,43 @@
             amountNeeded="256"/>
       </componentInstances>
     </modelElements>
+    <modelElements
+        xsi:type="instance:ComponentInstanceConfiguration"
+        xmi:id="_6DwPQO34EeSxqeA7wml_Sw"
+        name="cicStructured">
+      <componentInstances
+          xsi:type="instance:AtomicComponentInstance"
+          xmi:id="_6Dw2UO34EeSxqeA7wml_Sw"
+          name="c1"
+          componentType="_bj1K0PY_EeOj7bbnOoJljg"/>
+      <componentInstances
+          xsi:type="instance:AtomicComponentInstance"
+          xmi:id="_6Dw2Ue34EeSxqeA7wml_Sw"
+          name="c2"
+          componentType="_bj1K0PY_EeOj7bbnOoJljg"/>
+      <componentInstances
+          xsi:type="instance:StructuredComponentInstance"
+          xmi:id="_6Dw2Uu34EeSxqeA7wml_Sw"
+          name="sc1"
+          componentType="_ovh6sPpeEeOEq7hr2BhR2w">
+        <embeddedCIC
+            xmi:id="_6Dw2U-34EeSxqeA7wml_Sw"
+            name="foo">
+          <componentInstances
+              xsi:type="instance:AtomicComponentInstance"
+              xmi:id="_6Dw2VO34EeSxqeA7wml_Sw"
+              name="c1"
+              componentType="_bj1K0PY_EeOj7bbnOoJljg"
+              componentPart="_9xaZEPpeEeOEq7hr2BhR2w"/>
+          <componentInstances
+              xsi:type="instance:AtomicComponentInstance"
+              xmi:id="_7oweMO34EeSxqeA7wml_Sw"
+              name="c2"
+              componentType="_bj1K0PY_EeOj7bbnOoJljg"
+              componentPart="_9xaZEPpeEeOEq7hr2BhR2w"/>
+        </embeddedCIC>
+      </componentInstances>
+    </modelElements>
   </categories>
   <categories
       xmi:id="_YcXK-PY8EeOqWs4IacUwuQ"
@@ -170,7 +253,16 @@
       <embeddedComponentParts
           xmi:id="_9xaZEPpeEeOEq7hr2BhR2w"
           name="part"
-          componentType="_bj1K0PY_EeOj7bbnOoJljg"/>
+          componentType="_bj1K0PY_EeOj7bbnOoJljg">
+        <cardinality
+            xmi:id="_-OMPYO34EeSxqeA7wml_Sw">
+          <lowerBound
+              xmi:id="__JeL4O34EeSxqeA7wml_Sw"/>
+          <upperBound
+              xmi:id="_AKBC4O35EeSxqeA7wml_Sw"
+              value="2"/>
+        </cardinality>
+      </embeddedComponentParts>
     </modelElements>
     <modelElements
         xsi:type="component:StaticStructuredComponent"
@@ -179,7 +271,16 @@
       <embeddedComponentParts
           xmi:id="_O1UmAfpfEeOEq7hr2BhR2w"
           name="part"
-          componentType="_ovh6sPpeEeOEq7hr2BhR2w"/>
+          componentType="_ovh6sPpeEeOEq7hr2BhR2w">
+        <cardinality
+            xmi:id="_DyiowO35EeSxqeA7wml_Sw">
+          <lowerBound
+              xmi:id="_Dyiowe35EeSxqeA7wml_Sw"/>
+          <upperBound
+              xmi:id="_Dyiowu35EeSxqeA7wml_Sw"
+              value="2"/>
+        </cardinality>
+      </embeddedComponentParts>
     </modelElements>
   </categories>
   <categories
