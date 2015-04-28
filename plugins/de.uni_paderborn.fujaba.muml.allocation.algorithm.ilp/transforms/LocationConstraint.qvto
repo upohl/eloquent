@@ -42,9 +42,15 @@ helper LocationConstraintCS::createLocationConstraint(inout ilp : IntegerLinearP
 
 helper NamedElement::createLocationConstraintConstraintExpression(sequences : Sequence(Sequence(NamedElement)),
 	locationConstraint : LocationConstraintCS) : ConstraintExpression {
+	var mySequences : Sequence(Sequence(NamedElement)) := self.getSequences(sequences)->asSequence();
 	var comment : String := if locationConstraint.name <> '' then locationConstraint.name else locationConstraint.repr() endif;
-	var lit : String := if locationConstraint.type = LocationConstraintTypes::SAME_LOCATION then '1' else '0' endif;
-	return self.getSequences(sequences)->asSequence()->createAdditionConstraintExpression(lit, comment);
+	var lit : String := if locationConstraint.type = LocationConstraintTypes::SAME_LOCATION then
+			mySequences->collect(seq : Sequence(NamedElement) | seq->at(3))
+				->asSet()->size().toString()
+		else
+			'0'
+		endif;
+	return mySequences->createAdditionConstraintExpression(lit, comment);
 }
 
 // returns "my" sequences
