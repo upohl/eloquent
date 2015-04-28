@@ -76,10 +76,16 @@ public class QVToTransformationRunner {
 	}
 	
 	public ExecutionDiagnostic runTransformation(@Nullable IProgressMonitor progressMonitor) {
+		long startTime = System.currentTimeMillis();
 		TransformationExecutor executor = new TransformationExecutor(
 				transformationURI);
 		ExecutionContext context = createExecutionContext(progressMonitor);
-		return executor.execute(context, createModelExtents());
+		ExecutionDiagnostic execDiag = executor.execute(context, createModelExtents());
+		long endTime = System.currentTimeMillis();
+        double runtime =  (double)(endTime-startTime)/1000;
+		System.out.println("Runtime: " + runtime + " seconds");
+
+		return execDiag;
 	}
 	
 	public ExecutionDiagnostic runTransformation() {

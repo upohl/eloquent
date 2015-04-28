@@ -27,6 +27,7 @@ public class LPSolve {
 	}
 	
 	private static int run(String ilpString, Dictionary<String, Integer> solution) {
+		long startTime1 = System.currentTimeMillis();
 		ProcessBuilder pb = new ProcessBuilder(CMD);
 		int ret = -1;
 		try {
@@ -38,7 +39,12 @@ public class LPSolve {
 			process.getOutputStream().close();
 			parseOutput(process.getInputStream(), solution);
 			ret = process.waitFor();
+			
+
 			System.out.println("lp_solve: " + ret);
+			long endTime1 = System.currentTimeMillis();
+            
+			System.out.println("Runtime solving: " + (endTime1-startTime1) + " milli seconds");
 		} catch (IOException e) {
 			throw new IllegalStateException(e);
 		} catch (InterruptedException e) {
