@@ -1,5 +1,6 @@
 package de.uni_paderborn.fujaba.muml.allocation.algorithm.ocl;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,6 +42,12 @@ public class TupleAccessor {
 		System.out.println("accessed: " + unboxedValue);
 		// this is type safe as long as the locationConstraintCS is valid
 		//return (NamedElement) unboxedValue;
+		if (unboxedValue instanceof BigDecimal) {
+			// XXX: qvto cannot convert a java.math.BigDecimal to "Real"
+			// thus, we have to convert it to a double (maybe its somehow
+			// possible to handle this conversion in the qvto transformation itself?)
+			return ((BigDecimal) unboxedValue).doubleValue();
+		}
 		return unboxedValue;
 	}	
 	
