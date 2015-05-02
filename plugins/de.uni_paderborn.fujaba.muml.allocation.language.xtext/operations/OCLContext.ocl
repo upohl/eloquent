@@ -67,9 +67,13 @@
 			c2 : instance::ComponentInstance,
 			e2 : hwresourceinstance::ResourceInstance
 		)) =
+			let allHWInstances : Set(hwresourceinstance::ResourceInstance)
+			=
+			self.getAllHWInstances()->select(oclIsKindOf(hwresourceinstance::StructuredResourceInstance))
+			in 
 			self.componentInstanceConfiguration.getCommunicatingComponents()->collect(s |
 				self.allocateComponentsToConnectedECUs(s->at(1), s->at(2), 
-					self.getAllHWInstances()->select(oclIsKindOf(hwresourceinstance::StructuredResourceInstance))
+					allHWInstances
 				)
 			)->asSet()
 	
@@ -85,24 +89,12 @@
 				e1.getConnectedECUs()->union(Set{e1})
 					->select(e | allowedECUs->includes(e))
 					->collect(e2 |
-						Tuple{c1 = c1, e1 = e1, c2 = c2, e2 = e2}						
+						Set{
+							Tuple{c1 = c1, e1 = e1, c2 = c2, e2 = e2},
+							Tuple{c1 = c1, e1 = e2, c2 = c2, e2 = e1}
+						}
 					)
-			) -- remove redundant tuples
-			->iterate(it : Tuple(c1 : instance::ComponentInstance,
-								  e1 : hwresourceinstance::ResourceInstance,
-								  c2 : instance::ComponentInstance,
-								  e2 : hwresourceinstance::ResourceInstance);
-					   acc : Set(Tuple(c1 : instance::ComponentInstance,
-									   e1 : hwresourceinstance::ResourceInstance,
-									   c2 : instance::ComponentInstance,
-									   e2 : hwresourceinstance::ResourceInstance)
-					   ) = Set{} |
-				if acc->collectNested(Set{e1, e2})->includes(Set{it.e1, it.e2}) then
-					acc
-				else
-					acc->including(it)
-				endif
-			)
+			)->asSet()
 			
 	context hwplatforminstance::HWPlatformInstanceConfiguration
 		def: getAllEmbeddedPlatformInstances() : Set(hwplatforminstance::HWPlatformInstance) =
