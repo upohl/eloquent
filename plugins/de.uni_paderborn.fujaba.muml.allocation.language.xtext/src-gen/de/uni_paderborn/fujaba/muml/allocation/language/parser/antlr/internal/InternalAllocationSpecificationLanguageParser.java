@@ -25,68 +25,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_UNQUOTED_STRING", "RULE_SIMPLE_ID", "RULE_ESCAPED_ID", "RULE_INT", "RULE_SINGLE_QUOTED_STRING", "RULE_ESCAPED_CHARACTER", "RULE_LETTER_CHARACTER", "RULE_DOUBLE_QUOTED_STRING", "RULE_ML_SINGLE_QUOTED_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'{'", "'}'", "'service'", "'qos'", "'value'", "';'", "'descriptors'", "','", "'ocl'", "'constraint'", "'resource'", "'lhs'", "'rhs'", "'requiredHardwareResourceInstance'", "'('", "')'", "'measure'", "'+'", "'^'", "'^^'", "'derive'", "'import'", "'include'", "'init'", "'library'", "'Boolean'", "'Integer'", "'Real'", "'String'", "'UnlimitedNatural'", "'OclAny'", "'OclInvalid'", "'OclMessage'", "'OclState'", "'OclVoid'", "'context'", "'inv'", "':'", "'static'", "'def'", "'='", "'::'", "'*'", "'pre'", "'post'", "'body'", "'package'", "'endpackage'", "'?'", "'-'", "'not'", "'/'", "'>'", "'<'", "'>='", "'<='", "'<>'", "'and'", "'or'", "'xor'", "'implies'", "'.'", "'->'", "'Tuple'", "'Set'", "'Bag'", "'Sequence'", "'Collection'", "'OrderedSet'", "'..'", "'['", "']'", "'true'", "'false'", "'invalid'", "'null'", "'@'", "'|'", "'if'", "'then'", "'else'", "'endif'", "'let'", "'in'", "'self'", "'sameLocation'", "'differentLocation'", "'min'", "'max'"
     };
-    public static final int T__29=29;
-    public static final int T__28=28;
-    public static final int T__27=27;
-    public static final int T__26=26;
-    public static final int RULE_ESCAPED_CHARACTER=9;
-    public static final int T__25=25;
-    public static final int T__24=24;
-    public static final int T__23=23;
-    public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=16;
-    public static final int T__21=21;
-    public static final int T__20=20;
-    public static final int RULE_ESCAPED_ID=6;
-    public static final int RULE_DOUBLE_QUOTED_STRING=11;
-    public static final int EOF=-1;
-    public static final int T__93=93;
-    public static final int T__19=19;
-    public static final int T__94=94;
-    public static final int T__91=91;
-    public static final int T__92=92;
-    public static final int T__90=90;
-    public static final int T__18=18;
-    public static final int T__17=17;
-    public static final int RULE_SIMPLE_ID=5;
-    public static final int T__99=99;
-    public static final int T__98=98;
-    public static final int T__97=97;
-    public static final int T__96=96;
-    public static final int T__95=95;
-    public static final int T__80=80;
-    public static final int T__81=81;
-    public static final int T__82=82;
-    public static final int T__83=83;
-    public static final int RULE_SINGLE_QUOTED_STRING=8;
-    public static final int T__85=85;
-    public static final int T__84=84;
-    public static final int T__87=87;
-    public static final int T__86=86;
-    public static final int T__89=89;
-    public static final int T__88=88;
-    public static final int RULE_ML_COMMENT=13;
-    public static final int RULE_LETTER_CHARACTER=10;
-    public static final int T__71=71;
-    public static final int T__72=72;
-    public static final int T__70=70;
-    public static final int T__76=76;
-    public static final int T__75=75;
-    public static final int T__74=74;
-    public static final int T__73=73;
-    public static final int T__79=79;
-    public static final int T__78=78;
-    public static final int T__77=77;
-    public static final int T__68=68;
-    public static final int T__69=69;
-    public static final int T__66=66;
-    public static final int T__67=67;
-    public static final int T__64=64;
-    public static final int T__65=65;
-    public static final int T__62=62;
-    public static final int T__63=63;
-    public static final int T__61=61;
-    public static final int T__60=60;
+    public static final int T__50=50;
+    public static final int T__59=59;
     public static final int T__55=55;
     public static final int T__56=56;
     public static final int T__57=57;
@@ -95,39 +35,99 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     public static final int T__52=52;
     public static final int T__53=53;
     public static final int T__54=54;
-    public static final int T__59=59;
-    public static final int T__103=103;
-    public static final int RULE_UNQUOTED_STRING=4;
-    public static final int T__104=104;
-    public static final int T__105=105;
+    public static final int T__60=60;
+    public static final int T__61=61;
     public static final int RULE_INT=7;
-    public static final int T__50=50;
-    public static final int T__42=42;
-    public static final int T__43=43;
-    public static final int T__40=40;
-    public static final int RULE_ML_SINGLE_QUOTED_STRING=12;
-    public static final int T__41=41;
-    public static final int T__46=46;
-    public static final int T__47=47;
-    public static final int T__44=44;
-    public static final int T__45=45;
-    public static final int T__48=48;
-    public static final int T__49=49;
-    public static final int T__102=102;
-    public static final int T__101=101;
-    public static final int T__100=100;
-    public static final int RULE_SL_COMMENT=14;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
+    public static final int T__66=66;
+    public static final int RULE_ML_COMMENT=13;
+    public static final int T__67=67;
+    public static final int T__68=68;
+    public static final int T__69=69;
+    public static final int T__62=62;
+    public static final int T__63=63;
+    public static final int T__64=64;
+    public static final int T__65=65;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
     public static final int T__33=33;
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int T__37=37;
-    public static final int T__38=38;
-    public static final int T__39=39;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
+    public static final int RULE_SINGLE_QUOTED_STRING=8;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int RULE_DOUBLE_QUOTED_STRING=11;
+    public static final int T__44=44;
+    public static final int T__45=45;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int RULE_ESCAPED_ID=6;
+    public static final int T__40=40;
+    public static final int T__41=41;
+    public static final int T__42=42;
+    public static final int T__43=43;
+    public static final int T__91=91;
+    public static final int T__100=100;
+    public static final int T__92=92;
+    public static final int T__93=93;
+    public static final int T__102=102;
+    public static final int T__94=94;
+    public static final int T__101=101;
+    public static final int T__90=90;
+    public static final int RULE_LETTER_CHARACTER=10;
+    public static final int T__19=19;
+    public static final int T__17=17;
+    public static final int T__18=18;
+    public static final int T__99=99;
+    public static final int RULE_ESCAPED_CHARACTER=9;
+    public static final int T__95=95;
+    public static final int RULE_ML_SINGLE_QUOTED_STRING=12;
+    public static final int T__96=96;
+    public static final int T__97=97;
+    public static final int T__98=98;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int T__29=29;
+    public static final int T__22=22;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
+    public static final int T__70=70;
+    public static final int T__71=71;
+    public static final int T__72=72;
+    public static final int RULE_UNQUOTED_STRING=4;
+    public static final int RULE_SL_COMMENT=14;
+    public static final int T__77=77;
+    public static final int T__78=78;
+    public static final int T__79=79;
+    public static final int T__73=73;
+    public static final int EOF=-1;
+    public static final int T__74=74;
+    public static final int T__75=75;
+    public static final int T__76=76;
+    public static final int T__80=80;
+    public static final int T__81=81;
+    public static final int T__82=82;
+    public static final int RULE_SIMPLE_ID=5;
+    public static final int T__83=83;
     public static final int RULE_WS=15;
+    public static final int RULE_ANY_OTHER=16;
+    public static final int T__88=88;
+    public static final int T__89=89;
+    public static final int T__84=84;
+    public static final int T__104=104;
+    public static final int T__85=85;
+    public static final int T__103=103;
+    public static final int T__86=86;
+    public static final int T__87=87;
+    public static final int T__105=105;
 
     // delegates
     // delegators
@@ -19407,11 +19407,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         state.failed=false;
         return success;
     }
-    public final boolean synpred131_InternalAllocationSpecificationLanguage() {
+    public final boolean synpred132_InternalAllocationSpecificationLanguage() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred131_InternalAllocationSpecificationLanguage_fragment(); // can never throw exception
+            synpred132_InternalAllocationSpecificationLanguage_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -19421,11 +19421,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         state.failed=false;
         return success;
     }
-    public final boolean synpred132_InternalAllocationSpecificationLanguage() {
+    public final boolean synpred131_InternalAllocationSpecificationLanguage() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred132_InternalAllocationSpecificationLanguage_fragment(); // can never throw exception
+            synpred131_InternalAllocationSpecificationLanguage_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -19468,18 +19468,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     static final String DFA16_maxS =
         "\1\51\7\72\2\uffff";
     static final String DFA16_acceptS =
-        "\10\uffff\1\2\1\1";
+        "\10\uffff\1\1\1\2";
     static final String DFA16_specialS =
         "\12\uffff}>";
     static final String[] DFA16_transitionS = {
             "\1\1\1\2\36\uffff\1\3\1\4\1\5\1\6\1\7",
-            "\2\11\36\uffff\5\11\13\uffff\1\10\1\uffff\2\10\1\uffff\1\10",
-            "\2\11\36\uffff\5\11\13\uffff\1\10\1\uffff\2\10\1\uffff\1\10",
-            "\2\11\36\uffff\5\11\13\uffff\1\10\1\uffff\2\10\1\uffff\1\10",
-            "\2\11\36\uffff\5\11\13\uffff\1\10\1\uffff\2\10\1\uffff\1\10",
-            "\2\11\36\uffff\5\11\13\uffff\1\10\1\uffff\2\10\1\uffff\1\10",
-            "\2\11\36\uffff\5\11\13\uffff\1\10\1\uffff\2\10\1\uffff\1\10",
-            "\2\11\36\uffff\5\11\13\uffff\1\10\1\uffff\2\10\1\uffff\1\10",
+            "\2\10\36\uffff\5\10\13\uffff\1\11\1\uffff\2\11\1\uffff\1\11",
+            "\2\10\36\uffff\5\10\13\uffff\1\11\1\uffff\2\11\1\uffff\1\11",
+            "\2\10\36\uffff\5\10\13\uffff\1\11\1\uffff\2\11\1\uffff\1\11",
+            "\2\10\36\uffff\5\10\13\uffff\1\11\1\uffff\2\11\1\uffff\1\11",
+            "\2\10\36\uffff\5\10\13\uffff\1\11\1\uffff\2\11\1\uffff\1\11",
+            "\2\10\36\uffff\5\10\13\uffff\1\11\1\uffff\2\11\1\uffff\1\11",
+            "\2\10\36\uffff\5\10\13\uffff\1\11\1\uffff\2\11\1\uffff\1\11",
             "",
             ""
     };
@@ -19526,55 +19526,46 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     static final String DFA20_maxS =
         "\1\64\1\51\7\72\1\125\3\uffff\27\72";
     static final String DFA20_acceptS =
-        "\12\uffff\1\1\1\2\1\3\27\uffff";
+        "\12\uffff\1\3\1\1\1\2\27\uffff";
     static final String DFA20_specialS =
         "\44\uffff}>";
     static final String[] DFA20_transitionS = {
             "\1\1",
             "\1\2\1\3\36\uffff\1\4\1\5\1\6\1\7\1\10",
-            "\2\13\30\uffff\1\14\5\uffff\5\13\13\uffff\1\13\1\12\2\13\1"+
-            "\uffff\1\11",
-            "\2\13\30\uffff\1\14\5\uffff\5\13\13\uffff\1\13\1\12\2\13\1"+
-            "\uffff\1\11",
-            "\2\13\30\uffff\1\14\5\uffff\5\13\13\uffff\1\13\1\12\2\13\1"+
-            "\uffff\1\11",
-            "\2\13\30\uffff\1\14\5\uffff\5\13\13\uffff\1\13\1\12\2\13\1"+
-            "\uffff\1\11",
-            "\2\13\30\uffff\1\14\5\uffff\5\13\13\uffff\1\13\1\12\2\13\1"+
-            "\uffff\1\11",
-            "\2\13\30\uffff\1\14\5\uffff\5\13\13\uffff\1\13\1\12\2\13\1"+
-            "\uffff\1\11",
-            "\2\13\30\uffff\1\14\5\uffff\5\13\13\uffff\1\13\1\12\2\13\1"+
-            "\uffff\1\11",
-            "\1\15\1\16\36\uffff\1\17\1\20\1\21\1\22\1\23\1\31\1\32\1\33"+
-            "\1\34\1\35\1\36\1\37\1\40\1\41\1\42\34\uffff\1\43\1\24\1\25"+
-            "\1\26\1\27\1\30",
+            "\2\14\30\uffff\1\12\5\uffff\5\14\13\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\2\14\30\uffff\1\12\5\uffff\5\14\13\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\2\14\30\uffff\1\12\5\uffff\5\14\13\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\2\14\30\uffff\1\12\5\uffff\5\14\13\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\2\14\30\uffff\1\12\5\uffff\5\14\13\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\2\14\30\uffff\1\12\5\uffff\5\14\13\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\2\14\30\uffff\1\12\5\uffff\5\14\13\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\15\1\16\36\uffff\1\17\1\20\1\21\1\22\1\23\1\31\1\32\1\33\1\34\1\35\1\36\1\37\1\40\1\41\1\42\34\uffff\1\43\1\24\1\25\1\26\1\27\1\30",
             "",
             "",
             "",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11",
-            "\1\14\25\uffff\1\13\1\12\2\13\1\uffff\1\11"
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11",
+            "\1\12\25\uffff\1\14\1\13\2\14\1\uffff\1\11"
     };
 
     static final short[] DFA20_eot = DFA.unpackEncodedString(DFA20_eotS);
@@ -19619,7 +19610,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     static final String DFA21_maxS =
         "\2\70\10\66\1\51\7\66\2\uffff";
     static final String DFA21_acceptS =
-        "\22\uffff\1\1\1\2";
+        "\22\uffff\1\2\1\1";
     static final String DFA21_specialS =
         "\24\uffff}>";
     static final String[] DFA21_transitionS = {
@@ -19634,13 +19625,13 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             "\1\12",
             "\1\12",
             "\1\13\1\14\36\uffff\1\15\1\16\1\17\1\20\1\21",
-            "\1\22\26\uffff\1\23",
-            "\1\22\26\uffff\1\23",
-            "\1\22\26\uffff\1\23",
-            "\1\22\26\uffff\1\23",
-            "\1\22\26\uffff\1\23",
-            "\1\22\26\uffff\1\23",
-            "\1\22\26\uffff\1\23",
+            "\1\23\26\uffff\1\22",
+            "\1\23\26\uffff\1\22",
+            "\1\23\26\uffff\1\22",
+            "\1\23\26\uffff\1\22",
+            "\1\23\26\uffff\1\22",
+            "\1\23\26\uffff\1\22",
+            "\1\23\26\uffff\1\22",
             "",
             ""
     };
@@ -19749,8 +19740,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     static final String DFA38_specialS =
         "\3\uffff\1\0\2\uffff\1\1\24\uffff}>";
     static final String[] DFA38_transitionS = {
-            "\2\1\36\uffff\1\3\2\1\1\6\13\1\1\30\13\uffff\1\30\17\uffff\6"+
-            "\1",
+            "\2\1\36\uffff\1\3\2\1\1\6\13\1\1\30\13\uffff\1\30\17\uffff\6\1",
             "",
             "",
             "\1\uffff",
@@ -19866,14 +19856,9 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     static final String DFA77_specialS =
         "\6\uffff}>";
     static final String[] DFA77_transitionS = {
-            "\4\3\26\uffff\1\3\5\uffff\17\3\7\uffff\1\3\6\uffff\1\1\1\2\14"+
-            "\uffff\6\3\3\uffff\4\3\2\uffff\1\3\3\uffff\1\4\1\uffff\1\3",
-            "\4\3\26\uffff\1\3\5\uffff\17\3\7\uffff\1\3\6\uffff\1\1\1\2"+
-            "\14\uffff\6\3\3\uffff\4\3\2\uffff\1\3\3\uffff\1\5\1\uffff\1"+
-            "\3",
-            "\4\3\26\uffff\1\3\5\uffff\17\3\7\uffff\1\3\6\uffff\1\1\1\2"+
-            "\14\uffff\6\3\3\uffff\4\3\2\uffff\1\3\3\uffff\1\5\1\uffff\1"+
-            "\3",
+            "\4\3\26\uffff\1\3\5\uffff\17\3\7\uffff\1\3\6\uffff\1\1\1\2\14\uffff\6\3\3\uffff\4\3\2\uffff\1\3\3\uffff\1\4\1\uffff\1\3",
+            "\4\3\26\uffff\1\3\5\uffff\17\3\7\uffff\1\3\6\uffff\1\1\1\2\14\uffff\6\3\3\uffff\4\3\2\uffff\1\3\3\uffff\1\5\1\uffff\1\3",
+            "\4\3\26\uffff\1\3\5\uffff\17\3\7\uffff\1\3\6\uffff\1\1\1\2\14\uffff\6\3\3\uffff\4\3\2\uffff\1\3\3\uffff\1\5\1\uffff\1\3",
             "",
             "",
             ""
@@ -19925,65 +19910,25 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     static final String DFA72_specialS =
         "\25\uffff}>";
     static final String[] DFA72_transitionS = {
-            "\2\23\2\uffff\1\23\1\uffff\1\23\1\uffff\1\23\5\uffff\1\23\1"+
-            "\uffff\1\3\1\21\1\22\4\23\13\uffff\5\23\1\11\1\uffff\1\1\3\23"+
-            "\1\uffff\1\23\1\uffff\1\4\1\uffff\1\2\1\5\1\6\1\7\1\10\1\12"+
-            "\1\13\1\14\1\15\1\16\1\17\1\20\6\uffff\1\23\1\uffff\1\23\5\uffff"+
-            "\1\23\1\uffff\3\23\1\uffff\1\23\3\uffff\2\23",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
-            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24"+
-            "\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff"+
-            "\1\24",
+            "\2\23\2\uffff\1\23\1\uffff\1\23\1\uffff\1\23\5\uffff\1\23\1\uffff\1\3\1\21\1\22\4\23\13\uffff\5\23\1\11\1\uffff\1\1\3\23\1\uffff\1\23\1\uffff\1\4\1\uffff\1\2\1\5\1\6\1\7\1\10\1\12\1\13\1\14\1\15\1\16\1\17\1\20\6\uffff\1\23\1\uffff\1\23\5\uffff\1\23\1\uffff\3\23\1\uffff\1\23\3\uffff\2\23",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
+            "\4\24\26\uffff\1\24\5\uffff\17\24\7\uffff\1\24\6\uffff\2\24\14\uffff\6\24\3\uffff\4\24\2\uffff\1\24\3\uffff\1\23\1\uffff\1\24",
             "",
             ""
     };
@@ -20030,14 +19975,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     static final String DFA96_maxS =
         "\1\145\12\uffff\6\0\23\uffff";
     static final String DFA96_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\4\14\uffff\1\7\11\uffff\1\10\6\uffff\1\5"+
-        "\1\6";
+        "\1\uffff\1\1\1\2\1\3\1\4\14\uffff\1\7\11\uffff\1\10\6\uffff\1\5\1\6";
     static final String DFA96_specialS =
         "\13\uffff\1\0\1\1\1\2\1\3\1\4\1\5\23\uffff}>";
     static final String[] DFA96_transitionS = {
-            "\2\33\2\4\26\uffff\1\1\5\uffff\5\33\12\21\7\uffff\1\4\24\uffff"+
-            "\1\13\1\14\1\15\1\16\1\17\1\20\3\uffff\4\4\2\uffff\1\2\5\uffff"+
-            "\1\3",
+            "\2\33\2\4\26\uffff\1\1\5\uffff\5\33\12\21\7\uffff\1\4\24\uffff\1\13\1\14\1\15\1\16\1\17\1\20\3\uffff\4\4\2\uffff\1\2\5\uffff\1\3",
             "",
             "",
             "",

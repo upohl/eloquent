@@ -764,29 +764,42 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		public Keyword getMAXMaxKeyword_1_0() { return cMAXMaxKeyword_1_0; }
 	}
 	
-	private SpecificationElements pSpecification;
-	private ServiceElements pService;
-	private QosDimensionElements pQosDimension;
-	private ConstraintElements pConstraint;
-	private LocationConstraintElements pLocationConstraint;
-	private ResourceConstraintElements pResourceConstraint;
-	private RequiredHardwareResourceInstanceConstraintElements pRequiredHardwareResourceInstanceConstraint;
-	private LocationConstraintTypeElements unknownRuleLocationConstraintType;
-	private LocationTupleDescriptorElements pLocationTupleDescriptor;
-	private ValueTupleDescriptorElements pValueTupleDescriptor;
-	private ComponentResourceTupleDescriptorElements pComponentResourceTupleDescriptor;
-	private MeasureFunctionElements pMeasureFunction;
-	private GoalElements unknownRuleGoal;
+	private final SpecificationElements pSpecification;
+	private final ServiceElements pService;
+	private final QosDimensionElements pQosDimension;
+	private final ConstraintElements pConstraint;
+	private final LocationConstraintElements pLocationConstraint;
+	private final ResourceConstraintElements pResourceConstraint;
+	private final RequiredHardwareResourceInstanceConstraintElements pRequiredHardwareResourceInstanceConstraint;
+	private final LocationConstraintTypeElements unknownRuleLocationConstraintType;
+	private final LocationTupleDescriptorElements pLocationTupleDescriptor;
+	private final ValueTupleDescriptorElements pValueTupleDescriptor;
+	private final ComponentResourceTupleDescriptorElements pComponentResourceTupleDescriptor;
+	private final MeasureFunctionElements pMeasureFunction;
+	private final GoalElements unknownRuleGoal;
 	
 	private final Grammar grammar;
 
-	private CompleteOCLGrammarAccess gaCompleteOCL;
+	private final CompleteOCLGrammarAccess gaCompleteOCL;
 
 	@Inject
 	public AllocationSpecificationLanguageGrammarAccess(GrammarProvider grammarProvider,
 		CompleteOCLGrammarAccess gaCompleteOCL) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaCompleteOCL = gaCompleteOCL;
+		this.pSpecification = new SpecificationElements();
+		this.pService = new ServiceElements();
+		this.pQosDimension = new QosDimensionElements();
+		this.pConstraint = new ConstraintElements();
+		this.pLocationConstraint = new LocationConstraintElements();
+		this.pResourceConstraint = new ResourceConstraintElements();
+		this.pRequiredHardwareResourceInstanceConstraint = new RequiredHardwareResourceInstanceConstraintElements();
+		this.unknownRuleLocationConstraintType = new LocationConstraintTypeElements();
+		this.pLocationTupleDescriptor = new LocationTupleDescriptorElements();
+		this.pValueTupleDescriptor = new ValueTupleDescriptorElements();
+		this.pComponentResourceTupleDescriptor = new ComponentResourceTupleDescriptorElements();
+		this.pMeasureFunction = new MeasureFunctionElements();
+		this.unknownRuleGoal = new GoalElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -821,7 +834,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//	{cs::SpecificationCS} name=ID "{" (ownedImport+=ImportCS | ownedInclude+=IncludeCS | contexts+=ClassifierContextDeclCS
 	//	| services+=Service | constraints+=Constraint)* (goal=Goal measure=MeasureFunction)? "}";
 	public SpecificationElements getSpecificationAccess() {
-		return (pSpecification != null) ? pSpecification : (pSpecification = new SpecificationElements());
+		return pSpecification;
 	}
 	
 	public ParserRule getSpecificationRule() {
@@ -831,7 +844,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//Service returns cs::ServiceCS:
 	//	"service" name=ID "{" dimensions+=QosDimension* "}";
 	public ServiceElements getServiceAccess() {
-		return (pService != null) ? pService : (pService = new ServiceElements());
+		return pService;
 	}
 	
 	public ParserRule getServiceRule() {
@@ -843,7 +856,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//	tupleDescriptors+=ComponentResourceTupleDescriptor ("," tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl"
 	//	expression=Model ";" "}";
 	public QosDimensionElements getQosDimensionAccess() {
-		return (pQosDimension != null) ? pQosDimension : (pQosDimension = new QosDimensionElements());
+		return pQosDimension;
 	}
 	
 	public ParserRule getQosDimensionRule() {
@@ -853,7 +866,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//Constraint returns cs::ConstraintCS:
 	//	"constraint" (LocationConstraint | ResourceConstraint | RequiredHardwareResourceInstanceConstraint);
 	public ConstraintElements getConstraintAccess() {
-		return (pConstraint != null) ? pConstraint : (pConstraint = new ConstraintElements());
+		return pConstraint;
 	}
 	
 	public ParserRule getConstraintRule() {
@@ -864,7 +877,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//	type=LocationConstraintType name=ID? "{" "descriptors" tupleDescriptor=LocationTupleDescriptor ";" "ocl"
 	//	expression=Model ";" "}";
 	public LocationConstraintElements getLocationConstraintAccess() {
-		return (pLocationConstraint != null) ? pLocationConstraint : (pLocationConstraint = new LocationConstraintElements());
+		return pLocationConstraint;
 	}
 	
 	public ParserRule getLocationConstraintRule() {
@@ -876,7 +889,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//	tupleDescriptors+=ComponentResourceTupleDescriptor ("," tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl"
 	//	expression=Model ";" "}";
 	public ResourceConstraintElements getResourceConstraintAccess() {
-		return (pResourceConstraint != null) ? pResourceConstraint : (pResourceConstraint = new ResourceConstraintElements());
+		return pResourceConstraint;
 	}
 	
 	public ParserRule getResourceConstraintRule() {
@@ -887,7 +900,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//	"requiredHardwareResourceInstance" name=ID? "{" "descriptors" tupleDescriptors+=ComponentResourceTupleDescriptor (","
 	//	tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl" expression=Model ";" "}";
 	public RequiredHardwareResourceInstanceConstraintElements getRequiredHardwareResourceInstanceConstraintAccess() {
-		return (pRequiredHardwareResourceInstanceConstraint != null) ? pRequiredHardwareResourceInstanceConstraint : (pRequiredHardwareResourceInstanceConstraint = new RequiredHardwareResourceInstanceConstraintElements());
+		return pRequiredHardwareResourceInstanceConstraint;
 	}
 	
 	public ParserRule getRequiredHardwareResourceInstanceConstraintRule() {
@@ -897,7 +910,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//enum LocationConstraintType returns cs::LocationConstraintTypes:
 	//	SAME_LOCATION="sameLocation" | DIFFERENT_LOCATION="differentLocation";
 	public LocationConstraintTypeElements getLocationConstraintTypeAccess() {
-		return (unknownRuleLocationConstraintType != null) ? unknownRuleLocationConstraintType : (unknownRuleLocationConstraintType = new LocationConstraintTypeElements());
+		return unknownRuleLocationConstraintType;
 	}
 	
 	public EnumRule getLocationConstraintTypeRule() {
@@ -907,7 +920,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//LocationTupleDescriptor returns cs::LocationTupleDescriptorCS:
 	//	"(" instance=ID "," secondInstance=ID ")";
 	public LocationTupleDescriptorElements getLocationTupleDescriptorAccess() {
-		return (pLocationTupleDescriptor != null) ? pLocationTupleDescriptor : (pLocationTupleDescriptor = new LocationTupleDescriptorElements());
+		return pLocationTupleDescriptor;
 	}
 	
 	public ParserRule getLocationTupleDescriptorRule() {
@@ -917,7 +930,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//ValueTupleDescriptor returns cs::ValueTupleDescriptorCS:
 	//	value=ID;
 	public ValueTupleDescriptorElements getValueTupleDescriptorAccess() {
-		return (pValueTupleDescriptor != null) ? pValueTupleDescriptor : (pValueTupleDescriptor = new ValueTupleDescriptorElements());
+		return pValueTupleDescriptor;
 	}
 	
 	public ParserRule getValueTupleDescriptorRule() {
@@ -927,7 +940,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//ComponentResourceTupleDescriptor returns cs::ComponentResourceTupleDescriptorCS:
 	//	"(" instance=ID "," hwresinstance=ID ")";
 	public ComponentResourceTupleDescriptorElements getComponentResourceTupleDescriptorAccess() {
-		return (pComponentResourceTupleDescriptor != null) ? pComponentResourceTupleDescriptor : (pComponentResourceTupleDescriptor = new ComponentResourceTupleDescriptorElements());
+		return pComponentResourceTupleDescriptor;
 	}
 	
 	public ParserRule getComponentResourceTupleDescriptorRule() {
@@ -937,7 +950,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//MeasureFunction returns cs::MeasureFunctionCS:
 	//	"measure" services+=[cs::ServiceCS] ("+" services+=[cs::ServiceCS])* ";";
 	public MeasureFunctionElements getMeasureFunctionAccess() {
-		return (pMeasureFunction != null) ? pMeasureFunction : (pMeasureFunction = new MeasureFunctionElements());
+		return pMeasureFunction;
 	}
 	
 	public ParserRule getMeasureFunctionRule() {
@@ -947,7 +960,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//enum Goal returns cs::Goal:
 	//	MIN="min" | MAX="max";
 	public GoalElements getGoalAccess() {
-		return (unknownRuleGoal != null) ? unknownRuleGoal : (unknownRuleGoal = new GoalElements());
+		return unknownRuleGoal;
 	}
 	
 	public EnumRule getGoalRule() {
