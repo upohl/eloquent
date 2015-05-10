@@ -23,6 +23,12 @@ class RequiredHardwareResourceInstance2ILPTest extends QVToTransformationSingleO
 				  uriPrefix + "requiredHardwareResourceInstanceConstraintSimple.allocation_specification",
 				  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.1/@modelElements.0",
 				  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0/@embeddedHPIC"],
+				// requiredLocation keyword
+				#[uriPrefix + "requiredHardwareResourceInstanceConstraintSimple.lp",
+				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp/transforms/Specification2ILP.qvto",
+				  uriPrefix + "requiredLocationConstraintSimple.allocation_specification",
+				  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.1/@modelElements.0",
+				  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0/@embeddedHPIC"],
 				#[uriPrefix + "requiredHardwareResourceInstanceConstraintMixedResult.lp",
 				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp/transforms/Specification2ILP.qvto",
 				  uriPrefix + "requiredHardwareResourceInstanceConstraintMixedResult.allocation_specification",

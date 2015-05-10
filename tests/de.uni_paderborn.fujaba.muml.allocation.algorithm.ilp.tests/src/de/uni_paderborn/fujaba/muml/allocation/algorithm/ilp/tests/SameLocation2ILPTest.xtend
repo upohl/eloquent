@@ -24,6 +24,12 @@ class SameLocation2ILPTest extends QVToTransformationSingleOutExtentTest {
 				  uriPrefix + "locationConstraintSimple.allocation_specification",
 				  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.1/@modelElements.0",
 				  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0/@embeddedHPIC"],
+				// collocation keyword
+				#[uriPrefix + "locationConstraintSimple.lp",
+				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp/transforms/Specification2ILP.qvto",
+				  uriPrefix + "collocationConstraintSimple.allocation_specification",
+				  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.1/@modelElements.0",
+				  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0/@embeddedHPIC"],
 				// two sameLocation constraints (only one embedded component instance)
 				#[uriPrefix + "locationConstraintStructured.lp",
 				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp/transforms/Specification2ILP.qvto",

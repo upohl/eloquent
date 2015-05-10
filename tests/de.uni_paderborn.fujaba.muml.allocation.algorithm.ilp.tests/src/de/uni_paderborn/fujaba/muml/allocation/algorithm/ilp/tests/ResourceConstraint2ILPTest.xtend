@@ -23,6 +23,12 @@ class ResourceConstraint2ILPTest extends QVToTransformationSingleOutExtentTest {
 				  uriPrefix + "resourceConstraintSimple.allocation_specification",
 				  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.1/@modelElements.0",
 				  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0/@embeddedHPIC"],
+				// requiredResource keyword
+				#[uriPrefix + "resourceConstraintSimple.lp",
+				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp/transforms/Specification2ILP.qvto",
+				  uriPrefix + "requiredResourceConstraintSimple.allocation_specification",
+				  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.1/@modelElements.0",
+				  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0/@embeddedHPIC"],
 				#[uriPrefix + "resourceConstraintEncodeSAT.lp",
 				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp/transforms/Specification2ILP.qvto",
 				  uriPrefix + "resourceConstraintEncodeSAT.allocation_specification",
