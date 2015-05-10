@@ -39,6 +39,8 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 				{
 					put(grammarAccess.getSpecificationAccess().getAlternatives_3(), "rule__Specification__Alternatives_3");
 					put(grammarAccess.getConstraintAccess().getAlternatives_1(), "rule__Constraint__Alternatives_1");
+					put(grammarAccess.getResourceConstraintAccess().getAlternatives_0(), "rule__ResourceConstraint__Alternatives_0");
+					put(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getAlternatives_0(), "rule__RequiredHardwareResourceInstanceConstraint__Alternatives_0");
 					put(grammarAccess.getCompleteOCLDocumentCSAccess().getAlternatives_0(), "rule__CompleteOCLDocumentCS__Alternatives_0");
 					put(grammarAccess.getCompleteOCLDocumentCSAccess().getAlternatives_1(), "rule__CompleteOCLDocumentCS__Alternatives_1");
 					put(grammarAccess.getCompleteOCLNavigationOperatorCSAccess().getNameAlternatives_0(), "rule__CompleteOCLNavigationOperatorCS__NameAlternatives_0");

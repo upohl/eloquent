@@ -40,7 +40,7 @@ LocationConstraint returns cs::LocationConstraintCS:
 ;
 
 ResourceConstraint returns cs::ResourceConstraintCS:
-	'resource' (name=ID)? '{'
+	('resource' | 'requiredResource') (name=ID)? '{'
 		'lhs' weighting=ValueTupleDescriptor';'
 		'rhs' rhs=ValueTupleDescriptor';'
 		'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor (',' tupleDescriptors+=ComponentResourceTupleDescriptor)*';'
@@ -49,14 +49,15 @@ ResourceConstraint returns cs::ResourceConstraintCS:
 ;
 
 RequiredHardwareResourceInstanceConstraint returns cs::RequiredHardwareResourceInstanceConstraintCS:
-	'requiredHardwareResourceInstance' (name=ID)? '{'
+	('requiredHardwareResourceInstance' | 'requiredLocation') (name=ID)? '{'
 		'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor (',' tupleDescriptors+=ComponentResourceTupleDescriptor)*';'
 		'ocl' expression=Model';'
 	'}'
 ;
 
 enum LocationConstraintType returns cs::LocationConstraintTypes:
-	SAME_LOCATION='sameLocation' | DIFFERENT_LOCATION='differentLocation'
+	SAME_LOCATION='sameLocation' | SAME_LOCATION='collocation'
+		| DIFFERENT_LOCATION='differentLocation' | DIFFERENT_LOCATION='separateLocation'
 ;
 
 LocationTupleDescriptor returns cs::LocationTupleDescriptorCS:

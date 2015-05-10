@@ -364,7 +364,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	public class ResourceConstraintElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ResourceConstraint");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cResourceKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final Keyword cResourceKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
+		private final Keyword cRequiredResourceKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
@@ -391,18 +393,24 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Keyword cRightCurlyBracketKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
 		//ResourceConstraint returns cs::ResourceConstraintCS:
-		//	"resource" name=ID? "{" "lhs" weighting=ValueTupleDescriptor ";" "rhs" rhs=ValueTupleDescriptor ";" "descriptors"
-		//	tupleDescriptors+=ComponentResourceTupleDescriptor ("," tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl"
-		//	expression=Model ";" "}";
+		//	("resource" | "requiredResource") name=ID? "{" "lhs" weighting=ValueTupleDescriptor ";" "rhs" rhs=ValueTupleDescriptor
+		//	";" "descriptors" tupleDescriptors+=ComponentResourceTupleDescriptor (","
+		//	tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl" expression=Model ";" "}";
 		public ParserRule getRule() { return rule; }
 
-		//"resource" name=ID? "{" "lhs" weighting=ValueTupleDescriptor ";" "rhs" rhs=ValueTupleDescriptor ";" "descriptors"
-		//tupleDescriptors+=ComponentResourceTupleDescriptor ("," tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl"
-		//expression=Model ";" "}"
+		//("resource" | "requiredResource") name=ID? "{" "lhs" weighting=ValueTupleDescriptor ";" "rhs" rhs=ValueTupleDescriptor
+		//";" "descriptors" tupleDescriptors+=ComponentResourceTupleDescriptor (","
+		//tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl" expression=Model ";" "}"
 		public Group getGroup() { return cGroup; }
 
+		//"resource" | "requiredResource"
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+
 		//"resource"
-		public Keyword getResourceKeyword_0() { return cResourceKeyword_0; }
+		public Keyword getResourceKeyword_0_0() { return cResourceKeyword_0_0; }
+
+		//"requiredResource"
+		public Keyword getRequiredResourceKeyword_0_1() { return cRequiredResourceKeyword_0_1; }
 
 		//name=ID?
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -480,7 +488,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	public class RequiredHardwareResourceInstanceConstraintElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RequiredHardwareResourceInstanceConstraint");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cRequiredHardwareResourceInstanceKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final Keyword cRequiredHardwareResourceInstanceKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
+		private final Keyword cRequiredLocationKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
@@ -499,16 +509,24 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//RequiredHardwareResourceInstanceConstraint returns cs::RequiredHardwareResourceInstanceConstraintCS:
-		//	"requiredHardwareResourceInstance" name=ID? "{" "descriptors" tupleDescriptors+=ComponentResourceTupleDescriptor (","
-		//	tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl" expression=Model ";" "}";
+		//	("requiredHardwareResourceInstance" | "requiredLocation") name=ID? "{" "descriptors"
+		//	tupleDescriptors+=ComponentResourceTupleDescriptor ("," tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl"
+		//	expression=Model ";" "}";
 		public ParserRule getRule() { return rule; }
 
-		//"requiredHardwareResourceInstance" name=ID? "{" "descriptors" tupleDescriptors+=ComponentResourceTupleDescriptor (","
-		//tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl" expression=Model ";" "}"
+		//("requiredHardwareResourceInstance" | "requiredLocation") name=ID? "{" "descriptors"
+		//tupleDescriptors+=ComponentResourceTupleDescriptor ("," tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl"
+		//expression=Model ";" "}"
 		public Group getGroup() { return cGroup; }
 
+		//"requiredHardwareResourceInstance" | "requiredLocation"
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+
 		//"requiredHardwareResourceInstance"
-		public Keyword getRequiredHardwareResourceInstanceKeyword_0() { return cRequiredHardwareResourceInstanceKeyword_0; }
+		public Keyword getRequiredHardwareResourceInstanceKeyword_0_0() { return cRequiredHardwareResourceInstanceKeyword_0_0; }
+
+		//"requiredLocation"
+		public Keyword getRequiredLocationKeyword_0_1() { return cRequiredLocationKeyword_0_1; }
 
 		//name=ID?
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -713,14 +731,20 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cSAME_LOCATIONEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cSAME_LOCATIONSameLocationKeyword_0_0 = (Keyword)cSAME_LOCATIONEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cDIFFERENT_LOCATIONEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cDIFFERENT_LOCATIONDifferentLocationKeyword_1_0 = (Keyword)cDIFFERENT_LOCATIONEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cSAME_LOCATIONEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cSAME_LOCATIONCollocationKeyword_1_0 = (Keyword)cSAME_LOCATIONEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cDIFFERENT_LOCATIONEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cDIFFERENT_LOCATIONDifferentLocationKeyword_2_0 = (Keyword)cDIFFERENT_LOCATIONEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cDIFFERENT_LOCATIONEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cDIFFERENT_LOCATIONSeparateLocationKeyword_3_0 = (Keyword)cDIFFERENT_LOCATIONEnumLiteralDeclaration_3.eContents().get(0);
 		
 		//enum LocationConstraintType returns cs::LocationConstraintTypes:
-		//	SAME_LOCATION="sameLocation" | DIFFERENT_LOCATION="differentLocation";
+		//	SAME_LOCATION="sameLocation" | SAME_LOCATION="collocation" | DIFFERENT_LOCATION="differentLocation" |
+		//	DIFFERENT_LOCATION="separateLocation";
 		public EnumRule getRule() { return rule; }
 
-		//SAME_LOCATION="sameLocation" | DIFFERENT_LOCATION="differentLocation"
+		//SAME_LOCATION="sameLocation" | SAME_LOCATION="collocation" | DIFFERENT_LOCATION="differentLocation" |
+		//DIFFERENT_LOCATION="separateLocation"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//SAME_LOCATION="sameLocation"
@@ -729,11 +753,23 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//"sameLocation"
 		public Keyword getSAME_LOCATIONSameLocationKeyword_0_0() { return cSAME_LOCATIONSameLocationKeyword_0_0; }
 
+		//SAME_LOCATION="collocation"
+		public EnumLiteralDeclaration getSAME_LOCATIONEnumLiteralDeclaration_1() { return cSAME_LOCATIONEnumLiteralDeclaration_1; }
+
+		//"collocation"
+		public Keyword getSAME_LOCATIONCollocationKeyword_1_0() { return cSAME_LOCATIONCollocationKeyword_1_0; }
+
 		//DIFFERENT_LOCATION="differentLocation"
-		public EnumLiteralDeclaration getDIFFERENT_LOCATIONEnumLiteralDeclaration_1() { return cDIFFERENT_LOCATIONEnumLiteralDeclaration_1; }
+		public EnumLiteralDeclaration getDIFFERENT_LOCATIONEnumLiteralDeclaration_2() { return cDIFFERENT_LOCATIONEnumLiteralDeclaration_2; }
 
 		//"differentLocation"
-		public Keyword getDIFFERENT_LOCATIONDifferentLocationKeyword_1_0() { return cDIFFERENT_LOCATIONDifferentLocationKeyword_1_0; }
+		public Keyword getDIFFERENT_LOCATIONDifferentLocationKeyword_2_0() { return cDIFFERENT_LOCATIONDifferentLocationKeyword_2_0; }
+
+		//DIFFERENT_LOCATION="separateLocation"
+		public EnumLiteralDeclaration getDIFFERENT_LOCATIONEnumLiteralDeclaration_3() { return cDIFFERENT_LOCATIONEnumLiteralDeclaration_3; }
+
+		//"separateLocation"
+		public Keyword getDIFFERENT_LOCATIONSeparateLocationKeyword_3_0() { return cDIFFERENT_LOCATIONSeparateLocationKeyword_3_0; }
 	}
 
 	public class GoalElements extends AbstractEnumRuleElementFinder {
@@ -885,9 +921,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//ResourceConstraint returns cs::ResourceConstraintCS:
-	//	"resource" name=ID? "{" "lhs" weighting=ValueTupleDescriptor ";" "rhs" rhs=ValueTupleDescriptor ";" "descriptors"
-	//	tupleDescriptors+=ComponentResourceTupleDescriptor ("," tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl"
-	//	expression=Model ";" "}";
+	//	("resource" | "requiredResource") name=ID? "{" "lhs" weighting=ValueTupleDescriptor ";" "rhs" rhs=ValueTupleDescriptor
+	//	";" "descriptors" tupleDescriptors+=ComponentResourceTupleDescriptor (","
+	//	tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl" expression=Model ";" "}";
 	public ResourceConstraintElements getResourceConstraintAccess() {
 		return pResourceConstraint;
 	}
@@ -897,8 +933,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//RequiredHardwareResourceInstanceConstraint returns cs::RequiredHardwareResourceInstanceConstraintCS:
-	//	"requiredHardwareResourceInstance" name=ID? "{" "descriptors" tupleDescriptors+=ComponentResourceTupleDescriptor (","
-	//	tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl" expression=Model ";" "}";
+	//	("requiredHardwareResourceInstance" | "requiredLocation") name=ID? "{" "descriptors"
+	//	tupleDescriptors+=ComponentResourceTupleDescriptor ("," tupleDescriptors+=ComponentResourceTupleDescriptor)* ";" "ocl"
+	//	expression=Model ";" "}";
 	public RequiredHardwareResourceInstanceConstraintElements getRequiredHardwareResourceInstanceConstraintAccess() {
 		return pRequiredHardwareResourceInstanceConstraint;
 	}
@@ -908,7 +945,8 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//enum LocationConstraintType returns cs::LocationConstraintTypes:
-	//	SAME_LOCATION="sameLocation" | DIFFERENT_LOCATION="differentLocation";
+	//	SAME_LOCATION="sameLocation" | SAME_LOCATION="collocation" | DIFFERENT_LOCATION="differentLocation" |
+	//	DIFFERENT_LOCATION="separateLocation";
 	public LocationConstraintTypeElements getLocationConstraintTypeAccess() {
 		return unknownRuleLocationConstraintType;
 	}

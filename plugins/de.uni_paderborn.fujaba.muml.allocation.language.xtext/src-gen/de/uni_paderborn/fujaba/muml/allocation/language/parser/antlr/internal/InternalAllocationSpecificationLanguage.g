@@ -670,161 +670,166 @@ ruleResourceConstraint returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='resource' 
+((	otherlv_0='resource' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getResourceConstraintAccess().getResourceKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getResourceConstraintAccess().getResourceKeyword_0_0());
     }
-(
+
+    |	otherlv_1='requiredResource' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getResourceConstraintAccess().getRequiredResourceKeyword_0_1());
+    }
+)(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getNameIDParserRuleCall_1_0()); 
 	    }
-		lv_name_1_0=ruleID		{
+		lv_name_2_0=ruleID		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getResourceConstraintRule());
 	        }
        		set(
        			$current, 
        			"name",
-        		lv_name_1_0, 
+        		lv_name_2_0, 
         		"ID");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)?	otherlv_2='{' 
+)?	otherlv_3='{' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getResourceConstraintAccess().getLeftCurlyBracketKeyword_2());
+    	newLeafNode(otherlv_3, grammarAccess.getResourceConstraintAccess().getLeftCurlyBracketKeyword_2());
     }
-	otherlv_3='lhs' 
+	otherlv_4='lhs' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getResourceConstraintAccess().getLhsKeyword_3());
+    	newLeafNode(otherlv_4, grammarAccess.getResourceConstraintAccess().getLhsKeyword_3());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getWeightingValueTupleDescriptorParserRuleCall_4_0()); 
 	    }
-		lv_weighting_4_0=ruleValueTupleDescriptor		{
+		lv_weighting_5_0=ruleValueTupleDescriptor		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getResourceConstraintRule());
 	        }
        		set(
        			$current, 
        			"weighting",
-        		lv_weighting_4_0, 
+        		lv_weighting_5_0, 
         		"ValueTupleDescriptor");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_5=';' 
+)	otherlv_6=';' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_5());
+    	newLeafNode(otherlv_6, grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_5());
     }
-	otherlv_6='rhs' 
+	otherlv_7='rhs' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getResourceConstraintAccess().getRhsKeyword_6());
+    	newLeafNode(otherlv_7, grammarAccess.getResourceConstraintAccess().getRhsKeyword_6());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getRhsValueTupleDescriptorParserRuleCall_7_0()); 
 	    }
-		lv_rhs_7_0=ruleValueTupleDescriptor		{
+		lv_rhs_8_0=ruleValueTupleDescriptor		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getResourceConstraintRule());
 	        }
        		set(
        			$current, 
        			"rhs",
-        		lv_rhs_7_0, 
+        		lv_rhs_8_0, 
         		"ValueTupleDescriptor");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_8=';' 
+)	otherlv_9=';' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_8());
+    	newLeafNode(otherlv_9, grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_8());
     }
-	otherlv_9='descriptors' 
+	otherlv_10='descriptors' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getResourceConstraintAccess().getDescriptorsKeyword_9());
+    	newLeafNode(otherlv_10, grammarAccess.getResourceConstraintAccess().getDescriptorsKeyword_9());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_10_0()); 
 	    }
-		lv_tupleDescriptors_10_0=ruleComponentResourceTupleDescriptor		{
+		lv_tupleDescriptors_11_0=ruleComponentResourceTupleDescriptor		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getResourceConstraintRule());
 	        }
        		add(
        			$current, 
        			"tupleDescriptors",
-        		lv_tupleDescriptors_10_0, 
+        		lv_tupleDescriptors_11_0, 
         		"ComponentResourceTupleDescriptor");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_11=',' 
+)(	otherlv_12=',' 
     {
-    	newLeafNode(otherlv_11, grammarAccess.getResourceConstraintAccess().getCommaKeyword_11_0());
+    	newLeafNode(otherlv_12, grammarAccess.getResourceConstraintAccess().getCommaKeyword_11_0());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_11_1_0()); 
 	    }
-		lv_tupleDescriptors_12_0=ruleComponentResourceTupleDescriptor		{
+		lv_tupleDescriptors_13_0=ruleComponentResourceTupleDescriptor		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getResourceConstraintRule());
 	        }
        		add(
        			$current, 
        			"tupleDescriptors",
-        		lv_tupleDescriptors_12_0, 
+        		lv_tupleDescriptors_13_0, 
         		"ComponentResourceTupleDescriptor");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*	otherlv_13=';' 
+))*	otherlv_14=';' 
     {
-    	newLeafNode(otherlv_13, grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_12());
+    	newLeafNode(otherlv_14, grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_12());
     }
-	otherlv_14='ocl' 
+	otherlv_15='ocl' 
     {
-    	newLeafNode(otherlv_14, grammarAccess.getResourceConstraintAccess().getOclKeyword_13());
+    	newLeafNode(otherlv_15, grammarAccess.getResourceConstraintAccess().getOclKeyword_13());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getExpressionModelParserRuleCall_14_0()); 
 	    }
-		lv_expression_15_0=ruleModel		{
+		lv_expression_16_0=ruleModel		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getResourceConstraintRule());
 	        }
        		set(
        			$current, 
        			"expression",
-        		lv_expression_15_0, 
+        		lv_expression_16_0, 
         		"Model");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_16=';' 
+)	otherlv_17=';' 
     {
-    	newLeafNode(otherlv_16, grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_15());
+    	newLeafNode(otherlv_17, grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_15());
     }
-	otherlv_17='}' 
+	otherlv_18='}' 
     {
-    	newLeafNode(otherlv_17, grammarAccess.getResourceConstraintAccess().getRightCurlyBracketKeyword_16());
+    	newLeafNode(otherlv_18, grammarAccess.getResourceConstraintAccess().getRightCurlyBracketKeyword_16());
     }
 )
 ;
@@ -847,109 +852,114 @@ ruleRequiredHardwareResourceInstanceConstraint returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='requiredHardwareResourceInstance' 
+((	otherlv_0='requiredHardwareResourceInstance' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRequiredHardwareResourceInstanceKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRequiredHardwareResourceInstanceKeyword_0_0());
     }
-(
+
+    |	otherlv_1='requiredLocation' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRequiredLocationKeyword_0_1());
+    }
+)(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getNameIDParserRuleCall_1_0()); 
 	    }
-		lv_name_1_0=ruleID		{
+		lv_name_2_0=ruleID		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRequiredHardwareResourceInstanceConstraintRule());
 	        }
        		set(
        			$current, 
        			"name",
-        		lv_name_1_0, 
+        		lv_name_2_0, 
         		"ID");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)?	otherlv_2='{' 
+)?	otherlv_3='{' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getLeftCurlyBracketKeyword_2());
+    	newLeafNode(otherlv_3, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getLeftCurlyBracketKeyword_2());
     }
-	otherlv_3='descriptors' 
+	otherlv_4='descriptors' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getDescriptorsKeyword_3());
+    	newLeafNode(otherlv_4, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getDescriptorsKeyword_3());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_4_0()); 
 	    }
-		lv_tupleDescriptors_4_0=ruleComponentResourceTupleDescriptor		{
+		lv_tupleDescriptors_5_0=ruleComponentResourceTupleDescriptor		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRequiredHardwareResourceInstanceConstraintRule());
 	        }
        		add(
        			$current, 
        			"tupleDescriptors",
-        		lv_tupleDescriptors_4_0, 
+        		lv_tupleDescriptors_5_0, 
         		"ComponentResourceTupleDescriptor");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_5=',' 
+)(	otherlv_6=',' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getCommaKeyword_5_0());
+    	newLeafNode(otherlv_6, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getCommaKeyword_5_0());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_5_1_0()); 
 	    }
-		lv_tupleDescriptors_6_0=ruleComponentResourceTupleDescriptor		{
+		lv_tupleDescriptors_7_0=ruleComponentResourceTupleDescriptor		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRequiredHardwareResourceInstanceConstraintRule());
 	        }
        		add(
        			$current, 
        			"tupleDescriptors",
-        		lv_tupleDescriptors_6_0, 
+        		lv_tupleDescriptors_7_0, 
         		"ComponentResourceTupleDescriptor");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*	otherlv_7=';' 
+))*	otherlv_8=';' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getSemicolonKeyword_6());
+    	newLeafNode(otherlv_8, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getSemicolonKeyword_6());
     }
-	otherlv_8='ocl' 
+	otherlv_9='ocl' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getOclKeyword_7());
+    	newLeafNode(otherlv_9, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getOclKeyword_7());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getExpressionModelParserRuleCall_8_0()); 
 	    }
-		lv_expression_9_0=ruleModel		{
+		lv_expression_10_0=ruleModel		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRequiredHardwareResourceInstanceConstraintRule());
 	        }
        		set(
        			$current, 
        			"expression",
-        		lv_expression_9_0, 
+        		lv_expression_10_0, 
         		"Model");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_10=';' 
+)	otherlv_11=';' 
     {
-    	newLeafNode(otherlv_10, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getSemicolonKeyword_9());
+    	newLeafNode(otherlv_11, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getSemicolonKeyword_9());
     }
-	otherlv_11='}' 
+	otherlv_12='}' 
     {
-    	newLeafNode(otherlv_11, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRightCurlyBracketKeyword_10());
+    	newLeafNode(otherlv_12, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRightCurlyBracketKeyword_10());
     }
 )
 ;
@@ -6817,10 +6827,22 @@ ruleLocationConstraintType returns [Enumerator current=null]
         newLeafNode(enumLiteral_0, grammarAccess.getLocationConstraintTypeAccess().getSAME_LOCATIONEnumLiteralDeclaration_0()); 
     }
 )
-    |(	enumLiteral_1='differentLocation' 
+    |(	enumLiteral_1='collocation' 
 	{
-        $current = grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_1, grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_1()); 
+        $current = grammarAccess.getLocationConstraintTypeAccess().getSAME_LOCATIONEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getLocationConstraintTypeAccess().getSAME_LOCATIONEnumLiteralDeclaration_1()); 
+    }
+)
+    |(	enumLiteral_2='differentLocation' 
+	{
+        $current = grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_2()); 
+    }
+)
+    |(	enumLiteral_3='separateLocation' 
+	{
+        $current = grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_3, grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_3()); 
     }
 ));
 
