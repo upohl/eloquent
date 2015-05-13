@@ -168,15 +168,15 @@
 			
 		def: getConnectedECUs() : Set(hwresourceinstance::ResourceInstance) =
 			self.getConnectors()->collect(c |
-				c.connectorEndpointInstances->select(oclIsKindOf(hwresource::HWPort))
-					->collect(oclAsType(hwresource::HWPort).parentResourceInstance)
+				c.connectorEndpointInstances->select(oclIsKindOf(hwresourceinstance::HWPort))
+					->collect(oclAsType(hwresourceinstance::HWPort).parentResourceInstance)
 			)->asSet()->reject(r | r = self)
 		
 		def: getConnectors(other : hwresourceinstance::ResourceInstance) : OrderedSet(OrderedSet(connector::ConnectorInstance)) =
 			self.getConnectors()->select(s |
 				s->last().connectorEndpointInstances
-					->select(oclIsKindOf(hwresource::HWPort))
-					->collect(oclAsType(hwresource::HWPort).parentResourceInstance)
+					->select(oclIsKindOf(hwresourceinstance::HWPort))
+					->collect(oclAsType(hwresourceinstance::HWPort).parentResourceInstance)
 					->includes(other)
 			)
 			
