@@ -63,7 +63,7 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
 
 			@Override
 			public String wizardPageGetSourceFileExtension() {
-				return "fujaba";
+				return "muml";
 			}
 
 			@Override
@@ -89,7 +89,7 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
 
 			@Override
 			public String wizardPageGetSourceFileExtension() {
-				return "fujaba";
+				return "muml";
 			}
 
 			@Override
@@ -140,7 +140,7 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
 			
 			@Override
 			public String wizardPageGetSourceFileExtension() {
-				return "fujaba";
+				return "muml";
 			}
 
 			@Override
