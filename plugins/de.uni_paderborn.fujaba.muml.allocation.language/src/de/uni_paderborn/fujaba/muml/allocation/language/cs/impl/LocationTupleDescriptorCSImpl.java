@@ -4,13 +4,18 @@ package de.uni_paderborn.fujaba.muml.allocation.language.cs.impl;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS;
+
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.jdt.annotation.Nullable;
-import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
+
+import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,10 +23,10 @@ import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.LocationTupleDescriptorCSImpl#getSecondInstance <em>Second Instance</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -91,7 +96,6 @@ public class LocationTupleDescriptorCSImpl extends InstanceTupleDescriptorCSImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String toString() {
 		return super.toString();
 	}
@@ -160,7 +164,7 @@ public class LocationTupleDescriptorCSImpl extends InstanceTupleDescriptorCSImpl
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public @Nullable <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
+	public <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
 		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitLocationTupleDescriptorCS(this);
 	}
 

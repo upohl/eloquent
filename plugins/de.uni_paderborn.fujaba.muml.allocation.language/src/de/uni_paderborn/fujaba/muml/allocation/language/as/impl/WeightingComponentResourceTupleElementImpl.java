@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.eclipse.ocl.examples.pivot.internal.impl.ElementImpl;
+import org.eclipse.ocl.pivot.internal.ElementImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,11 +30,11 @@ import org.eclipse.ocl.examples.pivot.internal.impl.ElementImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.WeightingComponentResourceTupleElementImpl#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.WeightingComponentResourceTupleElementImpl#getWeighting <em>Weighting</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

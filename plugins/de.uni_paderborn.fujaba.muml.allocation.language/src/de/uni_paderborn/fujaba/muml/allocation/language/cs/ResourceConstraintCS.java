@@ -2,7 +2,6 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.language.cs;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,10 +16,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.ResourceConstraintCS#getRhs <em>Rhs</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage#getResourceConstraintCS()
  * @model

@@ -1,4 +1,4 @@
-/**
+/*******************************************************************************
  * <copyright>
  * 
  * </copyright>
@@ -15,7 +15,7 @@ import org.eclipse.jdt.annotation.Nullable;
 
 /**
  */
-public interface LanguageSpecificationCSVisitor<R> extends org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.util.CompleteOCLCSVisitor<R>
+public interface LanguageSpecificationCSVisitor<R> extends org.eclipse.ocl.xtext.completeoclcs.util.CompleteOCLCSVisitor<R>
 {
 	@Nullable R visitComponentResourceTupleDescriptorCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupleDescriptorCS object);
 	@Nullable R visitConstraintCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.ConstraintCS object);

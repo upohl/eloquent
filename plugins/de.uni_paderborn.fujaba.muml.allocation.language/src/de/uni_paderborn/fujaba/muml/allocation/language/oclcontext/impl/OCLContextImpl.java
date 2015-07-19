@@ -23,11 +23,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl.OCLContextImpl#getComponentInstanceConfiguration <em>Component Instance Configuration</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl.OCLContextImpl#getHardwarePlatformInstanceConfiguration <em>Hardware Platform Instance Configuration</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

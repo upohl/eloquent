@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
-import org.eclipse.ocl.examples.pivot.internal.impl.ElementImpl;
+import org.eclipse.ocl.pivot.internal.ElementImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,10 +22,10 @@ import org.eclipse.ocl.examples.pivot.internal.impl.ElementImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.MeasureFunctionImpl#getServices <em>Services</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

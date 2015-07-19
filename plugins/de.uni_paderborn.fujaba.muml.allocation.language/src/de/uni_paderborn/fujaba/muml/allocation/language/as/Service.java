@@ -4,9 +4,7 @@ package de.uni_paderborn.fujaba.muml.allocation.language.as;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.ocl.examples.pivot.NamedElement;
+import org.eclipse.ocl.pivot.NamedElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,16 +18,16 @@ import org.eclipse.ocl.examples.pivot.NamedElement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Service#getDimensions <em>Dimensions</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage#getService()
  * @model
  * @generated
  */
-public interface Service extends EObject, NamedElement {
+public interface Service extends NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Dimensions</b></em>' containment reference list.
 	 * The list contents are of type {@link de.uni_paderborn.fujaba.muml.allocation.language.as.QoSDimension}.

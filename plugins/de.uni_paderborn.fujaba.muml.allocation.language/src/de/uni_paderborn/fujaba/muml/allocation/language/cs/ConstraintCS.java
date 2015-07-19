@@ -2,9 +2,7 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.language.cs;
 
-import org.eclipse.ocl.examples.xtext.base.basecs.NamedElementCS;
-
-import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
+import org.eclipse.ocl.xtext.basecs.NamedElementCS;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,5 +19,4 @@ import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
  * @generated
  */
 public interface ConstraintCS extends NamedElementCS, EvaluatableElementCS {
-
 } // ConstraintCS

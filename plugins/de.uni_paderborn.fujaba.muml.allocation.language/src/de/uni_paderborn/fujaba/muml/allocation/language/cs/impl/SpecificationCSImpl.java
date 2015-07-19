@@ -8,26 +8,33 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.Goal;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ServiceCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS;
+
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.jdt.annotation.Nullable;
-import org.eclipse.ocl.examples.xtext.base.basecs.impl.NamedElementCSImpl;
-import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
-import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.impl.CompleteOCLDocumentCSImpl;
+
+import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
+
+import org.eclipse.ocl.xtext.completeoclcs.impl.CompleteOCLDocumentCSImpl;
+
 import org.storydriven.core.CorePackage;
 import org.storydriven.core.ExtendableElement;
 import org.storydriven.core.Extension;
@@ -39,6 +46,7 @@ import org.storydriven.core.util.ExtendableElementOperations;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.SpecificationCSImpl#getAnnotations <em>Annotation</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.SpecificationCSImpl#getExtensions <em>Extension</em>}</li>
@@ -47,7 +55,6 @@ import org.storydriven.core.util.ExtendableElementOperations;
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.SpecificationCSImpl#getMeasure <em>Measure</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.SpecificationCSImpl#getGoal <em>Goal</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -498,7 +505,7 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public @Nullable <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
+	public <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
 		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitSpecificationCS(this);
 	}
 

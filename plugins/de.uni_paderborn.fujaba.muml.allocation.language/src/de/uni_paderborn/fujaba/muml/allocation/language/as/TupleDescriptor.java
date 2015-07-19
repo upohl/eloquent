@@ -2,9 +2,7 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.language.as;
 
-import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.ocl.examples.pivot.Element;
+import org.eclipse.ocl.pivot.Element;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,5 +20,5 @@ import org.eclipse.ocl.examples.pivot.Element;
  * @model abstract="true"
  * @generated
  */
-public interface TupleDescriptor extends EObject, Element {
+public interface TupleDescriptor extends Element {
 } // TupleDescriptor

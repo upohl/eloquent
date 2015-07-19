@@ -2,10 +2,8 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.language.as;
 
-import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.ocl.examples.pivot.Element;
-import org.eclipse.ocl.examples.pivot.ExpressionInOCL;
+import org.eclipse.ocl.pivot.Element;
+import org.eclipse.ocl.pivot.ExpressionInOCL;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,16 +17,16 @@ import org.eclipse.ocl.examples.pivot.ExpressionInOCL;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement#getExpression <em>Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage#getEvaluatableElement()
  * @model abstract="true"
  * @generated
  */
-public interface EvaluatableElement extends EObject, Element {
+public interface EvaluatableElement extends Element {
 	/**
 	 * Returns the value of the '<em><b>Expression</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

@@ -4,7 +4,7 @@ package de.uni_paderborn.fujaba.muml.allocation.language.cs;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.ocl.examples.xtext.base.basecs.NamedElementCS;
+import org.eclipse.ocl.xtext.basecs.NamedElementCS;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,10 +18,10 @@ import org.eclipse.ocl.examples.xtext.base.basecs.NamedElementCS;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.ServiceCS#getDimensions <em>Dimensions</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage#getServiceCS()
  * @model

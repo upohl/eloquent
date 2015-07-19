@@ -1,4 +1,4 @@
-/**
+/*******************************************************************************
  * <copyright>
  * 
  * </copyright>
@@ -17,7 +17,7 @@ import org.eclipse.jdt.annotation.Nullable;
  * An AbstractDelegatingLanguageSpecificationCSVisitor delegates all visits.
  */
 public abstract class AbstractDelegatingLanguageSpecificationCSVisitor<R, C, D extends LanguageSpecificationCSVisitor<R>>
-	extends org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.util.AbstractDelegatingCompleteOCLCSVisitor<R, C, D>
+	extends org.eclipse.ocl.xtext.completeoclcs.util.AbstractDelegatingCompleteOCLCSVisitor<R, C, D>
 	implements LanguageSpecificationCSVisitor<R>
 {
 	protected AbstractDelegatingLanguageSpecificationCSVisitor(@NonNull D delegate, @NonNull C context) {
@@ -25,7 +25,7 @@ public abstract class AbstractDelegatingLanguageSpecificationCSVisitor<R, C, D e
 	}
 
 	@Override
-	public @Nullable R visiting(@NonNull org.eclipse.ocl.examples.xtext.base.basecs.util.VisitableCS visitable) {
+	public @Nullable R visiting(@NonNull org.eclipse.ocl.xtext.basecs.util.VisitableCS visitable) {
 		return delegate.visiting(visitable);
 	}
 

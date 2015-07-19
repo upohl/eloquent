@@ -24,8 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.eclipse.ocl.examples.pivot.internal.impl.NamedElementImpl;
-import org.eclipse.ocl.examples.pivot.internal.impl.RootImpl;
+import org.eclipse.ocl.pivot.internal.ModelImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,17 +32,17 @@ import org.eclipse.ocl.examples.pivot.internal.impl.RootImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.SpecificationImpl#getServices <em>Services</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.SpecificationImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.SpecificationImpl#getMeasure <em>Measure</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.SpecificationImpl#getGoal <em>Goal</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class SpecificationImpl extends RootImpl implements Specification {
+public class SpecificationImpl extends ModelImpl implements Specification {
 	/**
 	 * The cached value of the '{@link #getServices() <em>Services</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

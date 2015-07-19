@@ -4,8 +4,8 @@ package de.uni_paderborn.fujaba.muml.allocation.language.cs;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.ocl.examples.xtext.base.basecs.NamedElementCS;
-import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.CompleteOCLDocumentCS;
+import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLDocumentCS;
+
 import org.storydriven.core.ExtendableElement;
 
 /**
@@ -19,13 +19,13 @@ import org.storydriven.core.ExtendableElement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS#getServices <em>Services</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS#getMeasure <em>Measure</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS#getGoal <em>Goal</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage#getSpecificationCS()
  * @model

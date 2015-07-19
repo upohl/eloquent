@@ -15,10 +15,10 @@ package de.uni_paderborn.fujaba.muml.allocation.language.as;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.InstanceTupleDescriptor#getInstance <em>Instance</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage#getInstanceTupleDescriptor()
  * @model abstract="true"

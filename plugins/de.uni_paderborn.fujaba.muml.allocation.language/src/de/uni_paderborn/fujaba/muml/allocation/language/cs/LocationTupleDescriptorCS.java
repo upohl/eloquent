@@ -15,10 +15,10 @@ package de.uni_paderborn.fujaba.muml.allocation.language.cs;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationTupleDescriptorCS#getSecondInstance <em>Second Instance</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage#getLocationTupleDescriptorCS()
  * @model

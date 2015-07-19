@@ -4,9 +4,7 @@ package de.uni_paderborn.fujaba.muml.allocation.language.as;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.ocl.examples.pivot.Element;
+import org.eclipse.ocl.pivot.Element;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,17 +19,17 @@ import org.eclipse.ocl.examples.pivot.Element;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.WeightingComponentResourceTupleElement#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.WeightingComponentResourceTupleElement#getWeighting <em>Weighting</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage#getWeightingComponentResourceTupleElement()
  * @model abstract="true"
  * @generated
  */
-public interface WeightingComponentResourceTupleElement extends EObject, Element {
+public interface WeightingComponentResourceTupleElement extends Element {
 	/**
 	 * Returns the value of the '<em><b>Tuple Descriptors</b></em>' containment reference list.
 	 * The list contents are of type {@link de.uni_paderborn.fujaba.muml.allocation.language.as.ComponentResourceTupleDescriptor}.

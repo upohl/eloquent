@@ -4,8 +4,8 @@ package de.uni_paderborn.fujaba.muml.allocation.language.cs.impl;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
-
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.ocl.examples.xtext.base.basecs.impl.NamedElementCSImpl;
+import org.eclipse.ocl.xtext.basecs.impl.NamedElementCSImpl;
 
-import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
+import org.eclipse.ocl.xtext.essentialoclcs.ContextCS;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,10 +24,10 @@ import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.ConstraintCSImpl#getExpression <em>Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

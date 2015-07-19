@@ -7,14 +7,12 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.TupleDescriptorCS;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.ocl.examples.xtext.base.basecs.impl.ModelElementCSImpl;
+import org.eclipse.ocl.xtext.basecs.impl.ModelElementCSImpl;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Tuple Descriptor CS</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

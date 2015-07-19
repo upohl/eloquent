@@ -9,19 +9,20 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.ocl.examples.domain.elements.Nameable;
+import org.eclipse.ocl.pivot.utilities.Nameable;
+import org.eclipse.ocl.pivot.utilities.Pivotable;
 
-import org.eclipse.ocl.examples.pivot.util.Pivotable;
+import org.eclipse.ocl.xtext.basecs.ElementCS;
+import org.eclipse.ocl.xtext.basecs.ModelElementCS;
+import org.eclipse.ocl.xtext.basecs.NamedElementCS;
+import org.eclipse.ocl.xtext.basecs.NamespaceCS;
+import org.eclipse.ocl.xtext.basecs.PivotableElementCS;
+import org.eclipse.ocl.xtext.basecs.RootCS;
 
-import org.eclipse.ocl.examples.xtext.base.basecs.ElementCS;
-import org.eclipse.ocl.examples.xtext.base.basecs.ModelElementCS;
-import org.eclipse.ocl.examples.xtext.base.basecs.NamedElementCS;
-import org.eclipse.ocl.examples.xtext.base.basecs.NamespaceCS;
-import org.eclipse.ocl.examples.xtext.base.basecs.PivotableElementCS;
+import org.eclipse.ocl.xtext.basecs.util.VisitableCS;
 
-import org.eclipse.ocl.examples.xtext.base.basecs.RootCS;
-import org.eclipse.ocl.examples.xtext.base.basecs.util.VisitableCS;
-import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.CompleteOCLDocumentCS;
+import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLDocumentCS;
+
 import org.storydriven.core.ExtendableElement;
 
 /**
@@ -62,7 +63,7 @@ public class CsSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */

@@ -7,14 +7,12 @@ import de.uni_paderborn.fujaba.muml.allocation.language.as.TupleDescriptor;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.ocl.examples.pivot.internal.impl.ElementImpl;
+import org.eclipse.ocl.pivot.internal.ElementImpl;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Tuple Descriptor</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

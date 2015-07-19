@@ -11,14 +11,14 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.ocl.examples.domain.elements.Nameable;
+import org.eclipse.ocl.pivot.Element;
+import org.eclipse.ocl.pivot.Model;
+import org.eclipse.ocl.pivot.NamedElement;
+import org.eclipse.ocl.pivot.Namespace;
 
-import org.eclipse.ocl.examples.pivot.Element;
-import org.eclipse.ocl.examples.pivot.NamedElement;
+import org.eclipse.ocl.pivot.util.Visitable;
 
-import org.eclipse.ocl.examples.pivot.Namespace;
-import org.eclipse.ocl.examples.pivot.Root;
-import org.eclipse.ocl.examples.pivot.util.Visitable;
+import org.eclipse.ocl.pivot.utilities.Nameable;
 
 /**
  * <!-- begin-user-doc -->
@@ -157,8 +157,8 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 				return createNamespaceAdapter();
 			}
 			@Override
-			public Adapter caseRoot(Root object) {
-				return createRootAdapter();
+			public Adapter caseModel(Model object) {
+				return createModelAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -391,13 +391,13 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.examples.pivot.util.Visitable <em>Visitable</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.pivot.util.Visitable <em>Visitable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.ocl.examples.pivot.util.Visitable
+	 * @see org.eclipse.ocl.pivot.util.Visitable
 	 * @generated
 	 */
 	public Adapter createVisitableAdapter() {
@@ -405,13 +405,13 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.examples.pivot.Element <em>Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.pivot.Element <em>Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.ocl.examples.pivot.Element
+	 * @see org.eclipse.ocl.pivot.Element
 	 * @generated
 	 */
 	public Adapter createElementAdapter() {
@@ -419,13 +419,13 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.examples.domain.elements.Nameable <em>Nameable</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.pivot.utilities.Nameable <em>Nameable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.ocl.examples.domain.elements.Nameable
+	 * @see org.eclipse.ocl.pivot.utilities.Nameable
 	 * @generated
 	 */
 	public Adapter createNameableAdapter() {
@@ -433,13 +433,13 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.examples.pivot.NamedElement <em>Named Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.pivot.NamedElement <em>Named Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.ocl.examples.pivot.NamedElement
+	 * @see org.eclipse.ocl.pivot.NamedElement
 	 * @generated
 	 */
 	public Adapter createNamedElementAdapter() {
@@ -447,13 +447,13 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.examples.pivot.Namespace <em>Namespace</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.pivot.Namespace <em>Namespace</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.ocl.examples.pivot.Namespace
+	 * @see org.eclipse.ocl.pivot.Namespace
 	 * @generated
 	 */
 	public Adapter createNamespaceAdapter() {
@@ -461,16 +461,16 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.examples.pivot.Root <em>Root</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.pivot.Model <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.ocl.examples.pivot.Root
+	 * @see org.eclipse.ocl.pivot.Model
 	 * @generated
 	 */
-	public Adapter createRootAdapter() {
+	public Adapter createModelAdapter() {
 		return null;
 	}
 

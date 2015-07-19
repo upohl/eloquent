@@ -6,8 +6,8 @@ import de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.ComponentResourceTupleDescriptor;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.ResourceConstraint;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.ValueTupleDescriptor;
-
 import de.uni_paderborn.fujaba.muml.allocation.language.as.WeightingComponentResourceTupleElement;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -29,12 +29,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.ResourceConstraintImpl#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.ResourceConstraintImpl#getWeighting <em>Weighting</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.ResourceConstraintImpl#getRhs <em>Rhs</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

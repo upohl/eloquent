@@ -13,9 +13,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.ocl.examples.xtext.base.basecs.impl.ModelElementCSImpl;
+import org.eclipse.ocl.xtext.basecs.impl.ModelElementCSImpl;
 
-import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
+import org.eclipse.ocl.xtext.essentialoclcs.ContextCS;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,10 +23,10 @@ import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.EvaluatableElementCSImpl#getExpression <em>Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

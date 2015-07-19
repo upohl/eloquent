@@ -4,10 +4,7 @@ package de.uni_paderborn.fujaba.muml.allocation.language.as;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.ocl.examples.pivot.NamedElement;
-import org.eclipse.ocl.examples.pivot.Root;
+import org.eclipse.ocl.pivot.Model;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,19 +17,19 @@ import org.eclipse.ocl.examples.pivot.Root;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Specification#getServices <em>Services</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Specification#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Specification#getMeasure <em>Measure</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Specification#getGoal <em>Goal</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage#getSpecification()
  * @model
  * @generated
  */
-public interface Specification extends EObject, Root {
+public interface Specification extends Model {
 	/**
 	 * Returns the value of the '<em><b>Services</b></em>' containment reference list.
 	 * The list contents are of type {@link de.uni_paderborn.fujaba.muml.allocation.language.as.Service}.

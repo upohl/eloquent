@@ -13,9 +13,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.ocl.examples.pivot.ExpressionInOCL;
+import org.eclipse.ocl.pivot.ExpressionInOCL;
 
-import org.eclipse.ocl.examples.pivot.internal.impl.ElementImpl;
+import org.eclipse.ocl.pivot.internal.ElementImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,10 +23,10 @@ import org.eclipse.ocl.examples.pivot.internal.impl.ElementImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.EvaluatableElementImpl#getExpression <em>Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

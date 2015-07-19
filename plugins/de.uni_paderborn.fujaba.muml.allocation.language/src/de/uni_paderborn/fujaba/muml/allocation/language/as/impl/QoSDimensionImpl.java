@@ -7,8 +7,8 @@ import de.uni_paderborn.fujaba.muml.allocation.language.as.ComponentResourceTupl
 import de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.QoSDimension;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.ValueTupleDescriptor;
-
 import de.uni_paderborn.fujaba.muml.allocation.language.as.WeightingComponentResourceTupleElement;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -24,9 +24,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.eclipse.ocl.examples.pivot.ExpressionInOCL;
+import org.eclipse.ocl.pivot.ExpressionInOCL;
 
-import org.eclipse.ocl.examples.pivot.internal.impl.NamedElementImpl;
+import org.eclipse.ocl.pivot.internal.NamedElementImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,12 +34,12 @@ import org.eclipse.ocl.examples.pivot.internal.impl.NamedElementImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.QoSDimensionImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.QoSDimensionImpl#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.QoSDimensionImpl#getWeighting <em>Weighting</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

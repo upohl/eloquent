@@ -1,4 +1,4 @@
-/**
+/*******************************************************************************
  * <copyright>
  * 
  * </copyright>
@@ -21,7 +21,7 @@ import org.eclipse.jdt.annotation.Nullable;
  * suitable first super class, the method delegates to visiting().
  */
 public abstract class AbstractExtendingLanguageSpecificationCSVisitor<R, C>
-	extends org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.util.AbstractExtendingCompleteOCLCSVisitor<R, C>
+	extends org.eclipse.ocl.xtext.completeoclcs.util.AbstractExtendingCompleteOCLCSVisitor<R, C>
 	implements LanguageSpecificationCSVisitor<R>
 {
 	/**

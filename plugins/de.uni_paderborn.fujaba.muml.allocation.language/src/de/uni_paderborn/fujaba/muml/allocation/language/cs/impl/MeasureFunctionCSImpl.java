@@ -5,15 +5,22 @@ package de.uni_paderborn.fujaba.muml.allocation.language.cs.impl;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ServiceCS;
+
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.jdt.annotation.Nullable;
-import org.eclipse.ocl.examples.xtext.base.basecs.impl.ModelElementCSImpl;
-import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
+
+import org.eclipse.ocl.xtext.basecs.impl.ModelElementCSImpl;
+
+import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,10 +28,10 @@ import org.eclipse.ocl.examples.xtext.base.basecs.util.BaseCSVisitor;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.impl.MeasureFunctionCSImpl#getServices <em>Services</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -136,7 +143,7 @@ public class MeasureFunctionCSImpl extends ModelElementCSImpl implements Measure
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public @Nullable <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
+	public <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
 		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitMeasureFunctionCS(this);
 	}
 

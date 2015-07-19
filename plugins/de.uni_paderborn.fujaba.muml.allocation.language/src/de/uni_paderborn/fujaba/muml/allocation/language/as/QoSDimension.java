@@ -2,12 +2,7 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.language.as;
 
-import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.ocl.examples.pivot.ExpressionInOCL;
-import org.eclipse.ocl.examples.pivot.NamedElement;
+import org.eclipse.ocl.pivot.NamedElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,5 +21,4 @@ import org.eclipse.ocl.examples.pivot.NamedElement;
  * @generated
  */
 public interface QoSDimension extends NamedElement, EvaluatableElement, WeightingComponentResourceTupleElement {
-
 } // QoSDimension

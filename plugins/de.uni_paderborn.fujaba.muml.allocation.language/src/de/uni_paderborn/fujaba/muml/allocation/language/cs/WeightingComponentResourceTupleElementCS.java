@@ -4,7 +4,7 @@ package de.uni_paderborn.fujaba.muml.allocation.language.cs;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.ocl.examples.xtext.base.basecs.ModelElementCS;
+import org.eclipse.ocl.xtext.basecs.ModelElementCS;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,11 +19,11 @@ import org.eclipse.ocl.examples.xtext.base.basecs.ModelElementCS;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.WeightingComponentResourceTupleElementCS#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.WeightingComponentResourceTupleElementCS#getWeighting <em>Weighting</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage#getWeightingComponentResourceTupleElementCS()
  * @model abstract="true"

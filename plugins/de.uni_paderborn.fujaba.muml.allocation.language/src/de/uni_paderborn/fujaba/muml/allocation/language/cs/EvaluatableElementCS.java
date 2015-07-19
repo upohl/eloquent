@@ -2,9 +2,9 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.language.cs;
 
-import org.eclipse.ocl.examples.xtext.base.basecs.ModelElementCS;
+import org.eclipse.ocl.xtext.basecs.ModelElementCS;
 
-import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
+import org.eclipse.ocl.xtext.essentialoclcs.ContextCS;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,10 +18,10 @@ import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS#getExpression <em>Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage#getEvaluatableElementCS()
  * @model abstract="true"

@@ -14,10 +14,10 @@ package de.uni_paderborn.fujaba.muml.allocation.language.cs;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage#getValueTupleDescriptorCS()
  * @model

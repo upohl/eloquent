@@ -9,14 +9,14 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.ocl.examples.domain.elements.Nameable;
+import org.eclipse.ocl.pivot.Element;
+import org.eclipse.ocl.pivot.Model;
+import org.eclipse.ocl.pivot.NamedElement;
+import org.eclipse.ocl.pivot.Namespace;
 
-import org.eclipse.ocl.examples.pivot.Element;
-import org.eclipse.ocl.examples.pivot.NamedElement;
+import org.eclipse.ocl.pivot.util.Visitable;
 
-import org.eclipse.ocl.examples.pivot.Namespace;
-import org.eclipse.ocl.examples.pivot.Root;
-import org.eclipse.ocl.examples.pivot.util.Visitable;
+import org.eclipse.ocl.pivot.utilities.Nameable;
 
 /**
  * <!-- begin-user-doc -->
@@ -56,7 +56,7 @@ public class AsSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
@@ -78,7 +78,7 @@ public class AsSwitch<T> extends Switch<T> {
 			case AsPackage.SPECIFICATION: {
 				Specification specification = (Specification)theEObject;
 				T result = caseSpecification(specification);
-				if (result == null) result = caseRoot(specification);
+				if (result == null) result = caseModel(specification);
 				if (result == null) result = caseNamespace(specification);
 				if (result == null) result = caseNamedElement(specification);
 				if (result == null) result = caseElement(specification);
@@ -532,17 +532,17 @@ public class AsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Root</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Root</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Model</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRoot(Root object) {
+	public T caseModel(Model object) {
 		return null;
 	}
 

@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
-import org.eclipse.ocl.examples.pivot.PivotPackage;
+import org.eclipse.ocl.pivot.PivotPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -73,40 +73,40 @@ public interface AsPackage extends EPackage {
 	int SPECIFICATION = 0;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__EXTENSION = PivotPackage.ROOT__EXTENSION;
+	int SPECIFICATION__ANNOTATING_COMMENTS = PivotPackage.MODEL__ANNOTATING_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__OWNED_ANNOTATION = PivotPackage.ROOT__OWNED_ANNOTATION;
+	int SPECIFICATION__OWNED_ANNOTATIONS = PivotPackage.MODEL__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__OWNED_COMMENT = PivotPackage.ROOT__OWNED_COMMENT;
+	int SPECIFICATION__OWNED_COMMENTS = PivotPackage.MODEL__OWNED_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__IS_STATIC = PivotPackage.ROOT__IS_STATIC;
+	int SPECIFICATION__OWNED_EXTENSIONS = PivotPackage.MODEL__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -115,16 +115,16 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__NAME = PivotPackage.ROOT__NAME;
+	int SPECIFICATION__NAME = PivotPackage.MODEL__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Owned Rule</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Constraints</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__OWNED_RULE = PivotPackage.ROOT__OWNED_RULE;
+	int SPECIFICATION__OWNED_CONSTRAINTS = PivotPackage.MODEL__OWNED_CONSTRAINTS;
 
 	/**
 	 * The feature id for the '<em><b>External URI</b></em>' attribute.
@@ -133,25 +133,25 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__EXTERNAL_URI = PivotPackage.ROOT__EXTERNAL_URI;
+	int SPECIFICATION__EXTERNAL_URI = PivotPackage.MODEL__EXTERNAL_URI;
 
 	/**
-	 * The feature id for the '<em><b>Imports</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Imports</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__IMPORTS = PivotPackage.ROOT__IMPORTS;
+	int SPECIFICATION__OWNED_IMPORTS = PivotPackage.MODEL__OWNED_IMPORTS;
 
 	/**
-	 * The feature id for the '<em><b>Nested Package</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Packages</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__NESTED_PACKAGE = PivotPackage.ROOT__NESTED_PACKAGE;
+	int SPECIFICATION__OWNED_PACKAGES = PivotPackage.MODEL__OWNED_PACKAGES;
 
 	/**
 	 * The feature id for the '<em><b>Services</b></em>' containment reference list.
@@ -160,7 +160,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__SERVICES = PivotPackage.ROOT_FEATURE_COUNT + 0;
+	int SPECIFICATION__SERVICES = PivotPackage.MODEL_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
@@ -169,7 +169,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__CONSTRAINTS = PivotPackage.ROOT_FEATURE_COUNT + 1;
+	int SPECIFICATION__CONSTRAINTS = PivotPackage.MODEL_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Measure</b></em>' containment reference.
@@ -178,7 +178,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__MEASURE = PivotPackage.ROOT_FEATURE_COUNT + 2;
+	int SPECIFICATION__MEASURE = PivotPackage.MODEL_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Goal</b></em>' attribute.
@@ -187,7 +187,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__GOAL = PivotPackage.ROOT_FEATURE_COUNT + 3;
+	int SPECIFICATION__GOAL = PivotPackage.MODEL_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Specification</em>' class.
@@ -196,7 +196,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_FEATURE_COUNT = PivotPackage.ROOT_FEATURE_COUNT + 4;
+	int SPECIFICATION_FEATURE_COUNT = PivotPackage.MODEL_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.impl.EvaluatableElementImpl <em>Evaluatable Element</em>}' class.
@@ -209,31 +209,40 @@ public interface AsPackage extends EPackage {
 	int EVALUATABLE_ELEMENT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATABLE_ELEMENT__EXTENSION = PivotPackage.ELEMENT__EXTENSION;
+	int EVALUATABLE_ELEMENT__ANNOTATING_COMMENTS = PivotPackage.ELEMENT__ANNOTATING_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATABLE_ELEMENT__OWNED_ANNOTATION = PivotPackage.ELEMENT__OWNED_ANNOTATION;
+	int EVALUATABLE_ELEMENT__OWNED_ANNOTATIONS = PivotPackage.ELEMENT__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATABLE_ELEMENT__OWNED_COMMENT = PivotPackage.ELEMENT__OWNED_COMMENT;
+	int EVALUATABLE_ELEMENT__OWNED_COMMENTS = PivotPackage.ELEMENT__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATABLE_ELEMENT__OWNED_EXTENSIONS = PivotPackage.ELEMENT__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -264,31 +273,40 @@ public interface AsPackage extends EPackage {
 	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__EXTENSION = PivotPackage.ELEMENT__EXTENSION;
+	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__ANNOTATING_COMMENTS = PivotPackage.ELEMENT__ANNOTATING_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__OWNED_ANNOTATION = PivotPackage.ELEMENT__OWNED_ANNOTATION;
+	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__OWNED_ANNOTATIONS = PivotPackage.ELEMENT__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__OWNED_COMMENT = PivotPackage.ELEMENT__OWNED_COMMENT;
+	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__OWNED_COMMENTS = PivotPackage.ELEMENT__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__OWNED_EXTENSIONS = PivotPackage.ELEMENT__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Tuple Descriptors</b></em>' containment reference list.
@@ -328,40 +346,40 @@ public interface AsPackage extends EPackage {
 	int SERVICE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__EXTENSION = PivotPackage.NAMED_ELEMENT__EXTENSION;
+	int SERVICE__ANNOTATING_COMMENTS = PivotPackage.NAMED_ELEMENT__ANNOTATING_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__OWNED_ANNOTATION = PivotPackage.NAMED_ELEMENT__OWNED_ANNOTATION;
+	int SERVICE__OWNED_ANNOTATIONS = PivotPackage.NAMED_ELEMENT__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__OWNED_COMMENT = PivotPackage.NAMED_ELEMENT__OWNED_COMMENT;
+	int SERVICE__OWNED_COMMENTS = PivotPackage.NAMED_ELEMENT__OWNED_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__IS_STATIC = PivotPackage.NAMED_ELEMENT__IS_STATIC;
+	int SERVICE__OWNED_EXTENSIONS = PivotPackage.NAMED_ELEMENT__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -401,40 +419,40 @@ public interface AsPackage extends EPackage {
 	int QO_SDIMENSION = 4;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QO_SDIMENSION__EXTENSION = PivotPackage.NAMED_ELEMENT__EXTENSION;
+	int QO_SDIMENSION__ANNOTATING_COMMENTS = PivotPackage.NAMED_ELEMENT__ANNOTATING_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QO_SDIMENSION__OWNED_ANNOTATION = PivotPackage.NAMED_ELEMENT__OWNED_ANNOTATION;
+	int QO_SDIMENSION__OWNED_ANNOTATIONS = PivotPackage.NAMED_ELEMENT__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QO_SDIMENSION__OWNED_COMMENT = PivotPackage.NAMED_ELEMENT__OWNED_COMMENT;
+	int QO_SDIMENSION__OWNED_COMMENTS = PivotPackage.NAMED_ELEMENT__OWNED_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QO_SDIMENSION__IS_STATIC = PivotPackage.NAMED_ELEMENT__IS_STATIC;
+	int QO_SDIMENSION__OWNED_EXTENSIONS = PivotPackage.NAMED_ELEMENT__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -492,40 +510,40 @@ public interface AsPackage extends EPackage {
 	int CONSTRAINT = 5;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT__EXTENSION = PivotPackage.NAMED_ELEMENT__EXTENSION;
+	int CONSTRAINT__ANNOTATING_COMMENTS = PivotPackage.NAMED_ELEMENT__ANNOTATING_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT__OWNED_ANNOTATION = PivotPackage.NAMED_ELEMENT__OWNED_ANNOTATION;
+	int CONSTRAINT__OWNED_ANNOTATIONS = PivotPackage.NAMED_ELEMENT__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT__OWNED_COMMENT = PivotPackage.NAMED_ELEMENT__OWNED_COMMENT;
+	int CONSTRAINT__OWNED_COMMENTS = PivotPackage.NAMED_ELEMENT__OWNED_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT__IS_STATIC = PivotPackage.NAMED_ELEMENT__IS_STATIC;
+	int CONSTRAINT__OWNED_EXTENSIONS = PivotPackage.NAMED_ELEMENT__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -565,40 +583,40 @@ public interface AsPackage extends EPackage {
 	int LOCATION_CONSTRAINT = 6;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT__EXTENSION = CONSTRAINT__EXTENSION;
+	int LOCATION_CONSTRAINT__ANNOTATING_COMMENTS = CONSTRAINT__ANNOTATING_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT__OWNED_ANNOTATION = CONSTRAINT__OWNED_ANNOTATION;
+	int LOCATION_CONSTRAINT__OWNED_ANNOTATIONS = CONSTRAINT__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT__OWNED_COMMENT = CONSTRAINT__OWNED_COMMENT;
+	int LOCATION_CONSTRAINT__OWNED_COMMENTS = CONSTRAINT__OWNED_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT__IS_STATIC = CONSTRAINT__IS_STATIC;
+	int LOCATION_CONSTRAINT__OWNED_EXTENSIONS = CONSTRAINT__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -656,40 +674,40 @@ public interface AsPackage extends EPackage {
 	int RESOURCE_CONSTRAINT = 7;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSTRAINT__EXTENSION = CONSTRAINT__EXTENSION;
+	int RESOURCE_CONSTRAINT__ANNOTATING_COMMENTS = CONSTRAINT__ANNOTATING_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSTRAINT__OWNED_ANNOTATION = CONSTRAINT__OWNED_ANNOTATION;
+	int RESOURCE_CONSTRAINT__OWNED_ANNOTATIONS = CONSTRAINT__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSTRAINT__OWNED_COMMENT = CONSTRAINT__OWNED_COMMENT;
+	int RESOURCE_CONSTRAINT__OWNED_COMMENTS = CONSTRAINT__OWNED_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSTRAINT__IS_STATIC = CONSTRAINT__IS_STATIC;
+	int RESOURCE_CONSTRAINT__OWNED_EXTENSIONS = CONSTRAINT__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -756,40 +774,40 @@ public interface AsPackage extends EPackage {
 	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT = 8;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__EXTENSION = CONSTRAINT__EXTENSION;
+	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__ANNOTATING_COMMENTS = CONSTRAINT__ANNOTATING_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__OWNED_ANNOTATION = CONSTRAINT__OWNED_ANNOTATION;
+	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__OWNED_ANNOTATIONS = CONSTRAINT__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__OWNED_COMMENT = CONSTRAINT__OWNED_COMMENT;
+	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__OWNED_COMMENTS = CONSTRAINT__OWNED_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__IS_STATIC = CONSTRAINT__IS_STATIC;
+	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__OWNED_EXTENSIONS = CONSTRAINT__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -838,31 +856,40 @@ public interface AsPackage extends EPackage {
 	int TUPLE_DESCRIPTOR = 9;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TUPLE_DESCRIPTOR__EXTENSION = PivotPackage.ELEMENT__EXTENSION;
+	int TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS = PivotPackage.ELEMENT__ANNOTATING_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TUPLE_DESCRIPTOR__OWNED_ANNOTATION = PivotPackage.ELEMENT__OWNED_ANNOTATION;
+	int TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS = PivotPackage.ELEMENT__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TUPLE_DESCRIPTOR__OWNED_COMMENT = PivotPackage.ELEMENT__OWNED_COMMENT;
+	int TUPLE_DESCRIPTOR__OWNED_COMMENTS = PivotPackage.ELEMENT__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TUPLE_DESCRIPTOR__OWNED_EXTENSIONS = PivotPackage.ELEMENT__OWNED_EXTENSIONS;
 
 	/**
 	 * The number of structural features of the '<em>Tuple Descriptor</em>' class.
@@ -884,31 +911,40 @@ public interface AsPackage extends EPackage {
 	int INSTANCE_TUPLE_DESCRIPTOR = 10;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INSTANCE_TUPLE_DESCRIPTOR__EXTENSION = TUPLE_DESCRIPTOR__EXTENSION;
+	int INSTANCE_TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS = TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INSTANCE_TUPLE_DESCRIPTOR__OWNED_ANNOTATION = TUPLE_DESCRIPTOR__OWNED_ANNOTATION;
+	int INSTANCE_TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS = TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INSTANCE_TUPLE_DESCRIPTOR__OWNED_COMMENT = TUPLE_DESCRIPTOR__OWNED_COMMENT;
+	int INSTANCE_TUPLE_DESCRIPTOR__OWNED_COMMENTS = TUPLE_DESCRIPTOR__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_TUPLE_DESCRIPTOR__OWNED_EXTENSIONS = TUPLE_DESCRIPTOR__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Instance</b></em>' attribute.
@@ -939,31 +975,40 @@ public interface AsPackage extends EPackage {
 	int LOCATION_TUPLE_DESCRIPTOR = 11;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR__EXTENSION = INSTANCE_TUPLE_DESCRIPTOR__EXTENSION;
+	int LOCATION_TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS = INSTANCE_TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR__OWNED_ANNOTATION = INSTANCE_TUPLE_DESCRIPTOR__OWNED_ANNOTATION;
+	int LOCATION_TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS = INSTANCE_TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR__OWNED_COMMENT = INSTANCE_TUPLE_DESCRIPTOR__OWNED_COMMENT;
+	int LOCATION_TUPLE_DESCRIPTOR__OWNED_COMMENTS = INSTANCE_TUPLE_DESCRIPTOR__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION_TUPLE_DESCRIPTOR__OWNED_EXTENSIONS = INSTANCE_TUPLE_DESCRIPTOR__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Instance</b></em>' attribute.
@@ -1003,31 +1048,40 @@ public interface AsPackage extends EPackage {
 	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR = 12;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR__EXTENSION = INSTANCE_TUPLE_DESCRIPTOR__EXTENSION;
+	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS = INSTANCE_TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR__OWNED_ANNOTATION = INSTANCE_TUPLE_DESCRIPTOR__OWNED_ANNOTATION;
+	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS = INSTANCE_TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR__OWNED_COMMENT = INSTANCE_TUPLE_DESCRIPTOR__OWNED_COMMENT;
+	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR__OWNED_COMMENTS = INSTANCE_TUPLE_DESCRIPTOR__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR__OWNED_EXTENSIONS = INSTANCE_TUPLE_DESCRIPTOR__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Instance</b></em>' attribute.
@@ -1067,31 +1121,40 @@ public interface AsPackage extends EPackage {
 	int VALUE_TUPLE_DESCRIPTOR = 13;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR__EXTENSION = TUPLE_DESCRIPTOR__EXTENSION;
+	int VALUE_TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS = TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR__OWNED_ANNOTATION = TUPLE_DESCRIPTOR__OWNED_ANNOTATION;
+	int VALUE_TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS = TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR__OWNED_COMMENT = TUPLE_DESCRIPTOR__OWNED_COMMENT;
+	int VALUE_TUPLE_DESCRIPTOR__OWNED_COMMENTS = TUPLE_DESCRIPTOR__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALUE_TUPLE_DESCRIPTOR__OWNED_EXTENSIONS = TUPLE_DESCRIPTOR__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1122,31 +1185,40 @@ public interface AsPackage extends EPackage {
 	int MEASURE_FUNCTION = 14;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEASURE_FUNCTION__EXTENSION = PivotPackage.ELEMENT__EXTENSION;
+	int MEASURE_FUNCTION__ANNOTATING_COMMENTS = PivotPackage.ELEMENT__ANNOTATING_COMMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEASURE_FUNCTION__OWNED_ANNOTATION = PivotPackage.ELEMENT__OWNED_ANNOTATION;
+	int MEASURE_FUNCTION__OWNED_ANNOTATIONS = PivotPackage.ELEMENT__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEASURE_FUNCTION__OWNED_COMMENT = PivotPackage.ELEMENT__OWNED_COMMENT;
+	int MEASURE_FUNCTION__OWNED_COMMENTS = PivotPackage.ELEMENT__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEASURE_FUNCTION__OWNED_EXTENSIONS = PivotPackage.ELEMENT__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Services</b></em>' reference list.
@@ -1175,7 +1247,6 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 */
 	int LOCATION_CONSTRAINT_TYPES = 15;
-
 
 	/**
 	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.language.as.Goal <em>Goal</em>}' enum.

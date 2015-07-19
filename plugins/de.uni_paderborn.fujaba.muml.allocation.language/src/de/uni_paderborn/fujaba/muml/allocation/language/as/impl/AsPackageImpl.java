@@ -20,8 +20,8 @@ import de.uni_paderborn.fujaba.muml.allocation.language.as.Service;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.Specification;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.TupleDescriptor;
 import de.uni_paderborn.fujaba.muml.allocation.language.as.ValueTupleDescriptor;
-
 import de.uni_paderborn.fujaba.muml.allocation.language.as.WeightingComponentResourceTupleElement;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.ocl.examples.pivot.PivotPackage;
+import org.eclipse.ocl.pivot.PivotPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -639,7 +639,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		specificationEClass.getESuperTypes().add(thePivotPackage.getRoot());
+		specificationEClass.getESuperTypes().add(thePivotPackage.getModel());
 		evaluatableElementEClass.getESuperTypes().add(thePivotPackage.getElement());
 		weightingComponentResourceTupleElementEClass.getESuperTypes().add(thePivotPackage.getElement());
 		serviceEClass.getESuperTypes().add(thePivotPackage.getNamedElement());

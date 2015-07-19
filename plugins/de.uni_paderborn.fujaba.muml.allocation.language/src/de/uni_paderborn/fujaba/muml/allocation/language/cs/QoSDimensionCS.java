@@ -2,11 +2,7 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.language.cs;
 
-import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.ocl.examples.xtext.base.basecs.NamedElementCS;
-
-import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
+import org.eclipse.ocl.xtext.basecs.NamedElementCS;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,5 +21,4 @@ import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
  * @generated
  */
 public interface QoSDimensionCS extends NamedElementCS, EvaluatableElementCS, WeightingComponentResourceTupleElementCS {
-
 } // QoSDimensionCS
