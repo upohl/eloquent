@@ -1,5 +1,5 @@
 modeltype ECORE "strict" uses ecore('http://www.eclipse.org/emf/2002/Ecore');
-modeltype PIVOT "strict" uses pivot('http://www.eclipse.org/ocl/3.1.0/Pivot');
+modeltype PIVOT "strict" uses pivot('http://www.eclipse.org/ocl/2015/Pivot');
 
 // TODO: mapping names need a bit more love + unify naming scheme
 // TODO: some more comments
