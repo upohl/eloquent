@@ -2,7 +2,7 @@ package de.uni_paderborn.fujaba.muml.allocation.language.build;
 
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
-import org.eclipse.ocl.examples.pivot.PivotPackage;
+import org.eclipse.ocl.pivot.PivotPackage;
 
 public class PivotModelSetup {
 	private ResourceSet resourceSet;
