@@ -15,11 +15,11 @@ modeltype core uses core('http://www.storydriven.org/core/0.3.1');
 modeltype expressions uses core::expressions('http://www.storydriven.org/core/expressions/0.3.1');
 modeltype common uses core::expressions::common('http://www.storydriven.org/core/expressions/common/0.3.1');
 modeltype instance uses muml::instance('http://www.fujaba.de/muml/instance/0.4.0');
-modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.0/');
-modeltype hwrinstance uses hardware::hwresourceinstance('http://www.fujaba.de/muml/hardware/hwresourceinstance/1.0/');
+modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.1/');
+modeltype hwrinstance uses hardware::hwresourceinstance('http://www.fujaba.de/muml/hardware/hwresourceinstance/1.1/');
 modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
-modeltype ocl uses essentialoclcs('http://www.eclipse.org/ocl/3.1.0/EssentialOCLCST');
-modeltype values uses values('http://ww.eclipse.org/OCL/Values');
+modeltype ocl uses essentialoclcs('http://www.eclipse.org/ocl/2015/EssentialOCLCS');
+modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
 transformation Specification2ILP(in specification : allocationSpecification, in ins : instance, in hwpi : hwpinstance, out ilpOut : ilptype);
 

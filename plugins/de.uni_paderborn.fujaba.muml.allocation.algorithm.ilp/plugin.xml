@@ -10,13 +10,13 @@
                class="de.uni_paderborn.fujaba.muml.allocation.algorithm.ocl.OCLEvaluator"
                name="OCLEvaluatorBlackbox">
             <metamodel
-                  nsURI="http://www.eclipse.org/ocl/3.1.0/EssentialOCLCST">
+                  nsURI="http://www.eclipse.org/ocl/2015/EssentialOCLCS">
             </metamodel>
             <metamodel
-                  nsURI="http://www.eclipse.org/ocl/3.1.0/Pivot">
+                  nsURI="http://www.eclipse.org/ocl/2015/Pivot">
             </metamodel>
             <metamodel
-                  nsURI="http://ww.eclipse.org/OCL/Values">
+                  nsURI="http://www.eclipse.org/ocl/2015/Values">
             </metamodel>
             <metamodel
                   nsURI="http://www.fujaba.de/muml/allocation/language/0.1.0/cs">
@@ -36,7 +36,7 @@
                   nsURI="http://www.storydriven.org/core/0.3.1">
             </metamodel>
             <metamodel
-                  nsURI="http://ww.eclipse.org/OCL/Values">
+                  nsURI="http://www.eclipse.org/ocl/2015/Values">
             </metamodel>
          </library>
       </unit>

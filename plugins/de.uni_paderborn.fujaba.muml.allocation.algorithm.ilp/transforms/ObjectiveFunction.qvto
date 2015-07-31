@@ -12,8 +12,8 @@ modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
 modeltype expressions uses core::expressions('http://www.storydriven.org/core/expressions/0.3.1');
 modeltype common uses core::expressions::common('http://www.storydriven.org/core/expressions/common/0.3.1');
 modeltype instance uses muml::instance('http://www.fujaba.de/muml/instance/0.4.0');
-modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.0/');
-modeltype values uses values('http://ww.eclipse.org/OCL/Values');
+modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.1/');
+modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
 library ObjectiveFunction;
 
