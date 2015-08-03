@@ -3,6 +3,8 @@
 */
 package de.uni_paderborn.fujaba.muml.allocation.language.ui.quickfix
 
+import org.eclipse.ocl.xtext.essentialocl.ui.quickfix.EssentialOCLQuickfixProvider
+
 //import org.eclipse.xtext.ui.editor.quickfix.Fix
 //import org.eclipse.xtext.ui.editor.quickfix.IssueResolutionAcceptor
 //import org.eclipse.xtext.validation.Issue
@@ -12,7 +14,7 @@ package de.uni_paderborn.fujaba.muml.allocation.language.ui.quickfix
  *
  * see http://www.eclipse.org/Xtext/documentation.html#quickfixes
  */
-class AllocationSpecificationLanguageQuickfixProvider extends org.eclipse.ocl.examples.xtext.essentialocl.ui.quickfix.EssentialOCLQuickfixProvider {
+class AllocationSpecificationLanguageQuickfixProvider extends EssentialOCLQuickfixProvider {
 
 //	@Fix(MyDslValidator::INVALID_NAME)
 //	def capitalizeName(Issue issue, IssueResolutionAcceptor acceptor) {

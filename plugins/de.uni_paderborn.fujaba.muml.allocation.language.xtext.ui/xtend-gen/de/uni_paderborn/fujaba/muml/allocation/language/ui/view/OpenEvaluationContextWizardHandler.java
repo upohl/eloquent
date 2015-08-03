@@ -20,6 +20,7 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
 
 @SuppressWarnings("all")
 public class OpenEvaluationContextWizardHandler extends BaseHandler {
+  @Override
   public Object execute(final ExecutionEvent event) throws ExecutionException {
     try {
       Object _xblockexpression = null;

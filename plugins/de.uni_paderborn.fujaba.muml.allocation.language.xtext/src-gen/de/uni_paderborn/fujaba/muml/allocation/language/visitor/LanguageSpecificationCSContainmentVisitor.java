@@ -1,14 +1,14 @@
 package de.uni_paderborn.fujaba.muml.allocation.language.visitor;
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
-import org.eclipse.ocl.examples.xtext.base.cs2as.Continuation;
-import org.eclipse.ocl.examples.pivot.utilities.PivotUtil;
-import org.eclipse.ocl.examples.xtext.base.cs2as.CS2PivotConversion;
+import org.eclipse.ocl.xtext.base.cs2as.Continuation;
+import org.eclipse.ocl.pivot.utilities.PivotUtil;
+import org.eclipse.ocl.xtext.base.cs2as.CS2ASConversion;
 
 // generated code: do NOT edit (file is overwritten on regeneration)
 
 public class LanguageSpecificationCSContainmentVisitor extends de.uni_paderborn.fujaba.muml.allocation.language.cs.util.AbstractLanguageSpecificationCSContainmentVisitor {
-	public LanguageSpecificationCSContainmentVisitor(CS2PivotConversion context) {
+	public LanguageSpecificationCSContainmentVisitor(CS2ASConversion context) {
 		super(context);
 	}
 	
@@ -35,7 +35,7 @@ public class LanguageSpecificationCSContainmentVisitor extends de.uni_paderborn.
 	public @Nullable Continuation<?> visitEvaluatableElementCS(@NonNull de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS csElement) {
 		de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement pivotElement = PivotUtil.getPivot(de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement.class, csElement);
 		pivotElement.setExpression(
-			PivotUtil.getPivot(org.eclipse.ocl.examples.pivot.ExpressionInOCL.class, csElement.getExpression())
+			PivotUtil.getPivot(org.eclipse.ocl.pivot.ExpressionInOCL.class, csElement.getExpression())
 		);
 		return null;
 	}

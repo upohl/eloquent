@@ -23,6 +23,7 @@ public class EvaluationContextWizard extends AbstractFujabaExportWizard {
   
   private HWPlatformInstanceConfiguration hpic;
   
+  @Override
   public IFujabaExportOperation wizardCreateExportOperation() {
     IFujabaExportOperation _xblockexpression = null;
     {
@@ -33,10 +34,12 @@ public class EvaluationContextWizard extends AbstractFujabaExportWizard {
       EObject _get_1 = _sourceElements_1[0];
       this.hpic = ((HWPlatformInstanceConfiguration) _get_1);
       _xblockexpression = new IFujabaExportOperation() {
+        @Override
         public IStatus getStatus() {
           return Status.OK_STATUS;
         }
         
+        @Override
         public void run(final IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
         }
       };
@@ -44,6 +47,7 @@ public class EvaluationContextWizard extends AbstractFujabaExportWizard {
     return _xblockexpression;
   }
   
+  @Override
   public void addPages() {
     ResourceSet _resourceSet = this.getResourceSet();
     this.cicSourcePage = new AbstractFujabaExportSourcePage("CicSP", this.toolkit, _resourceSet, this.initialSelection) {
@@ -53,14 +57,17 @@ public class EvaluationContextWizard extends AbstractFujabaExportWizard {
        * setDescription("Select Component Instance Configuration, whose component instances should be allocated");
        * }
        */
+      @Override
       public String wizardPageGetSourceFileExtension() {
         return "fujaba";
       }
       
+      @Override
       public ElementSelectionMode wizardPageGetSupportedSelectionMode() {
         return ElementSelectionMode.ELEMENT_SELECTION_MODE_SINGLE;
       }
       
+      @Override
       public boolean wizardPageSupportsSourceModelElement(final EObject element) {
         return (element instanceof ComponentInstanceConfiguration);
       }
@@ -74,14 +81,17 @@ public class EvaluationContextWizard extends AbstractFujabaExportWizard {
        * setDescription("The HW Platform Instance Configuration provides the ECUs");
        * }
        */
+      @Override
       public String wizardPageGetSourceFileExtension() {
         return "fujaba";
       }
       
+      @Override
       public ElementSelectionMode wizardPageGetSupportedSelectionMode() {
         return ElementSelectionMode.ELEMENT_SELECTION_MODE_SINGLE;
       }
       
+      @Override
       public boolean wizardPageSupportsSourceModelElement(final EObject element) {
         return (element instanceof HWPlatformInstanceConfiguration);
       }
@@ -89,6 +99,7 @@ public class EvaluationContextWizard extends AbstractFujabaExportWizard {
     this.addPage(this.hpicSourcePage);
   }
   
+  @Override
   public String wizardGetId() {
     return "de.uni_paderborn.fujaba.muml.allocation.language.ui.view.EvaluationContextWizard";
   }

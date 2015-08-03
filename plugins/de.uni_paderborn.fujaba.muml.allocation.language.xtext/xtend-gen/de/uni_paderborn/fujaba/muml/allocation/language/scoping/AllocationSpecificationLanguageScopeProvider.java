@@ -9,8 +9,8 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.ocl.examples.pivot.scoping.Attribution;
-import org.eclipse.ocl.examples.xtext.essentialocl.scoping.EssentialOCLScopeProvider;
+import org.eclipse.ocl.pivot.internal.scoping.Attribution;
+import org.eclipse.ocl.xtext.completeocl.scoping.CompleteOCLScopeProvider;
 import org.eclipse.xtext.scoping.IScope;
 
 /**
@@ -20,11 +20,12 @@ import org.eclipse.xtext.scoping.IScope;
  * on how and when to use it
  */
 @SuppressWarnings("all")
-public class AllocationSpecificationLanguageScopeProvider extends EssentialOCLScopeProvider {
+public class AllocationSpecificationLanguageScopeProvider extends CompleteOCLScopeProvider {
   public static void init() {
     Attribution.REGISTRY.put(CsPackage.Literals.SPECIFICATION_CS, SpecificationCSAttribution.INSTANCE);
   }
   
+  @Override
   public IScope getScope(final EObject context, final EReference reference) {
     IScope _xifexpression = null;
     if ((context instanceof MeasureFunctionCS)) {

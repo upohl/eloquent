@@ -6,51 +6,53 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs2as.SpecificationCSPos
 import de.uni_paderborn.fujaba.muml.allocation.language.visitor.LanguageSpecificationCSContainmentVisitor;
 import de.uni_paderborn.fujaba.muml.allocation.language.visitor.LanguageSpecificationCSLeft2RightVisitor;
 import de.uni_paderborn.fujaba.muml.allocation.language.visitor.LanguageSpecificationCSPreOrderVisitor;
-import java.util.Collection;
-import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.ocl.examples.pivot.Element;
-import org.eclipse.ocl.examples.pivot.manager.MetaModelManager;
-import org.eclipse.ocl.examples.pivot.resource.ASResource;
-import org.eclipse.ocl.examples.xtext.base.cs2as.CS2PivotConversion;
-import org.eclipse.ocl.examples.xtext.base.cs2as.Continuation;
-import org.eclipse.ocl.examples.xtext.base.utilities.BaseCSResource;
-import org.eclipse.ocl.examples.xtext.essentialocl.cs2as.EssentialOCLCS2Pivot;
+import org.eclipse.ocl.pivot.Element;
+import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal;
+import org.eclipse.ocl.pivot.resource.ASResource;
+import org.eclipse.ocl.xtext.base.cs2as.CS2ASConversion;
+import org.eclipse.ocl.xtext.base.cs2as.Continuation;
+import org.eclipse.ocl.xtext.base.utilities.BaseCSResource;
+import org.eclipse.ocl.xtext.completeocl.cs2as.CompleteOCLCS2AS;
 import org.eclipse.xtext.diagnostics.IDiagnosticConsumer;
 
 @SuppressWarnings("all")
-public class SpecificationCS2Pivot extends EssentialOCLCS2Pivot {
+public class SpecificationCS2Pivot extends CompleteOCLCS2AS {
   private EClass contextClass;
   
-  public SpecificationCS2Pivot(final Map<? extends Resource, ? extends ASResource> cs2asResourceMap, final MetaModelManager metaModelManager, final EClass contextClass) {
-    super(cs2asResourceMap, metaModelManager);
+  public SpecificationCS2Pivot(final EnvironmentFactoryInternal environmentFactory, final BaseCSResource csResource, final ASResource asResource, final EClass contextClass) {
+    super(environmentFactory, csResource, asResource);
     this.contextClass = contextClass;
   }
   
   @NonNull
-  protected LanguageSpecificationCSVisitor<Continuation<?>> createContainmentVisitor(@NonNull final CS2PivotConversion converter) {
+  @Override
+  protected LanguageSpecificationCSVisitor<Continuation<?>> createContainmentVisitor(@NonNull final CS2ASConversion converter) {
     return new LanguageSpecificationCSContainmentVisitor(converter);
   }
   
   @NonNull
-  protected LanguageSpecificationCSVisitor<Element> createLeft2RightVisitor(@NonNull final CS2PivotConversion converter) {
+  @Override
+  protected LanguageSpecificationCSVisitor<Element> createLeft2RightVisitor(@NonNull final CS2ASConversion converter) {
     return new LanguageSpecificationCSLeft2RightVisitor(converter);
   }
   
   @NonNull
-  protected LanguageSpecificationCSVisitor<Continuation<?>> createPostOrderVisitor(@NonNull final CS2PivotConversion converter) {
+  @Override
+  protected LanguageSpecificationCSVisitor<Continuation<?>> createPostOrderVisitor(@NonNull final CS2ASConversion converter) {
     return new SpecificationCSPostOrderVisitor(converter);
   }
   
   @NonNull
-  protected LanguageSpecificationCSVisitor<Continuation<?>> createPreOrderVisitor(@NonNull final CS2PivotConversion converter) {
+  @Override
+  protected LanguageSpecificationCSVisitor<Continuation<?>> createPreOrderVisitor(@NonNull final CS2ASConversion converter) {
     return new LanguageSpecificationCSPreOrderVisitor(converter);
   }
   
   @NonNull
-  protected CS2PivotConversion createConversion(@NonNull final IDiagnosticConsumer diagnosticsConsumer, @NonNull final Collection<? extends BaseCSResource> csResources) {
-    return new SpecificationCS2PivotConversion(this, diagnosticsConsumer, csResources, this.contextClass);
+  @Override
+  protected CS2ASConversion createConversion(@NonNull final IDiagnosticConsumer diagnosticsConsumer, @NonNull final BaseCSResource csResource) {
+    return new SpecificationCS2PivotConversion(this, diagnosticsConsumer, this.contextClass);
   }
 }

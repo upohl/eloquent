@@ -3,7 +3,7 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.language.ui.quickfix;
 
-import org.eclipse.ocl.examples.xtext.essentialocl.ui.quickfix.EssentialOCLQuickfixProvider;
+import org.eclipse.ocl.xtext.essentialocl.ui.quickfix.EssentialOCLQuickfixProvider;
 
 /**
  * Custom quickfixes.

@@ -8,15 +8,15 @@ import de.uni_paderborn.fujaba.muml.allocation.language.visitor.LanguageSpecific
 import java.util.Collections;
 import java.util.List;
 import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.ocl.examples.pivot.ExpressionInOCL;
-import org.eclipse.ocl.examples.pivot.utilities.PivotUtil;
-import org.eclipse.ocl.examples.xtext.base.cs2as.BasicContinuation;
-import org.eclipse.ocl.examples.xtext.base.cs2as.CS2PivotConversion;
-import org.eclipse.ocl.examples.xtext.base.cs2as.Continuation;
-import org.eclipse.ocl.examples.xtext.base.cs2as.Dependency;
-import org.eclipse.ocl.examples.xtext.base.cs2as.SingleContinuation;
-import org.eclipse.ocl.examples.xtext.essentialocl.cs2as.EssentialOCLCSPostOrderVisitor;
-import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
+import org.eclipse.ocl.pivot.ExpressionInOCL;
+import org.eclipse.ocl.pivot.utilities.PivotUtil;
+import org.eclipse.ocl.xtext.base.cs2as.BasicContinuation;
+import org.eclipse.ocl.xtext.base.cs2as.CS2ASConversion;
+import org.eclipse.ocl.xtext.base.cs2as.Continuation;
+import org.eclipse.ocl.xtext.base.cs2as.Dependency;
+import org.eclipse.ocl.xtext.base.cs2as.SingleContinuation;
+import org.eclipse.ocl.xtext.essentialocl.cs2as.EssentialOCLCSPostOrderVisitor;
+import org.eclipse.ocl.xtext.essentialoclcs.ContextCS;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 
@@ -25,10 +25,11 @@ public class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPost
   protected static class PreContextCSCompletion extends SingleContinuation<EvaluatableElementCS> {
     private final static String MISSING_ContextCSCompletion = "Expected an instance of type ContextCSCompletion in %s";
     
-    public PreContextCSCompletion(final CS2PivotConversion context, final EvaluatableElementCS csElement) {
+    public PreContextCSCompletion(final CS2ASConversion context, final EvaluatableElementCS csElement) {
       super(context, null, null, csElement, Collections.<Dependency>emptyList());
     }
     
+    @Override
     public BasicContinuation<?> execute() {
       Object _xblockexpression = null;
       {
@@ -41,8 +42,10 @@ public class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPost
       return ((BasicContinuation<?>)_xblockexpression);
     }
     
+    @Override
     public void addTo(@NonNull final List<BasicContinuation<?>> simpleContinuations) {
       final Function1<BasicContinuation<?>, Boolean> _function = new Function1<BasicContinuation<?>, Boolean>() {
+        @Override
         public Boolean apply(final BasicContinuation<?> it) {
           return Boolean.valueOf((it instanceof EssentialOCLCSPostOrderVisitor.ContextCSCompletion));
         }
@@ -58,14 +61,16 @@ public class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPost
     }
   }
   
-  public SpecificationCSPostOrderVisitor(final CS2PivotConversion context) {
+  public SpecificationCSPostOrderVisitor(final CS2ASConversion context) {
     super(context);
   }
   
+  @Override
   public Continuation<?> visitEvaluatableElementCS(@NonNull final EvaluatableElementCS csElement) {
     return new SpecificationCSPostOrderVisitor.PreContextCSCompletion(this.context, csElement);
   }
   
+  @Override
   public Continuation<?> visitConstraintCS(@NonNull final ConstraintCS csElement) {
     Continuation<?> _xblockexpression = null;
     {
@@ -75,6 +80,7 @@ public class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPost
     return _xblockexpression;
   }
   
+  @Override
   public Continuation<?> visitQoSDimensionCS(@NonNull final QoSDimensionCS csElement) {
     Continuation<?> _xblockexpression = null;
     {
