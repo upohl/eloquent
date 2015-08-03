@@ -3,6 +3,10 @@
 */
 package de.uni_paderborn.fujaba.muml.allocation.language;
 
+import com.google.inject.Injector;
+
+import de.uni_paderborn.fujaba.muml.allocation.language.scoping.AllocationSpecificationLanguageScopeProvider;
+
 /**
  * Initialization support for running Xtext languages 
  * without equinox extension registry
@@ -11,6 +15,12 @@ public class AllocationSpecificationLanguageStandaloneSetup extends AllocationSp
 
 	public static void doSetup() {
 		new AllocationSpecificationLanguageStandaloneSetup().createInjectorAndDoEMFRegistration();
+	}
+	
+	@Override
+	public Injector createInjector() {
+		AllocationSpecificationLanguageScopeProvider.init();
+		return super.createInjector();
 	}
 }
 
