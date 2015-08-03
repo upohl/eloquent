@@ -69,6 +69,7 @@ public class GenerateContainmentVisitor extends GenerateVisitor {
     this.primarySuperCallWhitelist.add(className);
   }
   
+  @Override
   public void checkConfiguration(final Issues issues) {
     super.checkConfiguration(issues);
     boolean _equals = Objects.equal(this.csGenModelURI, null);
@@ -85,15 +86,16 @@ public class GenerateContainmentVisitor extends GenerateVisitor {
     }
   }
   
+  @Override
   public String generateImports() {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("import org.eclipse.jdt.annotation.NonNull;");
     _builder.newLine();
     _builder.append("import org.eclipse.jdt.annotation.Nullable;");
     _builder.newLine();
-    _builder.append("import org.eclipse.ocl.examples.xtext.base.cs2as.Continuation;");
+    _builder.append("import org.eclipse.ocl.xtext.base.cs2as.Continuation;");
     _builder.newLine();
-    _builder.append("import org.eclipse.ocl.examples.pivot.utilities.PivotUtil;");
+    _builder.append("import org.eclipse.ocl.pivot.utilities.PivotUtil;");
     _builder.newLine();
     String _generateImports = super.generateImports();
     _builder.append(_generateImports, "");
@@ -118,6 +120,7 @@ public class GenerateContainmentVisitor extends GenerateVisitor {
   
   private GenModel asGenModel;
   
+  @Override
   protected String generateMethods() {
     String _xblockexpression = null;
     {
@@ -208,6 +211,7 @@ public class GenerateContainmentVisitor extends GenerateVisitor {
     {
       EList<EClass> _eSuperTypes = eClass.getESuperTypes();
       final Function1<EClass, Boolean> _function = new Function1<EClass, Boolean>() {
+        @Override
         public Boolean apply(final EClass superClass) {
           return Boolean.valueOf(GenerateContainmentVisitor.this.secondarySuperCallAllowed(eClass, superClass));
         }

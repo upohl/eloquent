@@ -108,13 +108,13 @@ class GenerateVisitor extends AbstractWorkflowComponent {
 	
 	def protected String generateImports() {
 		'''
-		import org.eclipse.ocl.examples.xtext.base.cs2as.CS2PivotConversion;
+		import org.eclipse.ocl.xtext.base.cs2as.CS2ASConversion;
 		'''
 	}
 	
 	def protected String generateConstructor() {
 		'''
-		public «className»(CS2PivotConversion context) {
+		public «className»(CS2ASConversion context) {
 			super(context);
 		}
 		'''

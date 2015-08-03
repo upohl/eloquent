@@ -54,6 +54,7 @@ public class GenerateVisitor extends AbstractWorkflowComponent {
     this.filename = filename;
   }
   
+  @Override
   public void checkConfiguration(final Issues issues) {
     boolean _equals = Objects.equal(this.className, null);
     if (_equals) {
@@ -73,6 +74,7 @@ public class GenerateVisitor extends AbstractWorkflowComponent {
     }
   }
   
+  @Override
   protected void invokeInternal(final WorkflowContext arg0, final ProgressMonitor arg1, final Issues arg2) {
     this.writeClassFile();
   }
@@ -157,7 +159,7 @@ public class GenerateVisitor extends AbstractWorkflowComponent {
   
   protected String generateImports() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("import org.eclipse.ocl.examples.xtext.base.cs2as.CS2PivotConversion;");
+    _builder.append("import org.eclipse.ocl.xtext.base.cs2as.CS2ASConversion;");
     _builder.newLine();
     return _builder.toString();
   }
@@ -166,7 +168,7 @@ public class GenerateVisitor extends AbstractWorkflowComponent {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("public ");
     _builder.append(this.className, "");
-    _builder.append("(CS2PivotConversion context) {");
+    _builder.append("(CS2ASConversion context) {");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("super(context);");

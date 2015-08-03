@@ -77,8 +77,8 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 		'''
 		import org.eclipse.jdt.annotation.NonNull;
 		import org.eclipse.jdt.annotation.Nullable;
-		import org.eclipse.ocl.examples.xtext.base.cs2as.Continuation;
-		import org.eclipse.ocl.examples.pivot.utilities.PivotUtil;
+		import org.eclipse.ocl.xtext.base.cs2as.Continuation;
+		import org.eclipse.ocl.pivot.utilities.PivotUtil;
 		«super.generateImports»
 		'''
 	}
