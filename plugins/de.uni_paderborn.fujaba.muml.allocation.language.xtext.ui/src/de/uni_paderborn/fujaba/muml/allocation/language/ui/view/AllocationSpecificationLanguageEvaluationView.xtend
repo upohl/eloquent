@@ -17,12 +17,12 @@ import org.eclipse.jface.text.ITextSelection
 import org.eclipse.jface.text.ITextViewer
 import org.eclipse.jface.text.TextViewer
 import org.eclipse.jface.viewers.ISelection
-import org.eclipse.ocl.examples.domain.ids.TuplePartId
-import org.eclipse.ocl.examples.domain.values.TupleValue
-import org.eclipse.ocl.examples.domain.values.impl.InvalidValueException
-import org.eclipse.ocl.examples.domain.values.util.ValuesUtil
-import org.eclipse.ocl.examples.pivot.ExpressionInOCL
-import org.eclipse.ocl.examples.xtext.base.basecs.NamedElementCS
+import org.eclipse.ocl.pivot.ExpressionInOCL
+import org.eclipse.ocl.pivot.ids.TuplePartId
+import org.eclipse.ocl.pivot.utilities.ValueUtil
+import org.eclipse.ocl.pivot.values.InvalidValueException
+import org.eclipse.ocl.pivot.values.TupleValue
+import org.eclipse.ocl.xtext.basecs.NamedElementCS
 import org.eclipse.swt.SWT
 import org.eclipse.swt.layout.GridData
 import org.eclipse.swt.widgets.Composite
@@ -140,7 +140,7 @@ class AllocationSpecificationLanguageEvaluationView extends ViewPart implements 
 	}
 	
 	private def dispatch void buildOutput(StringBuilder builder, Object value, String indent) {
-		val collection = ValuesUtil.isCollectionValue(value)
+		val collection = ValueUtil.isCollectionValue(value)
 		if (collection != null) {
 			builder.append(indent)
 			builder.append(
@@ -156,7 +156,7 @@ class AllocationSpecificationLanguageEvaluationView extends ViewPart implements 
 		} else {
 			//builder.append(ValuesUtil.stringValueOf(value))
 			builder.append(indent)
-			ValuesUtil.toString(value, builder, 4000)
+			ValueUtil.toString(value, builder, 4000)
 			builder.append("\n")
 		}
 	}
@@ -174,7 +174,7 @@ class AllocationSpecificationLanguageEvaluationView extends ViewPart implements 
 			builder.append(partId.getDisplayName().replaceAll("'.*'::", ""));
 			builder.append(" = "); //$NON-NLS-1$a
 			val StringBuilder tmp = new StringBuilder
-			ValuesUtil.toString(value.getValue(i), tmp, 4000);
+			ValueUtil.toString(value.getValue(i), tmp, 4000);
 			builder.append(tmp.toString.replaceAll(".*@[^\\s]*\\s+", ""))
 		}       
 		builder.append("}"); //$NON-NLS-1$
