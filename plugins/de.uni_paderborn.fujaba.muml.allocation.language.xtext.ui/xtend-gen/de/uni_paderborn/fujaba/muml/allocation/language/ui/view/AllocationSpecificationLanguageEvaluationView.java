@@ -124,7 +124,8 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
       final ITextSelection textSel = ((ITextSelection) selection);
       this.editor = ((XtextEditor) part);
       IXtextDocument _document = this.editor.getDocument();
-      final IUnitOfWork<String, XtextResource> _function = (XtextResource resource) -> {
+      final IUnitOfWork<String, XtextResource> _function = new IUnitOfWork<String, XtextResource>() {
+        public String exec(final XtextResource resource) throws Exception {
         String _xblockexpression = null;
         {
           int _offset = textSel.getOffset();
@@ -141,6 +142,7 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
           _xblockexpression = _xifexpression;
         }
         return _xblockexpression;
+        }
       };
       String _readOnly = _document.<String>readOnly(_function);
       this.evaluatableElementFragmentURI = _readOnly;
@@ -179,7 +181,9 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
     boolean _notEquals = (!Objects.equal(this.editor, null));
     if (_notEquals) {
       IXtextDocument _document = this.editor.getDocument();
-      final IUnitOfWork<Object, XtextResource> _function = (XtextResource resource) -> {
+      final IUnitOfWork<Object, XtextResource> _function = new IUnitOfWork<Object, XtextResource>() {
+        public Object exec(final XtextResource resource) throws Exception {
+
         Object _xblockexpression = null;
         {
           final EvaluatableElementCS element = this.getEvaluatableElementCS(resource);
@@ -254,6 +258,7 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
           _xblockexpression = _xifexpression;
         }
         return _xblockexpression;
+        }
       };
       final Object result = _document.<Object>readOnly(_function);
       boolean _notEquals_1 = (!Objects.equal(result, null));
