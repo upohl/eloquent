@@ -1,6 +1,5 @@
 package de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.tests;
 
-import org.eclipse.emf.common.EMFPlugin;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
@@ -25,10 +24,8 @@ import de.uni_paderborn.fujaba.muml.hardware.HardwarePackage;
 public class Specification2ILPTestSuite {
 	@BeforeClass
 	public static void setUpClass() {
-		//if (!EMFPlugin.IS_ECLIPSE_RUNNING) {
-			AllocationSpecificationLanguageStandaloneSetup.doSetup();
-			LPSolveStandaloneSetup.doSetup();
-		//}
+		AllocationSpecificationLanguageStandaloneSetup.doSetup();
+		LPSolveStandaloneSetup.doSetup();
 		// explicitly setup these packages otherwise the qvto compilation
 		// fails (mars) - might be related to the qvto commit
 		// de499dbfbd960a63f62c4938d9dc71172e075120
