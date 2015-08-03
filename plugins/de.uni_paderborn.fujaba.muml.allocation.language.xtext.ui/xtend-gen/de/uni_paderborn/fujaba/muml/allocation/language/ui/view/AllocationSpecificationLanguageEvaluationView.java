@@ -129,7 +129,7 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
         String _xblockexpression = null;
         {
           int _offset = textSel.getOffset();
-          EObject model = this.eObjectAtOffsetHelper.resolveContainedElementAt(resource, _offset);
+          EObject model = AllocationSpecificationLanguageEvaluationView.this.eObjectAtOffsetHelper.resolveContainedElementAt(resource, _offset);
           while (((!(model instanceof EvaluatableElementCS)) && (!Objects.equal(model, null)))) {
             EObject _eContainer = model.eContainer();
             model = _eContainer;
@@ -186,8 +186,8 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
 
         Object _xblockexpression = null;
         {
-          final EvaluatableElementCS element = this.getEvaluatableElementCS(resource);
-          final OCLContext ctx = this.getContext();
+          final EvaluatableElementCS element = AllocationSpecificationLanguageEvaluationView.this.getEvaluatableElementCS(resource);
+          final OCLContext ctx = AllocationSpecificationLanguageEvaluationView.this.getContext();
           Object _xifexpression = null;
           boolean _and = false;
           boolean _and_1 = false;
@@ -209,7 +209,7 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
           if (_and) {
             Object _xblockexpression_1 = null;
             {
-              String _name = this.getName(element);
+              String _name = AllocationSpecificationLanguageEvaluationView.this.getName(element);
               String _plus = ("Evaluating: " + _name);
               String _plus_1 = (_plus + "\n");
               builder.append(_plus_1);
