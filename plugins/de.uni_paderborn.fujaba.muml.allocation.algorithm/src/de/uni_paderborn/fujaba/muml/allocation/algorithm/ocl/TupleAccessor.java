@@ -6,11 +6,11 @@ import java.util.List;
 
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation.Kind;
-import org.eclipse.ocl.examples.domain.ids.TuplePartId;
-import org.eclipse.ocl.examples.domain.types.IdResolver;
-import org.eclipse.ocl.examples.domain.values.CollectionValue;
-import org.eclipse.ocl.examples.domain.values.TupleValue;
-import org.eclipse.ocl.examples.pivot.TupleType;
+import org.eclipse.ocl.pivot.TupleType;
+import org.eclipse.ocl.pivot.ids.IdResolver;
+import org.eclipse.ocl.pivot.ids.TuplePartId;
+import org.eclipse.ocl.pivot.values.CollectionValue;
+import org.eclipse.ocl.pivot.values.TupleValue;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.LocationConstraintCS;
@@ -36,7 +36,7 @@ public class TupleAccessor {
 		if (!unboxValue) {
 			return partValue;
 		}
-		IdResolver idResolver = TypesUtil.getMetaModelManager(elementCS)
+		IdResolver idResolver = TypesUtil.getEnvironmentFactory(elementCS)
 				.getIdResolver();
 		Object unboxedValue = idResolver.unboxedValueOf(partValue);
 		System.out.println("accessed: " + unboxedValue);
