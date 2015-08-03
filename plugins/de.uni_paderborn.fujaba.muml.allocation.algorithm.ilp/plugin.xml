@@ -45,67 +45,67 @@
          point="org.eclipse.m2m.qvt.oml.runtime.qvtTransformation">
       <transformation
             file="transforms/Specification2ILP.qvto"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.transforms.Specification2ILP">
+            id="Specification2ILP">
       </transformation>
       <transformation
             file="transforms/Variables.qvto"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.transforms.Variables">
+            id="Variables">
       </transformation>
       <transformation
             file="transforms/HWUtil.qvto"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.transforms.HWUtil">
+            id="HWUtil">
       </transformation>
       <transformation
             file="transforms/TupleAccessor.qvto"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.transforms.TupleAccessor">
+            id="TupleAccessor">
       </transformation>
       <transformation
             file="transforms/LocationConstraint.qvto"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.transforms.LocationConstraint">
+            id="LocationConstraint">
       </transformation>
       <transformation
             file="transforms/Util.qvto"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.transforms.Util">
+            id="Util">
       </transformation>
       <transformation
             file="transforms/ObjectiveFunction.qvto"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.transforms.ObjectiveFunction">
+            id="ObjectiveFunction">
       </transformation>
       <transformation
             file="transforms/Expressions.qvto"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.transforms.Expressions">
+            id="Expressions">
       </transformation>
       <transformation
             file="transforms/GeneralConstraint.qvto"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.transforms.GeneralConstraint">
+            id="GeneralConstraint">
       </transformation>
       <transformation
             file="transforms/VariableHelper.qvto"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.transforms.VariableHelper">
+            id="VariableHelper">
       </transformation>
       <transformation
             file="transforms/Sort.qvto"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.transforms.Sort">
+            id="Sort">
       </transformation>
       <transformation
             file="transforms/ResourceConstraint.qvto"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.transforms.ResourceConstraint">
+            id="ResourceConstraint">
       </transformation>
       <transformation
             file="transforms/OCLEvaluator.qvto"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.transforms.OCLEvaluator">
+            id="OCLEvaluator">
       </transformation>
       <transformation
             file="transforms/RequiredHardwareResourceInstanceConstraint.qvto"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.transforms.RequiredHardwareResourceInstanceConstraint">
+            id="RequiredHardwareResourceInstanceConstraint">
       </transformation>
       <transformation
             file="transforms/SolverConstants.qvto"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.transforms.SolverConstants">
+            id="SolverConstants">
       </transformation>
       <transformation
             file="transforms/AbstractILPBasedAlgorithm.qvto"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.transforms.AbstractILPBasedAlgorithm">
+            id="AbstractILPBasedAlgorithm">
       </transformation>
    </extension>
 </plugin>
