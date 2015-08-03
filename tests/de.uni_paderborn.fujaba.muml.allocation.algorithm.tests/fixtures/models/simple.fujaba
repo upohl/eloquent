@@ -6,10 +6,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:component="http://www.fujaba.de/muml/component/0.4.0"
     xmlns:extension="http://example.com/extension"
-    xmlns:hwplatform="http://www.fujaba.de/muml/hardware/hwplatform/1.0/"
-    xmlns:hwplatforminstance="http://www.fujaba.de/muml/hardware/hwplatforminstance/1.0/"
-    xmlns:hwresource="http://www.fujaba.de/muml/hardware/hwresource/1.0/"
-    xmlns:hwresourceinstance="http://www.fujaba.de/muml/hardware/hwresourceinstance/1.0/"
+    xmlns:hwplatform="http://www.fujaba.de/muml/hardware/hwplatform/1.1/"
+    xmlns:hwplatforminstance="http://www.fujaba.de/muml/hardware/hwplatforminstance/1.1/"
+    xmlns:hwresource="http://www.fujaba.de/muml/hardware/hwresource/1.1/"
+    xmlns:hwresourceinstance="http://www.fujaba.de/muml/hardware/hwresourceinstance/1.1/"
     xmlns:instance="http://www.fujaba.de/muml/instance/0.4.0"
     xmlns:modelinstance="http://www.fujaba.de/modelinstance/0.4.0"
     xmlns:types="http://www.fujaba.de/muml/types/0.4.0"
@@ -296,378 +296,96 @@
       key="de.uni_paderborn.fujaba.muml.realtimestatechart.category"
       name="realtimestatechart"/>
   <categories
-      xmi:id="_abZDcPY8EeOqWs4IacUwuQ"
+      xmi:id="_EbXUQDFNEeWcy9nhHDkKYg"
       key="de.uni_paderborn.fujaba.muml.hardware.resource.category"
       name="resource">
     <modelElements
+        xsi:type="hwresourceinstance:ResourceInstanceRepository"
+        xmi:id="_EbX7UDFNEeWcy9nhHDkKYg"/>
+    <modelElements
         xsi:type="hwresource:ResourceRepository"
-        xmi:id="_aba4oPY8EeOqWs4IacUwuQ">
+        xmi:id="_IosQUDFNEeWcy9nhHDkKYg">
       <resources
           xsi:type="hwresource:StructuredResource"
-          xmi:id="_erbVQPY8EeOqWs4IacUwuQ"
-          name="SR1">
-        <embeddedAtomicResources
-            xsi:type="hwresource:MemoryResource"
-            xmi:id="_gKsIkPY8EeOqWs4IacUwuQ"
-            name="ram"/>
-        <embeddedAtomicResources
-            xsi:type="hwresource:Processor"
-            xmi:id="_kXYLcPY8EeOqWs4IacUwuQ"
-            name="processor"
-            family="">
-          <nbCores
-              xmi:id="_kYbUUPY8EeOqWs4IacUwuQ"/>
-        </embeddedAtomicResources>
-      </resources>
-      <resources
-          xsi:type="hwresource:StructuredResource"
-          xmi:id="_oYBWYPY8EeOqWs4IacUwuQ"
-          name="SR2">
-        <embeddedAtomicResources
-            xsi:type="hwresource:MemoryResource"
-            xmi:id="_qCEdYPY8EeOqWs4IacUwuQ"
-            name="ram"/>
-      </resources>
-      <protocols
-          xmi:id="_AK_m4PY-EeOj7bbnOoJljg"
-          name="ProtocolRepository">
-        <communicationProtocols
-            xsi:type="hwresource:BusProtocol"
-            xmi:id="_AfOKcPY-EeOj7bbnOoJljg"
-            name="busprot"
-            furtherInformation=""/>
-      </protocols>
-      <communicationMedia
-          xsi:type="hwresource:Bus"
-          xmi:id="__AQSEPY9EeOj7bbnOoJljg"
-          protocol="_AfOKcPY-EeOj7bbnOoJljg">
-        <bandwidth
-            xmi:id="__ASHQPY9EeOj7bbnOoJljg"
-            value="2.0"
-            unit="Mb\s"/>
-      </communicationMedia>
+          xmi:id="_Jg7f4DFNEeWcy9nhHDkKYg"
+          name="S1"/>
     </modelElements>
     <modelElements
         xsi:type="hwresourceinstance:ResourceInstanceRepository"
-        xmi:id="_svXKEPY8EeOqWs4IacUwuQ">
+        xmi:id="_TaPuYDFNEeWcy9nhHDkKYg">
       <resourceInstances
           xsi:type="hwresourceinstance:StructuredResourceInstance"
-          xmi:id="_tyyV8PY8EeOqWs4IacUwuQ"
-          name="e1"
-          resourceType="_erbVQPY8EeOqWs4IacUwuQ">
-        <hwports
-            xsi:type="hwresource:CommunicationResource"
-            xmi:id="_JabK4PY-EeOj7bbnOoJljg"
-            name="p1"
-            protocol="_AfOKcPY-EeOj7bbnOoJljg">
-          <cardinality
-              xmi:id="_KFikcPY-EeOj7bbnOoJljg">
-            <lowerBound
-                xmi:id="_LsQqoPY-EeOj7bbnOoJljg"
-                infinity="true"/>
-            <upperBound
-                xmi:id="_LsRRsPY-EeOj7bbnOoJljg"
-                infinity="true"/>
-          </cardinality>
-        </hwports>
-        <embeddedAtomicResourceInstances
-            xsi:type="hwresourceinstance:StorageMemoryInstance"
-            xmi:id="_woFIEPY8EeOqWs4IacUwuQ"
-            name="ram"
-            resourceType="_gKsIkPY8EeOqWs4IacUwuQ">
-          <memorySize
-              xmi:id="_woFIEfY8EeOqWs4IacUwuQ"
-              value="200.0"
-              unit="MByte"/>
-        </embeddedAtomicResourceInstances>
-        <embeddedAtomicResourceInstances
-            xsi:type="hwresourceinstance:ProcessorInstance"
-            xmi:id="_woFIEvY8EeOqWs4IacUwuQ"
-            name="processor"
-            resourceType="_kXYLcPY8EeOqWs4IacUwuQ">
-          <frequency
-              xmi:id="_woFIE_Y8EeOqWs4IacUwuQ"
-              value="100.0"
-              unit="MHz"/>
-        </embeddedAtomicResourceInstances>
-      </resourceInstances>
-      <resourceInstances
-          xsi:type="hwresourceinstance:StructuredResourceInstance"
-          xmi:id="_198ZgPY8EeOqWs4IacUwuQ"
-          name="e2"
-          resourceType="_erbVQPY8EeOqWs4IacUwuQ">
-        <embeddedAtomicResourceInstances
-            xsi:type="hwresourceinstance:ProcessorInstance"
-            xmi:id="_3RN_QPY8EeOqWs4IacUwuQ"
-            name="processor"
-            resourceType="_kXYLcPY8EeOqWs4IacUwuQ">
-          <frequency
-              xmi:id="_3RN_QfY8EeOqWs4IacUwuQ"/>
-        </embeddedAtomicResourceInstances>
-        <embeddedAtomicResourceInstances
-            xsi:type="hwresourceinstance:StorageMemoryInstance"
-            xmi:id="_3ROmUPY8EeOqWs4IacUwuQ"
-            name="ram"
-            resourceType="_gKsIkPY8EeOqWs4IacUwuQ">
-          <memorySize
-              xmi:id="_3ROmUfY8EeOqWs4IacUwuQ"/>
-        </embeddedAtomicResourceInstances>
-      </resourceInstances>
-      <resourceInstances
-          xsi:type="hwresourceinstance:StructuredResourceInstance"
-          xmi:id="_4yrK8PY8EeOqWs4IacUwuQ"
-          name="e3"
-          resourceType="_erbVQPY8EeOqWs4IacUwuQ">
-        <hwports
-            xsi:type="hwresource:CommunicationResource"
-            xmi:id="_M7fd4PY-EeOj7bbnOoJljg"
-            name="p1"
-            protocol="_AfOKcPY-EeOj7bbnOoJljg">
-          <cardinality
-              xmi:id="_Os80cPY-EeOj7bbnOoJljg">
-            <lowerBound
-                xmi:id="_Os80cfY-EeOj7bbnOoJljg"
-                infinity="true"/>
-            <upperBound
-                xmi:id="_Os80cvY-EeOj7bbnOoJljg"
-                infinity="true"/>
-          </cardinality>
-        </hwports>
-        <embeddedAtomicResourceInstances
-            xsi:type="hwresourceinstance:StorageMemoryInstance"
-            xmi:id="_5ZIG8PY8EeOqWs4IacUwuQ"
-            name="ram"
-            resourceType="_gKsIkPY8EeOqWs4IacUwuQ">
-          <memorySize
-              xmi:id="_5ZIG8fY8EeOqWs4IacUwuQ"/>
-        </embeddedAtomicResourceInstances>
-        <embeddedAtomicResourceInstances
-            xsi:type="hwresourceinstance:ProcessorInstance"
-            xmi:id="_5ZIuAPY8EeOqWs4IacUwuQ"
-            name="processor"
-            resourceType="_kXYLcPY8EeOqWs4IacUwuQ">
-          <frequency
-              xmi:id="_5ZIuAfY8EeOqWs4IacUwuQ"/>
-        </embeddedAtomicResourceInstances>
-      </resourceInstances>
+          xmi:id="_T44LIDFNEeWcy9nhHDkKYg"
+          name="S1"
+          resourceType="_Jg7f4DFNEeWcy9nhHDkKYg"/>
     </modelElements>
   </categories>
   <categories
-      xmi:id="_8cwQAPY8EeOqWs4IacUwuQ"
+      xmi:id="_QbzqgDFREeWR5cCJ5Gth0Q"
+      name="dummy"/>
+  <categories
+      xmi:id="_W_hzADFNEeWcy9nhHDkKYg"
       key="de.uni_paderborn.fujaba.muml.hardware.hwplatform.category"
       name="hwplatform">
     <modelElements
-        xsi:type="hwplatform:HWPlatform"
-        xmi:id="_8cwQAfY8EeOqWs4IacUwuQ"
-        name="platformtype">
-      <embeddedPlatformParts
-          xsi:type="hwplatform:ResourcePart"
-          xmi:id="_9rSfsPY8EeOqWs4IacUwuQ"
-          name="resourceInstance"
-          resourceType="_tyyV8PY8EeOqWs4IacUwuQ">
-        <cardinality
-            xmi:id="_9rkzkPY8EeOqWs4IacUwuQ">
-          <lowerBound
-              xmi:id="_B8QloPY9EeOqWs4IacUwuQ"
-              value="0"/>
-          <upperBound
-              xmi:id="_B8RMsPY9EeOqWs4IacUwuQ"/>
-        </cardinality>
-        <hwPortParts
-            xmi:id="_QO3TIPY-EeOj7bbnOoJljg"
-            connectors="_bLO6EPY-EeOj7bbnOoJljg"
-            communicationResource="_JabK4PY-EeOj7bbnOoJljg"/>
-      </embeddedPlatformParts>
-      <embeddedPlatformParts
-          xsi:type="hwplatform:ResourcePart"
-          xmi:id="_EHBNAPY9EeOqWs4IacUwuQ"
-          name="resourceInstance"
-          resourceType="_198ZgPY8EeOqWs4IacUwuQ">
-        <cardinality
-            xmi:id="_EHBNAfY9EeOqWs4IacUwuQ">
-          <lowerBound
-              xmi:id="_E_xZ8PY9EeOqWs4IacUwuQ"
-              value="0"/>
-          <upperBound
-              xmi:id="_E_yBAPY9EeOqWs4IacUwuQ"/>
-        </cardinality>
-      </embeddedPlatformParts>
-      <embeddedPlatformParts
-          xsi:type="hwplatform:ResourcePart"
-          xmi:id="_SLf-8PY-EeOj7bbnOoJljg"
-          name="resourceInstance"
-          resourceType="_4yrK8PY8EeOqWs4IacUwuQ">
-        <cardinality
-            xmi:id="_SLgmAPY-EeOj7bbnOoJljg">
-          <lowerBound
-              xmi:id="_YpgkMPY-EeOj7bbnOoJljg"
-              value="0"/>
-          <upperBound
-              xmi:id="_YphLQPY-EeOj7bbnOoJljg"/>
-        </cardinality>
-        <hwPortParts
-            xmi:id="_S9FM4PY-EeOj7bbnOoJljg"
-            connectors="_aZJ84PY-EeOj7bbnOoJljg"
-            communicationResource="_M7fd4PY-EeOj7bbnOoJljg"/>
-      </embeddedPlatformParts>
-      <networkingHardwareParts
-          xsi:type="hwplatform:BusPart"
-          xmi:id="_YnRIgPY-EeOj7bbnOoJljg"
-          communicationMedia="__AQSEPY9EeOj7bbnOoJljg"
-          connectors="_aZJ84PY-EeOj7bbnOoJljg _bLO6EPY-EeOj7bbnOoJljg"/>
-      <networkingHardwareParts
-          xsi:type="hwplatform:BusConnector"
-          xmi:id="_aZJ84PY-EeOj7bbnOoJljg"
-          connectorEndpoints="_S9FM4PY-EeOj7bbnOoJljg _YnRIgPY-EeOj7bbnOoJljg"/>
-      <networkingHardwareParts
-          xsi:type="hwplatform:BusConnector"
-          xmi:id="_bLO6EPY-EeOj7bbnOoJljg"
-          connectorEndpoints="_QO3TIPY-EeOj7bbnOoJljg _YnRIgPY-EeOj7bbnOoJljg"/>
-    </modelElements>
-  </categories>
-  <categories
-      xmi:id="_i4JicPY-EeOj7bbnOoJljg"
-      key="de.uni_paderborn.fujaba.muml.hardware.hwplatforminstance.category"
-      name="platform">
-    <modelElements
         xsi:type="hwplatforminstance:HWPlatformInstanceConfiguration"
-        xmi:id="_i4JicfY-EeOj7bbnOoJljg">
+        xmi:id="_heYXgDFNEeWcy9nhHDkKYg">
       <hwplatformInstances
-          xmi:id="_p2GzEPY-EeOj7bbnOoJljg"
+          xmi:id="_iHg0EDFNEeWcy9nhHDkKYg"
           name="platformtype.0"
-          hwplatformType="_8cwQAfY8EeOqWs4IacUwuQ">
+          hwplatformType="_W_hzATFNEeWcy9nhHDkKYg">
         <embeddedHPIC
-            xmi:id="_p2GzEfY-EeOj7bbnOoJljg">
-          <networkingHardwareInstances
-              xsi:type="hwplatforminstance:BusInstance"
-              xmi:id="_p2GzEvY-EeOj7bbnOoJljg"
-              communicationMediaPart="_YnRIgPY-EeOj7bbnOoJljg"
-              name=""
-              comment="&quot;no comment provided&quot;.0"
-              connectorInstances="_0SIGAPY-EeOj7bbnOoJljg _1d3gYPY-EeOj7bbnOoJljg"
-              type="_YnRIgPY-EeOj7bbnOoJljg"/>
-          <networkingHardwareInstances
-              xsi:type="hwplatforminstance:BusConnectorInstance"
-              xmi:id="_0SIGAPY-EeOj7bbnOoJljg"
-              connectorEndpointInstances="_p2GzIfY-EeOj7bbnOoJljg _p2GzEvY-EeOj7bbnOoJljg"/>
-          <networkingHardwareInstances
-              xsi:type="hwplatforminstance:BusConnectorInstance"
-              xmi:id="_1d3gYPY-EeOj7bbnOoJljg"
-              connectorEndpointInstances="_p2GzG_Y-EeOj7bbnOoJljg _p2GzEvY-EeOj7bbnOoJljg"/>
+            xmi:id="_sItMMDFNEeWcy9nhHDkKYg">
           <resources
               xsi:type="hwresourceinstance:StructuredResourceInstance"
-              xmi:id="_p2GzFfY-EeOj7bbnOoJljg"
+              xmi:id="_wrHncDFNEeWcy9nhHDkKYg"
               name="e1"
-              resourceType="_erbVQPY8EeOqWs4IacUwuQ">
-            <embeddedAtomicResourceInstances
-                xsi:type="hwresourceinstance:ProcessorInstance"
-                xmi:id="_p2GzFvY-EeOj7bbnOoJljg"
-                name="processor"
-                resourceType="_kXYLcPY8EeOqWs4IacUwuQ">
-              <frequency
-                  xmi:id="_p2GzF_Y-EeOj7bbnOoJljg"/>
-            </embeddedAtomicResourceInstances>
-            <embeddedAtomicResourceInstances
-                xsi:type="hwresourceinstance:StorageMemoryInstance"
-                xmi:id="_p2GzGPY-EeOj7bbnOoJljg"
-                name="ram"
-                resourceType="_gKsIkPY8EeOqWs4IacUwuQ">
-              <memorySize
-                  xmi:id="_p2GzGfY-EeOj7bbnOoJljg"/>
-            </embeddedAtomicResourceInstances>
-          </resources>
+              resourceType="_Jg7f4DFNEeWcy9nhHDkKYg"/>
           <resources
               xsi:type="hwresourceinstance:StructuredResourceInstance"
-              xmi:id="_p2GzGvY-EeOj7bbnOoJljg"
-              name="e3"
-              resourceType="_erbVQPY8EeOqWs4IacUwuQ">
-            <hwports
-                xsi:type="hwplatforminstance:HWPortInstance"
-                xmi:id="_p2GzG_Y-EeOj7bbnOoJljg"
-                name="p1"
-                connectorInstances="_1d3gYPY-EeOj7bbnOoJljg"
-                type="_S9FM4PY-EeOj7bbnOoJljg"/>
-            <embeddedAtomicResourceInstances
-                xsi:type="hwresourceinstance:StorageMemoryInstance"
-                xmi:id="_p2GzHPY-EeOj7bbnOoJljg"
-                name="ram"
-                resourceType="_gKsIkPY8EeOqWs4IacUwuQ">
-              <memorySize
-                  xmi:id="_p2GzHfY-EeOj7bbnOoJljg"/>
-            </embeddedAtomicResourceInstances>
-            <embeddedAtomicResourceInstances
-                xsi:type="hwresourceinstance:ProcessorInstance"
-                xmi:id="_p2GzHvY-EeOj7bbnOoJljg"
-                name="processor"
-                resourceType="_kXYLcPY8EeOqWs4IacUwuQ">
-              <frequency
-                  xmi:id="_p2GzH_Y-EeOj7bbnOoJljg"/>
-            </embeddedAtomicResourceInstances>
-          </resources>
-          <resources
-              xsi:type="hwresourceinstance:StructuredResourceInstance"
-              xmi:id="_p2GzIPY-EeOj7bbnOoJljg"
+              xmi:id="_yvZMUDFNEeWcy9nhHDkKYg"
               name="e2"
-              resourceType="_erbVQPY8EeOqWs4IacUwuQ">
-            <hwports
-                xsi:type="hwplatforminstance:HWPortInstance"
-                xmi:id="_p2GzIfY-EeOj7bbnOoJljg"
-                name="p1"
-                connectorInstances="_0SIGAPY-EeOj7bbnOoJljg"
-                type="_QO3TIPY-EeOj7bbnOoJljg"/>
-            <embeddedAtomicResourceInstances
-                xsi:type="hwresourceinstance:StorageMemoryInstance"
-                xmi:id="_p2GzIvY-EeOj7bbnOoJljg"
-                name="ram"
-                resourceType="_gKsIkPY8EeOqWs4IacUwuQ">
-              <memorySize
-                  xmi:id="_p2GzI_Y-EeOj7bbnOoJljg"
-                  value="200.0"
-                  unit="MByte"/>
-            </embeddedAtomicResourceInstances>
-            <embeddedAtomicResourceInstances
-                xsi:type="hwresourceinstance:ProcessorInstance"
-                xmi:id="_p2GzJPY-EeOj7bbnOoJljg"
-                name="processor"
-                resourceType="_kXYLcPY8EeOqWs4IacUwuQ">
-              <frequency
-                  xmi:id="_p2GzJfY-EeOj7bbnOoJljg"
-                  value="100.0"
-                  unit="MHz"/>
-            </embeddedAtomicResourceInstances>
-          </resources>
+              resourceType="_Jg7f4DFNEeWcy9nhHDkKYg"/>
+          <resources
+              xsi:type="hwresourceinstance:StructuredResourceInstance"
+              xmi:id="_1xx_QDFNEeWcy9nhHDkKYg"
+              name="e3"
+              resourceType="_Jg7f4DFNEeWcy9nhHDkKYg"/>
         </embeddedHPIC>
       </hwplatformInstances>
       <hwplatformInstances
-          xmi:id="_AkBIgBDlEeSimc3eukHRXw"
+          xmi:id="_XpxYoDeJEeWpW5_6YNX1CQ"
           name="test"
-          hwplatformType="_8cwQAfY8EeOqWs4IacUwuQ">
+          hwplatformType="_W_hzATFNEeWcy9nhHDkKYg">
         <embeddedHPIC
-            xmi:id="_Fi9uwBDlEeSimc3eukHRXw">
+            xmi:id="_XpxYoTeJEeWpW5_6YNX1CQ">
           <resources
               xsi:type="hwresourceinstance:StructuredResourceInstance"
-              xmi:id="_Df3ZIBDmEeSimc3eukHRXw"
+              xmi:id="_XpxYojeJEeWpW5_6YNX1CQ"
               name="e1"
-              resourceType="_erbVQPY8EeOqWs4IacUwuQ">
-            <embeddedAtomicResourceInstances
-                xsi:type="hwresourceinstance:ProcessorInstance"
-                xmi:id="_Df3ZIRDmEeSimc3eukHRXw"
-                name="processor"
-                resourceType="_kXYLcPY8EeOqWs4IacUwuQ">
-              <frequency
-                  xmi:id="_Df3ZIhDmEeSimc3eukHRXw"/>
-            </embeddedAtomicResourceInstances>
-            <embeddedAtomicResourceInstances
-                xsi:type="hwresourceinstance:StorageMemoryInstance"
-                xmi:id="_Df3ZIxDmEeSimc3eukHRXw"
-                name="ram"
-                resourceType="_gKsIkPY8EeOqWs4IacUwuQ">
-              <memorySize
-                  xmi:id="_Df3ZJBDmEeSimc3eukHRXw"/>
-            </embeddedAtomicResourceInstances>
-          </resources>
+              resourceType="_Jg7f4DFNEeWcy9nhHDkKYg"/>
         </embeddedHPIC>
       </hwplatformInstances>
+    </modelElements>
+    <modelElements
+        xsi:type="hwplatform:HWPlatform"
+        xmi:id="_W_hzATFNEeWcy9nhHDkKYg"
+        name="Platform">
+      <embeddedPlatformParts
+          xsi:type="hwplatform:ResourcePart"
+          xmi:id="_YKCeUDFNEeWcy9nhHDkKYg"
+          name="R1"
+          resourceType="_T44LIDFNEeWcy9nhHDkKYg">
+        <cardinality
+            xmi:id="_YKYckDFNEeWcy9nhHDkKYg">
+          <lowerBound
+              xmi:id="_YKYckTFNEeWcy9nhHDkKYg"
+              value="0"/>
+          <upperBound
+              xmi:id="_YKZqsDFNEeWcy9nhHDkKYg"
+              value="3"/>
+        </cardinality>
+      </embeddedPlatformParts>
     </modelElements>
   </categories>
 </modelinstance:RootNode>
