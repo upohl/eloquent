@@ -2,10 +2,10 @@ package de.uni_paderborn.fujaba.muml.allocation.language.attributes
 
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.jdt.annotation.NonNull
-import org.eclipse.ocl.examples.pivot.scoping.EnvironmentView
-import org.eclipse.ocl.examples.pivot.scoping.ScopeView
-import org.eclipse.ocl.examples.xtext.completeocl.attributes.CompleteOCLDocumentCSAttribution
-import org.eclipse.ocl.examples.xtext.completeocl.completeoclcs.ClassifierContextDeclCS
+import org.eclipse.ocl.pivot.internal.scoping.EnvironmentView
+import org.eclipse.ocl.pivot.internal.scoping.ScopeView
+import org.eclipse.ocl.xtext.completeocl.attributes.CompleteOCLDocumentCSAttribution
+import org.eclipse.ocl.xtext.completeoclcs.ClassifierContextDeclCS
 
 class SpecificationCSAttribution extends CompleteOCLDocumentCSAttribution {
 	

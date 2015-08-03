@@ -1,30 +1,30 @@
 package de.uni_paderborn.fujaba.muml.allocation.language.cs2as
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ConstraintCS
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS
 import de.uni_paderborn.fujaba.muml.allocation.language.visitor.LanguageSpecificationCSPostOrderVisitor
 import java.util.Collections
 import java.util.List
 import org.eclipse.jdt.annotation.NonNull
-import org.eclipse.ocl.examples.pivot.ExpressionInOCL
-import org.eclipse.ocl.examples.pivot.utilities.PivotUtil
-import org.eclipse.ocl.examples.xtext.base.cs2as.BasicContinuation
-import org.eclipse.ocl.examples.xtext.base.cs2as.CS2PivotConversion
-import org.eclipse.ocl.examples.xtext.base.cs2as.Continuation
-import org.eclipse.ocl.examples.xtext.base.cs2as.Dependency
-import org.eclipse.ocl.examples.xtext.base.cs2as.SingleContinuation
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS
+import org.eclipse.ocl.pivot.ExpressionInOCL
+import org.eclipse.ocl.pivot.utilities.PivotUtil
+import org.eclipse.ocl.xtext.base.cs2as.BasicContinuation
+import org.eclipse.ocl.xtext.base.cs2as.CS2ASConversion
+import org.eclipse.ocl.xtext.base.cs2as.Continuation
+import org.eclipse.ocl.xtext.base.cs2as.Dependency
+import org.eclipse.ocl.xtext.base.cs2as.SingleContinuation
 
 class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVisitor {
 	
-	new(CS2PivotConversion context) {
+	new(CS2ASConversion context) {
 		super(context)
 	}
 	
 	protected static class PreContextCSCompletion extends SingleContinuation<EvaluatableElementCS> {
 		private static final String MISSING_ContextCSCompletion = "Expected an instance of type ContextCSCompletion in %s"
 		
-		new(CS2PivotConversion context,	EvaluatableElementCS csElement) {
+		new(CS2ASConversion context,	EvaluatableElementCS csElement) {
 			super(context, null, null, csElement, Collections.<Dependency>emptyList)
 		}
 

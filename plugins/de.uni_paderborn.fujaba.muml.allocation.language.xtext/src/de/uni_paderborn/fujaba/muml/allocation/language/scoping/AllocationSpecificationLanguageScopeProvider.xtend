@@ -3,13 +3,14 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.language.scoping
 
-import org.eclipse.xtext.scoping.IScope
+import de.uni_paderborn.fujaba.muml.allocation.language.attributes.SpecificationCSAttribution
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage
+import de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EReference
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.MeasureFunctionCS
-import org.eclipse.ocl.examples.pivot.scoping.Attribution
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage
-import de.uni_paderborn.fujaba.muml.allocation.language.attributes.SpecificationCSAttribution
+import org.eclipse.ocl.pivot.internal.scoping.Attribution
+import org.eclipse.ocl.xtext.completeocl.scoping.CompleteOCLScopeProvider
+import org.eclipse.xtext.scoping.IScope
 
 /**
  * This class contains custom scoping description.
@@ -18,7 +19,7 @@ import de.uni_paderborn.fujaba.muml.allocation.language.attributes.Specification
  * on how and when to use it 
  *
  */
-class AllocationSpecificationLanguageScopeProvider extends org.eclipse.ocl.examples.xtext.essentialocl.scoping.EssentialOCLScopeProvider {
+class AllocationSpecificationLanguageScopeProvider extends CompleteOCLScopeProvider {
 	
 	def public static void init() {
 		// register our Attribution (this method is called from the .ui plugin's activator)

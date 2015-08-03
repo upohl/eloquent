@@ -5,10 +5,10 @@ package de.uni_paderborn.fujaba.muml.allocation.language.validation;
 
 import java.util.List;
 
-import org.eclipse.ocl.examples.pivot.ExpressionInOCL;
-import org.eclipse.ocl.examples.pivot.Type;
-import org.eclipse.ocl.examples.pivot.manager.MetaModelManager;
-import org.eclipse.ocl.examples.xtext.essentialocl.essentialoclcs.ContextCS;
+import org.eclipse.ocl.pivot.ExpressionInOCL;
+import org.eclipse.ocl.pivot.Type;
+import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal;
+import org.eclipse.ocl.xtext.essentialoclcs.ContextCS;
 import org.eclipse.xtext.validation.Check;
 
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ComponentResourceTupleDescriptorCS;
@@ -74,10 +74,10 @@ public class AllocationSpecificationLanguageJavaValidator extends de.uni_paderbo
 	}
 	
 	private void checkTypes(EvaluatableElementCS elementCS) {
-		MetaModelManager metaModelManager = TypesUtil.getMetaModelManager(elementCS);
+		EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(elementCS);
 		Type expectedType = TypesUtil.createType(elementCS);
 		Type actualType = ((ExpressionInOCL) elementCS.getExpression().getPivot()).getType();
-		boolean conformsTo = TypesUtil.conformsTo(metaModelManager, actualType, expectedType);
+		boolean conformsTo = TypesUtil.conformsTo(envFactory, actualType, expectedType);
 		if (!conformsTo) {
 			error(String.format(typeMismatch, expectedType, actualType),
 					CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION);

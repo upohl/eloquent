@@ -15,61 +15,61 @@ import java.util.Map
 import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.jdt.annotation.NonNull
-import org.eclipse.ocl.examples.domain.elements.DomainType
-import org.eclipse.ocl.examples.domain.types.IdResolver
-import org.eclipse.ocl.examples.pivot.CollectionType
-import org.eclipse.ocl.examples.pivot.TupleType
-import org.eclipse.ocl.examples.pivot.Type
-import org.eclipse.ocl.examples.pivot.manager.MetaModelManager
-import org.eclipse.ocl.examples.pivot.manager.TupleTypeManager
-import org.eclipse.ocl.examples.pivot.utilities.PivotUtil
+import org.eclipse.ocl.pivot.CollectionType
+import org.eclipse.ocl.pivot.TupleType
+import org.eclipse.ocl.pivot.Type
+import org.eclipse.ocl.pivot.ids.IdResolver
+import org.eclipse.ocl.pivot.internal.manager.TupleTypeManager
+import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal
+import org.eclipse.ocl.pivot.internal.utilities.PivotUtilInternal
+import org.eclipse.ocl.pivot.values.TemplateParameterSubstitutions
 
 class TypesUtil {
+	private static final String missingEnvFac = "An EnvironmentFactory should be associated with %s"
 	private static final String tupleName = "Tuple"
 	
 	@NonNull
-	public static def TupleType createTupleTypeHelper(MetaModelManager metaModelManager, Map<String, EClass> namedParts) {
+	public static def TupleType createTupleTypeHelper(EnvironmentFactoryInternal envFactory, Map<String, EClass> namedParts) {
 		val Map<String, Type> newNamedParts = namedParts.mapValues[EClass eClass |
-			getType(metaModelManager, eClass)
+			getType(envFactory, eClass)
 		]
-		createTupleType(metaModelManager, newNamedParts)
+		createTupleType(envFactory, newNamedParts)
 	}
 	
-	@NonNull static def TupleType createTupleType(MetaModelManager metaModelManager, Map<String, Type> namedParts) {
-		val TupleTypeManager tupleTypeManager = metaModelManager.tupleManager
+	@NonNull static def TupleType createTupleType(EnvironmentFactoryInternal envFactory, Map<String, Type> namedParts) {
+		val TupleTypeManager tupleTypeManager = envFactory.completeModel.tupleManager
 		tupleTypeManager.getTupleType(tupleName, namedParts)
 	}
 	
 	@NonNull
-	public static def Type getType(MetaModelManager metaModelManager, EClass eClass) {
-		val IdResolver idResolver = metaModelManager.idResolver
-		val DomainType domainType = idResolver.getType(eClass)
-		metaModelManager.getType(domainType)
+	public static def Type getType(EnvironmentFactoryInternal envFactory, EClass eClass) {
+		// XXX: eek mmm -> envFac
+		val IdResolver idResolver = envFactory.idResolver
+		idResolver.getType(eClass)
 	}
 	
 	@NonNull
-	public static def Type getRealType(MetaModelManager metaModelManager) {
-		val IdResolver idResolver = metaModelManager.idResolver
-		val DomainType domainType = idResolver.standardLibrary.realType
-		metaModelManager.getType(domainType)
+	public static def Type getRealType(EnvironmentFactoryInternal envFactory) {
+		envFactory.standardLibrary.realType
 	}
 		
 	@NonNull
-	public static def CollectionType createSetType(MetaModelManager metaModelManager, Type type) {
-		metaModelManager.getSetType(type, null, null)
+	public static def CollectionType createSetType(EnvironmentFactoryInternal envFactory, Type type) {
+		envFactory.completeEnvironment.getSetType(type, false, null, null)
 	}
 	
 	@NonNull
-	public static def MetaModelManager getMetaModelManager(EObject object) {
-		val MetaModelManager metaModelManager = PivotUtil.findMetaModelManager(object)
-		if (metaModelManager == null) {
-			throw new IllegalStateException("A MetaModelManager should be associated with " + object)
+	static def EnvironmentFactoryInternal getEnvironmentFactory(EObject object) {
+		val EnvironmentFactoryInternal envFactory = PivotUtilInternal.findEnvironmentFactory(object)
+		if (envFactory == null) {
+			throw new IllegalStateException(String.format(missingEnvFac, object))
 		}
-		metaModelManager
+		envFactory
 	}
 	
-	public static def conformsTo(MetaModelManager metaModelManager, Type actualType, Type expectedType) {
-		metaModelManager.conformsTo(actualType, expectedType, null);
+	public static def conformsTo(EnvironmentFactoryInternal envFactory, Type actualType, Type expectedType) {
+		envFactory.metamodelManager.conformsTo(actualType, TemplateParameterSubstitutions.EMPTY,
+			expectedType, TemplateParameterSubstitutions.EMPTY)
 	}
 	
 	// language specific constraint types are created below
@@ -78,31 +78,31 @@ class TypesUtil {
 	
 	@NonNull
 	public static def TupleType createLocationConstraintTupleType(LocationConstraintCS locationConstraintCS) {
-		createLocationConstraintTupleType(getMetaModelManager(locationConstraintCS),
+		createLocationConstraintTupleType(getEnvironmentFactory(locationConstraintCS),
 			locationConstraintCS.tupleDescriptor
 		)
 	}
 	
 	@NonNull
-	public static def TupleType createLocationConstraintTupleType(MetaModelManager metaModelManager, LocationTupleDescriptorCS tupleDescriptor) {
+	public static def TupleType createLocationConstraintTupleType(EnvironmentFactoryInternal envFactory, LocationTupleDescriptorCS tupleDescriptor) {
 		val namedParts =  #{tupleDescriptor.instance -> InstancePackage.Literals.COMPONENT_INSTANCE,
 			tupleDescriptor.secondInstance -> InstancePackage.Literals.COMPONENT_INSTANCE
 		}
-		createTupleTypeHelper(metaModelManager, namedParts)
+		createTupleTypeHelper(envFactory, namedParts)
 	}
 	
 	@NonNull
 	public static def Type createLocationConstraintType(LocationConstraintCS locationConstraintCS) {
-		val MetaModelManager metaModelManager = getMetaModelManager(locationConstraintCS) 
-		createSetType(metaModelManager,
-			createLocationConstraintTupleType(metaModelManager, locationConstraintCS.tupleDescriptor)
+		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(locationConstraintCS) 
+		createSetType(envFactory,
+			createLocationConstraintTupleType(envFactory, locationConstraintCS.tupleDescriptor)
 		)
 	}
 	
 	// requiredHardwareResourceInstance constraint
 	@NonNull static def TupleType createReqHWResInstanceConstraintTupleType(RequiredHardwareResourceInstanceConstraintCS constraintCS) {
-		val MetaModelManager metaModelManager = getMetaModelManager(constraintCS)
-		createReqHWResInstanceConstraintTupleType(metaModelManager,
+		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraintCS)
+		createReqHWResInstanceConstraintTupleType(envFactory,
 			constraintCS.tupleDescriptors
 		)
 	}
@@ -119,7 +119,7 @@ class TypesUtil {
 		namedParts
 	}
 	
-	@NonNull static def TupleType createReqHWResInstanceConstraintTupleType(MetaModelManager metaModelManager, 
+	@NonNull static def TupleType createReqHWResInstanceConstraintTupleType(EnvironmentFactoryInternal envFactory, 
 		List<ComponentResourceTupleDescriptorCS> tupleDescriptorList) {
 		/*val namedParts = <String, Type>newHashMap()
 		tupleDescriptorList.forEach[t |
@@ -129,62 +129,62 @@ class TypesUtil {
 					getType(metaModelManager, HwresourceinstancePackage.Literals.RESOURCE_INSTANCE))
 		})]*/
 		val namedParts = createNamedPartsFromComponentResourceTupleDescriptors(tupleDescriptorList)
-		createTupleTypeHelper(metaModelManager, namedParts)
+		createTupleTypeHelper(envFactory, namedParts)
 	}
 	
 	@NonNull static def Type createReqHWResInstanceConstraintType(RequiredHardwareResourceInstanceConstraintCS constraintCS) {
-		val MetaModelManager metaModelManager = getMetaModelManager(constraintCS)
-		createSetType(metaModelManager,
-			createReqHWResInstanceConstraintTupleType(metaModelManager, constraintCS.tupleDescriptors)
+		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraintCS)
+		createSetType(envFactory,
+			createReqHWResInstanceConstraintTupleType(envFactory, constraintCS.tupleDescriptors)
 		)
 	}
 	
 	// resource constraint
 	@NonNull static def TupleType createResourceConstraintInnerTupleType(ResourceConstraintCS constraintCS) {
-		val MetaModelManager metaModelManager = getMetaModelManager(constraintCS)
-		createWeightingComponentResourceTupleElementCSTupleType(metaModelManager, constraintCS)
+		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraintCS)
+		createWeightingComponentResourceTupleElementCSTupleType(envFactory, constraintCS)
 	}
 	
-	@NonNull static def TupleType createResourceConstraintOuterTupleType(MetaModelManager metaModelManager, ResourceConstraintCS constraintCS) {
-		val Type innerTupleType = createWeightingComponentResourceTupleElementCSTupleType(metaModelManager, constraintCS)
+	@NonNull static def TupleType createResourceConstraintOuterTupleType(EnvironmentFactoryInternal envFactory, ResourceConstraintCS constraintCS) {
+		val Type innerTupleType = createWeightingComponentResourceTupleElementCSTupleType(envFactory, constraintCS)
 		val Map<String, Type> namedParts = #{
-			constraintCS.weighting.value -> createSetType(metaModelManager, innerTupleType),
-			constraintCS.rhs.value -> getRealType(metaModelManager)
+			constraintCS.weighting.value -> createSetType(envFactory, innerTupleType),
+			constraintCS.rhs.value -> getRealType(envFactory)
 		}
-		createTupleType(metaModelManager, namedParts)
+		createTupleType(envFactory, namedParts)
 	}
 	
 	@NonNull static def TupleType createResourceConstraintOuterTupleType(ResourceConstraintCS constraintCS) {
-		val MetaModelManager metaModelManager = getMetaModelManager(constraintCS)
-		createResourceConstraintOuterTupleType(metaModelManager, constraintCS)
+		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraintCS)
+		createResourceConstraintOuterTupleType(envFactory, constraintCS)
 	}
 	
 	@NonNull static def Type createResourceConstraintType(ResourceConstraintCS constraintCS) {
-		val MetaModelManager metaModelManager = getMetaModelManager(constraintCS)
-		createSetType(metaModelManager,
-			createResourceConstraintOuterTupleType(metaModelManager, constraintCS)
+		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraintCS)
+		createSetType(envFactory,
+			createResourceConstraintOuterTupleType(envFactory, constraintCS)
 		)
 	}
 	
 	// QoS dimension
 	@NonNull static def TupleType createQoSDimensionTupleType(QoSDimensionCS qosDimensionCS) {
-		val MetaModelManager metaModelManager = getMetaModelManager(qosDimensionCS)
-		createWeightingComponentResourceTupleElementCSTupleType(metaModelManager, qosDimensionCS)
+		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(qosDimensionCS)
+		createWeightingComponentResourceTupleElementCSTupleType(envFactory, qosDimensionCS)
 	}
 
 	@NonNull static def Type createQoSDimensionType(QoSDimensionCS qosDimensionCS) {
-		val MetaModelManager metaModelManager = getMetaModelManager(qosDimensionCS)
-		createSetType(metaModelManager,  
-			createWeightingComponentResourceTupleElementCSTupleType(metaModelManager, qosDimensionCS)
+		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(qosDimensionCS)
+		createSetType(envFactory,  
+			createWeightingComponentResourceTupleElementCSTupleType(envFactory, qosDimensionCS)
 		)
 	}
 	
-	@NonNull static def TupleType createWeightingComponentResourceTupleElementCSTupleType(MetaModelManager metaModelManager, WeightingComponentResourceTupleElementCS elementCS) {
+	@NonNull static def TupleType createWeightingComponentResourceTupleElementCSTupleType(EnvironmentFactoryInternal envFactory, WeightingComponentResourceTupleElementCS elementCS) {
 		var Map<String, Type> namedParts = <String, Type>newHashMap()
 		namedParts.putAll(createNamedPartsFromComponentResourceTupleDescriptors(elementCS.tupleDescriptors)
-			.mapValues[EClass eClass | getType(metaModelManager, eClass)])
-		namedParts.put(elementCS.weighting.value, getRealType(metaModelManager))
-		createTupleType(metaModelManager, namedParts)
+			.mapValues[EClass eClass | getType(envFactory, eClass)])
+		namedParts.put(elementCS.weighting.value, getRealType(envFactory))
+		createTupleType(envFactory, namedParts)
 	}
 	
 	// for convenience:
