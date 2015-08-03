@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.uni_paderborn.fujaba.muml.allocation.language/src"
     modelPluginID="de.uni_paderborn.fujaba.muml.allocation.language" modelName="LanguageSpecificationAS"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" complianceLevel="6.0"
-    copyrightFields="false" usedGenPackages="../../org.eclipse.ocl.examples.pivot/model/Pivot.merged.genmodel#//pivot">
+    copyrightFields="false" usedGenPackages="../../org.eclipse.ocl.pivot/model/Pivot.genmodel#//pivot">
   <genPackages prefix="As" basePackage="de.uni_paderborn.fujaba.muml.allocation.language"
       disposableProviderFactory="true" ecorePackage="LanguageSpecificationAS.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="LanguageSpecificationAS.ecore#//LocationConstraintTypes">
