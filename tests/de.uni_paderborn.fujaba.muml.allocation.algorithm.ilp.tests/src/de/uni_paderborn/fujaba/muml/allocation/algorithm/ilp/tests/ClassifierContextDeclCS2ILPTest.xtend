@@ -1,11 +1,11 @@
 package de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.tests
 
+import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.qvto.QVToTransformationSingleOutExtentTest
+import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.util.TestDataUtil
 import java.util.Collection
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import org.junit.runners.Parameterized.Parameters
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.qvto.QVToTransformationSingleOutExtentTest
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.util.TestDataUtil
 
 @RunWith(value = typeof(Parameterized))
 class ClassifierContextDeclCS2ILPTest extends QVToTransformationSingleOutExtentTest {
