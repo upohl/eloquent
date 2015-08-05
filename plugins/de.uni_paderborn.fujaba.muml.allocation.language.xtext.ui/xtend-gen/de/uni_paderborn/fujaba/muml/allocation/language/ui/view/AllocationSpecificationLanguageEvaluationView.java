@@ -124,12 +124,11 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
       final ITextSelection textSel = ((ITextSelection) selection);
       this.editor = ((XtextEditor) part);
       IXtextDocument _document = this.editor.getDocument();
-      final IUnitOfWork<String, XtextResource> _function = new IUnitOfWork<String, XtextResource>() {
-        public String exec(final XtextResource resource) throws Exception {
+      final IUnitOfWork<String, XtextResource> _function = (XtextResource resource) -> {
         String _xblockexpression = null;
         {
           int _offset = textSel.getOffset();
-          EObject model = AllocationSpecificationLanguageEvaluationView.this.eObjectAtOffsetHelper.resolveContainedElementAt(resource, _offset);
+          EObject model = this.eObjectAtOffsetHelper.resolveContainedElementAt(resource, _offset);
           while (((!(model instanceof EvaluatableElementCS)) && (!Objects.equal(model, null)))) {
             EObject _eContainer = model.eContainer();
             model = _eContainer;
@@ -142,7 +141,6 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
           _xblockexpression = _xifexpression;
         }
         return _xblockexpression;
-        }
       };
       String _readOnly = _document.<String>readOnly(_function);
       this.evaluatableElementFragmentURI = _readOnly;
@@ -181,13 +179,11 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
     boolean _notEquals = (!Objects.equal(this.editor, null));
     if (_notEquals) {
       IXtextDocument _document = this.editor.getDocument();
-      final IUnitOfWork<Object, XtextResource> _function = new IUnitOfWork<Object, XtextResource>() {
-        public Object exec(final XtextResource resource) throws Exception {
-
+      final IUnitOfWork<Object, XtextResource> _function = (XtextResource resource) -> {
         Object _xblockexpression = null;
         {
-          final EvaluatableElementCS element = AllocationSpecificationLanguageEvaluationView.this.getEvaluatableElementCS(resource);
-          final OCLContext ctx = AllocationSpecificationLanguageEvaluationView.this.getContext();
+          final EvaluatableElementCS element = this.getEvaluatableElementCS(resource);
+          final OCLContext ctx = this.getContext();
           Object _xifexpression = null;
           boolean _and = false;
           boolean _and_1 = false;
@@ -209,7 +205,7 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
           if (_and) {
             Object _xblockexpression_1 = null;
             {
-              String _name = AllocationSpecificationLanguageEvaluationView.this.getName(element);
+              String _name = this.getName(element);
               String _plus = ("Evaluating: " + _name);
               String _plus_1 = (_plus + "\n");
               builder.append(_plus_1);
@@ -258,7 +254,6 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
           _xblockexpression = _xifexpression;
         }
         return _xblockexpression;
-        }
       };
       final Object result = _document.<Object>readOnly(_function);
       boolean _notEquals_1 = (!Objects.equal(result, null));

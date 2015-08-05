@@ -43,7 +43,7 @@ class EvaluationContextWizard extends AbstractFujabaExportWizard {
 			}*/
 
 			override wizardPageGetSourceFileExtension() {
-				return "fujaba";
+				return "muml";
 			}
 
 			override wizardPageGetSupportedSelectionMode() {
@@ -66,7 +66,7 @@ class EvaluationContextWizard extends AbstractFujabaExportWizard {
 			}*/
 
 			override wizardPageGetSourceFileExtension() {
-				"fujaba"
+				"muml"
 			}
 
 			override wizardPageGetSupportedSelectionMode() {
