@@ -24,10 +24,12 @@ import de.uni_paderborn.fujaba.export.pages.ElementSelectionMode;
 import de.uni_paderborn.fujaba.export.wizard.AbstractFujabaExportWizard;
 import de.uni_paderborn.fujaba.modelinstance.ModelElementCategory;
 import de.uni_paderborn.fujaba.modelinstance.RootNode;
+import de.uni_paderborn.fujaba.muml.MumlPackage;
 import de.uni_paderborn.fujaba.muml.allocation.algorithm.main.AllocationComputationStrategyExtension;
 import de.uni_paderborn.fujaba.muml.allocation.algorithm.main.AllocationComputationStrategyExtension.AllocationComputationStrategyDescription;
 import de.uni_paderborn.fujaba.muml.allocation.algorithm.main.IAllocationComputationStrategy;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS;
+import de.uni_paderborn.fujaba.muml.hardware.HardwarePackage;
 import de.uni_paderborn.fujaba.muml.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 import de.uni_paderborn.fujaba.muml.instance.ComponentInstanceConfiguration;
 import de.uni_paderborn.fujaba.muml.psm.allocation.SystemAllocation;
@@ -44,6 +46,13 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
 	public void init(IWorkbench workbench, IStructuredSelection currentSelection) {
 		super.init(workbench, currentSelection);
 		setWindowTitle(title);
+		// explicitly setup these packages otherwise the qvto compilation
+		// fails (mars) - might be related to the qvto commit
+		// de499dbfbd960a63f62c4938d9dc71172e075120
+		// (actually, this belongs to the QVToTransformationRunner class,
+		// but I want keep that class clean)
+		MumlPackage.eINSTANCE.eClass();
+		HardwarePackage.eINSTANCE.eClass();
 	}
 
 	@Override
