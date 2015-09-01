@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="de.uni_paderborn.fujaba.muml.psm.sdk.feature"
+      label="%featureName"
+      version="0.4.0.qualifier"
+      provider-name="%providerName">
+
+   <description url="www.muml.org">
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <includes
+         id="de.uni_paderborn.fujaba.muml.allocation.ext.dependency.opt4j.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="de.uni_paderborn.fujaba.muml.psm.feature"
+         version="0.0.0"/>
+   <includes
+         id="de.uni_paderborn.fujaba.muml.psm.source.feature"
+         version="0.0.0"/>
+   <requires>
+      <import feature="de.uni_paderborn.fujaba.core.sdk.feature" version="0.5.0.qualifier"/>
+      <import feature="de.uni_paderborn.fujaba.muml.pim.sdk.feature" version="0.5.0.qualifier"/>
+      <import feature="de.uni_paderborn.fujaba.muml.pm.sdk.feature" version="0.5.0.qualifier"/>
+   </requires>
+
+</feature>
