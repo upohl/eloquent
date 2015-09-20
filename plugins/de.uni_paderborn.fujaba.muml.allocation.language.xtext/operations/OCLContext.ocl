@@ -282,6 +282,8 @@
 			let wcet : properties::WCET = wcets->any(resourceInstance = ecu)
 			in
 			if wcet.oclIsUndefined() then
+                -- XXX: this prone to fail, if all resourceInstance references are <> null
+                -- (FIXME later)
 				wcets->any(resourceInstance.oclIsUndefined())
 			else
 				wcet
