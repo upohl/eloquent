@@ -1,0 +1,105 @@
+-- RTA as described in "Modeling and efficient solving of extra-functional properties for
+-- adaptation in networked embedded real-time systems adaptation in networked embedded real-time systems"
+-- (Zeller, Prehofer)
+
+import 'http://www.fujaba.de/muml/psm/properties/0.4.0/'
+import 'http://www.fujaba.de/muml/allocation/language/0.1.0/oclcontext'
+
+include 'platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.language.xtext/operations/OCLContext.ocl'
+
+	context oclcontext::OCLContext	
+		def: RTAForInstanceAndECU(swInstance : instance::ComponentInstance, instances : Set(instance::ComponentInstance), ecu : hwresourceinstance::ResourceInstance)
+			: Set(
+				Tuple(
+					lval : Set(
+						Tuple(
+							c1 : instance::ComponentInstance,
+							e1 : hwresourceinstance::ResourceInstance,
+							c2 : instance::ComponentInstance,
+							e2 : hwresourceinstance::ResourceInstance,
+							lval : Real
+						)
+					),
+					rval : Real
+				)
+			)
+			=
+			let deadline : Real = swInstance.getSchedulingExtension().deadline.getLiteralVal()
+			in
+			Set{
+				Tuple {
+					lval = Set{
+						Tuple{
+							c1 = swInstance,
+							e1 = ecu,
+							c2 = swInstance,
+							e2 = ecu,
+							-- first summand from equation (8)
+							lval = swInstance.getWCETExtensionForECU(ecu).wcet.getLiteralVal()
+						}
+					}
+					->union(
+						instances->select(
+							getSchedulingExtension().priority._'value' > swInstance.getSchedulingExtension().priority._'value'
+						)->collect(other : instance::ComponentInstance |
+							let otherPeriod : Real = other.getSchedulingExtension().period.getLiteralVal()
+							in
+							let otherWCET : Real = other.getWCETExtensionForECU(ecu).wcet.getLiteralVal()
+							in
+							Tuple{
+								c1 = swInstance,
+								e1 = ecu,
+								c2 = other,
+								e2 = ecu,
+								-- inner summand (see equation (8))
+								lval = otherWCET - otherWCET * otherWCET / otherPeriod + otherWCET / otherPeriod * deadline   
+							}
+						)->asSet()
+					),
+					rval = deadline
+				}
+			}
+			
+		def: RTAOnECU(instances : Set(instance::ComponentInstance), ecu : hwresourceinstance::ResourceInstance)
+			: Set(
+				Tuple(
+					lval : Set(
+						Tuple(
+							c1 : instance::ComponentInstance,
+							e1 : hwresourceinstance::ResourceInstance,
+							c2 : instance::ComponentInstance,
+							e2 : hwresourceinstance::ResourceInstance,
+							lval : Real
+						)
+					),
+					rval : Real
+				)
+			)
+			=
+			let schedInstances : Set(instance::ComponentInstance) = getSWInstancesForSchedulingOnECU(instances, ecu)
+			in
+			schedInstances->collect(swInstance : instance::ComponentInstance |
+				self.RTAForInstanceAndECU(swInstance, schedInstances, ecu)
+			)->asSet()
+			
+		def: RTA() 
+			: Set(
+				Tuple(
+					lval : Set(
+						Tuple(
+							c1 : instance::ComponentInstance,
+							e1 : hwresourceinstance::ResourceInstance,
+							c2 : instance::ComponentInstance,
+							e2 : hwresourceinstance::ResourceInstance,
+							lval : Real
+						)
+					),
+					rval : Real
+				)
+			)
+			=
+			let instances : Set(instance::ComponentInstance) = self.getAllSWInstances()
+			in
+			self.getAllHWInstances()->collect(ecu : hwresourceinstance::ResourceInstance |
+				self.RTAOnECU(instances, ecu)
+			)->asSet()

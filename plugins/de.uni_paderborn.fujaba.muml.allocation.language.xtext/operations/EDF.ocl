@@ -1,0 +1,72 @@
+-- EDF as described in "Modeling and efficient solving of extra-functional properties for
+-- adaptation in networked embedded real-time systems adaptation in networked embedded real-time systems"
+-- (Zeller, Prehofer)
+
+import 'http://www.fujaba.de/muml/psm/properties/0.4.0/'
+import 'http://www.fujaba.de/muml/allocation/language/0.1.0/oclcontext'
+include 'platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.language.xtext/operations/OCLContext.ocl'
+
+	context oclcontext::OCLContext
+		def: minimum(a : Real, b : Real) : Real
+			=
+			if a - b < 0 then
+				a
+			else
+				b
+			endif
+	
+		def: EDFOnECU(instances : Set(instance::ComponentInstance), ecu : hwresourceinstance::ResourceInstance)
+			: Set(
+				Tuple(	
+					lval : Set(
+						Tuple(
+							componentInstance : instance::ComponentInstance,
+							resourceInstance : hwresourceinstance::ResourceInstance,
+							lval : Real
+						)
+					),
+					rval : Real
+				)
+			)
+			=
+			Set {
+				Tuple {
+					lval = self.getSWInstancesForSchedulingOnECU(instances, ecu)->collect(swInstance : instance::ComponentInstance |
+						let scheduling : properties::Scheduling = swInstance.getSchedulingExtension()
+						in
+						let period : Real = scheduling.period.getLiteralVal()
+						in
+						let deadline : Real = scheduling.deadline.getLiteralVal()
+						in
+						let wcet : Real = swInstance.getWCETExtensionForECU(ecu).wcet.getLiteralVal()
+						in
+						Tuple{
+							componentInstance = swInstance,
+							resourceInstance = ecu,
+							-- summand (see equation (11))
+							lval = wcet / self.minimum(period, deadline)
+						}
+					)->asSet(),
+					rval = 1
+				}
+			}
+	
+		def: EDF()
+			: Set(
+				Tuple(	
+					lval : Set(
+						Tuple(
+							componentInstance : instance::ComponentInstance,
+							resourceInstance : hwresourceinstance::ResourceInstance,
+							lval : Real
+						)
+					),
+					rval : Real
+				)
+			)
+			=
+			let instances : Set(instance::ComponentInstance) = self.getAllSWInstances()
+			in
+			self.getAllHWInstances()->collect(ecu : hwresourceinstance::ResourceInstance |
+				self.EDFOnECU(instances, ecu)
+			)->asSet()
