@@ -152,6 +152,25 @@
 		def: getSWInstancesForSchedulingOnECU(instances : Set(instance::ComponentInstance), ecu : hwresourceinstance::ResourceInstance) : Set(instance::ComponentInstance) =
 			self.getSWInstancesWithWCET(instances, ecu)->select(not getSchedulingExtension().oclIsUndefined())
 			
+	context connector::ConnectorInstance
+		-- basically, a DFS
+		def: getReachableConnectors() : OrderedSet(OrderedSet(connector::ConnectorInstance)) =
+			OrderedSet{OrderedSet{self}}->closure(s : OrderedSet(connector::ConnectorInstance) |
+				s->last()->collect(c |
+					c.connectorEndpointInstances->collect(connectorInstances)
+				)->select(c |
+					-- move forward
+					if s->size() >= 2 then 
+						s->at(s->size() - 1).connectorEndpointInstances
+					else
+						OrderedSet{}
+					endif
+					->intersection(c.connectorEndpointInstances)->isEmpty()
+				)->collectNested(c |
+					s->append(c)
+				)
+			)	
+			
 	context hwplatforminstance::HWPlatformInstanceConfiguration
 		def: getAllEmbeddedPlatformInstances() : Set(hwplatforminstance::HWPlatformInstance) =
 			self.hwplatformInstances->closure(h |
@@ -192,21 +211,9 @@
 			self.hwports->select(oclIsKindOf(connector::ConnectorEndpointInstance))
 				->collect(oclAsType(connector::ConnectorEndpointInstance))
 				->collect(connectorInstances)
-				->collectNested(c | OrderedSet{c})
-				->closure(s : OrderedSet(connector::ConnectorInstance) |
-					s->last()->collect(c |
-						c.connectorEndpointInstances->collect(connectorInstances)
-					)->select(c |
-						-- move forward
-						if s->size() >= 2 then 
-							s->at(s->size() - 1).connectorEndpointInstances
-						else
-							OrderedSet{}
-						endif
-						->intersection(c.connectorEndpointInstances)->isEmpty()
-					)->collectNested(c |
-						s->append(c)
-					)
+				->collectNested(c | c.getReachableConnectors())
+				->iterate(it : OrderedSet(OrderedSet(connector::ConnectorInstance)); acc : OrderedSet(OrderedSet(connector::ConnectorInstance)) = OrderedSet{} |
+					acc->union(it)
 				)
 		
 		def: getReachableECUs() : Set(hwresourceinstance::ResourceInstance) =
