@@ -1,0 +1,395 @@
+import 'http://www.fujaba.de/muml/hardware/hwplatforminstance/1.1/'
+import 'http://www.fujaba.de/muml/hardware/hwresourceinstance/1.1/'
+import 'http://www.fujaba.de/muml/psm/properties/0.4.0/'
+import 'http://www.fujaba.de/muml/connector/0.4.0'
+import 'http://www.fujaba.de/muml/valuetype/0.4.0'
+include 'platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.language.xtext/operations/OCLContext.ocl'
+
+-- CAN RTA (see Controller Area Network (CAN) schedulability analysis: Refuted, revisited and revised,
+-- http://link.springer.com/article/10.1007%2Fs11241-007-9012-7)
+
+context oclcontext::OCLContext
+
+	def: busUtilization(busName : String) : Set(
+		Tuple(
+			utilization : Set(
+				Tuple(
+					c1 : instance::ComponentInstance,
+					e1 : hwresourceinstance::ResourceInstance,
+					c2 : instance::ComponentInstance,
+					e2 : hwresourceinstance::ResourceInstance,
+					utilization : Real 
+				)
+			),
+			rval : Real
+		)
+	)
+		=
+		let canBus = self.getCANBus(busName)
+		in
+		let busECUPairs : Set(Tuple(first : hwresourceinstance::ResourceInstance, second : hwresourceinstance::ResourceInstance))
+		=
+		canBus.getConnectedECUs()->product(canBus.getConnectedECUs())->reject(t |
+			t.first = t.second
+				or not t.first.oclIsKindOf(hwresourceinstance::StructuredResourceInstance)
+				or not t.second.oclIsKindOf(hwresourceinstance::StructuredResourceInstance)
+		)
+		in
+		Set{
+			Tuple{
+				utilization = self.getSendingPortInstances()->collect(
+					getMessageExtension()
+				)->collect(msg |
+					let senderPortInstance : instance::PortInstance
+					=
+					msg.extendableBase.oclAsType(instance::PortInstance)
+					in
+					let
+					senderComponent : instance::ComponentInstance = senderPortInstance.componentInstance
+					in
+					let	receiverComponent : instance::ComponentInstance = senderPortInstance.getReceiverPortInstance().componentInstance
+					in
+					busECUPairs->collect(t |
+						Tuple{
+							c1 = senderComponent,
+							e1 = t.first,
+							c2 = receiverComponent,
+							e2 = t.second,
+							utilization = canBus.getUtilization(Set{msg})
+						}
+					)
+				)->asSet(),
+				rval = 1
+			}
+		}
+
+	def: canRTA(busName : String) : Set(
+			Tuple(
+				lval : Set(
+					Tuple(
+						c1 : instance::ComponentInstance,
+						e1 : hwresourceinstance::ResourceInstance,
+						c2 : instance::ComponentInstance,
+						e2 : hwresourceinstance::ResourceInstance,
+						lval : Real
+					)
+				),
+				rval : Real
+			)
+		)
+			=
+			let canBus = self.getCANBus(busName)
+			in
+			let possibleMessages : Set(Set(properties::Message))
+			=
+			canBus.getPossibleMessages(
+				self.getSendingPortInstances()->collect(getMessageExtension())->asSet()
+			)
+			in
+			possibleMessages->collect(messages |
+				messages->collect(msg |
+					let blockingTime : Real = canBus.getBlockingTime(msg.getLowerPriorityMessages(messages, true))
+					in
+					let busyPeriod : Real = msg.calculateBusyPeriod(msg.getHigherPriorityMessages(messages, false), canBus, blockingTime)
+					in
+					msg.calculateWorstCaseResponseTimeTuples(
+						msg.getHigherPriorityMessages(messages, true),
+						canBus, blockingTime, busyPeriod,
+						self.getAllHWInstances()->select(
+							oclIsKindOf(hwresourceinstance::StructuredResourceInstance)
+						)
+					)
+				)
+			)->asSet()
+			
+			
+		def: getCANBusses() : Set(hwplatforminstance::BusInstance) =
+			self.getAllHWPlatformInstances()->collect(embeddedHPIC)->collect(
+				networkingHardwareInstances
+			)->select(
+				oclIsKindOf(hwplatforminstance::BusInstance)
+			)->collect(
+				oclAsType(hwplatforminstance::BusInstance)
+			)->asSet()
+			
+		def: getCANBus(busName : String) : hwplatforminstance::BusInstance =
+			self.getCANBusses()->any(name = busName)
+			
+		def: getSendingPortInstances() : Set(instance::PortInstance) =
+			self.getAllSWInstances()->collect(getSendingPortInstances())->asSet()
+				
+		def: getPowerset(portInstances : Set(instance::PortInstance)) : Set(Set(instance::PortInstance)) =
+			Set{portInstances}->closure(s |
+				s->collectNested(c |
+					s->reject(elm | elm = c)
+				)
+			)->asSet()
+			
+	context hwplatforminstance::BusInstance
+		def: getConnectedECUs() : Set(hwresourceinstance::ResourceInstance) =
+			self.getConnectors()->select(path |
+				-- path should contain other busses or bridges
+				path->forAll(c |
+					c.connectorEndpointInstances->forAll(ce |
+						ce.oclIsKindOf(hwplatforminstance::NetworkingHardwareInstance) implies ce = self
+					)
+				)
+			)->collect(path |
+				path->collect(connectorEndpointInstances)->select(
+					oclIsKindOf(hwplatforminstance::HWPortInstance)
+				)->collect(oclAsType(hwplatforminstance::HWPortInstance).parentResourceInstance)
+			)->asSet()
+			
+		-- XXX: why the warning?
+		def: getConnectors() : Set(OrderedSet(connector::ConnectorInstance)) =
+			self.connectorInstances
+				->collectNested(c | c.getReachableConnectors())
+				->iterate(it : OrderedSet(OrderedSet(connector::ConnectorInstance)); acc : OrderedSet(OrderedSet(connector::ConnectorInstance)) = OrderedSet{} |
+					acc->union(it)
+				)
+				
+		def: getPossibleMessages(messages : Set(properties::Message)) : Set(Set(properties::Message)) =
+			Set{messages}->closure(msgs |
+				if self.getUtilization(msgs) < 1 then
+					Set{msgs}
+				else
+					msgs->collectNested(msg |
+						msgs->reject(elm | elm = msg)
+					)
+				endif
+			)->select(msgs | self.getUtilization(msgs) < 1)
+				
+		def: getUtilization(messages : Set(properties::Message)) : Real =
+			messages->collect(msg |
+				self.getTransmissionTime(msg) / msg.period.getLiteralVal()
+			)->sum()
+				
+		def: getTransmissionTime(message : properties::Message) : Real =
+			-- TODO: can we use this? message.size.getInByte() / self.bandwidth.getInBpS()
+			message.size._'value' / self.bandwidth._'value'
+			
+		def: getBlockingTime(lmessages : Set(properties::Message)) : Real =
+			lmessages->collect(msg | self.getTransmissionTime(msg))
+				->union(Set{0})->_'max'()
+				
+		def: getBitTransmissionTime() : Real =
+			1 / self.bandwidth._'value'
+			
+	context instance::ComponentInstance
+		def: getSendingPortInstances() : Set(instance::PortInstance) =
+			self.portInstances->select(
+				not getMessageExtension().oclIsUndefined()
+			)->asSet()
+			
+	context instance::PortInstance
+		def: getReceiverPortInstance() : instance::PortInstance =
+			-- XXX: delegation ports!
+			self.connectorInstances->any(true).connectorEndpointInstances->any(p | p <> self).oclAsType(instance::PortInstance)
+			
+		def: getMessageExtensions() : Set(properties::Message) =
+			self.extension->select(oclIsKindOf(properties::Message))
+				->collect(oclAsType(properties::Message))->asSet()
+				
+		def: getMessageExtension() : properties::Message =
+			self.getMessageExtensions()->any(true)
+			
+	context valuetype::NaturalNumber
+		def: getVal() : Integer =
+			self._'value'
+			
+	context properties::Message
+		def: getLowerPriorityMessages(msgs : Set(properties::Message), strict : Boolean) : Set(properties::Message) =
+			msgs->select(msg |
+				if strict then
+					msg.priority.getVal() > self.priority.getVal()
+				else
+					msg.priority.getVal() >= self.priority.getVal()
+				endif
+			)
+					
+		def: getHigherPriorityMessages(msgs : Set(properties::Message), strict : Boolean) : Set(properties::Message) =
+			msgs - self.getLowerPriorityMessages(msgs, not strict)
+			
+		def: ceil(val : Real) : Integer =
+			let floor : Integer = val.floor()
+			in
+			if floor = val then
+				floor
+			else
+				floor + 1
+			endif
+			
+		def: calculateBusyPeriod(hemessages : Set(properties::Message), canBus : hwplatforminstance::BusInstance, blockingTime : Real) : Real
+			=
+			OrderedSet{canBus.getTransmissionTime(self)}->closure(t : Real |
+				hemessages->collect(msg |
+					self.ceil(
+						t / msg.period.getLiteralVal()
+					) * canBus.getTransmissionTime(msg)
+				)->sum() + blockingTime
+			)->last()
+			
+		def: calculateWaitTimeForInstanceq(
+			hmessages : Set(properties::Message), canBus : hwplatforminstance::BusInstance,
+			blockingTime : Real, q : Integer
+		) : Real
+			=
+			let transmissionQ : Real = q * canBus.getTransmissionTime(self)
+			in
+			OrderedSet{blockingTime + transmissionQ}->closure(w : Real |
+				hmessages->collect(msg |
+					self.ceil(
+						(w + canBus.getBitTransmissionTime()) / msg.period.getLiteralVal()
+					) * canBus.getTransmissionTime(msg)
+				)->sum() + blockingTime + transmissionQ
+			)->last()
+			
+		def: calculateWorstCaseResponseTimeForInstanceq(
+			hmessages : Set(properties::Message), canBus : hwplatforminstance::BusInstance,
+			blockingTime : Real, q : Integer
+		) : Real
+			=
+			self.calculateWaitTimeForInstanceq(hmessages, canBus, blockingTime, q)
+				- q * self.period.getLiteralVal() + canBus.getTransmissionTime(self)
+				
+		def: calculateWorstCaseResponseTime(
+			hmessages : Set(properties::Message), canBus : hwplatforminstance::BusInstance,
+			blockingTime : Real, busyPeriod : Real
+		) : Tuple(worstCaseResponseTime : Real, instance : Integer)
+			=
+			let maxInstances : Integer = self.ceil(busyPeriod / self.period.getLiteralVal())
+			in
+			let worstCaseResponseTimes : OrderedSet(Real) = OrderedSet{0 .. maxInstances - 1}->collect(q |
+				self.calculateWorstCaseResponseTimeForInstanceq(
+					hmessages, canBus, blockingTime, q
+				)
+			)->asOrderedSet()
+			in
+			let worstCaseResponseTime : Real = worstCaseResponseTimes->_'max'()
+			in
+			Tuple{
+				worstCaseResponseTime = worstCaseResponseTime,
+				instance = worstCaseResponseTimes->indexOf(worstCaseResponseTime) - 1
+			}
+			
+		def: calculateInterferenceTimeForInstanceQ(
+			hmessages : Set(properties::Message), canBus : hwplatforminstance::BusInstance,
+			blockingTime : Real, q : Integer, interferingMessage : properties::Message
+		) : Real
+			=
+			let
+			interferenceTime : Real
+			=
+			-- we could also reconstruct this from t.worstCaseResponseTime, but recalculating
+			-- it is less error-prone
+			-- TODO: verify if this calculation is really correct (in the worst case
+			-- it is pessimistic (at least I think so))
+			self.calculateWaitTimeForInstanceq(hmessages, canBus, blockingTime, q)
+				- blockingTime - q * self.period.getLiteralVal() - q * canBus.getTransmissionTime(self)
+			in
+			self.ceil(
+				interferenceTime / interferingMessage.period.getLiteralVal()
+			) * canBus.getTransmissionTime(interferingMessage)
+			
+		def: calculateWorstCaseResponseTimeLvalTuples(
+			hmessages : Set(properties::Message), canBus : hwplatforminstance::BusInstance,
+			blockingTime : Real, busyPeriod : Real, ecus : Set(hwresourceinstance::ResourceInstance)
+		) : Set(
+			Tuple(
+				c1 : instance::ComponentInstance,
+				e1 : hwresourceinstance::ResourceInstance,
+				c2 : instance::ComponentInstance,
+				e2 : hwresourceinstance::ResourceInstance,
+				lval : Real
+			)
+		)
+			=
+			let t : Tuple(worstCaseResponseTime : Real, instance : Integer)
+			=
+			self.calculateWorstCaseResponseTime(hmessages, canBus, blockingTime, busyPeriod)
+			in
+			let senderPortInstance : instance:: PortInstance
+			=
+			self.extendableBase.oclAsType(instance::PortInstance)
+			in
+			let senderComponent : instance::ComponentInstance
+			=
+			senderPortInstance.componentInstance
+			in
+			let receiverComponent : instance::ComponentInstance
+			=
+			senderPortInstance.getReceiverPortInstance().componentInstance
+			in
+			let senderReceiverInterference : Set(Tuple(senderComponent : instance::ComponentInstance, receiverComponent : instance::ComponentInstance, interferenceTime : Real))
+			=
+			hmessages->collect(msg |
+				let senderPortInstance : instance::PortInstance
+				=
+				msg.extendableBase.oclAsType(instance::PortInstance)
+				in
+				Tuple{
+					senderComponent = senderPortInstance.componentInstance,
+					receiverComponent = senderPortInstance.getReceiverPortInstance().componentInstance,
+					interferenceTime = self.calculateInterferenceTimeForInstanceQ(
+						hmessages, canBus, blockingTime, t.instance, msg
+					)
+				}
+			)->asSet()
+			in
+			let busECUPairs : Set(Tuple(first : hwresourceinstance::ResourceInstance, second : hwresourceinstance::ResourceInstance))
+			=
+			canBus.getConnectedECUs()->product(canBus.getConnectedECUs())->reject(t |
+				t.first = t.second
+					or not t.first.oclIsKindOf(hwresourceinstance::StructuredResourceInstance)
+					or not t.second.oclIsKindOf(hwresourceinstance::StructuredResourceInstance)
+			)
+			in
+			-- finally, we can construct the tuples
+			busECUPairs->collect(tb |
+				Tuple{
+					c1 = senderComponent,
+					e1 = tb.first,
+					c2 = receiverComponent,
+					e2 = tb.second,
+					lval = t.worstCaseResponseTime
+				}
+			)->union(
+				senderReceiverInterference->collect(t |
+					ecus->collect(ecu |
+						Tuple{
+							c1 = t.senderComponent,
+							e1 = ecu,
+							c2 = t.receiverComponent,
+							e2 = ecu,
+							lval = -1 * t.interferenceTime
+						}
+					)	
+				)
+			)->asSet()
+			
+		def: calculateWorstCaseResponseTimeTuples(
+			hmessages : Set(properties::Message), canBus : hwplatforminstance::BusInstance,
+			blockingTime : Real, busyPeriod : Real, ecus : Set(hwresourceinstance::ResourceInstance)
+		) : Set(
+			Tuple(
+				lval : Set(
+					Tuple(
+						c1 : instance::ComponentInstance,
+						e1 : hwresourceinstance::ResourceInstance,
+						c2 : instance::ComponentInstance,
+						e2 : hwresourceinstance::ResourceInstance,
+						lval : Real
+					)
+				),
+				rval : Real
+			)
+		)
+			=
+			Set{
+				Tuple{
+					lval = self.calculateWorstCaseResponseTimeLvalTuples(
+						hmessages, canBus, blockingTime, busyPeriod, ecus
+					),
+					rval = self.deadline.getLiteralVal()
+				}
+			}
