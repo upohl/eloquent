@@ -37,6 +37,40 @@ class ILP2SATTest {
 	}
 	
 	@Test
+	public def testSingleConstraintFloatInt() {
+		// same as above (just a different fixture file)
+		val uri = uri + "singleConstraintFloatInt.lp"
+		val ilp = QVToTransformationRunner.Util.loadURI(uri) as IntegerLinearProgram
+		val ilp2sat = new ILP2SAT()
+		ILPPreorderTraversal.traverse(ilp, ilp2sat)
+		assertEquals(1, ilp2sat.constraintList.size)
+		val constraint = ilp2sat.constraintList.get(0)
+		assertEquals(3, constraint.size)
+		var term = constraint.get(0)
+		assertEquals(ilp.variables.get(0), term.literal.variable)
+		assertEquals(2, term.coefficient)
+		term = constraint.get(1)
+		assertEquals(ilp.variables.get(1), term.literal.variable)
+		assertEquals(3, term.coefficient)
+		term = constraint.get(2)
+		assertEquals(ilp.variables.get(2), term.literal.variable)
+		assertEquals(1, term.coefficient)
+		// test rhs
+		assertEquals(40, constraint.rhs)
+		// test constraint operator
+		assertEquals(Constraint.Operator.LE, constraint.operator)
+	}
+	
+	@Test(expected = typeof(IllegalArgumentException))
+	public def testSingleConstraintFloatUnsupported() {
+		// currently floating point coefficients are unsupported
+		val uri = uri + "singleConstraintFloatUnsupported.lp"
+		val ilp = QVToTransformationRunner.Util.loadURI(uri) as IntegerLinearProgram
+		val ilp2sat = new ILP2SAT()
+		ILPPreorderTraversal.traverse(ilp, ilp2sat)
+	}
+	
+	@Test
 	public def testTwoConstraints() {
 		val uri = uri + "twoConstraints.lp"
 		val ilp = QVToTransformationRunner.Util.loadURI(uri) as IntegerLinearProgram

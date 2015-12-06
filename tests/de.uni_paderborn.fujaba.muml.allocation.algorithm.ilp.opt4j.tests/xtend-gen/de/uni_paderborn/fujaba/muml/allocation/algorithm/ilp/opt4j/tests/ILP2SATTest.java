@@ -65,6 +65,61 @@ public class ILP2SATTest {
   }
   
   @Test
+  public void testSingleConstraintFloatInt() {
+    final String uri = (this.uri + "singleConstraintFloatInt.lp");
+    EObject _loadURI = QVToTransformationRunner.Util.loadURI(uri);
+    final IntegerLinearProgram ilp = ((IntegerLinearProgram) _loadURI);
+    final ILP2SAT ilp2sat = new ILP2SAT();
+    ILPPreorderTraversal.traverse(ilp, ilp2sat);
+    List<Constraint> _constraintList = ilp2sat.getConstraintList();
+    int _size = _constraintList.size();
+    Assert.assertEquals(1, _size);
+    List<Constraint> _constraintList_1 = ilp2sat.getConstraintList();
+    final Constraint constraint = _constraintList_1.get(0);
+    int _size_1 = constraint.size();
+    Assert.assertEquals(3, _size_1);
+    Term term = constraint.get(0);
+    EList<Variable> _variables = ilp.getVariables();
+    Variable _get = _variables.get(0);
+    Literal _literal = term.getLiteral();
+    Object _variable = _literal.variable();
+    Assert.assertEquals(_get, _variable);
+    int _coefficient = term.getCoefficient();
+    Assert.assertEquals(2, _coefficient);
+    Term _get_1 = constraint.get(1);
+    term = _get_1;
+    EList<Variable> _variables_1 = ilp.getVariables();
+    Variable _get_2 = _variables_1.get(1);
+    Literal _literal_1 = term.getLiteral();
+    Object _variable_1 = _literal_1.variable();
+    Assert.assertEquals(_get_2, _variable_1);
+    int _coefficient_1 = term.getCoefficient();
+    Assert.assertEquals(3, _coefficient_1);
+    Term _get_3 = constraint.get(2);
+    term = _get_3;
+    EList<Variable> _variables_2 = ilp.getVariables();
+    Variable _get_4 = _variables_2.get(2);
+    Literal _literal_2 = term.getLiteral();
+    Object _variable_2 = _literal_2.variable();
+    Assert.assertEquals(_get_4, _variable_2);
+    int _coefficient_2 = term.getCoefficient();
+    Assert.assertEquals(1, _coefficient_2);
+    int _rhs = constraint.getRhs();
+    Assert.assertEquals(40, _rhs);
+    Constraint.Operator _operator = constraint.getOperator();
+    Assert.assertEquals(Constraint.Operator.LE, _operator);
+  }
+  
+  @Test(expected = IllegalArgumentException.class)
+  public void testSingleConstraintFloatUnsupported() {
+    final String uri = (this.uri + "singleConstraintFloatUnsupported.lp");
+    EObject _loadURI = QVToTransformationRunner.Util.loadURI(uri);
+    final IntegerLinearProgram ilp = ((IntegerLinearProgram) _loadURI);
+    final ILP2SAT ilp2sat = new ILP2SAT();
+    ILPPreorderTraversal.traverse(ilp, ilp2sat);
+  }
+  
+  @Test
   public void testTwoConstraints() {
     final String uri = (this.uri + "twoConstraints.lp");
     EObject _loadURI = QVToTransformationRunner.Util.loadURI(uri);
