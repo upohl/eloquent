@@ -80,7 +80,7 @@ context oclcontext::OCLContext
 			=
 			let canBus = self.getCANBus(busName)
 			in
-			let possibleMessages : Set(Set(properties::Message))
+			let possibleMessages : Set(Set(properties::CANMessageFrame))
 			=
 			canBus.getPossibleMessages(
 				self.getSendingPortInstances()->collect(getMessageExtension())->asSet()
@@ -148,7 +148,7 @@ context oclcontext::OCLContext
 					acc->union(it)
 				)
 				
-		def: getPossibleMessages(messages : Set(properties::Message)) : Set(Set(properties::Message)) =
+		def: getPossibleMessages(messages : Set(properties::CANMessageFrame)) : Set(Set(properties::CANMessageFrame)) =
 			Set{messages}->closure(msgs |
 				if self.getUtilization(msgs) < 1 then
 					Set{msgs}
@@ -159,16 +159,16 @@ context oclcontext::OCLContext
 				endif
 			)->select(msgs | self.getUtilization(msgs) < 1)
 				
-		def: getUtilization(messages : Set(properties::Message)) : Real =
+		def: getUtilization(messages : Set(properties::CANMessageFrame)) : Real =
 			messages->collect(msg |
 				self.getTransmissionTime(msg) / msg.period.getLiteralVal()
 			)->sum()
 				
-		def: getTransmissionTime(message : properties::Message) : Real =
+		def: getTransmissionTime(message : properties::CANMessageFrame) : Real =
 			-- TODO: can we use this? message.size.getInByte() / self.bandwidth.getInBpS()
 			message.size._'value' / self.bandwidth._'value'
 			
-		def: getBlockingTime(lmessages : Set(properties::Message)) : Real =
+		def: getBlockingTime(lmessages : Set(properties::CANMessageFrame)) : Real =
 			lmessages->collect(msg | self.getTransmissionTime(msg))
 				->union(Set{0})->_'max'()
 				
@@ -186,19 +186,19 @@ context oclcontext::OCLContext
 			-- XXX: delegation ports!
 			self.connectorInstances->any(true).connectorEndpointInstances->any(p | p <> self).oclAsType(instance::PortInstance)
 			
-		def: getMessageExtensions() : Set(properties::Message) =
-			self.extension->select(oclIsKindOf(properties::Message))
-				->collect(oclAsType(properties::Message))->asSet()
+		def: getMessageExtensions() : Set(properties::CANMessageFrame) =
+			self.extension->select(oclIsKindOf(properties::CANMessageFrame))
+				->collect(oclAsType(properties::CANMessageFrame))->asSet()
 				
-		def: getMessageExtension() : properties::Message =
+		def: getMessageExtension() : properties::CANMessageFrame =
 			self.getMessageExtensions()->any(true)
 			
 	context valuetype::NaturalNumber
 		def: getVal() : Integer =
 			self._'value'
 			
-	context properties::Message
-		def: getLowerPriorityMessages(msgs : Set(properties::Message), strict : Boolean) : Set(properties::Message) =
+	context properties::CANMessageFrame
+		def: getLowerPriorityMessages(msgs : Set(properties::CANMessageFrame), strict : Boolean) : Set(properties::CANMessageFrame) =
 			msgs->select(msg |
 				if strict then
 					msg.priority.getVal() > self.priority.getVal()
@@ -207,7 +207,7 @@ context oclcontext::OCLContext
 				endif
 			)
 					
-		def: getHigherPriorityMessages(msgs : Set(properties::Message), strict : Boolean) : Set(properties::Message) =
+		def: getHigherPriorityMessages(msgs : Set(properties::CANMessageFrame), strict : Boolean) : Set(properties::CANMessageFrame) =
 			msgs - self.getLowerPriorityMessages(msgs, not strict)
 			
 		def: ceil(val : Real) : Integer =
@@ -219,7 +219,7 @@ context oclcontext::OCLContext
 				floor + 1
 			endif
 			
-		def: calculateBusyPeriod(hemessages : Set(properties::Message), canBus : hwplatforminstance::BusInstance, blockingTime : Real) : Real
+		def: calculateBusyPeriod(hemessages : Set(properties::CANMessageFrame), canBus : hwplatforminstance::BusInstance, blockingTime : Real) : Real
 			=
 			OrderedSet{canBus.getTransmissionTime(self)}->closure(t : Real |
 				hemessages->collect(msg |
@@ -230,7 +230,7 @@ context oclcontext::OCLContext
 			)->last()
 			
 		def: calculateWaitTimeForInstanceq(
-			hmessages : Set(properties::Message), canBus : hwplatforminstance::BusInstance,
+			hmessages : Set(properties::CANMessageFrame), canBus : hwplatforminstance::BusInstance,
 			blockingTime : Real, q : Integer
 		) : Real
 			=
@@ -245,7 +245,7 @@ context oclcontext::OCLContext
 			)->last()
 			
 		def: calculateWorstCaseResponseTimeForInstanceq(
-			hmessages : Set(properties::Message), canBus : hwplatforminstance::BusInstance,
+			hmessages : Set(properties::CANMessageFrame), canBus : hwplatforminstance::BusInstance,
 			blockingTime : Real, q : Integer
 		) : Real
 			=
@@ -253,7 +253,7 @@ context oclcontext::OCLContext
 				- q * self.period.getLiteralVal() + canBus.getTransmissionTime(self)
 				
 		def: calculateWorstCaseResponseTime(
-			hmessages : Set(properties::Message), canBus : hwplatforminstance::BusInstance,
+			hmessages : Set(properties::CANMessageFrame), canBus : hwplatforminstance::BusInstance,
 			blockingTime : Real, busyPeriod : Real
 		) : Tuple(worstCaseResponseTime : Real, instance : Integer)
 			=
@@ -273,8 +273,8 @@ context oclcontext::OCLContext
 			}
 			
 		def: calculateInterferenceTimeForInstanceQ(
-			hmessages : Set(properties::Message), canBus : hwplatforminstance::BusInstance,
-			blockingTime : Real, q : Integer, interferingMessage : properties::Message
+			hmessages : Set(properties::CANMessageFrame), canBus : hwplatforminstance::BusInstance,
+			blockingTime : Real, q : Integer, interferingMessage : properties::CANMessageFrame
 		) : Real
 			=
 			let
@@ -292,7 +292,7 @@ context oclcontext::OCLContext
 			) * canBus.getTransmissionTime(interferingMessage)
 			
 		def: calculateWorstCaseResponseTimeLvalTuples(
-			hmessages : Set(properties::Message), canBus : hwplatforminstance::BusInstance,
+			hmessages : Set(properties::CANMessageFrame), canBus : hwplatforminstance::BusInstance,
 			blockingTime : Real, busyPeriod : Real, ecus : Set(hwresourceinstance::ResourceInstance)
 		) : Set(
 			Tuple(
@@ -368,7 +368,7 @@ context oclcontext::OCLContext
 			)->asSet()
 			
 		def: calculateWorstCaseResponseTimeTuples(
-			hmessages : Set(properties::Message), canBus : hwplatforminstance::BusInstance,
+			hmessages : Set(properties::CANMessageFrame), canBus : hwplatforminstance::BusInstance,
 			blockingTime : Real, busyPeriod : Real, ecus : Set(hwresourceinstance::ResourceInstance)
 		) : Set(
 			Tuple(
