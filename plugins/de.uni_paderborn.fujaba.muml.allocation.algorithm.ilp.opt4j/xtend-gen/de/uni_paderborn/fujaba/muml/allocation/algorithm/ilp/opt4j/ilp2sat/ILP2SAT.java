@@ -340,7 +340,15 @@ public class ILP2SAT implements IVisitor {
   }
   
   private void addLiteral(final VariableExpression variableExpression, final String coefficient) {
-    int coeff = Integer.parseInt(coefficient);
+    double value = Double.parseDouble(coefficient);
+    double _ceil = Math.ceil(value);
+    int _intValue = Double.valueOf(value).intValue();
+    double _minus = (_ceil - _intValue);
+    boolean _greaterThan = (_minus > 0);
+    if (_greaterThan) {
+      throw new IllegalArgumentException("floating point coefficient is not supported");
+    }
+    int coeff = Double.valueOf(value).intValue();
     boolean _equals = Objects.equal(this.state, ILP2SAT.State.CONSTRAINT_RHS);
     if (_equals) {
       int _coeff = coeff;

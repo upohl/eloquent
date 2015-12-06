@@ -235,8 +235,12 @@ class ILP2SAT implements IVisitor {
 	}
 	
 	private def addLiteral(VariableExpression variableExpression, String coefficient) {
-		// this might fail for floats
-		var coeff = Integer.parseInt(coefficient)
+		// should we support floats?
+		var value = Double.parseDouble(coefficient)
+		if (Math.ceil(value) - value.intValue > 0) {
+			throw new IllegalArgumentException("floating point coefficient is not supported")
+		}
+		var coeff = value.intValue
 		if (state == State.CONSTRAINT_RHS) {
 			coeff *= -1
 		}
