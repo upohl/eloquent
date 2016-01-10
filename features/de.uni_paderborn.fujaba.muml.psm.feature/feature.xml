@@ -81,7 +81,6 @@
       <import plugin="de.uni_paderborn.fujaba.muml.actionlanguage.xtext.ui" version="0.5.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.jdt.annotation" version="1.1.100" match="compatible"/>
       <import plugin="org.eclipse.emf.transaction" version="1.9.0" match="greaterOrEqual"/>
-      <import plugin="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config" version="0.1.0" match="greaterOrEqual"/>
       <import feature="de.uni_paderborn.fujaba.modelcopy.feature" version="0.5.0.qualifier"/>
       <import feature="org.eclipse.ocl.unified.core" version="1.0.0.v20150608-1110"/>
       <import feature="de.uni_paderborn.fujaba.muml.allocation.ext.dependency.ocl.pivot.beo477283.feature" version="1.0.1.qualifier"/>
@@ -228,6 +227,27 @@
 
    <plugin
          id="de.uni_paderborn.fujaba.muml.psm.edit.properties"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config.edit.properties"
          download-size="0"
          install-size="0"
          version="0.0.0"
