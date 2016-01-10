@@ -44,7 +44,7 @@ public class AllocationComputationStrategyExtension {
 		private static final String nameAttribute = "name";
 		private static final String descriptionAttribute = "description";
 		private static final String classAttribute = "class";
-		private static final String invalidClass = "%s is no IAllocationComputationStrategy";
+		private static final String invalidClass = "%s is no IAllocationComputationStrategy<?>";
 		
 		private IConfigurationElement configurationElement;
 		
@@ -74,15 +74,15 @@ public class AllocationComputationStrategyExtension {
 		 * @return the allocation computation strategy
 		 */
 		@NonNull
-		public IAllocationComputationStrategy getAllocationComputationStrategy()
+		public IAllocationComputationStrategy<?> getAllocationComputationStrategy()
 				throws CoreException {
 			Object object = configurationElement.createExecutableExtension(
 					classAttribute);
-			if (!(object instanceof IAllocationComputationStrategy)) {
+			if (!(object instanceof IAllocationComputationStrategy<?>)) {
 				throw new IllegalStateException(
 						String.format(invalidClass, object));
 			}
-			return (IAllocationComputationStrategy) object;
+			return (IAllocationComputationStrategy<?>) object;
 		}
 	}
 }

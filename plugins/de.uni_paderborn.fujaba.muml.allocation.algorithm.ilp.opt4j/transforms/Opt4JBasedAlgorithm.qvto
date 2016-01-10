@@ -6,12 +6,23 @@ modeltype instance uses muml::instance('http://www.fujaba.de/muml/instance/0.4.0
 modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.1/');
 modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
 modeltype allocation uses psm::allocation('http://www.fujaba.de/muml/psm/allocation/0.4.0/');
+modeltype opt4jconfig uses config('http://www.fujaba.de/muml/allocation/algorithm/ilp/opt4j/0.1.0/config');
 
 transformation Opt4JBasedAlgorithm(in specification : allocationSpecification, in ins : instance, in hwpi : hwpinstance, out allocationOut : allocation)
 	extends AbstractILPBasedAlgorithm;
 
 main() {
 	computeAllocation();
+	allocationOut.removeOrphans();
+}
+
+helper allocation::removeOrphans() {
+	// remove Opt4jConfiguration object from the out extent...
+	self.objects()->select(
+		oclIsKindOf(Opt4jConfiguration)
+	)->forEach(elm) {
+		self.removeElement(elm);
+	};
 }
 
 query getAllocationSpecification() : allocationSpecification {

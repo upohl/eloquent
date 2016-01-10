@@ -10,7 +10,7 @@ import de.uni_paderborn.fujaba.muml.allocation.algorithm.qvto.QVToBasedAllocatio
  *
  */
 public class LPSolveAllocationComputationStrategy extends
-		QVToBasedAllocationComputationStrategy {
+		QVToBasedAllocationComputationStrategy<Object> {
 	
 	private static final String transformationURI =
 			"platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.lpsolve/transforms/LPSolveBasedAlgorithm.qvto";

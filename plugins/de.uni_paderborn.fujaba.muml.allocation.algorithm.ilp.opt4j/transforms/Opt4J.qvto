@@ -2,12 +2,15 @@ import de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.Opt4JBlackbox
 import SolverConstants;
 
 modeltype ilptype uses ilp('http://www.fujaba.de/muml/allocation/ilp/0.1.0');
+modeltype opt4jconfig uses config('http://www.fujaba.de/muml/allocation/algorithm/ilp/opt4j/0.1.0/config');
 
 library Opt4J;
 
+configuration property config : Dict(String, Integer);
+
 helper opt4jsolve(ilpModel : IntegerLinearProgram, inout solution : Dict(Variable, Integer)) : Integer {
 	var completeSolution : Dict(String, Integer) := Dict{}; 
-	var ret : Integer := solve(ilpModel, completeSolution);
+	var ret : Integer := solve(ilpModel, completeSolution, new Opt4jConfiguration(config));
 	if (ret != SUCCESS()) then {
 		return ret;
 	} endif;
@@ -20,4 +23,12 @@ helper opt4jsolve(ilpModel : IntegerLinearProgram, inout solution : Dict(Variabl
 
 query IntegerLinearProgram::getVariable(variableName : String) : Variable {
 	return self.variables->any(name = variableName);
+}
+
+constructor Opt4jConfiguration::Opt4jConfiguration(config : Dict(String, Integer)) {
+	populationSize := config->get('populationSize');
+	generations := config->get('generations');
+	parents := config->get('parents');
+	offspring := config->get('offspring');
+	noDominatedSolutions := config->get('noDominatedSolutions') != 0;
 }

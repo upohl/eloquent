@@ -6,12 +6,14 @@ import de.uni_paderborn.fujaba.muml.allocation.ilp.IntegerLinearProgram;
 
 public class AllocationModule extends ProblemModule {
 	
-	public AllocationModule(IntegerLinearProgram ilp) {
+	private IntegerLinearProgram ilp;
+	private boolean noDominatedSolutions;
+	
+	public AllocationModule(IntegerLinearProgram ilp, boolean noDominatedSolutions) {
 		super();
 		this.ilp = ilp;
+		this.noDominatedSolutions = noDominatedSolutions;
 	}
-	
-	private IntegerLinearProgram ilp;
 
 	@Override
 	protected void config() {
@@ -19,7 +21,8 @@ public class AllocationModule extends ProblemModule {
 		bind(AllocationProblem.class).to(ConcreteAllocationProblem.class);
 		bindProblem(AllocationSATCreatorDecoder.class,
 				AllocationSATCreatorDecoder.class,
-				ObjectiveFunctionEvaluator.class);
+				noDominatedSolutions ? NoDominatedSolutionObjectiveFunctionEvaluator.class
+						: SingleObjectiveFunctionEvaluator.class);
 	}
 
 }

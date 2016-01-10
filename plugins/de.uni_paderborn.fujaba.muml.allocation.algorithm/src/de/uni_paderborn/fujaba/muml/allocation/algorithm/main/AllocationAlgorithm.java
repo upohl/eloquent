@@ -46,7 +46,7 @@ public class AllocationAlgorithm {
 	 * @return					the diagnostic, which provides details about the computation
 	 */
 	@NonNull
-	public Diagnostic computeAllocation(@NonNull IAllocationComputationStrategy acs,
+	public Diagnostic computeAllocation(@NonNull IAllocationComputationStrategy<?> acs,
 			@Nullable IProgressMonitor progressMonitor) {
 		result = acs.computeAllocation(allocationSpecification, cic, hpic,
 				progressMonitor);
@@ -54,7 +54,7 @@ public class AllocationAlgorithm {
 	}
 	
 	@NonNull
-	public Diagnostic computeAllocation(IAllocationComputationStrategy acs) {
+	public Diagnostic computeAllocation(IAllocationComputationStrategy<?> acs) {
 		return computeAllocation(acs, null);
 	}
 	

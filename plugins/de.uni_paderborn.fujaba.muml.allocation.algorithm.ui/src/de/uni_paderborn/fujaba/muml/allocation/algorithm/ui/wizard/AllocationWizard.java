@@ -1,7 +1,15 @@
 package de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.wizard;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -10,6 +18,7 @@ import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.ListViewer;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.StructuredSelection;
+import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
@@ -33,6 +42,8 @@ import de.uni_paderborn.fujaba.muml.hardware.HardwarePackage;
 import de.uni_paderborn.fujaba.muml.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 import de.uni_paderborn.fujaba.muml.instance.ComponentInstanceConfiguration;
 import de.uni_paderborn.fujaba.muml.psm.allocation.SystemAllocation;
+import de.uni_paderborn.fujaba.properties.runtime.editors.ObjectPropertyEditor;
+import de.uni_paderborn.fujaba.properties.runtime.wizard.PropertyEditorWizardPage;
 
 public class AllocationWizard extends AbstractFujabaExportWizard {
 	private static final String title = "Create Allocation Wizard";
@@ -165,9 +176,11 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
 			}
 		};
 		addPage(targetPage);
+		AllocationComputationStrategyConfigurationPage configPage = new AllocationComputationStrategyConfigurationPage();
 		// allocation computation strategy page
-		strategyPage = new AllocationComputationStrategySelectionPage("strategy");
+		strategyPage = new AllocationComputationStrategySelectionPage("strategy", configPage);
 		addPage(strategyPage);
+		addPage(configPage);
 	}
 	
 	@Override
@@ -189,11 +202,15 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
 				"Please select an allocation computation strategy";
 		private ListViewer listViewer;
 		private IStructuredSelection structuredSelection;
+		private Map<String, IAllocationComputationStrategy<?>> strategyCache;
+		private AllocationComputationStrategyConfigurationPage configPage;
 
-		public AllocationComputationStrategySelectionPage(String pageName) {
+		public AllocationComputationStrategySelectionPage(String pageName, AllocationComputationStrategyConfigurationPage configPage) {
 			super(pageName);
 			setTitle(title);
 			setDescription(description);
+			strategyCache = new HashMap<String, IAllocationComputationStrategy<?>>();
+			this.configPage = configPage;
 		}
 
 		@Override
@@ -254,26 +271,89 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
 			}
 		}
 		
-		protected void validatePage() {
-			boolean isValid = structuredSelection.getFirstElement() instanceof AllocationComputationStrategyDescription;
+		@Override
+		public IWizardPage getNextPage() {
+			if (isValid()) {
+				IAllocationComputationStrategy<?> strategy = getAllocationComputationStrategy();
+				Object configuration = strategy.getConfiguration();
+				if (!(configuration instanceof EObject)) {
+					// cannot handle this => no configuration wizard page
+					return null;
+				}
+				configPage.setConfiguration((EObject) configuration);
+				return configPage;
+			}
+			return null;
+		}
+		
+		private boolean isValid() {
+			return structuredSelection.getFirstElement() instanceof AllocationComputationStrategyDescription;
+		}
+		
+		protected boolean validatePage() {
+			boolean isValid = isValid();
 			setPageComplete(isValid);
 			if (!isValid) {
 				setErrorMessage(invalidSelection);
 			}
+			return isValid;
 		}
 		
 		@NonNull
-		public IAllocationComputationStrategy getAllocationComputationStrategy() {
+		public IAllocationComputationStrategy<?> getAllocationComputationStrategy() {
+			// the wildcard return type is OK, because usually the caller does not
+			// need fiddle with config object, because setting up the config object
+			// is the job of this wizard
 			if (structuredSelection == null) {
 				throw new IllegalStateException("structuredSelection is null (should not happen");
 			}
-			try {
-				return ((AllocationComputationStrategyDescription) structuredSelection
-						.getFirstElement()).getAllocationComputationStrategy();
-			} catch (CoreException e) {
-				// TODO Auto-generated catch block
-				throw new IllegalStateException("Failed to create strategy", e);
+			// assumption: two different strategies have different names
+			// (IMHO, a reasonable assumption...)
+			AllocationComputationStrategyDescription description =
+					((AllocationComputationStrategyDescription) structuredSelection.getFirstElement());
+			String key = description.getName();
+			IAllocationComputationStrategy<?> strategy = strategyCache
+					.get(key);
+			if (strategy == null) {
+				try {
+					strategy = ((AllocationComputationStrategyDescription) structuredSelection
+							.getFirstElement()).getAllocationComputationStrategy();
+					strategyCache.put(key, strategy); 
+				} catch (CoreException e) {
+					throw new IllegalStateException("Failed to create strategy", e);
+				}
 			}
+			return strategy;
+		}
+		
+	}
+	
+	public static class AllocationComputationStrategyConfigurationPage extends PropertyEditorWizardPage {
+		// inspired by/stolen from de.uni_paderborn.fujaba.muml.verification.uppaal.ui.OptionsWizardPage
+		
+		private static final String tabId = "de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config";
+		private static final String title = "Configuration options for the Opt4j EA";
+		private static final String description = "Configure the Opt4j evolutionary algorithm";
+
+		public AllocationComputationStrategyConfigurationPage() {
+			super(new ObjectPropertyEditor(tabId, null, "Options", true));
+			setTitle(title);
+			setDescription(description);
+		}
+		
+		public void setConfiguration(EObject configuration) {
+			// create dummy resource unless the configuration object is already contained
+			// in a resource
+			if (configuration.eResource() == null) {
+				ResourceSet resSet = new ResourceSetImpl();
+				Resource resource = resSet.createResource(
+						URI.createURI("dummy://dummy.ecore"));
+				resource.getContents().add(configuration);
+				// just to make APE happy (otherwise APE will not modify the object
+				// (see de.uni_paderborn.fujaba.properties.runtime.editors.AbstractStructuralFeaturePropertyEditor.setValue))
+				TransactionalEditingDomain.Factory.INSTANCE.createEditingDomain(resSet);
+			}
+			setInput(configuration);
 		}
 		
 	}

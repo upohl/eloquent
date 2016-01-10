@@ -11,7 +11,7 @@ import org.eclipse.jdt.annotation.Nullable;
  * which contains the <code>SystemAllocation</code> and computation details
  *
  */
-public interface IAllocationComputationStrategy {
+public interface IAllocationComputationStrategy<T> {
 	
 	/**
 	 * Computes an allocation using the specified parameters. It returns
@@ -22,11 +22,22 @@ public interface IAllocationComputationStrategy {
 	 * @param cic						the component instance configuration model element
 	 * @param hpic						the hardware platform instance configuration model element
 	 * @param progressMonitor			progress monitor or <code>null</code>
-	 * @return							the iComputationResult
+	 * @return							the IComputationResult
 	 */
 	@NonNull
 	public IComputationResult computeAllocation(
 			@NonNull EObject allocationSpecification,
 			@NonNull EObject cic, @NonNull EObject hpic,
 			@Nullable IProgressMonitor progressMonitor);
+	
+	/**
+	 * Returns a configuration object of type T, which can be used to
+	 * configure this <code>IAllocationComputationStrategy</code>,
+	 * or <code>null</code> (if this IAllocationComputationStrategy is not
+	 * configurable).
+	 * 
+	 * @return	a configuration object or <code>null</code>
+	 */
+	@Nullable
+	public T getConfiguration();
 }

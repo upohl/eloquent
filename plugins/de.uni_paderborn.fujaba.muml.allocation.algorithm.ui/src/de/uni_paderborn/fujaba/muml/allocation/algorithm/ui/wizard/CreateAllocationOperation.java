@@ -38,13 +38,13 @@ public class CreateAllocationOperation extends AbstractFujabaExportOperation {
 	@NonNull private ComponentInstanceConfiguration cic;
 	@NonNull private HWPlatformInstanceConfiguration hpic;
 	@NonNull private EObject target;
-	@NonNull private IAllocationComputationStrategy allocationComputationStrategy;
+	@NonNull private IAllocationComputationStrategy<?> allocationComputationStrategy;
 	
 	public CreateAllocationOperation(@NonNull EditingDomain editingDomain,
 			@NonNull SpecificationCS allocationSpecification,
 			@NonNull ComponentInstanceConfiguration cic, @NonNull HWPlatformInstanceConfiguration hpic,
 			@NonNull EObject target,
-			@NonNull IAllocationComputationStrategy allocationComputationStrategy) {
+			@NonNull IAllocationComputationStrategy<?> allocationComputationStrategy) {
 		this.editingDomain = editingDomain;
 		this.allocationSpecification = allocationSpecification;
 		this.cic = cic;

@@ -1,5 +1,8 @@
 package de.uni_paderborn.fujaba.muml.allocation.algorithm.qvto;
 
+import java.util.Collections;
+import java.util.Map;
+
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -13,8 +16,8 @@ import de.uni_paderborn.fujaba.muml.allocation.algorithm.main.IAllocationComputa
 import de.uni_paderborn.fujaba.muml.allocation.algorithm.main.IComputationResult;
 import de.uni_paderborn.fujaba.muml.psm.allocation.SystemAllocation;
 
-public class QVToBasedAllocationComputationStrategy implements
-		IAllocationComputationStrategy {
+public class QVToBasedAllocationComputationStrategy<T> implements
+		IAllocationComputationStrategy<T> {
 	
 	private final String transformationURI;
 	
@@ -39,6 +42,7 @@ public class QVToBasedAllocationComputationStrategy implements
 		QVToSingleOutExtentTransformationRunner runner =
 				new QVToSingleOutExtentTransformationRunner(
 						transformationURI,
+						getConfigurationPropertyMap(),
 						eObjectToURI(allocationSpecification),
 						eObjectToURI(cic),
 						eObjectToURI(hpic));
@@ -53,6 +57,17 @@ public class QVToBasedAllocationComputationStrategy implements
 		}
 		return new IComputationResult.DefaultComputationResult(
 				rootDiagnostic, systemAllocation);
+	}
+	
+	protected Map<String, Object> getConfigurationPropertyMap() {
+		return Collections.<String, Object>emptyMap();
+	}
+	
+	@Override
+	@Nullable
+	public T getConfiguration() {
+		// by default our strategy cannot be configured
+		return null;
 	}
 	
 	private static BasicDiagnostic createDiagnostic(ExecutionDiagnostic executionDiagnostic) {
