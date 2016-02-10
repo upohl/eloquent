@@ -18,19 +18,18 @@
    </license>
 
    <includes
-         id="de.uni_paderborn.fujaba.muml.allocation.ext.dependency.opt4j.feature"
+         id="de.uni_paderborn.fujaba.muml.psm.feature"
          version="0.0.0"/>
 
    <includes
-         id="de.uni_paderborn.fujaba.muml.psm.feature"
-         version="0.0.0"/>
-   <includes
          id="de.uni_paderborn.fujaba.muml.psm.source.feature"
          version="0.0.0"/>
+
    <requires>
       <import feature="de.uni_paderborn.fujaba.core.sdk.feature" version="0.5.0.qualifier"/>
       <import feature="de.uni_paderborn.fujaba.muml.pim.sdk.feature" version="0.5.0.qualifier"/>
       <import feature="de.uni_paderborn.fujaba.muml.pm.sdk.feature" version="0.5.0.qualifier"/>
+      <import feature="de.uni_paderborn.fujaba.muml.allocation.ext.dependency.opt4j.feature" version="3.1.3.qualifier"/>
    </requires>
 
 </feature>
