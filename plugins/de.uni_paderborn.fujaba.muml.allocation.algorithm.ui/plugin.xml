@@ -9,6 +9,12 @@
             id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.OpenAllocationWizardCommand"
             name="Create Allocation">
       </command>
+      <command
+            categoryId="de.uni_paderborn.fujaba"
+            defaultHandler="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.CreateASLFileHandler"
+            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.CreateASLFileCommand"
+            name="Create Allocation Specification">
+      </command>
    </extension>
    <extension
          point="org.eclipse.ui.menus">
@@ -37,6 +43,21 @@
                      </adapt>
                   </iterate>
                </or>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:de.uni_paderborn.fujaba">
+         <command
+               commandId="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.CreateASLFileCommand"
+               label="Create Allocation Specification"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <reference
+                     definitionId="de.uni_paderborn.fujaba.expression.fujabafile">
+               </reference>
             </visibleWhen>
          </command>
       </menuContribution>
