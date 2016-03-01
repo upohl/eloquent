@@ -78,9 +78,8 @@
       <import plugin="org.eclipse.jdt.annotation" version="1.1.100" match="compatible"/>
       <import plugin="org.eclipse.emf.transaction" version="1.9.0" match="greaterOrEqual"/>
       <import feature="de.uni_paderborn.fujaba.modelcopy.feature" version="0.5.0.qualifier"/>
-      <import feature="org.eclipse.ocl.unified.core" version="1.0.0.v20150608-1110"/>
-      <import feature="de.uni_paderborn.fujaba.muml.allocation.ext.dependency.ocl.pivot.beo477283.feature" version="1.0.1.qualifier"/>
-   </requires>
+      <import feature="org.eclipse.ocl.unified.core" version="1.0.0.v20150608-1110"/> 
+  </requires>
 
    <plugin
          id="de.uni_paderborn.fujaba.muml.psm"
