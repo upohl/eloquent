@@ -401,10 +401,6 @@
            name="ASL Evaluation View"
            restorable="true">
      </view>
-     <category
-           id="de.uni_paderborn.fujaba.muml.views"
-           name="MechatronicUML">
-     </category>
   </extension>
   <extension
         point="org.eclipse.ui.commands">
