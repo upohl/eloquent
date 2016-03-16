@@ -67,7 +67,7 @@
       <import plugin="de.uni_paderborn.fujaba.export"/>
       <import plugin="org.eclipse.core.jobs"/>
       <import plugin="de.uni_paderborn.fujaba.modelcopy.qvto.library" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="de.uni_paderborn.fujaba.properties.runtime"/>
+      <import plugin="org.muml.ape.runtime"/>
       <import plugin="de.uni_paderborn.fujaba.muml.hardware.edit.properties"/>
       <import plugin="org.storydriven.core.edit.properties"/>
       <import plugin="de.uni_paderborn.fujaba.muml.edit.properties"/>
