@@ -12,5 +12,5 @@ Export-Package: de.uni_paderborn.fujaba.muml.allocation.ilp,
  de.uni_paderborn.fujaba.muml.allocation.ilp.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.storydriven.core;bundle-version="1.0.1";visibility:=reexport
+ org.muml.core;bundle-version="1.0.1";visibility:=reexport
 Bundle-ActivationPolicy: lazy
