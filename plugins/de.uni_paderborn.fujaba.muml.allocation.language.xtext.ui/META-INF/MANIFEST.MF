@@ -18,7 +18,7 @@ Require-Bundle: de.uni_paderborn.fujaba.muml.allocation.language.xtext;visibilit
  org.eclipse.compare,
  de.uni_paderborn.fujaba.muml.allocation.language;bundle-version="0.1.0",
  org.muml.core.export;bundle-version="0.5.0",
- de.uni_paderborn.fujaba.muml;bundle-version="0.5.0",
+ org.muml.pim;bundle-version="0.5.0",
  de.uni_paderborn.fujaba.muml.hardware;bundle-version="1.0.0",
  de.uni_paderborn.fujaba.muml.allocation.algorithm;bundle-version="1.0.0",
  org.eclipse.xtext.xbase.lib,

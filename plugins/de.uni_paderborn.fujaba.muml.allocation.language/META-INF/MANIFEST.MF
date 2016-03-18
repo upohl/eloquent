@@ -19,7 +19,7 @@ Export-Package: de.uni_paderborn.fujaba.muml.allocation.language.as,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.muml.core;visibility:=reexport,
- de.uni_paderborn.fujaba.muml;bundle-version="0.4.0";visibility:=reexport,
+ org.muml.pim;bundle-version="0.4.0";visibility:=reexport,
  de.uni_paderborn.fujaba.muml.hardware;bundle-version="1.0.0";visibility:=reexport,
  org.eclipse.jdt.annotation;bundle-version="[1.1.0,2.0.0)",
  org.eclipse.ocl.xtext.completeocl;bundle-version="1.0.0"
