@@ -3,10 +3,10 @@ Bundle-ManifestVersion: 2
 Bundle-Name: de.uni_paderborn.fujaba.muml.allocation.language.xtext.tests
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
-Bundle-SymbolicName: de.uni_paderborn.fujaba.muml.allocation.language.xtext.tests; singleton:=true
+Bundle-SymbolicName: org.muml.psm.allocation.language.xtext.tests;singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: de.uni_paderborn.fujaba.muml.allocation.language.xtext,
- de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui,
+Require-Bundle: org.muml.psm.allocation.language.xtext,
+ org.muml.psm.allocation.language.xtext.ui,
  org.eclipse.core.runtime,
  org.eclipse.xtext.junit4,
  org.eclipse.ui.workbench;resolution:=optional,

@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext
 Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn, Germany
 Bundle-Version: 1.0.0.qualifier
-Bundle-SymbolicName: de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext; singleton:=true
+Bundle-SymbolicName: org.muml.psm.allocation.ilp.lpsolve.xtext;singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.xtext.xbase;resolution:=optional;visibility:=reexport,
@@ -12,7 +12,7 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.emf.codegen.ecore;resolution:=optional,
  org.eclipse.emf.mwe.utils;resolution:=optional,
  org.eclipse.emf.mwe2.launch;resolution:=optional,
- de.uni_paderborn.fujaba.muml.allocation.ilp,
+ org.muml.psm.allocation.ilp,
  org.muml.core;bundle-version="1.0.1",
  org.eclipse.xtext.util,
  org.antlr.runtime,

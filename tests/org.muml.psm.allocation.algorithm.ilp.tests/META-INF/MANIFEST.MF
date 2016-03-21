@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Tests
-Bundle-SymbolicName: de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.tests;singleton:=true
+Bundle-SymbolicName: org.muml.psm.allocation.algorithm.ilp.tests;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn, Germany
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
@@ -9,10 +9,10 @@ Require-Bundle: org.eclipse.emf.ecore;bundle-version="2.10.1",
  org.muml.core;bundle-version="1.0.1",
  org.junit;bundle-version="4.11.0",
  org.eclipse.xtext.xbase.lib;bundle-version="2.7.2",
- de.uni_paderborn.fujaba.muml.allocation.algorithm.tests;bundle-version="1.0.0",
- de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp;bundle-version="1.0.0",
- de.uni_paderborn.fujaba.muml.allocation.language.xtext;bundle-version="1.0.0",
- de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext;bundle-version="1.0.0",
+ org.muml.psm.allocation.algorithm.tests;bundle-version="1.0.0",
+ org.muml.psm.allocation.algorithm.ilp;bundle-version="1.0.0",
+ org.muml.psm.allocation.language.xtext;bundle-version="1.0.0",
+ org.muml.psm.allocation.ilp.lpsolve.xtext;bundle-version="1.0.0",
  org.muml.pim;bundle-version="0.5.0",
  org.muml.pm.hardware;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
