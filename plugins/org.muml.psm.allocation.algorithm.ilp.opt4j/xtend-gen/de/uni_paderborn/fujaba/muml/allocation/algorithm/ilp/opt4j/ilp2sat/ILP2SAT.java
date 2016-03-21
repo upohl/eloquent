@@ -11,7 +11,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.xtend.lib.annotations.Accessors;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.opt4j.satdecoding.Constraint;
@@ -30,12 +29,15 @@ public class ILP2SAT implements IVisitor {
     CONSTRAINT_RHS;
   }
   
-  /* @Accessors
-   */private final List<Constraint> constraintList;
+  private final List<Constraint> constraintList;
   
   private final Stack<Expression> stack;
   
   private double accRHS;
+  
+  public List<Constraint> getConstraintList() {
+    return this.constraintList;
+  }
   
   private ILP2SAT.State state;
   

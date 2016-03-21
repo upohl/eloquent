@@ -39,8 +39,14 @@ class AllocationSpecificationLanguageEvaluationView extends ViewPart implements 
 	@Inject @Named(Constants.LANGUAGE_NAME) String languageName
 	String evaluatableElementFragmentURI
 	XtextEditor editor
-	@Accessors ComponentInstanceConfiguration cic
-	@Accessors HWPlatformInstanceConfiguration hpic
+	ComponentInstanceConfiguration cic
+	HWPlatformInstanceConfiguration hpic
+	
+	public def getCic() { return cic; }
+	public def setCic(ComponentInstanceConfiguration cic) { this.cic = cic; }
+	public def getHpic() { return hpic; }
+	public def setHpic(HWPlatformInstanceConfiguration hpic) { this.hpic = hpic; }
+	
 	
 	ITextViewer resultTextViewer
 	

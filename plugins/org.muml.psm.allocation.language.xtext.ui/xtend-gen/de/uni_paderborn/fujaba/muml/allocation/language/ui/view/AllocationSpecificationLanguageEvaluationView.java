@@ -43,7 +43,6 @@ import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.part.ViewPart;
-import org.eclipse.xtend.lib.annotations.Accessors;
 import org.eclipse.xtext.Constants;
 import org.eclipse.xtext.resource.EObjectAtOffsetHelper;
 import org.eclipse.xtext.resource.XtextResource;
@@ -51,7 +50,6 @@ import org.eclipse.xtext.ui.editor.XtextEditor;
 import org.eclipse.xtext.ui.editor.model.IXtextDocument;
 import org.eclipse.xtext.util.concurrent.IUnitOfWork;
 import org.eclipse.xtext.xbase.lib.Exceptions;
-import org.eclipse.xtext.xbase.lib.Pure;
 
 @SuppressWarnings("all")
 public class AllocationSpecificationLanguageEvaluationView extends ViewPart implements ISelectionListener {
@@ -66,11 +64,25 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
   
   private XtextEditor editor;
   
-  @Accessors
   private ComponentInstanceConfiguration cic;
   
-  @Accessors
   private HWPlatformInstanceConfiguration hpic;
+  
+  public ComponentInstanceConfiguration getCic() {
+    return this.cic;
+  }
+  
+  public ComponentInstanceConfiguration setCic(final ComponentInstanceConfiguration cic) {
+    return this.cic = cic;
+  }
+  
+  public HWPlatformInstanceConfiguration getHpic() {
+    return this.hpic;
+  }
+  
+  public HWPlatformInstanceConfiguration setHpic(final HWPlatformInstanceConfiguration hpic) {
+    return this.hpic = hpic;
+  }
   
   private ITextViewer resultTextViewer;
   
@@ -340,23 +352,5 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
       throw new IllegalArgumentException("Unhandled parameter types: " +
         Arrays.<Object>asList(builder, value, indent).toString());
     }
-  }
-  
-  @Pure
-  public ComponentInstanceConfiguration getCic() {
-    return this.cic;
-  }
-  
-  public void setCic(final ComponentInstanceConfiguration cic) {
-    this.cic = cic;
-  }
-  
-  @Pure
-  public HWPlatformInstanceConfiguration getHpic() {
-    return this.hpic;
-  }
-  
-  public void setHpic(final HWPlatformInstanceConfiguration hpic) {
-    this.hpic = hpic;
   }
 }

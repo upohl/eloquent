@@ -21,14 +21,19 @@ import org.storydriven.core.expressions.common.LiteralExpression
 // no need to inherit from IlpSwitch, because xtend does the
 // better dispatching
 class ILP2SAT implements IVisitor {
-
-	@Accessors val List<Constraint> constraintList
+ 
+	val List<Constraint> constraintList
 	val Stack<Expression> stack;
 	var double accRHS;
 	private static enum State {
 		CONSTRAINT_LHS,
 		CONSTRAINT_RHS
 	}
+	
+	public def getConstraintList() {
+		return constraintList;
+	}
+	
 	
 	private State state;
 		
