@@ -26,6 +26,8 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.IWorkbench;
+import org.muml.ape.runtime.editors.ObjectPropertyEditor;
+import org.muml.ape.runtime.wizard.PropertyEditorWizardPage;
 
 import de.uni_paderborn.fujaba.export.operation.IFujabaExportOperation;
 import de.uni_paderborn.fujaba.export.pages.AbstractFujabaExportSourcePage;
@@ -42,8 +44,6 @@ import de.uni_paderborn.fujaba.muml.hardware.HardwarePackage;
 import de.uni_paderborn.fujaba.muml.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 import de.uni_paderborn.fujaba.muml.instance.ComponentInstanceConfiguration;
 import de.uni_paderborn.fujaba.muml.psm.allocation.SystemAllocation;
-import de.uni_paderborn.fujaba.properties.runtime.editors.ObjectPropertyEditor;
-import de.uni_paderborn.fujaba.properties.runtime.wizard.PropertyEditorWizardPage;
 
 public class AllocationWizard extends AbstractFujabaExportWizard {
 	private static final String title = "Create Allocation Wizard";
