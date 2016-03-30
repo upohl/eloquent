@@ -4,7 +4,7 @@ package de.uni_paderborn.fujaba.muml.allocation.ilp.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.storydriven.core.provider.CoreEditPlugin;
+import org.muml.core.provider.CoreEditPlugin;
 
 /**
  * This is the central singleton for the Ilp edit plugin.

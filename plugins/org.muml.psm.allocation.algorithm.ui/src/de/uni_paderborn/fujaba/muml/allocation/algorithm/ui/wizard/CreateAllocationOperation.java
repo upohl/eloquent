@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.edit.command.ChangeCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jdt.annotation.NonNull;
+import org.muml.core.export.operation.AbstractFujabaExportOperation;
+import org.muml.core.modelinstance.ModelElementCategory;
+import org.muml.core.modelinstance.RootNode;
+import org.muml.core.modelinstance.categories.ModelElementCategoryRegistry;
 
-import de.uni_paderborn.fujaba.export.operation.AbstractFujabaExportOperation;
-import de.uni_paderborn.fujaba.modelinstance.ModelElementCategory;
-import de.uni_paderborn.fujaba.modelinstance.RootNode;
-import de.uni_paderborn.fujaba.modelinstance.categories.ModelElementCategoryRegistry;
 import de.uni_paderborn.fujaba.muml.allocation.algorithm.main.AllocationAlgorithm;
 import de.uni_paderborn.fujaba.muml.allocation.algorithm.main.IAllocationComputationStrategy;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS;

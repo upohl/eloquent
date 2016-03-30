@@ -1,6 +1,6 @@
 package de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.resource
 
-import de.uni_paderborn.fujaba.common.xtext.AbstractLanguageResource
+import org.muml.common.xtext.AbstractLanguageResource
 import org.eclipse.emf.ecore.EObject
 import com.google.inject.Injector
 import de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.LPSolveStandaloneSetup

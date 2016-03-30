@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.muml.core.expressions.common.CommonExpressionsPackage;
-import org.storydriven.core.expressions.common.provider.ComparisonExpressionItemProvider;
+import org.muml.core.expressions.common.provider.ComparisonExpressionItemProvider;
 
 /**
  * This is the item provider adapter for a {@link de.uni_paderborn.fujaba.muml.allocation.ilp.ConstraintExpression} object.
