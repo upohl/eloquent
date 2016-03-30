@@ -18,12 +18,12 @@ import org.muml.core.export.operation.AbstractFujabaExportOperation;
 import org.muml.core.modelinstance.ModelElementCategory;
 import org.muml.core.modelinstance.RootNode;
 import org.muml.core.modelinstance.categories.ModelElementCategoryRegistry;
+import org.muml.pim.instance.ComponentInstanceConfiguration;
 
 import de.uni_paderborn.fujaba.muml.allocation.algorithm.main.AllocationAlgorithm;
 import de.uni_paderborn.fujaba.muml.allocation.algorithm.main.IAllocationComputationStrategy;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS;
 import de.uni_paderborn.fujaba.muml.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
-import de.uni_paderborn.fujaba.muml.instance.ComponentInstanceConfiguration;
 import de.uni_paderborn.fujaba.muml.psm.allocation.SystemAllocation;
 
 public class CreateAllocationOperation extends AbstractFujabaExportOperation {

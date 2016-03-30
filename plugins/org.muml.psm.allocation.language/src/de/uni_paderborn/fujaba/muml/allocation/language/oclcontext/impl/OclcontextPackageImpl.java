@@ -16,13 +16,12 @@ import de.uni_paderborn.fujaba.muml.hardware.hwresourceinstance.Hwresourceinstan
 
 import de.uni_paderborn.fujaba.muml.hardware.hwvaluetype.HwvaluetypePackage;
 
-import de.uni_paderborn.fujaba.muml.instance.InstancePackage;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.muml.pim.instance.InstancePackage;
 
 /**
  * <!-- begin-user-doc -->

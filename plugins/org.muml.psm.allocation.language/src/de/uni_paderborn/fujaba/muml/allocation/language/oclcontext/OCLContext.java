@@ -4,9 +4,8 @@ package de.uni_paderborn.fujaba.muml.allocation.language.oclcontext;
 
 import de.uni_paderborn.fujaba.muml.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 
-import de.uni_paderborn.fujaba.muml.instance.ComponentInstanceConfiguration;
-
 import org.eclipse.emf.ecore.EObject;
+import org.muml.pim.instance.ComponentInstanceConfiguration;
 
 /**
  * <!-- begin-user-doc -->
