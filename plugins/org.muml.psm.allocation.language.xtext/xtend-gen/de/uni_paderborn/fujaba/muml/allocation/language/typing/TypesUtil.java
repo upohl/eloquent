@@ -10,14 +10,10 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.RequiredHardwareResou
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ResourceConstraintCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.ValueTupleDescriptorCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.WeightingComponentResourceTupleElementCS;
-import de.uni_paderborn.fujaba.muml.hardware.hwresourceinstance.HwresourceinstancePackage;
-import de.uni_paderborn.fujaba.muml.instance.InstancePackage;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Consumer;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -120,16 +116,13 @@ public class TypesUtil {
   
   @NonNull
   public static TupleType createLocationConstraintTupleType(final EnvironmentFactoryInternal envFactory, final LocationTupleDescriptorCS tupleDescriptor) {
-    TupleType _xblockexpression = null;
-    {
-      String _instance = tupleDescriptor.getInstance();
-      Pair<String, EClass> _mappedTo = Pair.<String, EClass>of(_instance, InstancePackage.Literals.COMPONENT_INSTANCE);
-      String _secondInstance = tupleDescriptor.getSecondInstance();
-      Pair<String, EClass> _mappedTo_1 = Pair.<String, EClass>of(_secondInstance, InstancePackage.Literals.COMPONENT_INSTANCE);
-      final Map<String, EClass> namedParts = Collections.<String, EClass>unmodifiableMap(CollectionLiterals.<String, EClass>newHashMap(_mappedTo, _mappedTo_1));
-      _xblockexpression = TypesUtil.createTupleTypeHelper(envFactory, namedParts);
-    }
-    return _xblockexpression;
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field InstancePackage is undefined"
+      + "\nThe method or field InstancePackage is undefined"
+      + "\nLiterals cannot be resolved"
+      + "\nCOMPONENT_INSTANCE cannot be resolved"
+      + "\nLiterals cannot be resolved"
+      + "\nCOMPONENT_INSTANCE cannot be resolved");
   }
   
   @NonNull
@@ -157,21 +150,10 @@ public class TypesUtil {
   
   @NonNull
   public static Map<String, EClass> createNamedPartsFromComponentResourceTupleDescriptors(final List<ComponentResourceTupleDescriptorCS> tupleDescriptorList) {
-    HashMap<String, EClass> _xblockexpression = null;
-    {
-      final HashMap<String, EClass> namedParts = CollectionLiterals.<String, EClass>newHashMap();
-      final Consumer<ComponentResourceTupleDescriptorCS> _function = (ComponentResourceTupleDescriptorCS t) -> {
-        String _instance = t.getInstance();
-        Pair<String, EClass> _mappedTo = Pair.<String, EClass>of(_instance, InstancePackage.Literals.COMPONENT_INSTANCE);
-        String _hwresinstance = t.getHwresinstance();
-        Pair<String, EClass> _mappedTo_1 = Pair.<String, EClass>of(_hwresinstance, HwresourceinstancePackage.Literals.RESOURCE_INSTANCE);
-        namedParts.putAll(
-          Collections.<String, EClass>unmodifiableMap(CollectionLiterals.<String, EClass>newHashMap(_mappedTo, _mappedTo_1)));
-      };
-      tupleDescriptorList.forEach(_function);
-      _xblockexpression = namedParts;
-    }
-    return _xblockexpression;
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field InstancePackage is undefined"
+      + "\nLiterals cannot be resolved"
+      + "\nCOMPONENT_INSTANCE cannot be resolved");
   }
   
   @NonNull

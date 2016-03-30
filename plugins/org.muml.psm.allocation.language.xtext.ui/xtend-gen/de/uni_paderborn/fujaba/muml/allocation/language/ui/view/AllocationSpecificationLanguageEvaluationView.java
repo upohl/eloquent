@@ -9,7 +9,6 @@ import de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OCLContext;
 import de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OclcontextFactory;
 import de.uni_paderborn.fujaba.muml.allocation.language.typing.TypesUtil;
 import de.uni_paderborn.fujaba.muml.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
-import de.uni_paderborn.fujaba.muml.instance.ComponentInstanceConfiguration;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Arrays;
@@ -50,6 +49,7 @@ import org.eclipse.xtext.ui.editor.XtextEditor;
 import org.eclipse.xtext.ui.editor.model.IXtextDocument;
 import org.eclipse.xtext.util.concurrent.IUnitOfWork;
 import org.eclipse.xtext.xbase.lib.Exceptions;
+import org.muml.pim.instance.ComponentInstanceConfiguration;
 
 @SuppressWarnings("all")
 public class AllocationSpecificationLanguageEvaluationView extends ViewPart implements ISelectionListener {
@@ -64,7 +64,7 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
   
   private XtextEditor editor;
   
-  private ComponentInstanceConfiguration cic;
+  private /* ComponentInstanceConfiguration */Object cic;
   
   private HWPlatformInstanceConfiguration hpic;
   
@@ -72,7 +72,7 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
     return this.cic;
   }
   
-  public ComponentInstanceConfiguration setCic(final ComponentInstanceConfiguration cic) {
+  public ComponentInstanceConfiguration setCic(final /* ComponentInstanceConfiguration */Object cic) {
     return this.cic = cic;
   }
   

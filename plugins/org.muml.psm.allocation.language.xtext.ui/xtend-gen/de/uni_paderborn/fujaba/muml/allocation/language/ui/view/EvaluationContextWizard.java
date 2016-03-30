@@ -1,7 +1,6 @@
 package de.uni_paderborn.fujaba.muml.allocation.language.ui.view;
 
 import de.uni_paderborn.fujaba.muml.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
-import de.uni_paderborn.fujaba.muml.instance.ComponentInstanceConfiguration;
 
 @SuppressWarnings("all")
 public class EvaluationContextWizard /* implements AbstractFujabaExportWizard  */{
@@ -9,13 +8,14 @@ public class EvaluationContextWizard /* implements AbstractFujabaExportWizard  *
   
   private /* AbstractFujabaExportSourcePage */Object hpicSourcePage;
   
-  private ComponentInstanceConfiguration cic;
+  private /* ComponentInstanceConfiguration */Object cic;
   
   private HWPlatformInstanceConfiguration hpic;
   
   @Override
   public Object wizardCreateExportOperation() {
     throw new Error("Unresolved compilation problems:"
+      + "\nComponentInstanceConfiguration cannot be resolved to a type."
       + "\nIFujabaExportOperation cannot be resolved."
       + "\nThe method getStatus() of type new Object(){} must override a superclass method."
       + "\nThe method run(IProgressMonitor) of type new Object(){} must override a superclass method."
@@ -28,6 +28,7 @@ public class EvaluationContextWizard /* implements AbstractFujabaExportWizard  *
   @Override
   public Object addPages() {
     throw new Error("Unresolved compilation problems:"
+      + "\nComponentInstanceConfiguration cannot be resolved to a type."
       + "\nAbstractFujabaExportSourcePage cannot be resolved."
       + "\nThe method or field toolkit is undefined"
       + "\nThe method getResourceSet() is undefined"
