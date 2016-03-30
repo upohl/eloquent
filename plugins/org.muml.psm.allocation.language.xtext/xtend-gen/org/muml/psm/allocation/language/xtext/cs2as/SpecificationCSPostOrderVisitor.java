@@ -1,10 +1,6 @@
-package de.uni_paderborn.fujaba.muml.allocation.language.cs2as;
+package org.muml.psm.allocation.language.xtext.cs2as;
 
 import com.google.common.base.Objects;
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.ConstraintCS;
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS;
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.QoSDimensionCS;
-import de.uni_paderborn.fujaba.muml.allocation.language.visitor.LanguageSpecificationCSPostOrderVisitor;
 import java.util.Collections;
 import java.util.List;
 import org.eclipse.jdt.annotation.NonNull;
@@ -19,6 +15,10 @@ import org.eclipse.ocl.xtext.essentialocl.cs2as.EssentialOCLCSPostOrderVisitor;
 import org.eclipse.ocl.xtext.essentialoclcs.ContextCS;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import org.muml.psm.allocation.language.cs.ConstraintCS;
+import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
+import org.muml.psm.allocation.language.cs.QoSDimensionCS;
+import org.muml.psm.allocation.language.xtext.visitor.LanguageSpecificationCSPostOrderVisitor;
 
 @SuppressWarnings("all")
 public class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVisitor {

@@ -1,9 +1,5 @@
-package de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.tests;
+package org.muml.psm.allocation.algorithm.ilp.opt4j.tests;
 
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.evaluation.ObjectiveFunctionExpressionEvaluator;
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.qvto.QVToTransformationRunner;
-import de.uni_paderborn.fujaba.muml.allocation.ilp.IntegerLinearProgram;
-import de.uni_paderborn.fujaba.muml.allocation.ilp.ObjectiveFunctionExpression;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
@@ -16,6 +12,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.muml.core.expressions.Expression;
+import org.muml.psm.allocation.algorithm.ilp.opt4j.evaluation.ObjectiveFunctionExpressionEvaluator;
+import org.muml.psm.allocation.algorithm.qvto.QVToTransformationRunner;
+import org.muml.psm.allocation.ilp.IntegerLinearProgram;
+import org.muml.psm.allocation.ilp.ObjectiveFunctionExpression;
 
 @RunWith(value = Parameterized.class)
 @SuppressWarnings("all")

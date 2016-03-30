@@ -1,9 +1,9 @@
-package de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.tests;
+package org.muml.psm.allocation.algorithm.ilp.opt4j.tests;
 
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.qvto.QVToBasedAlgorithmTest;
 import java.util.Collection;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.muml.psm.allocation.algorithm.tests.qvto.QVToBasedAlgorithmTest;
 
 @RunWith(value = Parameterized.class)
 @SuppressWarnings("all")

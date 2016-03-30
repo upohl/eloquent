@@ -1,11 +1,5 @@
-package de.uni_paderborn.fujaba.muml.allocation.language.cs2as;
+package org.muml.psm.allocation.language.xtext.cs2as;
 
-import de.uni_paderborn.fujaba.muml.allocation.language.cs.util.LanguageSpecificationCSVisitor;
-import de.uni_paderborn.fujaba.muml.allocation.language.cs2as.SpecificationCS2PivotConversion;
-import de.uni_paderborn.fujaba.muml.allocation.language.cs2as.SpecificationCSPostOrderVisitor;
-import de.uni_paderborn.fujaba.muml.allocation.language.visitor.LanguageSpecificationCSContainmentVisitor;
-import de.uni_paderborn.fujaba.muml.allocation.language.visitor.LanguageSpecificationCSLeft2RightVisitor;
-import de.uni_paderborn.fujaba.muml.allocation.language.visitor.LanguageSpecificationCSPreOrderVisitor;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.ocl.pivot.Element;
@@ -16,6 +10,12 @@ import org.eclipse.ocl.xtext.base.cs2as.Continuation;
 import org.eclipse.ocl.xtext.base.utilities.BaseCSResource;
 import org.eclipse.ocl.xtext.completeocl.cs2as.CompleteOCLCS2AS;
 import org.eclipse.xtext.diagnostics.IDiagnosticConsumer;
+import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
+import org.muml.psm.allocation.language.xtext.cs2as.SpecificationCS2PivotConversion;
+import org.muml.psm.allocation.language.xtext.cs2as.SpecificationCSPostOrderVisitor;
+import org.muml.psm.allocation.language.xtext.visitor.LanguageSpecificationCSContainmentVisitor;
+import org.muml.psm.allocation.language.xtext.visitor.LanguageSpecificationCSLeft2RightVisitor;
+import org.muml.psm.allocation.language.xtext.visitor.LanguageSpecificationCSPreOrderVisitor;
 
 @SuppressWarnings("all")
 public class SpecificationCS2Pivot extends CompleteOCLCS2AS {

@@ -1,4 +1,4 @@
-package de.uni_paderborn.fujaba.muml.allocation.language.attributes;
+package org.muml.psm.allocation.language.xtext.attributes;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNull;

@@ -1,4 +1,4 @@
-package de.uni_paderborn.fujaba.muml.allocation.language.build;
+package org.muml.psm.allocation.language.build;
 
 import java.util.HashSet;
 import java.util.Set;

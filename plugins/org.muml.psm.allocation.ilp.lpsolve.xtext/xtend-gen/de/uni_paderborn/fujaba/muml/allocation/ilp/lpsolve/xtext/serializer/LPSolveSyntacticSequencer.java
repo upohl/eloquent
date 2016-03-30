@@ -3,8 +3,6 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.serializer;
 
-import de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.serializer.AbstractLPSolveSyntacticSequencer;
-
 @SuppressWarnings("all")
-public class LPSolveSyntacticSequencer extends AbstractLPSolveSyntacticSequencer {
+public class LPSolveSyntacticSequencer /* implements AbstractLPSolveSyntacticSequencer  */{
 }

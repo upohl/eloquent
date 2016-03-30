@@ -1,7 +1,6 @@
-package de.uni_paderborn.fujaba.muml.allocation.language.build;
+package org.muml.psm.allocation.language.build;
 
 import com.google.common.base.Objects;
-import de.uni_paderborn.fujaba.muml.allocation.language.build.GenerateVisitor;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,6 +24,7 @@ import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.InputOutput;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import org.muml.psm.allocation.language.build.GenerateVisitor;
 
 @SuppressWarnings("all")
 public class GenerateContainmentVisitor extends GenerateVisitor {

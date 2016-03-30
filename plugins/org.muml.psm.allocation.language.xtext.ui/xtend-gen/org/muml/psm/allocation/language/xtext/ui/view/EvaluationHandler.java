@@ -1,7 +1,5 @@
-package de.uni_paderborn.fujaba.muml.allocation.language.ui.view;
+package org.muml.psm.allocation.language.xtext.ui.view;
 
-import de.uni_paderborn.fujaba.muml.allocation.language.ui.view.AllocationSpecificationLanguageEvaluationView;
-import de.uni_paderborn.fujaba.muml.allocation.language.ui.view.BaseHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.ui.IViewPart;

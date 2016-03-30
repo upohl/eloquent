@@ -1,4 +1,4 @@
-package de.uni_paderborn.fujaba.muml.allocation.language.build;
+package org.muml.psm.allocation.language.build;
 
 import com.google.common.base.Objects;
 import java.io.File;

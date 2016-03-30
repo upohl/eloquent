@@ -1,7 +1,5 @@
-package de.uni_paderborn.fujaba.muml.allocation.language.cs2as;
+package org.muml.psm.allocation.language.xtext.cs2as;
 
-import de.uni_paderborn.fujaba.muml.allocation.language.as.EvaluatableElement;
-import de.uni_paderborn.fujaba.muml.allocation.language.typing.TypesUtil;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNull;
@@ -11,6 +9,8 @@ import org.eclipse.ocl.pivot.utilities.PivotConstants;
 import org.eclipse.ocl.xtext.base.cs2as.CS2AS;
 import org.eclipse.ocl.xtext.base.cs2as.CS2ASConversion;
 import org.eclipse.xtext.diagnostics.IDiagnosticConsumer;
+import org.muml.psm.allocation.language.as.EvaluatableElement;
+import org.muml.psm.allocation.language.xtext.typing.TypesUtil;
 
 @SuppressWarnings("all")
 public class SpecificationCS2PivotConversion extends CS2ASConversion {

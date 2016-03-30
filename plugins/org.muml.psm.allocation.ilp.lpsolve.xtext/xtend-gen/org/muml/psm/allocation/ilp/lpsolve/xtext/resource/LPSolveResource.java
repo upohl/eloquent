@@ -1,4 +1,4 @@
-package de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.resource;
+package org.muml.psm.allocation.ilp.lpsolve.xtext.resource;
 
 import org.eclipse.emf.ecore.EObject;
 import org.muml.core.common.xtext.AbstractLanguageResource;

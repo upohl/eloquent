@@ -1,4 +1,4 @@
-package de.uni_paderborn.fujaba.muml.allocation.language.ui.view;
+package org.muml.psm.allocation.language.xtext.ui.view;
 
 import org.eclipse.core.commands.AbstractHandler;
 
