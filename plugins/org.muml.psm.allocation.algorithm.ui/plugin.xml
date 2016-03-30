@@ -5,13 +5,13 @@
          point="org.eclipse.ui.commands">
       <command
             categoryId="de.uni_paderborn.fujaba"
-            defaultHandler="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.OpenAllocationWizardHandler"
+            defaultHandler="org.muml.psm.allocation.algorithm.ui.OpenAllocationWizardHandler"
             id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.OpenAllocationWizardCommand"
             name="Create Allocation">
       </command>
       <command
             categoryId="de.uni_paderborn.fujaba"
-            defaultHandler="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.CreateASLFileHandler"
+            defaultHandler="org.muml.psm.allocation.algorithm.ui.CreateASLFileHandler"
             id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.CreateASLFileCommand"
             name="Create Allocation Specification">
       </command>
@@ -66,7 +66,7 @@
          point="org.eclipse.ui.exportWizards">
       <wizard
             category="de.uni_paderborn.fujaba.export"
-            class="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.wizard.AllocationWizard"
+            class="org.muml.psm.allocation.algorithm.ui.wizard.AllocationWizard"
             id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.wizard.AllocationWizard"
             name="Allocation">
       </wizard>

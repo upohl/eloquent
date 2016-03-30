@@ -5,7 +5,7 @@
       <!-- @generated ilp -->
       <factory
             uri="http://www.fujaba.de/muml/allocation/ilp/0.1.0"
-            class="de.uni_paderborn.fujaba.muml.allocation.ilp.provider.IlpItemProviderAdapterFactory"
+            class="org.muml.psm.allocation.ilp.provider.IlpItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

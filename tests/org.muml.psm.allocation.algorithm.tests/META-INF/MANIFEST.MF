@@ -13,8 +13,8 @@ Require-Bundle: org.junit;bundle-version="4.11.0",
  org.eclipse.jdt.annotation;bundle-version="[0.0.0,2.0.0)",
  org.muml.psm.allocation.algorithm
 Bundle-ActivationPolicy: lazy
-Export-Package: de.uni_paderborn.fujaba.muml.allocation.algorithm.tests,
- de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.qvto,
- de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.util
+Export-Package: org.muml.psm.allocation.algorithm.tests,
+ org.muml.psm.allocation.algorithm.tests.qvto,
+ org.muml.psm.allocation.algorithm.tests.util
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin

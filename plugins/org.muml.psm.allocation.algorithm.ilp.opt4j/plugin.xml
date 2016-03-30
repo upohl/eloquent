@@ -7,7 +7,7 @@
             name="Opt4JBlackboxUnit"
             namespace="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j">
          <library
-               class="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.Opt4J"
+               class="org.muml.psm.allocation.algorithm.ilp.opt4j.Opt4J"
                name="Opt4JBlackbox">
             <metamodel
                   nsURI="http://www.fujaba.de/muml/allocation/ilp/0.1.0">
@@ -21,7 +21,7 @@
    <extension
          point="de.uni_paderborn.fujaba.muml.allocation.algorithm.strategy">
       <strategy
-            class="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.Opt4JAllocationComputationStrategy"
+            class="org.muml.psm.allocation.algorithm.ilp.opt4j.Opt4JAllocationComputationStrategy"
             description="Opt4J-based allocation computation strategy (using opt4j)"
             name="Opt4J Allocation Computation Strategy">
       </strategy>

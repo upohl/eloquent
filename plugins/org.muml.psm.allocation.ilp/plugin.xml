@@ -5,7 +5,7 @@
       <!-- @generated ilp -->
       <package
             uri="http://www.fujaba.de/muml/allocation/ilp/0.1.0"
-            class="de.uni_paderborn.fujaba.muml.allocation.ilp.IlpPackage"
+            class="org.muml.psm.allocation.ilp.IlpPackage"
             genModel="model/ilp.genmodel"/>
    </extension>
 

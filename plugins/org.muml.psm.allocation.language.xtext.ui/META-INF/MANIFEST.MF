@@ -26,9 +26,9 @@ Require-Bundle: org.muml.psm.allocation.language.xtext;visibility:=reexport,
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: de.uni_paderborn.fujaba.muml.allocation.language.ui.contentassist,
- de.uni_paderborn.fujaba.muml.allocation.language.ui.contentassist.antlr,
- de.uni_paderborn.fujaba.muml.allocation.language.ui.internal,
- de.uni_paderborn.fujaba.muml.allocation.language.ui.quickfix,
- de.uni_paderborn.fujaba.muml.allocation.language.ui.view
-Bundle-Activator: de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationLanguagePluginActivator
+Export-Package: org.muml.psm.allocation.language.xtext.ui.contentassist,
+ org.muml.psm.allocation.language.xtext.ui.contentassist.antlr,
+ org.muml.psm.allocation.language.xtext.ui.internal,
+ org.muml.psm.allocation.language.xtext.ui.quickfix,
+ org.muml.psm.allocation.language.xtext.ui.view
+Bundle-Activator: org.muml.psm.allocation.language.xtext.ui.AllocationSpecificationLanguagePluginActivator

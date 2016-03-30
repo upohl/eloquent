@@ -7,7 +7,7 @@
             name="LPSolveBlackboxUnit"
             namespace="de.uni_paderborn.fujaba.muml.allocation.algorithm.lpsolve">
          <library
-               class="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.lpsolve.LPSolve"
+               class="org.muml.psm.allocation.algorithm.ilp.lpsolve.LPSolve"
                name="LPSolveBlackbox">
             <metamodel
                   nsURI="http://www.fujaba.de/muml/allocation/ilp/0.1.0">
@@ -18,7 +18,7 @@
    <extension
          point="de.uni_paderborn.fujaba.muml.allocation.algorithm.strategy">
       <strategy
-            class="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.lpsolve.LPSolveAllocationComputationStrategy"
+            class="org.muml.psm.allocation.algorithm.ilp.lpsolve.LPSolveAllocationComputationStrategy"
             description="ILP-based allocation computation strategy (using lpsolve)"
             name="LPSolve Allocation Computation Strategy">
       </strategy>

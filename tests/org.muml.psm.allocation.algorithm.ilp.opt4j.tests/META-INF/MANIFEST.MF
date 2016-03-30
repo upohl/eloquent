@@ -16,4 +16,4 @@ Require-Bundle: org.junit;bundle-version="4.11.0",
  org.muml.pim;bundle-version="0.5.0",
  org.muml.pm.hardware;bundle-version="1.0.0"
 Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn, Germany
-Export-Package: de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.tests
+Export-Package: org.muml.psm.allocation.algorithm.ilp.opt4j.tests

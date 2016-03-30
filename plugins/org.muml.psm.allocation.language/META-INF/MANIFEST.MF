@@ -7,15 +7,15 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: de.uni_paderborn.fujaba.muml.allocation.language.as,
- de.uni_paderborn.fujaba.muml.allocation.language.as.impl,
- de.uni_paderborn.fujaba.muml.allocation.language.as.util,
- de.uni_paderborn.fujaba.muml.allocation.language.cs,
- de.uni_paderborn.fujaba.muml.allocation.language.cs.impl,
- de.uni_paderborn.fujaba.muml.allocation.language.cs.util,
- de.uni_paderborn.fujaba.muml.allocation.language.oclcontext,
- de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl,
- de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.util
+Export-Package: org.muml.psm.allocation.language.as,
+ org.muml.psm.allocation.language.as.impl,
+ org.muml.psm.allocation.language.as.util,
+ org.muml.psm.allocation.language.cs,
+ org.muml.psm.allocation.language.cs.impl,
+ org.muml.psm.allocation.language.cs.util,
+ org.muml.psm.allocation.language.oclcontext,
+ org.muml.psm.allocation.language.oclcontext.impl,
+ org.muml.psm.allocation.language.oclcontext.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.muml.core;visibility:=reexport,

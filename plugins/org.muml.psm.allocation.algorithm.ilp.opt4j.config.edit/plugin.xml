@@ -10,7 +10,7 @@
       <!-- @generated config -->
       <factory
             uri="http://www.fujaba.de/muml/allocation/algorithm/ilp/opt4j/0.1.0/config"
-            class="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config.provider.ConfigItemProviderAdapterFactory"
+            class="org.muml.psm.allocation.algorithm.ilp.opt4j.config.provider.ConfigItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

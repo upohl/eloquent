@@ -28,7 +28,7 @@
       <!-- @generated LanguageSpecificationCS -->
       <package
             uri="http://www.fujaba.de/muml/allocation/language/0.1.0/cs"
-            class="de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage"
+            class="org.muml.psm.allocation.language.cs.CsPackage"
             genModel="model/LanguageSpecificationCS.genmodel"/>
    </extension>
 
@@ -37,7 +37,7 @@
       <!-- @generated AS -->
       <package
             uri="http://www.fujaba.de/muml/allocation/language/0.1.0/as"
-            class="de.uni_paderborn.fujaba.muml.allocation.language.as.AsPackage"
+            class="org.muml.psm.allocation.language.as.AsPackage"
             genModel="model-gen/LanguageSpecificationAS.genmodel"/>
    </extension>
 
@@ -45,7 +45,7 @@
       <!-- @generated OCLContext -->
       <package
             uri="http://www.fujaba.de/muml/allocation/language/0.1.0/oclcontext"
-            class="de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OclcontextPackage"
+            class="org.muml.psm.allocation.language.oclcontext.OclcontextPackage"
             genModel="model/OCLContext.genmodel"/>
    </extension>
 

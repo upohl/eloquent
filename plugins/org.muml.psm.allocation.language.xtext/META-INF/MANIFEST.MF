@@ -26,16 +26,16 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: de.uni_paderborn.fujaba.muml.allocation.language,
- de.uni_paderborn.fujaba.muml.allocation.language.cs2as,
- de.uni_paderborn.fujaba.muml.allocation.language.formatting,
- de.uni_paderborn.fujaba.muml.allocation.language.generator,
- de.uni_paderborn.fujaba.muml.allocation.language.parser.antlr,
- de.uni_paderborn.fujaba.muml.allocation.language.parser.antlr.internal,
- de.uni_paderborn.fujaba.muml.allocation.language.resource,
- de.uni_paderborn.fujaba.muml.allocation.language.scoping,
- de.uni_paderborn.fujaba.muml.allocation.language.serializer,
- de.uni_paderborn.fujaba.muml.allocation.language.services,
- de.uni_paderborn.fujaba.muml.allocation.language.typing,
- de.uni_paderborn.fujaba.muml.allocation.language.validation
+Export-Package: org.muml.psm.allocation.language.xtext,
+ org.muml.psm.allocation.language.xtext.cs2as,
+ org.muml.psm.allocation.language.xtext.formatting,
+ org.muml.psm.allocation.language.xtext.generator,
+ org.muml.psm.allocation.language.xtext.parser.antlr,
+ org.muml.psm.allocation.language.xtext.parser.antlr.internal,
+ org.muml.psm.allocation.language.xtext.resource,
+ org.muml.psm.allocation.language.xtext.scoping,
+ org.muml.psm.allocation.language.xtext.serializer,
+ org.muml.psm.allocation.language.xtext.services,
+ org.muml.psm.allocation.language.xtext.typing,
+ org.muml.psm.allocation.language.xtext.validation
 

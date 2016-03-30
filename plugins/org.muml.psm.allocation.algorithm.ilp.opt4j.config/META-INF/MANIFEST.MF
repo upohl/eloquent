@@ -7,9 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config,
- de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config.impl,
- de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config.util
+Export-Package: org.muml.psm.allocation.algorithm.ilp.opt4j.config,
+ org.muml.psm.allocation.algorithm.ilp.opt4j.config.impl,
+ org.muml.psm.allocation.algorithm.ilp.opt4j.config.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy

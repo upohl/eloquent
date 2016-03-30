@@ -2,14 +2,14 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.util;
 
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.*;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
 import org.muml.core.ExtendableElement;
 import org.muml.core.Extension;
+
+import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.ExtensionPackage;
+import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.MemoryExtension;
 
 /**
  * <!-- begin-user-doc -->

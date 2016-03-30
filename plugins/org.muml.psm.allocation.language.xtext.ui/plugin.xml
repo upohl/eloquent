@@ -405,7 +405,7 @@
   <extension
         point="org.eclipse.ui.commands">
      <command
-           defaultHandler="de.uni_paderborn.fujaba.muml.allocation.language.ui.view.OpenEvaluationContextWizardHandler"
+           defaultHandler="org.muml.psm.allocation.language.xtext.ui.view.OpenEvaluationContextWizardHandler"
            id="de.uni_paderborn.fujaba.muml.allocation.language.ui.view.OpenEvaluationContextWizardHandler"
            name="Open Evaluation Context Wizard">
      </command>
@@ -434,7 +434,7 @@
   <extension
         point="org.eclipse.ui.commands">
      <command
-           defaultHandler="de.uni_paderborn.fujaba.muml.allocation.language.ui.view.EvaluationHandler"
+           defaultHandler="org.muml.psm.allocation.language.xtext.ui.view.EvaluationHandler"
            id="de.uni_paderborn.fujaba.muml.allocation.language.ui.view.EvaluationHandler"
            name="Evaluate">
      </command>
