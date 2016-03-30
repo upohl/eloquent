@@ -5,10 +5,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 import org.muml.pim.MumlPackage;
+import org.muml.pm.hardware.HardwarePackage;
 
 import de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.LPSolveStandaloneSetup;
 import de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecificationLanguageStandaloneSetup;
-import de.uni_paderborn.fujaba.muml.hardware.HardwarePackage;
 
 @RunWith(Suite.class)
 @SuiteClasses({

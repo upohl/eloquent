@@ -152,8 +152,11 @@ public class TypesUtil {
   public static Map<String, EClass> createNamedPartsFromComponentResourceTupleDescriptors(final List<ComponentResourceTupleDescriptorCS> tupleDescriptorList) {
     throw new Error("Unresolved compilation problems:"
       + "\nThe method or field InstancePackage is undefined"
+      + "\nThe method or field HwresourceinstancePackage is undefined"
       + "\nLiterals cannot be resolved"
-      + "\nCOMPONENT_INSTANCE cannot be resolved");
+      + "\nCOMPONENT_INSTANCE cannot be resolved"
+      + "\nLiterals cannot be resolved"
+      + "\nRESOURCE_INSTANCE cannot be resolved");
   }
   
   @NonNull

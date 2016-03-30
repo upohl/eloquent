@@ -2,10 +2,9 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.language.oclcontext;
 
-import de.uni_paderborn.fujaba.muml.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
-
 import org.eclipse.emf.ecore.EObject;
 import org.muml.pim.instance.ComponentInstanceConfiguration;
+import org.muml.pm.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 
 /**
  * <!-- begin-user-doc -->

@@ -36,13 +36,13 @@ import org.muml.core.modelinstance.ModelElementCategory;
 import org.muml.core.modelinstance.RootNode;
 import org.muml.pim.MumlPackage;
 import org.muml.pim.instance.ComponentInstanceConfiguration;
+import org.muml.pm.hardware.HardwarePackage;
+import org.muml.pm.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 
 import de.uni_paderborn.fujaba.muml.allocation.algorithm.main.AllocationComputationStrategyExtension;
 import de.uni_paderborn.fujaba.muml.allocation.algorithm.main.AllocationComputationStrategyExtension.AllocationComputationStrategyDescription;
 import de.uni_paderborn.fujaba.muml.allocation.algorithm.main.IAllocationComputationStrategy;
 import de.uni_paderborn.fujaba.muml.allocation.language.cs.SpecificationCS;
-import de.uni_paderborn.fujaba.muml.hardware.HardwarePackage;
-import de.uni_paderborn.fujaba.muml.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 import de.uni_paderborn.fujaba.muml.psm.allocation.SystemAllocation;
 
 public class AllocationWizard extends AbstractFujabaExportWizard {

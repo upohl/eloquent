@@ -5,8 +5,6 @@ package de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.impl;
 import de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OCLContext;
 import de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OclcontextPackage;
 
-import de.uni_paderborn.fujaba.muml.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -15,6 +13,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.muml.pim.instance.ComponentInstanceConfiguration;
+import org.muml.pm.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 
 /**
  * <!-- begin-user-doc -->

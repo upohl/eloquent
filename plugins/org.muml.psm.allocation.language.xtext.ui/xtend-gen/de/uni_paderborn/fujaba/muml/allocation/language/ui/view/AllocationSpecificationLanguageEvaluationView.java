@@ -8,7 +8,6 @@ import de.uni_paderborn.fujaba.muml.allocation.language.cs.EvaluatableElementCS;
 import de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OCLContext;
 import de.uni_paderborn.fujaba.muml.allocation.language.oclcontext.OclcontextFactory;
 import de.uni_paderborn.fujaba.muml.allocation.language.typing.TypesUtil;
-import de.uni_paderborn.fujaba.muml.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Arrays;
@@ -50,6 +49,7 @@ import org.eclipse.xtext.ui.editor.model.IXtextDocument;
 import org.eclipse.xtext.util.concurrent.IUnitOfWork;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.muml.pim.instance.ComponentInstanceConfiguration;
+import org.muml.pm.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 
 @SuppressWarnings("all")
 public class AllocationSpecificationLanguageEvaluationView extends ViewPart implements ISelectionListener {
@@ -66,7 +66,7 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
   
   private /* ComponentInstanceConfiguration */Object cic;
   
-  private HWPlatformInstanceConfiguration hpic;
+  private /* HWPlatformInstanceConfiguration */Object hpic;
   
   public ComponentInstanceConfiguration getCic() {
     return this.cic;
@@ -80,7 +80,7 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
     return this.hpic;
   }
   
-  public HWPlatformInstanceConfiguration setHpic(final HWPlatformInstanceConfiguration hpic) {
+  public HWPlatformInstanceConfiguration setHpic(final /* HWPlatformInstanceConfiguration */Object hpic) {
     return this.hpic = hpic;
   }
   
