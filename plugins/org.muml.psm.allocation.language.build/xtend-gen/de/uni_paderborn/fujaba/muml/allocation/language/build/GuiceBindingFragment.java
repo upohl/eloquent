@@ -45,6 +45,7 @@ public class GuiceBindingFragment /* implements EssentialOCLFragment  */{
   @Override
   public Set<Binding> getGuiceBindingsRt(final Grammar grammar) {
     throw new Error("Unresolved compilation problems:"
+      + "\nSpecificationCSResource cannot be resolved to a type."
       + "\nThe method or field super is undefined"
       + "\ngetGuiceBindingsRt cannot be resolved"
       + "\nremoveBindingsFor cannot be resolved"

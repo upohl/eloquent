@@ -34,11 +34,10 @@ import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
 
 import org.eclipse.ocl.xtext.completeoclcs.impl.CompleteOCLDocumentCSImpl;
-
-import org.storydriven.core.CorePackage;
-import org.storydriven.core.ExtendableElement;
-import org.storydriven.core.Extension;
-import org.storydriven.core.util.ExtendableElementOperations;
+import org.muml.core.CorePackage;
+import org.muml.core.ExtendableElement;
+import org.muml.core.Extension;
+import org.muml.core.util.ExtendableElementOperations;
 
 /**
  * <!-- begin-user-doc -->

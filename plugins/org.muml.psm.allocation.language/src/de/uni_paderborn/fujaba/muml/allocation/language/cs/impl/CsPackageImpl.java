@@ -71,10 +71,7 @@ import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLCSPackage;
 
 
 import org.eclipse.ocl.xtext.essentialoclcs.EssentialOCLCSPackage;
-
-
-
-import org.storydriven.core.CorePackage;
+import org.muml.core.CorePackage;
 
 
 

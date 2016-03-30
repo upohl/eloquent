@@ -2,7 +2,7 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension;
 
-import org.storydriven.core.Extension;
+import org.muml.core.Extension;
 
 /**
  * <!-- begin-user-doc -->

@@ -3,11 +3,11 @@ package de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j;
 import java.util.Map;
 
 import org.eclipse.jdt.annotation.NonNull;
+import org.muml.core.expressions.Expression;
+import org.muml.core.expressions.common.CommonExpressionsFactory;
+import org.muml.core.expressions.common.LiteralExpression;
 import org.opt4j.core.Objective;
 import org.opt4j.core.Objectives;
-import org.storydriven.core.expressions.Expression;
-import org.storydriven.core.expressions.common.CommonExpressionsFactory;
-import org.storydriven.core.expressions.common.LiteralExpression;
 
 import com.google.inject.Inject;
 

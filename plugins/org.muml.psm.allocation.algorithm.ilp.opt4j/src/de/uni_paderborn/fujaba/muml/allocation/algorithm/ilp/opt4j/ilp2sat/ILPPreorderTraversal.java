@@ -1,9 +1,9 @@
 package de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.ilp2sat;
 
 import org.eclipse.emf.ecore.EObject;
-import org.storydriven.core.expressions.Expression;
-import org.storydriven.core.expressions.common.BinaryExpression;
-import org.storydriven.core.expressions.common.util.CommonExpressionsSwitch;
+import org.muml.core.expressions.Expression;
+import org.muml.core.expressions.common.BinaryExpression;
+import org.muml.core.expressions.common.util.CommonExpressionsSwitch;
 
 import de.uni_paderborn.fujaba.muml.allocation.ilp.ConstraintExpression;
 import de.uni_paderborn.fujaba.muml.allocation.ilp.IntegerLinearProgram;

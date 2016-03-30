@@ -2,7 +2,7 @@
  */
 package de.uni_paderborn.fujaba.muml.allocation.ilp;
 
-import org.storydriven.core.NamedElement;
+import org.muml.core.NamedElement;
 
 /**
  * <!-- begin-user-doc -->

@@ -15,7 +15,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.storydriven.core.expressions.Expression;
+import org.muml.core.expressions.Expression;
 
 @RunWith(value = Parameterized.class)
 @SuppressWarnings("all")

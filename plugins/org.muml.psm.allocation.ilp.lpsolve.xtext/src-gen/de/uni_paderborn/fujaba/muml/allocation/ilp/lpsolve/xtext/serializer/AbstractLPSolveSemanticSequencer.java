@@ -20,9 +20,9 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEOb
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
-import org.storydriven.core.expressions.common.ArithmeticExpression;
-import org.storydriven.core.expressions.common.CommonExpressionsPackage;
-import org.storydriven.core.expressions.common.LiteralExpression;
+import org.muml.core.expressions.common.ArithmeticExpression;
+import org.muml.core.expressions.common.CommonExpressionsPackage;
+import org.muml.core.expressions.common.LiteralExpression;
 
 @SuppressWarnings("all")
 public abstract class AbstractLPSolveSemanticSequencer extends AbstractDelegatingSemanticSequencer {

@@ -22,8 +22,7 @@ import org.eclipse.ocl.xtext.basecs.RootCS;
 import org.eclipse.ocl.xtext.basecs.util.VisitableCS;
 
 import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLDocumentCS;
-
-import org.storydriven.core.ExtendableElement;
+import org.muml.core.ExtendableElement;
 
 /**
  * <!-- begin-user-doc -->

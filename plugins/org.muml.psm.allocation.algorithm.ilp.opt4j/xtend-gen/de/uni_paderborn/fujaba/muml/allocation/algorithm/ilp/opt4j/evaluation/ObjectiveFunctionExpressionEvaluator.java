@@ -5,10 +5,6 @@ import de.uni_paderborn.fujaba.muml.allocation.ilp.Variable;
 import de.uni_paderborn.fujaba.muml.allocation.ilp.VariableExpression;
 import java.util.Arrays;
 import java.util.Map;
-import org.storydriven.core.expressions.Expression;
-import org.storydriven.core.expressions.common.ArithmeticExpression;
-import org.storydriven.core.expressions.common.ArithmeticOperator;
-import org.storydriven.core.expressions.common.LiteralExpression;
 
 @SuppressWarnings("all")
 public class ObjectiveFunctionExpressionEvaluator {
@@ -49,46 +45,31 @@ public class ObjectiveFunctionExpressionEvaluator {
     this.environment = _environment;
   }
   
-  public static double evaluate(final Expression expression, final Map<String, Boolean> allocation) {
+  public static double evaluate(final /* Expression */Object expression, final Map<String, Boolean> allocation) {
     ObjectiveFunctionExpressionEvaluator _objectiveFunctionExpressionEvaluator = new ObjectiveFunctionExpressionEvaluator(allocation);
     return _objectiveFunctionExpressionEvaluator.evaluate(expression);
   }
   
-  public double _evaluate(final Expression expression) {
-    throw new IllegalArgumentException(("unsupported expression: " + expression));
+  public double _evaluate(final /* Expression */Object expression) {
+    String _plus = ("unsupported expression: " + expression);
+    throw new IllegalArgumentException(_plus);
   }
   
-  public double _evaluate(final ArithmeticExpression expression) {
-    Expression _leftExpression = expression.getLeftExpression();
-    final double left = this.evaluate(_leftExpression);
-    Expression _rightExpression = expression.getRightExpression();
-    final double right = this.evaluate(_rightExpression);
-    double _switchResult = (double) 0;
-    ArithmeticOperator _operator = expression.getOperator();
-    if (_operator != null) {
-      switch (_operator) {
-        case PLUS:
-          _switchResult = (left + right);
-          break;
-        case TIMES:
-          _switchResult = (left * right);
-          break;
-        default:
-          ArithmeticOperator _operator_1 = expression.getOperator();
-          String _plus = ("unexpected operator " + _operator_1);
-          throw new IllegalArgumentException(_plus);
-      }
-    } else {
-      ArithmeticOperator _operator_1 = expression.getOperator();
-      String _plus = ("unexpected operator " + _operator_1);
-      throw new IllegalArgumentException(_plus);
-    }
-    return _switchResult;
+  public double _evaluate(final /* ArithmeticExpression */Object expression) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field ArithmeticOperator is undefined"
+      + "\nThe method or field ArithmeticOperator is undefined"
+      + "\nleftExpression cannot be resolved"
+      + "\nrightExpression cannot be resolved"
+      + "\noperator cannot be resolved"
+      + "\nPLUS cannot be resolved"
+      + "\nTIMES cannot be resolved"
+      + "\noperator cannot be resolved");
   }
   
-  public double _evaluate(final LiteralExpression expression) {
-    String _value = expression.getValue();
-    return Double.parseDouble(_value);
+  public double _evaluate(final /* LiteralExpression */Object expression) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nvalue cannot be resolved");
   }
   
   public double _evaluate(final VariableExpression expression) {
@@ -96,13 +77,9 @@ public class ObjectiveFunctionExpressionEvaluator {
     return this.environment.lookup(_variable);
   }
   
-  public double evaluate(final Expression expression) {
-    if (expression instanceof ArithmeticExpression) {
-      return _evaluate((ArithmeticExpression)expression);
-    } else if (expression instanceof VariableExpression) {
-      return _evaluate((VariableExpression)expression);
-    } else if (expression instanceof LiteralExpression) {
-      return _evaluate((LiteralExpression)expression);
+  public double evaluate(final VariableExpression expression) {
+    if (expression != null) {
+      return _evaluate(expression);
     } else if (expression != null) {
       return _evaluate(expression);
     } else {

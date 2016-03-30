@@ -5,8 +5,7 @@ package de.uni_paderborn.fujaba.muml.allocation.language.cs;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLDocumentCS;
-
-import org.storydriven.core.ExtendableElement;
+import org.muml.core.ExtendableElement;
 
 /**
  * <!-- begin-user-doc -->

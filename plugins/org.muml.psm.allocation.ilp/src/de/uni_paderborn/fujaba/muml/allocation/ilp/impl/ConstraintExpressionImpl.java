@@ -6,8 +6,7 @@ import de.uni_paderborn.fujaba.muml.allocation.ilp.ConstraintExpression;
 import de.uni_paderborn.fujaba.muml.allocation.ilp.IlpPackage;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.storydriven.core.expressions.common.impl.ComparisonExpressionImpl;
+import org.muml.core.expressions.common.impl.ComparisonExpressionImpl;
 
 /**
  * <!-- begin-user-doc -->
