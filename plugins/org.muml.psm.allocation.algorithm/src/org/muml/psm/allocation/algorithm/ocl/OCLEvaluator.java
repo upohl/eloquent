@@ -84,4 +84,14 @@ public class OCLEvaluator {
 		return TupleAccessor.createTupleValueList(result);
 	}
 	
+	/** QVTo blackbox method to get system time for performance measurement
+	 * @author upohl
+	 * @return long current system time in ms
+	 * @param void
+	 * */
+	public static long getCurrentTime()
+	{
+		return System.currentTimeMillis();
+	}
+	
 }
