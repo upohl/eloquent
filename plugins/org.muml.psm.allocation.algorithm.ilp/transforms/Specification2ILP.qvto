@@ -28,11 +28,28 @@ main() {
 	var cic : ComponentInstanceConfiguration := ins.getRootCIC();
 	var hpic : HWPlatformInstanceConfiguration := hwpi.getRootHPIC();
 	var ilp : IntegerLinearProgram := object IntegerLinearProgram {};
+	var startTime : Integer;
+	var endTime : Integer;
+	startTime := getCurrentTime();
 	ilp.map createGeneralConstraints(cic, hpic);
+	endTime := getCurrentTime();
+	log("Time for create GeneralConstraints:"+((endTime-startTime)/1000).toString()+" seconds");
+	
 	specificationCS.createLocationConstraints(ilp, cic, hpic);
+	endTime := getCurrentTime();
+	log("Time for create LocationConstraints:"+((endTime-startTime)/1000).toString()+" seconds");
+	startTime := getCurrentTime();
 	specificationCS.createHWResInstanceConstraints(ilp, cic, hpic);
+	endTime := getCurrentTime();
+	log("Time for create required Location constraints:"+((endTime-startTime)/1000).toString()+" seconds");
+	startTime := getCurrentTime();
 	specificationCS.createResourceConstraints(ilp, cic, hpic);
+	endTime := getCurrentTime();
+	log("Time for create required resource constraints:"+((endTime-startTime)/1000).toString()+" seconds");
+	startTime := getCurrentTime();
 	specificationCS.createObjectiveFunction(ilp, cic, hpic);
+	endTime := getCurrentTime();
+	log("Time for create objective functions:"+((endTime-startTime)/1000).toString()+" seconds");
 	//specificationCS.getSameLocationConstraints()->createSameLocationConstraint(ilp, cic, hpic);
 	ilpOut.removeOrphans();
 	//log(cic.toString());
