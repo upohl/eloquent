@@ -10,7 +10,7 @@ import org.eclipse.m2m.qvt.oml.blackbox.java.Operation.Kind;
 import org.eclipse.m2m.qvt.oml.util.Dictionary;
 import org.muml.psm.allocation.ilp.IntegerLinearProgram;
 
-import de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.resource.LPSolveResource;
+import org.muml.psm.allocation.ilp.lpsolve.xtext.resource.LPSolveResource;
 
 public class LPSolve {
 	private static final String[] CMD = new String[] {"lp_solve", "-lp"};
