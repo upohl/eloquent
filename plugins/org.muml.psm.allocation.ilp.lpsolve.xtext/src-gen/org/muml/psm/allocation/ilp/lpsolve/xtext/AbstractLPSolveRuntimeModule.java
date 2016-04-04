@@ -95,13 +95,13 @@ public abstract class AbstractLPSolveRuntimeModule extends DefaultRuntimeModule 
 	}
 
 	// contributed by org.eclipse.xtext.generator.validation.ValidatorFragment
-	@org.eclipse.xtext.service.SingletonBinding(eager=true)	public Class<? extends de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.validation.LPSolveValidator> bindLPSolveValidator() {
-		return de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.validation.LPSolveValidator.class;
+	@org.eclipse.xtext.service.SingletonBinding(eager=true)	public Class<? extends org.muml.psm.allocation.ilp.lpsolve.xtext.validation.LPSolveValidator> bindLPSolveValidator() {
+		return org.muml.psm.allocation.ilp.lpsolve.xtext.validation.LPSolveValidator.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.scoping.AbstractScopingFragment
 	public Class<? extends org.eclipse.xtext.scoping.IScopeProvider> bindIScopeProvider() {
-		return de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.scoping.LPSolveScopeProvider.class;
+		return org.muml.psm.allocation.ilp.lpsolve.xtext.scoping.LPSolveScopeProvider.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.scoping.AbstractScopingFragment
@@ -136,12 +136,12 @@ public abstract class AbstractLPSolveRuntimeModule extends DefaultRuntimeModule 
 
 	// contributed by org.eclipse.xtext.generator.generator.GeneratorFragment
 	public Class<? extends org.eclipse.xtext.generator.IGenerator> bindIGenerator() {
-		return de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.generator.LPSolveGenerator.class;
+		return org.muml.psm.allocation.ilp.lpsolve.xtext.generator.LPSolveGenerator.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.formatting.FormatterFragment
 	public Class<? extends org.eclipse.xtext.formatting.IFormatter> bindIFormatter() {
-		return de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.formatting.LPSolveFormatter.class;
+		return org.muml.psm.allocation.ilp.lpsolve.xtext.formatting.LPSolveFormatter.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.types.TypesGeneratorFragment

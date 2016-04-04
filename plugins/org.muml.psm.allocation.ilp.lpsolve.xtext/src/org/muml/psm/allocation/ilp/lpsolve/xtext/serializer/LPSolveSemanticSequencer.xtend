@@ -5,3 +5,4 @@ package org.muml.psm.allocation.ilp.lpsolve.xtext.serializer
 
 class LPSolveSemanticSequencer extends AbstractLPSolveSemanticSequencer {
 }
+ 

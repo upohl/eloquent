@@ -12,4 +12,4 @@ package org.muml.psm.allocation.ilp.lpsolve.xtext.scoping
  */
 class LPSolveScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider {
 
-}
+} 
