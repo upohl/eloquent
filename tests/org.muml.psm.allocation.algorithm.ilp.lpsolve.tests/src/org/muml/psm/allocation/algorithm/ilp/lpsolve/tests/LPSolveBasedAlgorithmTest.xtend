@@ -16,7 +16,7 @@ class LPSolveBasedAlgorithmTest extends QVToBasedAlgorithmTest {
 	@Parameters
 	def static Collection<Object[]> getTestData() {
 		getTestData(
-			"platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.lpsolve/transforms/LPSolveBasedAlgorithm.qvto"
+			"platform:/plugin/org.muml.psm.allocation.algorithm.ilp.lpsolve/transforms/LPSolveBasedAlgorithm.qvto"
 		)
 	}
 
