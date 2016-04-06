@@ -34,7 +34,7 @@ import org.muml.core.export.pages.ElementSelectionMode;
 import org.muml.core.export.wizard.AbstractFujabaExportWizard;
 import org.muml.core.modelinstance.ModelElementCategory;
 import org.muml.core.modelinstance.RootNode;
-import org.muml.pim.MumlPackage;
+import org.muml.pim.PimPackage;
 import org.muml.pim.instance.ComponentInstanceConfiguration;
 import org.muml.pm.hardware.HardwarePackage;
 import org.muml.pm.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
@@ -61,7 +61,7 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
 		// de499dbfbd960a63f62c4938d9dc71172e075120
 		// (actually, this belongs to the QVToTransformationRunner class,
 		// but I want keep that class clean)
-		MumlPackage.eINSTANCE.eClass();
+		PimPackage.eINSTANCE.eClass();
 		HardwarePackage.eINSTANCE.eClass();
 	}
 

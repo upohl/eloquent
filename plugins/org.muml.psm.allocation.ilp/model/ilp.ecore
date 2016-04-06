@@ -33,7 +33,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="../../org.storydriven.core/model/core.ecore#//NamedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="../../org.muml.core/model/core.ecore#//NamedElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class represents a variable, which is used in an Integer Linear Program."/>
     </eAnnotations>
@@ -52,7 +52,7 @@
     <eLiterals name="INTEGER" value="1"/>
     <eLiterals name="REAL" value="2" literal="REAL"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConstraintExpression" eSuperTypes="../../org.storydriven.core/model/core.ecore#//expressions/common/ComparisonExpression">
+  <eClassifiers xsi:type="ecore:EClass" name="ConstraintExpression" eSuperTypes="../../org.muml.core/model/core.ecore#//expressions/common/ComparisonExpression">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class represents a constraint of the Integer Linear Program."/>
     </eAnnotations>
@@ -63,7 +63,7 @@
       <details key="ValidOperator" value="-- Invalid comparison operator (allowed &lt;, &lt;=, =, >=, >)&#xA;Set{core::expressions::common::ComparingOperator::LESS, core::expressions::common::ComparingOperator::LESS_OR_EQUAL, core::expressions::common::ComparingOperator::EQUAL, core::expressions::common::ComparingOperator::GREATER_OR_EQUAL, core::expressions::common::ComparingOperator::GREATER}->includes(operator)"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VariableExpression" eSuperTypes="../../org.storydriven.core/model/core.ecore#//expressions/Expression">
+  <eClassifiers xsi:type="ecore:EClass" name="VariableExpression" eSuperTypes="../../org.muml.core/model/core.ecore#//expressions/Expression">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class references a variable, which is used in a ConstraintExpression or&#xA;ObjectiveFunctionExpression."/>
     </eAnnotations>
@@ -85,7 +85,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="objectiveFunction" lowerBound="1"
-        eType="ecore:EClass ../../org.storydriven.core/model/core.ecore#//expressions/Expression"
+        eType="ecore:EClass ../../org.muml.core/model/core.ecore#//expressions/Expression"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ObjectiveGoal">

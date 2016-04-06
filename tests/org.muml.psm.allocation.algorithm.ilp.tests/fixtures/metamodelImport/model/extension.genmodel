@@ -4,7 +4,7 @@
     modelPluginID="de.uni_paderborn.fujaba.muml.allocation.algorithm.tests" modelName="Extension"
     modelPluginClass="" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
-    usedGenPackages="../../../../org.storydriven.core/model/core.uml.genmodel#//core"
+    usedGenPackages="../../../../org.muml.core/model/core.genmodel#//core"
     operationReflection="true" importOrganizing="true">
   <foreignModel>extension.ecore</foreignModel>
   <genPackages prefix="Extension" basePackage="de.uni_paderborn.fujaba.muml.allocation.algorithm.tests"
