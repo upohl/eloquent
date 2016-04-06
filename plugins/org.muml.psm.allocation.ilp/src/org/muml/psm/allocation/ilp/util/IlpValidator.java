@@ -42,7 +42,7 @@ public class IlpValidator extends EObjectValidator {
 	 * @see org.eclipse.emf.common.util.Diagnostic#getCode()
 	 * @generated
 	 */
-	public static final String DIAGNOSTIC_SOURCE = "de.uni_paderborn.fujaba.muml.allocation.ilp";
+	public static final String DIAGNOSTIC_SOURCE = "org.muml.psm.allocation.ilp";
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants.

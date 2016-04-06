@@ -16,10 +16,10 @@ import org.muml.core.expressions.Expression;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.muml.psm.allocation.ilp.VariableExpression#getVariable <em>Variable</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.muml.psm.allocation.ilp.IlpPackage#getVariableExpression()
  * @model

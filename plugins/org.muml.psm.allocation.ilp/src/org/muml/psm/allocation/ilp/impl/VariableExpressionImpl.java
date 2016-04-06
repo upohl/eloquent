@@ -17,10 +17,10 @@ import org.muml.psm.allocation.ilp.VariableExpression;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.muml.psm.allocation.ilp.impl.VariableExpressionImpl#getVariable <em>Variable</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

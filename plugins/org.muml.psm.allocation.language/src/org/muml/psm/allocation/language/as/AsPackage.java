@@ -43,7 +43,7 @@ public interface AsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.fujaba.de/muml/allocation/language/0.1.0/as";
+	String eNS_URI = "http://www.muml.org/psm/allocation/language/as/1.0.0";
 
 	/**
 	 * The package namespace name.

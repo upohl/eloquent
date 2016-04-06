@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.muml.psm.allocation.language.as.*;
 import org.muml.psm.allocation.language.as.AsFactory;
 import org.muml.psm.allocation.language.as.AsPackage;
 import org.muml.psm.allocation.language.as.ComponentResourceTupleDescriptor;

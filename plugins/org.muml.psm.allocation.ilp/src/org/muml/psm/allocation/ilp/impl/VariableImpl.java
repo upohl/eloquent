@@ -16,10 +16,10 @@ import org.muml.psm.allocation.ilp.Variable;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.muml.psm.allocation.ilp.impl.VariableImpl#getDataType <em>Data Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

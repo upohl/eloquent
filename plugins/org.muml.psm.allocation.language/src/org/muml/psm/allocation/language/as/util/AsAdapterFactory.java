@@ -12,6 +12,7 @@ import org.eclipse.ocl.pivot.NamedElement;
 import org.eclipse.ocl.pivot.Namespace;
 import org.eclipse.ocl.pivot.util.Visitable;
 import org.eclipse.ocl.pivot.utilities.Nameable;
+import org.muml.psm.allocation.language.as.*;
 import org.muml.psm.allocation.language.as.AsPackage;
 import org.muml.psm.allocation.language.as.ComponentResourceTupleDescriptor;
 import org.muml.psm.allocation.language.as.Constraint;

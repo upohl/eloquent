@@ -6,7 +6,7 @@
 
 <plugin
       name="%pluginName"
-      id="de.uni_paderborn.fujaba.muml.allocation.language"
+      id="org.muml.psm.allocation.language"
       version="1.0.0"
       provider-name="%providerName">
 
@@ -27,26 +27,25 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated LanguageSpecificationCS -->
       <package
-            uri="http://www.fujaba.de/muml/allocation/language/0.1.0/cs"
+            uri="http://www.muml.org/psm/allocation/language/cs/1.0.0"
             class="org.muml.psm.allocation.language.cs.CsPackage"
             genModel="model/LanguageSpecificationCS.genmodel"/>
-   </extension>
-
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated AS -->
-      <package
-            uri="http://www.fujaba.de/muml/allocation/language/0.1.0/as"
-            class="org.muml.psm.allocation.language.as.AsPackage"
-            genModel="model-gen/LanguageSpecificationAS.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated OCLContext -->
       <package
-            uri="http://www.fujaba.de/muml/allocation/language/0.1.0/oclcontext"
+            uri="http://www.muml.org/psm/allocation/language/oclcontext/1.0.0"
             class="org.muml.psm.allocation.language.oclcontext.OclcontextPackage"
             genModel="model/OCLContext.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated LanguageSpecificationAS -->
+      <package
+            uri="http://www.muml.org/psm/allocation/language/as/1.0.0"
+            class="org.muml.psm.allocation.language.as.AsPackage"
+            genModel="model-gen/LanguageSpecificationAS.genmodel"/>
    </extension>
 
 </plugin>

@@ -5,11 +5,8 @@ package org.muml.psm.allocation.language.cs.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS;
-import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 
 /**
  * <!-- begin-user-doc -->
@@ -90,8 +87,15 @@ public class LocationTupleDescriptorCSImpl extends InstanceTupleDescriptorCSImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String toString() {
-		return super.toString();
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (secondInstance: ");
+		result.append(secondInstance);
+		result.append(')');
+		return result.toString();
 	}
 
 	/**
@@ -150,16 +154,6 @@ public class LocationTupleDescriptorCSImpl extends InstanceTupleDescriptorCSImpl
 				return SECOND_INSTANCE_EDEFAULT == null ? secondInstance != null : !SECOND_INSTANCE_EDEFAULT.equals(secondInstance);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
-		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitLocationTupleDescriptorCS(this);
 	}
 
 } //LocationTupleDescriptorCSImpl

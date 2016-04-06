@@ -25,12 +25,12 @@ import org.muml.psm.allocation.ilp.Variable;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.muml.psm.allocation.ilp.impl.IntegerLinearProgramImpl#getVariables <em>Variables</em>}</li>
  *   <li>{@link org.muml.psm.allocation.ilp.impl.IntegerLinearProgramImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link org.muml.psm.allocation.ilp.impl.IntegerLinearProgramImpl#getObjectiveFunction <em>Objective Function</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

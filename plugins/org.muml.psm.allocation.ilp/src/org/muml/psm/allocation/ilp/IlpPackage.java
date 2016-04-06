@@ -46,7 +46,7 @@ public interface IlpPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.fujaba.de/muml/allocation/ilp/0.1.0";
+	String eNS_URI = "http://www.muml.org/psm/allocation/ilp/1.0.0";
 
 	/**
 	 * The package namespace name.
@@ -130,22 +130,22 @@ public interface IlpPackage extends EPackage {
 	int VARIABLE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__ANNOTATION = CorePackage.NAMED_ELEMENT__ANNOTATION;
+	int VARIABLE__ANNOTATIONS = CorePackage.NAMED_ELEMENT__ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__EXTENSION = CorePackage.NAMED_ELEMENT__EXTENSION;
+	int VARIABLE__EXTENSIONS = CorePackage.NAMED_ELEMENT__EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -365,22 +365,22 @@ public interface IlpPackage extends EPackage {
 	int CONSTRAINT_EXPRESSION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT_EXPRESSION__ANNOTATION = CommonExpressionsPackage.COMPARISON_EXPRESSION__ANNOTATION;
+	int CONSTRAINT_EXPRESSION__ANNOTATIONS = CommonExpressionsPackage.COMPARISON_EXPRESSION__ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT_EXPRESSION__EXTENSION = CommonExpressionsPackage.COMPARISON_EXPRESSION__EXTENSION;
+	int CONSTRAINT_EXPRESSION__EXTENSIONS = CommonExpressionsPackage.COMPARISON_EXPRESSION__EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Comment</b></em>' attribute.
@@ -618,22 +618,22 @@ public interface IlpPackage extends EPackage {
 	int VARIABLE_EXPRESSION = 3;
 
 	/**
-	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_EXPRESSION__ANNOTATION = ExpressionsPackage.EXPRESSION__ANNOTATION;
+	int VARIABLE_EXPRESSION__ANNOTATIONS = ExpressionsPackage.EXPRESSION__ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_EXPRESSION__EXTENSION = ExpressionsPackage.EXPRESSION__EXTENSION;
+	int VARIABLE_EXPRESSION__EXTENSIONS = ExpressionsPackage.EXPRESSION__EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Comment</b></em>' attribute.

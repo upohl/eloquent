@@ -19,11 +19,11 @@ import org.muml.psm.allocation.ilp.ObjectiveGoal;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.muml.psm.allocation.ilp.impl.ObjectiveFunctionExpressionImpl#getGoal <em>Goal</em>}</li>
  *   <li>{@link org.muml.psm.allocation.ilp.impl.ObjectiveFunctionExpressionImpl#getObjectiveFunction <em>Objective Function</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

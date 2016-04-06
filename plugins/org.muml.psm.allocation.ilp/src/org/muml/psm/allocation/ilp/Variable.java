@@ -15,10 +15,10 @@ import org.muml.core.NamedElement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.muml.psm.allocation.ilp.Variable#getDataType <em>Data Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.muml.psm.allocation.ilp.IlpPackage#getVariable()
  * @model

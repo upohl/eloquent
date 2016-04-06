@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?eclipse version="3.0"?><!--
 --><plugin>
+ 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated ilp -->
       <package
-            uri="http://www.fujaba.de/muml/allocation/ilp/0.1.0"
+            uri="http://www.muml.org/psm/allocation/ilp/1.0.0"
             class="org.muml.psm.allocation.ilp.IlpPackage"
             genModel="model/ilp.genmodel"/>
    </extension>

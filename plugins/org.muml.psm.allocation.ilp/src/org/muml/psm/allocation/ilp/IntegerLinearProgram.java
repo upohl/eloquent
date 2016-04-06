@@ -17,12 +17,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.muml.psm.allocation.ilp.IntegerLinearProgram#getVariables <em>Variables</em>}</li>
  *   <li>{@link org.muml.psm.allocation.ilp.IntegerLinearProgram#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link org.muml.psm.allocation.ilp.IntegerLinearProgram#getObjectiveFunction <em>Objective Function</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.muml.psm.allocation.ilp.IlpPackage#getIntegerLinearProgram()
  * @model

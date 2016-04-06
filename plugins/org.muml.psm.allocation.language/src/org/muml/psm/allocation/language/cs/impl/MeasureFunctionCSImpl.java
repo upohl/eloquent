@@ -7,13 +7,10 @@ import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.ocl.xtext.basecs.impl.ModelElementCSImpl;
-import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
 import org.muml.psm.allocation.language.cs.ServiceCS;
-import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 
 /**
  * <!-- begin-user-doc -->
@@ -128,16 +125,6 @@ public class MeasureFunctionCSImpl extends ModelElementCSImpl implements Measure
 				return services != null && !services.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
-		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitMeasureFunctionCS(this);
 	}
 
 } //MeasureFunctionCSImpl

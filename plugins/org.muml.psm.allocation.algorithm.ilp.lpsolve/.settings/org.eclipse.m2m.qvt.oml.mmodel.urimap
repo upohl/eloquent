@@ -3,9 +3,9 @@
   <mapping sourceURI="http://www.fujaba.de/muml/allocation/language/0.1.0/cs" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.ecore"/>
   <mapping sourceURI="http://www.fujaba.de/muml/instance/0.4.0" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml/model/muml.ecore"/>
   <mapping sourceURI="http://www.fujaba.de/muml/allocation/language/0.1.0/oclcontext" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/OCLContext.ecore"/>
-  <mapping sourceURI="http://www.fujaba.de/muml/hardware/hwplatforminstance/1.1/" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.hardware/model/hardware.ecore"/>
+  <mapping sourceURI="http://www.fujaba.de/muml/hardware/hwplatforminstance/1.1/" targetURI="platform:/resource/org.muml.pm.hardware/model/hardware.ecore"/>
   <mapping sourceURI="http://www.fujaba.de/muml/allocation/ilp/0.1.0" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.allocation.ilp/model/ilp.ecore"/>
-  <mapping sourceURI="http://www.fujaba.de/muml/hardware/hwresourceinstance/1.1/" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.hardware/model/hardware.ecore"/>
+  <mapping sourceURI="http://www.fujaba.de/muml/hardware/hwresourceinstance/1.1/" targetURI="platform:/resource/org.muml.pm.hardware/model/hardware.ecore"/>
   <mapping sourceURI="http://www.muml.org/core/1.0.0" targetURI="platform:/resource/org.muml.core/model/core.ecore"/>
   <mapping sourceURI="http://www.storydriven.org/core/expressions/common/0.3.1" targetURI="platform:/resource/org.storydriven.core/model/core.ecore"/>
   <mapping sourceURI="http://www.storydriven.org/core/expressions/0.3.1" targetURI="platform:/resource/org.storydriven.core/model/core.ecore"/>

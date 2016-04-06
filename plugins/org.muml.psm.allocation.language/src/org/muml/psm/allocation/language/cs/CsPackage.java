@@ -44,7 +44,7 @@ public interface CsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.fujaba.de/muml/allocation/language/0.1.0/cs";
+	String eNS_URI = "http://www.muml.org/psm/allocation/language/cs/1.0.0";
 
 	/**
 	 * The package namespace name.
@@ -154,22 +154,22 @@ public interface CsPackage extends EPackage {
 	int SPECIFICATION_CS__OWNED_PACKAGES = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS__OWNED_PACKAGES;
 
 	/**
-	 * The feature id for the '<em><b>Annotation</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__ANNOTATION = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 0;
+	int SPECIFICATION_CS__ANNOTATIONS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__EXTENSION = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 1;
+	int SPECIFICATION_CS__EXTENSIONS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Services</b></em>' containment reference list.

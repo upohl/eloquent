@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated config -->
       <package
-            uri="http://www.fujaba.de/muml/allocation/algorithm/ilp/opt4j/0.1.0/config"
+            uri="http://www.muml.org/psm/allocation/algorithm/ilp/opt4j/config/1.0.0"
             class="org.muml.psm.allocation.algorithm.ilp.opt4j.config.ConfigPackage"
             genModel="model/config.genmodel"/>
    </extension>

@@ -17,11 +17,11 @@ import org.muml.core.expressions.Expression;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.muml.psm.allocation.ilp.ObjectiveFunctionExpression#getGoal <em>Goal</em>}</li>
  *   <li>{@link org.muml.psm.allocation.ilp.ObjectiveFunctionExpression#getObjectiveFunction <em>Objective Function</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.muml.psm.allocation.ilp.IlpPackage#getObjectiveFunctionExpression()
  * @model

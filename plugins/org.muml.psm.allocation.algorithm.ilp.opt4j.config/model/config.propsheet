@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="ASCII"?>
-<de.uni_paderborn.fujaba:PropertyGenerator xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.uni_paderborn.fujaba="http://www.muml.org/ape/1.0.0" xmi:id="_RnViUM1gEeSIgPDefa6ZBw" contributorId="">
+<org.muml:PropertyGenerator xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.muml="http://www.muml.org/ape/1.0.0" xmi:id="_RnViUM1gEeSIgPDefa6ZBw" contributorId="">
   <reconciler xmi:id="_RnViUc1gEeSIgPDefa6ZBw"/>
   <genModel href="config.genmodel#/"/>
-  <plugin xmi:id="_RnViUs1gEeSIgPDefa6ZBw" id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config.edit.properties" name="Properties" vendor="Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn" version="0.5.0.qualifier">
+  <plugin xmi:id="_RnViUs1gEeSIgPDefa6ZBw" id="org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit.properties" name="Properties" vendor="Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn" version="1.0.0.qualifier">
     <requiredBundles>org.eclipse.emf.ecore</requiredBundles>
     <requiredBundles>org.eclipse.core.runtime</requiredBundles>
-    <requiredBundles>de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config.edit</requiredBundles>
-    <requiredBundles>de.uni_paderborn.fujaba.properties.runtime</requiredBundles>
     <requiredBundles>org.eclipse.emf.edit</requiredBundles>
     <requiredBundles>org.eclipse.ui</requiredBundles>
-    <requiredBundles>de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config</requiredBundles>
+    <requiredBundles>org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit</requiredBundles>
+    <requiredBundles>org.muml.psm.allocation.algorithm.ilp.opt4j.config</requiredBundles>
+    <requiredBundles>org.muml.ape.runtime</requiredBundles>
   </plugin>
-  <tabs xmi:id="_RnWJYM1gEeSIgPDefa6ZBw" id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config" name="Opt4j Configuration" afterTab=""/>
+  <tabs xmi:id="_RnWJYM1gEeSIgPDefa6ZBw" id="org.muml.allocation.algorithm.ilp.opt4j.config" name="Opt4j Configuration" afterTab=""/>
   <packages>
     <genPackage href="config.genmodel#//config"/>
     <classes>
       <genClass href="config.genmodel#//config/Opt4jConfiguration"/>
-      <orderedElements xsi:type="de.uni_paderborn.fujaba:Property" tab="_RnWJYM1gEeSIgPDefa6ZBw">
+      <orderedElements xsi:type="org.muml:Property" tab="_RnWJYM1gEeSIgPDefa6ZBw">
         <genFeature href="config.genmodel#//config/Opt4jConfiguration/populationSize"/>
-        <editor xsi:type="de.uni_paderborn.fujaba:SpinnerPropertyEditor"/>
+        <editor xsi:type="org.muml:SpinnerPropertyEditor"/>
       </orderedElements>
-      <orderedElements xsi:type="de.uni_paderborn.fujaba:Property" tab="_RnWJYM1gEeSIgPDefa6ZBw">
+      <orderedElements xsi:type="org.muml:Property" tab="_RnWJYM1gEeSIgPDefa6ZBw">
         <genFeature href="config.genmodel#//config/Opt4jConfiguration/generations"/>
-        <editor xsi:type="de.uni_paderborn.fujaba:SpinnerPropertyEditor"/>
+        <editor xsi:type="org.muml:SpinnerPropertyEditor"/>
       </orderedElements>
-      <orderedElements xsi:type="de.uni_paderborn.fujaba:Property" tab="_RnWJYM1gEeSIgPDefa6ZBw">
+      <orderedElements xsi:type="org.muml:Property" tab="_RnWJYM1gEeSIgPDefa6ZBw">
         <genFeature href="config.genmodel#//config/Opt4jConfiguration/parents"/>
-        <editor xsi:type="de.uni_paderborn.fujaba:SpinnerPropertyEditor"/>
+        <editor xsi:type="org.muml:SpinnerPropertyEditor"/>
       </orderedElements>
-      <orderedElements xsi:type="de.uni_paderborn.fujaba:Property" tab="_RnWJYM1gEeSIgPDefa6ZBw">
+      <orderedElements xsi:type="org.muml:Property" tab="_RnWJYM1gEeSIgPDefa6ZBw">
         <genFeature href="config.genmodel#//config/Opt4jConfiguration/offspring"/>
-        <editor xsi:type="de.uni_paderborn.fujaba:SpinnerPropertyEditor"/>
+        <editor xsi:type="org.muml:SpinnerPropertyEditor"/>
       </orderedElements>
-      <orderedElements xsi:type="de.uni_paderborn.fujaba:Property" tab="_RnWJYM1gEeSIgPDefa6ZBw">
+      <orderedElements xsi:type="org.muml:Property" tab="_RnWJYM1gEeSIgPDefa6ZBw">
         <genFeature href="config.genmodel#//config/Opt4jConfiguration/noDominatedSolutions"/>
-        <editor xsi:type="de.uni_paderborn.fujaba:CheckboxPropertyEditor"/>
+        <editor xsi:type="org.muml:CheckboxPropertyEditor"/>
       </orderedElements>
     </classes>
   </packages>
-</de.uni_paderborn.fujaba:PropertyGenerator>
+</org.muml:PropertyGenerator>
