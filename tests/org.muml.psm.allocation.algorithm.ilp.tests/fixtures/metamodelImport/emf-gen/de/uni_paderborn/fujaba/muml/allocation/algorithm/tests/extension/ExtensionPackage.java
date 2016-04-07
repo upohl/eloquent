@@ -73,7 +73,7 @@ public interface ExtensionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEMORY_EXTENSION__ANNOTATION = CorePackage.EXTENSION__ANNOTATION;
+	int MEMORY_EXTENSION__ANNOTATION = CorePackage.EXTENSION__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Extension</b></em>' containment reference list.
@@ -82,7 +82,7 @@ public interface ExtensionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEMORY_EXTENSION__EXTENSION = CorePackage.EXTENSION__EXTENSION;
+	int MEMORY_EXTENSION__EXTENSION = CorePackage.EXTENSION__EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Base</b></em>' reference.
