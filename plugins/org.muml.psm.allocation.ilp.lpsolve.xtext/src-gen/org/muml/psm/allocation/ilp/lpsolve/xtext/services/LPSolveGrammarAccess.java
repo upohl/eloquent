@@ -39,7 +39,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cVariablesAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cVariablesVariableParserRuleCall_2_0 = (RuleCall)cVariablesAssignment_2.eContents().get(0);
 		
-		////import "platform:/resource/org.storydriven.core/model/core.ecore#//expressions/common" as common
+		////import "platform:/resource/org.muml.core/model/core.ecore#//expressions/common" as common
 		//IntegerLinearProgram returns ilp::IntegerLinearProgram:
 		//	objectiveFunction=ObjectiveFunctionExpression constraints+=ConstraintExpression* variables+=Variable*;
 		public ParserRule getRule() { return rule; }
@@ -705,7 +705,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	////import "platform:/resource/org.storydriven.core/model/core.ecore#//expressions/common" as common
+	////import "platform:/resource/org.muml.core/model/core.ecore#//expressions/common" as common
 	//IntegerLinearProgram returns ilp::IntegerLinearProgram:
 	//	objectiveFunction=ObjectiveFunctionExpression constraints+=ConstraintExpression* variables+=Variable*;
 	public IntegerLinearProgramElements getIntegerLinearProgramAccess() {
