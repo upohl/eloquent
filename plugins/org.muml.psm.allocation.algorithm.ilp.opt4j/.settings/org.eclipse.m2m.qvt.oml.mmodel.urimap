@@ -2,9 +2,9 @@
 <uriMap:MappingContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uriMap="http:///www.eclipse.org/m2m/qvt/oml/MModelUriMap/1.0.0">
   <mapping sourceURI="http://www.muml.org/psm/allocation/language/cs/1.0.0" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.ecore"/>
   <mapping sourceURI="http://www.muml.org/pim/instance/1.0.0" targetURI="platform:/resource/org.muml.pim/model/pim.ecore"/>
-  <mapping sourceURI="http://www.fujaba.de/muml/hardware/hwplatforminstance/1.1/" targetURI="platform:/resource/org.muml.pm.hardware/model/hardware.ecore"/>
+  <mapping sourceURI="http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0" targetURI="platform:/resource/org.muml.pm.hardware/model/hardware.ecore"/>
   <mapping sourceURI="http://www.muml.org/psm/allocation/ilp/1.0.0" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.allocation.ilp/model/ilp.ecore"/>
-  <mapping sourceURI="http://www.fujaba.de/muml/hardware/hwresourceinstance/1.1/" targetURI="platform:/resource/org.muml.pm.hardware/model/hardware.ecore"/>
+  <mapping sourceURI="http://www.muml.org/pm/hardware/hwresourceinstance/1.0.0" targetURI="platform:/resource/org.muml.pm.hardware/model/hardware.ecore"/>
   <mapping sourceURI="http://www.muml.org/psm/allocation/1.0.0" targetURI="platform:/resource/org.muml.psm/model/psm.ecore"/>
   <mapping sourceURI="http://www.muml.org/psm/allocation/algorithm/ilp/opt4j/config/1.0.0" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config/model/config.ecore"/>
 </uriMap:MappingContainer>

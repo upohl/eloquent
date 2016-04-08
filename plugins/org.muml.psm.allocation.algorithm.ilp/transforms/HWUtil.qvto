@@ -1,7 +1,7 @@
 import VariableHelper;
 
-modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.1/');
-modeltype hwrinstance uses hardware::hwresourceinstance('http://www.fujaba.de/muml/hardware/hwresourceinstance/1.1/');
+modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0');
+modeltype hwrinstance uses hardware::hwresourceinstance('http://www.muml.org/pm/hardware/hwresourceinstance/1.0.0');
 
 library HWUtil;
 

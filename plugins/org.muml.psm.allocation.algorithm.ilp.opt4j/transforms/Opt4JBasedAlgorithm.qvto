@@ -3,7 +3,7 @@ import Opt4J;
 
 modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
 modeltype instance uses muml::instance('http://www.muml.org/pim/instance/1.0.0');
-modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.1/');
+modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
 modeltype allocation uses psm::allocation('http://www.muml.org/psm/allocation/1.0.0');
 modeltype opt4jconfig uses config('http://www.muml.org/psm/allocation/algorithm/ilp/opt4j/config/1.0.0');
