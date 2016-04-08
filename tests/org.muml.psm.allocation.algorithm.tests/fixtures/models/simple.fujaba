@@ -4,15 +4,15 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:component="http://www.fujaba.de/muml/component/0.4.0"
+    xmlns:component="http://www.muml.org/pim/component/1.0.0"
     xmlns:extension="http://example.com/extension"
     xmlns:hwplatform="http://www.fujaba.de/muml/hardware/hwplatform/1.1/"
     xmlns:hwplatforminstance="http://www.fujaba.de/muml/hardware/hwplatforminstance/1.1/"
     xmlns:hwresource="http://www.fujaba.de/muml/hardware/hwresource/1.1/"
     xmlns:hwresourceinstance="http://www.fujaba.de/muml/hardware/hwresourceinstance/1.1/"
-    xmlns:instance="http://www.fujaba.de/muml/instance/0.4.0"
+    xmlns:instance="http://www.muml.org/pim/instance/1.0.0"
     xmlns:modelinstance="http://www.fujaba.de/modelinstance/0.4.0"
-    xmlns:types="http://www.fujaba.de/muml/types/0.4.0"
+    xmlns:types="http://www.muml.org/pim/types/1.0.0"
     xmi:id="_YcQdQPY8EeOqWs4IacUwuQ">
   <categories
       xmi:id="_wbmdQewLEeSuJ6Pj2Em3zQ"

@@ -4,7 +4,7 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:allocation="http://www.fujaba.de/muml/psm/allocation/0.4.0/"
-    xmlns:instance="http://www.fujaba.de/muml/instance/0.4.0">
+    xmlns:instance="http://www.muml.org/pim/instance/1.0.0">
   <allocations>
     <componentInstance
         xsi:type="instance:AtomicComponentInstance"
