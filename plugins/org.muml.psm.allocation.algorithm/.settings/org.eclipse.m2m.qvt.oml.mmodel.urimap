@@ -7,8 +7,8 @@
   <mapping sourceURI="http://www.muml.org/psm/allocation/ilp/1.0.0" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.allocation.ilp/model/ilp.ecore"/>
   <mapping sourceURI="http://www.fujaba.de/muml/hardware/hwresourceinstance/1.0/" targetURI="platform:/resource/org.muml.pm.hardware/model/hardware.ecore"/>
   <mapping sourceURI="http://www.muml.org/core/1.0.0" targetURI="platform:/resource/org.muml.core/model/core.ecore"/>
-  <mapping sourceURI="http://www.storydriven.org/core/expressions/common/0.3.1" targetURI="platform:/resource/org.muml.core/model/core.ecore"/>
-  <mapping sourceURI="http://www.storydriven.org/core/expressions/0.3.1" targetURI="platform:/resource/org.muml.core/model/core.ecore"/>
+  <mapping sourceURI="http://www.muml.org/core/expressions/common/1.0.0" targetURI="platform:/resource/org.muml.core/model/core.ecore"/>
+  <mapping sourceURI="http://www.muml.org/core/expressions/1.0.0" targetURI="platform:/resource/org.muml.core/model/core.ecore"/>
   <mapping sourceURI="http://ww.eclipse.org/OCL/Values" targetURI="platform:/resource/org.eclipse.ocl.examples.domain/model/Values.ecore"/>
   <mapping sourceURI="http://www.muml.org/psm/allocation/1.0.0" targetURI="platform:/resource/org.muml.psm/model/psm.ecore"/>
 </uriMap:MappingContainer>

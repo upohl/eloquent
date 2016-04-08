@@ -1,4 +1,4 @@
-modeltype core uses core('http://www.storydriven.org/core/0.3.1');
+modeltype core uses core('http://www.muml.org/core/1.0.0');
 
 library Util;
 
