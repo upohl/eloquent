@@ -13,7 +13,7 @@
                   nsURI="http://www.fujaba.de/muml/allocation/ilp/0.1.0">
             </metamodel>
             <metamodel
-                  nsURI="http://www.fujaba.de/muml/allocation/algorithm/ilp/opt4j/0.1.0/config">
+                  nsURI="http://www.muml.org/psm/allocation/algorithm/ilp/opt4j/config/1.0.0">
             </metamodel>
          </library>
       </unit>

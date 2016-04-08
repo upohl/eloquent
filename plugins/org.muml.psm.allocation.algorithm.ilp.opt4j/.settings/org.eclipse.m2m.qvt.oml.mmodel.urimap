@@ -6,5 +6,5 @@
   <mapping sourceURI="http://www.fujaba.de/muml/allocation/ilp/0.1.0" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.allocation.ilp/model/ilp.ecore"/>
   <mapping sourceURI="http://www.fujaba.de/muml/hardware/hwresourceinstance/1.1/" targetURI="platform:/resource/org.muml.pm.hardware/model/hardware.ecore"/>
   <mapping sourceURI="http://www.fujaba.de/muml/psm/allocation/0.4.0/" targetURI="platform:/resource/org.muml.psm/model/psm.ecore"/>
-  <mapping sourceURI="http://www.fujaba.de/muml/allocation/algorithm/ilp/opt4j/0.1.0/config" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config/model/config.ecore"/>
+  <mapping sourceURI="http://www.muml.org/psm/allocation/algorithm/ilp/opt4j/config/1.0.0" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config/model/config.ecore"/>
 </uriMap:MappingContainer>
