@@ -13,7 +13,7 @@ public class AbstractLPSolveValidator extends org.eclipse.xtext.validation.Abstr
 	@Override
 	protected List<EPackage> getEPackages() {
 	    List<EPackage> result = new ArrayList<EPackage>();
-	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.fujaba.de/muml/allocation/ilp/0.1.0"));
+	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.muml.org/psm/allocation/ilp/1.0.0"));
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.storydriven.org/core/expressions/0.3.1"));
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.storydriven.org/core/expressions/common/0.3.1"));
 		return result;

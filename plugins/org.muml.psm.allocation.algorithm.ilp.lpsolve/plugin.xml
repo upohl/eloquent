@@ -10,7 +10,7 @@
                class="org.muml.psm.allocation.algorithm.ilp.lpsolve.LPSolve"
                name="LPSolveBlackbox">
             <metamodel
-                  nsURI="http://www.fujaba.de/muml/allocation/ilp/0.1.0">
+                  nsURI="http://www.muml.org/psm/allocation/ilp/1.0.0">
             </metamodel>
          </library>
       </unit>
