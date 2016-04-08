@@ -1,7 +1,7 @@
 import AbstractILPBasedAlgorithm;
 import Opt4J;
 
-modeltype allocationSpecification uses cs('http://www.fujaba.de/muml/allocation/language/0.1.0/cs');
+modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
 modeltype instance uses muml::instance('http://www.muml.org/pim/instance/1.0.0');
 modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.1/');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');

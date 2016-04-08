@@ -13,7 +13,7 @@ public class AbstractAllocationSpecificationLanguageJavaValidator extends org.ec
 	@Override
 	protected List<EPackage> getEPackages() {
 	    List<EPackage> result = new ArrayList<EPackage>();
-	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.fujaba.de/muml/allocation/language/0.1.0/cs"));
+	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.muml.org/psm/allocation/language/cs/1.0.0"));
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.eclipse.org/ocl/2015/CompleteOCLCS"));
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.eclipse.org/ocl/2015/BaseCS"));
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.eclipse.org/ocl/2015/EssentialOCLCS"));

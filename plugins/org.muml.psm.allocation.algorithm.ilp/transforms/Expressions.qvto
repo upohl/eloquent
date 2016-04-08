@@ -3,7 +3,7 @@ import VariableHelper;
 import Sort;
 import TupleAccessor;
 
-modeltype allocationSpecification uses cs('http://www.fujaba.de/muml/allocation/language/0.1.0/cs');
+modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
 modeltype core uses core('http://www.storydriven.org/core/0.3.1');
 modeltype expressions uses core::expressions('http://www.storydriven.org/core/expressions/0.3.1');
 modeltype common uses core::expressions::common('http://www.storydriven.org/core/expressions/common/0.3.1');

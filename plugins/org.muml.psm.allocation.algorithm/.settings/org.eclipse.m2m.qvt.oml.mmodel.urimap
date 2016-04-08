@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <uriMap:MappingContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uriMap="http:///www.eclipse.org/m2m/qvt/oml/MModelUriMap/1.0.0">
-  <mapping sourceURI="http://www.fujaba.de/muml/allocation/language/0.1.0/cs" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.ecore"/>
+  <mapping sourceURI="http://www.muml.org/psm/allocation/language/cs/1.0.0" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.ecore"/>
   <mapping sourceURI="http://www.muml.org/pim/instance/1.0.0" targetURI="platform:/resource/org.muml.pim/model/pim.ecore"/>
   <mapping sourceURI="http://www.fujaba.de/muml/allocation/language/0.1.0/oclcontext" targetURI="platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/OCLContext.ecore"/>
   <mapping sourceURI="http://www.fujaba.de/muml/hardware/hwplatforminstance/1.0/" targetURI="platform:/resource/org.muml.pm.hardware/model/hardware.ecore"/>

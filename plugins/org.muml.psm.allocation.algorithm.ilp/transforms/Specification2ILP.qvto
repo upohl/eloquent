@@ -8,7 +8,7 @@ import ObjectiveFunction;
 import Util;
 import Variables;
 
-modeltype allocationSpecification uses cs('http://www.fujaba.de/muml/allocation/language/0.1.0/cs');
+modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
 modeltype oclcontext uses oclcontext('http://www.fujaba.de/muml/allocation/language/0.1.0/oclcontext');
 //modeltype ecore uses ecore('http://www.eclipse.org/emf/2002/Ecore');
 modeltype core uses core('http://www.storydriven.org/core/0.3.1');
