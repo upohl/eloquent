@@ -11,7 +11,7 @@
     xmlns:hwresource="http://www.muml.org/pm/hardware/hwresource/1.0.0"
     xmlns:hwresourceinstance="http://www.muml.org/pm/hardware/hwresourceinstance/1.0.0"
     xmlns:instance="http://www.muml.org/pim/instance/1.0.0"
-    xmlns:modelinstance="http://www.fujaba.de/modelinstance/0.4.0"
+    xmlns:modelinstance="http://www.muml.org/modelinstance/1.0.0"
     xmlns:types="http://www.muml.org/pim/types/1.0.0"
     xmi:id="_YcQdQPY8EeOqWs4IacUwuQ">
   <categories
