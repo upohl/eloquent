@@ -4,7 +4,7 @@
 	import 'http://www.muml.org/pim/instance/1.0.0'
 	import 'http://www.muml.org/pim/connector/1.0.0'
 	import 'http://www.muml.org/pim/valuetype/1.0.0'
-	import 'http://www.fujaba.de/muml/psm/properties/0.4.0/'
+	import 'http://www.muml.org/psm/properties/1.0.0'
 	import 'http://www.muml.org/psm/allocation/language/oclcontext/1.0.0'
 	import 'http://www.storydriven.org/core/expressions/common/0.3.1'
 	

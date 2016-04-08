@@ -8,7 +8,7 @@ modeltype instance uses muml::instance('http://www.muml.org/pim/instance/1.0.0')
 modeltype hwpinstance uses hardware::hwplatforminstance('http://www.fujaba.de/muml/hardware/hwplatforminstance/1.1/');
 modeltype hwrinstance uses hardware::hwresourceinstance('http://www.fujaba.de/muml/hardware/hwresourceinstance/1.1/');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
-modeltype allocation uses psm::allocation('http://www.fujaba.de/muml/psm/allocation/0.4.0/');
+modeltype allocation uses psm::allocation('http://www.muml.org/psm/allocation/1.0.0');
 
 /* Abstract library for ILP-based algorithms */
 library AbstractILPBasedAlgorithm;

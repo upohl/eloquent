@@ -9,5 +9,5 @@
   <mapping sourceURI="http://www.muml.org/core/1.0.0" targetURI="platform:/resource/org.muml.core/model/core.ecore"/>
   <mapping sourceURI="http://www.storydriven.org/core/expressions/common/0.3.1" targetURI="platform:/resource/org.muml.core/model/core.ecore"/>
   <mapping sourceURI="http://www.storydriven.org/core/expressions/0.3.1" targetURI="platform:/resource/org.muml.core/model/core.ecore"/>
-  <mapping sourceURI="http://www.fujaba.de/muml/psm/allocation/0.4.0/" targetURI="platform:/resource/org.muml.psm/model/psm.ecore"/>
+  <mapping sourceURI="http://www.muml.org/psm/allocation/1.0.0" targetURI="platform:/resource/org.muml.psm/model/psm.ecore"/>
 </uriMap:MappingContainer>

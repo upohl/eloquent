@@ -3,7 +3,7 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:allocation="http://www.fujaba.de/muml/psm/allocation/0.4.0/"
+    xmlns:allocation="http://www.muml.org/psm/allocation/1.0.0"
     xmlns:instance="http://www.muml.org/pim/instance/1.0.0">
   <allocations>
     <componentInstance
