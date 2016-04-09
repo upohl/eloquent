@@ -349,7 +349,7 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
 						URI.createURI("dummy://dummy.ecore"));
 				resource.getContents().add(configuration);
 				// just to make APE happy (otherwise APE will not modify the object
-				// (see de.uni_paderborn.fujaba.properties.runtime.editors.AbstractStructuralFeaturePropertyEditor.setValue))
+				// (see org.muml.ape.runtime.editors.AbstractStructuralFeaturePropertyEditor.setValue))
 				TransactionalEditingDomain.Factory.INSTANCE.createEditingDomain(resSet);
 			}
 			setInput(configuration);
