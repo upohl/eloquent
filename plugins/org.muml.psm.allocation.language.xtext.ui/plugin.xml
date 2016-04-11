@@ -395,7 +395,7 @@
   <extension
         point="org.eclipse.ui.views">
      <view
-           category="de.uni_paderborn.fujaba.muml.views"
+           category="org.muml.views"
            class="de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationLanguageExecutableExtensionFactory:de.uni_paderborn.fujaba.muml.allocation.language.ui.view.AllocationSpecificationLanguageEvaluationView"
            id="de.uni_paderborn.fujaba.muml.allocation.language.xtext.ui.view.evaluation"
            name="ASL Evaluation View"

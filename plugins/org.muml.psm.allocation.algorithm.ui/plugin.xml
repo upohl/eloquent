@@ -65,7 +65,7 @@
    <extension
          point="org.eclipse.ui.exportWizards">
       <wizard
-            category="de.uni_paderborn.fujaba.export"
+            category="org.muml.core.export"
             class="org.muml.psm.allocation.algorithm.ui.wizard.AllocationWizard"
             id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.wizard.AllocationWizard"
             name="Allocation">
