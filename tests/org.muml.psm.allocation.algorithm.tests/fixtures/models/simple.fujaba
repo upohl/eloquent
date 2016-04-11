@@ -75,7 +75,7 @@
   </categories>
   <categories
       xmi:id="_YcXK9_Y8EeOqWs4IacUwuQ"
-      key="de.uni_paderborn.fujaba.muml.instance.category"
+      key="org.muml.pim.instance.category"
       name="instance">
     <modelElements
         xsi:type="instance:ComponentInstanceConfiguration"
