@@ -1,5 +1,5 @@
 modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
-modeltype instance uses muml::instance('http://www.muml.org/pim/instance/1.0.0');
+modeltype instance uses pim::instance('http://www.muml.org/pim/instance/1.0.0');
 modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0');
 
 // This library provides queries so that different transformations/libraries
