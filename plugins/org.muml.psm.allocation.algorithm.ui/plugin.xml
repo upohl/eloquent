@@ -20,7 +20,7 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="popup:de.uni_paderborn.fujaba">
+            locationURI="popup:org.muml">
          <command
                commandId="org.muml.psm.allocation.algorithm.ui.OpenAllocationWizardCommand"
                label="Create Allocation"
@@ -48,7 +48,7 @@
       </menuContribution>
       <menuContribution
             allPopups="false"
-            locationURI="popup:de.uni_paderborn.fujaba">
+            locationURI="popup:org.muml">
          <command
                commandId="org.muml.psm.allocation.algorithm.ui.CreateASLFileCommand"
                label="Create Allocation Specification"
