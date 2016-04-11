@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-   <extension-point id="de.uni_paderborn.fujaba.muml.allocation.algorithm.strategy" name="AllocationComputationStrategy" schema="schema/de.uni_paderborn.fujaba.muml.allocation.algorithm.strategy.exsd"/>
+   <extension-point id="org.muml.psm.allocation.algorithm.strategy" name="AllocationComputationStrategy" schema="schema/org.muml.psm.allocation.algorithm.strategy.exsd"/>
 </plugin>

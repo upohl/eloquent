@@ -240,7 +240,7 @@
   </categories>
   <categories
       xmi:id="_YcXK-PY8EeOqWs4IacUwuQ"
-      key="de.uni_paderborn.fujaba.muml.components.category"
+      key="org.muml.pim.components.category"
       name="component">
     <modelElements
         xsi:type="component:StaticAtomicComponent"
@@ -285,11 +285,11 @@
   </categories>
   <categories
       xmi:id="_YcXK-fY8EeOqWs4IacUwuQ"
-      key="de.uni_paderborn.fujaba.muml.protocol.category"
+      key="org.muml.pim.protocol.category"
       name="protocol"/>
   <categories
       xmi:id="_YcXK-vY8EeOqWs4IacUwuQ"
-      key="de.uni_paderborn.fujaba.muml.messagetype.category"
+      key="org.muml.pim.messagetype.category"
       name="msgtype"/>
   <categories
       xmi:id="_YcXK-_Y8EeOqWs4IacUwuQ"
@@ -297,7 +297,7 @@
       name="realtimestatechart"/>
   <categories
       xmi:id="_EbXUQDFNEeWcy9nhHDkKYg"
-      key="de.uni_paderborn.fujaba.muml.hardware.resource.category"
+      key="org.muml.pm.hardware.hwresource.category"
       name="resource">
     <modelElements
         xsi:type="hwresourceinstance:ResourceInstanceRepository"
@@ -325,7 +325,7 @@
       name="dummy"/>
   <categories
       xmi:id="_W_hzADFNEeWcy9nhHDkKYg"
-      key="de.uni_paderborn.fujaba.muml.hardware.hwplatform.category"
+      key="org.muml.pm.hardware.hwplatform.category"
       name="hwplatform">
     <modelElements
         xsi:type="hwplatforminstance:HWPlatformInstanceConfiguration"

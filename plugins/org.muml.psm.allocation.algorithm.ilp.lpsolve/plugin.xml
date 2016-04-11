@@ -5,7 +5,7 @@
          point="org.eclipse.m2m.qvt.oml.javaBlackboxUnits">
       <unit
             name="LPSolveBlackboxUnit"
-            namespace="de.uni_paderborn.fujaba.muml.allocation.algorithm.lpsolve">
+            namespace="org.muml.psm.allocation.algorithm.lpsolve">
          <library
                class="org.muml.psm.allocation.algorithm.ilp.lpsolve.LPSolve"
                name="LPSolveBlackbox">
@@ -16,7 +16,7 @@
       </unit>
    </extension>
    <extension
-         point="de.uni_paderborn.fujaba.muml.allocation.algorithm.strategy">
+         point="org.muml.psm.allocation.algorithm.strategy">
       <strategy
             class="org.muml.psm.allocation.algorithm.ilp.lpsolve.LPSolveAllocationComputationStrategy"
             description="ILP-based allocation computation strategy (using lpsolve)"

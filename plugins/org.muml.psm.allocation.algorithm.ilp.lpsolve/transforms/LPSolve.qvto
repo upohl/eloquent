@@ -1,6 +1,5 @@
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.lpsolve.LPSolveBlackboxUnit;
+import org.muml.psm.allocation.algorithm.lpsolve.LPSolveBlackboxUnit;
 import SolverConstants;
-
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
 
 library LPSolve;

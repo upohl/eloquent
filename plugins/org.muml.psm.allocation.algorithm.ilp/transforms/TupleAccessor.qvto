@@ -1,4 +1,4 @@
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.ocl.TupleAccessorBlackboxUnit;
+import org.muml.psm.allocation.algorithm.ocl.TupleAccessorBlackboxUnit;
 import Util;
 
 modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');

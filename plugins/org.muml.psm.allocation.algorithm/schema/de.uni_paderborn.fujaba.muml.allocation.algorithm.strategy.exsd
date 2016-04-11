@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="de.uni_paderborn.fujaba.muml.allocation.algorithm" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.muml.psm.allocation.algorithm" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="de.uni_paderborn.fujaba.muml.allocation.algorithm" id="de.uni_paderborn.fujaba.muml.allocation.algorithm.strategy" name="AllocationComputationStrategy"/>
+         <meta.schema plugin="org.muml.psm.allocation.algorithm" id="org.muml.psm.allocation.algorithm.strategy" name="AllocationComputationStrategy"/>
       </appinfo>
       <documentation>
          The AllocationComputationStrategy extension point allows plug-ins to
@@ -62,7 +62,7 @@ contribute their own allocation computation strategies.
 interface.
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":de.uni_paderborn.fujaba.muml.allocation.algorithm.main.IAllocationComputationStrategy"/>
+                  <meta.attribute kind="java" basedOn=":org.muml.psm.allocation.algorithm.main.IAllocationComputationStrategy"/>
                </appinfo>
             </annotation>
          </attribute>

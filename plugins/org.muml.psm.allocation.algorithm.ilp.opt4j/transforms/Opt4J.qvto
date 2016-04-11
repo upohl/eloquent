@@ -1,4 +1,4 @@
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.Opt4JBlackboxUnit;
+import org.muml.psm.allocation.algorithm.ilp.opt4j.Opt4JBlackboxUnit;
 import SolverConstants;
 
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
