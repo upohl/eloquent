@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
 
-// all the good bits are taken from de.uni_paderborn.fujaba.muml.verification.uppaal.tests
+// all the good bits are taken from org.muml.uppaal.adapter.tests
 
 // TODO: document me
 
