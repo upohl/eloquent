@@ -82,7 +82,7 @@ class EvaluationContextWizard extends AbstractFujabaExportWizard {
 	}
 	
 	override wizardGetId() {
-		"de.uni_paderborn.fujaba.muml.allocation.language.ui.view.EvaluationContextWizard"
+		"org.muml.psm.allocation.language.ui.view.EvaluationContextWizard"
 	}
 	
 	def getComponentInstanceConfiguration() {

@@ -10,7 +10,7 @@ import com.google.inject.Injector;
 public class LPSolveUiInjectorProvider implements IInjectorProvider {
 	
 	public Injector getInjector() {
-		return org.muml.psm.allocation.ilp.lpsolve.xtext.ui.internal.LPSolveActivator.getInstance().getInjector("de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.LPSolve");
+		return org.muml.psm.allocation.ilp.lpsolve.xtext.ui.internal.LPSolveActivator.getInstance().getInjector("org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve");
 	}
 	
 }

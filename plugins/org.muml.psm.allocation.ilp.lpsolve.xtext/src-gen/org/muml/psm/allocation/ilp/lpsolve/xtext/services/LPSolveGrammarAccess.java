@@ -681,7 +681,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
 		Grammar grammar = grammarProvider.getGrammar(this);
 		while (grammar != null) {
-			if ("de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.LPSolve".equals(grammar.getName())) {
+			if ("org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve".equals(grammar.getName())) {
 				return grammar;
 			}
 			List<Grammar> grammars = grammar.getUsedGrammars();

@@ -16,7 +16,7 @@ class Opt4JBasedAlgorithmTest extends QVToBasedAlgorithmTest {
 	@Parameters
 	def static Collection<Object[]> getTestData() {
 		getTestData(
-			"platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j/transforms/Opt4JBasedAlgorithm.qvto"
+			"platform:/plugin/org.muml.psm.allocation.algorithm.ilp.opt4j/transforms/Opt4JBasedAlgorithm.qvto"
 		)
 	}
 	

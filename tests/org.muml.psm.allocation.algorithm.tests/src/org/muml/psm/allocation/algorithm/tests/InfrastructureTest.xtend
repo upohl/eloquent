@@ -9,7 +9,7 @@ import org.muml.psm.allocation.algorithm.tests.util.TestDataUtil
 
 @RunWith(value = typeof(Parameterized))
 class InfrastructureTest extends QVToTransformationSingleOutExtentTest {
-	public static final String uriPrefix = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.tests/fixtures/infrastructure/"
+	public static final String uriPrefix = "platform:/plugin/org.muml.psm.allocation.algorithm.tests/fixtures/infrastructure/"
 	
 	new(String expectedURI, String transformationURI, String... inputObjectURIs) {
 		super(expectedURI, transformationURI, inputObjectURIs)

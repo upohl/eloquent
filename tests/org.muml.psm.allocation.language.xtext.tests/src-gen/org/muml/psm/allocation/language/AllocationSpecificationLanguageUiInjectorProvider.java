@@ -11,7 +11,7 @@ public class AllocationSpecificationLanguageUiInjectorProvider implements IInjec
 	
 	@Override
 	public Injector getInjector() {
-		return org.muml.psm.allocation.language.xtext.ui.internal.AllocationSpecificationLanguageActivator.getInstance().getInjector("de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecificationLanguage");
+		return org.muml.psm.allocation.language.xtext.ui.internal.AllocationSpecificationLanguageActivator.getInstance().getInjector("org.muml.psm.allocation.language.AllocationSpecificationLanguage");
 	}
 	
 }

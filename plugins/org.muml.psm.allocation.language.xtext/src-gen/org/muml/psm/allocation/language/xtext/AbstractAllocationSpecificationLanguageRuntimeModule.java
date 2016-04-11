@@ -11,7 +11,7 @@ import com.google.inject.Binder;
 import com.google.inject.name.Names;
 
 /**
- * Manual modifications go to {de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecificationLanguageRuntimeModule}
+ * Manual modifications go to {org.muml.psm.allocation.language.AllocationSpecificationLanguageRuntimeModule}
  */
 @SuppressWarnings("all")
 public abstract class AbstractAllocationSpecificationLanguageRuntimeModule extends org.eclipse.xtext.common.types.DefaultCommonTypesRuntimeModule {
@@ -25,7 +25,7 @@ public abstract class AbstractAllocationSpecificationLanguageRuntimeModule exten
 	}
 	
 	public void configureLanguageName(Binder binder) {
-		binder.bind(String.class).annotatedWith(Names.named(Constants.LANGUAGE_NAME)).toInstance("de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecificationLanguage");
+		binder.bind(String.class).annotatedWith(Names.named(Constants.LANGUAGE_NAME)).toInstance("org.muml.psm.allocation.language.AllocationSpecificationLanguage");
 	}
 	
 	public void configureFileExtensions(Binder binder) {
@@ -208,7 +208,7 @@ public abstract class AbstractAllocationSpecificationLanguageRuntimeModule exten
 		return org.eclipse.ocl.xtext.base.services.BaseValueConverterService.class;
 	}
 
-	// contributed by de.uni_paderborn.fujaba.muml.allocation.language.build.GuiceBindingFragment
+	// contributed by org.muml.psm.allocation.language.build.GuiceBindingFragment
 	public Class<? extends org.eclipse.xtext.resource.XtextResource> bindXtextResource() {
 		return org.muml.psm.allocation.language.xtext.resource.SpecificationCSResource.class;
 	}

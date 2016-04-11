@@ -6,7 +6,7 @@
       <!-- @generated extension -->
       <package
             uri="http://example.com/extension"
-            class="de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.ExtensionPackage"
+            class="org.muml.psm.allocation.algorithm.tests.extension.ExtensionPackage"
             genModel="fixtures/metamodelImport/model/extension.genmodel"/>
    </extension>
 

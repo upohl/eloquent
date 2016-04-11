@@ -843,7 +843,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
 		Grammar grammar = grammarProvider.getGrammar(this);
 		while (grammar != null) {
-			if ("de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecificationLanguage".equals(grammar.getName())) {
+			if ("org.muml.psm.allocation.language.AllocationSpecificationLanguage".equals(grammar.getName())) {
 				return grammar;
 			}
 			List<Grammar> grammars = grammar.getUsedGrammars();

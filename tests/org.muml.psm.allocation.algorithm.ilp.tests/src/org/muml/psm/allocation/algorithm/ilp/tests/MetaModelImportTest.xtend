@@ -9,7 +9,7 @@ import org.muml.psm.allocation.algorithm.tests.util.TestDataUtil
 
 @RunWith(value = typeof(Parameterized))
 class MetaModelImportTest extends QVToTransformationSingleOutExtentTest {
-	public static final String uriPrefix = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.tests/fixtures/metamodelImport/"
+	public static final String uriPrefix = "platform:/plugin/org.muml.psm.allocation.algorithm.ilp.tests/fixtures/metamodelImport/"
 	
 	new(String expectedURI, String transformationURI, String... inputObjectURIs) {
 		super(expectedURI, transformationURI, inputObjectURIs)
@@ -19,7 +19,7 @@ class MetaModelImportTest extends QVToTransformationSingleOutExtentTest {
 	def static Collection<Object[]> getTestData() {
 		TestDataUtil.createTestData(2,
 				#[uriPrefix + "metamodelImport.lp",
-				  "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp/transforms/Specification2ILP.qvto",
+				  "platform:/plugin/org.muml.psm.allocation.algorithm.ilp/transforms/Specification2ILP.qvto",
 				  uriPrefix + "metamodelImport.allocation_specification",
 				  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.1/@modelElements.3",
 				  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0/@embeddedHPIC"])

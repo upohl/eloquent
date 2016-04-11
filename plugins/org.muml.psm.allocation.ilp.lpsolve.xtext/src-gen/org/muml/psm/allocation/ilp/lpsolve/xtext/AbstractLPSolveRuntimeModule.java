@@ -12,7 +12,7 @@ import com.google.inject.Binder;
 import com.google.inject.name.Names;
 
 /**
- * Manual modifications go to {de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.LPSolveRuntimeModule}
+ * Manual modifications go to {org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolveRuntimeModule}
  */
  @SuppressWarnings("all")
 public abstract class AbstractLPSolveRuntimeModule extends DefaultRuntimeModule {
@@ -26,7 +26,7 @@ public abstract class AbstractLPSolveRuntimeModule extends DefaultRuntimeModule 
 	}
 	
 	public void configureLanguageName(Binder binder) {
-		binder.bind(String.class).annotatedWith(Names.named(Constants.LANGUAGE_NAME)).toInstance("de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.LPSolve");
+		binder.bind(String.class).annotatedWith(Names.named(Constants.LANGUAGE_NAME)).toInstance("org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve");
 	}
 	
 	public void configureFileExtensions(Binder binder) {

@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: de.uni_paderborn.fujaba.muml.allocation.language.xtext
+Bundle-Name: org.muml.psm.allocation.language.xtext
 Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn, Germany
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: org.muml.psm.allocation.language.xtext;singleton:=true

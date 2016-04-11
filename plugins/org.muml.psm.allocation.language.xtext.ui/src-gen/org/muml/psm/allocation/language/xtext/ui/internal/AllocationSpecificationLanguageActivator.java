@@ -23,7 +23,7 @@ import com.google.inject.Module;
  */
 public class AllocationSpecificationLanguageActivator extends AbstractUIPlugin {
 	
-	public static final String DE_UNI_PADERBORN_FUJABA_MUML_ALLOCATION_LANGUAGE_ALLOCATIONSPECIFICATIONLANGUAGE = "de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecificationLanguage";
+	public static final String DE_UNI_PADERBORN_FUJABA_MUML_ALLOCATION_LANGUAGE_ALLOCATIONSPECIFICATIONLANGUAGE = "org.muml.psm.allocation.language.AllocationSpecificationLanguage";
 	
 	private static final Logger logger = Logger.getLogger(AllocationSpecificationLanguageActivator.class);
 	

@@ -7,7 +7,7 @@ package org.muml.psm.allocation.language.xtext.ui;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 /**
- * Manual modifications go to {de.uni_paderborn.fujaba.muml.allocation.language.ui.AllocationSpecificationLanguageUiModule}
+ * Manual modifications go to {org.muml.psm.allocation.language.ui.AllocationSpecificationLanguageUiModule}
  */
 @SuppressWarnings("all")
 public abstract class AbstractAllocationSpecificationLanguageUiModule extends org.eclipse.xtext.common.types.ui.DefaultCommonTypesUiModule {

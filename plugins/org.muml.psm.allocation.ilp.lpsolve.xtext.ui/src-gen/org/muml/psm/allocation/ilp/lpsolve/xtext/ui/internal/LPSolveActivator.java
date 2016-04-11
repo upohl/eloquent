@@ -23,7 +23,7 @@ import com.google.inject.Module;
  */
 public class LPSolveActivator extends AbstractUIPlugin {
 	
-	public static final String DE_UNI_PADERBORN_FUJABA_MUML_ALLOCATION_ILP_LPSOLVE_XTEXT_LPSOLVE = "de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.LPSolve";
+	public static final String DE_UNI_PADERBORN_FUJABA_MUML_ALLOCATION_ILP_LPSOLVE_XTEXT_LPSOLVE = "org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve";
 	
 	private static final Logger logger = Logger.getLogger(LPSolveActivator.class);
 	

@@ -1,6 +1,6 @@
 /**
  */
-package de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.impl;
+package org.muml.psm.allocation.algorithm.tests.extension.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -8,9 +8,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.muml.core.CorePackage;
 
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.ExtensionFactory;
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.ExtensionPackage;
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.MemoryExtension;
+import org.muml.psm.allocation.algorithm.tests.extension.ExtensionFactory;
+import org.muml.psm.allocation.algorithm.tests.extension.ExtensionPackage;
+import org.muml.psm.allocation.algorithm.tests.extension.MemoryExtension;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +37,7 @@ public class ExtensionPackageImpl extends EPackageImpl implements ExtensionPacka
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.ExtensionPackage#eNS_URI
+	 * @see org.muml.psm.allocation.algorithm.tests.extension.ExtensionPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */

@@ -1,6 +1,6 @@
 /**
  */
-package de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension;
+package org.muml.psm.allocation.algorithm.tests.extension;
 
 import org.muml.core.Extension;
 
@@ -12,11 +12,11 @@ import org.muml.core.Extension;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.MemoryExtension#getAmountNeeded <em>Amount Needed</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.algorithm.tests.extension.MemoryExtension#getAmountNeeded <em>Amount Needed</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.ExtensionPackage#getMemoryExtension()
+ * @see org.muml.psm.allocation.algorithm.tests.extension.ExtensionPackage#getMemoryExtension()
  * @model
  * @generated
  */
@@ -31,14 +31,14 @@ public interface MemoryExtension extends Extension {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Amount Needed</em>' attribute.
 	 * @see #setAmountNeeded(int)
-	 * @see de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.ExtensionPackage#getMemoryExtension_AmountNeeded()
+	 * @see org.muml.psm.allocation.algorithm.tests.extension.ExtensionPackage#getMemoryExtension_AmountNeeded()
 	 * @model required="true"
 	 * @generated
 	 */
 	int getAmountNeeded();
 
 	/**
-	 * Sets the value of the '{@link de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.MemoryExtension#getAmountNeeded <em>Amount Needed</em>}' attribute.
+	 * Sets the value of the '{@link org.muml.psm.allocation.algorithm.tests.extension.MemoryExtension#getAmountNeeded <em>Amount Needed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Amount Needed</em>' attribute.

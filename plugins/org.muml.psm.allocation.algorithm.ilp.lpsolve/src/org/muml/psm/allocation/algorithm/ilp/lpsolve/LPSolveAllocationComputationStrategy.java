@@ -13,7 +13,7 @@ public class LPSolveAllocationComputationStrategy extends
 		QVToBasedAllocationComputationStrategy<Object> {
 	
 	private static final String transformationURI =
-			"platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.lpsolve/transforms/LPSolveBasedAlgorithm.qvto";
+			"platform:/plugin/org.muml.psm.allocation.algorithm.ilp.lpsolve/transforms/LPSolveBasedAlgorithm.qvto";
 	
 	public LPSolveAllocationComputationStrategy() {
 		super(transformationURI);

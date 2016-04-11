@@ -330,7 +330,7 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
 	public static class AllocationComputationStrategyConfigurationPage extends PropertyEditorWizardPage {
 		// inspired by/stolen from de.uni_paderborn.fujaba.muml.verification.uppaal.ui.OptionsWizardPage
 		
-		private static final String tabId = "de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.config";
+		private static final String tabId = "org.muml.psm.allocation.algorithm.ilp.opt4j.config";
 		private static final String title = "Configuration options for the Opt4j EA";
 		private static final String description = "Configure the Opt4j evolutionary algorithm";
 

@@ -6,13 +6,13 @@
       <command
             categoryId="org.muml"
             defaultHandler="org.muml.psm.allocation.algorithm.ui.OpenAllocationWizardHandler"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.OpenAllocationWizardCommand"
+            id="org.muml.psm.allocation.algorithm.ui.OpenAllocationWizardCommand"
             name="Create Allocation">
       </command>
       <command
             categoryId="org.muml"
             defaultHandler="org.muml.psm.allocation.algorithm.ui.CreateASLFileHandler"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.CreateASLFileCommand"
+            id="org.muml.psm.allocation.algorithm.ui.CreateASLFileCommand"
             name="Create Allocation Specification">
       </command>
    </extension>
@@ -22,7 +22,7 @@
             allPopups="false"
             locationURI="popup:de.uni_paderborn.fujaba">
          <command
-               commandId="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.OpenAllocationWizardCommand"
+               commandId="org.muml.psm.allocation.algorithm.ui.OpenAllocationWizardCommand"
                label="Create Allocation"
                style="push">
             <visibleWhen
@@ -50,7 +50,7 @@
             allPopups="false"
             locationURI="popup:de.uni_paderborn.fujaba">
          <command
-               commandId="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.CreateASLFileCommand"
+               commandId="org.muml.psm.allocation.algorithm.ui.CreateASLFileCommand"
                label="Create Allocation Specification"
                style="push">
             <visibleWhen
@@ -67,7 +67,7 @@
       <wizard
             category="org.muml.core.export"
             class="org.muml.psm.allocation.algorithm.ui.wizard.AllocationWizard"
-            id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.wizard.AllocationWizard"
+            id="org.muml.psm.allocation.algorithm.ui.wizard.AllocationWizard"
             name="Allocation">
       </wizard>
    </extension>

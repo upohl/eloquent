@@ -1,6 +1,6 @@
 /**
  */
-package de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.util;
+package org.muml.psm.allocation.algorithm.tests.extension.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -8,8 +8,8 @@ import org.eclipse.emf.ecore.util.Switch;
 import org.muml.core.ExtendableElement;
 import org.muml.core.Extension;
 
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.ExtensionPackage;
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.MemoryExtension;
+import org.muml.psm.allocation.algorithm.tests.extension.ExtensionPackage;
+import org.muml.psm.allocation.algorithm.tests.extension.MemoryExtension;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.MemoryE
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.ExtensionPackage
+ * @see org.muml.psm.allocation.algorithm.tests.extension.ExtensionPackage
  * @generated
  */
 public class ExtensionSwitch<T> extends Switch<T> {

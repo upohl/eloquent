@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: de.uni_paderborn.fujaba.muml.allocation.language.xtext.tests
+Bundle-Name: org.muml.psm.allocation.language.xtext.tests
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: org.muml.psm.allocation.language.xtext.tests;singleton:=true

@@ -12,7 +12,7 @@ public class Opt4JAllocationComputationStrategy extends
 		QVToBasedAllocationComputationStrategy<Opt4jConfiguration> {
 	
 	private static final String transformationURI =
-			"platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j/transforms/Opt4JBasedAlgorithm.qvto";
+			"platform:/plugin/org.muml.psm.allocation.algorithm.ilp.opt4j/transforms/Opt4JBasedAlgorithm.qvto";
 	private static final String transformationConfigurationPropertyName = "config";
 	private Opt4jConfiguration configuration;
 	

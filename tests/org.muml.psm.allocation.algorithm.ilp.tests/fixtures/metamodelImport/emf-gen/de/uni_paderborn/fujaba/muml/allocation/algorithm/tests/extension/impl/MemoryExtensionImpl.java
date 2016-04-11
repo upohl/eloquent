@@ -1,14 +1,14 @@
 /**
  */
-package de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.impl;
+package org.muml.psm.allocation.algorithm.tests.extension.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.muml.core.impl.ExtensionImpl;
 
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.ExtensionPackage;
-import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.MemoryExtension;
+import org.muml.psm.allocation.algorithm.tests.extension.ExtensionPackage;
+import org.muml.psm.allocation.algorithm.tests.extension.MemoryExtension;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +17,7 @@ import de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.MemoryE
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.impl.MemoryExtensionImpl#getAmountNeeded <em>Amount Needed</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.algorithm.tests.extension.impl.MemoryExtensionImpl#getAmountNeeded <em>Amount Needed</em>}</li>
  * </ul>
  * </p>
  *

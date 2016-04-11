@@ -15,7 +15,7 @@ import static org.junit.Assert.*
 @RunWith(value = typeof(Parameterized))
 class ObjectiveFunctionExpressionEvaluatorTest {
 
-	static val uriPrefix = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.tests/fixtures/evaluation/"
+	static val uriPrefix = "platform:/plugin/org.muml.psm.allocation.algorithm.ilp.opt4j.tests/fixtures/evaluation/"
 	
 	val String ilpURI
 	val Map<String, Boolean> allocation

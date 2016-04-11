@@ -4,7 +4,7 @@
  * </copyright>
  *
  * This code is auto-generated
- * from: de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.genmodel
+ * from: org.muml.psm.allocation.language/model/LanguageSpecificationCS.genmodel
  *
  * Only the copyright statement is editable.
  *******************************************************************************/

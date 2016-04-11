@@ -1,6 +1,6 @@
 /**
  */
-package de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension;
+package org.muml.psm.allocation.algorithm.tests.extension;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -19,7 +19,7 @@ import org.muml.core.CorePackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.ExtensionFactory
+ * @see org.muml.psm.allocation.algorithm.tests.extension.ExtensionFactory
  * @model kind="package"
  * @generated
  */
@@ -54,14 +54,14 @@ public interface ExtensionPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	ExtensionPackage eINSTANCE = de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.impl.ExtensionPackageImpl.init();
+	ExtensionPackage eINSTANCE = org.muml.psm.allocation.algorithm.tests.extension.impl.ExtensionPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.impl.MemoryExtensionImpl <em>Memory Extension</em>}' class.
+	 * The meta object id for the '{@link org.muml.psm.allocation.algorithm.tests.extension.impl.MemoryExtensionImpl <em>Memory Extension</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.impl.MemoryExtensionImpl
-	 * @see de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.impl.ExtensionPackageImpl#getMemoryExtension()
+	 * @see org.muml.psm.allocation.algorithm.tests.extension.impl.MemoryExtensionImpl
+	 * @see org.muml.psm.allocation.algorithm.tests.extension.impl.ExtensionPackageImpl#getMemoryExtension()
 	 * @generated
 	 */
 	int MEMORY_EXTENSION = 0;
@@ -320,21 +320,21 @@ public interface ExtensionPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.MemoryExtension <em>Memory Extension</em>}'.
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.algorithm.tests.extension.MemoryExtension <em>Memory Extension</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Memory Extension</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.MemoryExtension
+	 * @see org.muml.psm.allocation.algorithm.tests.extension.MemoryExtension
 	 * @generated
 	 */
 	EClass getMemoryExtension();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.MemoryExtension#getAmountNeeded <em>Amount Needed</em>}'.
+	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.algorithm.tests.extension.MemoryExtension#getAmountNeeded <em>Amount Needed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Amount Needed</em>'.
-	 * @see de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.MemoryExtension#getAmountNeeded()
+	 * @see org.muml.psm.allocation.algorithm.tests.extension.MemoryExtension#getAmountNeeded()
 	 * @see #getMemoryExtension()
 	 * @generated
 	 */
@@ -364,11 +364,11 @@ public interface ExtensionPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.impl.MemoryExtensionImpl <em>Memory Extension</em>}' class.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.algorithm.tests.extension.impl.MemoryExtensionImpl <em>Memory Extension</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.impl.MemoryExtensionImpl
-		 * @see de.uni_paderborn.fujaba.muml.allocation.algorithm.tests.extension.impl.ExtensionPackageImpl#getMemoryExtension()
+		 * @see org.muml.psm.allocation.algorithm.tests.extension.impl.MemoryExtensionImpl
+		 * @see org.muml.psm.allocation.algorithm.tests.extension.impl.ExtensionPackageImpl#getMemoryExtension()
 		 * @generated
 		 */
 		EClass MEMORY_EXTENSION = eINSTANCE.getMemoryExtension();

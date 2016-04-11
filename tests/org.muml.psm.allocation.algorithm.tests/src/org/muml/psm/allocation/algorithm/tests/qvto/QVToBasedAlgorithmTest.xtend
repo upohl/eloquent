@@ -4,7 +4,7 @@ import java.util.Collection
 import org.muml.psm.allocation.algorithm.tests.util.TestDataUtil
 
 abstract class QVToBasedAlgorithmTest extends QVToTransformationSingleOutExtentTest {
-	public static final String uriPrefix = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.tests/fixtures/"
+	public static final String uriPrefix = "platform:/plugin/org.muml.psm.allocation.algorithm.tests/fixtures/"
 	
 	new(String expectedURI, String transformationURI, String... inputObjectURIs) {
 		super(expectedURI, transformationURI, inputObjectURIs)

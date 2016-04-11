@@ -8,7 +8,7 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtext.ui.DefaultUiModule;
 
 /**
- * Manual modifications go to {de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext.ui.LPSolveUiModule}
+ * Manual modifications go to {org.muml.psm.allocation.ilp.lpsolve.xtext.ui.LPSolveUiModule}
  */
 @SuppressWarnings("all")
 public abstract class AbstractLPSolveUiModule extends DefaultUiModule {

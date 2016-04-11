@@ -10,7 +10,7 @@ import org.opt4j.satdecoding.Constraint
 import static org.junit.Assert.*
 
 class ILP2SATTest {
-	private val uri = "platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j.tests/fixtures/ilp2sat/" 
+	private val uri = "platform:/plugin/org.muml.psm.allocation.algorithm.ilp.opt4j.tests/fixtures/ilp2sat/" 
 	
 	@Test
 	public def testSingleConstraint() {

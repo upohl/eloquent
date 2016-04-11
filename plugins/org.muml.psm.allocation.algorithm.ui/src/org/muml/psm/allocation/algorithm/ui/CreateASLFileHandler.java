@@ -24,7 +24,7 @@ public class CreateASLFileHandler extends AbstractHandler {
 			"template does not conform to the grammar";
 	private static final String file_extension = "allocation_specification";
 	private static final String template =
-			"%s {\n\tinclude 'platform:/plugin/de.uni_paderborn.fujaba.muml.allocation.language.xtext/operations/OCLContext.ocl'\n}";
+			"%s {\n\tinclude 'platform:/plugin/org.muml.psm.allocation.language.xtext/operations/OCLContext.ocl'\n}";
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {

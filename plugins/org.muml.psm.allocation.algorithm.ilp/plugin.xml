@@ -25,7 +25,7 @@
       </unit>
       <unit
             name="TupleAccessorBlackboxUnit"
-            namespace="de.uni_paderborn.fujaba.muml.allocation.algorithm.ocl">
+            namespace="org.muml.psm.allocation.algorithm.ocl">
          <library
                class="org.muml.psm.allocation.algorithm.ocl.TupleAccessor"
                name="TupleAccessorBlackbox">
