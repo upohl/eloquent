@@ -1,6 +1,6 @@
 /**
  */
-package org.muml.psm.allocation.algorithm.tests.extension;
+package org.muml.psm.allocation.algorithm.ilp.tests.extension;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.muml.psm.allocation.algorithm.tests.extension.ExtensionPackage
+ * @see org.muml.psm.allocation.algorithm.ilp.tests.extension.ExtensionPackage
  * @generated
  */
 public interface ExtensionFactory extends EFactory {
@@ -19,7 +19,7 @@ public interface ExtensionFactory extends EFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	ExtensionFactory eINSTANCE = org.muml.psm.allocation.algorithm.tests.extension.impl.ExtensionFactoryImpl.init();
+	ExtensionFactory eINSTANCE = org.muml.psm.allocation.algorithm.ilp.tests.extension.impl.ExtensionFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Memory Extension</em>'.

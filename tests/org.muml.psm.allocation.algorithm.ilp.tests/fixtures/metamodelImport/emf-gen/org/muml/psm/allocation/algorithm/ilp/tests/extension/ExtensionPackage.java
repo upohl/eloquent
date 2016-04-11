@@ -1,6 +1,6 @@
 /**
  */
-package org.muml.psm.allocation.algorithm.tests.extension;
+package org.muml.psm.allocation.algorithm.ilp.tests.extension;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -54,7 +54,7 @@ public interface ExtensionPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	ExtensionPackage eINSTANCE = org.muml.psm.allocation.algorithm.tests.extension.impl.ExtensionPackageImpl.init();
+	ExtensionPackage eINSTANCE = org.muml.psm.allocation.algorithm.ilp.tests.extension.impl.ExtensionPackageImpl.init();
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.algorithm.tests.extension.impl.MemoryExtensionImpl <em>Memory Extension</em>}' class.

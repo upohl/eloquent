@@ -1,6 +1,6 @@
 /**
  */
-package org.muml.psm.allocation.algorithm.tests.extension.util;
+package org.muml.psm.allocation.algorithm.ilp.tests.extension.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -8,9 +8,8 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.muml.core.ExtendableElement;
 import org.muml.core.Extension;
-
-import org.muml.psm.allocation.algorithm.tests.extension.ExtensionPackage;
-import org.muml.psm.allocation.algorithm.tests.extension.MemoryExtension;
+import org.muml.psm.allocation.algorithm.ilp.tests.extension.ExtensionPackage;
+import org.muml.psm.allocation.algorithm.ilp.tests.extension.MemoryExtension;
 
 /**
  * <!-- begin-user-doc -->

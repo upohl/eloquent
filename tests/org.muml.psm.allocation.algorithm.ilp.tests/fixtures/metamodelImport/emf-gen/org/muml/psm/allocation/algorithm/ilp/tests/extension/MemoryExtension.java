@@ -1,6 +1,6 @@
 /**
  */
-package org.muml.psm.allocation.algorithm.tests.extension;
+package org.muml.psm.allocation.algorithm.ilp.tests.extension;
 
 import org.muml.core.Extension;
 

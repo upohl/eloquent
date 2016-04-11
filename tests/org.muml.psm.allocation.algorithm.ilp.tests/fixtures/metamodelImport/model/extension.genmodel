@@ -4,10 +4,10 @@
     modelPluginID="org.muml.psm.allocation.algorithm.tests" modelName="Extension"
     modelPluginClass="" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
-    usedGenPackages="../../../../org.muml.core/model/core.genmodel#//core"
-    operationReflection="true" importOrganizing="true">
+    usedGenPackages="../../../../org.muml.core/model/core.genmodel#//core" operationReflection="true"
+    importOrganizing="true">
   <foreignModel>extension.ecore</foreignModel>
-  <genPackages prefix="Extension" basePackage="org.muml.psm.allocation.algorithm.tests"
+  <genPackages prefix="Extension" basePackage="org.muml.psm.allocation.algorithm.ilp.tests"
       disposableProviderFactory="true" ecorePackage="extension.ecore#/">
     <genClasses ecoreClass="extension.ecore#//MemoryExtension">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute extension.ecore#//MemoryExtension/amountNeeded"/>
