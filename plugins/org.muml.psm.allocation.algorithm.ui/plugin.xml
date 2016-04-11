@@ -4,13 +4,13 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            categoryId="de.uni_paderborn.fujaba"
+            categoryId="org.muml"
             defaultHandler="org.muml.psm.allocation.algorithm.ui.OpenAllocationWizardHandler"
             id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.OpenAllocationWizardCommand"
             name="Create Allocation">
       </command>
       <command
-            categoryId="de.uni_paderborn.fujaba"
+            categoryId="org.muml"
             defaultHandler="org.muml.psm.allocation.algorithm.ui.CreateASLFileHandler"
             id="de.uni_paderborn.fujaba.muml.allocation.algorithm.ui.CreateASLFileCommand"
             name="Create Allocation Specification">
@@ -29,7 +29,7 @@
                   checkEnabled="false">
                <or>
                   <reference
-                        definitionId="de.uni_paderborn.fujaba.expression.fujabafile">
+                        definitionId="org.muml.expression.mumlfile">
                   </reference>
                   <iterate
                         ifEmpty="false"
@@ -56,7 +56,7 @@
             <visibleWhen
                   checkEnabled="false">
                <reference
-                     definitionId="de.uni_paderborn.fujaba.expression.fujabafile">
+                     definitionId="org.muml.expression.mumlfile">
                </reference>
             </visibleWhen>
          </command>
