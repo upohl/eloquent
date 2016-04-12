@@ -18,67 +18,9 @@
    </license>
 
    <requires>
-      <import plugin="org.eclipse.core.runtime"/>
-      <import plugin="org.eclipse.emf.ecore"/>
-      <import plugin="org.muml.pim.actionlanguage"/>
-      <import plugin="org.muml.core"/>
-      <import plugin="org.muml.pm.hardware"/>
-      <import plugin="org.muml.pim"/>
-      <import plugin="org.muml.pm.software.platform"/>
-      <import plugin="org.muml.core.modelinstance" version="0.4.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.xtext"/>
-      <import plugin="org.muml.pim.actionlanguage.xtext" version="0.4.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.xtext.util"/>
-      <import plugin="org.antlr.runtime"/>
-      <import plugin="org.eclipse.xtext.common.types"/>
-      <import plugin="org.eclipse.xtext.xbase.lib"/>
-      <import plugin="org.apache.log4j"/>
-      <import plugin="org.eclipse.xtext.ui"/>
-      <import plugin="org.eclipse.ui.editors" version="3.5.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.ui.ide" version="3.5.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.xtext.ui.shared"/>
-      <import plugin="org.eclipse.ui" version="3.106.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.xtext.builder"/>
-      <import plugin="org.eclipse.xtext.common.types.ui"/>
-      <import plugin="org.eclipse.xtext.ui.codetemplates.ui"/>
-      <import plugin="org.eclipse.compare"/>
-      <import plugin="org.muml.pim.actionlanguage.xtext.ui" version="0.4.0" match="greaterOrEqual"/>
-      <import plugin="org.muml.pm.common" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.m2m.qvt.oml" version="3.3.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.core.resources" version="3.8.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.core.runtime" version="3.8.0" match="greaterOrEqual"/>
-      <import plugin="org.muml.pim" version="0.4.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.edit"/>
-      <import plugin="org.muml.pim.actionlanguage.edit"/>
-      <import plugin="org.muml.core.edit"/>
-      <import plugin="org.muml.pm.hardware.edit"/>
-      <import plugin="org.muml.pim.edit"/>
-      <import plugin="org.muml.pm.software.platform.edit"/>
-      <import plugin="org.eclipse.emf.ecore.xmi"/>
-      <import plugin="org.eclipse.emf.edit.ui"/>
-      <import plugin="org.muml.psm.edit" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.muml.psm.api.transformation.blackbox" version="0.4.0" match="greaterOrEqual"/>
-      <import plugin="org.muml.pim.actionlanguage" version="0.4.0" match="greaterOrEqual"/>
-      <import plugin="org.muml.psm" version="0.4.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.ui.workbench"/>
-      <import plugin="org.eclipse.jface" version="3.10.0" match="greaterOrEqual"/>
-      <import plugin="org.muml.psm" version="0.1.0" match="greaterOrEqual"/>
-      <import plugin="org.muml.psm" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.muml.core.export"/>
-      <import plugin="org.eclipse.core.jobs"/>
-      <import plugin="org.muml.modelcopy.qvto.library" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.muml.ape.runtime"/>
-      <import plugin="org.muml.pm.hardware.edit.properties"/>
-      <import plugin="org.muml.core.edit.properties"/>
-      <import plugin="org.muml.pim.edit.properties"/>
-      <import plugin="org.muml.core.modelinstance.edit"/>
-      <import plugin="org.muml.core.modelinstance.edit.properties"/>
-      <import plugin="org.muml.pim.common"/>
-      <import plugin="org.muml.pim.actionlanguage.xtext.ui" version="0.5.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.jdt.annotation" version="1.1.100" match="compatible"/>
-      <import plugin="org.eclipse.emf.transaction" version="1.9.0" match="greaterOrEqual"/>
-      <import feature="org.muml.modelcopy.feature" version="0.5.0.qualifier"/>
-      <import feature="org.eclipse.ocl.unified.core" version="1.0.0.v20150608-1110"/>
+      <import feature="org.muml.core.feature" version="0.5.0.qualifier"/>
+      <import feature="org.muml.pim.feature" version="0.5.0.qualifier"/>
+      <import feature="org.muml.pm.feature" version="0.5.0.qualifier"/>
    </requires>
 
    <plugin
@@ -108,8 +50,6 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
-
 
    <plugin
          id="org.muml.psm.edit"
