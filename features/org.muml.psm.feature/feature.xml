@@ -31,14 +31,14 @@
          unpack="false"/>
 
    <plugin
-         id="org.muml.psm.api.apimappinglanguage"
+         id="org.muml.psm.api.apimappinglanguage.xtext"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.muml.psm.api.apimappinglanguage.ui"
+         id="org.muml.psm.api.apimappinglanguage.xtext.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
