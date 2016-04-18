@@ -154,22 +154,13 @@ public interface CsPackage extends EPackage {
 	int SPECIFICATION_CS__OWNED_PACKAGES = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS__OWNED_PACKAGES;
 
 	/**
-	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION_CS__ANNOTATIONS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__EXTENSIONS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 1;
+	int SPECIFICATION_CS__EXTENSIONS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Services</b></em>' containment reference list.
@@ -178,7 +169,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__SERVICES = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 2;
+	int SPECIFICATION_CS__SERVICES = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
@@ -187,7 +178,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__CONSTRAINTS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 3;
+	int SPECIFICATION_CS__CONSTRAINTS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Measure</b></em>' containment reference.
@@ -196,7 +187,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__MEASURE = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 4;
+	int SPECIFICATION_CS__MEASURE = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Goal</b></em>' attribute.
@@ -205,7 +196,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__GOAL = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 5;
+	int SPECIFICATION_CS__GOAL = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Specification CS</em>' class.
@@ -214,7 +205,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS_FEATURE_COUNT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 6;
+	int SPECIFICATION_CS_FEATURE_COUNT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.EvaluatableElementCSImpl <em>Evaluatable Element CS</em>}' class.

@@ -7,9 +7,7 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -19,7 +17,6 @@ import org.eclipse.ocl.xtext.completeoclcs.impl.CompleteOCLDocumentCSImpl;
 import org.muml.core.CorePackage;
 import org.muml.core.ExtendableElement;
 import org.muml.core.Extension;
-import org.muml.core.util.ExtendableElementOperations;
 import org.muml.psm.allocation.language.cs.ConstraintCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.Goal;
@@ -35,7 +32,6 @@ import org.muml.psm.allocation.language.cs.SpecificationCS;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getAnnotations <em>Annotations</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getExtensions <em>Extensions</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getServices <em>Services</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getConstraints <em>Constraints</em>}</li>
@@ -46,16 +42,6 @@ import org.muml.psm.allocation.language.cs.SpecificationCS;
  * @generated
  */
 public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements SpecificationCS {
-	/**
-	 * The cached value of the '{@link #getAnnotations() <em>Annotations</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAnnotations()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<EAnnotation> annotations;
-
 	/**
 	 * The cached value of the '{@link #getExtensions() <em>Extensions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -133,18 +119,6 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	@Override
 	protected EClass eStaticClass() {
 		return CsPackage.Literals.SPECIFICATION_CS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<EAnnotation> getAnnotations() {
-		if (annotations == null) {
-			annotations = new EObjectContainmentEList<EAnnotation>(EAnnotation.class, this, CsPackage.SPECIFICATION_CS__ANNOTATIONS);
-		}
-		return annotations;
 	}
 
 	/**
@@ -269,34 +243,13 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 * @generated
 	 */
 	public Extension getExtension(final EClass type) {
-		return ExtendableElementOperations.getExtension(this, type);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Extension provideExtension(final EClass type) {
-		return ExtendableElementOperations.provideExtension(this, type);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAnnotation getAnnotation(final String source) {
-		return ExtendableElementOperations.getAnnotation(this, source);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAnnotation provideAnnotation(final String source) {
-		return ExtendableElementOperations.provideAnnotation(this, source);
+		EList<Extension> extensions = this.getExtensions();
+						for (Extension extension : extensions) {
+							if (type.isInstance(extension)) {
+								return extension;
+							}
+						}
+						return null;
 	}
 
 	/**
@@ -322,8 +275,6 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CsPackage.SPECIFICATION_CS__ANNOTATIONS:
-				return ((InternalEList<?>)getAnnotations()).basicRemove(otherEnd, msgs);
 			case CsPackage.SPECIFICATION_CS__EXTENSIONS:
 				return ((InternalEList<?>)getExtensions()).basicRemove(otherEnd, msgs);
 			case CsPackage.SPECIFICATION_CS__SERVICES:
@@ -344,8 +295,6 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CsPackage.SPECIFICATION_CS__ANNOTATIONS:
-				return getAnnotations();
 			case CsPackage.SPECIFICATION_CS__EXTENSIONS:
 				return getExtensions();
 			case CsPackage.SPECIFICATION_CS__SERVICES:
@@ -369,10 +318,6 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CsPackage.SPECIFICATION_CS__ANNOTATIONS:
-				getAnnotations().clear();
-				getAnnotations().addAll((Collection<? extends EAnnotation>)newValue);
-				return;
 			case CsPackage.SPECIFICATION_CS__EXTENSIONS:
 				getExtensions().clear();
 				getExtensions().addAll((Collection<? extends Extension>)newValue);
@@ -403,9 +348,6 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CsPackage.SPECIFICATION_CS__ANNOTATIONS:
-				getAnnotations().clear();
-				return;
 			case CsPackage.SPECIFICATION_CS__EXTENSIONS:
 				getExtensions().clear();
 				return;
@@ -433,8 +375,6 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CsPackage.SPECIFICATION_CS__ANNOTATIONS:
-				return annotations != null && !annotations.isEmpty();
 			case CsPackage.SPECIFICATION_CS__EXTENSIONS:
 				return extensions != null && !extensions.isEmpty();
 			case CsPackage.SPECIFICATION_CS__SERVICES:
@@ -456,14 +396,8 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == EObject.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == ExtendableElement.class) {
 			switch (derivedFeatureID) {
-				case CsPackage.SPECIFICATION_CS__ANNOTATIONS: return CorePackage.EXTENDABLE_ELEMENT__ANNOTATIONS;
 				case CsPackage.SPECIFICATION_CS__EXTENSIONS: return CorePackage.EXTENDABLE_ELEMENT__EXTENSIONS;
 				default: return -1;
 			}
@@ -478,14 +412,8 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == EObject.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == ExtendableElement.class) {
 			switch (baseFeatureID) {
-				case CorePackage.EXTENDABLE_ELEMENT__ANNOTATIONS: return CsPackage.SPECIFICATION_CS__ANNOTATIONS;
 				case CorePackage.EXTENDABLE_ELEMENT__EXTENSIONS: return CsPackage.SPECIFICATION_CS__EXTENSIONS;
 				default: return -1;
 			}

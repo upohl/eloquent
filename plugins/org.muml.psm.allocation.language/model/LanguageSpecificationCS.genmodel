@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.muml.psm.allocation.language/src"
-    modelPluginID="org.muml.psm.allocation.language" modelName="LanguageSpecificationCS"
-    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="6.0" copyrightFields="false" usedGenPackages="../../org.eclipse.ocl.xtext.base/model/BaseCS.genmodel#//basecs ../../org.eclipse.ocl.xtext.completeocl/model/CompleteOCLCS.genmodel#//completeoclcs ../../org.muml.core/model/core.genmodel#//core ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.ocl.xtext.essentialocl/model/EssentialOCLCS.genmodel#//essentialoclcs ../../org.eclipse.ocl.pivot/model/Pivot.genmodel#//pivot"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.muml.psm.allocation.language/src" modelPluginID="org.muml.psm.allocation.language"
+    modelName="LanguageSpecificationCS" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    usedGenPackages="../../org.eclipse.ocl.xtext.base/model/BaseCS.genmodel#//basecs ../../org.eclipse.ocl.xtext.completeocl/model/CompleteOCLCS.genmodel#//completeoclcs ../../org.muml.core/model/core.genmodel#//core ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.ocl.xtext.essentialocl/model/EssentialOCLCS.genmodel#//essentialoclcs ../../org.eclipse.ocl.pivot/model/Pivot.genmodel#//pivot"
     importOrganizing="true">
   <genAnnotations source="http://www.eclipse.org/OCL/GenModel">
     <details key="Use Null Annotations" value="true"/>
@@ -14,8 +14,8 @@
     <details key="Derived Visitor Class" value="org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor"/>
   </genAnnotations>
   <foreignModel>LanguageSpecificationCS.ecore</foreignModel>
-  <genPackages prefix="Cs" basePackage="org.muml.psm.allocation.language"
-      disposableProviderFactory="true" ecorePackage="LanguageSpecificationCS.ecore#/">
+  <genPackages prefix="Cs" basePackage="org.muml.psm.allocation.language" disposableProviderFactory="true"
+      ecorePackage="LanguageSpecificationCS.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="LanguageSpecificationCS.ecore#//LocationConstraintTypes">
       <genEnumLiterals ecoreEnumLiteral="LanguageSpecificationCS.ecore#//LocationConstraintTypes/SAME_LOCATION"/>
       <genEnumLiterals ecoreEnumLiteral="LanguageSpecificationCS.ecore#//LocationConstraintTypes/DIFFERENT_LOCATION"/>
