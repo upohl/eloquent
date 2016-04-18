@@ -20,7 +20,9 @@ Require-Bundle: org.muml.psm.allocation.algorithm;bundle-version="1.0.0",
  org.eclipse.jdt.annotation;bundle-version="[1.1.0,2.0.0)",
  org.eclipse.ocl.xtext.completeocl;bundle-version="1.0.0",
  org.muml.ape.runtime;bundle-version="0.5.0",
- org.eclipse.emf.transaction;bundle-version="1.9.0"
+ org.eclipse.emf.transaction;bundle-version="1.9.0",
+ org.eclipse.emf.common,
+ org.eclipse.core.runtime
 Export-Package: org.muml.psm.allocation.algorithm.ui,
  org.muml.psm.allocation.algorithm.ui.wizard
 Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn, Germany
