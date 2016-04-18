@@ -17,9 +17,6 @@ Require-Bundle: org.junit;bundle-version="4.11.0",
 Bundle-ActivationPolicy: lazy
 Export-Package: org.muml.psm.allocation.algorithm.tests,
  org.muml.psm.allocation.algorithm.tests.qvto,
- org.muml.psm.allocation.algorithm.tests.util,
- org.muml.psm.allocation.algorithm.ilp.tests.extension,
- org.muml.psm.allocation.algorithm.ilp.tests.extension.impl,
- org.muml.psm.allocation.algorithm.ilp.tests.extension.util
+ org.muml.psm.allocation.algorithm.tests.util
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin

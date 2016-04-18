@@ -6,11 +6,4 @@
 
 <plugin>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated extension -->
-      <package
-            uri="http://example.com/extension"
-            class="org.muml.psm.allocation.algorithm.ilp.tests.extension.ExtensionPackage"/>
-   </extension>
-
 </plugin>
