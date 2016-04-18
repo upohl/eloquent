@@ -16,7 +16,3 @@ Require-Bundle: org.eclipse.emf.ecore;bundle-version="2.10.1",
  org.muml.pim;bundle-version="0.5.0",
  org.muml.pm.hardware;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
-Export-Package: org.muml.psm.allocation.algorithm.ilp.tests.extension,
- org.muml.psm.allocation.algorithm.ilp.tests.extension.impl,
- org.muml.psm.allocation.algorithm.ilp.tests.extension.util,
- org.muml.psm.allocation.algorithm.ilp.tests
