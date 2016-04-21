@@ -1,6 +1,7 @@
 package org.muml.psm.allocation.language.build;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.ocl.examples.build.utilities.GenerateModel;
 
 /**
  * Its sole purpose is to accept an URI-like "genModel" variable.

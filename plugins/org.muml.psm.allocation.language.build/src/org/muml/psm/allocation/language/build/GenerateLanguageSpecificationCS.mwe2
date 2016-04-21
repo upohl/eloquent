@@ -5,7 +5,7 @@ import org.eclipse.ocl.examples.build.utilities.UMLGenModelSetup
 import org.eclipse.emf.mwe.utils.StandaloneSetup
 import org.eclipse.emf.ecore.resource.impl.*
 import org.eclipse.uml2.codegen.ecore.genmodel.GenModelPackage
-import de.uni_paderborn.fujaba.muml.allocation.language.build.URIAwareGenerateModel
+import org.muml.psm.allocation.language.build.URIAwareGenerateModel
 
 Workflow {
 	bean = ResourceSetImpl : resourceSet {}

@@ -4,7 +4,7 @@ import org.eclipse.ocl.examples.build.utilities.GenModelSetup
 import org.eclipse.ocl.examples.build.utilities.UMLGenModelSetup
 import org.eclipse.emf.mwe.utils.StandaloneSetup
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
-import de.uni_paderborn.fujaba.muml.allocation.language.build.PivotModelSetup
+import org.muml.psm.allocation.language.build.PivotModelSetup
 
 Workflow {
 	bean = ResourceSetImpl : resourceSet {}

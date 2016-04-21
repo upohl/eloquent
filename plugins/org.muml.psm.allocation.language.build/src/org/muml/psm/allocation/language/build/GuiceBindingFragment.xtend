@@ -8,7 +8,7 @@ import org.eclipse.xtext.generator.BindFactory
 import org.eclipse.xtext.generator.BindKey
 import org.eclipse.xtext.resource.XtextResource
 import java.util.HashSet
-import de.uni_paderborn.fujaba.muml.allocation.language.resource.SpecificationCSResource
+import org.muml.psm.allocation.language.xtext.resource.SpecificationCSResource
 import org.eclipse.xtext.ui.editor.XtextEditor
 
 class GuiceBindingFragment extends EssentialOCLFragment {

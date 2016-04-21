@@ -6,6 +6,7 @@ import org.eclipse.emf.mwe.core.monitor.ProgressMonitor;
 import org.eclipse.m2m.qvt.oml.ExecutionContextImpl;
 import org.eclipse.m2m.qvt.oml.util.Dictionary;
 import org.eclipse.m2m.qvt.oml.util.Utils;
+import org.eclipse.ocl.examples.build.utilities.PredefinedQVToTransformationExecutor;
 
 public class CS2ASEcore extends PredefinedQVToTransformationExecutor {
 	private static final String TRANSFORMATION_URI = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language.build/transforms/CS2ASTransformation.qvto";

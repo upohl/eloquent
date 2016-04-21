@@ -6,8 +6,8 @@ import org.eclipse.xtext.ui.generator.*
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
 import org.eclipse.ocl.examples.build.fragments.MarkupHoverFragment
 import org.eclipse.ocl.examples.build.utilities.UMLGenModelSetup
-import de.uni_paderborn.fujaba.muml.allocation.language.build.GenerateVisitors
-import de.uni_paderborn.fujaba.muml.allocation.language.build.GuiceBindingFragment
+import org.muml.psm.allocation.language.build.GenerateVisitors
+import org.muml.psm.allocation.language.build.GuiceBindingFragment
 
 var grammarURI = "classpath:/de/uni_paderborn/fujaba/muml/allocation/language/AllocationSpecificationLanguage.xtext"
 var fileExtensions = "allocation_specification"
