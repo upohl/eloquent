@@ -33,10 +33,14 @@ query String::csName2asName() : String {
 	endif;
 }
 
+query String::csUri2asUri() : String {
+	return self.replace("cs", "as");
+}
+
 mapping in EPackage::csEPackage2asEPackage() : EPackage {
 	name := self.name.csName2asName("as");
 	nsPrefix := self.nsPrefix.csName2asName("as");
-	nsURI := self.nsURI.csName2asName("as");
+	nsURI := self.nsURI.csUri2asUri();
 	eClassifiers += self.eClassifiers->map eClassifier2eClassifier();
 }
 
