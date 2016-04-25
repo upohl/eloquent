@@ -1,5 +1,6 @@
 module GenerateLanguageSpecificationCS
 
+import org.eclipse.ocl.examples.build.SubGenerateCSModel
 import org.eclipse.ocl.examples.build.utilities.EcoreGenModelSetup
 import org.eclipse.ocl.examples.build.utilities.UMLGenModelSetup
 import org.eclipse.emf.mwe.utils.StandaloneSetup
@@ -16,17 +17,15 @@ Workflow {
 	bean = EcoreGenModelSetup { resourceSet = resourceSet }
 	bean = UMLGenModelSetup { resourceSet = resourceSet }
 	component = @SubGenerateCSModel { resourceSet = resourceSet
-		projectName = "de.uni_paderborn.fujaba.muml.allocation.language"
-		modelName = "cs"
-		projectPrefix = "LanguageSpecificationCS"
+		projectName = "org.muml.psm.allocation.language"
+		genModelFile = "model/LanguageSpecificationCS.genmodel"
 		superProjectName = "org.eclipse.ocl.xtext.completeocl"
-		superModelName = "completeoclcs"
-		superProjectPrefix = "CompleteOCLCS"
-		superVisitorPackageName = "org.eclipse.ocl.xtext.completeoclcs.util"
-		javaFolder = "src"
+		superGenModelFile = "model/CompleteOCLCS.genmodel"
+		baseProjectName = "org.eclipse.ocl.xtext.base"
+		baseGenModelFile = "model/BaseCS.genmodel"
 	}
 	component = URIAwareGenerateModel {
 		resourceSet = resourceSet
-		genModel = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/OCLContext.genmodel"
+		genModel = "platform:/resource/org.muml.psm.allocation.language/model/OCLContext.genmodel"
 	}
 }
