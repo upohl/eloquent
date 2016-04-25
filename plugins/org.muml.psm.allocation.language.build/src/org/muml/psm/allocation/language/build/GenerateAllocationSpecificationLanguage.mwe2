@@ -1,4 +1,4 @@
-module de.uni_paderborn.fujaba.muml.allocation.language.AllocationSpecificationLanguage
+module org.muml.psm.allocation.language.AllocationSpecificationLanguage
 
 import org.eclipse.emf.mwe.utils.*
 import org.eclipse.xtext.generator.*
@@ -9,9 +9,9 @@ import org.eclipse.ocl.examples.build.utilities.UMLGenModelSetup
 import org.muml.psm.allocation.language.build.GenerateVisitors
 import org.muml.psm.allocation.language.build.GuiceBindingFragment
 
-var grammarURI = "classpath:/de/uni_paderborn/fujaba/muml/allocation/language/AllocationSpecificationLanguage.xtext"
+var grammarURI = "classpath:/org/muml/psm/allocation/language/xtext/AllocationSpecificationLanguage.xtext"
 var fileExtensions = "allocation_specification"
-var projectName = "de.uni_paderborn.fujaba.muml.allocation.language.xtext"
+var projectName = "org.muml.psm.allocation.language.xtext"
 var runtimeProject = "../${projectName}"
 var generateXtendStub = true
 
@@ -24,8 +24,8 @@ Workflow {
 		resourceSet = resourceSet
 		scanClassPath  = true
 		platformUri = "${runtimeProject}/.."
-		registerGeneratedEPackage = "de.uni_paderborn.fujaba.muml.allocation.language.cs.CsPackage"
-		registerGenModelFile = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.genmodel"
+		registerGeneratedEPackage = "org.muml.psm.allocation.language.cs.CsPackage"
+		registerGenModelFile = "platform:/resource/org.muml.psm.allocation.language/model/LanguageSpecificationCS.genmodel"
 	}
 
 	component = DirectoryCleaner {

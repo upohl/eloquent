@@ -6,9 +6,9 @@ import org.eclipse.xtext.ui.generator.*
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
 import org.eclipse.ocl.examples.build.utilities.UMLGenModelSetup
 
-var grammarURI = "classpath:/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/LPSolve.xtext"
+var grammarURI = "classpath:/org/muml/psm/allocation/ilp/lpsolve/xtext/LPSolve.xtext"
 var fileExtensions = "lp"
-var projectName = "de.uni_paderborn.fujaba.muml.allocation.ilp.lpsolve.xtext"
+var projectName = "org.muml.psm.allocation.ilp.lpsolve.xtext"
 var runtimeProject = "../${projectName}"
 var generateXtendStub = true
 
@@ -21,9 +21,9 @@ Workflow {
 		resourceSet = resourceSet
 		scanClassPath  = true
 		platformUri = "${runtimeProject}/.."
-		registerGeneratedEPackage = "de.uni_paderborn.fujaba.muml.allocation.ilp.IlpPackage"
-		registerGenModelFile = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.ilp/model/ilp.genmodel"
-		registerGenModelFile = "platform:/resource/org.storydriven.core/model/core.uml.genmodel"
+		registerGeneratedEPackage = "org.muml.psm.allocation.ilp.IlpPackage"
+		registerGenModelFile = "platform:/resource/org.muml.psm.allocation.ilp/model/ilp.genmodel"
+		registerGenModelFile = "platform:/resource/org.muml.core/model/core.genmodel"
 	}
 
 	component = DirectoryCleaner {

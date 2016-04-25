@@ -17,14 +17,14 @@ Workflow {
     bean = PivotModelSetup { resourceSet = resourceSet }
 	component = @GenerateLanguageSpecificationAS {
 		resourceSet = resourceSet
-		csModelURI = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.ecore"
+		csModelURI = "platform:/resource/org.muml.psm.allocation.language/model/LanguageSpecificationCS.ecore"
 		pivotModelURI = "platform:/resource/org.eclipse.ocl.pivot/model/Pivot.ecore"
 		pivotGenModelURI = "platform:/resource/org.eclipse.ocl.pivot/model/Pivot.genmodel"
-		asModelURI = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model-gen/LanguageSpecificationAS.ecore"
-		asGenModelURI = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model-gen/LanguageSpecificationAS.genmodel"
-		basePackage = "de.uni_paderborn.fujaba.muml.allocation.language"
-		modelDirectory = "/de.uni_paderborn.fujaba.muml.allocation.language/src"
-		pluginID = "de.uni_paderborn.fujaba.muml.allocation.language"
+		asModelURI = "platform:/resource/org.muml.psm.allocation.language/model-gen/LanguageSpecificationAS.ecore"
+		asGenModelURI = "platform:/resource/org.muml.psm.allocation.language/model-gen/LanguageSpecificationAS.genmodel"
+		basePackage = "org.muml.psm.allocation.language"
+		modelDirectory = "/org.muml.psm.allocation.language/src"
+		pluginID = "org.muml.psm.allocation.language"
 	}
 
 }

@@ -1,7 +1,7 @@
-module de.uni_paderborn.fujaba.muml.allocation.language.build.GenerateModels
+module org.muml.psm.allocation.language.build.GenerateModels
 
-import de.uni_paderborn.fujaba.muml.allocation.language.build.GenerateLanguageSpecificationCS
-import de.uni_paderborn.fujaba.muml.allocation.language.build.BuildAS
+import org.muml.psm.allocation.language.build.GenerateLanguageSpecificationCS
+import org.muml.psm.allocation.language.build.BuildAS
 
 
 Workflow {

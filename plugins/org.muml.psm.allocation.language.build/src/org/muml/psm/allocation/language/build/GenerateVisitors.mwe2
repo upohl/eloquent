@@ -1,21 +1,23 @@
-module de.uni_paderborn.fujaba.muml.allocation.language.build.GenerateVisitors
+module org.muml.psm.allocation.language.build.GenerateVisitors
 
 import org.eclipse.emf.ecore.resource.ResourceSet
+import org.muml.psm.allocation.language.build.GenerateVisitor
+import org.muml.psm.allocation.language.build.GenerateContainmentVisitor
 
 /**
  * The resourceSet
  */
 var ResourceSet resourceSet
 
-var String visitorPackageName = "de.uni_paderborn.fujaba.muml.allocation.language.visitor"
-var String baseClassPackageName = "de.uni_paderborn.fujaba.muml.allocation.language.cs.util"
-var String csGenModelURI = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model/LanguageSpecificationCS.genmodel"
-var String asGenModelURI = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language/model-gen/LanguageSpecificationAS.genmodel"
+var String visitorPackageName = "org.muml.psm.allocation.language.xtext.visitor"
+var String baseClassPackageName = "org.muml.psm.allocation.language.cs.util"
+var String csGenModelURI = "platform:/resource/org.muml.psm.allocation.language/model/LanguageSpecificationCS.genmodel"
+var String asGenModelURI = "platform:/resource/org.muml.psm.allocation.language/model-gen/LanguageSpecificationAS.genmodel"
 
 /**
  * URI to the visitor package directory (has to be a platform URI)
  */
-var String visitorPackageDirectory = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/visitor" 
+var String visitorPackageDirectory = "platform:/resource/org.muml.psm.allocation.language.xtext/src-gen/org/muml/psm/allocation/language/xtext/visitor" 
 
 Workflow {
 	
@@ -24,7 +26,7 @@ Workflow {
 		csGenModelURI = csGenModelURI
 		asGenModelURI = asGenModelURI
 		className = "LanguageSpecificationCSContainmentVisitor"
-		fqBaseClassName = "${baseClassPackageName}.AbstractLanguageSpecificationCSContainmentVisitor"
+		fqBaseClassName = "${baseClassPackageName}.AbstractCsContainmentVisitor"
 		packageName = visitorPackageName
 		filename = "${visitorPackageDirectory}/LanguageSpecificationCSContainmentVisitor.java"
 		resourceSet = resourceSet
@@ -37,7 +39,7 @@ Workflow {
 	// generate left2right visitor
 	component = GenerateVisitor {
 		className = "LanguageSpecificationCSLeft2RightVisitor"
-		fqBaseClassName = "${baseClassPackageName}.AbstractLanguageSpecificationCSLeft2RightVisitor"
+		fqBaseClassName = "${baseClassPackageName}.AbstractCsLeft2RightVisitor"
 		packageName = visitorPackageName
 		filename = "${visitorPackageDirectory}/LanguageSpecificationCSLeft2RightVisitor.java"
 	}
@@ -45,7 +47,7 @@ Workflow {
 	// generate post-order visitor
 	component = GenerateVisitor {
 		className = "LanguageSpecificationCSPostOrderVisitor"
-		fqBaseClassName = "${baseClassPackageName}.AbstractLanguageSpecificationCSPostOrderVisitor"
+		fqBaseClassName = "${baseClassPackageName}.AbstractCsPostOrderVisitor"
 		packageName = visitorPackageName
 		filename = "${visitorPackageDirectory}/LanguageSpecificationCSPostOrderVisitor.java"
 	}
@@ -53,7 +55,7 @@ Workflow {
 	// generate pre-order visitor
 	component = GenerateVisitor {
 		className = "LanguageSpecificationCSPreOrderVisitor"
-		fqBaseClassName = "${baseClassPackageName}.AbstractLanguageSpecificationCSPreOrderVisitor"
+		fqBaseClassName = "${baseClassPackageName}.AbstractCsPreOrderVisitor"
 		packageName = visitorPackageName
 		filename = "${visitorPackageDirectory}/LanguageSpecificationCSPreOrderVisitor.java"
 	}
