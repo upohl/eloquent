@@ -7,7 +7,7 @@ package org.muml.psm.allocation.language.xtext.ui;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 /**
- * Manual modifications go to {org.muml.psm.allocation.language.ui.AllocationSpecificationLanguageUiModule}
+ * Manual modifications go to {org.muml.psm.allocation.language.xtext.ui.AllocationSpecificationLanguageUiModule}
  */
 @SuppressWarnings("all")
 public abstract class AbstractAllocationSpecificationLanguageUiModule extends org.eclipse.xtext.common.types.ui.DefaultCommonTypesUiModule {
@@ -260,6 +260,11 @@ public abstract class AbstractAllocationSpecificationLanguageUiModule extends or
 	// contributed by org.eclipse.ocl.examples.build.fragments.MarkupHoverFragment
 	public Class<? extends org.eclipse.xtext.documentation.IEObjectDocumentationProvider> bindIEObjectDocumentationProvider() {
 		return org.eclipse.ocl.xtext.base.ui.model.BaseDocumentationProvider.class;
+	}
+
+	// contributed by org.eclipse.ocl.examples.build.fragments.MarkupHoverFragment
+	public Class<? extends org.eclipse.jface.text.ITextHover> bindITextHover() {
+		return org.eclipse.ocl.xtext.markup.ui.hover.MarkupCompositeHover.class;
 	}
 
 

@@ -4,10 +4,11 @@
 package org.muml.psm.allocation.language.xtext.ui;
 
 import org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory;
-import org.muml.psm.allocation.language.xtext.ui.internal.AllocationSpecificationLanguageActivator;
 import org.osgi.framework.Bundle;
 
 import com.google.inject.Injector;
+
+import org.muml.psm.allocation.language.xtext.ui.internal.AllocationSpecificationLanguageActivator;
 
 /**
  * This class was generated. Customizations should only happen in a newly
@@ -22,7 +23,7 @@ public class AllocationSpecificationLanguageExecutableExtensionFactory extends A
 	
 	@Override
 	protected Injector getInjector() {
-		return AllocationSpecificationLanguageActivator.getInstance().getInjector(AllocationSpecificationLanguageActivator.DE_UNI_PADERBORN_FUJABA_MUML_ALLOCATION_LANGUAGE_ALLOCATIONSPECIFICATIONLANGUAGE);
+		return AllocationSpecificationLanguageActivator.getInstance().getInjector(AllocationSpecificationLanguageActivator.ORG_MUML_PSM_ALLOCATION_LANGUAGE_XTEXT_ALLOCATIONSPECIFICATIONLANGUAGE);
 	}
 	
 }

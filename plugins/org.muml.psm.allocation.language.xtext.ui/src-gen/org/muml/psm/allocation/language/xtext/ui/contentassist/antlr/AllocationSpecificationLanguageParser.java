@@ -4,17 +4,18 @@
 package org.muml.psm.allocation.language.xtext.ui.contentassist.antlr;
 
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.HashMap;
 
 import org.antlr.runtime.RecognitionException;
 import org.eclipse.xtext.AbstractElement;
 import org.eclipse.xtext.ui.editor.contentassist.antlr.AbstractContentAssistParser;
 import org.eclipse.xtext.ui.editor.contentassist.antlr.FollowElement;
 import org.eclipse.xtext.ui.editor.contentassist.antlr.internal.AbstractInternalContentAssistParser;
-import org.muml.psm.allocation.language.xtext.services.AllocationSpecificationLanguageGrammarAccess;
 
 import com.google.inject.Inject;
+
+import org.muml.psm.allocation.language.xtext.services.AllocationSpecificationLanguageGrammarAccess;
 
 public class AllocationSpecificationLanguageParser extends AbstractContentAssistParser {
 	

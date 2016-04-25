@@ -3,7 +3,7 @@ import org.eclipse.ocl.xtext.base.cs2as.CS2ASConversion;
 
 // generated code: do NOT edit (file is overwritten on regeneration)
 
-public class LanguageSpecificationCSPreOrderVisitor extends org.muml.psm.allocation.language.cs.util.AbstractLanguageSpecificationCSPreOrderVisitor {
+public class LanguageSpecificationCSPreOrderVisitor extends org.muml.psm.allocation.language.cs.util.AbstractCsPreOrderVisitor {
 	public LanguageSpecificationCSPreOrderVisitor(CS2ASConversion context) {
 		super(context);
 	}

@@ -1,17 +1,14 @@
 package org.muml.psm.allocation.language.xtext.ui.contentassist.antlr.internal;
 
-import org.antlr.runtime.BaseRecognizer;
-import org.antlr.runtime.CharStream;
-import org.antlr.runtime.DFA;
-import org.antlr.runtime.EarlyExitException;
-import org.antlr.runtime.IntStream;
-import org.antlr.runtime.MismatchedSetException;
-import org.antlr.runtime.NoViableAltException;
-import org.antlr.runtime.RecognitionException;
-import org.antlr.runtime.RecognizerSharedState;
 // Hack: Use our own Lexer superclass by means of import. 
 // Currently there is no other way to specify the superclass for the lexer.
 import org.eclipse.xtext.ui.editor.contentassist.antlr.internal.Lexer;
+
+
+import org.antlr.runtime.*;
+import java.util.Stack;
+import java.util.List;
+import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalAllocationSpecificationLanguageLexer extends Lexer {
@@ -146,15 +143,15 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g"; }
+    public String getGrammarFileName() { return "InternalAllocationSpecificationLanguage.g"; }
 
     // $ANTLR start "T__17"
     public final void mT__17() throws RecognitionException {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11:7: ( 'resource' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:11:9: 'resource'
+            // InternalAllocationSpecificationLanguage.g:11:7: ( 'resource' )
+            // InternalAllocationSpecificationLanguage.g:11:9: 'resource'
             {
             match("resource"); 
 
@@ -174,8 +171,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:12:7: ( 'requiredResource' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:12:9: 'requiredResource'
+            // InternalAllocationSpecificationLanguage.g:12:7: ( 'requiredResource' )
+            // InternalAllocationSpecificationLanguage.g:12:9: 'requiredResource'
             {
             match("requiredResource"); 
 
@@ -195,8 +192,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:13:7: ( 'requiredHardwareResourceInstance' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:13:9: 'requiredHardwareResourceInstance'
+            // InternalAllocationSpecificationLanguage.g:13:7: ( 'requiredHardwareResourceInstance' )
+            // InternalAllocationSpecificationLanguage.g:13:9: 'requiredHardwareResourceInstance'
             {
             match("requiredHardwareResourceInstance"); 
 
@@ -216,8 +213,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:14:7: ( 'requiredLocation' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:14:9: 'requiredLocation'
+            // InternalAllocationSpecificationLanguage.g:14:7: ( 'requiredLocation' )
+            // InternalAllocationSpecificationLanguage.g:14:9: 'requiredLocation'
             {
             match("requiredLocation"); 
 
@@ -237,8 +234,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:15:7: ( '^' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:15:9: '^'
+            // InternalAllocationSpecificationLanguage.g:15:7: ( '^' )
+            // InternalAllocationSpecificationLanguage.g:15:9: '^'
             {
             match('^'); 
 
@@ -257,8 +254,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:16:7: ( '^^' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:16:9: '^^'
+            // InternalAllocationSpecificationLanguage.g:16:7: ( '^^' )
+            // InternalAllocationSpecificationLanguage.g:16:9: '^^'
             {
             match("^^"); 
 
@@ -278,8 +275,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:17:7: ( 'import' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:17:9: 'import'
+            // InternalAllocationSpecificationLanguage.g:17:7: ( 'import' )
+            // InternalAllocationSpecificationLanguage.g:17:9: 'import'
             {
             match("import"); 
 
@@ -299,8 +296,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:18:7: ( 'include' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:18:9: 'include'
+            // InternalAllocationSpecificationLanguage.g:18:7: ( 'include' )
+            // InternalAllocationSpecificationLanguage.g:18:9: 'include'
             {
             match("include"); 
 
@@ -320,8 +317,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:19:7: ( 'library' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:19:9: 'library'
+            // InternalAllocationSpecificationLanguage.g:19:7: ( 'library' )
+            // InternalAllocationSpecificationLanguage.g:19:9: 'library'
             {
             match("library"); 
 
@@ -341,8 +338,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:20:7: ( 'Boolean' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:20:9: 'Boolean'
+            // InternalAllocationSpecificationLanguage.g:20:7: ( 'Boolean' )
+            // InternalAllocationSpecificationLanguage.g:20:9: 'Boolean'
             {
             match("Boolean"); 
 
@@ -362,8 +359,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21:7: ( 'Integer' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21:9: 'Integer'
+            // InternalAllocationSpecificationLanguage.g:21:7: ( 'Integer' )
+            // InternalAllocationSpecificationLanguage.g:21:9: 'Integer'
             {
             match("Integer"); 
 
@@ -383,8 +380,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:22:7: ( 'Real' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:22:9: 'Real'
+            // InternalAllocationSpecificationLanguage.g:22:7: ( 'Real' )
+            // InternalAllocationSpecificationLanguage.g:22:9: 'Real'
             {
             match("Real"); 
 
@@ -404,8 +401,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:23:7: ( 'String' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:23:9: 'String'
+            // InternalAllocationSpecificationLanguage.g:23:7: ( 'String' )
+            // InternalAllocationSpecificationLanguage.g:23:9: 'String'
             {
             match("String"); 
 
@@ -425,8 +422,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:24:7: ( 'UnlimitedNatural' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:24:9: 'UnlimitedNatural'
+            // InternalAllocationSpecificationLanguage.g:24:7: ( 'UnlimitedNatural' )
+            // InternalAllocationSpecificationLanguage.g:24:9: 'UnlimitedNatural'
             {
             match("UnlimitedNatural"); 
 
@@ -446,8 +443,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:25:7: ( 'OclAny' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:25:9: 'OclAny'
+            // InternalAllocationSpecificationLanguage.g:25:7: ( 'OclAny' )
+            // InternalAllocationSpecificationLanguage.g:25:9: 'OclAny'
             {
             match("OclAny"); 
 
@@ -467,8 +464,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:26:7: ( 'OclInvalid' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:26:9: 'OclInvalid'
+            // InternalAllocationSpecificationLanguage.g:26:7: ( 'OclInvalid' )
+            // InternalAllocationSpecificationLanguage.g:26:9: 'OclInvalid'
             {
             match("OclInvalid"); 
 
@@ -488,8 +485,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:27:7: ( 'OclMessage' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:27:9: 'OclMessage'
+            // InternalAllocationSpecificationLanguage.g:27:7: ( 'OclMessage' )
+            // InternalAllocationSpecificationLanguage.g:27:9: 'OclMessage'
             {
             match("OclMessage"); 
 
@@ -509,8 +506,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:28:7: ( 'OclState' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:28:9: 'OclState'
+            // InternalAllocationSpecificationLanguage.g:28:7: ( 'OclState' )
+            // InternalAllocationSpecificationLanguage.g:28:9: 'OclState'
             {
             match("OclState"); 
 
@@ -530,8 +527,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:29:7: ( 'OclVoid' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:29:9: 'OclVoid'
+            // InternalAllocationSpecificationLanguage.g:29:7: ( 'OclVoid' )
+            // InternalAllocationSpecificationLanguage.g:29:9: 'OclVoid'
             {
             match("OclVoid"); 
 
@@ -551,8 +548,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:30:7: ( '-' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:30:9: '-'
+            // InternalAllocationSpecificationLanguage.g:30:7: ( '-' )
+            // InternalAllocationSpecificationLanguage.g:30:9: '-'
             {
             match('-'); 
 
@@ -571,8 +568,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:31:7: ( 'not' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:31:9: 'not'
+            // InternalAllocationSpecificationLanguage.g:31:7: ( 'not' )
+            // InternalAllocationSpecificationLanguage.g:31:9: 'not'
             {
             match("not"); 
 
@@ -592,8 +589,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:32:7: ( '*' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:32:9: '*'
+            // InternalAllocationSpecificationLanguage.g:32:7: ( '*' )
+            // InternalAllocationSpecificationLanguage.g:32:9: '*'
             {
             match('*'); 
 
@@ -612,8 +609,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:33:7: ( '/' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:33:9: '/'
+            // InternalAllocationSpecificationLanguage.g:33:7: ( '/' )
+            // InternalAllocationSpecificationLanguage.g:33:9: '/'
             {
             match('/'); 
 
@@ -632,8 +629,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:34:7: ( '+' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:34:9: '+'
+            // InternalAllocationSpecificationLanguage.g:34:7: ( '+' )
+            // InternalAllocationSpecificationLanguage.g:34:9: '+'
             {
             match('+'); 
 
@@ -652,8 +649,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:35:7: ( '>' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:35:9: '>'
+            // InternalAllocationSpecificationLanguage.g:35:7: ( '>' )
+            // InternalAllocationSpecificationLanguage.g:35:9: '>'
             {
             match('>'); 
 
@@ -672,8 +669,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:36:7: ( '<' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:36:9: '<'
+            // InternalAllocationSpecificationLanguage.g:36:7: ( '<' )
+            // InternalAllocationSpecificationLanguage.g:36:9: '<'
             {
             match('<'); 
 
@@ -692,8 +689,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:37:7: ( '>=' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:37:9: '>='
+            // InternalAllocationSpecificationLanguage.g:37:7: ( '>=' )
+            // InternalAllocationSpecificationLanguage.g:37:9: '>='
             {
             match(">="); 
 
@@ -713,8 +710,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:38:7: ( '<=' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:38:9: '<='
+            // InternalAllocationSpecificationLanguage.g:38:7: ( '<=' )
+            // InternalAllocationSpecificationLanguage.g:38:9: '<='
             {
             match("<="); 
 
@@ -734,8 +731,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:39:7: ( '=' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:39:9: '='
+            // InternalAllocationSpecificationLanguage.g:39:7: ( '=' )
+            // InternalAllocationSpecificationLanguage.g:39:9: '='
             {
             match('='); 
 
@@ -754,8 +751,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:40:7: ( '<>' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:40:9: '<>'
+            // InternalAllocationSpecificationLanguage.g:40:7: ( '<>' )
+            // InternalAllocationSpecificationLanguage.g:40:9: '<>'
             {
             match("<>"); 
 
@@ -775,8 +772,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:41:7: ( 'and' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:41:9: 'and'
+            // InternalAllocationSpecificationLanguage.g:41:7: ( 'and' )
+            // InternalAllocationSpecificationLanguage.g:41:9: 'and'
             {
             match("and"); 
 
@@ -796,8 +793,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:42:7: ( 'or' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:42:9: 'or'
+            // InternalAllocationSpecificationLanguage.g:42:7: ( 'or' )
+            // InternalAllocationSpecificationLanguage.g:42:9: 'or'
             {
             match("or"); 
 
@@ -817,8 +814,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:43:7: ( 'xor' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:43:9: 'xor'
+            // InternalAllocationSpecificationLanguage.g:43:7: ( 'xor' )
+            // InternalAllocationSpecificationLanguage.g:43:9: 'xor'
             {
             match("xor"); 
 
@@ -838,8 +835,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:44:7: ( 'implies' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:44:9: 'implies'
+            // InternalAllocationSpecificationLanguage.g:44:7: ( 'implies' )
+            // InternalAllocationSpecificationLanguage.g:44:9: 'implies'
             {
             match("implies"); 
 
@@ -859,8 +856,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:45:7: ( '.' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:45:9: '.'
+            // InternalAllocationSpecificationLanguage.g:45:7: ( '.' )
+            // InternalAllocationSpecificationLanguage.g:45:9: '.'
             {
             match('.'); 
 
@@ -879,8 +876,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:46:7: ( '->' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:46:9: '->'
+            // InternalAllocationSpecificationLanguage.g:46:7: ( '->' )
+            // InternalAllocationSpecificationLanguage.g:46:9: '->'
             {
             match("->"); 
 
@@ -900,8 +897,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:47:7: ( '?.' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:47:9: '?.'
+            // InternalAllocationSpecificationLanguage.g:47:7: ( '?.' )
+            // InternalAllocationSpecificationLanguage.g:47:9: '?.'
             {
             match("?."); 
 
@@ -921,8 +918,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:48:7: ( '?->' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:48:9: '?->'
+            // InternalAllocationSpecificationLanguage.g:48:7: ( '?->' )
+            // InternalAllocationSpecificationLanguage.g:48:9: '?->'
             {
             match("?->"); 
 
@@ -942,8 +939,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:49:7: ( 'Map' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:49:9: 'Map'
+            // InternalAllocationSpecificationLanguage.g:49:7: ( 'Map' )
+            // InternalAllocationSpecificationLanguage.g:49:9: 'Map'
             {
             match("Map"); 
 
@@ -963,8 +960,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:50:7: ( 'Tuple' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:50:9: 'Tuple'
+            // InternalAllocationSpecificationLanguage.g:50:7: ( 'Tuple' )
+            // InternalAllocationSpecificationLanguage.g:50:9: 'Tuple'
             {
             match("Tuple"); 
 
@@ -984,8 +981,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:51:7: ( 'Set' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:51:9: 'Set'
+            // InternalAllocationSpecificationLanguage.g:51:7: ( 'Set' )
+            // InternalAllocationSpecificationLanguage.g:51:9: 'Set'
             {
             match("Set"); 
 
@@ -1005,8 +1002,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:52:7: ( 'Bag' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:52:9: 'Bag'
+            // InternalAllocationSpecificationLanguage.g:52:7: ( 'Bag' )
+            // InternalAllocationSpecificationLanguage.g:52:9: 'Bag'
             {
             match("Bag"); 
 
@@ -1026,8 +1023,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:53:7: ( 'Sequence' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:53:9: 'Sequence'
+            // InternalAllocationSpecificationLanguage.g:53:7: ( 'Sequence' )
+            // InternalAllocationSpecificationLanguage.g:53:9: 'Sequence'
             {
             match("Sequence"); 
 
@@ -1047,8 +1044,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:54:7: ( 'Collection' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:54:9: 'Collection'
+            // InternalAllocationSpecificationLanguage.g:54:7: ( 'Collection' )
+            // InternalAllocationSpecificationLanguage.g:54:9: 'Collection'
             {
             match("Collection"); 
 
@@ -1068,8 +1065,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:55:7: ( 'OrderedSet' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:55:9: 'OrderedSet'
+            // InternalAllocationSpecificationLanguage.g:55:7: ( 'OrderedSet' )
+            // InternalAllocationSpecificationLanguage.g:55:9: 'OrderedSet'
             {
             match("OrderedSet"); 
 
@@ -1089,8 +1086,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:56:7: ( '|?' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:56:9: '|?'
+            // InternalAllocationSpecificationLanguage.g:56:7: ( '|?' )
+            // InternalAllocationSpecificationLanguage.g:56:9: '|?'
             {
             match("|?"); 
 
@@ -1110,8 +1107,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:57:7: ( '?' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:57:9: '?'
+            // InternalAllocationSpecificationLanguage.g:57:7: ( '?' )
+            // InternalAllocationSpecificationLanguage.g:57:9: '?'
             {
             match('?'); 
 
@@ -1130,8 +1127,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:58:7: ( 'sameLocation' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:58:9: 'sameLocation'
+            // InternalAllocationSpecificationLanguage.g:58:7: ( 'sameLocation' )
+            // InternalAllocationSpecificationLanguage.g:58:9: 'sameLocation'
             {
             match("sameLocation"); 
 
@@ -1151,8 +1148,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:59:7: ( 'collocation' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:59:9: 'collocation'
+            // InternalAllocationSpecificationLanguage.g:59:7: ( 'collocation' )
+            // InternalAllocationSpecificationLanguage.g:59:9: 'collocation'
             {
             match("collocation"); 
 
@@ -1172,8 +1169,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__66;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:60:7: ( 'differentLocation' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:60:9: 'differentLocation'
+            // InternalAllocationSpecificationLanguage.g:60:7: ( 'differentLocation' )
+            // InternalAllocationSpecificationLanguage.g:60:9: 'differentLocation'
             {
             match("differentLocation"); 
 
@@ -1193,8 +1190,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__67;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:61:7: ( 'separateLocation' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:61:9: 'separateLocation'
+            // InternalAllocationSpecificationLanguage.g:61:7: ( 'separateLocation' )
+            // InternalAllocationSpecificationLanguage.g:61:9: 'separateLocation'
             {
             match("separateLocation"); 
 
@@ -1214,8 +1211,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__68;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:62:7: ( 'min' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:62:9: 'min'
+            // InternalAllocationSpecificationLanguage.g:62:7: ( 'min' )
+            // InternalAllocationSpecificationLanguage.g:62:9: 'min'
             {
             match("min"); 
 
@@ -1235,8 +1232,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__69;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:63:7: ( 'max' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:63:9: 'max'
+            // InternalAllocationSpecificationLanguage.g:63:7: ( 'max' )
+            // InternalAllocationSpecificationLanguage.g:63:9: 'max'
             {
             match("max"); 
 
@@ -1256,8 +1253,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:64:7: ( '{' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:64:9: '{'
+            // InternalAllocationSpecificationLanguage.g:64:7: ( '{' )
+            // InternalAllocationSpecificationLanguage.g:64:9: '{'
             {
             match('{'); 
 
@@ -1276,8 +1273,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:65:7: ( '}' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:65:9: '}'
+            // InternalAllocationSpecificationLanguage.g:65:7: ( '}' )
+            // InternalAllocationSpecificationLanguage.g:65:9: '}'
             {
             match('}'); 
 
@@ -1296,8 +1293,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:66:7: ( 'service' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:66:9: 'service'
+            // InternalAllocationSpecificationLanguage.g:66:7: ( 'service' )
+            // InternalAllocationSpecificationLanguage.g:66:9: 'service'
             {
             match("service"); 
 
@@ -1317,8 +1314,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__73;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:67:7: ( 'qos' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:67:9: 'qos'
+            // InternalAllocationSpecificationLanguage.g:67:7: ( 'qos' )
+            // InternalAllocationSpecificationLanguage.g:67:9: 'qos'
             {
             match("qos"); 
 
@@ -1338,8 +1335,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__74;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:68:7: ( 'value' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:68:9: 'value'
+            // InternalAllocationSpecificationLanguage.g:68:7: ( 'value' )
+            // InternalAllocationSpecificationLanguage.g:68:9: 'value'
             {
             match("value"); 
 
@@ -1359,8 +1356,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__75;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:69:7: ( ';' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:69:9: ';'
+            // InternalAllocationSpecificationLanguage.g:69:7: ( ';' )
+            // InternalAllocationSpecificationLanguage.g:69:9: ';'
             {
             match(';'); 
 
@@ -1379,8 +1376,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__76;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:70:7: ( 'descriptors' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:70:9: 'descriptors'
+            // InternalAllocationSpecificationLanguage.g:70:7: ( 'descriptors' )
+            // InternalAllocationSpecificationLanguage.g:70:9: 'descriptors'
             {
             match("descriptors"); 
 
@@ -1400,8 +1397,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__77;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:71:7: ( 'ocl' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:71:9: 'ocl'
+            // InternalAllocationSpecificationLanguage.g:71:7: ( 'ocl' )
+            // InternalAllocationSpecificationLanguage.g:71:9: 'ocl'
             {
             match("ocl"); 
 
@@ -1421,8 +1418,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__78;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:72:7: ( ',' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:72:9: ','
+            // InternalAllocationSpecificationLanguage.g:72:7: ( ',' )
+            // InternalAllocationSpecificationLanguage.g:72:9: ','
             {
             match(','); 
 
@@ -1441,8 +1438,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__79;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:73:7: ( 'constraint' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:73:9: 'constraint'
+            // InternalAllocationSpecificationLanguage.g:73:7: ( 'constraint' )
+            // InternalAllocationSpecificationLanguage.g:73:9: 'constraint'
             {
             match("constraint"); 
 
@@ -1462,8 +1459,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__80;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:74:7: ( 'lhs' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:74:9: 'lhs'
+            // InternalAllocationSpecificationLanguage.g:74:7: ( 'lhs' )
+            // InternalAllocationSpecificationLanguage.g:74:9: 'lhs'
             {
             match("lhs"); 
 
@@ -1483,8 +1480,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__81;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:75:7: ( 'rhs' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:75:9: 'rhs'
+            // InternalAllocationSpecificationLanguage.g:75:7: ( 'rhs' )
+            // InternalAllocationSpecificationLanguage.g:75:9: 'rhs'
             {
             match("rhs"); 
 
@@ -1504,8 +1501,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__82;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:76:7: ( '(' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:76:9: '('
+            // InternalAllocationSpecificationLanguage.g:76:7: ( '(' )
+            // InternalAllocationSpecificationLanguage.g:76:9: '('
             {
             match('('); 
 
@@ -1524,8 +1521,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__83;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:77:7: ( ')' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:77:9: ')'
+            // InternalAllocationSpecificationLanguage.g:77:7: ( ')' )
+            // InternalAllocationSpecificationLanguage.g:77:9: ')'
             {
             match(')'); 
 
@@ -1544,8 +1541,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__84;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:78:7: ( 'measure' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:78:9: 'measure'
+            // InternalAllocationSpecificationLanguage.g:78:7: ( 'measure' )
+            // InternalAllocationSpecificationLanguage.g:78:9: 'measure'
             {
             match("measure"); 
 
@@ -1565,8 +1562,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__85;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:79:7: ( 'context' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:79:9: 'context'
+            // InternalAllocationSpecificationLanguage.g:79:7: ( 'context' )
+            // InternalAllocationSpecificationLanguage.g:79:9: 'context'
             {
             match("context"); 
 
@@ -1586,8 +1583,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__86;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:80:7: ( 'inv' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:80:9: 'inv'
+            // InternalAllocationSpecificationLanguage.g:80:7: ( 'inv' )
+            // InternalAllocationSpecificationLanguage.g:80:9: 'inv'
             {
             match("inv"); 
 
@@ -1607,8 +1604,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__87;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:81:7: ( ':' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:81:9: ':'
+            // InternalAllocationSpecificationLanguage.g:81:7: ( ':' )
+            // InternalAllocationSpecificationLanguage.g:81:9: ':'
             {
             match(':'); 
 
@@ -1627,8 +1624,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__88;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:82:7: ( 'def' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:82:9: 'def'
+            // InternalAllocationSpecificationLanguage.g:82:7: ( 'def' )
+            // InternalAllocationSpecificationLanguage.g:82:9: 'def'
             {
             match("def"); 
 
@@ -1648,8 +1645,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__89;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:83:7: ( 'pre' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:83:9: 'pre'
+            // InternalAllocationSpecificationLanguage.g:83:7: ( 'pre' )
+            // InternalAllocationSpecificationLanguage.g:83:9: 'pre'
             {
             match("pre"); 
 
@@ -1669,8 +1666,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__90;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:84:7: ( 'post' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:84:9: 'post'
+            // InternalAllocationSpecificationLanguage.g:84:7: ( 'post' )
+            // InternalAllocationSpecificationLanguage.g:84:9: 'post'
             {
             match("post"); 
 
@@ -1690,8 +1687,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__91;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:85:7: ( 'body' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:85:9: 'body'
+            // InternalAllocationSpecificationLanguage.g:85:7: ( 'body' )
+            // InternalAllocationSpecificationLanguage.g:85:9: 'body'
             {
             match("body"); 
 
@@ -1711,8 +1708,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__92;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:86:7: ( 'package' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:86:9: 'package'
+            // InternalAllocationSpecificationLanguage.g:86:7: ( 'package' )
+            // InternalAllocationSpecificationLanguage.g:86:9: 'package'
             {
             match("package"); 
 
@@ -1732,8 +1729,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__93;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:87:7: ( 'endpackage' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:87:9: 'endpackage'
+            // InternalAllocationSpecificationLanguage.g:87:7: ( 'endpackage' )
+            // InternalAllocationSpecificationLanguage.g:87:9: 'endpackage'
             {
             match("endpackage"); 
 
@@ -1753,8 +1750,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__94;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:88:7: ( 'derive' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:88:9: 'derive'
+            // InternalAllocationSpecificationLanguage.g:88:7: ( 'derive' )
+            // InternalAllocationSpecificationLanguage.g:88:9: 'derive'
             {
             match("derive"); 
 
@@ -1774,8 +1771,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__95;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:89:7: ( 'init' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:89:9: 'init'
+            // InternalAllocationSpecificationLanguage.g:89:7: ( 'init' )
+            // InternalAllocationSpecificationLanguage.g:89:9: 'init'
             {
             match("init"); 
 
@@ -1795,8 +1792,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__96;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:90:7: ( '::' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:90:9: '::'
+            // InternalAllocationSpecificationLanguage.g:90:7: ( '::' )
+            // InternalAllocationSpecificationLanguage.g:90:9: '::'
             {
             match("::"); 
 
@@ -1816,8 +1813,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__97;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:91:7: ( '..' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:91:9: '..'
+            // InternalAllocationSpecificationLanguage.g:91:7: ( '..' )
+            // InternalAllocationSpecificationLanguage.g:91:9: '..'
             {
             match(".."); 
 
@@ -1837,8 +1834,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__98;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:92:7: ( '++' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:92:9: '++'
+            // InternalAllocationSpecificationLanguage.g:92:7: ( '++' )
+            // InternalAllocationSpecificationLanguage.g:92:9: '++'
             {
             match("++"); 
 
@@ -1858,8 +1855,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__99;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:93:7: ( 'Lambda' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:93:9: 'Lambda'
+            // InternalAllocationSpecificationLanguage.g:93:7: ( 'Lambda' )
+            // InternalAllocationSpecificationLanguage.g:93:9: 'Lambda'
             {
             match("Lambda"); 
 
@@ -1879,8 +1876,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__100;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:94:8: ( '<-' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:94:10: '<-'
+            // InternalAllocationSpecificationLanguage.g:94:8: ( '<-' )
+            // InternalAllocationSpecificationLanguage.g:94:10: '<-'
             {
             match("<-"); 
 
@@ -1900,8 +1897,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__101;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:95:8: ( 'invalid' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:95:10: 'invalid'
+            // InternalAllocationSpecificationLanguage.g:95:8: ( 'invalid' )
+            // InternalAllocationSpecificationLanguage.g:95:10: 'invalid'
             {
             match("invalid"); 
 
@@ -1921,8 +1918,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__102;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:96:8: ( 'null' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:96:10: 'null'
+            // InternalAllocationSpecificationLanguage.g:96:8: ( 'null' )
+            // InternalAllocationSpecificationLanguage.g:96:10: 'null'
             {
             match("null"); 
 
@@ -1942,8 +1939,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__103;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:97:8: ( '[' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:97:10: '['
+            // InternalAllocationSpecificationLanguage.g:97:8: ( '[' )
+            // InternalAllocationSpecificationLanguage.g:97:10: '['
             {
             match('['); 
 
@@ -1962,8 +1959,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__104;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:98:8: ( ']' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:98:10: ']'
+            // InternalAllocationSpecificationLanguage.g:98:8: ( ']' )
+            // InternalAllocationSpecificationLanguage.g:98:10: ']'
             {
             match(']'); 
 
@@ -1982,8 +1979,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__105;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:99:8: ( 'in' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:99:10: 'in'
+            // InternalAllocationSpecificationLanguage.g:99:8: ( 'in' )
+            // InternalAllocationSpecificationLanguage.g:99:10: 'in'
             {
             match("in"); 
 
@@ -2003,8 +2000,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__106;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:100:8: ( 'if' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:100:10: 'if'
+            // InternalAllocationSpecificationLanguage.g:100:8: ( 'if' )
+            // InternalAllocationSpecificationLanguage.g:100:10: 'if'
             {
             match("if"); 
 
@@ -2024,8 +2021,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__107;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:101:8: ( 'then' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:101:10: 'then'
+            // InternalAllocationSpecificationLanguage.g:101:8: ( 'then' )
+            // InternalAllocationSpecificationLanguage.g:101:10: 'then'
             {
             match("then"); 
 
@@ -2045,8 +2042,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__108;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:102:8: ( 'else' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:102:10: 'else'
+            // InternalAllocationSpecificationLanguage.g:102:8: ( 'else' )
+            // InternalAllocationSpecificationLanguage.g:102:10: 'else'
             {
             match("else"); 
 
@@ -2066,8 +2063,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__109;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:103:8: ( 'endif' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:103:10: 'endif'
+            // InternalAllocationSpecificationLanguage.g:103:8: ( 'endif' )
+            // InternalAllocationSpecificationLanguage.g:103:10: 'endif'
             {
             match("endif"); 
 
@@ -2087,8 +2084,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__110;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:104:8: ( 'elseif' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:104:10: 'elseif'
+            // InternalAllocationSpecificationLanguage.g:104:8: ( 'elseif' )
+            // InternalAllocationSpecificationLanguage.g:104:10: 'elseif'
             {
             match("elseif"); 
 
@@ -2108,8 +2105,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__111;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:105:8: ( 'let' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:105:10: 'let'
+            // InternalAllocationSpecificationLanguage.g:105:8: ( 'let' )
+            // InternalAllocationSpecificationLanguage.g:105:10: 'let'
             {
             match("let"); 
 
@@ -2129,8 +2126,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__112;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:106:8: ( 'self' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:106:10: 'self'
+            // InternalAllocationSpecificationLanguage.g:106:8: ( 'self' )
+            // InternalAllocationSpecificationLanguage.g:106:10: 'self'
             {
             match("self"); 
 
@@ -2150,8 +2147,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__113;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:107:8: ( 'extends' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:107:10: 'extends'
+            // InternalAllocationSpecificationLanguage.g:107:8: ( 'extends' )
+            // InternalAllocationSpecificationLanguage.g:107:10: 'extends'
             {
             match("extends"); 
 
@@ -2171,8 +2168,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__114;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:108:8: ( '&&' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:108:10: '&&'
+            // InternalAllocationSpecificationLanguage.g:108:8: ( '&&' )
+            // InternalAllocationSpecificationLanguage.g:108:10: '&&'
             {
             match("&&"); 
 
@@ -2192,8 +2189,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__115;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:109:8: ( 'static' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:109:10: 'static'
+            // InternalAllocationSpecificationLanguage.g:109:8: ( 'static' )
+            // InternalAllocationSpecificationLanguage.g:109:10: 'static'
             {
             match("static"); 
 
@@ -2213,8 +2210,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__116;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:110:8: ( '::*' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:110:10: '::*'
+            // InternalAllocationSpecificationLanguage.g:110:8: ( '::*' )
+            // InternalAllocationSpecificationLanguage.g:110:10: '::*'
             {
             match("::*"); 
 
@@ -2234,8 +2231,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__117;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:111:8: ( 'true' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:111:10: 'true'
+            // InternalAllocationSpecificationLanguage.g:111:8: ( 'true' )
+            // InternalAllocationSpecificationLanguage.g:111:10: 'true'
             {
             match("true"); 
 
@@ -2255,8 +2252,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__118;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:112:8: ( 'false' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:112:10: 'false'
+            // InternalAllocationSpecificationLanguage.g:112:8: ( 'false' )
+            // InternalAllocationSpecificationLanguage.g:112:10: 'false'
             {
             match("false"); 
 
@@ -2276,8 +2273,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__119;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:113:8: ( '@' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:113:10: '@'
+            // InternalAllocationSpecificationLanguage.g:113:8: ( '@' )
+            // InternalAllocationSpecificationLanguage.g:113:10: '@'
             {
             match('@'); 
 
@@ -2296,8 +2293,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__120;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:114:8: ( '|' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:114:10: '|'
+            // InternalAllocationSpecificationLanguage.g:114:8: ( '|' )
+            // InternalAllocationSpecificationLanguage.g:114:10: '|'
             {
             match('|'); 
 
@@ -2316,8 +2313,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = T__121;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:115:8: ( '|1' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:115:10: '|1'
+            // InternalAllocationSpecificationLanguage.g:115:8: ( '|1' )
+            // InternalAllocationSpecificationLanguage.g:115:10: '|1'
             {
             match("|1"); 
 
@@ -2337,8 +2334,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = RULE_UNQUOTED_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21881:22: ( '\\u00A3$%^\\u00A3$%^' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21881:24: '\\u00A3$%^\\u00A3$%^'
+            // InternalAllocationSpecificationLanguage.g:21881:22: ( '\\u00A3$%^\\u00A3$%^' )
+            // InternalAllocationSpecificationLanguage.g:21881:24: '\\u00A3$%^\\u00A3$%^'
             {
             match("\u00A3$%^\u00A3$%^"); 
 
@@ -2356,8 +2353,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
     // $ANTLR start "RULE_ESCAPED_CHARACTER"
     public final void mRULE_ESCAPED_CHARACTER() throws RecognitionException {
         try {
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21883:33: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21883:35: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+            // InternalAllocationSpecificationLanguage.g:21883:33: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) )
+            // InternalAllocationSpecificationLanguage.g:21883:35: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
             {
             match('\\'); 
             if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2381,8 +2378,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
     // $ANTLR start "RULE_LETTER_CHARACTER"
     public final void mRULE_LETTER_CHARACTER() throws RecognitionException {
         try {
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21885:32: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21885:34: ( 'a' .. 'z' | 'A' .. 'Z' | '_' )
+            // InternalAllocationSpecificationLanguage.g:21885:32: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) )
+            // InternalAllocationSpecificationLanguage.g:21885:34: ( 'a' .. 'z' | 'A' .. 'Z' | '_' )
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -2407,11 +2404,11 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = RULE_DOUBLE_QUOTED_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21887:27: ( '\"' ( RULE_ESCAPED_CHARACTER | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21887:29: '\"' ( RULE_ESCAPED_CHARACTER | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+            // InternalAllocationSpecificationLanguage.g:21887:27: ( '\"' ( RULE_ESCAPED_CHARACTER | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
+            // InternalAllocationSpecificationLanguage.g:21887:29: '\"' ( RULE_ESCAPED_CHARACTER | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
             {
             match('\"'); 
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21887:33: ( RULE_ESCAPED_CHARACTER | ~ ( ( '\\\\' | '\"' ) ) )*
+            // InternalAllocationSpecificationLanguage.g:21887:33: ( RULE_ESCAPED_CHARACTER | ~ ( ( '\\\\' | '\"' ) ) )*
             loop1:
             do {
                 int alt1=3;
@@ -2427,14 +2424,14 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21887:34: RULE_ESCAPED_CHARACTER
+            	    // InternalAllocationSpecificationLanguage.g:21887:34: RULE_ESCAPED_CHARACTER
             	    {
             	    mRULE_ESCAPED_CHARACTER(); 
 
             	    }
             	    break;
             	case 2 :
-            	    // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21887:57: ~ ( ( '\\\\' | '\"' ) )
+            	    // InternalAllocationSpecificationLanguage.g:21887:57: ~ ( ( '\\\\' | '\"' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2471,11 +2468,11 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = RULE_SINGLE_QUOTED_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21889:27: ( '\\'' ( RULE_ESCAPED_CHARACTER | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21889:29: '\\'' ( RULE_ESCAPED_CHARACTER | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+            // InternalAllocationSpecificationLanguage.g:21889:27: ( '\\'' ( RULE_ESCAPED_CHARACTER | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalAllocationSpecificationLanguage.g:21889:29: '\\'' ( RULE_ESCAPED_CHARACTER | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
             {
             match('\''); 
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21889:34: ( RULE_ESCAPED_CHARACTER | ~ ( ( '\\\\' | '\\'' ) ) )*
+            // InternalAllocationSpecificationLanguage.g:21889:34: ( RULE_ESCAPED_CHARACTER | ~ ( ( '\\\\' | '\\'' ) ) )*
             loop2:
             do {
                 int alt2=3;
@@ -2491,14 +2488,14 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21889:35: RULE_ESCAPED_CHARACTER
+            	    // InternalAllocationSpecificationLanguage.g:21889:35: RULE_ESCAPED_CHARACTER
             	    {
             	    mRULE_ESCAPED_CHARACTER(); 
 
             	    }
             	    break;
             	case 2 :
-            	    // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21889:58: ~ ( ( '\\\\' | '\\'' ) )
+            	    // InternalAllocationSpecificationLanguage.g:21889:58: ~ ( ( '\\\\' | '\\'' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2535,12 +2532,12 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = RULE_ML_SINGLE_QUOTED_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21891:30: ( '/\\'' ( options {greedy=false; } : . )* '\\'/' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21891:32: '/\\'' ( options {greedy=false; } : . )* '\\'/'
+            // InternalAllocationSpecificationLanguage.g:21891:30: ( '/\\'' ( options {greedy=false; } : . )* '\\'/' )
+            // InternalAllocationSpecificationLanguage.g:21891:32: '/\\'' ( options {greedy=false; } : . )* '\\'/'
             {
             match("/'"); 
 
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21891:38: ( options {greedy=false; } : . )*
+            // InternalAllocationSpecificationLanguage.g:21891:38: ( options {greedy=false; } : . )*
             loop3:
             do {
                 int alt3=2;
@@ -2565,7 +2562,7 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21891:66: .
+            	    // InternalAllocationSpecificationLanguage.g:21891:66: .
             	    {
             	    matchAny(); 
 
@@ -2595,11 +2592,11 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = RULE_SIMPLE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21893:16: ( RULE_LETTER_CHARACTER ( RULE_LETTER_CHARACTER | '0' .. '9' )* )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21893:18: RULE_LETTER_CHARACTER ( RULE_LETTER_CHARACTER | '0' .. '9' )*
+            // InternalAllocationSpecificationLanguage.g:21893:16: ( RULE_LETTER_CHARACTER ( RULE_LETTER_CHARACTER | '0' .. '9' )* )
+            // InternalAllocationSpecificationLanguage.g:21893:18: RULE_LETTER_CHARACTER ( RULE_LETTER_CHARACTER | '0' .. '9' )*
             {
             mRULE_LETTER_CHARACTER(); 
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21893:40: ( RULE_LETTER_CHARACTER | '0' .. '9' )*
+            // InternalAllocationSpecificationLanguage.g:21893:40: ( RULE_LETTER_CHARACTER | '0' .. '9' )*
             loop4:
             do {
                 int alt4=2;
@@ -2612,7 +2609,7 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:
+            	    // InternalAllocationSpecificationLanguage.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -2648,8 +2645,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = RULE_ESCAPED_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21895:17: ( '_' RULE_SINGLE_QUOTED_STRING )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21895:19: '_' RULE_SINGLE_QUOTED_STRING
+            // InternalAllocationSpecificationLanguage.g:21895:17: ( '_' RULE_SINGLE_QUOTED_STRING )
+            // InternalAllocationSpecificationLanguage.g:21895:19: '_' RULE_SINGLE_QUOTED_STRING
             {
             match('_'); 
             mRULE_SINGLE_QUOTED_STRING(); 
@@ -2669,10 +2666,10 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21897:10: ( ( '0' .. '9' )+ )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21897:12: ( '0' .. '9' )+
+            // InternalAllocationSpecificationLanguage.g:21897:10: ( ( '0' .. '9' )+ )
+            // InternalAllocationSpecificationLanguage.g:21897:12: ( '0' .. '9' )+
             {
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21897:12: ( '0' .. '9' )+
+            // InternalAllocationSpecificationLanguage.g:21897:12: ( '0' .. '9' )+
             int cnt5=0;
             loop5:
             do {
@@ -2686,7 +2683,7 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21897:13: '0' .. '9'
+            	    // InternalAllocationSpecificationLanguage.g:21897:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2718,12 +2715,12 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21899:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21899:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalAllocationSpecificationLanguage.g:21899:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalAllocationSpecificationLanguage.g:21899:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21899:24: ( options {greedy=false; } : . )*
+            // InternalAllocationSpecificationLanguage.g:21899:24: ( options {greedy=false; } : . )*
             loop6:
             do {
                 int alt6=2;
@@ -2748,7 +2745,7 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21899:52: .
+            	    // InternalAllocationSpecificationLanguage.g:21899:52: .
             	    {
             	    matchAny(); 
 
@@ -2778,12 +2775,12 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21901:17: ( '--' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21901:19: '--' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalAllocationSpecificationLanguage.g:21901:17: ( '--' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalAllocationSpecificationLanguage.g:21901:19: '--' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("--"); 
 
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21901:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalAllocationSpecificationLanguage.g:21901:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop7:
             do {
                 int alt7=2;
@@ -2796,7 +2793,7 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21901:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalAllocationSpecificationLanguage.g:21901:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2816,7 +2813,7 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21901:40: ( ( '\\r' )? '\\n' )?
+            // InternalAllocationSpecificationLanguage.g:21901:40: ( ( '\\r' )? '\\n' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -2825,9 +2822,9 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21901:41: ( '\\r' )? '\\n'
+                    // InternalAllocationSpecificationLanguage.g:21901:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21901:41: ( '\\r' )?
+                    // InternalAllocationSpecificationLanguage.g:21901:41: ( '\\r' )?
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -2836,7 +2833,7 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
                     }
                     switch (alt8) {
                         case 1 :
-                            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21901:41: '\\r'
+                            // InternalAllocationSpecificationLanguage.g:21901:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2868,10 +2865,10 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21903:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21903:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalAllocationSpecificationLanguage.g:21903:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalAllocationSpecificationLanguage.g:21903:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21903:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalAllocationSpecificationLanguage.g:21903:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt10=0;
             loop10:
             do {
@@ -2885,7 +2882,7 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:
+            	    // InternalAllocationSpecificationLanguage.g:
             	    {
             	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -2925,8 +2922,8 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21905:16: ( . )
-            // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:21905:18: .
+            // InternalAllocationSpecificationLanguage.g:21905:16: ( . )
+            // InternalAllocationSpecificationLanguage.g:21905:18: .
             {
             matchAny(); 
 
@@ -2941,817 +2938,817 @@ public class InternalAllocationSpecificationLanguageLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:8: ( T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | RULE_UNQUOTED_STRING | RULE_DOUBLE_QUOTED_STRING | RULE_SINGLE_QUOTED_STRING | RULE_ML_SINGLE_QUOTED_STRING | RULE_SIMPLE_ID | RULE_ESCAPED_ID | RULE_INT | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        // InternalAllocationSpecificationLanguage.g:1:8: ( T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | RULE_UNQUOTED_STRING | RULE_DOUBLE_QUOTED_STRING | RULE_SINGLE_QUOTED_STRING | RULE_ML_SINGLE_QUOTED_STRING | RULE_SIMPLE_ID | RULE_ESCAPED_ID | RULE_INT | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
         int alt11=116;
         alt11 = dfa11.predict(input);
         switch (alt11) {
             case 1 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:10: T__17
+                // InternalAllocationSpecificationLanguage.g:1:10: T__17
                 {
                 mT__17(); 
 
                 }
                 break;
             case 2 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:16: T__18
+                // InternalAllocationSpecificationLanguage.g:1:16: T__18
                 {
                 mT__18(); 
 
                 }
                 break;
             case 3 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:22: T__19
+                // InternalAllocationSpecificationLanguage.g:1:22: T__19
                 {
                 mT__19(); 
 
                 }
                 break;
             case 4 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:28: T__20
+                // InternalAllocationSpecificationLanguage.g:1:28: T__20
                 {
                 mT__20(); 
 
                 }
                 break;
             case 5 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:34: T__21
+                // InternalAllocationSpecificationLanguage.g:1:34: T__21
                 {
                 mT__21(); 
 
                 }
                 break;
             case 6 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:40: T__22
+                // InternalAllocationSpecificationLanguage.g:1:40: T__22
                 {
                 mT__22(); 
 
                 }
                 break;
             case 7 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:46: T__23
+                // InternalAllocationSpecificationLanguage.g:1:46: T__23
                 {
                 mT__23(); 
 
                 }
                 break;
             case 8 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:52: T__24
+                // InternalAllocationSpecificationLanguage.g:1:52: T__24
                 {
                 mT__24(); 
 
                 }
                 break;
             case 9 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:58: T__25
+                // InternalAllocationSpecificationLanguage.g:1:58: T__25
                 {
                 mT__25(); 
 
                 }
                 break;
             case 10 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:64: T__26
+                // InternalAllocationSpecificationLanguage.g:1:64: T__26
                 {
                 mT__26(); 
 
                 }
                 break;
             case 11 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:70: T__27
+                // InternalAllocationSpecificationLanguage.g:1:70: T__27
                 {
                 mT__27(); 
 
                 }
                 break;
             case 12 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:76: T__28
+                // InternalAllocationSpecificationLanguage.g:1:76: T__28
                 {
                 mT__28(); 
 
                 }
                 break;
             case 13 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:82: T__29
+                // InternalAllocationSpecificationLanguage.g:1:82: T__29
                 {
                 mT__29(); 
 
                 }
                 break;
             case 14 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:88: T__30
+                // InternalAllocationSpecificationLanguage.g:1:88: T__30
                 {
                 mT__30(); 
 
                 }
                 break;
             case 15 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:94: T__31
+                // InternalAllocationSpecificationLanguage.g:1:94: T__31
                 {
                 mT__31(); 
 
                 }
                 break;
             case 16 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:100: T__32
+                // InternalAllocationSpecificationLanguage.g:1:100: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
             case 17 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:106: T__33
+                // InternalAllocationSpecificationLanguage.g:1:106: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
             case 18 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:112: T__34
+                // InternalAllocationSpecificationLanguage.g:1:112: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
             case 19 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:118: T__35
+                // InternalAllocationSpecificationLanguage.g:1:118: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
             case 20 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:124: T__36
+                // InternalAllocationSpecificationLanguage.g:1:124: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
             case 21 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:130: T__37
+                // InternalAllocationSpecificationLanguage.g:1:130: T__37
                 {
                 mT__37(); 
 
                 }
                 break;
             case 22 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:136: T__38
+                // InternalAllocationSpecificationLanguage.g:1:136: T__38
                 {
                 mT__38(); 
 
                 }
                 break;
             case 23 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:142: T__39
+                // InternalAllocationSpecificationLanguage.g:1:142: T__39
                 {
                 mT__39(); 
 
                 }
                 break;
             case 24 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:148: T__40
+                // InternalAllocationSpecificationLanguage.g:1:148: T__40
                 {
                 mT__40(); 
 
                 }
                 break;
             case 25 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:154: T__41
+                // InternalAllocationSpecificationLanguage.g:1:154: T__41
                 {
                 mT__41(); 
 
                 }
                 break;
             case 26 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:160: T__42
+                // InternalAllocationSpecificationLanguage.g:1:160: T__42
                 {
                 mT__42(); 
 
                 }
                 break;
             case 27 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:166: T__43
+                // InternalAllocationSpecificationLanguage.g:1:166: T__43
                 {
                 mT__43(); 
 
                 }
                 break;
             case 28 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:172: T__44
+                // InternalAllocationSpecificationLanguage.g:1:172: T__44
                 {
                 mT__44(); 
 
                 }
                 break;
             case 29 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:178: T__45
+                // InternalAllocationSpecificationLanguage.g:1:178: T__45
                 {
                 mT__45(); 
 
                 }
                 break;
             case 30 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:184: T__46
+                // InternalAllocationSpecificationLanguage.g:1:184: T__46
                 {
                 mT__46(); 
 
                 }
                 break;
             case 31 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:190: T__47
+                // InternalAllocationSpecificationLanguage.g:1:190: T__47
                 {
                 mT__47(); 
 
                 }
                 break;
             case 32 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:196: T__48
+                // InternalAllocationSpecificationLanguage.g:1:196: T__48
                 {
                 mT__48(); 
 
                 }
                 break;
             case 33 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:202: T__49
+                // InternalAllocationSpecificationLanguage.g:1:202: T__49
                 {
                 mT__49(); 
 
                 }
                 break;
             case 34 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:208: T__50
+                // InternalAllocationSpecificationLanguage.g:1:208: T__50
                 {
                 mT__50(); 
 
                 }
                 break;
             case 35 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:214: T__51
+                // InternalAllocationSpecificationLanguage.g:1:214: T__51
                 {
                 mT__51(); 
 
                 }
                 break;
             case 36 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:220: T__52
+                // InternalAllocationSpecificationLanguage.g:1:220: T__52
                 {
                 mT__52(); 
 
                 }
                 break;
             case 37 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:226: T__53
+                // InternalAllocationSpecificationLanguage.g:1:226: T__53
                 {
                 mT__53(); 
 
                 }
                 break;
             case 38 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:232: T__54
+                // InternalAllocationSpecificationLanguage.g:1:232: T__54
                 {
                 mT__54(); 
 
                 }
                 break;
             case 39 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:238: T__55
+                // InternalAllocationSpecificationLanguage.g:1:238: T__55
                 {
                 mT__55(); 
 
                 }
                 break;
             case 40 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:244: T__56
+                // InternalAllocationSpecificationLanguage.g:1:244: T__56
                 {
                 mT__56(); 
 
                 }
                 break;
             case 41 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:250: T__57
+                // InternalAllocationSpecificationLanguage.g:1:250: T__57
                 {
                 mT__57(); 
 
                 }
                 break;
             case 42 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:256: T__58
+                // InternalAllocationSpecificationLanguage.g:1:256: T__58
                 {
                 mT__58(); 
 
                 }
                 break;
             case 43 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:262: T__59
+                // InternalAllocationSpecificationLanguage.g:1:262: T__59
                 {
                 mT__59(); 
 
                 }
                 break;
             case 44 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:268: T__60
+                // InternalAllocationSpecificationLanguage.g:1:268: T__60
                 {
                 mT__60(); 
 
                 }
                 break;
             case 45 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:274: T__61
+                // InternalAllocationSpecificationLanguage.g:1:274: T__61
                 {
                 mT__61(); 
 
                 }
                 break;
             case 46 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:280: T__62
+                // InternalAllocationSpecificationLanguage.g:1:280: T__62
                 {
                 mT__62(); 
 
                 }
                 break;
             case 47 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:286: T__63
+                // InternalAllocationSpecificationLanguage.g:1:286: T__63
                 {
                 mT__63(); 
 
                 }
                 break;
             case 48 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:292: T__64
+                // InternalAllocationSpecificationLanguage.g:1:292: T__64
                 {
                 mT__64(); 
 
                 }
                 break;
             case 49 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:298: T__65
+                // InternalAllocationSpecificationLanguage.g:1:298: T__65
                 {
                 mT__65(); 
 
                 }
                 break;
             case 50 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:304: T__66
+                // InternalAllocationSpecificationLanguage.g:1:304: T__66
                 {
                 mT__66(); 
 
                 }
                 break;
             case 51 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:310: T__67
+                // InternalAllocationSpecificationLanguage.g:1:310: T__67
                 {
                 mT__67(); 
 
                 }
                 break;
             case 52 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:316: T__68
+                // InternalAllocationSpecificationLanguage.g:1:316: T__68
                 {
                 mT__68(); 
 
                 }
                 break;
             case 53 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:322: T__69
+                // InternalAllocationSpecificationLanguage.g:1:322: T__69
                 {
                 mT__69(); 
 
                 }
                 break;
             case 54 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:328: T__70
+                // InternalAllocationSpecificationLanguage.g:1:328: T__70
                 {
                 mT__70(); 
 
                 }
                 break;
             case 55 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:334: T__71
+                // InternalAllocationSpecificationLanguage.g:1:334: T__71
                 {
                 mT__71(); 
 
                 }
                 break;
             case 56 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:340: T__72
+                // InternalAllocationSpecificationLanguage.g:1:340: T__72
                 {
                 mT__72(); 
 
                 }
                 break;
             case 57 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:346: T__73
+                // InternalAllocationSpecificationLanguage.g:1:346: T__73
                 {
                 mT__73(); 
 
                 }
                 break;
             case 58 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:352: T__74
+                // InternalAllocationSpecificationLanguage.g:1:352: T__74
                 {
                 mT__74(); 
 
                 }
                 break;
             case 59 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:358: T__75
+                // InternalAllocationSpecificationLanguage.g:1:358: T__75
                 {
                 mT__75(); 
 
                 }
                 break;
             case 60 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:364: T__76
+                // InternalAllocationSpecificationLanguage.g:1:364: T__76
                 {
                 mT__76(); 
 
                 }
                 break;
             case 61 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:370: T__77
+                // InternalAllocationSpecificationLanguage.g:1:370: T__77
                 {
                 mT__77(); 
 
                 }
                 break;
             case 62 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:376: T__78
+                // InternalAllocationSpecificationLanguage.g:1:376: T__78
                 {
                 mT__78(); 
 
                 }
                 break;
             case 63 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:382: T__79
+                // InternalAllocationSpecificationLanguage.g:1:382: T__79
                 {
                 mT__79(); 
 
                 }
                 break;
             case 64 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:388: T__80
+                // InternalAllocationSpecificationLanguage.g:1:388: T__80
                 {
                 mT__80(); 
 
                 }
                 break;
             case 65 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:394: T__81
+                // InternalAllocationSpecificationLanguage.g:1:394: T__81
                 {
                 mT__81(); 
 
                 }
                 break;
             case 66 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:400: T__82
+                // InternalAllocationSpecificationLanguage.g:1:400: T__82
                 {
                 mT__82(); 
 
                 }
                 break;
             case 67 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:406: T__83
+                // InternalAllocationSpecificationLanguage.g:1:406: T__83
                 {
                 mT__83(); 
 
                 }
                 break;
             case 68 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:412: T__84
+                // InternalAllocationSpecificationLanguage.g:1:412: T__84
                 {
                 mT__84(); 
 
                 }
                 break;
             case 69 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:418: T__85
+                // InternalAllocationSpecificationLanguage.g:1:418: T__85
                 {
                 mT__85(); 
 
                 }
                 break;
             case 70 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:424: T__86
+                // InternalAllocationSpecificationLanguage.g:1:424: T__86
                 {
                 mT__86(); 
 
                 }
                 break;
             case 71 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:430: T__87
+                // InternalAllocationSpecificationLanguage.g:1:430: T__87
                 {
                 mT__87(); 
 
                 }
                 break;
             case 72 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:436: T__88
+                // InternalAllocationSpecificationLanguage.g:1:436: T__88
                 {
                 mT__88(); 
 
                 }
                 break;
             case 73 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:442: T__89
+                // InternalAllocationSpecificationLanguage.g:1:442: T__89
                 {
                 mT__89(); 
 
                 }
                 break;
             case 74 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:448: T__90
+                // InternalAllocationSpecificationLanguage.g:1:448: T__90
                 {
                 mT__90(); 
 
                 }
                 break;
             case 75 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:454: T__91
+                // InternalAllocationSpecificationLanguage.g:1:454: T__91
                 {
                 mT__91(); 
 
                 }
                 break;
             case 76 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:460: T__92
+                // InternalAllocationSpecificationLanguage.g:1:460: T__92
                 {
                 mT__92(); 
 
                 }
                 break;
             case 77 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:466: T__93
+                // InternalAllocationSpecificationLanguage.g:1:466: T__93
                 {
                 mT__93(); 
 
                 }
                 break;
             case 78 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:472: T__94
+                // InternalAllocationSpecificationLanguage.g:1:472: T__94
                 {
                 mT__94(); 
 
                 }
                 break;
             case 79 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:478: T__95
+                // InternalAllocationSpecificationLanguage.g:1:478: T__95
                 {
                 mT__95(); 
 
                 }
                 break;
             case 80 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:484: T__96
+                // InternalAllocationSpecificationLanguage.g:1:484: T__96
                 {
                 mT__96(); 
 
                 }
                 break;
             case 81 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:490: T__97
+                // InternalAllocationSpecificationLanguage.g:1:490: T__97
                 {
                 mT__97(); 
 
                 }
                 break;
             case 82 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:496: T__98
+                // InternalAllocationSpecificationLanguage.g:1:496: T__98
                 {
                 mT__98(); 
 
                 }
                 break;
             case 83 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:502: T__99
+                // InternalAllocationSpecificationLanguage.g:1:502: T__99
                 {
                 mT__99(); 
 
                 }
                 break;
             case 84 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:508: T__100
+                // InternalAllocationSpecificationLanguage.g:1:508: T__100
                 {
                 mT__100(); 
 
                 }
                 break;
             case 85 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:515: T__101
+                // InternalAllocationSpecificationLanguage.g:1:515: T__101
                 {
                 mT__101(); 
 
                 }
                 break;
             case 86 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:522: T__102
+                // InternalAllocationSpecificationLanguage.g:1:522: T__102
                 {
                 mT__102(); 
 
                 }
                 break;
             case 87 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:529: T__103
+                // InternalAllocationSpecificationLanguage.g:1:529: T__103
                 {
                 mT__103(); 
 
                 }
                 break;
             case 88 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:536: T__104
+                // InternalAllocationSpecificationLanguage.g:1:536: T__104
                 {
                 mT__104(); 
 
                 }
                 break;
             case 89 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:543: T__105
+                // InternalAllocationSpecificationLanguage.g:1:543: T__105
                 {
                 mT__105(); 
 
                 }
                 break;
             case 90 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:550: T__106
+                // InternalAllocationSpecificationLanguage.g:1:550: T__106
                 {
                 mT__106(); 
 
                 }
                 break;
             case 91 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:557: T__107
+                // InternalAllocationSpecificationLanguage.g:1:557: T__107
                 {
                 mT__107(); 
 
                 }
                 break;
             case 92 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:564: T__108
+                // InternalAllocationSpecificationLanguage.g:1:564: T__108
                 {
                 mT__108(); 
 
                 }
                 break;
             case 93 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:571: T__109
+                // InternalAllocationSpecificationLanguage.g:1:571: T__109
                 {
                 mT__109(); 
 
                 }
                 break;
             case 94 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:578: T__110
+                // InternalAllocationSpecificationLanguage.g:1:578: T__110
                 {
                 mT__110(); 
 
                 }
                 break;
             case 95 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:585: T__111
+                // InternalAllocationSpecificationLanguage.g:1:585: T__111
                 {
                 mT__111(); 
 
                 }
                 break;
             case 96 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:592: T__112
+                // InternalAllocationSpecificationLanguage.g:1:592: T__112
                 {
                 mT__112(); 
 
                 }
                 break;
             case 97 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:599: T__113
+                // InternalAllocationSpecificationLanguage.g:1:599: T__113
                 {
                 mT__113(); 
 
                 }
                 break;
             case 98 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:606: T__114
+                // InternalAllocationSpecificationLanguage.g:1:606: T__114
                 {
                 mT__114(); 
 
                 }
                 break;
             case 99 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:613: T__115
+                // InternalAllocationSpecificationLanguage.g:1:613: T__115
                 {
                 mT__115(); 
 
                 }
                 break;
             case 100 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:620: T__116
+                // InternalAllocationSpecificationLanguage.g:1:620: T__116
                 {
                 mT__116(); 
 
                 }
                 break;
             case 101 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:627: T__117
+                // InternalAllocationSpecificationLanguage.g:1:627: T__117
                 {
                 mT__117(); 
 
                 }
                 break;
             case 102 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:634: T__118
+                // InternalAllocationSpecificationLanguage.g:1:634: T__118
                 {
                 mT__118(); 
 
                 }
                 break;
             case 103 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:641: T__119
+                // InternalAllocationSpecificationLanguage.g:1:641: T__119
                 {
                 mT__119(); 
 
                 }
                 break;
             case 104 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:648: T__120
+                // InternalAllocationSpecificationLanguage.g:1:648: T__120
                 {
                 mT__120(); 
 
                 }
                 break;
             case 105 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:655: T__121
+                // InternalAllocationSpecificationLanguage.g:1:655: T__121
                 {
                 mT__121(); 
 
                 }
                 break;
             case 106 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:662: RULE_UNQUOTED_STRING
+                // InternalAllocationSpecificationLanguage.g:1:662: RULE_UNQUOTED_STRING
                 {
                 mRULE_UNQUOTED_STRING(); 
 
                 }
                 break;
             case 107 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:683: RULE_DOUBLE_QUOTED_STRING
+                // InternalAllocationSpecificationLanguage.g:1:683: RULE_DOUBLE_QUOTED_STRING
                 {
                 mRULE_DOUBLE_QUOTED_STRING(); 
 
                 }
                 break;
             case 108 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:709: RULE_SINGLE_QUOTED_STRING
+                // InternalAllocationSpecificationLanguage.g:1:709: RULE_SINGLE_QUOTED_STRING
                 {
                 mRULE_SINGLE_QUOTED_STRING(); 
 
                 }
                 break;
             case 109 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:735: RULE_ML_SINGLE_QUOTED_STRING
+                // InternalAllocationSpecificationLanguage.g:1:735: RULE_ML_SINGLE_QUOTED_STRING
                 {
                 mRULE_ML_SINGLE_QUOTED_STRING(); 
 
                 }
                 break;
             case 110 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:764: RULE_SIMPLE_ID
+                // InternalAllocationSpecificationLanguage.g:1:764: RULE_SIMPLE_ID
                 {
                 mRULE_SIMPLE_ID(); 
 
                 }
                 break;
             case 111 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:779: RULE_ESCAPED_ID
+                // InternalAllocationSpecificationLanguage.g:1:779: RULE_ESCAPED_ID
                 {
                 mRULE_ESCAPED_ID(); 
 
                 }
                 break;
             case 112 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:795: RULE_INT
+                // InternalAllocationSpecificationLanguage.g:1:795: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
             case 113 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:804: RULE_ML_COMMENT
+                // InternalAllocationSpecificationLanguage.g:1:804: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
             case 114 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:820: RULE_SL_COMMENT
+                // InternalAllocationSpecificationLanguage.g:1:820: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
             case 115 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:836: RULE_WS
+                // InternalAllocationSpecificationLanguage.g:1:836: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
             case 116 :
-                // ../org.muml.psm.allocation.language.xtext.ui/src-gen/de/uni_paderborn/fujaba/muml/allocation/language/ui/contentassist/antlr/internal/InternalAllocationSpecificationLanguage.g:1:844: RULE_ANY_OTHER
+                // InternalAllocationSpecificationLanguage.g:1:844: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 

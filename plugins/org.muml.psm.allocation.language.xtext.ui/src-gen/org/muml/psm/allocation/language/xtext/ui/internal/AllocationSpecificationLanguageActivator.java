@@ -23,7 +23,7 @@ import com.google.inject.Module;
  */
 public class AllocationSpecificationLanguageActivator extends AbstractUIPlugin {
 	
-	public static final String DE_UNI_PADERBORN_FUJABA_MUML_ALLOCATION_LANGUAGE_ALLOCATIONSPECIFICATIONLANGUAGE = "org.muml.psm.allocation.language.AllocationSpecificationLanguage";
+	public static final String ORG_MUML_PSM_ALLOCATION_LANGUAGE_XTEXT_ALLOCATIONSPECIFICATIONLANGUAGE = "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage";
 	
 	private static final Logger logger = Logger.getLogger(AllocationSpecificationLanguageActivator.class);
 	
@@ -73,7 +73,7 @@ public class AllocationSpecificationLanguageActivator extends AbstractUIPlugin {
 	}
 
 	protected Module getRuntimeModule(String grammar) {
-		if (DE_UNI_PADERBORN_FUJABA_MUML_ALLOCATION_LANGUAGE_ALLOCATIONSPECIFICATIONLANGUAGE.equals(grammar)) {
+		if (ORG_MUML_PSM_ALLOCATION_LANGUAGE_XTEXT_ALLOCATIONSPECIFICATIONLANGUAGE.equals(grammar)) {
 			return new org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguageRuntimeModule();
 		}
 		
@@ -81,7 +81,7 @@ public class AllocationSpecificationLanguageActivator extends AbstractUIPlugin {
 	}
 	
 	protected Module getUiModule(String grammar) {
-		if (DE_UNI_PADERBORN_FUJABA_MUML_ALLOCATION_LANGUAGE_ALLOCATIONSPECIFICATIONLANGUAGE.equals(grammar)) {
+		if (ORG_MUML_PSM_ALLOCATION_LANGUAGE_XTEXT_ALLOCATIONSPECIFICATIONLANGUAGE.equals(grammar)) {
 			return new org.muml.psm.allocation.language.xtext.ui.AllocationSpecificationLanguageUiModule(this);
 		}
 		

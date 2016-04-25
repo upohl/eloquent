@@ -30,5 +30,6 @@ Export-Package: org.muml.psm.allocation.language.xtext.ui.contentassist,
  org.muml.psm.allocation.language.xtext.ui.contentassist.antlr,
  org.muml.psm.allocation.language.xtext.ui.internal,
  org.muml.psm.allocation.language.xtext.ui.quickfix,
- org.muml.psm.allocation.language.xtext.ui.view
+ org.muml.psm.allocation.language.xtext.ui.view,
+ org.muml.psm.allocation.language.xtext.ui.contentassist.antlr.internal
 Bundle-Activator: org.muml.psm.allocation.language.xtext.ui.AllocationSpecificationLanguagePluginActivator

@@ -3,10 +3,10 @@
  */
 package org.muml.psm.allocation.language.xtext.parser.antlr;
 
+import com.google.inject.Inject;
+
 import org.eclipse.xtext.parser.antlr.XtextTokenStream;
 import org.muml.psm.allocation.language.xtext.services.AllocationSpecificationLanguageGrammarAccess;
-
-import com.google.inject.Inject;
 
 public class AllocationSpecificationLanguageParser extends org.eclipse.xtext.parser.antlr.AbstractAntlrParser {
 	

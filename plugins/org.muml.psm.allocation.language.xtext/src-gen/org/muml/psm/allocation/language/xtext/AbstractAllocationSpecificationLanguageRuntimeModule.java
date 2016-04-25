@@ -11,7 +11,7 @@ import com.google.inject.Binder;
 import com.google.inject.name.Names;
 
 /**
- * Manual modifications go to {org.muml.psm.allocation.language.AllocationSpecificationLanguageRuntimeModule}
+ * Manual modifications go to {org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguageRuntimeModule}
  */
 @SuppressWarnings("all")
 public abstract class AbstractAllocationSpecificationLanguageRuntimeModule extends org.eclipse.xtext.common.types.DefaultCommonTypesRuntimeModule {
@@ -20,12 +20,12 @@ public abstract class AbstractAllocationSpecificationLanguageRuntimeModule exten
 
 	@Override
 	public void configure(Binder binder) {
-		properties = tryBindProperties(binder, "de/uni_paderborn/fujaba/muml/allocation/language/AllocationSpecificationLanguage.properties");
+		properties = tryBindProperties(binder, "org/muml/psm/allocation/language/xtext/AllocationSpecificationLanguage.properties");
 		super.configure(binder);
 	}
 	
 	public void configureLanguageName(Binder binder) {
-		binder.bind(String.class).annotatedWith(Names.named(Constants.LANGUAGE_NAME)).toInstance("org.muml.psm.allocation.language.AllocationSpecificationLanguage");
+		binder.bind(String.class).annotatedWith(Names.named(Constants.LANGUAGE_NAME)).toInstance("org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage");
 	}
 	
 	public void configureFileExtensions(Binder binder) {

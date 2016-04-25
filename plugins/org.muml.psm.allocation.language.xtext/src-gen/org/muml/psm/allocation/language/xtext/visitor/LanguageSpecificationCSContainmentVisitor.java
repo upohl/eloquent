@@ -1,13 +1,13 @@
 package org.muml.psm.allocation.language.xtext.visitor;
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
+import org.eclipse.ocl.xtext.base.cs2as.Continuation;
 import org.eclipse.ocl.pivot.utilities.PivotUtil;
 import org.eclipse.ocl.xtext.base.cs2as.CS2ASConversion;
-import org.eclipse.ocl.xtext.base.cs2as.Continuation;
 
 // generated code: do NOT edit (file is overwritten on regeneration)
 
-public class LanguageSpecificationCSContainmentVisitor extends org.muml.psm.allocation.language.cs.util.AbstractLanguageSpecificationCSContainmentVisitor {
+public class LanguageSpecificationCSContainmentVisitor extends org.muml.psm.allocation.language.cs.util.AbstractCsContainmentVisitor {
 	public LanguageSpecificationCSContainmentVisitor(CS2ASConversion context) {
 		super(context);
 	}
