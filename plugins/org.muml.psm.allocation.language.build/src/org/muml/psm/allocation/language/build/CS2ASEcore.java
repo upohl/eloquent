@@ -9,7 +9,7 @@ import org.eclipse.m2m.qvt.oml.util.Utils;
 import org.eclipse.ocl.examples.build.utilities.PredefinedQVToTransformationExecutor;
 
 public class CS2ASEcore extends PredefinedQVToTransformationExecutor {
-	private static final String TRANSFORMATION_URI = "platform:/resource/de.uni_paderborn.fujaba.muml.allocation.language.build/transforms/CS2ASTransformation.qvto";
+	private static final String TRANSFORMATION_URI = "platform:/resource/org.muml.psm.allocation.language.build/transforms/CS2ASTransformation.qvto";
 	private static final String oclCS2PivotClassMap = "oclCS2PivotClassMap";
 	
 	private String csModelURI;
