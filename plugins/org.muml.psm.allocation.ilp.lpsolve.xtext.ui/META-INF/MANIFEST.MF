@@ -15,12 +15,14 @@ Require-Bundle: org.muml.psm.allocation.ilp.lpsolve.xtext;visibility:=reexport,
  org.antlr.runtime,
  org.eclipse.xtext.common.types.ui,
  org.eclipse.xtext.ui.codetemplates.ui,
- org.eclipse.compare
+ org.eclipse.compare,
+ org.eclipse.xtext.xbase.lib
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.muml.psm.allocation.ilp.lpsolve.xtext.ui.contentassist,
  org.muml.psm.allocation.ilp.lpsolve.xtext.ui.contentassist.antlr,
  org.muml.psm.allocation.ilp.lpsolve.xtext.ui.internal,
- org.muml.psm.allocation.ilp.lpsolve.xtext.ui.quickfix
+ org.muml.psm.allocation.ilp.lpsolve.xtext.ui.quickfix,
+ org.muml.psm.allocation.ilp.lpsolve.xtext.ui.contentassist.antlr.internal
 Bundle-Activator: org.muml.psm.allocation.ilp.lpsolve.xtext.ui.internal.LPSolveActivator

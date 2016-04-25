@@ -1,48 +1,53 @@
 package org.muml.psm.allocation.ilp.lpsolve.xtext.parser.antlr.internal; 
 
-import org.antlr.runtime.BaseRecognizer;
-import org.antlr.runtime.BitSet;
-import org.antlr.runtime.DFA;
-import org.antlr.runtime.NoViableAltException;
-import org.antlr.runtime.RecognitionException;
-import org.antlr.runtime.RecognizerSharedState;
-import org.antlr.runtime.Token;
-import org.antlr.runtime.TokenStream;
-import org.eclipse.emf.common.util.Enumerator;
+import org.eclipse.xtext.*;
+import org.eclipse.xtext.parser.*;
+import org.eclipse.xtext.parser.impl.*;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.xtext.parser.antlr.AbstractInternalAntlrParser;
+import org.eclipse.xtext.parser.antlr.XtextTokenStream;
+import org.eclipse.xtext.parser.antlr.XtextTokenStream.HiddenTokens;
 import org.eclipse.xtext.parser.antlr.AntlrDatatypeRuleToken;
 import org.muml.psm.allocation.ilp.lpsolve.xtext.services.LPSolveGrammarAccess;
+
+
+
+import org.antlr.runtime.*;
+import java.util.Stack;
+import java.util.List;
+import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalLPSolveParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'min'", "'max'", "':'", "';'", "'.'", "'-'", "'='", "'>'", "'>='", "'<'", "'<='", "'bin'", "'int'", "'real'", "'+'", "'*'"
     };
-    public static final int RULE_ID=4;
-    public static final int T__26=26;
-    public static final int T__25=25;
-    public static final int T__24=24;
-    public static final int T__23=23;
-    public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=10;
-    public static final int T__21=21;
-    public static final int T__20=20;
-    public static final int RULE_SL_COMMENT=8;
-    public static final int EOF=-1;
-    public static final int RULE_ML_COMMENT=7;
-    public static final int T__19=19;
     public static final int RULE_STRING=6;
-    public static final int T__16=16;
+    public static final int RULE_SL_COMMENT=8;
+    public static final int T__19=19;
     public static final int T__15=15;
-    public static final int T__18=18;
+    public static final int T__16=16;
     public static final int T__17=17;
-    public static final int T__12=12;
+    public static final int T__18=18;
     public static final int T__11=11;
-    public static final int T__14=14;
+    public static final int T__12=12;
     public static final int T__13=13;
-    public static final int RULE_INT=5;
+    public static final int T__14=14;
+    public static final int EOF=-1;
+    public static final int RULE_ID=4;
     public static final int RULE_WS=9;
+    public static final int RULE_ANY_OTHER=10;
+    public static final int T__26=26;
+    public static final int RULE_INT=5;
+    public static final int T__22=22;
+    public static final int RULE_ML_COMMENT=7;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -58,7 +63,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
         
 
     public String[] getTokenNames() { return InternalLPSolveParser.tokenNames; }
-    public String getGrammarFileName() { return "../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g"; }
+    public String getGrammarFileName() { return "InternalLPSolve.g"; }
 
 
 
@@ -83,7 +88,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIntegerLinearProgram"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:68:1: entryRuleIntegerLinearProgram returns [EObject current=null] : iv_ruleIntegerLinearProgram= ruleIntegerLinearProgram EOF ;
+    // InternalLPSolve.g:68:1: entryRuleIntegerLinearProgram returns [EObject current=null] : iv_ruleIntegerLinearProgram= ruleIntegerLinearProgram EOF ;
     public final EObject entryRuleIntegerLinearProgram() throws RecognitionException {
         EObject current = null;
 
@@ -91,17 +96,17 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:69:2: (iv_ruleIntegerLinearProgram= ruleIntegerLinearProgram EOF )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:70:2: iv_ruleIntegerLinearProgram= ruleIntegerLinearProgram EOF
+            // InternalLPSolve.g:69:2: (iv_ruleIntegerLinearProgram= ruleIntegerLinearProgram EOF )
+            // InternalLPSolve.g:70:2: iv_ruleIntegerLinearProgram= ruleIntegerLinearProgram EOF
             {
              newCompositeNode(grammarAccess.getIntegerLinearProgramRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleIntegerLinearProgram_in_entryRuleIntegerLinearProgram75);
+            pushFollow(FollowSets000.FOLLOW_1);
             iv_ruleIntegerLinearProgram=ruleIntegerLinearProgram();
 
             state._fsp--;
 
              current =iv_ruleIntegerLinearProgram; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleIntegerLinearProgram85); 
+            match(input,EOF,FollowSets000.FOLLOW_2); 
 
             }
 
@@ -119,7 +124,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIntegerLinearProgram"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:77:1: ruleIntegerLinearProgram returns [EObject current=null] : ( ( (lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression ) ) ( (lv_constraints_1_0= ruleConstraintExpression ) )* ( (lv_variables_2_0= ruleVariable ) )* ) ;
+    // InternalLPSolve.g:77:1: ruleIntegerLinearProgram returns [EObject current=null] : ( ( (lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression ) ) ( (lv_constraints_1_0= ruleConstraintExpression ) )* ( (lv_variables_2_0= ruleVariable ) )* ) ;
     public final EObject ruleIntegerLinearProgram() throws RecognitionException {
         EObject current = null;
 
@@ -133,22 +138,22 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:80:28: ( ( ( (lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression ) ) ( (lv_constraints_1_0= ruleConstraintExpression ) )* ( (lv_variables_2_0= ruleVariable ) )* ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:81:1: ( ( (lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression ) ) ( (lv_constraints_1_0= ruleConstraintExpression ) )* ( (lv_variables_2_0= ruleVariable ) )* )
+            // InternalLPSolve.g:80:28: ( ( ( (lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression ) ) ( (lv_constraints_1_0= ruleConstraintExpression ) )* ( (lv_variables_2_0= ruleVariable ) )* ) )
+            // InternalLPSolve.g:81:1: ( ( (lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression ) ) ( (lv_constraints_1_0= ruleConstraintExpression ) )* ( (lv_variables_2_0= ruleVariable ) )* )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:81:1: ( ( (lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression ) ) ( (lv_constraints_1_0= ruleConstraintExpression ) )* ( (lv_variables_2_0= ruleVariable ) )* )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:81:2: ( (lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression ) ) ( (lv_constraints_1_0= ruleConstraintExpression ) )* ( (lv_variables_2_0= ruleVariable ) )*
+            // InternalLPSolve.g:81:1: ( ( (lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression ) ) ( (lv_constraints_1_0= ruleConstraintExpression ) )* ( (lv_variables_2_0= ruleVariable ) )* )
+            // InternalLPSolve.g:81:2: ( (lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression ) ) ( (lv_constraints_1_0= ruleConstraintExpression ) )* ( (lv_variables_2_0= ruleVariable ) )*
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:81:2: ( (lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:82:1: (lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression )
+            // InternalLPSolve.g:81:2: ( (lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression ) )
+            // InternalLPSolve.g:82:1: (lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:82:1: (lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:83:3: lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression
+            // InternalLPSolve.g:82:1: (lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression )
+            // InternalLPSolve.g:83:3: lv_objectiveFunction_0_0= ruleObjectiveFunctionExpression
             {
              
             	        newCompositeNode(grammarAccess.getIntegerLinearProgramAccess().getObjectiveFunctionObjectiveFunctionExpressionParserRuleCall_0_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleObjectiveFunctionExpression_in_ruleIntegerLinearProgram131);
+            pushFollow(FollowSets000.FOLLOW_3);
             lv_objectiveFunction_0_0=ruleObjectiveFunctionExpression();
 
             state._fsp--;
@@ -161,7 +166,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"objectiveFunction",
                     		lv_objectiveFunction_0_0, 
-                    		"ObjectiveFunctionExpression");
+                    		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.ObjectiveFunctionExpression");
             	        afterParserOrEnumRuleCall();
             	    
 
@@ -170,7 +175,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:99:2: ( (lv_constraints_1_0= ruleConstraintExpression ) )*
+            // InternalLPSolve.g:99:2: ( (lv_constraints_1_0= ruleConstraintExpression ) )*
             loop1:
             do {
                 int alt1=2;
@@ -183,15 +188,15 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:100:1: (lv_constraints_1_0= ruleConstraintExpression )
+            	    // InternalLPSolve.g:100:1: (lv_constraints_1_0= ruleConstraintExpression )
             	    {
-            	    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:100:1: (lv_constraints_1_0= ruleConstraintExpression )
-            	    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:101:3: lv_constraints_1_0= ruleConstraintExpression
+            	    // InternalLPSolve.g:100:1: (lv_constraints_1_0= ruleConstraintExpression )
+            	    // InternalLPSolve.g:101:3: lv_constraints_1_0= ruleConstraintExpression
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getIntegerLinearProgramAccess().getConstraintsConstraintExpressionParserRuleCall_1_0()); 
             	    	    
-            	    pushFollow(FollowSets000.FOLLOW_ruleConstraintExpression_in_ruleIntegerLinearProgram152);
+            	    pushFollow(FollowSets000.FOLLOW_3);
             	    lv_constraints_1_0=ruleConstraintExpression();
 
             	    state._fsp--;
@@ -204,7 +209,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             	           			current, 
             	           			"constraints",
             	            		lv_constraints_1_0, 
-            	            		"ConstraintExpression");
+            	            		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.ConstraintExpression");
             	    	        afterParserOrEnumRuleCall();
             	    	    
 
@@ -219,7 +224,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:117:3: ( (lv_variables_2_0= ruleVariable ) )*
+            // InternalLPSolve.g:117:3: ( (lv_variables_2_0= ruleVariable ) )*
             loop2:
             do {
                 int alt2=2;
@@ -232,15 +237,15 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:118:1: (lv_variables_2_0= ruleVariable )
+            	    // InternalLPSolve.g:118:1: (lv_variables_2_0= ruleVariable )
             	    {
-            	    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:118:1: (lv_variables_2_0= ruleVariable )
-            	    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:119:3: lv_variables_2_0= ruleVariable
+            	    // InternalLPSolve.g:118:1: (lv_variables_2_0= ruleVariable )
+            	    // InternalLPSolve.g:119:3: lv_variables_2_0= ruleVariable
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getIntegerLinearProgramAccess().getVariablesVariableParserRuleCall_2_0()); 
             	    	    
-            	    pushFollow(FollowSets000.FOLLOW_ruleVariable_in_ruleIntegerLinearProgram174);
+            	    pushFollow(FollowSets000.FOLLOW_4);
             	    lv_variables_2_0=ruleVariable();
 
             	    state._fsp--;
@@ -253,7 +258,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             	           			current, 
             	           			"variables",
             	            		lv_variables_2_0, 
-            	            		"Variable");
+            	            		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.Variable");
             	    	        afterParserOrEnumRuleCall();
             	    	    
 
@@ -289,7 +294,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleObjectiveFunctionExpression"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:143:1: entryRuleObjectiveFunctionExpression returns [EObject current=null] : iv_ruleObjectiveFunctionExpression= ruleObjectiveFunctionExpression EOF ;
+    // InternalLPSolve.g:143:1: entryRuleObjectiveFunctionExpression returns [EObject current=null] : iv_ruleObjectiveFunctionExpression= ruleObjectiveFunctionExpression EOF ;
     public final EObject entryRuleObjectiveFunctionExpression() throws RecognitionException {
         EObject current = null;
 
@@ -297,17 +302,17 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:144:2: (iv_ruleObjectiveFunctionExpression= ruleObjectiveFunctionExpression EOF )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:145:2: iv_ruleObjectiveFunctionExpression= ruleObjectiveFunctionExpression EOF
+            // InternalLPSolve.g:144:2: (iv_ruleObjectiveFunctionExpression= ruleObjectiveFunctionExpression EOF )
+            // InternalLPSolve.g:145:2: iv_ruleObjectiveFunctionExpression= ruleObjectiveFunctionExpression EOF
             {
              newCompositeNode(grammarAccess.getObjectiveFunctionExpressionRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleObjectiveFunctionExpression_in_entryRuleObjectiveFunctionExpression211);
+            pushFollow(FollowSets000.FOLLOW_1);
             iv_ruleObjectiveFunctionExpression=ruleObjectiveFunctionExpression();
 
             state._fsp--;
 
              current =iv_ruleObjectiveFunctionExpression; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleObjectiveFunctionExpression221); 
+            match(input,EOF,FollowSets000.FOLLOW_2); 
 
             }
 
@@ -325,7 +330,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleObjectiveFunctionExpression"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:152:1: ruleObjectiveFunctionExpression returns [EObject current=null] : ( ( (otherlv_0= 'min' | otherlv_1= 'max' ) otherlv_2= ':' otherlv_3= ';' ) | ( ( (lv_goal_4_0= ruleObjectiveGoal ) ) otherlv_5= ':' ( (lv_objectiveFunction_6_0= ruleLinearExpression ) ) otherlv_7= ';' ) ) ;
+    // InternalLPSolve.g:152:1: ruleObjectiveFunctionExpression returns [EObject current=null] : ( ( (otherlv_0= 'min' | otherlv_1= 'max' ) otherlv_2= ':' otherlv_3= ';' ) | ( ( (lv_goal_4_0= ruleObjectiveGoal ) ) otherlv_5= ':' ( (lv_objectiveFunction_6_0= ruleLinearExpression ) ) otherlv_7= ';' ) ) ;
     public final EObject ruleObjectiveFunctionExpression() throws RecognitionException {
         EObject current = null;
 
@@ -343,10 +348,10 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:155:28: ( ( ( (otherlv_0= 'min' | otherlv_1= 'max' ) otherlv_2= ':' otherlv_3= ';' ) | ( ( (lv_goal_4_0= ruleObjectiveGoal ) ) otherlv_5= ':' ( (lv_objectiveFunction_6_0= ruleLinearExpression ) ) otherlv_7= ';' ) ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:156:1: ( ( (otherlv_0= 'min' | otherlv_1= 'max' ) otherlv_2= ':' otherlv_3= ';' ) | ( ( (lv_goal_4_0= ruleObjectiveGoal ) ) otherlv_5= ':' ( (lv_objectiveFunction_6_0= ruleLinearExpression ) ) otherlv_7= ';' ) )
+            // InternalLPSolve.g:155:28: ( ( ( (otherlv_0= 'min' | otherlv_1= 'max' ) otherlv_2= ':' otherlv_3= ';' ) | ( ( (lv_goal_4_0= ruleObjectiveGoal ) ) otherlv_5= ':' ( (lv_objectiveFunction_6_0= ruleLinearExpression ) ) otherlv_7= ';' ) ) )
+            // InternalLPSolve.g:156:1: ( ( (otherlv_0= 'min' | otherlv_1= 'max' ) otherlv_2= ':' otherlv_3= ';' ) | ( ( (lv_goal_4_0= ruleObjectiveGoal ) ) otherlv_5= ':' ( (lv_objectiveFunction_6_0= ruleLinearExpression ) ) otherlv_7= ';' ) )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:156:1: ( ( (otherlv_0= 'min' | otherlv_1= 'max' ) otherlv_2= ':' otherlv_3= ';' ) | ( ( (lv_goal_4_0= ruleObjectiveGoal ) ) otherlv_5= ':' ( (lv_objectiveFunction_6_0= ruleLinearExpression ) ) otherlv_7= ';' ) )
+            // InternalLPSolve.g:156:1: ( ( (otherlv_0= 'min' | otherlv_1= 'max' ) otherlv_2= ':' otherlv_3= ';' ) | ( ( (lv_goal_4_0= ruleObjectiveGoal ) ) otherlv_5= ':' ( (lv_objectiveFunction_6_0= ruleLinearExpression ) ) otherlv_7= ';' ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -410,12 +415,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             }
             switch (alt4) {
                 case 1 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:156:2: ( (otherlv_0= 'min' | otherlv_1= 'max' ) otherlv_2= ':' otherlv_3= ';' )
+                    // InternalLPSolve.g:156:2: ( (otherlv_0= 'min' | otherlv_1= 'max' ) otherlv_2= ':' otherlv_3= ';' )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:156:2: ( (otherlv_0= 'min' | otherlv_1= 'max' ) otherlv_2= ':' otherlv_3= ';' )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:156:3: (otherlv_0= 'min' | otherlv_1= 'max' ) otherlv_2= ':' otherlv_3= ';'
+                    // InternalLPSolve.g:156:2: ( (otherlv_0= 'min' | otherlv_1= 'max' ) otherlv_2= ':' otherlv_3= ';' )
+                    // InternalLPSolve.g:156:3: (otherlv_0= 'min' | otherlv_1= 'max' ) otherlv_2= ':' otherlv_3= ';'
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:156:3: (otherlv_0= 'min' | otherlv_1= 'max' )
+                    // InternalLPSolve.g:156:3: (otherlv_0= 'min' | otherlv_1= 'max' )
                     int alt3=2;
                     int LA3_0 = input.LA(1);
 
@@ -433,9 +438,9 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt3) {
                         case 1 :
-                            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:156:5: otherlv_0= 'min'
+                            // InternalLPSolve.g:156:5: otherlv_0= 'min'
                             {
-                            otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_11_in_ruleObjectiveFunctionExpression260); 
+                            otherlv_0=(Token)match(input,11,FollowSets000.FOLLOW_5); 
 
                                 	newLeafNode(otherlv_0, grammarAccess.getObjectiveFunctionExpressionAccess().getMinKeyword_0_0_0());
                                 
@@ -443,9 +448,9 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:161:7: otherlv_1= 'max'
+                            // InternalLPSolve.g:161:7: otherlv_1= 'max'
                             {
-                            otherlv_1=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleObjectiveFunctionExpression278); 
+                            otherlv_1=(Token)match(input,12,FollowSets000.FOLLOW_5); 
 
                                 	newLeafNode(otherlv_1, grammarAccess.getObjectiveFunctionExpressionAccess().getMaxKeyword_0_0_1());
                                 
@@ -455,11 +460,11 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_2=(Token)match(input,13,FollowSets000.FOLLOW_13_in_ruleObjectiveFunctionExpression291); 
+                    otherlv_2=(Token)match(input,13,FollowSets000.FOLLOW_6); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getObjectiveFunctionExpressionAccess().getColonKeyword_0_1());
                         
-                    otherlv_3=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleObjectiveFunctionExpression303); 
+                    otherlv_3=(Token)match(input,14,FollowSets000.FOLLOW_2); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getObjectiveFunctionExpressionAccess().getSemicolonKeyword_0_2());
                         
@@ -470,21 +475,21 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:174:6: ( ( (lv_goal_4_0= ruleObjectiveGoal ) ) otherlv_5= ':' ( (lv_objectiveFunction_6_0= ruleLinearExpression ) ) otherlv_7= ';' )
+                    // InternalLPSolve.g:174:6: ( ( (lv_goal_4_0= ruleObjectiveGoal ) ) otherlv_5= ':' ( (lv_objectiveFunction_6_0= ruleLinearExpression ) ) otherlv_7= ';' )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:174:6: ( ( (lv_goal_4_0= ruleObjectiveGoal ) ) otherlv_5= ':' ( (lv_objectiveFunction_6_0= ruleLinearExpression ) ) otherlv_7= ';' )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:174:7: ( (lv_goal_4_0= ruleObjectiveGoal ) ) otherlv_5= ':' ( (lv_objectiveFunction_6_0= ruleLinearExpression ) ) otherlv_7= ';'
+                    // InternalLPSolve.g:174:6: ( ( (lv_goal_4_0= ruleObjectiveGoal ) ) otherlv_5= ':' ( (lv_objectiveFunction_6_0= ruleLinearExpression ) ) otherlv_7= ';' )
+                    // InternalLPSolve.g:174:7: ( (lv_goal_4_0= ruleObjectiveGoal ) ) otherlv_5= ':' ( (lv_objectiveFunction_6_0= ruleLinearExpression ) ) otherlv_7= ';'
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:174:7: ( (lv_goal_4_0= ruleObjectiveGoal ) )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:175:1: (lv_goal_4_0= ruleObjectiveGoal )
+                    // InternalLPSolve.g:174:7: ( (lv_goal_4_0= ruleObjectiveGoal ) )
+                    // InternalLPSolve.g:175:1: (lv_goal_4_0= ruleObjectiveGoal )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:175:1: (lv_goal_4_0= ruleObjectiveGoal )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:176:3: lv_goal_4_0= ruleObjectiveGoal
+                    // InternalLPSolve.g:175:1: (lv_goal_4_0= ruleObjectiveGoal )
+                    // InternalLPSolve.g:176:3: lv_goal_4_0= ruleObjectiveGoal
                     {
                      
                     	        newCompositeNode(grammarAccess.getObjectiveFunctionExpressionAccess().getGoalObjectiveGoalEnumRuleCall_1_0_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleObjectiveGoal_in_ruleObjectiveFunctionExpression332);
+                    pushFollow(FollowSets000.FOLLOW_5);
                     lv_goal_4_0=ruleObjectiveGoal();
 
                     state._fsp--;
@@ -497,7 +502,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"goal",
                             		lv_goal_4_0, 
-                            		"ObjectiveGoal");
+                            		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.ObjectiveGoal");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -506,20 +511,20 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_13_in_ruleObjectiveFunctionExpression344); 
+                    otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_7); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getObjectiveFunctionExpressionAccess().getColonKeyword_1_1());
                         
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:196:1: ( (lv_objectiveFunction_6_0= ruleLinearExpression ) )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:197:1: (lv_objectiveFunction_6_0= ruleLinearExpression )
+                    // InternalLPSolve.g:196:1: ( (lv_objectiveFunction_6_0= ruleLinearExpression ) )
+                    // InternalLPSolve.g:197:1: (lv_objectiveFunction_6_0= ruleLinearExpression )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:197:1: (lv_objectiveFunction_6_0= ruleLinearExpression )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:198:3: lv_objectiveFunction_6_0= ruleLinearExpression
+                    // InternalLPSolve.g:197:1: (lv_objectiveFunction_6_0= ruleLinearExpression )
+                    // InternalLPSolve.g:198:3: lv_objectiveFunction_6_0= ruleLinearExpression
                     {
                      
                     	        newCompositeNode(grammarAccess.getObjectiveFunctionExpressionAccess().getObjectiveFunctionLinearExpressionParserRuleCall_1_2_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleLinearExpression_in_ruleObjectiveFunctionExpression365);
+                    pushFollow(FollowSets000.FOLLOW_6);
                     lv_objectiveFunction_6_0=ruleLinearExpression();
 
                     state._fsp--;
@@ -532,7 +537,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"objectiveFunction",
                             		lv_objectiveFunction_6_0, 
-                            		"LinearExpression");
+                            		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.LinearExpression");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -541,7 +546,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleObjectiveFunctionExpression377); 
+                    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_2); 
 
                         	newLeafNode(otherlv_7, grammarAccess.getObjectiveFunctionExpressionAccess().getSemicolonKeyword_1_3());
                         
@@ -572,7 +577,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConstraintExpression"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:226:1: entryRuleConstraintExpression returns [EObject current=null] : iv_ruleConstraintExpression= ruleConstraintExpression EOF ;
+    // InternalLPSolve.g:226:1: entryRuleConstraintExpression returns [EObject current=null] : iv_ruleConstraintExpression= ruleConstraintExpression EOF ;
     public final EObject entryRuleConstraintExpression() throws RecognitionException {
         EObject current = null;
 
@@ -580,17 +585,17 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:227:2: (iv_ruleConstraintExpression= ruleConstraintExpression EOF )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:228:2: iv_ruleConstraintExpression= ruleConstraintExpression EOF
+            // InternalLPSolve.g:227:2: (iv_ruleConstraintExpression= ruleConstraintExpression EOF )
+            // InternalLPSolve.g:228:2: iv_ruleConstraintExpression= ruleConstraintExpression EOF
             {
              newCompositeNode(grammarAccess.getConstraintExpressionRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleConstraintExpression_in_entryRuleConstraintExpression414);
+            pushFollow(FollowSets000.FOLLOW_1);
             iv_ruleConstraintExpression=ruleConstraintExpression();
 
             state._fsp--;
 
              current =iv_ruleConstraintExpression; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleConstraintExpression424); 
+            match(input,EOF,FollowSets000.FOLLOW_2); 
 
             }
 
@@ -608,7 +613,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConstraintExpression"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:235:1: ruleConstraintExpression returns [EObject current=null] : ( ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleComparingOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';' ) ;
+    // InternalLPSolve.g:235:1: ruleConstraintExpression returns [EObject current=null] : ( ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleComparingOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';' ) ;
     public final EObject ruleConstraintExpression() throws RecognitionException {
         EObject current = null;
 
@@ -626,29 +631,29 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:238:28: ( ( ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleComparingOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';' ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:239:1: ( ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleComparingOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';' )
+            // InternalLPSolve.g:238:28: ( ( ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleComparingOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';' ) )
+            // InternalLPSolve.g:239:1: ( ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleComparingOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';' )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:239:1: ( ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleComparingOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';' )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:239:2: ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleComparingOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';'
+            // InternalLPSolve.g:239:1: ( ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleComparingOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';' )
+            // InternalLPSolve.g:239:2: ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleComparingOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';'
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:239:2: ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )?
+            // InternalLPSolve.g:239:2: ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )?
             int alt5=2;
             alt5 = dfa5.predict(input);
             switch (alt5) {
                 case 1 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:239:3: ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':'
+                    // InternalLPSolve.g:239:3: ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':'
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:239:3: ( (lv_comment_0_0= ruleVariableID ) )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:240:1: (lv_comment_0_0= ruleVariableID )
+                    // InternalLPSolve.g:239:3: ( (lv_comment_0_0= ruleVariableID ) )
+                    // InternalLPSolve.g:240:1: (lv_comment_0_0= ruleVariableID )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:240:1: (lv_comment_0_0= ruleVariableID )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:241:3: lv_comment_0_0= ruleVariableID
+                    // InternalLPSolve.g:240:1: (lv_comment_0_0= ruleVariableID )
+                    // InternalLPSolve.g:241:3: lv_comment_0_0= ruleVariableID
                     {
                      
                     	        newCompositeNode(grammarAccess.getConstraintExpressionAccess().getCommentVariableIDParserRuleCall_0_0_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleVariableID_in_ruleConstraintExpression471);
+                    pushFollow(FollowSets000.FOLLOW_5);
                     lv_comment_0_0=ruleVariableID();
 
                     state._fsp--;
@@ -661,7 +666,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"comment",
                             		lv_comment_0_0, 
-                            		"VariableID");
+                            		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.VariableID");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -670,7 +675,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_1=(Token)match(input,13,FollowSets000.FOLLOW_13_in_ruleConstraintExpression483); 
+                    otherlv_1=(Token)match(input,13,FollowSets000.FOLLOW_7); 
 
                         	newLeafNode(otherlv_1, grammarAccess.getConstraintExpressionAccess().getColonKeyword_0_1());
                         
@@ -680,16 +685,16 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:261:3: ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:262:1: (lv_leftExpression_2_0= ruleSimpleLinearExpression )
+            // InternalLPSolve.g:261:3: ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) )
+            // InternalLPSolve.g:262:1: (lv_leftExpression_2_0= ruleSimpleLinearExpression )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:262:1: (lv_leftExpression_2_0= ruleSimpleLinearExpression )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:263:3: lv_leftExpression_2_0= ruleSimpleLinearExpression
+            // InternalLPSolve.g:262:1: (lv_leftExpression_2_0= ruleSimpleLinearExpression )
+            // InternalLPSolve.g:263:3: lv_leftExpression_2_0= ruleSimpleLinearExpression
             {
              
             	        newCompositeNode(grammarAccess.getConstraintExpressionAccess().getLeftExpressionSimpleLinearExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleSimpleLinearExpression_in_ruleConstraintExpression506);
+            pushFollow(FollowSets000.FOLLOW_8);
             lv_leftExpression_2_0=ruleSimpleLinearExpression();
 
             state._fsp--;
@@ -702,7 +707,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"leftExpression",
                     		lv_leftExpression_2_0, 
-                    		"SimpleLinearExpression");
+                    		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.SimpleLinearExpression");
             	        afterParserOrEnumRuleCall();
             	    
 
@@ -711,16 +716,16 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:279:2: ( (lv_operator_3_0= ruleComparingOperator ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:280:1: (lv_operator_3_0= ruleComparingOperator )
+            // InternalLPSolve.g:279:2: ( (lv_operator_3_0= ruleComparingOperator ) )
+            // InternalLPSolve.g:280:1: (lv_operator_3_0= ruleComparingOperator )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:280:1: (lv_operator_3_0= ruleComparingOperator )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:281:3: lv_operator_3_0= ruleComparingOperator
+            // InternalLPSolve.g:280:1: (lv_operator_3_0= ruleComparingOperator )
+            // InternalLPSolve.g:281:3: lv_operator_3_0= ruleComparingOperator
             {
              
             	        newCompositeNode(grammarAccess.getConstraintExpressionAccess().getOperatorComparingOperatorEnumRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleComparingOperator_in_ruleConstraintExpression527);
+            pushFollow(FollowSets000.FOLLOW_7);
             lv_operator_3_0=ruleComparingOperator();
 
             state._fsp--;
@@ -733,7 +738,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"operator",
                     		lv_operator_3_0, 
-                    		"ComparingOperator");
+                    		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.ComparingOperator");
             	        afterParserOrEnumRuleCall();
             	    
 
@@ -742,16 +747,16 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:297:2: ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:298:1: (lv_rightExpression_4_0= ruleSimpleLinearExpression )
+            // InternalLPSolve.g:297:2: ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) )
+            // InternalLPSolve.g:298:1: (lv_rightExpression_4_0= ruleSimpleLinearExpression )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:298:1: (lv_rightExpression_4_0= ruleSimpleLinearExpression )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:299:3: lv_rightExpression_4_0= ruleSimpleLinearExpression
+            // InternalLPSolve.g:298:1: (lv_rightExpression_4_0= ruleSimpleLinearExpression )
+            // InternalLPSolve.g:299:3: lv_rightExpression_4_0= ruleSimpleLinearExpression
             {
              
             	        newCompositeNode(grammarAccess.getConstraintExpressionAccess().getRightExpressionSimpleLinearExpressionParserRuleCall_3_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleSimpleLinearExpression_in_ruleConstraintExpression548);
+            pushFollow(FollowSets000.FOLLOW_6);
             lv_rightExpression_4_0=ruleSimpleLinearExpression();
 
             state._fsp--;
@@ -764,7 +769,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"rightExpression",
                     		lv_rightExpression_4_0, 
-                    		"SimpleLinearExpression");
+                    		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.SimpleLinearExpression");
             	        afterParserOrEnumRuleCall();
             	    
 
@@ -773,7 +778,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleConstraintExpression560); 
+            otherlv_5=(Token)match(input,14,FollowSets000.FOLLOW_2); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getConstraintExpressionAccess().getSemicolonKeyword_4());
                 
@@ -798,7 +803,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVariable"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:327:1: entryRuleVariable returns [EObject current=null] : iv_ruleVariable= ruleVariable EOF ;
+    // InternalLPSolve.g:327:1: entryRuleVariable returns [EObject current=null] : iv_ruleVariable= ruleVariable EOF ;
     public final EObject entryRuleVariable() throws RecognitionException {
         EObject current = null;
 
@@ -806,17 +811,17 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:328:2: (iv_ruleVariable= ruleVariable EOF )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:329:2: iv_ruleVariable= ruleVariable EOF
+            // InternalLPSolve.g:328:2: (iv_ruleVariable= ruleVariable EOF )
+            // InternalLPSolve.g:329:2: iv_ruleVariable= ruleVariable EOF
             {
              newCompositeNode(grammarAccess.getVariableRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleVariable_in_entryRuleVariable596);
+            pushFollow(FollowSets000.FOLLOW_1);
             iv_ruleVariable=ruleVariable();
 
             state._fsp--;
 
              current =iv_ruleVariable; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleVariable606); 
+            match(input,EOF,FollowSets000.FOLLOW_2); 
 
             }
 
@@ -834,7 +839,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVariable"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:336:1: ruleVariable returns [EObject current=null] : ( ( (lv_dataType_0_0= ruleILPDataType ) ) ( (lv_name_1_0= ruleVariableID ) ) otherlv_2= ';' ) ;
+    // InternalLPSolve.g:336:1: ruleVariable returns [EObject current=null] : ( ( (lv_dataType_0_0= ruleILPDataType ) ) ( (lv_name_1_0= ruleVariableID ) ) otherlv_2= ';' ) ;
     public final EObject ruleVariable() throws RecognitionException {
         EObject current = null;
 
@@ -847,22 +852,22 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:339:28: ( ( ( (lv_dataType_0_0= ruleILPDataType ) ) ( (lv_name_1_0= ruleVariableID ) ) otherlv_2= ';' ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:340:1: ( ( (lv_dataType_0_0= ruleILPDataType ) ) ( (lv_name_1_0= ruleVariableID ) ) otherlv_2= ';' )
+            // InternalLPSolve.g:339:28: ( ( ( (lv_dataType_0_0= ruleILPDataType ) ) ( (lv_name_1_0= ruleVariableID ) ) otherlv_2= ';' ) )
+            // InternalLPSolve.g:340:1: ( ( (lv_dataType_0_0= ruleILPDataType ) ) ( (lv_name_1_0= ruleVariableID ) ) otherlv_2= ';' )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:340:1: ( ( (lv_dataType_0_0= ruleILPDataType ) ) ( (lv_name_1_0= ruleVariableID ) ) otherlv_2= ';' )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:340:2: ( (lv_dataType_0_0= ruleILPDataType ) ) ( (lv_name_1_0= ruleVariableID ) ) otherlv_2= ';'
+            // InternalLPSolve.g:340:1: ( ( (lv_dataType_0_0= ruleILPDataType ) ) ( (lv_name_1_0= ruleVariableID ) ) otherlv_2= ';' )
+            // InternalLPSolve.g:340:2: ( (lv_dataType_0_0= ruleILPDataType ) ) ( (lv_name_1_0= ruleVariableID ) ) otherlv_2= ';'
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:340:2: ( (lv_dataType_0_0= ruleILPDataType ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:341:1: (lv_dataType_0_0= ruleILPDataType )
+            // InternalLPSolve.g:340:2: ( (lv_dataType_0_0= ruleILPDataType ) )
+            // InternalLPSolve.g:341:1: (lv_dataType_0_0= ruleILPDataType )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:341:1: (lv_dataType_0_0= ruleILPDataType )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:342:3: lv_dataType_0_0= ruleILPDataType
+            // InternalLPSolve.g:341:1: (lv_dataType_0_0= ruleILPDataType )
+            // InternalLPSolve.g:342:3: lv_dataType_0_0= ruleILPDataType
             {
              
             	        newCompositeNode(grammarAccess.getVariableAccess().getDataTypeILPDataTypeEnumRuleCall_0_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleILPDataType_in_ruleVariable652);
+            pushFollow(FollowSets000.FOLLOW_9);
             lv_dataType_0_0=ruleILPDataType();
 
             state._fsp--;
@@ -875,7 +880,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"dataType",
                     		lv_dataType_0_0, 
-                    		"ILPDataType");
+                    		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.ILPDataType");
             	        afterParserOrEnumRuleCall();
             	    
 
@@ -884,16 +889,16 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:358:2: ( (lv_name_1_0= ruleVariableID ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:359:1: (lv_name_1_0= ruleVariableID )
+            // InternalLPSolve.g:358:2: ( (lv_name_1_0= ruleVariableID ) )
+            // InternalLPSolve.g:359:1: (lv_name_1_0= ruleVariableID )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:359:1: (lv_name_1_0= ruleVariableID )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:360:3: lv_name_1_0= ruleVariableID
+            // InternalLPSolve.g:359:1: (lv_name_1_0= ruleVariableID )
+            // InternalLPSolve.g:360:3: lv_name_1_0= ruleVariableID
             {
              
             	        newCompositeNode(grammarAccess.getVariableAccess().getNameVariableIDParserRuleCall_1_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleVariableID_in_ruleVariable673);
+            pushFollow(FollowSets000.FOLLOW_6);
             lv_name_1_0=ruleVariableID();
 
             state._fsp--;
@@ -906,7 +911,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"name",
                     		lv_name_1_0, 
-                    		"VariableID");
+                    		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.VariableID");
             	        afterParserOrEnumRuleCall();
             	    
 
@@ -915,7 +920,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleVariable685); 
+            otherlv_2=(Token)match(input,14,FollowSets000.FOLLOW_2); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getVariableAccess().getSemicolonKeyword_2());
                 
@@ -940,7 +945,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVariableID"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:388:1: entryRuleVariableID returns [String current=null] : iv_ruleVariableID= ruleVariableID EOF ;
+    // InternalLPSolve.g:388:1: entryRuleVariableID returns [String current=null] : iv_ruleVariableID= ruleVariableID EOF ;
     public final String entryRuleVariableID() throws RecognitionException {
         String current = null;
 
@@ -948,17 +953,17 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:389:2: (iv_ruleVariableID= ruleVariableID EOF )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:390:2: iv_ruleVariableID= ruleVariableID EOF
+            // InternalLPSolve.g:389:2: (iv_ruleVariableID= ruleVariableID EOF )
+            // InternalLPSolve.g:390:2: iv_ruleVariableID= ruleVariableID EOF
             {
              newCompositeNode(grammarAccess.getVariableIDRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleVariableID_in_entryRuleVariableID722);
+            pushFollow(FollowSets000.FOLLOW_1);
             iv_ruleVariableID=ruleVariableID();
 
             state._fsp--;
 
              current =iv_ruleVariableID.getText(); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleVariableID733); 
+            match(input,EOF,FollowSets000.FOLLOW_2); 
 
             }
 
@@ -976,7 +981,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVariableID"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:397:1: ruleVariableID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' (this_ID_2= RULE_ID | (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? ) ) )* ) ;
+    // InternalLPSolve.g:397:1: ruleVariableID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' (this_ID_2= RULE_ID | (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? ) ) )* ) ;
     public final AntlrDatatypeRuleToken ruleVariableID() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -989,20 +994,20 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:400:28: ( (this_ID_0= RULE_ID (kw= '.' (this_ID_2= RULE_ID | (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? ) ) )* ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:401:1: (this_ID_0= RULE_ID (kw= '.' (this_ID_2= RULE_ID | (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? ) ) )* )
+            // InternalLPSolve.g:400:28: ( (this_ID_0= RULE_ID (kw= '.' (this_ID_2= RULE_ID | (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? ) ) )* ) )
+            // InternalLPSolve.g:401:1: (this_ID_0= RULE_ID (kw= '.' (this_ID_2= RULE_ID | (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? ) ) )* )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:401:1: (this_ID_0= RULE_ID (kw= '.' (this_ID_2= RULE_ID | (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? ) ) )* )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:401:6: this_ID_0= RULE_ID (kw= '.' (this_ID_2= RULE_ID | (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? ) ) )*
+            // InternalLPSolve.g:401:1: (this_ID_0= RULE_ID (kw= '.' (this_ID_2= RULE_ID | (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? ) ) )* )
+            // InternalLPSolve.g:401:6: this_ID_0= RULE_ID (kw= '.' (this_ID_2= RULE_ID | (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? ) ) )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleVariableID773); 
+            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_10); 
 
             		current.merge(this_ID_0);
                 
              
                 newLeafNode(this_ID_0, grammarAccess.getVariableIDAccess().getIDTerminalRuleCall_0()); 
                 
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:408:1: (kw= '.' (this_ID_2= RULE_ID | (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? ) ) )*
+            // InternalLPSolve.g:408:1: (kw= '.' (this_ID_2= RULE_ID | (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1015,14 +1020,14 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:409:2: kw= '.' (this_ID_2= RULE_ID | (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? ) )
+            	    // InternalLPSolve.g:409:2: kw= '.' (this_ID_2= RULE_ID | (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? ) )
             	    {
-            	    kw=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleVariableID792); 
+            	    kw=(Token)match(input,15,FollowSets000.FOLLOW_11); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getVariableIDAccess().getFullStopKeyword_1_0()); 
             	        
-            	    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:414:1: (this_ID_2= RULE_ID | (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? ) )
+            	    // InternalLPSolve.g:414:1: (this_ID_2= RULE_ID | (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? ) )
             	    int alt7=2;
             	    int LA7_0 = input.LA(1);
 
@@ -1040,9 +1045,9 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt7) {
             	        case 1 :
-            	            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:414:6: this_ID_2= RULE_ID
+            	            // InternalLPSolve.g:414:6: this_ID_2= RULE_ID
             	            {
-            	            this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleVariableID808); 
+            	            this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_10); 
 
             	            		current.merge(this_ID_2);
             	                
@@ -1053,19 +1058,19 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:422:6: (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? )
+            	            // InternalLPSolve.g:422:6: (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? )
             	            {
-            	            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:422:6: (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? )
-            	            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:422:11: this_INT_3= RULE_INT (this_ID_4= RULE_ID )?
+            	            // InternalLPSolve.g:422:6: (this_INT_3= RULE_INT (this_ID_4= RULE_ID )? )
+            	            // InternalLPSolve.g:422:11: this_INT_3= RULE_INT (this_ID_4= RULE_ID )?
             	            {
-            	            this_INT_3=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleVariableID835); 
+            	            this_INT_3=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_12); 
 
             	            		current.merge(this_INT_3);
             	                
             	             
             	                newLeafNode(this_INT_3, grammarAccess.getVariableIDAccess().getINTTerminalRuleCall_1_1_1_0()); 
             	                
-            	            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:429:1: (this_ID_4= RULE_ID )?
+            	            // InternalLPSolve.g:429:1: (this_ID_4= RULE_ID )?
             	            int alt6=2;
             	            int LA6_0 = input.LA(1);
 
@@ -1074,9 +1079,9 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             	            }
             	            switch (alt6) {
             	                case 1 :
-            	                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:429:6: this_ID_4= RULE_ID
+            	                    // InternalLPSolve.g:429:6: this_ID_4= RULE_ID
             	                    {
-            	                    this_ID_4=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleVariableID856); 
+            	                    this_ID_4=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_10); 
 
             	                    		current.merge(this_ID_4);
             	                        
@@ -1128,7 +1133,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLinearExpression"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:444:1: entryRuleLinearExpression returns [EObject current=null] : iv_ruleLinearExpression= ruleLinearExpression EOF ;
+    // InternalLPSolve.g:444:1: entryRuleLinearExpression returns [EObject current=null] : iv_ruleLinearExpression= ruleLinearExpression EOF ;
     public final EObject entryRuleLinearExpression() throws RecognitionException {
         EObject current = null;
 
@@ -1136,17 +1141,17 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:445:2: (iv_ruleLinearExpression= ruleLinearExpression EOF )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:446:2: iv_ruleLinearExpression= ruleLinearExpression EOF
+            // InternalLPSolve.g:445:2: (iv_ruleLinearExpression= ruleLinearExpression EOF )
+            // InternalLPSolve.g:446:2: iv_ruleLinearExpression= ruleLinearExpression EOF
             {
              newCompositeNode(grammarAccess.getLinearExpressionRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleLinearExpression_in_entryRuleLinearExpression907);
+            pushFollow(FollowSets000.FOLLOW_1);
             iv_ruleLinearExpression=ruleLinearExpression();
 
             state._fsp--;
 
              current =iv_ruleLinearExpression; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleLinearExpression917); 
+            match(input,EOF,FollowSets000.FOLLOW_2); 
 
             }
 
@@ -1164,7 +1169,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLinearExpression"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:453:1: ruleLinearExpression returns [EObject current=null] : this_SimpleLinearExpression_0= ruleSimpleLinearExpression ;
+    // InternalLPSolve.g:453:1: ruleLinearExpression returns [EObject current=null] : this_SimpleLinearExpression_0= ruleSimpleLinearExpression ;
     public final EObject ruleLinearExpression() throws RecognitionException {
         EObject current = null;
 
@@ -1174,13 +1179,13 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:456:28: (this_SimpleLinearExpression_0= ruleSimpleLinearExpression )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:458:5: this_SimpleLinearExpression_0= ruleSimpleLinearExpression
+            // InternalLPSolve.g:456:28: (this_SimpleLinearExpression_0= ruleSimpleLinearExpression )
+            // InternalLPSolve.g:458:5: this_SimpleLinearExpression_0= ruleSimpleLinearExpression
             {
              
                     newCompositeNode(grammarAccess.getLinearExpressionAccess().getSimpleLinearExpressionParserRuleCall()); 
                 
-            pushFollow(FollowSets000.FOLLOW_ruleSimpleLinearExpression_in_ruleLinearExpression963);
+            pushFollow(FollowSets000.FOLLOW_2);
             this_SimpleLinearExpression_0=ruleSimpleLinearExpression();
 
             state._fsp--;
@@ -1207,7 +1212,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSimpleLinearExpression"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:474:1: entryRuleSimpleLinearExpression returns [EObject current=null] : iv_ruleSimpleLinearExpression= ruleSimpleLinearExpression EOF ;
+    // InternalLPSolve.g:474:1: entryRuleSimpleLinearExpression returns [EObject current=null] : iv_ruleSimpleLinearExpression= ruleSimpleLinearExpression EOF ;
     public final EObject entryRuleSimpleLinearExpression() throws RecognitionException {
         EObject current = null;
 
@@ -1215,17 +1220,17 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:475:2: (iv_ruleSimpleLinearExpression= ruleSimpleLinearExpression EOF )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:476:2: iv_ruleSimpleLinearExpression= ruleSimpleLinearExpression EOF
+            // InternalLPSolve.g:475:2: (iv_ruleSimpleLinearExpression= ruleSimpleLinearExpression EOF )
+            // InternalLPSolve.g:476:2: iv_ruleSimpleLinearExpression= ruleSimpleLinearExpression EOF
             {
              newCompositeNode(grammarAccess.getSimpleLinearExpressionRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleSimpleLinearExpression_in_entryRuleSimpleLinearExpression997);
+            pushFollow(FollowSets000.FOLLOW_1);
             iv_ruleSimpleLinearExpression=ruleSimpleLinearExpression();
 
             state._fsp--;
 
              current =iv_ruleSimpleLinearExpression; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleSimpleLinearExpression1007); 
+            match(input,EOF,FollowSets000.FOLLOW_2); 
 
             }
 
@@ -1243,7 +1248,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSimpleLinearExpression"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:483:1: ruleSimpleLinearExpression returns [EObject current=null] : this_AdditionExpression_0= ruleAdditionExpression ;
+    // InternalLPSolve.g:483:1: ruleSimpleLinearExpression returns [EObject current=null] : this_AdditionExpression_0= ruleAdditionExpression ;
     public final EObject ruleSimpleLinearExpression() throws RecognitionException {
         EObject current = null;
 
@@ -1253,13 +1258,13 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:486:28: (this_AdditionExpression_0= ruleAdditionExpression )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:488:5: this_AdditionExpression_0= ruleAdditionExpression
+            // InternalLPSolve.g:486:28: (this_AdditionExpression_0= ruleAdditionExpression )
+            // InternalLPSolve.g:488:5: this_AdditionExpression_0= ruleAdditionExpression
             {
              
                     newCompositeNode(grammarAccess.getSimpleLinearExpressionAccess().getAdditionExpressionParserRuleCall()); 
                 
-            pushFollow(FollowSets000.FOLLOW_ruleAdditionExpression_in_ruleSimpleLinearExpression1053);
+            pushFollow(FollowSets000.FOLLOW_2);
             this_AdditionExpression_0=ruleAdditionExpression();
 
             state._fsp--;
@@ -1286,7 +1291,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAdditionExpression"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:504:1: entryRuleAdditionExpression returns [EObject current=null] : iv_ruleAdditionExpression= ruleAdditionExpression EOF ;
+    // InternalLPSolve.g:504:1: entryRuleAdditionExpression returns [EObject current=null] : iv_ruleAdditionExpression= ruleAdditionExpression EOF ;
     public final EObject entryRuleAdditionExpression() throws RecognitionException {
         EObject current = null;
 
@@ -1294,17 +1299,17 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:505:2: (iv_ruleAdditionExpression= ruleAdditionExpression EOF )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:506:2: iv_ruleAdditionExpression= ruleAdditionExpression EOF
+            // InternalLPSolve.g:505:2: (iv_ruleAdditionExpression= ruleAdditionExpression EOF )
+            // InternalLPSolve.g:506:2: iv_ruleAdditionExpression= ruleAdditionExpression EOF
             {
              newCompositeNode(grammarAccess.getAdditionExpressionRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAdditionExpression_in_entryRuleAdditionExpression1087);
+            pushFollow(FollowSets000.FOLLOW_1);
             iv_ruleAdditionExpression=ruleAdditionExpression();
 
             state._fsp--;
 
              current =iv_ruleAdditionExpression; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAdditionExpression1097); 
+            match(input,EOF,FollowSets000.FOLLOW_2); 
 
             }
 
@@ -1322,7 +1327,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAdditionExpression"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:513:1: ruleAdditionExpression returns [EObject current=null] : (this_MultiplicationExpression_0= ruleMultiplicationExpression ( () ( (lv_operator_2_0= ruleAdditionOperator ) ) ( (lv_rightExpression_3_0= ruleLinearExpression ) ) )? ) ;
+    // InternalLPSolve.g:513:1: ruleAdditionExpression returns [EObject current=null] : (this_MultiplicationExpression_0= ruleMultiplicationExpression ( () ( (lv_operator_2_0= ruleAdditionOperator ) ) ( (lv_rightExpression_3_0= ruleLinearExpression ) ) )? ) ;
     public final EObject ruleAdditionExpression() throws RecognitionException {
         EObject current = null;
 
@@ -1336,16 +1341,16 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:516:28: ( (this_MultiplicationExpression_0= ruleMultiplicationExpression ( () ( (lv_operator_2_0= ruleAdditionOperator ) ) ( (lv_rightExpression_3_0= ruleLinearExpression ) ) )? ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:517:1: (this_MultiplicationExpression_0= ruleMultiplicationExpression ( () ( (lv_operator_2_0= ruleAdditionOperator ) ) ( (lv_rightExpression_3_0= ruleLinearExpression ) ) )? )
+            // InternalLPSolve.g:516:28: ( (this_MultiplicationExpression_0= ruleMultiplicationExpression ( () ( (lv_operator_2_0= ruleAdditionOperator ) ) ( (lv_rightExpression_3_0= ruleLinearExpression ) ) )? ) )
+            // InternalLPSolve.g:517:1: (this_MultiplicationExpression_0= ruleMultiplicationExpression ( () ( (lv_operator_2_0= ruleAdditionOperator ) ) ( (lv_rightExpression_3_0= ruleLinearExpression ) ) )? )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:517:1: (this_MultiplicationExpression_0= ruleMultiplicationExpression ( () ( (lv_operator_2_0= ruleAdditionOperator ) ) ( (lv_rightExpression_3_0= ruleLinearExpression ) ) )? )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:518:5: this_MultiplicationExpression_0= ruleMultiplicationExpression ( () ( (lv_operator_2_0= ruleAdditionOperator ) ) ( (lv_rightExpression_3_0= ruleLinearExpression ) ) )?
+            // InternalLPSolve.g:517:1: (this_MultiplicationExpression_0= ruleMultiplicationExpression ( () ( (lv_operator_2_0= ruleAdditionOperator ) ) ( (lv_rightExpression_3_0= ruleLinearExpression ) ) )? )
+            // InternalLPSolve.g:518:5: this_MultiplicationExpression_0= ruleMultiplicationExpression ( () ( (lv_operator_2_0= ruleAdditionOperator ) ) ( (lv_rightExpression_3_0= ruleLinearExpression ) ) )?
             {
              
                     newCompositeNode(grammarAccess.getAdditionExpressionAccess().getMultiplicationExpressionParserRuleCall_0()); 
                 
-            pushFollow(FollowSets000.FOLLOW_ruleMultiplicationExpression_in_ruleAdditionExpression1144);
+            pushFollow(FollowSets000.FOLLOW_13);
             this_MultiplicationExpression_0=ruleMultiplicationExpression();
 
             state._fsp--;
@@ -1354,7 +1359,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     current = this_MultiplicationExpression_0; 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:526:1: ( () ( (lv_operator_2_0= ruleAdditionOperator ) ) ( (lv_rightExpression_3_0= ruleLinearExpression ) ) )?
+            // InternalLPSolve.g:526:1: ( () ( (lv_operator_2_0= ruleAdditionOperator ) ) ( (lv_rightExpression_3_0= ruleLinearExpression ) ) )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1363,10 +1368,10 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:526:2: () ( (lv_operator_2_0= ruleAdditionOperator ) ) ( (lv_rightExpression_3_0= ruleLinearExpression ) )
+                    // InternalLPSolve.g:526:2: () ( (lv_operator_2_0= ruleAdditionOperator ) ) ( (lv_rightExpression_3_0= ruleLinearExpression ) )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:526:2: ()
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:527:5: 
+                    // InternalLPSolve.g:526:2: ()
+                    // InternalLPSolve.g:527:5: 
                     {
 
                             current = forceCreateModelElementAndSet(
@@ -1376,16 +1381,16 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:532:2: ( (lv_operator_2_0= ruleAdditionOperator ) )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:533:1: (lv_operator_2_0= ruleAdditionOperator )
+                    // InternalLPSolve.g:532:2: ( (lv_operator_2_0= ruleAdditionOperator ) )
+                    // InternalLPSolve.g:533:1: (lv_operator_2_0= ruleAdditionOperator )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:533:1: (lv_operator_2_0= ruleAdditionOperator )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:534:3: lv_operator_2_0= ruleAdditionOperator
+                    // InternalLPSolve.g:533:1: (lv_operator_2_0= ruleAdditionOperator )
+                    // InternalLPSolve.g:534:3: lv_operator_2_0= ruleAdditionOperator
                     {
                      
                     	        newCompositeNode(grammarAccess.getAdditionExpressionAccess().getOperatorAdditionOperatorEnumRuleCall_1_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleAdditionOperator_in_ruleAdditionExpression1174);
+                    pushFollow(FollowSets000.FOLLOW_7);
                     lv_operator_2_0=ruleAdditionOperator();
 
                     state._fsp--;
@@ -1398,7 +1403,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"operator",
                             		lv_operator_2_0, 
-                            		"AdditionOperator");
+                            		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.AdditionOperator");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -1407,16 +1412,16 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:550:2: ( (lv_rightExpression_3_0= ruleLinearExpression ) )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:551:1: (lv_rightExpression_3_0= ruleLinearExpression )
+                    // InternalLPSolve.g:550:2: ( (lv_rightExpression_3_0= ruleLinearExpression ) )
+                    // InternalLPSolve.g:551:1: (lv_rightExpression_3_0= ruleLinearExpression )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:551:1: (lv_rightExpression_3_0= ruleLinearExpression )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:552:3: lv_rightExpression_3_0= ruleLinearExpression
+                    // InternalLPSolve.g:551:1: (lv_rightExpression_3_0= ruleLinearExpression )
+                    // InternalLPSolve.g:552:3: lv_rightExpression_3_0= ruleLinearExpression
                     {
                      
                     	        newCompositeNode(grammarAccess.getAdditionExpressionAccess().getRightExpressionLinearExpressionParserRuleCall_1_2_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleLinearExpression_in_ruleAdditionExpression1195);
+                    pushFollow(FollowSets000.FOLLOW_2);
                     lv_rightExpression_3_0=ruleLinearExpression();
 
                     state._fsp--;
@@ -1429,7 +1434,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"rightExpression",
                             		lv_rightExpression_3_0, 
-                            		"LinearExpression");
+                            		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.LinearExpression");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -1465,7 +1470,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMultiplicationExpression"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:576:1: entryRuleMultiplicationExpression returns [EObject current=null] : iv_ruleMultiplicationExpression= ruleMultiplicationExpression EOF ;
+    // InternalLPSolve.g:576:1: entryRuleMultiplicationExpression returns [EObject current=null] : iv_ruleMultiplicationExpression= ruleMultiplicationExpression EOF ;
     public final EObject entryRuleMultiplicationExpression() throws RecognitionException {
         EObject current = null;
 
@@ -1473,17 +1478,17 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:577:2: (iv_ruleMultiplicationExpression= ruleMultiplicationExpression EOF )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:578:2: iv_ruleMultiplicationExpression= ruleMultiplicationExpression EOF
+            // InternalLPSolve.g:577:2: (iv_ruleMultiplicationExpression= ruleMultiplicationExpression EOF )
+            // InternalLPSolve.g:578:2: iv_ruleMultiplicationExpression= ruleMultiplicationExpression EOF
             {
              newCompositeNode(grammarAccess.getMultiplicationExpressionRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleMultiplicationExpression_in_entryRuleMultiplicationExpression1233);
+            pushFollow(FollowSets000.FOLLOW_1);
             iv_ruleMultiplicationExpression=ruleMultiplicationExpression();
 
             state._fsp--;
 
              current =iv_ruleMultiplicationExpression; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleMultiplicationExpression1243); 
+            match(input,EOF,FollowSets000.FOLLOW_2); 
 
             }
 
@@ -1501,7 +1506,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMultiplicationExpression"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:585:1: ruleMultiplicationExpression returns [EObject current=null] : (this_Operand_0= ruleOperand ( () ( (lv_operator_2_0= ruleMultiplicationOperator ) ) ( (lv_rightExpression_3_0= ruleOperand ) ) )? ) ;
+    // InternalLPSolve.g:585:1: ruleMultiplicationExpression returns [EObject current=null] : (this_Operand_0= ruleOperand ( () ( (lv_operator_2_0= ruleMultiplicationOperator ) ) ( (lv_rightExpression_3_0= ruleOperand ) ) )? ) ;
     public final EObject ruleMultiplicationExpression() throws RecognitionException {
         EObject current = null;
 
@@ -1515,16 +1520,16 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:588:28: ( (this_Operand_0= ruleOperand ( () ( (lv_operator_2_0= ruleMultiplicationOperator ) ) ( (lv_rightExpression_3_0= ruleOperand ) ) )? ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:589:1: (this_Operand_0= ruleOperand ( () ( (lv_operator_2_0= ruleMultiplicationOperator ) ) ( (lv_rightExpression_3_0= ruleOperand ) ) )? )
+            // InternalLPSolve.g:588:28: ( (this_Operand_0= ruleOperand ( () ( (lv_operator_2_0= ruleMultiplicationOperator ) ) ( (lv_rightExpression_3_0= ruleOperand ) ) )? ) )
+            // InternalLPSolve.g:589:1: (this_Operand_0= ruleOperand ( () ( (lv_operator_2_0= ruleMultiplicationOperator ) ) ( (lv_rightExpression_3_0= ruleOperand ) ) )? )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:589:1: (this_Operand_0= ruleOperand ( () ( (lv_operator_2_0= ruleMultiplicationOperator ) ) ( (lv_rightExpression_3_0= ruleOperand ) ) )? )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:590:5: this_Operand_0= ruleOperand ( () ( (lv_operator_2_0= ruleMultiplicationOperator ) ) ( (lv_rightExpression_3_0= ruleOperand ) ) )?
+            // InternalLPSolve.g:589:1: (this_Operand_0= ruleOperand ( () ( (lv_operator_2_0= ruleMultiplicationOperator ) ) ( (lv_rightExpression_3_0= ruleOperand ) ) )? )
+            // InternalLPSolve.g:590:5: this_Operand_0= ruleOperand ( () ( (lv_operator_2_0= ruleMultiplicationOperator ) ) ( (lv_rightExpression_3_0= ruleOperand ) ) )?
             {
              
                     newCompositeNode(grammarAccess.getMultiplicationExpressionAccess().getOperandParserRuleCall_0()); 
                 
-            pushFollow(FollowSets000.FOLLOW_ruleOperand_in_ruleMultiplicationExpression1290);
+            pushFollow(FollowSets000.FOLLOW_14);
             this_Operand_0=ruleOperand();
 
             state._fsp--;
@@ -1533,7 +1538,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     current = this_Operand_0; 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:598:1: ( () ( (lv_operator_2_0= ruleMultiplicationOperator ) ) ( (lv_rightExpression_3_0= ruleOperand ) ) )?
+            // InternalLPSolve.g:598:1: ( () ( (lv_operator_2_0= ruleMultiplicationOperator ) ) ( (lv_rightExpression_3_0= ruleOperand ) ) )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1542,10 +1547,10 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:598:2: () ( (lv_operator_2_0= ruleMultiplicationOperator ) ) ( (lv_rightExpression_3_0= ruleOperand ) )
+                    // InternalLPSolve.g:598:2: () ( (lv_operator_2_0= ruleMultiplicationOperator ) ) ( (lv_rightExpression_3_0= ruleOperand ) )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:598:2: ()
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:599:5: 
+                    // InternalLPSolve.g:598:2: ()
+                    // InternalLPSolve.g:599:5: 
                     {
 
                             current = forceCreateModelElementAndSet(
@@ -1555,16 +1560,16 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:604:2: ( (lv_operator_2_0= ruleMultiplicationOperator ) )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:605:1: (lv_operator_2_0= ruleMultiplicationOperator )
+                    // InternalLPSolve.g:604:2: ( (lv_operator_2_0= ruleMultiplicationOperator ) )
+                    // InternalLPSolve.g:605:1: (lv_operator_2_0= ruleMultiplicationOperator )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:605:1: (lv_operator_2_0= ruleMultiplicationOperator )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:606:3: lv_operator_2_0= ruleMultiplicationOperator
+                    // InternalLPSolve.g:605:1: (lv_operator_2_0= ruleMultiplicationOperator )
+                    // InternalLPSolve.g:606:3: lv_operator_2_0= ruleMultiplicationOperator
                     {
                      
                     	        newCompositeNode(grammarAccess.getMultiplicationExpressionAccess().getOperatorMultiplicationOperatorEnumRuleCall_1_1_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleMultiplicationOperator_in_ruleMultiplicationExpression1320);
+                    pushFollow(FollowSets000.FOLLOW_7);
                     lv_operator_2_0=ruleMultiplicationOperator();
 
                     state._fsp--;
@@ -1577,7 +1582,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"operator",
                             		lv_operator_2_0, 
-                            		"MultiplicationOperator");
+                            		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.MultiplicationOperator");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -1586,16 +1591,16 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:622:2: ( (lv_rightExpression_3_0= ruleOperand ) )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:623:1: (lv_rightExpression_3_0= ruleOperand )
+                    // InternalLPSolve.g:622:2: ( (lv_rightExpression_3_0= ruleOperand ) )
+                    // InternalLPSolve.g:623:1: (lv_rightExpression_3_0= ruleOperand )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:623:1: (lv_rightExpression_3_0= ruleOperand )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:624:3: lv_rightExpression_3_0= ruleOperand
+                    // InternalLPSolve.g:623:1: (lv_rightExpression_3_0= ruleOperand )
+                    // InternalLPSolve.g:624:3: lv_rightExpression_3_0= ruleOperand
                     {
                      
                     	        newCompositeNode(grammarAccess.getMultiplicationExpressionAccess().getRightExpressionOperandParserRuleCall_1_2_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleOperand_in_ruleMultiplicationExpression1341);
+                    pushFollow(FollowSets000.FOLLOW_2);
                     lv_rightExpression_3_0=ruleOperand();
 
                     state._fsp--;
@@ -1608,7 +1613,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"rightExpression",
                             		lv_rightExpression_3_0, 
-                            		"Operand");
+                            		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.Operand");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -1644,7 +1649,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOperand"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:648:1: entryRuleOperand returns [EObject current=null] : iv_ruleOperand= ruleOperand EOF ;
+    // InternalLPSolve.g:648:1: entryRuleOperand returns [EObject current=null] : iv_ruleOperand= ruleOperand EOF ;
     public final EObject entryRuleOperand() throws RecognitionException {
         EObject current = null;
 
@@ -1652,17 +1657,17 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:649:2: (iv_ruleOperand= ruleOperand EOF )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:650:2: iv_ruleOperand= ruleOperand EOF
+            // InternalLPSolve.g:649:2: (iv_ruleOperand= ruleOperand EOF )
+            // InternalLPSolve.g:650:2: iv_ruleOperand= ruleOperand EOF
             {
              newCompositeNode(grammarAccess.getOperandRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleOperand_in_entryRuleOperand1379);
+            pushFollow(FollowSets000.FOLLOW_1);
             iv_ruleOperand=ruleOperand();
 
             state._fsp--;
 
              current =iv_ruleOperand; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleOperand1389); 
+            match(input,EOF,FollowSets000.FOLLOW_2); 
 
             }
 
@@ -1680,7 +1685,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperand"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:657:1: ruleOperand returns [EObject current=null] : (this_NumberLiteralExpression_0= ruleNumberLiteralExpression | this_VariableExpression_1= ruleVariableExpression ) ;
+    // InternalLPSolve.g:657:1: ruleOperand returns [EObject current=null] : (this_NumberLiteralExpression_0= ruleNumberLiteralExpression | this_VariableExpression_1= ruleVariableExpression ) ;
     public final EObject ruleOperand() throws RecognitionException {
         EObject current = null;
 
@@ -1692,10 +1697,10 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:660:28: ( (this_NumberLiteralExpression_0= ruleNumberLiteralExpression | this_VariableExpression_1= ruleVariableExpression ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:661:1: (this_NumberLiteralExpression_0= ruleNumberLiteralExpression | this_VariableExpression_1= ruleVariableExpression )
+            // InternalLPSolve.g:660:28: ( (this_NumberLiteralExpression_0= ruleNumberLiteralExpression | this_VariableExpression_1= ruleVariableExpression ) )
+            // InternalLPSolve.g:661:1: (this_NumberLiteralExpression_0= ruleNumberLiteralExpression | this_VariableExpression_1= ruleVariableExpression )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:661:1: (this_NumberLiteralExpression_0= ruleNumberLiteralExpression | this_VariableExpression_1= ruleVariableExpression )
+            // InternalLPSolve.g:661:1: (this_NumberLiteralExpression_0= ruleNumberLiteralExpression | this_VariableExpression_1= ruleVariableExpression )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1713,12 +1718,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             }
             switch (alt11) {
                 case 1 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:662:5: this_NumberLiteralExpression_0= ruleNumberLiteralExpression
+                    // InternalLPSolve.g:662:5: this_NumberLiteralExpression_0= ruleNumberLiteralExpression
                     {
                      
                             newCompositeNode(grammarAccess.getOperandAccess().getNumberLiteralExpressionParserRuleCall_0()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleNumberLiteralExpression_in_ruleOperand1436);
+                    pushFollow(FollowSets000.FOLLOW_2);
                     this_NumberLiteralExpression_0=ruleNumberLiteralExpression();
 
                     state._fsp--;
@@ -1731,12 +1736,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:672:5: this_VariableExpression_1= ruleVariableExpression
+                    // InternalLPSolve.g:672:5: this_VariableExpression_1= ruleVariableExpression
                     {
                      
                             newCompositeNode(grammarAccess.getOperandAccess().getVariableExpressionParserRuleCall_1()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleVariableExpression_in_ruleOperand1463);
+                    pushFollow(FollowSets000.FOLLOW_2);
                     this_VariableExpression_1=ruleVariableExpression();
 
                     state._fsp--;
@@ -1769,7 +1774,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumberLiteralExpression"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:688:1: entryRuleNumberLiteralExpression returns [EObject current=null] : iv_ruleNumberLiteralExpression= ruleNumberLiteralExpression EOF ;
+    // InternalLPSolve.g:688:1: entryRuleNumberLiteralExpression returns [EObject current=null] : iv_ruleNumberLiteralExpression= ruleNumberLiteralExpression EOF ;
     public final EObject entryRuleNumberLiteralExpression() throws RecognitionException {
         EObject current = null;
 
@@ -1777,17 +1782,17 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:689:2: (iv_ruleNumberLiteralExpression= ruleNumberLiteralExpression EOF )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:690:2: iv_ruleNumberLiteralExpression= ruleNumberLiteralExpression EOF
+            // InternalLPSolve.g:689:2: (iv_ruleNumberLiteralExpression= ruleNumberLiteralExpression EOF )
+            // InternalLPSolve.g:690:2: iv_ruleNumberLiteralExpression= ruleNumberLiteralExpression EOF
             {
              newCompositeNode(grammarAccess.getNumberLiteralExpressionRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleNumberLiteralExpression_in_entryRuleNumberLiteralExpression1498);
+            pushFollow(FollowSets000.FOLLOW_1);
             iv_ruleNumberLiteralExpression=ruleNumberLiteralExpression();
 
             state._fsp--;
 
              current =iv_ruleNumberLiteralExpression; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleNumberLiteralExpression1508); 
+            match(input,EOF,FollowSets000.FOLLOW_2); 
 
             }
 
@@ -1805,7 +1810,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumberLiteralExpression"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:697:1: ruleNumberLiteralExpression returns [EObject current=null] : ( (lv_value_0_0= ruleNumber ) ) ;
+    // InternalLPSolve.g:697:1: ruleNumberLiteralExpression returns [EObject current=null] : ( (lv_value_0_0= ruleNumber ) ) ;
     public final EObject ruleNumberLiteralExpression() throws RecognitionException {
         EObject current = null;
 
@@ -1815,19 +1820,19 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:700:28: ( ( (lv_value_0_0= ruleNumber ) ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:701:1: ( (lv_value_0_0= ruleNumber ) )
+            // InternalLPSolve.g:700:28: ( ( (lv_value_0_0= ruleNumber ) ) )
+            // InternalLPSolve.g:701:1: ( (lv_value_0_0= ruleNumber ) )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:701:1: ( (lv_value_0_0= ruleNumber ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:702:1: (lv_value_0_0= ruleNumber )
+            // InternalLPSolve.g:701:1: ( (lv_value_0_0= ruleNumber ) )
+            // InternalLPSolve.g:702:1: (lv_value_0_0= ruleNumber )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:702:1: (lv_value_0_0= ruleNumber )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:703:3: lv_value_0_0= ruleNumber
+            // InternalLPSolve.g:702:1: (lv_value_0_0= ruleNumber )
+            // InternalLPSolve.g:703:3: lv_value_0_0= ruleNumber
             {
              
             	        newCompositeNode(grammarAccess.getNumberLiteralExpressionAccess().getValueNumberParserRuleCall_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleNumber_in_ruleNumberLiteralExpression1553);
+            pushFollow(FollowSets000.FOLLOW_2);
             lv_value_0_0=ruleNumber();
 
             state._fsp--;
@@ -1840,7 +1845,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"value",
                     		lv_value_0_0, 
-                    		"Number");
+                    		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.Number");
             	        afterParserOrEnumRuleCall();
             	    
 
@@ -1867,7 +1872,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumber"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:727:1: entryRuleNumber returns [String current=null] : iv_ruleNumber= ruleNumber EOF ;
+    // InternalLPSolve.g:727:1: entryRuleNumber returns [String current=null] : iv_ruleNumber= ruleNumber EOF ;
     public final String entryRuleNumber() throws RecognitionException {
         String current = null;
 
@@ -1875,17 +1880,17 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:728:2: (iv_ruleNumber= ruleNumber EOF )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:729:2: iv_ruleNumber= ruleNumber EOF
+            // InternalLPSolve.g:728:2: (iv_ruleNumber= ruleNumber EOF )
+            // InternalLPSolve.g:729:2: iv_ruleNumber= ruleNumber EOF
             {
              newCompositeNode(grammarAccess.getNumberRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleNumber_in_entryRuleNumber1589);
+            pushFollow(FollowSets000.FOLLOW_1);
             iv_ruleNumber=ruleNumber();
 
             state._fsp--;
 
              current =iv_ruleNumber.getText(); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleNumber1600); 
+            match(input,EOF,FollowSets000.FOLLOW_2); 
 
             }
 
@@ -1903,7 +1908,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumber"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:736:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? (this_Decimal_1= ruleDecimal | this_INT_2= RULE_INT ) ) ;
+    // InternalLPSolve.g:736:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? (this_Decimal_1= ruleDecimal | this_INT_2= RULE_INT ) ) ;
     public final AntlrDatatypeRuleToken ruleNumber() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1915,13 +1920,13 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:739:28: ( ( (kw= '-' )? (this_Decimal_1= ruleDecimal | this_INT_2= RULE_INT ) ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:740:1: ( (kw= '-' )? (this_Decimal_1= ruleDecimal | this_INT_2= RULE_INT ) )
+            // InternalLPSolve.g:739:28: ( ( (kw= '-' )? (this_Decimal_1= ruleDecimal | this_INT_2= RULE_INT ) ) )
+            // InternalLPSolve.g:740:1: ( (kw= '-' )? (this_Decimal_1= ruleDecimal | this_INT_2= RULE_INT ) )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:740:1: ( (kw= '-' )? (this_Decimal_1= ruleDecimal | this_INT_2= RULE_INT ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:740:2: (kw= '-' )? (this_Decimal_1= ruleDecimal | this_INT_2= RULE_INT )
+            // InternalLPSolve.g:740:1: ( (kw= '-' )? (this_Decimal_1= ruleDecimal | this_INT_2= RULE_INT ) )
+            // InternalLPSolve.g:740:2: (kw= '-' )? (this_Decimal_1= ruleDecimal | this_INT_2= RULE_INT )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:740:2: (kw= '-' )?
+            // InternalLPSolve.g:740:2: (kw= '-' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1930,9 +1935,9 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             }
             switch (alt12) {
                 case 1 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:741:2: kw= '-'
+                    // InternalLPSolve.g:741:2: kw= '-'
                     {
-                    kw=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleNumber1639); 
+                    kw=(Token)match(input,16,FollowSets000.FOLLOW_15); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getNumberAccess().getHyphenMinusKeyword_0()); 
@@ -1943,18 +1948,18 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:746:3: (this_Decimal_1= ruleDecimal | this_INT_2= RULE_INT )
+            // InternalLPSolve.g:746:3: (this_Decimal_1= ruleDecimal | this_INT_2= RULE_INT )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
             if ( (LA13_0==RULE_INT) ) {
                 int LA13_1 = input.LA(2);
 
-                if ( (LA13_1==15) ) {
-                    alt13=1;
-                }
-                else if ( (LA13_1==EOF||LA13_1==14||(LA13_1>=16 && LA13_1<=21)||(LA13_1>=25 && LA13_1<=26)) ) {
+                if ( (LA13_1==EOF||LA13_1==14||(LA13_1>=16 && LA13_1<=21)||(LA13_1>=25 && LA13_1<=26)) ) {
                     alt13=2;
+                }
+                else if ( (LA13_1==15) ) {
+                    alt13=1;
                 }
                 else {
                     NoViableAltException nvae =
@@ -1971,12 +1976,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             }
             switch (alt13) {
                 case 1 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:747:5: this_Decimal_1= ruleDecimal
+                    // InternalLPSolve.g:747:5: this_Decimal_1= ruleDecimal
                     {
                      
                             newCompositeNode(grammarAccess.getNumberAccess().getDecimalParserRuleCall_1_0()); 
                         
-                    pushFollow(FollowSets000.FOLLOW_ruleDecimal_in_ruleNumber1664);
+                    pushFollow(FollowSets000.FOLLOW_2);
                     this_Decimal_1=ruleDecimal();
 
                     state._fsp--;
@@ -1991,9 +1996,9 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:758:10: this_INT_2= RULE_INT
+                    // InternalLPSolve.g:758:10: this_INT_2= RULE_INT
                     {
-                    this_INT_2=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleNumber1690); 
+                    this_INT_2=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_2); 
 
                     		current.merge(this_INT_2);
                         
@@ -2027,7 +2032,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDecimal"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:773:1: entryRuleDecimal returns [String current=null] : iv_ruleDecimal= ruleDecimal EOF ;
+    // InternalLPSolve.g:773:1: entryRuleDecimal returns [String current=null] : iv_ruleDecimal= ruleDecimal EOF ;
     public final String entryRuleDecimal() throws RecognitionException {
         String current = null;
 
@@ -2035,17 +2040,17 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:774:2: (iv_ruleDecimal= ruleDecimal EOF )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:775:2: iv_ruleDecimal= ruleDecimal EOF
+            // InternalLPSolve.g:774:2: (iv_ruleDecimal= ruleDecimal EOF )
+            // InternalLPSolve.g:775:2: iv_ruleDecimal= ruleDecimal EOF
             {
              newCompositeNode(grammarAccess.getDecimalRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleDecimal_in_entryRuleDecimal1737);
+            pushFollow(FollowSets000.FOLLOW_1);
             iv_ruleDecimal=ruleDecimal();
 
             state._fsp--;
 
              current =iv_ruleDecimal.getText(); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleDecimal1748); 
+            match(input,EOF,FollowSets000.FOLLOW_2); 
 
             }
 
@@ -2063,7 +2068,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDecimal"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:782:1: ruleDecimal returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT ) ;
+    // InternalLPSolve.g:782:1: ruleDecimal returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT ) ;
     public final AntlrDatatypeRuleToken ruleDecimal() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2074,25 +2079,25 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:785:28: ( (this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:786:1: (this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT )
+            // InternalLPSolve.g:785:28: ( (this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT ) )
+            // InternalLPSolve.g:786:1: (this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:786:1: (this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:786:6: this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT
+            // InternalLPSolve.g:786:1: (this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT )
+            // InternalLPSolve.g:786:6: this_INT_0= RULE_INT kw= '.' this_INT_2= RULE_INT
             {
-            this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleDecimal1788); 
+            this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_16); 
 
             		current.merge(this_INT_0);
                 
              
                 newLeafNode(this_INT_0, grammarAccess.getDecimalAccess().getINTTerminalRuleCall_0()); 
                 
-            kw=(Token)match(input,15,FollowSets000.FOLLOW_15_in_ruleDecimal1806); 
+            kw=(Token)match(input,15,FollowSets000.FOLLOW_15); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getDecimalAccess().getFullStopKeyword_1()); 
                 
-            this_INT_2=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleDecimal1821); 
+            this_INT_2=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_2); 
 
             		current.merge(this_INT_2);
                 
@@ -2120,7 +2125,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVariableExpression"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:814:1: entryRuleVariableExpression returns [EObject current=null] : iv_ruleVariableExpression= ruleVariableExpression EOF ;
+    // InternalLPSolve.g:814:1: entryRuleVariableExpression returns [EObject current=null] : iv_ruleVariableExpression= ruleVariableExpression EOF ;
     public final EObject entryRuleVariableExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2128,17 +2133,17 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:815:2: (iv_ruleVariableExpression= ruleVariableExpression EOF )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:816:2: iv_ruleVariableExpression= ruleVariableExpression EOF
+            // InternalLPSolve.g:815:2: (iv_ruleVariableExpression= ruleVariableExpression EOF )
+            // InternalLPSolve.g:816:2: iv_ruleVariableExpression= ruleVariableExpression EOF
             {
              newCompositeNode(grammarAccess.getVariableExpressionRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleVariableExpression_in_entryRuleVariableExpression1866);
+            pushFollow(FollowSets000.FOLLOW_1);
             iv_ruleVariableExpression=ruleVariableExpression();
 
             state._fsp--;
 
              current =iv_ruleVariableExpression; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleVariableExpression1876); 
+            match(input,EOF,FollowSets000.FOLLOW_2); 
 
             }
 
@@ -2156,21 +2161,21 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVariableExpression"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:823:1: ruleVariableExpression returns [EObject current=null] : ( ( ruleVariableID ) ) ;
+    // InternalLPSolve.g:823:1: ruleVariableExpression returns [EObject current=null] : ( ( ruleVariableID ) ) ;
     public final EObject ruleVariableExpression() throws RecognitionException {
         EObject current = null;
 
          enterRule(); 
             
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:826:28: ( ( ( ruleVariableID ) ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:827:1: ( ( ruleVariableID ) )
+            // InternalLPSolve.g:826:28: ( ( ( ruleVariableID ) ) )
+            // InternalLPSolve.g:827:1: ( ( ruleVariableID ) )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:827:1: ( ( ruleVariableID ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:828:1: ( ruleVariableID )
+            // InternalLPSolve.g:827:1: ( ( ruleVariableID ) )
+            // InternalLPSolve.g:828:1: ( ruleVariableID )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:828:1: ( ruleVariableID )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:829:3: ruleVariableID
+            // InternalLPSolve.g:828:1: ( ruleVariableID )
+            // InternalLPSolve.g:829:3: ruleVariableID
             {
 
             			if (current==null) {
@@ -2180,7 +2185,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getVariableExpressionAccess().getVariableVariableCrossReference_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleVariableID_in_ruleVariableExpression1923);
+            pushFollow(FollowSets000.FOLLOW_2);
             ruleVariableID();
 
             state._fsp--;
@@ -2212,7 +2217,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleObjectiveGoal"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:850:1: ruleObjectiveGoal returns [Enumerator current=null] : ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'max' ) ) ;
+    // InternalLPSolve.g:850:1: ruleObjectiveGoal returns [Enumerator current=null] : ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'max' ) ) ;
     public final Enumerator ruleObjectiveGoal() throws RecognitionException {
         Enumerator current = null;
 
@@ -2221,10 +2226,10 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:852:28: ( ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'max' ) ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:853:1: ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'max' ) )
+            // InternalLPSolve.g:852:28: ( ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'max' ) ) )
+            // InternalLPSolve.g:853:1: ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'max' ) )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:853:1: ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'max' ) )
+            // InternalLPSolve.g:853:1: ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'max' ) )
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -2242,12 +2247,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             }
             switch (alt14) {
                 case 1 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:853:2: (enumLiteral_0= 'min' )
+                    // InternalLPSolve.g:853:2: (enumLiteral_0= 'min' )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:853:2: (enumLiteral_0= 'min' )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:853:4: enumLiteral_0= 'min'
+                    // InternalLPSolve.g:853:2: (enumLiteral_0= 'min' )
+                    // InternalLPSolve.g:853:4: enumLiteral_0= 'min'
                     {
-                    enumLiteral_0=(Token)match(input,11,FollowSets000.FOLLOW_11_in_ruleObjectiveGoal1972); 
+                    enumLiteral_0=(Token)match(input,11,FollowSets000.FOLLOW_2); 
 
                             current = grammarAccess.getObjectiveGoalAccess().getMINEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getObjectiveGoalAccess().getMINEnumLiteralDeclaration_0()); 
@@ -2259,12 +2264,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:859:6: (enumLiteral_1= 'max' )
+                    // InternalLPSolve.g:859:6: (enumLiteral_1= 'max' )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:859:6: (enumLiteral_1= 'max' )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:859:8: enumLiteral_1= 'max'
+                    // InternalLPSolve.g:859:6: (enumLiteral_1= 'max' )
+                    // InternalLPSolve.g:859:8: enumLiteral_1= 'max'
                     {
-                    enumLiteral_1=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleObjectiveGoal1989); 
+                    enumLiteral_1=(Token)match(input,12,FollowSets000.FOLLOW_2); 
 
                             current = grammarAccess.getObjectiveGoalAccess().getMAXEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getObjectiveGoalAccess().getMAXEnumLiteralDeclaration_1()); 
@@ -2296,7 +2301,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComparingOperator"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:869:1: ruleComparingOperator returns [Enumerator current=null] : ( (enumLiteral_0= '=' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '<=' ) ) ;
+    // InternalLPSolve.g:869:1: ruleComparingOperator returns [Enumerator current=null] : ( (enumLiteral_0= '=' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '<=' ) ) ;
     public final Enumerator ruleComparingOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -2308,10 +2313,10 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:871:28: ( ( (enumLiteral_0= '=' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '<=' ) ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:872:1: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '<=' ) )
+            // InternalLPSolve.g:871:28: ( ( (enumLiteral_0= '=' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '<=' ) ) )
+            // InternalLPSolve.g:872:1: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '<=' ) )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:872:1: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '<=' ) )
+            // InternalLPSolve.g:872:1: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '<=' ) )
             int alt15=5;
             switch ( input.LA(1) ) {
             case 17:
@@ -2348,12 +2353,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
             switch (alt15) {
                 case 1 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:872:2: (enumLiteral_0= '=' )
+                    // InternalLPSolve.g:872:2: (enumLiteral_0= '=' )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:872:2: (enumLiteral_0= '=' )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:872:4: enumLiteral_0= '='
+                    // InternalLPSolve.g:872:2: (enumLiteral_0= '=' )
+                    // InternalLPSolve.g:872:4: enumLiteral_0= '='
                     {
-                    enumLiteral_0=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleComparingOperator2034); 
+                    enumLiteral_0=(Token)match(input,17,FollowSets000.FOLLOW_2); 
 
                             current = grammarAccess.getComparingOperatorAccess().getEQUALEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getComparingOperatorAccess().getEQUALEnumLiteralDeclaration_0()); 
@@ -2365,12 +2370,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:878:6: (enumLiteral_1= '>' )
+                    // InternalLPSolve.g:878:6: (enumLiteral_1= '>' )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:878:6: (enumLiteral_1= '>' )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:878:8: enumLiteral_1= '>'
+                    // InternalLPSolve.g:878:6: (enumLiteral_1= '>' )
+                    // InternalLPSolve.g:878:8: enumLiteral_1= '>'
                     {
-                    enumLiteral_1=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleComparingOperator2051); 
+                    enumLiteral_1=(Token)match(input,18,FollowSets000.FOLLOW_2); 
 
                             current = grammarAccess.getComparingOperatorAccess().getGREATEREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getComparingOperatorAccess().getGREATEREnumLiteralDeclaration_1()); 
@@ -2382,12 +2387,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:884:6: (enumLiteral_2= '>=' )
+                    // InternalLPSolve.g:884:6: (enumLiteral_2= '>=' )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:884:6: (enumLiteral_2= '>=' )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:884:8: enumLiteral_2= '>='
+                    // InternalLPSolve.g:884:6: (enumLiteral_2= '>=' )
+                    // InternalLPSolve.g:884:8: enumLiteral_2= '>='
                     {
-                    enumLiteral_2=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleComparingOperator2068); 
+                    enumLiteral_2=(Token)match(input,19,FollowSets000.FOLLOW_2); 
 
                             current = grammarAccess.getComparingOperatorAccess().getGREATER_OR_EQUALEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getComparingOperatorAccess().getGREATER_OR_EQUALEnumLiteralDeclaration_2()); 
@@ -2399,12 +2404,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:890:6: (enumLiteral_3= '<' )
+                    // InternalLPSolve.g:890:6: (enumLiteral_3= '<' )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:890:6: (enumLiteral_3= '<' )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:890:8: enumLiteral_3= '<'
+                    // InternalLPSolve.g:890:6: (enumLiteral_3= '<' )
+                    // InternalLPSolve.g:890:8: enumLiteral_3= '<'
                     {
-                    enumLiteral_3=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleComparingOperator2085); 
+                    enumLiteral_3=(Token)match(input,20,FollowSets000.FOLLOW_2); 
 
                             current = grammarAccess.getComparingOperatorAccess().getLESSEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getComparingOperatorAccess().getLESSEnumLiteralDeclaration_3()); 
@@ -2416,12 +2421,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:896:6: (enumLiteral_4= '<=' )
+                    // InternalLPSolve.g:896:6: (enumLiteral_4= '<=' )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:896:6: (enumLiteral_4= '<=' )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:896:8: enumLiteral_4= '<='
+                    // InternalLPSolve.g:896:6: (enumLiteral_4= '<=' )
+                    // InternalLPSolve.g:896:8: enumLiteral_4= '<='
                     {
-                    enumLiteral_4=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleComparingOperator2102); 
+                    enumLiteral_4=(Token)match(input,21,FollowSets000.FOLLOW_2); 
 
                             current = grammarAccess.getComparingOperatorAccess().getLESS_OR_EQUALEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getComparingOperatorAccess().getLESS_OR_EQUALEnumLiteralDeclaration_4()); 
@@ -2453,7 +2458,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleILPDataType"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:906:1: ruleILPDataType returns [Enumerator current=null] : ( (enumLiteral_0= 'bin' ) | (enumLiteral_1= 'int' ) | (enumLiteral_2= 'real' ) ) ;
+    // InternalLPSolve.g:906:1: ruleILPDataType returns [Enumerator current=null] : ( (enumLiteral_0= 'bin' ) | (enumLiteral_1= 'int' ) | (enumLiteral_2= 'real' ) ) ;
     public final Enumerator ruleILPDataType() throws RecognitionException {
         Enumerator current = null;
 
@@ -2463,10 +2468,10 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:908:28: ( ( (enumLiteral_0= 'bin' ) | (enumLiteral_1= 'int' ) | (enumLiteral_2= 'real' ) ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:909:1: ( (enumLiteral_0= 'bin' ) | (enumLiteral_1= 'int' ) | (enumLiteral_2= 'real' ) )
+            // InternalLPSolve.g:908:28: ( ( (enumLiteral_0= 'bin' ) | (enumLiteral_1= 'int' ) | (enumLiteral_2= 'real' ) ) )
+            // InternalLPSolve.g:909:1: ( (enumLiteral_0= 'bin' ) | (enumLiteral_1= 'int' ) | (enumLiteral_2= 'real' ) )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:909:1: ( (enumLiteral_0= 'bin' ) | (enumLiteral_1= 'int' ) | (enumLiteral_2= 'real' ) )
+            // InternalLPSolve.g:909:1: ( (enumLiteral_0= 'bin' ) | (enumLiteral_1= 'int' ) | (enumLiteral_2= 'real' ) )
             int alt16=3;
             switch ( input.LA(1) ) {
             case 22:
@@ -2493,12 +2498,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
             switch (alt16) {
                 case 1 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:909:2: (enumLiteral_0= 'bin' )
+                    // InternalLPSolve.g:909:2: (enumLiteral_0= 'bin' )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:909:2: (enumLiteral_0= 'bin' )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:909:4: enumLiteral_0= 'bin'
+                    // InternalLPSolve.g:909:2: (enumLiteral_0= 'bin' )
+                    // InternalLPSolve.g:909:4: enumLiteral_0= 'bin'
                     {
-                    enumLiteral_0=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleILPDataType2147); 
+                    enumLiteral_0=(Token)match(input,22,FollowSets000.FOLLOW_2); 
 
                             current = grammarAccess.getILPDataTypeAccess().getBINARYEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getILPDataTypeAccess().getBINARYEnumLiteralDeclaration_0()); 
@@ -2510,12 +2515,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:915:6: (enumLiteral_1= 'int' )
+                    // InternalLPSolve.g:915:6: (enumLiteral_1= 'int' )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:915:6: (enumLiteral_1= 'int' )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:915:8: enumLiteral_1= 'int'
+                    // InternalLPSolve.g:915:6: (enumLiteral_1= 'int' )
+                    // InternalLPSolve.g:915:8: enumLiteral_1= 'int'
                     {
-                    enumLiteral_1=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleILPDataType2164); 
+                    enumLiteral_1=(Token)match(input,23,FollowSets000.FOLLOW_2); 
 
                             current = grammarAccess.getILPDataTypeAccess().getINTEGEREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getILPDataTypeAccess().getINTEGEREnumLiteralDeclaration_1()); 
@@ -2527,12 +2532,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:921:6: (enumLiteral_2= 'real' )
+                    // InternalLPSolve.g:921:6: (enumLiteral_2= 'real' )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:921:6: (enumLiteral_2= 'real' )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:921:8: enumLiteral_2= 'real'
+                    // InternalLPSolve.g:921:6: (enumLiteral_2= 'real' )
+                    // InternalLPSolve.g:921:8: enumLiteral_2= 'real'
                     {
-                    enumLiteral_2=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleILPDataType2181); 
+                    enumLiteral_2=(Token)match(input,24,FollowSets000.FOLLOW_2); 
 
                             current = grammarAccess.getILPDataTypeAccess().getREALEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getILPDataTypeAccess().getREALEnumLiteralDeclaration_2()); 
@@ -2564,7 +2569,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAdditionOperator"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:931:1: ruleAdditionOperator returns [Enumerator current=null] : ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) ;
+    // InternalLPSolve.g:931:1: ruleAdditionOperator returns [Enumerator current=null] : ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) ;
     public final Enumerator ruleAdditionOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -2573,10 +2578,10 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:933:28: ( ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:934:1: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
+            // InternalLPSolve.g:933:28: ( ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) )
+            // InternalLPSolve.g:934:1: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:934:1: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
+            // InternalLPSolve.g:934:1: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -2594,12 +2599,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             }
             switch (alt17) {
                 case 1 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:934:2: (enumLiteral_0= '+' )
+                    // InternalLPSolve.g:934:2: (enumLiteral_0= '+' )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:934:2: (enumLiteral_0= '+' )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:934:4: enumLiteral_0= '+'
+                    // InternalLPSolve.g:934:2: (enumLiteral_0= '+' )
+                    // InternalLPSolve.g:934:4: enumLiteral_0= '+'
                     {
-                    enumLiteral_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleAdditionOperator2226); 
+                    enumLiteral_0=(Token)match(input,25,FollowSets000.FOLLOW_2); 
 
                             current = grammarAccess.getAdditionOperatorAccess().getPLUSEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getAdditionOperatorAccess().getPLUSEnumLiteralDeclaration_0()); 
@@ -2611,12 +2616,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:940:6: (enumLiteral_1= '-' )
+                    // InternalLPSolve.g:940:6: (enumLiteral_1= '-' )
                     {
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:940:6: (enumLiteral_1= '-' )
-                    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:940:8: enumLiteral_1= '-'
+                    // InternalLPSolve.g:940:6: (enumLiteral_1= '-' )
+                    // InternalLPSolve.g:940:8: enumLiteral_1= '-'
                     {
-                    enumLiteral_1=(Token)match(input,16,FollowSets000.FOLLOW_16_in_ruleAdditionOperator2243); 
+                    enumLiteral_1=(Token)match(input,16,FollowSets000.FOLLOW_2); 
 
                             current = grammarAccess.getAdditionOperatorAccess().getMINUSEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getAdditionOperatorAccess().getMINUSEnumLiteralDeclaration_1()); 
@@ -2648,7 +2653,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMultiplicationOperator"
-    // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:950:1: ruleMultiplicationOperator returns [Enumerator current=null] : (enumLiteral_0= '*' ) ;
+    // InternalLPSolve.g:950:1: ruleMultiplicationOperator returns [Enumerator current=null] : (enumLiteral_0= '*' ) ;
     public final Enumerator ruleMultiplicationOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -2656,13 +2661,13 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:952:28: ( (enumLiteral_0= '*' ) )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:953:1: (enumLiteral_0= '*' )
+            // InternalLPSolve.g:952:28: ( (enumLiteral_0= '*' ) )
+            // InternalLPSolve.g:953:1: (enumLiteral_0= '*' )
             {
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:953:1: (enumLiteral_0= '*' )
-            // ../org.muml.psm.allocation.ilp.lpsolve.xtext/src-gen/de/uni_paderborn/fujaba/muml/allocation/ilp/lpsolve/xtext/parser/antlr/internal/InternalLPSolve.g:953:3: enumLiteral_0= '*'
+            // InternalLPSolve.g:953:1: (enumLiteral_0= '*' )
+            // InternalLPSolve.g:953:3: enumLiteral_0= '*'
             {
-            enumLiteral_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleMultiplicationOperator2287); 
+            enumLiteral_0=(Token)match(input,26,FollowSets000.FOLLOW_2); 
 
                     current = grammarAccess.getMultiplicationOperatorAccess().getTIMESEnumLiteralDeclaration().getEnumLiteral().getInstance();
                     newLeafNode(enumLiteral_0, grammarAccess.getMultiplicationOperatorAccess().getTIMESEnumLiteralDeclaration()); 
@@ -2690,19 +2695,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     protected DFA5 dfa5 = new DFA5(this);
-    static final String DFA5_eotS =
-        "\10\uffff";
-    static final String DFA5_eofS =
-        "\10\uffff";
-    static final String DFA5_minS =
-        "\1\4\1\15\1\uffff\1\4\1\uffff\1\15\1\4\1\15";
-    static final String DFA5_maxS =
-        "\1\20\1\32\1\uffff\1\5\1\uffff\3\32";
-    static final String DFA5_acceptS =
-        "\2\uffff\1\2\1\uffff\1\1\3\uffff";
-    static final String DFA5_specialS =
-        "\10\uffff}>";
-    static final String[] DFA5_transitionS = {
+    static final String dfa_1s = "\10\uffff";
+    static final String dfa_2s = "\1\4\1\15\1\uffff\1\4\1\uffff\1\15\1\4\1\15";
+    static final String dfa_3s = "\1\20\1\32\1\uffff\1\5\1\uffff\3\32";
+    static final String dfa_4s = "\2\uffff\1\2\1\uffff\1\1\3\uffff";
+    static final String dfa_5s = "\10\uffff}>";
+    static final String[] dfa_6s = {
             "\1\1\1\2\12\uffff\1\2",
             "\1\4\1\uffff\1\3\6\2\3\uffff\2\2",
             "",
@@ -2713,34 +2711,25 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             "\1\4\1\uffff\1\3\6\2\3\uffff\2\2"
     };
 
-    static final short[] DFA5_eot = DFA.unpackEncodedString(DFA5_eotS);
-    static final short[] DFA5_eof = DFA.unpackEncodedString(DFA5_eofS);
-    static final char[] DFA5_min = DFA.unpackEncodedStringToUnsignedChars(DFA5_minS);
-    static final char[] DFA5_max = DFA.unpackEncodedStringToUnsignedChars(DFA5_maxS);
-    static final short[] DFA5_accept = DFA.unpackEncodedString(DFA5_acceptS);
-    static final short[] DFA5_special = DFA.unpackEncodedString(DFA5_specialS);
-    static final short[][] DFA5_transition;
-
-    static {
-        int numStates = DFA5_transitionS.length;
-        DFA5_transition = new short[numStates][];
-        for (int i=0; i<numStates; i++) {
-            DFA5_transition[i] = DFA.unpackEncodedString(DFA5_transitionS[i]);
-        }
-    }
+    static final short[] dfa_1 = DFA.unpackEncodedString(dfa_1s);
+    static final char[] dfa_2 = DFA.unpackEncodedStringToUnsignedChars(dfa_2s);
+    static final char[] dfa_3 = DFA.unpackEncodedStringToUnsignedChars(dfa_3s);
+    static final short[] dfa_4 = DFA.unpackEncodedString(dfa_4s);
+    static final short[] dfa_5 = DFA.unpackEncodedString(dfa_5s);
+    static final short[][] dfa_6 = unpackEncodedStringArray(dfa_6s);
 
     class DFA5 extends DFA {
 
         public DFA5(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
             this.decisionNumber = 5;
-            this.eot = DFA5_eot;
-            this.eof = DFA5_eof;
-            this.min = DFA5_min;
-            this.max = DFA5_max;
-            this.accept = DFA5_accept;
-            this.special = DFA5_special;
-            this.transition = DFA5_transition;
+            this.eot = dfa_1;
+            this.eof = dfa_1;
+            this.min = dfa_2;
+            this.max = dfa_3;
+            this.accept = dfa_4;
+            this.special = dfa_5;
+            this.transition = dfa_6;
         }
         public String getDescription() {
             return "239:2: ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )?";
@@ -2750,90 +2739,22 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
     
     private static class FollowSets000 {
-        public static final BitSet FOLLOW_ruleIntegerLinearProgram_in_entryRuleIntegerLinearProgram75 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleIntegerLinearProgram85 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleObjectiveFunctionExpression_in_ruleIntegerLinearProgram131 = new BitSet(new long[]{0x0000000001C10032L});
-        public static final BitSet FOLLOW_ruleConstraintExpression_in_ruleIntegerLinearProgram152 = new BitSet(new long[]{0x0000000001C10032L});
-        public static final BitSet FOLLOW_ruleVariable_in_ruleIntegerLinearProgram174 = new BitSet(new long[]{0x0000000001C00002L});
-        public static final BitSet FOLLOW_ruleObjectiveFunctionExpression_in_entryRuleObjectiveFunctionExpression211 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleObjectiveFunctionExpression221 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_11_in_ruleObjectiveFunctionExpression260 = new BitSet(new long[]{0x0000000000002000L});
-        public static final BitSet FOLLOW_12_in_ruleObjectiveFunctionExpression278 = new BitSet(new long[]{0x0000000000002000L});
-        public static final BitSet FOLLOW_13_in_ruleObjectiveFunctionExpression291 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleObjectiveFunctionExpression303 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleObjectiveGoal_in_ruleObjectiveFunctionExpression332 = new BitSet(new long[]{0x0000000000002000L});
-        public static final BitSet FOLLOW_13_in_ruleObjectiveFunctionExpression344 = new BitSet(new long[]{0x0000000000010030L});
-        public static final BitSet FOLLOW_ruleLinearExpression_in_ruleObjectiveFunctionExpression365 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleObjectiveFunctionExpression377 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleConstraintExpression_in_entryRuleConstraintExpression414 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleConstraintExpression424 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleVariableID_in_ruleConstraintExpression471 = new BitSet(new long[]{0x0000000000002000L});
-        public static final BitSet FOLLOW_13_in_ruleConstraintExpression483 = new BitSet(new long[]{0x0000000000010030L});
-        public static final BitSet FOLLOW_ruleSimpleLinearExpression_in_ruleConstraintExpression506 = new BitSet(new long[]{0x00000000003E0000L});
-        public static final BitSet FOLLOW_ruleComparingOperator_in_ruleConstraintExpression527 = new BitSet(new long[]{0x0000000000010030L});
-        public static final BitSet FOLLOW_ruleSimpleLinearExpression_in_ruleConstraintExpression548 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleConstraintExpression560 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleVariable_in_entryRuleVariable596 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleVariable606 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleILPDataType_in_ruleVariable652 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_ruleVariableID_in_ruleVariable673 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleVariable685 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleVariableID_in_entryRuleVariableID722 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleVariableID733 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleVariableID773 = new BitSet(new long[]{0x0000000000008002L});
-        public static final BitSet FOLLOW_15_in_ruleVariableID792 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleVariableID808 = new BitSet(new long[]{0x0000000000008002L});
-        public static final BitSet FOLLOW_RULE_INT_in_ruleVariableID835 = new BitSet(new long[]{0x0000000000008012L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleVariableID856 = new BitSet(new long[]{0x0000000000008002L});
-        public static final BitSet FOLLOW_ruleLinearExpression_in_entryRuleLinearExpression907 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleLinearExpression917 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleSimpleLinearExpression_in_ruleLinearExpression963 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleSimpleLinearExpression_in_entryRuleSimpleLinearExpression997 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleSimpleLinearExpression1007 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAdditionExpression_in_ruleSimpleLinearExpression1053 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAdditionExpression_in_entryRuleAdditionExpression1087 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleAdditionExpression1097 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMultiplicationExpression_in_ruleAdditionExpression1144 = new BitSet(new long[]{0x0000000002010002L});
-        public static final BitSet FOLLOW_ruleAdditionOperator_in_ruleAdditionExpression1174 = new BitSet(new long[]{0x0000000000010030L});
-        public static final BitSet FOLLOW_ruleLinearExpression_in_ruleAdditionExpression1195 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleMultiplicationExpression_in_entryRuleMultiplicationExpression1233 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleMultiplicationExpression1243 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleOperand_in_ruleMultiplicationExpression1290 = new BitSet(new long[]{0x0000000004000002L});
-        public static final BitSet FOLLOW_ruleMultiplicationOperator_in_ruleMultiplicationExpression1320 = new BitSet(new long[]{0x0000000000010030L});
-        public static final BitSet FOLLOW_ruleOperand_in_ruleMultiplicationExpression1341 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleOperand_in_entryRuleOperand1379 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleOperand1389 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNumberLiteralExpression_in_ruleOperand1436 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleVariableExpression_in_ruleOperand1463 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNumberLiteralExpression_in_entryRuleNumberLiteralExpression1498 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleNumberLiteralExpression1508 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNumber_in_ruleNumberLiteralExpression1553 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleNumber_in_entryRuleNumber1589 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleNumber1600 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_ruleNumber1639 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_ruleDecimal_in_ruleNumber1664 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_INT_in_ruleNumber1690 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDecimal_in_entryRuleDecimal1737 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleDecimal1748 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_INT_in_ruleDecimal1788 = new BitSet(new long[]{0x0000000000008000L});
-        public static final BitSet FOLLOW_15_in_ruleDecimal1806 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_INT_in_ruleDecimal1821 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleVariableExpression_in_entryRuleVariableExpression1866 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleVariableExpression1876 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleVariableID_in_ruleVariableExpression1923 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_11_in_ruleObjectiveGoal1972 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_ruleObjectiveGoal1989 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_17_in_ruleComparingOperator2034 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_ruleComparingOperator2051 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_ruleComparingOperator2068 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_20_in_ruleComparingOperator2085 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_21_in_ruleComparingOperator2102 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_22_in_ruleILPDataType2147 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_ruleILPDataType2164 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_24_in_ruleILPDataType2181 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_ruleAdditionOperator2226 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_ruleAdditionOperator2243 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_26_in_ruleMultiplicationOperator2287 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000001C10032L});
+        public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000001C00002L});
+        public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000002000L});
+        public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000004000L});
+        public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000010030L});
+        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x00000000003E0000L});
+        public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000008002L});
+        public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000008012L});
+        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000002010002L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000004000002L});
+        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000008000L});
     }
 
 

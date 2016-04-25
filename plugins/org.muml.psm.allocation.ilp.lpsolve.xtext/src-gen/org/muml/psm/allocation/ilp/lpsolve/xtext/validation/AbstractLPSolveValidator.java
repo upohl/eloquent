@@ -5,7 +5,6 @@ package org.muml.psm.allocation.ilp.lpsolve.xtext.validation;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.eclipse.emf.ecore.EPackage;
 
 public class AbstractLPSolveValidator extends org.eclipse.xtext.validation.AbstractDeclarativeValidator {

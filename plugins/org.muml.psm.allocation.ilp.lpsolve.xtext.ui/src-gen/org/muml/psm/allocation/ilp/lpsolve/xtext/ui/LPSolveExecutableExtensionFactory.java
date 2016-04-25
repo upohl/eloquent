@@ -4,10 +4,11 @@
 package org.muml.psm.allocation.ilp.lpsolve.xtext.ui;
 
 import org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory;
-import org.muml.psm.allocation.ilp.lpsolve.xtext.ui.internal.LPSolveActivator;
 import org.osgi.framework.Bundle;
 
 import com.google.inject.Injector;
+
+import org.muml.psm.allocation.ilp.lpsolve.xtext.ui.internal.LPSolveActivator;
 
 /**
  * This class was generated. Customizations should only happen in a newly
@@ -22,7 +23,7 @@ public class LPSolveExecutableExtensionFactory extends AbstractGuiceAwareExecuta
 	
 	@Override
 	protected Injector getInjector() {
-		return LPSolveActivator.getInstance().getInjector(LPSolveActivator.DE_UNI_PADERBORN_FUJABA_MUML_ALLOCATION_ILP_LPSOLVE_XTEXT_LPSOLVE);
+		return LPSolveActivator.getInstance().getInjector(LPSolveActivator.ORG_MUML_PSM_ALLOCATION_ILP_LPSOLVE_XTEXT_LPSOLVE);
 	}
 	
 }
