@@ -10,10 +10,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.ocl.xtext.basecs.impl.NamedElementCSImpl;
+import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
 import org.muml.psm.allocation.language.cs.ServiceCS;
+import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 
 /**
  * <!-- begin-user-doc -->
@@ -142,6 +145,16 @@ public class ServiceCSImpl extends NamedElementCSImpl implements ServiceCS {
 				return dimensions != null && !dimensions.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
+		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitServiceCS(this);
 	}
 
 } //ServiceCSImpl

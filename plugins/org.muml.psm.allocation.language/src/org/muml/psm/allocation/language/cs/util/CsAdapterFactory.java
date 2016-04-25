@@ -6,6 +6,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jdt.annotation.Nullable;
 import org.eclipse.ocl.pivot.utilities.Nameable;
 import org.eclipse.ocl.pivot.utilities.Pivotable;
 import org.eclipse.ocl.xtext.basecs.ElementCS;
@@ -17,6 +18,7 @@ import org.eclipse.ocl.xtext.basecs.RootCS;
 import org.eclipse.ocl.xtext.basecs.util.VisitableCS;
 import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLDocumentCS;
 import org.muml.core.ExtendableElement;
+import org.muml.psm.allocation.language.cs.*;
 import org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.ConstraintCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
@@ -88,8 +90,8 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CsSwitch<Adapter> modelSwitch =
-		new CsSwitch<Adapter>() {
+	protected CsSwitch<@Nullable Adapter> modelSwitch =
+		new CsSwitch<@Nullable Adapter>() {
 			@Override
 			public Adapter caseSpecificationCS(SpecificationCS object) {
 				return createSpecificationCSAdapter();

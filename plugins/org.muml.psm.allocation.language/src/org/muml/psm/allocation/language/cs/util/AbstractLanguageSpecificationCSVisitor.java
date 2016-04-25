@@ -10,7 +10,6 @@
  *******************************************************************************/
 package	org.muml.psm.allocation.language.cs.util;
 
-import org.eclipse.jdt.annotation.NonNull;
 
 /*
  * An AbstractLanguageSpecificationCSVisitor provides a default implementation of the visitor framework
@@ -25,7 +24,7 @@ public abstract class AbstractLanguageSpecificationCSVisitor<R, C>
 	 * 
 	 * @param context my initial result value
 	 */
-	protected AbstractLanguageSpecificationCSVisitor(@NonNull C context) {
+	protected AbstractLanguageSpecificationCSVisitor(C context) {
 		super(context);
 	}
 }

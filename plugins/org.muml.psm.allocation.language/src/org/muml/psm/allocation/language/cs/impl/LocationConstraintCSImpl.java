@@ -7,10 +7,13 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintTypes;
 import org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS;
+import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 
 /**
  * <!-- begin-user-doc -->
@@ -147,13 +150,7 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (type: ");
-		result.append(type);
-		result.append(')');
-		return result.toString();
+		return super.toString();
 	}
 
 	/**
@@ -236,6 +233,16 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 				return type != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
+		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitLocationConstraintCS(this);
 	}
 
 } //LocationConstraintCSImpl

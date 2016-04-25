@@ -6,6 +6,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jdt.annotation.Nullable;
 import org.eclipse.ocl.pivot.Element;
 import org.eclipse.ocl.pivot.Model;
 import org.eclipse.ocl.pivot.NamedElement;
@@ -84,8 +85,8 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AsSwitch<Adapter> modelSwitch =
-		new AsSwitch<Adapter>() {
+	protected AsSwitch<@Nullable Adapter> modelSwitch =
+		new AsSwitch<@Nullable Adapter>() {
 			@Override
 			public Adapter caseSpecification(Specification object) {
 				return createSpecificationAdapter();

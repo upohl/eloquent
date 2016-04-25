@@ -6,6 +6,8 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jdt.annotation.Nullable;
+import org.muml.psm.allocation.language.oclcontext.*;
 import org.muml.psm.allocation.language.oclcontext.OCLContext;
 import org.muml.psm.allocation.language.oclcontext.OclcontextPackage;
 
@@ -63,8 +65,8 @@ public class OclcontextAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected OclcontextSwitch<Adapter> modelSwitch =
-		new OclcontextSwitch<Adapter>() {
+	protected OclcontextSwitch<@Nullable Adapter> modelSwitch =
+		new OclcontextSwitch<@Nullable Adapter>() {
 			@Override
 			public Adapter caseOCLContext(OCLContext object) {
 				return createOCLContextAdapter();

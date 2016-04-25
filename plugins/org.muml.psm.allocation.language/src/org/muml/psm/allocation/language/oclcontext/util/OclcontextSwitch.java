@@ -5,6 +5,8 @@ package org.muml.psm.allocation.language.oclcontext.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.jdt.annotation.Nullable;
+import org.muml.psm.allocation.language.oclcontext.*;
 import org.muml.psm.allocation.language.oclcontext.OCLContext;
 import org.muml.psm.allocation.language.oclcontext.OclcontextPackage;
 
@@ -21,7 +23,7 @@ import org.muml.psm.allocation.language.oclcontext.OclcontextPackage;
  * @see org.muml.psm.allocation.language.oclcontext.OclcontextPackage
  * @generated
  */
-public class OclcontextSwitch<T> extends Switch<T> {
+public class OclcontextSwitch<@Nullable T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->

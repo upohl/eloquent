@@ -16,8 +16,11 @@ import org.eclipse.jdt.annotation.Nullable;
 /**
  * An AbstractNullLanguageSpecificationCSVisitor provides a default implementation for each
  * visitXxx method that returns null.
+ *
+ * @deprecated Explicit 'Null' functionality is obsolete with Java 8 @Nullable annotations.  
  */
-public abstract class AbstractNullLanguageSpecificationCSVisitor<R, C>
+ @Deprecated
+public abstract class AbstractNullLanguageSpecificationCSVisitor<@Nullable R, C>
 	extends org.eclipse.ocl.xtext.completeoclcs.util.AbstractNullCompleteOCLCSVisitor<R, C> implements LanguageSpecificationCSVisitor<R>
 {
 	/**
@@ -25,82 +28,82 @@ public abstract class AbstractNullLanguageSpecificationCSVisitor<R, C>
 	 * 
 	 * @param context my initial result value
 	 */
-	protected AbstractNullLanguageSpecificationCSVisitor(@NonNull C context) {
+	protected AbstractNullLanguageSpecificationCSVisitor(C context) {
 		super(context);
 	}	
 
 	@Override
-	public @Nullable R visitComponentResourceTupleDescriptorCS(@NonNull org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS object) {
+	public R visitComponentResourceTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull ComponentResourceTupleDescriptorCS object) {
 		return null;
 	}
 
 	@Override
-	public @Nullable R visitConstraintCS(@NonNull org.muml.psm.allocation.language.cs.ConstraintCS object) {
+	public R visitConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ConstraintCS object) {
 		return null;
 	}
 
 	@Override
-	public @Nullable R visitEvaluatableElementCS(@NonNull org.muml.psm.allocation.language.cs.EvaluatableElementCS object) {
+	public R visitEvaluatableElementCS(org.muml.psm.allocation.language.cs.@NonNull EvaluatableElementCS object) {
 		return null;
 	}
 
 	@Override
-	public @Nullable R visitInstanceTupleDescriptorCS(@NonNull org.muml.psm.allocation.language.cs.InstanceTupleDescriptorCS object) {
+	public R visitInstanceTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull InstanceTupleDescriptorCS object) {
 		return null;
 	}
 
 	@Override
-	public @Nullable R visitLocationConstraintCS(@NonNull org.muml.psm.allocation.language.cs.LocationConstraintCS object) {
+	public R visitLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull LocationConstraintCS object) {
 		return null;
 	}
 
 	@Override
-	public @Nullable R visitLocationTupleDescriptorCS(@NonNull org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS object) {
+	public R visitLocationTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull LocationTupleDescriptorCS object) {
 		return null;
 	}
 
 	@Override
-	public @Nullable R visitMeasureFunctionCS(@NonNull org.muml.psm.allocation.language.cs.MeasureFunctionCS object) {
+	public R visitMeasureFunctionCS(org.muml.psm.allocation.language.cs.@NonNull MeasureFunctionCS object) {
 		return null;
 	}
 
 	@Override
-	public @Nullable R visitQoSDimensionCS(@NonNull org.muml.psm.allocation.language.cs.QoSDimensionCS object) {
+	public R visitQoSDimensionCS(org.muml.psm.allocation.language.cs.@NonNull QoSDimensionCS object) {
 		return null;
 	}
 
 	@Override
-	public @Nullable R visitRequiredHardwareResourceInstanceConstraintCS(@NonNull org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS object) {
+	public R visitRequiredHardwareResourceInstanceConstraintCS(org.muml.psm.allocation.language.cs.@NonNull RequiredHardwareResourceInstanceConstraintCS object) {
 		return null;
 	}
 
 	@Override
-	public @Nullable R visitResourceConstraintCS(@NonNull org.muml.psm.allocation.language.cs.ResourceConstraintCS object) {
+	public R visitResourceConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ResourceConstraintCS object) {
 		return null;
 	}
 
 	@Override
-	public @Nullable R visitServiceCS(@NonNull org.muml.psm.allocation.language.cs.ServiceCS object) {
+	public R visitServiceCS(org.muml.psm.allocation.language.cs.@NonNull ServiceCS object) {
 		return null;
 	}
 
 	@Override
-	public @Nullable R visitSpecificationCS(@NonNull org.muml.psm.allocation.language.cs.SpecificationCS object) {
+	public R visitSpecificationCS(org.muml.psm.allocation.language.cs.@NonNull SpecificationCS object) {
 		return null;
 	}
 
 	@Override
-	public @Nullable R visitTupleDescriptorCS(@NonNull org.muml.psm.allocation.language.cs.TupleDescriptorCS object) {
+	public R visitTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull TupleDescriptorCS object) {
 		return null;
 	}
 
 	@Override
-	public @Nullable R visitValueTupleDescriptorCS(@NonNull org.muml.psm.allocation.language.cs.ValueTupleDescriptorCS object) {
+	public R visitValueTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull ValueTupleDescriptorCS object) {
 		return null;
 	}
 
 	@Override
-	public @Nullable R visitWeightingComponentResourceTupleElementCS(@NonNull org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElementCS object) {
+	public R visitWeightingComponentResourceTupleElementCS(org.muml.psm.allocation.language.cs.@NonNull WeightingComponentResourceTupleElementCS object) {
 		return null;
 	}
 }

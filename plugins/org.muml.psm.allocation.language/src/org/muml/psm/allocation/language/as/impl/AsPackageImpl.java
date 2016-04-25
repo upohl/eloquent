@@ -197,7 +197,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		if (isInited) return (AsPackage)EPackage.Registry.INSTANCE.getEPackage(AsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		AsPackageImpl theAsPackage = (AsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof AsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new AsPackageImpl());
+		Object ePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		AsPackageImpl theAsPackage = (AsPackageImpl)(ePackage instanceof AsPackageImpl ? ePackage : new AsPackageImpl());
 
 		isInited = true;
 

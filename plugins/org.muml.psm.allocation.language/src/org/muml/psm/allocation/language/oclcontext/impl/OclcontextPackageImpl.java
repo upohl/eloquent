@@ -72,7 +72,8 @@ public class OclcontextPackageImpl extends EPackageImpl implements OclcontextPac
 		if (isInited) return (OclcontextPackage)EPackage.Registry.INSTANCE.getEPackage(OclcontextPackage.eNS_URI);
 
 		// Obtain or create and register package
-		OclcontextPackageImpl theOclcontextPackage = (OclcontextPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof OclcontextPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new OclcontextPackageImpl());
+		Object ePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		OclcontextPackageImpl theOclcontextPackage = (OclcontextPackageImpl)(ePackage instanceof OclcontextPackageImpl ? ePackage : new OclcontextPackageImpl());
 
 		isInited = true;
 

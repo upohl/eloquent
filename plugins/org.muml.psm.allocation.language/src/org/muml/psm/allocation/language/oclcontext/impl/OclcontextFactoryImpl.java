@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.muml.psm.allocation.language.oclcontext.*;
 import org.muml.psm.allocation.language.oclcontext.OCLContext;
 import org.muml.psm.allocation.language.oclcontext.OclcontextFactory;
 import org.muml.psm.allocation.language.oclcontext.OclcontextPackage;

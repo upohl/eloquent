@@ -309,7 +309,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		if (isInited) return (CsPackage)EPackage.Registry.INSTANCE.getEPackage(CsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		CsPackageImpl theCsPackage = (CsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof CsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new CsPackageImpl());
+		Object ePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		CsPackageImpl theCsPackage = (CsPackageImpl)(ePackage instanceof CsPackageImpl ? ePackage : new CsPackageImpl());
 
 		isInited = true;
 

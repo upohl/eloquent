@@ -5,6 +5,7 @@ package org.muml.psm.allocation.language.cs.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.jdt.annotation.Nullable;
 import org.eclipse.ocl.pivot.utilities.Nameable;
 import org.eclipse.ocl.pivot.utilities.Pivotable;
 import org.eclipse.ocl.xtext.basecs.ElementCS;
@@ -16,6 +17,7 @@ import org.eclipse.ocl.xtext.basecs.RootCS;
 import org.eclipse.ocl.xtext.basecs.util.VisitableCS;
 import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLDocumentCS;
 import org.muml.core.ExtendableElement;
+import org.muml.psm.allocation.language.cs.*;
 import org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.ConstraintCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
@@ -46,7 +48,7 @@ import org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElemen
  * @see org.muml.psm.allocation.language.cs.CsPackage
  * @generated
  */
-public class CsSwitch<T> extends Switch<T> {
+public class CsSwitch<@Nullable T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->

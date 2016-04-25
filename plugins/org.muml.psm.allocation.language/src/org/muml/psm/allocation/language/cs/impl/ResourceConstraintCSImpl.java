@@ -12,11 +12,14 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
 import org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
 import org.muml.psm.allocation.language.cs.ValueTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElementCS;
+import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 
 /**
  * <!-- begin-user-doc -->
@@ -311,6 +314,16 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
+		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitResourceConstraintCS(this);
 	}
 
 } //ResourceConstraintCSImpl

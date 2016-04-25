@@ -13,6 +13,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
 import org.eclipse.ocl.xtext.completeoclcs.impl.CompleteOCLDocumentCSImpl;
 import org.muml.core.CorePackage;
 import org.muml.core.ExtendableElement;
@@ -23,6 +25,7 @@ import org.muml.psm.allocation.language.cs.Goal;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
 import org.muml.psm.allocation.language.cs.ServiceCS;
 import org.muml.psm.allocation.language.cs.SpecificationCS;
+import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 
 /**
  * <!-- begin-user-doc -->
@@ -228,13 +231,7 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (goal: ");
-		result.append(goal);
-		result.append(')');
-		return result.toString();
+		return super.toString();
 	}
 
 	/**
@@ -419,6 +416,16 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
+		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitSpecificationCS(this);
 	}
 
 } //SpecificationCSImpl
