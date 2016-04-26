@@ -4,10 +4,10 @@ import org.eclipse.emf.mwe.utils.*
 import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
-import org.eclipse.ocl.examples.build.fragments.MarkupHoverFragment
 import org.eclipse.ocl.examples.build.utilities.UMLGenModelSetup
 import org.muml.psm.allocation.language.build.GenerateVisitors
 import org.muml.psm.allocation.language.build.GuiceBindingFragment
+import org.muml.psm.allocation.language.build.MarkupHoverFragmentFixup
 
 var grammarURI = "classpath:/org/muml/psm/allocation/language/xtext/AllocationSpecificationLanguage.xtext"
 var fileExtensions = "allocation_specification"
@@ -153,8 +153,9 @@ Workflow {
 			// provides our own module bindings + the EssentialOCL specific bindings
 			fragment = GuiceBindingFragment {}
 			
-			// also use EssentialOCL's MarkupHoverFragmet (just needed for the UI (editor))
-			fragment = MarkupHoverFragment {}
+			// also use EssentialOCL's MarkupHoverFragment (just needed for the UI (editor))
+			// (or more precisely, our customized version)
+			fragment = MarkupHoverFragmentFixup {}
 		}
 	}
 }
