@@ -262,10 +262,5 @@ public abstract class AbstractAllocationSpecificationLanguageUiModule extends or
 		return org.eclipse.ocl.xtext.base.ui.model.BaseDocumentationProvider.class;
 	}
 
-	// contributed by org.eclipse.ocl.examples.build.fragments.MarkupHoverFragment
-	public Class<? extends org.eclipse.jface.text.ITextHover> bindITextHover() {
-		return org.eclipse.ocl.xtext.markup.ui.hover.MarkupCompositeHover.class;
-	}
-
 
 }

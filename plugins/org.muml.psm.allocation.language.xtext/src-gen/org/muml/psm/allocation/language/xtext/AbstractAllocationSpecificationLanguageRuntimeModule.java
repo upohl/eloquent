@@ -208,7 +208,7 @@ public abstract class AbstractAllocationSpecificationLanguageRuntimeModule exten
 		return org.eclipse.ocl.xtext.base.services.BaseValueConverterService.class;
 	}
 
-	// contributed by org.muml.psm.allocation.language.build.GuiceBindingFragment
+	// contributed by org.muml.psm.allocation.language.build.XtextBindingExtensions
 	public Class<? extends org.eclipse.xtext.resource.XtextResource> bindXtextResource() {
 		return org.muml.psm.allocation.language.xtext.resource.SpecificationCSResource.class;
 	}
