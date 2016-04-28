@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.ocl.xtext.basecs.BaseCSPackage;
 import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLCSPackage;
 import org.eclipse.ocl.xtext.essentialoclcs.EssentialOCLCSPackage;
-import org.muml.core.CorePackage;
+import org.muml.mumlcore.CorePackage;
 import org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.ConstraintCS;
 import org.muml.psm.allocation.language.cs.CsFactory;

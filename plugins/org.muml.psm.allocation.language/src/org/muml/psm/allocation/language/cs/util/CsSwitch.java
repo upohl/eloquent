@@ -16,7 +16,7 @@ import org.eclipse.ocl.xtext.basecs.PivotableElementCS;
 import org.eclipse.ocl.xtext.basecs.RootCS;
 import org.eclipse.ocl.xtext.basecs.util.VisitableCS;
 import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLDocumentCS;
-import org.muml.core.ExtendableElement;
+import org.muml.mumlcore.ExtendableElement;
 import org.muml.psm.allocation.language.cs.*;
 import org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.ConstraintCS;

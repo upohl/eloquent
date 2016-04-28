@@ -5,7 +5,7 @@ package org.muml.psm.allocation.ilp.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.muml.core.impl.NamedElementImpl;
+import org.muml.mumlcore.impl.NamedElementImpl;
 import org.muml.psm.allocation.ilp.ILPDataType;
 import org.muml.psm.allocation.ilp.IlpPackage;
 import org.muml.psm.allocation.ilp.Variable;

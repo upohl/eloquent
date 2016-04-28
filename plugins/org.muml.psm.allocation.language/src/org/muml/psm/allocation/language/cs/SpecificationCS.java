@@ -4,7 +4,7 @@ package org.muml.psm.allocation.language.cs;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLDocumentCS;
-import org.muml.core.ExtendableElement;
+import org.muml.mumlcore.ExtendableElement;
 
 /**
  * <!-- begin-user-doc -->

@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.muml.core.expressions.Expression;
+import org.muml.mumlcore.expressions.Expression;
 import org.muml.psm.allocation.ilp.IlpPackage;
 import org.muml.psm.allocation.ilp.ObjectiveFunctionExpression;
 import org.muml.psm.allocation.ilp.ObjectiveGoal;
