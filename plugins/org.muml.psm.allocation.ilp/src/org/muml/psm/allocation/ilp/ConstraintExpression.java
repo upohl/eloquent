@@ -2,7 +2,7 @@
  */
 package org.muml.psm.allocation.ilp;
 
-import org.muml.mumlcore.expressions.common.ComparisonExpression;
+import org.muml.core.expressions.common.ComparisonExpression;
 
 /**
  * <!-- begin-user-doc -->

@@ -2,7 +2,7 @@
  */
 package org.muml.psm.allocation.ilp;
 
-import org.muml.mumlcore.NamedElement;
+import org.muml.core.NamedElement;
 
 /**
  * <!-- begin-user-doc -->

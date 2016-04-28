@@ -3,9 +3,9 @@ package org.muml.psm.allocation.algorithm.ilp.opt4j;
 import java.util.Map;
 
 import org.eclipse.jdt.annotation.NonNull;
-import org.muml.mumlcore.expressions.Expression;
-import org.muml.mumlcore.expressions.common.CommonExpressionsFactory;
-import org.muml.mumlcore.expressions.common.LiteralExpression;
+import org.muml.core.expressions.Expression;
+import org.muml.core.expressions.common.CommonExpressionsFactory;
+import org.muml.core.expressions.common.LiteralExpression;
 import org.muml.psm.allocation.algorithm.ilp.opt4j.evaluation.ObjectiveFunctionExpressionEvaluator;
 import org.muml.psm.allocation.ilp.ObjectiveGoal;
 import org.opt4j.core.Objective;

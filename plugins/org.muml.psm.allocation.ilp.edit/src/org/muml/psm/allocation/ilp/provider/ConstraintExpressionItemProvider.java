@@ -10,8 +10,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.muml.core.expressions.common.CommonExpressionsPackage;
 import org.muml.core.expressions.common.provider.ComparisonExpressionItemProvider;
-import org.muml.mumlcore.expressions.common.CommonExpressionsPackage;
 import org.muml.psm.allocation.ilp.ConstraintExpression;
 import org.muml.psm.allocation.ilp.IlpFactory;
 

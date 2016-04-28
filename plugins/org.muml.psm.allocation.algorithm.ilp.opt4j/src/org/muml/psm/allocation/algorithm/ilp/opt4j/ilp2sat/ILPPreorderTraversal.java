@@ -1,9 +1,9 @@
 package org.muml.psm.allocation.algorithm.ilp.opt4j.ilp2sat;
 
 import org.eclipse.emf.ecore.EObject;
-import org.muml.mumlcore.expressions.Expression;
-import org.muml.mumlcore.expressions.common.BinaryExpression;
-import org.muml.mumlcore.expressions.common.util.CommonExpressionsSwitch;
+import org.muml.core.expressions.Expression;
+import org.muml.core.expressions.common.BinaryExpression;
+import org.muml.core.expressions.common.util.CommonExpressionsSwitch;
 import org.muml.psm.allocation.ilp.ConstraintExpression;
 import org.muml.psm.allocation.ilp.IntegerLinearProgram;
 import org.muml.psm.allocation.ilp.ObjectiveFunctionExpression;
