@@ -7,13 +7,13 @@
             categoryId="org.muml"
             defaultHandler="org.muml.psm.allocation.algorithm.ui.OpenAllocationWizardHandler"
             id="org.muml.psm.allocation.algorithm.ui.OpenAllocationWizardCommand"
-            name="Create Allocation">
+            name="Plan System Allocation">
       </command>
       <command
             categoryId="org.muml"
             defaultHandler="org.muml.psm.allocation.algorithm.ui.CreateASLFileHandler"
             id="org.muml.psm.allocation.algorithm.ui.CreateASLFileCommand"
-            name="Create Allocation Specification">
+            name="Create Allocation Constraint and Optimization Specification">
       </command>
    </extension>
    <extension
@@ -23,7 +23,7 @@
             locationURI="popup:org.muml">
          <command
                commandId="org.muml.psm.allocation.algorithm.ui.OpenAllocationWizardCommand"
-               label="Create Allocation"
+               label="Plan System Allocation"
                style="push">
             <visibleWhen
                   checkEnabled="false">
@@ -51,7 +51,7 @@
             locationURI="popup:org.muml">
          <command
                commandId="org.muml.psm.allocation.algorithm.ui.CreateASLFileCommand"
-               label="Create Allocation Specification"
+               label="Create Allocation Constraint and Optimization Specification"
                style="push">
             <visibleWhen
                   checkEnabled="false">
@@ -68,7 +68,7 @@
             category="org.muml.core.export"
             class="org.muml.psm.allocation.algorithm.ui.wizard.AllocationWizard"
             id="org.muml.psm.allocation.algorithm.ui.wizard.AllocationWizard"
-            name="Allocation">
+            name="Allocation Planning Wizard">
       </wizard>
    </extension>
 
