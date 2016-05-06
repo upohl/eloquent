@@ -396,7 +396,7 @@
         point="org.eclipse.ui.views">
      <view
            category="org.muml.views"
-           class="org.muml.psm.allocation.language.xtext.ui.AllocationSpecificationLanguageExecutableExtensionFactory:org.muml.psm.allocation.language.ui.view.AllocationSpecificationLanguageEvaluationView"
+           class="org.muml.psm.allocation.language.xtext.ui.AllocationSpecificationLanguageExecutableExtensionFactory:org.muml.psm.allocation.language.xtext.ui.view.AllocationSpecificationLanguageEvaluationView"
            id="org.muml.psm.allocation.language.xtext.ui.view.evaluation"
            name="ASL Evaluation View"
            restorable="true">
