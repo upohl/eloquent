@@ -1,10 +1,10 @@
 testSpecificationName {
 	constraint differentLocation foo {
 		descriptors (a, b);
-		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 		in
-		let c3 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c3')
+		let c3 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c3')
 		in
-		Set{Tuple{a : instance::ComponentInstance = c1, b : instance::ComponentInstance = c3}};
+		Set{Tuple{a : pim::instance::ComponentInstance = c1, b : pim::instance::ComponentInstance = c3}};
 	}
 }

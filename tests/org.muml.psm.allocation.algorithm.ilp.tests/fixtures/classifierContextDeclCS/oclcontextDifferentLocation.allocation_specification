@@ -1,26 +1,26 @@
 testSpecificationName {
 	
 	context oclcontext::OCLContext
-		def: getECUs(ecuNames : Set(String)) : Sequence(hwresourceinstance::ResourceInstance) =
+		def: getECUs(ecuNames : Set(String)) : Sequence(hardware::hwresourceinstance::ResourceInstance) =
 			self.hardwarePlatformInstanceConfiguration.resources->select(ecuNames->includes(name) or ecuNames->isEmpty())
 			
-		def: getECU(ecuName : String) : hwresourceinstance::ResourceInstance =
+		def: getECU(ecuName : String) : hardware::hwresourceinstance::ResourceInstance =
 			self.hardwarePlatformInstanceConfiguration.resources->any(name = ecuName)
 			
-		def: getInstance(instanceName : String) : instance::ComponentInstance =
+		def: getInstance(instanceName : String) : pim::instance::ComponentInstance =
 			self.componentInstanceConfiguration.componentInstances->any(name = instanceName)
 		
-		def: getInstances(instanceNames : Set(String)) : Set(instance::ComponentInstance) =
+		def: getInstances(instanceNames : Set(String)) : Set(pim::instance::ComponentInstance) =
 			self.componentInstanceConfiguration.componentInstances->select(instanceNames->includes(name))
 			
 		def: allocateToDifferentECUs(instanceNames : Set(String))
-			: Set(Tuple(first : instance::ComponentInstance,
-						second : instance::ComponentInstance))
+			: Set(Tuple(first : pim::instance::ComponentInstance,
+						second : pim::instance::ComponentInstance))
 			=
-			let instances : Set(instance::ComponentInstance) = self.getInstances(instanceNames)
+			let instances : Set(pim::instance::ComponentInstance) = self.getInstances(instanceNames)
 			in
 			instances->product(instances)->reject(first = second)
-			->iterate(it : Tuple(first : instance::ComponentInstance, second : instance::ComponentInstance); acc : Set(Tuple(first : instance::ComponentInstance, second : instance::ComponentInstance)) = Set{} |
+			->iterate(it : Tuple(first : pim::instance::ComponentInstance, second : pim::instance::ComponentInstance); acc : Set(Tuple(first : pim::instance::ComponentInstance, second : pim::instance::ComponentInstance)) = Set{} |
 				if acc->exists(Set{first, second} = Set{it.first, it.second}) then
 					acc
 				else

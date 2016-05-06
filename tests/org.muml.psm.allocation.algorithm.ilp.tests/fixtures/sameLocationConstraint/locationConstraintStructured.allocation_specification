@@ -1,18 +1,18 @@
 testSpecificationName {
 	constraint sameLocation foo {
 		descriptors (a, b);
-		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 		in
-		let c2 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
+		let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
 		in
-		Set{Tuple{a : instance::ComponentInstance = c1, b : instance::ComponentInstance = c2}};
+		Set{Tuple{a : pim::instance::ComponentInstance = c1, b : pim::instance::ComponentInstance = c2}};
 	}
 	
 	constraint sameLocation sc1Embedded {
 		descriptors (first, second);
-		ocl let sc1 : instance::StructuredComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='sc1').oclAsType(instance::StructuredComponentInstance)
+		ocl let sc1 : pim::instance::StructuredComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='sc1').oclAsType(pim::instance::StructuredComponentInstance)
 		in
-		sc1.oclAsType(instance::ComponentInstance)->asSet()->product(sc1.embeddedCIC.componentInstances)
+		sc1.oclAsType(pim::instance::ComponentInstance)->asSet()->product(sc1.embeddedCIC.componentInstances)
 		;
 	}
 }

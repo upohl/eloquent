@@ -1,13 +1,13 @@
 testSpecificationName {
 	constraint requiredLocation foo {
 		descriptors (ins, res);
-		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 		in
-		let e1 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
+		let e1 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
 		in
-		let e2 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
+		let e2 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
 		in
-		Set{Tuple{ins : instance::ComponentInstance = c1, res : hwresourceinstance::ResourceInstance = e1},
-			Tuple{ins : instance::ComponentInstance = c1, res : hwresourceinstance::ResourceInstance =e2}};
+		Set{Tuple{ins : pim::instance::ComponentInstance = c1, res : hardware::hwresourceinstance::ResourceInstance = e1},
+			Tuple{ins : pim::instance::ComponentInstance = c1, res : hardware::hwresourceinstance::ResourceInstance =e2}};
 	}
 }

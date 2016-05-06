@@ -3,18 +3,18 @@ testSpecificationName {
 		lhs coefficient;
 		rhs upperBound;
 		descriptors (ins, res);
-		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 		in
-		let c2 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
+		let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
 		in
-		let c3 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c3')
+		let c3 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c3')
 		in
-		let e1 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
+		let e1 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
 		in
 		Set{
-			Tuple{coefficient = Set{Tuple{ins : instance::ComponentInstance = c1, res : hwresourceinstance::ResourceInstance = e1, coefficient = 1 / 2},
-									Tuple{ins : instance::ComponentInstance = c2, res : hwresourceinstance::ResourceInstance = e1, coefficient = 1},
-									Tuple{ins : instance::ComponentInstance = c3, res : hwresourceinstance::ResourceInstance = e1, coefficient = 1 / 4}},
+			Tuple{coefficient = Set{Tuple{ins : pim::instance::ComponentInstance = c1, res : hardware::hwresourceinstance::ResourceInstance = e1, coefficient = 1 / 2},
+									Tuple{ins : pim::instance::ComponentInstance = c2, res : hardware::hwresourceinstance::ResourceInstance = e1, coefficient = 1},
+									Tuple{ins : pim::instance::ComponentInstance = c3, res : hardware::hwresourceinstance::ResourceInstance = e1, coefficient = 1 / 4}},
 				  upperBound : Integer = 5 / 4
 			}};
 	}

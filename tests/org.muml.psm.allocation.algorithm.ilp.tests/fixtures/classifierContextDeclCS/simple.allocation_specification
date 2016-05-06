@@ -1,25 +1,25 @@
 testSpecificationName {
 	
-	context hwplatforminstance::HWPlatformInstanceConfiguration
-		def: getECUs(ecuNames : Set(String)) : Sequence(hwresourceinstance::ResourceInstance) =
+	context hardware::hwplatforminstance::HWPlatformInstanceConfiguration
+		def: getECUs(ecuNames : Set(String)) : Sequence(hardware::hwresourceinstance::ResourceInstance) =
 			self.resources->select(ecuNames->includes(name))
-		def: getECU(ecuName : String) : hwresourceinstance::ResourceInstance =
+		def: getECU(ecuName : String) : hardware::hwresourceinstance::ResourceInstance =
 			self.resources->any(name = ecuName)
 			
-	context instance::ComponentInstanceConfiguration
-		def: getInstance(instanceName : String) : instance::ComponentInstance =
+	context pim::instance::ComponentInstanceConfiguration
+		def: getInstance(instanceName : String) : pim::instance::ComponentInstance =
 			self.componentInstances->any(name = instanceName)
 			
 
 	constraint requiredHardwareResourceInstance foo {
 		descriptors (ins, res);
-		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.getInstance('c1')
+		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.getInstance('c1')
 		in
-		let e1 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.getECU('e1')
+		let e1 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.getECU('e1')
 		in
-		let e2 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.getECU('e2')
+		let e2 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.getECU('e2')
 		in
-		Set{Tuple{ins : instance::ComponentInstance = c1, res : hwresourceinstance::ResourceInstance = e1},
-			Tuple{ins : instance::ComponentInstance = c1, res : hwresourceinstance::ResourceInstance =e2}};
+		Set{Tuple{ins : pim::instance::ComponentInstance = c1, res : hardware::hwresourceinstance::ResourceInstance = e1},
+			Tuple{ins : pim::instance::ComponentInstance = c1, res : hardware::hwresourceinstance::ResourceInstance =e2}};
 	}
 }

@@ -1,15 +1,15 @@
 testSpecificationName {
 	constraint requiredHardwareResourceInstance foo {
 		descriptors (ins1, res1) , (ins2, res2);
-		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 		in
-		let c3 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c3')
+		let c3 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c3')
 		in
-		let e1 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
+		let e1 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
 		in
-		let e2 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
+		let e2 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
 		in
-		let e3 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e3')
+		let e3 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e3')
 		in
 		Set{Tuple{ins1 = c1, res1 = e1, ins2 = c3, res2 = e2},
 			-- should be interpreted as {c1, e2, c3, e3}

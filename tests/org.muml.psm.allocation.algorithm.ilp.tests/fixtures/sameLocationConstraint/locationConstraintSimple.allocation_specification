@@ -1,10 +1,10 @@
 testSpecificationName {
 	constraint sameLocation foo {
 		descriptors (a, b);
-		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 		in
-		let c2 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
+		let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
 		in
-		Set{Tuple{a : instance::ComponentInstance = c1, b : instance::ComponentInstance = c2}};
+		Set{Tuple{a : pim::instance::ComponentInstance = c1, b : pim::instance::ComponentInstance = c2}};
 	}
 }

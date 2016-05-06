@@ -3,17 +3,17 @@ testSpecificationName {
     	qos a {
     		value coefficient;
     		descriptors (foo, bar);
-    		ocl	let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+    		ocl	let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 			in
-			let c2 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
+			let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
 			in
-			let c3 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c3')
+			let c3 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c3')
 			in
-			let e1 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
+			let e1 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
 			in
-			Set{Tuple{foo : instance::ComponentInstance = c1, bar : hwresourceinstance::ResourceInstance = e1, coefficient = -1},
-				Tuple{foo : instance::ComponentInstance = c2, bar : hwresourceinstance::ResourceInstance = e1, coefficient = 42},
-				Tuple{foo : instance::ComponentInstance = c3, bar : hwresourceinstance::ResourceInstance = e1, coefficient = 4711}
+			Set{Tuple{foo : pim::instance::ComponentInstance = c1, bar : hardware::hwresourceinstance::ResourceInstance = e1, coefficient = -1},
+				Tuple{foo : pim::instance::ComponentInstance = c2, bar : hardware::hwresourceinstance::ResourceInstance = e1, coefficient = 42},
+				Tuple{foo : pim::instance::ComponentInstance = c3, bar : hardware::hwresourceinstance::ResourceInstance = e1, coefficient = 4711}
 
             };
     	}
@@ -21,18 +21,18 @@ testSpecificationName {
     	qos b {
     		value val;
     		descriptors (x, y);
-    		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+    		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 			in
-			let c2 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
+			let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
 			in
-			let e1 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
+			let e1 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
 			in
-			let e3 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e3')
+			let e3 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e3')
 			in
-			Set{Tuple{x : instance::ComponentInstance = c1, y : hwresourceinstance::ResourceInstance = e3, val = 80},
-				Tuple{x : instance::ComponentInstance = c1, y : hwresourceinstance::ResourceInstance = e1, val = 9},
-				Tuple{x : instance::ComponentInstance = c1, y : hwresourceinstance::ResourceInstance = e1, val = 8},
-				Tuple{x : instance::ComponentInstance = c2, y : hwresourceinstance::ResourceInstance = e3, val = 11}
+			Set{Tuple{x : pim::instance::ComponentInstance = c1, y : hardware::hwresourceinstance::ResourceInstance = e3, val = 80},
+				Tuple{x : pim::instance::ComponentInstance = c1, y : hardware::hwresourceinstance::ResourceInstance = e1, val = 9},
+				Tuple{x : pim::instance::ComponentInstance = c1, y : hardware::hwresourceinstance::ResourceInstance = e1, val = 8},
+				Tuple{x : pim::instance::ComponentInstance = c2, y : hardware::hwresourceinstance::ResourceInstance = e3, val = 11}
 
             };
     	}
@@ -42,13 +42,13 @@ testSpecificationName {
     	qos x {
     		value val;
     		descriptors (a, b), (c, d);
-    		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+    		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
     		in
-    		let c2 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
+    		let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
 			in
-			let e2 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
+			let e2 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
 			in
-			let e3 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e3')
+			let e3 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e3')
 			in
 			Set{Tuple{c = c2, d = e2, a = c1, b = e3, val = 7},
 				Tuple{a = c1, c = c2, d = e3, b = e2, val = 8}
@@ -60,14 +60,14 @@ testSpecificationName {
     	qos x {
     		value val;
     		descriptors (x, y);
-    		ocl let c2 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
+    		ocl let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
 			in
-			let e2 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
+			let e2 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
 			in
-			let e3 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e3')
+			let e3 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e3')
 			in
-			Set{Tuple{x : instance::ComponentInstance = c2, y : hwresourceinstance::ResourceInstance = e3, val = 0},
-				Tuple{x : instance::ComponentInstance = c2, y : hwresourceinstance::ResourceInstance = e2, val = 7}
+			Set{Tuple{x : pim::instance::ComponentInstance = c2, y : hardware::hwresourceinstance::ResourceInstance = e3, val = 0},
+				Tuple{x : pim::instance::ComponentInstance = c2, y : hardware::hwresourceinstance::ResourceInstance = e2, val = 7}
             }; 
     	}
     }

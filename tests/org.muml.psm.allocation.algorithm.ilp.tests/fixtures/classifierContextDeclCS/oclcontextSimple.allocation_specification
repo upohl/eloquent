@@ -1,18 +1,18 @@
 testSpecificationName {
 	
 	context oclcontext::OCLContext
-		def: getECUs(ecuNames : Set(String)) : Sequence(hwresourceinstance::ResourceInstance) =
+		def: getECUs(ecuNames : Set(String)) : Sequence(hardware::hwresourceinstance::ResourceInstance) =
 			self.hardwarePlatformInstanceConfiguration.resources->select(ecuNames->includes(name))
 			
 		-- unused in this testcase
-		def: getECU(ecuName : String) : hwresourceinstance::ResourceInstance =
+		def: getECU(ecuName : String) : hardware::hwresourceinstance::ResourceInstance =
 			self.hardwarePlatformInstanceConfiguration.resources->any(name = ecuName)
 			
-		def: getInstance(instanceName : String) : instance::ComponentInstance =
+		def: getInstance(instanceName : String) : pim::instance::ComponentInstance =
 			self.componentInstanceConfiguration.componentInstances->any(name = instanceName)
 			
 		def: allocateToOneECU(instanceName : String, ecuNames : Set(String))
-			: Set(Tuple(first : instance::ComponentInstance, second : hwresourceinstance::ResourceInstance))
+			: Set(Tuple(first : pim::instance::ComponentInstance, second : hardware::hwresourceinstance::ResourceInstance))
 			=
 			self.getInstance(instanceName)->asSet()->product(self.getECUs(ecuNames))->asSet()
 			

@@ -5,9 +5,9 @@ testSpecificationName {
 		lhs memNeeded;
 		rhs memProvided;
 		descriptors (first, second);
-		ocl let componentSet : Set(instance::ComponentInstance) = self.componentInstanceConfiguration.componentInstances->select(extensions->exists(oclIsKindOf(extension::MemoryExtension)))
+		ocl let componentSet : Set(pim::instance::ComponentInstance) = self.componentInstanceConfiguration.componentInstances->select(extensions->exists(oclIsKindOf(extension::MemoryExtension)))
 		in
-		let e1 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
+		let e1 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
 		in
 		Set{Tuple{
 				memNeeded=componentSet->collect(c |
