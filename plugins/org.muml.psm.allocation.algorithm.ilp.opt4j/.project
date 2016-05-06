@@ -32,10 +32,4 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2m.qvt.oml.project.QVTONature</nature>
 	</natures>
-	<variableList>
-		<variable>
-			<name>copy_PARENT</name>
-			<value>$%7BPARENT-2-PROJECT_LOC%7D/workspace/trunk/PlatformSpecificModeling</value>
-		</variable>
-	</variableList>
 </projectDescription>

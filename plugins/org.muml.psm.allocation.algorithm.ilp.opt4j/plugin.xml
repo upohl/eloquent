@@ -5,7 +5,7 @@
          point="org.eclipse.m2m.qvt.oml.javaBlackboxUnits">
       <unit
             name="Opt4JBlackboxUnit"
-            namespace="de.uni_paderborn.fujaba.muml.allocation.algorithm.ilp.opt4j">
+            namespace="org.muml.psm.allocation.algorithm.ilp.opt4j">
          <library
                class="org.muml.psm.allocation.algorithm.ilp.opt4j.Opt4J"
                name="Opt4JBlackbox">
