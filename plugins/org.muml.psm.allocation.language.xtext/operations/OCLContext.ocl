@@ -269,18 +269,18 @@
 			endif
 
 		def: getMemoryExtensions() : Set(properties::RequiredMemory) =
-			self.extension->select(oclIsKindOf(properties::RequiredMemory))
+			self.extensions->select(oclIsKindOf(properties::RequiredMemory))
 				->collect(oclAsType(properties::RequiredMemory))->asSet()
 				
 		def: getSchedulingExtensions() : Set(properties::Scheduling) =
-			self.extension->select(oclIsKindOf(properties::Scheduling))
+			self.extensions->select(oclIsKindOf(properties::Scheduling))
 				->collect(oclAsType(properties::Scheduling))->asSet()
 				
 		def: getSchedulingExtension() : properties::Scheduling =
 			self.getSchedulingExtensions()->any(true)
 				
 		def: getWCETExtensions() : Set(properties::WCET) =
-			self.extension->select(oclIsKindOf(properties::WCET))
+			self.extensions->select(oclIsKindOf(properties::WCET))
 				->collect(oclAsType(properties::WCET))->asSet()
 				
 		def: getWCETExtensionForECU(ecu : hwresourceinstance::ResourceInstance) : properties::WCET =
@@ -487,7 +487,7 @@ context oclcontext::OCLContext
 			self.connectorInstances->any(true).connectorEndpointInstances->any(p | p <> self).oclAsType(instance::PortInstance)
 			
 		def: getMessageExtensions() : Set(properties::CANMessageFrame) =
-			self.extension->select(oclIsKindOf(properties::CANMessageFrame))
+			self.extensions->select(oclIsKindOf(properties::CANMessageFrame))
 				->collect(oclAsType(properties::CANMessageFrame))->asSet()
 				
 		def: getMessageExtension() : properties::CANMessageFrame =
