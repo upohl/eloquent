@@ -5,13 +5,13 @@ testSpecificationName {
 		lhs memNeeded;
 		rhs memProvided;
 		descriptors (first, second);
-		ocl let componentSet : Set(instance::ComponentInstance) = self.componentInstanceConfiguration.componentInstances->select(extension->exists(oclIsKindOf(extension::MemoryExtension)))
+		ocl let componentSet : Set(instance::ComponentInstance) = self.componentInstanceConfiguration.componentInstances->select(extensions->exists(oclIsKindOf(extension::MemoryExtension)))
 		in
 		let e1 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')
 		in
 		Set{Tuple{
 				memNeeded=componentSet->collect(c |
-						Tuple{first=c, second=e1, memNeeded : Real = c.extension->any(oclIsKindOf(extension::MemoryExtension)).oclAsType(extension::MemoryExtension).amountNeeded}
+						Tuple{first=c, second=e1, memNeeded : Real = c.extensions->any(oclIsKindOf(extension::MemoryExtension)).oclAsType(extension::MemoryExtension).amountNeeded}
 					)->asSet(),
 					memProvided : Real = 128 -- too lazy to retrieve it from e1 (just hardcoded an arbitrary value)
 			}
