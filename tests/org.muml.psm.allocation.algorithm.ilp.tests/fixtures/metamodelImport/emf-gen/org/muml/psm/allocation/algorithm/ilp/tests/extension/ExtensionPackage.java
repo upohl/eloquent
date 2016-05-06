@@ -39,7 +39,7 @@ public interface ExtensionPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://example.com/extension";
+	String eNS_URI = "http://www.muml.org/psm/allocation/algorithm/ilp/tests/extension/1.0.0";
 
 	/**
 	 * The package namespace name.

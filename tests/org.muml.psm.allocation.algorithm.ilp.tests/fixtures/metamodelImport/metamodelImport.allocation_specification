@@ -1,5 +1,5 @@
 testSpecificationName {
-	import 'http://example.com/extension'
+	import 'http://www.muml.org/psm/allocation/algorithm/ilp/tests/extension/1.0.0'
 	
 	constraint resource test {
 		lhs memNeeded;

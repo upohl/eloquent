@@ -5,7 +5,7 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:component="http://www.muml.org/pim/component/1.0.0"
-    xmlns:extension="http://example.com/extension"
+    xmlns:extension="http://www.muml.org/psm/allocation/algorithm/ilp/tests/extension/1.0.0"
     xmlns:hwplatform="http://www.muml.org/pm/hardware/hwplatform/1.0.0"
     xmlns:hwplatforminstance="http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0"
     xmlns:hwresource="http://www.muml.org/pm/hardware/hwresource/1.0.0"
