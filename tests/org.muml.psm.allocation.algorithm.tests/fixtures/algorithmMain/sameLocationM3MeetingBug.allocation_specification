@@ -2,11 +2,11 @@ testSpecificationName {
 
 	constraint sameLocation bar {
 		descriptors (foo, bar);
-		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 		in
-		let c2 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
+		let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
 		in
-		let c3 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c3')
+		let c3 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c3')
 		in
 		Set{Tuple{foo = c1, bar = c2},
 			Tuple{foo = c2, bar = c3}};
@@ -16,10 +16,10 @@ testSpecificationName {
 	-- (otherwise it might be dependent on the used ILP solver)
 	constraint requiredHardwareResourceInstance reproducableTestCase {
 		descriptors (ins, res);
-		ocl let c1 : instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 		in
-		let e2 : hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
+		let e2 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
 		in
-		Set{Tuple{ins : instance::ComponentInstance = c1, res : hwresourceinstance::ResourceInstance = e2}};
+		Set{Tuple{ins : pim::instance::ComponentInstance = c1, res : hardware::hwresourceinstance::ResourceInstance = e2}};
 	}
 }
