@@ -179,7 +179,7 @@
           xmi:id="_m3oYgUSaEeSHztxuV_x_Gw"
           name="c1"
           componentType="_bj1K0PY_EeOj7bbnOoJljg">
-        <extension
+        <extensions
             xsi:type="extension:MemoryExtension"
             xmi:id="__sd5MEScEeST-LaBdY9E0g"
             amountNeeded="42"/>
@@ -194,7 +194,7 @@
           xmi:id="_m3oYg0SaEeSHztxuV_x_Gw"
           name="c3"
           componentType="_bj1K0PY_EeOj7bbnOoJljg">
-        <extension
+        <extensions
             xsi:type="extension:MemoryExtension"
             xmi:id="__sd5MUScEeST-LaBdY9E0g"
             amountNeeded="256"/>
