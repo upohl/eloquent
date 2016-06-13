@@ -30,6 +30,7 @@
       <import feature="org.muml.external.guice.feature" version="4.0.0"/>
       <import feature="org.muml.ape.feature" version="0.5.0"/>
       <import feature="org.muml.external.javax.inject.feature" version="1.0.0"/>
+      <import feature="org.muml.modelcopy.feature" version="0.5.0"/>
    </requires>
 
    <plugin
