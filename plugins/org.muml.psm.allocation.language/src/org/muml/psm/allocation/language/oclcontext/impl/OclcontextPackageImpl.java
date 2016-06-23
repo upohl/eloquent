@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.muml.pim.instance.InstancePackage;
+import org.muml.pm.hardware.HardwarePackage;
 import org.muml.pm.hardware.hwplatform.HwplatformPackage;
 import org.muml.pm.hardware.hwplatforminstance.HwplatforminstancePackage;
 import org.muml.pm.hardware.hwresource.HwresourcePackage;
@@ -78,11 +79,7 @@ public class OclcontextPackageImpl extends EPackageImpl implements OclcontextPac
 		isInited = true;
 
 		// Initialize simple dependencies
-		HwplatformPackage.eINSTANCE.eClass();
-		HwvaluetypePackage.eINSTANCE.eClass();
-		HwplatforminstancePackage.eINSTANCE.eClass();
-		HwresourcePackage.eINSTANCE.eClass();
-		HwresourceinstancePackage.eINSTANCE.eClass();
+		HardwarePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theOclcontextPackage.createPackageContents();
