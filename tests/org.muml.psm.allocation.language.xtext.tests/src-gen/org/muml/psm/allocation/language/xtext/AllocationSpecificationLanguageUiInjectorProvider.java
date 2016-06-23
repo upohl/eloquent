@@ -8,10 +8,10 @@ import org.eclipse.xtext.junit4.IInjectorProvider;
 import com.google.inject.Injector;
 
 public class AllocationSpecificationLanguageUiInjectorProvider implements IInjectorProvider {
-	
+
 	@Override
 	public Injector getInjector() {
 		return org.muml.psm.allocation.language.xtext.ui.internal.AllocationSpecificationLanguageActivator.getInstance().getInjector("org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage");
 	}
-	
+
 }

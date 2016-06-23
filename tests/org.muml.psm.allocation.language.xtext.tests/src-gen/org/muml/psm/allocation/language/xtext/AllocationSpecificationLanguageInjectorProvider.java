@@ -3,16 +3,16 @@
  */
 package org.muml.psm.allocation.language.xtext;
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 import org.eclipse.xtext.junit4.GlobalRegistries;
 import org.eclipse.xtext.junit4.GlobalRegistries.GlobalStateMemento;
 import org.eclipse.xtext.junit4.IInjectorProvider;
 import org.eclipse.xtext.junit4.IRegistryConfigurator;
 
-import com.google.inject.Injector;
-
 public class AllocationSpecificationLanguageInjectorProvider implements IInjectorProvider, IRegistryConfigurator {
-	
-    protected GlobalStateMemento stateBeforeInjectorCreation;
+
+	protected GlobalStateMemento stateBeforeInjectorCreation;
 	protected GlobalStateMemento stateAfterInjectorCreation;
 	protected Injector injector;
 
@@ -30,9 +30,26 @@ public class AllocationSpecificationLanguageInjectorProvider implements IInjecto
 		}
 		return injector;
 	}
-	
+
 	protected Injector internalCreateInjector() {
-	    return new AllocationSpecificationLanguageStandaloneSetup().createInjectorAndDoEMFRegistration();
+		return new AllocationSpecificationLanguageStandaloneSetup() {
+			@Override
+			public Injector createInjector() {
+				return Guice.createInjector(createRuntimeModule());
+			}
+		}.createInjectorAndDoEMFRegistration();
+	}
+
+	protected AllocationSpecificationLanguageRuntimeModule createRuntimeModule() {
+		// make it work also with Maven/Tycho and OSGI
+		// see https://bugs.eclipse.org/bugs/show_bug.cgi?id=493672
+		return new AllocationSpecificationLanguageRuntimeModule() {
+			@Override
+			public ClassLoader bindClassLoaderToInstance() {
+				return AllocationSpecificationLanguageInjectorProvider.class
+						.getClassLoader();
+			}
+		};
 	}
 
 	@Override
