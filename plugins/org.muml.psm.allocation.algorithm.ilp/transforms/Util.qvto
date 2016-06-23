@@ -12,12 +12,14 @@ query String::join(wordList : Sequence(String)) : String {
 	)
 }
 
+// XXX: the above isn't true anymore for the qvto that is shipped with neon
+// => commented it for now (will be removed after some further testing)
 // hmm this is a standard ocl library operation - why doesn't qvto provide it?
-query OrderedSet(OclAny)::reverse() : OrderedSet(OclAny) {
-	return OrderedSet{1 .. self->size()}->iterate(i : Integer; acc : OrderedSet(OclAny) = OrderedSet{} |
-		acc->append(self->at(self->size() - i + 1))
-	);
-}
+--query OrderedSet(OclAny)::reverse() : OrderedSet(OclAny) {
+--	return OrderedSet{1 .. self->size()}->iterate(i : Integer; acc : OrderedSet(OclAny) = OrderedSet{} |
+--		acc->append(self->at(self->size() - i + 1))
+--	);
+--}
 
 query Sequence(OclAny)::orderedProduct(sequence : Sequence(OclAny)) : OrderedSet(Tuple(first : OclAny, second : OclAny)) {
 	log("orderedProduct start");

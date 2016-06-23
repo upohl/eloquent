@@ -40,7 +40,7 @@ constructor ConstraintExpression::ConstraintExpression(lhs : Expression, rhs : E
 helper Sequence(Sequence(NamedElement))::createAdditionConstraintExpression(lit : String, comment : String)
 	: ConstraintExpression {
 	var lhs : Expression := null;
-	self->asOrderedSet()->reverse()->collectNested(oclAsType(Sequence(NamedElement)))->forEach(seq) {
+	self->reverse()->forEach(seq) {
 		var variableExpression : VariableExpression := new VariableExpression(seq->getVariable()); 
 		if (lhs.oclIsUndefined()) then
 			lhs := variableExpression
