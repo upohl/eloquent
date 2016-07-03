@@ -24,6 +24,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ocl.pivot;visibility:=reexport,
  org.muml.pim;bundle-version="0.4.0";visibility:=reexport,
  org.muml.pm.hardware;bundle-version="1.0.0";visibility:=reexport,
- org.eclipse.jdt.annotation;bundle-version="1.1.100",
+ org.eclipse.jdt.annotation;bundle-version="[1.1.100,2.0.0)",
  org.eclipse.ocl.xtext.completeocl;bundle-version="1.0.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy
