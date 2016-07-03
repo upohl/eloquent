@@ -33,14 +33,14 @@
       <!--<import feature="org.muml.modelcopy.feature" version="0.5.0"/>-->
    </requires>
 
-   <plugin
+   <!--<plugin
          id="org.muml.psm"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
-   <!--<plugin
+   <plugin
          id="org.muml.psm.api.apimappinglanguage.xtext"
          download-size="0"
          install-size="0"
@@ -170,7 +170,7 @@
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>
+         unpack="false"/>-->
 
    <plugin
          id="org.muml.psm.allocation.algorithm.ilp.opt4j.config"
@@ -179,7 +179,7 @@
          version="0.0.0"
          unpack="false"/>
 
-   <plugin
+   <!--<plugin
          id="org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit"
          download-size="0"
          install-size="0"
