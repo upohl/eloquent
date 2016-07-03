@@ -22,13 +22,13 @@
       <import feature="org.muml.pim.feature" version="0.5.0.qualifier"/>
       <import feature="org.muml.pm.feature" version="0.5.0.qualifier"/>
       <import feature="org.muml.external.opt4j.feature" version="3.1.3"/>
-      <!--<import feature="org.muml.pm.hardware.feature" version="1.0.0"/>-->
+      <import feature="org.muml.pm.hardware.feature" version="1.0.0"/>
       <import feature="org.muml.external.aopalliance.feature" version="1.0.0"/>
       <!--<import feature="org.muml.pm.software.feature" version="1.0.0"/>-->
       <import feature="org.muml.external.guice.multibindings.feature" version="4.0.0"/>
       <import feature="org.muml.external.guava.feature" version="16.0.1"/>
       <import feature="org.muml.external.guice.feature" version="4.0.0"/>
-      <import feature="org.muml.ape.feature" version="0.5.0"/>
+      <!--<import feature="org.muml.ape.feature" version="0.5.0"/>-->
       <import feature="org.muml.external.javax.inject.feature" version="1.0.0"/>
       <!--<import feature="org.muml.modelcopy.feature" version="0.5.0"/>-->
    </requires>
@@ -59,7 +59,7 @@
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>-->
+         unpack="false"/>->
 
    <plugin
          id="org.muml.psm.edit"
@@ -191,6 +191,6 @@
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>
+         unpack="false"/>-->
 
 </feature>
