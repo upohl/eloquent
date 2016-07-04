@@ -11,7 +11,7 @@ Require-Bundle: org.muml.psm.allocation.ilp;bundle-version="0.1.0",
  org.muml.external.opt4j;bundle-version="3.1.3",
  org.muml.external.guice;bundle-version="4.0.0",
  org.muml.psm.allocation.algorithm.ilp.opt4j.config;bundle-version="0.1.0",
- org.eclipse.jdt.annotation;bundle-version="[1.1.100,2.0.0)",
+ org.eclipse.jdt.annotation;bundle-version="[2.0.0,3.0.0)";resolution:=optional,
  org.eclipse.core.runtime;bundle-version="3.11.1"
 Export-Package: org.muml.psm.allocation.algorithm.ilp.opt4j,
  org.muml.psm.allocation.algorithm.ilp.opt4j.evaluation,
