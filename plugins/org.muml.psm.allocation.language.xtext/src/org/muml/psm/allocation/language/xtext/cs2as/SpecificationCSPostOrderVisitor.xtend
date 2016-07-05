@@ -40,7 +40,7 @@ class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVi
 			null
 		}
 		
-		override public void addTo(@NonNull List<BasicContinuation<?>> simpleContinuations) {
+		override public void addTo( List<BasicContinuation<?>> simpleContinuations) {
 			val BasicContinuation<?> elm = simpleContinuations.findFirst[it instanceof ContextCSCompletion]
 			if (elm == null) {
 				// should never happen, because visitContextCS is supposed to return
@@ -54,11 +54,11 @@ class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVi
 		}
 	}
 	
-	override public Continuation<?> visitEvaluatableElementCS(@NonNull EvaluatableElementCS csElement) {
+	override public Continuation<?> visitEvaluatableElementCS( EvaluatableElementCS csElement) {
 		new PreContextCSCompletion(context, csElement)
 	}
 	
-	override public Continuation<?> visitConstraintCS(@NonNull ConstraintCS csElement) {
+	override public Continuation<?> visitConstraintCS( ConstraintCS csElement) {
 		// this should not return a Continuation (it should
 		// end up with a call to visitNamedElement)
 		super.visitConstraintCS(csElement)
@@ -67,7 +67,7 @@ class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVi
 		visitEvaluatableElementCS(csElement as EvaluatableElementCS)		
 	}
 	
-	override public Continuation<?> visitQoSDimensionCS(@NonNull QoSDimensionCS csElement) {
+	override public Continuation<?> visitQoSDimensionCS( QoSDimensionCS csElement) {
 		// this should not return a Continuation (it should
 		// end up with a call to visitNamedElement)
 		super.visitQoSDimensionCS(csElement)

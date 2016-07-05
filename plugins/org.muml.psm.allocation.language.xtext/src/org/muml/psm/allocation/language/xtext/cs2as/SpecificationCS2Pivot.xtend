@@ -24,29 +24,28 @@ class SpecificationCS2Pivot extends CompleteOCLCS2AS {
 		this.contextClass = contextClass
 	}
 	
-	@NonNull
-	override protected LanguageSpecificationCSVisitor<Continuation<?>> createContainmentVisitor(@NonNull CS2ASConversion converter) {
+	
+	override  protected  LanguageSpecificationCSVisitor<Continuation<?>> createContainmentVisitor( CS2ASConversion  converter) {
 		new LanguageSpecificationCSContainmentVisitor(converter);
 	}
 
-	@NonNull
-	override protected LanguageSpecificationCSVisitor<Element> createLeft2RightVisitor(@NonNull CS2ASConversion converter) {
+	override protected LanguageSpecificationCSVisitor<Element> createLeft2RightVisitor( CS2ASConversion converter) {
 		new LanguageSpecificationCSLeft2RightVisitor(converter);
 	}
 
-	@NonNull
-	override protected LanguageSpecificationCSVisitor<Continuation<?>> createPostOrderVisitor(@NonNull CS2ASConversion converter) {
+	
+	override protected LanguageSpecificationCSVisitor<Continuation<?>> createPostOrderVisitor( CS2ASConversion converter) {
 		// use the customized post order visitor
 		new SpecificationCSPostOrderVisitor(converter);
 	}
 
-	@NonNull
-	override protected LanguageSpecificationCSVisitor<Continuation<?>> createPreOrderVisitor(@NonNull CS2ASConversion converter) {
+	
+	override protected LanguageSpecificationCSVisitor<Continuation<?>> createPreOrderVisitor( CS2ASConversion converter) {
 		new LanguageSpecificationCSPreOrderVisitor(converter);
 	}
 	
-	@NonNull
-	override protected CS2ASConversion createConversion(@NonNull IDiagnosticConsumer diagnosticsConsumer, @NonNull BaseCSResource csResource) {
+	
+	override protected CS2ASConversion createConversion( IDiagnosticConsumer diagnosticsConsumer,  BaseCSResource csResource) {
 		new SpecificationCS2PivotConversion(this, diagnosticsConsumer, contextClass)
 	}
 	
