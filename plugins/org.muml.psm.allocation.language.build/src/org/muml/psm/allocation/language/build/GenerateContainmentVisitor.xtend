@@ -107,7 +107,7 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 		val EClass eClass = genClass.ecoreClass
 		'''
 		@Override
-		public @Nullable Continuation<?> visit«eClass.getName»(@NonNull «genClass.qualifiedInterfaceName» csElement) {
+		public @Nullable Continuation<?> visit«eClass.getName»(«genClass.genPackage.qualifiedPackageName».@NonNull «genClass.interfaceName» csElement) {
 			«genClass.generatePivot»
 			«genClass.generateFeatures»
 			«eClass.generateSecondarySuperCalls»
