@@ -28,7 +28,7 @@ class TypesUtil {
 	private static final String missingEnvFac = "An EnvironmentFactory should be associated with %s"
 	private static final String tupleName = "Tuple"
 	
-	@NonNull
+	/*@NonNull*/
 	public static def TupleType createTupleTypeHelper(EnvironmentFactoryInternal envFactory, Map<String, EClass> namedParts) {
 		val Map<String, Type> newNamedParts = namedParts.mapValues[EClass eClass |
 			getType(envFactory, eClass)
@@ -36,29 +36,29 @@ class TypesUtil {
 		createTupleType(envFactory, newNamedParts)
 	}
 	
-	@NonNull static def TupleType createTupleType(EnvironmentFactoryInternal envFactory, Map<String, Type> namedParts) {
+	/*@NonNull*/ static def TupleType createTupleType(EnvironmentFactoryInternal envFactory, Map<String, Type> namedParts) {
 		val TupleTypeManager tupleTypeManager = envFactory.completeModel.tupleManager
 		tupleTypeManager.getTupleType(tupleName, namedParts)
 	}
 	
-	@NonNull
+	/*@NonNull*/
 	public static def Type getType(EnvironmentFactoryInternal envFactory, EClass eClass) {
 		// XXX: eek mmm -> envFac
 		val IdResolver idResolver = envFactory.idResolver
 		idResolver.getType(eClass)
 	}
 	
-	@NonNull
+	/*@NonNull*/
 	public static def Type getRealType(EnvironmentFactoryInternal envFactory) {
 		envFactory.standardLibrary.realType
 	}
 		
-	@NonNull
+	/*@NonNull*/
 	public static def CollectionType createSetType(EnvironmentFactoryInternal envFactory, Type type) {
 		envFactory.completeEnvironment.getSetType(type, false, null, null)
 	}
 	
-	@NonNull
+	/*@NonNull*/
 	static def EnvironmentFactoryInternal getEnvironmentFactory(EObject object) {
 		val EnvironmentFactoryInternal envFactory = PivotUtilInternal.findEnvironmentFactory(object)
 		if (envFactory == null) {
@@ -76,14 +76,14 @@ class TypesUtil {
 	
 	// location constraint
 	
-	@NonNull
+	/*@NonNull*/
 	public static def TupleType createLocationConstraintTupleType(LocationConstraintCS locationConstraintCS) {
 		createLocationConstraintTupleType(getEnvironmentFactory(locationConstraintCS),
 			locationConstraintCS.tupleDescriptor
 		)
 	}
 	
-	@NonNull
+	/*@NonNull*/
 	public static def TupleType createLocationConstraintTupleType(EnvironmentFactoryInternal envFactory, LocationTupleDescriptorCS tupleDescriptor) {
 		val namedParts =  #{tupleDescriptor.instance -> InstancePackage.Literals.COMPONENT_INSTANCE,
 			tupleDescriptor.secondInstance -> InstancePackage.Literals.COMPONENT_INSTANCE
@@ -91,7 +91,7 @@ class TypesUtil {
 		createTupleTypeHelper(envFactory, namedParts)
 	}
 	
-	@NonNull
+	/*@NonNull*/
 	public static def Type createLocationConstraintType(LocationConstraintCS locationConstraintCS) {
 		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(locationConstraintCS) 
 		createSetType(envFactory,
@@ -100,14 +100,14 @@ class TypesUtil {
 	}
 	
 	// requiredHardwareResourceInstance constraint
-	@NonNull static def TupleType createReqHWResInstanceConstraintTupleType(RequiredHardwareResourceInstanceConstraintCS constraintCS) {
+	/*@NonNull*/ static def TupleType createReqHWResInstanceConstraintTupleType(RequiredHardwareResourceInstanceConstraintCS constraintCS) {
 		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraintCS)
 		createReqHWResInstanceConstraintTupleType(envFactory,
 			constraintCS.tupleDescriptors
 		)
 	}
 	
-	@NonNull static def Map<String, EClass>createNamedPartsFromComponentResourceTupleDescriptors(
+	/*@NonNull*/ static def Map<String, EClass>createNamedPartsFromComponentResourceTupleDescriptors(
 		List<ComponentResourceTupleDescriptorCS> tupleDescriptorList) {
 		val namedParts = <String, EClass>newHashMap()
 		tupleDescriptorList.forEach[t |
@@ -119,7 +119,7 @@ class TypesUtil {
 		namedParts
 	}
 	
-	@NonNull static def TupleType createReqHWResInstanceConstraintTupleType(EnvironmentFactoryInternal envFactory, 
+	/*@NonNull*/ static def TupleType createReqHWResInstanceConstraintTupleType(EnvironmentFactoryInternal envFactory, 
 		List<ComponentResourceTupleDescriptorCS> tupleDescriptorList) {
 		/*val namedParts = <String, Type>newHashMap()
 		tupleDescriptorList.forEach[t |
@@ -132,7 +132,7 @@ class TypesUtil {
 		createTupleTypeHelper(envFactory, namedParts)
 	}
 	
-	@NonNull static def Type createReqHWResInstanceConstraintType(RequiredHardwareResourceInstanceConstraintCS constraintCS) {
+	/*@NonNull*/ static def Type createReqHWResInstanceConstraintType(RequiredHardwareResourceInstanceConstraintCS constraintCS) {
 		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraintCS)
 		createSetType(envFactory,
 			createReqHWResInstanceConstraintTupleType(envFactory, constraintCS.tupleDescriptors)
@@ -140,12 +140,12 @@ class TypesUtil {
 	}
 	
 	// resource constraint
-	@NonNull static def TupleType createResourceConstraintInnerTupleType(ResourceConstraintCS constraintCS) {
+	/*@NonNull*/ static def TupleType createResourceConstraintInnerTupleType(ResourceConstraintCS constraintCS) {
 		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraintCS)
 		createWeightingComponentResourceTupleElementCSTupleType(envFactory, constraintCS)
 	}
 	
-	@NonNull static def TupleType createResourceConstraintOuterTupleType(EnvironmentFactoryInternal envFactory, ResourceConstraintCS constraintCS) {
+	/*@NonNull*/ static def TupleType createResourceConstraintOuterTupleType(EnvironmentFactoryInternal envFactory, ResourceConstraintCS constraintCS) {
 		val Type innerTupleType = createWeightingComponentResourceTupleElementCSTupleType(envFactory, constraintCS)
 		val Map<String, Type> namedParts = #{
 			constraintCS.weighting.value -> createSetType(envFactory, innerTupleType),
@@ -154,12 +154,12 @@ class TypesUtil {
 		createTupleType(envFactory, namedParts)
 	}
 	
-	@NonNull static def TupleType createResourceConstraintOuterTupleType(ResourceConstraintCS constraintCS) {
+	/*@NonNull*/ static def TupleType createResourceConstraintOuterTupleType(ResourceConstraintCS constraintCS) {
 		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraintCS)
 		createResourceConstraintOuterTupleType(envFactory, constraintCS)
 	}
 	
-	@NonNull static def Type createResourceConstraintType(ResourceConstraintCS constraintCS) {
+	/*@NonNull*/ static def Type createResourceConstraintType(ResourceConstraintCS constraintCS) {
 		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraintCS)
 		createSetType(envFactory,
 			createResourceConstraintOuterTupleType(envFactory, constraintCS)
@@ -167,19 +167,19 @@ class TypesUtil {
 	}
 	
 	// QoS dimension
-	@NonNull static def TupleType createQoSDimensionTupleType(QoSDimensionCS qosDimensionCS) {
+	/*@NonNull*/ static def TupleType createQoSDimensionTupleType(QoSDimensionCS qosDimensionCS) {
 		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(qosDimensionCS)
 		createWeightingComponentResourceTupleElementCSTupleType(envFactory, qosDimensionCS)
 	}
 
-	@NonNull static def Type createQoSDimensionType(QoSDimensionCS qosDimensionCS) {
+	/*@NonNull*/ static def Type createQoSDimensionType(QoSDimensionCS qosDimensionCS) {
 		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(qosDimensionCS)
 		createSetType(envFactory,  
 			createWeightingComponentResourceTupleElementCSTupleType(envFactory, qosDimensionCS)
 		)
 	}
 	
-	@NonNull static def TupleType createWeightingComponentResourceTupleElementCSTupleType(EnvironmentFactoryInternal envFactory, WeightingComponentResourceTupleElementCS elementCS) {
+	/*@NonNull*/ static def TupleType createWeightingComponentResourceTupleElementCSTupleType(EnvironmentFactoryInternal envFactory, WeightingComponentResourceTupleElementCS elementCS) {
 		var Map<String, Type> namedParts = <String, Type>newHashMap()
 		namedParts.putAll(createNamedPartsFromComponentResourceTupleDescriptors(elementCS.tupleDescriptors)
 			.mapValues[EClass eClass | getType(envFactory, eClass)])

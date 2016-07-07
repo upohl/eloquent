@@ -9,10 +9,10 @@ import org.eclipse.ocl.xtext.completeoclcs.ClassifierContextDeclCS
 
 class SpecificationCSAttribution extends CompleteOCLDocumentCSAttribution {
 	
-	@NonNull public static final SpecificationCSAttribution INSTANCE = new SpecificationCSAttribution
+	/*@NonNull*/ public static final SpecificationCSAttribution INSTANCE = new SpecificationCSAttribution
 	
-	override public ScopeView computeLookup(@NonNull EObject target, @NonNull EnvironmentView environmentView,
-		@NonNull ScopeView scopeView) {
+	override public ScopeView computeLookup(/*@NonNull*/ EObject target, /*@NonNull*/ EnvironmentView environmentView,
+		/*@NonNull*/ ScopeView scopeView) {
 		val ScopeView outerScopeView = super.computeLookup(target, environmentView, scopeView)
 		val EObject child = scopeView.child
 		if (!environmentView.hasFinalResult && child instanceof ClassifierContextDeclCS) {
