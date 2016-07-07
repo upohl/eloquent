@@ -14,8 +14,8 @@ class SpecificationCSResource extends CompleteOCLCSResource {
 	
 	private static final EClass contextClass = OclcontextPackage.Literals.OCL_CONTEXT
 	
-	 override CS2AS createCS2AS( EnvironmentFactoryInternal environmentFactory,
-		 ASResource asResource) {
+	@NonNull override CS2AS createCS2AS(@NonNull EnvironmentFactoryInternal environmentFactory,
+		@NonNull ASResource asResource) {
 		// General remark: we could also install a ParserContext - this would avoid our
 		// custom SpecificationCSPostOrderVisitor (but the current is more flexible, because
 		// we could use different context classes (not sure if we ever need this, though))

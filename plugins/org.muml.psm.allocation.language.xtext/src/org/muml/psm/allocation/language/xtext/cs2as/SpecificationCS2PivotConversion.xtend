@@ -20,7 +20,7 @@ class SpecificationCS2PivotConversion extends CS2ASConversion {
 		this.contextClass = contextClass
 	}
 			
-	override public void refreshContextVariable( ExpressionInOCL pivotSpecification) {
+	override public void refreshContextVariable(@NonNull ExpressionInOCL pivotSpecification) {
 		if (pivotSpecification.eContainer instanceof EvaluatableElement) {
 			// set the context variable
 			val Type contextType = TypesUtil.getType(environmentFactory, contextClass)
