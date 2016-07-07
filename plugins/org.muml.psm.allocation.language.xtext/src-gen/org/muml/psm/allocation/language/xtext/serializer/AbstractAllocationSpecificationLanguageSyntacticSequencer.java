@@ -3,8 +3,8 @@
  */
 package org.muml.psm.allocation.language.xtext.serializer;
 
-import com.google.inject.Inject;
 import java.util.List;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
@@ -17,6 +17,8 @@ import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISyn
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 import org.muml.psm.allocation.language.xtext.services.AllocationSpecificationLanguageGrammarAccess;
+
+import com.google.inject.Inject;
 
 @SuppressWarnings("all")
 public abstract class AbstractAllocationSpecificationLanguageSyntacticSequencer extends AbstractSyntacticSequencer {
