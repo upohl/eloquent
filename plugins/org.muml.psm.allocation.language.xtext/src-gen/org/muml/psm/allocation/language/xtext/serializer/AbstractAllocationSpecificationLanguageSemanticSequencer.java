@@ -3,10 +3,7 @@
  */
 package org.muml.psm.allocation.language.xtext.serializer;
 
-import com.google.inject.Inject;
-import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.ocl.xtext.basecs.BaseCSPackage;
 import org.eclipse.ocl.xtext.basecs.ConstraintCS;
 import org.eclipse.ocl.xtext.basecs.ImportCS;
@@ -71,12 +68,6 @@ import org.eclipse.ocl.xtext.essentialoclcs.TupleLiteralPartCS;
 import org.eclipse.ocl.xtext.essentialoclcs.TypeLiteralExpCS;
 import org.eclipse.ocl.xtext.essentialoclcs.TypeNameExpCS;
 import org.eclipse.ocl.xtext.essentialoclcs.UnlimitedNaturalLiteralExpCS;
-import org.eclipse.xtext.Action;
-import org.eclipse.xtext.Parameter;
-import org.eclipse.xtext.ParserRule;
-import org.eclipse.xtext.serializer.ISerializationContext;
-import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
-import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.LocationConstraintCS;
@@ -90,6 +81,8 @@ import org.muml.psm.allocation.language.cs.SpecificationCS;
 import org.muml.psm.allocation.language.cs.ValueTupleDescriptorCS;
 import org.muml.psm.allocation.language.xtext.services.AllocationSpecificationLanguageGrammarAccess;
 
+import com.google.inject.Inject;
+
 @SuppressWarnings("all")
 public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer extends CompleteOCLSemanticSequencer {
 
@@ -97,13 +90,8 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	private AllocationSpecificationLanguageGrammarAccess grammarAccess;
 	
 	@Override
-	public void sequence(ISerializationContext context, EObject semanticObject) {
-		EPackage epackage = semanticObject.eClass().getEPackage();
-		ParserRule rule = context.getParserRule();
-		Action action = context.getAssignedAction();
-		Set<Parameter> parameters = context.getEnabledBooleanParameters();
-		if (epackage == BaseCSPackage.eINSTANCE)
-			switch (semanticObject.eClass().getClassifierID()) {
+	public void createSequence(EObject context, EObject semanticObject) {
+		if(semanticObject.eClass().getEPackage() == BaseCSPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case BaseCSPackage.CONSTRAINT_CS:
 				sequence_ConstraintCS(context, (ConstraintCS) semanticObject); 
 				return; 
@@ -111,45 +99,45 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				sequence_ImportCS(context, (ImportCS) semanticObject); 
 				return; 
 			case BaseCSPackage.MULTIPLICITY_BOUNDS_CS:
-				if (rule == grammarAccess.getMultiplicityBoundsCSRule()) {
+				if(context == grammarAccess.getMultiplicityBoundsCSRule()) {
 					sequence_MultiplicityBoundsCS(context, (MultiplicityBoundsCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getMultiplicityCSRule()) {
+				else if(context == grammarAccess.getMultiplicityCSRule()) {
 					sequence_MultiplicityBoundsCS_MultiplicityCS(context, (MultiplicityBoundsCS) semanticObject); 
 					return; 
 				}
 				else break;
 			case BaseCSPackage.MULTIPLICITY_STRING_CS:
-				if (rule == grammarAccess.getMultiplicityCSRule()) {
+				if(context == grammarAccess.getMultiplicityCSRule()) {
 					sequence_MultiplicityCS_MultiplicityStringCS(context, (MultiplicityStringCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getMultiplicityStringCSRule()) {
+				else if(context == grammarAccess.getMultiplicityStringCSRule()) {
 					sequence_MultiplicityStringCS(context, (MultiplicityStringCS) semanticObject); 
 					return; 
 				}
 				else break;
 			case BaseCSPackage.PARAMETER_CS:
-				if (rule == grammarAccess.getDefParameterCSRule()) {
+				if(context == grammarAccess.getDefParameterCSRule()) {
 					sequence_DefParameterCS(context, (ParameterCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getParameterCSRule()) {
+				else if(context == grammarAccess.getParameterCSRule()) {
 					sequence_ParameterCS(context, (ParameterCS) semanticObject); 
 					return; 
 				}
 				else break;
 			case BaseCSPackage.PATH_ELEMENT_CS:
-				if (rule == grammarAccess.getFirstPathElementCSRule()) {
+				if(context == grammarAccess.getFirstPathElementCSRule()) {
 					sequence_FirstPathElementCS(context, (PathElementCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getNextPathElementCSRule()) {
+				else if(context == grammarAccess.getNextPathElementCSRule()) {
 					sequence_NextPathElementCS(context, (PathElementCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getURIFirstPathElementCSRule()) {
+				else if(context == grammarAccess.getURIFirstPathElementCSRule()) {
 					sequence_URIFirstPathElementCS(context, (PathElementCS) semanticObject); 
 					return; 
 				}
@@ -158,28 +146,28 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				sequence_URIFirstPathElementCS(context, (PathElementWithURICS) semanticObject); 
 				return; 
 			case BaseCSPackage.PATH_NAME_CS:
-				if (rule == grammarAccess.getPathNameCSRule()) {
+				if(context == grammarAccess.getPathNameCSRule()) {
 					sequence_PathNameCS(context, (PathNameCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getURIPathNameCSRule()) {
+				else if(context == grammarAccess.getURIPathNameCSRule()) {
 					sequence_URIPathNameCS(context, (PathNameCS) semanticObject); 
 					return; 
 				}
 				else break;
 			case BaseCSPackage.PRIMITIVE_TYPE_REF_CS:
-				if (rule == grammarAccess.getTypedRefCSRule()
-						|| rule == grammarAccess.getPrimitiveTypeCSRule()
-						|| rule == grammarAccess.getTypeLiteralCSRule()
-						|| rule == grammarAccess.getTypeRefCSRule()) {
+				if(context == grammarAccess.getPrimitiveTypeCSRule() ||
+				   context == grammarAccess.getTypeLiteralCSRule() ||
+				   context == grammarAccess.getTypeRefCSRule() ||
+				   context == grammarAccess.getTypedRefCSRule()) {
 					sequence_PrimitiveTypeCS(context, (PrimitiveTypeRefCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getTypeExpCSRule()) {
+				else if(context == grammarAccess.getTypeExpCSRule()) {
 					sequence_PrimitiveTypeCS_TypeExpCS(context, (PrimitiveTypeRefCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getTypeLiteralWithMultiplicityCSRule()) {
+				else if(context == grammarAccess.getTypeLiteralWithMultiplicityCSRule()) {
 					sequence_PrimitiveTypeCS_TypeLiteralWithMultiplicityCS(context, (PrimitiveTypeRefCS) semanticObject); 
 					return; 
 				}
@@ -197,18 +185,18 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				sequence_TuplePartCS(context, (TuplePartCS) semanticObject); 
 				return; 
 			case BaseCSPackage.TUPLE_TYPE_CS:
-				if (rule == grammarAccess.getTypedRefCSRule()
-						|| rule == grammarAccess.getTupleTypeCSRule()
-						|| rule == grammarAccess.getTypeLiteralCSRule()
-						|| rule == grammarAccess.getTypeRefCSRule()) {
+				if(context == grammarAccess.getTupleTypeCSRule() ||
+				   context == grammarAccess.getTypeLiteralCSRule() ||
+				   context == grammarAccess.getTypeRefCSRule() ||
+				   context == grammarAccess.getTypedRefCSRule()) {
 					sequence_TupleTypeCS(context, (TupleTypeCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getTypeExpCSRule()) {
+				else if(context == grammarAccess.getTypeExpCSRule()) {
 					sequence_TupleTypeCS_TypeExpCS(context, (TupleTypeCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getTypeLiteralWithMultiplicityCSRule()) {
+				else if(context == grammarAccess.getTypeLiteralWithMultiplicityCSRule()) {
 					sequence_TupleTypeCS_TypeLiteralWithMultiplicityCS(context, (TupleTypeCS) semanticObject); 
 					return; 
 				}
@@ -223,8 +211,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				sequence_WildcardTypeRefCS(context, (WildcardTypeRefCS) semanticObject); 
 				return; 
 			}
-		else if (epackage == CompleteOCLCSPackage.eINSTANCE)
-			switch (semanticObject.eClass().getClassifierID()) {
+		else if(semanticObject.eClass().getEPackage() == CompleteOCLCSPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case CompleteOCLCSPackage.CLASSIFIER_CONTEXT_DECL_CS:
 				sequence_ClassifierContextDeclCS(context, (ClassifierContextDeclCS) semanticObject); 
 				return; 
@@ -250,8 +237,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				sequence_PropertyContextDeclCS(context, (PropertyContextDeclCS) semanticObject); 
 				return; 
 			}
-		else if (epackage == CsPackage.eINSTANCE)
-			switch (semanticObject.eClass().getClassifierID()) {
+		else if(semanticObject.eClass().getEPackage() == CsPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case CsPackage.COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS:
 				sequence_ComponentResourceTupleDescriptor(context, (ComponentResourceTupleDescriptorCS) semanticObject); 
 				return; 
@@ -283,8 +269,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				sequence_ValueTupleDescriptor(context, (ValueTupleDescriptorCS) semanticObject); 
 				return; 
 			}
-		else if (epackage == EssentialOCLCSPackage.eINSTANCE)
-			switch (semanticObject.eClass().getClassifierID()) {
+		else if(semanticObject.eClass().getEPackage() == EssentialOCLCSPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case EssentialOCLCSPackage.BOOLEAN_LITERAL_EXP_CS:
 				sequence_BooleanLiteralExpCS(context, (BooleanLiteralExpCS) semanticObject); 
 				return; 
@@ -295,28 +280,28 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				sequence_CollectionLiteralPartCS(context, (CollectionLiteralPartCS) semanticObject); 
 				return; 
 			case EssentialOCLCSPackage.COLLECTION_PATTERN_CS:
-				if (rule == grammarAccess.getCollectionPatternCSRule()) {
+				if(context == grammarAccess.getCollectionPatternCSRule()) {
 					sequence_CollectionPatternCS(context, (CollectionPatternCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getTypeExpCSRule()) {
+				else if(context == grammarAccess.getTypeExpCSRule()) {
 					sequence_CollectionPatternCS_TypeExpCS(context, (CollectionPatternCS) semanticObject); 
 					return; 
 				}
 				else break;
 			case EssentialOCLCSPackage.COLLECTION_TYPE_CS:
-				if (rule == grammarAccess.getTypedRefCSRule()
-						|| rule == grammarAccess.getCollectionTypeCSRule()
-						|| rule == grammarAccess.getTypeLiteralCSRule()
-						|| rule == grammarAccess.getTypeRefCSRule()) {
+				if(context == grammarAccess.getCollectionTypeCSRule() ||
+				   context == grammarAccess.getTypeLiteralCSRule() ||
+				   context == grammarAccess.getTypeRefCSRule() ||
+				   context == grammarAccess.getTypedRefCSRule()) {
 					sequence_CollectionTypeCS(context, (CollectionTypeCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getTypeExpCSRule()) {
+				else if(context == grammarAccess.getTypeExpCSRule()) {
 					sequence_CollectionTypeCS_TypeExpCS(context, (CollectionTypeCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getTypeLiteralWithMultiplicityCSRule()) {
+				else if(context == grammarAccess.getTypeLiteralWithMultiplicityCSRule()) {
 					sequence_CollectionTypeCS_TypeLiteralWithMultiplicityCS(context, (CollectionTypeCS) semanticObject); 
 					return; 
 				}
@@ -358,18 +343,18 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				sequence_MapLiteralPartCS(context, (MapLiteralPartCS) semanticObject); 
 				return; 
 			case EssentialOCLCSPackage.MAP_TYPE_CS:
-				if (rule == grammarAccess.getTypedRefCSRule()
-						|| rule == grammarAccess.getMapTypeCSRule()
-						|| rule == grammarAccess.getTypeLiteralCSRule()
-						|| rule == grammarAccess.getTypeRefCSRule()) {
+				if(context == grammarAccess.getMapTypeCSRule() ||
+				   context == grammarAccess.getTypeLiteralCSRule() ||
+				   context == grammarAccess.getTypeRefCSRule() ||
+				   context == grammarAccess.getTypedRefCSRule()) {
 					sequence_MapTypeCS(context, (MapTypeCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getTypeExpCSRule()) {
+				else if(context == grammarAccess.getTypeExpCSRule()) {
 					sequence_MapTypeCS_TypeExpCS(context, (MapTypeCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getTypeLiteralWithMultiplicityCSRule()) {
+				else if(context == grammarAccess.getTypeLiteralWithMultiplicityCSRule()) {
 					sequence_MapTypeCS_TypeLiteralWithMultiplicityCS(context, (MapTypeCS) semanticObject); 
 					return; 
 				}
@@ -378,19 +363,19 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				sequence_NameExpCS(context, (NameExpCS) semanticObject); 
 				return; 
 			case EssentialOCLCSPackage.NAVIGATING_ARG_CS:
-				if (rule == grammarAccess.getNavigatingArgCSRule()) {
+				if(context == grammarAccess.getNavigatingArgCSRule()) {
 					sequence_NavigatingArgCS(context, (NavigatingArgCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getNavigatingBarArgCSRule()) {
+				else if(context == grammarAccess.getNavigatingBarArgCSRule()) {
 					sequence_NavigatingBarArgCS(context, (NavigatingArgCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getNavigatingCommaArgCSRule()) {
+				else if(context == grammarAccess.getNavigatingCommaArgCSRule()) {
 					sequence_NavigatingCommaArgCS(context, (NavigatingArgCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getNavigatingSemiArgCSRule()) {
+				else if(context == grammarAccess.getNavigatingSemiArgCSRule()) {
 					sequence_NavigatingSemiArgCS(context, (NavigatingArgCS) semanticObject); 
 					return; 
 				}
@@ -408,17 +393,17 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				sequence_PatternExpCS(context, (PatternExpCS) semanticObject); 
 				return; 
 			case EssentialOCLCSPackage.PREFIX_EXP_CS:
-				if (rule == grammarAccess.getPrefixedLetExpCSRule()) {
+				if(context == grammarAccess.getPrefixedLetExpCSRule()) {
 					sequence_PrefixedLetExpCS(context, (PrefixExpCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getNavigatingArgExpCSRule()
-						|| rule == grammarAccess.getExpCSRule()) {
+				else if(context == grammarAccess.getExpCSRule() ||
+				   context == grammarAccess.getNavigatingArgExpCSRule()) {
 					sequence_PrefixedLetExpCS_PrefixedPrimaryExpCS(context, (PrefixExpCS) semanticObject); 
 					return; 
 				}
-				else if (action == grammarAccess.getExpCSAccess().getInfixExpCSOwnedLeftAction_0_1_0()
-						|| rule == grammarAccess.getPrefixedPrimaryExpCSRule()) {
+				else if(context == grammarAccess.getExpCSAccess().getInfixExpCSOwnedLeftAction_0_1_0() ||
+				   context == grammarAccess.getPrefixedPrimaryExpCSRule()) {
 					sequence_PrefixedPrimaryExpCS(context, (PrefixExpCS) semanticObject); 
 					return; 
 				}
@@ -448,11 +433,11 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				sequence_TypeLiteralExpCS(context, (TypeLiteralExpCS) semanticObject); 
 				return; 
 			case EssentialOCLCSPackage.TYPE_NAME_EXP_CS:
-				if (rule == grammarAccess.getTypeExpCSRule()) {
+				if(context == grammarAccess.getTypeExpCSRule()) {
 					sequence_TypeExpCS_TypeNameExpCS(context, (TypeNameExpCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getTypeNameExpCSRule()) {
+				else if(context == grammarAccess.getTypeNameExpCSRule()) {
 					sequence_TypeNameExpCS(context, (TypeNameExpCS) semanticObject); 
 					return; 
 				}
@@ -461,81 +446,46 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				sequence_UnlimitedNaturalLiteralExpCS(context, (UnlimitedNaturalLiteralExpCS) semanticObject); 
 				return; 
 			}
-		if (errorAcceptor != null)
-			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
+		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
 	
 	/**
-	 * Contexts:
-	 *     ComponentResourceTupleDescriptor returns ComponentResourceTupleDescriptorCS
-	 *
 	 * Constraint:
 	 *     (instance=ID hwresinstance=ID)
 	 */
-	protected void sequence_ComponentResourceTupleDescriptor(ISerializationContext context, ComponentResourceTupleDescriptorCS semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.INSTANCE_TUPLE_DESCRIPTOR_CS__INSTANCE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.INSTANCE_TUPLE_DESCRIPTOR_CS__INSTANCE));
-			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS__HWRESINSTANCE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS__HWRESINSTANCE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getComponentResourceTupleDescriptorAccess().getInstanceIDParserRuleCall_1_0(), semanticObject.getInstance());
-		feeder.accept(grammarAccess.getComponentResourceTupleDescriptorAccess().getHwresinstanceIDParserRuleCall_3_0(), semanticObject.getHwresinstance());
-		feeder.finish();
+	protected void sequence_ComponentResourceTupleDescriptor(EObject context, ComponentResourceTupleDescriptorCS semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     Constraint returns LocationConstraintCS
-	 *     LocationConstraint returns LocationConstraintCS
-	 *
 	 * Constraint:
 	 *     (type=LocationConstraintType name=ID? tupleDescriptor=LocationTupleDescriptor expression=Model)
 	 */
-	protected void sequence_LocationConstraint(ISerializationContext context, LocationConstraintCS semanticObject) {
+	protected void sequence_LocationConstraint(EObject context, LocationConstraintCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     LocationTupleDescriptor returns LocationTupleDescriptorCS
-	 *
 	 * Constraint:
 	 *     (instance=ID secondInstance=ID)
 	 */
-	protected void sequence_LocationTupleDescriptor(ISerializationContext context, LocationTupleDescriptorCS semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.INSTANCE_TUPLE_DESCRIPTOR_CS__INSTANCE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.INSTANCE_TUPLE_DESCRIPTOR_CS__INSTANCE));
-			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.LOCATION_TUPLE_DESCRIPTOR_CS__SECOND_INSTANCE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.LOCATION_TUPLE_DESCRIPTOR_CS__SECOND_INSTANCE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getLocationTupleDescriptorAccess().getInstanceIDParserRuleCall_1_0(), semanticObject.getInstance());
-		feeder.accept(grammarAccess.getLocationTupleDescriptorAccess().getSecondInstanceIDParserRuleCall_3_0(), semanticObject.getSecondInstance());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     MeasureFunction returns MeasureFunctionCS
-	 *
-	 * Constraint:
-	 *     (services+=[ServiceCS|ID] services+=[ServiceCS|ID]*)
-	 */
-	protected void sequence_MeasureFunction(ISerializationContext context, MeasureFunctionCS semanticObject) {
+	protected void sequence_LocationTupleDescriptor(EObject context, LocationTupleDescriptorCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     QosDimension returns QoSDimensionCS
-	 *
+	 * Constraint:
+	 *     (services+=[ServiceCS|ID] services+=[ServiceCS|ID]*)
+	 */
+	protected void sequence_MeasureFunction(EObject context, MeasureFunctionCS semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -545,29 +495,21 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 *         expression=Model
 	 *     )
 	 */
-	protected void sequence_QosDimension(ISerializationContext context, QoSDimensionCS semanticObject) {
+	protected void sequence_QosDimension(EObject context, QoSDimensionCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     Constraint returns RequiredHardwareResourceInstanceConstraintCS
-	 *     RequiredHardwareResourceInstanceConstraint returns RequiredHardwareResourceInstanceConstraintCS
-	 *
 	 * Constraint:
 	 *     (name=ID? tupleDescriptors+=ComponentResourceTupleDescriptor tupleDescriptors+=ComponentResourceTupleDescriptor* expression=Model)
 	 */
-	protected void sequence_RequiredHardwareResourceInstanceConstraint(ISerializationContext context, RequiredHardwareResourceInstanceConstraintCS semanticObject) {
+	protected void sequence_RequiredHardwareResourceInstanceConstraint(EObject context, RequiredHardwareResourceInstanceConstraintCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     Constraint returns ResourceConstraintCS
-	 *     ResourceConstraint returns ResourceConstraintCS
-	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID? 
@@ -578,27 +520,21 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 *         expression=Model
 	 *     )
 	 */
-	protected void sequence_ResourceConstraint(ISerializationContext context, ResourceConstraintCS semanticObject) {
+	protected void sequence_ResourceConstraint(EObject context, ResourceConstraintCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     Service returns ServiceCS
-	 *
 	 * Constraint:
 	 *     (name=ID dimensions+=QosDimension*)
 	 */
-	protected void sequence_Service(ISerializationContext context, ServiceCS semanticObject) {
+	protected void sequence_Service(EObject context, ServiceCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     Specification returns SpecificationCS
-	 *
 	 * Constraint:
 	 *     (
 	 *         name=ID 
@@ -606,27 +542,16 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 *         (goal=Goal measure=MeasureFunction)?
 	 *     )
 	 */
-	protected void sequence_Specification(ISerializationContext context, SpecificationCS semanticObject) {
+	protected void sequence_Specification(EObject context, SpecificationCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     ValueTupleDescriptor returns ValueTupleDescriptorCS
-	 *
 	 * Constraint:
 	 *     value=ID
 	 */
-	protected void sequence_ValueTupleDescriptor(ISerializationContext context, ValueTupleDescriptorCS semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.VALUE_TUPLE_DESCRIPTOR_CS__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.VALUE_TUPLE_DESCRIPTOR_CS__VALUE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getValueTupleDescriptorAccess().getValueIDParserRuleCall_0(), semanticObject.getValue());
-		feeder.finish();
+	protected void sequence_ValueTupleDescriptor(EObject context, ValueTupleDescriptorCS semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
-	
-	
 }
