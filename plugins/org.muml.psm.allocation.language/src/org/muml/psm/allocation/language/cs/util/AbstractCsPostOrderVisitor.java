@@ -32,82 +32,82 @@ public abstract class AbstractCsPostOrderVisitor
 	 * 
 	 * @param context my initial result value
 	 */
-	protected AbstractCsPostOrderVisitor(@NonNull CS2ASConversion context) {
+	protected AbstractCsPostOrderVisitor(CS2ASConversion context) {
 		super(context);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitComponentResourceTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull ComponentResourceTupleDescriptorCS csElement) {
+	public @Nullable Continuation<?> visitComponentResourceTupleDescriptorCS(org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS csElement) {
 		return visitInstanceTupleDescriptorCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ConstraintCS csElement) {
+	public @Nullable Continuation<?> visitConstraintCS(org.muml.psm.allocation.language.cs.ConstraintCS csElement) {
 		return visitNamedElementCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitEvaluatableElementCS(org.muml.psm.allocation.language.cs.@NonNull EvaluatableElementCS csElement) {
+	public @Nullable Continuation<?> visitEvaluatableElementCS(org.muml.psm.allocation.language.cs.EvaluatableElementCS csElement) {
 		return visitModelElementCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitInstanceTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull InstanceTupleDescriptorCS csElement) {
+	public @Nullable Continuation<?> visitInstanceTupleDescriptorCS(org.muml.psm.allocation.language.cs.InstanceTupleDescriptorCS csElement) {
 		return visitTupleDescriptorCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull LocationConstraintCS csElement) {
+	public @Nullable Continuation<?> visitLocationConstraintCS(org.muml.psm.allocation.language.cs.LocationConstraintCS csElement) {
 		return visitConstraintCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitLocationTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull LocationTupleDescriptorCS csElement) {
+	public @Nullable Continuation<?> visitLocationTupleDescriptorCS(org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS csElement) {
 		return visitInstanceTupleDescriptorCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitMeasureFunctionCS(org.muml.psm.allocation.language.cs.@NonNull MeasureFunctionCS csElement) {
+	public @Nullable Continuation<?> visitMeasureFunctionCS(org.muml.psm.allocation.language.cs.MeasureFunctionCS csElement) {
 		return visitModelElementCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitQoSDimensionCS(org.muml.psm.allocation.language.cs.@NonNull QoSDimensionCS csElement) {
+	public @Nullable Continuation<?> visitQoSDimensionCS(org.muml.psm.allocation.language.cs.QoSDimensionCS csElement) {
 		return visitNamedElementCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitRequiredHardwareResourceInstanceConstraintCS(org.muml.psm.allocation.language.cs.@NonNull RequiredHardwareResourceInstanceConstraintCS csElement) {
+	public @Nullable Continuation<?> visitRequiredHardwareResourceInstanceConstraintCS(org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS csElement) {
 		return visitConstraintCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitResourceConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ResourceConstraintCS csElement) {
+	public @Nullable Continuation<?> visitResourceConstraintCS(org.muml.psm.allocation.language.cs.ResourceConstraintCS csElement) {
 		return visitConstraintCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitServiceCS(org.muml.psm.allocation.language.cs.@NonNull ServiceCS csElement) {
+	public @Nullable Continuation<?> visitServiceCS(org.muml.psm.allocation.language.cs.ServiceCS csElement) {
 		return visitNamedElementCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitSpecificationCS(org.muml.psm.allocation.language.cs.@NonNull SpecificationCS csElement) {
+	public @Nullable Continuation<?> visitSpecificationCS(org.muml.psm.allocation.language.cs.SpecificationCS csElement) {
 		return visitCompleteOCLDocumentCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull TupleDescriptorCS csElement) {
+	public @Nullable Continuation<?> visitTupleDescriptorCS(org.muml.psm.allocation.language.cs.TupleDescriptorCS csElement) {
 		return visitModelElementCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitValueTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull ValueTupleDescriptorCS csElement) {
+	public @Nullable Continuation<?> visitValueTupleDescriptorCS(org.muml.psm.allocation.language.cs.ValueTupleDescriptorCS csElement) {
 		return visitTupleDescriptorCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitWeightingComponentResourceTupleElementCS(org.muml.psm.allocation.language.cs.@NonNull WeightingComponentResourceTupleElementCS csElement) {
+	public @Nullable Continuation<?> visitWeightingComponentResourceTupleElementCS(org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElementCS csElement) {
 		return visitModelElementCS(csElement);
 	}
 }

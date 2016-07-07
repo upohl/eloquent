@@ -241,7 +241,7 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
+	public <R> R accept(BaseCSVisitor<R> visitor) {
 		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitLocationConstraintCS(this);
 	}
 
