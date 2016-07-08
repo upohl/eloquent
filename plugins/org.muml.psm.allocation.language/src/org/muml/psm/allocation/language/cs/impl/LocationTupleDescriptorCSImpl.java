@@ -159,7 +159,7 @@ public class LocationTupleDescriptorCSImpl extends InstanceTupleDescriptorCSImpl
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public <R> R accept(BaseCSVisitor<R> visitor) {
+	public <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
 		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitLocationTupleDescriptorCS(this);
 	}
 

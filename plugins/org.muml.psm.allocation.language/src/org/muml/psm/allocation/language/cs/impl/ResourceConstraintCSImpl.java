@@ -322,7 +322,7 @@ public class ResourceConstraintCSImpl extends ConstraintCSImpl implements Resour
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public <R> R accept(BaseCSVisitor<R> visitor) {
+	public <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
 		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitResourceConstraintCS(this);
 	}
 

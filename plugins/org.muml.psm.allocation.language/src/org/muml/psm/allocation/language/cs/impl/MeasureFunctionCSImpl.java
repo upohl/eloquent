@@ -136,7 +136,7 @@ public class MeasureFunctionCSImpl extends ModelElementCSImpl implements Measure
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public <R> R accept(BaseCSVisitor<R> visitor) {
+	public <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
 		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitMeasureFunctionCS(this);
 	}
 
