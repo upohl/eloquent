@@ -15,6 +15,21 @@ import org.eclipse.jdt.annotation.Nullable;
 import org.eclipse.ocl.xtext.base.cs2as.CS2ASConversion;
 import org.eclipse.ocl.xtext.base.cs2as.Continuation;
 import org.eclipse.ocl.xtext.completeocl.cs2as.CompleteOCLCSPostOrderVisitor;
+import org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS;
+import org.muml.psm.allocation.language.cs.ConstraintCS;
+import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
+import org.muml.psm.allocation.language.cs.InstanceTupleDescriptorCS;
+import org.muml.psm.allocation.language.cs.LocationConstraintCS;
+import org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS;
+import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
+import org.muml.psm.allocation.language.cs.QoSDimensionCS;
+import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
+import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
+import org.muml.psm.allocation.language.cs.ServiceCS;
+import org.muml.psm.allocation.language.cs.SpecificationCS;
+import org.muml.psm.allocation.language.cs.TupleDescriptorCS;
+import org.muml.psm.allocation.language.cs.ValueTupleDescriptorCS;
+import org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElementCS;
 
 /**
  * An AbstractCsPostOrderVisitor provides a default implementation for each
@@ -37,77 +52,77 @@ public abstract class AbstractCsPostOrderVisitor
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitComponentResourceTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull ComponentResourceTupleDescriptorCS csElement) {
+	public @Nullable Continuation<?> visitComponentResourceTupleDescriptorCS(@NonNull ComponentResourceTupleDescriptorCS csElement) {
 		return visitInstanceTupleDescriptorCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ConstraintCS csElement) {
+	public @Nullable Continuation<?> visitConstraintCS(@NonNull ConstraintCS csElement) {
 		return visitNamedElementCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitEvaluatableElementCS(org.muml.psm.allocation.language.cs.@NonNull EvaluatableElementCS csElement) {
+	public @Nullable Continuation<?> visitEvaluatableElementCS(@NonNull EvaluatableElementCS csElement) {
 		return visitModelElementCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitInstanceTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull InstanceTupleDescriptorCS csElement) {
+	public @Nullable Continuation<?> visitInstanceTupleDescriptorCS(@NonNull InstanceTupleDescriptorCS csElement) {
 		return visitTupleDescriptorCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull LocationConstraintCS csElement) {
+	public @Nullable Continuation<?> visitLocationConstraintCS(@NonNull LocationConstraintCS csElement) {
 		return visitConstraintCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitLocationTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull LocationTupleDescriptorCS csElement) {
+	public @Nullable Continuation<?> visitLocationTupleDescriptorCS(@NonNull LocationTupleDescriptorCS csElement) {
 		return visitInstanceTupleDescriptorCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitMeasureFunctionCS(org.muml.psm.allocation.language.cs.@NonNull MeasureFunctionCS csElement) {
+	public @Nullable Continuation<?> visitMeasureFunctionCS(@NonNull MeasureFunctionCS csElement) {
 		return visitModelElementCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitQoSDimensionCS(org.muml.psm.allocation.language.cs.@NonNull QoSDimensionCS csElement) {
+	public @Nullable Continuation<?> visitQoSDimensionCS(@NonNull QoSDimensionCS csElement) {
 		return visitNamedElementCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitRequiredHardwareResourceInstanceConstraintCS(org.muml.psm.allocation.language.cs.@NonNull RequiredHardwareResourceInstanceConstraintCS csElement) {
+	public @Nullable Continuation<?> visitRequiredHardwareResourceInstanceConstraintCS(@NonNull RequiredHardwareResourceInstanceConstraintCS csElement) {
 		return visitConstraintCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitResourceConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ResourceConstraintCS csElement) {
+	public @Nullable Continuation<?> visitResourceConstraintCS(@NonNull ResourceConstraintCS csElement) {
 		return visitConstraintCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitServiceCS(org.muml.psm.allocation.language.cs.@NonNull ServiceCS csElement) {
+	public @Nullable Continuation<?> visitServiceCS(@NonNull ServiceCS csElement) {
 		return visitNamedElementCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitSpecificationCS(org.muml.psm.allocation.language.cs.@NonNull SpecificationCS csElement) {
+	public @Nullable Continuation<?> visitSpecificationCS(@NonNull SpecificationCS csElement) {
 		return visitCompleteOCLDocumentCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull TupleDescriptorCS csElement) {
+	public @Nullable Continuation<?> visitTupleDescriptorCS(@NonNull TupleDescriptorCS csElement) {
 		return visitModelElementCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitValueTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull ValueTupleDescriptorCS csElement) {
+	public @Nullable Continuation<?> visitValueTupleDescriptorCS(@NonNull ValueTupleDescriptorCS csElement) {
 		return visitTupleDescriptorCS(csElement);
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitWeightingComponentResourceTupleElementCS(org.muml.psm.allocation.language.cs.@NonNull WeightingComponentResourceTupleElementCS csElement) {
+	public @Nullable Continuation<?> visitWeightingComponentResourceTupleElementCS(@NonNull WeightingComponentResourceTupleElementCS csElement) {
 		return visitModelElementCS(csElement);
 	}
 }
