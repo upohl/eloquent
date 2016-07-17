@@ -10,4 +10,5 @@
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.eclipse.xtend.core.compiler.batch.Main"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-classpath ${project_classpath:org.muml.psm.allocation.language.xtext} -d xtend-gen src src-gen"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="org.muml.psm.allocation.language.xtext"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-XX:MaxPermSize=256m -Xms40m -Xmx2048m"/>
 </launchConfiguration>
