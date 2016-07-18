@@ -15,7 +15,8 @@ Export-Package: org.muml.psm.allocation.language.as,
  org.muml.psm.allocation.language.cs.util,
  org.muml.psm.allocation.language.oclcontext,
  org.muml.psm.allocation.language.oclcontext.impl,
- org.muml.psm.allocation.language.oclcontext.util
+ org.muml.psm.allocation.language.oclcontext.util,
+ org.muml.psm.allocation.language.xtext.visitor
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.ocl.xtext.base;visibility:=reexport,
