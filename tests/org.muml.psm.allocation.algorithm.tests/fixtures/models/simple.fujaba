@@ -293,7 +293,7 @@
       name="msgtype"/>
   <categories
       xmi:id="_YcXK-_Y8EeOqWs4IacUwuQ"
-      key="org.muml.realtimestatechart.category"
+      key="org.muml.pim.realtimestatechart.category"
       name="realtimestatechart"/>
   <categories
       xmi:id="_EbXUQDFNEeWcy9nhHDkKYg"
