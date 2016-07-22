@@ -14,7 +14,7 @@ class ILP2SATTest {
 	
 	@Test
 	public def testSingleConstraint() {
-		val uri = uri.concat("singleConstraint.lp")
+		val uri = uri + "singleConstraint.lp"
 		val ilp = QVToTransformationRunner.Util.loadURI(uri) as IntegerLinearProgram
 		val ilp2sat = new ILP2SAT()
 		ILPPreorderTraversal.traverse(ilp, ilp2sat)
@@ -39,7 +39,7 @@ class ILP2SATTest {
 	@Test
 	public def testSingleConstraintFloatInt() {
 		// same as above (just a different fixture file)
-		val uri = uri.concat("singleConstraintFloatInt.lp")
+		val uri = uri + "singleConstraintFloatInt.lp"
 		val ilp = QVToTransformationRunner.Util.loadURI(uri) as IntegerLinearProgram
 		val ilp2sat = new ILP2SAT()
 		ILPPreorderTraversal.traverse(ilp, ilp2sat)
@@ -64,7 +64,7 @@ class ILP2SATTest {
 	@Test(expected = typeof(IllegalArgumentException))
 	public def testSingleConstraintFloatUnsupported() {
 		// currently floating point coefficients are unsupported
-		val uri = uri.concat("singleConstraintFloatUnsupported.lp")
+		val uri = uri + "singleConstraintFloatUnsupported.lp"
 		val ilp = QVToTransformationRunner.Util.loadURI(uri) as IntegerLinearProgram
 		val ilp2sat = new ILP2SAT()
 		ILPPreorderTraversal.traverse(ilp, ilp2sat)
@@ -72,7 +72,7 @@ class ILP2SATTest {
 	
 	@Test
 	public def testTwoConstraints() {
-		val uri = uri.concat("twoConstraints.lp")
+		val uri = uri + "twoConstraints.lp"
 		val ilp = QVToTransformationRunner.Util.loadURI(uri) as IntegerLinearProgram
 		val ilp2sat = new ILP2SAT()
 		ILPPreorderTraversal.traverse(ilp, ilp2sat)
@@ -121,7 +121,7 @@ class ILP2SATTest {
 	
 	@Test
 	public def testRHSVariables() {
-		val uri = uri.concat("rhsVariables.lp")
+		val uri = uri + "rhsVariables.lp"
 		val ilp = QVToTransformationRunner.Util.loadURI(uri) as IntegerLinearProgram
 		val ilp2sat = new ILP2SAT()
 		ILPPreorderTraversal.traverse(ilp, ilp2sat)
@@ -152,7 +152,7 @@ class ILP2SATTest {
 	
 	@Test
 	public def testSingleVariable() {
-		val uri = uri.concat("singleVariable.lp")
+		val uri = uri + "singleVariable.lp"
 		val ilp = QVToTransformationRunner.Util.loadURI(uri) as IntegerLinearProgram
 		val ilp2sat = new ILP2SAT()
 		ILPPreorderTraversal.traverse(ilp, ilp2sat)
@@ -170,7 +170,7 @@ class ILP2SATTest {
 	
 	@Test
 	public def testSingleLiteral() {
-		val uri = uri.concat("singleLiteral.lp")
+		val uri = uri + "singleLiteral.lp"
 		val ilp = QVToTransformationRunner.Util.loadURI(uri) as IntegerLinearProgram
 		val ilp2sat = new ILP2SAT()
 		ILPPreorderTraversal.traverse(ilp, ilp2sat)

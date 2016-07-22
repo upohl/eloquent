@@ -42,42 +42,42 @@ class ObjectiveFunctionExpressionEvaluatorTest {
 	def static Collection<Object[]> getTestData() {
 		newArrayList(
 			#[
-				uriPrefix.concat("singleLiteral.lp"),
+				uriPrefix + "singleLiteral.lp",
 				#{"x" -> true, "y" -> false, "z" -> true},
 				2
 			],
 			#[
-				uriPrefix.concat("twoLiterals.lp"),
+				uriPrefix + "twoLiterals.lp",
 				#{"x" -> true, "y" -> false, "z" -> true},
 				42
 			],
 			#[
-				uriPrefix.concat("singleVariable.lp"),
+				uriPrefix + "singleVariable.lp",
 				#{"x" -> true, "y" -> false, "z" -> true},
 				1
 			],
 			#[
-				uriPrefix.concat("singleVariable.lp"),
+				uriPrefix + "singleVariable.lp",
 				#{"x" -> false, "y" -> false, "z" -> true},
 				0
 			],
 			#[
-				uriPrefix.concat("singleVariable.lp"),
+				uriPrefix + "singleVariable.lp",
 				#{"x" -> true, "y" -> false, "z" -> true},
 				1
 			],
 			#[
-				uriPrefix.concat("mix1.lp"),
+				uriPrefix + "mix1.lp",
 				#{"x" -> true, "y" -> true, "z" -> true},
 				6
 			],
 			#[
-				uriPrefix.concat("mix1.lp"),
+				uriPrefix + "mix1.lp",
 				#{"x" -> true, "y" -> false, "z" -> true},
 				2
 			],
 			#[
-				uriPrefix.concat("mix1.lp"),
+				uriPrefix + "mix1.lp",
 				#{"x" -> false, "y" -> false, "z" -> true},
 				1
 			]
