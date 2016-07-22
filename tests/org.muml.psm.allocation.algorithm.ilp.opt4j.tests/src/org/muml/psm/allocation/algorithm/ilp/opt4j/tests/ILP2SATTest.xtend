@@ -14,7 +14,7 @@ class ILP2SATTest {
 	
 	@Test
 	public def testSingleConstraint() {
-		val uri = uri + "singleConstraint.lp"
+		val uri = uri.concat("singleConstraint.lp")
 		val ilp = QVToTransformationRunner.Util.loadURI(uri) as IntegerLinearProgram
 		val ilp2sat = new ILP2SAT()
 		ILPPreorderTraversal.traverse(ilp, ilp2sat)
