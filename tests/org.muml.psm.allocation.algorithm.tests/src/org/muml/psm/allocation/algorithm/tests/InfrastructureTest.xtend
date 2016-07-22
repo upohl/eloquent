@@ -18,7 +18,7 @@ class InfrastructureTest extends QVToTransformationSingleOutExtentTest {
 	@Parameters
 	def static Collection<Object[]> getTestData() {
 		TestDataUtil.createTestData(2,
-				#[uriPrefix + "My.ecore", uriPrefix + "test.qvto", uriPrefix + "My.ecore"],
+				#[(uriPrefix as String) + ("My.ecore" as String), (uriPrefix as String) + ("test.qvto" as String), (uriPrefix as String) + ("My.ecore" as String)],
 				// test fragment uris
 				#[uriPrefix + "NestedEPackage.ecore#//@eSubpackages.0",
 				  uriPrefix + "test.qvto",
