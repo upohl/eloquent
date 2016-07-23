@@ -6,9 +6,10 @@ PSM MUML
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>org.muml.psm.repository</artifactId>
 	<packaging>eclipse-repository</packaging>
-	<parent>
-		<groupId>org.muml.psm</groupId>
-		<artifactId>PlatformSpecificModeling</artifactId>
-		<version>0.5.0-SNAPSHOT</version>
-	</parent>
+	  <parent>
+    <groupId>org.muml.psm</groupId>
+    <artifactId>PlatformSpecificModeling</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>org.muml.psm</groupId>
 </project>
