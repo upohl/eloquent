@@ -23,7 +23,7 @@
 				<configuration>
 					<testSuite>org.muml.psm.allocation.algorithm.tests</testSuite>
 					<testClass>org.muml.psm.allocation.algorithm.tests.AllTestsSuite</testClass>
-					<product>EclipseProductID</product>
+					<product>org.eclipse.platform.ide</product>
 				</configuration>
 			</plugin>
 
