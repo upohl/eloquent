@@ -11,4 +11,23 @@
   <artifactId>org.muml.psm.allocation.algorithm.ilp.tests</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>eclipse-test-plugin</packaging>
+  
+  <build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<testSuite>org.muml.psm.allocation.algorithm.ilp.tests</testSuite>
+					<testClass>org.muml.psm.allocation.algorithm.ilp.tests.Specification2ILPTestSuite</testClass>
+					<product>org.eclipse.platform.ide</product>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+
+	</build>
 </project>
