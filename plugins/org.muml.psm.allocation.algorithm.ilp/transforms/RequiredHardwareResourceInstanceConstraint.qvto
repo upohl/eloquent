@@ -42,7 +42,13 @@ helper RequiredHardwareResourceInstanceConstraintCS::createHwResInstanceConstrai
 	sequences->createHelperVariablesAndConstraints(ilp);
 	while (sequences->notEmpty()) {
 		var cur : Sequence(NamedElement) := sequences->first();
-		var todo : Sequence(Sequence(NamedElement)) := cur->getAssociatedSequences(sequences);
+		// since createConstraintExpression generates an equality ("= 1"),
+		// we must get rid of duplicates (hence, we do the
+		// -> OrderedSet -> Sequence conversion)
+		// (actually, todo could be an OrderedSet(Sequence(NamedElement)),
+		// but the other helpers/queries expect a Sequence...)
+		var todo : Sequence(Sequence(NamedElement)) := cur->getAssociatedSequences(sequences)
+			->asOrderedSet()->asSequence();
 		sequences := sequences->reject(seq | todo->includes(seq));
 		todo->createConstraintExpression(ilp, self)
 	};
