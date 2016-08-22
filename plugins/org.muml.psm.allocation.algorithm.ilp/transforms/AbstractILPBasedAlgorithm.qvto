@@ -2,6 +2,8 @@ import InputHelper;
 import Specification2ILP;
 import SolverConstants;
 
+import org.muml.common._blackbox.SaveXMIBlackbox;
+
 modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
 modeltype core uses core('http://www.muml.org/core/1.0.0');
 modeltype instance uses pim::instance('http://www.muml.org/pim/instance/1.0.0');
@@ -13,6 +15,8 @@ modeltype allocation uses psm::allocation('http://www.muml.org/psm/allocation/1.
 /* Abstract library for ILP-based algorithms */
 library AbstractILPBasedAlgorithm;
 
+configuration property STORE_ILP_MODEL : Boolean;
+
 helper computeAllocation() {
 	var ilpOut : ilptype := ilptype.createEmptyModel().oclAsType(ilptype);
 	var ret : Status := new Specification2ILP(getAllocationSpecification().oclAsType(allocationSpecification),
@@ -22,6 +26,9 @@ helper computeAllocation() {
 	log("ret: " + ret.toString());
 	assert fatal (ret.succeeded()) with log("Specification2ILP transformation failed: " + ret.toString());
 	var ilpModel : IntegerLinearProgram := ilpOut.rootObjects()![IntegerLinearProgram];
+	if (STORE_ILP_MODEL) then {
+		save(ilpModel->asBag(), "ILP Model", "ilp.lp");
+	} endif;
 	createAllocation(ilpModel);
 }
 

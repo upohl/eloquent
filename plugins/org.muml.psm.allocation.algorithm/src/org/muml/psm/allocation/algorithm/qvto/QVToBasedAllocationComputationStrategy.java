@@ -1,6 +1,6 @@
 package org.muml.psm.allocation.algorithm.qvto;
 
-import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -37,11 +37,13 @@ public class QVToBasedAllocationComputationStrategy<T> implements
 	@NonNull
 	public IComputationResult computeAllocation(
 			@NonNull EObject allocationSpecification, @NonNull EObject cic,
-			@NonNull EObject hpic, @Nullable IProgressMonitor progressMonitor) {
+			@NonNull EObject hpic, boolean storeILPModel, @Nullable IProgressMonitor progressMonitor) {
+		Map<String, Object> config = getConfigurationPropertyMap();
+		config.put("STORE_ILP_MODEL", storeILPModel);
 		QVToSingleOutExtentTransformationRunner runner =
 				new QVToSingleOutExtentTransformationRunner(
 						transformationURI,
-						getConfigurationPropertyMap(),
+						config,
 						eObjectToURI(allocationSpecification),
 						eObjectToURI(cic),
 						eObjectToURI(hpic));
@@ -59,7 +61,7 @@ public class QVToBasedAllocationComputationStrategy<T> implements
 	}
 	
 	protected Map<String, Object> getConfigurationPropertyMap() {
-		return Collections.<String, Object>emptyMap();
+		return new HashMap<String, Object>();
 	}
 	
 	@Override

@@ -21,8 +21,11 @@ import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.IWorkbench;
@@ -52,7 +55,8 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
     private AbstractFujabaExportSourcePage targetPage;
     private AllocationComputationStrategySelectionPage strategyPage;
 
-    @Override
+
+	@Override
     public void init(IWorkbench workbench, IStructuredSelection currentSelection) {
         super.init(workbench, currentSelection);
         setWindowTitle(title);
@@ -173,6 +177,7 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
         AllocationComputationStrategyConfigurationPage configPage = new AllocationComputationStrategyConfigurationPage();
         // allocation computation strategy page
         strategyPage = new AllocationComputationStrategySelectionPage("strategy", configPage);
+        strategyPage.setPageComplete(false);
         addPage(strategyPage);
         addPage(configPage);
     }
@@ -181,7 +186,7 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
     public IFujabaExportOperation wizardCreateExportOperation() {
         return new CreateAllocationOperation(editingDomain, (SpecificationCS) allocationSpecificationSourcePage.getSourceElements()[0],
                 (ComponentInstanceConfiguration) cicSourcePage.getSourceElements()[0], (HWPlatformInstanceConfiguration) hpicSourcePage.getSourceElements()[0],
-                targetPage.getSourceElements()[0], strategyPage.getAllocationComputationStrategy());
+                targetPage.getSourceElements()[0], strategyPage.getAllocationComputationStrategy(), strategyPage.isStoreILPModel());
     }
 
     public static class AllocationComputationStrategySelectionPage extends WizardPage {
@@ -192,8 +197,12 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
         private IStructuredSelection structuredSelection;
         private Map<String, IAllocationComputationStrategy<?>> strategyCache;
         private AllocationComputationStrategyConfigurationPage configPage;
+        
 
-        public AllocationComputationStrategySelectionPage(String pageName, AllocationComputationStrategyConfigurationPage configPage) {
+        private boolean storeILPModel = false; 
+        
+
+		public AllocationComputationStrategySelectionPage(String pageName, AllocationComputationStrategyConfigurationPage configPage) {
             super(pageName);
             setTitle(title);
             setDescription(description);
@@ -201,6 +210,10 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
             this.configPage = configPage;
         }
 
+        public boolean isStoreILPModel() {
+			return storeILPModel;
+		}
+        
         @Override
         public void createControl(Composite parent) {
             Composite composite = new Composite(parent, SWT.NONE);
@@ -239,7 +252,21 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
 
             };
             listViewer.addSelectionChangedListener(strategyListener);
+            
+            final Button checkboxStoreILPModel = new Button(composite, SWT.CHECK);
+            checkboxStoreILPModel.setLayoutData(new GridData(SWT.LEFT, SWT.BOTTOM, false, false, 0, 10));
+            checkboxStoreILPModel.setText("Store ILP Model");
+            checkboxStoreILPModel.addSelectionListener(new SelectionAdapter() {
+				@Override
+				public void widgetSelected(SelectionEvent e) {
+					checkboxStoreILPModel.getSelection();
+					storeILPModel = checkboxStoreILPModel.getSelection();
+				}
+            });
+
         }
+        
+        
 
         @Override
         public void setVisible(boolean visible) {
@@ -334,7 +361,6 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
             }
             setInput(configuration);
         }
-
     }
 
 }

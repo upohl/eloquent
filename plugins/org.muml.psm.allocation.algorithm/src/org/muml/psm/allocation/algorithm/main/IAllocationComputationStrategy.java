@@ -21,13 +21,14 @@ public interface IAllocationComputationStrategy<T> {
 	 * @param allocationSpecification 	the allocation specification model element
 	 * @param cic						the component instance configuration model element
 	 * @param hpic						the hardware platform instance configuration model element
+	 * @param storeILPModel				if true, store ilp model for debugging purposes
 	 * @param progressMonitor			progress monitor or <code>null</code>
 	 * @return							the IComputationResult
 	 */
 	@NonNull
 	public IComputationResult computeAllocation(
 			@NonNull EObject allocationSpecification,
-			@NonNull EObject cic, @NonNull EObject hpic,
+			@NonNull EObject cic, @NonNull EObject hpic, boolean storeILPModel,
 			@Nullable IProgressMonitor progressMonitor);
 	
 	/**
