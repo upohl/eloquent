@@ -153,10 +153,11 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 	def protected String generatePivot(GenClass genClass) {
 		val EClass eClass = genClass.ecoreClass
 		'''
-		«IF eClass.abstract»
 		«eClass.qualifiedPivotName» «getPivotName()» = PivotUtil.getPivot(«eClass.qualifiedPivotName».class, csElement);
-		«ELSE»
-		«eClass.qualifiedPivotName» «getPivotName()» = context.refreshModelElement(«eClass.qualifiedPivotName».class, «asGenModel.findGenClass(eClass.pivotName).qualifiedClassifierAccessor», csElement);
+		«IF !eClass.abstract»
+		if («getPivotName()» == null) {
+			«getPivotName()» = context.refreshModelElement(«eClass.qualifiedPivotName».class, «asGenModel.findGenClass(eClass.pivotName).qualifiedClassifierAccessor», csElement);
+		}
 		«ENDIF»
 		'''
 	}
