@@ -12,7 +12,7 @@ testSpecificationName {
 			
 
 	constraint requiredHardwareResourceInstance foo {
-		descriptors (ins, res);
+		descriptors (ins : pim::instance::ComponentInstance, res : hardware::hwresourceinstance::ResourceInstance);
 		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.getInstance('c1')
 		in
 		let e1 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.getECU('e1')

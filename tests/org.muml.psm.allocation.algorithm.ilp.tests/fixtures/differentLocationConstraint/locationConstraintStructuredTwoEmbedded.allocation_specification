@@ -1,6 +1,6 @@
 testSpecificationName {
 	constraint differentLocation foo {
-		descriptors (a, b);
+		descriptors (a : pim::instance::ComponentInstance, b : pim::instance::ComponentInstance);
 		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 		in
 		let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
@@ -9,7 +9,7 @@ testSpecificationName {
 	}
 	
 	constraint differentLocation sc1Embedded {
-		descriptors (first, second);
+		descriptors (first : pim::instance::ComponentInstance, second : pim::instance::ComponentInstance);
 		ocl let sc1 : pim::instance::StructuredComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='sc1').oclAsType(pim::instance::StructuredComponentInstance)
 		in
 		sc1.oclAsType(pim::instance::ComponentInstance)->asSet()->product(sc1.embeddedCIC.componentInstances)

@@ -30,7 +30,7 @@ testSpecificationName {
 			
 
 	constraint differentLocation foo {
-		descriptors (first, second);
+		descriptors (first : pim::instance::ComponentInstance, second : pim::instance::ComponentInstance);
 		ocl self.allocateToDifferentECUs(Set{'c1', 'c2', 'c3'});
 	}
 }

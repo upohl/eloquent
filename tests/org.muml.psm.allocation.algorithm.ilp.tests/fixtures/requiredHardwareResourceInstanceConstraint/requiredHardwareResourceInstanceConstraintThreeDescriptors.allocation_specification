@@ -1,6 +1,6 @@
 testSpecificationName {
 	constraint requiredHardwareResourceInstance foo {
-		descriptors (ins1, res1) , (ins2, res2), (ins3, res3);
+		descriptors (ins1 : pim::instance::ComponentInstance, res1 : hardware::hwresourceinstance::ResourceInstance) , (ins2 : pim::instance::ComponentInstance, res2 : hardware::hwresourceinstance::ResourceInstance), (ins3 : pim::instance::ComponentInstance, res3 : hardware::hwresourceinstance::ResourceInstance);
 		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 		in
 		let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')

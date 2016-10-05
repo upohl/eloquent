@@ -1,6 +1,6 @@
 testSpecificationName {
 	constraint separateLocation foo {
-		descriptors (a, b);
+		descriptors (a : pim::instance::ComponentInstance, b : pim::instance::ComponentInstance);
 		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 		in
 		let c3 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c3')

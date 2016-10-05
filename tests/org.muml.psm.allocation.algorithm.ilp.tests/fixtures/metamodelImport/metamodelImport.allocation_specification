@@ -2,9 +2,9 @@ testSpecificationName {
 	import 'http://www.muml.org/psm/allocation/algorithm/ilp/tests/extension/1.0.0'
 	
 	constraint resource test {
-		lhs memNeeded;
-		rhs memProvided;
-		descriptors (first, second);
+		weight memNeeded;
+		bound memProvided;
+		descriptors (first : pim::instance::ComponentInstance, second : hardware::hwresourceinstance::ResourceInstance);
 		ocl let componentSet : Set(pim::instance::ComponentInstance) = self.componentInstanceConfiguration.componentInstances->select(extensions->exists(oclIsKindOf(extension::MemoryExtension)))
 		in
 		let e1 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e1')

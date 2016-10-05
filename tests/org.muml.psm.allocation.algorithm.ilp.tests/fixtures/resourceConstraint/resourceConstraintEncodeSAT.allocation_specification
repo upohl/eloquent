@@ -6,9 +6,9 @@ testSpecificationName {
 	-- (note: the model also has a third resource e3)
 
 	constraint resource clause1 {
-		lhs coefficient;
-		rhs upperBound;
-		descriptors (ins, res);
+		weight coefficient;
+		bound upperBound;
+		descriptors (ins : pim::instance::ComponentInstance, res : hardware::hwresourceinstance::ResourceInstance);
 		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 		in
 		let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
@@ -23,9 +23,9 @@ testSpecificationName {
 	}
 
 	constraint resource clause2 {
-		lhs coefficient;
-		rhs upperBound;
-		descriptors (ins, res);
+		weight coefficient;
+		bound upperBound;
+		descriptors (ins : pim::instance::ComponentInstance, res : hardware::hwresourceinstance::ResourceInstance);
 		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 		in
 		let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')

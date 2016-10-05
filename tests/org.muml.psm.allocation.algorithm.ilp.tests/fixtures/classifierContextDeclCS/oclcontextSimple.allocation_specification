@@ -18,7 +18,7 @@ testSpecificationName {
 			
 
 	constraint requiredHardwareResourceInstance foo {
-		descriptors (first, second);
+		descriptors (first : pim::instance::ComponentInstance, second : pim::instance::ComponentInstance);
 		ocl self.allocateToOneECU('c1', Set{'e1', 'e2'});
 	}
 }

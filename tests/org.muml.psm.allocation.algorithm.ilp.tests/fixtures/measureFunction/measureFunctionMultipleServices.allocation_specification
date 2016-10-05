@@ -1,8 +1,8 @@
 testSpecificationName {
     service foo {
     	qos a {
-    		value coefficient;
-    		descriptors (foo, bar);
+    		weight coefficient;
+    		descriptors (foo : pim::instance::ComponentInstance, bar : hardware::hwresourceinstance::ResourceInstance);
     		ocl	let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 			in
 			let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
@@ -19,8 +19,8 @@ testSpecificationName {
     	}
     	
     	qos b {
-    		value val;
-    		descriptors (x, y);
+    		weight val;
+    		descriptors (x : pim::instance::ComponentInstance, y : hardware::hwresourceinstance::ResourceInstance);
     		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 			in
 			let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
@@ -40,8 +40,8 @@ testSpecificationName {
     
     service bar {
     	qos x {
-    		value val;
-    		descriptors (x, y);
+    		weight val;
+    		descriptors (x : pim::instance::ComponentInstance, y : hardware::hwresourceinstance::ResourceInstance);
     		ocl let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
 			in
 			let e2 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
