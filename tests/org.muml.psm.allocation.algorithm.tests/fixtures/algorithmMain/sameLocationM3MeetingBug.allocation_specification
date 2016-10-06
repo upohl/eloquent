@@ -1,7 +1,7 @@
 testSpecificationName {
 
 	constraint sameLocation bar {
-		descriptors (foo, bar);
+		descriptors (foo : pim::instance::ComponentInstance, bar : pim::instance::ComponentInstance);
 		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 		in
 		let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
@@ -15,7 +15,7 @@ testSpecificationName {
 	-- only needed to get a reproducable testcase
 	-- (otherwise it might be dependent on the used ILP solver)
 	constraint requiredHardwareResourceInstance reproducableTestCase {
-		descriptors (ins, res);
+		descriptors (ins : pim::instance::ComponentInstance, res : hardware::hwresourceinstance::ResourceInstance);
 		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
 		in
 		let e2 : hardware::hwresourceinstance::ResourceInstance = self.hardwarePlatformInstanceConfiguration.resources->any(name='e2')
