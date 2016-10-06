@@ -157,7 +157,11 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 		«eClass.qualifiedPivotName» «getPivotName()» = PivotUtil.getPivot(«eClass.qualifiedPivotName».class, csElement);
 		«IF !eClass.abstract»
 		if («getPivotName()» == null) {
+			«IF eClass.EAllSuperTypes.exists[superClass | superClass.name.equals("NamedElementCS")]»
+			«getPivotName()» = refreshNamedElement(«eClass.qualifiedPivotName».class, «asGenModel.findGenClass(eClass.pivotName).qualifiedClassifierAccessor», csElement);
+			«ELSE»
 			«getPivotName()» = context.refreshModelElement(«eClass.qualifiedPivotName».class, «asGenModel.findGenClass(eClass.pivotName).qualifiedClassifierAccessor», csElement);
+			«ENDIF»
 		}
 		«ENDIF»
 		'''
