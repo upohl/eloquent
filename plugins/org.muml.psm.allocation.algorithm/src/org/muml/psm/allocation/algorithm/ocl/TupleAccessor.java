@@ -4,11 +4,13 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation.Kind;
 import org.eclipse.ocl.pivot.TupleType;
 import org.eclipse.ocl.pivot.ids.IdResolver;
 import org.eclipse.ocl.pivot.ids.TuplePartId;
+import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal;
 import org.eclipse.ocl.pivot.values.CollectionValue;
 import org.eclipse.ocl.pivot.values.TupleValue;
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
@@ -56,20 +58,22 @@ public class TupleAccessor {
 	}
 	
 	private static Object getPart(TupleValue tupleValue, String namedPart, Object object, boolean unboxValue) {
+		// XXX: get rid of this EObject cast again
+		EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory((EObject) object);
 		TupleType tupleType = null;
 		if (object instanceof LocationConstraintCS) {
-			tupleType = TypesUtil.createLocationConstraintTupleType((LocationConstraintCS) object);
+			tupleType = TypesUtil.createLocationConstraintTupleType(envFactory, (LocationConstraintCS) object);
 		} else if (object instanceof RequiredHardwareResourceInstanceConstraintCS) {
-			tupleType = TypesUtil.createReqHWResInstanceConstraintTupleType((RequiredHardwareResourceInstanceConstraintCS) object);
+			tupleType = TypesUtil.createReqHWResInstanceConstraintTupleType(envFactory, (RequiredHardwareResourceInstanceConstraintCS) object);
 		} else if (object instanceof ResourceConstraintCS) {
 			// outer tuple type has exactly 2 parts
 			if (tupleValue.getTypeId().getPartIds().length == 2) {
-				tupleType = TypesUtil.createResourceConstraintOuterTupleType((ResourceConstraintCS) object);
+				tupleType = TypesUtil.createResourceConstraintOuterTupleType(envFactory, (ResourceConstraintCS) object);
 			} else {
-				tupleType = TypesUtil.createResourceConstraintInnerTupleType((ResourceConstraintCS) object);
+				tupleType = TypesUtil.createResourceConstraintInnerTupleType(envFactory, (ResourceConstraintCS) object);
 			}
 		} else if (object instanceof QoSDimensionCS) {
-			tupleType = TypesUtil.createQoSDimensionTupleType((QoSDimensionCS) object);
+			tupleType = TypesUtil.createQoSDimensionTupleType(envFactory, (QoSDimensionCS) object);
 		} else {
 			throw new IllegalArgumentException(
 					String.format(unexpectedObject, object));
