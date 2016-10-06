@@ -5,6 +5,11 @@
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
     <details key="documentation" value="This package describes the abstract syntax of the&#xA;allocation specification language."/>
   </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="SpecificationCS" eSuperTypes="../../org.eclipse.ocl.xtext.completeocl/model/CompleteOCLCS.ecore#//CompleteOCLDocumentCS ../../org.muml.core/model/core.ecore#//ExtendableElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class represents the complete allocation specification."/>
@@ -46,40 +51,6 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WeightingComponentResourceTupleElementCS"
-      abstract="true" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This class represents an element that attaches a weighting to the allocation of&#xA;component instances to hardware resources. Examples for a &quot;weighting&quot; are&#xA;memory consumption or communication latency."/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tupleDescriptors" lowerBound="1"
-        upperBound="-1" eType="#//ComponentResourceTupleDescriptorCS" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A set of component resource tuple descriptors."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="weighting" lowerBound="1"
-        eType="#//ValueTupleDescriptorCS" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Represents the tuple descriptor for the weighting of the component instances&#xA;to hardware resources allocation."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ServiceCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This class represents a service. A service represents a particular function&#xA;of the system."/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dimensions" upperBound="-1"
-        eType="#//QoSDimensionCS" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="This containment contains all quality of service dimensions which&#xA;belong to this service."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QoSDimensionCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS #//EvaluatableElementCS #//WeightingComponentResourceTupleElementCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This class represents a quality of service dimension. The metric of the&#xA;quality of service dimension is specified via the inherited &quot;expression&quot;&#xA;reference"/>
-    </eAnnotations>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConstraintCS" abstract="true" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS #//EvaluatableElementCS">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Abstract base class for constraints."/>
@@ -96,8 +67,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class either represents a SAME_LOCATION or DIFFERENT_LOCATION&#xA;constraint. A constraint of the type SAME_LOCATION specifies that a set of&#xA;component instances have to be allocated to the same hardware resource&#xA;instance. The DIFFERENT_LOCATION type constraint is the opposite&#xA;of the SAME_LOCATION type."/>
     </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="exactlyOnePair"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="exactlyOnePair" value="self.tupleDescriptor.typedPairs->size() = 1"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tupleDescriptor" lowerBound="1"
-        eType="#//LocationTupleDescriptorCS" containment="true">
+        eType="#//TupleDescriptorCS" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A set of location tuple descriptors."/>
       </eAnnotations>
@@ -108,12 +85,12 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResourceConstraintCS" eSuperTypes="#//ConstraintCS #//WeightingComponentResourceTupleElementCS">
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceConstraintCS" eSuperTypes="#//ConstraintCS">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class represents a &quot;resource&quot; constraint, which can be used&#xA;to specify resource limits (like the maximum amount of available memory)&#xA;for a hardware resource instance."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rhs" lowerBound="1" eType="#//ValueTupleDescriptorCS"
-        containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tupleDescriptor" lowerBound="1"
+        eType="#//BoundWeightTupleDescriptorCS" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Represents the tuple descriptor for the right-hand side of the inequality."/>
       </eAnnotations>
@@ -124,62 +101,30 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class represents a &quot;required hardware resource instance&quot; constraint&#xA;which can be used to limit the number of potential hardware resource&#xA;instances for a specific component instance."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tupleDescriptors" lowerBound="1"
-        upperBound="-1" eType="#//ComponentResourceTupleDescriptorCS" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tupleDescriptor" lowerBound="1"
+        eType="#//TupleDescriptorCS" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A set of component resource tuple descriptors."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TupleDescriptorCS" abstract="true" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Represents which named part of a tuple in the set of an evaluated&#xA;(OCL) expression belongs to the component instance and which to&#xA;the hardware resource instance (or component instances)."/>
-    </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="TupleDescriptorCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typedPairs" lowerBound="1"
+        upperBound="-1" eType="#//TypedPairCS" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InstanceTupleDescriptorCS" abstract="true"
-      eSuperTypes="#//TupleDescriptorCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Can be subclassed by tuple descriptor classes where one named part&#xA;describes a component instance."/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instance" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Name of the named part which represents the component instance."/>
-      </eAnnotations>
-    </eStructuralFeatures>
+  <eClassifiers xsi:type="ecore:EClass" name="WeightTupleDescriptorCS" eSuperTypes="#//TupleDescriptorCS">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weight" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LocationTupleDescriptorCS" eSuperTypes="#//InstanceTupleDescriptorCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Describes the two named parts of a tuple of a SAME_LOCATION or&#xA;DIFFERENT_LOCATION constraint."/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="secondInstance" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Name of the named part, which represents the other component instance."/>
-      </eAnnotations>
-    </eStructuralFeatures>
+  <eClassifiers xsi:type="ecore:EClass" name="BoundWeightTupleDescriptorCS" eSuperTypes="#//WeightTupleDescriptorCS">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bound" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ComponentResourceTupleDescriptorCS"
-      eSuperTypes="#//InstanceTupleDescriptorCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Describes two of the potentially multiple named parts of a tuple of a&#xA;RESOURCE or REQUIRED_HWRESINSTANCE constraint."/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hwresinstance" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Name of the named part which represents hardware resource instance."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ValueTupleDescriptorCS" eSuperTypes="#//TupleDescriptorCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Describes a named part of tuple which represents a calculated value."/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Name of the named part which represents a calculated value."/>
-      </eAnnotations>
-    </eStructuralFeatures>
+  <eClassifiers xsi:type="ecore:EClass" name="TypedNamedPartCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//TypedElementCS"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TypedPairCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="first" lowerBound="1" eType="#//TypedNamedPartCS"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="second" lowerBound="1"
+        eType="#//TypedNamedPartCS" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MeasureFunctionCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -198,5 +143,23 @@
     </eAnnotations>
     <eLiterals name="MAX"/>
     <eLiterals name="MIN" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This class represents a service. A service represents a particular function&#xA;of the system."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dimensions" upperBound="-1"
+        eType="#//QoSDimensionCS" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This containment contains all quality of service dimensions which&#xA;belong to this service."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QoSDimensionCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS #//EvaluatableElementCS">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This class represents a quality of service dimension. The metric of the&#xA;quality of service dimension is specified via the inherited &quot;expression&quot;&#xA;reference"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tupleDescriptor" lowerBound="1"
+        eType="#//WeightTupleDescriptorCS" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -5,14 +5,21 @@ package org.muml.psm.allocation.language.cs.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.jdt.annotation.NonNull;
+
 import org.eclipse.ocl.xtext.basecs.impl.ModelElementCSImpl;
+
 import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
+
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
 import org.muml.psm.allocation.language.cs.ServiceCS;
+
 import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 
 /**

@@ -31,24 +31,6 @@ public interface AsFactory extends EFactory {
 	Specification createSpecification();
 
 	/**
-	 * Returns a new object of class '<em>Service</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Service</em>'.
-	 * @generated
-	 */
-	Service createService();
-
-	/**
-	 * Returns a new object of class '<em>Qo SDimension</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Qo SDimension</em>'.
-	 * @generated
-	 */
-	QoSDimension createQoSDimension();
-
-	/**
 	 * Returns a new object of class '<em>Location Constraint</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,31 +58,49 @@ public interface AsFactory extends EFactory {
 	RequiredHardwareResourceInstanceConstraint createRequiredHardwareResourceInstanceConstraint();
 
 	/**
-	 * Returns a new object of class '<em>Location Tuple Descriptor</em>'.
+	 * Returns a new object of class '<em>Tuple Descriptor</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Location Tuple Descriptor</em>'.
+	 * @return a new object of class '<em>Tuple Descriptor</em>'.
 	 * @generated
 	 */
-	LocationTupleDescriptor createLocationTupleDescriptor();
+	TupleDescriptor createTupleDescriptor();
 
 	/**
-	 * Returns a new object of class '<em>Component Resource Tuple Descriptor</em>'.
+	 * Returns a new object of class '<em>Weight Tuple Descriptor</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Component Resource Tuple Descriptor</em>'.
+	 * @return a new object of class '<em>Weight Tuple Descriptor</em>'.
 	 * @generated
 	 */
-	ComponentResourceTupleDescriptor createComponentResourceTupleDescriptor();
+	WeightTupleDescriptor createWeightTupleDescriptor();
 
 	/**
-	 * Returns a new object of class '<em>Value Tuple Descriptor</em>'.
+	 * Returns a new object of class '<em>Bound Weight Tuple Descriptor</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Value Tuple Descriptor</em>'.
+	 * @return a new object of class '<em>Bound Weight Tuple Descriptor</em>'.
 	 * @generated
 	 */
-	ValueTupleDescriptor createValueTupleDescriptor();
+	BoundWeightTupleDescriptor createBoundWeightTupleDescriptor();
+
+	/**
+	 * Returns a new object of class '<em>Typed Named Part</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Typed Named Part</em>'.
+	 * @generated
+	 */
+	TypedNamedPart createTypedNamedPart();
+
+	/**
+	 * Returns a new object of class '<em>Typed Pair</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Typed Pair</em>'.
+	 * @generated
+	 */
+	TypedPair createTypedPair();
 
 	/**
 	 * Returns a new object of class '<em>Measure Function</em>'.
@@ -110,6 +110,24 @@ public interface AsFactory extends EFactory {
 	 * @generated
 	 */
 	MeasureFunction createMeasureFunction();
+
+	/**
+	 * Returns a new object of class '<em>Service</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Service</em>'.
+	 * @generated
+	 */
+	Service createService();
+
+	/**
+	 * Returns a new object of class '<em>Qo SDimension</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Qo SDimension</em>'.
+	 * @generated
+	 */
+	QoSDimension createQoSDimension();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -4,15 +4,21 @@ package org.muml.psm.allocation.language.cs.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.jdt.annotation.NonNull;
+
 import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
+
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintTypes;
-import org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS;
+import org.muml.psm.allocation.language.cs.TupleDescriptorCS;
+
 import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 
 /**
@@ -38,7 +44,7 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	 * @generated
 	 * @ordered
 	 */
-	protected LocationTupleDescriptorCS tupleDescriptor;
+	protected TupleDescriptorCS tupleDescriptor;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -84,7 +90,7 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocationTupleDescriptorCS getTupleDescriptor() {
+	public TupleDescriptorCS getTupleDescriptor() {
 		return tupleDescriptor;
 	}
 
@@ -93,8 +99,8 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTupleDescriptor(LocationTupleDescriptorCS newTupleDescriptor, NotificationChain msgs) {
-		LocationTupleDescriptorCS oldTupleDescriptor = tupleDescriptor;
+	public NotificationChain basicSetTupleDescriptor(TupleDescriptorCS newTupleDescriptor, NotificationChain msgs) {
+		TupleDescriptorCS oldTupleDescriptor = tupleDescriptor;
 		tupleDescriptor = newTupleDescriptor;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR, oldTupleDescriptor, newTupleDescriptor);
@@ -108,7 +114,7 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTupleDescriptor(LocationTupleDescriptorCS newTupleDescriptor) {
+	public void setTupleDescriptor(TupleDescriptorCS newTupleDescriptor) {
 		if (newTupleDescriptor != tupleDescriptor) {
 			NotificationChain msgs = null;
 			if (tupleDescriptor != null)
@@ -148,7 +154,6 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String toString() {
 		return super.toString();
 	}
@@ -192,7 +197,7 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
-				setTupleDescriptor((LocationTupleDescriptorCS)newValue);
+				setTupleDescriptor((TupleDescriptorCS)newValue);
 				return;
 			case CsPackage.LOCATION_CONSTRAINT_CS__TYPE:
 				setType((LocationConstraintTypes)newValue);
@@ -210,7 +215,7 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
-				setTupleDescriptor((LocationTupleDescriptorCS)null);
+				setTupleDescriptor((TupleDescriptorCS)null);
 				return;
 			case CsPackage.LOCATION_CONSTRAINT_CS__TYPE:
 				setType(TYPE_EDEFAULT);

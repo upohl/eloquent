@@ -6,25 +6,36 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.jdt.annotation.NonNull;
+
 import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
+
 import org.eclipse.ocl.xtext.completeoclcs.impl.CompleteOCLDocumentCSImpl;
+
 import org.muml.core.CorePackage;
 import org.muml.core.ExtendableElement;
 import org.muml.core.Extension;
+
 import org.muml.psm.allocation.language.cs.ConstraintCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.Goal;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
 import org.muml.psm.allocation.language.cs.ServiceCS;
 import org.muml.psm.allocation.language.cs.SpecificationCS;
+
 import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 
 /**
@@ -229,7 +240,6 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String toString() {
 		return super.toString();
 	}
@@ -393,6 +403,11 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == EObject.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
 		if (baseClass == ExtendableElement.class) {
 			switch (derivedFeatureID) {
 				case CsPackage.SPECIFICATION_CS__EXTENSIONS: return CorePackage.EXTENDABLE_ELEMENT__EXTENSIONS;
@@ -409,6 +424,11 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == EObject.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
 		if (baseClass == ExtendableElement.class) {
 			switch (baseFeatureID) {
 				case CorePackage.EXTENDABLE_ELEMENT__EXTENSIONS: return CsPackage.SPECIFICATION_CS__EXTENSIONS;

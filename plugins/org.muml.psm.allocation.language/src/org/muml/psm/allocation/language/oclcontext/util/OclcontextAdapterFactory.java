@@ -4,12 +4,14 @@ package org.muml.psm.allocation.language.oclcontext.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.jdt.annotation.Nullable;
+
 import org.muml.psm.allocation.language.oclcontext.*;
-import org.muml.psm.allocation.language.oclcontext.OCLContext;
-import org.muml.psm.allocation.language.oclcontext.OclcontextPackage;
 
 /**
  * <!-- begin-user-doc -->

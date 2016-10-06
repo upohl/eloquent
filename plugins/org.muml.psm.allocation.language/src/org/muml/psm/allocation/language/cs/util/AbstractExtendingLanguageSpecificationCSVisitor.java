@@ -33,8 +33,8 @@ public abstract class AbstractExtendingLanguageSpecificationCSVisitor<R, C>
 	}	
 
 	@Override
-	public R visitComponentResourceTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull ComponentResourceTupleDescriptorCS object) {
-		return visitInstanceTupleDescriptorCS(object);
+	public R visitBoundWeightTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull BoundWeightTupleDescriptorCS object) {
+		return visitWeightTupleDescriptorCS(object);
 	}
 
 	@Override
@@ -48,18 +48,8 @@ public abstract class AbstractExtendingLanguageSpecificationCSVisitor<R, C>
 	}
 
 	@Override
-	public R visitInstanceTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull InstanceTupleDescriptorCS object) {
-		return visitTupleDescriptorCS(object);
-	}
-
-	@Override
 	public R visitLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull LocationConstraintCS object) {
 		return visitConstraintCS(object);
-	}
-
-	@Override
-	public R visitLocationTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull LocationTupleDescriptorCS object) {
-		return visitInstanceTupleDescriptorCS(object);
 	}
 
 	@Override
@@ -98,12 +88,17 @@ public abstract class AbstractExtendingLanguageSpecificationCSVisitor<R, C>
 	}
 
 	@Override
-	public R visitValueTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull ValueTupleDescriptorCS object) {
-		return visitTupleDescriptorCS(object);
+	public R visitTypedNamedPartCS(org.muml.psm.allocation.language.cs.@NonNull TypedNamedPartCS object) {
+		return visitTypedElementCS(object);
 	}
 
 	@Override
-	public R visitWeightingComponentResourceTupleElementCS(org.muml.psm.allocation.language.cs.@NonNull WeightingComponentResourceTupleElementCS object) {
+	public R visitTypedPairCS(org.muml.psm.allocation.language.cs.@NonNull TypedPairCS object) {
 		return visitModelElementCS(object);
+	}
+
+	@Override
+	public R visitWeightTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull WeightTupleDescriptorCS object) {
+		return visitTupleDescriptorCS(object);
 	}
 }

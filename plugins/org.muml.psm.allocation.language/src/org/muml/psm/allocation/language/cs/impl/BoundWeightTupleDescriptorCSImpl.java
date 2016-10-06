@@ -3,54 +3,60 @@
 package org.muml.psm.allocation.language.cs.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.jdt.annotation.NonNull;
+
 import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
+
+import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
-import org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS;
+
 import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Location Tuple Descriptor CS</b></em>'.
+ * An implementation of the model object '<em><b>Bound Weight Tuple Descriptor CS</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.muml.psm.allocation.language.cs.impl.LocationTupleDescriptorCSImpl#getSecondInstance <em>Second Instance</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.impl.BoundWeightTupleDescriptorCSImpl#getBound <em>Bound</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class LocationTupleDescriptorCSImpl extends InstanceTupleDescriptorCSImpl implements LocationTupleDescriptorCS {
+public class BoundWeightTupleDescriptorCSImpl extends WeightTupleDescriptorCSImpl implements BoundWeightTupleDescriptorCS {
 	/**
-	 * The default value of the '{@link #getSecondInstance() <em>Second Instance</em>}' attribute.
+	 * The default value of the '{@link #getBound() <em>Bound</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSecondInstance()
+	 * @see #getBound()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SECOND_INSTANCE_EDEFAULT = null;
+	protected static final String BOUND_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getSecondInstance() <em>Second Instance</em>}' attribute.
+	 * The cached value of the '{@link #getBound() <em>Bound</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSecondInstance()
+	 * @see #getBound()
 	 * @generated
 	 * @ordered
 	 */
-	protected String secondInstance = SECOND_INSTANCE_EDEFAULT;
+	protected String bound = BOUND_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LocationTupleDescriptorCSImpl() {
+	protected BoundWeightTupleDescriptorCSImpl() {
 		super();
 	}
 
@@ -61,7 +67,7 @@ public class LocationTupleDescriptorCSImpl extends InstanceTupleDescriptorCSImpl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CsPackage.Literals.LOCATION_TUPLE_DESCRIPTOR_CS;
+		return CsPackage.Literals.BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS;
 	}
 
 	/**
@@ -69,8 +75,8 @@ public class LocationTupleDescriptorCSImpl extends InstanceTupleDescriptorCSImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSecondInstance() {
-		return secondInstance;
+	public String getBound() {
+		return bound;
 	}
 
 	/**
@@ -78,11 +84,11 @@ public class LocationTupleDescriptorCSImpl extends InstanceTupleDescriptorCSImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSecondInstance(String newSecondInstance) {
-		String oldSecondInstance = secondInstance;
-		secondInstance = newSecondInstance;
+	public void setBound(String newBound) {
+		String oldBound = bound;
+		bound = newBound;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.LOCATION_TUPLE_DESCRIPTOR_CS__SECOND_INSTANCE, oldSecondInstance, secondInstance));
+			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__BOUND, oldBound, bound));
 	}
 
 	/**
@@ -90,7 +96,6 @@ public class LocationTupleDescriptorCSImpl extends InstanceTupleDescriptorCSImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String toString() {
 		return super.toString();
 	}
@@ -103,8 +108,8 @@ public class LocationTupleDescriptorCSImpl extends InstanceTupleDescriptorCSImpl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CsPackage.LOCATION_TUPLE_DESCRIPTOR_CS__SECOND_INSTANCE:
-				return getSecondInstance();
+			case CsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__BOUND:
+				return getBound();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -117,8 +122,8 @@ public class LocationTupleDescriptorCSImpl extends InstanceTupleDescriptorCSImpl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CsPackage.LOCATION_TUPLE_DESCRIPTOR_CS__SECOND_INSTANCE:
-				setSecondInstance((String)newValue);
+			case CsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__BOUND:
+				setBound((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -132,8 +137,8 @@ public class LocationTupleDescriptorCSImpl extends InstanceTupleDescriptorCSImpl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CsPackage.LOCATION_TUPLE_DESCRIPTOR_CS__SECOND_INSTANCE:
-				setSecondInstance(SECOND_INSTANCE_EDEFAULT);
+			case CsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__BOUND:
+				setBound(BOUND_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -147,8 +152,8 @@ public class LocationTupleDescriptorCSImpl extends InstanceTupleDescriptorCSImpl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CsPackage.LOCATION_TUPLE_DESCRIPTOR_CS__SECOND_INSTANCE:
-				return SECOND_INSTANCE_EDEFAULT == null ? secondInstance != null : !SECOND_INSTANCE_EDEFAULT.equals(secondInstance);
+			case CsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__BOUND:
+				return BOUND_EDEFAULT == null ? bound != null : !BOUND_EDEFAULT.equals(bound);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -160,7 +165,7 @@ public class LocationTupleDescriptorCSImpl extends InstanceTupleDescriptorCSImpl
 	@SuppressWarnings("unchecked")
 	@Override
 	public <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
-		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitLocationTupleDescriptorCS(this);
+		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitBoundWeightTupleDescriptorCS(this);
 	}
 
-} //LocationTupleDescriptorCSImpl
+} //BoundWeightTupleDescriptorCSImpl

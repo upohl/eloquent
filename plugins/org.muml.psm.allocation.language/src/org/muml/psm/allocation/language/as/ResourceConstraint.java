@@ -18,37 +18,37 @@ package org.muml.psm.allocation.language.as;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.muml.psm.allocation.language.as.ResourceConstraint#getRhs <em>Rhs</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.as.ResourceConstraint#getTupleDescriptor <em>Tuple Descriptor</em>}</li>
  * </ul>
  *
  * @see org.muml.psm.allocation.language.as.AsPackage#getResourceConstraint()
  * @model
  * @generated
  */
-public interface ResourceConstraint extends Constraint, WeightingComponentResourceTupleElement {
+public interface ResourceConstraint extends Constraint {
 	/**
-	 * Returns the value of the '<em><b>Rhs</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Tuple Descriptor</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Represents the tuple descriptor for the right-hand side of the inequality.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Rhs</em>' containment reference.
-	 * @see #setRhs(ValueTupleDescriptor)
-	 * @see org.muml.psm.allocation.language.as.AsPackage#getResourceConstraint_Rhs()
+	 * @return the value of the '<em>Tuple Descriptor</em>' containment reference.
+	 * @see #setTupleDescriptor(BoundWeightTupleDescriptor)
+	 * @see org.muml.psm.allocation.language.as.AsPackage#getResourceConstraint_TupleDescriptor()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	ValueTupleDescriptor getRhs();
+	BoundWeightTupleDescriptor getTupleDescriptor();
 
 	/**
-	 * Sets the value of the '{@link org.muml.psm.allocation.language.as.ResourceConstraint#getRhs <em>Rhs</em>}' containment reference.
+	 * Sets the value of the '{@link org.muml.psm.allocation.language.as.ResourceConstraint#getTupleDescriptor <em>Tuple Descriptor</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rhs</em>' containment reference.
-	 * @see #getRhs()
+	 * @param value the new value of the '<em>Tuple Descriptor</em>' containment reference.
+	 * @see #getTupleDescriptor()
 	 * @generated
 	 */
-	void setRhs(ValueTupleDescriptor value);
+	void setTupleDescriptor(BoundWeightTupleDescriptor value);
 
 } // ResourceConstraint

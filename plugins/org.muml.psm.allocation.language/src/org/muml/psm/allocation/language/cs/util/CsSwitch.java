@@ -4,36 +4,29 @@ package org.muml.psm.allocation.language.cs.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.util.Switch;
+
 import org.eclipse.jdt.annotation.Nullable;
+
 import org.eclipse.ocl.pivot.utilities.Nameable;
 import org.eclipse.ocl.pivot.utilities.Pivotable;
+
 import org.eclipse.ocl.xtext.basecs.ElementCS;
 import org.eclipse.ocl.xtext.basecs.ModelElementCS;
 import org.eclipse.ocl.xtext.basecs.NamedElementCS;
 import org.eclipse.ocl.xtext.basecs.NamespaceCS;
 import org.eclipse.ocl.xtext.basecs.PivotableElementCS;
 import org.eclipse.ocl.xtext.basecs.RootCS;
+import org.eclipse.ocl.xtext.basecs.TypedElementCS;
+
 import org.eclipse.ocl.xtext.basecs.util.VisitableCS;
+
 import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLDocumentCS;
+
 import org.muml.core.ExtendableElement;
+
 import org.muml.psm.allocation.language.cs.*;
-import org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS;
-import org.muml.psm.allocation.language.cs.ConstraintCS;
-import org.muml.psm.allocation.language.cs.CsPackage;
-import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
-import org.muml.psm.allocation.language.cs.InstanceTupleDescriptorCS;
-import org.muml.psm.allocation.language.cs.LocationConstraintCS;
-import org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS;
-import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
-import org.muml.psm.allocation.language.cs.QoSDimensionCS;
-import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
-import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
-import org.muml.psm.allocation.language.cs.ServiceCS;
-import org.muml.psm.allocation.language.cs.SpecificationCS;
-import org.muml.psm.allocation.language.cs.TupleDescriptorCS;
-import org.muml.psm.allocation.language.cs.ValueTupleDescriptorCS;
-import org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElementCS;
 
 /**
  * <!-- begin-user-doc -->
@@ -120,45 +113,6 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS: {
-				WeightingComponentResourceTupleElementCS weightingComponentResourceTupleElementCS = (WeightingComponentResourceTupleElementCS)theEObject;
-				T result = caseWeightingComponentResourceTupleElementCS(weightingComponentResourceTupleElementCS);
-				if (result == null) result = caseModelElementCS(weightingComponentResourceTupleElementCS);
-				if (result == null) result = casePivotableElementCS(weightingComponentResourceTupleElementCS);
-				if (result == null) result = caseElementCS(weightingComponentResourceTupleElementCS);
-				if (result == null) result = casePivotable(weightingComponentResourceTupleElementCS);
-				if (result == null) result = caseVisitableCS(weightingComponentResourceTupleElementCS);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CsPackage.SERVICE_CS: {
-				ServiceCS serviceCS = (ServiceCS)theEObject;
-				T result = caseServiceCS(serviceCS);
-				if (result == null) result = caseNamedElementCS(serviceCS);
-				if (result == null) result = caseModelElementCS(serviceCS);
-				if (result == null) result = caseNameable(serviceCS);
-				if (result == null) result = casePivotableElementCS(serviceCS);
-				if (result == null) result = caseElementCS(serviceCS);
-				if (result == null) result = casePivotable(serviceCS);
-				if (result == null) result = caseVisitableCS(serviceCS);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CsPackage.QO_SDIMENSION_CS: {
-				QoSDimensionCS qoSDimensionCS = (QoSDimensionCS)theEObject;
-				T result = caseQoSDimensionCS(qoSDimensionCS);
-				if (result == null) result = caseNamedElementCS(qoSDimensionCS);
-				if (result == null) result = caseEvaluatableElementCS(qoSDimensionCS);
-				if (result == null) result = caseWeightingComponentResourceTupleElementCS(qoSDimensionCS);
-				if (result == null) result = caseModelElementCS(qoSDimensionCS);
-				if (result == null) result = caseNameable(qoSDimensionCS);
-				if (result == null) result = casePivotableElementCS(qoSDimensionCS);
-				if (result == null) result = caseElementCS(qoSDimensionCS);
-				if (result == null) result = casePivotable(qoSDimensionCS);
-				if (result == null) result = caseVisitableCS(qoSDimensionCS);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case CsPackage.CONSTRAINT_CS: {
 				ConstraintCS constraintCS = (ConstraintCS)theEObject;
 				T result = caseConstraintCS(constraintCS);
@@ -192,7 +146,6 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 				ResourceConstraintCS resourceConstraintCS = (ResourceConstraintCS)theEObject;
 				T result = caseResourceConstraintCS(resourceConstraintCS);
 				if (result == null) result = caseConstraintCS(resourceConstraintCS);
-				if (result == null) result = caseWeightingComponentResourceTupleElementCS(resourceConstraintCS);
 				if (result == null) result = caseNamedElementCS(resourceConstraintCS);
 				if (result == null) result = caseEvaluatableElementCS(resourceConstraintCS);
 				if (result == null) result = caseModelElementCS(resourceConstraintCS);
@@ -230,53 +183,53 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CsPackage.INSTANCE_TUPLE_DESCRIPTOR_CS: {
-				InstanceTupleDescriptorCS instanceTupleDescriptorCS = (InstanceTupleDescriptorCS)theEObject;
-				T result = caseInstanceTupleDescriptorCS(instanceTupleDescriptorCS);
-				if (result == null) result = caseTupleDescriptorCS(instanceTupleDescriptorCS);
-				if (result == null) result = caseModelElementCS(instanceTupleDescriptorCS);
-				if (result == null) result = casePivotableElementCS(instanceTupleDescriptorCS);
-				if (result == null) result = caseElementCS(instanceTupleDescriptorCS);
-				if (result == null) result = casePivotable(instanceTupleDescriptorCS);
-				if (result == null) result = caseVisitableCS(instanceTupleDescriptorCS);
+			case CsPackage.WEIGHT_TUPLE_DESCRIPTOR_CS: {
+				WeightTupleDescriptorCS weightTupleDescriptorCS = (WeightTupleDescriptorCS)theEObject;
+				T result = caseWeightTupleDescriptorCS(weightTupleDescriptorCS);
+				if (result == null) result = caseTupleDescriptorCS(weightTupleDescriptorCS);
+				if (result == null) result = caseModelElementCS(weightTupleDescriptorCS);
+				if (result == null) result = casePivotableElementCS(weightTupleDescriptorCS);
+				if (result == null) result = caseElementCS(weightTupleDescriptorCS);
+				if (result == null) result = casePivotable(weightTupleDescriptorCS);
+				if (result == null) result = caseVisitableCS(weightTupleDescriptorCS);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CsPackage.LOCATION_TUPLE_DESCRIPTOR_CS: {
-				LocationTupleDescriptorCS locationTupleDescriptorCS = (LocationTupleDescriptorCS)theEObject;
-				T result = caseLocationTupleDescriptorCS(locationTupleDescriptorCS);
-				if (result == null) result = caseInstanceTupleDescriptorCS(locationTupleDescriptorCS);
-				if (result == null) result = caseTupleDescriptorCS(locationTupleDescriptorCS);
-				if (result == null) result = caseModelElementCS(locationTupleDescriptorCS);
-				if (result == null) result = casePivotableElementCS(locationTupleDescriptorCS);
-				if (result == null) result = caseElementCS(locationTupleDescriptorCS);
-				if (result == null) result = casePivotable(locationTupleDescriptorCS);
-				if (result == null) result = caseVisitableCS(locationTupleDescriptorCS);
+			case CsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS: {
+				BoundWeightTupleDescriptorCS boundWeightTupleDescriptorCS = (BoundWeightTupleDescriptorCS)theEObject;
+				T result = caseBoundWeightTupleDescriptorCS(boundWeightTupleDescriptorCS);
+				if (result == null) result = caseWeightTupleDescriptorCS(boundWeightTupleDescriptorCS);
+				if (result == null) result = caseTupleDescriptorCS(boundWeightTupleDescriptorCS);
+				if (result == null) result = caseModelElementCS(boundWeightTupleDescriptorCS);
+				if (result == null) result = casePivotableElementCS(boundWeightTupleDescriptorCS);
+				if (result == null) result = caseElementCS(boundWeightTupleDescriptorCS);
+				if (result == null) result = casePivotable(boundWeightTupleDescriptorCS);
+				if (result == null) result = caseVisitableCS(boundWeightTupleDescriptorCS);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CsPackage.COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS: {
-				ComponentResourceTupleDescriptorCS componentResourceTupleDescriptorCS = (ComponentResourceTupleDescriptorCS)theEObject;
-				T result = caseComponentResourceTupleDescriptorCS(componentResourceTupleDescriptorCS);
-				if (result == null) result = caseInstanceTupleDescriptorCS(componentResourceTupleDescriptorCS);
-				if (result == null) result = caseTupleDescriptorCS(componentResourceTupleDescriptorCS);
-				if (result == null) result = caseModelElementCS(componentResourceTupleDescriptorCS);
-				if (result == null) result = casePivotableElementCS(componentResourceTupleDescriptorCS);
-				if (result == null) result = caseElementCS(componentResourceTupleDescriptorCS);
-				if (result == null) result = casePivotable(componentResourceTupleDescriptorCS);
-				if (result == null) result = caseVisitableCS(componentResourceTupleDescriptorCS);
+			case CsPackage.TYPED_NAMED_PART_CS: {
+				TypedNamedPartCS typedNamedPartCS = (TypedNamedPartCS)theEObject;
+				T result = caseTypedNamedPartCS(typedNamedPartCS);
+				if (result == null) result = caseTypedElementCS(typedNamedPartCS);
+				if (result == null) result = caseNamedElementCS(typedNamedPartCS);
+				if (result == null) result = caseModelElementCS(typedNamedPartCS);
+				if (result == null) result = caseNameable(typedNamedPartCS);
+				if (result == null) result = casePivotableElementCS(typedNamedPartCS);
+				if (result == null) result = caseElementCS(typedNamedPartCS);
+				if (result == null) result = casePivotable(typedNamedPartCS);
+				if (result == null) result = caseVisitableCS(typedNamedPartCS);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CsPackage.VALUE_TUPLE_DESCRIPTOR_CS: {
-				ValueTupleDescriptorCS valueTupleDescriptorCS = (ValueTupleDescriptorCS)theEObject;
-				T result = caseValueTupleDescriptorCS(valueTupleDescriptorCS);
-				if (result == null) result = caseTupleDescriptorCS(valueTupleDescriptorCS);
-				if (result == null) result = caseModelElementCS(valueTupleDescriptorCS);
-				if (result == null) result = casePivotableElementCS(valueTupleDescriptorCS);
-				if (result == null) result = caseElementCS(valueTupleDescriptorCS);
-				if (result == null) result = casePivotable(valueTupleDescriptorCS);
-				if (result == null) result = caseVisitableCS(valueTupleDescriptorCS);
+			case CsPackage.TYPED_PAIR_CS: {
+				TypedPairCS typedPairCS = (TypedPairCS)theEObject;
+				T result = caseTypedPairCS(typedPairCS);
+				if (result == null) result = caseModelElementCS(typedPairCS);
+				if (result == null) result = casePivotableElementCS(typedPairCS);
+				if (result == null) result = caseElementCS(typedPairCS);
+				if (result == null) result = casePivotable(typedPairCS);
+				if (result == null) result = caseVisitableCS(typedPairCS);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -288,6 +241,33 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = caseElementCS(measureFunctionCS);
 				if (result == null) result = casePivotable(measureFunctionCS);
 				if (result == null) result = caseVisitableCS(measureFunctionCS);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CsPackage.SERVICE_CS: {
+				ServiceCS serviceCS = (ServiceCS)theEObject;
+				T result = caseServiceCS(serviceCS);
+				if (result == null) result = caseNamedElementCS(serviceCS);
+				if (result == null) result = caseModelElementCS(serviceCS);
+				if (result == null) result = caseNameable(serviceCS);
+				if (result == null) result = casePivotableElementCS(serviceCS);
+				if (result == null) result = caseElementCS(serviceCS);
+				if (result == null) result = casePivotable(serviceCS);
+				if (result == null) result = caseVisitableCS(serviceCS);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CsPackage.QO_SDIMENSION_CS: {
+				QoSDimensionCS qoSDimensionCS = (QoSDimensionCS)theEObject;
+				T result = caseQoSDimensionCS(qoSDimensionCS);
+				if (result == null) result = caseNamedElementCS(qoSDimensionCS);
+				if (result == null) result = caseEvaluatableElementCS(qoSDimensionCS);
+				if (result == null) result = caseModelElementCS(qoSDimensionCS);
+				if (result == null) result = caseNameable(qoSDimensionCS);
+				if (result == null) result = casePivotableElementCS(qoSDimensionCS);
+				if (result == null) result = caseElementCS(qoSDimensionCS);
+				if (result == null) result = casePivotable(qoSDimensionCS);
+				if (result == null) result = caseVisitableCS(qoSDimensionCS);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -322,51 +302,6 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEvaluatableElementCS(EvaluatableElementCS object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Weighting Component Resource Tuple Element CS</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Weighting Component Resource Tuple Element CS</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseWeightingComponentResourceTupleElementCS(WeightingComponentResourceTupleElementCS object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Service CS</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Service CS</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseServiceCS(ServiceCS object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Qo SDimension CS</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Qo SDimension CS</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseQoSDimensionCS(QoSDimensionCS object) {
 		return null;
 	}
 
@@ -446,62 +381,62 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Instance Tuple Descriptor CS</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Weight Tuple Descriptor CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Instance Tuple Descriptor CS</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Weight Tuple Descriptor CS</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstanceTupleDescriptorCS(InstanceTupleDescriptorCS object) {
+	public T caseWeightTupleDescriptorCS(WeightTupleDescriptorCS object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Location Tuple Descriptor CS</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Bound Weight Tuple Descriptor CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Location Tuple Descriptor CS</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Bound Weight Tuple Descriptor CS</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLocationTupleDescriptorCS(LocationTupleDescriptorCS object) {
+	public T caseBoundWeightTupleDescriptorCS(BoundWeightTupleDescriptorCS object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Component Resource Tuple Descriptor CS</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Typed Named Part CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Component Resource Tuple Descriptor CS</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Typed Named Part CS</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseComponentResourceTupleDescriptorCS(ComponentResourceTupleDescriptorCS object) {
+	public T caseTypedNamedPartCS(TypedNamedPartCS object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Value Tuple Descriptor CS</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Typed Pair CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Value Tuple Descriptor CS</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Typed Pair CS</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseValueTupleDescriptorCS(ValueTupleDescriptorCS object) {
+	public T caseTypedPairCS(TypedPairCS object) {
 		return null;
 	}
 
@@ -517,6 +452,36 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMeasureFunctionCS(MeasureFunctionCS object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Service CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Service CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseServiceCS(ServiceCS object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Qo SDimension CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Qo SDimension CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQoSDimensionCS(QoSDimensionCS object) {
 		return null;
 	}
 
@@ -682,6 +647,21 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseExtendableElement(ExtendableElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Typed Element CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Typed Element CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTypedElementCS(TypedElementCS object) {
 		return null;
 	}
 

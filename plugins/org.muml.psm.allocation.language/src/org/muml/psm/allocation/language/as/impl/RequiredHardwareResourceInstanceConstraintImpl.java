@@ -2,17 +2,17 @@
  */
 package org.muml.psm.allocation.language.as.impl;
 
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.muml.psm.allocation.language.as.AsPackage;
-import org.muml.psm.allocation.language.as.ComponentResourceTupleDescriptor;
 import org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint;
+import org.muml.psm.allocation.language.as.TupleDescriptor;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,21 +22,21 @@ import org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConst
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.muml.psm.allocation.language.as.impl.RequiredHardwareResourceInstanceConstraintImpl#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.as.impl.RequiredHardwareResourceInstanceConstraintImpl#getTupleDescriptor <em>Tuple Descriptor</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintImpl implements RequiredHardwareResourceInstanceConstraint {
 	/**
-	 * The cached value of the '{@link #getTupleDescriptors() <em>Tuple Descriptors</em>}' containment reference list.
+	 * The cached value of the '{@link #getTupleDescriptor() <em>Tuple Descriptor</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTupleDescriptors()
+	 * @see #getTupleDescriptor()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ComponentResourceTupleDescriptor> tupleDescriptors;
+	protected TupleDescriptor tupleDescriptor;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,11 +62,42 @@ public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ComponentResourceTupleDescriptor> getTupleDescriptors() {
-		if (tupleDescriptors == null) {
-			tupleDescriptors = new EObjectContainmentEList<ComponentResourceTupleDescriptor>(ComponentResourceTupleDescriptor.class, this, AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTORS);
+	public TupleDescriptor getTupleDescriptor() {
+		return tupleDescriptor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTupleDescriptor(TupleDescriptor newTupleDescriptor, NotificationChain msgs) {
+		TupleDescriptor oldTupleDescriptor = tupleDescriptor;
+		tupleDescriptor = newTupleDescriptor;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR, oldTupleDescriptor, newTupleDescriptor);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return tupleDescriptors;
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTupleDescriptor(TupleDescriptor newTupleDescriptor) {
+		if (newTupleDescriptor != tupleDescriptor) {
+			NotificationChain msgs = null;
+			if (tupleDescriptor != null)
+				msgs = ((InternalEObject)tupleDescriptor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR, null, msgs);
+			if (newTupleDescriptor != null)
+				msgs = ((InternalEObject)newTupleDescriptor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR, null, msgs);
+			msgs = basicSetTupleDescriptor(newTupleDescriptor, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR, newTupleDescriptor, newTupleDescriptor));
 	}
 
 	/**
@@ -77,8 +108,8 @@ public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintIm
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTORS:
-				return ((InternalEList<?>)getTupleDescriptors()).basicRemove(otherEnd, msgs);
+			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR:
+				return basicSetTupleDescriptor(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -91,8 +122,8 @@ public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintIm
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTORS:
-				return getTupleDescriptors();
+			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR:
+				return getTupleDescriptor();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -102,13 +133,11 @@ public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTORS:
-				getTupleDescriptors().clear();
-				getTupleDescriptors().addAll((Collection<? extends ComponentResourceTupleDescriptor>)newValue);
+			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR:
+				setTupleDescriptor((TupleDescriptor)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +151,8 @@ public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintIm
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTORS:
-				getTupleDescriptors().clear();
+			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR:
+				setTupleDescriptor((TupleDescriptor)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,8 +166,8 @@ public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintIm
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTORS:
-				return tupleDescriptors != null && !tupleDescriptors.isEmpty();
+			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR:
+				return tupleDescriptor != null;
 		}
 		return super.eIsSet(featureID);
 	}

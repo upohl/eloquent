@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.ocl.pivot.PivotPackage;
 
 /**
@@ -26,6 +27,7 @@ import org.eclipse.ocl.pivot.PivotPackage;
  * <!-- end-model-doc -->
  * @see org.muml.psm.allocation.language.as.AsFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot'"
  * @generated
  */
 public interface AsPackage extends EPackage {
@@ -262,243 +264,6 @@ public interface AsPackage extends EPackage {
 	int EVALUATABLE_ELEMENT_FEATURE_COUNT = PivotPackage.ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.WeightingComponentResourceTupleElementImpl <em>Weighting Component Resource Tuple Element</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.as.impl.WeightingComponentResourceTupleElementImpl
-	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getWeightingComponentResourceTupleElement()
-	 * @generated
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT = 2;
-
-	/**
-	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__ANNOTATING_COMMENTS = PivotPackage.ELEMENT__ANNOTATING_COMMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__OWNED_ANNOTATIONS = PivotPackage.ELEMENT__OWNED_ANNOTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__OWNED_COMMENTS = PivotPackage.ELEMENT__OWNED_COMMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__OWNED_EXTENSIONS = PivotPackage.ELEMENT__OWNED_EXTENSIONS;
-
-	/**
-	 * The feature id for the '<em><b>Tuple Descriptors</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__TUPLE_DESCRIPTORS = PivotPackage.ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Weighting</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__WEIGHTING = PivotPackage.ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Weighting Component Resource Tuple Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_FEATURE_COUNT = PivotPackage.ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.ServiceImpl <em>Service</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.as.impl.ServiceImpl
-	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getService()
-	 * @generated
-	 */
-	int SERVICE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE__ANNOTATING_COMMENTS = PivotPackage.NAMED_ELEMENT__ANNOTATING_COMMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE__OWNED_ANNOTATIONS = PivotPackage.NAMED_ELEMENT__OWNED_ANNOTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE__OWNED_COMMENTS = PivotPackage.NAMED_ELEMENT__OWNED_COMMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE__OWNED_EXTENSIONS = PivotPackage.NAMED_ELEMENT__OWNED_EXTENSIONS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE__NAME = PivotPackage.NAMED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Dimensions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE__DIMENSIONS = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Service</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_FEATURE_COUNT = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.QoSDimensionImpl <em>Qo SDimension</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.as.impl.QoSDimensionImpl
-	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getQoSDimension()
-	 * @generated
-	 */
-	int QO_SDIMENSION = 4;
-
-	/**
-	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION__ANNOTATING_COMMENTS = PivotPackage.NAMED_ELEMENT__ANNOTATING_COMMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION__OWNED_ANNOTATIONS = PivotPackage.NAMED_ELEMENT__OWNED_ANNOTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION__OWNED_COMMENTS = PivotPackage.NAMED_ELEMENT__OWNED_COMMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION__OWNED_EXTENSIONS = PivotPackage.NAMED_ELEMENT__OWNED_EXTENSIONS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION__NAME = PivotPackage.NAMED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION__EXPRESSION = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Tuple Descriptors</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION__TUPLE_DESCRIPTORS = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Weighting</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION__WEIGHTING = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Qo SDimension</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION_FEATURE_COUNT = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.ConstraintImpl <em>Constraint</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -506,7 +271,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getConstraint()
 	 * @generated
 	 */
-	int CONSTRAINT = 5;
+	int CONSTRAINT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -579,7 +344,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getLocationConstraint()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT = 6;
+	int LOCATION_CONSTRAINT = 3;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -670,7 +435,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getResourceConstraint()
 	 * @generated
 	 */
-	int RESOURCE_CONSTRAINT = 7;
+	int RESOURCE_CONSTRAINT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -727,31 +492,13 @@ public interface AsPackage extends EPackage {
 	int RESOURCE_CONSTRAINT__EXPRESSION = CONSTRAINT__EXPRESSION;
 
 	/**
-	 * The feature id for the '<em><b>Tuple Descriptors</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSTRAINT__TUPLE_DESCRIPTORS = CONSTRAINT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Weighting</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CONSTRAINT__WEIGHTING = CONSTRAINT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Rhs</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CONSTRAINT__RHS = CONSTRAINT_FEATURE_COUNT + 2;
+	int RESOURCE_CONSTRAINT__TUPLE_DESCRIPTOR = CONSTRAINT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Resource Constraint</em>' class.
@@ -760,7 +507,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSTRAINT_FEATURE_COUNT = CONSTRAINT_FEATURE_COUNT + 3;
+	int RESOURCE_CONSTRAINT_FEATURE_COUNT = CONSTRAINT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.RequiredHardwareResourceInstanceConstraintImpl <em>Required Hardware Resource Instance Constraint</em>}' class.
@@ -770,7 +517,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getRequiredHardwareResourceInstanceConstraint()
 	 * @generated
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT = 8;
+	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -827,13 +574,13 @@ public interface AsPackage extends EPackage {
 	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__EXPRESSION = CONSTRAINT__EXPRESSION;
 
 	/**
-	 * The feature id for the '<em><b>Tuple Descriptors</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTORS = CONSTRAINT_FEATURE_COUNT + 0;
+	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR = CONSTRAINT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Required Hardware Resource Instance Constraint</em>' class.
@@ -852,7 +599,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getTupleDescriptor()
 	 * @generated
 	 */
-	int TUPLE_DESCRIPTOR = 9;
+	int TUPLE_DESCRIPTOR = 6;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -891,87 +638,32 @@ public interface AsPackage extends EPackage {
 	int TUPLE_DESCRIPTOR__OWNED_EXTENSIONS = PivotPackage.ELEMENT__OWNED_EXTENSIONS;
 
 	/**
+	 * The feature id for the '<em><b>Typed Pairs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TUPLE_DESCRIPTOR__TYPED_PAIRS = PivotPackage.ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Tuple Descriptor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TUPLE_DESCRIPTOR_FEATURE_COUNT = PivotPackage.ELEMENT_FEATURE_COUNT + 0;
+	int TUPLE_DESCRIPTOR_FEATURE_COUNT = PivotPackage.ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.InstanceTupleDescriptorImpl <em>Instance Tuple Descriptor</em>}' class.
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.WeightTupleDescriptorImpl <em>Weight Tuple Descriptor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.as.impl.InstanceTupleDescriptorImpl
-	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getInstanceTupleDescriptor()
+	 * @see org.muml.psm.allocation.language.as.impl.WeightTupleDescriptorImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getWeightTupleDescriptor()
 	 * @generated
 	 */
-	int INSTANCE_TUPLE_DESCRIPTOR = 10;
-
-	/**
-	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS = TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS = TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_TUPLE_DESCRIPTOR__OWNED_COMMENTS = TUPLE_DESCRIPTOR__OWNED_COMMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_TUPLE_DESCRIPTOR__OWNED_EXTENSIONS = TUPLE_DESCRIPTOR__OWNED_EXTENSIONS;
-
-	/**
-	 * The feature id for the '<em><b>Instance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_TUPLE_DESCRIPTOR__INSTANCE = TUPLE_DESCRIPTOR_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Instance Tuple Descriptor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_TUPLE_DESCRIPTOR_FEATURE_COUNT = TUPLE_DESCRIPTOR_FEATURE_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.LocationTupleDescriptorImpl <em>Location Tuple Descriptor</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.as.impl.LocationTupleDescriptorImpl
-	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getLocationTupleDescriptor()
-	 * @generated
-	 */
-	int LOCATION_TUPLE_DESCRIPTOR = 11;
+	int WEIGHT_TUPLE_DESCRIPTOR = 7;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -980,7 +672,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS = INSTANCE_TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS;
+	int WEIGHT_TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS = TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
@@ -989,7 +681,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS = INSTANCE_TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS;
+	int WEIGHT_TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS = TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
@@ -998,7 +690,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR__OWNED_COMMENTS = INSTANCE_TUPLE_DESCRIPTOR__OWNED_COMMENTS;
+	int WEIGHT_TUPLE_DESCRIPTOR__OWNED_COMMENTS = TUPLE_DESCRIPTOR__OWNED_COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
@@ -1007,44 +699,44 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR__OWNED_EXTENSIONS = INSTANCE_TUPLE_DESCRIPTOR__OWNED_EXTENSIONS;
+	int WEIGHT_TUPLE_DESCRIPTOR__OWNED_EXTENSIONS = TUPLE_DESCRIPTOR__OWNED_EXTENSIONS;
 
 	/**
-	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * The feature id for the '<em><b>Typed Pairs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR__INSTANCE = INSTANCE_TUPLE_DESCRIPTOR__INSTANCE;
+	int WEIGHT_TUPLE_DESCRIPTOR__TYPED_PAIRS = TUPLE_DESCRIPTOR__TYPED_PAIRS;
 
 	/**
-	 * The feature id for the '<em><b>Second Instance</b></em>' attribute.
+	 * The feature id for the '<em><b>Weight</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR__SECOND_INSTANCE = INSTANCE_TUPLE_DESCRIPTOR_FEATURE_COUNT + 0;
+	int WEIGHT_TUPLE_DESCRIPTOR__WEIGHT = TUPLE_DESCRIPTOR_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Location Tuple Descriptor</em>' class.
+	 * The number of structural features of the '<em>Weight Tuple Descriptor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR_FEATURE_COUNT = INSTANCE_TUPLE_DESCRIPTOR_FEATURE_COUNT + 1;
+	int WEIGHT_TUPLE_DESCRIPTOR_FEATURE_COUNT = TUPLE_DESCRIPTOR_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.ComponentResourceTupleDescriptorImpl <em>Component Resource Tuple Descriptor</em>}' class.
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.BoundWeightTupleDescriptorImpl <em>Bound Weight Tuple Descriptor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.as.impl.ComponentResourceTupleDescriptorImpl
-	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getComponentResourceTupleDescriptor()
+	 * @see org.muml.psm.allocation.language.as.impl.BoundWeightTupleDescriptorImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getBoundWeightTupleDescriptor()
 	 * @generated
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR = 12;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR = 8;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1053,7 +745,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS = INSTANCE_TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS = WEIGHT_TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
@@ -1062,7 +754,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS = INSTANCE_TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS = WEIGHT_TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
@@ -1071,7 +763,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR__OWNED_COMMENTS = INSTANCE_TUPLE_DESCRIPTOR__OWNED_COMMENTS;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR__OWNED_COMMENTS = WEIGHT_TUPLE_DESCRIPTOR__OWNED_COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
@@ -1080,44 +772,53 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR__OWNED_EXTENSIONS = INSTANCE_TUPLE_DESCRIPTOR__OWNED_EXTENSIONS;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR__OWNED_EXTENSIONS = WEIGHT_TUPLE_DESCRIPTOR__OWNED_EXTENSIONS;
 
 	/**
-	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * The feature id for the '<em><b>Typed Pairs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR__INSTANCE = INSTANCE_TUPLE_DESCRIPTOR__INSTANCE;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR__TYPED_PAIRS = WEIGHT_TUPLE_DESCRIPTOR__TYPED_PAIRS;
 
 	/**
-	 * The feature id for the '<em><b>Hwresinstance</b></em>' attribute.
+	 * The feature id for the '<em><b>Weight</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR__HWRESINSTANCE = INSTANCE_TUPLE_DESCRIPTOR_FEATURE_COUNT + 0;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR__WEIGHT = WEIGHT_TUPLE_DESCRIPTOR__WEIGHT;
 
 	/**
-	 * The number of structural features of the '<em>Component Resource Tuple Descriptor</em>' class.
+	 * The feature id for the '<em><b>Bound</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_FEATURE_COUNT = INSTANCE_TUPLE_DESCRIPTOR_FEATURE_COUNT + 1;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR__BOUND = WEIGHT_TUPLE_DESCRIPTOR_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.ValueTupleDescriptorImpl <em>Value Tuple Descriptor</em>}' class.
+	 * The number of structural features of the '<em>Bound Weight Tuple Descriptor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.as.impl.ValueTupleDescriptorImpl
-	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getValueTupleDescriptor()
+	 * @generated
+	 * @ordered
+	 */
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_FEATURE_COUNT = WEIGHT_TUPLE_DESCRIPTOR_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.TypedNamedPartImpl <em>Typed Named Part</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.as.impl.TypedNamedPartImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getTypedNamedPart()
 	 * @generated
 	 */
-	int VALUE_TUPLE_DESCRIPTOR = 13;
+	int TYPED_NAMED_PART = 9;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1126,7 +827,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS = TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS;
+	int TYPED_NAMED_PART__ANNOTATING_COMMENTS = PivotPackage.TYPED_ELEMENT__ANNOTATING_COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
@@ -1135,7 +836,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS = TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS;
+	int TYPED_NAMED_PART__OWNED_ANNOTATIONS = PivotPackage.TYPED_ELEMENT__OWNED_ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
@@ -1144,7 +845,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR__OWNED_COMMENTS = TUPLE_DESCRIPTOR__OWNED_COMMENTS;
+	int TYPED_NAMED_PART__OWNED_COMMENTS = PivotPackage.TYPED_ELEMENT__OWNED_COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
@@ -1153,25 +854,125 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR__OWNED_EXTENSIONS = TUPLE_DESCRIPTOR__OWNED_EXTENSIONS;
+	int TYPED_NAMED_PART__OWNED_EXTENSIONS = PivotPackage.TYPED_ELEMENT__OWNED_EXTENSIONS;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR__VALUE = TUPLE_DESCRIPTOR_FEATURE_COUNT + 0;
+	int TYPED_NAMED_PART__NAME = PivotPackage.TYPED_ELEMENT__NAME;
 
 	/**
-	 * The number of structural features of the '<em>Value Tuple Descriptor</em>' class.
+	 * The feature id for the '<em><b>Is Many</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR_FEATURE_COUNT = TUPLE_DESCRIPTOR_FEATURE_COUNT + 1;
+	int TYPED_NAMED_PART__IS_MANY = PivotPackage.TYPED_ELEMENT__IS_MANY;
+
+	/**
+	 * The feature id for the '<em><b>Is Required</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_NAMED_PART__IS_REQUIRED = PivotPackage.TYPED_ELEMENT__IS_REQUIRED;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_NAMED_PART__TYPE = PivotPackage.TYPED_ELEMENT__TYPE;
+
+	/**
+	 * The number of structural features of the '<em>Typed Named Part</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_NAMED_PART_FEATURE_COUNT = PivotPackage.TYPED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.TypedPairImpl <em>Typed Pair</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.as.impl.TypedPairImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getTypedPair()
+	 * @generated
+	 */
+	int TYPED_PAIR = 10;
+
+	/**
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_PAIR__ANNOTATING_COMMENTS = PivotPackage.ELEMENT__ANNOTATING_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_PAIR__OWNED_ANNOTATIONS = PivotPackage.ELEMENT__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_PAIR__OWNED_COMMENTS = PivotPackage.ELEMENT__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_PAIR__OWNED_EXTENSIONS = PivotPackage.ELEMENT__OWNED_EXTENSIONS;
+
+	/**
+	 * The feature id for the '<em><b>First</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_PAIR__FIRST = PivotPackage.ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Second</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_PAIR__SECOND = PivotPackage.ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Typed Pair</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_PAIR_FEATURE_COUNT = PivotPackage.ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.MeasureFunctionImpl <em>Measure Function</em>}' class.
@@ -1181,7 +982,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getMeasureFunction()
 	 * @generated
 	 */
-	int MEASURE_FUNCTION = 14;
+	int MEASURE_FUNCTION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1238,6 +1039,161 @@ public interface AsPackage extends EPackage {
 	int MEASURE_FUNCTION_FEATURE_COUNT = PivotPackage.ELEMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.ServiceImpl <em>Service</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.as.impl.ServiceImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getService()
+	 * @generated
+	 */
+	int SERVICE = 12;
+
+	/**
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE__ANNOTATING_COMMENTS = PivotPackage.NAMED_ELEMENT__ANNOTATING_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE__OWNED_ANNOTATIONS = PivotPackage.NAMED_ELEMENT__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE__OWNED_COMMENTS = PivotPackage.NAMED_ELEMENT__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE__OWNED_EXTENSIONS = PivotPackage.NAMED_ELEMENT__OWNED_EXTENSIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE__NAME = PivotPackage.NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Dimensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE__DIMENSIONS = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Service</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_FEATURE_COUNT = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.QoSDimensionImpl <em>Qo SDimension</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.as.impl.QoSDimensionImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getQoSDimension()
+	 * @generated
+	 */
+	int QO_SDIMENSION = 13;
+
+	/**
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION__ANNOTATING_COMMENTS = PivotPackage.NAMED_ELEMENT__ANNOTATING_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION__OWNED_ANNOTATIONS = PivotPackage.NAMED_ELEMENT__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION__OWNED_COMMENTS = PivotPackage.NAMED_ELEMENT__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION__OWNED_EXTENSIONS = PivotPackage.NAMED_ELEMENT__OWNED_EXTENSIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION__NAME = PivotPackage.NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION__EXPRESSION = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION__TUPLE_DESCRIPTOR = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Qo SDimension</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION_FEATURE_COUNT = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1245,7 +1201,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getLocationConstraintTypes()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_TYPES = 15;
+	int LOCATION_CONSTRAINT_TYPES = 14;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.Goal <em>Goal</em>}' enum.
@@ -1255,7 +1211,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getGoal()
 	 * @generated
 	 */
-	int GOAL = 16;
+	int GOAL = 15;
 
 
 	/**
@@ -1334,69 +1290,6 @@ public interface AsPackage extends EPackage {
 	EReference getEvaluatableElement_Expression();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.WeightingComponentResourceTupleElement <em>Weighting Component Resource Tuple Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Weighting Component Resource Tuple Element</em>'.
-	 * @see org.muml.psm.allocation.language.as.WeightingComponentResourceTupleElement
-	 * @generated
-	 */
-	EClass getWeightingComponentResourceTupleElement();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.muml.psm.allocation.language.as.WeightingComponentResourceTupleElement#getTupleDescriptors <em>Tuple Descriptors</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tuple Descriptors</em>'.
-	 * @see org.muml.psm.allocation.language.as.WeightingComponentResourceTupleElement#getTupleDescriptors()
-	 * @see #getWeightingComponentResourceTupleElement()
-	 * @generated
-	 */
-	EReference getWeightingComponentResourceTupleElement_TupleDescriptors();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.WeightingComponentResourceTupleElement#getWeighting <em>Weighting</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Weighting</em>'.
-	 * @see org.muml.psm.allocation.language.as.WeightingComponentResourceTupleElement#getWeighting()
-	 * @see #getWeightingComponentResourceTupleElement()
-	 * @generated
-	 */
-	EReference getWeightingComponentResourceTupleElement_Weighting();
-
-	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.Service <em>Service</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Service</em>'.
-	 * @see org.muml.psm.allocation.language.as.Service
-	 * @generated
-	 */
-	EClass getService();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.muml.psm.allocation.language.as.Service#getDimensions <em>Dimensions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Dimensions</em>'.
-	 * @see org.muml.psm.allocation.language.as.Service#getDimensions()
-	 * @see #getService()
-	 * @generated
-	 */
-	EReference getService_Dimensions();
-
-	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.QoSDimension <em>Qo SDimension</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Qo SDimension</em>'.
-	 * @see org.muml.psm.allocation.language.as.QoSDimension
-	 * @generated
-	 */
-	EClass getQoSDimension();
-
-	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.Constraint <em>Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1449,15 +1342,15 @@ public interface AsPackage extends EPackage {
 	EClass getResourceConstraint();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.ResourceConstraint#getRhs <em>Rhs</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.ResourceConstraint#getTupleDescriptor <em>Tuple Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Rhs</em>'.
-	 * @see org.muml.psm.allocation.language.as.ResourceConstraint#getRhs()
+	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.as.ResourceConstraint#getTupleDescriptor()
 	 * @see #getResourceConstraint()
 	 * @generated
 	 */
-	EReference getResourceConstraint_Rhs();
+	EReference getResourceConstraint_TupleDescriptor();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint <em>Required Hardware Resource Instance Constraint</em>}'.
@@ -1470,15 +1363,15 @@ public interface AsPackage extends EPackage {
 	EClass getRequiredHardwareResourceInstanceConstraint();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint#getTupleDescriptors <em>Tuple Descriptors</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint#getTupleDescriptor <em>Tuple Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tuple Descriptors</em>'.
-	 * @see org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint#getTupleDescriptors()
+	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint#getTupleDescriptor()
 	 * @see #getRequiredHardwareResourceInstanceConstraint()
 	 * @generated
 	 */
-	EReference getRequiredHardwareResourceInstanceConstraint_TupleDescriptors();
+	EReference getRequiredHardwareResourceInstanceConstraint_TupleDescriptor();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.TupleDescriptor <em>Tuple Descriptor</em>}'.
@@ -1491,88 +1384,99 @@ public interface AsPackage extends EPackage {
 	EClass getTupleDescriptor();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.InstanceTupleDescriptor <em>Instance Tuple Descriptor</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.muml.psm.allocation.language.as.TupleDescriptor#getTypedPairs <em>Typed Pairs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Instance Tuple Descriptor</em>'.
-	 * @see org.muml.psm.allocation.language.as.InstanceTupleDescriptor
+	 * @return the meta object for the containment reference list '<em>Typed Pairs</em>'.
+	 * @see org.muml.psm.allocation.language.as.TupleDescriptor#getTypedPairs()
+	 * @see #getTupleDescriptor()
 	 * @generated
 	 */
-	EClass getInstanceTupleDescriptor();
+	EReference getTupleDescriptor_TypedPairs();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.as.InstanceTupleDescriptor#getInstance <em>Instance</em>}'.
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.WeightTupleDescriptor <em>Weight Tuple Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Instance</em>'.
-	 * @see org.muml.psm.allocation.language.as.InstanceTupleDescriptor#getInstance()
-	 * @see #getInstanceTupleDescriptor()
+	 * @return the meta object for class '<em>Weight Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.as.WeightTupleDescriptor
 	 * @generated
 	 */
-	EAttribute getInstanceTupleDescriptor_Instance();
+	EClass getWeightTupleDescriptor();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.LocationTupleDescriptor <em>Location Tuple Descriptor</em>}'.
+	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.as.WeightTupleDescriptor#getWeight <em>Weight</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Location Tuple Descriptor</em>'.
-	 * @see org.muml.psm.allocation.language.as.LocationTupleDescriptor
+	 * @return the meta object for the attribute '<em>Weight</em>'.
+	 * @see org.muml.psm.allocation.language.as.WeightTupleDescriptor#getWeight()
+	 * @see #getWeightTupleDescriptor()
 	 * @generated
 	 */
-	EClass getLocationTupleDescriptor();
+	EAttribute getWeightTupleDescriptor_Weight();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.as.LocationTupleDescriptor#getSecondInstance <em>Second Instance</em>}'.
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.BoundWeightTupleDescriptor <em>Bound Weight Tuple Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Second Instance</em>'.
-	 * @see org.muml.psm.allocation.language.as.LocationTupleDescriptor#getSecondInstance()
-	 * @see #getLocationTupleDescriptor()
+	 * @return the meta object for class '<em>Bound Weight Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.as.BoundWeightTupleDescriptor
 	 * @generated
 	 */
-	EAttribute getLocationTupleDescriptor_SecondInstance();
+	EClass getBoundWeightTupleDescriptor();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.ComponentResourceTupleDescriptor <em>Component Resource Tuple Descriptor</em>}'.
+	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.as.BoundWeightTupleDescriptor#getBound <em>Bound</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Component Resource Tuple Descriptor</em>'.
-	 * @see org.muml.psm.allocation.language.as.ComponentResourceTupleDescriptor
+	 * @return the meta object for the attribute '<em>Bound</em>'.
+	 * @see org.muml.psm.allocation.language.as.BoundWeightTupleDescriptor#getBound()
+	 * @see #getBoundWeightTupleDescriptor()
 	 * @generated
 	 */
-	EClass getComponentResourceTupleDescriptor();
+	EAttribute getBoundWeightTupleDescriptor_Bound();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.as.ComponentResourceTupleDescriptor#getHwresinstance <em>Hwresinstance</em>}'.
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.TypedNamedPart <em>Typed Named Part</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Hwresinstance</em>'.
-	 * @see org.muml.psm.allocation.language.as.ComponentResourceTupleDescriptor#getHwresinstance()
-	 * @see #getComponentResourceTupleDescriptor()
+	 * @return the meta object for class '<em>Typed Named Part</em>'.
+	 * @see org.muml.psm.allocation.language.as.TypedNamedPart
 	 * @generated
 	 */
-	EAttribute getComponentResourceTupleDescriptor_Hwresinstance();
+	EClass getTypedNamedPart();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.ValueTupleDescriptor <em>Value Tuple Descriptor</em>}'.
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.TypedPair <em>Typed Pair</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Value Tuple Descriptor</em>'.
-	 * @see org.muml.psm.allocation.language.as.ValueTupleDescriptor
+	 * @return the meta object for class '<em>Typed Pair</em>'.
+	 * @see org.muml.psm.allocation.language.as.TypedPair
 	 * @generated
 	 */
-	EClass getValueTupleDescriptor();
+	EClass getTypedPair();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.as.ValueTupleDescriptor#getValue <em>Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.TypedPair#getFirst <em>First</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.muml.psm.allocation.language.as.ValueTupleDescriptor#getValue()
-	 * @see #getValueTupleDescriptor()
+	 * @return the meta object for the containment reference '<em>First</em>'.
+	 * @see org.muml.psm.allocation.language.as.TypedPair#getFirst()
+	 * @see #getTypedPair()
 	 * @generated
 	 */
-	EAttribute getValueTupleDescriptor_Value();
+	EReference getTypedPair_First();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.TypedPair#getSecond <em>Second</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Second</em>'.
+	 * @see org.muml.psm.allocation.language.as.TypedPair#getSecond()
+	 * @see #getTypedPair()
+	 * @generated
+	 */
+	EReference getTypedPair_Second();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.MeasureFunction <em>Measure Function</em>}'.
@@ -1594,6 +1498,48 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMeasureFunction_Services();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.Service <em>Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Service</em>'.
+	 * @see org.muml.psm.allocation.language.as.Service
+	 * @generated
+	 */
+	EClass getService();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.muml.psm.allocation.language.as.Service#getDimensions <em>Dimensions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Dimensions</em>'.
+	 * @see org.muml.psm.allocation.language.as.Service#getDimensions()
+	 * @see #getService()
+	 * @generated
+	 */
+	EReference getService_Dimensions();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.QoSDimension <em>Qo SDimension</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Qo SDimension</em>'.
+	 * @see org.muml.psm.allocation.language.as.QoSDimension
+	 * @generated
+	 */
+	EClass getQoSDimension();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.QoSDimension#getTupleDescriptor <em>Tuple Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.as.QoSDimension#getTupleDescriptor()
+	 * @see #getQoSDimension()
+	 * @generated
+	 */
+	EReference getQoSDimension_TupleDescriptor();
 
 	/**
 	 * Returns the meta object for enum '{@link org.muml.psm.allocation.language.as.LocationConstraintTypes <em>Location Constraint Types</em>}'.
@@ -1698,60 +1644,6 @@ public interface AsPackage extends EPackage {
 		EReference EVALUATABLE_ELEMENT__EXPRESSION = eINSTANCE.getEvaluatableElement_Expression();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.WeightingComponentResourceTupleElementImpl <em>Weighting Component Resource Tuple Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.as.impl.WeightingComponentResourceTupleElementImpl
-		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getWeightingComponentResourceTupleElement()
-		 * @generated
-		 */
-		EClass WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT = eINSTANCE.getWeightingComponentResourceTupleElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Tuple Descriptors</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__TUPLE_DESCRIPTORS = eINSTANCE.getWeightingComponentResourceTupleElement_TupleDescriptors();
-
-		/**
-		 * The meta object literal for the '<em><b>Weighting</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__WEIGHTING = eINSTANCE.getWeightingComponentResourceTupleElement_Weighting();
-
-		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.ServiceImpl <em>Service</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.as.impl.ServiceImpl
-		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getService()
-		 * @generated
-		 */
-		EClass SERVICE = eINSTANCE.getService();
-
-		/**
-		 * The meta object literal for the '<em><b>Dimensions</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SERVICE__DIMENSIONS = eINSTANCE.getService_Dimensions();
-
-		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.QoSDimensionImpl <em>Qo SDimension</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.as.impl.QoSDimensionImpl
-		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getQoSDimension()
-		 * @generated
-		 */
-		EClass QO_SDIMENSION = eINSTANCE.getQoSDimension();
-
-		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.ConstraintImpl <em>Constraint</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1798,12 +1690,12 @@ public interface AsPackage extends EPackage {
 		EClass RESOURCE_CONSTRAINT = eINSTANCE.getResourceConstraint();
 
 		/**
-		 * The meta object literal for the '<em><b>Rhs</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESOURCE_CONSTRAINT__RHS = eINSTANCE.getResourceConstraint_Rhs();
+		EReference RESOURCE_CONSTRAINT__TUPLE_DESCRIPTOR = eINSTANCE.getResourceConstraint_TupleDescriptor();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.RequiredHardwareResourceInstanceConstraintImpl <em>Required Hardware Resource Instance Constraint</em>}' class.
@@ -1816,12 +1708,12 @@ public interface AsPackage extends EPackage {
 		EClass REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT = eINSTANCE.getRequiredHardwareResourceInstanceConstraint();
 
 		/**
-		 * The meta object literal for the '<em><b>Tuple Descriptors</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTORS = eINSTANCE.getRequiredHardwareResourceInstanceConstraint_TupleDescriptors();
+		EReference REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR = eINSTANCE.getRequiredHardwareResourceInstanceConstraint_TupleDescriptor();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.TupleDescriptorImpl <em>Tuple Descriptor</em>}' class.
@@ -1834,76 +1726,84 @@ public interface AsPackage extends EPackage {
 		EClass TUPLE_DESCRIPTOR = eINSTANCE.getTupleDescriptor();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.InstanceTupleDescriptorImpl <em>Instance Tuple Descriptor</em>}' class.
+		 * The meta object literal for the '<em><b>Typed Pairs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.as.impl.InstanceTupleDescriptorImpl
-		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getInstanceTupleDescriptor()
 		 * @generated
 		 */
-		EClass INSTANCE_TUPLE_DESCRIPTOR = eINSTANCE.getInstanceTupleDescriptor();
+		EReference TUPLE_DESCRIPTOR__TYPED_PAIRS = eINSTANCE.getTupleDescriptor_TypedPairs();
 
 		/**
-		 * The meta object literal for the '<em><b>Instance</b></em>' attribute feature.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.WeightTupleDescriptorImpl <em>Weight Tuple Descriptor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.as.impl.WeightTupleDescriptorImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getWeightTupleDescriptor()
 		 * @generated
 		 */
-		EAttribute INSTANCE_TUPLE_DESCRIPTOR__INSTANCE = eINSTANCE.getInstanceTupleDescriptor_Instance();
+		EClass WEIGHT_TUPLE_DESCRIPTOR = eINSTANCE.getWeightTupleDescriptor();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.LocationTupleDescriptorImpl <em>Location Tuple Descriptor</em>}' class.
+		 * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.as.impl.LocationTupleDescriptorImpl
-		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getLocationTupleDescriptor()
 		 * @generated
 		 */
-		EClass LOCATION_TUPLE_DESCRIPTOR = eINSTANCE.getLocationTupleDescriptor();
+		EAttribute WEIGHT_TUPLE_DESCRIPTOR__WEIGHT = eINSTANCE.getWeightTupleDescriptor_Weight();
 
 		/**
-		 * The meta object literal for the '<em><b>Second Instance</b></em>' attribute feature.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.BoundWeightTupleDescriptorImpl <em>Bound Weight Tuple Descriptor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.as.impl.BoundWeightTupleDescriptorImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getBoundWeightTupleDescriptor()
 		 * @generated
 		 */
-		EAttribute LOCATION_TUPLE_DESCRIPTOR__SECOND_INSTANCE = eINSTANCE.getLocationTupleDescriptor_SecondInstance();
+		EClass BOUND_WEIGHT_TUPLE_DESCRIPTOR = eINSTANCE.getBoundWeightTupleDescriptor();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.ComponentResourceTupleDescriptorImpl <em>Component Resource Tuple Descriptor</em>}' class.
+		 * The meta object literal for the '<em><b>Bound</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.as.impl.ComponentResourceTupleDescriptorImpl
-		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getComponentResourceTupleDescriptor()
 		 * @generated
 		 */
-		EClass COMPONENT_RESOURCE_TUPLE_DESCRIPTOR = eINSTANCE.getComponentResourceTupleDescriptor();
+		EAttribute BOUND_WEIGHT_TUPLE_DESCRIPTOR__BOUND = eINSTANCE.getBoundWeightTupleDescriptor_Bound();
 
 		/**
-		 * The meta object literal for the '<em><b>Hwresinstance</b></em>' attribute feature.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.TypedNamedPartImpl <em>Typed Named Part</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.as.impl.TypedNamedPartImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getTypedNamedPart()
 		 * @generated
 		 */
-		EAttribute COMPONENT_RESOURCE_TUPLE_DESCRIPTOR__HWRESINSTANCE = eINSTANCE.getComponentResourceTupleDescriptor_Hwresinstance();
+		EClass TYPED_NAMED_PART = eINSTANCE.getTypedNamedPart();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.ValueTupleDescriptorImpl <em>Value Tuple Descriptor</em>}' class.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.TypedPairImpl <em>Typed Pair</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.as.impl.ValueTupleDescriptorImpl
-		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getValueTupleDescriptor()
+		 * @see org.muml.psm.allocation.language.as.impl.TypedPairImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getTypedPair()
 		 * @generated
 		 */
-		EClass VALUE_TUPLE_DESCRIPTOR = eINSTANCE.getValueTupleDescriptor();
+		EClass TYPED_PAIR = eINSTANCE.getTypedPair();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>First</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VALUE_TUPLE_DESCRIPTOR__VALUE = eINSTANCE.getValueTupleDescriptor_Value();
+		EReference TYPED_PAIR__FIRST = eINSTANCE.getTypedPair_First();
+
+		/**
+		 * The meta object literal for the '<em><b>Second</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TYPED_PAIR__SECOND = eINSTANCE.getTypedPair_Second();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.MeasureFunctionImpl <em>Measure Function</em>}' class.
@@ -1922,6 +1822,42 @@ public interface AsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MEASURE_FUNCTION__SERVICES = eINSTANCE.getMeasureFunction_Services();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.ServiceImpl <em>Service</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.as.impl.ServiceImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getService()
+		 * @generated
+		 */
+		EClass SERVICE = eINSTANCE.getService();
+
+		/**
+		 * The meta object literal for the '<em><b>Dimensions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SERVICE__DIMENSIONS = eINSTANCE.getService_Dimensions();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.QoSDimensionImpl <em>Qo SDimension</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.as.impl.QoSDimensionImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getQoSDimension()
+		 * @generated
+		 */
+		EClass QO_SDIMENSION = eINSTANCE.getQoSDimension();
+
+		/**
+		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QO_SDIMENSION__TUPLE_DESCRIPTOR = eINSTANCE.getQoSDimension_TupleDescriptor();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.

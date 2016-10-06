@@ -4,11 +4,12 @@ package org.muml.psm.allocation.language.oclcontext.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.util.Switch;
+
 import org.eclipse.jdt.annotation.Nullable;
+
 import org.muml.psm.allocation.language.oclcontext.*;
-import org.muml.psm.allocation.language.oclcontext.OCLContext;
-import org.muml.psm.allocation.language.oclcontext.OclcontextPackage;
 
 /**
  * <!-- begin-user-doc -->

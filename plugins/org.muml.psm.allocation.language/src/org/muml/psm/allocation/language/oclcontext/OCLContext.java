@@ -3,7 +3,9 @@
 package org.muml.psm.allocation.language.oclcontext;
 
 import org.eclipse.emf.ecore.EObject;
+
 import org.muml.pim.instance.ComponentInstanceConfiguration;
+
 import org.muml.pm.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 
 /**

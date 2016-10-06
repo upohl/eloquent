@@ -7,7 +7,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.ocl.xtext.basecs.BaseCSPackage;
+
 import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLCSPackage;
 
 /**
@@ -27,6 +29,7 @@ import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLCSPackage;
  * <!-- end-model-doc -->
  * @see org.muml.psm.allocation.language.cs.CsFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot'"
  * @generated
  */
 public interface CsPackage extends EPackage {
@@ -281,270 +284,6 @@ public interface CsPackage extends EPackage {
 	int EVALUATABLE_ELEMENT_CS_FEATURE_COUNT = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.WeightingComponentResourceTupleElementCSImpl <em>Weighting Component Resource Tuple Element CS</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.cs.impl.WeightingComponentResourceTupleElementCSImpl
-	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getWeightingComponentResourceTupleElementCS()
-	 * @generated
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Csi</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__CSI = BaseCSPackage.MODEL_ELEMENT_CS__CSI;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__PARENT = BaseCSPackage.MODEL_ELEMENT_CS__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Pivot</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__PIVOT = BaseCSPackage.MODEL_ELEMENT_CS__PIVOT;
-
-	/**
-	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__ORIGINAL_XMI_ID = BaseCSPackage.MODEL_ELEMENT_CS__ORIGINAL_XMI_ID;
-
-	/**
-	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__OWNED_ANNOTATIONS = BaseCSPackage.MODEL_ELEMENT_CS__OWNED_ANNOTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Tuple Descriptors</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__TUPLE_DESCRIPTORS = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Weighting</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__WEIGHTING = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Weighting Component Resource Tuple Element CS</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS_FEATURE_COUNT = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 2;
-
-	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.ServiceCSImpl <em>Service CS</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.cs.impl.ServiceCSImpl
-	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getServiceCS()
-	 * @generated
-	 */
-	int SERVICE_CS = 3;
-
-	/**
-	 * The feature id for the '<em><b>Csi</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_CS__CSI = BaseCSPackage.NAMED_ELEMENT_CS__CSI;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_CS__PARENT = BaseCSPackage.NAMED_ELEMENT_CS__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Pivot</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_CS__PIVOT = BaseCSPackage.NAMED_ELEMENT_CS__PIVOT;
-
-	/**
-	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_CS__ORIGINAL_XMI_ID = BaseCSPackage.NAMED_ELEMENT_CS__ORIGINAL_XMI_ID;
-
-	/**
-	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_CS__OWNED_ANNOTATIONS = BaseCSPackage.NAMED_ELEMENT_CS__OWNED_ANNOTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_CS__NAME = BaseCSPackage.NAMED_ELEMENT_CS__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Dimensions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_CS__DIMENSIONS = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Service CS</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_CS_FEATURE_COUNT = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.QoSDimensionCSImpl <em>Qo SDimension CS</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.cs.impl.QoSDimensionCSImpl
-	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getQoSDimensionCS()
-	 * @generated
-	 */
-	int QO_SDIMENSION_CS = 4;
-
-	/**
-	 * The feature id for the '<em><b>Csi</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION_CS__CSI = BaseCSPackage.NAMED_ELEMENT_CS__CSI;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION_CS__PARENT = BaseCSPackage.NAMED_ELEMENT_CS__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Pivot</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION_CS__PIVOT = BaseCSPackage.NAMED_ELEMENT_CS__PIVOT;
-
-	/**
-	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION_CS__ORIGINAL_XMI_ID = BaseCSPackage.NAMED_ELEMENT_CS__ORIGINAL_XMI_ID;
-
-	/**
-	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION_CS__OWNED_ANNOTATIONS = BaseCSPackage.NAMED_ELEMENT_CS__OWNED_ANNOTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION_CS__NAME = BaseCSPackage.NAMED_ELEMENT_CS__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION_CS__EXPRESSION = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Tuple Descriptors</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION_CS__TUPLE_DESCRIPTORS = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Weighting</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION_CS__WEIGHTING = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Qo SDimension CS</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QO_SDIMENSION_CS_FEATURE_COUNT = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 3;
-
-	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.ConstraintCSImpl <em>Constraint CS</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -552,7 +291,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getConstraintCS()
 	 * @generated
 	 */
-	int CONSTRAINT_CS = 5;
+	int CONSTRAINT_CS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -634,7 +373,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getLocationConstraintCS()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_CS = 6;
+	int LOCATION_CONSTRAINT_CS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -734,7 +473,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getResourceConstraintCS()
 	 * @generated
 	 */
-	int RESOURCE_CONSTRAINT_CS = 7;
+	int RESOURCE_CONSTRAINT_CS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -800,31 +539,13 @@ public interface CsPackage extends EPackage {
 	int RESOURCE_CONSTRAINT_CS__EXPRESSION = CONSTRAINT_CS__EXPRESSION;
 
 	/**
-	 * The feature id for the '<em><b>Tuple Descriptors</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSTRAINT_CS__TUPLE_DESCRIPTORS = CONSTRAINT_CS_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Weighting</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CONSTRAINT_CS__WEIGHTING = CONSTRAINT_CS_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Rhs</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CONSTRAINT_CS__RHS = CONSTRAINT_CS_FEATURE_COUNT + 2;
+	int RESOURCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR = CONSTRAINT_CS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Resource Constraint CS</em>' class.
@@ -833,7 +554,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSTRAINT_CS_FEATURE_COUNT = CONSTRAINT_CS_FEATURE_COUNT + 3;
+	int RESOURCE_CONSTRAINT_CS_FEATURE_COUNT = CONSTRAINT_CS_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.RequiredHardwareResourceInstanceConstraintCSImpl <em>Required Hardware Resource Instance Constraint CS</em>}' class.
@@ -843,7 +564,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getRequiredHardwareResourceInstanceConstraintCS()
 	 * @generated
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS = 8;
+	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -909,13 +630,13 @@ public interface CsPackage extends EPackage {
 	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__EXPRESSION = CONSTRAINT_CS__EXPRESSION;
 
 	/**
-	 * The feature id for the '<em><b>Tuple Descriptors</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__TUPLE_DESCRIPTORS = CONSTRAINT_CS_FEATURE_COUNT + 0;
+	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR = CONSTRAINT_CS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Required Hardware Resource Instance Constraint CS</em>' class.
@@ -934,7 +655,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getTupleDescriptorCS()
 	 * @generated
 	 */
-	int TUPLE_DESCRIPTOR_CS = 9;
+	int TUPLE_DESCRIPTOR_CS = 6;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -982,96 +703,32 @@ public interface CsPackage extends EPackage {
 	int TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATIONS = BaseCSPackage.MODEL_ELEMENT_CS__OWNED_ANNOTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Typed Pairs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TUPLE_DESCRIPTOR_CS__TYPED_PAIRS = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Tuple Descriptor CS</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TUPLE_DESCRIPTOR_CS_FEATURE_COUNT = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 0;
+	int TUPLE_DESCRIPTOR_CS_FEATURE_COUNT = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.InstanceTupleDescriptorCSImpl <em>Instance Tuple Descriptor CS</em>}' class.
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.WeightTupleDescriptorCSImpl <em>Weight Tuple Descriptor CS</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.cs.impl.InstanceTupleDescriptorCSImpl
-	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getInstanceTupleDescriptorCS()
+	 * @see org.muml.psm.allocation.language.cs.impl.WeightTupleDescriptorCSImpl
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getWeightTupleDescriptorCS()
 	 * @generated
 	 */
-	int INSTANCE_TUPLE_DESCRIPTOR_CS = 10;
-
-	/**
-	 * The feature id for the '<em><b>Csi</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_TUPLE_DESCRIPTOR_CS__CSI = TUPLE_DESCRIPTOR_CS__CSI;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_TUPLE_DESCRIPTOR_CS__PARENT = TUPLE_DESCRIPTOR_CS__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Pivot</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_TUPLE_DESCRIPTOR_CS__PIVOT = TUPLE_DESCRIPTOR_CS__PIVOT;
-
-	/**
-	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_TUPLE_DESCRIPTOR_CS__ORIGINAL_XMI_ID = TUPLE_DESCRIPTOR_CS__ORIGINAL_XMI_ID;
-
-	/**
-	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATIONS = TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Instance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_TUPLE_DESCRIPTOR_CS__INSTANCE = TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Instance Tuple Descriptor CS</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT = TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.LocationTupleDescriptorCSImpl <em>Location Tuple Descriptor CS</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.cs.impl.LocationTupleDescriptorCSImpl
-	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getLocationTupleDescriptorCS()
-	 * @generated
-	 */
-	int LOCATION_TUPLE_DESCRIPTOR_CS = 11;
+	int WEIGHT_TUPLE_DESCRIPTOR_CS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1080,7 +737,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR_CS__CSI = INSTANCE_TUPLE_DESCRIPTOR_CS__CSI;
+	int WEIGHT_TUPLE_DESCRIPTOR_CS__CSI = TUPLE_DESCRIPTOR_CS__CSI;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1089,7 +746,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR_CS__PARENT = INSTANCE_TUPLE_DESCRIPTOR_CS__PARENT;
+	int WEIGHT_TUPLE_DESCRIPTOR_CS__PARENT = TUPLE_DESCRIPTOR_CS__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Pivot</b></em>' reference.
@@ -1098,7 +755,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR_CS__PIVOT = INSTANCE_TUPLE_DESCRIPTOR_CS__PIVOT;
+	int WEIGHT_TUPLE_DESCRIPTOR_CS__PIVOT = TUPLE_DESCRIPTOR_CS__PIVOT;
 
 	/**
 	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
@@ -1107,7 +764,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR_CS__ORIGINAL_XMI_ID = INSTANCE_TUPLE_DESCRIPTOR_CS__ORIGINAL_XMI_ID;
+	int WEIGHT_TUPLE_DESCRIPTOR_CS__ORIGINAL_XMI_ID = TUPLE_DESCRIPTOR_CS__ORIGINAL_XMI_ID;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
@@ -1116,44 +773,44 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATIONS = INSTANCE_TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATIONS;
+	int WEIGHT_TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATIONS = TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * The feature id for the '<em><b>Typed Pairs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR_CS__INSTANCE = INSTANCE_TUPLE_DESCRIPTOR_CS__INSTANCE;
+	int WEIGHT_TUPLE_DESCRIPTOR_CS__TYPED_PAIRS = TUPLE_DESCRIPTOR_CS__TYPED_PAIRS;
 
 	/**
-	 * The feature id for the '<em><b>Second Instance</b></em>' attribute.
+	 * The feature id for the '<em><b>Weight</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR_CS__SECOND_INSTANCE = INSTANCE_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 0;
+	int WEIGHT_TUPLE_DESCRIPTOR_CS__WEIGHT = TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Location Tuple Descriptor CS</em>' class.
+	 * The number of structural features of the '<em>Weight Tuple Descriptor CS</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT = INSTANCE_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 1;
+	int WEIGHT_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT = TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.ComponentResourceTupleDescriptorCSImpl <em>Component Resource Tuple Descriptor CS</em>}' class.
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.BoundWeightTupleDescriptorCSImpl <em>Bound Weight Tuple Descriptor CS</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.cs.impl.ComponentResourceTupleDescriptorCSImpl
-	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getComponentResourceTupleDescriptorCS()
+	 * @see org.muml.psm.allocation.language.cs.impl.BoundWeightTupleDescriptorCSImpl
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getBoundWeightTupleDescriptorCS()
 	 * @generated
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS = 12;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS = 8;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1162,7 +819,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS__CSI = INSTANCE_TUPLE_DESCRIPTOR_CS__CSI;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__CSI = WEIGHT_TUPLE_DESCRIPTOR_CS__CSI;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1171,7 +828,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS__PARENT = INSTANCE_TUPLE_DESCRIPTOR_CS__PARENT;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__PARENT = WEIGHT_TUPLE_DESCRIPTOR_CS__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Pivot</b></em>' reference.
@@ -1180,7 +837,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS__PIVOT = INSTANCE_TUPLE_DESCRIPTOR_CS__PIVOT;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__PIVOT = WEIGHT_TUPLE_DESCRIPTOR_CS__PIVOT;
 
 	/**
 	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
@@ -1189,7 +846,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS__ORIGINAL_XMI_ID = INSTANCE_TUPLE_DESCRIPTOR_CS__ORIGINAL_XMI_ID;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__ORIGINAL_XMI_ID = WEIGHT_TUPLE_DESCRIPTOR_CS__ORIGINAL_XMI_ID;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
@@ -1198,44 +855,53 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATIONS = INSTANCE_TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATIONS;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATIONS = WEIGHT_TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Instance</b></em>' attribute.
+	 * The feature id for the '<em><b>Typed Pairs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS__INSTANCE = INSTANCE_TUPLE_DESCRIPTOR_CS__INSTANCE;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__TYPED_PAIRS = WEIGHT_TUPLE_DESCRIPTOR_CS__TYPED_PAIRS;
 
 	/**
-	 * The feature id for the '<em><b>Hwresinstance</b></em>' attribute.
+	 * The feature id for the '<em><b>Weight</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS__HWRESINSTANCE = INSTANCE_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 0;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__WEIGHT = WEIGHT_TUPLE_DESCRIPTOR_CS__WEIGHT;
 
 	/**
-	 * The number of structural features of the '<em>Component Resource Tuple Descriptor CS</em>' class.
+	 * The feature id for the '<em><b>Bound</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT = INSTANCE_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 1;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__BOUND = WEIGHT_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.ValueTupleDescriptorCSImpl <em>Value Tuple Descriptor CS</em>}' class.
+	 * The number of structural features of the '<em>Bound Weight Tuple Descriptor CS</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.cs.impl.ValueTupleDescriptorCSImpl
-	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getValueTupleDescriptorCS()
+	 * @generated
+	 * @ordered
+	 */
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT = WEIGHT_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.TypedNamedPartCSImpl <em>Typed Named Part CS</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.cs.impl.TypedNamedPartCSImpl
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getTypedNamedPartCS()
 	 * @generated
 	 */
-	int VALUE_TUPLE_DESCRIPTOR_CS = 13;
+	int TYPED_NAMED_PART_CS = 9;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1244,7 +910,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR_CS__CSI = TUPLE_DESCRIPTOR_CS__CSI;
+	int TYPED_NAMED_PART_CS__CSI = BaseCSPackage.TYPED_ELEMENT_CS__CSI;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1253,7 +919,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR_CS__PARENT = TUPLE_DESCRIPTOR_CS__PARENT;
+	int TYPED_NAMED_PART_CS__PARENT = BaseCSPackage.TYPED_ELEMENT_CS__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Pivot</b></em>' reference.
@@ -1262,7 +928,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR_CS__PIVOT = TUPLE_DESCRIPTOR_CS__PIVOT;
+	int TYPED_NAMED_PART_CS__PIVOT = BaseCSPackage.TYPED_ELEMENT_CS__PIVOT;
 
 	/**
 	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
@@ -1271,7 +937,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR_CS__ORIGINAL_XMI_ID = TUPLE_DESCRIPTOR_CS__ORIGINAL_XMI_ID;
+	int TYPED_NAMED_PART_CS__ORIGINAL_XMI_ID = BaseCSPackage.TYPED_ELEMENT_CS__ORIGINAL_XMI_ID;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
@@ -1280,25 +946,134 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATIONS = TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATIONS;
+	int TYPED_NAMED_PART_CS__OWNED_ANNOTATIONS = BaseCSPackage.TYPED_ELEMENT_CS__OWNED_ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR_CS__VALUE = TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 0;
+	int TYPED_NAMED_PART_CS__NAME = BaseCSPackage.TYPED_ELEMENT_CS__NAME;
 
 	/**
-	 * The number of structural features of the '<em>Value Tuple Descriptor CS</em>' class.
+	 * The feature id for the '<em><b>Is Optional</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT = TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 1;
+	int TYPED_NAMED_PART_CS__IS_OPTIONAL = BaseCSPackage.TYPED_ELEMENT_CS__IS_OPTIONAL;
+
+	/**
+	 * The feature id for the '<em><b>Owned Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_NAMED_PART_CS__OWNED_TYPE = BaseCSPackage.TYPED_ELEMENT_CS__OWNED_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Qualifiers</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_NAMED_PART_CS__QUALIFIERS = BaseCSPackage.TYPED_ELEMENT_CS__QUALIFIERS;
+
+	/**
+	 * The number of structural features of the '<em>Typed Named Part CS</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_NAMED_PART_CS_FEATURE_COUNT = BaseCSPackage.TYPED_ELEMENT_CS_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.TypedPairCSImpl <em>Typed Pair CS</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.cs.impl.TypedPairCSImpl
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getTypedPairCS()
+	 * @generated
+	 */
+	int TYPED_PAIR_CS = 10;
+
+	/**
+	 * The feature id for the '<em><b>Csi</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_PAIR_CS__CSI = BaseCSPackage.MODEL_ELEMENT_CS__CSI;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_PAIR_CS__PARENT = BaseCSPackage.MODEL_ELEMENT_CS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Pivot</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_PAIR_CS__PIVOT = BaseCSPackage.MODEL_ELEMENT_CS__PIVOT;
+
+	/**
+	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_PAIR_CS__ORIGINAL_XMI_ID = BaseCSPackage.MODEL_ELEMENT_CS__ORIGINAL_XMI_ID;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_PAIR_CS__OWNED_ANNOTATIONS = BaseCSPackage.MODEL_ELEMENT_CS__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>First</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_PAIR_CS__FIRST = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Second</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_PAIR_CS__SECOND = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Typed Pair CS</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_PAIR_CS_FEATURE_COUNT = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.MeasureFunctionCSImpl <em>Measure Function CS</em>}' class.
@@ -1308,7 +1083,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getMeasureFunctionCS()
 	 * @generated
 	 */
-	int MEASURE_FUNCTION_CS = 14;
+	int MEASURE_FUNCTION_CS = 11;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1374,6 +1149,179 @@ public interface CsPackage extends EPackage {
 	int MEASURE_FUNCTION_CS_FEATURE_COUNT = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.ServiceCSImpl <em>Service CS</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.cs.impl.ServiceCSImpl
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getServiceCS()
+	 * @generated
+	 */
+	int SERVICE_CS = 12;
+
+	/**
+	 * The feature id for the '<em><b>Csi</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_CS__CSI = BaseCSPackage.NAMED_ELEMENT_CS__CSI;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_CS__PARENT = BaseCSPackage.NAMED_ELEMENT_CS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Pivot</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_CS__PIVOT = BaseCSPackage.NAMED_ELEMENT_CS__PIVOT;
+
+	/**
+	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_CS__ORIGINAL_XMI_ID = BaseCSPackage.NAMED_ELEMENT_CS__ORIGINAL_XMI_ID;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_CS__OWNED_ANNOTATIONS = BaseCSPackage.NAMED_ELEMENT_CS__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_CS__NAME = BaseCSPackage.NAMED_ELEMENT_CS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Dimensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_CS__DIMENSIONS = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Service CS</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_CS_FEATURE_COUNT = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.QoSDimensionCSImpl <em>Qo SDimension CS</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.cs.impl.QoSDimensionCSImpl
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getQoSDimensionCS()
+	 * @generated
+	 */
+	int QO_SDIMENSION_CS = 13;
+
+	/**
+	 * The feature id for the '<em><b>Csi</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION_CS__CSI = BaseCSPackage.NAMED_ELEMENT_CS__CSI;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION_CS__PARENT = BaseCSPackage.NAMED_ELEMENT_CS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Pivot</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION_CS__PIVOT = BaseCSPackage.NAMED_ELEMENT_CS__PIVOT;
+
+	/**
+	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION_CS__ORIGINAL_XMI_ID = BaseCSPackage.NAMED_ELEMENT_CS__ORIGINAL_XMI_ID;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION_CS__OWNED_ANNOTATIONS = BaseCSPackage.NAMED_ELEMENT_CS__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION_CS__NAME = BaseCSPackage.NAMED_ELEMENT_CS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION_CS__EXPRESSION = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION_CS__TUPLE_DESCRIPTOR = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Qo SDimension CS</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QO_SDIMENSION_CS_FEATURE_COUNT = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 2;
+
+	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1381,7 +1329,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getLocationConstraintTypes()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_TYPES = 15;
+	int LOCATION_CONSTRAINT_TYPES = 14;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.Goal <em>Goal</em>}' enum.
@@ -1391,7 +1339,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getGoal()
 	 * @generated
 	 */
-	int GOAL = 16;
+	int GOAL = 15;
 
 
 	/**
@@ -1470,69 +1418,6 @@ public interface CsPackage extends EPackage {
 	EReference getEvaluatableElementCS_Expression();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElementCS <em>Weighting Component Resource Tuple Element CS</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Weighting Component Resource Tuple Element CS</em>'.
-	 * @see org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElementCS
-	 * @generated
-	 */
-	EClass getWeightingComponentResourceTupleElementCS();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElementCS#getTupleDescriptors <em>Tuple Descriptors</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tuple Descriptors</em>'.
-	 * @see org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElementCS#getTupleDescriptors()
-	 * @see #getWeightingComponentResourceTupleElementCS()
-	 * @generated
-	 */
-	EReference getWeightingComponentResourceTupleElementCS_TupleDescriptors();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElementCS#getWeighting <em>Weighting</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Weighting</em>'.
-	 * @see org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElementCS#getWeighting()
-	 * @see #getWeightingComponentResourceTupleElementCS()
-	 * @generated
-	 */
-	EReference getWeightingComponentResourceTupleElementCS_Weighting();
-
-	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.ServiceCS <em>Service CS</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Service CS</em>'.
-	 * @see org.muml.psm.allocation.language.cs.ServiceCS
-	 * @generated
-	 */
-	EClass getServiceCS();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.muml.psm.allocation.language.cs.ServiceCS#getDimensions <em>Dimensions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Dimensions</em>'.
-	 * @see org.muml.psm.allocation.language.cs.ServiceCS#getDimensions()
-	 * @see #getServiceCS()
-	 * @generated
-	 */
-	EReference getServiceCS_Dimensions();
-
-	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.QoSDimensionCS <em>Qo SDimension CS</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Qo SDimension CS</em>'.
-	 * @see org.muml.psm.allocation.language.cs.QoSDimensionCS
-	 * @generated
-	 */
-	EClass getQoSDimensionCS();
-
-	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.ConstraintCS <em>Constraint CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1585,15 +1470,15 @@ public interface CsPackage extends EPackage {
 	EClass getResourceConstraintCS();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.ResourceConstraintCS#getRhs <em>Rhs</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.ResourceConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Rhs</em>'.
-	 * @see org.muml.psm.allocation.language.cs.ResourceConstraintCS#getRhs()
+	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.cs.ResourceConstraintCS#getTupleDescriptor()
 	 * @see #getResourceConstraintCS()
 	 * @generated
 	 */
-	EReference getResourceConstraintCS_Rhs();
+	EReference getResourceConstraintCS_TupleDescriptor();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS <em>Required Hardware Resource Instance Constraint CS</em>}'.
@@ -1606,15 +1491,15 @@ public interface CsPackage extends EPackage {
 	EClass getRequiredHardwareResourceInstanceConstraintCS();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS#getTupleDescriptors <em>Tuple Descriptors</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tuple Descriptors</em>'.
-	 * @see org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS#getTupleDescriptors()
+	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS#getTupleDescriptor()
 	 * @see #getRequiredHardwareResourceInstanceConstraintCS()
 	 * @generated
 	 */
-	EReference getRequiredHardwareResourceInstanceConstraintCS_TupleDescriptors();
+	EReference getRequiredHardwareResourceInstanceConstraintCS_TupleDescriptor();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.TupleDescriptorCS <em>Tuple Descriptor CS</em>}'.
@@ -1627,88 +1512,99 @@ public interface CsPackage extends EPackage {
 	EClass getTupleDescriptorCS();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.InstanceTupleDescriptorCS <em>Instance Tuple Descriptor CS</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.muml.psm.allocation.language.cs.TupleDescriptorCS#getTypedPairs <em>Typed Pairs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Instance Tuple Descriptor CS</em>'.
-	 * @see org.muml.psm.allocation.language.cs.InstanceTupleDescriptorCS
+	 * @return the meta object for the containment reference list '<em>Typed Pairs</em>'.
+	 * @see org.muml.psm.allocation.language.cs.TupleDescriptorCS#getTypedPairs()
+	 * @see #getTupleDescriptorCS()
 	 * @generated
 	 */
-	EClass getInstanceTupleDescriptorCS();
+	EReference getTupleDescriptorCS_TypedPairs();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.cs.InstanceTupleDescriptorCS#getInstance <em>Instance</em>}'.
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.WeightTupleDescriptorCS <em>Weight Tuple Descriptor CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Instance</em>'.
-	 * @see org.muml.psm.allocation.language.cs.InstanceTupleDescriptorCS#getInstance()
-	 * @see #getInstanceTupleDescriptorCS()
+	 * @return the meta object for class '<em>Weight Tuple Descriptor CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.WeightTupleDescriptorCS
 	 * @generated
 	 */
-	EAttribute getInstanceTupleDescriptorCS_Instance();
+	EClass getWeightTupleDescriptorCS();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS <em>Location Tuple Descriptor CS</em>}'.
+	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.cs.WeightTupleDescriptorCS#getWeight <em>Weight</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Location Tuple Descriptor CS</em>'.
-	 * @see org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS
+	 * @return the meta object for the attribute '<em>Weight</em>'.
+	 * @see org.muml.psm.allocation.language.cs.WeightTupleDescriptorCS#getWeight()
+	 * @see #getWeightTupleDescriptorCS()
 	 * @generated
 	 */
-	EClass getLocationTupleDescriptorCS();
+	EAttribute getWeightTupleDescriptorCS_Weight();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS#getSecondInstance <em>Second Instance</em>}'.
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS <em>Bound Weight Tuple Descriptor CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Second Instance</em>'.
-	 * @see org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS#getSecondInstance()
-	 * @see #getLocationTupleDescriptorCS()
+	 * @return the meta object for class '<em>Bound Weight Tuple Descriptor CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS
 	 * @generated
 	 */
-	EAttribute getLocationTupleDescriptorCS_SecondInstance();
+	EClass getBoundWeightTupleDescriptorCS();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS <em>Component Resource Tuple Descriptor CS</em>}'.
+	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS#getBound <em>Bound</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Component Resource Tuple Descriptor CS</em>'.
-	 * @see org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS
+	 * @return the meta object for the attribute '<em>Bound</em>'.
+	 * @see org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS#getBound()
+	 * @see #getBoundWeightTupleDescriptorCS()
 	 * @generated
 	 */
-	EClass getComponentResourceTupleDescriptorCS();
+	EAttribute getBoundWeightTupleDescriptorCS_Bound();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS#getHwresinstance <em>Hwresinstance</em>}'.
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.TypedNamedPartCS <em>Typed Named Part CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Hwresinstance</em>'.
-	 * @see org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS#getHwresinstance()
-	 * @see #getComponentResourceTupleDescriptorCS()
+	 * @return the meta object for class '<em>Typed Named Part CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.TypedNamedPartCS
 	 * @generated
 	 */
-	EAttribute getComponentResourceTupleDescriptorCS_Hwresinstance();
+	EClass getTypedNamedPartCS();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.ValueTupleDescriptorCS <em>Value Tuple Descriptor CS</em>}'.
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.TypedPairCS <em>Typed Pair CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Value Tuple Descriptor CS</em>'.
-	 * @see org.muml.psm.allocation.language.cs.ValueTupleDescriptorCS
+	 * @return the meta object for class '<em>Typed Pair CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.TypedPairCS
 	 * @generated
 	 */
-	EClass getValueTupleDescriptorCS();
+	EClass getTypedPairCS();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.cs.ValueTupleDescriptorCS#getValue <em>Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.TypedPairCS#getFirst <em>First</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.muml.psm.allocation.language.cs.ValueTupleDescriptorCS#getValue()
-	 * @see #getValueTupleDescriptorCS()
+	 * @return the meta object for the containment reference '<em>First</em>'.
+	 * @see org.muml.psm.allocation.language.cs.TypedPairCS#getFirst()
+	 * @see #getTypedPairCS()
 	 * @generated
 	 */
-	EAttribute getValueTupleDescriptorCS_Value();
+	EReference getTypedPairCS_First();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.TypedPairCS#getSecond <em>Second</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Second</em>'.
+	 * @see org.muml.psm.allocation.language.cs.TypedPairCS#getSecond()
+	 * @see #getTypedPairCS()
+	 * @generated
+	 */
+	EReference getTypedPairCS_Second();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.MeasureFunctionCS <em>Measure Function CS</em>}'.
@@ -1730,6 +1626,48 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMeasureFunctionCS_Services();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.ServiceCS <em>Service CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Service CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.ServiceCS
+	 * @generated
+	 */
+	EClass getServiceCS();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.muml.psm.allocation.language.cs.ServiceCS#getDimensions <em>Dimensions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Dimensions</em>'.
+	 * @see org.muml.psm.allocation.language.cs.ServiceCS#getDimensions()
+	 * @see #getServiceCS()
+	 * @generated
+	 */
+	EReference getServiceCS_Dimensions();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.QoSDimensionCS <em>Qo SDimension CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Qo SDimension CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.QoSDimensionCS
+	 * @generated
+	 */
+	EClass getQoSDimensionCS();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.QoSDimensionCS#getTupleDescriptor <em>Tuple Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.cs.QoSDimensionCS#getTupleDescriptor()
+	 * @see #getQoSDimensionCS()
+	 * @generated
+	 */
+	EReference getQoSDimensionCS_TupleDescriptor();
 
 	/**
 	 * Returns the meta object for enum '{@link org.muml.psm.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}'.
@@ -1834,60 +1772,6 @@ public interface CsPackage extends EPackage {
 		EReference EVALUATABLE_ELEMENT_CS__EXPRESSION = eINSTANCE.getEvaluatableElementCS_Expression();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.WeightingComponentResourceTupleElementCSImpl <em>Weighting Component Resource Tuple Element CS</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.cs.impl.WeightingComponentResourceTupleElementCSImpl
-		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getWeightingComponentResourceTupleElementCS()
-		 * @generated
-		 */
-		EClass WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS = eINSTANCE.getWeightingComponentResourceTupleElementCS();
-
-		/**
-		 * The meta object literal for the '<em><b>Tuple Descriptors</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__TUPLE_DESCRIPTORS = eINSTANCE.getWeightingComponentResourceTupleElementCS_TupleDescriptors();
-
-		/**
-		 * The meta object literal for the '<em><b>Weighting</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__WEIGHTING = eINSTANCE.getWeightingComponentResourceTupleElementCS_Weighting();
-
-		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.ServiceCSImpl <em>Service CS</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.cs.impl.ServiceCSImpl
-		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getServiceCS()
-		 * @generated
-		 */
-		EClass SERVICE_CS = eINSTANCE.getServiceCS();
-
-		/**
-		 * The meta object literal for the '<em><b>Dimensions</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SERVICE_CS__DIMENSIONS = eINSTANCE.getServiceCS_Dimensions();
-
-		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.QoSDimensionCSImpl <em>Qo SDimension CS</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.cs.impl.QoSDimensionCSImpl
-		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getQoSDimensionCS()
-		 * @generated
-		 */
-		EClass QO_SDIMENSION_CS = eINSTANCE.getQoSDimensionCS();
-
-		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.ConstraintCSImpl <em>Constraint CS</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1934,12 +1818,12 @@ public interface CsPackage extends EPackage {
 		EClass RESOURCE_CONSTRAINT_CS = eINSTANCE.getResourceConstraintCS();
 
 		/**
-		 * The meta object literal for the '<em><b>Rhs</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESOURCE_CONSTRAINT_CS__RHS = eINSTANCE.getResourceConstraintCS_Rhs();
+		EReference RESOURCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR = eINSTANCE.getResourceConstraintCS_TupleDescriptor();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.RequiredHardwareResourceInstanceConstraintCSImpl <em>Required Hardware Resource Instance Constraint CS</em>}' class.
@@ -1952,12 +1836,12 @@ public interface CsPackage extends EPackage {
 		EClass REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS = eINSTANCE.getRequiredHardwareResourceInstanceConstraintCS();
 
 		/**
-		 * The meta object literal for the '<em><b>Tuple Descriptors</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__TUPLE_DESCRIPTORS = eINSTANCE.getRequiredHardwareResourceInstanceConstraintCS_TupleDescriptors();
+		EReference REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR = eINSTANCE.getRequiredHardwareResourceInstanceConstraintCS_TupleDescriptor();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.TupleDescriptorCSImpl <em>Tuple Descriptor CS</em>}' class.
@@ -1970,76 +1854,84 @@ public interface CsPackage extends EPackage {
 		EClass TUPLE_DESCRIPTOR_CS = eINSTANCE.getTupleDescriptorCS();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.InstanceTupleDescriptorCSImpl <em>Instance Tuple Descriptor CS</em>}' class.
+		 * The meta object literal for the '<em><b>Typed Pairs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.cs.impl.InstanceTupleDescriptorCSImpl
-		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getInstanceTupleDescriptorCS()
 		 * @generated
 		 */
-		EClass INSTANCE_TUPLE_DESCRIPTOR_CS = eINSTANCE.getInstanceTupleDescriptorCS();
+		EReference TUPLE_DESCRIPTOR_CS__TYPED_PAIRS = eINSTANCE.getTupleDescriptorCS_TypedPairs();
 
 		/**
-		 * The meta object literal for the '<em><b>Instance</b></em>' attribute feature.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.WeightTupleDescriptorCSImpl <em>Weight Tuple Descriptor CS</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.cs.impl.WeightTupleDescriptorCSImpl
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getWeightTupleDescriptorCS()
 		 * @generated
 		 */
-		EAttribute INSTANCE_TUPLE_DESCRIPTOR_CS__INSTANCE = eINSTANCE.getInstanceTupleDescriptorCS_Instance();
+		EClass WEIGHT_TUPLE_DESCRIPTOR_CS = eINSTANCE.getWeightTupleDescriptorCS();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.LocationTupleDescriptorCSImpl <em>Location Tuple Descriptor CS</em>}' class.
+		 * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.cs.impl.LocationTupleDescriptorCSImpl
-		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getLocationTupleDescriptorCS()
 		 * @generated
 		 */
-		EClass LOCATION_TUPLE_DESCRIPTOR_CS = eINSTANCE.getLocationTupleDescriptorCS();
+		EAttribute WEIGHT_TUPLE_DESCRIPTOR_CS__WEIGHT = eINSTANCE.getWeightTupleDescriptorCS_Weight();
 
 		/**
-		 * The meta object literal for the '<em><b>Second Instance</b></em>' attribute feature.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.BoundWeightTupleDescriptorCSImpl <em>Bound Weight Tuple Descriptor CS</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.cs.impl.BoundWeightTupleDescriptorCSImpl
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getBoundWeightTupleDescriptorCS()
 		 * @generated
 		 */
-		EAttribute LOCATION_TUPLE_DESCRIPTOR_CS__SECOND_INSTANCE = eINSTANCE.getLocationTupleDescriptorCS_SecondInstance();
+		EClass BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS = eINSTANCE.getBoundWeightTupleDescriptorCS();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.ComponentResourceTupleDescriptorCSImpl <em>Component Resource Tuple Descriptor CS</em>}' class.
+		 * The meta object literal for the '<em><b>Bound</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.cs.impl.ComponentResourceTupleDescriptorCSImpl
-		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getComponentResourceTupleDescriptorCS()
 		 * @generated
 		 */
-		EClass COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS = eINSTANCE.getComponentResourceTupleDescriptorCS();
+		EAttribute BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__BOUND = eINSTANCE.getBoundWeightTupleDescriptorCS_Bound();
 
 		/**
-		 * The meta object literal for the '<em><b>Hwresinstance</b></em>' attribute feature.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.TypedNamedPartCSImpl <em>Typed Named Part CS</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.cs.impl.TypedNamedPartCSImpl
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getTypedNamedPartCS()
 		 * @generated
 		 */
-		EAttribute COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS__HWRESINSTANCE = eINSTANCE.getComponentResourceTupleDescriptorCS_Hwresinstance();
+		EClass TYPED_NAMED_PART_CS = eINSTANCE.getTypedNamedPartCS();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.ValueTupleDescriptorCSImpl <em>Value Tuple Descriptor CS</em>}' class.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.TypedPairCSImpl <em>Typed Pair CS</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.cs.impl.ValueTupleDescriptorCSImpl
-		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getValueTupleDescriptorCS()
+		 * @see org.muml.psm.allocation.language.cs.impl.TypedPairCSImpl
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getTypedPairCS()
 		 * @generated
 		 */
-		EClass VALUE_TUPLE_DESCRIPTOR_CS = eINSTANCE.getValueTupleDescriptorCS();
+		EClass TYPED_PAIR_CS = eINSTANCE.getTypedPairCS();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>First</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VALUE_TUPLE_DESCRIPTOR_CS__VALUE = eINSTANCE.getValueTupleDescriptorCS_Value();
+		EReference TYPED_PAIR_CS__FIRST = eINSTANCE.getTypedPairCS_First();
+
+		/**
+		 * The meta object literal for the '<em><b>Second</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TYPED_PAIR_CS__SECOND = eINSTANCE.getTypedPairCS_Second();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.MeasureFunctionCSImpl <em>Measure Function CS</em>}' class.
@@ -2058,6 +1950,42 @@ public interface CsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MEASURE_FUNCTION_CS__SERVICES = eINSTANCE.getMeasureFunctionCS_Services();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.ServiceCSImpl <em>Service CS</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.cs.impl.ServiceCSImpl
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getServiceCS()
+		 * @generated
+		 */
+		EClass SERVICE_CS = eINSTANCE.getServiceCS();
+
+		/**
+		 * The meta object literal for the '<em><b>Dimensions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SERVICE_CS__DIMENSIONS = eINSTANCE.getServiceCS_Dimensions();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.QoSDimensionCSImpl <em>Qo SDimension CS</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.cs.impl.QoSDimensionCSImpl
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getQoSDimensionCS()
+		 * @generated
+		 */
+		EClass QO_SDIMENSION_CS = eINSTANCE.getQoSDimensionCS();
+
+		/**
+		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QO_SDIMENSION_CS__TUPLE_DESCRIPTOR = eINSTANCE.getQoSDimensionCS_TupleDescriptor();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.

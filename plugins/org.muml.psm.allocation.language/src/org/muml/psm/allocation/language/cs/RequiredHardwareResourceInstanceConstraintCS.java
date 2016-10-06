@@ -2,7 +2,6 @@
  */
 package org.muml.psm.allocation.language.cs;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +18,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}</li>
  * </ul>
  *
  * @see org.muml.psm.allocation.language.cs.CsPackage#getRequiredHardwareResourceInstanceConstraintCS()
@@ -28,18 +27,28 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface RequiredHardwareResourceInstanceConstraintCS extends ConstraintCS {
 	/**
-	 * Returns the value of the '<em><b>Tuple Descriptors</b></em>' containment reference list.
-	 * The list contents are of type {@link org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS}.
+	 * Returns the value of the '<em><b>Tuple Descriptor</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * A set of component resource tuple descriptors.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Tuple Descriptors</em>' containment reference list.
-	 * @see org.muml.psm.allocation.language.cs.CsPackage#getRequiredHardwareResourceInstanceConstraintCS_TupleDescriptors()
+	 * @return the value of the '<em>Tuple Descriptor</em>' containment reference.
+	 * @see #setTupleDescriptor(TupleDescriptorCS)
+	 * @see org.muml.psm.allocation.language.cs.CsPackage#getRequiredHardwareResourceInstanceConstraintCS_TupleDescriptor()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<ComponentResourceTupleDescriptorCS> getTupleDescriptors();
+	TupleDescriptorCS getTupleDescriptor();
+
+	/**
+	 * Sets the value of the '{@link org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Tuple Descriptor</em>' containment reference.
+	 * @see #getTupleDescriptor()
+	 * @generated
+	 */
+	void setTupleDescriptor(TupleDescriptorCS value);
 
 } // RequiredHardwareResourceInstanceConstraintCS

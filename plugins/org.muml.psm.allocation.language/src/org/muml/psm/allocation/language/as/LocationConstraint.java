@@ -25,7 +25,8 @@ package org.muml.psm.allocation.language.as;
  * </ul>
  *
  * @see org.muml.psm.allocation.language.as.AsPackage#getLocationConstraint()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='exactlyOnePair'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot exactlyOnePair='self.tupleDescriptor.typedPairs->size() = 1'"
  * @generated
  */
 public interface LocationConstraint extends Constraint {
@@ -37,12 +38,12 @@ public interface LocationConstraint extends Constraint {
 	 * A set of location tuple descriptors.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tuple Descriptor</em>' containment reference.
-	 * @see #setTupleDescriptor(LocationTupleDescriptor)
+	 * @see #setTupleDescriptor(TupleDescriptor)
 	 * @see org.muml.psm.allocation.language.as.AsPackage#getLocationConstraint_TupleDescriptor()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	LocationTupleDescriptor getTupleDescriptor();
+	TupleDescriptor getTupleDescriptor();
 
 	/**
 	 * Sets the value of the '{@link org.muml.psm.allocation.language.as.LocationConstraint#getTupleDescriptor <em>Tuple Descriptor</em>}' containment reference.
@@ -52,7 +53,7 @@ public interface LocationConstraint extends Constraint {
 	 * @see #getTupleDescriptor()
 	 * @generated
 	 */
-	void setTupleDescriptor(LocationTupleDescriptor value);
+	void setTupleDescriptor(TupleDescriptor value);
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.

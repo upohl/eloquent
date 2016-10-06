@@ -4,13 +4,16 @@ package org.muml.psm.allocation.language.as.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.muml.psm.allocation.language.as.AsPackage;
 import org.muml.psm.allocation.language.as.LocationConstraint;
 import org.muml.psm.allocation.language.as.LocationConstraintTypes;
-import org.muml.psm.allocation.language.as.LocationTupleDescriptor;
+import org.muml.psm.allocation.language.as.TupleDescriptor;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +38,7 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	 * @generated
 	 * @ordered
 	 */
-	protected LocationTupleDescriptor tupleDescriptor;
+	protected TupleDescriptor tupleDescriptor;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -81,7 +84,7 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocationTupleDescriptor getTupleDescriptor() {
+	public TupleDescriptor getTupleDescriptor() {
 		return tupleDescriptor;
 	}
 
@@ -90,8 +93,8 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTupleDescriptor(LocationTupleDescriptor newTupleDescriptor, NotificationChain msgs) {
-		LocationTupleDescriptor oldTupleDescriptor = tupleDescriptor;
+	public NotificationChain basicSetTupleDescriptor(TupleDescriptor newTupleDescriptor, NotificationChain msgs) {
+		TupleDescriptor oldTupleDescriptor = tupleDescriptor;
 		tupleDescriptor = newTupleDescriptor;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR, oldTupleDescriptor, newTupleDescriptor);
@@ -105,7 +108,7 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTupleDescriptor(LocationTupleDescriptor newTupleDescriptor) {
+	public void setTupleDescriptor(TupleDescriptor newTupleDescriptor) {
 		if (newTupleDescriptor != tupleDescriptor) {
 			NotificationChain msgs = null;
 			if (tupleDescriptor != null)
@@ -179,7 +182,7 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
-				setTupleDescriptor((LocationTupleDescriptor)newValue);
+				setTupleDescriptor((TupleDescriptor)newValue);
 				return;
 			case AsPackage.LOCATION_CONSTRAINT__TYPE:
 				setType((LocationConstraintTypes)newValue);
@@ -197,7 +200,7 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
-				setTupleDescriptor((LocationTupleDescriptor)null);
+				setTupleDescriptor((TupleDescriptor)null);
 				return;
 			case AsPackage.LOCATION_CONSTRAINT__TYPE:
 				setType(TYPE_EDEFAULT);

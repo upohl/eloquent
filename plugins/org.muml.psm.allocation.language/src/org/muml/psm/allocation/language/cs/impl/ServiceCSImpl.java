@@ -5,17 +5,25 @@ package org.muml.psm.allocation.language.cs.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.jdt.annotation.NonNull;
+
 import org.eclipse.ocl.xtext.basecs.impl.NamedElementCSImpl;
+
 import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
+
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
 import org.muml.psm.allocation.language.cs.ServiceCS;
+
 import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 
 /**

@@ -18,37 +18,37 @@ package org.muml.psm.allocation.language.cs;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.muml.psm.allocation.language.cs.ResourceConstraintCS#getRhs <em>Rhs</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.ResourceConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}</li>
  * </ul>
  *
  * @see org.muml.psm.allocation.language.cs.CsPackage#getResourceConstraintCS()
  * @model
  * @generated
  */
-public interface ResourceConstraintCS extends ConstraintCS, WeightingComponentResourceTupleElementCS {
+public interface ResourceConstraintCS extends ConstraintCS {
 	/**
-	 * Returns the value of the '<em><b>Rhs</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Tuple Descriptor</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Represents the tuple descriptor for the right-hand side of the inequality.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Rhs</em>' containment reference.
-	 * @see #setRhs(ValueTupleDescriptorCS)
-	 * @see org.muml.psm.allocation.language.cs.CsPackage#getResourceConstraintCS_Rhs()
+	 * @return the value of the '<em>Tuple Descriptor</em>' containment reference.
+	 * @see #setTupleDescriptor(BoundWeightTupleDescriptorCS)
+	 * @see org.muml.psm.allocation.language.cs.CsPackage#getResourceConstraintCS_TupleDescriptor()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	ValueTupleDescriptorCS getRhs();
+	BoundWeightTupleDescriptorCS getTupleDescriptor();
 
 	/**
-	 * Sets the value of the '{@link org.muml.psm.allocation.language.cs.ResourceConstraintCS#getRhs <em>Rhs</em>}' containment reference.
+	 * Sets the value of the '{@link org.muml.psm.allocation.language.cs.ResourceConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rhs</em>' containment reference.
-	 * @see #getRhs()
+	 * @param value the new value of the '<em>Tuple Descriptor</em>' containment reference.
+	 * @see #getTupleDescriptor()
 	 * @generated
 	 */
-	void setRhs(ValueTupleDescriptorCS value);
+	void setTupleDescriptor(BoundWeightTupleDescriptorCS value);
 
 } // ResourceConstraintCS

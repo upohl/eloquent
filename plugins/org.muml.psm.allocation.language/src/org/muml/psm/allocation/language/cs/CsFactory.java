@@ -31,24 +31,6 @@ public interface CsFactory extends EFactory {
 	SpecificationCS createSpecificationCS();
 
 	/**
-	 * Returns a new object of class '<em>Service CS</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Service CS</em>'.
-	 * @generated
-	 */
-	ServiceCS createServiceCS();
-
-	/**
-	 * Returns a new object of class '<em>Qo SDimension CS</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Qo SDimension CS</em>'.
-	 * @generated
-	 */
-	QoSDimensionCS createQoSDimensionCS();
-
-	/**
 	 * Returns a new object of class '<em>Location Constraint CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,31 +58,49 @@ public interface CsFactory extends EFactory {
 	RequiredHardwareResourceInstanceConstraintCS createRequiredHardwareResourceInstanceConstraintCS();
 
 	/**
-	 * Returns a new object of class '<em>Location Tuple Descriptor CS</em>'.
+	 * Returns a new object of class '<em>Tuple Descriptor CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Location Tuple Descriptor CS</em>'.
+	 * @return a new object of class '<em>Tuple Descriptor CS</em>'.
 	 * @generated
 	 */
-	LocationTupleDescriptorCS createLocationTupleDescriptorCS();
+	TupleDescriptorCS createTupleDescriptorCS();
 
 	/**
-	 * Returns a new object of class '<em>Component Resource Tuple Descriptor CS</em>'.
+	 * Returns a new object of class '<em>Weight Tuple Descriptor CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Component Resource Tuple Descriptor CS</em>'.
+	 * @return a new object of class '<em>Weight Tuple Descriptor CS</em>'.
 	 * @generated
 	 */
-	ComponentResourceTupleDescriptorCS createComponentResourceTupleDescriptorCS();
+	WeightTupleDescriptorCS createWeightTupleDescriptorCS();
 
 	/**
-	 * Returns a new object of class '<em>Value Tuple Descriptor CS</em>'.
+	 * Returns a new object of class '<em>Bound Weight Tuple Descriptor CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Value Tuple Descriptor CS</em>'.
+	 * @return a new object of class '<em>Bound Weight Tuple Descriptor CS</em>'.
 	 * @generated
 	 */
-	ValueTupleDescriptorCS createValueTupleDescriptorCS();
+	BoundWeightTupleDescriptorCS createBoundWeightTupleDescriptorCS();
+
+	/**
+	 * Returns a new object of class '<em>Typed Named Part CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Typed Named Part CS</em>'.
+	 * @generated
+	 */
+	TypedNamedPartCS createTypedNamedPartCS();
+
+	/**
+	 * Returns a new object of class '<em>Typed Pair CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Typed Pair CS</em>'.
+	 * @generated
+	 */
+	TypedPairCS createTypedPairCS();
 
 	/**
 	 * Returns a new object of class '<em>Measure Function CS</em>'.
@@ -110,6 +110,24 @@ public interface CsFactory extends EFactory {
 	 * @generated
 	 */
 	MeasureFunctionCS createMeasureFunctionCS();
+
+	/**
+	 * Returns a new object of class '<em>Service CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Service CS</em>'.
+	 * @generated
+	 */
+	ServiceCS createServiceCS();
+
+	/**
+	 * Returns a new object of class '<em>Qo SDimension CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Qo SDimension CS</em>'.
+	 * @generated
+	 */
+	QoSDimensionCS createQoSDimensionCS();
 
 	/**
 	 * Returns the package supported by this factory.

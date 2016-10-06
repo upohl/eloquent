@@ -6,23 +6,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
 import org.muml.psm.allocation.language.as.*;
-import org.muml.psm.allocation.language.as.AsFactory;
-import org.muml.psm.allocation.language.as.AsPackage;
-import org.muml.psm.allocation.language.as.ComponentResourceTupleDescriptor;
-import org.muml.psm.allocation.language.as.Goal;
-import org.muml.psm.allocation.language.as.LocationConstraint;
-import org.muml.psm.allocation.language.as.LocationConstraintTypes;
-import org.muml.psm.allocation.language.as.LocationTupleDescriptor;
-import org.muml.psm.allocation.language.as.MeasureFunction;
-import org.muml.psm.allocation.language.as.QoSDimension;
-import org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint;
-import org.muml.psm.allocation.language.as.ResourceConstraint;
-import org.muml.psm.allocation.language.as.Service;
-import org.muml.psm.allocation.language.as.Specification;
-import org.muml.psm.allocation.language.as.ValueTupleDescriptor;
 
 /**
  * <!-- begin-user-doc -->
@@ -69,15 +58,17 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case AsPackage.SPECIFICATION: return createSpecification();
-			case AsPackage.SERVICE: return createService();
-			case AsPackage.QO_SDIMENSION: return createQoSDimension();
 			case AsPackage.LOCATION_CONSTRAINT: return createLocationConstraint();
 			case AsPackage.RESOURCE_CONSTRAINT: return createResourceConstraint();
 			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT: return createRequiredHardwareResourceInstanceConstraint();
-			case AsPackage.LOCATION_TUPLE_DESCRIPTOR: return createLocationTupleDescriptor();
-			case AsPackage.COMPONENT_RESOURCE_TUPLE_DESCRIPTOR: return createComponentResourceTupleDescriptor();
-			case AsPackage.VALUE_TUPLE_DESCRIPTOR: return createValueTupleDescriptor();
+			case AsPackage.TUPLE_DESCRIPTOR: return createTupleDescriptor();
+			case AsPackage.WEIGHT_TUPLE_DESCRIPTOR: return createWeightTupleDescriptor();
+			case AsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR: return createBoundWeightTupleDescriptor();
+			case AsPackage.TYPED_NAMED_PART: return createTypedNamedPart();
+			case AsPackage.TYPED_PAIR: return createTypedPair();
 			case AsPackage.MEASURE_FUNCTION: return createMeasureFunction();
+			case AsPackage.SERVICE: return createService();
+			case AsPackage.QO_SDIMENSION: return createQoSDimension();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -132,26 +123,6 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Service createService() {
-		ServiceImpl service = new ServiceImpl();
-		return service;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public QoSDimension createQoSDimension() {
-		QoSDimensionImpl qoSDimension = new QoSDimensionImpl();
-		return qoSDimension;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public LocationConstraint createLocationConstraint() {
 		LocationConstraintImpl locationConstraint = new LocationConstraintImpl();
 		return locationConstraint;
@@ -182,9 +153,9 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocationTupleDescriptor createLocationTupleDescriptor() {
-		LocationTupleDescriptorImpl locationTupleDescriptor = new LocationTupleDescriptorImpl();
-		return locationTupleDescriptor;
+	public TupleDescriptor createTupleDescriptor() {
+		TupleDescriptorImpl tupleDescriptor = new TupleDescriptorImpl();
+		return tupleDescriptor;
 	}
 
 	/**
@@ -192,9 +163,9 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ComponentResourceTupleDescriptor createComponentResourceTupleDescriptor() {
-		ComponentResourceTupleDescriptorImpl componentResourceTupleDescriptor = new ComponentResourceTupleDescriptorImpl();
-		return componentResourceTupleDescriptor;
+	public WeightTupleDescriptor createWeightTupleDescriptor() {
+		WeightTupleDescriptorImpl weightTupleDescriptor = new WeightTupleDescriptorImpl();
+		return weightTupleDescriptor;
 	}
 
 	/**
@@ -202,9 +173,29 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueTupleDescriptor createValueTupleDescriptor() {
-		ValueTupleDescriptorImpl valueTupleDescriptor = new ValueTupleDescriptorImpl();
-		return valueTupleDescriptor;
+	public BoundWeightTupleDescriptor createBoundWeightTupleDescriptor() {
+		BoundWeightTupleDescriptorImpl boundWeightTupleDescriptor = new BoundWeightTupleDescriptorImpl();
+		return boundWeightTupleDescriptor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TypedNamedPart createTypedNamedPart() {
+		TypedNamedPartImpl typedNamedPart = new TypedNamedPartImpl();
+		return typedNamedPart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TypedPair createTypedPair() {
+		TypedPairImpl typedPair = new TypedPairImpl();
+		return typedPair;
 	}
 
 	/**
@@ -215,6 +206,26 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	public MeasureFunction createMeasureFunction() {
 		MeasureFunctionImpl measureFunction = new MeasureFunctionImpl();
 		return measureFunction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Service createService() {
+		ServiceImpl service = new ServiceImpl();
+		return service;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QoSDimension createQoSDimension() {
+		QoSDimensionImpl qoSDimension = new QoSDimensionImpl();
+		return qoSDimension;
 	}
 
 	/**

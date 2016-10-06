@@ -5,14 +5,15 @@ package org.muml.psm.allocation.language.oclcontext.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import org.muml.pim.instance.InstancePackage;
+
 import org.muml.pm.hardware.HardwarePackage;
-import org.muml.pm.hardware.hwplatform.HwplatformPackage;
+
 import org.muml.pm.hardware.hwplatforminstance.HwplatforminstancePackage;
-import org.muml.pm.hardware.hwresource.HwresourcePackage;
-import org.muml.pm.hardware.hwresourceinstance.HwresourceinstancePackage;
-import org.muml.pm.hardware.hwvaluetype.HwvaluetypePackage;
+
 import org.muml.psm.allocation.language.oclcontext.OCLContext;
 import org.muml.psm.allocation.language.oclcontext.OclcontextFactory;
 import org.muml.psm.allocation.language.oclcontext.OclcontextPackage;

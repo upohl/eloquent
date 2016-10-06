@@ -3,51 +3,60 @@
 package org.muml.psm.allocation.language.cs.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.jdt.annotation.NonNull;
+
+import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
+
 import org.muml.psm.allocation.language.cs.CsPackage;
-import org.muml.psm.allocation.language.cs.InstanceTupleDescriptorCS;
+import org.muml.psm.allocation.language.cs.WeightTupleDescriptorCS;
+
+import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Instance Tuple Descriptor CS</b></em>'.
+ * An implementation of the model object '<em><b>Weight Tuple Descriptor CS</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.muml.psm.allocation.language.cs.impl.InstanceTupleDescriptorCSImpl#getInstance <em>Instance</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.impl.WeightTupleDescriptorCSImpl#getWeight <em>Weight</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class InstanceTupleDescriptorCSImpl extends TupleDescriptorCSImpl implements InstanceTupleDescriptorCS {
+public class WeightTupleDescriptorCSImpl extends TupleDescriptorCSImpl implements WeightTupleDescriptorCS {
 	/**
-	 * The default value of the '{@link #getInstance() <em>Instance</em>}' attribute.
+	 * The default value of the '{@link #getWeight() <em>Weight</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInstance()
+	 * @see #getWeight()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INSTANCE_EDEFAULT = null;
+	protected static final String WEIGHT_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getInstance() <em>Instance</em>}' attribute.
+	 * The cached value of the '{@link #getWeight() <em>Weight</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInstance()
+	 * @see #getWeight()
 	 * @generated
 	 * @ordered
 	 */
-	protected String instance = INSTANCE_EDEFAULT;
+	protected String weight = WEIGHT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InstanceTupleDescriptorCSImpl() {
+	protected WeightTupleDescriptorCSImpl() {
 		super();
 	}
 
@@ -58,7 +67,7 @@ public abstract class InstanceTupleDescriptorCSImpl extends TupleDescriptorCSImp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CsPackage.Literals.INSTANCE_TUPLE_DESCRIPTOR_CS;
+		return CsPackage.Literals.WEIGHT_TUPLE_DESCRIPTOR_CS;
 	}
 
 	/**
@@ -66,8 +75,8 @@ public abstract class InstanceTupleDescriptorCSImpl extends TupleDescriptorCSImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getInstance() {
-		return instance;
+	public String getWeight() {
+		return weight;
 	}
 
 	/**
@@ -75,11 +84,11 @@ public abstract class InstanceTupleDescriptorCSImpl extends TupleDescriptorCSImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInstance(String newInstance) {
-		String oldInstance = instance;
-		instance = newInstance;
+	public void setWeight(String newWeight) {
+		String oldWeight = weight;
+		weight = newWeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.INSTANCE_TUPLE_DESCRIPTOR_CS__INSTANCE, oldInstance, instance));
+			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.WEIGHT_TUPLE_DESCRIPTOR_CS__WEIGHT, oldWeight, weight));
 	}
 
 	/**
@@ -87,7 +96,6 @@ public abstract class InstanceTupleDescriptorCSImpl extends TupleDescriptorCSImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String toString() {
 		return super.toString();
 	}
@@ -100,8 +108,8 @@ public abstract class InstanceTupleDescriptorCSImpl extends TupleDescriptorCSImp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CsPackage.INSTANCE_TUPLE_DESCRIPTOR_CS__INSTANCE:
-				return getInstance();
+			case CsPackage.WEIGHT_TUPLE_DESCRIPTOR_CS__WEIGHT:
+				return getWeight();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -114,8 +122,8 @@ public abstract class InstanceTupleDescriptorCSImpl extends TupleDescriptorCSImp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CsPackage.INSTANCE_TUPLE_DESCRIPTOR_CS__INSTANCE:
-				setInstance((String)newValue);
+			case CsPackage.WEIGHT_TUPLE_DESCRIPTOR_CS__WEIGHT:
+				setWeight((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -129,8 +137,8 @@ public abstract class InstanceTupleDescriptorCSImpl extends TupleDescriptorCSImp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CsPackage.INSTANCE_TUPLE_DESCRIPTOR_CS__INSTANCE:
-				setInstance(INSTANCE_EDEFAULT);
+			case CsPackage.WEIGHT_TUPLE_DESCRIPTOR_CS__WEIGHT:
+				setWeight(WEIGHT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -144,11 +152,20 @@ public abstract class InstanceTupleDescriptorCSImpl extends TupleDescriptorCSImp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CsPackage.INSTANCE_TUPLE_DESCRIPTOR_CS__INSTANCE:
-				return INSTANCE_EDEFAULT == null ? instance != null : !INSTANCE_EDEFAULT.equals(instance);
+			case CsPackage.WEIGHT_TUPLE_DESCRIPTOR_CS__WEIGHT:
+				return WEIGHT_EDEFAULT == null ? weight != null : !WEIGHT_EDEFAULT.equals(weight);
 		}
 		return super.eIsSet(featureID);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
+		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitWeightTupleDescriptorCS(this);
+	}
 
-} //InstanceTupleDescriptorCSImpl
+} //WeightTupleDescriptorCSImpl

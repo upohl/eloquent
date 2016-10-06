@@ -3,6 +3,7 @@
 package org.muml.psm.allocation.language.cs;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.ocl.xtext.basecs.NamedElementCS;
 
 /**

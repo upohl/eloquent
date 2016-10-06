@@ -3,6 +3,7 @@
 package org.muml.psm.allocation.language.as;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.ocl.pivot.Model;
 
 /**

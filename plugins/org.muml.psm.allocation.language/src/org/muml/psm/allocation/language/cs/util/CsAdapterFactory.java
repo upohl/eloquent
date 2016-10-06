@@ -4,37 +4,31 @@ package org.muml.psm.allocation.language.cs.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.jdt.annotation.Nullable;
+
 import org.eclipse.ocl.pivot.utilities.Nameable;
 import org.eclipse.ocl.pivot.utilities.Pivotable;
+
 import org.eclipse.ocl.xtext.basecs.ElementCS;
 import org.eclipse.ocl.xtext.basecs.ModelElementCS;
 import org.eclipse.ocl.xtext.basecs.NamedElementCS;
 import org.eclipse.ocl.xtext.basecs.NamespaceCS;
 import org.eclipse.ocl.xtext.basecs.PivotableElementCS;
 import org.eclipse.ocl.xtext.basecs.RootCS;
+import org.eclipse.ocl.xtext.basecs.TypedElementCS;
+
 import org.eclipse.ocl.xtext.basecs.util.VisitableCS;
+
 import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLDocumentCS;
+
 import org.muml.core.ExtendableElement;
+
 import org.muml.psm.allocation.language.cs.*;
-import org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS;
-import org.muml.psm.allocation.language.cs.ConstraintCS;
-import org.muml.psm.allocation.language.cs.CsPackage;
-import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
-import org.muml.psm.allocation.language.cs.InstanceTupleDescriptorCS;
-import org.muml.psm.allocation.language.cs.LocationConstraintCS;
-import org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS;
-import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
-import org.muml.psm.allocation.language.cs.QoSDimensionCS;
-import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
-import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
-import org.muml.psm.allocation.language.cs.ServiceCS;
-import org.muml.psm.allocation.language.cs.SpecificationCS;
-import org.muml.psm.allocation.language.cs.TupleDescriptorCS;
-import org.muml.psm.allocation.language.cs.ValueTupleDescriptorCS;
-import org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElementCS;
 
 /**
  * <!-- begin-user-doc -->
@@ -101,18 +95,6 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 				return createEvaluatableElementCSAdapter();
 			}
 			@Override
-			public Adapter caseWeightingComponentResourceTupleElementCS(WeightingComponentResourceTupleElementCS object) {
-				return createWeightingComponentResourceTupleElementCSAdapter();
-			}
-			@Override
-			public Adapter caseServiceCS(ServiceCS object) {
-				return createServiceCSAdapter();
-			}
-			@Override
-			public Adapter caseQoSDimensionCS(QoSDimensionCS object) {
-				return createQoSDimensionCSAdapter();
-			}
-			@Override
 			public Adapter caseConstraintCS(ConstraintCS object) {
 				return createConstraintCSAdapter();
 			}
@@ -133,24 +115,32 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 				return createTupleDescriptorCSAdapter();
 			}
 			@Override
-			public Adapter caseInstanceTupleDescriptorCS(InstanceTupleDescriptorCS object) {
-				return createInstanceTupleDescriptorCSAdapter();
+			public Adapter caseWeightTupleDescriptorCS(WeightTupleDescriptorCS object) {
+				return createWeightTupleDescriptorCSAdapter();
 			}
 			@Override
-			public Adapter caseLocationTupleDescriptorCS(LocationTupleDescriptorCS object) {
-				return createLocationTupleDescriptorCSAdapter();
+			public Adapter caseBoundWeightTupleDescriptorCS(BoundWeightTupleDescriptorCS object) {
+				return createBoundWeightTupleDescriptorCSAdapter();
 			}
 			@Override
-			public Adapter caseComponentResourceTupleDescriptorCS(ComponentResourceTupleDescriptorCS object) {
-				return createComponentResourceTupleDescriptorCSAdapter();
+			public Adapter caseTypedNamedPartCS(TypedNamedPartCS object) {
+				return createTypedNamedPartCSAdapter();
 			}
 			@Override
-			public Adapter caseValueTupleDescriptorCS(ValueTupleDescriptorCS object) {
-				return createValueTupleDescriptorCSAdapter();
+			public Adapter caseTypedPairCS(TypedPairCS object) {
+				return createTypedPairCSAdapter();
 			}
 			@Override
 			public Adapter caseMeasureFunctionCS(MeasureFunctionCS object) {
 				return createMeasureFunctionCSAdapter();
+			}
+			@Override
+			public Adapter caseServiceCS(ServiceCS object) {
+				return createServiceCSAdapter();
+			}
+			@Override
+			public Adapter caseQoSDimensionCS(QoSDimensionCS object) {
+				return createQoSDimensionCSAdapter();
 			}
 			@Override
 			public Adapter caseVisitableCS(VisitableCS object) {
@@ -197,6 +187,10 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 				return createExtendableElementAdapter();
 			}
 			@Override
+			public Adapter caseTypedElementCS(TypedElementCS object) {
+				return createTypedElementCSAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -241,48 +235,6 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEvaluatableElementCSAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElementCS <em>Weighting Component Resource Tuple Element CS</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElementCS
-	 * @generated
-	 */
-	public Adapter createWeightingComponentResourceTupleElementCSAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.ServiceCS <em>Service CS</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.cs.ServiceCS
-	 * @generated
-	 */
-	public Adapter createServiceCSAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.QoSDimensionCS <em>Qo SDimension CS</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.cs.QoSDimensionCS
-	 * @generated
-	 */
-	public Adapter createQoSDimensionCSAdapter() {
 		return null;
 	}
 
@@ -357,58 +309,58 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.InstanceTupleDescriptorCS <em>Instance Tuple Descriptor CS</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.WeightTupleDescriptorCS <em>Weight Tuple Descriptor CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.cs.InstanceTupleDescriptorCS
+	 * @see org.muml.psm.allocation.language.cs.WeightTupleDescriptorCS
 	 * @generated
 	 */
-	public Adapter createInstanceTupleDescriptorCSAdapter() {
+	public Adapter createWeightTupleDescriptorCSAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS <em>Location Tuple Descriptor CS</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS <em>Bound Weight Tuple Descriptor CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS
+	 * @see org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS
 	 * @generated
 	 */
-	public Adapter createLocationTupleDescriptorCSAdapter() {
+	public Adapter createBoundWeightTupleDescriptorCSAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS <em>Component Resource Tuple Descriptor CS</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.TypedNamedPartCS <em>Typed Named Part CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS
+	 * @see org.muml.psm.allocation.language.cs.TypedNamedPartCS
 	 * @generated
 	 */
-	public Adapter createComponentResourceTupleDescriptorCSAdapter() {
+	public Adapter createTypedNamedPartCSAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.ValueTupleDescriptorCS <em>Value Tuple Descriptor CS</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.TypedPairCS <em>Typed Pair CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.cs.ValueTupleDescriptorCS
+	 * @see org.muml.psm.allocation.language.cs.TypedPairCS
 	 * @generated
 	 */
-	public Adapter createValueTupleDescriptorCSAdapter() {
+	public Adapter createTypedPairCSAdapter() {
 		return null;
 	}
 
@@ -423,6 +375,34 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMeasureFunctionCSAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.ServiceCS <em>Service CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.cs.ServiceCS
+	 * @generated
+	 */
+	public Adapter createServiceCSAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.QoSDimensionCS <em>Qo SDimension CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.cs.QoSDimensionCS
+	 * @generated
+	 */
+	public Adapter createQoSDimensionCSAdapter() {
 		return null;
 	}
 
@@ -577,6 +557,20 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createExtendableElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.xtext.basecs.TypedElementCS <em>Typed Element CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.ocl.xtext.basecs.TypedElementCS
+	 * @generated
+	 */
+	public Adapter createTypedElementCSAdapter() {
 		return null;
 	}
 

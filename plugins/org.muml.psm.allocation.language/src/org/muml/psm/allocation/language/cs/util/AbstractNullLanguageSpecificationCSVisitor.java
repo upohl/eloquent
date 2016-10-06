@@ -33,7 +33,7 @@ public abstract class AbstractNullLanguageSpecificationCSVisitor<@Nullable R, C>
 	}	
 
 	@Override
-	public R visitComponentResourceTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull ComponentResourceTupleDescriptorCS object) {
+	public R visitBoundWeightTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull BoundWeightTupleDescriptorCS object) {
 		return null;
 	}
 
@@ -48,17 +48,7 @@ public abstract class AbstractNullLanguageSpecificationCSVisitor<@Nullable R, C>
 	}
 
 	@Override
-	public R visitInstanceTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull InstanceTupleDescriptorCS object) {
-		return null;
-	}
-
-	@Override
 	public R visitLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull LocationConstraintCS object) {
-		return null;
-	}
-
-	@Override
-	public R visitLocationTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull LocationTupleDescriptorCS object) {
 		return null;
 	}
 
@@ -98,12 +88,17 @@ public abstract class AbstractNullLanguageSpecificationCSVisitor<@Nullable R, C>
 	}
 
 	@Override
-	public R visitValueTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull ValueTupleDescriptorCS object) {
+	public R visitTypedNamedPartCS(org.muml.psm.allocation.language.cs.@NonNull TypedNamedPartCS object) {
 		return null;
 	}
 
 	@Override
-	public R visitWeightingComponentResourceTupleElementCS(org.muml.psm.allocation.language.cs.@NonNull WeightingComponentResourceTupleElementCS object) {
+	public R visitTypedPairCS(org.muml.psm.allocation.language.cs.@NonNull TypedPairCS object) {
+		return null;
+	}
+
+	@Override
+	public R visitWeightTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull WeightTupleDescriptorCS object) {
 		return null;
 	}
 }

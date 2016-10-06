@@ -2,24 +2,22 @@
  */
 package org.muml.psm.allocation.language.as.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.ocl.pivot.ExpressionInOCL;
+
 import org.eclipse.ocl.pivot.internal.NamedElementImpl;
+
 import org.muml.psm.allocation.language.as.AsPackage;
-import org.muml.psm.allocation.language.as.ComponentResourceTupleDescriptor;
 import org.muml.psm.allocation.language.as.EvaluatableElement;
 import org.muml.psm.allocation.language.as.QoSDimension;
-import org.muml.psm.allocation.language.as.ValueTupleDescriptor;
-import org.muml.psm.allocation.language.as.WeightingComponentResourceTupleElement;
+import org.muml.psm.allocation.language.as.WeightTupleDescriptor;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,8 +28,7 @@ import org.muml.psm.allocation.language.as.WeightingComponentResourceTupleElemen
  * </p>
  * <ul>
  *   <li>{@link org.muml.psm.allocation.language.as.impl.QoSDimensionImpl#getExpression <em>Expression</em>}</li>
- *   <li>{@link org.muml.psm.allocation.language.as.impl.QoSDimensionImpl#getTupleDescriptors <em>Tuple Descriptors</em>}</li>
- *   <li>{@link org.muml.psm.allocation.language.as.impl.QoSDimensionImpl#getWeighting <em>Weighting</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.as.impl.QoSDimensionImpl#getTupleDescriptor <em>Tuple Descriptor</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,24 +45,14 @@ public class QoSDimensionImpl extends NamedElementImpl implements QoSDimension {
 	protected ExpressionInOCL expression;
 
 	/**
-	 * The cached value of the '{@link #getTupleDescriptors() <em>Tuple Descriptors</em>}' containment reference list.
+	 * The cached value of the '{@link #getTupleDescriptor() <em>Tuple Descriptor</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTupleDescriptors()
+	 * @see #getTupleDescriptor()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ComponentResourceTupleDescriptor> tupleDescriptors;
-
-	/**
-	 * The cached value of the '{@link #getWeighting() <em>Weighting</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getWeighting()
-	 * @generated
-	 * @ordered
-	 */
-	protected ValueTupleDescriptor weighting;
+	protected WeightTupleDescriptor tupleDescriptor;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,11 +121,8 @@ public class QoSDimensionImpl extends NamedElementImpl implements QoSDimension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ComponentResourceTupleDescriptor> getTupleDescriptors() {
-		if (tupleDescriptors == null) {
-			tupleDescriptors = new EObjectContainmentEList<ComponentResourceTupleDescriptor>(ComponentResourceTupleDescriptor.class, this, AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTORS);
-		}
-		return tupleDescriptors;
+	public WeightTupleDescriptor getTupleDescriptor() {
+		return tupleDescriptor;
 	}
 
 	/**
@@ -146,20 +130,11 @@ public class QoSDimensionImpl extends NamedElementImpl implements QoSDimension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueTupleDescriptor getWeighting() {
-		return weighting;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetWeighting(ValueTupleDescriptor newWeighting, NotificationChain msgs) {
-		ValueTupleDescriptor oldWeighting = weighting;
-		weighting = newWeighting;
+	public NotificationChain basicSetTupleDescriptor(WeightTupleDescriptor newTupleDescriptor, NotificationChain msgs) {
+		WeightTupleDescriptor oldTupleDescriptor = tupleDescriptor;
+		tupleDescriptor = newTupleDescriptor;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AsPackage.QO_SDIMENSION__WEIGHTING, oldWeighting, newWeighting);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTOR, oldTupleDescriptor, newTupleDescriptor);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -170,18 +145,18 @@ public class QoSDimensionImpl extends NamedElementImpl implements QoSDimension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWeighting(ValueTupleDescriptor newWeighting) {
-		if (newWeighting != weighting) {
+	public void setTupleDescriptor(WeightTupleDescriptor newTupleDescriptor) {
+		if (newTupleDescriptor != tupleDescriptor) {
 			NotificationChain msgs = null;
-			if (weighting != null)
-				msgs = ((InternalEObject)weighting).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AsPackage.QO_SDIMENSION__WEIGHTING, null, msgs);
-			if (newWeighting != null)
-				msgs = ((InternalEObject)newWeighting).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AsPackage.QO_SDIMENSION__WEIGHTING, null, msgs);
-			msgs = basicSetWeighting(newWeighting, msgs);
+			if (tupleDescriptor != null)
+				msgs = ((InternalEObject)tupleDescriptor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTOR, null, msgs);
+			if (newTupleDescriptor != null)
+				msgs = ((InternalEObject)newTupleDescriptor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTOR, null, msgs);
+			msgs = basicSetTupleDescriptor(newTupleDescriptor, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.QO_SDIMENSION__WEIGHTING, newWeighting, newWeighting));
+			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTOR, newTupleDescriptor, newTupleDescriptor));
 	}
 
 	/**
@@ -194,10 +169,8 @@ public class QoSDimensionImpl extends NamedElementImpl implements QoSDimension {
 		switch (featureID) {
 			case AsPackage.QO_SDIMENSION__EXPRESSION:
 				return basicSetExpression(null, msgs);
-			case AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTORS:
-				return ((InternalEList<?>)getTupleDescriptors()).basicRemove(otherEnd, msgs);
-			case AsPackage.QO_SDIMENSION__WEIGHTING:
-				return basicSetWeighting(null, msgs);
+			case AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTOR:
+				return basicSetTupleDescriptor(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -212,10 +185,8 @@ public class QoSDimensionImpl extends NamedElementImpl implements QoSDimension {
 		switch (featureID) {
 			case AsPackage.QO_SDIMENSION__EXPRESSION:
 				return getExpression();
-			case AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTORS:
-				return getTupleDescriptors();
-			case AsPackage.QO_SDIMENSION__WEIGHTING:
-				return getWeighting();
+			case AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTOR:
+				return getTupleDescriptor();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -225,19 +196,14 @@ public class QoSDimensionImpl extends NamedElementImpl implements QoSDimension {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case AsPackage.QO_SDIMENSION__EXPRESSION:
 				setExpression((ExpressionInOCL)newValue);
 				return;
-			case AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTORS:
-				getTupleDescriptors().clear();
-				getTupleDescriptors().addAll((Collection<? extends ComponentResourceTupleDescriptor>)newValue);
-				return;
-			case AsPackage.QO_SDIMENSION__WEIGHTING:
-				setWeighting((ValueTupleDescriptor)newValue);
+			case AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTOR:
+				setTupleDescriptor((WeightTupleDescriptor)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -254,11 +220,8 @@ public class QoSDimensionImpl extends NamedElementImpl implements QoSDimension {
 			case AsPackage.QO_SDIMENSION__EXPRESSION:
 				setExpression((ExpressionInOCL)null);
 				return;
-			case AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTORS:
-				getTupleDescriptors().clear();
-				return;
-			case AsPackage.QO_SDIMENSION__WEIGHTING:
-				setWeighting((ValueTupleDescriptor)null);
+			case AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTOR:
+				setTupleDescriptor((WeightTupleDescriptor)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -274,10 +237,8 @@ public class QoSDimensionImpl extends NamedElementImpl implements QoSDimension {
 		switch (featureID) {
 			case AsPackage.QO_SDIMENSION__EXPRESSION:
 				return expression != null;
-			case AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTORS:
-				return tupleDescriptors != null && !tupleDescriptors.isEmpty();
-			case AsPackage.QO_SDIMENSION__WEIGHTING:
-				return weighting != null;
+			case AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTOR:
+				return tupleDescriptor != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -295,13 +256,6 @@ public class QoSDimensionImpl extends NamedElementImpl implements QoSDimension {
 				default: return -1;
 			}
 		}
-		if (baseClass == WeightingComponentResourceTupleElement.class) {
-			switch (derivedFeatureID) {
-				case AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTORS: return AsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__TUPLE_DESCRIPTORS;
-				case AsPackage.QO_SDIMENSION__WEIGHTING: return AsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__WEIGHTING;
-				default: return -1;
-			}
-		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -315,13 +269,6 @@ public class QoSDimensionImpl extends NamedElementImpl implements QoSDimension {
 		if (baseClass == EvaluatableElement.class) {
 			switch (baseFeatureID) {
 				case AsPackage.EVALUATABLE_ELEMENT__EXPRESSION: return AsPackage.QO_SDIMENSION__EXPRESSION;
-				default: return -1;
-			}
-		}
-		if (baseClass == WeightingComponentResourceTupleElement.class) {
-			switch (baseFeatureID) {
-				case AsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__TUPLE_DESCRIPTORS: return AsPackage.QO_SDIMENSION__TUPLE_DESCRIPTORS;
-				case AsPackage.WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT__WEIGHTING: return AsPackage.QO_SDIMENSION__WEIGHTING;
 				default: return -1;
 			}
 		}

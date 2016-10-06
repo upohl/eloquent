@@ -1,31 +1,32 @@
 /**
-
  */
-
 package org.muml.psm.allocation.language.cs.impl;
-
-
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EValidator;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import org.eclipse.ocl.xtext.basecs.BaseCSPackage;
+
 import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLCSPackage;
+
 import org.eclipse.ocl.xtext.essentialoclcs.EssentialOCLCSPackage;
+
 import org.muml.core.CorePackage;
-import org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS;
+
+import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.ConstraintCS;
 import org.muml.psm.allocation.language.cs.CsFactory;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
 import org.muml.psm.allocation.language.cs.Goal;
-import org.muml.psm.allocation.language.cs.InstanceTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintTypes;
-import org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
 import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
@@ -33,226 +34,130 @@ import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
 import org.muml.psm.allocation.language.cs.ServiceCS;
 import org.muml.psm.allocation.language.cs.SpecificationCS;
 import org.muml.psm.allocation.language.cs.TupleDescriptorCS;
-import org.muml.psm.allocation.language.cs.ValueTupleDescriptorCS;
-import org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElementCS;
+import org.muml.psm.allocation.language.cs.TypedNamedPartCS;
+import org.muml.psm.allocation.language.cs.TypedPairCS;
+import org.muml.psm.allocation.language.cs.WeightTupleDescriptorCS;
 
-
+import org.muml.psm.allocation.language.cs.util.CsValidator;
 
 /**
  * <!-- begin-user-doc -->
-
  * An implementation of the model <b>Package</b>.
-
  * <!-- end-user-doc -->
-
  * @generated
  */
-
 public class CsPackageImpl extends EPackageImpl implements CsPackage {
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	private EClass specificationCSEClass = null;
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	private EClass evaluatableElementCSEClass = null;
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
-	private EClass weightingComponentResourceTupleElementCSEClass = null;
-
-
-
-	/**
-	 * <!-- begin-user-doc -->
-
-	 * <!-- end-user-doc -->
-
-	 * @generated
-	 */
-
-	private EClass serviceCSEClass = null;
-
-
-
-	/**
-	 * <!-- begin-user-doc -->
-
-	 * <!-- end-user-doc -->
-
-	 * @generated
-	 */
-
-	private EClass qoSDimensionCSEClass = null;
-
-
-
-	/**
-	 * <!-- begin-user-doc -->
-
-	 * <!-- end-user-doc -->
-
-	 * @generated
-	 */
-
 	private EClass constraintCSEClass = null;
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	private EClass locationConstraintCSEClass = null;
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	private EClass resourceConstraintCSEClass = null;
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	private EClass requiredHardwareResourceInstanceConstraintCSEClass = null;
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	private EClass tupleDescriptorCSEClass = null;
 
-
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass weightTupleDescriptorCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
-	private EClass instanceTupleDescriptorCSEClass = null;
-
-
+	private EClass boundWeightTupleDescriptorCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
-	private EClass locationTupleDescriptorCSEClass = null;
-
-
+	private EClass typedNamedPartCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
-	private EClass componentResourceTupleDescriptorCSEClass = null;
-
-
+	private EClass typedPairCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
-	private EClass valueTupleDescriptorCSEClass = null;
-
-
-
-	/**
-	 * <!-- begin-user-doc -->
-
-	 * <!-- end-user-doc -->
-
-	 * @generated
-	 */
-
 	private EClass measureFunctionCSEClass = null;
 
-
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass serviceCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
+	private EClass qoSDimensionCSEClass = null;
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum locationConstraintTypesEEnum = null;
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	private EEnum goalEEnum = null;
-
-
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -263,32 +168,22 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * initialization of the package, or returns the registered package,
 	 * if one already exists.
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
 	 * @see org.muml.psm.allocation.language.cs.CsPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-
 	private CsPackageImpl() {
 		super(eNS_URI, CsFactory.eINSTANCE);
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	private static boolean isInited = false;
-
-
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
@@ -296,15 +191,12 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <p>This method is used to initialize {@link CsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @see #eNS_URI
 	 * @see #createPackageContents()
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-
 	public static CsPackage init() {
 		if (isInited) return (CsPackage)EPackage.Registry.INSTANCE.getEPackage(CsPackage.eNS_URI);
 
@@ -324,6 +216,15 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		// Initialize created meta-data
 		theCsPackage.initializePackageContents();
 
+		// Register package validator
+		EValidator.Registry.INSTANCE.put
+			(theCsPackage, 
+			 new EValidator.Descriptor() {
+				 public EValidator getEValidator() {
+					 return CsValidator.INSTANCE;
+				 }
+			 });
+
 		// Mark meta-data to indicate it can't be changed
 		theCsPackage.freeze();
 
@@ -333,520 +234,326 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		return theCsPackage;
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public EClass getSpecificationCS() {
 		return specificationCSEClass;
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public EReference getSpecificationCS_Services() {
 		return (EReference)specificationCSEClass.getEStructuralFeatures().get(0);
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public EReference getSpecificationCS_Constraints() {
 		return (EReference)specificationCSEClass.getEStructuralFeatures().get(1);
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public EReference getSpecificationCS_Measure() {
 		return (EReference)specificationCSEClass.getEStructuralFeatures().get(2);
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public EAttribute getSpecificationCS_Goal() {
 		return (EAttribute)specificationCSEClass.getEStructuralFeatures().get(3);
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public EClass getEvaluatableElementCS() {
 		return evaluatableElementCSEClass;
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public EReference getEvaluatableElementCS_Expression() {
 		return (EReference)evaluatableElementCSEClass.getEStructuralFeatures().get(0);
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
-	public EClass getWeightingComponentResourceTupleElementCS() {
-		return weightingComponentResourceTupleElementCSEClass;
-	}
-
-
-
-	/**
-	 * <!-- begin-user-doc -->
-
-	 * <!-- end-user-doc -->
-
-	 * @generated
-	 */
-
-	public EReference getWeightingComponentResourceTupleElementCS_TupleDescriptors() {
-		return (EReference)weightingComponentResourceTupleElementCSEClass.getEStructuralFeatures().get(0);
-	}
-
-
-
-	/**
-	 * <!-- begin-user-doc -->
-
-	 * <!-- end-user-doc -->
-
-	 * @generated
-	 */
-
-	public EReference getWeightingComponentResourceTupleElementCS_Weighting() {
-		return (EReference)weightingComponentResourceTupleElementCSEClass.getEStructuralFeatures().get(1);
-	}
-
-
-
-	/**
-	 * <!-- begin-user-doc -->
-
-	 * <!-- end-user-doc -->
-
-	 * @generated
-	 */
-
-	public EClass getServiceCS() {
-		return serviceCSEClass;
-	}
-
-
-
-	/**
-	 * <!-- begin-user-doc -->
-
-	 * <!-- end-user-doc -->
-
-	 * @generated
-	 */
-
-	public EReference getServiceCS_Dimensions() {
-		return (EReference)serviceCSEClass.getEStructuralFeatures().get(0);
-	}
-
-
-
-	/**
-	 * <!-- begin-user-doc -->
-
-	 * <!-- end-user-doc -->
-
-	 * @generated
-	 */
-
-	public EClass getQoSDimensionCS() {
-		return qoSDimensionCSEClass;
-	}
-
-
-
-	/**
-	 * <!-- begin-user-doc -->
-
-	 * <!-- end-user-doc -->
-
-	 * @generated
-	 */
-
 	public EClass getConstraintCS() {
 		return constraintCSEClass;
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public EClass getLocationConstraintCS() {
 		return locationConstraintCSEClass;
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public EReference getLocationConstraintCS_TupleDescriptor() {
 		return (EReference)locationConstraintCSEClass.getEStructuralFeatures().get(0);
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public EAttribute getLocationConstraintCS_Type() {
 		return (EAttribute)locationConstraintCSEClass.getEStructuralFeatures().get(1);
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public EClass getResourceConstraintCS() {
 		return resourceConstraintCSEClass;
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
-	public EReference getResourceConstraintCS_Rhs() {
+	public EReference getResourceConstraintCS_TupleDescriptor() {
 		return (EReference)resourceConstraintCSEClass.getEStructuralFeatures().get(0);
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public EClass getRequiredHardwareResourceInstanceConstraintCS() {
 		return requiredHardwareResourceInstanceConstraintCSEClass;
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
-	public EReference getRequiredHardwareResourceInstanceConstraintCS_TupleDescriptors() {
+	public EReference getRequiredHardwareResourceInstanceConstraintCS_TupleDescriptor() {
 		return (EReference)requiredHardwareResourceInstanceConstraintCSEClass.getEStructuralFeatures().get(0);
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public EClass getTupleDescriptorCS() {
 		return tupleDescriptorCSEClass;
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
-	public EClass getInstanceTupleDescriptorCS() {
-		return instanceTupleDescriptorCSEClass;
+	public EReference getTupleDescriptorCS_TypedPairs() {
+		return (EReference)tupleDescriptorCSEClass.getEStructuralFeatures().get(0);
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
-	public EAttribute getInstanceTupleDescriptorCS_Instance() {
-		return (EAttribute)instanceTupleDescriptorCSEClass.getEStructuralFeatures().get(0);
+	public EClass getWeightTupleDescriptorCS() {
+		return weightTupleDescriptorCSEClass;
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
-	public EClass getLocationTupleDescriptorCS() {
-		return locationTupleDescriptorCSEClass;
+	public EAttribute getWeightTupleDescriptorCS_Weight() {
+		return (EAttribute)weightTupleDescriptorCSEClass.getEStructuralFeatures().get(0);
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
-	public EAttribute getLocationTupleDescriptorCS_SecondInstance() {
-		return (EAttribute)locationTupleDescriptorCSEClass.getEStructuralFeatures().get(0);
+	public EClass getBoundWeightTupleDescriptorCS() {
+		return boundWeightTupleDescriptorCSEClass;
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
-	public EClass getComponentResourceTupleDescriptorCS() {
-		return componentResourceTupleDescriptorCSEClass;
+	public EAttribute getBoundWeightTupleDescriptorCS_Bound() {
+		return (EAttribute)boundWeightTupleDescriptorCSEClass.getEStructuralFeatures().get(0);
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
-	public EAttribute getComponentResourceTupleDescriptorCS_Hwresinstance() {
-		return (EAttribute)componentResourceTupleDescriptorCSEClass.getEStructuralFeatures().get(0);
+	public EClass getTypedNamedPartCS() {
+		return typedNamedPartCSEClass;
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
-	public EClass getValueTupleDescriptorCS() {
-		return valueTupleDescriptorCSEClass;
+	public EClass getTypedPairCS() {
+		return typedPairCSEClass;
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
-	public EAttribute getValueTupleDescriptorCS_Value() {
-		return (EAttribute)valueTupleDescriptorCSEClass.getEStructuralFeatures().get(0);
+	public EReference getTypedPairCS_First() {
+		return (EReference)typedPairCSEClass.getEStructuralFeatures().get(0);
 	}
 
-
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTypedPairCS_Second() {
+		return (EReference)typedPairCSEClass.getEStructuralFeatures().get(1);
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public EClass getMeasureFunctionCS() {
 		return measureFunctionCSEClass;
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public EReference getMeasureFunctionCS_Services() {
 		return (EReference)measureFunctionCSEClass.getEStructuralFeatures().get(0);
 	}
 
-
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getServiceCS() {
+		return serviceCSEClass;
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
+	public EReference getServiceCS_Dimensions() {
+		return (EReference)serviceCSEClass.getEStructuralFeatures().get(0);
+	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getQoSDimensionCS() {
+		return qoSDimensionCSEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQoSDimensionCS_TupleDescriptor() {
+		return (EReference)qoSDimensionCSEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getLocationConstraintTypes() {
 		return locationConstraintTypesEEnum;
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public EEnum getGoal() {
 		return goalEEnum;
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public CsFactory getCsFactory() {
 		return (CsFactory)getEFactoryInstance();
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	private boolean isCreated = false;
-
-
 
 	/**
 	 * Creates the meta-model objects for the package.  This method is
 	 * guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public void createPackageContents() {
 		if (isCreated) return;
 		isCreated = true;
@@ -861,15 +568,6 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		evaluatableElementCSEClass = createEClass(EVALUATABLE_ELEMENT_CS);
 		createEReference(evaluatableElementCSEClass, EVALUATABLE_ELEMENT_CS__EXPRESSION);
 
-		weightingComponentResourceTupleElementCSEClass = createEClass(WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS);
-		createEReference(weightingComponentResourceTupleElementCSEClass, WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__TUPLE_DESCRIPTORS);
-		createEReference(weightingComponentResourceTupleElementCSEClass, WEIGHTING_COMPONENT_RESOURCE_TUPLE_ELEMENT_CS__WEIGHTING);
-
-		serviceCSEClass = createEClass(SERVICE_CS);
-		createEReference(serviceCSEClass, SERVICE_CS__DIMENSIONS);
-
-		qoSDimensionCSEClass = createEClass(QO_SDIMENSION_CS);
-
 		constraintCSEClass = createEClass(CONSTRAINT_CS);
 
 		locationConstraintCSEClass = createEClass(LOCATION_CONSTRAINT_CS);
@@ -877,57 +575,54 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		createEAttribute(locationConstraintCSEClass, LOCATION_CONSTRAINT_CS__TYPE);
 
 		resourceConstraintCSEClass = createEClass(RESOURCE_CONSTRAINT_CS);
-		createEReference(resourceConstraintCSEClass, RESOURCE_CONSTRAINT_CS__RHS);
+		createEReference(resourceConstraintCSEClass, RESOURCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR);
 
 		requiredHardwareResourceInstanceConstraintCSEClass = createEClass(REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS);
-		createEReference(requiredHardwareResourceInstanceConstraintCSEClass, REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__TUPLE_DESCRIPTORS);
+		createEReference(requiredHardwareResourceInstanceConstraintCSEClass, REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR);
 
 		tupleDescriptorCSEClass = createEClass(TUPLE_DESCRIPTOR_CS);
+		createEReference(tupleDescriptorCSEClass, TUPLE_DESCRIPTOR_CS__TYPED_PAIRS);
 
-		instanceTupleDescriptorCSEClass = createEClass(INSTANCE_TUPLE_DESCRIPTOR_CS);
-		createEAttribute(instanceTupleDescriptorCSEClass, INSTANCE_TUPLE_DESCRIPTOR_CS__INSTANCE);
+		weightTupleDescriptorCSEClass = createEClass(WEIGHT_TUPLE_DESCRIPTOR_CS);
+		createEAttribute(weightTupleDescriptorCSEClass, WEIGHT_TUPLE_DESCRIPTOR_CS__WEIGHT);
 
-		locationTupleDescriptorCSEClass = createEClass(LOCATION_TUPLE_DESCRIPTOR_CS);
-		createEAttribute(locationTupleDescriptorCSEClass, LOCATION_TUPLE_DESCRIPTOR_CS__SECOND_INSTANCE);
+		boundWeightTupleDescriptorCSEClass = createEClass(BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS);
+		createEAttribute(boundWeightTupleDescriptorCSEClass, BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__BOUND);
 
-		componentResourceTupleDescriptorCSEClass = createEClass(COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS);
-		createEAttribute(componentResourceTupleDescriptorCSEClass, COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS__HWRESINSTANCE);
+		typedNamedPartCSEClass = createEClass(TYPED_NAMED_PART_CS);
 
-		valueTupleDescriptorCSEClass = createEClass(VALUE_TUPLE_DESCRIPTOR_CS);
-		createEAttribute(valueTupleDescriptorCSEClass, VALUE_TUPLE_DESCRIPTOR_CS__VALUE);
+		typedPairCSEClass = createEClass(TYPED_PAIR_CS);
+		createEReference(typedPairCSEClass, TYPED_PAIR_CS__FIRST);
+		createEReference(typedPairCSEClass, TYPED_PAIR_CS__SECOND);
 
 		measureFunctionCSEClass = createEClass(MEASURE_FUNCTION_CS);
 		createEReference(measureFunctionCSEClass, MEASURE_FUNCTION_CS__SERVICES);
+
+		serviceCSEClass = createEClass(SERVICE_CS);
+		createEReference(serviceCSEClass, SERVICE_CS__DIMENSIONS);
+
+		qoSDimensionCSEClass = createEClass(QO_SDIMENSION_CS);
+		createEReference(qoSDimensionCSEClass, QO_SDIMENSION_CS__TUPLE_DESCRIPTOR);
 
 		// Create enums
 		locationConstraintTypesEEnum = createEEnum(LOCATION_CONSTRAINT_TYPES);
 		goalEEnum = createEEnum(GOAL);
 	}
 
-
-
 	/**
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	private boolean isInitialized = false;
-
-
 
 	/**
 	 * Complete the initialization of the package and its meta-model.  This
 	 * method is guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
-
 	 * <!-- end-user-doc -->
-
 	 * @generated
 	 */
-
 	public void initializePackageContents() {
 		if (isInitialized) return;
 		isInitialized = true;
@@ -951,23 +646,20 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		specificationCSEClass.getESuperTypes().add(theCompleteOCLCSPackage.getCompleteOCLDocumentCS());
 		specificationCSEClass.getESuperTypes().add(theCorePackage.getExtendableElement());
 		evaluatableElementCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
-		weightingComponentResourceTupleElementCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
-		serviceCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
-		qoSDimensionCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
-		qoSDimensionCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
-		qoSDimensionCSEClass.getESuperTypes().add(this.getWeightingComponentResourceTupleElementCS());
 		constraintCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
 		constraintCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
 		locationConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		resourceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
-		resourceConstraintCSEClass.getESuperTypes().add(this.getWeightingComponentResourceTupleElementCS());
 		requiredHardwareResourceInstanceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		tupleDescriptorCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
-		instanceTupleDescriptorCSEClass.getESuperTypes().add(this.getTupleDescriptorCS());
-		locationTupleDescriptorCSEClass.getESuperTypes().add(this.getInstanceTupleDescriptorCS());
-		componentResourceTupleDescriptorCSEClass.getESuperTypes().add(this.getInstanceTupleDescriptorCS());
-		valueTupleDescriptorCSEClass.getESuperTypes().add(this.getTupleDescriptorCS());
+		weightTupleDescriptorCSEClass.getESuperTypes().add(this.getTupleDescriptorCS());
+		boundWeightTupleDescriptorCSEClass.getESuperTypes().add(this.getWeightTupleDescriptorCS());
+		typedNamedPartCSEClass.getESuperTypes().add(theBaseCSPackage.getTypedElementCS());
+		typedPairCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
 		measureFunctionCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
+		serviceCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
+		qoSDimensionCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
+		qoSDimensionCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(specificationCSEClass, SpecificationCS.class, "SpecificationCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -979,43 +671,41 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEClass(evaluatableElementCSEClass, EvaluatableElementCS.class, "EvaluatableElementCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEvaluatableElementCS_Expression(), theEssentialOCLCSPackage.getContextCS(), null, "expression", null, 1, 1, EvaluatableElementCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(weightingComponentResourceTupleElementCSEClass, WeightingComponentResourceTupleElementCS.class, "WeightingComponentResourceTupleElementCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWeightingComponentResourceTupleElementCS_TupleDescriptors(), this.getComponentResourceTupleDescriptorCS(), null, "tupleDescriptors", null, 1, -1, WeightingComponentResourceTupleElementCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWeightingComponentResourceTupleElementCS_Weighting(), this.getValueTupleDescriptorCS(), null, "weighting", null, 1, 1, WeightingComponentResourceTupleElementCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(constraintCSEClass, ConstraintCS.class, "ConstraintCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(locationConstraintCSEClass, LocationConstraintCS.class, "LocationConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLocationConstraintCS_TupleDescriptor(), this.getTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, LocationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLocationConstraintCS_Type(), this.getLocationConstraintTypes(), "type", null, 1, 1, LocationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(resourceConstraintCSEClass, ResourceConstraintCS.class, "ResourceConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getResourceConstraintCS_TupleDescriptor(), this.getBoundWeightTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, ResourceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(requiredHardwareResourceInstanceConstraintCSEClass, RequiredHardwareResourceInstanceConstraintCS.class, "RequiredHardwareResourceInstanceConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRequiredHardwareResourceInstanceConstraintCS_TupleDescriptor(), this.getTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, RequiredHardwareResourceInstanceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tupleDescriptorCSEClass, TupleDescriptorCS.class, "TupleDescriptorCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTupleDescriptorCS_TypedPairs(), this.getTypedPairCS(), null, "typedPairs", null, 1, -1, TupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(weightTupleDescriptorCSEClass, WeightTupleDescriptorCS.class, "WeightTupleDescriptorCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getWeightTupleDescriptorCS_Weight(), ecorePackage.getEString(), "weight", null, 1, 1, WeightTupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(boundWeightTupleDescriptorCSEClass, BoundWeightTupleDescriptorCS.class, "BoundWeightTupleDescriptorCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBoundWeightTupleDescriptorCS_Bound(), ecorePackage.getEString(), "bound", null, 1, 1, BoundWeightTupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(typedNamedPartCSEClass, TypedNamedPartCS.class, "TypedNamedPartCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(typedPairCSEClass, TypedPairCS.class, "TypedPairCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTypedPairCS_First(), this.getTypedNamedPartCS(), null, "first", null, 1, 1, TypedPairCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTypedPairCS_Second(), this.getTypedNamedPartCS(), null, "second", null, 1, 1, TypedPairCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(measureFunctionCSEClass, MeasureFunctionCS.class, "MeasureFunctionCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMeasureFunctionCS_Services(), this.getServiceCS(), null, "services", null, 0, -1, MeasureFunctionCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(serviceCSEClass, ServiceCS.class, "ServiceCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getServiceCS_Dimensions(), this.getQoSDimensionCS(), null, "dimensions", null, 0, -1, ServiceCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(qoSDimensionCSEClass, QoSDimensionCS.class, "QoSDimensionCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(constraintCSEClass, ConstraintCS.class, "ConstraintCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(locationConstraintCSEClass, LocationConstraintCS.class, "LocationConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLocationConstraintCS_TupleDescriptor(), this.getLocationTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, LocationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLocationConstraintCS_Type(), this.getLocationConstraintTypes(), "type", null, 1, 1, LocationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(resourceConstraintCSEClass, ResourceConstraintCS.class, "ResourceConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResourceConstraintCS_Rhs(), this.getValueTupleDescriptorCS(), null, "rhs", null, 1, 1, ResourceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(requiredHardwareResourceInstanceConstraintCSEClass, RequiredHardwareResourceInstanceConstraintCS.class, "RequiredHardwareResourceInstanceConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRequiredHardwareResourceInstanceConstraintCS_TupleDescriptors(), this.getComponentResourceTupleDescriptorCS(), null, "tupleDescriptors", null, 1, -1, RequiredHardwareResourceInstanceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tupleDescriptorCSEClass, TupleDescriptorCS.class, "TupleDescriptorCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(instanceTupleDescriptorCSEClass, InstanceTupleDescriptorCS.class, "InstanceTupleDescriptorCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getInstanceTupleDescriptorCS_Instance(), ecorePackage.getEString(), "instance", null, 1, 1, InstanceTupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(locationTupleDescriptorCSEClass, LocationTupleDescriptorCS.class, "LocationTupleDescriptorCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLocationTupleDescriptorCS_SecondInstance(), ecorePackage.getEString(), "secondInstance", null, 1, 1, LocationTupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(componentResourceTupleDescriptorCSEClass, ComponentResourceTupleDescriptorCS.class, "ComponentResourceTupleDescriptorCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getComponentResourceTupleDescriptorCS_Hwresinstance(), ecorePackage.getEString(), "hwresinstance", null, 1, 1, ComponentResourceTupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(valueTupleDescriptorCSEClass, ValueTupleDescriptorCS.class, "ValueTupleDescriptorCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getValueTupleDescriptorCS_Value(), ecorePackage.getEString(), "value", null, 1, 1, ValueTupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(measureFunctionCSEClass, MeasureFunctionCS.class, "MeasureFunctionCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMeasureFunctionCS_Services(), this.getServiceCS(), null, "services", null, 0, -1, MeasureFunctionCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQoSDimensionCS_TupleDescriptor(), this.getWeightTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, QoSDimensionCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(locationConstraintTypesEEnum, LocationConstraintTypes.class, "LocationConstraintTypes");
@@ -1028,9 +718,52 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
+		createPivotAnnotations();
 	}
 
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+		   });	
+		addAnnotation
+		  (locationConstraintCSEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "exactlyOnePair"
+		   });
+	}
 
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createPivotAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+		addAnnotation
+		  (locationConstraintCSEClass, 
+		   source, 
+		   new String[] {
+			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
+		   });
+	}
 
 } //CsPackageImpl
-

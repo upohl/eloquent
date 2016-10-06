@@ -6,23 +6,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
 import org.muml.psm.allocation.language.cs.*;
-import org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS;
-import org.muml.psm.allocation.language.cs.CsFactory;
-import org.muml.psm.allocation.language.cs.CsPackage;
-import org.muml.psm.allocation.language.cs.Goal;
-import org.muml.psm.allocation.language.cs.LocationConstraintCS;
-import org.muml.psm.allocation.language.cs.LocationConstraintTypes;
-import org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS;
-import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
-import org.muml.psm.allocation.language.cs.QoSDimensionCS;
-import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
-import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
-import org.muml.psm.allocation.language.cs.ServiceCS;
-import org.muml.psm.allocation.language.cs.SpecificationCS;
-import org.muml.psm.allocation.language.cs.ValueTupleDescriptorCS;
 
 /**
  * <!-- begin-user-doc -->
@@ -69,15 +58,17 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case CsPackage.SPECIFICATION_CS: return createSpecificationCS();
-			case CsPackage.SERVICE_CS: return createServiceCS();
-			case CsPackage.QO_SDIMENSION_CS: return createQoSDimensionCS();
 			case CsPackage.LOCATION_CONSTRAINT_CS: return createLocationConstraintCS();
 			case CsPackage.RESOURCE_CONSTRAINT_CS: return createResourceConstraintCS();
 			case CsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS: return createRequiredHardwareResourceInstanceConstraintCS();
-			case CsPackage.LOCATION_TUPLE_DESCRIPTOR_CS: return createLocationTupleDescriptorCS();
-			case CsPackage.COMPONENT_RESOURCE_TUPLE_DESCRIPTOR_CS: return createComponentResourceTupleDescriptorCS();
-			case CsPackage.VALUE_TUPLE_DESCRIPTOR_CS: return createValueTupleDescriptorCS();
+			case CsPackage.TUPLE_DESCRIPTOR_CS: return createTupleDescriptorCS();
+			case CsPackage.WEIGHT_TUPLE_DESCRIPTOR_CS: return createWeightTupleDescriptorCS();
+			case CsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS: return createBoundWeightTupleDescriptorCS();
+			case CsPackage.TYPED_NAMED_PART_CS: return createTypedNamedPartCS();
+			case CsPackage.TYPED_PAIR_CS: return createTypedPairCS();
 			case CsPackage.MEASURE_FUNCTION_CS: return createMeasureFunctionCS();
+			case CsPackage.SERVICE_CS: return createServiceCS();
+			case CsPackage.QO_SDIMENSION_CS: return createQoSDimensionCS();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -132,26 +123,6 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ServiceCS createServiceCS() {
-		ServiceCSImpl serviceCS = new ServiceCSImpl();
-		return serviceCS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public QoSDimensionCS createQoSDimensionCS() {
-		QoSDimensionCSImpl qoSDimensionCS = new QoSDimensionCSImpl();
-		return qoSDimensionCS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public LocationConstraintCS createLocationConstraintCS() {
 		LocationConstraintCSImpl locationConstraintCS = new LocationConstraintCSImpl();
 		return locationConstraintCS;
@@ -182,9 +153,9 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocationTupleDescriptorCS createLocationTupleDescriptorCS() {
-		LocationTupleDescriptorCSImpl locationTupleDescriptorCS = new LocationTupleDescriptorCSImpl();
-		return locationTupleDescriptorCS;
+	public TupleDescriptorCS createTupleDescriptorCS() {
+		TupleDescriptorCSImpl tupleDescriptorCS = new TupleDescriptorCSImpl();
+		return tupleDescriptorCS;
 	}
 
 	/**
@@ -192,9 +163,9 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ComponentResourceTupleDescriptorCS createComponentResourceTupleDescriptorCS() {
-		ComponentResourceTupleDescriptorCSImpl componentResourceTupleDescriptorCS = new ComponentResourceTupleDescriptorCSImpl();
-		return componentResourceTupleDescriptorCS;
+	public WeightTupleDescriptorCS createWeightTupleDescriptorCS() {
+		WeightTupleDescriptorCSImpl weightTupleDescriptorCS = new WeightTupleDescriptorCSImpl();
+		return weightTupleDescriptorCS;
 	}
 
 	/**
@@ -202,9 +173,29 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueTupleDescriptorCS createValueTupleDescriptorCS() {
-		ValueTupleDescriptorCSImpl valueTupleDescriptorCS = new ValueTupleDescriptorCSImpl();
-		return valueTupleDescriptorCS;
+	public BoundWeightTupleDescriptorCS createBoundWeightTupleDescriptorCS() {
+		BoundWeightTupleDescriptorCSImpl boundWeightTupleDescriptorCS = new BoundWeightTupleDescriptorCSImpl();
+		return boundWeightTupleDescriptorCS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TypedNamedPartCS createTypedNamedPartCS() {
+		TypedNamedPartCSImpl typedNamedPartCS = new TypedNamedPartCSImpl();
+		return typedNamedPartCS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TypedPairCS createTypedPairCS() {
+		TypedPairCSImpl typedPairCS = new TypedPairCSImpl();
+		return typedPairCS;
 	}
 
 	/**
@@ -215,6 +206,26 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	public MeasureFunctionCS createMeasureFunctionCS() {
 		MeasureFunctionCSImpl measureFunctionCS = new MeasureFunctionCSImpl();
 		return measureFunctionCS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ServiceCS createServiceCS() {
+		ServiceCSImpl serviceCS = new ServiceCSImpl();
+		return serviceCS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QoSDimensionCS createQoSDimensionCS() {
+		QoSDimensionCSImpl qoSDimensionCS = new QoSDimensionCSImpl();
+		return qoSDimensionCS;
 	}
 
 	/**

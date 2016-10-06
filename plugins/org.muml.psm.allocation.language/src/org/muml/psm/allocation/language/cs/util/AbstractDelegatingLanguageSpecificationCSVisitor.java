@@ -29,8 +29,8 @@ public abstract class AbstractDelegatingLanguageSpecificationCSVisitor<R, C, @No
 	}
 
 	@Override
-	public R visitComponentResourceTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull ComponentResourceTupleDescriptorCS object) {
-		return delegate.visitComponentResourceTupleDescriptorCS(object);
+	public R visitBoundWeightTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull BoundWeightTupleDescriptorCS object) {
+		return delegate.visitBoundWeightTupleDescriptorCS(object);
 	}
 
 	@Override
@@ -44,18 +44,8 @@ public abstract class AbstractDelegatingLanguageSpecificationCSVisitor<R, C, @No
 	}
 
 	@Override
-	public R visitInstanceTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull InstanceTupleDescriptorCS object) {
-		return delegate.visitInstanceTupleDescriptorCS(object);
-	}
-
-	@Override
 	public R visitLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull LocationConstraintCS object) {
 		return delegate.visitLocationConstraintCS(object);
-	}
-
-	@Override
-	public R visitLocationTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull LocationTupleDescriptorCS object) {
-		return delegate.visitLocationTupleDescriptorCS(object);
 	}
 
 	@Override
@@ -94,12 +84,17 @@ public abstract class AbstractDelegatingLanguageSpecificationCSVisitor<R, C, @No
 	}
 
 	@Override
-	public R visitValueTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull ValueTupleDescriptorCS object) {
-		return delegate.visitValueTupleDescriptorCS(object);
+	public R visitTypedNamedPartCS(org.muml.psm.allocation.language.cs.@NonNull TypedNamedPartCS object) {
+		return delegate.visitTypedNamedPartCS(object);
 	}
 
 	@Override
-	public R visitWeightingComponentResourceTupleElementCS(org.muml.psm.allocation.language.cs.@NonNull WeightingComponentResourceTupleElementCS object) {
-		return delegate.visitWeightingComponentResourceTupleElementCS(object);
+	public R visitTypedPairCS(org.muml.psm.allocation.language.cs.@NonNull TypedPairCS object) {
+		return delegate.visitTypedPairCS(object);
+	}
+
+	@Override
+	public R visitWeightTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull WeightTupleDescriptorCS object) {
+		return delegate.visitWeightTupleDescriptorCS(object);
 	}
 }

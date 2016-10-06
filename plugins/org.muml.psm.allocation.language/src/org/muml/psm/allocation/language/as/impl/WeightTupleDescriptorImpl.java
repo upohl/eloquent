@@ -3,51 +3,54 @@
 package org.muml.psm.allocation.language.as.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.muml.psm.allocation.language.as.AsPackage;
-import org.muml.psm.allocation.language.as.LocationTupleDescriptor;
+import org.muml.psm.allocation.language.as.WeightTupleDescriptor;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Location Tuple Descriptor</b></em>'.
+ * An implementation of the model object '<em><b>Weight Tuple Descriptor</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.muml.psm.allocation.language.as.impl.LocationTupleDescriptorImpl#getSecondInstance <em>Second Instance</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.as.impl.WeightTupleDescriptorImpl#getWeight <em>Weight</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl implements LocationTupleDescriptor {
+public class WeightTupleDescriptorImpl extends TupleDescriptorImpl implements WeightTupleDescriptor {
 	/**
-	 * The default value of the '{@link #getSecondInstance() <em>Second Instance</em>}' attribute.
+	 * The default value of the '{@link #getWeight() <em>Weight</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSecondInstance()
+	 * @see #getWeight()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SECOND_INSTANCE_EDEFAULT = null;
+	protected static final String WEIGHT_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getSecondInstance() <em>Second Instance</em>}' attribute.
+	 * The cached value of the '{@link #getWeight() <em>Weight</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSecondInstance()
+	 * @see #getWeight()
 	 * @generated
 	 * @ordered
 	 */
-	protected String secondInstance = SECOND_INSTANCE_EDEFAULT;
+	protected String weight = WEIGHT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LocationTupleDescriptorImpl() {
+	protected WeightTupleDescriptorImpl() {
 		super();
 	}
 
@@ -58,7 +61,7 @@ public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl imp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return AsPackage.Literals.LOCATION_TUPLE_DESCRIPTOR;
+		return AsPackage.Literals.WEIGHT_TUPLE_DESCRIPTOR;
 	}
 
 	/**
@@ -66,8 +69,8 @@ public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSecondInstance() {
-		return secondInstance;
+	public String getWeight() {
+		return weight;
 	}
 
 	/**
@@ -75,11 +78,11 @@ public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSecondInstance(String newSecondInstance) {
-		String oldSecondInstance = secondInstance;
-		secondInstance = newSecondInstance;
+	public void setWeight(String newWeight) {
+		String oldWeight = weight;
+		weight = newWeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.LOCATION_TUPLE_DESCRIPTOR__SECOND_INSTANCE, oldSecondInstance, secondInstance));
+			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.WEIGHT_TUPLE_DESCRIPTOR__WEIGHT, oldWeight, weight));
 	}
 
 	/**
@@ -90,8 +93,8 @@ public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AsPackage.LOCATION_TUPLE_DESCRIPTOR__SECOND_INSTANCE:
-				return getSecondInstance();
+			case AsPackage.WEIGHT_TUPLE_DESCRIPTOR__WEIGHT:
+				return getWeight();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -104,8 +107,8 @@ public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AsPackage.LOCATION_TUPLE_DESCRIPTOR__SECOND_INSTANCE:
-				setSecondInstance((String)newValue);
+			case AsPackage.WEIGHT_TUPLE_DESCRIPTOR__WEIGHT:
+				setWeight((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -119,8 +122,8 @@ public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AsPackage.LOCATION_TUPLE_DESCRIPTOR__SECOND_INSTANCE:
-				setSecondInstance(SECOND_INSTANCE_EDEFAULT);
+			case AsPackage.WEIGHT_TUPLE_DESCRIPTOR__WEIGHT:
+				setWeight(WEIGHT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -134,8 +137,8 @@ public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AsPackage.LOCATION_TUPLE_DESCRIPTOR__SECOND_INSTANCE:
-				return SECOND_INSTANCE_EDEFAULT == null ? secondInstance != null : !SECOND_INSTANCE_EDEFAULT.equals(secondInstance);
+			case AsPackage.WEIGHT_TUPLE_DESCRIPTOR__WEIGHT:
+				return WEIGHT_EDEFAULT == null ? weight != null : !WEIGHT_EDEFAULT.equals(weight);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -150,11 +153,11 @@ public class LocationTupleDescriptorImpl extends InstanceTupleDescriptorImpl imp
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (secondInstance: ");
-		result.append(secondInstance);
+		result.append(" (weight: ");
+		result.append(weight);
 		result.append(')');
 		return result.toString();
 	}
 
 
-} //LocationTupleDescriptorImpl
+} //WeightTupleDescriptorImpl

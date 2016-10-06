@@ -4,32 +4,24 @@ package org.muml.psm.allocation.language.as.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.jdt.annotation.Nullable;
+
 import org.eclipse.ocl.pivot.Element;
 import org.eclipse.ocl.pivot.Model;
 import org.eclipse.ocl.pivot.NamedElement;
 import org.eclipse.ocl.pivot.Namespace;
+import org.eclipse.ocl.pivot.TypedElement;
+
 import org.eclipse.ocl.pivot.util.Visitable;
+
 import org.eclipse.ocl.pivot.utilities.Nameable;
+
 import org.muml.psm.allocation.language.as.*;
-import org.muml.psm.allocation.language.as.AsPackage;
-import org.muml.psm.allocation.language.as.ComponentResourceTupleDescriptor;
-import org.muml.psm.allocation.language.as.Constraint;
-import org.muml.psm.allocation.language.as.EvaluatableElement;
-import org.muml.psm.allocation.language.as.InstanceTupleDescriptor;
-import org.muml.psm.allocation.language.as.LocationConstraint;
-import org.muml.psm.allocation.language.as.LocationTupleDescriptor;
-import org.muml.psm.allocation.language.as.MeasureFunction;
-import org.muml.psm.allocation.language.as.QoSDimension;
-import org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint;
-import org.muml.psm.allocation.language.as.ResourceConstraint;
-import org.muml.psm.allocation.language.as.Service;
-import org.muml.psm.allocation.language.as.Specification;
-import org.muml.psm.allocation.language.as.TupleDescriptor;
-import org.muml.psm.allocation.language.as.ValueTupleDescriptor;
-import org.muml.psm.allocation.language.as.WeightingComponentResourceTupleElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -96,18 +88,6 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 				return createEvaluatableElementAdapter();
 			}
 			@Override
-			public Adapter caseWeightingComponentResourceTupleElement(WeightingComponentResourceTupleElement object) {
-				return createWeightingComponentResourceTupleElementAdapter();
-			}
-			@Override
-			public Adapter caseService(Service object) {
-				return createServiceAdapter();
-			}
-			@Override
-			public Adapter caseQoSDimension(QoSDimension object) {
-				return createQoSDimensionAdapter();
-			}
-			@Override
 			public Adapter caseConstraint(Constraint object) {
 				return createConstraintAdapter();
 			}
@@ -128,24 +108,32 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 				return createTupleDescriptorAdapter();
 			}
 			@Override
-			public Adapter caseInstanceTupleDescriptor(InstanceTupleDescriptor object) {
-				return createInstanceTupleDescriptorAdapter();
+			public Adapter caseWeightTupleDescriptor(WeightTupleDescriptor object) {
+				return createWeightTupleDescriptorAdapter();
 			}
 			@Override
-			public Adapter caseLocationTupleDescriptor(LocationTupleDescriptor object) {
-				return createLocationTupleDescriptorAdapter();
+			public Adapter caseBoundWeightTupleDescriptor(BoundWeightTupleDescriptor object) {
+				return createBoundWeightTupleDescriptorAdapter();
 			}
 			@Override
-			public Adapter caseComponentResourceTupleDescriptor(ComponentResourceTupleDescriptor object) {
-				return createComponentResourceTupleDescriptorAdapter();
+			public Adapter caseTypedNamedPart(TypedNamedPart object) {
+				return createTypedNamedPartAdapter();
 			}
 			@Override
-			public Adapter caseValueTupleDescriptor(ValueTupleDescriptor object) {
-				return createValueTupleDescriptorAdapter();
+			public Adapter caseTypedPair(TypedPair object) {
+				return createTypedPairAdapter();
 			}
 			@Override
 			public Adapter caseMeasureFunction(MeasureFunction object) {
 				return createMeasureFunctionAdapter();
+			}
+			@Override
+			public Adapter caseService(Service object) {
+				return createServiceAdapter();
+			}
+			@Override
+			public Adapter caseQoSDimension(QoSDimension object) {
+				return createQoSDimensionAdapter();
 			}
 			@Override
 			public Adapter caseVisitable(Visitable object) {
@@ -170,6 +158,10 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseModel(Model object) {
 				return createModelAdapter();
+			}
+			@Override
+			public Adapter caseTypedElement(TypedElement object) {
+				return createTypedElementAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -216,48 +208,6 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEvaluatableElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.WeightingComponentResourceTupleElement <em>Weighting Component Resource Tuple Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.as.WeightingComponentResourceTupleElement
-	 * @generated
-	 */
-	public Adapter createWeightingComponentResourceTupleElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.Service <em>Service</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.as.Service
-	 * @generated
-	 */
-	public Adapter createServiceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.QoSDimension <em>Qo SDimension</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.as.QoSDimension
-	 * @generated
-	 */
-	public Adapter createQoSDimensionAdapter() {
 		return null;
 	}
 
@@ -332,58 +282,58 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.InstanceTupleDescriptor <em>Instance Tuple Descriptor</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.WeightTupleDescriptor <em>Weight Tuple Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.as.InstanceTupleDescriptor
+	 * @see org.muml.psm.allocation.language.as.WeightTupleDescriptor
 	 * @generated
 	 */
-	public Adapter createInstanceTupleDescriptorAdapter() {
+	public Adapter createWeightTupleDescriptorAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.LocationTupleDescriptor <em>Location Tuple Descriptor</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.BoundWeightTupleDescriptor <em>Bound Weight Tuple Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.as.LocationTupleDescriptor
+	 * @see org.muml.psm.allocation.language.as.BoundWeightTupleDescriptor
 	 * @generated
 	 */
-	public Adapter createLocationTupleDescriptorAdapter() {
+	public Adapter createBoundWeightTupleDescriptorAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.ComponentResourceTupleDescriptor <em>Component Resource Tuple Descriptor</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.TypedNamedPart <em>Typed Named Part</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.as.ComponentResourceTupleDescriptor
+	 * @see org.muml.psm.allocation.language.as.TypedNamedPart
 	 * @generated
 	 */
-	public Adapter createComponentResourceTupleDescriptorAdapter() {
+	public Adapter createTypedNamedPartAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.ValueTupleDescriptor <em>Value Tuple Descriptor</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.TypedPair <em>Typed Pair</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.as.ValueTupleDescriptor
+	 * @see org.muml.psm.allocation.language.as.TypedPair
 	 * @generated
 	 */
-	public Adapter createValueTupleDescriptorAdapter() {
+	public Adapter createTypedPairAdapter() {
 		return null;
 	}
 
@@ -398,6 +348,34 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMeasureFunctionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.Service <em>Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.as.Service
+	 * @generated
+	 */
+	public Adapter createServiceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.QoSDimension <em>Qo SDimension</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.as.QoSDimension
+	 * @generated
+	 */
+	public Adapter createQoSDimensionAdapter() {
 		return null;
 	}
 
@@ -482,6 +460,20 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.pivot.TypedElement <em>Typed Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.ocl.pivot.TypedElement
+	 * @generated
+	 */
+	public Adapter createTypedElementAdapter() {
 		return null;
 	}
 
