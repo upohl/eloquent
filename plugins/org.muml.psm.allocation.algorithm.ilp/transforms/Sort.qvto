@@ -16,19 +16,19 @@ query Sequence(NamedElement)::sortComponentResourceSequence() : Sequence(NamedEl
 		->sortedBy(s | s->getVariableName())->flatten()
 }
 
-query Sequence(TupleValue)::sortWeightingComponentResourceTuples(elementCS : WeightingComponentResourceTupleElementCS) : Sequence(TupleValue) {
-	return self->sortedBy(tv : TupleValue | tv.getWeightingComponentResourceTupleSortId(elementCS));
+query Sequence(TupleValue)::sortWeightingComponentResourceTuples(tupleDescriptor : WeightTupleDescriptorCS) : Sequence(TupleValue) {
+	return self->sortedBy(tv : TupleValue | tv.getWeightingComponentResourceTupleSortId(tupleDescriptor));
 }
 
-query TupleValue::getWeightingComponentResourceTupleSortId(elementCS : WeightingComponentResourceTupleElementCS) : String {
+query TupleValue::getWeightingComponentResourceTupleSortId(tupleDescriptor : WeightTupleDescriptorCS) : String {
 	// Order by component_ecu names and add the coefficient/LhsValue as a tie breaker
 	// for the sort algo
 	// this uniquely identifies a WeightingComponentResourceTuple tuple (because
 	// the WeightingComponentResourceTuple tuples are contained in a set => no duplicates)
 	return self.toSequence()->sortComponentResourceSequence()->getVariableName()
-		+ ILLEGAL_VARIABLE_CHARS()->at(1) + self.getWeighting(elementCS); 
+		+ ILLEGAL_VARIABLE_CHARS()->at(1) + self.getWeighting(tupleDescriptor); 
 }
 
-query TupleValue::getWeighting(elementCS : WeightingComponentResourceTupleElementCS) : String {
-	return self.get(elementCS.weighting.value).oclAsType(Real).toString();
+query TupleValue::getWeighting(tupleDescriptor : WeightTupleDescriptorCS) : String {
+	return self.get(tupleDescriptor.weight).oclAsType(Real).toString();
 }

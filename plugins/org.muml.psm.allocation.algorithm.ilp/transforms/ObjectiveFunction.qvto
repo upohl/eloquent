@@ -35,11 +35,11 @@ helper SpecificationCS::createAdditionExpression(inout ilp : IntegerLinearProgra
 	var expression : Expression := null;
 	self.getQoSDimensions()->asOrderedSet()->reverse()->collect(oclAsType(QoSDimensionCS))->forEach(qosDimension) {
 		var sequence : Sequence(TupleValue) := qosDimension.evaluateOCL(oclContext)
-			->sortWeightingComponentResourceTuples(qosDimension);
+			->sortWeightingComponentResourceTuples(qosDimension.tupleDescriptor);
 		sequence->collectNested(tv : TupleValue |
 			tv.toSequence()->sortComponentResourceSequence()
 		)->createHelperVariablesAndConstraints(ilp);
-		expression := sequence->createWeightingComponentResourceTuplesAdditionExpression(qosDimension, expression);
+		expression := sequence->createWeightingComponentResourceTuplesAdditionExpression(qosDimension.tupleDescriptor, expression);
 	};
 	return expression;
 }

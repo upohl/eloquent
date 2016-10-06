@@ -55,9 +55,9 @@ query TupleValue::getOuterId(constraintCS : ResourceConstraintCS) : String {
 	return let char : String = ILLEGAL_VARIABLE_CHARS()->at(1)
 	in
 	self.getRhsValue(constraintCS) + char + char.join(
-		self.getSequence(constraintCS.weighting.value)
-			->sortWeightingComponentResourceTuples(constraintCS)
-			->collect(tv : TupleValue | tv.getWeightingComponentResourceTupleSortId(constraintCS))
+		self.getSequence(constraintCS.tupleDescriptor.weight)
+			->sortWeightingComponentResourceTuples(constraintCS.tupleDescriptor)
+			->collect(tv : TupleValue | tv.getWeightingComponentResourceTupleSortId(constraintCS.tupleDescriptor))
 	);
 }
 
@@ -71,21 +71,21 @@ helper TupleValue::createResourceConstraint(inout ilp : IntegerLinearProgram, co
 }
 
 query TupleValue::getSortedInnerResultSequence(constraintCS : ResourceConstraintCS) : Sequence(TupleValue) {
-	return self.getSequence(constraintCS.weighting.value)
-		->sortWeightingComponentResourceTuples(constraintCS);
+	return self.getSequence(constraintCS.tupleDescriptor.weight)
+		->sortWeightingComponentResourceTuples(constraintCS.tupleDescriptor);
 }
 
 helper Sequence(TupleValue)::createResourceConstraintExpression(inout ilp : IntegerLinearProgram,
 	constraintCS : ResourceConstraintCS, rhsValue : String) {
 	var comment : String := if constraintCS.name <> '' then constraintCS.name else constraintCS.repr() endif;
 	ilp.constraints += new ConstraintExpression(
-		self->createWeightingComponentResourceTuplesAdditionExpression(constraintCS, null),
+		self->createWeightingComponentResourceTuplesAdditionExpression(constraintCS.tupleDescriptor, null),
 		new LiteralExpression(rhsValue),
 		ComparingOperator::LESS_OR_EQUAL, comment);
 }
 
 query TupleValue::getRhsValue(constraintCS : ResourceConstraintCS) : String {
-	return self.getValue(constraintCS.rhs.value);
+	return self.getValue(constraintCS.tupleDescriptor.bound);
 }
 
 query TupleValue::getValue(namedPart : String) : String {

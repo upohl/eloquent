@@ -52,11 +52,11 @@ helper Sequence(Sequence(NamedElement))::createAdditionConstraintExpression(lit 
 		ComparingOperator::EQUAL, comment);
 }
 
-helper Sequence(TupleValue)::createWeightingComponentResourceTuplesAdditionExpression(elementCS : WeightingComponentResourceTupleElementCS, expression : Expression) : Expression {
+helper Sequence(TupleValue)::createWeightingComponentResourceTuplesAdditionExpression(tupleDescriptor : WeightTupleDescriptorCS, expression : Expression) : Expression {
 	var expr : Expression := expression;
 	self->asOrderedSet()->reverse()->collect(oclAsType(TupleValue))->forEach(tv) {
 		var tmp : Expression := new ArithmeticExpression(
-			new LiteralExpression(tv.getWeighting(elementCS)), // getWeighting is imported via the Sort lib
+			new LiteralExpression(tv.getWeighting(tupleDescriptor)), // getWeighting is imported via the Sort lib
 			new VariableExpression(tv.toSequence()->sortComponentResourceSequence()->getVariable()),
 			ArithmeticOperator::TIMES
 		);

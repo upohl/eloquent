@@ -32,22 +32,21 @@ query TupleValue::toSequence() : Sequence(NamedElement) {
 }
 
 query LocationConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
-	var tupleDescriptor : LocationTupleDescriptorCS := self.tupleDescriptor;
-	return Sequence{tupleValue.get(tupleDescriptor.instance).oclAsType(NamedElement),
-		tupleValue.get(tupleDescriptor.secondInstance).oclAsType(NamedElement)}; 
+	// there should be exactly one typedPair
+	return self.tupleDescriptor.toSequence(tupleValue); 
 }
 
-query OrderedSet(ComponentResourceTupleDescriptorCS)::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
-	return self->collect(td |
+query TupleDescriptorCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+	return self.typedPairs->collect(typedPair : TypedPairCS |
 		Sequence{
-			tupleValue.get(td.instance).oclAsType(NamedElement),
-			tupleValue.get(td.hwresinstance).oclAsType(NamedElement)
+			tupleValue.get(typedPair.first.name).oclAsType(NamedElement),
+			tupleValue.get(typedPair.second.name).oclAsType(NamedElement)
 		}
 	);
 }
 
 query RequiredHardwareResourceInstanceConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
-	return self.tupleDescriptors->toSequence(tupleValue);
+	return self.tupleDescriptor.toSequence(tupleValue);
 }
 
 // Note: it is not possible to generalize the next two queries into
@@ -59,11 +58,11 @@ query ResourceConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(Named
 	// unfortunately we cannot check if tupleValue corresponds to an "inner" tuple
 	// (well... we could do this via a blackbox but it is probably not worth the effort)
 	// => we assume that the caller knows what he/she is doing
-	return self.tupleDescriptors->toSequence(tupleValue);
+	return self.tupleDescriptor.toSequence(tupleValue);
 }
 
 query QoSDimensionCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
-	return self.tupleDescriptors->toSequence(tupleValue);
+	return self.tupleDescriptor.toSequence(tupleValue);
 }
 
 query EvaluatableElementCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {

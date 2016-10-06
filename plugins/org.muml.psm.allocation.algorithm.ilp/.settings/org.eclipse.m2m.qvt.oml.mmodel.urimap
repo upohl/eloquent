@@ -11,4 +11,5 @@
   <mapping sourceURI="http://www.muml.org/core/expressions/1.0.0" targetURI="platform:/resource/org.muml.core/model/core.ecore"/>
   <mapping sourceURI="http://www.eclipse.org/ocl/2015/Values" targetURI="platform:/resource/org.eclipse.ocl.pivot/model/Values.ecore"/>
   <mapping sourceURI="http://www.muml.org/psm/allocation/1.0.0" targetURI="platform:/resource/org.muml.psm/model/psm.ecore"/>
+  <mapping sourceURI="http://www.eclipse.org/ocl/2015/EssentialOCLCS" targetURI="platform:/resource/org.eclipse.ocl.xtext.essentialocl/model/EssentialOCLCS.ecore"/>
 </uriMap:MappingContainer>

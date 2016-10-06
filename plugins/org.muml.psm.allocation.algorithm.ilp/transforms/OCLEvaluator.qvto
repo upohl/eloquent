@@ -21,7 +21,7 @@ helper EvaluatableElementCS::evaluateOCL(contextObject : OclAny) : Sequence(Tupl
 helper ResourceConstraintCS::evaluateOCL(contextObject : OclAny) : Sequence(TupleValue) {
 	var res : Sequence(TupleValue) := evaluateEvaluatableElementCS(self, contextObject);
 	res->createTraceHelper(self); // do this first, otherwise the subsequent tv.getSequence fails
-	res->collect(tv : TupleValue | tv.getSequence(self.weighting.value))
+	res->collect(tv : TupleValue | tv.getSequence(self.tupleDescriptor.weight))
 		->collect(oclAsType(TupleValue))
 		->createTraceHelper(self);
 	return res;
