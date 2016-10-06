@@ -3,21 +3,22 @@
 */
 package org.muml.psm.allocation.language.xtext.validation;
 
-import java.util.List;
-
 import org.eclipse.ocl.pivot.ExpressionInOCL;
 import org.eclipse.ocl.pivot.Type;
 import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal;
 import org.eclipse.ocl.xtext.essentialoclcs.ContextCS;
 import org.eclipse.xtext.validation.Check;
-import org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS;
+import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
+//import org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintCS;
-import org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS;
+//import org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
 import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
+import org.muml.psm.allocation.language.cs.TupleDescriptorCS;
+import org.muml.psm.allocation.language.cs.WeightTupleDescriptorCS;
 import org.muml.psm.allocation.language.xtext.typing.TypesUtil;
 
 /**
@@ -30,9 +31,9 @@ public class AllocationSpecificationLanguageJavaValidator extends org.muml.psm.a
 
 	@Check
 	public void checkLocationConstraintCS(LocationConstraintCS constraintCS) {
-		LocationTupleDescriptorCS tupleDescriptor = constraintCS.getTupleDescriptor();
+		TupleDescriptorCS tupleDescriptorCS = constraintCS.getTupleDescriptor();
 		ContextCS oclExpression = constraintCS.getExpression();
-		if (tupleDescriptor == null || oclExpression == null) {
+		if (tupleDescriptorCS == null || oclExpression == null) {
 			// in this case a different error is displayed
 			return;
 		}
@@ -41,9 +42,9 @@ public class AllocationSpecificationLanguageJavaValidator extends org.muml.psm.a
 	
 	@Check
 	public void checkRequiredHardwareResourceInstanceConstraintCS(RequiredHardwareResourceInstanceConstraintCS constraintCS) {
-		List<ComponentResourceTupleDescriptorCS> tupleDescriptorList = constraintCS.getTupleDescriptors();
+		TupleDescriptorCS tupleDescriptorCS = constraintCS.getTupleDescriptor();
 		ContextCS oclExpression = constraintCS.getExpression();
-		if (tupleDescriptorList.isEmpty() || oclExpression == null) {
+		if (tupleDescriptorCS == null || oclExpression == null) {
 			// in this case a different error is displayed
 			return;
 		}
@@ -52,10 +53,10 @@ public class AllocationSpecificationLanguageJavaValidator extends org.muml.psm.a
 	
 	@Check
 	public void checkResourceConstraintCS(ResourceConstraintCS constraintCS) {
-		List<ComponentResourceTupleDescriptorCS> tupleDescriptorList = constraintCS.getTupleDescriptors();
+		BoundWeightTupleDescriptorCS  tupleDescriptorCS = constraintCS.getTupleDescriptor();
 		ContextCS oclExpression = constraintCS.getExpression();
-		if (tupleDescriptorList.isEmpty() || oclExpression == null
-				|| constraintCS.getWeighting() == null || constraintCS.getRhs() == null) {
+		if (tupleDescriptorCS == null || tupleDescriptorCS.getWeight() == null
+				|| tupleDescriptorCS.getBound() == null || oclExpression == null) {
 			// parser/ui will display an error
 			return;
 		}
@@ -64,9 +65,10 @@ public class AllocationSpecificationLanguageJavaValidator extends org.muml.psm.a
 	
 	@Check
 	public void checkQoSDimensionCS(QoSDimensionCS qosDimensionCS) {
-		List<ComponentResourceTupleDescriptorCS> tupleDescriptorList = qosDimensionCS.getTupleDescriptors();
+		WeightTupleDescriptorCS tupleDescriptorCS = qosDimensionCS.getTupleDescriptor();
 		ContextCS oclExpression = qosDimensionCS.getExpression();
-		if (tupleDescriptorList.isEmpty() || oclExpression == null) {
+		if (tupleDescriptorCS == null || tupleDescriptorCS.getWeight() == null
+				|| oclExpression == null) {
 			return;
 		}
 		checkTypes(qosDimensionCS);
