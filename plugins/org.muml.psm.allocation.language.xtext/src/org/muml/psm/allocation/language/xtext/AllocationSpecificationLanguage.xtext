@@ -24,10 +24,32 @@ Service returns cs::ServiceCS:
 
 QosDimension returns cs::QoSDimensionCS:
 	'qos' name=ID '{'
-		'value' weighting=ValueTupleDescriptor';'
-		'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor (',' tupleDescriptors+=ComponentResourceTupleDescriptor)*';'
+		tupleDescriptor=WeightTupleDescriptor
 		'ocl' expression=Model ';'
 	'}'
+;
+
+TypedPair returns cs::TypedPairCS:
+	'(' first=TypedNamedPart ',' second=TypedNamedPart ')'
+;
+
+TypedNamedPart returns cs::TypedNamedPartCS:
+	name=ID ':' ownedType=TypedRefCS
+;
+
+TupleDescriptor returns cs::TupleDescriptorCS:
+	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+;
+
+WeightTupleDescriptor returns cs::WeightTupleDescriptorCS:
+	'weight' weight=ID ';'
+	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+;
+
+BoundWeightTupleDescriptor returns cs::BoundWeightTupleDescriptorCS:
+	'weight' weight=ID ';'
+	'bound' bound=ID ';'
+	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
 ;
 
 Constraint returns cs::ConstraintCS:
@@ -36,23 +58,21 @@ Constraint returns cs::ConstraintCS:
 
 LocationConstraint returns cs::LocationConstraintCS:
 	type=LocationConstraintType (name=ID)? '{'
-		'descriptors' tupleDescriptor=LocationTupleDescriptor ';'
+		tupleDescriptor=TupleDescriptor
 		'ocl' expression=Model ';'
 	'}'
 ;
 
 ResourceConstraint returns cs::ResourceConstraintCS:
 	('resource' | 'requiredResource') (name=ID)? '{'
-		'lhs' weighting=ValueTupleDescriptor';'
-		'rhs' rhs=ValueTupleDescriptor';'
-		'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor (',' tupleDescriptors+=ComponentResourceTupleDescriptor)*';'
+		tupleDescriptor=BoundWeightTupleDescriptor
 		'ocl' expression=Model ';'
 	'}'
 ;
 
 RequiredHardwareResourceInstanceConstraint returns cs::RequiredHardwareResourceInstanceConstraintCS:
 	('requiredHardwareResourceInstance' | 'requiredLocation') (name=ID)? '{'
-		'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor (',' tupleDescriptors+=ComponentResourceTupleDescriptor)*';'
+		tupleDescriptor=TupleDescriptor
 		'ocl' expression=Model';'
 	'}'
 ;
@@ -60,18 +80,6 @@ RequiredHardwareResourceInstanceConstraint returns cs::RequiredHardwareResourceI
 enum LocationConstraintType returns cs::LocationConstraintTypes:
 	SAME_LOCATION='sameLocation' | SAME_LOCATION='collocation'
 		| DIFFERENT_LOCATION='differentLocation' | DIFFERENT_LOCATION='separateLocation'
-;
-
-LocationTupleDescriptor returns cs::LocationTupleDescriptorCS:
-	'(' instance=ID ',' secondInstance=ID ')'
-;
-
-ValueTupleDescriptor returns cs::ValueTupleDescriptorCS:
-	value=ID
-;
-
-ComponentResourceTupleDescriptor returns cs::ComponentResourceTupleDescriptorCS:
-	'(' instance=ID ',' hwresinstance=ID ')'
 ;
 
 MeasureFunction returns cs::MeasureFunctionCS:

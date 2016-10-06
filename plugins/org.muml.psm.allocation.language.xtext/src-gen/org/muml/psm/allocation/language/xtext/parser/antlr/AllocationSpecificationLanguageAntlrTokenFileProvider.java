@@ -4,7 +4,6 @@
 package org.muml.psm.allocation.language.xtext.parser.antlr;
 
 import java.io.InputStream;
-
 import org.eclipse.xtext.parser.antlr.IAntlrTokenFileProvider;
 
 public class AllocationSpecificationLanguageAntlrTokenFileProvider implements IAntlrTokenFileProvider {

@@ -3,29 +3,18 @@
  */
 package org.muml.psm.allocation.language.xtext.services;
 
+import com.google.inject.Singleton;
+import com.google.inject.Inject;
+
 import java.util.List;
 
-import org.eclipse.ocl.xtext.base.services.BaseGrammarAccess;
+import org.eclipse.xtext.*;
+import org.eclipse.xtext.service.GrammarProvider;
+import org.eclipse.xtext.service.AbstractElementFinder.*;
+
 import org.eclipse.ocl.xtext.completeocl.services.CompleteOCLGrammarAccess;
 import org.eclipse.ocl.xtext.essentialocl.services.EssentialOCLGrammarAccess;
-import org.eclipse.xtext.Action;
-import org.eclipse.xtext.Alternatives;
-import org.eclipse.xtext.Assignment;
-import org.eclipse.xtext.CrossReference;
-import org.eclipse.xtext.EnumLiteralDeclaration;
-import org.eclipse.xtext.EnumRule;
-import org.eclipse.xtext.Grammar;
-import org.eclipse.xtext.GrammarUtil;
-import org.eclipse.xtext.Group;
-import org.eclipse.xtext.Keyword;
-import org.eclipse.xtext.ParserRule;
-import org.eclipse.xtext.RuleCall;
-import org.eclipse.xtext.TerminalRule;
-import org.eclipse.xtext.service.AbstractElementFinder.AbstractGrammarElementFinder;
-import org.eclipse.xtext.service.GrammarProvider;
-
-import com.google.inject.Inject;
-import com.google.inject.Singleton;
+import org.eclipse.ocl.xtext.base.services.BaseGrammarAccess;
 
 @Singleton
 public class AllocationSpecificationLanguageGrammarAccess extends AbstractGrammarElementFinder {
@@ -171,36 +160,22 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cValueKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cWeightingAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cWeightingValueTupleDescriptorParserRuleCall_4_0 = (RuleCall)cWeightingAssignment_4.eContents().get(0);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Keyword cDescriptorsKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Assignment cTupleDescriptorsAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_7_0 = (RuleCall)cTupleDescriptorsAssignment_7.eContents().get(0);
-		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
-		private final Keyword cCommaKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
-		private final Assignment cTupleDescriptorsAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
-		private final RuleCall cTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_8_1_0 = (RuleCall)cTupleDescriptorsAssignment_8_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Keyword cOclKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final Assignment cExpressionAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cExpressionModelParserRuleCall_11_0 = (RuleCall)cExpressionAssignment_11.eContents().get(0);
-		private final Keyword cSemicolonKeyword_12 = (Keyword)cGroup.eContents().get(12);
-		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Assignment cTupleDescriptorAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTupleDescriptorWeightTupleDescriptorParserRuleCall_3_0 = (RuleCall)cTupleDescriptorAssignment_3.eContents().get(0);
+		private final Keyword cOclKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cExpressionAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cExpressionModelParserRuleCall_5_0 = (RuleCall)cExpressionAssignment_5.eContents().get(0);
+		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//QosDimension cs::QoSDimensionCS:
 		//	'qos' name=ID '{'
-		//	'value' weighting=ValueTupleDescriptor ';'
-		//	'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor (','
-		//	tupleDescriptors+=ComponentResourceTupleDescriptor)* ';'
+		//	tupleDescriptor=WeightTupleDescriptor
 		//	'ocl' expression=Model ';'
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//'qos' name=ID '{' 'value' weighting=ValueTupleDescriptor ';' 'descriptors'
-		//tupleDescriptors+=ComponentResourceTupleDescriptor (',' tupleDescriptors+=ComponentResourceTupleDescriptor)* ';' 'ocl'
-		//expression=Model ';' '}'
+		//'qos' name=ID '{' tupleDescriptor=WeightTupleDescriptor 'ocl' expression=Model ';' '}'
 		public Group getGroup() { return cGroup; }
 
 		//'qos'
@@ -215,14 +190,254 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//'value'
-		public Keyword getValueKeyword_3() { return cValueKeyword_3; }
+		//tupleDescriptor=WeightTupleDescriptor
+		public Assignment getTupleDescriptorAssignment_3() { return cTupleDescriptorAssignment_3; }
 
-		//weighting=ValueTupleDescriptor
-		public Assignment getWeightingAssignment_4() { return cWeightingAssignment_4; }
+		//WeightTupleDescriptor
+		public RuleCall getTupleDescriptorWeightTupleDescriptorParserRuleCall_3_0() { return cTupleDescriptorWeightTupleDescriptorParserRuleCall_3_0; }
 
-		//ValueTupleDescriptor
-		public RuleCall getWeightingValueTupleDescriptorParserRuleCall_4_0() { return cWeightingValueTupleDescriptorParserRuleCall_4_0; }
+		//'ocl'
+		public Keyword getOclKeyword_4() { return cOclKeyword_4; }
+
+		//expression=Model
+		public Assignment getExpressionAssignment_5() { return cExpressionAssignment_5; }
+
+		//Model
+		public RuleCall getExpressionModelParserRuleCall_5_0() { return cExpressionModelParserRuleCall_5_0; }
+
+		//';'
+		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
+
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+	}
+
+	public class TypedPairElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TypedPair");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cFirstAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cFirstTypedNamedPartParserRuleCall_1_0 = (RuleCall)cFirstAssignment_1.eContents().get(0);
+		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cSecondAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSecondTypedNamedPartParserRuleCall_3_0 = (RuleCall)cSecondAssignment_3.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//TypedPair cs::TypedPairCS:
+		//	'(' first=TypedNamedPart ',' second=TypedNamedPart ')'
+		@Override public ParserRule getRule() { return rule; }
+
+		//'(' first=TypedNamedPart ',' second=TypedNamedPart ')'
+		public Group getGroup() { return cGroup; }
+
+		//'('
+		public Keyword getLeftParenthesisKeyword_0() { return cLeftParenthesisKeyword_0; }
+
+		//first=TypedNamedPart
+		public Assignment getFirstAssignment_1() { return cFirstAssignment_1; }
+
+		//TypedNamedPart
+		public RuleCall getFirstTypedNamedPartParserRuleCall_1_0() { return cFirstTypedNamedPartParserRuleCall_1_0; }
+
+		//','
+		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
+
+		//second=TypedNamedPart
+		public Assignment getSecondAssignment_3() { return cSecondAssignment_3; }
+
+		//TypedNamedPart
+		public RuleCall getSecondTypedNamedPartParserRuleCall_3_0() { return cSecondTypedNamedPartParserRuleCall_3_0; }
+
+		//')'
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
+	}
+
+	public class TypedNamedPartElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TypedNamedPart");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cOwnedTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cOwnedTypeTypedRefCSParserRuleCall_2_0 = (RuleCall)cOwnedTypeAssignment_2.eContents().get(0);
+		
+		//TypedNamedPart cs::TypedNamedPartCS:
+		//	name=ID ':' ownedType=TypedRefCS
+		@Override public ParserRule getRule() { return rule; }
+
+		//name=ID ':' ownedType=TypedRefCS
+		public Group getGroup() { return cGroup; }
+
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//ID
+		public RuleCall getNameIDParserRuleCall_0_0() { return cNameIDParserRuleCall_0_0; }
+
+		//':'
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+
+		//ownedType=TypedRefCS
+		public Assignment getOwnedTypeAssignment_2() { return cOwnedTypeAssignment_2; }
+
+		//TypedRefCS
+		public RuleCall getOwnedTypeTypedRefCSParserRuleCall_2_0() { return cOwnedTypeTypedRefCSParserRuleCall_2_0; }
+	}
+
+	public class TupleDescriptorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TupleDescriptor");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cDescriptorsKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cTypedPairsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cTypedPairsTypedPairParserRuleCall_1_0 = (RuleCall)cTypedPairsAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cTypedPairsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cTypedPairsTypedPairParserRuleCall_2_1_0 = (RuleCall)cTypedPairsAssignment_2_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//TupleDescriptor cs::TupleDescriptorCS:
+		//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+		@Override public ParserRule getRule() { return rule; }
+
+		//'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+		public Group getGroup() { return cGroup; }
+
+		//'descriptors'
+		public Keyword getDescriptorsKeyword_0() { return cDescriptorsKeyword_0; }
+
+		//typedPairs+=TypedPair
+		public Assignment getTypedPairsAssignment_1() { return cTypedPairsAssignment_1; }
+
+		//TypedPair
+		public RuleCall getTypedPairsTypedPairParserRuleCall_1_0() { return cTypedPairsTypedPairParserRuleCall_1_0; }
+
+		//(',' typedPairs+=TypedPair)*
+		public Group getGroup_2() { return cGroup_2; }
+
+		//','
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+
+		//typedPairs+=TypedPair
+		public Assignment getTypedPairsAssignment_2_1() { return cTypedPairsAssignment_2_1; }
+
+		//TypedPair
+		public RuleCall getTypedPairsTypedPairParserRuleCall_2_1_0() { return cTypedPairsTypedPairParserRuleCall_2_1_0; }
+
+		//';'
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+	}
+
+	public class WeightTupleDescriptorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.WeightTupleDescriptor");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cWeightKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cWeightAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cWeightIDParserRuleCall_1_0 = (RuleCall)cWeightAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cDescriptorsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cTypedPairsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cTypedPairsTypedPairParserRuleCall_4_0 = (RuleCall)cTypedPairsAssignment_4.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cCommaKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cTypedPairsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cTypedPairsTypedPairParserRuleCall_5_1_0 = (RuleCall)cTypedPairsAssignment_5_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		
+		//WeightTupleDescriptor cs::WeightTupleDescriptorCS:
+		//	'weight' weight=ID ';'
+		//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+		@Override public ParserRule getRule() { return rule; }
+
+		//'weight' weight=ID ';' 'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+		public Group getGroup() { return cGroup; }
+
+		//'weight'
+		public Keyword getWeightKeyword_0() { return cWeightKeyword_0; }
+
+		//weight=ID
+		public Assignment getWeightAssignment_1() { return cWeightAssignment_1; }
+
+		//ID
+		public RuleCall getWeightIDParserRuleCall_1_0() { return cWeightIDParserRuleCall_1_0; }
+
+		//';'
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+
+		//'descriptors'
+		public Keyword getDescriptorsKeyword_3() { return cDescriptorsKeyword_3; }
+
+		//typedPairs+=TypedPair
+		public Assignment getTypedPairsAssignment_4() { return cTypedPairsAssignment_4; }
+
+		//TypedPair
+		public RuleCall getTypedPairsTypedPairParserRuleCall_4_0() { return cTypedPairsTypedPairParserRuleCall_4_0; }
+
+		//(',' typedPairs+=TypedPair)*
+		public Group getGroup_5() { return cGroup_5; }
+
+		//','
+		public Keyword getCommaKeyword_5_0() { return cCommaKeyword_5_0; }
+
+		//typedPairs+=TypedPair
+		public Assignment getTypedPairsAssignment_5_1() { return cTypedPairsAssignment_5_1; }
+
+		//TypedPair
+		public RuleCall getTypedPairsTypedPairParserRuleCall_5_1_0() { return cTypedPairsTypedPairParserRuleCall_5_1_0; }
+
+		//';'
+		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
+	}
+
+	public class BoundWeightTupleDescriptorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.BoundWeightTupleDescriptor");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cWeightKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cWeightAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cWeightIDParserRuleCall_1_0 = (RuleCall)cWeightAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cBoundKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cBoundAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cBoundIDParserRuleCall_4_0 = (RuleCall)cBoundAssignment_4.eContents().get(0);
+		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cDescriptorsKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cTypedPairsAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cTypedPairsTypedPairParserRuleCall_7_0 = (RuleCall)cTypedPairsAssignment_7.eContents().get(0);
+		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
+		private final Keyword cCommaKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Assignment cTypedPairsAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
+		private final RuleCall cTypedPairsTypedPairParserRuleCall_8_1_0 = (RuleCall)cTypedPairsAssignment_8_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		
+		//BoundWeightTupleDescriptor cs::BoundWeightTupleDescriptorCS:
+		//	'weight' weight=ID ';'
+		//	'bound' bound=ID ';'
+		//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+		@Override public ParserRule getRule() { return rule; }
+
+		//'weight' weight=ID ';' 'bound' bound=ID ';' 'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+		public Group getGroup() { return cGroup; }
+
+		//'weight'
+		public Keyword getWeightKeyword_0() { return cWeightKeyword_0; }
+
+		//weight=ID
+		public Assignment getWeightAssignment_1() { return cWeightAssignment_1; }
+
+		//ID
+		public RuleCall getWeightIDParserRuleCall_1_0() { return cWeightIDParserRuleCall_1_0; }
+
+		//';'
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+
+		//'bound'
+		public Keyword getBoundKeyword_3() { return cBoundKeyword_3; }
+
+		//bound=ID
+		public Assignment getBoundAssignment_4() { return cBoundAssignment_4; }
+
+		//ID
+		public RuleCall getBoundIDParserRuleCall_4_0() { return cBoundIDParserRuleCall_4_0; }
 
 		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
@@ -230,41 +445,26 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//'descriptors'
 		public Keyword getDescriptorsKeyword_6() { return cDescriptorsKeyword_6; }
 
-		//tupleDescriptors+=ComponentResourceTupleDescriptor
-		public Assignment getTupleDescriptorsAssignment_7() { return cTupleDescriptorsAssignment_7; }
+		//typedPairs+=TypedPair
+		public Assignment getTypedPairsAssignment_7() { return cTypedPairsAssignment_7; }
 
-		//ComponentResourceTupleDescriptor
-		public RuleCall getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_7_0() { return cTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_7_0; }
+		//TypedPair
+		public RuleCall getTypedPairsTypedPairParserRuleCall_7_0() { return cTypedPairsTypedPairParserRuleCall_7_0; }
 
-		//(',' tupleDescriptors+=ComponentResourceTupleDescriptor)*
+		//(',' typedPairs+=TypedPair)*
 		public Group getGroup_8() { return cGroup_8; }
 
 		//','
 		public Keyword getCommaKeyword_8_0() { return cCommaKeyword_8_0; }
 
-		//tupleDescriptors+=ComponentResourceTupleDescriptor
-		public Assignment getTupleDescriptorsAssignment_8_1() { return cTupleDescriptorsAssignment_8_1; }
+		//typedPairs+=TypedPair
+		public Assignment getTypedPairsAssignment_8_1() { return cTypedPairsAssignment_8_1; }
 
-		//ComponentResourceTupleDescriptor
-		public RuleCall getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_8_1_0() { return cTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_8_1_0; }
+		//TypedPair
+		public RuleCall getTypedPairsTypedPairParserRuleCall_8_1_0() { return cTypedPairsTypedPairParserRuleCall_8_1_0; }
 
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
-
-		//'ocl'
-		public Keyword getOclKeyword_10() { return cOclKeyword_10; }
-
-		//expression=Model
-		public Assignment getExpressionAssignment_11() { return cExpressionAssignment_11; }
-
-		//Model
-		public RuleCall getExpressionModelParserRuleCall_11_0() { return cExpressionModelParserRuleCall_11_0; }
-
-		//';'
-		public Keyword getSemicolonKeyword_12() { return cSemicolonKeyword_12; }
-
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_13() { return cRightCurlyBracketKeyword_13; }
 	}
 
 	public class ConstraintElements extends AbstractParserRuleElementFinder {
@@ -307,25 +507,22 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cDescriptorsKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cTupleDescriptorAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cTupleDescriptorLocationTupleDescriptorParserRuleCall_4_0 = (RuleCall)cTupleDescriptorAssignment_4.eContents().get(0);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Keyword cOclKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Assignment cExpressionAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cExpressionModelParserRuleCall_7_0 = (RuleCall)cExpressionAssignment_7.eContents().get(0);
-		private final Keyword cSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Assignment cTupleDescriptorAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTupleDescriptorTupleDescriptorParserRuleCall_3_0 = (RuleCall)cTupleDescriptorAssignment_3.eContents().get(0);
+		private final Keyword cOclKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cExpressionAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cExpressionModelParserRuleCall_5_0 = (RuleCall)cExpressionAssignment_5.eContents().get(0);
+		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//LocationConstraint cs::LocationConstraintCS:
 		//	type=LocationConstraintType name=ID? '{'
-		//	'descriptors' tupleDescriptor=LocationTupleDescriptor ';'
+		//	tupleDescriptor=TupleDescriptor
 		//	'ocl' expression=Model ';'
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//type=LocationConstraintType name=ID? '{' 'descriptors' tupleDescriptor=LocationTupleDescriptor ';' 'ocl'
-		//expression=Model ';' '}'
+		//type=LocationConstraintType name=ID? '{' tupleDescriptor=TupleDescriptor 'ocl' expression=Model ';' '}'
 		public Group getGroup() { return cGroup; }
 
 		//type=LocationConstraintType
@@ -343,32 +540,26 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//'descriptors'
-		public Keyword getDescriptorsKeyword_3() { return cDescriptorsKeyword_3; }
+		//tupleDescriptor=TupleDescriptor
+		public Assignment getTupleDescriptorAssignment_3() { return cTupleDescriptorAssignment_3; }
 
-		//tupleDescriptor=LocationTupleDescriptor
-		public Assignment getTupleDescriptorAssignment_4() { return cTupleDescriptorAssignment_4; }
-
-		//LocationTupleDescriptor
-		public RuleCall getTupleDescriptorLocationTupleDescriptorParserRuleCall_4_0() { return cTupleDescriptorLocationTupleDescriptorParserRuleCall_4_0; }
-
-		//';'
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		//TupleDescriptor
+		public RuleCall getTupleDescriptorTupleDescriptorParserRuleCall_3_0() { return cTupleDescriptorTupleDescriptorParserRuleCall_3_0; }
 
 		//'ocl'
-		public Keyword getOclKeyword_6() { return cOclKeyword_6; }
+		public Keyword getOclKeyword_4() { return cOclKeyword_4; }
 
 		//expression=Model
-		public Assignment getExpressionAssignment_7() { return cExpressionAssignment_7; }
+		public Assignment getExpressionAssignment_5() { return cExpressionAssignment_5; }
 
 		//Model
-		public RuleCall getExpressionModelParserRuleCall_7_0() { return cExpressionModelParserRuleCall_7_0; }
+		public RuleCall getExpressionModelParserRuleCall_5_0() { return cExpressionModelParserRuleCall_5_0; }
 
 		//';'
-		public Keyword getSemicolonKeyword_8() { return cSemicolonKeyword_8; }
+		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
 
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class ResourceConstraintElements extends AbstractParserRuleElementFinder {
@@ -380,41 +571,22 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cLhsKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cWeightingAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cWeightingValueTupleDescriptorParserRuleCall_4_0 = (RuleCall)cWeightingAssignment_4.eContents().get(0);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Keyword cRhsKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Assignment cRhsAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cRhsValueTupleDescriptorParserRuleCall_7_0 = (RuleCall)cRhsAssignment_7.eContents().get(0);
-		private final Keyword cSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Keyword cDescriptorsKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Assignment cTupleDescriptorsAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_10_0 = (RuleCall)cTupleDescriptorsAssignment_10.eContents().get(0);
-		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
-		private final Keyword cCommaKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
-		private final Assignment cTupleDescriptorsAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
-		private final RuleCall cTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_11_1_0 = (RuleCall)cTupleDescriptorsAssignment_11_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_12 = (Keyword)cGroup.eContents().get(12);
-		private final Keyword cOclKeyword_13 = (Keyword)cGroup.eContents().get(13);
-		private final Assignment cExpressionAssignment_14 = (Assignment)cGroup.eContents().get(14);
-		private final RuleCall cExpressionModelParserRuleCall_14_0 = (RuleCall)cExpressionAssignment_14.eContents().get(0);
-		private final Keyword cSemicolonKeyword_15 = (Keyword)cGroup.eContents().get(15);
-		private final Keyword cRightCurlyBracketKeyword_16 = (Keyword)cGroup.eContents().get(16);
+		private final Assignment cTupleDescriptorAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTupleDescriptorBoundWeightTupleDescriptorParserRuleCall_3_0 = (RuleCall)cTupleDescriptorAssignment_3.eContents().get(0);
+		private final Keyword cOclKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cExpressionAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cExpressionModelParserRuleCall_5_0 = (RuleCall)cExpressionAssignment_5.eContents().get(0);
+		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//ResourceConstraint cs::ResourceConstraintCS:
 		//	('resource' | 'requiredResource') name=ID? '{'
-		//	'lhs' weighting=ValueTupleDescriptor ';'
-		//	'rhs' rhs=ValueTupleDescriptor ';'
-		//	'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor (','
-		//	tupleDescriptors+=ComponentResourceTupleDescriptor)* ';'
+		//	tupleDescriptor=BoundWeightTupleDescriptor
 		//	'ocl' expression=Model ';'
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//('resource' | 'requiredResource') name=ID? '{' 'lhs' weighting=ValueTupleDescriptor ';' 'rhs' rhs=ValueTupleDescriptor
-		//';' 'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor (','
-		//tupleDescriptors+=ComponentResourceTupleDescriptor)* ';' 'ocl' expression=Model ';' '}'
+		//('resource' | 'requiredResource') name=ID? '{' tupleDescriptor=BoundWeightTupleDescriptor 'ocl' expression=Model ';' '}'
 		public Group getGroup() { return cGroup; }
 
 		//('resource' | 'requiredResource')
@@ -435,68 +607,26 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//'lhs'
-		public Keyword getLhsKeyword_3() { return cLhsKeyword_3; }
+		//tupleDescriptor=BoundWeightTupleDescriptor
+		public Assignment getTupleDescriptorAssignment_3() { return cTupleDescriptorAssignment_3; }
 
-		//weighting=ValueTupleDescriptor
-		public Assignment getWeightingAssignment_4() { return cWeightingAssignment_4; }
-
-		//ValueTupleDescriptor
-		public RuleCall getWeightingValueTupleDescriptorParserRuleCall_4_0() { return cWeightingValueTupleDescriptorParserRuleCall_4_0; }
-
-		//';'
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
-
-		//'rhs'
-		public Keyword getRhsKeyword_6() { return cRhsKeyword_6; }
-
-		//rhs=ValueTupleDescriptor
-		public Assignment getRhsAssignment_7() { return cRhsAssignment_7; }
-
-		//ValueTupleDescriptor
-		public RuleCall getRhsValueTupleDescriptorParserRuleCall_7_0() { return cRhsValueTupleDescriptorParserRuleCall_7_0; }
-
-		//';'
-		public Keyword getSemicolonKeyword_8() { return cSemicolonKeyword_8; }
-
-		//'descriptors'
-		public Keyword getDescriptorsKeyword_9() { return cDescriptorsKeyword_9; }
-
-		//tupleDescriptors+=ComponentResourceTupleDescriptor
-		public Assignment getTupleDescriptorsAssignment_10() { return cTupleDescriptorsAssignment_10; }
-
-		//ComponentResourceTupleDescriptor
-		public RuleCall getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_10_0() { return cTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_10_0; }
-
-		//(',' tupleDescriptors+=ComponentResourceTupleDescriptor)*
-		public Group getGroup_11() { return cGroup_11; }
-
-		//','
-		public Keyword getCommaKeyword_11_0() { return cCommaKeyword_11_0; }
-
-		//tupleDescriptors+=ComponentResourceTupleDescriptor
-		public Assignment getTupleDescriptorsAssignment_11_1() { return cTupleDescriptorsAssignment_11_1; }
-
-		//ComponentResourceTupleDescriptor
-		public RuleCall getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_11_1_0() { return cTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_11_1_0; }
-
-		//';'
-		public Keyword getSemicolonKeyword_12() { return cSemicolonKeyword_12; }
+		//BoundWeightTupleDescriptor
+		public RuleCall getTupleDescriptorBoundWeightTupleDescriptorParserRuleCall_3_0() { return cTupleDescriptorBoundWeightTupleDescriptorParserRuleCall_3_0; }
 
 		//'ocl'
-		public Keyword getOclKeyword_13() { return cOclKeyword_13; }
+		public Keyword getOclKeyword_4() { return cOclKeyword_4; }
 
 		//expression=Model
-		public Assignment getExpressionAssignment_14() { return cExpressionAssignment_14; }
+		public Assignment getExpressionAssignment_5() { return cExpressionAssignment_5; }
 
 		//Model
-		public RuleCall getExpressionModelParserRuleCall_14_0() { return cExpressionModelParserRuleCall_14_0; }
+		public RuleCall getExpressionModelParserRuleCall_5_0() { return cExpressionModelParserRuleCall_5_0; }
 
 		//';'
-		public Keyword getSemicolonKeyword_15() { return cSemicolonKeyword_15; }
+		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
 
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_16() { return cRightCurlyBracketKeyword_16; }
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class RequiredHardwareResourceInstanceConstraintElements extends AbstractParserRuleElementFinder {
@@ -508,30 +638,22 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cDescriptorsKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cTupleDescriptorsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_4_0 = (RuleCall)cTupleDescriptorsAssignment_4.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cCommaKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cTupleDescriptorsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_5_1_0 = (RuleCall)cTupleDescriptorsAssignment_5_1.eContents().get(0);
+		private final Assignment cTupleDescriptorAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTupleDescriptorTupleDescriptorParserRuleCall_3_0 = (RuleCall)cTupleDescriptorAssignment_3.eContents().get(0);
+		private final Keyword cOclKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cExpressionAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cExpressionModelParserRuleCall_5_0 = (RuleCall)cExpressionAssignment_5.eContents().get(0);
 		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Keyword cOclKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cExpressionAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cExpressionModelParserRuleCall_8_0 = (RuleCall)cExpressionAssignment_8.eContents().get(0);
-		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//RequiredHardwareResourceInstanceConstraint cs::RequiredHardwareResourceInstanceConstraintCS:
 		//	('requiredHardwareResourceInstance' | 'requiredLocation') name=ID? '{'
-		//	'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor (','
-		//	tupleDescriptors+=ComponentResourceTupleDescriptor)* ';'
+		//	tupleDescriptor=TupleDescriptor
 		//	'ocl' expression=Model ';'
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//('requiredHardwareResourceInstance' | 'requiredLocation') name=ID? '{' 'descriptors'
-		//tupleDescriptors+=ComponentResourceTupleDescriptor (',' tupleDescriptors+=ComponentResourceTupleDescriptor)* ';' 'ocl'
+		//('requiredHardwareResourceInstance' | 'requiredLocation') name=ID? '{' tupleDescriptor=TupleDescriptor 'ocl'
 		//expression=Model ';' '}'
 		public Group getGroup() { return cGroup; }
 
@@ -553,140 +675,26 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//'descriptors'
-		public Keyword getDescriptorsKeyword_3() { return cDescriptorsKeyword_3; }
+		//tupleDescriptor=TupleDescriptor
+		public Assignment getTupleDescriptorAssignment_3() { return cTupleDescriptorAssignment_3; }
 
-		//tupleDescriptors+=ComponentResourceTupleDescriptor
-		public Assignment getTupleDescriptorsAssignment_4() { return cTupleDescriptorsAssignment_4; }
+		//TupleDescriptor
+		public RuleCall getTupleDescriptorTupleDescriptorParserRuleCall_3_0() { return cTupleDescriptorTupleDescriptorParserRuleCall_3_0; }
 
-		//ComponentResourceTupleDescriptor
-		public RuleCall getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_4_0() { return cTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_4_0; }
+		//'ocl'
+		public Keyword getOclKeyword_4() { return cOclKeyword_4; }
 
-		//(',' tupleDescriptors+=ComponentResourceTupleDescriptor)*
-		public Group getGroup_5() { return cGroup_5; }
+		//expression=Model
+		public Assignment getExpressionAssignment_5() { return cExpressionAssignment_5; }
 
-		//','
-		public Keyword getCommaKeyword_5_0() { return cCommaKeyword_5_0; }
-
-		//tupleDescriptors+=ComponentResourceTupleDescriptor
-		public Assignment getTupleDescriptorsAssignment_5_1() { return cTupleDescriptorsAssignment_5_1; }
-
-		//ComponentResourceTupleDescriptor
-		public RuleCall getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_5_1_0() { return cTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_5_1_0; }
+		//Model
+		public RuleCall getExpressionModelParserRuleCall_5_0() { return cExpressionModelParserRuleCall_5_0; }
 
 		//';'
 		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
 
-		//'ocl'
-		public Keyword getOclKeyword_7() { return cOclKeyword_7; }
-
-		//expression=Model
-		public Assignment getExpressionAssignment_8() { return cExpressionAssignment_8; }
-
-		//Model
-		public RuleCall getExpressionModelParserRuleCall_8_0() { return cExpressionModelParserRuleCall_8_0; }
-
-		//';'
-		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
-
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
-	}
-
-	public class LocationTupleDescriptorElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.LocationTupleDescriptor");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cLeftParenthesisKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cInstanceAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cInstanceIDParserRuleCall_1_0 = (RuleCall)cInstanceAssignment_1.eContents().get(0);
-		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cSecondInstanceAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cSecondInstanceIDParserRuleCall_3_0 = (RuleCall)cSecondInstanceAssignment_3.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		
-		//LocationTupleDescriptor cs::LocationTupleDescriptorCS:
-		//	'(' instance=ID ',' secondInstance=ID ')'
-		@Override public ParserRule getRule() { return rule; }
-
-		//'(' instance=ID ',' secondInstance=ID ')'
-		public Group getGroup() { return cGroup; }
-
-		//'('
-		public Keyword getLeftParenthesisKeyword_0() { return cLeftParenthesisKeyword_0; }
-
-		//instance=ID
-		public Assignment getInstanceAssignment_1() { return cInstanceAssignment_1; }
-
-		//ID
-		public RuleCall getInstanceIDParserRuleCall_1_0() { return cInstanceIDParserRuleCall_1_0; }
-
-		//','
-		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
-
-		//secondInstance=ID
-		public Assignment getSecondInstanceAssignment_3() { return cSecondInstanceAssignment_3; }
-
-		//ID
-		public RuleCall getSecondInstanceIDParserRuleCall_3_0() { return cSecondInstanceIDParserRuleCall_3_0; }
-
-		//')'
-		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
-	}
-
-	public class ValueTupleDescriptorElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.ValueTupleDescriptor");
-		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cValueIDParserRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
-		
-		//ValueTupleDescriptor cs::ValueTupleDescriptorCS:
-		//	value=ID
-		@Override public ParserRule getRule() { return rule; }
-
-		//value=ID
-		public Assignment getValueAssignment() { return cValueAssignment; }
-
-		//ID
-		public RuleCall getValueIDParserRuleCall_0() { return cValueIDParserRuleCall_0; }
-	}
-
-	public class ComponentResourceTupleDescriptorElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.ComponentResourceTupleDescriptor");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cLeftParenthesisKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cInstanceAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cInstanceIDParserRuleCall_1_0 = (RuleCall)cInstanceAssignment_1.eContents().get(0);
-		private final Keyword cCommaKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cHwresinstanceAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cHwresinstanceIDParserRuleCall_3_0 = (RuleCall)cHwresinstanceAssignment_3.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		
-		//ComponentResourceTupleDescriptor cs::ComponentResourceTupleDescriptorCS:
-		//	'(' instance=ID ',' hwresinstance=ID ')'
-		@Override public ParserRule getRule() { return rule; }
-
-		//'(' instance=ID ',' hwresinstance=ID ')'
-		public Group getGroup() { return cGroup; }
-
-		//'('
-		public Keyword getLeftParenthesisKeyword_0() { return cLeftParenthesisKeyword_0; }
-
-		//instance=ID
-		public Assignment getInstanceAssignment_1() { return cInstanceAssignment_1; }
-
-		//ID
-		public RuleCall getInstanceIDParserRuleCall_1_0() { return cInstanceIDParserRuleCall_1_0; }
-
-		//','
-		public Keyword getCommaKeyword_2() { return cCommaKeyword_2; }
-
-		//hwresinstance=ID
-		public Assignment getHwresinstanceAssignment_3() { return cHwresinstanceAssignment_3; }
-
-		//ID
-		public RuleCall getHwresinstanceIDParserRuleCall_3_0() { return cHwresinstanceIDParserRuleCall_3_0; }
-
-		//')'
-		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class MeasureFunctionElements extends AbstractParserRuleElementFinder {
@@ -819,14 +827,16 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	private final SpecificationElements pSpecification;
 	private final ServiceElements pService;
 	private final QosDimensionElements pQosDimension;
+	private final TypedPairElements pTypedPair;
+	private final TypedNamedPartElements pTypedNamedPart;
+	private final TupleDescriptorElements pTupleDescriptor;
+	private final WeightTupleDescriptorElements pWeightTupleDescriptor;
+	private final BoundWeightTupleDescriptorElements pBoundWeightTupleDescriptor;
 	private final ConstraintElements pConstraint;
 	private final LocationConstraintElements pLocationConstraint;
 	private final ResourceConstraintElements pResourceConstraint;
 	private final RequiredHardwareResourceInstanceConstraintElements pRequiredHardwareResourceInstanceConstraint;
 	private final LocationConstraintTypeElements eLocationConstraintType;
-	private final LocationTupleDescriptorElements pLocationTupleDescriptor;
-	private final ValueTupleDescriptorElements pValueTupleDescriptor;
-	private final ComponentResourceTupleDescriptorElements pComponentResourceTupleDescriptor;
 	private final MeasureFunctionElements pMeasureFunction;
 	private final GoalElements eGoal;
 	
@@ -850,14 +860,16 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		this.pSpecification = new SpecificationElements();
 		this.pService = new ServiceElements();
 		this.pQosDimension = new QosDimensionElements();
+		this.pTypedPair = new TypedPairElements();
+		this.pTypedNamedPart = new TypedNamedPartElements();
+		this.pTupleDescriptor = new TupleDescriptorElements();
+		this.pWeightTupleDescriptor = new WeightTupleDescriptorElements();
+		this.pBoundWeightTupleDescriptor = new BoundWeightTupleDescriptorElements();
 		this.pConstraint = new ConstraintElements();
 		this.pLocationConstraint = new LocationConstraintElements();
 		this.pResourceConstraint = new ResourceConstraintElements();
 		this.pRequiredHardwareResourceInstanceConstraint = new RequiredHardwareResourceInstanceConstraintElements();
 		this.eLocationConstraintType = new LocationConstraintTypeElements();
-		this.pLocationTupleDescriptor = new LocationTupleDescriptorElements();
-		this.pValueTupleDescriptor = new ValueTupleDescriptorElements();
-		this.pComponentResourceTupleDescriptor = new ComponentResourceTupleDescriptorElements();
 		this.pMeasureFunction = new MeasureFunctionElements();
 		this.eGoal = new GoalElements();
 	}
@@ -923,9 +935,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 	//QosDimension cs::QoSDimensionCS:
 	//	'qos' name=ID '{'
-	//	'value' weighting=ValueTupleDescriptor ';'
-	//	'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor (','
-	//	tupleDescriptors+=ComponentResourceTupleDescriptor)* ';'
+	//	tupleDescriptor=WeightTupleDescriptor
 	//	'ocl' expression=Model ';'
 	//	'}'
 	public QosDimensionElements getQosDimensionAccess() {
@@ -934,6 +944,59 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	
 	public ParserRule getQosDimensionRule() {
 		return getQosDimensionAccess().getRule();
+	}
+
+	//TypedPair cs::TypedPairCS:
+	//	'(' first=TypedNamedPart ',' second=TypedNamedPart ')'
+	public TypedPairElements getTypedPairAccess() {
+		return pTypedPair;
+	}
+	
+	public ParserRule getTypedPairRule() {
+		return getTypedPairAccess().getRule();
+	}
+
+	//TypedNamedPart cs::TypedNamedPartCS:
+	//	name=ID ':' ownedType=TypedRefCS
+	public TypedNamedPartElements getTypedNamedPartAccess() {
+		return pTypedNamedPart;
+	}
+	
+	public ParserRule getTypedNamedPartRule() {
+		return getTypedNamedPartAccess().getRule();
+	}
+
+	//TupleDescriptor cs::TupleDescriptorCS:
+	//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+	public TupleDescriptorElements getTupleDescriptorAccess() {
+		return pTupleDescriptor;
+	}
+	
+	public ParserRule getTupleDescriptorRule() {
+		return getTupleDescriptorAccess().getRule();
+	}
+
+	//WeightTupleDescriptor cs::WeightTupleDescriptorCS:
+	//	'weight' weight=ID ';'
+	//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+	public WeightTupleDescriptorElements getWeightTupleDescriptorAccess() {
+		return pWeightTupleDescriptor;
+	}
+	
+	public ParserRule getWeightTupleDescriptorRule() {
+		return getWeightTupleDescriptorAccess().getRule();
+	}
+
+	//BoundWeightTupleDescriptor cs::BoundWeightTupleDescriptorCS:
+	//	'weight' weight=ID ';'
+	//	'bound' bound=ID ';'
+	//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+	public BoundWeightTupleDescriptorElements getBoundWeightTupleDescriptorAccess() {
+		return pBoundWeightTupleDescriptor;
+	}
+	
+	public ParserRule getBoundWeightTupleDescriptorRule() {
+		return getBoundWeightTupleDescriptorAccess().getRule();
 	}
 
 	//Constraint cs::ConstraintCS:
@@ -948,7 +1011,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 	//LocationConstraint cs::LocationConstraintCS:
 	//	type=LocationConstraintType name=ID? '{'
-	//	'descriptors' tupleDescriptor=LocationTupleDescriptor ';'
+	//	tupleDescriptor=TupleDescriptor
 	//	'ocl' expression=Model ';'
 	//	'}'
 	public LocationConstraintElements getLocationConstraintAccess() {
@@ -961,10 +1024,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 	//ResourceConstraint cs::ResourceConstraintCS:
 	//	('resource' | 'requiredResource') name=ID? '{'
-	//	'lhs' weighting=ValueTupleDescriptor ';'
-	//	'rhs' rhs=ValueTupleDescriptor ';'
-	//	'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor (','
-	//	tupleDescriptors+=ComponentResourceTupleDescriptor)* ';'
+	//	tupleDescriptor=BoundWeightTupleDescriptor
 	//	'ocl' expression=Model ';'
 	//	'}'
 	public ResourceConstraintElements getResourceConstraintAccess() {
@@ -977,8 +1037,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 	//RequiredHardwareResourceInstanceConstraint cs::RequiredHardwareResourceInstanceConstraintCS:
 	//	('requiredHardwareResourceInstance' | 'requiredLocation') name=ID? '{'
-	//	'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor (','
-	//	tupleDescriptors+=ComponentResourceTupleDescriptor)* ';'
+	//	tupleDescriptor=TupleDescriptor
 	//	'ocl' expression=Model ';'
 	//	'}'
 	public RequiredHardwareResourceInstanceConstraintElements getRequiredHardwareResourceInstanceConstraintAccess() {
@@ -998,36 +1057,6 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	
 	public EnumRule getLocationConstraintTypeRule() {
 		return getLocationConstraintTypeAccess().getRule();
-	}
-
-	//LocationTupleDescriptor cs::LocationTupleDescriptorCS:
-	//	'(' instance=ID ',' secondInstance=ID ')'
-	public LocationTupleDescriptorElements getLocationTupleDescriptorAccess() {
-		return pLocationTupleDescriptor;
-	}
-	
-	public ParserRule getLocationTupleDescriptorRule() {
-		return getLocationTupleDescriptorAccess().getRule();
-	}
-
-	//ValueTupleDescriptor cs::ValueTupleDescriptorCS:
-	//	value=ID
-	public ValueTupleDescriptorElements getValueTupleDescriptorAccess() {
-		return pValueTupleDescriptor;
-	}
-	
-	public ParserRule getValueTupleDescriptorRule() {
-		return getValueTupleDescriptorAccess().getRule();
-	}
-
-	//ComponentResourceTupleDescriptor cs::ComponentResourceTupleDescriptorCS:
-	//	'(' instance=ID ',' hwresinstance=ID ')'
-	public ComponentResourceTupleDescriptorElements getComponentResourceTupleDescriptorAccess() {
-		return pComponentResourceTupleDescriptor;
-	}
-	
-	public ParserRule getComponentResourceTupleDescriptorRule() {
-		return getComponentResourceTupleDescriptorAccess().getRule();
 	}
 
 	//MeasureFunction cs::MeasureFunctionCS:

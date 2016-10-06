@@ -3,6 +3,7 @@
  */
 package org.muml.psm.allocation.language.xtext;
 
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.ISetup;
 

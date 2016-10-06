@@ -346,109 +346,468 @@ ruleQosDimension returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getQosDimensionAccess().getLeftCurlyBracketKeyword_2());
     }
-	otherlv_3='value' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getQosDimensionAccess().getValueKeyword_3());
-    }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQosDimensionAccess().getWeightingValueTupleDescriptorParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getQosDimensionAccess().getTupleDescriptorWeightTupleDescriptorParserRuleCall_3_0()); 
 	    }
-		lv_weighting_4_0=ruleValueTupleDescriptor		{
+		lv_tupleDescriptor_3_0=ruleWeightTupleDescriptor		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getQosDimensionRule());
 	        }
        		set(
        			$current, 
-       			"weighting",
-        		lv_weighting_4_0, 
-        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.ValueTupleDescriptor");
+       			"tupleDescriptor",
+        		lv_tupleDescriptor_3_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.WeightTupleDescriptor");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_5=';' 
+)	otherlv_4='ocl' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getQosDimensionAccess().getSemicolonKeyword_5());
-    }
-	otherlv_6='descriptors' 
-    {
-    	newLeafNode(otherlv_6, grammarAccess.getQosDimensionAccess().getDescriptorsKeyword_6());
+    	newLeafNode(otherlv_4, grammarAccess.getQosDimensionAccess().getOclKeyword_4());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getQosDimensionAccess().getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_7_0()); 
+	        newCompositeNode(grammarAccess.getQosDimensionAccess().getExpressionModelParserRuleCall_5_0()); 
 	    }
-		lv_tupleDescriptors_7_0=ruleComponentResourceTupleDescriptor		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getQosDimensionRule());
-	        }
-       		add(
-       			$current, 
-       			"tupleDescriptors",
-        		lv_tupleDescriptors_7_0, 
-        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.ComponentResourceTupleDescriptor");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(	otherlv_8=',' 
-    {
-    	newLeafNode(otherlv_8, grammarAccess.getQosDimensionAccess().getCommaKeyword_8_0());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getQosDimensionAccess().getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_8_1_0()); 
-	    }
-		lv_tupleDescriptors_9_0=ruleComponentResourceTupleDescriptor		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getQosDimensionRule());
-	        }
-       		add(
-       			$current, 
-       			"tupleDescriptors",
-        		lv_tupleDescriptors_9_0, 
-        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.ComponentResourceTupleDescriptor");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))*	otherlv_10=';' 
-    {
-    	newLeafNode(otherlv_10, grammarAccess.getQosDimensionAccess().getSemicolonKeyword_9());
-    }
-	otherlv_11='ocl' 
-    {
-    	newLeafNode(otherlv_11, grammarAccess.getQosDimensionAccess().getOclKeyword_10());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getQosDimensionAccess().getExpressionModelParserRuleCall_11_0()); 
-	    }
-		lv_expression_12_0=ruleModel		{
+		lv_expression_5_0=ruleModel		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getQosDimensionRule());
 	        }
        		set(
        			$current, 
        			"expression",
-        		lv_expression_12_0, 
+        		lv_expression_5_0, 
         		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.Model");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_13=';' 
+)	otherlv_6=';' 
     {
-    	newLeafNode(otherlv_13, grammarAccess.getQosDimensionAccess().getSemicolonKeyword_12());
+    	newLeafNode(otherlv_6, grammarAccess.getQosDimensionAccess().getSemicolonKeyword_6());
     }
-	otherlv_14='}' 
+	otherlv_7='}' 
     {
-    	newLeafNode(otherlv_14, grammarAccess.getQosDimensionAccess().getRightCurlyBracketKeyword_13());
+    	newLeafNode(otherlv_7, grammarAccess.getQosDimensionAccess().getRightCurlyBracketKeyword_7());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleTypedPair
+entryRuleTypedPair returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getTypedPairRule()); }
+	 iv_ruleTypedPair=ruleTypedPair 
+	 { $current=$iv_ruleTypedPair.current; } 
+	 EOF 
+;
+
+// Rule TypedPair
+ruleTypedPair returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='(' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getTypedPairAccess().getLeftParenthesisKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTypedPairAccess().getFirstTypedNamedPartParserRuleCall_1_0()); 
+	    }
+		lv_first_1_0=ruleTypedNamedPart		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTypedPairRule());
+	        }
+       		set(
+       			$current, 
+       			"first",
+        		lv_first_1_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TypedNamedPart");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_2=',' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getTypedPairAccess().getCommaKeyword_2());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTypedPairAccess().getSecondTypedNamedPartParserRuleCall_3_0()); 
+	    }
+		lv_second_3_0=ruleTypedNamedPart		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTypedPairRule());
+	        }
+       		set(
+       			$current, 
+       			"second",
+        		lv_second_3_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TypedNamedPart");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_4=')' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getTypedPairAccess().getRightParenthesisKeyword_4());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleTypedNamedPart
+entryRuleTypedNamedPart returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getTypedNamedPartRule()); }
+	 iv_ruleTypedNamedPart=ruleTypedNamedPart 
+	 { $current=$iv_ruleTypedNamedPart.current; } 
+	 EOF 
+;
+
+// Rule TypedNamedPart
+ruleTypedNamedPart returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTypedNamedPartAccess().getNameIDParserRuleCall_0_0()); 
+	    }
+		lv_name_0_0=ruleID		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTypedNamedPartRule());
+	        }
+       		set(
+       			$current, 
+       			"name",
+        		lv_name_0_0, 
+        		"org.eclipse.ocl.xtext.base.Base.ID");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_1=':' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getTypedNamedPartAccess().getColonKeyword_1());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTypedNamedPartAccess().getOwnedTypeTypedRefCSParserRuleCall_2_0()); 
+	    }
+		lv_ownedType_2_0=ruleTypedRefCS		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTypedNamedPartRule());
+	        }
+       		set(
+       			$current, 
+       			"ownedType",
+        		lv_ownedType_2_0, 
+        		"org.eclipse.ocl.xtext.completeocl.CompleteOCL.TypedRefCS");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
+;
+
+
+
+
+
+// Entry rule entryRuleTupleDescriptor
+entryRuleTupleDescriptor returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getTupleDescriptorRule()); }
+	 iv_ruleTupleDescriptor=ruleTupleDescriptor 
+	 { $current=$iv_ruleTupleDescriptor.current; } 
+	 EOF 
+;
+
+// Rule TupleDescriptor
+ruleTupleDescriptor returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='descriptors' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getTupleDescriptorAccess().getDescriptorsKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_1_0()); 
+	    }
+		lv_typedPairs_1_0=ruleTypedPair		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTupleDescriptorRule());
+	        }
+       		add(
+       			$current, 
+       			"typedPairs",
+        		lv_typedPairs_1_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TypedPair");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_2=',' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getTupleDescriptorAccess().getCommaKeyword_2_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_2_1_0()); 
+	    }
+		lv_typedPairs_3_0=ruleTypedPair		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTupleDescriptorRule());
+	        }
+       		add(
+       			$current, 
+       			"typedPairs",
+        		lv_typedPairs_3_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TypedPair");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*	otherlv_4=';' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getTupleDescriptorAccess().getSemicolonKeyword_3());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleWeightTupleDescriptor
+entryRuleWeightTupleDescriptor returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getWeightTupleDescriptorRule()); }
+	 iv_ruleWeightTupleDescriptor=ruleWeightTupleDescriptor 
+	 { $current=$iv_ruleWeightTupleDescriptor.current; } 
+	 EOF 
+;
+
+// Rule WeightTupleDescriptor
+ruleWeightTupleDescriptor returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='weight' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getWeightTupleDescriptorAccess().getWeightKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getWeightTupleDescriptorAccess().getWeightIDParserRuleCall_1_0()); 
+	    }
+		lv_weight_1_0=ruleID		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getWeightTupleDescriptorRule());
+	        }
+       		set(
+       			$current, 
+       			"weight",
+        		lv_weight_1_0, 
+        		"org.eclipse.ocl.xtext.base.Base.ID");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_2=';' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getWeightTupleDescriptorAccess().getSemicolonKeyword_2());
+    }
+	otherlv_3='descriptors' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getWeightTupleDescriptorAccess().getDescriptorsKeyword_3());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getWeightTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_4_0()); 
+	    }
+		lv_typedPairs_4_0=ruleTypedPair		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getWeightTupleDescriptorRule());
+	        }
+       		add(
+       			$current, 
+       			"typedPairs",
+        		lv_typedPairs_4_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TypedPair");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_5=',' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getWeightTupleDescriptorAccess().getCommaKeyword_5_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getWeightTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_5_1_0()); 
+	    }
+		lv_typedPairs_6_0=ruleTypedPair		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getWeightTupleDescriptorRule());
+	        }
+       		add(
+       			$current, 
+       			"typedPairs",
+        		lv_typedPairs_6_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TypedPair");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*	otherlv_7=';' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getWeightTupleDescriptorAccess().getSemicolonKeyword_6());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleBoundWeightTupleDescriptor
+entryRuleBoundWeightTupleDescriptor returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getBoundWeightTupleDescriptorRule()); }
+	 iv_ruleBoundWeightTupleDescriptor=ruleBoundWeightTupleDescriptor 
+	 { $current=$iv_ruleBoundWeightTupleDescriptor.current; } 
+	 EOF 
+;
+
+// Rule BoundWeightTupleDescriptor
+ruleBoundWeightTupleDescriptor returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='weight' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getBoundWeightTupleDescriptorAccess().getWeightKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getBoundWeightTupleDescriptorAccess().getWeightIDParserRuleCall_1_0()); 
+	    }
+		lv_weight_1_0=ruleID		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getBoundWeightTupleDescriptorRule());
+	        }
+       		set(
+       			$current, 
+       			"weight",
+        		lv_weight_1_0, 
+        		"org.eclipse.ocl.xtext.base.Base.ID");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_2=';' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getBoundWeightTupleDescriptorAccess().getSemicolonKeyword_2());
+    }
+	otherlv_3='bound' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getBoundWeightTupleDescriptorAccess().getBoundKeyword_3());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getBoundWeightTupleDescriptorAccess().getBoundIDParserRuleCall_4_0()); 
+	    }
+		lv_bound_4_0=ruleID		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getBoundWeightTupleDescriptorRule());
+	        }
+       		set(
+       			$current, 
+       			"bound",
+        		lv_bound_4_0, 
+        		"org.eclipse.ocl.xtext.base.Base.ID");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_5=';' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getBoundWeightTupleDescriptorAccess().getSemicolonKeyword_5());
+    }
+	otherlv_6='descriptors' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getBoundWeightTupleDescriptorAccess().getDescriptorsKeyword_6());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getBoundWeightTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_7_0()); 
+	    }
+		lv_typedPairs_7_0=ruleTypedPair		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getBoundWeightTupleDescriptorRule());
+	        }
+       		add(
+       			$current, 
+       			"typedPairs",
+        		lv_typedPairs_7_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TypedPair");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_8=',' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getBoundWeightTupleDescriptorAccess().getCommaKeyword_8_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getBoundWeightTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_8_1_0()); 
+	    }
+		lv_typedPairs_9_0=ruleTypedPair		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getBoundWeightTupleDescriptorRule());
+	        }
+       		add(
+       			$current, 
+       			"typedPairs",
+        		lv_typedPairs_9_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TypedPair");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*	otherlv_10=';' 
+    {
+    	newLeafNode(otherlv_10, grammarAccess.getBoundWeightTupleDescriptorAccess().getSemicolonKeyword_9());
     }
 )
 ;
@@ -574,61 +933,53 @@ ruleLocationConstraint returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getLocationConstraintAccess().getLeftCurlyBracketKeyword_2());
     }
-	otherlv_3='descriptors' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getLocationConstraintAccess().getDescriptorsKeyword_3());
-    }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getTupleDescriptorLocationTupleDescriptorParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); 
 	    }
-		lv_tupleDescriptor_4_0=ruleLocationTupleDescriptor		{
+		lv_tupleDescriptor_3_0=ruleTupleDescriptor		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getLocationConstraintRule());
 	        }
        		set(
        			$current, 
        			"tupleDescriptor",
-        		lv_tupleDescriptor_4_0, 
-        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.LocationTupleDescriptor");
+        		lv_tupleDescriptor_3_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TupleDescriptor");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_5=';' 
+)	otherlv_4='ocl' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_5());
-    }
-	otherlv_6='ocl' 
-    {
-    	newLeafNode(otherlv_6, grammarAccess.getLocationConstraintAccess().getOclKeyword_6());
+    	newLeafNode(otherlv_4, grammarAccess.getLocationConstraintAccess().getOclKeyword_4());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_7_0()); 
+	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_5_0()); 
 	    }
-		lv_expression_7_0=ruleModel		{
+		lv_expression_5_0=ruleModel		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getLocationConstraintRule());
 	        }
        		set(
        			$current, 
        			"expression",
-        		lv_expression_7_0, 
+        		lv_expression_5_0, 
         		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.Model");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_8=';' 
+)	otherlv_6=';' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_8());
+    	newLeafNode(otherlv_6, grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_6());
     }
-	otherlv_9='}' 
+	otherlv_7='}' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_9());
+    	newLeafNode(otherlv_7, grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_7());
     }
 )
 ;
@@ -682,135 +1033,53 @@ ruleResourceConstraint returns [EObject current=null]
     {
     	newLeafNode(otherlv_3, grammarAccess.getResourceConstraintAccess().getLeftCurlyBracketKeyword_2());
     }
-	otherlv_4='lhs' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getResourceConstraintAccess().getLhsKeyword_3());
-    }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getWeightingValueTupleDescriptorParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getTupleDescriptorBoundWeightTupleDescriptorParserRuleCall_3_0()); 
 	    }
-		lv_weighting_5_0=ruleValueTupleDescriptor		{
+		lv_tupleDescriptor_4_0=ruleBoundWeightTupleDescriptor		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getResourceConstraintRule());
 	        }
        		set(
        			$current, 
-       			"weighting",
-        		lv_weighting_5_0, 
-        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.ValueTupleDescriptor");
+       			"tupleDescriptor",
+        		lv_tupleDescriptor_4_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.BoundWeightTupleDescriptor");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_6=';' 
+)	otherlv_5='ocl' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_5());
-    }
-	otherlv_7='rhs' 
-    {
-    	newLeafNode(otherlv_7, grammarAccess.getResourceConstraintAccess().getRhsKeyword_6());
+    	newLeafNode(otherlv_5, grammarAccess.getResourceConstraintAccess().getOclKeyword_4());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getRhsValueTupleDescriptorParserRuleCall_7_0()); 
+	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getExpressionModelParserRuleCall_5_0()); 
 	    }
-		lv_rhs_8_0=ruleValueTupleDescriptor		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getResourceConstraintRule());
-	        }
-       		set(
-       			$current, 
-       			"rhs",
-        		lv_rhs_8_0, 
-        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.ValueTupleDescriptor");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)	otherlv_9=';' 
-    {
-    	newLeafNode(otherlv_9, grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_8());
-    }
-	otherlv_10='descriptors' 
-    {
-    	newLeafNode(otherlv_10, grammarAccess.getResourceConstraintAccess().getDescriptorsKeyword_9());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_10_0()); 
-	    }
-		lv_tupleDescriptors_11_0=ruleComponentResourceTupleDescriptor		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getResourceConstraintRule());
-	        }
-       		add(
-       			$current, 
-       			"tupleDescriptors",
-        		lv_tupleDescriptors_11_0, 
-        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.ComponentResourceTupleDescriptor");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(	otherlv_12=',' 
-    {
-    	newLeafNode(otherlv_12, grammarAccess.getResourceConstraintAccess().getCommaKeyword_11_0());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_11_1_0()); 
-	    }
-		lv_tupleDescriptors_13_0=ruleComponentResourceTupleDescriptor		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getResourceConstraintRule());
-	        }
-       		add(
-       			$current, 
-       			"tupleDescriptors",
-        		lv_tupleDescriptors_13_0, 
-        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.ComponentResourceTupleDescriptor");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))*	otherlv_14=';' 
-    {
-    	newLeafNode(otherlv_14, grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_12());
-    }
-	otherlv_15='ocl' 
-    {
-    	newLeafNode(otherlv_15, grammarAccess.getResourceConstraintAccess().getOclKeyword_13());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getResourceConstraintAccess().getExpressionModelParserRuleCall_14_0()); 
-	    }
-		lv_expression_16_0=ruleModel		{
+		lv_expression_6_0=ruleModel		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getResourceConstraintRule());
 	        }
        		set(
        			$current, 
        			"expression",
-        		lv_expression_16_0, 
+        		lv_expression_6_0, 
         		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.Model");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_17=';' 
+)	otherlv_7=';' 
     {
-    	newLeafNode(otherlv_17, grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_15());
+    	newLeafNode(otherlv_7, grammarAccess.getResourceConstraintAccess().getSemicolonKeyword_6());
     }
-	otherlv_18='}' 
+	otherlv_8='}' 
     {
-    	newLeafNode(otherlv_18, grammarAccess.getResourceConstraintAccess().getRightCurlyBracketKeyword_16());
+    	newLeafNode(otherlv_8, grammarAccess.getResourceConstraintAccess().getRightCurlyBracketKeyword_7());
     }
 )
 ;
@@ -864,260 +1133,53 @@ ruleRequiredHardwareResourceInstanceConstraint returns [EObject current=null]
     {
     	newLeafNode(otherlv_3, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getLeftCurlyBracketKeyword_2());
     }
-	otherlv_4='descriptors' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getDescriptorsKeyword_3());
-    }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); 
 	    }
-		lv_tupleDescriptors_5_0=ruleComponentResourceTupleDescriptor		{
+		lv_tupleDescriptor_4_0=ruleTupleDescriptor		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRequiredHardwareResourceInstanceConstraintRule());
 	        }
-       		add(
+       		set(
        			$current, 
-       			"tupleDescriptors",
-        		lv_tupleDescriptors_5_0, 
-        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.ComponentResourceTupleDescriptor");
+       			"tupleDescriptor",
+        		lv_tupleDescriptor_4_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TupleDescriptor");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_6=',' 
+)	otherlv_5='ocl' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getCommaKeyword_5_0());
+    	newLeafNode(otherlv_5, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getOclKeyword_4());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getTupleDescriptorsComponentResourceTupleDescriptorParserRuleCall_5_1_0()); 
+	        newCompositeNode(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getExpressionModelParserRuleCall_5_0()); 
 	    }
-		lv_tupleDescriptors_7_0=ruleComponentResourceTupleDescriptor		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getRequiredHardwareResourceInstanceConstraintRule());
-	        }
-       		add(
-       			$current, 
-       			"tupleDescriptors",
-        		lv_tupleDescriptors_7_0, 
-        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.ComponentResourceTupleDescriptor");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))*	otherlv_8=';' 
-    {
-    	newLeafNode(otherlv_8, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getSemicolonKeyword_6());
-    }
-	otherlv_9='ocl' 
-    {
-    	newLeafNode(otherlv_9, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getOclKeyword_7());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getExpressionModelParserRuleCall_8_0()); 
-	    }
-		lv_expression_10_0=ruleModel		{
+		lv_expression_6_0=ruleModel		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRequiredHardwareResourceInstanceConstraintRule());
 	        }
        		set(
        			$current, 
        			"expression",
-        		lv_expression_10_0, 
+        		lv_expression_6_0, 
         		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.Model");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_11=';' 
+)	otherlv_7=';' 
     {
-    	newLeafNode(otherlv_11, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getSemicolonKeyword_9());
+    	newLeafNode(otherlv_7, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getSemicolonKeyword_6());
     }
-	otherlv_12='}' 
+	otherlv_8='}' 
     {
-    	newLeafNode(otherlv_12, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRightCurlyBracketKeyword_10());
-    }
-)
-;
-
-
-
-
-
-// Entry rule entryRuleLocationTupleDescriptor
-entryRuleLocationTupleDescriptor returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getLocationTupleDescriptorRule()); }
-	 iv_ruleLocationTupleDescriptor=ruleLocationTupleDescriptor 
-	 { $current=$iv_ruleLocationTupleDescriptor.current; } 
-	 EOF 
-;
-
-// Rule LocationTupleDescriptor
-ruleLocationTupleDescriptor returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(	otherlv_0='(' 
-    {
-    	newLeafNode(otherlv_0, grammarAccess.getLocationTupleDescriptorAccess().getLeftParenthesisKeyword_0());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getLocationTupleDescriptorAccess().getInstanceIDParserRuleCall_1_0()); 
-	    }
-		lv_instance_1_0=ruleID		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLocationTupleDescriptorRule());
-	        }
-       		set(
-       			$current, 
-       			"instance",
-        		lv_instance_1_0, 
-        		"org.eclipse.ocl.xtext.base.Base.ID");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)	otherlv_2=',' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getLocationTupleDescriptorAccess().getCommaKeyword_2());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getLocationTupleDescriptorAccess().getSecondInstanceIDParserRuleCall_3_0()); 
-	    }
-		lv_secondInstance_3_0=ruleID		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLocationTupleDescriptorRule());
-	        }
-       		set(
-       			$current, 
-       			"secondInstance",
-        		lv_secondInstance_3_0, 
-        		"org.eclipse.ocl.xtext.base.Base.ID");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)	otherlv_4=')' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getLocationTupleDescriptorAccess().getRightParenthesisKeyword_4());
-    }
-)
-;
-
-
-
-
-
-// Entry rule entryRuleValueTupleDescriptor
-entryRuleValueTupleDescriptor returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getValueTupleDescriptorRule()); }
-	 iv_ruleValueTupleDescriptor=ruleValueTupleDescriptor 
-	 { $current=$iv_ruleValueTupleDescriptor.current; } 
-	 EOF 
-;
-
-// Rule ValueTupleDescriptor
-ruleValueTupleDescriptor returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getValueTupleDescriptorAccess().getValueIDParserRuleCall_0()); 
-	    }
-		lv_value_0_0=ruleID		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getValueTupleDescriptorRule());
-	        }
-       		set(
-       			$current, 
-       			"value",
-        		lv_value_0_0, 
-        		"org.eclipse.ocl.xtext.base.Base.ID");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)
-;
-
-
-
-
-
-// Entry rule entryRuleComponentResourceTupleDescriptor
-entryRuleComponentResourceTupleDescriptor returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getComponentResourceTupleDescriptorRule()); }
-	 iv_ruleComponentResourceTupleDescriptor=ruleComponentResourceTupleDescriptor 
-	 { $current=$iv_ruleComponentResourceTupleDescriptor.current; } 
-	 EOF 
-;
-
-// Rule ComponentResourceTupleDescriptor
-ruleComponentResourceTupleDescriptor returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(	otherlv_0='(' 
-    {
-    	newLeafNode(otherlv_0, grammarAccess.getComponentResourceTupleDescriptorAccess().getLeftParenthesisKeyword_0());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getComponentResourceTupleDescriptorAccess().getInstanceIDParserRuleCall_1_0()); 
-	    }
-		lv_instance_1_0=ruleID		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getComponentResourceTupleDescriptorRule());
-	        }
-       		set(
-       			$current, 
-       			"instance",
-        		lv_instance_1_0, 
-        		"org.eclipse.ocl.xtext.base.Base.ID");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)	otherlv_2=',' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getComponentResourceTupleDescriptorAccess().getCommaKeyword_2());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getComponentResourceTupleDescriptorAccess().getHwresinstanceIDParserRuleCall_3_0()); 
-	    }
-		lv_hwresinstance_3_0=ruleID		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getComponentResourceTupleDescriptorRule());
-	        }
-       		set(
-       			$current, 
-       			"hwresinstance",
-        		lv_hwresinstance_3_0, 
-        		"org.eclipse.ocl.xtext.base.Base.ID");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)	otherlv_4=')' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getComponentResourceTupleDescriptorAccess().getRightParenthesisKeyword_4());
+    	newLeafNode(otherlv_8, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRightCurlyBracketKeyword_7());
     }
 )
 ;

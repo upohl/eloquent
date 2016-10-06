@@ -3,8 +3,8 @@
  */
 package org.muml.psm.allocation.language.xtext.serializer;
 
+import com.google.inject.Inject;
 import java.util.List;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
@@ -17,8 +17,6 @@ import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISyn
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 import org.muml.psm.allocation.language.xtext.services.AllocationSpecificationLanguageGrammarAccess;
-
-import com.google.inject.Inject;
 
 @SuppressWarnings("all")
 public abstract class AbstractAllocationSpecificationLanguageSyntacticSequencer extends AbstractSyntacticSequencer {
@@ -167,9 +165,9 @@ public abstract class AbstractAllocationSpecificationLanguageSyntacticSequencer 
 	 *     'requiredHardwareResourceInstance' | 'requiredLocation'
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) 'constraint' (ambiguity) '{' 'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor
+	 *     (rule start) 'constraint' (ambiguity) '{' tupleDescriptor=TupleDescriptor
 	 *     (rule start) 'constraint' (ambiguity) name=ID
-	 *     (rule start) (ambiguity) '{' 'descriptors' tupleDescriptors+=ComponentResourceTupleDescriptor
+	 *     (rule start) (ambiguity) '{' tupleDescriptor=TupleDescriptor
 	 *     (rule start) (ambiguity) name=ID
 	 */
 	protected void emit_RequiredHardwareResourceInstanceConstraint_RequiredHardwareResourceInstanceKeyword_0_0_or_RequiredLocationKeyword_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -181,9 +179,9 @@ public abstract class AbstractAllocationSpecificationLanguageSyntacticSequencer 
 	 *     'resource' | 'requiredResource'
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) 'constraint' (ambiguity) '{' 'lhs' weighting=ValueTupleDescriptor
+	 *     (rule start) 'constraint' (ambiguity) '{' tupleDescriptor=BoundWeightTupleDescriptor
 	 *     (rule start) 'constraint' (ambiguity) name=ID
-	 *     (rule start) (ambiguity) '{' 'lhs' weighting=ValueTupleDescriptor
+	 *     (rule start) (ambiguity) '{' tupleDescriptor=BoundWeightTupleDescriptor
 	 *     (rule start) (ambiguity) name=ID
 	 */
 	protected void emit_ResourceConstraint_RequiredResourceKeyword_0_1_or_ResourceKeyword_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
