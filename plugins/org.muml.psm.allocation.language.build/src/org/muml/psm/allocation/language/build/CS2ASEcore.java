@@ -47,6 +47,7 @@ public class CS2ASEcore extends PredefinedQVToTransformationExecutor {
 		dict.put("NamedElementCS", "NamedElement");
 		dict.put("CompleteOCLDocumentCS", "Model");
 		dict.put("ContextCS", "ExpressionInOCL");
+		dict.put("TypedElementCS", "TypedElement");
 		context.setConfigProperty(oclCS2PivotClassMap, dict);
 	}
 }
