@@ -13,6 +13,7 @@ public class SpecificationCSAttribution extends CompleteOCLDocumentCSAttribution
    */
   public final static SpecificationCSAttribution INSTANCE = new SpecificationCSAttribution();
   
+  @Override
   public ScopeView computeLookup(final EObject target, final EnvironmentView environmentView, final ScopeView scopeView) {
     ScopeView _xblockexpression = null;
     {

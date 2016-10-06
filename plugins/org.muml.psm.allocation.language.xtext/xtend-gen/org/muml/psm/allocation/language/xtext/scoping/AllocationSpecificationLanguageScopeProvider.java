@@ -25,6 +25,7 @@ public class AllocationSpecificationLanguageScopeProvider extends CompleteOCLSco
     Attribution.REGISTRY.put(CsPackage.Literals.SPECIFICATION_CS, SpecificationCSAttribution.INSTANCE);
   }
   
+  @Override
   public IScope getScope(final EObject context, final EReference reference) {
     IScope _xifexpression = null;
     if ((context instanceof MeasureFunctionCS)) {

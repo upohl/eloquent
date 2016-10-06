@@ -28,6 +28,7 @@ public class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPost
       super(context, null, null, csElement, Collections.<Dependency>emptyList());
     }
     
+    @Override
     public BasicContinuation<?> execute() {
       Object _xblockexpression = null;
       {
@@ -40,11 +41,10 @@ public class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPost
       return ((BasicContinuation<?>)_xblockexpression);
     }
     
+    @Override
     public void addTo(final List<BasicContinuation<?>> simpleContinuations) {
-      final Function1<BasicContinuation<?>, Boolean> _function = new Function1<BasicContinuation<?>, Boolean>() {
-        public Boolean apply(final BasicContinuation<?> it) {
-          return Boolean.valueOf((it instanceof EssentialOCLCSPostOrderVisitor.ContextCSCompletion));
-        }
+      final Function1<BasicContinuation<?>, Boolean> _function = (BasicContinuation<?> it) -> {
+        return Boolean.valueOf((it instanceof EssentialOCLCSPostOrderVisitor.ContextCSCompletion));
       };
       final BasicContinuation<?> elm = IterableExtensions.<BasicContinuation<?>>findFirst(simpleContinuations, _function);
       boolean _equals = Objects.equal(elm, null);
@@ -61,10 +61,12 @@ public class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPost
     super(context);
   }
   
+  @Override
   public Continuation<?> visitEvaluatableElementCS(final EvaluatableElementCS csElement) {
     return new SpecificationCSPostOrderVisitor.PreContextCSCompletion(this.context, csElement);
   }
   
+  @Override
   public Continuation<?> visitConstraintCS(final ConstraintCS csElement) {
     Continuation<?> _xblockexpression = null;
     {
@@ -74,6 +76,7 @@ public class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPost
     return _xblockexpression;
   }
   
+  @Override
   public Continuation<?> visitQoSDimensionCS(final QoSDimensionCS csElement) {
     Continuation<?> _xblockexpression = null;
     {

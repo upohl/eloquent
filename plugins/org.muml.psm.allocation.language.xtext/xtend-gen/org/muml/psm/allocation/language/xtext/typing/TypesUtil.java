@@ -21,22 +21,24 @@ import org.eclipse.ocl.pivot.internal.manager.PivotMetamodelManager;
 import org.eclipse.ocl.pivot.internal.manager.TupleTypeManager;
 import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal;
 import org.eclipse.ocl.pivot.internal.utilities.PivotUtilInternal;
+import org.eclipse.ocl.pivot.utilities.PivotUtil;
 import org.eclipse.ocl.pivot.values.TemplateParameterSubstitutions;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
-import org.eclipse.xtext.xbase.lib.Functions.Function1;
-import org.eclipse.xtext.xbase.lib.MapExtensions;
 import org.eclipse.xtext.xbase.lib.Pair;
-import org.muml.pim.instance.InstancePackage;
-import org.muml.pm.hardware.hwresourceinstance.HwresourceinstancePackage;
-import org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS;
+import org.muml.psm.allocation.language.as.BoundWeightTupleDescriptor;
+import org.muml.psm.allocation.language.as.LocationConstraint;
+import org.muml.psm.allocation.language.as.QoSDimension;
+import org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint;
+import org.muml.psm.allocation.language.as.ResourceConstraint;
+import org.muml.psm.allocation.language.as.TupleDescriptor;
+import org.muml.psm.allocation.language.as.TypedNamedPart;
+import org.muml.psm.allocation.language.as.TypedPair;
+import org.muml.psm.allocation.language.as.WeightTupleDescriptor;
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintCS;
-import org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
 import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
-import org.muml.psm.allocation.language.cs.ValueTupleDescriptorCS;
-import org.muml.psm.allocation.language.cs.WeightingComponentResourceTupleElementCS;
 
 @SuppressWarnings("all")
 public class TypesUtil {
@@ -47,16 +49,11 @@ public class TypesUtil {
   /**
    * @NonNull
    */
-  public static TupleType createTupleTypeHelper(final EnvironmentFactoryInternal envFactory, final Map<String, EClass> namedParts) {
-    TupleType _xblockexpression = null;
+  public static Type getType(final EnvironmentFactoryInternal envFactory, final EClass eClass) {
+    org.eclipse.ocl.pivot.Class _xblockexpression = null;
     {
-      final Function1<EClass, Type> _function = new Function1<EClass, Type>() {
-        public Type apply(final EClass eClass) {
-          return TypesUtil.getType(envFactory, eClass);
-        }
-      };
-      final Map<String, Type> newNamedParts = MapExtensions.<String, EClass, Type>mapValues(namedParts, _function);
-      _xblockexpression = TypesUtil.createTupleType(envFactory, newNamedParts);
+      final IdResolver idResolver = envFactory.getIdResolver();
+      _xblockexpression = idResolver.getType(eClass);
     }
     return _xblockexpression;
   }
@@ -70,18 +67,6 @@ public class TypesUtil {
       CompleteModelInternal _completeModel = envFactory.getCompleteModel();
       final TupleTypeManager tupleTypeManager = _completeModel.getTupleManager();
       _xblockexpression = tupleTypeManager.getTupleType(TypesUtil.tupleName, namedParts);
-    }
-    return _xblockexpression;
-  }
-  
-  /**
-   * @NonNull
-   */
-  public static Type getType(final EnvironmentFactoryInternal envFactory, final EClass eClass) {
-    org.eclipse.ocl.pivot.Class _xblockexpression = null;
-    {
-      final IdResolver idResolver = envFactory.getIdResolver();
-      _xblockexpression = idResolver.getType(eClass);
     }
     return _xblockexpression;
   }
@@ -124,27 +109,39 @@ public class TypesUtil {
     return _metamodelManager.conformsTo(actualType, TemplateParameterSubstitutions.EMPTY, expectedType, TemplateParameterSubstitutions.EMPTY);
   }
   
-  /**
-   * @NonNull
-   */
-  public static TupleType createLocationConstraintTupleType(final LocationConstraintCS locationConstraintCS) {
-    EnvironmentFactoryInternal _environmentFactory = TypesUtil.getEnvironmentFactory(locationConstraintCS);
-    LocationTupleDescriptorCS _tupleDescriptor = locationConstraintCS.getTupleDescriptor();
-    return TypesUtil.createLocationConstraintTupleType(_environmentFactory, _tupleDescriptor);
+  public static Map<String, Type> convertToNamedParts(final List<TypedPair> typedPairs) {
+    HashMap<String, Type> _xblockexpression = null;
+    {
+      final HashMap<String, Type> namedParts = CollectionLiterals.<String, Type>newHashMap();
+      final Consumer<TypedPair> _function = (TypedPair typedPair) -> {
+        TypedNamedPart _first = typedPair.getFirst();
+        String _name = _first.getName();
+        TypedNamedPart _first_1 = typedPair.getFirst();
+        Type _type = _first_1.getType();
+        namedParts.put(_name, _type);
+        TypedNamedPart _second = typedPair.getSecond();
+        String _name_1 = _second.getName();
+        TypedNamedPart _second_1 = typedPair.getSecond();
+        Type _type_1 = _second_1.getType();
+        namedParts.put(_name_1, _type_1);
+      };
+      typedPairs.forEach(_function);
+      _xblockexpression = namedParts;
+    }
+    return _xblockexpression;
   }
   
   /**
    * @NonNull
    */
-  public static TupleType createLocationConstraintTupleType(final EnvironmentFactoryInternal envFactory, final LocationTupleDescriptorCS tupleDescriptor) {
+  public static TupleType createLocationConstraintTupleType(final EnvironmentFactoryInternal envFactory, final LocationConstraintCS constraintCS) {
     TupleType _xblockexpression = null;
     {
-      String _instance = tupleDescriptor.getInstance();
-      Pair<String, EClass> _mappedTo = Pair.<String, EClass>of(_instance, InstancePackage.Literals.COMPONENT_INSTANCE);
-      String _secondInstance = tupleDescriptor.getSecondInstance();
-      Pair<String, EClass> _mappedTo_1 = Pair.<String, EClass>of(_secondInstance, InstancePackage.Literals.COMPONENT_INSTANCE);
-      final Map<String, EClass> namedParts = Collections.<String, EClass>unmodifiableMap(CollectionLiterals.<String, EClass>newHashMap(_mappedTo, _mappedTo_1));
-      _xblockexpression = TypesUtil.createTupleTypeHelper(envFactory, namedParts);
+      final LocationConstraint constraint = PivotUtil.<LocationConstraint>getPivot(LocationConstraint.class, constraintCS);
+      TupleDescriptor _tupleDescriptor = constraint.getTupleDescriptor();
+      EList<TypedPair> _typedPairs = _tupleDescriptor.getTypedPairs();
+      final Map<String, Type> namedParts = TypesUtil.convertToNamedParts(_typedPairs);
+      _xblockexpression = TypesUtil.createTupleType(envFactory, namedParts);
     }
     return _xblockexpression;
   }
@@ -156,8 +153,7 @@ public class TypesUtil {
     CollectionType _xblockexpression = null;
     {
       final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(locationConstraintCS);
-      LocationTupleDescriptorCS _tupleDescriptor = locationConstraintCS.getTupleDescriptor();
-      TupleType _createLocationConstraintTupleType = TypesUtil.createLocationConstraintTupleType(envFactory, _tupleDescriptor);
+      TupleType _createLocationConstraintTupleType = TypesUtil.createLocationConstraintTupleType(envFactory, locationConstraintCS);
       _xblockexpression = TypesUtil.createSetType(envFactory, _createLocationConstraintTupleType);
     }
     return _xblockexpression;
@@ -166,47 +162,14 @@ public class TypesUtil {
   /**
    * @NonNull
    */
-  public static TupleType createReqHWResInstanceConstraintTupleType(final RequiredHardwareResourceInstanceConstraintCS constraintCS) {
+  public static TupleType createReqHWResInstanceConstraintTupleType(final EnvironmentFactoryInternal envFactory, final RequiredHardwareResourceInstanceConstraintCS constraintCS) {
     TupleType _xblockexpression = null;
     {
-      final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(constraintCS);
-      EList<ComponentResourceTupleDescriptorCS> _tupleDescriptors = constraintCS.getTupleDescriptors();
-      _xblockexpression = TypesUtil.createReqHWResInstanceConstraintTupleType(envFactory, _tupleDescriptors);
-    }
-    return _xblockexpression;
-  }
-  
-  /**
-   * @NonNull
-   */
-  public static Map<String, EClass> createNamedPartsFromComponentResourceTupleDescriptors(final List<ComponentResourceTupleDescriptorCS> tupleDescriptorList) {
-    HashMap<String, EClass> _xblockexpression = null;
-    {
-      final HashMap<String, EClass> namedParts = CollectionLiterals.<String, EClass>newHashMap();
-      final Consumer<ComponentResourceTupleDescriptorCS> _function = new Consumer<ComponentResourceTupleDescriptorCS>() {
-        public void accept(final ComponentResourceTupleDescriptorCS t) {
-          String _instance = t.getInstance();
-          Pair<String, EClass> _mappedTo = Pair.<String, EClass>of(_instance, InstancePackage.Literals.COMPONENT_INSTANCE);
-          String _hwresinstance = t.getHwresinstance();
-          Pair<String, EClass> _mappedTo_1 = Pair.<String, EClass>of(_hwresinstance, HwresourceinstancePackage.Literals.RESOURCE_INSTANCE);
-          namedParts.putAll(
-            Collections.<String, EClass>unmodifiableMap(CollectionLiterals.<String, EClass>newHashMap(_mappedTo, _mappedTo_1)));
-        }
-      };
-      tupleDescriptorList.forEach(_function);
-      _xblockexpression = namedParts;
-    }
-    return _xblockexpression;
-  }
-  
-  /**
-   * @NonNull
-   */
-  public static TupleType createReqHWResInstanceConstraintTupleType(final EnvironmentFactoryInternal envFactory, final List<ComponentResourceTupleDescriptorCS> tupleDescriptorList) {
-    TupleType _xblockexpression = null;
-    {
-      final Map<String, EClass> namedParts = TypesUtil.createNamedPartsFromComponentResourceTupleDescriptors(tupleDescriptorList);
-      _xblockexpression = TypesUtil.createTupleTypeHelper(envFactory, namedParts);
+      final RequiredHardwareResourceInstanceConstraint constraint = PivotUtil.<RequiredHardwareResourceInstanceConstraint>getPivot(RequiredHardwareResourceInstanceConstraint.class, constraintCS);
+      TupleDescriptor _tupleDescriptor = constraint.getTupleDescriptor();
+      EList<TypedPair> _typedPairs = _tupleDescriptor.getTypedPairs();
+      final Map<String, Type> namedParts = TypesUtil.convertToNamedParts(_typedPairs);
+      _xblockexpression = TypesUtil.createTupleType(envFactory, namedParts);
     }
     return _xblockexpression;
   }
@@ -218,8 +181,7 @@ public class TypesUtil {
     CollectionType _xblockexpression = null;
     {
       final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(constraintCS);
-      EList<ComponentResourceTupleDescriptorCS> _tupleDescriptors = constraintCS.getTupleDescriptors();
-      TupleType _createReqHWResInstanceConstraintTupleType = TypesUtil.createReqHWResInstanceConstraintTupleType(envFactory, _tupleDescriptors);
+      TupleType _createReqHWResInstanceConstraintTupleType = TypesUtil.createReqHWResInstanceConstraintTupleType(envFactory, constraintCS);
       _xblockexpression = TypesUtil.createSetType(envFactory, _createReqHWResInstanceConstraintTupleType);
     }
     return _xblockexpression;
@@ -228,31 +190,14 @@ public class TypesUtil {
   /**
    * @NonNull
    */
-  public static TupleType createResourceConstraintInnerTupleType(final ResourceConstraintCS constraintCS) {
+  public static TupleType createWeightTupleDescriptorTupleType(final EnvironmentFactoryInternal envFactory, final WeightTupleDescriptor tupleDescriptor) {
     TupleType _xblockexpression = null;
     {
-      final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(constraintCS);
-      _xblockexpression = TypesUtil.createWeightingComponentResourceTupleElementCSTupleType(envFactory, constraintCS);
-    }
-    return _xblockexpression;
-  }
-  
-  /**
-   * @NonNull
-   */
-  public static TupleType createResourceConstraintOuterTupleType(final EnvironmentFactoryInternal envFactory, final ResourceConstraintCS constraintCS) {
-    TupleType _xblockexpression = null;
-    {
-      final Type innerTupleType = TypesUtil.createWeightingComponentResourceTupleElementCSTupleType(envFactory, constraintCS);
-      ValueTupleDescriptorCS _weighting = constraintCS.getWeighting();
-      String _value = _weighting.getValue();
-      CollectionType _createSetType = TypesUtil.createSetType(envFactory, innerTupleType);
-      Pair<String, CollectionType> _mappedTo = Pair.<String, CollectionType>of(_value, _createSetType);
-      ValueTupleDescriptorCS _rhs = constraintCS.getRhs();
-      String _value_1 = _rhs.getValue();
+      EList<TypedPair> _typedPairs = tupleDescriptor.getTypedPairs();
+      final Map<String, Type> namedParts = TypesUtil.convertToNamedParts(_typedPairs);
+      String _weight = tupleDescriptor.getWeight();
       Type _realType = TypesUtil.getRealType(envFactory);
-      Pair<String, Type> _mappedTo_1 = Pair.<String, Type>of(_value_1, _realType);
-      final Map<String, Type> namedParts = Collections.<String, Type>unmodifiableMap(CollectionLiterals.<String, Type>newHashMap(_mappedTo, _mappedTo_1));
+      namedParts.put(_weight, _realType);
       _xblockexpression = TypesUtil.createTupleType(envFactory, namedParts);
     }
     return _xblockexpression;
@@ -261,13 +206,32 @@ public class TypesUtil {
   /**
    * @NonNull
    */
-  public static TupleType createResourceConstraintOuterTupleType(final ResourceConstraintCS constraintCS) {
+  public static TupleType createResourceConstraintInnerTupleType(final EnvironmentFactoryInternal envFactory, final ResourceConstraintCS constraintCS) {
     TupleType _xblockexpression = null;
     {
-      final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(constraintCS);
-      _xblockexpression = TypesUtil.createResourceConstraintOuterTupleType(envFactory, constraintCS);
+      final ResourceConstraint constraint = PivotUtil.<ResourceConstraint>getPivot(ResourceConstraint.class, constraintCS);
+      BoundWeightTupleDescriptor _tupleDescriptor = constraint.getTupleDescriptor();
+      _xblockexpression = TypesUtil.createWeightTupleDescriptorTupleType(envFactory, _tupleDescriptor);
     }
     return _xblockexpression;
+  }
+  
+  /**
+   * @NonNull
+   */
+  public static TupleType createResourceConstraintOuterTupleType(final EnvironmentFactoryInternal envFactory, final ResourceConstraintCS constraintCS) {
+    final ResourceConstraint constraint = PivotUtil.<ResourceConstraint>getPivot(ResourceConstraint.class, constraintCS);
+    final Type innerTupleType = TypesUtil.createResourceConstraintInnerTupleType(envFactory, constraintCS);
+    BoundWeightTupleDescriptor _tupleDescriptor = constraint.getTupleDescriptor();
+    String _weight = _tupleDescriptor.getWeight();
+    CollectionType _createSetType = TypesUtil.createSetType(envFactory, innerTupleType);
+    Pair<String, CollectionType> _mappedTo = Pair.<String, CollectionType>of(_weight, _createSetType);
+    BoundWeightTupleDescriptor _tupleDescriptor_1 = constraint.getTupleDescriptor();
+    String _bound = _tupleDescriptor_1.getBound();
+    Type _realType = TypesUtil.getRealType(envFactory);
+    Pair<String, Type> _mappedTo_1 = Pair.<String, Type>of(_bound, _realType);
+    final Map<String, Type> outerNamedParts = Collections.<String, Type>unmodifiableMap(CollectionLiterals.<String, Type>newHashMap(_mappedTo, _mappedTo_1));
+    return TypesUtil.createTupleType(envFactory, outerNamedParts);
   }
   
   /**
@@ -286,11 +250,12 @@ public class TypesUtil {
   /**
    * @NonNull
    */
-  public static TupleType createQoSDimensionTupleType(final QoSDimensionCS qosDimensionCS) {
+  public static TupleType createQoSDimensionTupleType(final EnvironmentFactoryInternal envFactory, final QoSDimensionCS qosDimensionCS) {
     TupleType _xblockexpression = null;
     {
-      final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(qosDimensionCS);
-      _xblockexpression = TypesUtil.createWeightingComponentResourceTupleElementCSTupleType(envFactory, qosDimensionCS);
+      final QoSDimension qosDimension = PivotUtil.<QoSDimension>getPivot(QoSDimension.class, qosDimensionCS);
+      WeightTupleDescriptor _tupleDescriptor = qosDimension.getTupleDescriptor();
+      _xblockexpression = TypesUtil.createWeightTupleDescriptorTupleType(envFactory, _tupleDescriptor);
     }
     return _xblockexpression;
   }
@@ -302,33 +267,8 @@ public class TypesUtil {
     CollectionType _xblockexpression = null;
     {
       final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(qosDimensionCS);
-      TupleType _createWeightingComponentResourceTupleElementCSTupleType = TypesUtil.createWeightingComponentResourceTupleElementCSTupleType(envFactory, qosDimensionCS);
-      _xblockexpression = TypesUtil.createSetType(envFactory, _createWeightingComponentResourceTupleElementCSTupleType);
-    }
-    return _xblockexpression;
-  }
-  
-  /**
-   * @NonNull
-   */
-  public static TupleType createWeightingComponentResourceTupleElementCSTupleType(final EnvironmentFactoryInternal envFactory, final WeightingComponentResourceTupleElementCS elementCS) {
-    TupleType _xblockexpression = null;
-    {
-      Map<String, Type> namedParts = CollectionLiterals.<String, Type>newHashMap();
-      EList<ComponentResourceTupleDescriptorCS> _tupleDescriptors = elementCS.getTupleDescriptors();
-      Map<String, EClass> _createNamedPartsFromComponentResourceTupleDescriptors = TypesUtil.createNamedPartsFromComponentResourceTupleDescriptors(_tupleDescriptors);
-      final Function1<EClass, Type> _function = new Function1<EClass, Type>() {
-        public Type apply(final EClass eClass) {
-          return TypesUtil.getType(envFactory, eClass);
-        }
-      };
-      Map<String, Type> _mapValues = MapExtensions.<String, EClass, Type>mapValues(_createNamedPartsFromComponentResourceTupleDescriptors, _function);
-      namedParts.putAll(_mapValues);
-      ValueTupleDescriptorCS _weighting = elementCS.getWeighting();
-      String _value = _weighting.getValue();
-      Type _realType = TypesUtil.getRealType(envFactory);
-      namedParts.put(_value, _realType);
-      _xblockexpression = TypesUtil.createTupleType(envFactory, namedParts);
+      TupleType _createQoSDimensionTupleType = TypesUtil.createQoSDimensionTupleType(envFactory, qosDimensionCS);
+      _xblockexpression = TypesUtil.createSetType(envFactory, _createQoSDimensionTupleType);
     }
     return _xblockexpression;
   }

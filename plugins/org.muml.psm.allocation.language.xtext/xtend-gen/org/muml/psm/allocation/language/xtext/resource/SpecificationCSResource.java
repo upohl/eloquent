@@ -16,6 +16,7 @@ public class SpecificationCSResource extends CompleteOCLCSResource {
   /**
    * @NonNull
    */
+  @Override
   public CS2AS createCS2AS(final EnvironmentFactoryInternal environmentFactory, final ASResource asResource) {
     SpecificationCS2Pivot _xblockexpression = null;
     {

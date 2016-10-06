@@ -20,6 +20,7 @@ public class SpecificationCS2PivotConversion extends CS2ASConversion {
     this.contextClass = contextClass;
   }
   
+  @Override
   public void refreshContextVariable(final ExpressionInOCL pivotSpecification) {
     EObject _eContainer = pivotSpecification.eContainer();
     if ((_eContainer instanceof EvaluatableElement)) {

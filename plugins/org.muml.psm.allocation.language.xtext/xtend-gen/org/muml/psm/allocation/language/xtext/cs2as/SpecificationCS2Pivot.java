@@ -28,6 +28,7 @@ public class SpecificationCS2Pivot extends CompleteOCLCS2AS {
   /**
    * @NonNull
    */
+  @Override
   protected LanguageSpecificationCSVisitor<Continuation<?>> createContainmentVisitor(final CS2ASConversion converter) {
     return new LanguageSpecificationCSContainmentVisitor(converter);
   }
@@ -35,6 +36,7 @@ public class SpecificationCS2Pivot extends CompleteOCLCS2AS {
   /**
    * @NonNull
    */
+  @Override
   protected LanguageSpecificationCSVisitor<Element> createLeft2RightVisitor(final CS2ASConversion converter) {
     return new LanguageSpecificationCSLeft2RightVisitor(converter);
   }
@@ -42,6 +44,7 @@ public class SpecificationCS2Pivot extends CompleteOCLCS2AS {
   /**
    * @NonNull
    */
+  @Override
   protected LanguageSpecificationCSVisitor<Continuation<?>> createPostOrderVisitor(final CS2ASConversion converter) {
     return new SpecificationCSPostOrderVisitor(converter);
   }
@@ -49,6 +52,7 @@ public class SpecificationCS2Pivot extends CompleteOCLCS2AS {
   /**
    * @NonNull
    */
+  @Override
   protected LanguageSpecificationCSVisitor<Continuation<?>> createPreOrderVisitor(final CS2ASConversion converter) {
     return new LanguageSpecificationCSPreOrderVisitor(converter);
   }
@@ -56,6 +60,7 @@ public class SpecificationCS2Pivot extends CompleteOCLCS2AS {
   /**
    * @NonNull
    */
+  @Override
   protected CS2ASConversion createConversion(final IDiagnosticConsumer diagnosticsConsumer, final BaseCSResource csResource) {
     return new SpecificationCS2PivotConversion(this, diagnosticsConsumer, this.contextClass);
   }
