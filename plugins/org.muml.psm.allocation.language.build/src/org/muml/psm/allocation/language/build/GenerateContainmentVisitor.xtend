@@ -4,17 +4,18 @@ import java.util.HashMap
 import java.util.List
 import java.util.Map
 import org.eclipse.emf.codegen.ecore.genmodel.GenClass
+import org.eclipse.emf.codegen.ecore.genmodel.GenEnum
 import org.eclipse.emf.codegen.ecore.genmodel.GenFeature
 import org.eclipse.emf.codegen.ecore.genmodel.GenModel
 import org.eclipse.emf.codegen.ecore.genmodel.GenPackage
 import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.EClass
-import org.eclipse.emf.ecore.EReference
+import org.eclipse.emf.ecore.EClassifier
+import org.eclipse.emf.ecore.EEnum
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.emf.mwe.core.issues.Issues
 
-// TODO: also set attributes (minor feature)
 // code needs a bit more love and comments
 
 class GenerateContainmentVisitor extends GenerateVisitor {
@@ -171,15 +172,22 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 	}
 	
 	def protected String generateFeature(GenFeature genFeature) {
-		if (genFeature.isReferenceType) genFeature.generateReferenceFeature
+		if (genFeature.isReferenceType) {
+			genFeature.generateReferenceFeature
+		} else {
+			genFeature.generateDataTypeFeature
+		}
 	}
 	
 	def protected String generateReferenceFeature(GenFeature genFeature) {
-		val EReference ref = genFeature.ecoreFeature as EReference 
-		if (ref.isMany) genFeature.generateManyReference else genFeature.generateSingleReference
+		if (genFeature.ecoreFeature.isMany) {
+			genFeature.generateManyReferenceFeature
+		} else {
+			genFeature.generateSingleReferenceFeature
+		}
 	}
 	
-	def protected String generateManyReference(GenFeature genFeature) {
+	def protected String generateManyReferenceFeature(GenFeature genFeature) {
 		//for («eClass.getFullyQualifiedName()» it : csElement.get«ref.name.toFirstUpper»()) {
 		val GenClass genClass = csGenModel.findGenClass(genFeature.ecoreFeature.EType.name)
 		'''
@@ -191,11 +199,62 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 		'''
 	}
 	
-	def protected String generateSingleReference(GenFeature genFeature) {
+	def protected String generateSingleReferenceFeature(GenFeature genFeature) {
 		val EClass eClass = genFeature.ecoreFeature.EType as EClass
 		'''
 		«getPivotName()».«genFeature.getSetterName»(
 			PivotUtil.getPivot(«eClass.qualifiedPivotName».class, csElement.«genFeature.getGetAccessor»())
+		);
+		'''
+	}
+	
+	def protected String generateDataTypeFeature(GenFeature genFeature) {
+		if (genFeature.isEnumType) {
+			genFeature.generateEnumFeature
+		} else {
+			genFeature.generateAttributeFeature
+		}
+	}
+	
+	def protected String generateEnumFeature(GenFeature genFeature) {
+		if (genFeature.ecoreFeature.isMany) {
+			genFeature.generateManyEnumFeature
+		} else {
+			genFeature.generateSingleEnumFeature
+		}
+	}
+	
+	// TODO: integrate generate*EnumFeature into generate*ReferenceFeature?
+	//       (they could share some code...)
+	def protected String generateManyEnumFeature(GenFeature genFeature) {
+		val GenEnum genEnum = csGenModel.findGenEnum(genFeature.ecoreFeature.EType.name)
+		'''
+		for («genEnum.qualifiedName» it : csElement.«genFeature.getGetAccessor»()) {
+			«getPivotName()».«genFeature.getSetterName»(
+				«genEnum.ecoreEnum.qualifiedPivotName».get(it.getValue())
+			);
+		}
+		'''
+	}
+	
+	def protected String generateSingleEnumFeature(GenFeature genFeature) {
+		// we can use the getValue() approach here, because the cs and as enum
+		// literal values are the same
+		val EEnum eEnum = genFeature.ecoreFeature.EType as EEnum
+		'''
+		«getPivotName()».«genFeature.getSetterName»(
+			«eEnum.qualifiedPivotName».get(csElement.«genFeature.getGetAccessor»().getValue())
+		);
+		'''
+	}
+	
+	def protected String generateAttributeFeature(GenFeature genFeature) {
+		// we don't need to call PivotUtil.getPivot for attributes
+		// (its type remains the same)
+		val String allSuffix = if (genFeature.ecoreFeature.isMany) 'All' else ''
+		'''
+		«getPivotName()».«genFeature.getSetterName»«allSuffix»(
+			csElement.«genFeature.getGetAccessor»()
 		);
 		'''
 	}
@@ -210,17 +269,7 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 	def protected String getPivotName() {
 		'pivotElement'
 	}
-		
-	def protected GenClass getGenClass(EClass eClass) {
-		val GenPackage genPackage = csGenModel.findGenPackage(eClass.EPackage)
-		for (GenClass genClass : genPackage.genClasses) {
-			if (genClass.ecoreClass == eClass) {
-				return genClass
-			}
-		}
-		// raise error?
-	}
-	
+
 	def protected GenClass findGenClass(GenModel genModel, String className) {
 		for (GenPackage genPackage : genModel.getAllGenAndUsedGenPackagesWithClassifiers()) {
 			for (GenClass genClass : genPackage.genClasses) {
@@ -229,23 +278,40 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 				}
 			}
 		}
-		println("EPROR: " + className)
-		null
+		throw new IllegalArgumentException(className + ": no GenClass found")
 	}
 	
-	def protected String getPivotName(EClass eClass) {
+	def protected GenEnum findGenEnum(GenModel genModel, String enumName) {
+		for (GenPackage genPackage : genModel.getAllGenAndUsedGenPackagesWithClassifiers()) {
+			for (GenEnum genEnum : genPackage.genEnums) {
+				if (genEnum.ecoreEnum.name.equals(enumName)) {
+					return genEnum
+				}
+			}
+		}
+		throw new IllegalArgumentException(enumName + ": no GenEnum found")
+	}
+	
+	def protected String getPivotName(EClassifier eClassifier) {
 		val Map<String, String> cs2pivot = new HashMap<String, String>()
 		cs2pivot.put("ModelElementCS", "Element")
 		cs2pivot.put("NamedElementCS", "NamedElement")
 		cs2pivot.put("ContextCS", "ExpressionInOCL")
-		cs2pivot.get(eClass.name) ?: eClass.name.replaceAll("CS$", "")
+		cs2pivot.get(eClassifier.name) ?: eClassifier.name.replaceAll("CS$", "")
 	}
 	
-	def protected String getQualifiedPivotName(EClass eClass) {
-		//println("OK: " + eClass.name + ", " + eClass.name.replaceAll("CS$", ""))
-		// TODO: handle null (even though null should not occur...)
+	def protected dispatch String getQualifiedPivotName(EClassifier eClassifier) {
+		val msg = "getQualifiedName called with unexpected eClassifier: "
+			+ eClassifier
+		throw new IllegalArgumentException(msg)
+	}
+	
+	def protected dispatch String getQualifiedPivotName(EClass eClass) {
 		asGenModel.findGenClass(eClass.getPivotName).qualifiedInterfaceName
-		//'''«eClass.getGenClass().genPackage.basePackage».'''
+	}
+	
+	def protected dispatch String getQualifiedPivotName(EEnum eEnum) {
+		asGenModel.findGenEnum(eEnum.getPivotName).qualifiedName
 	}
 	
 }
