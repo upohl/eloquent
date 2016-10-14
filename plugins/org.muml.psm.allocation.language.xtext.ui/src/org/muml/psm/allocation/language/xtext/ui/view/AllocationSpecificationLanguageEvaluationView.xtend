@@ -11,12 +11,12 @@ import org.eclipse.jface.text.ITextSelection
 import org.eclipse.jface.text.ITextViewer
 import org.eclipse.jface.text.TextViewer
 import org.eclipse.jface.viewers.ISelection
-import org.eclipse.ocl.pivot.ExpressionInOCL
+import org.eclipse.ocl.pivot.NamedElement
 import org.eclipse.ocl.pivot.ids.TuplePartId
+import org.eclipse.ocl.pivot.utilities.PivotUtil
 import org.eclipse.ocl.pivot.utilities.ValueUtil
 import org.eclipse.ocl.pivot.values.InvalidValueException
 import org.eclipse.ocl.pivot.values.TupleValue
-import org.eclipse.ocl.xtext.basecs.NamedElementCS
 import org.eclipse.swt.SWT
 import org.eclipse.swt.layout.GridData
 import org.eclipse.swt.widgets.Composite
@@ -29,6 +29,7 @@ import org.eclipse.xtext.ui.editor.XtextEditor
 import org.muml.pim.instance.ComponentInstanceConfiguration
 import org.muml.pm.hardware.hwplatforminstance.HWPlatformInstanceConfiguration
 import org.muml.psm.allocation.algorithm.ocl.OCLEvaluator
+import org.muml.psm.allocation.language.^as.EvaluatableElement
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS
 import org.muml.psm.allocation.language.oclcontext.OclcontextFactory
 import org.muml.psm.allocation.language.xtext.typing.TypesUtil
@@ -106,13 +107,13 @@ class AllocationSpecificationLanguageEvaluationView extends ViewPart implements 
 		val StringBuilder builder = new StringBuilder
 		if (editor != null) {
 			val result = editor.document.readOnly [ resource |
-				val element = resource.getEvaluatableElementCS
+				val element = PivotUtil.getPivot(typeof(EvaluatableElement), resource.getEvaluatableElementCS);
 				val ctx = getContext
 				if (element != null && ctx.componentInstanceConfiguration != null && ctx.hardwarePlatformInstanceConfiguration != null) {
 					builder.append("Evaluating: " + element.getName + "\n")
 					builder.append("Expected type: " + TypesUtil.createType(element))
 					builder.append("\n")
-					builder.append("Actual type: " + (element.expression.pivot as ExpressionInOCL).type)
+					builder.append("Actual type: " + element.expression.type)
 					builder.append("\nResult:\n\n")
 					try {
 						OCLEvaluator.evaluate(element.expression, ctx)
@@ -136,9 +137,9 @@ class AllocationSpecificationLanguageEvaluationView extends ViewPart implements 
 		resultTextViewer.document.set(builder.toString)
 	}
 	
-	private def getName(EvaluatableElementCS element) {
-		if (element instanceof NamedElementCS) {
-			(element as NamedElementCS).name
+	private def getName(EvaluatableElement element) {
+		if (element instanceof NamedElement) {
+			(element as NamedElement).name
 		} else {
 			"<Unnamed>"
 		}
