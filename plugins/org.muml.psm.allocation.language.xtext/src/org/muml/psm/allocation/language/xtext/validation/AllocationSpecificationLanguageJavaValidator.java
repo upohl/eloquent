@@ -3,17 +3,16 @@
 */
 package org.muml.psm.allocation.language.xtext.validation;
 
-import org.eclipse.ocl.pivot.ExpressionInOCL;
 import org.eclipse.ocl.pivot.Type;
 import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal;
+import org.eclipse.ocl.pivot.utilities.PivotUtil;
 import org.eclipse.ocl.xtext.essentialoclcs.ContextCS;
 import org.eclipse.xtext.validation.Check;
+import org.muml.psm.allocation.language.as.EvaluatableElement;
 import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
-//import org.muml.psm.allocation.language.cs.ComponentResourceTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintCS;
-//import org.muml.psm.allocation.language.cs.LocationTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
 import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
@@ -27,7 +26,8 @@ import org.muml.psm.allocation.language.xtext.typing.TypesUtil;
  * see http://www.eclipse.org/Xtext/documentation.html#validation
  */
 public class AllocationSpecificationLanguageJavaValidator extends org.muml.psm.allocation.language.xtext.validation.AbstractAllocationSpecificationLanguageJavaValidator {
-	private static final String typeMismatch = "Type mismatch: expected %s but got %s"; 
+	private static final String typeMismatch = "Type mismatch: expected %s but got %s";
+	private static final String noPivotElement = "Unable to retrieve pivot element for object %s";
 
 	@Check
 	public void checkLocationConstraintCS(LocationConstraintCS constraintCS) {
@@ -75,9 +75,15 @@ public class AllocationSpecificationLanguageJavaValidator extends org.muml.psm.a
 	}
 	
 	private void checkTypes(EvaluatableElementCS elementCS) {
-		EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(elementCS);
-		Type expectedType = TypesUtil.createType(elementCS);
-		Type actualType = ((ExpressionInOCL) elementCS.getExpression().getPivot()).getType();
+		EvaluatableElement element = PivotUtil.getPivot(EvaluatableElement.class, elementCS);
+		if (element == null) {
+			// this is no "error(...)" but an exceptional situation
+			throw new IllegalStateException(String.format(noPivotElement,
+					elementCS));
+		}
+		EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(element);
+		Type expectedType = TypesUtil.createType(element);
+		Type actualType = element.getExpression().getType();
 		boolean conformsTo = TypesUtil.conformsTo(envFactory, actualType, expectedType);
 		if (!conformsTo) {
 			error(String.format(typeMismatch, expectedType, actualType),
