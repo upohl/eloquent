@@ -13,11 +13,11 @@ import org.eclipse.ocl.pivot.ids.TuplePartId;
 import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal;
 import org.eclipse.ocl.pivot.values.CollectionValue;
 import org.eclipse.ocl.pivot.values.TupleValue;
-import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
-import org.muml.psm.allocation.language.cs.LocationConstraintCS;
-import org.muml.psm.allocation.language.cs.QoSDimensionCS;
-import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
-import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
+import org.muml.psm.allocation.language.as.EvaluatableElement;
+import org.muml.psm.allocation.language.as.LocationConstraint;
+import org.muml.psm.allocation.language.as.QoSDimension;
+import org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint;
+import org.muml.psm.allocation.language.as.ResourceConstraint;
 import org.muml.psm.allocation.language.xtext.typing.TypesUtil;
 
 public class TupleAccessor {
@@ -25,7 +25,7 @@ public class TupleAccessor {
 	private static final String unexpectedObject = "unexpected object %s";
 	private static final String noTupleValue = "object %s is not a TupleValue instance";
 	
-	private static Object getPart(TupleValue tupleValue, String namedPart, EvaluatableElementCS elementCS,
+	private static Object getPart(TupleValue tupleValue, String namedPart, EvaluatableElement elementCS,
 			TupleType tupleType, boolean unboxValue) {
 		//TupleType tupleType = TypesUtil.createLocationConstraintTupleType(locationConstraintCS);
 		TuplePartId partId = tupleType.getTupleTypeId().getPartId(namedPart);
@@ -61,24 +61,24 @@ public class TupleAccessor {
 		// XXX: get rid of this EObject cast again
 		EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory((EObject) object);
 		TupleType tupleType = null;
-		if (object instanceof LocationConstraintCS) {
-			tupleType = TypesUtil.createLocationConstraintTupleType(envFactory, (LocationConstraintCS) object);
-		} else if (object instanceof RequiredHardwareResourceInstanceConstraintCS) {
-			tupleType = TypesUtil.createReqHWResInstanceConstraintTupleType(envFactory, (RequiredHardwareResourceInstanceConstraintCS) object);
-		} else if (object instanceof ResourceConstraintCS) {
+		if (object instanceof LocationConstraint) {
+			tupleType = TypesUtil.createLocationConstraintTupleType(envFactory, (LocationConstraint) object);
+		} else if (object instanceof RequiredHardwareResourceInstanceConstraint) {
+			tupleType = TypesUtil.createReqHWResInstanceConstraintTupleType(envFactory, (RequiredHardwareResourceInstanceConstraint) object);
+		} else if (object instanceof ResourceConstraint) {
 			// outer tuple type has exactly 2 parts
 			if (tupleValue.getTypeId().getPartIds().length == 2) {
-				tupleType = TypesUtil.createResourceConstraintOuterTupleType(envFactory, (ResourceConstraintCS) object);
+				tupleType = TypesUtil.createResourceConstraintOuterTupleType(envFactory, (ResourceConstraint) object);
 			} else {
-				tupleType = TypesUtil.createResourceConstraintInnerTupleType(envFactory, (ResourceConstraintCS) object);
+				tupleType = TypesUtil.createResourceConstraintInnerTupleType(envFactory, (ResourceConstraint) object);
 			}
-		} else if (object instanceof QoSDimensionCS) {
-			tupleType = TypesUtil.createQoSDimensionTupleType(envFactory, (QoSDimensionCS) object);
+		} else if (object instanceof QoSDimension) {
+			tupleType = TypesUtil.createQoSDimensionTupleType(envFactory, (QoSDimension) object);
 		} else {
 			throw new IllegalArgumentException(
 					String.format(unexpectedObject, object));
 		}
-		return getPart(tupleValue, namedPart, (EvaluatableElementCS) object, tupleType, unboxValue);
+		return getPart(tupleValue, namedPart, (EvaluatableElement) object, tupleType, unboxValue);
 	}
 	
 	@Operation(kind=Kind.QUERY)
