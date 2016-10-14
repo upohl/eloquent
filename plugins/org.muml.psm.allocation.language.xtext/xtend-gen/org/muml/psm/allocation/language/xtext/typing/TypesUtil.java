@@ -21,11 +21,11 @@ import org.eclipse.ocl.pivot.internal.manager.PivotMetamodelManager;
 import org.eclipse.ocl.pivot.internal.manager.TupleTypeManager;
 import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal;
 import org.eclipse.ocl.pivot.internal.utilities.PivotUtilInternal;
-import org.eclipse.ocl.pivot.utilities.PivotUtil;
 import org.eclipse.ocl.pivot.values.TemplateParameterSubstitutions;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Pair;
 import org.muml.psm.allocation.language.as.BoundWeightTupleDescriptor;
+import org.muml.psm.allocation.language.as.EvaluatableElement;
 import org.muml.psm.allocation.language.as.LocationConstraint;
 import org.muml.psm.allocation.language.as.QoSDimension;
 import org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint;
@@ -34,11 +34,6 @@ import org.muml.psm.allocation.language.as.TupleDescriptor;
 import org.muml.psm.allocation.language.as.TypedNamedPart;
 import org.muml.psm.allocation.language.as.TypedPair;
 import org.muml.psm.allocation.language.as.WeightTupleDescriptor;
-import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
-import org.muml.psm.allocation.language.cs.LocationConstraintCS;
-import org.muml.psm.allocation.language.cs.QoSDimensionCS;
-import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
-import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
 
 @SuppressWarnings("all")
 public class TypesUtil {
@@ -134,10 +129,9 @@ public class TypesUtil {
   /**
    * @NonNull
    */
-  public static TupleType createLocationConstraintTupleType(final EnvironmentFactoryInternal envFactory, final LocationConstraintCS constraintCS) {
+  public static TupleType createLocationConstraintTupleType(final EnvironmentFactoryInternal envFactory, final LocationConstraint constraint) {
     TupleType _xblockexpression = null;
     {
-      final LocationConstraint constraint = PivotUtil.<LocationConstraint>getPivot(LocationConstraint.class, constraintCS);
       TupleDescriptor _tupleDescriptor = constraint.getTupleDescriptor();
       EList<TypedPair> _typedPairs = _tupleDescriptor.getTypedPairs();
       final Map<String, Type> namedParts = TypesUtil.convertToNamedParts(_typedPairs);
@@ -149,11 +143,11 @@ public class TypesUtil {
   /**
    * @NonNull
    */
-  public static Type createLocationConstraintType(final LocationConstraintCS locationConstraintCS) {
+  public static Type createLocationConstraintType(final LocationConstraint constraint) {
     CollectionType _xblockexpression = null;
     {
-      final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(locationConstraintCS);
-      TupleType _createLocationConstraintTupleType = TypesUtil.createLocationConstraintTupleType(envFactory, locationConstraintCS);
+      final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(constraint);
+      TupleType _createLocationConstraintTupleType = TypesUtil.createLocationConstraintTupleType(envFactory, constraint);
       _xblockexpression = TypesUtil.createSetType(envFactory, _createLocationConstraintTupleType);
     }
     return _xblockexpression;
@@ -162,10 +156,9 @@ public class TypesUtil {
   /**
    * @NonNull
    */
-  public static TupleType createReqHWResInstanceConstraintTupleType(final EnvironmentFactoryInternal envFactory, final RequiredHardwareResourceInstanceConstraintCS constraintCS) {
+  public static TupleType createReqHWResInstanceConstraintTupleType(final EnvironmentFactoryInternal envFactory, final RequiredHardwareResourceInstanceConstraint constraint) {
     TupleType _xblockexpression = null;
     {
-      final RequiredHardwareResourceInstanceConstraint constraint = PivotUtil.<RequiredHardwareResourceInstanceConstraint>getPivot(RequiredHardwareResourceInstanceConstraint.class, constraintCS);
       TupleDescriptor _tupleDescriptor = constraint.getTupleDescriptor();
       EList<TypedPair> _typedPairs = _tupleDescriptor.getTypedPairs();
       final Map<String, Type> namedParts = TypesUtil.convertToNamedParts(_typedPairs);
@@ -177,11 +170,11 @@ public class TypesUtil {
   /**
    * @NonNull
    */
-  public static Type createReqHWResInstanceConstraintType(final RequiredHardwareResourceInstanceConstraintCS constraintCS) {
+  public static Type createReqHWResInstanceConstraintType(final RequiredHardwareResourceInstanceConstraint constraint) {
     CollectionType _xblockexpression = null;
     {
-      final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(constraintCS);
-      TupleType _createReqHWResInstanceConstraintTupleType = TypesUtil.createReqHWResInstanceConstraintTupleType(envFactory, constraintCS);
+      final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(constraint);
+      TupleType _createReqHWResInstanceConstraintTupleType = TypesUtil.createReqHWResInstanceConstraintTupleType(envFactory, constraint);
       _xblockexpression = TypesUtil.createSetType(envFactory, _createReqHWResInstanceConstraintTupleType);
     }
     return _xblockexpression;
@@ -206,22 +199,16 @@ public class TypesUtil {
   /**
    * @NonNull
    */
-  public static TupleType createResourceConstraintInnerTupleType(final EnvironmentFactoryInternal envFactory, final ResourceConstraintCS constraintCS) {
-    TupleType _xblockexpression = null;
-    {
-      final ResourceConstraint constraint = PivotUtil.<ResourceConstraint>getPivot(ResourceConstraint.class, constraintCS);
-      BoundWeightTupleDescriptor _tupleDescriptor = constraint.getTupleDescriptor();
-      _xblockexpression = TypesUtil.createWeightTupleDescriptorTupleType(envFactory, _tupleDescriptor);
-    }
-    return _xblockexpression;
+  public static TupleType createResourceConstraintInnerTupleType(final EnvironmentFactoryInternal envFactory, final ResourceConstraint constraint) {
+    BoundWeightTupleDescriptor _tupleDescriptor = constraint.getTupleDescriptor();
+    return TypesUtil.createWeightTupleDescriptorTupleType(envFactory, _tupleDescriptor);
   }
   
   /**
    * @NonNull
    */
-  public static TupleType createResourceConstraintOuterTupleType(final EnvironmentFactoryInternal envFactory, final ResourceConstraintCS constraintCS) {
-    final ResourceConstraint constraint = PivotUtil.<ResourceConstraint>getPivot(ResourceConstraint.class, constraintCS);
-    final Type innerTupleType = TypesUtil.createResourceConstraintInnerTupleType(envFactory, constraintCS);
+  public static TupleType createResourceConstraintOuterTupleType(final EnvironmentFactoryInternal envFactory, final ResourceConstraint constraint) {
+    final Type innerTupleType = TypesUtil.createResourceConstraintInnerTupleType(envFactory, constraint);
     BoundWeightTupleDescriptor _tupleDescriptor = constraint.getTupleDescriptor();
     String _weight = _tupleDescriptor.getWeight();
     CollectionType _createSetType = TypesUtil.createSetType(envFactory, innerTupleType);
@@ -237,11 +224,11 @@ public class TypesUtil {
   /**
    * @NonNull
    */
-  public static Type createResourceConstraintType(final ResourceConstraintCS constraintCS) {
+  public static Type createResourceConstraintType(final ResourceConstraint constraint) {
     CollectionType _xblockexpression = null;
     {
-      final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(constraintCS);
-      TupleType _createResourceConstraintOuterTupleType = TypesUtil.createResourceConstraintOuterTupleType(envFactory, constraintCS);
+      final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(constraint);
+      TupleType _createResourceConstraintOuterTupleType = TypesUtil.createResourceConstraintOuterTupleType(envFactory, constraint);
       _xblockexpression = TypesUtil.createSetType(envFactory, _createResourceConstraintOuterTupleType);
     }
     return _xblockexpression;
@@ -250,63 +237,58 @@ public class TypesUtil {
   /**
    * @NonNull
    */
-  public static TupleType createQoSDimensionTupleType(final EnvironmentFactoryInternal envFactory, final QoSDimensionCS qosDimensionCS) {
-    TupleType _xblockexpression = null;
-    {
-      final QoSDimension qosDimension = PivotUtil.<QoSDimension>getPivot(QoSDimension.class, qosDimensionCS);
-      WeightTupleDescriptor _tupleDescriptor = qosDimension.getTupleDescriptor();
-      _xblockexpression = TypesUtil.createWeightTupleDescriptorTupleType(envFactory, _tupleDescriptor);
-    }
-    return _xblockexpression;
+  public static TupleType createQoSDimensionTupleType(final EnvironmentFactoryInternal envFactory, final QoSDimension qosDimension) {
+    WeightTupleDescriptor _tupleDescriptor = qosDimension.getTupleDescriptor();
+    return TypesUtil.createWeightTupleDescriptorTupleType(envFactory, _tupleDescriptor);
   }
   
   /**
    * @NonNull
    */
-  public static Type createQoSDimensionType(final QoSDimensionCS qosDimensionCS) {
+  public static Type createQoSDimensionType(final QoSDimension qosDimension) {
     CollectionType _xblockexpression = null;
     {
-      final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(qosDimensionCS);
-      TupleType _createQoSDimensionTupleType = TypesUtil.createQoSDimensionTupleType(envFactory, qosDimensionCS);
+      final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(qosDimension);
+      TupleType _createQoSDimensionTupleType = TypesUtil.createQoSDimensionTupleType(envFactory, qosDimension);
       _xblockexpression = TypesUtil.createSetType(envFactory, _createQoSDimensionTupleType);
     }
     return _xblockexpression;
   }
   
-  protected static Type _createType(final EvaluatableElementCS element) {
+  protected static Type _createType(final EvaluatableElement element) {
     throw new IllegalArgumentException(("unexpected element: " + element));
   }
   
-  protected static Type _createType(final LocationConstraintCS constraintCS) {
-    return TypesUtil.createLocationConstraintType(constraintCS);
+  protected static Type _createType(final LocationConstraint constraint) {
+    return TypesUtil.createLocationConstraintType(constraint);
   }
   
-  protected static Type _createType(final RequiredHardwareResourceInstanceConstraintCS constraintCS) {
-    return TypesUtil.createReqHWResInstanceConstraintType(constraintCS);
+  protected static Type _createType(final RequiredHardwareResourceInstanceConstraint constraint) {
+    return TypesUtil.createReqHWResInstanceConstraintType(constraint);
   }
   
-  protected static Type _createType(final ResourceConstraintCS constraintCS) {
-    return TypesUtil.createResourceConstraintType(constraintCS);
+  protected static Type _createType(final ResourceConstraint constraint) {
+    return TypesUtil.createResourceConstraintType(constraint);
   }
   
-  protected static Type _createType(final QoSDimensionCS qosDimensionCS) {
-    return TypesUtil.createQoSDimensionType(qosDimensionCS);
+  protected static Type _createType(final QoSDimension qosDimension) {
+    return TypesUtil.createQoSDimensionType(qosDimension);
   }
   
-  public static Type createType(final EvaluatableElementCS constraintCS) {
-    if (constraintCS instanceof LocationConstraintCS) {
-      return _createType((LocationConstraintCS)constraintCS);
-    } else if (constraintCS instanceof RequiredHardwareResourceInstanceConstraintCS) {
-      return _createType((RequiredHardwareResourceInstanceConstraintCS)constraintCS);
-    } else if (constraintCS instanceof ResourceConstraintCS) {
-      return _createType((ResourceConstraintCS)constraintCS);
-    } else if (constraintCS instanceof QoSDimensionCS) {
-      return _createType((QoSDimensionCS)constraintCS);
-    } else if (constraintCS != null) {
-      return _createType(constraintCS);
+  public static Type createType(final EvaluatableElement constraint) {
+    if (constraint instanceof LocationConstraint) {
+      return _createType((LocationConstraint)constraint);
+    } else if (constraint instanceof RequiredHardwareResourceInstanceConstraint) {
+      return _createType((RequiredHardwareResourceInstanceConstraint)constraint);
+    } else if (constraint instanceof ResourceConstraint) {
+      return _createType((ResourceConstraint)constraint);
+    } else if (constraint instanceof QoSDimension) {
+      return _createType((QoSDimension)constraint);
+    } else if (constraint != null) {
+      return _createType(constraint);
     } else {
       throw new IllegalArgumentException("Unhandled parameter types: " +
-        Arrays.<Object>asList(constraintCS).toString());
+        Arrays.<Object>asList(constraint).toString());
     }
   }
 }

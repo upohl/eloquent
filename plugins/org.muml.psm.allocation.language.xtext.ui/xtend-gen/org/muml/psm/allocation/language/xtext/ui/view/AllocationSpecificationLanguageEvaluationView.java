@@ -15,17 +15,16 @@ import org.eclipse.jface.text.ITextSelection;
 import org.eclipse.jface.text.ITextViewer;
 import org.eclipse.jface.text.TextViewer;
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.ocl.pivot.Element;
 import org.eclipse.ocl.pivot.ExpressionInOCL;
+import org.eclipse.ocl.pivot.NamedElement;
 import org.eclipse.ocl.pivot.Type;
 import org.eclipse.ocl.pivot.ids.TuplePartId;
 import org.eclipse.ocl.pivot.ids.TupleTypeId;
+import org.eclipse.ocl.pivot.utilities.PivotUtil;
 import org.eclipse.ocl.pivot.utilities.ValueUtil;
 import org.eclipse.ocl.pivot.values.CollectionValue;
 import org.eclipse.ocl.pivot.values.InvalidValueException;
 import org.eclipse.ocl.pivot.values.TupleValue;
-import org.eclipse.ocl.xtext.basecs.NamedElementCS;
-import org.eclipse.ocl.xtext.essentialoclcs.ContextCS;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.graphics.Font;
@@ -46,6 +45,7 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.muml.pim.instance.ComponentInstanceConfiguration;
 import org.muml.pm.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 import org.muml.psm.allocation.algorithm.ocl.OCLEvaluator;
+import org.muml.psm.allocation.language.as.EvaluatableElement;
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
 import org.muml.psm.allocation.language.oclcontext.OCLContext;
 import org.muml.psm.allocation.language.oclcontext.OclcontextFactory;
@@ -177,7 +177,8 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
         public Object exec(final XtextResource resource) throws Exception {
           Object _xblockexpression = null;
           {
-            final EvaluatableElementCS element = AllocationSpecificationLanguageEvaluationView.this.getEvaluatableElementCS(resource);
+            EvaluatableElementCS _evaluatableElementCS = AllocationSpecificationLanguageEvaluationView.this.getEvaluatableElementCS(resource);
+            final EvaluatableElement element = PivotUtil.<EvaluatableElement>getPivot(EvaluatableElement.class, _evaluatableElementCS);
             final OCLContext ctx = AllocationSpecificationLanguageEvaluationView.this.getContext();
             Object _xifexpression = null;
             if ((((!Objects.equal(element, null)) && (!Objects.equal(ctx.getComponentInstanceConfiguration(), null))) && (!Objects.equal(ctx.getHardwarePlatformInstanceConfiguration(), null)))) {
@@ -191,15 +192,14 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
                 String _plus_2 = ("Expected type: " + _createType);
                 builder.append(_plus_2);
                 builder.append("\n");
-                ContextCS _expression = element.getExpression();
-                Element _pivot = _expression.getPivot();
-                Type _type = ((ExpressionInOCL) _pivot).getType();
+                ExpressionInOCL _expression = element.getExpression();
+                Type _type = _expression.getType();
                 String _plus_3 = ("Actual type: " + _type);
                 builder.append(_plus_3);
                 builder.append("\nResult:\n\n");
                 Object _xtrycatchfinallyexpression = null;
                 try {
-                  ContextCS _expression_1 = element.getExpression();
+                  ExpressionInOCL _expression_1 = element.getExpression();
                   _xtrycatchfinallyexpression = OCLEvaluator.evaluate(_expression_1, ctx);
                 } catch (final Throwable _t) {
                   if (_t instanceof InvalidValueException) {
@@ -247,10 +247,10 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
     _document_1.set(_string);
   }
   
-  private String getName(final EvaluatableElementCS element) {
+  private String getName(final EvaluatableElement element) {
     String _xifexpression = null;
-    if ((element instanceof NamedElementCS)) {
-      _xifexpression = ((NamedElementCS) element).getName();
+    if ((element instanceof NamedElement)) {
+      _xifexpression = ((NamedElement) element).getName();
     } else {
       _xifexpression = "<Unnamed>";
     }
