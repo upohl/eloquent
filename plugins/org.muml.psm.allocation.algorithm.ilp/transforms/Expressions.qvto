@@ -3,7 +3,7 @@ import VariableHelper;
 import Sort;
 import TupleAccessor;
 
-modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
+modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype core uses core('http://www.muml.org/core/1.0.0');
 modeltype expressions uses core::expressions('http://www.muml.org/core/expressions/1.0.0');
 modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
@@ -52,7 +52,7 @@ helper Sequence(Sequence(NamedElement))::createAdditionConstraintExpression(lit 
 		ComparingOperator::EQUAL, comment);
 }
 
-helper Sequence(TupleValue)::createWeightingComponentResourceTuplesAdditionExpression(tupleDescriptor : WeightTupleDescriptorCS, expression : Expression) : Expression {
+helper Sequence(TupleValue)::createWeightingComponentResourceTuplesAdditionExpression(tupleDescriptor : WeightTupleDescriptor, expression : Expression) : Expression {
 	var expr : Expression := expression;
 	self->asOrderedSet()->reverse()->collect(oclAsType(TupleValue))->forEach(tv) {
 		var tmp : Expression := new ArithmeticExpression(

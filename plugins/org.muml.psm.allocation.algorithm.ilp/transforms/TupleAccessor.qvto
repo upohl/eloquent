@@ -1,7 +1,7 @@
 import org.muml.psm.allocation.algorithm.ocl.TupleAccessorBlackboxUnit;
 import Util;
 
-modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
+modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype core uses core('http://www.muml.org/core/1.0.0');
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
@@ -9,13 +9,13 @@ library TupleAccessor;
 
 helper TupleValue::get(namedPart : String) : OclAny {
 	//log("resolve call: ");
-	var source : EvaluatableElementCS := self.invresolveone(EvaluatableElementCS);
+	var source : EvaluatableElement := self.invresolveone(EvaluatableElement);
 	//log(source.toString());
 	return getPart(self, namedPart, source);
 }
 
 helper TupleValue::getSequence(namedPart : String) : Sequence(TupleValue) {
-	var source : EvaluatableElementCS := self.invresolveone(EvaluatableElementCS);
+	var source : EvaluatableElement := self.invresolveone(EvaluatableElement);
 	return getSequencePart(self, namedPart, source);
 }
 
@@ -27,17 +27,17 @@ query TupleValue::toSequence() : Sequence(NamedElement) {
 	// ->first() (to be investigated) to get the "correct"/expected constraint
 	// (implicit assumption: the tuple value is only accessed during the transformation
 	// of the constraint)
-	var source : EvaluatableElementCS := self.invresolveone(EvaluatableElementCS);
+	var source : EvaluatableElement := self.invresolveone(EvaluatableElement);
 	return source.toSequence(self);
 }
 
-query LocationConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+query LocationConstraint::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
 	// there should be exactly one typedPair
 	return self.tupleDescriptor.toSequence(tupleValue); 
 }
 
-query TupleDescriptorCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
-	return self.typedPairs->collect(typedPair : TypedPairCS |
+query TupleDescriptor::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+	return self.typedPairs->collect(typedPair : TypedPair |
 		Sequence{
 			tupleValue.get(typedPair.first.name).oclAsType(NamedElement),
 			tupleValue.get(typedPair.second.name).oclAsType(NamedElement)
@@ -45,27 +45,27 @@ query TupleDescriptorCS::toSequence(tupleValue : TupleValue) : Sequence(NamedEle
 	);
 }
 
-query RequiredHardwareResourceInstanceConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+query RequiredHardwareResourceInstanceConstraint::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
 	return self.tupleDescriptor.toSequence(tupleValue);
 }
 
 // Note: it is not possible to generalize the next two queries into
-// WeightingComponentResourceTupleElementCS::toSequence, because WeightingComponentResourceTupleElementCS
-// is just a "secondary" superclass in ResourceConstraintCS' and QoSDimensionConstraintCS'
-// inheritance hierarchy. As a consequence the "catch-call" EvaluatableElementCS::toSequence
+// WeightingComponentResourceTupleElement::toSequence, because WeightingComponentResourceTupleElement
+// is just a "secondary" superclass in ResourceConstraint' and QoSDimensionConstraint'
+// inheritance hierarchy. As a consequence the "catch-call" EvaluatableElement::toSequence
 // query is called and the transformation fails. XXX: how does qvto's "linearization" algo work?
-query ResourceConstraintCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+query ResourceConstraint::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
 	// unfortunately we cannot check if tupleValue corresponds to an "inner" tuple
 	// (well... we could do this via a blackbox but it is probably not worth the effort)
 	// => we assume that the caller knows what he/she is doing
 	return self.tupleDescriptor.toSequence(tupleValue);
 }
 
-query QoSDimensionCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+query QoSDimension::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
 	return self.tupleDescriptor.toSequence(tupleValue);
 }
 
-query EvaluatableElementCS::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+query EvaluatableElement::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
 	// should not happen
 	assert fatal (false) with log("add element specific ::toSequence mapping for " + self.toString());
 	return null;

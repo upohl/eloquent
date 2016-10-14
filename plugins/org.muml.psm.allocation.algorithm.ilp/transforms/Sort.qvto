@@ -1,7 +1,7 @@
 import VariableHelper;
 import TupleAccessor;
 
-modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
+modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype core uses core('http://www.muml.org/core/1.0.0');
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
@@ -16,11 +16,11 @@ query Sequence(NamedElement)::sortComponentResourceSequence() : Sequence(NamedEl
 		->sortedBy(s | s->getVariableName())->flatten()
 }
 
-query Sequence(TupleValue)::sortWeightingComponentResourceTuples(tupleDescriptor : WeightTupleDescriptorCS) : Sequence(TupleValue) {
+query Sequence(TupleValue)::sortWeightingComponentResourceTuples(tupleDescriptor : WeightTupleDescriptor) : Sequence(TupleValue) {
 	return self->sortedBy(tv : TupleValue | tv.getWeightingComponentResourceTupleSortId(tupleDescriptor));
 }
 
-query TupleValue::getWeightingComponentResourceTupleSortId(tupleDescriptor : WeightTupleDescriptorCS) : String {
+query TupleValue::getWeightingComponentResourceTupleSortId(tupleDescriptor : WeightTupleDescriptor) : String {
 	// Order by component_ecu names and add the coefficient/LhsValue as a tie breaker
 	// for the sort algo
 	// this uniquely identifies a WeightingComponentResourceTuple tuple (because
@@ -29,6 +29,6 @@ query TupleValue::getWeightingComponentResourceTupleSortId(tupleDescriptor : Wei
 		+ ILLEGAL_VARIABLE_CHARS()->at(1) + self.getWeighting(tupleDescriptor); 
 }
 
-query TupleValue::getWeighting(tupleDescriptor : WeightTupleDescriptorCS) : String {
+query TupleValue::getWeighting(tupleDescriptor : WeightTupleDescriptor) : String {
 	return self.get(tupleDescriptor.weight).oclAsType(Real).toString();
 }

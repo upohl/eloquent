@@ -6,7 +6,7 @@ import Util;
 import Variables;
 import VariableHelper;
 
-modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
+modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype oclcontext uses oclcontext('http://www.muml.org/psm/allocation/language/oclcontext/1.0.0');
 modeltype core uses core('http://www.muml.org/core/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
@@ -18,7 +18,7 @@ modeltype hwrinstance uses hardware::hwresourceinstance('http://www.muml.org/pm/
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
 
-library ResourceConstraint;
+library ResourceConstraintLib;
 
 // In this lib we do a lot of sorting: this is only needed to get
 // a reproducable output (and it indirectly reduces the number of
@@ -30,13 +30,13 @@ library ResourceConstraint;
 // to the lhs value (and maintaining the lhs value in the sequence is awkward
 // (NamedElement + Real => common supertype OclAny))).
 
-helper SpecificationCS::createResourceConstraints(inout ilp : IntegerLinearProgram,
+helper Specification::createResourceConstraints(inout ilp : IntegerLinearProgram,
 	cic : ComponentInstanceConfiguration,
 	hpic : HWPlatformInstanceConfiguration) {
 	self.getResourceConstraints()->createResourceConstraint(ilp, cic, hpic);
 }
 
-helper ResourceConstraintCS::createResourceConstraint(inout ilp : IntegerLinearProgram,
+helper ResourceConstraint::createResourceConstraint(inout ilp : IntegerLinearProgram,
 	cic : ComponentInstanceConfiguration,
 	hpic : HWPlatformInstanceConfiguration) {
 	var oclContext : OCLContext := createOCLContext(cic, hpic);
@@ -44,57 +44,57 @@ helper ResourceConstraintCS::createResourceConstraint(inout ilp : IntegerLinearP
 	sequences->sortOuterResultSequence(self)->createResourceConstraint(ilp, self);
 }
 
-query Sequence(TupleValue)::sortOuterResultSequence(constraintCS : ResourceConstraintCS) : Sequence(TupleValue) {
-	return self->sortedBy(tv : TupleValue | tv.getOuterId(constraintCS));
+query Sequence(TupleValue)::sortOuterResultSequence(constraint : ResourceConstraint) : Sequence(TupleValue) {
+	return self->sortedBy(tv : TupleValue | tv.getOuterId(constraint));
 }
 
-query TupleValue::getOuterId(constraintCS : ResourceConstraintCS) : String {
+query TupleValue::getOuterId(constraint : ResourceConstraint) : String {
 	// the outer id consists of the rhs + the join of all inner ids
 	// this uniquely identifies an outer tuple (because the outer tuples
 	// are contained in a set => no duplicates)
 	return let char : String = ILLEGAL_VARIABLE_CHARS()->at(1)
 	in
-	self.getRhsValue(constraintCS) + char + char.join(
-		self.getSequence(constraintCS.tupleDescriptor.weight)
-			->sortWeightingComponentResourceTuples(constraintCS.tupleDescriptor)
-			->collect(tv : TupleValue | tv.getWeightingComponentResourceTupleSortId(constraintCS.tupleDescriptor))
+	self.getRhsValue(constraint) + char + char.join(
+		self.getSequence(constraint.tupleDescriptor.weight)
+			->sortWeightingComponentResourceTuples(constraint.tupleDescriptor)
+			->collect(tv : TupleValue | tv.getWeightingComponentResourceTupleSortId(constraint.tupleDescriptor))
 	);
 }
 
-helper TupleValue::createResourceConstraint(inout ilp : IntegerLinearProgram, constraintCS : ResourceConstraintCS) {
-	var sequence : Sequence(TupleValue) := self.getSortedInnerResultSequence(constraintCS);
+helper TupleValue::createResourceConstraint(inout ilp : IntegerLinearProgram, constraint : ResourceConstraint) {
+	var sequence : Sequence(TupleValue) := self.getSortedInnerResultSequence(constraint);
 	log("invalid? " + sequence->oclIsInvalid().toString());
 	sequence->collectNested(tv : TupleValue |
 		tv.toSequence()->sortComponentResourceSequence() // sort the sequence
 	)->createHelperVariablesAndConstraints(ilp);
-	sequence->createResourceConstraintExpression(ilp, constraintCS, self.getRhsValue(constraintCS));
+	sequence->createResourceConstraintExpression(ilp, constraint, self.getRhsValue(constraint));
 }
 
-query TupleValue::getSortedInnerResultSequence(constraintCS : ResourceConstraintCS) : Sequence(TupleValue) {
-	return self.getSequence(constraintCS.tupleDescriptor.weight)
-		->sortWeightingComponentResourceTuples(constraintCS.tupleDescriptor);
+query TupleValue::getSortedInnerResultSequence(constraint : ResourceConstraint) : Sequence(TupleValue) {
+	return self.getSequence(constraint.tupleDescriptor.weight)
+		->sortWeightingComponentResourceTuples(constraint.tupleDescriptor);
 }
 
 helper Sequence(TupleValue)::createResourceConstraintExpression(inout ilp : IntegerLinearProgram,
-	constraintCS : ResourceConstraintCS, rhsValue : String) {
-	var comment : String := if constraintCS.name <> '' then constraintCS.name else constraintCS.repr() endif;
+	constraint : ResourceConstraint, rhsValue : String) {
+	var comment : String := if constraint.name <> '' then constraint.name else constraint.repr() endif;
 	ilp.constraints += new ConstraintExpression(
-		self->createWeightingComponentResourceTuplesAdditionExpression(constraintCS.tupleDescriptor, null),
+		self->createWeightingComponentResourceTuplesAdditionExpression(constraint.tupleDescriptor, null),
 		new LiteralExpression(rhsValue),
 		ComparingOperator::LESS_OR_EQUAL, comment);
 }
 
-query TupleValue::getRhsValue(constraintCS : ResourceConstraintCS) : String {
-	return self.getValue(constraintCS.tupleDescriptor.bound);
+query TupleValue::getRhsValue(constraint : ResourceConstraint) : String {
+	return self.getValue(constraint.tupleDescriptor.bound);
 }
 
 query TupleValue::getValue(namedPart : String) : String {
 	return self.get(namedPart).oclAsType(Real).toString();
 }
 
-query SpecificationCS::getResourceConstraints() : OrderedSet(ResourceConstraintCS) {
+query Specification::getResourceConstraints() : OrderedSet(ResourceConstraint) {
 	return self.constraints
-		->select(oclIsKindOf(ResourceConstraintCS))
-		->collect(oclAsType(ResourceConstraintCS))
+		->select(oclIsKindOf(ResourceConstraint))
+		->collect(oclAsType(ResourceConstraint))
 		->asOrderedSet();
 }

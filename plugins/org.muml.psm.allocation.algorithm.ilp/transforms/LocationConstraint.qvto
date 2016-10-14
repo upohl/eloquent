@@ -5,7 +5,7 @@ import Util;
 import VariableHelper;
 import Variables;
 
-modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
+modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype oclcontext uses oclcontext('http://www.muml.org/psm/allocation/language/oclcontext/1.0.0');
 modeltype core uses core('http://www.muml.org/core/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
@@ -17,12 +17,12 @@ modeltype hwrinstance uses hardware::hwresourceinstance('http://www.muml.org/pm/
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
 
-library LocationConstraint;
+library LocationConstraintLib;
 
 // the implementation of the differentLocation constraint differs from the approach,
 // which was described in my thesis
 
-helper SpecificationCS::createLocationConstraints(inout ilp : IntegerLinearProgram,
+helper Specification::createLocationConstraints(inout ilp : IntegerLinearProgram,
 	cic : ComponentInstanceConfiguration,
 	hpic : HWPlatformInstanceConfiguration) {
 	var startTime : Integer;
@@ -37,7 +37,7 @@ helper SpecificationCS::createLocationConstraints(inout ilp : IntegerLinearProgr
 	log("Time for create separate location Constraints:"+((endTime-startTime)/1000).toString()+" seconds");
 }
 
-helper LocationConstraintCS::createLocationConstraint(inout ilp : IntegerLinearProgram,
+helper LocationConstraint::createLocationConstraint(inout ilp : IntegerLinearProgram,
 	cic : ComponentInstanceConfiguration,
 	hpic : HWPlatformInstanceConfiguration) {
 	var sequences : Sequence(Sequence(NamedElement)) := self.getHelperVariableSequences(cic, hpic);
@@ -49,7 +49,7 @@ helper LocationConstraintCS::createLocationConstraint(inout ilp : IntegerLinearP
 }
 
 helper NamedElement::createLocationConstraintConstraintExpression(sequences : Sequence(Sequence(NamedElement)),
-	locationConstraint : LocationConstraintCS) : ConstraintExpression {
+	locationConstraint : LocationConstraint) : ConstraintExpression {
 	var mySequences : Sequence(Sequence(NamedElement)) := self.getSequences(sequences)->asSequence();
 	var comment : String := if locationConstraint.name <> '' then locationConstraint.name else locationConstraint.repr() endif;
 	var lit : String := if locationConstraint.type = LocationConstraintTypes::SAME_LOCATION then
@@ -69,7 +69,7 @@ query NamedElement::getSequences(sequences : Sequence(Sequence(NamedElement))) :
 
 // removed
 
-query LocationConstraintCS::getHelperVariableSequences(cic : ComponentInstanceConfiguration,
+query LocationConstraint::getHelperVariableSequences(cic : ComponentInstanceConfiguration,
 	hpic : HWPlatformInstanceConfiguration) : Sequence(Sequence(NamedElement)) {
 	var oclContext : OCLContext := createOCLContext(cic, hpic);
 	var res : Sequence(TupleValue) := self.evaluateOCL(oclContext);
@@ -98,17 +98,17 @@ mapping inout IntegerLinearProgram::createSameLocationConstraints(cic : Componen
 	hpic : HWPlatformInstanceConfiguration) {
 }
 
-query SpecificationCS::getLocationConstraints(wantedType : LocationConstraintTypes) : OrderedSet(LocationConstraintCS) {
-	return self.constraints->select(oclIsKindOf(LocationConstraintCS))
-		->collect(oclAsType(LocationConstraintCS))
+query Specification::getLocationConstraints(wantedType : LocationConstraintTypes) : OrderedSet(LocationConstraint) {
+	return self.constraints->select(oclIsKindOf(LocationConstraint))
+		->collect(oclAsType(LocationConstraint))
 		->select(type = wantedType)
 		->asOrderedSet();	
 }
 
-query SpecificationCS::getSameLocationConstraints() : OrderedSet(LocationConstraintCS) {
+query Specification::getSameLocationConstraints() : OrderedSet(LocationConstraint) {
 	return self.getLocationConstraints(LocationConstraintTypes::SAME_LOCATION);
 }
 
-query SpecificationCS::getDifferentLocationConstraints() : OrderedSet(LocationConstraintCS) {
+query Specification::getDifferentLocationConstraints() : OrderedSet(LocationConstraint) {
 	return self.getLocationConstraints(LocationConstraintTypes::DIFFERENT_LOCATION);
 }

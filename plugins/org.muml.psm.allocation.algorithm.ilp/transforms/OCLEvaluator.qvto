@@ -3,23 +3,23 @@ import TupleAccessor;
 modeltype oclcontext uses oclcontext('http://www.muml.org/psm/allocation/language/oclcontext/1.0.0');
 modeltype instance uses pim::instance('http://www.muml.org/pim/instance/1.0.0');
 modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0');
-modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
+modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype ocl uses essentialoclcs('http://www.eclipse.org/ocl/2015/EssentialOCLCS');
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
 library OCLEvaluator;
 
-//blackbox query evaluate(oclExpression : ContextCS, contextObject : OclAny) : OclAny;
-//blackbox query evaluateLocationConstraintCS(oclExpression : ContextCS, contextObject : OclAny) : OrderedSet(TupleValue);
+//blackbox query evaluate(oclExpression : Context, contextObject : OclAny) : OclAny;
+//blackbox query evaluateLocationConstraint(oclExpression : Context, contextObject : OclAny) : OrderedSet(TupleValue);
 
-helper EvaluatableElementCS::evaluateOCL(contextObject : OclAny) : Sequence(TupleValue) {
-	var res : Sequence(TupleValue) := evaluateEvaluatableElementCS(self, contextObject);
+helper EvaluatableElement::evaluateOCL(contextObject : OclAny) : Sequence(TupleValue) {
+	var res : Sequence(TupleValue) := evaluateEvaluatableElement(self, contextObject);
 	res->createTraceHelper(self);
 	return res;
 }
 
-helper ResourceConstraintCS::evaluateOCL(contextObject : OclAny) : Sequence(TupleValue) {
-	var res : Sequence(TupleValue) := evaluateEvaluatableElementCS(self, contextObject);
+helper ResourceConstraint::evaluateOCL(contextObject : OclAny) : Sequence(TupleValue) {
+	var res : Sequence(TupleValue) := evaluateEvaluatableElement(self, contextObject);
 	res->createTraceHelper(self); // do this first, otherwise the subsequent tv.getSequence fails
 	res->collect(tv : TupleValue | tv.getSequence(self.tupleDescriptor.weight))
 		->collect(oclAsType(TupleValue))
@@ -27,15 +27,15 @@ helper ResourceConstraintCS::evaluateOCL(contextObject : OclAny) : Sequence(Tupl
 	return res;
 }
 
-helper TupleValue::createTraceHelper(cs : EvaluatableElementCS) {
+helper TupleValue::createTraceHelper(cs : EvaluatableElement) {
 	cs.map createTrace(self);
 	return null;
 }
 
-mapping EvaluatableElementCS::createTrace(tv : TupleValue) : TupleValue {
+mapping EvaluatableElement::createTrace(tv : TupleValue) : TupleValue {
 	init {
 		result := tv;
-		log("create trace (EvaluatableElementCS) called");
+		log("create trace (EvaluatableElement) called");
 	}
 }
 

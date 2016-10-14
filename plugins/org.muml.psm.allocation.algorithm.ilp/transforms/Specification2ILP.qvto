@@ -8,7 +8,8 @@ import ObjectiveFunction;
 import Util;
 import Variables;
 
-modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
+modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
+modeltype allocationSpecificationCS uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
 modeltype oclcontext uses oclcontext('http://www.muml.org/psm/allocation/language/oclcontext/1.0.0');
 //modeltype ecore uses ecore('http://www.eclipse.org/emf/2002/Ecore');
 modeltype core uses core('http://www.muml.org/core/1.0.0');
@@ -21,10 +22,10 @@ modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
 modeltype ocl uses essentialoclcs('http://www.eclipse.org/ocl/2015/EssentialOCLCS');
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
-transformation Specification2ILP(in specification : allocationSpecification, in ins : instance, in hwpi : hwpinstance, out ilpOut : ilptype);
+transformation Specification2ILP(in specificationCS : allocationSpecificationCS, in ins : instance, in hwpi : hwpinstance, out ilpOut : ilptype);
 
 main() {
-	var specificationCS : SpecificationCS := specification.getSpecification();
+	var specification : Specification := specificationCS.getSpecification();
 	var cic : ComponentInstanceConfiguration := ins.getRootCIC();
 	var hpic : HWPlatformInstanceConfiguration := hwpi.getRootHPIC();
 	var ilp : IntegerLinearProgram := object IntegerLinearProgram {};
@@ -35,22 +36,22 @@ main() {
 	endTime := getCurrentTime();
 	log("Time for create GeneralConstraints:"+((endTime-startTime)/1000).toString()+" seconds");
 	startTime := getCurrentTime();
-	specificationCS.createLocationConstraints(ilp, cic, hpic);
+	specification.createLocationConstraints(ilp, cic, hpic);
 	endTime := getCurrentTime();
 	log("Time for create LocationConstraints:"+((endTime-startTime)/1000).toString()+" seconds");
 	startTime := getCurrentTime();
-	specificationCS.createHWResInstanceConstraints(ilp, cic, hpic);
+	specification.createHWResInstanceConstraints(ilp, cic, hpic);
 	endTime := getCurrentTime();
 	log("Time for create required Location constraints:"+((endTime-startTime)/1000).toString()+" seconds");
 	startTime := getCurrentTime();
-	specificationCS.createResourceConstraints(ilp, cic, hpic);
+	specification.createResourceConstraints(ilp, cic, hpic);
 	endTime := getCurrentTime();
 	log("Time for create required resource constraints:"+((endTime-startTime)/1000).toString()+" seconds");
 	startTime := getCurrentTime();
-	specificationCS.createObjectiveFunction(ilp, cic, hpic);
+	specification.createObjectiveFunction(ilp, cic, hpic);
 	endTime := getCurrentTime();
 	log("Time for create objective functions:"+((endTime-startTime)/1000).toString()+" seconds");
-	//specificationCS.getSameLocationConstraints()->createSameLocationConstraint(ilp, cic, hpic);
+	//specification.getSameLocationConstraints()->createSameLocationConstraint(ilp, cic, hpic);
 	ilpOut.removeOrphans();
 	//log(cic.toString());
 	//var ctx : OCLContext := createOCLContext(cic, null);
