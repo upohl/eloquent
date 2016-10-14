@@ -11,19 +11,14 @@ import org.eclipse.ocl.pivot.ids.IdResolver
 import org.eclipse.ocl.pivot.internal.manager.TupleTypeManager
 import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal
 import org.eclipse.ocl.pivot.internal.utilities.PivotUtilInternal
-import org.eclipse.ocl.pivot.utilities.PivotUtil
 import org.eclipse.ocl.pivot.values.TemplateParameterSubstitutions
+import org.muml.psm.allocation.language.^as.EvaluatableElement
 import org.muml.psm.allocation.language.^as.LocationConstraint
 import org.muml.psm.allocation.language.^as.QoSDimension
 import org.muml.psm.allocation.language.^as.RequiredHardwareResourceInstanceConstraint
 import org.muml.psm.allocation.language.^as.ResourceConstraint
 import org.muml.psm.allocation.language.^as.TypedPair
 import org.muml.psm.allocation.language.^as.WeightTupleDescriptor
-import org.muml.psm.allocation.language.cs.EvaluatableElementCS
-import org.muml.psm.allocation.language.cs.LocationConstraintCS
-import org.muml.psm.allocation.language.cs.QoSDimensionCS
-import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS
-import org.muml.psm.allocation.language.cs.ResourceConstraintCS
 
 class TypesUtil {
 	private static final String missingEnvFac = "An EnvironmentFactory should be associated with %s"
@@ -32,7 +27,6 @@ class TypesUtil {
 	/* will removed */
 	/*@NonNull*/
 	static def Type getType(EnvironmentFactoryInternal envFactory, EClass eClass) {
-		// XXX: eek mmm -> envFac
 		val IdResolver idResolver = envFactory.idResolver
 		idResolver.getType(eClass)
 	}
@@ -82,38 +76,34 @@ class TypesUtil {
 	
 	/*@NonNull*/
 	static def TupleType createLocationConstraintTupleType(EnvironmentFactoryInternal envFactory,
-		LocationConstraintCS constraintCS
+		LocationConstraint constraint
 	) {
-		val LocationConstraint constraint = PivotUtil.getPivot(typeof(LocationConstraint),
-			constraintCS
-		)
 		val Map<String, Type> namedParts = convertToNamedParts(constraint.tupleDescriptor.typedPairs)
 		createTupleType(envFactory, namedParts)
 	}
 	
 	/*@NonNull*/
-	static def Type createLocationConstraintType(LocationConstraintCS locationConstraintCS) {
-		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(locationConstraintCS)
+	static def Type createLocationConstraintType(LocationConstraint constraint) {
+		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraint)
 		createSetType(envFactory,
-			createLocationConstraintTupleType(envFactory, locationConstraintCS)
+			createLocationConstraintTupleType(envFactory, constraint)
 		)
 	}
 	
 	/*@NonNull*/
 	static def TupleType createReqHWResInstanceConstraintTupleType(EnvironmentFactoryInternal envFactory,
-		RequiredHardwareResourceInstanceConstraintCS constraintCS
+		RequiredHardwareResourceInstanceConstraint constraint
 	) {
-		val RequiredHardwareResourceInstanceConstraint constraint = PivotUtil.getPivot(typeof(RequiredHardwareResourceInstanceConstraint), constraintCS)
 		val Map<String, Type> namedParts = convertToNamedParts(constraint.tupleDescriptor.typedPairs)
 		createTupleType(envFactory, namedParts)
 	}
 	
 	/*@NonNull*/
-	static def Type createReqHWResInstanceConstraintType(RequiredHardwareResourceInstanceConstraintCS constraintCS) {
-		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraintCS)
+	static def Type createReqHWResInstanceConstraintType(RequiredHardwareResourceInstanceConstraint constraint) {
+		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraint)
 		
 		createSetType(envFactory,
-			createReqHWResInstanceConstraintTupleType(envFactory, constraintCS)
+			createReqHWResInstanceConstraintTupleType(envFactory, constraint)
 		)
 	}
 	
@@ -130,9 +120,8 @@ class TypesUtil {
 	
 	/*@NonNull*/
 	static def TupleType createResourceConstraintInnerTupleType(EnvironmentFactoryInternal envFactory,
-		ResourceConstraintCS constraintCS
+		ResourceConstraint constraint
 	) {
-		val ResourceConstraint constraint = PivotUtil.getPivot(typeof(ResourceConstraint), constraintCS)
 		createWeightTupleDescriptorTupleType(envFactory,
 			constraint.tupleDescriptor
 		)
@@ -140,11 +129,10 @@ class TypesUtil {
 	
 	/*@NonNull*/
 	static def TupleType createResourceConstraintOuterTupleType(EnvironmentFactoryInternal envFactory,
-		ResourceConstraintCS constraintCS
+		ResourceConstraint constraint
 	) {
-		val ResourceConstraint constraint = PivotUtil.getPivot(typeof(ResourceConstraint), constraintCS)
 		val Type innerTupleType = createResourceConstraintInnerTupleType(
-			envFactory, constraintCS
+			envFactory, constraint
 		)
 		val Map<String, Type> outerNamedParts = #{
 			constraint.tupleDescriptor.weight -> createSetType(envFactory, innerTupleType),
@@ -154,49 +142,48 @@ class TypesUtil {
 	}
 	
 	/*@NonNull*/
-	static def Type createResourceConstraintType(ResourceConstraintCS constraintCS) {
-		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraintCS)
+	static def Type createResourceConstraintType(ResourceConstraint constraint) {
+		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraint)
 		createSetType(envFactory,
-			createResourceConstraintOuterTupleType(envFactory, constraintCS)
+			createResourceConstraintOuterTupleType(envFactory, constraint)
 		)
 	}
 	
 	// QoS dimension
 	/*@NonNull*/
 	static def TupleType createQoSDimensionTupleType(EnvironmentFactoryInternal envFactory,
-		QoSDimensionCS qosDimensionCS
+		QoSDimension qosDimension
 	) {
-		val QoSDimension qosDimension = PivotUtil.getPivot(typeof(QoSDimension), qosDimensionCS)
 		createWeightTupleDescriptorTupleType(envFactory, qosDimension.tupleDescriptor)
 	}
 	
 	/*@NonNull*/
-	static def Type createQoSDimensionType(QoSDimensionCS qosDimensionCS) {
-		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(qosDimensionCS)
-		createSetType(envFactory,  
-			createQoSDimensionTupleType(envFactory, qosDimensionCS)
+	static def Type createQoSDimensionType(QoSDimension qosDimension) {
+		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(qosDimension)
+		createSetType(envFactory,
+			createQoSDimensionTupleType(envFactory, qosDimension)
 		)
 	}
 	
 	// for convenience:
 	
-	static def dispatch createType(EvaluatableElementCS element) {
+	static def dispatch createType(EvaluatableElement element) {
 		throw new IllegalArgumentException("unexpected element: " + element)
 	}
 	
-	static def dispatch createType(LocationConstraintCS constraintCS) {
-		createLocationConstraintType(constraintCS)
+	static def dispatch createType(LocationConstraint constraint) {
+		createLocationConstraintType(constraint)
 	}
 	
-	static def dispatch createType(RequiredHardwareResourceInstanceConstraintCS constraintCS) {
-		createReqHWResInstanceConstraintType(constraintCS)
+	static def dispatch createType(RequiredHardwareResourceInstanceConstraint constraint) {
+		createReqHWResInstanceConstraintType(constraint)
 	}
 	
-	static def dispatch createType(ResourceConstraintCS constraintCS) {
-		createResourceConstraintType(constraintCS)
+	static def dispatch createType(ResourceConstraint constraint) {
+		createResourceConstraintType(constraint)
 	}
 	
-	static def dispatch createType(QoSDimensionCS qosDimensionCS) {
-		createQoSDimensionType(qosDimensionCS)
+	static def dispatch createType(QoSDimension qosDimension) {
+		createQoSDimensionType(qosDimension)
 	}
 }
