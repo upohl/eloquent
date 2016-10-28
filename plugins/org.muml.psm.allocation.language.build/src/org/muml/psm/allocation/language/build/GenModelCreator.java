@@ -149,7 +149,6 @@ public class GenModelCreator extends AbstractWorkflowComponent {
 		genModel.setValidateModel(true);
 		genModel.setComplianceLevel(GenJDKLevel.JDK80_LITERAL);
 		genModel.setRootExtendsClass("org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container");
-		genModel.setRootExtendsInterface("");
 	}
 	
 	protected String getModelName() {
