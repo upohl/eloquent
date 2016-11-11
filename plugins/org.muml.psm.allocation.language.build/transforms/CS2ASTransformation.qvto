@@ -9,6 +9,10 @@ transformation CS2ASTransformation(in csModel : ECORE, in pivotModel : PIVOT, ou
 // maps an ocl cs class name to a pivot class name
 configuration property oclCS2PivotClassMap : Dict(String, String);
 
+// names of features that should NOT be part of the corresponding as class
+// (simple name, no fqn) (yes... ambiguous)
+configuration property skipFeatures : List(String);
+
 main() {
 	csModel.rootObjects()![EPackage]->map csEPackage2asEPackage();
 	// defer EAnnotation creation in order to avoid mapping "cluttering"
@@ -56,7 +60,9 @@ mapping in EClass::csEClass2asEClass() : EClass
 	name := self.name.csName2asName();
 	_abstract := self._abstract;
 	eSuperTypes += self.eSuperTypes->map eClass2eClass();
-	eStructuralFeatures += self.eStructuralFeatures->map eStructuralFeature2eStructuralFeature();
+	eStructuralFeatures += self.eStructuralFeatures->reject(feature |
+		skipFeatures->includes(feature.name)
+	)->map eStructuralFeature2eStructuralFeature();
 	eOperations += self.eOperations->map eOperation2eOperation();
 }
 

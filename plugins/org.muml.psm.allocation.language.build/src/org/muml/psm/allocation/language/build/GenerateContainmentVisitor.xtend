@@ -45,6 +45,13 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 	 */
 	private List<String> primarySuperCallWhitelist = <String>newArrayList()
 	
+	/**
+	 * Names of features for which no code should be generated.
+	 * Note: a feature is simply specified by name (simple name, no fqn) (yes... ambiguous)
+	 * Note2: this is a gross hack...
+	 */
+	private List<String> skipFeatures = <String>newArrayList()
+	
 	def public void setCsGenModelURI(String csGenModelURI) {
 		this.csGenModelURI = csGenModelURI
 	}
@@ -59,6 +66,10 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 	
 	def public void addgeneratePrimarySuperCallFor(String className) {
 		primarySuperCallWhitelist.add(className)
+	}
+	
+	def public void addskipFeatures(String featureName) {
+		skipFeatures.add(featureName)
 	}
 	
 	override checkConfiguration(Issues issues) {
@@ -171,7 +182,9 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 	def protected String generateFeatures(GenClass genClass) {
 		'''
 		«FOR genFeature : genClass.genFeatures»
+		«IF !skipFeatures.contains(genFeature.ecoreFeature.name)»
 		«genFeature.generateFeature»
+		«ENDIF»
 		«ENDFOR»
 		'''
 	}

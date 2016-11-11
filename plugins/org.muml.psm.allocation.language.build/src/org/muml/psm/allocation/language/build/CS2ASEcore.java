@@ -1,5 +1,7 @@
 package org.muml.psm.allocation.language.build;
 
+import java.util.List;
+
 import org.eclipse.emf.mwe.core.WorkflowContext;
 import org.eclipse.emf.mwe.core.issues.Issues;
 import org.eclipse.emf.mwe.core.monitor.ProgressMonitor;
@@ -11,6 +13,7 @@ import org.eclipse.ocl.examples.build.utilities.PredefinedQVToTransformationExec
 public class CS2ASEcore extends PredefinedQVToTransformationExecutor {
 	private static final String TRANSFORMATION_URI = "platform:/resource/org.muml.psm.allocation.language.build/transforms/CS2ASTransformation.qvto";
 	private static final String oclCS2PivotClassMap = "oclCS2PivotClassMap";
+	private static final String skipFeatures = "skipFeatures";
 	
 	private String csModelURI;
 	private String pivotModelURI;
@@ -49,5 +52,8 @@ public class CS2ASEcore extends PredefinedQVToTransformationExecutor {
 		dict.put("ContextCS", "ExpressionInOCL");
 		dict.put("TypedElementCS", "TypedElement");
 		context.setConfigProperty(oclCS2PivotClassMap, dict);
+		List<String> skipFeaturesList = Utils.<String>createList();
+		skipFeaturesList.add("nameProviderImplementationClass");
+		context.setConfigProperty(skipFeatures, skipFeaturesList);
 	}
 }

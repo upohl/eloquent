@@ -34,6 +34,8 @@ Workflow {
 		// visitor method is called, because it "installs" the classifier context
 		// operation decls etc. 
 		generatePrimarySuperCallFor = "SpecificationCS"
+		skipFeatures = "nameProviderImplementationClass"
+		skipFeatures = "nameProvider"
 	}
 	
 	// generate left2right visitor
