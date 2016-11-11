@@ -57,6 +57,7 @@ mapping in EClass::csEClass2asEClass() : EClass
 	_abstract := self._abstract;
 	eSuperTypes += self.eSuperTypes->map eClass2eClass();
 	eStructuralFeatures += self.eStructuralFeatures->map eStructuralFeature2eStructuralFeature();
+	eOperations += self.eOperations->map eOperation2eOperation();
 }
 
 mapping in EStructuralFeature::eStructuralFeature2eStructuralFeature() : EStructuralFeature
@@ -114,6 +115,26 @@ mapping in EEnumLiteral::eLiteral2eLiteral() : EEnumLiteral {
 	name := self.name;
 	value := self.value;
 	_literal := self._literal;
+}
+
+mapping in EOperation::eOperation2eOperation() : EOperation {
+	name := self.name;
+	lowerBound := self.lowerBound;
+	upperBound := self.upperBound;
+	_ordered := self._ordered;
+	unique := self.unique;
+	eType := self.eType.map eClassifier2eClassifier();
+	eParameters += self.eParameters->map eParameter2eParameter();
+	-- exceptions and other attributes are omitted
+}
+
+mapping in EParameter::eParameter2eParameter() : EParameter {
+	name := self.name;
+	lowerBound := self.lowerBound;
+	upperBound := self.upperBound;
+	_ordered := self._ordered;
+	unique := self.unique;
+	eType := self.eType.map eClassifier2eClassifier();
 }
 
 mapping inout EModelElement::createEAnnotations() {
