@@ -98,8 +98,9 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 		asGenModel = loadGenModel(asGenModelURI)
 		'''
 		«FOR genClass : csGenModel.genPackages.get(0).genClasses»
+			«IF genClass.ecoreClass.EAllSuperTypes.exists[superType | superType.name.equals("VisitableCS")]»
 				«genClass.generateMethod»
-				
+			«ENDIF»
 		«ENDFOR»
 		'''
 	}
