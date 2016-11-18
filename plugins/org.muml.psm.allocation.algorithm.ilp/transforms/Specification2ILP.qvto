@@ -7,6 +7,7 @@ import ResourceConstraint;
 import ObjectiveFunction;
 import Util;
 import Variables;
+import VariableHelper;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype allocationSpecificationCS uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
@@ -32,6 +33,7 @@ main() {
 	var startTime : Integer;
 	var endTime : Integer;
 	startTime := getCurrentTime();
+	VariableHelper::initialize(specification.nameProvider);
 	ilp.map createGeneralConstraints(cic, hpic);
 	endTime := getCurrentTime();
 	log("Time for create GeneralConstraints:"+((endTime-startTime)/1000).toString()+" seconds");

@@ -7,65 +7,28 @@ modeltype common uses core::expressions::common('http://www.muml.org/core/expres
 modeltype instance uses pim::instance('http://www.muml.org/pim/instance/1.0.0');
 modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0');
 modeltype hwrinstance uses hardware::hwresourceinstance('http://www.muml.org/pm/hardware/hwresourceinstance/1.0.0');
+modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 
 library VariableHelper;
+
+property nameProvider : NameProvider;
 
 query ILLEGAL_VARIABLE_CHARS() : OrderedSet(String) {
 	return OrderedSet{' '};
 }
 
-query Sequence(NamedElement)::getVariableName() : String {
+query OclAny::getVariableName() : String {
+	return this.nameProvider.getName(self);
+}
+
+query Sequence(OclAny)::getVariableName() : String {
 	return '_'.join(self->collect(getVariableName()));
-}
-
-query NamedElement::getVariableName() : String {
-	// fail in order to detect potential errors
-	assert fatal (false) with log("implement me");
-	return '';
-}
-
-query ComponentInstance::getVariableName() : String {
-	return '.'.join(self.getParentComponents()->collect(name));
-}
-
-query ComponentInstance::getParentComponents() : OrderedSet(ComponentInstance) {
-	return self->asOrderedSet()->closure(ci : ComponentInstance |
-		let sci : StructuredComponentInstance = ci.parentCIC.parentStructuredComponentInstance
-		in
-		if sci.oclIsUndefined() then
-			ci->asOrderedSet()
-		else
-			OrderedSet{ci, sci}
-		endif
-	)->reverse()->collect(oclAsType(ComponentInstance))->asOrderedSet();
-}
-
-query ResourceInstance::getVariableName() : String {
-	return '.'.join(self.getParentHPICs()
-		->collect(parentHWPlatformInstance.name)
-		->append(self.name)
-	); 
-}
-
-query ResourceInstance::getParentHPIC() : HWPlatformInstanceConfiguration {
-	// eek!
-	return self.container().oclAsType(HWPlatformInstanceConfiguration);
-}
-
-query ResourceInstance::getParentHPICs() : OrderedSet(HWPlatformInstanceConfiguration) {
-	return
-	let hpics : OrderedSet(HWPlatformInstanceConfiguration)= self.getParentHPIC()->asOrderedSet()
-		->closure(hpic : HWPlatformInstanceConfiguration |
-			if hpic.parentHWPlatformInstance.oclIsUndefined() then
-				OrderedSet{}
-			else
-				OrderedSet{hpic, hpic.parentHWPlatformInstance.parentHPIC}
-			endif
-		)
-	in
-	hpics->subOrderedSet(1, hpics->size() - 1);
 }
 
 query Sequence(NamedElement)::getVariable() : Variable {
 	return Sequence{self}.resolveone(Variable);
+}
+
+helper initialize(nameProvider : NameProvider) {
+	this.nameProvider := nameProvider;
 }
