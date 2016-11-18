@@ -27,30 +27,35 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
-		private final Assignment cOwnedImportsAssignment_3_0 = (Assignment)cAlternatives_3.eContents().get(0);
-		private final RuleCall cOwnedImportsImportCSParserRuleCall_3_0_0 = (RuleCall)cOwnedImportsAssignment_3_0.eContents().get(0);
-		private final Assignment cOwnedContextsAssignment_3_1 = (Assignment)cAlternatives_3.eContents().get(1);
-		private final RuleCall cOwnedContextsClassifierContextDeclCSParserRuleCall_3_1_0 = (RuleCall)cOwnedContextsAssignment_3_1.eContents().get(0);
-		private final Assignment cServicesAssignment_3_2 = (Assignment)cAlternatives_3.eContents().get(2);
-		private final RuleCall cServicesServiceParserRuleCall_3_2_0 = (RuleCall)cServicesAssignment_3_2.eContents().get(0);
-		private final Assignment cConstraintsAssignment_3_3 = (Assignment)cAlternatives_3.eContents().get(3);
-		private final RuleCall cConstraintsConstraintParserRuleCall_3_3_0 = (RuleCall)cConstraintsAssignment_3_3.eContents().get(0);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Assignment cGoalAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
-		private final RuleCall cGoalGoalEnumRuleCall_4_0_0 = (RuleCall)cGoalAssignment_4_0.eContents().get(0);
-		private final Assignment cMeasureAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cMeasureMeasureFunctionParserRuleCall_4_1_0 = (RuleCall)cMeasureAssignment_4_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cNameProviderImplementationClassAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNameProviderImplementationClassNameProviderImplementationClassParserRuleCall_3_0 = (RuleCall)cNameProviderImplementationClassAssignment_3.eContents().get(0);
+		private final Alternatives cAlternatives_4 = (Alternatives)cGroup.eContents().get(4);
+		private final Assignment cOwnedImportsAssignment_4_0 = (Assignment)cAlternatives_4.eContents().get(0);
+		private final RuleCall cOwnedImportsImportCSParserRuleCall_4_0_0 = (RuleCall)cOwnedImportsAssignment_4_0.eContents().get(0);
+		private final Assignment cOwnedContextsAssignment_4_1 = (Assignment)cAlternatives_4.eContents().get(1);
+		private final RuleCall cOwnedContextsClassifierContextDeclCSParserRuleCall_4_1_0 = (RuleCall)cOwnedContextsAssignment_4_1.eContents().get(0);
+		private final Assignment cServicesAssignment_4_2 = (Assignment)cAlternatives_4.eContents().get(2);
+		private final RuleCall cServicesServiceParserRuleCall_4_2_0 = (RuleCall)cServicesAssignment_4_2.eContents().get(0);
+		private final Assignment cConstraintsAssignment_4_3 = (Assignment)cAlternatives_4.eContents().get(3);
+		private final RuleCall cConstraintsConstraintParserRuleCall_4_3_0 = (RuleCall)cConstraintsAssignment_4_3.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Assignment cGoalAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
+		private final RuleCall cGoalGoalEnumRuleCall_5_0_0 = (RuleCall)cGoalAssignment_5_0.eContents().get(0);
+		private final Assignment cMeasureAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cMeasureMeasureFunctionParserRuleCall_5_1_0 = (RuleCall)cMeasureAssignment_5_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Specification cs::SpecificationCS:
-		//	{cs::SpecificationCS} name=ID '{' (ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS
+		//	{cs::SpecificationCS} name=ID '{'
+		//	nameProviderImplementationClass=NameProviderImplementationClass (ownedImports+=ImportCS |
+		//	ownedContexts+=ClassifierContextDeclCS
 		//	| services+=Service | constraints+=Constraint)* (goal=Goal measure=MeasureFunction)?
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{cs::SpecificationCS} name=ID '{' (ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS | services+=Service |
-		//constraints+=Constraint)* (goal=Goal measure=MeasureFunction)? '}'
+		//{cs::SpecificationCS} name=ID '{' nameProviderImplementationClass=NameProviderImplementationClass
+		//(ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS | services+=Service | constraints+=Constraint)*
+		//(goal=Goal measure=MeasureFunction)? '}'
 		public Group getGroup() { return cGroup; }
 
 		//{cs::SpecificationCS}
@@ -65,50 +70,88 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
+		//nameProviderImplementationClass=NameProviderImplementationClass
+		public Assignment getNameProviderImplementationClassAssignment_3() { return cNameProviderImplementationClassAssignment_3; }
+
+		//NameProviderImplementationClass
+		public RuleCall getNameProviderImplementationClassNameProviderImplementationClassParserRuleCall_3_0() { return cNameProviderImplementationClassNameProviderImplementationClassParserRuleCall_3_0; }
+
 		//(ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS | services+=Service | constraints+=Constraint)*
-		public Alternatives getAlternatives_3() { return cAlternatives_3; }
+		public Alternatives getAlternatives_4() { return cAlternatives_4; }
 
 		//ownedImports+=ImportCS
-		public Assignment getOwnedImportsAssignment_3_0() { return cOwnedImportsAssignment_3_0; }
+		public Assignment getOwnedImportsAssignment_4_0() { return cOwnedImportsAssignment_4_0; }
 
 		//ImportCS
-		public RuleCall getOwnedImportsImportCSParserRuleCall_3_0_0() { return cOwnedImportsImportCSParserRuleCall_3_0_0; }
+		public RuleCall getOwnedImportsImportCSParserRuleCall_4_0_0() { return cOwnedImportsImportCSParserRuleCall_4_0_0; }
 
 		//ownedContexts+=ClassifierContextDeclCS
-		public Assignment getOwnedContextsAssignment_3_1() { return cOwnedContextsAssignment_3_1; }
+		public Assignment getOwnedContextsAssignment_4_1() { return cOwnedContextsAssignment_4_1; }
 
 		//ClassifierContextDeclCS
-		public RuleCall getOwnedContextsClassifierContextDeclCSParserRuleCall_3_1_0() { return cOwnedContextsClassifierContextDeclCSParserRuleCall_3_1_0; }
+		public RuleCall getOwnedContextsClassifierContextDeclCSParserRuleCall_4_1_0() { return cOwnedContextsClassifierContextDeclCSParserRuleCall_4_1_0; }
 
 		//services+=Service
-		public Assignment getServicesAssignment_3_2() { return cServicesAssignment_3_2; }
+		public Assignment getServicesAssignment_4_2() { return cServicesAssignment_4_2; }
 
 		//Service
-		public RuleCall getServicesServiceParserRuleCall_3_2_0() { return cServicesServiceParserRuleCall_3_2_0; }
+		public RuleCall getServicesServiceParserRuleCall_4_2_0() { return cServicesServiceParserRuleCall_4_2_0; }
 
 		//constraints+=Constraint
-		public Assignment getConstraintsAssignment_3_3() { return cConstraintsAssignment_3_3; }
+		public Assignment getConstraintsAssignment_4_3() { return cConstraintsAssignment_4_3; }
 
 		//Constraint
-		public RuleCall getConstraintsConstraintParserRuleCall_3_3_0() { return cConstraintsConstraintParserRuleCall_3_3_0; }
+		public RuleCall getConstraintsConstraintParserRuleCall_4_3_0() { return cConstraintsConstraintParserRuleCall_4_3_0; }
 
 		//(goal=Goal measure=MeasureFunction)?
-		public Group getGroup_4() { return cGroup_4; }
+		public Group getGroup_5() { return cGroup_5; }
 
 		//goal=Goal
-		public Assignment getGoalAssignment_4_0() { return cGoalAssignment_4_0; }
+		public Assignment getGoalAssignment_5_0() { return cGoalAssignment_5_0; }
 
 		//Goal
-		public RuleCall getGoalGoalEnumRuleCall_4_0_0() { return cGoalGoalEnumRuleCall_4_0_0; }
+		public RuleCall getGoalGoalEnumRuleCall_5_0_0() { return cGoalGoalEnumRuleCall_5_0_0; }
 
 		//measure=MeasureFunction
-		public Assignment getMeasureAssignment_4_1() { return cMeasureAssignment_4_1; }
+		public Assignment getMeasureAssignment_5_1() { return cMeasureAssignment_5_1; }
 
 		//MeasureFunction
-		public RuleCall getMeasureMeasureFunctionParserRuleCall_4_1_0() { return cMeasureMeasureFunctionParserRuleCall_4_1_0; }
+		public RuleCall getMeasureMeasureFunctionParserRuleCall_5_1_0() { return cMeasureMeasureFunctionParserRuleCall_5_1_0; }
 
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+	}
+
+	public class NameProviderImplementationClassElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.NameProviderImplementationClass");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cNameProviderKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cImplementationAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cImplementationJavaClassCSCrossReference_1_0 = (CrossReference)cImplementationAssignment_1.eContents().get(0);
+		private final RuleCall cImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1 = (RuleCall)cImplementationJavaClassCSCrossReference_1_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//NameProviderImplementationClass cs::JavaImplementationProviderCS:
+		//	'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING] ';'
+		@Override public ParserRule getRule() { return rule; }
+
+		//'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING] ';'
+		public Group getGroup() { return cGroup; }
+
+		//'nameProvider'
+		public Keyword getNameProviderKeyword_0() { return cNameProviderKeyword_0; }
+
+		//implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING]
+		public Assignment getImplementationAssignment_1() { return cImplementationAssignment_1; }
+
+		//[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING]
+		public CrossReference getImplementationJavaClassCSCrossReference_1_0() { return cImplementationJavaClassCSCrossReference_1_0; }
+
+		//SINGLE_QUOTED_STRING
+		public RuleCall getImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1() { return cImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1; }
+
+		//';'
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
 	public class ServiceElements extends AbstractParserRuleElementFinder {
@@ -825,6 +868,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 	
 	private final SpecificationElements pSpecification;
+	private final NameProviderImplementationClassElements pNameProviderImplementationClass;
 	private final ServiceElements pService;
 	private final QosDimensionElements pQosDimension;
 	private final TypedPairElements pTypedPair;
@@ -858,6 +902,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		this.gaEssentialOCL = gaEssentialOCL;
 		this.gaBase = gaBase;
 		this.pSpecification = new SpecificationElements();
+		this.pNameProviderImplementationClass = new NameProviderImplementationClassElements();
 		this.pService = new ServiceElements();
 		this.pQosDimension = new QosDimensionElements();
 		this.pTypedPair = new TypedPairElements();
@@ -910,7 +955,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 	
 	//Specification cs::SpecificationCS:
-	//	{cs::SpecificationCS} name=ID '{' (ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS
+	//	{cs::SpecificationCS} name=ID '{'
+	//	nameProviderImplementationClass=NameProviderImplementationClass (ownedImports+=ImportCS |
+	//	ownedContexts+=ClassifierContextDeclCS
 	//	| services+=Service | constraints+=Constraint)* (goal=Goal measure=MeasureFunction)?
 	//	'}'
 	public SpecificationElements getSpecificationAccess() {
@@ -919,6 +966,16 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	
 	public ParserRule getSpecificationRule() {
 		return getSpecificationAccess().getRule();
+	}
+
+	//NameProviderImplementationClass cs::JavaImplementationProviderCS:
+	//	'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING] ';'
+	public NameProviderImplementationClassElements getNameProviderImplementationClassAccess() {
+		return pNameProviderImplementationClass;
+	}
+	
+	public ParserRule getNameProviderImplementationClassRule() {
+		return getNameProviderImplementationClassAccess().getRule();
 	}
 
 	//Service cs::ServiceCS:

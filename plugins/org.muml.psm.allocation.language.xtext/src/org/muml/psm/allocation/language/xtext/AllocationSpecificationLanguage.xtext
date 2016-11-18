@@ -5,15 +5,21 @@ grammar org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage w
 // the platform uri import mechanism as well
 import "platform:/resource/org.muml.psm.allocation.language/model/LanguageSpecificationCS.ecore" as cs
 import "platform:/resource/org.eclipse.ocl.xtext.essentialocl/model/EssentialOCLCS.ecore" as essentialocl
+import "platform:/resource/org.eclipse.ocl.xtext.oclstdlib/model/OCLstdlibCS.ecore" as oclstdlib
 
 Specification returns cs::SpecificationCS:
 	{cs::SpecificationCS}
 	name=ID '{'
+		nameProviderImplementationClass=NameProviderImplementationClass
 		(ownedImports += ImportCS | ownedContexts += ClassifierContextDeclCS
 			| services += Service | constraints += Constraint
 		)*
 		(goal=Goal measure=MeasureFunction)? 
 	'}'
+;
+
+NameProviderImplementationClass returns cs::JavaImplementationProviderCS:
+	'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING] ';'
 ;
 
 Service returns cs::ServiceCS:

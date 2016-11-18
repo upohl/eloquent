@@ -71,6 +71,7 @@ import org.eclipse.ocl.xtext.essentialoclcs.TupleLiteralPartCS;
 import org.eclipse.ocl.xtext.essentialoclcs.TypeLiteralExpCS;
 import org.eclipse.ocl.xtext.essentialoclcs.TypeNameExpCS;
 import org.eclipse.ocl.xtext.essentialoclcs.UnlimitedNaturalLiteralExpCS;
+import org.eclipse.ocl.xtext.oclstdlibcs.OCLstdlibCSPackage;
 import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Parameter;
 import org.eclipse.xtext.ParserRule;
@@ -79,6 +80,7 @@ import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
+import org.muml.psm.allocation.language.cs.JavaImplementationProviderCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
@@ -256,6 +258,9 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 			switch (semanticObject.eClass().getClassifierID()) {
 			case CsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS:
 				sequence_BoundWeightTupleDescriptor(context, (BoundWeightTupleDescriptorCS) semanticObject); 
+				return; 
+			case CsPackage.JAVA_IMPLEMENTATION_PROVIDER_CS:
+				sequence_NameProviderImplementationClass(context, (JavaImplementationProviderCS) semanticObject); 
 				return; 
 			case CsPackage.LOCATION_CONSTRAINT_CS:
 				sequence_LocationConstraint(context, (LocationConstraintCS) semanticObject); 
@@ -512,6 +517,24 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	
 	/**
 	 * Contexts:
+	 *     NameProviderImplementationClass returns JavaImplementationProviderCS
+	 *
+	 * Constraint:
+	 *     implementation=[JavaClassCS|SINGLE_QUOTED_STRING]
+	 */
+	protected void sequence_NameProviderImplementationClass(ISerializationContext context, JavaImplementationProviderCS semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OCLstdlibCSPackage.Literals.JAVA_IMPLEMENTATION_CS__IMPLEMENTATION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OCLstdlibCSPackage.Literals.JAVA_IMPLEMENTATION_CS__IMPLEMENTATION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getNameProviderImplementationClassAccess().getImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1(), semanticObject.getImplementation());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     QosDimension returns QoSDimensionCS
 	 *
 	 * Constraint:
@@ -579,6 +602,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 * Constraint:
 	 *     (
 	 *         name=ID 
+	 *         nameProviderImplementationClass=NameProviderImplementationClass 
 	 *         (ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS | services+=Service | constraints+=Constraint)* 
 	 *         (goal=Goal measure=MeasureFunction)?
 	 *     )

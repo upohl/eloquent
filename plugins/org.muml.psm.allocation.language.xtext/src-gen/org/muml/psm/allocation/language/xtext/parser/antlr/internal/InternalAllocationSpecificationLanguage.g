@@ -115,19 +115,37 @@ ruleSpecification returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getSpecificationAccess().getLeftCurlyBracketKeyword_2());
     }
-((
+(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSpecificationAccess().getOwnedImportsImportCSParserRuleCall_3_0_0()); 
+	        newCompositeNode(grammarAccess.getSpecificationAccess().getNameProviderImplementationClassNameProviderImplementationClassParserRuleCall_3_0()); 
 	    }
-		lv_ownedImports_3_0=ruleImportCS		{
+		lv_nameProviderImplementationClass_3_0=ruleNameProviderImplementationClass		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getSpecificationRule());
+	        }
+       		set(
+       			$current, 
+       			"nameProviderImplementationClass",
+        		lv_nameProviderImplementationClass_3_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.NameProviderImplementationClass");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getSpecificationAccess().getOwnedImportsImportCSParserRuleCall_4_0_0()); 
+	    }
+		lv_ownedImports_4_0=ruleImportCS		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSpecificationRule());
 	        }
        		add(
        			$current, 
        			"ownedImports",
-        		lv_ownedImports_3_0, 
+        		lv_ownedImports_4_0, 
         		"org.eclipse.ocl.xtext.completeocl.CompleteOCL.ImportCS");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -137,16 +155,16 @@ ruleSpecification returns [EObject current=null]
     |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSpecificationAccess().getOwnedContextsClassifierContextDeclCSParserRuleCall_3_1_0()); 
+	        newCompositeNode(grammarAccess.getSpecificationAccess().getOwnedContextsClassifierContextDeclCSParserRuleCall_4_1_0()); 
 	    }
-		lv_ownedContexts_4_0=ruleClassifierContextDeclCS		{
+		lv_ownedContexts_5_0=ruleClassifierContextDeclCS		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSpecificationRule());
 	        }
        		add(
        			$current, 
        			"ownedContexts",
-        		lv_ownedContexts_4_0, 
+        		lv_ownedContexts_5_0, 
         		"org.eclipse.ocl.xtext.completeocl.CompleteOCL.ClassifierContextDeclCS");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -156,16 +174,16 @@ ruleSpecification returns [EObject current=null]
     |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSpecificationAccess().getServicesServiceParserRuleCall_3_2_0()); 
+	        newCompositeNode(grammarAccess.getSpecificationAccess().getServicesServiceParserRuleCall_4_2_0()); 
 	    }
-		lv_services_5_0=ruleService		{
+		lv_services_6_0=ruleService		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSpecificationRule());
 	        }
        		add(
        			$current, 
        			"services",
-        		lv_services_5_0, 
+        		lv_services_6_0, 
         		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.Service");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -175,16 +193,16 @@ ruleSpecification returns [EObject current=null]
     |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSpecificationAccess().getConstraintsConstraintParserRuleCall_3_3_0()); 
+	        newCompositeNode(grammarAccess.getSpecificationAccess().getConstraintsConstraintParserRuleCall_4_3_0()); 
 	    }
-		lv_constraints_6_0=ruleConstraint		{
+		lv_constraints_7_0=ruleConstraint		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSpecificationRule());
 	        }
        		add(
        			$current, 
        			"constraints",
-        		lv_constraints_6_0, 
+        		lv_constraints_7_0, 
         		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.Constraint");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -193,16 +211,16 @@ ruleSpecification returns [EObject current=null]
 ))*((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSpecificationAccess().getGoalGoalEnumRuleCall_4_0_0()); 
+	        newCompositeNode(grammarAccess.getSpecificationAccess().getGoalGoalEnumRuleCall_5_0_0()); 
 	    }
-		lv_goal_7_0=ruleGoal		{
+		lv_goal_8_0=ruleGoal		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSpecificationRule());
 	        }
        		set(
        			$current, 
        			"goal",
-        		lv_goal_7_0, 
+        		lv_goal_8_0, 
         		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.Goal");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -211,24 +229,69 @@ ruleSpecification returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSpecificationAccess().getMeasureMeasureFunctionParserRuleCall_4_1_0()); 
+	        newCompositeNode(grammarAccess.getSpecificationAccess().getMeasureMeasureFunctionParserRuleCall_5_1_0()); 
 	    }
-		lv_measure_8_0=ruleMeasureFunction		{
+		lv_measure_9_0=ruleMeasureFunction		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSpecificationRule());
 	        }
        		set(
        			$current, 
        			"measure",
-        		lv_measure_8_0, 
+        		lv_measure_9_0, 
         		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.MeasureFunction");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))?	otherlv_9='}' 
+))?	otherlv_10='}' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getSpecificationAccess().getRightCurlyBracketKeyword_5());
+    	newLeafNode(otherlv_10, grammarAccess.getSpecificationAccess().getRightCurlyBracketKeyword_6());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleNameProviderImplementationClass
+entryRuleNameProviderImplementationClass returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getNameProviderImplementationClassRule()); }
+	 iv_ruleNameProviderImplementationClass=ruleNameProviderImplementationClass 
+	 { $current=$iv_ruleNameProviderImplementationClass.current; } 
+	 EOF 
+;
+
+// Rule NameProviderImplementationClass
+ruleNameProviderImplementationClass returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='nameProvider' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getNameProviderImplementationClassAccess().getNameProviderKeyword_0());
+    }
+(
+(
+		{ 
+		  /* */ 
+		}
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getNameProviderImplementationClassRule());
+	        }
+        }
+	otherlv_1=RULE_SINGLE_QUOTED_STRING
+	{
+		newLeafNode(otherlv_1, grammarAccess.getNameProviderImplementationClassAccess().getImplementationJavaClassCSCrossReference_1_0()); 
+	}
+
+)
+)	otherlv_2=';' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getNameProviderImplementationClassAccess().getSemicolonKeyword_2());
     }
 )
 ;
