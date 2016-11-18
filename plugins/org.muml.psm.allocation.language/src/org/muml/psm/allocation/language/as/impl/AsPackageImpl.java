@@ -5,6 +5,7 @@ package org.muml.psm.allocation.language.as.impl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
@@ -19,9 +20,11 @@ import org.muml.psm.allocation.language.as.BoundWeightTupleDescriptor;
 import org.muml.psm.allocation.language.as.Constraint;
 import org.muml.psm.allocation.language.as.EvaluatableElement;
 import org.muml.psm.allocation.language.as.Goal;
+import org.muml.psm.allocation.language.as.JavaImplementationProvider;
 import org.muml.psm.allocation.language.as.LocationConstraint;
 import org.muml.psm.allocation.language.as.LocationConstraintTypes;
 import org.muml.psm.allocation.language.as.MeasureFunction;
+import org.muml.psm.allocation.language.as.NameProvider;
 import org.muml.psm.allocation.language.as.QoSDimension;
 import org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint;
 import org.muml.psm.allocation.language.as.ResourceConstraint;
@@ -138,6 +141,20 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * @generated
 	 */
 	private EClass qoSDimensionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass javaImplementationProviderEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass nameProviderEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -270,6 +287,15 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 */
 	public EAttribute getSpecification_Goal() {
 		return (EAttribute)specificationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSpecification_NameProvider() {
+		return (EReference)specificationEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -511,6 +537,24 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getJavaImplementationProvider() {
+		return javaImplementationProviderEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNameProvider() {
+		return nameProviderEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getLocationConstraintTypes() {
 		return locationConstraintTypesEEnum;
 	}
@@ -557,6 +601,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		createEReference(specificationEClass, SPECIFICATION__CONSTRAINTS);
 		createEReference(specificationEClass, SPECIFICATION__MEASURE);
 		createEAttribute(specificationEClass, SPECIFICATION__GOAL);
+		createEReference(specificationEClass, SPECIFICATION__NAME_PROVIDER);
 
 		evaluatableElementEClass = createEClass(EVALUATABLE_ELEMENT);
 		createEReference(evaluatableElementEClass, EVALUATABLE_ELEMENT__EXPRESSION);
@@ -596,6 +641,10 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		qoSDimensionEClass = createEClass(QO_SDIMENSION);
 		createEReference(qoSDimensionEClass, QO_SDIMENSION__TUPLE_DESCRIPTOR);
+
+		javaImplementationProviderEClass = createEClass(JAVA_IMPLEMENTATION_PROVIDER);
+
+		nameProviderEClass = createEClass(NAME_PROVIDER);
 
 		// Create enums
 		locationConstraintTypesEEnum = createEEnum(LOCATION_CONSTRAINT_TYPES);
@@ -649,6 +698,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		serviceEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
 		qoSDimensionEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
 		qoSDimensionEClass.getESuperTypes().add(this.getEvaluatableElement());
+		javaImplementationProviderEClass.getESuperTypes().add(thePivotPackage.getElement());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(specificationEClass, Specification.class, "Specification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -656,6 +706,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		initEReference(getSpecification_Constraints(), this.getConstraint(), null, "constraints", null, 0, -1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecification_Measure(), this.getMeasureFunction(), null, "measure", null, 0, 1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpecification_Goal(), this.getGoal(), "goal", null, 0, 1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecification_NameProvider(), this.getNameProvider(), null, "nameProvider", null, 0, 1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(evaluatableElementEClass, EvaluatableElement.class, "EvaluatableElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEvaluatableElement_Expression(), thePivotPackage.getExpressionInOCL(), null, "expression", null, 1, 1, EvaluatableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -695,6 +746,13 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		initEClass(qoSDimensionEClass, QoSDimension.class, "QoSDimension", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQoSDimension_TupleDescriptor(), this.getWeightTupleDescriptor(), null, "tupleDescriptor", null, 1, 1, QoSDimension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(javaImplementationProviderEClass, JavaImplementationProvider.class, "JavaImplementationProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(nameProviderEClass, NameProvider.class, "NameProvider", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		EOperation op = addEOperation(nameProviderEClass, ecorePackage.getEString(), "getName", 1, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, thePivotPackage.getObject(), "element", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(locationConstraintTypesEEnum, LocationConstraintTypes.class, "LocationConstraintTypes");

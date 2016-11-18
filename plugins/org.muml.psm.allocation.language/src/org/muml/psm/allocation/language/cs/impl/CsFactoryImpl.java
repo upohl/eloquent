@@ -69,6 +69,7 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 			case CsPackage.MEASURE_FUNCTION_CS: return createMeasureFunctionCS();
 			case CsPackage.SERVICE_CS: return createServiceCS();
 			case CsPackage.QO_SDIMENSION_CS: return createQoSDimensionCS();
+			case CsPackage.JAVA_IMPLEMENTATION_PROVIDER_CS: return createJavaImplementationProviderCS();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -226,6 +227,16 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	public QoSDimensionCS createQoSDimensionCS() {
 		QoSDimensionCSImpl qoSDimensionCS = new QoSDimensionCSImpl();
 		return qoSDimensionCS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JavaImplementationProviderCS createJavaImplementationProviderCS() {
+		JavaImplementationProviderCSImpl javaImplementationProviderCS = new JavaImplementationProviderCSImpl();
+		return javaImplementationProviderCS;
 	}
 
 	/**

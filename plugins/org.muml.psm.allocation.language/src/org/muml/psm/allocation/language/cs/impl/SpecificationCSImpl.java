@@ -32,7 +32,9 @@ import org.muml.core.Extension;
 import org.muml.psm.allocation.language.cs.ConstraintCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.Goal;
+import org.muml.psm.allocation.language.cs.JavaImplementationProviderCS;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
+import org.muml.psm.allocation.language.cs.NameProviderCS;
 import org.muml.psm.allocation.language.cs.ServiceCS;
 import org.muml.psm.allocation.language.cs.SpecificationCS;
 
@@ -51,6 +53,8 @@ import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
  *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getMeasure <em>Measure</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getGoal <em>Goal</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getNameProviderImplementationClass <em>Name Provider Implementation Class</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getNameProvider <em>Name Provider</em>}</li>
  * </ul>
  *
  * @generated
@@ -115,6 +119,26 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 * @ordered
 	 */
 	protected Goal goal = GOAL_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getNameProviderImplementationClass() <em>Name Provider Implementation Class</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameProviderImplementationClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected JavaImplementationProviderCS nameProviderImplementationClass;
+
+	/**
+	 * The cached value of the '{@link #getNameProvider() <em>Name Provider</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameProvider()
+	 * @generated
+	 * @ordered
+	 */
+	protected NameProviderCS nameProvider;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -240,6 +264,87 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public JavaImplementationProviderCS getNameProviderImplementationClass() {
+		return nameProviderImplementationClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetNameProviderImplementationClass(JavaImplementationProviderCS newNameProviderImplementationClass, NotificationChain msgs) {
+		JavaImplementationProviderCS oldNameProviderImplementationClass = nameProviderImplementationClass;
+		nameProviderImplementationClass = newNameProviderImplementationClass;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.SPECIFICATION_CS__NAME_PROVIDER_IMPLEMENTATION_CLASS, oldNameProviderImplementationClass, newNameProviderImplementationClass);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameProviderImplementationClass(JavaImplementationProviderCS newNameProviderImplementationClass) {
+		if (newNameProviderImplementationClass != nameProviderImplementationClass) {
+			NotificationChain msgs = null;
+			if (nameProviderImplementationClass != null)
+				msgs = ((InternalEObject)nameProviderImplementationClass).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CsPackage.SPECIFICATION_CS__NAME_PROVIDER_IMPLEMENTATION_CLASS, null, msgs);
+			if (newNameProviderImplementationClass != null)
+				msgs = ((InternalEObject)newNameProviderImplementationClass).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CsPackage.SPECIFICATION_CS__NAME_PROVIDER_IMPLEMENTATION_CLASS, null, msgs);
+			msgs = basicSetNameProviderImplementationClass(newNameProviderImplementationClass, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.SPECIFICATION_CS__NAME_PROVIDER_IMPLEMENTATION_CLASS, newNameProviderImplementationClass, newNameProviderImplementationClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NameProviderCS getNameProvider() {
+		if (nameProvider != null && ((EObject)nameProvider).eIsProxy()) {
+			InternalEObject oldNameProvider = (InternalEObject)nameProvider;
+			nameProvider = (NameProviderCS)eResolveProxy(oldNameProvider);
+			if (nameProvider != oldNameProvider) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CsPackage.SPECIFICATION_CS__NAME_PROVIDER, oldNameProvider, nameProvider));
+			}
+		}
+		return nameProvider;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NameProviderCS basicGetNameProvider() {
+		return nameProvider;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameProvider(NameProviderCS newNameProvider) {
+		NameProviderCS oldNameProvider = nameProvider;
+		nameProvider = newNameProvider;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.SPECIFICATION_CS__NAME_PROVIDER, oldNameProvider, nameProvider));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String toString() {
 		return super.toString();
 	}
@@ -290,6 +395,8 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 				return ((InternalEList<?>)getConstraints()).basicRemove(otherEnd, msgs);
 			case CsPackage.SPECIFICATION_CS__MEASURE:
 				return basicSetMeasure(null, msgs);
+			case CsPackage.SPECIFICATION_CS__NAME_PROVIDER_IMPLEMENTATION_CLASS:
+				return basicSetNameProviderImplementationClass(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -312,6 +419,11 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 				return getMeasure();
 			case CsPackage.SPECIFICATION_CS__GOAL:
 				return getGoal();
+			case CsPackage.SPECIFICATION_CS__NAME_PROVIDER_IMPLEMENTATION_CLASS:
+				return getNameProviderImplementationClass();
+			case CsPackage.SPECIFICATION_CS__NAME_PROVIDER:
+				if (resolve) return getNameProvider();
+				return basicGetNameProvider();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -343,6 +455,12 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 			case CsPackage.SPECIFICATION_CS__GOAL:
 				setGoal((Goal)newValue);
 				return;
+			case CsPackage.SPECIFICATION_CS__NAME_PROVIDER_IMPLEMENTATION_CLASS:
+				setNameProviderImplementationClass((JavaImplementationProviderCS)newValue);
+				return;
+			case CsPackage.SPECIFICATION_CS__NAME_PROVIDER:
+				setNameProvider((NameProviderCS)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -370,6 +488,12 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 			case CsPackage.SPECIFICATION_CS__GOAL:
 				setGoal(GOAL_EDEFAULT);
 				return;
+			case CsPackage.SPECIFICATION_CS__NAME_PROVIDER_IMPLEMENTATION_CLASS:
+				setNameProviderImplementationClass((JavaImplementationProviderCS)null);
+				return;
+			case CsPackage.SPECIFICATION_CS__NAME_PROVIDER:
+				setNameProvider((NameProviderCS)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -392,6 +516,10 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 				return measure != null;
 			case CsPackage.SPECIFICATION_CS__GOAL:
 				return goal != GOAL_EDEFAULT;
+			case CsPackage.SPECIFICATION_CS__NAME_PROVIDER_IMPLEMENTATION_CLASS:
+				return nameProviderImplementationClass != null;
+			case CsPackage.SPECIFICATION_CS__NAME_PROVIDER:
+				return nameProvider != null;
 		}
 		return super.eIsSet(featureID);
 	}

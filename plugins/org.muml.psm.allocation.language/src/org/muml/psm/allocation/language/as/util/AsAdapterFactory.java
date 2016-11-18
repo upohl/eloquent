@@ -136,6 +136,14 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 				return createQoSDimensionAdapter();
 			}
 			@Override
+			public Adapter caseJavaImplementationProvider(JavaImplementationProvider object) {
+				return createJavaImplementationProviderAdapter();
+			}
+			@Override
+			public Adapter caseNameProvider(NameProvider object) {
+				return createNameProviderAdapter();
+			}
+			@Override
 			public Adapter caseVisitable(Visitable object) {
 				return createVisitableAdapter();
 			}
@@ -376,6 +384,34 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createQoSDimensionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.JavaImplementationProvider <em>Java Implementation Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.as.JavaImplementationProvider
+	 * @generated
+	 */
+	public Adapter createJavaImplementationProviderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.NameProvider <em>Name Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.as.NameProvider
+	 * @generated
+	 */
+	public Adapter createNameProviderAdapter() {
 		return null;
 	}
 

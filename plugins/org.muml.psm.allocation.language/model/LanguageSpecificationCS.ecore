@@ -37,6 +37,17 @@
         <details key="documentation" value="Represents the optimization goal."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nameProviderImplementationClass"
+        lowerBound="1" eType="#//JavaImplementationProviderCS" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Contains a JavaImplementationProviderCS. This containment won't be&#xA;part of the AS meta model."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nameProvider" eType="#//NameProviderCS">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This reference is not used in the CS model. It is only needed in order to&#xA;automatically create a corresponding reference in the AS meta model."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EvaluatableElementCS" abstract="true"
       eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
@@ -161,5 +172,18 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tupleDescriptor" lowerBound="1"
         eType="#//WeightTupleDescriptorCS" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaImplementationProviderCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS ../../org.eclipse.ocl.xtext.oclstdlib/model/OCLstdlibCS.ecore#//JavaImplementationCS">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The sole purpose of this class is to make oclstdlibcs::JavaImplementationCS&#xA;&quot;concrete&quot;. In order to make the visitor framework happy, we also inherit from&#xA;ModelElementCS.&#xA;The corresponding class in the AS meta model is unused."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NameProviderCS" abstract="true" interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A NameProvider is used to compute a (unique) name for a given model element.&#xA;That is, there exists a bijection between the set of names returned by a NameProvider&#xA;instance and the set of objects that were passed to this NameProvider instance's&#xA;getName method."/>
+    </eAnnotations>
+    <eOperations name="getName" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eParameters name="element" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object"/>
+    </eOperations>
   </eClassifiers>
 </ecore:EPackage>

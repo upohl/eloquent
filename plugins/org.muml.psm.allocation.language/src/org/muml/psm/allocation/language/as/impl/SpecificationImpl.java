@@ -23,6 +23,7 @@ import org.muml.psm.allocation.language.as.AsPackage;
 import org.muml.psm.allocation.language.as.Constraint;
 import org.muml.psm.allocation.language.as.Goal;
 import org.muml.psm.allocation.language.as.MeasureFunction;
+import org.muml.psm.allocation.language.as.NameProvider;
 import org.muml.psm.allocation.language.as.Service;
 import org.muml.psm.allocation.language.as.Specification;
 
@@ -38,6 +39,7 @@ import org.muml.psm.allocation.language.as.Specification;
  *   <li>{@link org.muml.psm.allocation.language.as.impl.SpecificationImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.impl.SpecificationImpl#getMeasure <em>Measure</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.impl.SpecificationImpl#getGoal <em>Goal</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.as.impl.SpecificationImpl#getNameProvider <em>Name Provider</em>}</li>
  * </ul>
  *
  * @generated
@@ -92,6 +94,16 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 	 * @ordered
 	 */
 	protected Goal goal = GOAL_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getNameProvider() <em>Name Provider</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameProvider()
+	 * @generated
+	 * @ordered
+	 */
+	protected NameProvider nameProvider;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -205,6 +217,44 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NameProvider getNameProvider() {
+		if (nameProvider != null && nameProvider.eIsProxy()) {
+			InternalEObject oldNameProvider = (InternalEObject)nameProvider;
+			nameProvider = (NameProvider)eResolveProxy(oldNameProvider);
+			if (nameProvider != oldNameProvider) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AsPackage.SPECIFICATION__NAME_PROVIDER, oldNameProvider, nameProvider));
+			}
+		}
+		return nameProvider;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NameProvider basicGetNameProvider() {
+		return nameProvider;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameProvider(NameProvider newNameProvider) {
+		NameProvider oldNameProvider = nameProvider;
+		nameProvider = newNameProvider;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.SPECIFICATION__NAME_PROVIDER, oldNameProvider, nameProvider));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -234,6 +284,9 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 				return getMeasure();
 			case AsPackage.SPECIFICATION__GOAL:
 				return getGoal();
+			case AsPackage.SPECIFICATION__NAME_PROVIDER:
+				if (resolve) return getNameProvider();
+				return basicGetNameProvider();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -261,6 +314,9 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 			case AsPackage.SPECIFICATION__GOAL:
 				setGoal((Goal)newValue);
 				return;
+			case AsPackage.SPECIFICATION__NAME_PROVIDER:
+				setNameProvider((NameProvider)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -285,6 +341,9 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 			case AsPackage.SPECIFICATION__GOAL:
 				setGoal(GOAL_EDEFAULT);
 				return;
+			case AsPackage.SPECIFICATION__NAME_PROVIDER:
+				setNameProvider((NameProvider)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -305,6 +364,8 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 				return measure != null;
 			case AsPackage.SPECIFICATION__GOAL:
 				return goal != GOAL_EDEFAULT;
+			case AsPackage.SPECIFICATION__NAME_PROVIDER:
+				return nameProvider != null;
 		}
 		return super.eIsSet(featureID);
 	}

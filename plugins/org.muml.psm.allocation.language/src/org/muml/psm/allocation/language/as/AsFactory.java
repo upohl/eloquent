@@ -130,6 +130,15 @@ public interface AsFactory extends EFactory {
 	QoSDimension createQoSDimension();
 
 	/**
+	 * Returns a new object of class '<em>Java Implementation Provider</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Java Implementation Provider</em>'.
+	 * @generated
+	 */
+	JavaImplementationProvider createJavaImplementationProvider();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

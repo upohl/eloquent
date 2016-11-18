@@ -130,6 +130,15 @@ public interface CsFactory extends EFactory {
 	QoSDimensionCS createQoSDimensionCS();
 
 	/**
+	 * Returns a new object of class '<em>Java Implementation Provider CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Java Implementation Provider CS</em>'.
+	 * @generated
+	 */
+	JavaImplementationProviderCS createJavaImplementationProviderCS();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

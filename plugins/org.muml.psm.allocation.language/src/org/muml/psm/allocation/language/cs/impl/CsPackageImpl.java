@@ -5,17 +5,22 @@ package org.muml.psm.allocation.language.cs.impl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.ocl.pivot.PivotPackage;
+
 import org.eclipse.ocl.xtext.basecs.BaseCSPackage;
 
 import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLCSPackage;
 
 import org.eclipse.ocl.xtext.essentialoclcs.EssentialOCLCSPackage;
+
+import org.eclipse.ocl.xtext.oclstdlibcs.OCLstdlibCSPackage;
 
 import org.muml.core.CorePackage;
 
@@ -25,9 +30,11 @@ import org.muml.psm.allocation.language.cs.CsFactory;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
 import org.muml.psm.allocation.language.cs.Goal;
+import org.muml.psm.allocation.language.cs.JavaImplementationProviderCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintTypes;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
+import org.muml.psm.allocation.language.cs.NameProviderCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
 import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
@@ -150,6 +157,20 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass javaImplementationProviderCSEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass nameProviderCSEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum locationConstraintTypesEEnum = null;
 
 	/**
@@ -209,6 +230,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		// Initialize simple dependencies
 		CompleteOCLCSPackage.eINSTANCE.eClass();
 		CorePackage.eINSTANCE.eClass();
+		OCLstdlibCSPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theCsPackage.createPackageContents();
@@ -277,6 +299,24 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 */
 	public EAttribute getSpecificationCS_Goal() {
 		return (EAttribute)specificationCSEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSpecificationCS_NameProviderImplementationClass() {
+		return (EReference)specificationCSEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSpecificationCS_NameProvider() {
+		return (EReference)specificationCSEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -518,6 +558,24 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getJavaImplementationProviderCS() {
+		return javaImplementationProviderCSEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNameProviderCS() {
+		return nameProviderCSEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getLocationConstraintTypes() {
 		return locationConstraintTypesEEnum;
 	}
@@ -564,6 +622,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		createEReference(specificationCSEClass, SPECIFICATION_CS__CONSTRAINTS);
 		createEReference(specificationCSEClass, SPECIFICATION_CS__MEASURE);
 		createEAttribute(specificationCSEClass, SPECIFICATION_CS__GOAL);
+		createEReference(specificationCSEClass, SPECIFICATION_CS__NAME_PROVIDER_IMPLEMENTATION_CLASS);
+		createEReference(specificationCSEClass, SPECIFICATION_CS__NAME_PROVIDER);
 
 		evaluatableElementCSEClass = createEClass(EVALUATABLE_ELEMENT_CS);
 		createEReference(evaluatableElementCSEClass, EVALUATABLE_ELEMENT_CS__EXPRESSION);
@@ -604,6 +664,10 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		qoSDimensionCSEClass = createEClass(QO_SDIMENSION_CS);
 		createEReference(qoSDimensionCSEClass, QO_SDIMENSION_CS__TUPLE_DESCRIPTOR);
 
+		javaImplementationProviderCSEClass = createEClass(JAVA_IMPLEMENTATION_PROVIDER_CS);
+
+		nameProviderCSEClass = createEClass(NAME_PROVIDER_CS);
+
 		// Create enums
 		locationConstraintTypesEEnum = createEEnum(LOCATION_CONSTRAINT_TYPES);
 		goalEEnum = createEEnum(GOAL);
@@ -637,6 +701,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
 		BaseCSPackage theBaseCSPackage = (BaseCSPackage)EPackage.Registry.INSTANCE.getEPackage(BaseCSPackage.eNS_URI);
 		EssentialOCLCSPackage theEssentialOCLCSPackage = (EssentialOCLCSPackage)EPackage.Registry.INSTANCE.getEPackage(EssentialOCLCSPackage.eNS_URI);
+		OCLstdlibCSPackage theOCLstdlibCSPackage = (OCLstdlibCSPackage)EPackage.Registry.INSTANCE.getEPackage(OCLstdlibCSPackage.eNS_URI);
+		PivotPackage thePivotPackage = (PivotPackage)EPackage.Registry.INSTANCE.getEPackage(PivotPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -660,6 +726,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		serviceCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
 		qoSDimensionCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
 		qoSDimensionCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
+		javaImplementationProviderCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
+		javaImplementationProviderCSEClass.getESuperTypes().add(theOCLstdlibCSPackage.getJavaImplementationCS());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(specificationCSEClass, SpecificationCS.class, "SpecificationCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -667,6 +735,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEReference(getSpecificationCS_Constraints(), this.getConstraintCS(), null, "constraints", null, 0, -1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificationCS_Measure(), this.getMeasureFunctionCS(), null, "measure", null, 0, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpecificationCS_Goal(), this.getGoal(), "goal", null, 0, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecificationCS_NameProviderImplementationClass(), this.getJavaImplementationProviderCS(), null, "nameProviderImplementationClass", null, 1, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecificationCS_NameProvider(), this.getNameProviderCS(), null, "nameProvider", null, 0, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(evaluatableElementCSEClass, EvaluatableElementCS.class, "EvaluatableElementCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEvaluatableElementCS_Expression(), theEssentialOCLCSPackage.getContextCS(), null, "expression", null, 1, 1, EvaluatableElementCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -706,6 +776,13 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		initEClass(qoSDimensionCSEClass, QoSDimensionCS.class, "QoSDimensionCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQoSDimensionCS_TupleDescriptor(), this.getWeightTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, QoSDimensionCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(javaImplementationProviderCSEClass, JavaImplementationProviderCS.class, "JavaImplementationProviderCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(nameProviderCSEClass, NameProviderCS.class, "NameProviderCS", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		EOperation op = addEOperation(nameProviderCSEClass, ecorePackage.getEString(), "getName", 1, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, thePivotPackage.getObject(), "element", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(locationConstraintTypesEEnum, LocationConstraintTypes.class, "LocationConstraintTypes");

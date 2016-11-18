@@ -202,13 +202,31 @@ public interface CsPackage extends EPackage {
 	int SPECIFICATION_CS__GOAL = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Name Provider Implementation Class</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_CS__NAME_PROVIDER_IMPLEMENTATION_CLASS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Name Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_CS__NAME_PROVIDER = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Specification CS</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS_FEATURE_COUNT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 5;
+	int SPECIFICATION_CS_FEATURE_COUNT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.EvaluatableElementCSImpl <em>Evaluatable Element CS</em>}' class.
@@ -1322,6 +1340,98 @@ public interface CsPackage extends EPackage {
 	int QO_SDIMENSION_CS_FEATURE_COUNT = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.JavaImplementationProviderCSImpl <em>Java Implementation Provider CS</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.cs.impl.JavaImplementationProviderCSImpl
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getJavaImplementationProviderCS()
+	 * @generated
+	 */
+	int JAVA_IMPLEMENTATION_PROVIDER_CS = 14;
+
+	/**
+	 * The feature id for the '<em><b>Csi</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_IMPLEMENTATION_PROVIDER_CS__CSI = BaseCSPackage.MODEL_ELEMENT_CS__CSI;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_IMPLEMENTATION_PROVIDER_CS__PARENT = BaseCSPackage.MODEL_ELEMENT_CS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Pivot</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_IMPLEMENTATION_PROVIDER_CS__PIVOT = BaseCSPackage.MODEL_ELEMENT_CS__PIVOT;
+
+	/**
+	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_IMPLEMENTATION_PROVIDER_CS__ORIGINAL_XMI_ID = BaseCSPackage.MODEL_ELEMENT_CS__ORIGINAL_XMI_ID;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_IMPLEMENTATION_PROVIDER_CS__OWNED_ANNOTATIONS = BaseCSPackage.MODEL_ELEMENT_CS__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Implementation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_IMPLEMENTATION_PROVIDER_CS__IMPLEMENTATION = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Java Implementation Provider CS</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_IMPLEMENTATION_PROVIDER_CS_FEATURE_COUNT = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.NameProviderCS <em>Name Provider CS</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.cs.NameProviderCS
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getNameProviderCS()
+	 * @generated
+	 */
+	int NAME_PROVIDER_CS = 15;
+
+	/**
+	 * The number of structural features of the '<em>Name Provider CS</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAME_PROVIDER_CS_FEATURE_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1329,7 +1439,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getLocationConstraintTypes()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_TYPES = 14;
+	int LOCATION_CONSTRAINT_TYPES = 16;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.Goal <em>Goal</em>}' enum.
@@ -1339,7 +1449,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getGoal()
 	 * @generated
 	 */
-	int GOAL = 15;
+	int GOAL = 17;
 
 
 	/**
@@ -1395,6 +1505,28 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSpecificationCS_Goal();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.SpecificationCS#getNameProviderImplementationClass <em>Name Provider Implementation Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Name Provider Implementation Class</em>'.
+	 * @see org.muml.psm.allocation.language.cs.SpecificationCS#getNameProviderImplementationClass()
+	 * @see #getSpecificationCS()
+	 * @generated
+	 */
+	EReference getSpecificationCS_NameProviderImplementationClass();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.muml.psm.allocation.language.cs.SpecificationCS#getNameProvider <em>Name Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Name Provider</em>'.
+	 * @see org.muml.psm.allocation.language.cs.SpecificationCS#getNameProvider()
+	 * @see #getSpecificationCS()
+	 * @generated
+	 */
+	EReference getSpecificationCS_NameProvider();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.EvaluatableElementCS <em>Evaluatable Element CS</em>}'.
@@ -1670,6 +1802,26 @@ public interface CsPackage extends EPackage {
 	EReference getQoSDimensionCS_TupleDescriptor();
 
 	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.JavaImplementationProviderCS <em>Java Implementation Provider CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Java Implementation Provider CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.JavaImplementationProviderCS
+	 * @generated
+	 */
+	EClass getJavaImplementationProviderCS();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.NameProviderCS <em>Name Provider CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Name Provider CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.NameProviderCS
+	 * @generated
+	 */
+	EClass getNameProviderCS();
+
+	/**
 	 * Returns the meta object for enum '{@link org.muml.psm.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1752,6 +1904,22 @@ public interface CsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SPECIFICATION_CS__GOAL = eINSTANCE.getSpecificationCS_Goal();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Provider Implementation Class</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION_CS__NAME_PROVIDER_IMPLEMENTATION_CLASS = eINSTANCE.getSpecificationCS_NameProviderImplementationClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Provider</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION_CS__NAME_PROVIDER = eINSTANCE.getSpecificationCS_NameProvider();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.EvaluatableElementCSImpl <em>Evaluatable Element CS</em>}' class.
@@ -1986,6 +2154,26 @@ public interface CsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference QO_SDIMENSION_CS__TUPLE_DESCRIPTOR = eINSTANCE.getQoSDimensionCS_TupleDescriptor();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.JavaImplementationProviderCSImpl <em>Java Implementation Provider CS</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.cs.impl.JavaImplementationProviderCSImpl
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getJavaImplementationProviderCS()
+		 * @generated
+		 */
+		EClass JAVA_IMPLEMENTATION_PROVIDER_CS = eINSTANCE.getJavaImplementationProviderCS();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.NameProviderCS <em>Name Provider CS</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.cs.NameProviderCS
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getNameProviderCS()
+		 * @generated
+		 */
+		EClass NAME_PROVIDER_CS = eINSTANCE.getNameProviderCS();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.

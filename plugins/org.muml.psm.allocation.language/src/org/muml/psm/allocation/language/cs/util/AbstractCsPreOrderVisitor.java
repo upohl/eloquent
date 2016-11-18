@@ -52,6 +52,11 @@ public abstract class AbstractCsPreOrderVisitor
 	}
 
 	@Override
+	public @Nullable Continuation<?> visitJavaImplementationProviderCS(org.muml.psm.allocation.language.cs.@NonNull JavaImplementationProviderCS csElement) {
+		return visitModelElementCS(csElement);
+	}
+
+	@Override
 	public @Nullable Continuation<?> visitLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull LocationConstraintCS csElement) {
 		return visitConstraintCS(csElement);
 	}

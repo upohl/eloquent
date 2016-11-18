@@ -191,13 +191,22 @@ public interface AsPackage extends EPackage {
 	int SPECIFICATION__GOAL = PivotPackage.MODEL_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Name Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__NAME_PROVIDER = PivotPackage.MODEL_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_FEATURE_COUNT = PivotPackage.MODEL_FEATURE_COUNT + 4;
+	int SPECIFICATION_FEATURE_COUNT = PivotPackage.MODEL_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.EvaluatableElementImpl <em>Evaluatable Element</em>}' class.
@@ -1194,6 +1203,80 @@ public interface AsPackage extends EPackage {
 	int QO_SDIMENSION_FEATURE_COUNT = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.JavaImplementationProviderImpl <em>Java Implementation Provider</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.as.impl.JavaImplementationProviderImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getJavaImplementationProvider()
+	 * @generated
+	 */
+	int JAVA_IMPLEMENTATION_PROVIDER = 14;
+
+	/**
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_IMPLEMENTATION_PROVIDER__ANNOTATING_COMMENTS = PivotPackage.ELEMENT__ANNOTATING_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_IMPLEMENTATION_PROVIDER__OWNED_ANNOTATIONS = PivotPackage.ELEMENT__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_IMPLEMENTATION_PROVIDER__OWNED_COMMENTS = PivotPackage.ELEMENT__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_IMPLEMENTATION_PROVIDER__OWNED_EXTENSIONS = PivotPackage.ELEMENT__OWNED_EXTENSIONS;
+
+	/**
+	 * The number of structural features of the '<em>Java Implementation Provider</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_IMPLEMENTATION_PROVIDER_FEATURE_COUNT = PivotPackage.ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.NameProviderImpl <em>Name Provider</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.as.impl.NameProviderImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getNameProvider()
+	 * @generated
+	 */
+	int NAME_PROVIDER = 15;
+
+	/**
+	 * The number of structural features of the '<em>Name Provider</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAME_PROVIDER_FEATURE_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1201,7 +1284,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getLocationConstraintTypes()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_TYPES = 14;
+	int LOCATION_CONSTRAINT_TYPES = 16;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.Goal <em>Goal</em>}' enum.
@@ -1211,7 +1294,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getGoal()
 	 * @generated
 	 */
-	int GOAL = 15;
+	int GOAL = 17;
 
 
 	/**
@@ -1267,6 +1350,17 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSpecification_Goal();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.muml.psm.allocation.language.as.Specification#getNameProvider <em>Name Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Name Provider</em>'.
+	 * @see org.muml.psm.allocation.language.as.Specification#getNameProvider()
+	 * @see #getSpecification()
+	 * @generated
+	 */
+	EReference getSpecification_NameProvider();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.EvaluatableElement <em>Evaluatable Element</em>}'.
@@ -1542,6 +1636,26 @@ public interface AsPackage extends EPackage {
 	EReference getQoSDimension_TupleDescriptor();
 
 	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.JavaImplementationProvider <em>Java Implementation Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Java Implementation Provider</em>'.
+	 * @see org.muml.psm.allocation.language.as.JavaImplementationProvider
+	 * @generated
+	 */
+	EClass getJavaImplementationProvider();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.NameProvider <em>Name Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Name Provider</em>'.
+	 * @see org.muml.psm.allocation.language.as.NameProvider
+	 * @generated
+	 */
+	EClass getNameProvider();
+
+	/**
 	 * Returns the meta object for enum '{@link org.muml.psm.allocation.language.as.LocationConstraintTypes <em>Location Constraint Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1624,6 +1738,14 @@ public interface AsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SPECIFICATION__GOAL = eINSTANCE.getSpecification_Goal();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Provider</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION__NAME_PROVIDER = eINSTANCE.getSpecification_NameProvider();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.EvaluatableElementImpl <em>Evaluatable Element</em>}' class.
@@ -1858,6 +1980,26 @@ public interface AsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference QO_SDIMENSION__TUPLE_DESCRIPTOR = eINSTANCE.getQoSDimension_TupleDescriptor();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.JavaImplementationProviderImpl <em>Java Implementation Provider</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.as.impl.JavaImplementationProviderImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getJavaImplementationProvider()
+		 * @generated
+		 */
+		EClass JAVA_IMPLEMENTATION_PROVIDER = eINSTANCE.getJavaImplementationProvider();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.NameProviderImpl <em>Name Provider</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.as.impl.NameProviderImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getNameProvider()
+		 * @generated
+		 */
+		EClass NAME_PROVIDER = eINSTANCE.getNameProvider();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.

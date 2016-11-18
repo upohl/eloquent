@@ -23,6 +23,7 @@ import org.eclipse.ocl.pivot.Model;
  *   <li>{@link org.muml.psm.allocation.language.as.Specification#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.Specification#getMeasure <em>Measure</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.Specification#getGoal <em>Goal</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.as.Specification#getNameProvider <em>Name Provider</em>}</li>
  * </ul>
  *
  * @see org.muml.psm.allocation.language.as.AsPackage#getSpecification()
@@ -112,5 +113,31 @@ public interface Specification extends Model {
 	 * @generated
 	 */
 	void setGoal(Goal value);
+
+	/**
+	 * Returns the value of the '<em><b>Name Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * This reference is not used in the CS model. It is only needed in order to
+	 * automatically create a corresponding reference in the AS meta model.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Name Provider</em>' reference.
+	 * @see #setNameProvider(NameProvider)
+	 * @see org.muml.psm.allocation.language.as.AsPackage#getSpecification_NameProvider()
+	 * @model
+	 * @generated
+	 */
+	NameProvider getNameProvider();
+
+	/**
+	 * Sets the value of the '{@link org.muml.psm.allocation.language.as.Specification#getNameProvider <em>Name Provider</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name Provider</em>' reference.
+	 * @see #getNameProvider()
+	 * @generated
+	 */
+	void setNameProvider(NameProvider value);
 
 } // Specification

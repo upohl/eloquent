@@ -25,6 +25,8 @@ import org.muml.core.ExtendableElement;
  *   <li>{@link org.muml.psm.allocation.language.cs.SpecificationCS#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.SpecificationCS#getMeasure <em>Measure</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.SpecificationCS#getGoal <em>Goal</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.SpecificationCS#getNameProviderImplementationClass <em>Name Provider Implementation Class</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.SpecificationCS#getNameProvider <em>Name Provider</em>}</li>
  * </ul>
  *
  * @see org.muml.psm.allocation.language.cs.CsPackage#getSpecificationCS()
@@ -114,5 +116,57 @@ public interface SpecificationCS extends CompleteOCLDocumentCS, ExtendableElemen
 	 * @generated
 	 */
 	void setGoal(Goal value);
+
+	/**
+	 * Returns the value of the '<em><b>Name Provider Implementation Class</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Contains a JavaImplementationProviderCS. This containment won't be
+	 * part of the AS meta model.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Name Provider Implementation Class</em>' containment reference.
+	 * @see #setNameProviderImplementationClass(JavaImplementationProviderCS)
+	 * @see org.muml.psm.allocation.language.cs.CsPackage#getSpecificationCS_NameProviderImplementationClass()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	JavaImplementationProviderCS getNameProviderImplementationClass();
+
+	/**
+	 * Sets the value of the '{@link org.muml.psm.allocation.language.cs.SpecificationCS#getNameProviderImplementationClass <em>Name Provider Implementation Class</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name Provider Implementation Class</em>' containment reference.
+	 * @see #getNameProviderImplementationClass()
+	 * @generated
+	 */
+	void setNameProviderImplementationClass(JavaImplementationProviderCS value);
+
+	/**
+	 * Returns the value of the '<em><b>Name Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * This reference is not used in the CS model. It is only needed in order to
+	 * automatically create a corresponding reference in the AS meta model.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Name Provider</em>' reference.
+	 * @see #setNameProvider(NameProviderCS)
+	 * @see org.muml.psm.allocation.language.cs.CsPackage#getSpecificationCS_NameProvider()
+	 * @model
+	 * @generated
+	 */
+	NameProviderCS getNameProvider();
+
+	/**
+	 * Sets the value of the '{@link org.muml.psm.allocation.language.cs.SpecificationCS#getNameProvider <em>Name Provider</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name Provider</em>' reference.
+	 * @see #getNameProvider()
+	 * @generated
+	 */
+	void setNameProvider(NameProviderCS value);
 
 } // SpecificationCS

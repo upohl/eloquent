@@ -69,6 +69,7 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 			case AsPackage.MEASURE_FUNCTION: return createMeasureFunction();
 			case AsPackage.SERVICE: return createService();
 			case AsPackage.QO_SDIMENSION: return createQoSDimension();
+			case AsPackage.JAVA_IMPLEMENTATION_PROVIDER: return createJavaImplementationProvider();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -226,6 +227,16 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	public QoSDimension createQoSDimension() {
 		QoSDimensionImpl qoSDimension = new QoSDimensionImpl();
 		return qoSDimension;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JavaImplementationProvider createJavaImplementationProvider() {
+		JavaImplementationProviderImpl javaImplementationProvider = new JavaImplementationProviderImpl();
+		return javaImplementationProvider;
 	}
 
 	/**

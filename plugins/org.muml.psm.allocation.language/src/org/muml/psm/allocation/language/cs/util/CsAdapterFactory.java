@@ -26,6 +26,8 @@ import org.eclipse.ocl.xtext.basecs.util.VisitableCS;
 
 import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLDocumentCS;
 
+import org.eclipse.ocl.xtext.oclstdlibcs.JavaImplementationCS;
+
 import org.muml.core.ExtendableElement;
 
 import org.muml.psm.allocation.language.cs.*;
@@ -143,6 +145,14 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 				return createQoSDimensionCSAdapter();
 			}
 			@Override
+			public Adapter caseJavaImplementationProviderCS(JavaImplementationProviderCS object) {
+				return createJavaImplementationProviderCSAdapter();
+			}
+			@Override
+			public Adapter caseNameProviderCS(NameProviderCS object) {
+				return createNameProviderCSAdapter();
+			}
+			@Override
 			public Adapter caseVisitableCS(VisitableCS object) {
 				return createVisitableCSAdapter();
 			}
@@ -189,6 +199,10 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseTypedElementCS(TypedElementCS object) {
 				return createTypedElementCSAdapter();
+			}
+			@Override
+			public Adapter caseJavaImplementationCS(JavaImplementationCS object) {
+				return createJavaImplementationCSAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -407,6 +421,34 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.JavaImplementationProviderCS <em>Java Implementation Provider CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.cs.JavaImplementationProviderCS
+	 * @generated
+	 */
+	public Adapter createJavaImplementationProviderCSAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.NameProviderCS <em>Name Provider CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.cs.NameProviderCS
+	 * @generated
+	 */
+	public Adapter createNameProviderCSAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.xtext.basecs.util.VisitableCS <em>Visitable CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -571,6 +613,20 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTypedElementCSAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.ocl.xtext.oclstdlibcs.JavaImplementationCS <em>Java Implementation CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.ocl.xtext.oclstdlibcs.JavaImplementationCS
+	 * @generated
+	 */
+	public Adapter createJavaImplementationCSAdapter() {
 		return null;
 	}
 

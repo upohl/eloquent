@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.muml.psm.allocation.language/src" modelPluginID="org.muml.psm.allocation.language"
-    modelName="LanguageSpecificationCS" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    usedGenPackages="../../org.eclipse.ocl.xtext.base/model/BaseCS.genmodel#//basecs ../../org.eclipse.ocl.xtext.completeocl/model/CompleteOCLCS.genmodel#//completeoclcs ../../org.muml.core/model/core.genmodel#//core ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.ocl.xtext.essentialocl/model/EssentialOCLCS.genmodel#//essentialoclcs ../../org.eclipse.ocl.pivot/model/Pivot.genmodel#//pivot"
+    modelName="LanguageSpecificationCS" rootExtendsInterface="" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    rootImplementsInterface="" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" usedGenPackages="../../org.eclipse.ocl.xtext.base/model/BaseCS.genmodel#//basecs ../../org.eclipse.ocl.xtext.completeocl/model/CompleteOCLCS.genmodel#//completeoclcs ../../org.muml.core/model/core.genmodel#//core ../../org.eclipse.ocl.xtext.essentialocl/model/EssentialOCLCS.genmodel#//essentialoclcs ../../org.eclipse.ocl.xtext.oclstdlib/model/OCLstdlibCS.genmodel#//oclstdlibcs ../../org.eclipse.ocl.pivot/model/Pivot.genmodel#//pivot"
     importOrganizing="true">
   <genAnnotations source="http://www.eclipse.org/OCL/GenModel">
     <details key="Use Null Annotations" value="true"/>
@@ -29,6 +29,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/constraints"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/measure"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationCS.ecore#//SpecificationCS/goal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/nameProviderImplementationClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/nameProvider"/>
     </genClasses>
     <genClasses image="false" ecoreClass="LanguageSpecificationCS.ecore#//EvaluatableElementCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//EvaluatableElementCS/expression"/>
@@ -66,6 +68,12 @@
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationCS.ecore#//QoSDimensionCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//QoSDimensionCS/tupleDescriptor"/>
+    </genClasses>
+    <genClasses ecoreClass="LanguageSpecificationCS.ecore#//JavaImplementationProviderCS"/>
+    <genClasses image="false" ecoreClass="LanguageSpecificationCS.ecore#//NameProviderCS">
+      <genOperations ecoreOperation="LanguageSpecificationCS.ecore#//NameProviderCS/getName">
+        <genParameters ecoreParameter="LanguageSpecificationCS.ecore#//NameProviderCS/getName/element"/>
+      </genOperations>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

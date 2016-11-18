@@ -220,6 +220,20 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AsPackage.JAVA_IMPLEMENTATION_PROVIDER: {
+				JavaImplementationProvider javaImplementationProvider = (JavaImplementationProvider)theEObject;
+				T result = caseJavaImplementationProvider(javaImplementationProvider);
+				if (result == null) result = caseElement(javaImplementationProvider);
+				if (result == null) result = caseVisitable(javaImplementationProvider);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AsPackage.NAME_PROVIDER: {
+				NameProvider nameProvider = (NameProvider)theEObject;
+				T result = caseNameProvider(nameProvider);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -431,6 +445,36 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseQoSDimension(QoSDimension object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Java Implementation Provider</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Java Implementation Provider</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJavaImplementationProvider(JavaImplementationProvider object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Name Provider</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Name Provider</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNameProvider(NameProvider object) {
 		return null;
 	}
 

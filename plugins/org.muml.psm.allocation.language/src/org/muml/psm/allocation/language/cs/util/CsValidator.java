@@ -8,6 +8,7 @@ import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.EObjectValidator;
@@ -114,6 +115,10 @@ public class CsValidator extends EObjectValidator {
 				return validateServiceCS((ServiceCS)value, diagnostics, context);
 			case CsPackage.QO_SDIMENSION_CS:
 				return validateQoSDimensionCS((QoSDimensionCS)value, diagnostics, context);
+			case CsPackage.JAVA_IMPLEMENTATION_PROVIDER_CS:
+				return validateJavaImplementationProviderCS((JavaImplementationProviderCS)value, diagnostics, context);
+			case CsPackage.NAME_PROVIDER_CS:
+				return validateNameProviderCS((NameProviderCS)value, diagnostics, context);
 			case CsPackage.LOCATION_CONSTRAINT_TYPES:
 				return validateLocationConstraintTypes((LocationConstraintTypes)value, diagnostics, context);
 			case CsPackage.GOAL:
@@ -286,6 +291,24 @@ public class CsValidator extends EObjectValidator {
 	 */
 	public boolean validateQoSDimensionCS(QoSDimensionCS qoSDimensionCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(qoSDimensionCS, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateJavaImplementationProviderCS(JavaImplementationProviderCS javaImplementationProviderCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(javaImplementationProviderCS, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateNameProviderCS(NameProviderCS nameProviderCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)nameProviderCS, diagnostics, context);
 	}
 
 	/**

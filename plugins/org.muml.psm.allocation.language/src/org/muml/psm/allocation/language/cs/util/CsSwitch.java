@@ -24,6 +24,8 @@ import org.eclipse.ocl.xtext.basecs.util.VisitableCS;
 
 import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLDocumentCS;
 
+import org.eclipse.ocl.xtext.oclstdlibcs.JavaImplementationCS;
+
 import org.muml.core.ExtendableElement;
 
 import org.muml.psm.allocation.language.cs.*;
@@ -271,6 +273,24 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CsPackage.JAVA_IMPLEMENTATION_PROVIDER_CS: {
+				JavaImplementationProviderCS javaImplementationProviderCS = (JavaImplementationProviderCS)theEObject;
+				T result = caseJavaImplementationProviderCS(javaImplementationProviderCS);
+				if (result == null) result = caseModelElementCS(javaImplementationProviderCS);
+				if (result == null) result = caseJavaImplementationCS(javaImplementationProviderCS);
+				if (result == null) result = casePivotableElementCS(javaImplementationProviderCS);
+				if (result == null) result = caseElementCS(javaImplementationProviderCS);
+				if (result == null) result = casePivotable(javaImplementationProviderCS);
+				if (result == null) result = caseVisitableCS(javaImplementationProviderCS);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CsPackage.NAME_PROVIDER_CS: {
+				NameProviderCS nameProviderCS = (NameProviderCS)theEObject;
+				T result = caseNameProviderCS(nameProviderCS);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -486,6 +506,36 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Java Implementation Provider CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Java Implementation Provider CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJavaImplementationProviderCS(JavaImplementationProviderCS object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Name Provider CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Name Provider CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNameProviderCS(NameProviderCS object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Visitable CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -662,6 +712,21 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTypedElementCS(TypedElementCS object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Java Implementation CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Java Implementation CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJavaImplementationCS(JavaImplementationCS object) {
 		return null;
 	}
 
