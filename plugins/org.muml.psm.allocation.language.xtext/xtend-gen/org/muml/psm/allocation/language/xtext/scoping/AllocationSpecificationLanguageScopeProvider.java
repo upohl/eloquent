@@ -4,10 +4,22 @@
 package org.muml.psm.allocation.language.xtext.scoping;
 
 import com.google.common.base.Objects;
+import java.util.Collections;
+import java.util.List;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.ocl.pivot.internal.library.ImplementationManager;
+import org.eclipse.ocl.pivot.internal.manager.PivotMetamodelManager;
+import org.eclipse.ocl.pivot.internal.resource.EnvironmentFactoryAdapter;
 import org.eclipse.ocl.pivot.internal.scoping.Attribution;
+import org.eclipse.ocl.xtext.base.scoping.AbstractJavaClassScope;
+import org.eclipse.ocl.xtext.base.utilities.BaseCSResource;
 import org.eclipse.ocl.xtext.completeocl.scoping.CompleteOCLScopeProvider;
+import org.eclipse.ocl.xtext.oclstdlib.scoping.JavaClassScope;
+import org.eclipse.ocl.xtext.oclstdlibcs.OCLstdlibCSPackage;
 import org.eclipse.xtext.scoping.IScope;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
@@ -31,7 +43,15 @@ public class AllocationSpecificationLanguageScopeProvider extends CompleteOCLSco
     if ((context instanceof MeasureFunctionCS)) {
       _xifexpression = this.polymorphicGetScope(context, reference);
     } else {
-      _xifexpression = super.getScope(context, reference);
+      IScope _xifexpression_1 = null;
+      EClass _eReferenceType = reference.getEReferenceType();
+      boolean _equals = Objects.equal(_eReferenceType, OCLstdlibCSPackage.Literals.JAVA_CLASS_CS);
+      if (_equals) {
+        _xifexpression_1 = this.getJavaClassScope(context, reference);
+      } else {
+        _xifexpression_1 = super.getScope(context, reference);
+      }
+      _xifexpression = _xifexpression_1;
     }
     return _xifexpression;
   }
@@ -51,6 +71,42 @@ public class AllocationSpecificationLanguageScopeProvider extends CompleteOCLSco
         }
       }
       _xblockexpression = scope;
+    }
+    return _xblockexpression;
+  }
+  
+  protected IScope getJavaClassScope(final EObject context, final EReference reference) {
+    IScope _xblockexpression = null;
+    {
+      final Resource csResource = context.eResource();
+      if ((csResource instanceof BaseCSResource)) {
+        AbstractJavaClassScope adapter = JavaClassScope.findAdapter(((BaseCSResource) csResource));
+        boolean _equals = Objects.equal(adapter, null);
+        if (_equals) {
+          EnvironmentFactoryAdapter environmentFactoryAdapter = EnvironmentFactoryAdapter.find(csResource);
+          boolean _equals_1 = Objects.equal(environmentFactoryAdapter, null);
+          if (_equals_1) {
+            final ResourceSet csResourceSet = ((BaseCSResource)csResource).getResourceSet();
+            boolean _notEquals = (!Objects.equal(csResourceSet, null));
+            if (_notEquals) {
+              EnvironmentFactoryAdapter _find = EnvironmentFactoryAdapter.find(csResourceSet);
+              environmentFactoryAdapter = _find;
+            }
+          }
+          List<ClassLoader> classLoaders = Collections.<ClassLoader>emptyList();
+          boolean _notEquals_1 = (!Objects.equal(environmentFactoryAdapter, null));
+          if (_notEquals_1) {
+            PivotMetamodelManager _metamodelManager = environmentFactoryAdapter.getMetamodelManager();
+            ImplementationManager _implementationManager = _metamodelManager.getImplementationManager();
+            List<ClassLoader> _classLoaders = _implementationManager.getClassLoaders();
+            classLoaders = _classLoaders;
+          }
+          JavaClassScope _adapter = JavaClassScope.getAdapter(((BaseCSResource) csResource), classLoaders);
+          adapter = _adapter;
+        }
+        return adapter;
+      }
+      _xblockexpression = IScope.NULLSCOPE;
     }
     return _xblockexpression;
   }
