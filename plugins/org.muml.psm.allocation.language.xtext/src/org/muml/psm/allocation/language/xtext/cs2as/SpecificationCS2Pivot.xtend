@@ -1,7 +1,6 @@
 package org.muml.psm.allocation.language.xtext.cs2as
 
 import org.eclipse.emf.ecore.EClass
-import org.eclipse.jdt.annotation.NonNull
 import org.eclipse.ocl.pivot.Element
 import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal
 import org.eclipse.ocl.pivot.resource.ASResource
@@ -11,7 +10,6 @@ import org.eclipse.ocl.xtext.base.utilities.BaseCSResource
 import org.eclipse.ocl.xtext.completeocl.cs2as.CompleteOCLCS2AS
 import org.eclipse.xtext.diagnostics.IDiagnosticConsumer
 import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor
-import org.muml.psm.allocation.language.xtext.visitor.LanguageSpecificationCSContainmentVisitor
 import org.muml.psm.allocation.language.xtext.visitor.LanguageSpecificationCSLeft2RightVisitor
 import org.muml.psm.allocation.language.xtext.visitor.LanguageSpecificationCSPreOrderVisitor
 
@@ -26,7 +24,7 @@ class SpecificationCS2Pivot extends CompleteOCLCS2AS {
 	
 	/*@NonNull*/
 	override protected LanguageSpecificationCSVisitor<Continuation<?>> createContainmentVisitor(/*@NonNull*/ CS2ASConversion converter) {
-		new LanguageSpecificationCSContainmentVisitor(converter);
+		new SpecificationCSContainmentVisitor(converter);
 	}
 
 	/*@NonNull*/

@@ -3,10 +3,19 @@
  */
 package org.muml.psm.allocation.language.xtext.scoping
 
+import java.util.Collections
+import java.util.List
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EReference
+import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.emf.ecore.resource.ResourceSet
+import org.eclipse.ocl.pivot.internal.resource.EnvironmentFactoryAdapter
 import org.eclipse.ocl.pivot.internal.scoping.Attribution
+import org.eclipse.ocl.xtext.base.scoping.AbstractJavaClassScope
+import org.eclipse.ocl.xtext.base.utilities.BaseCSResource
 import org.eclipse.ocl.xtext.completeocl.scoping.CompleteOCLScopeProvider
+import org.eclipse.ocl.xtext.oclstdlib.scoping.JavaClassScope
+import org.eclipse.ocl.xtext.oclstdlibcs.OCLstdlibCSPackage
 import org.eclipse.xtext.scoping.IScope
 import org.muml.psm.allocation.language.cs.CsPackage
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS
@@ -29,6 +38,8 @@ class AllocationSpecificationLanguageScopeProvider extends CompleteOCLScopeProvi
 	override IScope getScope(EObject context, EReference reference) {
 		if (context instanceof MeasureFunctionCS) {
 			polymorphicGetScope(context, reference)
+		} else if (reference.EReferenceType == OCLstdlibCSPackage.Literals.JAVA_CLASS_CS) {
+			getJavaClassScope(context, reference)
 		} else {
 			super.getScope(context, reference)	
 		}
@@ -45,5 +56,30 @@ class AllocationSpecificationLanguageScopeProvider extends CompleteOCLScopeProvi
 			}
 		}
 		scope
+	}
+	
+	def protected IScope getJavaClassScope(EObject context, EReference reference) {
+		// code is more or less copied and xtend-ified from
+		// org.eclipse.ocl.xtext.oclstdlib.scoping.OCLstdlibScopeProvider.getScope
+		val Resource csResource = context.eResource
+		if (csResource instanceof BaseCSResource) {
+			var AbstractJavaClassScope adapter = JavaClassScope.findAdapter(csResource as BaseCSResource)
+			if (adapter == null) {
+				var EnvironmentFactoryAdapter environmentFactoryAdapter = EnvironmentFactoryAdapter.find(csResource)
+				if (environmentFactoryAdapter == null) {
+					val ResourceSet csResourceSet = csResource.resourceSet
+					if (csResourceSet != null) {
+						environmentFactoryAdapter = EnvironmentFactoryAdapter.find(csResourceSet)
+					}
+				}
+				var List<ClassLoader> classLoaders = Collections.emptyList()
+				if (environmentFactoryAdapter != null) {
+					classLoaders = environmentFactoryAdapter.metamodelManager.implementationManager.classLoaders
+				}
+				adapter = JavaClassScope.getAdapter(csResource as BaseCSResource, classLoaders)
+			}
+			return adapter
+		}
+		IScope.NULLSCOPE;
 	}
 }
