@@ -1,4 +1,7 @@
 testSpecificationName {
+
+	nameProvider 'org.muml.psm.allocation.language.xtext.naming.MUMLNameProvider';
+
     service foo {
     	qos a {
     		weight coefficient;

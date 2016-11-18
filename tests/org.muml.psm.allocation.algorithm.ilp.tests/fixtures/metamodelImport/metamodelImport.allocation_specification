@@ -1,4 +1,7 @@
 testSpecificationName {
+
+	nameProvider 'org.muml.psm.allocation.language.xtext.naming.MUMLNameProvider';
+
 	import 'http://www.muml.org/psm/allocation/algorithm/ilp/tests/extension/1.0.0'
 	
 	constraint resource test {

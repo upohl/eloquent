@@ -1,4 +1,7 @@
 testSpecificationName {
+
+	nameProvider 'org.muml.psm.allocation.language.xtext.naming.MUMLNameProvider';
+
 	
 	context hardware::hwplatforminstance::HWPlatformInstanceConfiguration
 		def: getECUs(ecuNames : Set(String)) : Sequence(hardware::hwresourceinstance::ResourceInstance) =

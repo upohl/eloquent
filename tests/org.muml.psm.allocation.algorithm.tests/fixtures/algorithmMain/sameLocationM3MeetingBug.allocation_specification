@@ -1,5 +1,8 @@
 testSpecificationName {
 
+	nameProvider 'org.muml.psm.allocation.language.xtext.naming.MUMLNameProvider';
+
+
 	constraint sameLocation bar {
 		descriptors (foo : pim::instance::ComponentInstance, bar : pim::instance::ComponentInstance);
 		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')

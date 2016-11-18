@@ -1,4 +1,7 @@
 testSpecificationName {
+
+	nameProvider 'org.muml.psm.allocation.language.xtext.naming.MUMLNameProvider';
+
 	constraint requiredHardwareResourceInstance foo {
 		descriptors (ins1 : pim::instance::ComponentInstance, res1 : hardware::hwresourceinstance::ResourceInstance) , (ins2 : pim::instance::ComponentInstance, res2 : hardware::hwresourceinstance::ResourceInstance), (ins3 : pim::instance::ComponentInstance, res3 : hardware::hwresourceinstance::ResourceInstance);
 		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
