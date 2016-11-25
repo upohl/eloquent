@@ -1,4 +1,4 @@
-package org.muml.psm.allocation.language.xtext.naming
+package org.muml.psm.allocation.language.xtext.provider
 
 import java.util.Collection
 import org.eclipse.emf.ecore.impl.EObjectImpl

@@ -1,4 +1,4 @@
-package org.muml.psm.allocation.language.xtext.naming
+package org.muml.psm.allocation.language.xtext.provider
 
 import org.muml.pim.instance.ComponentInstance
 import org.muml.pm.hardware.hwplatforminstance.HWPlatformInstanceConfiguration

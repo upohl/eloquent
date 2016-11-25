@@ -5,7 +5,7 @@ import org.eclipse.ocl.xtext.base.cs2as.CS2ASConversion
 import org.eclipse.ocl.xtext.base.cs2as.Continuation
 import org.muml.psm.allocation.language.^as.Specification
 import org.muml.psm.allocation.language.cs.SpecificationCS
-import org.muml.psm.allocation.language.xtext.naming.LazyNameProvider
+import org.muml.psm.allocation.language.xtext.provider.LazyNameProvider
 import org.muml.psm.allocation.language.xtext.visitor.LanguageSpecificationCSContainmentVisitor
 
 class SpecificationCSContainmentVisitor extends LanguageSpecificationCSContainmentVisitor {
