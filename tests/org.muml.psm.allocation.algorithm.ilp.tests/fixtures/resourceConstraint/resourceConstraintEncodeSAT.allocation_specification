@@ -1,6 +1,6 @@
 testSpecificationName {
 
-	nameProvider 'org.muml.psm.allocation.language.xtext.naming.MUMLNameProvider';
+	nameProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLNameProvider';
 
 
 	-- basically encodes the following SAT (e1 corresponds to true and e2 corresponds to false)

@@ -1,6 +1,6 @@
 testSpecificationName {
 
-	nameProvider 'org.muml.psm.allocation.language.xtext.naming.MUMLNameProvider';
+	nameProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLNameProvider';
 
 	constraint requiredHardwareResourceInstance bar {
 		descriptors (a : pim::instance::ComponentInstance, b : hardware::hwresourceinstance::ResourceInstance), (c : pim::instance::ComponentInstance, d : hardware::hwresourceinstance::ResourceInstance);
