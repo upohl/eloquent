@@ -160,7 +160,7 @@
       <details key="documentation" value="The sole purpose of this class is to make oclstdlibcs::JavaImplementationCS&#xA;&quot;concrete&quot;. In order to make the visitor framework happy, we also inherit from&#xA;ModelElementCS.&#xA;The corresponding class in the AS meta model is unused."/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NameProvider" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="NameProvider" abstract="true" interface="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A NameProvider is used to compute a (unique) name for a given model element.&#xA;That is, there exists a bijection between the set of names returned by a NameProvider&#xA;instance and the set of objects that were passed to this NameProvider instance's&#xA;getName method."/>
     </eAnnotations>
@@ -168,7 +168,7 @@
       <eParameters name="element" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object"/>
     </eOperations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StorageProvider" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="StorageProvider" abstract="true" interface="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A StorageProvider is used to store relations between model objects."/>
     </eAnnotations>

@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  *
  * @see org.muml.psm.allocation.language.as.AsPackage#getNameProvider()
- * @model abstract="true"
+ * @model interface="true" abstract="true"
  * @generated
  */
 public interface NameProvider extends EObject {

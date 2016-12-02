@@ -779,12 +779,12 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		initEClass(javaImplementationProviderEClass, JavaImplementationProvider.class, "JavaImplementationProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(nameProviderEClass, NameProvider.class, "NameProvider", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(nameProviderEClass, NameProvider.class, "NameProvider", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		EOperation op = addEOperation(nameProviderEClass, ecorePackage.getEString(), "getName", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, thePivotPackage.getObject(), "element", 1, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(storageProviderEClass, StorageProvider.class, "StorageProvider", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(storageProviderEClass, StorageProvider.class, "StorageProvider", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = addEOperation(storageProviderEClass, null, "initialize", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, thePivotPackage.getObject(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);

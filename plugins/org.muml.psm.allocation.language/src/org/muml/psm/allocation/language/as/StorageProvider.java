@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  *
  * @see org.muml.psm.allocation.language.as.AsPackage#getStorageProvider()
- * @model abstract="true"
+ * @model interface="true" abstract="true"
  * @generated
  */
 public interface StorageProvider extends EObject {

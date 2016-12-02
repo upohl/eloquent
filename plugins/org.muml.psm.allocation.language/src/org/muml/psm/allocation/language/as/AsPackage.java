@@ -1267,10 +1267,10 @@ public interface AsPackage extends EPackage {
 	int JAVA_IMPLEMENTATION_PROVIDER_FEATURE_COUNT = PivotPackage.ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.NameProviderImpl <em>Name Provider</em>}' class.
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.NameProvider <em>Name Provider</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.as.impl.NameProviderImpl
+	 * @see org.muml.psm.allocation.language.as.NameProvider
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getNameProvider()
 	 * @generated
 	 */
@@ -1286,10 +1286,10 @@ public interface AsPackage extends EPackage {
 	int NAME_PROVIDER_FEATURE_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.StorageProviderImpl <em>Storage Provider</em>}' class.
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.StorageProvider <em>Storage Provider</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.as.impl.StorageProviderImpl
+	 * @see org.muml.psm.allocation.language.as.StorageProvider
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getStorageProvider()
 	 * @generated
 	 */
@@ -2049,20 +2049,20 @@ public interface AsPackage extends EPackage {
 		EClass JAVA_IMPLEMENTATION_PROVIDER = eINSTANCE.getJavaImplementationProvider();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.NameProviderImpl <em>Name Provider</em>}' class.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.NameProvider <em>Name Provider</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.as.impl.NameProviderImpl
+		 * @see org.muml.psm.allocation.language.as.NameProvider
 		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getNameProvider()
 		 * @generated
 		 */
 		EClass NAME_PROVIDER = eINSTANCE.getNameProvider();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.StorageProviderImpl <em>Storage Provider</em>}' class.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.StorageProvider <em>Storage Provider</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.as.impl.StorageProviderImpl
+		 * @see org.muml.psm.allocation.language.as.StorageProvider
 		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getStorageProvider()
 		 * @generated
 		 */
