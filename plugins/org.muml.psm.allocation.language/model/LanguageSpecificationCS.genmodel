@@ -31,6 +31,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationCS.ecore#//SpecificationCS/goal"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/nameProviderImplementationClass"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/nameProvider"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/storageProviderImplementationClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/storageProvider"/>
     </genClasses>
     <genClasses image="false" ecoreClass="LanguageSpecificationCS.ecore#//EvaluatableElementCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//EvaluatableElementCS/expression"/>
@@ -74,6 +76,16 @@
       <genOperations ecoreOperation="LanguageSpecificationCS.ecore#//NameProviderCS/getName">
         <genParameters ecoreParameter="LanguageSpecificationCS.ecore#//NameProviderCS/getName/element"/>
       </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="LanguageSpecificationCS.ecore#//StorageProviderCS">
+      <genOperations ecoreOperation="LanguageSpecificationCS.ecore#//StorageProviderCS/initialize">
+        <genParameters ecoreParameter="LanguageSpecificationCS.ecore#//StorageProviderCS/initialize/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="LanguageSpecificationCS.ecore#//StorageProviderCS/store">
+        <genParameters ecoreParameter="LanguageSpecificationCS.ecore#//StorageProviderCS/store/source"/>
+        <genParameters ecoreParameter="LanguageSpecificationCS.ecore#//StorageProviderCS/store/target"/>
+      </genOperations>
+      <genOperations ecoreOperation="LanguageSpecificationCS.ecore#//StorageProviderCS/noRelationFound"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

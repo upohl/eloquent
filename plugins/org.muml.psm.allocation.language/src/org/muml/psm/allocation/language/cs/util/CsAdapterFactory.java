@@ -153,6 +153,10 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 				return createNameProviderCSAdapter();
 			}
 			@Override
+			public Adapter caseStorageProviderCS(StorageProviderCS object) {
+				return createStorageProviderCSAdapter();
+			}
+			@Override
 			public Adapter caseVisitableCS(VisitableCS object) {
 				return createVisitableCSAdapter();
 			}
@@ -445,6 +449,20 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createNameProviderCSAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.StorageProviderCS <em>Storage Provider CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.cs.StorageProviderCS
+	 * @generated
+	 */
+	public Adapter createStorageProviderCSAdapter() {
 		return null;
 	}
 

@@ -27,6 +27,8 @@ import org.muml.core.ExtendableElement;
  *   <li>{@link org.muml.psm.allocation.language.cs.SpecificationCS#getGoal <em>Goal</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.SpecificationCS#getNameProviderImplementationClass <em>Name Provider Implementation Class</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.SpecificationCS#getNameProvider <em>Name Provider</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.SpecificationCS#getStorageProviderImplementationClass <em>Storage Provider Implementation Class</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.SpecificationCS#getStorageProvider <em>Storage Provider</em>}</li>
  * </ul>
  *
  * @see org.muml.psm.allocation.language.cs.CsPackage#getSpecificationCS()
@@ -168,5 +170,57 @@ public interface SpecificationCS extends CompleteOCLDocumentCS, ExtendableElemen
 	 * @generated
 	 */
 	void setNameProvider(NameProviderCS value);
+
+	/**
+	 * Returns the value of the '<em><b>Storage Provider Implementation Class</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Contains a JavaImplementationProviderCS. This containment won't be
+	 * part of the AS meta model.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Storage Provider Implementation Class</em>' containment reference.
+	 * @see #setStorageProviderImplementationClass(JavaImplementationProviderCS)
+	 * @see org.muml.psm.allocation.language.cs.CsPackage#getSpecificationCS_StorageProviderImplementationClass()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	JavaImplementationProviderCS getStorageProviderImplementationClass();
+
+	/**
+	 * Sets the value of the '{@link org.muml.psm.allocation.language.cs.SpecificationCS#getStorageProviderImplementationClass <em>Storage Provider Implementation Class</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Storage Provider Implementation Class</em>' containment reference.
+	 * @see #getStorageProviderImplementationClass()
+	 * @generated
+	 */
+	void setStorageProviderImplementationClass(JavaImplementationProviderCS value);
+
+	/**
+	 * Returns the value of the '<em><b>Storage Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * This reference is not used in the CS model. It is only needed in order to
+	 * automatically create a corresponding reference in the AS meta model.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Storage Provider</em>' reference.
+	 * @see #setStorageProvider(StorageProviderCS)
+	 * @see org.muml.psm.allocation.language.cs.CsPackage#getSpecificationCS_StorageProvider()
+	 * @model
+	 * @generated
+	 */
+	StorageProviderCS getStorageProvider();
+
+	/**
+	 * Sets the value of the '{@link org.muml.psm.allocation.language.cs.SpecificationCS#getStorageProvider <em>Storage Provider</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Storage Provider</em>' reference.
+	 * @see #getStorageProvider()
+	 * @generated
+	 */
+	void setStorageProvider(StorageProviderCS value);
 
 } // SpecificationCS

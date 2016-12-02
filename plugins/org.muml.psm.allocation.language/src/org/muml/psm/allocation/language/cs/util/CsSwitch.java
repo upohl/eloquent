@@ -291,6 +291,12 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CsPackage.STORAGE_PROVIDER_CS: {
+				StorageProviderCS storageProviderCS = (StorageProviderCS)theEObject;
+				T result = caseStorageProviderCS(storageProviderCS);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -532,6 +538,21 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNameProviderCS(NameProviderCS object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Storage Provider CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Storage Provider CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStorageProviderCS(StorageProviderCS object) {
 		return null;
 	}
 

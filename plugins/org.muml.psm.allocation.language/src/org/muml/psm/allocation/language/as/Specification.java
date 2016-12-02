@@ -24,6 +24,7 @@ import org.eclipse.ocl.pivot.Model;
  *   <li>{@link org.muml.psm.allocation.language.as.Specification#getMeasure <em>Measure</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.Specification#getGoal <em>Goal</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.Specification#getNameProvider <em>Name Provider</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.as.Specification#getStorageProvider <em>Storage Provider</em>}</li>
  * </ul>
  *
  * @see org.muml.psm.allocation.language.as.AsPackage#getSpecification()
@@ -139,5 +140,31 @@ public interface Specification extends Model {
 	 * @generated
 	 */
 	void setNameProvider(NameProvider value);
+
+	/**
+	 * Returns the value of the '<em><b>Storage Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * This reference is not used in the CS model. It is only needed in order to
+	 * automatically create a corresponding reference in the AS meta model.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Storage Provider</em>' reference.
+	 * @see #setStorageProvider(StorageProvider)
+	 * @see org.muml.psm.allocation.language.as.AsPackage#getSpecification_StorageProvider()
+	 * @model
+	 * @generated
+	 */
+	StorageProvider getStorageProvider();
+
+	/**
+	 * Sets the value of the '{@link org.muml.psm.allocation.language.as.Specification#getStorageProvider <em>Storage Provider</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Storage Provider</em>' reference.
+	 * @see #getStorageProvider()
+	 * @generated
+	 */
+	void setStorageProvider(StorageProvider value);
 
 } // Specification

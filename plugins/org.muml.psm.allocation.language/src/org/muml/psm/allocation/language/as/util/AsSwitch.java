@@ -234,6 +234,12 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AsPackage.STORAGE_PROVIDER: {
+				StorageProvider storageProvider = (StorageProvider)theEObject;
+				T result = caseStorageProvider(storageProvider);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -475,6 +481,21 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNameProvider(NameProvider object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Storage Provider</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Storage Provider</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStorageProvider(StorageProvider object) {
 		return null;
 	}
 

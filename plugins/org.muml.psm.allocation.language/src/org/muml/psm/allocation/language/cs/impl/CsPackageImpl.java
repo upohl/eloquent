@@ -40,6 +40,7 @@ import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConst
 import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
 import org.muml.psm.allocation.language.cs.ServiceCS;
 import org.muml.psm.allocation.language.cs.SpecificationCS;
+import org.muml.psm.allocation.language.cs.StorageProviderCS;
 import org.muml.psm.allocation.language.cs.TupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.TypedNamedPartCS;
 import org.muml.psm.allocation.language.cs.TypedPairCS;
@@ -165,6 +166,13 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * @generated
 	 */
 	private EClass nameProviderCSEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass storageProviderCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -317,6 +325,24 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 */
 	public EReference getSpecificationCS_NameProvider() {
 		return (EReference)specificationCSEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSpecificationCS_StorageProviderImplementationClass() {
+		return (EReference)specificationCSEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSpecificationCS_StorageProvider() {
+		return (EReference)specificationCSEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -576,6 +602,15 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getStorageProviderCS() {
+		return storageProviderCSEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getLocationConstraintTypes() {
 		return locationConstraintTypesEEnum;
 	}
@@ -624,6 +659,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		createEAttribute(specificationCSEClass, SPECIFICATION_CS__GOAL);
 		createEReference(specificationCSEClass, SPECIFICATION_CS__NAME_PROVIDER_IMPLEMENTATION_CLASS);
 		createEReference(specificationCSEClass, SPECIFICATION_CS__NAME_PROVIDER);
+		createEReference(specificationCSEClass, SPECIFICATION_CS__STORAGE_PROVIDER_IMPLEMENTATION_CLASS);
+		createEReference(specificationCSEClass, SPECIFICATION_CS__STORAGE_PROVIDER);
 
 		evaluatableElementCSEClass = createEClass(EVALUATABLE_ELEMENT_CS);
 		createEReference(evaluatableElementCSEClass, EVALUATABLE_ELEMENT_CS__EXPRESSION);
@@ -667,6 +704,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		javaImplementationProviderCSEClass = createEClass(JAVA_IMPLEMENTATION_PROVIDER_CS);
 
 		nameProviderCSEClass = createEClass(NAME_PROVIDER_CS);
+
+		storageProviderCSEClass = createEClass(STORAGE_PROVIDER_CS);
 
 		// Create enums
 		locationConstraintTypesEEnum = createEEnum(LOCATION_CONSTRAINT_TYPES);
@@ -737,6 +776,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEAttribute(getSpecificationCS_Goal(), this.getGoal(), "goal", null, 0, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificationCS_NameProviderImplementationClass(), this.getJavaImplementationProviderCS(), null, "nameProviderImplementationClass", null, 1, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificationCS_NameProvider(), this.getNameProviderCS(), null, "nameProvider", null, 0, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecificationCS_StorageProviderImplementationClass(), this.getJavaImplementationProviderCS(), null, "storageProviderImplementationClass", null, 1, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecificationCS_StorageProvider(), this.getStorageProviderCS(), null, "storageProvider", null, 0, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(evaluatableElementCSEClass, EvaluatableElementCS.class, "EvaluatableElementCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEvaluatableElementCS_Expression(), theEssentialOCLCSPackage.getContextCS(), null, "expression", null, 1, 1, EvaluatableElementCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -783,6 +824,17 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		EOperation op = addEOperation(nameProviderCSEClass, ecorePackage.getEString(), "getName", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, thePivotPackage.getObject(), "element", 1, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(storageProviderCSEClass, StorageProviderCS.class, "StorageProviderCS", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		op = addEOperation(storageProviderCSEClass, null, "initialize", 1, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, thePivotPackage.getObject(), "context", 1, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(storageProviderCSEClass, thePivotPackage.getObject(), "store", 1, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, thePivotPackage.getObject(), "source", 1, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, thePivotPackage.getObject(), "target", 1, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(storageProviderCSEClass, thePivotPackage.getObject(), "noRelationFound", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(locationConstraintTypesEEnum, LocationConstraintTypes.class, "LocationConstraintTypes");

@@ -118,6 +118,8 @@ public class AsValidator extends EObjectValidator {
 				return validateJavaImplementationProvider((JavaImplementationProvider)value, diagnostics, context);
 			case AsPackage.NAME_PROVIDER:
 				return validateNameProvider((NameProvider)value, diagnostics, context);
+			case AsPackage.STORAGE_PROVIDER:
+				return validateStorageProvider((StorageProvider)value, diagnostics, context);
 			case AsPackage.LOCATION_CONSTRAINT_TYPES:
 				return validateLocationConstraintTypes((LocationConstraintTypes)value, diagnostics, context);
 			case AsPackage.GOAL:
@@ -308,6 +310,15 @@ public class AsValidator extends EObjectValidator {
 	 */
 	public boolean validateNameProvider(NameProvider nameProvider, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(nameProvider, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateStorageProvider(StorageProvider storageProvider, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(storageProvider, diagnostics, context);
 	}
 
 	/**

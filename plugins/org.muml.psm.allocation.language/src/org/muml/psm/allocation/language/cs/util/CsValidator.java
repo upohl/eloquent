@@ -119,6 +119,8 @@ public class CsValidator extends EObjectValidator {
 				return validateJavaImplementationProviderCS((JavaImplementationProviderCS)value, diagnostics, context);
 			case CsPackage.NAME_PROVIDER_CS:
 				return validateNameProviderCS((NameProviderCS)value, diagnostics, context);
+			case CsPackage.STORAGE_PROVIDER_CS:
+				return validateStorageProviderCS((StorageProviderCS)value, diagnostics, context);
 			case CsPackage.LOCATION_CONSTRAINT_TYPES:
 				return validateLocationConstraintTypes((LocationConstraintTypes)value, diagnostics, context);
 			case CsPackage.GOAL:
@@ -309,6 +311,15 @@ public class CsValidator extends EObjectValidator {
 	 */
 	public boolean validateNameProviderCS(NameProviderCS nameProviderCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint((EObject)nameProviderCS, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateStorageProviderCS(StorageProviderCS storageProviderCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)storageProviderCS, diagnostics, context);
 	}
 
 	/**

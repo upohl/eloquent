@@ -19,6 +19,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//Specification/measure"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationAS.ecore#//Specification/goal"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//Specification/nameProvider"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//Specification/storageProvider"/>
     </genClasses>
     <genClasses image="false" ecoreClass="LanguageSpecificationAS.ecore#//EvaluatableElement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//EvaluatableElement/expression"/>
@@ -62,6 +63,16 @@
       <genOperations ecoreOperation="LanguageSpecificationAS.ecore#//NameProvider/getName">
         <genParameters ecoreParameter="LanguageSpecificationAS.ecore#//NameProvider/getName/element"/>
       </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="LanguageSpecificationAS.ecore#//StorageProvider">
+      <genOperations ecoreOperation="LanguageSpecificationAS.ecore#//StorageProvider/initialize">
+        <genParameters ecoreParameter="LanguageSpecificationAS.ecore#//StorageProvider/initialize/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="LanguageSpecificationAS.ecore#//StorageProvider/store">
+        <genParameters ecoreParameter="LanguageSpecificationAS.ecore#//StorageProvider/store/source"/>
+        <genParameters ecoreParameter="LanguageSpecificationAS.ecore#//StorageProvider/store/target"/>
+      </genOperations>
+      <genOperations ecoreOperation="LanguageSpecificationAS.ecore#//StorageProvider/noRelationFound"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

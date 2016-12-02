@@ -200,13 +200,22 @@ public interface AsPackage extends EPackage {
 	int SPECIFICATION__NAME_PROVIDER = PivotPackage.MODEL_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Storage Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__STORAGE_PROVIDER = PivotPackage.MODEL_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_FEATURE_COUNT = PivotPackage.MODEL_FEATURE_COUNT + 5;
+	int SPECIFICATION_FEATURE_COUNT = PivotPackage.MODEL_FEATURE_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.EvaluatableElementImpl <em>Evaluatable Element</em>}' class.
@@ -1277,6 +1286,25 @@ public interface AsPackage extends EPackage {
 	int NAME_PROVIDER_FEATURE_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.StorageProviderImpl <em>Storage Provider</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.as.impl.StorageProviderImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getStorageProvider()
+	 * @generated
+	 */
+	int STORAGE_PROVIDER = 16;
+
+	/**
+	 * The number of structural features of the '<em>Storage Provider</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORAGE_PROVIDER_FEATURE_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1284,7 +1312,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getLocationConstraintTypes()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_TYPES = 16;
+	int LOCATION_CONSTRAINT_TYPES = 17;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.Goal <em>Goal</em>}' enum.
@@ -1294,7 +1322,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getGoal()
 	 * @generated
 	 */
-	int GOAL = 17;
+	int GOAL = 18;
 
 
 	/**
@@ -1361,6 +1389,17 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSpecification_NameProvider();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.muml.psm.allocation.language.as.Specification#getStorageProvider <em>Storage Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Storage Provider</em>'.
+	 * @see org.muml.psm.allocation.language.as.Specification#getStorageProvider()
+	 * @see #getSpecification()
+	 * @generated
+	 */
+	EReference getSpecification_StorageProvider();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.EvaluatableElement <em>Evaluatable Element</em>}'.
@@ -1656,6 +1695,16 @@ public interface AsPackage extends EPackage {
 	EClass getNameProvider();
 
 	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.StorageProvider <em>Storage Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Storage Provider</em>'.
+	 * @see org.muml.psm.allocation.language.as.StorageProvider
+	 * @generated
+	 */
+	EClass getStorageProvider();
+
+	/**
 	 * Returns the meta object for enum '{@link org.muml.psm.allocation.language.as.LocationConstraintTypes <em>Location Constraint Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1746,6 +1795,14 @@ public interface AsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SPECIFICATION__NAME_PROVIDER = eINSTANCE.getSpecification_NameProvider();
+
+		/**
+		 * The meta object literal for the '<em><b>Storage Provider</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION__STORAGE_PROVIDER = eINSTANCE.getSpecification_StorageProvider();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.EvaluatableElementImpl <em>Evaluatable Element</em>}' class.
@@ -2000,6 +2057,16 @@ public interface AsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass NAME_PROVIDER = eINSTANCE.getNameProvider();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.StorageProviderImpl <em>Storage Provider</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.as.impl.StorageProviderImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getStorageProvider()
+		 * @generated
+		 */
+		EClass STORAGE_PROVIDER = eINSTANCE.getStorageProvider();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.

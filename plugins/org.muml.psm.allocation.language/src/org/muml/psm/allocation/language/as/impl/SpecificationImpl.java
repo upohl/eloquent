@@ -26,6 +26,7 @@ import org.muml.psm.allocation.language.as.MeasureFunction;
 import org.muml.psm.allocation.language.as.NameProvider;
 import org.muml.psm.allocation.language.as.Service;
 import org.muml.psm.allocation.language.as.Specification;
+import org.muml.psm.allocation.language.as.StorageProvider;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,6 +41,7 @@ import org.muml.psm.allocation.language.as.Specification;
  *   <li>{@link org.muml.psm.allocation.language.as.impl.SpecificationImpl#getMeasure <em>Measure</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.impl.SpecificationImpl#getGoal <em>Goal</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.impl.SpecificationImpl#getNameProvider <em>Name Provider</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.as.impl.SpecificationImpl#getStorageProvider <em>Storage Provider</em>}</li>
  * </ul>
  *
  * @generated
@@ -104,6 +106,16 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 	 * @ordered
 	 */
 	protected NameProvider nameProvider;
+
+	/**
+	 * The cached value of the '{@link #getStorageProvider() <em>Storage Provider</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStorageProvider()
+	 * @generated
+	 * @ordered
+	 */
+	protected StorageProvider storageProvider;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -255,6 +267,44 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public StorageProvider getStorageProvider() {
+		if (storageProvider != null && storageProvider.eIsProxy()) {
+			InternalEObject oldStorageProvider = (InternalEObject)storageProvider;
+			storageProvider = (StorageProvider)eResolveProxy(oldStorageProvider);
+			if (storageProvider != oldStorageProvider) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AsPackage.SPECIFICATION__STORAGE_PROVIDER, oldStorageProvider, storageProvider));
+			}
+		}
+		return storageProvider;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StorageProvider basicGetStorageProvider() {
+		return storageProvider;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStorageProvider(StorageProvider newStorageProvider) {
+		StorageProvider oldStorageProvider = storageProvider;
+		storageProvider = newStorageProvider;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.SPECIFICATION__STORAGE_PROVIDER, oldStorageProvider, storageProvider));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -287,6 +337,9 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 			case AsPackage.SPECIFICATION__NAME_PROVIDER:
 				if (resolve) return getNameProvider();
 				return basicGetNameProvider();
+			case AsPackage.SPECIFICATION__STORAGE_PROVIDER:
+				if (resolve) return getStorageProvider();
+				return basicGetStorageProvider();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -317,6 +370,9 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 			case AsPackage.SPECIFICATION__NAME_PROVIDER:
 				setNameProvider((NameProvider)newValue);
 				return;
+			case AsPackage.SPECIFICATION__STORAGE_PROVIDER:
+				setStorageProvider((StorageProvider)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -344,6 +400,9 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 			case AsPackage.SPECIFICATION__NAME_PROVIDER:
 				setNameProvider((NameProvider)null);
 				return;
+			case AsPackage.SPECIFICATION__STORAGE_PROVIDER:
+				setStorageProvider((StorageProvider)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -366,6 +425,8 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 				return goal != GOAL_EDEFAULT;
 			case AsPackage.SPECIFICATION__NAME_PROVIDER:
 				return nameProvider != null;
+			case AsPackage.SPECIFICATION__STORAGE_PROVIDER:
+				return storageProvider != null;
 		}
 		return super.eIsSet(featureID);
 	}

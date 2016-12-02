@@ -220,13 +220,31 @@ public interface CsPackage extends EPackage {
 	int SPECIFICATION_CS__NAME_PROVIDER = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Storage Provider Implementation Class</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_CS__STORAGE_PROVIDER_IMPLEMENTATION_CLASS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Storage Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_CS__STORAGE_PROVIDER = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>Specification CS</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS_FEATURE_COUNT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 7;
+	int SPECIFICATION_CS_FEATURE_COUNT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 9;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.EvaluatableElementCSImpl <em>Evaluatable Element CS</em>}' class.
@@ -1432,6 +1450,25 @@ public interface CsPackage extends EPackage {
 	int NAME_PROVIDER_CS_FEATURE_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.StorageProviderCS <em>Storage Provider CS</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.cs.StorageProviderCS
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getStorageProviderCS()
+	 * @generated
+	 */
+	int STORAGE_PROVIDER_CS = 16;
+
+	/**
+	 * The number of structural features of the '<em>Storage Provider CS</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORAGE_PROVIDER_CS_FEATURE_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1439,7 +1476,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getLocationConstraintTypes()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_TYPES = 16;
+	int LOCATION_CONSTRAINT_TYPES = 17;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.Goal <em>Goal</em>}' enum.
@@ -1449,7 +1486,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getGoal()
 	 * @generated
 	 */
-	int GOAL = 17;
+	int GOAL = 18;
 
 
 	/**
@@ -1527,6 +1564,28 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSpecificationCS_NameProvider();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.SpecificationCS#getStorageProviderImplementationClass <em>Storage Provider Implementation Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Storage Provider Implementation Class</em>'.
+	 * @see org.muml.psm.allocation.language.cs.SpecificationCS#getStorageProviderImplementationClass()
+	 * @see #getSpecificationCS()
+	 * @generated
+	 */
+	EReference getSpecificationCS_StorageProviderImplementationClass();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.muml.psm.allocation.language.cs.SpecificationCS#getStorageProvider <em>Storage Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Storage Provider</em>'.
+	 * @see org.muml.psm.allocation.language.cs.SpecificationCS#getStorageProvider()
+	 * @see #getSpecificationCS()
+	 * @generated
+	 */
+	EReference getSpecificationCS_StorageProvider();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.EvaluatableElementCS <em>Evaluatable Element CS</em>}'.
@@ -1822,6 +1881,16 @@ public interface CsPackage extends EPackage {
 	EClass getNameProviderCS();
 
 	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.StorageProviderCS <em>Storage Provider CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Storage Provider CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.StorageProviderCS
+	 * @generated
+	 */
+	EClass getStorageProviderCS();
+
+	/**
 	 * Returns the meta object for enum '{@link org.muml.psm.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1920,6 +1989,22 @@ public interface CsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SPECIFICATION_CS__NAME_PROVIDER = eINSTANCE.getSpecificationCS_NameProvider();
+
+		/**
+		 * The meta object literal for the '<em><b>Storage Provider Implementation Class</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION_CS__STORAGE_PROVIDER_IMPLEMENTATION_CLASS = eINSTANCE.getSpecificationCS_StorageProviderImplementationClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Storage Provider</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION_CS__STORAGE_PROVIDER = eINSTANCE.getSpecificationCS_StorageProvider();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.EvaluatableElementCSImpl <em>Evaluatable Element CS</em>}' class.
@@ -2174,6 +2259,16 @@ public interface CsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass NAME_PROVIDER_CS = eINSTANCE.getNameProviderCS();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.StorageProviderCS <em>Storage Provider CS</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.cs.StorageProviderCS
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getStorageProviderCS()
+		 * @generated
+		 */
+		EClass STORAGE_PROVIDER_CS = eINSTANCE.getStorageProviderCS();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.

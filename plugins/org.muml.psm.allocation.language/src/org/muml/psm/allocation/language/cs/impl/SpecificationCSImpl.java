@@ -37,6 +37,7 @@ import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
 import org.muml.psm.allocation.language.cs.NameProviderCS;
 import org.muml.psm.allocation.language.cs.ServiceCS;
 import org.muml.psm.allocation.language.cs.SpecificationCS;
+import org.muml.psm.allocation.language.cs.StorageProviderCS;
 
 import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 
@@ -55,6 +56,8 @@ import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
  *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getGoal <em>Goal</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getNameProviderImplementationClass <em>Name Provider Implementation Class</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getNameProvider <em>Name Provider</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getStorageProviderImplementationClass <em>Storage Provider Implementation Class</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getStorageProvider <em>Storage Provider</em>}</li>
  * </ul>
  *
  * @generated
@@ -139,6 +142,26 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 * @ordered
 	 */
 	protected NameProviderCS nameProvider;
+
+	/**
+	 * The cached value of the '{@link #getStorageProviderImplementationClass() <em>Storage Provider Implementation Class</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStorageProviderImplementationClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected JavaImplementationProviderCS storageProviderImplementationClass;
+
+	/**
+	 * The cached value of the '{@link #getStorageProvider() <em>Storage Provider</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStorageProvider()
+	 * @generated
+	 * @ordered
+	 */
+	protected StorageProviderCS storageProvider;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -345,6 +368,87 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public JavaImplementationProviderCS getStorageProviderImplementationClass() {
+		return storageProviderImplementationClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStorageProviderImplementationClass(JavaImplementationProviderCS newStorageProviderImplementationClass, NotificationChain msgs) {
+		JavaImplementationProviderCS oldStorageProviderImplementationClass = storageProviderImplementationClass;
+		storageProviderImplementationClass = newStorageProviderImplementationClass;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER_IMPLEMENTATION_CLASS, oldStorageProviderImplementationClass, newStorageProviderImplementationClass);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStorageProviderImplementationClass(JavaImplementationProviderCS newStorageProviderImplementationClass) {
+		if (newStorageProviderImplementationClass != storageProviderImplementationClass) {
+			NotificationChain msgs = null;
+			if (storageProviderImplementationClass != null)
+				msgs = ((InternalEObject)storageProviderImplementationClass).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER_IMPLEMENTATION_CLASS, null, msgs);
+			if (newStorageProviderImplementationClass != null)
+				msgs = ((InternalEObject)newStorageProviderImplementationClass).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER_IMPLEMENTATION_CLASS, null, msgs);
+			msgs = basicSetStorageProviderImplementationClass(newStorageProviderImplementationClass, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER_IMPLEMENTATION_CLASS, newStorageProviderImplementationClass, newStorageProviderImplementationClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StorageProviderCS getStorageProvider() {
+		if (storageProvider != null && ((EObject)storageProvider).eIsProxy()) {
+			InternalEObject oldStorageProvider = (InternalEObject)storageProvider;
+			storageProvider = (StorageProviderCS)eResolveProxy(oldStorageProvider);
+			if (storageProvider != oldStorageProvider) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER, oldStorageProvider, storageProvider));
+			}
+		}
+		return storageProvider;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StorageProviderCS basicGetStorageProvider() {
+		return storageProvider;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStorageProvider(StorageProviderCS newStorageProvider) {
+		StorageProviderCS oldStorageProvider = storageProvider;
+		storageProvider = newStorageProvider;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER, oldStorageProvider, storageProvider));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String toString() {
 		return super.toString();
 	}
@@ -397,6 +501,8 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 				return basicSetMeasure(null, msgs);
 			case CsPackage.SPECIFICATION_CS__NAME_PROVIDER_IMPLEMENTATION_CLASS:
 				return basicSetNameProviderImplementationClass(null, msgs);
+			case CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER_IMPLEMENTATION_CLASS:
+				return basicSetStorageProviderImplementationClass(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -424,6 +530,11 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 			case CsPackage.SPECIFICATION_CS__NAME_PROVIDER:
 				if (resolve) return getNameProvider();
 				return basicGetNameProvider();
+			case CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER_IMPLEMENTATION_CLASS:
+				return getStorageProviderImplementationClass();
+			case CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER:
+				if (resolve) return getStorageProvider();
+				return basicGetStorageProvider();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -461,6 +572,12 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 			case CsPackage.SPECIFICATION_CS__NAME_PROVIDER:
 				setNameProvider((NameProviderCS)newValue);
 				return;
+			case CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER_IMPLEMENTATION_CLASS:
+				setStorageProviderImplementationClass((JavaImplementationProviderCS)newValue);
+				return;
+			case CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER:
+				setStorageProvider((StorageProviderCS)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -494,6 +611,12 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 			case CsPackage.SPECIFICATION_CS__NAME_PROVIDER:
 				setNameProvider((NameProviderCS)null);
 				return;
+			case CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER_IMPLEMENTATION_CLASS:
+				setStorageProviderImplementationClass((JavaImplementationProviderCS)null);
+				return;
+			case CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER:
+				setStorageProvider((StorageProviderCS)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -520,6 +643,10 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 				return nameProviderImplementationClass != null;
 			case CsPackage.SPECIFICATION_CS__NAME_PROVIDER:
 				return nameProvider != null;
+			case CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER_IMPLEMENTATION_CLASS:
+				return storageProviderImplementationClass != null;
+			case CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER:
+				return storageProvider != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -38,6 +38,11 @@
         <details key="documentation" value="This reference is not used in the CS model. It is only needed in order to&#xA;automatically create a corresponding reference in the AS meta model."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="storageProvider" eType="#//StorageProvider">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This reference is not used in the CS model. It is only needed in order to&#xA;automatically create a corresponding reference in the AS meta model."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EvaluatableElement" abstract="true" eSuperTypes="../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Element">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -161,6 +166,29 @@
     </eAnnotations>
     <eOperations name="getName" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eParameters name="element" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StorageProvider" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A StorageProvider is used to store relations between model objects."/>
+    </eAnnotations>
+    <eOperations name="initialize" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This method can be used to initialize the StorageProvider. This method&#xA;is called only once. It is called before any call to the &quot;store&quot; method is&#xA;made. The context parameter is the context object that is passed to&#xA;the qvto transformation."/>
+      </eAnnotations>
+      <eParameters name="context" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object"/>
+    </eOperations>
+    <eOperations name="store" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Store the relation between the object &quot;source&quot; and the object &quot;target&quot;.&#xA;This method might return an arbitrary object or null. If it returns an object,&#xA;it is passed to a qvto transformation - so it should implement the EObject&#xA;interface."/>
+      </eAnnotations>
+      <eParameters name="source" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object"/>
+      <eParameters name="target" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object"/>
+    </eOperations>
+    <eOperations name="noRelationFound" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Called if no relation could be found that satisfies all constraints. Can&#xA;be used to return, for instance, an empty SystemAllocation object or null.&#xA;Note: maybe we will remove this method again (for now, we just introduced&#xA;it to pass the existing testcases (in particular&#xA;algorithmMain/nonexistenAllocation.allocation_specification))."/>
+      </eAnnotations>
     </eOperations>
   </eClassifiers>
 </ecore:EPackage>
