@@ -1,7 +1,7 @@
 testSpecificationName {
 
 	nameProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLNameProvider';
-
+	storageProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLStorageProvider';
 
 	constraint sameLocation bar {
 		descriptors (foo : pim::instance::ComponentInstance, bar : pim::instance::ComponentInstance);
