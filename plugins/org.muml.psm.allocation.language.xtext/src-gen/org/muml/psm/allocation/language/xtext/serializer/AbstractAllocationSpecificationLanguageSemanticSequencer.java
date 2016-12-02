@@ -260,8 +260,15 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				sequence_BoundWeightTupleDescriptor(context, (BoundWeightTupleDescriptorCS) semanticObject); 
 				return; 
 			case CsPackage.JAVA_IMPLEMENTATION_PROVIDER_CS:
-				sequence_NameProviderImplementationClass(context, (JavaImplementationProviderCS) semanticObject); 
-				return; 
+				if (rule == grammarAccess.getNameProviderImplementationClassRule()) {
+					sequence_NameProviderImplementationClass(context, (JavaImplementationProviderCS) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getStorageProviderImplementationClassRule()) {
+					sequence_StorageProviderImplementationClass(context, (JavaImplementationProviderCS) semanticObject); 
+					return; 
+				}
+				else break;
 			case CsPackage.LOCATION_CONSTRAINT_CS:
 				sequence_LocationConstraint(context, (LocationConstraintCS) semanticObject); 
 				return; 
@@ -603,12 +610,31 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 *     (
 	 *         name=ID 
 	 *         nameProviderImplementationClass=NameProviderImplementationClass 
+	 *         storageProviderImplementationClass=StorageProviderImplementationClass 
 	 *         (ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS | services+=Service | constraints+=Constraint)* 
 	 *         (goal=Goal measure=MeasureFunction)?
 	 *     )
 	 */
 	protected void sequence_Specification(ISerializationContext context, SpecificationCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     StorageProviderImplementationClass returns JavaImplementationProviderCS
+	 *
+	 * Constraint:
+	 *     implementation=[JavaClassCS|SINGLE_QUOTED_STRING]
+	 */
+	protected void sequence_StorageProviderImplementationClass(ISerializationContext context, JavaImplementationProviderCS semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, OCLstdlibCSPackage.Literals.JAVA_IMPLEMENTATION_CS__IMPLEMENTATION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OCLstdlibCSPackage.Literals.JAVA_IMPLEMENTATION_CS__IMPLEMENTATION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getStorageProviderImplementationClassAccess().getImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1(), semanticObject.getImplementation());
+		feeder.finish();
 	}
 	
 	

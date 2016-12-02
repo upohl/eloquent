@@ -37,7 +37,7 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getSpecificationAccess().getAlternatives_4(), "rule__Specification__Alternatives_4");
+					put(grammarAccess.getSpecificationAccess().getAlternatives_5(), "rule__Specification__Alternatives_5");
 					put(grammarAccess.getConstraintAccess().getAlternatives_1(), "rule__Constraint__Alternatives_1");
 					put(grammarAccess.getResourceConstraintAccess().getAlternatives_0(), "rule__ResourceConstraint__Alternatives_0");
 					put(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getAlternatives_0(), "rule__RequiredHardwareResourceInstanceConstraint__Alternatives_0");
@@ -88,8 +88,9 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getLocationConstraintTypeAccess().getAlternatives(), "rule__LocationConstraintType__Alternatives");
 					put(grammarAccess.getGoalAccess().getAlternatives(), "rule__Goal__Alternatives");
 					put(grammarAccess.getSpecificationAccess().getGroup(), "rule__Specification__Group__0");
-					put(grammarAccess.getSpecificationAccess().getGroup_5(), "rule__Specification__Group_5__0");
+					put(grammarAccess.getSpecificationAccess().getGroup_6(), "rule__Specification__Group_6__0");
 					put(grammarAccess.getNameProviderImplementationClassAccess().getGroup(), "rule__NameProviderImplementationClass__Group__0");
+					put(grammarAccess.getStorageProviderImplementationClassAccess().getGroup(), "rule__StorageProviderImplementationClass__Group__0");
 					put(grammarAccess.getServiceAccess().getGroup(), "rule__Service__Group__0");
 					put(grammarAccess.getQosDimensionAccess().getGroup(), "rule__QosDimension__Group__0");
 					put(grammarAccess.getTypedPairAccess().getGroup(), "rule__TypedPair__Group__0");
@@ -231,13 +232,15 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getWildcardTypeRefCSAccess().getGroup_2(), "rule__WildcardTypeRefCS__Group_2__0");
 					put(grammarAccess.getSpecificationAccess().getNameAssignment_1(), "rule__Specification__NameAssignment_1");
 					put(grammarAccess.getSpecificationAccess().getNameProviderImplementationClassAssignment_3(), "rule__Specification__NameProviderImplementationClassAssignment_3");
-					put(grammarAccess.getSpecificationAccess().getOwnedImportsAssignment_4_0(), "rule__Specification__OwnedImportsAssignment_4_0");
-					put(grammarAccess.getSpecificationAccess().getOwnedContextsAssignment_4_1(), "rule__Specification__OwnedContextsAssignment_4_1");
-					put(grammarAccess.getSpecificationAccess().getServicesAssignment_4_2(), "rule__Specification__ServicesAssignment_4_2");
-					put(grammarAccess.getSpecificationAccess().getConstraintsAssignment_4_3(), "rule__Specification__ConstraintsAssignment_4_3");
-					put(grammarAccess.getSpecificationAccess().getGoalAssignment_5_0(), "rule__Specification__GoalAssignment_5_0");
-					put(grammarAccess.getSpecificationAccess().getMeasureAssignment_5_1(), "rule__Specification__MeasureAssignment_5_1");
+					put(grammarAccess.getSpecificationAccess().getStorageProviderImplementationClassAssignment_4(), "rule__Specification__StorageProviderImplementationClassAssignment_4");
+					put(grammarAccess.getSpecificationAccess().getOwnedImportsAssignment_5_0(), "rule__Specification__OwnedImportsAssignment_5_0");
+					put(grammarAccess.getSpecificationAccess().getOwnedContextsAssignment_5_1(), "rule__Specification__OwnedContextsAssignment_5_1");
+					put(grammarAccess.getSpecificationAccess().getServicesAssignment_5_2(), "rule__Specification__ServicesAssignment_5_2");
+					put(grammarAccess.getSpecificationAccess().getConstraintsAssignment_5_3(), "rule__Specification__ConstraintsAssignment_5_3");
+					put(grammarAccess.getSpecificationAccess().getGoalAssignment_6_0(), "rule__Specification__GoalAssignment_6_0");
+					put(grammarAccess.getSpecificationAccess().getMeasureAssignment_6_1(), "rule__Specification__MeasureAssignment_6_1");
 					put(grammarAccess.getNameProviderImplementationClassAccess().getImplementationAssignment_1(), "rule__NameProviderImplementationClass__ImplementationAssignment_1");
+					put(grammarAccess.getStorageProviderImplementationClassAccess().getImplementationAssignment_1(), "rule__StorageProviderImplementationClass__ImplementationAssignment_1");
 					put(grammarAccess.getServiceAccess().getNameAssignment_1(), "rule__Service__NameAssignment_1");
 					put(grammarAccess.getServiceAccess().getDimensionsAssignment_3(), "rule__Service__DimensionsAssignment_3");
 					put(grammarAccess.getQosDimensionAccess().getNameAssignment_1(), "rule__QosDimension__NameAssignment_1");

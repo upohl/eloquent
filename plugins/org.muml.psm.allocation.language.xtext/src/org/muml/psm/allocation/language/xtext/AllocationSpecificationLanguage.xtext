@@ -11,6 +11,7 @@ Specification returns cs::SpecificationCS:
 	{cs::SpecificationCS}
 	name=ID '{'
 		nameProviderImplementationClass=NameProviderImplementationClass
+		storageProviderImplementationClass=StorageProviderImplementationClass
 		(ownedImports += ImportCS | ownedContexts += ClassifierContextDeclCS
 			| services += Service | constraints += Constraint
 		)*
@@ -20,6 +21,10 @@ Specification returns cs::SpecificationCS:
 
 NameProviderImplementationClass returns cs::JavaImplementationProviderCS:
 	'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING] ';'
+;
+
+StorageProviderImplementationClass returns cs::JavaImplementationProviderCS:
+	'storageProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING] ';'
 ;
 
 Service returns cs::ServiceCS:
