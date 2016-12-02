@@ -54,6 +54,7 @@ public class CS2ASEcore extends PredefinedQVToTransformationExecutor {
 		context.setConfigProperty(oclCS2PivotClassMap, dict);
 		List<String> skipFeaturesList = Utils.<String>createList();
 		skipFeaturesList.add("nameProviderImplementationClass");
+		skipFeaturesList.add("storageProviderImplementationClass");
 		context.setConfigProperty(skipFeatures, skipFeaturesList);
 	}
 }

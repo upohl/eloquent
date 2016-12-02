@@ -36,6 +36,8 @@ Workflow {
 		generatePrimarySuperCallFor = "SpecificationCS"
 		skipFeatures = "nameProviderImplementationClass"
 		skipFeatures = "nameProvider"
+		skipFeatures = "storageProviderImplementationClass"
+		skipFeatures = "storageProvider"
 	}
 	
 	// generate left2right visitor
