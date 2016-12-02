@@ -59,6 +59,7 @@ mapping in EClass::csEClass2asEClass() : EClass
 {
 	name := self.name.csName2asName();
 	_abstract := self._abstract;
+	interface := self.interface;
 	eSuperTypes += self.eSuperTypes->map eClass2eClass();
 	eStructuralFeatures += self.eStructuralFeatures->reject(feature |
 		skipFeatures->includes(feature.name)
