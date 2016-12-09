@@ -1,6 +1,7 @@
 testSpecificationName {
 
 	nameProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLNameProvider';
+	storageProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLStorageProvider';
 
 	constraint requiredHardwareResourceInstance foo {
 		descriptors (ins1 : pim::instance::ComponentInstance, res1 : hardware::hwresourceinstance::ResourceInstance) , (ins2 : pim::instance::ComponentInstance, res2 : hardware::hwresourceinstance::ResourceInstance);

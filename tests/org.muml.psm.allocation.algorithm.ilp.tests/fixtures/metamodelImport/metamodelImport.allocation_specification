@@ -1,6 +1,7 @@
 testSpecificationName {
 
 	nameProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLNameProvider';
+	storageProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLStorageProvider';
 
 	import 'http://www.muml.org/psm/allocation/algorithm/ilp/tests/extension/1.0.0'
 	

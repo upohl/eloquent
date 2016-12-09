@@ -1,6 +1,7 @@
 testSpecificationName {
 
 	nameProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLNameProvider';
+	storageProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLStorageProvider';
 
 	constraint collocation foo {
 		descriptors (a : pim::instance::ComponentInstance, b : pim::instance::ComponentInstance);

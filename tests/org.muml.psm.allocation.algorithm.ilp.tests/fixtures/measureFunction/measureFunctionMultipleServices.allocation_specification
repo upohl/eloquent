@@ -1,6 +1,7 @@
 testSpecificationName {
 
 	nameProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLNameProvider';
+	storageProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLStorageProvider';
 
     service foo {
     	qos a {
