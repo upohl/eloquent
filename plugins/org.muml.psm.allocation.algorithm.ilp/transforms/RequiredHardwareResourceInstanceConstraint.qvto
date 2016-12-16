@@ -7,10 +7,8 @@ import VariableHelper;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype oclcontext uses oclcontext('http://www.muml.org/psm/allocation/language/oclcontext/1.0.0');
-modeltype core uses core('http://www.muml.org/core/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
 modeltype expressions uses core::expressions('http://www.muml.org/core/expressions/1.0.0');
-modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
 modeltype instance uses pim::instance('http://www.muml.org/pim/instance/1.0.0');
 modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0');
 modeltype hwrinstance uses hardware::hwresourceinstance('http://www.muml.org/pm/hardware/hwresourceinstance/1.0.0');
@@ -35,26 +33,28 @@ helper RequiredHardwareResourceInstanceConstraint::createHwResInstanceConstraint
 	hpic : HWPlatformInstanceConfiguration) {
 	var oclContext : OCLContext := createOCLContext(cic, hpic);
 	log("SORT");
-	var sequences : Sequence(Sequence(NamedElement)) := self.evaluateOCL(oclContext)
+	var sequences : Sequence(Sequence(OclAny)) := self.evaluateOCL(oclContext)
 		->collectNested(toSequence())
 		->sortComponentResourceSequences(); 
 	log("SORT");
-	sequences->createHelperVariablesAndConstraints(ilp);
+	sequences->forEach(seq) {
+		seq->createHelperVariablesAndConstraints(ilp);
+	};
 	while (sequences->notEmpty()) {
-		var cur : Sequence(NamedElement) := sequences->first();
+		var cur : Sequence(OclAny) := sequences->first();
 		// since createConstraintExpression generates an equality ("= 1"),
 		// we must get rid of duplicates (hence, we do the
 		// -> OrderedSet -> Sequence conversion)
 		// (actually, todo could be an OrderedSet(Sequence(NamedElement)),
 		// but the other helpers/queries expect a Sequence...)
-		var todo : Sequence(Sequence(NamedElement)) := cur->getAssociatedSequences(sequences)
+		var todo : Sequence(Sequence(OclAny)) := cur->getAssociatedSequences(sequences)
 			->asOrderedSet()->asSequence();
 		sequences := sequences->reject(seq | todo->includes(seq));
 		todo->createConstraintExpression(ilp, self)
 	};
 }
 
-query Sequence(Sequence(NamedElement))::sortComponentResourceSequences() : Sequence(Sequence(NamedElement)) {
+query Sequence(Sequence(OclAny))::sortComponentResourceSequences() : Sequence(Sequence(OclAny)) {
 	return self->collectNested(seq |
 		seq->sortComponentResourceSequence()
 	)->sortedBy(seq | seq->getVariableName());
@@ -68,8 +68,8 @@ query Sequence(Sequence(NamedElement))::sortComponentResourceSequences() : Seque
 	indexes->collectNested(i | sequence->subSequence(i, i + 1));
 }*/
 
-query Sequence(NamedElement)::getAssociatedSequences(sequence : Sequence(Sequence(NamedElement)))
-	: Sequence(Sequence(NamedElement)) {
+query Sequence(OclAny)::getAssociatedSequences(sequence : Sequence(Sequence(OclAny)))
+	: Sequence(Sequence(OclAny)) {
 	return sequence->select(seq |
 		let indexes : OrderedSet(Integer) = getOddNumbers(1, self->size())
 		in
@@ -79,7 +79,7 @@ query Sequence(NamedElement)::getAssociatedSequences(sequence : Sequence(Sequenc
 	);
 }
 
-helper Sequence(Sequence(NamedElement))::createConstraintExpression(inout ilp : IntegerLinearProgram,
+helper Sequence(Sequence(OclAny))::createConstraintExpression(inout ilp : IntegerLinearProgram,
 	constraint : RequiredHardwareResourceInstanceConstraint) {
 	log("createHWRESConstraintExpression");
 	self->print();

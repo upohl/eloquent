@@ -4,7 +4,6 @@ import Sort;
 import TupleAccessor;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
-modeltype core uses core('http://www.muml.org/core/1.0.0');
 modeltype expressions uses core::expressions('http://www.muml.org/core/expressions/1.0.0');
 modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
@@ -37,7 +36,7 @@ constructor ConstraintExpression::ConstraintExpression(lhs : Expression, rhs : E
 	} endif;
 }
 
-helper Sequence(Sequence(NamedElement))::createAdditionConstraintExpression(lit : String, comment : String)
+helper Sequence(Sequence(OclAny))::createAdditionConstraintExpression(lit : String, comment : String)
 	: ConstraintExpression {
 	var lhs : Expression := null;
 	self->reverse()->forEach(seq) {

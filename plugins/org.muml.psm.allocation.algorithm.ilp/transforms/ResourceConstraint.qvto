@@ -8,9 +8,7 @@ import VariableHelper;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype oclcontext uses oclcontext('http://www.muml.org/psm/allocation/language/oclcontext/1.0.0');
-modeltype core uses core('http://www.muml.org/core/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
-modeltype expressions uses core::expressions('http://www.muml.org/core/expressions/1.0.0');
 modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
 modeltype instance uses pim::instance('http://www.muml.org/pim/instance/1.0.0');
 modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0');
@@ -28,7 +26,7 @@ library ResourceConstraintLib;
 // switch between a tuple value and its sequence representation
 // (we cannot solely use the sequence representation, because we need access
 // to the lhs value (and maintaining the lhs value in the sequence is awkward
-// (NamedElement + Real => common supertype OclAny))).
+// (OclAny + Real => common supertype OclAny))).
 
 helper Specification::createResourceConstraints(inout ilp : IntegerLinearProgram,
 	cic : ComponentInstanceConfiguration,
@@ -66,7 +64,9 @@ helper TupleValue::createResourceConstraint(inout ilp : IntegerLinearProgram, co
 	log("invalid? " + sequence->oclIsInvalid().toString());
 	sequence->collectNested(tv : TupleValue |
 		tv.toSequence()->sortComponentResourceSequence() // sort the sequence
-	)->createHelperVariablesAndConstraints(ilp);
+	)->forEach(seq) {
+		seq->createHelperVariablesAndConstraints(ilp);
+	};
 	sequence->createResourceConstraintExpression(ilp, constraint, self.getRhsValue(constraint));
 }
 

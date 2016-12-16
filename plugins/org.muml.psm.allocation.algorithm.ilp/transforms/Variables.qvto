@@ -2,7 +2,6 @@ import Expressions;
 import Util;
 import VariableHelper;
 
-modeltype core uses core('http://www.muml.org/core/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
 modeltype expressions uses core::expressions('http://www.muml.org/core/expressions/1.0.0');
 modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
@@ -12,13 +11,13 @@ modeltype hwrinstance uses hardware::hwresourceinstance('http://www.muml.org/pm/
 
 library Variables;
 
-helper Sequence(NamedElement)::createHelperVariablesAndConstraints(inout ilp : IntegerLinearProgram) : Variable {
+helper Sequence(OclAny)::createHelperVariablesAndConstraints(inout ilp : IntegerLinearProgram) : Variable {
 	var variable : Variable := self->getVariable();
 	if (not variable.oclIsUndefined()) then {
 		return variable;
 	} endif;
-	var left : Sequence(NamedElement) := self->subSequence(1, self->size() - 2);
-	var right : Sequence(NamedElement) := self->subSequence(3, self->size());
+	var left : Sequence(OclAny) := self->subSequence(1, self->size() - 2);
+	var right : Sequence(OclAny) := self->subSequence(3, self->size());
 	var leftVariable : Variable := left->createHelperVariablesAndConstraints(ilp);
 	var rightVariable : Variable := right->createHelperVariablesAndConstraints(ilp);
 	variable := self->map createBinaryVariable();
@@ -57,15 +56,15 @@ helper createHelperVariableConstraint(leftVariable : Variable,
 
 // binary
 
-mapping Sequence(NamedElement)::createBinaryVariable() : Variable {
+mapping Sequence(OclAny)::createBinaryVariable() : Variable {
 	log("binary called for: " + self->getVariableName());
 	name := self->getVariableName();
 	dataType := ILPDataType::BINARY;
 }
 
-query Variable::getBinaryVariableSequence() : Sequence(NamedElement) {
+query Variable::getBinaryVariableSequence() : Sequence(OclAny) {
 	return self.invresolveoneIn(
-		Sequence(NamedElement)::createBinaryVariable,
-		Sequence(NamedElement)
+		Sequence(OclAny)::createBinaryVariable,
+		Sequence(OclAny)
 	);
 }

@@ -9,7 +9,7 @@ library Sort;
 
 // common sorting code
 
-query Sequence(NamedElement)::sortComponentResourceSequence() : Sequence(NamedElement) {
+query Sequence(OclAny)::sortComponentResourceSequence() : Sequence(OclAny) {
 	return let indexes : OrderedSet(Integer) = getOddNumbers(1, self->size())
 	in
 	indexes->collectNested(i | Sequence{self->at(i), self->at(i + 1)})

@@ -7,7 +7,6 @@ import Variables;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype oclcontext uses oclcontext('http://www.muml.org/psm/allocation/language/oclcontext/1.0.0');
-modeltype core uses core('http://www.muml.org/core/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
 modeltype expressions uses core::expressions('http://www.muml.org/core/expressions/1.0.0');
 modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
@@ -40,20 +39,22 @@ helper Specification::createLocationConstraints(inout ilp : IntegerLinearProgram
 helper LocationConstraint::createLocationConstraint(inout ilp : IntegerLinearProgram,
 	cic : ComponentInstanceConfiguration,
 	hpic : HWPlatformInstanceConfiguration) {
-	var sequences : Sequence(Sequence(NamedElement)) := self.getHelperVariableSequences(cic, hpic);
-	sequences->createHelperVariablesAndConstraints(ilp);
-	var instances : OrderedSet(NamedElement) := sequences->collect(seq : Sequence(NamedElement) |
+	var sequences : Sequence(Sequence(OclAny)) := self.getHelperVariableSequences(cic, hpic);
+	sequences->forEach(seq) {
+		seq->createHelperVariablesAndConstraints(ilp);
+	};
+	var instances : OrderedSet(OclAny) := sequences->collect(seq : Sequence(OclAny) |
 		seq->at(1)
-	)->asOrderedSet()->sortedBy(name);
+	)->asOrderedSet()->sortedBy(getVariableName());
 	ilp.constraints += instances->createLocationConstraintConstraintExpression(sequences, self);
 }
 
-helper NamedElement::createLocationConstraintConstraintExpression(sequences : Sequence(Sequence(NamedElement)),
+helper OclAny::createLocationConstraintConstraintExpression(sequences : Sequence(Sequence(OclAny)),
 	locationConstraint : LocationConstraint) : ConstraintExpression {
-	var mySequences : Sequence(Sequence(NamedElement)) := self.getSequences(sequences)->asSequence();
+	var mySequences : Sequence(Sequence(OclAny)) := self.getSequences(sequences)->asSequence();
 	var comment : String := if locationConstraint.name <> '' then locationConstraint.name else locationConstraint.repr() endif;
 	var lit : String := if locationConstraint.type = LocationConstraintTypes::SAME_LOCATION then
-			mySequences->collect(seq : Sequence(NamedElement) | seq->at(3))
+			mySequences->collect(seq : Sequence(OclAny) | seq->at(3))
 				->asSet()->size().toString()
 		else
 			'0'
@@ -62,31 +63,31 @@ helper NamedElement::createLocationConstraintConstraintExpression(sequences : Se
 }
 
 // returns "my" sequences
-query NamedElement::getSequences(sequences : Sequence(Sequence(NamedElement))) : OrderedSet(Sequence(NamedElement)) {
-	return sequences->select(seq : Sequence(NamedElement) | seq->at(1) = self)
+query OclAny::getSequences(sequences : Sequence(Sequence(OclAny))) : OrderedSet(Sequence(OclAny)) {
+	return sequences->select(seq : Sequence(OclAny) | seq->at(1) = self)
 		->asOrderedSet()->sortedBy(getVariableName());
 }
 
 // removed
 
 query LocationConstraint::getHelperVariableSequences(cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) : Sequence(Sequence(NamedElement)) {
+	hpic : HWPlatformInstanceConfiguration) : Sequence(Sequence(OclAny)) {
 	var oclContext : OCLContext := createOCLContext(cic, hpic);
 	var res : Sequence(TupleValue) := self.evaluateOCL(oclContext);
 	return res->getLocationConstraintHelperVariableSequences(hpic.getResourceInstances());
 }
 
 query Sequence(TupleValue)::getLocationConstraintHelperVariableSequences(resourceInstanceSet : OrderedSet(ResourceInstance))
-	: Sequence(Sequence(NamedElement)) {
-	return self->iterate(it : TupleValue; acc : Sequence(Sequence(NamedElement)) = Sequence{} |
+	: Sequence(Sequence(OclAny)) {
+	return self->iterate(it : TupleValue; acc : Sequence(Sequence(OclAny)) = Sequence{} |
 		acc->union(it.getLocationConstraintHelperVariableSequences(resourceInstanceSet))
 	)->sortedBy(getVariableName());
 }
 
 query TupleValue::getLocationConstraintHelperVariableSequences(resourceInstanceSet : OrderedSet(ResourceInstance))
-	: Sequence(Sequence(NamedElement)) {
+	: Sequence(Sequence(OclAny)) {
 	// sort by instance set by variable name
-	var sequence : Sequence(NamedElement) := self.toSequence()->sortedBy(getVariableName());
+	var sequence : Sequence(OclAny) := self.toSequence()->sortedBy(getVariableName());
 	var size : Integer = sequence->size();
 	assert fatal (size = 2) with log("unexpected sequence size: " + size.toString());
 	return resourceInstanceSet->sortedBy(getVariableName())->collectNested(ri : ResourceInstance |

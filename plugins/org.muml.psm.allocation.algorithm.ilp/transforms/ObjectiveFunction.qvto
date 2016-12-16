@@ -7,7 +7,6 @@ import Util;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype oclcontext uses oclcontext('http://www.muml.org/psm/allocation/language/oclcontext/1.0.0');
-modeltype core uses core('http://www.muml.org/core/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
 modeltype expressions uses core::expressions('http://www.muml.org/core/expressions/1.0.0');
 modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
@@ -38,7 +37,9 @@ helper Specification::createAdditionExpression(inout ilp : IntegerLinearProgram,
 			->sortWeightingComponentResourceTuples(qosDimension.tupleDescriptor);
 		sequence->collectNested(tv : TupleValue |
 			tv.toSequence()->sortComponentResourceSequence()
-		)->createHelperVariablesAndConstraints(ilp);
+		)->forEach(seq) {
+			seq->createHelperVariablesAndConstraints(ilp);
+		};
 		expression := sequence->createWeightingComponentResourceTuplesAdditionExpression(qosDimension.tupleDescriptor, expression);
 	};
 	return expression;

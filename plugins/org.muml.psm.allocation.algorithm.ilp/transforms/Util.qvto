@@ -1,5 +1,3 @@
-modeltype core uses core('http://www.muml.org/core/1.0.0');
-
 library Util;
 
 query String::join(wordList : Sequence(String)) : String {
@@ -38,14 +36,6 @@ query Sequence(OclAny)::orderedProduct(sequence : Sequence(OclAny)) : OrderedSet
 
 query getOddNumbers(lower : Integer, upper : Integer) : OrderedSet(Integer) {
 	return OrderedSet{lower .. upper}->select(i | i.mod(2) = 1);
-}
-
-helper Sequence(NamedElement)::print() {
-	log("##: " + self->size().toString());
-	self->forEach(itm) {
-		log(itm.name);
-	};
-	log("##")
 }
 
 helper Sequence(OclAny)::print() {

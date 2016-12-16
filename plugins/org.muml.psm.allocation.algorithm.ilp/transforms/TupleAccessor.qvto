@@ -2,7 +2,6 @@ import org.muml.psm.allocation.algorithm.ocl.TupleAccessorBlackboxUnit;
 import Util;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
-modeltype core uses core('http://www.muml.org/core/1.0.0');
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
 library TupleAccessor;
@@ -19,7 +18,7 @@ helper TupleValue::getSequence(namedPart : String) : Sequence(TupleValue) {
 	return getSequencePart(self, namedPart, source);
 }
 
-query TupleValue::toSequence() : Sequence(NamedElement) {
+query TupleValue::toSequence() : Sequence(OclAny) {
 	// it might be possible that source is not the source we expect:
 	// source might be a previously transformed constraint. This is no problem
 	// because we the toSequence call will return the _expected_ sequence.
@@ -31,21 +30,21 @@ query TupleValue::toSequence() : Sequence(NamedElement) {
 	return source.toSequence(self);
 }
 
-query LocationConstraint::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+query LocationConstraint::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
 	// there should be exactly one typedPair
 	return self.tupleDescriptor.toSequence(tupleValue); 
 }
 
-query TupleDescriptor::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+query TupleDescriptor::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
 	return self.typedPairs->collect(typedPair : TypedPair |
 		Sequence{
-			tupleValue.get(typedPair.first.name).oclAsType(NamedElement),
-			tupleValue.get(typedPair.second.name).oclAsType(NamedElement)
+			tupleValue.get(typedPair.first.name),
+			tupleValue.get(typedPair.second.name)
 		}
 	);
 }
 
-query RequiredHardwareResourceInstanceConstraint::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+query RequiredHardwareResourceInstanceConstraint::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
 	return self.tupleDescriptor.toSequence(tupleValue);
 }
 
@@ -54,18 +53,18 @@ query RequiredHardwareResourceInstanceConstraint::toSequence(tupleValue : TupleV
 // is just a "secondary" superclass in ResourceConstraint' and QoSDimensionConstraint'
 // inheritance hierarchy. As a consequence the "catch-call" EvaluatableElement::toSequence
 // query is called and the transformation fails. XXX: how does qvto's "linearization" algo work?
-query ResourceConstraint::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+query ResourceConstraint::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
 	// unfortunately we cannot check if tupleValue corresponds to an "inner" tuple
 	// (well... we could do this via a blackbox but it is probably not worth the effort)
 	// => we assume that the caller knows what he/she is doing
 	return self.tupleDescriptor.toSequence(tupleValue);
 }
 
-query QoSDimension::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+query QoSDimension::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
 	return self.tupleDescriptor.toSequence(tupleValue);
 }
 
-query EvaluatableElement::toSequence(tupleValue : TupleValue) : Sequence(NamedElement) {
+query EvaluatableElement::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
 	// should not happen
 	assert fatal (false) with log("add element specific ::toSequence mapping for " + self.toString());
 	return null;

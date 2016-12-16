@@ -1,6 +1,5 @@
 import Util;
 
-modeltype core uses core('http://www.muml.org/core/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
 modeltype expressions uses core::expressions('http://www.muml.org/core/expressions/1.0.0');
 modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
@@ -25,7 +24,7 @@ query Sequence(OclAny)::getVariableName() : String {
 	return '_'.join(self->collect(getVariableName()));
 }
 
-query Sequence(NamedElement)::getVariable() : Variable {
+query Sequence(OclAny)::getVariable() : Variable {
 	return Sequence{self}.resolveone(Variable);
 }
 
