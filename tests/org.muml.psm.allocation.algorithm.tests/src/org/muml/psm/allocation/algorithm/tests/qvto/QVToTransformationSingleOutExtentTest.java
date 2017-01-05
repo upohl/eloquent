@@ -13,35 +13,23 @@ public class QVToTransformationSingleOutExtentTest extends QVToTransformationTes
 	protected URI expectedURI;
 	
 	
-	public QVToTransformationSingleOutExtentTest(String expectedURI, String transformationURI,
-			Map<String, Object> configurationPropertyMap, String... inputObjectURIs) {
-		super(createExpectedURIs(expectedURI, inputObjectURIs),
-				transformationURI, configurationPropertyMap,
-				createInOrOutObjectURIs(inputObjectURIs));
+	public QVToTransformationSingleOutExtentTest(Object expectedOutput, String transformationURI,
+			Map<String, Object> configurationPropertyMap, Object... inParameters) {
+		super(transformationURI, configurationPropertyMap,
+				mergeParams(expectedOutput, inParameters));
 	}
 	
-	// maybe provide explicit setters in the super class instead of fooling
-	// around with these static methods...
-	private static String[] createExpectedURIs(String expectedURI, String[] inputObjectURIs) {
-		String[] expectedURIs = new String[inputObjectURIs.length + 1];
-		expectedURIs[inputObjectURIs.length] = expectedURI;
-		return expectedURIs;
+	public QVToTransformationSingleOutExtentTest(Object expectedOutput, String transformationURI,
+			Object... inParameters) {
+		super(transformationURI, Collections.<String, Object>emptyMap(),
+				mergeParams(expectedOutput, inParameters));
 	}
 	
-	private static String[] createInOrOutObjectURIs(String[] inputObjectURIs) {
-		String[] inOrOutObjectURIs = new String[inputObjectURIs.length + 1];
-		for (int i = 0; i < inputObjectURIs.length; i++) {
-			inOrOutObjectURIs[i] = inputObjectURIs[i];
-		}
-		// this is already done implicitly
-		inOrOutObjectURIs[inputObjectURIs.length] = null;
-		return inOrOutObjectURIs;
-	}
-	
-	public QVToTransformationSingleOutExtentTest(String expectedURI, String transformationURI,
-			String... inputObjectURIs) {
-		this(expectedURI, transformationURI, Collections.<String, Object>emptyMap(),
-				inputObjectURIs);
+	private static Object[] mergeParams(Object expectedOutput, Object[] inParameters) {
+		Object[] inParamsAndExpOut = new String[inParameters.length + 1];
+		System.arraycopy(inParameters, 0, inParamsAndExpOut, 0, inParameters.length);
+		inParamsAndExpOut[inParameters.length] = expectedOutput;
+		return inParamsAndExpOut;
 	}
 	
 }
