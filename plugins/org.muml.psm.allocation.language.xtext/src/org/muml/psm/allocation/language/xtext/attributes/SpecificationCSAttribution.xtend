@@ -1,7 +1,6 @@
 package org.muml.psm.allocation.language.xtext.attributes
 
 import org.eclipse.emf.ecore.EObject
-import org.eclipse.jdt.annotation.NonNull
 import org.eclipse.ocl.pivot.internal.scoping.EnvironmentView
 import org.eclipse.ocl.pivot.internal.scoping.ScopeView
 import org.eclipse.ocl.xtext.completeocl.attributes.CompleteOCLDocumentCSAttribution
@@ -16,14 +15,13 @@ class SpecificationCSAttribution extends CompleteOCLDocumentCSAttribution {
 		val ScopeView outerScopeView = super.computeLookup(target, environmentView, scopeView)
 		val EObject child = scopeView.child
 		if (!environmentView.hasFinalResult && child instanceof ClassifierContextDeclCS) {
-			/* This is _most likely_ a lookup for the oclcontext:: package or a package
-			 * that is transitively "reachable" from the oclcontext:: package.
-			 * Since we do not require an explicit metamodel/package import via the "import"
-			 * statement for these packages, the super.computeLookup call did not supply the
-			 * correct package to the environmentView. So we try all root packages that are
-			 * known to the environmentView (the oclcontext:: package and its transitively
-			 * "reachable" packages are known packages, because they were "registered"
-			 * during the MetaModelManager's instantiation (see SpecificationCSResource)). 
+			/*
+			 * This is just for convenience: this is probably a lookup for a
+			 * package that is transitively reachable from the oclContext's
+			 * package (note: the oclcontext's package is usually explicitly
+			 * imported). In order to access such a package, an explicit
+			 * package import is needed (via the "import" statement). To avoid
+			 * this explicit import, we try a lookup in the root packages.
 			 */
 			environmentView.addRootPackages			
 		}

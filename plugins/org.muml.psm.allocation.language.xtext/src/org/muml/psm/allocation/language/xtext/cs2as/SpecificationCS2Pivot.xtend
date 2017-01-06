@@ -1,6 +1,5 @@
 package org.muml.psm.allocation.language.xtext.cs2as
 
-import org.eclipse.emf.ecore.EClass
 import org.eclipse.ocl.pivot.Element
 import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal
 import org.eclipse.ocl.pivot.resource.ASResource
@@ -14,12 +13,10 @@ import org.muml.psm.allocation.language.xtext.visitor.LanguageSpecificationCSLef
 import org.muml.psm.allocation.language.xtext.visitor.LanguageSpecificationCSPreOrderVisitor
 
 class SpecificationCS2Pivot extends CompleteOCLCS2AS {
-	private EClass contextClass
 	
 	new(EnvironmentFactoryInternal environmentFactory, BaseCSResource csResource,
-		ASResource asResource, EClass contextClass) {
+		ASResource asResource) {
 		super(environmentFactory, csResource, asResource)
-		this.contextClass = contextClass
 	}
 	
 	/*@NonNull*/
@@ -45,7 +42,7 @@ class SpecificationCS2Pivot extends CompleteOCLCS2AS {
 	
 	/*@NonNull*/
 	override protected CS2ASConversion createConversion(/*@NonNull*/ IDiagnosticConsumer diagnosticsConsumer, /*@NonNull*/ BaseCSResource csResource) {
-		new SpecificationCS2PivotConversion(this, diagnosticsConsumer, contextClass)
+		new SpecificationCS2PivotConversion(this, diagnosticsConsumer)
 	}
 	
 }

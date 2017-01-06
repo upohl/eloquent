@@ -4,7 +4,6 @@ import org.eclipse.core.resources.IProject
 import org.eclipse.core.resources.ResourcesPlugin
 import org.eclipse.core.runtime.Platform
 import org.eclipse.emf.common.util.URI
-import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.resource.impl.ResourceImpl
@@ -18,25 +17,16 @@ import org.eclipse.ocl.xtext.base.scoping.AbstractJavaClassScope
 import org.eclipse.ocl.xtext.completeocl.utilities.CompleteOCLCSResource
 import org.eclipse.ocl.xtext.oclstdlib.scoping.JavaClassScope
 import org.eclipse.ocl.xtext.oclstdlibcs.JavaClassCS
-import org.muml.psm.allocation.language.oclcontext.OclcontextPackage
 import org.muml.psm.allocation.language.xtext.cs2as.SpecificationCS2Pivot
-import org.muml.psm.allocation.language.xtext.typing.TypesUtil
 import org.osgi.framework.Bundle
 
 class SpecificationCSResource extends CompleteOCLCSResource {
 	
 	protected Resource javaClassResource = new ResourceImpl()
 	
-	private static final EClass contextClass = OclcontextPackage.Literals.OCL_CONTEXT
-	
 	/*@NonNull*/ override CS2AS createCS2AS(/*@NonNull*/ EnvironmentFactoryInternal environmentFactory,
 		/*@NonNull*/ ASResource asResource) {
-		// General remark: we could also install a ParserContext - this would avoid our
-		// custom SpecificationCSPostOrderVisitor (but the current is more flexible, because
-		// we could use different context classes (not sure if we ever need this, though))
-		// make our contextClass known
-		TypesUtil.getType(environmentFactory, contextClass)
-		new SpecificationCS2Pivot(environmentFactory, this, asResource, contextClass)
+		new SpecificationCS2Pivot(environmentFactory, this, asResource)
 	}
 	
 	public override CS2AS getCS2AS() {

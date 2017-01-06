@@ -2,7 +2,6 @@ package org.muml.psm.allocation.language.xtext.cs2as
 
 import java.util.Collections
 import java.util.List
-import org.eclipse.jdt.annotation.NonNull
 import org.eclipse.ocl.pivot.ExpressionInOCL
 import org.eclipse.ocl.pivot.utilities.PivotUtil
 import org.eclipse.ocl.xtext.base.cs2as.BasicContinuation
@@ -24,7 +23,7 @@ class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVi
 	protected static class PreContextCSCompletion extends SingleContinuation<EvaluatableElementCS> {
 		private static final String MISSING_ContextCSCompletion = "Expected an instance of type ContextCSCompletion in %s"
 		
-		new(CS2ASConversion context,	EvaluatableElementCS csElement) {
+		new(CS2ASConversion context, EvaluatableElementCS csElement) {
 			super(context, null, null, csElement, Collections.<Dependency>emptyList)
 		}
 
