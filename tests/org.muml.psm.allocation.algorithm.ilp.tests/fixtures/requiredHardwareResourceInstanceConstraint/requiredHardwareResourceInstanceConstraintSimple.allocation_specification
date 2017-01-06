@@ -2,6 +2,8 @@ testSpecificationName {
 
 	nameProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLNameProvider';
 	storageProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLStorageProvider';
+	oclContext oclcontext::OCLContext;
+	import 'http://www.muml.org/psm/allocation/language/oclcontext/1.0.0'
 
 	constraint requiredHardwareResourceInstance foo {
 		descriptors (ins : pim::instance::ComponentInstance, res : hardware::hwresourceinstance::ResourceInstance);
