@@ -83,6 +83,7 @@ import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.JavaImplementationProviderCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
+import org.muml.psm.allocation.language.cs.OCLContextCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
 import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
@@ -274,6 +275,9 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				return; 
 			case CsPackage.MEASURE_FUNCTION_CS:
 				sequence_MeasureFunction(context, (MeasureFunctionCS) semanticObject); 
+				return; 
+			case CsPackage.OCL_CONTEXT_CS:
+				sequence_OCLContext(context, (OCLContextCS) semanticObject); 
 				return; 
 			case CsPackage.QO_SDIMENSION_CS:
 				sequence_QosDimension(context, (QoSDimensionCS) semanticObject); 
@@ -542,6 +546,24 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	
 	/**
 	 * Contexts:
+	 *     OCLContext returns OCLContextCS
+	 *
+	 * Constraint:
+	 *     ownedType=TypedRefCS
+	 */
+	protected void sequence_OCLContext(ISerializationContext context, OCLContextCS semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, BaseCSPackage.Literals.TYPED_ELEMENT_CS__OWNED_TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BaseCSPackage.Literals.TYPED_ELEMENT_CS__OWNED_TYPE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getOCLContextAccess().getOwnedTypeTypedRefCSParserRuleCall_1_0(), semanticObject.getOwnedType());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     QosDimension returns QoSDimensionCS
 	 *
 	 * Constraint:
@@ -611,6 +633,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 *         name=ID 
 	 *         nameProviderImplementationClass=NameProviderImplementationClass 
 	 *         storageProviderImplementationClass=StorageProviderImplementationClass 
+	 *         oclContext=OCLContext 
 	 *         (ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS | services+=Service | constraints+=Constraint)* 
 	 *         (goal=Goal measure=MeasureFunction)?
 	 *     )

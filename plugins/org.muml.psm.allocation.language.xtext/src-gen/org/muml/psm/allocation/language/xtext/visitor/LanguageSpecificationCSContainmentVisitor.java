@@ -34,6 +34,9 @@ public class LanguageSpecificationCSContainmentVisitor extends org.muml.psm.allo
 		pivotElement.setGoal(
 			org.muml.psm.allocation.language.as.Goal.get(csElement.getGoal().getValue())
 		);
+		pivotElement.setOclContext(
+			PivotUtil.getPivot(org.muml.psm.allocation.language.as.OCLContext.class, csElement.getOclContext())
+		);
 		return visitCompleteOCLDocumentCS(csElement);
 	}
 	@Override
@@ -186,6 +189,14 @@ public class LanguageSpecificationCSContainmentVisitor extends org.muml.psm.allo
 		org.muml.psm.allocation.language.as.JavaImplementationProvider pivotElement = PivotUtil.getPivot(org.muml.psm.allocation.language.as.JavaImplementationProvider.class, csElement);
 		if (pivotElement == null) {
 			pivotElement = context.refreshModelElement(org.muml.psm.allocation.language.as.JavaImplementationProvider.class, org.muml.psm.allocation.language.as.AsPackage.Literals.JAVA_IMPLEMENTATION_PROVIDER, csElement);
+		}
+		return null;
+	}
+	@Override
+	public @Nullable Continuation<?> visitOCLContextCS(org.muml.psm.allocation.language.cs.@NonNull OCLContextCS csElement) {
+		org.muml.psm.allocation.language.as.OCLContext pivotElement = PivotUtil.getPivot(org.muml.psm.allocation.language.as.OCLContext.class, csElement);
+		if (pivotElement == null) {
+			pivotElement = refreshNamedElement(org.muml.psm.allocation.language.as.OCLContext.class, org.muml.psm.allocation.language.as.AsPackage.Literals.OCL_CONTEXT, csElement);
 		}
 		return null;
 	}

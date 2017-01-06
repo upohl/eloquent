@@ -31,33 +31,35 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final RuleCall cNameProviderImplementationClassNameProviderImplementationClassParserRuleCall_3_0 = (RuleCall)cNameProviderImplementationClassAssignment_3.eContents().get(0);
 		private final Assignment cStorageProviderImplementationClassAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cStorageProviderImplementationClassStorageProviderImplementationClassParserRuleCall_4_0 = (RuleCall)cStorageProviderImplementationClassAssignment_4.eContents().get(0);
-		private final Alternatives cAlternatives_5 = (Alternatives)cGroup.eContents().get(5);
-		private final Assignment cOwnedImportsAssignment_5_0 = (Assignment)cAlternatives_5.eContents().get(0);
-		private final RuleCall cOwnedImportsImportCSParserRuleCall_5_0_0 = (RuleCall)cOwnedImportsAssignment_5_0.eContents().get(0);
-		private final Assignment cOwnedContextsAssignment_5_1 = (Assignment)cAlternatives_5.eContents().get(1);
-		private final RuleCall cOwnedContextsClassifierContextDeclCSParserRuleCall_5_1_0 = (RuleCall)cOwnedContextsAssignment_5_1.eContents().get(0);
-		private final Assignment cServicesAssignment_5_2 = (Assignment)cAlternatives_5.eContents().get(2);
-		private final RuleCall cServicesServiceParserRuleCall_5_2_0 = (RuleCall)cServicesAssignment_5_2.eContents().get(0);
-		private final Assignment cConstraintsAssignment_5_3 = (Assignment)cAlternatives_5.eContents().get(3);
-		private final RuleCall cConstraintsConstraintParserRuleCall_5_3_0 = (RuleCall)cConstraintsAssignment_5_3.eContents().get(0);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Assignment cGoalAssignment_6_0 = (Assignment)cGroup_6.eContents().get(0);
-		private final RuleCall cGoalGoalEnumRuleCall_6_0_0 = (RuleCall)cGoalAssignment_6_0.eContents().get(0);
-		private final Assignment cMeasureAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cMeasureMeasureFunctionParserRuleCall_6_1_0 = (RuleCall)cMeasureAssignment_6_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cOclContextAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cOclContextOCLContextParserRuleCall_5_0 = (RuleCall)cOclContextAssignment_5.eContents().get(0);
+		private final Alternatives cAlternatives_6 = (Alternatives)cGroup.eContents().get(6);
+		private final Assignment cOwnedImportsAssignment_6_0 = (Assignment)cAlternatives_6.eContents().get(0);
+		private final RuleCall cOwnedImportsImportCSParserRuleCall_6_0_0 = (RuleCall)cOwnedImportsAssignment_6_0.eContents().get(0);
+		private final Assignment cOwnedContextsAssignment_6_1 = (Assignment)cAlternatives_6.eContents().get(1);
+		private final RuleCall cOwnedContextsClassifierContextDeclCSParserRuleCall_6_1_0 = (RuleCall)cOwnedContextsAssignment_6_1.eContents().get(0);
+		private final Assignment cServicesAssignment_6_2 = (Assignment)cAlternatives_6.eContents().get(2);
+		private final RuleCall cServicesServiceParserRuleCall_6_2_0 = (RuleCall)cServicesAssignment_6_2.eContents().get(0);
+		private final Assignment cConstraintsAssignment_6_3 = (Assignment)cAlternatives_6.eContents().get(3);
+		private final RuleCall cConstraintsConstraintParserRuleCall_6_3_0 = (RuleCall)cConstraintsAssignment_6_3.eContents().get(0);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Assignment cGoalAssignment_7_0 = (Assignment)cGroup_7.eContents().get(0);
+		private final RuleCall cGoalGoalEnumRuleCall_7_0_0 = (RuleCall)cGoalAssignment_7_0.eContents().get(0);
+		private final Assignment cMeasureAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cMeasureMeasureFunctionParserRuleCall_7_1_0 = (RuleCall)cMeasureAssignment_7_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//Specification cs::SpecificationCS:
 		//	{cs::SpecificationCS} name=ID '{'
 		//	nameProviderImplementationClass=NameProviderImplementationClass
-		//	storageProviderImplementationClass=StorageProviderImplementationClass (ownedImports+=ImportCS |
-		//	ownedContexts+=ClassifierContextDeclCS
+		//	storageProviderImplementationClass=StorageProviderImplementationClass
+		//	oclContext=OCLContext (ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS
 		//	| services+=Service | constraints+=Constraint)* (goal=Goal measure=MeasureFunction)?
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
 		//{cs::SpecificationCS} name=ID '{' nameProviderImplementationClass=NameProviderImplementationClass
-		//storageProviderImplementationClass=StorageProviderImplementationClass (ownedImports+=ImportCS |
+		//storageProviderImplementationClass=StorageProviderImplementationClass oclContext=OCLContext (ownedImports+=ImportCS |
 		//ownedContexts+=ClassifierContextDeclCS | services+=Service | constraints+=Constraint)* (goal=Goal
 		//measure=MeasureFunction)? '}'
 		public Group getGroup() { return cGroup; }
@@ -86,50 +88,56 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//StorageProviderImplementationClass
 		public RuleCall getStorageProviderImplementationClassStorageProviderImplementationClassParserRuleCall_4_0() { return cStorageProviderImplementationClassStorageProviderImplementationClassParserRuleCall_4_0; }
 
+		//oclContext=OCLContext
+		public Assignment getOclContextAssignment_5() { return cOclContextAssignment_5; }
+
+		//OCLContext
+		public RuleCall getOclContextOCLContextParserRuleCall_5_0() { return cOclContextOCLContextParserRuleCall_5_0; }
+
 		//(ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS | services+=Service | constraints+=Constraint)*
-		public Alternatives getAlternatives_5() { return cAlternatives_5; }
+		public Alternatives getAlternatives_6() { return cAlternatives_6; }
 
 		//ownedImports+=ImportCS
-		public Assignment getOwnedImportsAssignment_5_0() { return cOwnedImportsAssignment_5_0; }
+		public Assignment getOwnedImportsAssignment_6_0() { return cOwnedImportsAssignment_6_0; }
 
 		//ImportCS
-		public RuleCall getOwnedImportsImportCSParserRuleCall_5_0_0() { return cOwnedImportsImportCSParserRuleCall_5_0_0; }
+		public RuleCall getOwnedImportsImportCSParserRuleCall_6_0_0() { return cOwnedImportsImportCSParserRuleCall_6_0_0; }
 
 		//ownedContexts+=ClassifierContextDeclCS
-		public Assignment getOwnedContextsAssignment_5_1() { return cOwnedContextsAssignment_5_1; }
+		public Assignment getOwnedContextsAssignment_6_1() { return cOwnedContextsAssignment_6_1; }
 
 		//ClassifierContextDeclCS
-		public RuleCall getOwnedContextsClassifierContextDeclCSParserRuleCall_5_1_0() { return cOwnedContextsClassifierContextDeclCSParserRuleCall_5_1_0; }
+		public RuleCall getOwnedContextsClassifierContextDeclCSParserRuleCall_6_1_0() { return cOwnedContextsClassifierContextDeclCSParserRuleCall_6_1_0; }
 
 		//services+=Service
-		public Assignment getServicesAssignment_5_2() { return cServicesAssignment_5_2; }
+		public Assignment getServicesAssignment_6_2() { return cServicesAssignment_6_2; }
 
 		//Service
-		public RuleCall getServicesServiceParserRuleCall_5_2_0() { return cServicesServiceParserRuleCall_5_2_0; }
+		public RuleCall getServicesServiceParserRuleCall_6_2_0() { return cServicesServiceParserRuleCall_6_2_0; }
 
 		//constraints+=Constraint
-		public Assignment getConstraintsAssignment_5_3() { return cConstraintsAssignment_5_3; }
+		public Assignment getConstraintsAssignment_6_3() { return cConstraintsAssignment_6_3; }
 
 		//Constraint
-		public RuleCall getConstraintsConstraintParserRuleCall_5_3_0() { return cConstraintsConstraintParserRuleCall_5_3_0; }
+		public RuleCall getConstraintsConstraintParserRuleCall_6_3_0() { return cConstraintsConstraintParserRuleCall_6_3_0; }
 
 		//(goal=Goal measure=MeasureFunction)?
-		public Group getGroup_6() { return cGroup_6; }
+		public Group getGroup_7() { return cGroup_7; }
 
 		//goal=Goal
-		public Assignment getGoalAssignment_6_0() { return cGoalAssignment_6_0; }
+		public Assignment getGoalAssignment_7_0() { return cGoalAssignment_7_0; }
 
 		//Goal
-		public RuleCall getGoalGoalEnumRuleCall_6_0_0() { return cGoalGoalEnumRuleCall_6_0_0; }
+		public RuleCall getGoalGoalEnumRuleCall_7_0_0() { return cGoalGoalEnumRuleCall_7_0_0; }
 
 		//measure=MeasureFunction
-		public Assignment getMeasureAssignment_6_1() { return cMeasureAssignment_6_1; }
+		public Assignment getMeasureAssignment_7_1() { return cMeasureAssignment_7_1; }
 
 		//MeasureFunction
-		public RuleCall getMeasureMeasureFunctionParserRuleCall_6_1_0() { return cMeasureMeasureFunctionParserRuleCall_6_1_0; }
+		public RuleCall getMeasureMeasureFunctionParserRuleCall_7_1_0() { return cMeasureMeasureFunctionParserRuleCall_7_1_0; }
 
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class NameProviderImplementationClassElements extends AbstractParserRuleElementFinder {
@@ -191,6 +199,34 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 		//SINGLE_QUOTED_STRING
 		public RuleCall getImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1() { return cImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1; }
+
+		//';'
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+	}
+
+	public class OCLContextElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.OCLContext");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cOclContextKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cOwnedTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cOwnedTypeTypedRefCSParserRuleCall_1_0 = (RuleCall)cOwnedTypeAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//OCLContext cs::OCLContextCS:
+		//	'oclContext' ownedType=TypedRefCS ';'
+		@Override public ParserRule getRule() { return rule; }
+
+		//'oclContext' ownedType=TypedRefCS ';'
+		public Group getGroup() { return cGroup; }
+
+		//'oclContext'
+		public Keyword getOclContextKeyword_0() { return cOclContextKeyword_0; }
+
+		//ownedType=TypedRefCS
+		public Assignment getOwnedTypeAssignment_1() { return cOwnedTypeAssignment_1; }
+
+		//TypedRefCS
+		public RuleCall getOwnedTypeTypedRefCSParserRuleCall_1_0() { return cOwnedTypeTypedRefCSParserRuleCall_1_0; }
 
 		//';'
 		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
@@ -912,6 +948,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	private final SpecificationElements pSpecification;
 	private final NameProviderImplementationClassElements pNameProviderImplementationClass;
 	private final StorageProviderImplementationClassElements pStorageProviderImplementationClass;
+	private final OCLContextElements pOCLContext;
 	private final ServiceElements pService;
 	private final QosDimensionElements pQosDimension;
 	private final TypedPairElements pTypedPair;
@@ -947,6 +984,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		this.pSpecification = new SpecificationElements();
 		this.pNameProviderImplementationClass = new NameProviderImplementationClassElements();
 		this.pStorageProviderImplementationClass = new StorageProviderImplementationClassElements();
+		this.pOCLContext = new OCLContextElements();
 		this.pService = new ServiceElements();
 		this.pQosDimension = new QosDimensionElements();
 		this.pTypedPair = new TypedPairElements();
@@ -1001,8 +1039,8 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//Specification cs::SpecificationCS:
 	//	{cs::SpecificationCS} name=ID '{'
 	//	nameProviderImplementationClass=NameProviderImplementationClass
-	//	storageProviderImplementationClass=StorageProviderImplementationClass (ownedImports+=ImportCS |
-	//	ownedContexts+=ClassifierContextDeclCS
+	//	storageProviderImplementationClass=StorageProviderImplementationClass
+	//	oclContext=OCLContext (ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS
 	//	| services+=Service | constraints+=Constraint)* (goal=Goal measure=MeasureFunction)?
 	//	'}'
 	public SpecificationElements getSpecificationAccess() {
@@ -1031,6 +1069,16 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	
 	public ParserRule getStorageProviderImplementationClassRule() {
 		return getStorageProviderImplementationClassAccess().getRule();
+	}
+
+	//OCLContext cs::OCLContextCS:
+	//	'oclContext' ownedType=TypedRefCS ';'
+	public OCLContextElements getOCLContextAccess() {
+		return pOCLContext;
+	}
+	
+	public ParserRule getOCLContextRule() {
+		return getOCLContextAccess().getRule();
 	}
 
 	//Service cs::ServiceCS:
