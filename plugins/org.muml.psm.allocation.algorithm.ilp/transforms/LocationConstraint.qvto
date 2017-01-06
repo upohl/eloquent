@@ -68,20 +68,11 @@ query OclAny::getSequences(sequences : Sequence(Sequence(OclAny))) : OrderedSet(
 		->asOrderedSet()->sortedBy(getVariableName());
 }
 
-// removed
-
 query LocationConstraint::getHelperVariableSequences(cic : ComponentInstanceConfiguration,
 	hpic : HWPlatformInstanceConfiguration) : Sequence(Sequence(OclAny)) {
 	var oclContext : oclcontext::OCLContext := createOCLContext(cic, hpic);
 	var res : Sequence(TupleValue) := self.evaluateOCL(oclContext);
 	return res->getLocationConstraintHelperVariableSequences(hpic.getResourceInstances());
-}
-
-query Sequence(TupleValue)::getLocationConstraintHelperVariableSequences(resourceInstanceSet : OrderedSet(ResourceInstance))
-	: Sequence(Sequence(OclAny)) {
-	return self->iterate(it : TupleValue; acc : Sequence(Sequence(OclAny)) = Sequence{} |
-		acc->union(it.getLocationConstraintHelperVariableSequences(resourceInstanceSet))
-	)->sortedBy(getVariableName());
 }
 
 query TupleValue::getLocationConstraintHelperVariableSequences(resourceInstanceSet : OrderedSet(ResourceInstance))
@@ -93,10 +84,6 @@ query TupleValue::getLocationConstraintHelperVariableSequences(resourceInstanceS
 	return resourceInstanceSet->sortedBy(getVariableName())->collectNested(ri : ResourceInstance |
 		Sequence{sequence->at(1), ri, sequence->at(2), ri}
 	);
-}
-
-mapping inout IntegerLinearProgram::createSameLocationConstraints(cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) {
 }
 
 query Specification::getLocationConstraints(wantedType : LocationConstraintTypes) : OrderedSet(LocationConstraint) {
