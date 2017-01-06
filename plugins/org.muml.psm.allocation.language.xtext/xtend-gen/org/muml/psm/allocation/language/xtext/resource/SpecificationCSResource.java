@@ -8,7 +8,6 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceImpl;
@@ -26,30 +25,21 @@ import org.eclipse.ocl.xtext.oclstdlibcs.JavaClassCS;
 import org.eclipse.xtext.xbase.lib.Conversions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
-import org.muml.psm.allocation.language.oclcontext.OclcontextPackage;
 import org.muml.psm.allocation.language.xtext.cs2as.SpecificationCS2Pivot;
 import org.muml.psm.allocation.language.xtext.resource.BundleClassLoader;
 import org.muml.psm.allocation.language.xtext.resource.JavaProjectClassLoader;
-import org.muml.psm.allocation.language.xtext.typing.TypesUtil;
 import org.osgi.framework.Bundle;
 
 @SuppressWarnings("all")
 public class SpecificationCSResource extends CompleteOCLCSResource {
   protected Resource javaClassResource = new ResourceImpl();
   
-  private final static EClass contextClass = OclcontextPackage.Literals.OCL_CONTEXT;
-  
   /**
    * @NonNull
    */
   @Override
   public CS2AS createCS2AS(final EnvironmentFactoryInternal environmentFactory, final ASResource asResource) {
-    SpecificationCS2Pivot _xblockexpression = null;
-    {
-      TypesUtil.getType(environmentFactory, SpecificationCSResource.contextClass);
-      _xblockexpression = new SpecificationCS2Pivot(environmentFactory, this, asResource, SpecificationCSResource.contextClass);
-    }
-    return _xblockexpression;
+    return new SpecificationCS2Pivot(environmentFactory, this, asResource);
   }
   
   @Override
