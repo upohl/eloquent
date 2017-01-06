@@ -240,6 +240,17 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AsPackage.OCL_CONTEXT: {
+				OCLContext oclContext = (OCLContext)theEObject;
+				T result = caseOCLContext(oclContext);
+				if (result == null) result = caseTypedElement(oclContext);
+				if (result == null) result = caseNamedElement(oclContext);
+				if (result == null) result = caseElement(oclContext);
+				if (result == null) result = caseNameable(oclContext);
+				if (result == null) result = caseVisitable(oclContext);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -496,6 +507,21 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseStorageProvider(StorageProvider object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>OCL Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>OCL Context</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOCLContext(OCLContext object) {
 		return null;
 	}
 

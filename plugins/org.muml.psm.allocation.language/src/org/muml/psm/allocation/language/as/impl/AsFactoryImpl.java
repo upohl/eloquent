@@ -70,6 +70,7 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 			case AsPackage.SERVICE: return createService();
 			case AsPackage.QO_SDIMENSION: return createQoSDimension();
 			case AsPackage.JAVA_IMPLEMENTATION_PROVIDER: return createJavaImplementationProvider();
+			case AsPackage.OCL_CONTEXT: return createOCLContext();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -237,6 +238,16 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	public JavaImplementationProvider createJavaImplementationProvider() {
 		JavaImplementationProviderImpl javaImplementationProvider = new JavaImplementationProviderImpl();
 		return javaImplementationProvider;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OCLContext createOCLContext() {
+		OCLContextImpl oclContext = new OCLContextImpl();
+		return oclContext;
 	}
 
 	/**

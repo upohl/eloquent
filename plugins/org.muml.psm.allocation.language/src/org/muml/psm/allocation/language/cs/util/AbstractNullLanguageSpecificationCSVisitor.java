@@ -63,6 +63,11 @@ public abstract class AbstractNullLanguageSpecificationCSVisitor<@Nullable R, C>
 	}
 
 	@Override
+	public R visitOCLContextCS(org.muml.psm.allocation.language.cs.@NonNull OCLContextCS object) {
+		return null;
+	}
+
+	@Override
 	public R visitQoSDimensionCS(org.muml.psm.allocation.language.cs.@NonNull QoSDimensionCS object) {
 		return null;
 	}

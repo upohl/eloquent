@@ -67,6 +67,11 @@ public abstract class AbstractCsPostOrderVisitor
 	}
 
 	@Override
+	public @Nullable Continuation<?> visitOCLContextCS(org.muml.psm.allocation.language.cs.@NonNull OCLContextCS csElement) {
+		return visitTypedElementCS(csElement);
+	}
+
+	@Override
 	public @Nullable Continuation<?> visitQoSDimensionCS(org.muml.psm.allocation.language.cs.@NonNull QoSDimensionCS csElement) {
 		return visitNamedElementCS(csElement);
 	}

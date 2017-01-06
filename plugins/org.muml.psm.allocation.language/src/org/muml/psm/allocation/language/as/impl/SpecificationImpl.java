@@ -24,6 +24,7 @@ import org.muml.psm.allocation.language.as.Constraint;
 import org.muml.psm.allocation.language.as.Goal;
 import org.muml.psm.allocation.language.as.MeasureFunction;
 import org.muml.psm.allocation.language.as.NameProvider;
+import org.muml.psm.allocation.language.as.OCLContext;
 import org.muml.psm.allocation.language.as.Service;
 import org.muml.psm.allocation.language.as.Specification;
 import org.muml.psm.allocation.language.as.StorageProvider;
@@ -42,6 +43,7 @@ import org.muml.psm.allocation.language.as.StorageProvider;
  *   <li>{@link org.muml.psm.allocation.language.as.impl.SpecificationImpl#getGoal <em>Goal</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.impl.SpecificationImpl#getNameProvider <em>Name Provider</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.impl.SpecificationImpl#getStorageProvider <em>Storage Provider</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.as.impl.SpecificationImpl#getOclContext <em>Ocl Context</em>}</li>
  * </ul>
  *
  * @generated
@@ -116,6 +118,16 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 	 * @ordered
 	 */
 	protected StorageProvider storageProvider;
+
+	/**
+	 * The cached value of the '{@link #getOclContext() <em>Ocl Context</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOclContext()
+	 * @generated
+	 * @ordered
+	 */
+	protected OCLContext oclContext;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -305,6 +317,49 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public OCLContext getOclContext() {
+		return oclContext;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOclContext(OCLContext newOclContext, NotificationChain msgs) {
+		OCLContext oldOclContext = oclContext;
+		oclContext = newOclContext;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AsPackage.SPECIFICATION__OCL_CONTEXT, oldOclContext, newOclContext);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOclContext(OCLContext newOclContext) {
+		if (newOclContext != oclContext) {
+			NotificationChain msgs = null;
+			if (oclContext != null)
+				msgs = ((InternalEObject)oclContext).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AsPackage.SPECIFICATION__OCL_CONTEXT, null, msgs);
+			if (newOclContext != null)
+				msgs = ((InternalEObject)newOclContext).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AsPackage.SPECIFICATION__OCL_CONTEXT, null, msgs);
+			msgs = basicSetOclContext(newOclContext, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.SPECIFICATION__OCL_CONTEXT, newOclContext, newOclContext));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -314,6 +369,8 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 				return ((InternalEList<?>)getConstraints()).basicRemove(otherEnd, msgs);
 			case AsPackage.SPECIFICATION__MEASURE:
 				return basicSetMeasure(null, msgs);
+			case AsPackage.SPECIFICATION__OCL_CONTEXT:
+				return basicSetOclContext(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -340,6 +397,8 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 			case AsPackage.SPECIFICATION__STORAGE_PROVIDER:
 				if (resolve) return getStorageProvider();
 				return basicGetStorageProvider();
+			case AsPackage.SPECIFICATION__OCL_CONTEXT:
+				return getOclContext();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -373,6 +432,9 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 			case AsPackage.SPECIFICATION__STORAGE_PROVIDER:
 				setStorageProvider((StorageProvider)newValue);
 				return;
+			case AsPackage.SPECIFICATION__OCL_CONTEXT:
+				setOclContext((OCLContext)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -403,6 +465,9 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 			case AsPackage.SPECIFICATION__STORAGE_PROVIDER:
 				setStorageProvider((StorageProvider)null);
 				return;
+			case AsPackage.SPECIFICATION__OCL_CONTEXT:
+				setOclContext((OCLContext)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -427,6 +492,8 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 				return nameProvider != null;
 			case AsPackage.SPECIFICATION__STORAGE_PROVIDER:
 				return storageProvider != null;
+			case AsPackage.SPECIFICATION__OCL_CONTEXT:
+				return oclContext != null;
 		}
 		return super.eIsSet(featureID);
 	}

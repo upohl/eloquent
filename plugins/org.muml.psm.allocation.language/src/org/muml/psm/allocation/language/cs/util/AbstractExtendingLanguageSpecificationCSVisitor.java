@@ -63,6 +63,11 @@ public abstract class AbstractExtendingLanguageSpecificationCSVisitor<R, C>
 	}
 
 	@Override
+	public R visitOCLContextCS(org.muml.psm.allocation.language.cs.@NonNull OCLContextCS object) {
+		return visitTypedElementCS(object);
+	}
+
+	@Override
 	public R visitQoSDimensionCS(org.muml.psm.allocation.language.cs.@NonNull QoSDimensionCS object) {
 		return visitNamedElementCS(object);
 	}

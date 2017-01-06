@@ -25,6 +25,7 @@ import org.muml.psm.allocation.language.as.LocationConstraint;
 import org.muml.psm.allocation.language.as.LocationConstraintTypes;
 import org.muml.psm.allocation.language.as.MeasureFunction;
 import org.muml.psm.allocation.language.as.NameProvider;
+import org.muml.psm.allocation.language.as.OCLContext;
 import org.muml.psm.allocation.language.as.QoSDimension;
 import org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint;
 import org.muml.psm.allocation.language.as.ResourceConstraint;
@@ -163,6 +164,13 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * @generated
 	 */
 	private EClass storageProviderEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass oclContextEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -313,6 +321,15 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 */
 	public EReference getSpecification_StorageProvider() {
 		return (EReference)specificationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSpecification_OclContext() {
+		return (EReference)specificationEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -581,6 +598,15 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getOCLContext() {
+		return oclContextEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getLocationConstraintTypes() {
 		return locationConstraintTypesEEnum;
 	}
@@ -629,6 +655,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		createEAttribute(specificationEClass, SPECIFICATION__GOAL);
 		createEReference(specificationEClass, SPECIFICATION__NAME_PROVIDER);
 		createEReference(specificationEClass, SPECIFICATION__STORAGE_PROVIDER);
+		createEReference(specificationEClass, SPECIFICATION__OCL_CONTEXT);
 
 		evaluatableElementEClass = createEClass(EVALUATABLE_ELEMENT);
 		createEReference(evaluatableElementEClass, EVALUATABLE_ELEMENT__EXPRESSION);
@@ -674,6 +701,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		nameProviderEClass = createEClass(NAME_PROVIDER);
 
 		storageProviderEClass = createEClass(STORAGE_PROVIDER);
+
+		oclContextEClass = createEClass(OCL_CONTEXT);
 
 		// Create enums
 		locationConstraintTypesEEnum = createEEnum(LOCATION_CONSTRAINT_TYPES);
@@ -728,6 +757,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		qoSDimensionEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
 		qoSDimensionEClass.getESuperTypes().add(this.getEvaluatableElement());
 		javaImplementationProviderEClass.getESuperTypes().add(thePivotPackage.getElement());
+		oclContextEClass.getESuperTypes().add(thePivotPackage.getTypedElement());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(specificationEClass, Specification.class, "Specification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -737,6 +767,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		initEAttribute(getSpecification_Goal(), this.getGoal(), "goal", null, 0, 1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecification_NameProvider(), this.getNameProvider(), null, "nameProvider", null, 0, 1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecification_StorageProvider(), this.getStorageProvider(), null, "storageProvider", null, 0, 1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecification_OclContext(), this.getOCLContext(), null, "oclContext", null, 1, 1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(evaluatableElementEClass, EvaluatableElement.class, "EvaluatableElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEvaluatableElement_Expression(), thePivotPackage.getExpressionInOCL(), null, "expression", null, 1, 1, EvaluatableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -794,6 +825,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		addEParameter(op, thePivotPackage.getObject(), "target", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(storageProviderEClass, thePivotPackage.getObject(), "noRelationFound", 1, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(oclContextEClass, OCLContext.class, "OCLContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(locationConstraintTypesEEnum, LocationConstraintTypes.class, "LocationConstraintTypes");

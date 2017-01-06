@@ -297,6 +297,20 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CsPackage.OCL_CONTEXT_CS: {
+				OCLContextCS oclContextCS = (OCLContextCS)theEObject;
+				T result = caseOCLContextCS(oclContextCS);
+				if (result == null) result = caseTypedElementCS(oclContextCS);
+				if (result == null) result = caseNamedElementCS(oclContextCS);
+				if (result == null) result = caseModelElementCS(oclContextCS);
+				if (result == null) result = caseNameable(oclContextCS);
+				if (result == null) result = casePivotableElementCS(oclContextCS);
+				if (result == null) result = caseElementCS(oclContextCS);
+				if (result == null) result = casePivotable(oclContextCS);
+				if (result == null) result = caseVisitableCS(oclContextCS);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -553,6 +567,21 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseStorageProviderCS(StorageProviderCS object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>OCL Context CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>OCL Context CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOCLContextCS(OCLContextCS object) {
 		return null;
 	}
 

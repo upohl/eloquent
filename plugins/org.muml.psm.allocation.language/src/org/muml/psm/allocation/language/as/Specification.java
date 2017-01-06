@@ -25,6 +25,7 @@ import org.eclipse.ocl.pivot.Model;
  *   <li>{@link org.muml.psm.allocation.language.as.Specification#getGoal <em>Goal</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.Specification#getNameProvider <em>Name Provider</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.Specification#getStorageProvider <em>Storage Provider</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.as.Specification#getOclContext <em>Ocl Context</em>}</li>
  * </ul>
  *
  * @see org.muml.psm.allocation.language.as.AsPackage#getSpecification()
@@ -166,5 +167,31 @@ public interface Specification extends Model {
 	 * @generated
 	 */
 	void setStorageProvider(StorageProvider value);
+
+	/**
+	 * Returns the value of the '<em><b>Ocl Context</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Contains/Refers to the OCLContextCS/OCLContext element (for the
+	 * details see OCLContextCS/OCLContext).
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Ocl Context</em>' containment reference.
+	 * @see #setOclContext(OCLContext)
+	 * @see org.muml.psm.allocation.language.as.AsPackage#getSpecification_OclContext()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	OCLContext getOclContext();
+
+	/**
+	 * Sets the value of the '{@link org.muml.psm.allocation.language.as.Specification#getOclContext <em>Ocl Context</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ocl Context</em>' containment reference.
+	 * @see #getOclContext()
+	 * @generated
+	 */
+	void setOclContext(OCLContext value);
 
 } // Specification

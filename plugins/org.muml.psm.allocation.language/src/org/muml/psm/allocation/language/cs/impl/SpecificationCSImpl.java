@@ -35,6 +35,7 @@ import org.muml.psm.allocation.language.cs.Goal;
 import org.muml.psm.allocation.language.cs.JavaImplementationProviderCS;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
 import org.muml.psm.allocation.language.cs.NameProviderCS;
+import org.muml.psm.allocation.language.cs.OCLContextCS;
 import org.muml.psm.allocation.language.cs.ServiceCS;
 import org.muml.psm.allocation.language.cs.SpecificationCS;
 import org.muml.psm.allocation.language.cs.StorageProviderCS;
@@ -58,6 +59,7 @@ import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
  *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getNameProvider <em>Name Provider</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getStorageProviderImplementationClass <em>Storage Provider Implementation Class</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getStorageProvider <em>Storage Provider</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getOclContext <em>Ocl Context</em>}</li>
  * </ul>
  *
  * @generated
@@ -162,6 +164,16 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 * @ordered
 	 */
 	protected StorageProviderCS storageProvider;
+
+	/**
+	 * The cached value of the '{@link #getOclContext() <em>Ocl Context</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOclContext()
+	 * @generated
+	 * @ordered
+	 */
+	protected OCLContextCS oclContext;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -449,6 +461,49 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public OCLContextCS getOclContext() {
+		return oclContext;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOclContext(OCLContextCS newOclContext, NotificationChain msgs) {
+		OCLContextCS oldOclContext = oclContext;
+		oclContext = newOclContext;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.SPECIFICATION_CS__OCL_CONTEXT, oldOclContext, newOclContext);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOclContext(OCLContextCS newOclContext) {
+		if (newOclContext != oclContext) {
+			NotificationChain msgs = null;
+			if (oclContext != null)
+				msgs = ((InternalEObject)oclContext).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CsPackage.SPECIFICATION_CS__OCL_CONTEXT, null, msgs);
+			if (newOclContext != null)
+				msgs = ((InternalEObject)newOclContext).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CsPackage.SPECIFICATION_CS__OCL_CONTEXT, null, msgs);
+			msgs = basicSetOclContext(newOclContext, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.SPECIFICATION_CS__OCL_CONTEXT, newOclContext, newOclContext));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String toString() {
 		return super.toString();
 	}
@@ -503,6 +558,8 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 				return basicSetNameProviderImplementationClass(null, msgs);
 			case CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER_IMPLEMENTATION_CLASS:
 				return basicSetStorageProviderImplementationClass(null, msgs);
+			case CsPackage.SPECIFICATION_CS__OCL_CONTEXT:
+				return basicSetOclContext(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -535,6 +592,8 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 			case CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER:
 				if (resolve) return getStorageProvider();
 				return basicGetStorageProvider();
+			case CsPackage.SPECIFICATION_CS__OCL_CONTEXT:
+				return getOclContext();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -578,6 +637,9 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 			case CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER:
 				setStorageProvider((StorageProviderCS)newValue);
 				return;
+			case CsPackage.SPECIFICATION_CS__OCL_CONTEXT:
+				setOclContext((OCLContextCS)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -617,6 +679,9 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 			case CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER:
 				setStorageProvider((StorageProviderCS)null);
 				return;
+			case CsPackage.SPECIFICATION_CS__OCL_CONTEXT:
+				setOclContext((OCLContextCS)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -647,6 +712,8 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 				return storageProviderImplementationClass != null;
 			case CsPackage.SPECIFICATION_CS__STORAGE_PROVIDER:
 				return storageProvider != null;
+			case CsPackage.SPECIFICATION_CS__OCL_CONTEXT:
+				return oclContext != null;
 		}
 		return super.eIsSet(featureID);
 	}

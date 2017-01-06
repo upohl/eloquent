@@ -148,6 +148,10 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 				return createStorageProviderAdapter();
 			}
 			@Override
+			public Adapter caseOCLContext(OCLContext object) {
+				return createOCLContextAdapter();
+			}
+			@Override
 			public Adapter caseVisitable(Visitable object) {
 				return createVisitableAdapter();
 			}
@@ -430,6 +434,20 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createStorageProviderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.OCLContext <em>OCL Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.as.OCLContext
+	 * @generated
+	 */
+	public Adapter createOCLContextAdapter() {
 		return null;
 	}
 

@@ -209,13 +209,22 @@ public interface AsPackage extends EPackage {
 	int SPECIFICATION__STORAGE_PROVIDER = PivotPackage.MODEL_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Ocl Context</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__OCL_CONTEXT = PivotPackage.MODEL_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_FEATURE_COUNT = PivotPackage.MODEL_FEATURE_COUNT + 6;
+	int SPECIFICATION_FEATURE_COUNT = PivotPackage.MODEL_FEATURE_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.EvaluatableElementImpl <em>Evaluatable Element</em>}' class.
@@ -1305,6 +1314,97 @@ public interface AsPackage extends EPackage {
 	int STORAGE_PROVIDER_FEATURE_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.OCLContextImpl <em>OCL Context</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.as.impl.OCLContextImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getOCLContext()
+	 * @generated
+	 */
+	int OCL_CONTEXT = 17;
+
+	/**
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT__ANNOTATING_COMMENTS = PivotPackage.TYPED_ELEMENT__ANNOTATING_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT__OWNED_ANNOTATIONS = PivotPackage.TYPED_ELEMENT__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT__OWNED_COMMENTS = PivotPackage.TYPED_ELEMENT__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT__OWNED_EXTENSIONS = PivotPackage.TYPED_ELEMENT__OWNED_EXTENSIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT__NAME = PivotPackage.TYPED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Is Many</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT__IS_MANY = PivotPackage.TYPED_ELEMENT__IS_MANY;
+
+	/**
+	 * The feature id for the '<em><b>Is Required</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT__IS_REQUIRED = PivotPackage.TYPED_ELEMENT__IS_REQUIRED;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT__TYPE = PivotPackage.TYPED_ELEMENT__TYPE;
+
+	/**
+	 * The number of structural features of the '<em>OCL Context</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT_FEATURE_COUNT = PivotPackage.TYPED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1312,7 +1412,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getLocationConstraintTypes()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_TYPES = 17;
+	int LOCATION_CONSTRAINT_TYPES = 18;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.Goal <em>Goal</em>}' enum.
@@ -1322,7 +1422,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getGoal()
 	 * @generated
 	 */
-	int GOAL = 18;
+	int GOAL = 19;
 
 
 	/**
@@ -1400,6 +1500,17 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSpecification_StorageProvider();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.Specification#getOclContext <em>Ocl Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Ocl Context</em>'.
+	 * @see org.muml.psm.allocation.language.as.Specification#getOclContext()
+	 * @see #getSpecification()
+	 * @generated
+	 */
+	EReference getSpecification_OclContext();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.EvaluatableElement <em>Evaluatable Element</em>}'.
@@ -1705,6 +1816,16 @@ public interface AsPackage extends EPackage {
 	EClass getStorageProvider();
 
 	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.OCLContext <em>OCL Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>OCL Context</em>'.
+	 * @see org.muml.psm.allocation.language.as.OCLContext
+	 * @generated
+	 */
+	EClass getOCLContext();
+
+	/**
 	 * Returns the meta object for enum '{@link org.muml.psm.allocation.language.as.LocationConstraintTypes <em>Location Constraint Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1803,6 +1924,14 @@ public interface AsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SPECIFICATION__STORAGE_PROVIDER = eINSTANCE.getSpecification_StorageProvider();
+
+		/**
+		 * The meta object literal for the '<em><b>Ocl Context</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION__OCL_CONTEXT = eINSTANCE.getSpecification_OclContext();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.EvaluatableElementImpl <em>Evaluatable Element</em>}' class.
@@ -2067,6 +2196,16 @@ public interface AsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass STORAGE_PROVIDER = eINSTANCE.getStorageProvider();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.OCLContextImpl <em>OCL Context</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.as.impl.OCLContextImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getOCLContext()
+		 * @generated
+		 */
+		EClass OCL_CONTEXT = eINSTANCE.getOCLContext();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.

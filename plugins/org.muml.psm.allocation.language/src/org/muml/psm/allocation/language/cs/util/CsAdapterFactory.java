@@ -157,6 +157,10 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 				return createStorageProviderCSAdapter();
 			}
 			@Override
+			public Adapter caseOCLContextCS(OCLContextCS object) {
+				return createOCLContextCSAdapter();
+			}
+			@Override
 			public Adapter caseVisitableCS(VisitableCS object) {
 				return createVisitableCSAdapter();
 			}
@@ -463,6 +467,20 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createStorageProviderCSAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.OCLContextCS <em>OCL Context CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.cs.OCLContextCS
+	 * @generated
+	 */
+	public Adapter createOCLContextCSAdapter() {
 		return null;
 	}
 

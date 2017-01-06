@@ -139,6 +139,15 @@ public interface CsFactory extends EFactory {
 	JavaImplementationProviderCS createJavaImplementationProviderCS();
 
 	/**
+	 * Returns a new object of class '<em>OCL Context CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>OCL Context CS</em>'.
+	 * @generated
+	 */
+	OCLContextCS createOCLContextCS();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

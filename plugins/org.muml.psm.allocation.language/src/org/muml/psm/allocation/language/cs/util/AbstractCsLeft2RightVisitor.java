@@ -67,6 +67,11 @@ public abstract class AbstractCsLeft2RightVisitor
 	}
 
 	@Override
+	public @Nullable Element visitOCLContextCS(org.muml.psm.allocation.language.cs.@NonNull OCLContextCS csElement) {
+		return visitTypedElementCS(csElement);
+	}
+
+	@Override
 	public @Nullable Element visitQoSDimensionCS(org.muml.psm.allocation.language.cs.@NonNull QoSDimensionCS csElement) {
 		return visitNamedElementCS(csElement);
 	}

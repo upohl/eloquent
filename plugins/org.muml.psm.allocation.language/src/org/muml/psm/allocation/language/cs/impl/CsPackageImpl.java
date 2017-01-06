@@ -35,6 +35,7 @@ import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintTypes;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
 import org.muml.psm.allocation.language.cs.NameProviderCS;
+import org.muml.psm.allocation.language.cs.OCLContextCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
 import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
@@ -173,6 +174,13 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * @generated
 	 */
 	private EClass storageProviderCSEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass oclContextCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -343,6 +351,15 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 */
 	public EReference getSpecificationCS_StorageProvider() {
 		return (EReference)specificationCSEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSpecificationCS_OclContext() {
+		return (EReference)specificationCSEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -611,6 +628,15 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getOCLContextCS() {
+		return oclContextCSEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getLocationConstraintTypes() {
 		return locationConstraintTypesEEnum;
 	}
@@ -661,6 +687,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		createEReference(specificationCSEClass, SPECIFICATION_CS__NAME_PROVIDER);
 		createEReference(specificationCSEClass, SPECIFICATION_CS__STORAGE_PROVIDER_IMPLEMENTATION_CLASS);
 		createEReference(specificationCSEClass, SPECIFICATION_CS__STORAGE_PROVIDER);
+		createEReference(specificationCSEClass, SPECIFICATION_CS__OCL_CONTEXT);
 
 		evaluatableElementCSEClass = createEClass(EVALUATABLE_ELEMENT_CS);
 		createEReference(evaluatableElementCSEClass, EVALUATABLE_ELEMENT_CS__EXPRESSION);
@@ -706,6 +733,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		nameProviderCSEClass = createEClass(NAME_PROVIDER_CS);
 
 		storageProviderCSEClass = createEClass(STORAGE_PROVIDER_CS);
+
+		oclContextCSEClass = createEClass(OCL_CONTEXT_CS);
 
 		// Create enums
 		locationConstraintTypesEEnum = createEEnum(LOCATION_CONSTRAINT_TYPES);
@@ -767,6 +796,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		qoSDimensionCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
 		javaImplementationProviderCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
 		javaImplementationProviderCSEClass.getESuperTypes().add(theOCLstdlibCSPackage.getJavaImplementationCS());
+		oclContextCSEClass.getESuperTypes().add(theBaseCSPackage.getTypedElementCS());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(specificationCSEClass, SpecificationCS.class, "SpecificationCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -778,6 +808,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEReference(getSpecificationCS_NameProvider(), this.getNameProviderCS(), null, "nameProvider", null, 0, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificationCS_StorageProviderImplementationClass(), this.getJavaImplementationProviderCS(), null, "storageProviderImplementationClass", null, 1, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificationCS_StorageProvider(), this.getStorageProviderCS(), null, "storageProvider", null, 0, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSpecificationCS_OclContext(), this.getOCLContextCS(), null, "oclContext", null, 1, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(evaluatableElementCSEClass, EvaluatableElementCS.class, "EvaluatableElementCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEvaluatableElementCS_Expression(), theEssentialOCLCSPackage.getContextCS(), null, "expression", null, 1, 1, EvaluatableElementCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -835,6 +866,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		addEParameter(op, thePivotPackage.getObject(), "target", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(storageProviderCSEClass, thePivotPackage.getObject(), "noRelationFound", 1, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(oclContextCSEClass, OCLContextCS.class, "OCLContextCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(locationConstraintTypesEEnum, LocationConstraintTypes.class, "LocationConstraintTypes");

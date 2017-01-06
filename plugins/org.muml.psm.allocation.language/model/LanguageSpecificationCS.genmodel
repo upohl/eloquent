@@ -33,6 +33,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/nameProvider"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/storageProviderImplementationClass"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/storageProvider"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/oclContext"/>
     </genClasses>
     <genClasses image="false" ecoreClass="LanguageSpecificationCS.ecore#//EvaluatableElementCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//EvaluatableElementCS/expression"/>
@@ -87,5 +88,6 @@
       </genOperations>
       <genOperations ecoreOperation="LanguageSpecificationCS.ecore#//StorageProviderCS/noRelationFound"/>
     </genClasses>
+    <genClasses ecoreClass="LanguageSpecificationCS.ecore#//OCLContextCS"/>
   </genPackages>
 </genmodel:GenModel>

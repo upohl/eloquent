@@ -59,6 +59,11 @@ public abstract class AbstractDelegatingLanguageSpecificationCSVisitor<R, C, @No
 	}
 
 	@Override
+	public R visitOCLContextCS(org.muml.psm.allocation.language.cs.@NonNull OCLContextCS object) {
+		return delegate.visitOCLContextCS(object);
+	}
+
+	@Override
 	public R visitQoSDimensionCS(org.muml.psm.allocation.language.cs.@NonNull QoSDimensionCS object) {
 		return delegate.visitQoSDimensionCS(object);
 	}

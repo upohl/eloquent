@@ -120,6 +120,8 @@ public class AsValidator extends EObjectValidator {
 				return validateNameProvider((NameProvider)value, diagnostics, context);
 			case AsPackage.STORAGE_PROVIDER:
 				return validateStorageProvider((StorageProvider)value, diagnostics, context);
+			case AsPackage.OCL_CONTEXT:
+				return validateOCLContext((OCLContext)value, diagnostics, context);
 			case AsPackage.LOCATION_CONSTRAINT_TYPES:
 				return validateLocationConstraintTypes((LocationConstraintTypes)value, diagnostics, context);
 			case AsPackage.GOAL:
@@ -319,6 +321,15 @@ public class AsValidator extends EObjectValidator {
 	 */
 	public boolean validateStorageProvider(StorageProvider storageProvider, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(storageProvider, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateOCLContext(OCLContext oclContext, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(oclContext, diagnostics, context);
 	}
 
 	/**

@@ -238,13 +238,22 @@ public interface CsPackage extends EPackage {
 	int SPECIFICATION_CS__STORAGE_PROVIDER = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 8;
 
 	/**
+	 * The feature id for the '<em><b>Ocl Context</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_CS__OCL_CONTEXT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 9;
+
+	/**
 	 * The number of structural features of the '<em>Specification CS</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS_FEATURE_COUNT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 9;
+	int SPECIFICATION_CS_FEATURE_COUNT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 10;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.EvaluatableElementCSImpl <em>Evaluatable Element CS</em>}' class.
@@ -1469,6 +1478,106 @@ public interface CsPackage extends EPackage {
 	int STORAGE_PROVIDER_CS_FEATURE_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.OCLContextCSImpl <em>OCL Context CS</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.cs.impl.OCLContextCSImpl
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getOCLContextCS()
+	 * @generated
+	 */
+	int OCL_CONTEXT_CS = 17;
+
+	/**
+	 * The feature id for the '<em><b>Csi</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT_CS__CSI = BaseCSPackage.TYPED_ELEMENT_CS__CSI;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT_CS__PARENT = BaseCSPackage.TYPED_ELEMENT_CS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Pivot</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT_CS__PIVOT = BaseCSPackage.TYPED_ELEMENT_CS__PIVOT;
+
+	/**
+	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT_CS__ORIGINAL_XMI_ID = BaseCSPackage.TYPED_ELEMENT_CS__ORIGINAL_XMI_ID;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT_CS__OWNED_ANNOTATIONS = BaseCSPackage.TYPED_ELEMENT_CS__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT_CS__NAME = BaseCSPackage.TYPED_ELEMENT_CS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Is Optional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT_CS__IS_OPTIONAL = BaseCSPackage.TYPED_ELEMENT_CS__IS_OPTIONAL;
+
+	/**
+	 * The feature id for the '<em><b>Owned Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT_CS__OWNED_TYPE = BaseCSPackage.TYPED_ELEMENT_CS__OWNED_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Qualifiers</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT_CS__QUALIFIERS = BaseCSPackage.TYPED_ELEMENT_CS__QUALIFIERS;
+
+	/**
+	 * The number of structural features of the '<em>OCL Context CS</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCL_CONTEXT_CS_FEATURE_COUNT = BaseCSPackage.TYPED_ELEMENT_CS_FEATURE_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1476,7 +1585,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getLocationConstraintTypes()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_TYPES = 17;
+	int LOCATION_CONSTRAINT_TYPES = 18;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.Goal <em>Goal</em>}' enum.
@@ -1486,7 +1595,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getGoal()
 	 * @generated
 	 */
-	int GOAL = 18;
+	int GOAL = 19;
 
 
 	/**
@@ -1586,6 +1695,17 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSpecificationCS_StorageProvider();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.SpecificationCS#getOclContext <em>Ocl Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Ocl Context</em>'.
+	 * @see org.muml.psm.allocation.language.cs.SpecificationCS#getOclContext()
+	 * @see #getSpecificationCS()
+	 * @generated
+	 */
+	EReference getSpecificationCS_OclContext();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.EvaluatableElementCS <em>Evaluatable Element CS</em>}'.
@@ -1891,6 +2011,16 @@ public interface CsPackage extends EPackage {
 	EClass getStorageProviderCS();
 
 	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.OCLContextCS <em>OCL Context CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>OCL Context CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.OCLContextCS
+	 * @generated
+	 */
+	EClass getOCLContextCS();
+
+	/**
 	 * Returns the meta object for enum '{@link org.muml.psm.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2005,6 +2135,14 @@ public interface CsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SPECIFICATION_CS__STORAGE_PROVIDER = eINSTANCE.getSpecificationCS_StorageProvider();
+
+		/**
+		 * The meta object literal for the '<em><b>Ocl Context</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION_CS__OCL_CONTEXT = eINSTANCE.getSpecificationCS_OclContext();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.EvaluatableElementCSImpl <em>Evaluatable Element CS</em>}' class.
@@ -2269,6 +2407,16 @@ public interface CsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass STORAGE_PROVIDER_CS = eINSTANCE.getStorageProviderCS();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.OCLContextCSImpl <em>OCL Context CS</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.cs.impl.OCLContextCSImpl
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getOCLContextCS()
+		 * @generated
+		 */
+		EClass OCL_CONTEXT_CS = eINSTANCE.getOCLContextCS();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.

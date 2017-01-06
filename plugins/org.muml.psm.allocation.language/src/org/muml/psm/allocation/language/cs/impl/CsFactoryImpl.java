@@ -70,6 +70,7 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 			case CsPackage.SERVICE_CS: return createServiceCS();
 			case CsPackage.QO_SDIMENSION_CS: return createQoSDimensionCS();
 			case CsPackage.JAVA_IMPLEMENTATION_PROVIDER_CS: return createJavaImplementationProviderCS();
+			case CsPackage.OCL_CONTEXT_CS: return createOCLContextCS();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -237,6 +238,16 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	public JavaImplementationProviderCS createJavaImplementationProviderCS() {
 		JavaImplementationProviderCSImpl javaImplementationProviderCS = new JavaImplementationProviderCSImpl();
 		return javaImplementationProviderCS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OCLContextCS createOCLContextCS() {
+		OCLContextCSImpl oclContextCS = new OCLContextCSImpl();
+		return oclContextCS;
 	}
 
 	/**
