@@ -30,7 +30,7 @@ helper Specification::createObjectiveFunction(inout ilp : IntegerLinearProgram,
 helper Specification::createAdditionExpression(inout ilp : IntegerLinearProgram,
 	cic : ComponentInstanceConfiguration,
 	hpic : HWPlatformInstanceConfiguration) : Expression {
-	var oclContext : OCLContext := createOCLContext(cic, hpic);
+	var oclContext : oclcontext::OCLContext := createOCLContext(cic, hpic);
 	var expression : Expression := null;
 	self.getQoSDimensions()->asOrderedSet()->reverse()->collect(oclAsType(QoSDimension))->forEach(qosDimension) {
 		var sequence : Sequence(TupleValue) := qosDimension.evaluateOCL(oclContext)

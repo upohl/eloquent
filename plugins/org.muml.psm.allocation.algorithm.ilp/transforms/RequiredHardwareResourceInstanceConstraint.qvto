@@ -31,7 +31,7 @@ helper Specification::createHWResInstanceConstraints(inout ilp : IntegerLinearPr
 helper RequiredHardwareResourceInstanceConstraint::createHwResInstanceConstraint(inout ilp : IntegerLinearProgram,
 	cic : ComponentInstanceConfiguration,
 	hpic : HWPlatformInstanceConfiguration) {
-	var oclContext : OCLContext := createOCLContext(cic, hpic);
+	var oclContext : oclcontext::OCLContext := createOCLContext(cic, hpic);
 	log("SORT");
 	var sequences : Sequence(Sequence(OclAny)) := self.evaluateOCL(oclContext)
 		->collectNested(toSequence())

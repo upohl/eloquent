@@ -40,13 +40,13 @@ mapping EvaluatableElement::createTrace(tv : TupleValue) : TupleValue {
 }
 
 helper createOCLContext(cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) : OCLContext {
+	hpic : HWPlatformInstanceConfiguration) : oclcontext::OCLContext {
 	log('createOCLContextObject');
 	return map createOCLContextObject(cic, hpic);
 }
 
 mapping createOCLContextObject(cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) : OCLContext {
+	hpic : HWPlatformInstanceConfiguration) : oclcontext::OCLContext {
 	componentInstanceConfiguration := cic;
 	hardwarePlatformInstanceConfiguration := hpic;	
 }

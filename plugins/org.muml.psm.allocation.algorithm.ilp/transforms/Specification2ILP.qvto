@@ -56,7 +56,7 @@ main() {
 	//specification.getSameLocationConstraints()->createSameLocationConstraint(ilp, cic, hpic);
 	ilpOut.removeOrphans();
 	//log(cic.toString());
-	//var ctx : OCLContext := createOCLContext(cic, null);
+	//var ctx : oclcontext::OCLContext := createOCLContext(cic, null);
 	//log(ctx.toString());
 	//log("in qvto ocl result: " + evaluateOCL(null, ctx).toString());
 }

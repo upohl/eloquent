@@ -37,7 +37,7 @@ helper Specification::createResourceConstraints(inout ilp : IntegerLinearProgram
 helper ResourceConstraint::createResourceConstraint(inout ilp : IntegerLinearProgram,
 	cic : ComponentInstanceConfiguration,
 	hpic : HWPlatformInstanceConfiguration) {
-	var oclContext : OCLContext := createOCLContext(cic, hpic);
+	var oclContext : oclcontext::OCLContext := createOCLContext(cic, hpic);
 	var sequences : Sequence(TupleValue) := self.evaluateOCL(oclContext);
 	sequences->sortOuterResultSequence(self)->createResourceConstraint(ilp, self);
 }
