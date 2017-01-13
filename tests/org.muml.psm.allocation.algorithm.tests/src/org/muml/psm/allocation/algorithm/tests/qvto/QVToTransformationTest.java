@@ -29,7 +29,7 @@ import org.muml.psm.allocation.algorithm.tests.util.ModelTestUtil;
 
 public class QVToTransformationTest {
 	
-	public class ExpectedOutput {
+	public static class ExpectedOutput {
 		private String uri;
 		private EObject object;
 		
