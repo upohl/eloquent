@@ -75,6 +75,13 @@ query LocationConstraint::getHelperVariableSequences(cic : ComponentInstanceConf
 	return res->getLocationConstraintHelperVariableSequences(hpic.getResourceInstances());
 }
 
+query Sequence(TupleValue)::getLocationConstraintHelperVariableSequences(resourceInstanceSet : OrderedSet(ResourceInstance))
+	: Sequence(Sequence(OclAny)) {
+	return self->iterate(it : TupleValue; acc : Sequence(Sequence(OclAny)) = Sequence{} |
+		acc->union(it.getLocationConstraintHelperVariableSequences(resourceInstanceSet))
+	)->sortedBy(getVariableName());
+}
+
 query TupleValue::getLocationConstraintHelperVariableSequences(resourceInstanceSet : OrderedSet(ResourceInstance))
 	: Sequence(Sequence(OclAny)) {
 	// sort by instance set by variable name
