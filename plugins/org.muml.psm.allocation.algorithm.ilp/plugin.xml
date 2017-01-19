@@ -10,16 +10,10 @@
                class="org.muml.psm.allocation.algorithm.ocl.OCLEvaluator"
                name="OCLEvaluatorBlackbox">
             <metamodel
-                  nsURI="http://www.eclipse.org/ocl/2015/EssentialOCLCS">
+                  nsURI="http://www.muml.org/psm/allocation/language/as/1.0.0">
             </metamodel>
             <metamodel
                   nsURI="http://www.eclipse.org/ocl/2015/Pivot">
-            </metamodel>
-            <metamodel
-                  nsURI="http://www.eclipse.org/ocl/2015/Values">
-            </metamodel>
-            <metamodel
-                  nsURI="http://www.muml.org/psm/allocation/language/as/1.0.0">
             </metamodel>
          </library>
       </unit>
@@ -31,9 +25,6 @@
                name="TupleAccessorBlackbox">
             <metamodel
                   nsURI="http://www.muml.org/psm/allocation/language/as/1.0.0">
-            </metamodel>
-            <metamodel
-                  nsURI="http://www.muml.org/core/1.0.0">
             </metamodel>
             <metamodel
                   nsURI="http://www.eclipse.org/ocl/2015/Values">

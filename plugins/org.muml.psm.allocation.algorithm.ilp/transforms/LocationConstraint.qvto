@@ -71,7 +71,7 @@ query OclAny::getSequences(sequences : Sequence(Sequence(OclAny))) : OrderedSet(
 query LocationConstraint::getHelperVariableSequences(cic : ComponentInstanceConfiguration,
 	hpic : HWPlatformInstanceConfiguration) : Sequence(Sequence(OclAny)) {
 	var oclContext : oclcontext::OCLContext := createOCLContext(cic, hpic);
-	var res : Sequence(TupleValue) := self.evaluateOCL(oclContext);
+	var res : Sequence(TupleValue) := self.evaluateOCL(oclContext).asTupleValueSequence();
 	return res->getLocationConstraintHelperVariableSequences(hpic.getResourceInstances());
 }
 

@@ -34,6 +34,7 @@ helper RequiredHardwareResourceInstanceConstraint::createHwResInstanceConstraint
 	var oclContext : oclcontext::OCLContext := createOCLContext(cic, hpic);
 	log("SORT");
 	var sequences : Sequence(Sequence(OclAny)) := self.evaluateOCL(oclContext)
+		.asTupleValueSequence()
 		->collectNested(toSequence())
 		->sortComponentResourceSequences(); 
 	log("SORT");

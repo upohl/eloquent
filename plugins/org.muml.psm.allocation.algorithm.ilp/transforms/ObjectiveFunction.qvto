@@ -34,6 +34,7 @@ helper Specification::createAdditionExpression(inout ilp : IntegerLinearProgram,
 	var expression : Expression := null;
 	self.getQoSDimensions()->asOrderedSet()->reverse()->collect(oclAsType(QoSDimension))->forEach(qosDimension) {
 		var sequence : Sequence(TupleValue) := qosDimension.evaluateOCL(oclContext)
+			.asTupleValueSequence()
 			->sortWeightingComponentResourceTuples(qosDimension.tupleDescriptor);
 		sequence->collectNested(tv : TupleValue |
 			tv.toSequence()->sortComponentResourceSequence()

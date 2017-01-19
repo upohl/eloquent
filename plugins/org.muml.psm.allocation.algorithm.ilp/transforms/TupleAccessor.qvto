@@ -1,33 +1,68 @@
 import org.muml.psm.allocation.algorithm.ocl.TupleAccessorBlackboxUnit;
 import Util;
+import OCLEvaluator;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
 library TupleAccessor;
 
+helper OclAny::asTupleValueSequence() : Sequence(TupleValue) {
+	log("asTupleValueSequence called for: " + self.toString());
+	var evaluatableElement : EvaluatableElement := self.resolveone(EvaluatableElement);
+	log(evaluatableElement.toString());
+	assert fatal (not evaluatableElement.oclIsUndefined()) with log("no OCLEvaluator::createTrace call?");
+	var res : Sequence(TupleValue) := convertToTupleValueSequence(self);
+	evaluatableElement.createTrace(res);
+	return res;
+}
+
+-- we need to associate each tuple value with the evaluatable element
+helper EvaluatableElement::createTrace(tupleValues : Sequence(TupleValue)) {
+	createTrace(self, tupleValues);
+}
+
+-- here we do the same, but also each "inner" tuple value is associated
+-- with the evaluatable element
+helper ResourceConstraint::createTrace(tupleValues : Sequence(TupleValue)) {
+	-- do this first, otherwise the tv.getSequence call below fails
+	-- (which is, of course, expected)
+	createTrace(self, tupleValues);
+	createTrace(self,
+		tupleValues->collect(tv : TupleValue |
+			tv.getSequence(self.tupleDescriptor.weight)
+		)->collect(oclAsType(TupleValue)));
+}
+
+-- associate each tuple value in tupleValues with the passed evaluatableElement
+helper createTrace(evaluatableElement : EvaluatableElement, tupleValues : Sequence(TupleValue)) {
+	tupleValues->map OCLEvaluator::createTrace(evaluatableElement);
+}
+
 helper TupleValue::get(namedPart : String) : OclAny {
-	//log("resolve call: ");
-	var source : EvaluatableElement := self.invresolveone(EvaluatableElement);
+	//log("resolve call: ");res.
+	log("TupleValue::get called");
+	var evaluatableElement : EvaluatableElement := self.resolveone(EvaluatableElement);
 	//log(source.toString());
-	return getPart(self, namedPart, source);
+	return getPart(self, namedPart, evaluatableElement);
 }
 
 helper TupleValue::getSequence(namedPart : String) : Sequence(TupleValue) {
-	var source : EvaluatableElement := self.invresolveone(EvaluatableElement);
-	return getSequencePart(self, namedPart, source);
+	var evaluatableElement : EvaluatableElement := self.resolveone(EvaluatableElement);
+	return getSequencePart(self, namedPart, evaluatableElement);
 }
 
 query TupleValue::toSequence() : Sequence(OclAny) {
-	// it might be possible that source is not the source we expect:
-	// source might be a previously transformed constraint. This is no problem
-	// because we the toSequence call will return the _expected_ sequence.
-	// Alternatively, we can fix this be doing an invresolve(...)->last() or
+	// it might be possible that evaluatableElement is not the
+	// evaluatableElement we expect: evaluatableElement might
+	// be a previously transformed constraint. This is no problem,
+	// because the toSequence call will return the _expected_ sequence.
+	// Alternatively, we can fix this be doing an resolve(...)->last() or
 	// ->first() (to be investigated) to get the "correct"/expected constraint
 	// (implicit assumption: the tuple value is only accessed during the transformation
 	// of the constraint)
-	var source : EvaluatableElement := self.invresolveone(EvaluatableElement);
-	return source.toSequence(self);
+	var evaluatableElement : EvaluatableElement := self.resolveone(EvaluatableElement);
+	return evaluatableElement.toSequence(self);
 }
 
 query LocationConstraint::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {

@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation.Kind;
 import org.eclipse.ocl.pivot.TupleType;
@@ -12,6 +14,7 @@ import org.eclipse.ocl.pivot.ids.IdResolver;
 import org.eclipse.ocl.pivot.ids.TuplePartId;
 import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal;
 import org.eclipse.ocl.pivot.values.CollectionValue;
+import org.eclipse.ocl.pivot.values.SetValue;
 import org.eclipse.ocl.pivot.values.TupleValue;
 import org.muml.psm.allocation.language.as.EvaluatableElement;
 import org.muml.psm.allocation.language.as.LocationConstraint;
@@ -87,7 +90,7 @@ public class TupleAccessor {
 		return createTupleValueList(result);
 	}
 	
-	public static List<TupleValue> createTupleValueList(CollectionValue collection) {
+	public static List<TupleValue> createTupleValueList(@NonNull CollectionValue collection) {
 		List<TupleValue> tupleValueList = new ArrayList<TupleValue>(collection.size().signum());
 		for (Object elm : collection.getElements()) {
 			// do a sanity check (better safe than sorry...)
@@ -99,5 +102,13 @@ public class TupleAccessor {
 		return tupleValueList;
 	}
 	
+	@Operation(kind=Kind.QUERY)
+	public static List<TupleValue> convertToTupleValueSequence(@Nullable Object evaluationResult) {
+		if (!(evaluationResult instanceof SetValue)) {
+			throw new IllegalArgumentException(
+					String.format(unexpectedObject, evaluationResult));
+		}
+		return createTupleValueList((SetValue) evaluationResult);
+	}
 	
 }
