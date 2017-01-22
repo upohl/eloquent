@@ -1,0 +1,19 @@
+test {
+	nameProvider  'org.muml.psm.allocation.algorithm.ilp.tests.EcoreNameProvider';
+	storageProvider 'org.muml.psm.allocation.algorithm.ilp.tests.EcoreStorageProvider' ;
+	
+	oclContext ecore::EPackage;
+	
+	import 'http://www.eclipse.org/emf/2002/Ecore'
+	
+	relation sameLowerUpper {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 3;
+		upper 3;
+		ocl self.eSubpackages->at(1).eClassifiers->product(
+			self.eSubpackages->at(2).eSubpackages
+		);
+	}
+	
+	
+}

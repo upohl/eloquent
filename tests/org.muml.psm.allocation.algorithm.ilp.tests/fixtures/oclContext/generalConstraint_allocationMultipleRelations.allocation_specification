@@ -1,0 +1,38 @@
+test {
+	nameProvider  'org.muml.psm.allocation.algorithm.ilp.tests.EcoreNameProvider';
+	storageProvider 'org.muml.psm.allocation.algorithm.ilp.tests.EcoreStorageProvider' ;
+	
+	oclContext ecore::EPackage;
+	
+	import 'http://www.eclipse.org/emf/2002/Ecore'
+	
+	-- all relations have the _same_ name
+	relation allocation {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 1;
+		upper 1;
+		ocl self.eSubpackages->at(1).eClassifiers->at(1)->asSet()->product(
+			self.eSubpackages->at(2).eSubpackages
+		);
+	}
+	
+	relation allocation {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 1;
+		upper 1;
+		ocl self.eSubpackages->at(1).eClassifiers->at(2)->asSet()->product(
+			self.eSubpackages->at(2).eSubpackages
+		);
+	}
+	
+	relation allocation {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 1;
+		upper 1;
+		ocl self.eSubpackages->at(1).eClassifiers->at(3)->asSet()->product(
+			self.eSubpackages->at(2).eSubpackages
+		);
+	}
+	
+	
+}

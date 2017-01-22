@@ -1,0 +1,78 @@
+test {
+	nameProvider  'org.muml.psm.allocation.algorithm.ilp.tests.EcoreNameProvider';
+	storageProvider 'org.muml.psm.allocation.algorithm.ilp.tests.EcoreStorageProvider' ;
+	
+	oclContext ecore::EPackage;
+	
+	import 'http://www.eclipse.org/emf/2002/Ecore'
+	
+	-- relate A to all packages
+	relation relA {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 1;
+		upper 3;
+		ocl self.eSubpackages->at(1).eClassifiers->at(1)->product(
+			self.eSubpackages->at(2).eSubpackages
+		);
+	}
+	
+	-- relate B only to the packages "b" and "c"
+	relation relB {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 1;
+		upper 2;
+		ocl self.eSubpackages->at(1).eClassifiers->at(2)->product(
+			self.eSubpackages->at(2).eSubpackages
+				->reject(name='A')
+		);
+	}
+	
+	-- relate C to the packages "A" and "b"
+	relation allocC {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 1;
+		upper 1;
+		ocl self.eSubpackages->at(1).eClassifiers->at(3)->product(
+			self.eSubpackages->at(2).eSubpackages
+				->reject(name='c')
+		);
+	}
+	
+	-- collocate A and B: since B can only be related to "b" or "c",
+	-- A has to related to "b" or "c" as well
+	constraint collocation collocateAAndB {
+		descriptors (foo : ecore::EClassifier, bar : ecore::EClassifier);
+		ocl Set {
+			Tuple {
+				foo = self.eSubpackages->at(1).eClassifiers->at(1), -- class A
+				bar = self.eSubpackages->at(1).eClassifiers->at(2)  -- class B
+			}
+		};
+	}
+	
+	-- collocate A and C: since C can only be related to "A" or "b"
+	-- A has to be related to "A" or "b" as well
+	constraint collocation collocateAAndC {
+		descriptors (x : ecore::EClassifier, y : ecore::EClassifier);
+		ocl Set {
+			Tuple {
+				x = self.eSubpackages->at(1).eClassifiers->at(1), -- class A
+				y = self.eSubpackages->at(1).eClassifiers->at(3)  -- class C
+			}
+		};
+	}
+	
+	-- collocate B and C: results in the single inequality
+	-- m.pa.B_m.pb.b_m.pa.C_m.pb.b >= 1
+	constraint collocation collocateCAndB {
+		-- swapped second and first (just for fun and testing)
+		descriptors (second : ecore::EClassifier, first : ecore::EClassifier);
+		ocl Set {
+			Tuple {
+				second = self.eSubpackages->at(1).eClassifiers->at(3), -- class C
+				first = self.eSubpackages->at(1).eClassifiers->at(2)  -- class B
+			}
+		};
+	}
+	
+}

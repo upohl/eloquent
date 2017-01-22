@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="m" nsURI="http://www.muml.org/psm/allocation/algorithm/ilp/tests/m/1.0.0"
+    nsPrefix="m">
+  <eClassifiers xsi:type="ecore:EClass" name="ToplevelClass"/>
+  <eSubpackages name="pa" nsURI="http://www.muml.org/psm/allocation/algorithm/ilp/tests/m/pa/1.0.0"
+      nsPrefix="pa">
+    <eClassifiers xsi:type="ecore:EClass" name="A"/>
+    <eClassifiers xsi:type="ecore:EClass" name="B"/>
+    <eClassifiers xsi:type="ecore:EClass" name="C"/>
+  </eSubpackages>
+  <eSubpackages name="pb" nsURI="http://www.muml.org/psm/allocation/algorithm/ilp/tests/simple/pb/1.0.0"
+      nsPrefix="pb">
+    <eSubpackages name="A" nsURI="http://www.muml.org/psm/allocation/algorithm/ilp/tests/m/pb/A/1.0.0"
+        nsPrefix="b"/>
+    <eSubpackages name="b" nsURI="http://www.muml.org/psm/allocation/algorithm/ilp/tests/m/pb/b/1.0.0"
+        nsPrefix="b"/>
+    <eSubpackages name="c" nsURI="http://www.muml.org/psm/allocation/algorithm/ilp/tests/m/pb/c/1.0.0"
+        nsPrefix="c"/>
+  </eSubpackages>
+</ecore:EPackage>

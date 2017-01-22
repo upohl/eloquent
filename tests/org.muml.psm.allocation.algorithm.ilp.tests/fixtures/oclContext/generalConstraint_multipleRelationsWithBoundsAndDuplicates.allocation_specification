@@ -1,0 +1,72 @@
+test {
+	nameProvider  'org.muml.psm.allocation.algorithm.ilp.tests.EcoreNameProvider';
+	storageProvider 'org.muml.psm.allocation.algorithm.ilp.tests.EcoreStorageProvider' ;
+	
+	oclContext ecore::EPackage;
+	
+	import 'http://www.eclipse.org/emf/2002/Ecore'
+		
+	relation relationA {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 2;
+		upper 42;
+		ocl self.eSubpackages->at(1).eClassifiers->at(1)->asSet()->product(
+			self.eSubpackages->at(2).eSubpackages
+		);
+	}
+	
+	-- at this point all variables for class A were created
+	relation allocBAndA {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 1;
+		upper 1;
+		ocl self.eSubpackages->at(1).eClassifiers->at(2)->asSet()->product(
+			self.eSubpackages->at(2).eSubpackages
+				-- do not relate class "B" with package "A" or "b"
+				->reject(name = 'A' or name='b')
+		)->union(
+			self.eSubpackages->at(1).eClassifiers->at(1)->asSet()->product(
+				-- do not relate class "A" with package "A"
+				self.eSubpackages->at(2).eSubpackages
+					->reject(name='A')
+			)
+		);
+	}
+	
+	-- next, we duplicate all constraints from relation "relationA"
+	-- and additionally we create a new constraint (+ a new variable for class B)
+	relation duplicateAndNew {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 2;
+		upper 42;
+		ocl self.eSubpackages->at(1).eClassifiers->at(1)->asSet()->product(
+			self.eSubpackages->at(2).eSubpackages
+		)->union(
+			self.eSubpackages->at(1).eClassifiers->at(2)->asSet()->product(
+				self.eSubpackages->at(2).eSubpackages
+					-- relate class "B" with package "b" or "c" (the variable
+					-- for package "c" already exists)
+					->select(name='b' or name='c')
+			)
+		);
+	}
+	
+	-- Do not relate class "C" with package "A" and do not relate class "A"
+	-- with package "c"
+	relation relateCAndA {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 4 - 2;
+		upper 2;
+		ocl self.eSubpackages->at(1).eClassifiers->at(3)->asSet()->product(
+			self.eSubpackages->at(2).eSubpackages
+				->reject(name='A') -- do not relate class "C" with package "A"
+		)->union(
+			self.eSubpackages->at(1).eClassifiers->at(1)->asSet()->product(
+				-- do not relate class "A" with package "c"
+				self.eSubpackages->at(2).eSubpackages
+					->reject(name='c')
+			)
+		);
+	}
+	
+}

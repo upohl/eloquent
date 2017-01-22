@@ -1,0 +1,41 @@
+test {
+	nameProvider  'org.muml.psm.allocation.algorithm.ilp.tests.EcoreNameProvider';
+	storageProvider 'org.muml.psm.allocation.algorithm.ilp.tests.EcoreStorageProvider' ;
+	
+	oclContext ecore::EPackage;
+	
+	import 'http://www.eclipse.org/emf/2002/Ecore'
+	
+	-- relate A to all packages
+	relation relA {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 1;
+		upper 3;
+		ocl self.eSubpackages->at(1).eClassifiers->at(1)->product(
+			self.eSubpackages->at(2).eSubpackages
+		);
+	}
+	
+	-- relate B only to the packages "b" and "c"
+	relation relB {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 1;
+		upper 2;
+		ocl self.eSubpackages->at(1).eClassifiers->at(2)->product(
+			self.eSubpackages->at(2).eSubpackages
+				->reject(name='A')
+		);
+	}
+	
+	-- locate A and B to different packages
+	constraint differentLocation diffLocAAndB {
+		descriptors (foo : ecore::EClassifier, bar : ecore::EClassifier);
+		ocl Set {
+			Tuple {
+				foo = self.eSubpackages->at(1).eClassifiers->at(1), -- class A
+				bar = self.eSubpackages->at(1).eClassifiers->at(2)  -- class B
+			}
+		};
+	}
+	
+}

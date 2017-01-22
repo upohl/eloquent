@@ -1,0 +1,32 @@
+test {
+	nameProvider  'org.muml.psm.allocation.algorithm.ilp.tests.EcoreNameProvider';
+	storageProvider 'org.muml.psm.allocation.algorithm.ilp.tests.EcoreStorageProvider' ;
+	
+	oclContext ecore::EPackage;
+	
+	import 'http://www.eclipse.org/emf/2002/Ecore'
+		
+	relation allocation {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 1;
+		upper 1;
+		ocl self.eSubpackages->at(1).eClassifiers->product(
+			self.eSubpackages->at(2).eSubpackages
+		);
+	}
+	
+	-- all classes should be allocated to the same package (since we have an
+	-- allocation relation)
+	-- Note: the set contains semantical duplicates, for instance,
+	-- 		 Tuple{first=m.pa.A, second=m.pa.B} and Tuple{first=m.pa.B, second=m.pa.A}
+	--		 etc. We get rid of them in the transformation.
+	constraint collocation semdup {
+		descriptors (first : ecore::EClassifier, second : ecore::EClassifier);
+		ocl self.eSubpackages->at(1).eClassifiers->product(
+			self.eSubpackages->at(1).eClassifiers
+		)->reject(t |
+			t.first = t.second
+		);
+	}
+	
+}
