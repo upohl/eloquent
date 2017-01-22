@@ -26,7 +26,7 @@ public class QVToTransformationSingleOutExtentTest extends QVToTransformationTes
 	}
 	
 	private static Object[] mergeParams(Object expectedOutput, Object[] inParameters) {
-		Object[] inParamsAndExpOut = new String[inParameters.length + 1];
+		Object[] inParamsAndExpOut = new Object[inParameters.length + 1];
 		System.arraycopy(inParameters, 0, inParamsAndExpOut, 0, inParameters.length);
 		inParamsAndExpOut[inParameters.length] = expectedOutput;
 		return inParamsAndExpOut;
