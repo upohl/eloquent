@@ -1,0 +1,31 @@
+testSpecificationName {
+
+	nameProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLNameProvider';
+	storageProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLStorageProvider';
+	oclContext oclcontext::OCLContext;
+	import 'http://www.muml.org/psm/allocation/language/oclcontext/1.0.0'
+	
+	relation alloc {
+		descriptors (first : pim::instance::ComponentInstance, second : hardware::hwresourceinstance::ResourceInstance);
+		lower 1;
+		upper 1;
+		ocl self.componentInstanceConfiguration.componentInstances->union(
+			let s : pim::instance::StructuredComponentInstance = self.componentInstanceConfiguration
+				.componentInstances
+				->at(3) -- this is a StructuredComponentInstance
+				.oclAsType(pim::instance::StructuredComponentInstance)
+			in
+			s.embeddedCIC.componentInstances->union(
+				s.embeddedCIC.componentInstances
+					->at(1) -- again s StructuredComponentInstance
+					.oclAsType(pim::instance::StructuredComponentInstance)
+					.embeddedCIC.componentInstances
+			)
+			
+		)->product(
+			self.hardwarePlatformInstanceConfiguration.resources
+		);
+	}
+
+	
+}

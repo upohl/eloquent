@@ -9,7 +9,12 @@ testSpecificationName {
 		descriptors (first : pim::instance::ComponentInstance, second : hardware::hwresourceinstance::ResourceInstance);
 		lower 1;
 		upper 1;
-		ocl self.componentInstanceConfiguration.componentInstances->product(
+		ocl self.componentInstanceConfiguration.componentInstances->union(
+			self.componentInstanceConfiguration.componentInstances
+				->at(3) -- this is a StructuredComponentInstance
+				.oclAsType(pim::instance::StructuredComponentInstance)
+				.embeddedCIC.componentInstances
+		)->product(
 			self.hardwarePlatformInstanceConfiguration.resources
 		);
 	}

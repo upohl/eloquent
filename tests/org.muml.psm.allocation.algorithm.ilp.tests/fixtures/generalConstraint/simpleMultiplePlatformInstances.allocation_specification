@@ -10,7 +10,9 @@ testSpecificationName {
 		lower 1;
 		upper 1;
 		ocl self.componentInstanceConfiguration.componentInstances->product(
-			self.hardwarePlatformInstanceConfiguration.resources
+			self.hardwarePlatformInstanceConfiguration.hwplatformInstances->collect(hwpi |
+				hwpi.embeddedHPIC.resources
+			)
 		);
 	}
 
