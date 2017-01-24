@@ -7,6 +7,15 @@ testSpecificationName {
 
 	import 'http://www.muml.org/psm/allocation/algorithm/ilp/tests/extension/1.0.0'
 	
+	relation {
+		descriptors (first : pim::instance::ComponentInstance, second : hardware::hwresourceinstance::ResourceInstance);
+		lower 1;
+		upper 1;
+		ocl self.componentInstanceConfiguration.componentInstances->product(
+			self.hardwarePlatformInstanceConfiguration.resources
+		);
+	}
+	
 	constraint resource test {
 		weight memNeeded;
 		bound memProvided;
