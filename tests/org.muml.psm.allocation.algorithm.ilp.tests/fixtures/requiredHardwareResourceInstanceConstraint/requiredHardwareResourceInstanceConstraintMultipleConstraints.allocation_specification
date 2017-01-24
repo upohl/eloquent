@@ -4,6 +4,15 @@ testSpecificationName {
 	storageProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLStorageProvider';
 	oclContext oclcontext::OCLContext;
 	import 'http://www.muml.org/psm/allocation/language/oclcontext/1.0.0'
+	
+	relation {
+		descriptors (first : pim::instance::ComponentInstance, second : hardware::hwresourceinstance::ResourceInstance);
+		lower 1;
+		upper 1;
+		ocl self.componentInstanceConfiguration.componentInstances->product(
+			self.hardwarePlatformInstanceConfiguration.resources
+		);
+	}
 
 	constraint requiredHardwareResourceInstance bar {
 		descriptors (a : pim::instance::ComponentInstance, b : hardware::hwresourceinstance::ResourceInstance), (c : pim::instance::ComponentInstance, d : hardware::hwresourceinstance::ResourceInstance);
