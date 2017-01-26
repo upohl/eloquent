@@ -18,7 +18,8 @@ import org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguageSta
 	ResourceConstraint2ILPTest.class,
 	MeasureFunction2ILPTest.class,
 	ClassifierContextDeclCS2ILPTest.class,
-	MetaModelImportTest.class
+	MetaModelImportTest.class,
+	OclContext2ILPTest.class
 })
 public class Specification2ILPTestSuite {
 	@BeforeClass
