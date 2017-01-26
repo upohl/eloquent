@@ -5,7 +5,7 @@ import java.util.Collections;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.muml.psm.allocation.algorithm.ilp.tests.MUMLOCLContextBasedTest;
+import org.muml.psm.allocation.algorithm.tests.muml.MUMLOCLContextBasedTest;
 
 @RunWith(value = Parameterized.class)
 @SuppressWarnings("all")
