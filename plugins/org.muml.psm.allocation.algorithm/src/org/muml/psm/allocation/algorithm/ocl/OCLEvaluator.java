@@ -67,6 +67,16 @@ public class OCLEvaluator {
 		return evaluate(evaluatableElement.getExpression(), contextObject);
 	}
 	
+	// XXX: does not really belong here (introduce a new Conversion class?)
+	@Operation(kind=Kind.QUERY)
+	public static Integer convertToInteger(@Nullable Object evaluationResult) {
+		if (!(evaluationResult instanceof Number)) {
+			throw new IllegalArgumentException(
+					String.format(nullArgument, "evaluationResult"));
+		}
+		return ((Number) evaluationResult).intValue();
+	}
+	
 	/** QVTo blackbox method to get system time for performance measurement
 	 * @author upohl
 	 * @return long current system time in ms
