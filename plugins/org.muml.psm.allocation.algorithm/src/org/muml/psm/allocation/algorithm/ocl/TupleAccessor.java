@@ -19,6 +19,7 @@ import org.eclipse.ocl.pivot.values.TupleValue;
 import org.muml.psm.allocation.language.as.EvaluatableElement;
 import org.muml.psm.allocation.language.as.LocationConstraint;
 import org.muml.psm.allocation.language.as.QoSDimension;
+import org.muml.psm.allocation.language.as.Relation;
 import org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint;
 import org.muml.psm.allocation.language.as.ResourceConstraint;
 import org.muml.psm.allocation.language.xtext.typing.TypesUtil;
@@ -64,7 +65,9 @@ public class TupleAccessor {
 		// XXX: get rid of this EObject cast again
 		EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory((EObject) object);
 		TupleType tupleType = null;
-		if (object instanceof LocationConstraint) {
+		if (object instanceof Relation) {
+			tupleType = TypesUtil.createRelationTupleType(envFactory, (Relation) object);
+		} else if (object instanceof LocationConstraint) {
 			tupleType = TypesUtil.createLocationConstraintTupleType(envFactory, (LocationConstraint) object);
 		} else if (object instanceof RequiredHardwareResourceInstanceConstraint) {
 			tupleType = TypesUtil.createReqHWResInstanceConstraintTupleType(envFactory, (RequiredHardwareResourceInstanceConstraint) object);
