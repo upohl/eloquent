@@ -1,18 +1,18 @@
 import Expressions;
 import OCLEvaluator;
+import TupleAccessor;
 import Sort;
 import Util;
 import Variables;
 import VariableHelper;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
-modeltype oclcontext uses oclcontext('http://www.muml.org/psm/allocation/language/oclcontext/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
-modeltype expressions uses core::expressions('http://www.muml.org/core/expressions/1.0.0');
-modeltype instance uses pim::instance('http://www.muml.org/pim/instance/1.0.0');
-modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0');
-modeltype hwrinstance uses hardware::hwresourceinstance('http://www.muml.org/pm/hardware/hwresourceinstance/1.0.0');
+modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
+
+-- XXX: we probably need a semantics change here generate ">= 1" inequalities
+-- 		instead of "= 1" equations (needs to be discussed)
 
 
 library RequiredHardwareResourceInstanceConstraintLib;
@@ -21,17 +21,12 @@ library RequiredHardwareResourceInstanceConstraintLib;
 // which was described in my thesis
 
 helper Specification::createHWResInstanceConstraints(inout ilp : IntegerLinearProgram,
-	cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) {
-	//self.getSameLocationConstraints()->createLocationConstraint(ilp, cic, hpic);
-	//self.getDifferentLocationConstraints()->createLocationConstraint(ilp, cic, hpic);
-	self.getHWResInstanceConstraints()->createHwResInstanceConstraint(ilp, cic, hpic);
+	oclContext : OclAny) {
+	self.getHWResInstanceConstraints()->createHwResInstanceConstraint(ilp, oclContext);
 }
 
 helper RequiredHardwareResourceInstanceConstraint::createHwResInstanceConstraint(inout ilp : IntegerLinearProgram,
-	cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) {
-	var oclContext : oclcontext::OCLContext := createOCLContext(cic, hpic);
+	oclContext : OclAny) {
 	log("SORT");
 	var sequences : Sequence(Sequence(OclAny)) := self.evaluateOCL(oclContext)
 		.asTupleValueSequence()
@@ -85,7 +80,9 @@ helper Sequence(Sequence(OclAny))::createConstraintExpression(inout ilp : Intege
 	log("createHWRESConstraintExpression");
 	self->print();
 	var comment : String := if constraint.name <> '' then constraint.name else null endif;
-	ilp.constraints += self->createAdditionConstraintExpression('1', comment);
+	ilp.constraints += self->createAdditionConstraintExpression(
+		ComparingOperator::EQUAL,'1', comment
+	);
 	log("createHWRESConstraintExpression");
 }
 

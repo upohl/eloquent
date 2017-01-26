@@ -1,16 +1,12 @@
 import InputHelper;
 import Specification2ILP;
-import OCLEvaluator;
 import SolverConstants;
 
 import org.muml.common._blackbox.SaveXMIBlackbox;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
-modeltype instance uses pim::instance('http://www.muml.org/pim/instance/1.0.0');
-modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0');
-modeltype hwrinstance uses hardware::hwresourceinstance('http://www.muml.org/pm/hardware/hwresourceinstance/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
-modeltype ECORE uses ecore('http://www.eclipse.org/emf/2002/Ecore');
+modeltype ecore uses ecore('http://www.eclipse.org/emf/2002/Ecore');
 
 /* Abstract library for ILP-based algorithms */
 library AbstractILPBasedAlgorithm;
@@ -19,9 +15,8 @@ configuration property STORE_ILP_MODEL : Boolean;
 
 helper computeAllocation() {
 	var ilpOut : ilptype := ilptype.createEmptyModel().oclAsType(ilptype);
-	var ret : Status := new Specification2ILP(getAllocationSpecification().oclAsType(allocationSpecification),
-		getInstance().oclAsType(instance),
-		getHwpi().oclAsType(hwpinstance),
+	var ret : Status := new Specification2ILP(getAllocationSpecificationIn().oclAsType(allocationSpecification),
+		getOclContextIn().oclAsType(ecore),
 		ilpOut).transform();
 	log("ret: " + ret.toString());
 	assert fatal (ret.succeeded()) with log("Specification2ILP transformation failed: " + ret.toString());
@@ -32,17 +27,12 @@ helper computeAllocation() {
 	createAllocation(ilpModel);
 }
 
-query getAllocationSpecification() : OclAny {
+query getAllocationSpecificationIn() : OclAny {
 	assert fatal (false) with log("implement me in a sub transformation");
 	return null;  // never reached
 }
 
-query getInstance() : OclAny {
-	assert fatal (false) with log("implement me in a sub transformation");
-	return null;  // never reached
-}
-
-query getHwpi() : OclAny {
+query getOclContextIn() : OclAny {
 	assert fatal (false) with log("implement me in a sub transformation");
 	return null;  // never reached
 }
@@ -65,10 +55,11 @@ helper createAllocation(ilpModel : IntegerLinearProgram) {
 	} elif (ret != SUCCESS()) then {
 		log("solveILP: solver returned code " + ret.toString());
 	} endif;
-	var specification : Specification := getAllocationSpecification().oclAsType(allocationSpecification).getSpecification();
-	var cic : ComponentInstanceConfiguration := getInstance().oclAsType(instance).getRootCIC();
-	var hpic : HWPlatformInstanceConfiguration := getHwpi().oclAsType(hwpinstance).getRootHPIC();
-	specification.storageProvider.initialize(createOCLContext(cic, hpic));
+	var specification : Specification := getAllocationSpecificationIn()
+		.getSpecification();
+	var oclContext : OclAny := getOclContextIn()
+		.getOclContext();
+	specification.storageProvider.initialize(oclContext);
 	var todo : OrderedSet(Variable) := solution->keys()
 		->select(k | solution->get(k) = 1)
 		->sortedBy(name)->asOrderedSet();

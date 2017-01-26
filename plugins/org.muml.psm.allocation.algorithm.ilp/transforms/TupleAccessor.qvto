@@ -65,6 +65,11 @@ query TupleValue::toSequence() : Sequence(OclAny) {
 	return evaluatableElement.toSequence(self);
 }
 
+query Relation::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
+	// there should be exactly one typedPair
+	return self.tupleDescriptor.toSequence(tupleValue);
+}
+
 query LocationConstraint::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
 	// there should be exactly one typedPair
 	return self.tupleDescriptor.toSequence(tupleValue); 

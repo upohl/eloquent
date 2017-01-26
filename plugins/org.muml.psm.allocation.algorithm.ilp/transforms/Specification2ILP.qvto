@@ -12,55 +12,36 @@ import VariableHelper;
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype allocationSpecificationCS uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
 modeltype oclcontext uses oclcontext('http://www.muml.org/psm/allocation/language/oclcontext/1.0.0');
-//modeltype ecore uses ecore('http://www.eclipse.org/emf/2002/Ecore');
-modeltype core uses core('http://www.muml.org/core/1.0.0');
-modeltype expressions uses core::expressions('http://www.muml.org/core/expressions/1.0.0');
-modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
-modeltype instance uses pim::instance('http://www.muml.org/pim/instance/1.0.0');
-modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0');
-modeltype hwrinstance uses hardware::hwresourceinstance('http://www.muml.org/pm/hardware/hwresourceinstance/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
-modeltype ocl uses essentialoclcs('http://www.eclipse.org/ocl/2015/EssentialOCLCS');
-modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
+modeltype ecore uses ecore('http://www.eclipse.org/emf/2002/Ecore');
 
-transformation Specification2ILP(in specificationCS : allocationSpecificationCS, in ins : instance, in hwpi : hwpinstance, out ilpOut : ilptype);
+transformation Specification2ILP(in specificationCS : allocationSpecificationCS, in oclContextIn : ecore, out ilpOut : ilptype);
 
 main() {
 	var specification : Specification := specificationCS.getSpecification();
-	var cic : ComponentInstanceConfiguration := ins.getRootCIC();
-	var hpic : HWPlatformInstanceConfiguration := hwpi.getRootHPIC();
+	var oclContext : OclAny = oclContextIn.getOclContext();
 	var ilp : IntegerLinearProgram := object IntegerLinearProgram {};
 	var startTime : Integer;
 	var endTime : Integer;
 	startTime := getCurrentTime();
 	VariableHelper::initialize(specification.nameProvider);
-	ilp.map createGeneralConstraints(cic, hpic);
+	specification.createRelationConstraints(ilp, oclContext);
 	endTime := getCurrentTime();
 	log("Time for create GeneralConstraints:"+((endTime-startTime)/1000).toString()+" seconds");
 	startTime := getCurrentTime();
-	specification.createLocationConstraints(ilp, cic, hpic);
+	specification.createLocationConstraints(ilp, oclContext);
 	endTime := getCurrentTime();
 	log("Time for create LocationConstraints:"+((endTime-startTime)/1000).toString()+" seconds");
 	startTime := getCurrentTime();
-	specification.createHWResInstanceConstraints(ilp, cic, hpic);
+	specification.createHWResInstanceConstraints(ilp, oclContext);
 	endTime := getCurrentTime();
 	log("Time for create required Location constraints:"+((endTime-startTime)/1000).toString()+" seconds");
 	startTime := getCurrentTime();
-	specification.createResourceConstraints(ilp, cic, hpic);
+	specification.createResourceConstraints(ilp, oclContext);
 	endTime := getCurrentTime();
 	log("Time for create required resource constraints:"+((endTime-startTime)/1000).toString()+" seconds");
 	startTime := getCurrentTime();
-	specification.createObjectiveFunction(ilp, cic, hpic);
+	specification.createObjectiveFunction(ilp, oclContext);
 	endTime := getCurrentTime();
 	log("Time for create objective functions:"+((endTime-startTime)/1000).toString()+" seconds");
-	//specification.getSameLocationConstraints()->createSameLocationConstraint(ilp, cic, hpic);
-	ilpOut.removeOrphans();
-	//log(cic.toString());
-	//var ctx : oclcontext::OCLContext := createOCLContext(cic, null);
-	//log(ctx.toString());
-	//log("in qvto ocl result: " + evaluateOCL(null, ctx).toString());
-}
-
-helper ilptype::removeOrphans() {
-	self.removeElement(createOCLContext(ins.getRootCIC(), hwpi.getRootHPIC()));
 }

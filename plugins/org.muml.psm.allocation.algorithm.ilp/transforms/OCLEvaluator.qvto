@@ -1,8 +1,5 @@
 import org.muml.psm.allocation.algorithm.ocl.OCLEvaluatorBlackboxUnit;
 
-modeltype oclcontext uses oclcontext('http://www.muml.org/psm/allocation/language/oclcontext/1.0.0');
-modeltype instance uses pim::instance('http://www.muml.org/pim/instance/1.0.0');
-modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0');
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 
 library OCLEvaluator;
@@ -24,14 +21,8 @@ mapping OclAny::createTrace(evaluatableElement : EvaluatableElement) : Evaluatab
 	}
 }
 
-helper createOCLContext(cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) : oclcontext::OCLContext {
-	log('createOCLContextObject');
-	return map createOCLContextObject(cic, hpic);
-}
-
-mapping createOCLContextObject(cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) : oclcontext::OCLContext {
-	componentInstanceConfiguration := cic;
-	hardwarePlatformInstanceConfiguration := hpic;	
+// XXX: actually this belongs to a separate "Conversion" lib
+// (see also the comment in the OCLEvaluator class)
+helper OclAny::asInteger() : Integer {
+	return convertToInteger(self);
 }

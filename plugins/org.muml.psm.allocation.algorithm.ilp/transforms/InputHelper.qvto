@@ -1,7 +1,6 @@
 modeltype allocationSpecificationCS uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
-modeltype instance uses pim::instance('http://www.muml.org/pim/instance/1.0.0');
-modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0');
+modeltype ecore uses ecore('http://www.eclipse.org/emf/2002/Ecore');
 
 // This library provides queries so that different transformations/libraries
 // can access the input models (provided by the "input" extents) in a unified
@@ -9,27 +8,17 @@ modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/
 
 library InputHelper;
 
-query OclAny::getRootCIC() : ComponentInstanceConfiguration {
-	assert fatal (self.oclIsKindOf(instance)) with log("instance type expected");
-	var cicSet : Set(ComponentInstanceConfiguration) := self.oclAsType(instance)
-		.rootObjects()[ComponentInstanceConfiguration];
-	assert fatal (cicSet->size() = 1) with log("expected exactly one root cic");
-	return cicSet->any(true);
-}
-
-query OclAny::getRootHPIC() : HWPlatformInstanceConfiguration {
-	assert fatal (self.oclIsKindOf(hwpinstance)) with log("hwpinstance type expected");
-	var hpicSet : Set(HWPlatformInstanceConfiguration) := self.oclAsType(hwpinstance)
-		.rootObjects()[HWPlatformInstanceConfiguration];
-	log("hpicSet: " + hpicSet->size().toString());
-	assert fatal (hpicSet->size() = 1) with log("expected exactly one root hpic");
-	return hpicSet->any(true);
-}
-
 query OclAny::getSpecification() : Specification {
 	assert fatal (self.oclIsKindOf(allocationSpecificationCS)) with log("allocationSpecification type expected");
 	var specificationSet : Set(SpecificationCS) := self.oclAsType(allocationSpecification)
 		.rootObjects()[SpecificationCS];
 	assert fatal (specificationSet->size() = 1) with log("expected exactly one allocation specification");
 	return specificationSet->any(true).pivot.oclAsType(Specification);
+}
+
+query OclAny::getOclContext() : OclAny {
+	assert fatal (self.oclIsKindOf(ecore)) with log("ecore type expected");
+	var rootObjects : Set(OclAny) := self.oclAsType(ecore).rootObjects();
+	assert fatal (rootObjects->size() = 1) with log("expected exactly one root object");
+	return rootObjects->any(true);
 }

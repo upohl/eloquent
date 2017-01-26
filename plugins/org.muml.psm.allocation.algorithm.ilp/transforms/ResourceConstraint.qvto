@@ -2,19 +2,12 @@ import Expressions;
 import OCLEvaluator;
 import TupleAccessor;
 import Sort;
-import Util;
 import Variables;
-import VariableHelper;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
-modeltype oclcontext uses oclcontext('http://www.muml.org/psm/allocation/language/oclcontext/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
 modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
-modeltype instance uses pim::instance('http://www.muml.org/pim/instance/1.0.0');
-modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0');
-modeltype hwrinstance uses hardware::hwresourceinstance('http://www.muml.org/pm/hardware/hwresourceinstance/1.0.0');
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
-
 
 library ResourceConstraintLib;
 
@@ -29,16 +22,14 @@ library ResourceConstraintLib;
 // (OclAny + Real => common supertype OclAny))).
 
 helper Specification::createResourceConstraints(inout ilp : IntegerLinearProgram,
-	cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) {
-	self.getResourceConstraints()->createResourceConstraint(ilp, cic, hpic);
+	oclContext : OclAny) {
+	self.getResourceConstraints()->createResourceConstraint(ilp, oclContext);
 }
 
 helper ResourceConstraint::createResourceConstraint(inout ilp : IntegerLinearProgram,
-	cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) {
-	var oclContext : oclcontext::OCLContext := createOCLContext(cic, hpic);
-	var sequences : Sequence(TupleValue) := self.evaluateOCL(oclContext).asTupleValueSequence();
+	oclContext : OclAny) {
+	var sequences : Sequence(TupleValue) := self.evaluateOCL(oclContext)
+		.asTupleValueSequence();
 	sequences->sortOuterResultSequence(self)->createResourceConstraint(ilp, self);
 }
 

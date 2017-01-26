@@ -17,9 +17,8 @@ modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 library ObjectiveFunctionLib;
 
 helper Specification::createObjectiveFunction(inout ilp : IntegerLinearProgram,
-	cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) {
-	var expression : Expression := self.createAdditionExpression(ilp, cic, hpic);
+	oclContext : OclAny) {
+	var expression : Expression := self.createAdditionExpression(ilp, oclContext);
 	if (expression.oclIsUndefined()) then {
 		expression := new LiteralExpression('1');
 	} endif;
@@ -28,9 +27,7 @@ helper Specification::createObjectiveFunction(inout ilp : IntegerLinearProgram,
 }
 
 helper Specification::createAdditionExpression(inout ilp : IntegerLinearProgram,
-	cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) : Expression {
-	var oclContext : oclcontext::OCLContext := createOCLContext(cic, hpic);
+	oclContext : OclAny) : Expression {
 	var expression : Expression := null;
 	self.getQoSDimensions()->asOrderedSet()->reverse()->collect(oclAsType(QoSDimension))->forEach(qosDimension) {
 		var sequence : Sequence(TupleValue) := qosDimension.evaluateOCL(oclContext)

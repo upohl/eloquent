@@ -2,29 +2,24 @@ import AbstractILPBasedAlgorithm;
 import LPSolve;
 
 modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
-modeltype instance uses pim::instance('http://www.muml.org/pim/instance/1.0.0');
-modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
-modeltype ECORE uses ecore('http://www.eclipse.org/emf/2002/Ecore');
+modeltype ecore uses ecore('http://www.eclipse.org/emf/2002/Ecore');
 
-transformation LPSolveBasedAlgorithm(in specification : allocationSpecification, in ins : instance, in hwpi : hwpinstance,
-	out ecoreOut : ECORE)
+transformation LPSolveBasedAlgorithm(in specification : allocationSpecification,
+	in oclContextIn : ecore,
+	out ecoreOut : ecore)
 	extends AbstractILPBasedAlgorithm;
 
 main() {
 	computeAllocation();
 }
 
-query getAllocationSpecification() : allocationSpecification {
+query getAllocationSpecificationIn() : allocationSpecification {
 	return specification;
 }
 
-query getInstance() : instance {
-	return ins;
-}
-
-query getHwpi() : hwpinstance {
-	return hwpi;
+query getOclContextIn() : ecore {
+	return oclContextIn;
 }
 
 helper solveILP(ilpModel : IntegerLinearProgram, solution : Dict(Variable, Integer)) : Integer {

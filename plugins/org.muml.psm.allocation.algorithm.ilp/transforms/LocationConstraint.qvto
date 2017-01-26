@@ -1,109 +1,158 @@
 import Expressions;
-import HWUtil;
 import OCLEvaluator;
-import Util;
+import TupleAccessor;
 import VariableHelper;
 import Variables;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
-modeltype oclcontext uses oclcontext('http://www.muml.org/psm/allocation/language/oclcontext/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
-modeltype expressions uses core::expressions('http://www.muml.org/core/expressions/1.0.0');
 modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
-modeltype instance uses pim::instance('http://www.muml.org/pim/instance/1.0.0');
-modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0');
-modeltype hwrinstance uses hardware::hwresourceinstance('http://www.muml.org/pm/hardware/hwresourceinstance/1.0.0');
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
 
 library LocationConstraintLib;
 
-// the implementation of the differentLocation constraint differs from the approach,
-// which was described in my thesis
-
 helper Specification::createLocationConstraints(inout ilp : IntegerLinearProgram,
-	cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) {
-	var startTime : Integer;
-	var endTime : Integer;
-	startTime := getCurrentTime();
-	self.getSameLocationConstraints()->createLocationConstraint(ilp, cic, hpic);
-	endTime := getCurrentTime();
-	log("Time for create collocation Constraints:"+((endTime-startTime)/1000).toString()+" seconds");
-	startTime := getCurrentTime();
-	self.getDifferentLocationConstraints()->createLocationConstraint(ilp, cic, hpic);
-	endTime := getCurrentTime();
-	log("Time for create separate location Constraints:"+((endTime-startTime)/1000).toString()+" seconds");
+	oclContext : OclAny) {
+	self.getCollocationConstraints()->createConstraint(self, ilp, oclContext);
+	self.getDifferentLocationConstraints()->createConstraint(self, ilp, oclContext);
 }
 
-helper LocationConstraint::createLocationConstraint(inout ilp : IntegerLinearProgram,
-	cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) {
-	var sequences : Sequence(Sequence(OclAny)) := self.getHelperVariableSequences(cic, hpic);
+helper LocationConstraint::createConstraint(specification : Specification,
+	inout ilp : IntegerLinearProgram, oclContext : OclAny) {
+	log("create LocationConstraint");
+	var sequences : Sequence(Sequence(OclAny)) := self.evaluateOCL(oclContext)
+		.asTupleValueSequence()
+		->collectNested(
+			-- convert TupleValue to sequence and sort its elements
+			-- (needed in order to prune the "semantical" duplicates)
+			toSequence()->sortedBy(getVariableName())
+		)
+		->asSet() -- prune duplicates
+		->asSequence()
+		->sortedBy(seq : Sequence(OclAny) |
+			seq->getVariableName()
+		);
+	-- first, all helper variables
 	sequences->forEach(seq) {
-		seq->createHelperVariablesAndConstraints(ilp);
+		seq->createHelperVariables(specification, ilp, oclContext);
 	};
-	var instances : OrderedSet(OclAny) := sequences->collect(seq : Sequence(OclAny) |
-		seq->at(1)
-	)->asOrderedSet()->sortedBy(getVariableName());
-	ilp.constraints += instances->createLocationConstraintConstraintExpression(sequences, self);
+	-- then, all constraints (just for "readability" of the ilp)
+	sequences->forEach(seq) {
+		ilp.constraints += seq->getCommonRelations(specification.relations,
+			oclContext)->createConstraintExpression(self);
+	}
 }
 
-helper OclAny::createLocationConstraintConstraintExpression(sequences : Sequence(Sequence(OclAny)),
-	locationConstraint : LocationConstraint) : ConstraintExpression {
-	var mySequences : Sequence(Sequence(OclAny)) := self.getSequences(sequences)->asSequence();
-	var comment : String := if locationConstraint.name <> '' then locationConstraint.name else locationConstraint.repr() endif;
-	var lit : String := if locationConstraint.type = LocationConstraintTypes::SAME_LOCATION then
-			mySequences->collect(seq : Sequence(OclAny) | seq->at(3))
-				->asSet()->size().toString()
-		else
-			'0'
-		endif;
-	return mySequences->createAdditionConstraintExpression(lit, comment);
+helper Sequence(OclAny)::createHelperVariables(specification : Specification,
+	inout ilp : IntegerLinearProgram, oclContext : OclAny) {
+	log("helper: " + self->getVariableName());
+	var commonRelations : Sequence(Sequence(OclAny)) := self->getCommonRelations(
+		specification.relations, oclContext);
+	-- hmm maybe we should differentiate here: for differentLocation this
+	-- might make sense, but for same location it is (probably) an error
+	assert fatal (commonRelations->notEmpty()) with
+		log("no common relations found");
+	commonRelations->forEach(seq) {
+		seq->createHelperVariablesAndConstraints(ilp);
+	}
 }
 
-// returns "my" sequences
-query OclAny::getSequences(sequences : Sequence(Sequence(OclAny))) : OrderedSet(Sequence(OclAny)) {
-	return sequences->select(seq : Sequence(OclAny) | seq->at(1) = self)
-		->asOrderedSet()->sortedBy(getVariableName());
+helper Sequence(OclAny)::getCommonRelations(relations : OrderedSet(Relation),
+	oclContext : OclAny) : Sequence(Sequence(OclAny)) {
+	-- do this in a mapping, because this is called at least twice
+	-- per sequence
+	return map getCommonRelations(self, relations, oclContext);
 }
 
-query LocationConstraint::getHelperVariableSequences(cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) : Sequence(Sequence(OclAny)) {
-	var oclContext : oclcontext::OCLContext := createOCLContext(cic, hpic);
-	var res : Sequence(TupleValue) := self.evaluateOCL(oclContext).asTupleValueSequence();
-	return res->getLocationConstraintHelperVariableSequences(hpic.getResourceInstances());
+mapping getCommonRelations(sequence : Sequence(OclAny), relations : OrderedSet(Relation),
+	oclContext : OclAny) : Sequence(Sequence(OclAny)) {
+	init {
+		-- compute relevant sequences
+		var relSequences : Sequence(Sequence(OclAny)) := relations
+			->map getSequences(oclContext)
+			->select(seq : Sequence(OclAny) |
+				sequence->asSet()->intersection(seq->at(1)->asSet())->notEmpty()
+			);
+		log("relSequences: " + relSequences->size().toString());
+		result := relSequences->product(relSequences)->select(t |
+			t.first->at(1) <> t.second->at(1) -- different "sources"
+			and
+			t.first->at(2) = t.second->at(2) -- same "target"
+		)->collectNested(t |
+			-- convert tuple to sequence and sort it
+			-- (needed in order to prune "semantical" duplicates)
+			-- XXX: reuse Sort::sortComponentResourceSequence?
+			Sequence{
+				Sequence{t.first->at(1), t.first->at(2)},
+				Sequence{t.second->at(1), t.second->at(2)}
+			}->sortedBy(seq |
+				seq->at(1).getVariableName() -- sort by the source's variable name
+			)
+		)->asSet() -- prune duplicate sequences
+		->collectNested(seq |
+			Sequence{
+				seq->at(1)->at(1),
+				seq->at(1)->at(2),
+				seq->at(2)->at(1),
+				seq->at(2)->at(2)
+			}
+		)->sortedBy(seq |
+			seq->getVariableName()
+		);
+		log("commonRelations: " + result->size().toString());
+	}
 }
 
-query Sequence(TupleValue)::getLocationConstraintHelperVariableSequences(resourceInstanceSet : OrderedSet(ResourceInstance))
-	: Sequence(Sequence(OclAny)) {
-	return self->iterate(it : TupleValue; acc : Sequence(Sequence(OclAny)) = Sequence{} |
-		acc->union(it.getLocationConstraintHelperVariableSequences(resourceInstanceSet))
-	)->sortedBy(getVariableName());
+-- use mapping to cache the results (since this is potentially called
+-- quite often)
+mapping OrderedSet(Relation)::getSequences(oclContext : OclAny) : Sequence(Sequence(OclAny)) {
+	init {
+		log("mapping OrderedSet(Relation)::getSequences");
+		self->forEach(relation) {
+			result += relation.getSequences(oclContext)
+		};
+	}
 }
 
-query TupleValue::getLocationConstraintHelperVariableSequences(resourceInstanceSet : OrderedSet(ResourceInstance))
-	: Sequence(Sequence(OclAny)) {
-	// sort by instance set by variable name
-	var sequence : Sequence(OclAny) := self.toSequence()->sortedBy(getVariableName());
-	var size : Integer = sequence->size();
-	assert fatal (size = 2) with log("unexpected sequence size: " + size.toString());
-	return resourceInstanceSet->sortedBy(getVariableName())->collectNested(ri : ResourceInstance |
-		Sequence{sequence->at(1), ri, sequence->at(2), ri}
-	);
+helper Relation::getSequences(oclContext : OclAny) : Sequence(Sequence(OclAny)) {
+	log("helper Relation::getSequences");
+	return self.evaluateOCL(oclContext)
+		.asTupleValueSequence()
+		->collectNested(
+			toSequence()
+		);
+}
+
+helper Sequence(Sequence(OclAny))::createConstraintExpression(locationConstraint : LocationConstraint)
+	: ConstraintExpression {
+	var comment : String := if locationConstraint.name.oclIsUndefined() or locationConstraint.name = '' then
+		''
+	else
+		locationConstraint.name + '_'
+	endif;
+	comment := comment
+		+ Sequence{self->at(1)->at(1), self->at(1)->at(3)}->getVariableName();
+	var op : ComparingOperator := ComparingOperator::GREATER_OR_EQUAL;
+	var lit : String := '1';
+	if (locationConstraint.type = LocationConstraintTypes::DIFFERENT_LOCATION) then {
+		op := ComparingOperator::EQUAL;
+		lit := '0';
+	} endif;
+	return self->createAdditionConstraintExpression(op, lit, comment);
+}
+
+query Specification::getCollocationConstraints() : OrderedSet(LocationConstraint) {
+	return self.getLocationConstraints(LocationConstraintTypes::SAME_LOCATION);
+}
+
+query Specification::getDifferentLocationConstraints() : OrderedSet(LocationConstraint) {
+	return self.getLocationConstraints(LocationConstraintTypes::DIFFERENT_LOCATION);
 }
 
 query Specification::getLocationConstraints(wantedType : LocationConstraintTypes) : OrderedSet(LocationConstraint) {
 	return self.constraints->select(oclIsKindOf(LocationConstraint))
 		->collect(oclAsType(LocationConstraint))
 		->select(type = wantedType)
-		->asOrderedSet();	
-}
-
-query Specification::getSameLocationConstraints() : OrderedSet(LocationConstraint) {
-	return self.getLocationConstraints(LocationConstraintTypes::SAME_LOCATION);
-}
-
-query Specification::getDifferentLocationConstraints() : OrderedSet(LocationConstraint) {
-	return self.getLocationConstraints(LocationConstraintTypes::DIFFERENT_LOCATION);
+		->asOrderedSet();
 }

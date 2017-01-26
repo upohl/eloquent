@@ -36,7 +36,7 @@ constructor ConstraintExpression::ConstraintExpression(lhs : Expression, rhs : E
 	} endif;
 }
 
-helper Sequence(Sequence(OclAny))::createAdditionConstraintExpression(lit : String, comment : String)
+helper Sequence(Sequence(OclAny))::createAdditionConstraintExpression(op : ComparingOperator, lit : String, comment : String)
 	: ConstraintExpression {
 	var lhs : Expression := null;
 	self->reverse()->forEach(seq) {
@@ -48,7 +48,7 @@ helper Sequence(Sequence(OclAny))::createAdditionConstraintExpression(lit : Stri
 		endif;
 	};
 	return new ConstraintExpression(lhs, new LiteralExpression(lit),
-		ComparingOperator::EQUAL, comment);
+		op, comment);
 }
 
 helper Sequence(TupleValue)::createWeightingComponentResourceTuplesAdditionExpression(tupleDescriptor : WeightTupleDescriptor, expression : Expression) : Expression {

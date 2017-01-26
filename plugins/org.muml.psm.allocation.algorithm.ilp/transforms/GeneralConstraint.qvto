@@ -1,52 +1,98 @@
 import Expressions;
 import HWUtil;
+import OCLEvaluator;
+import TupleAccessor;
 import VariableHelper;
 import Variables;
 import Util;
 
+modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
-modeltype expressions uses core::expressions('http://www.muml.org/core/expressions/1.0.0');
-modeltype instance uses pim::instance('http://www.muml.org/pim/instance/1.0.0');
-modeltype hwpinstance uses hardware::hwplatforminstance('http://www.muml.org/pm/hardware/hwplatforminstance/1.0.0');
-modeltype hwrinstance uses hardware::hwresourceinstance('http://www.muml.org/pm/hardware/hwresourceinstance/1.0.0');
+modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
+modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
 library GeneralConstraint;
 
-mapping inout IntegerLinearProgram::createGeneralConstraints(cic : ComponentInstanceConfiguration,
-	hpic : HWPlatformInstanceConfiguration) {
-	var resourceInstances : OrderedSet(hwrinstance::ResourceInstance) := hpic.getResourceInstances();
-	var vars : Bag(Variable) := cic.getAllComponentInstances()
-		->product(resourceInstances)
-		->toSequence()->map createBinaryVariable();
-	variables += vars->sortedBy(name);
-	constraints += cic.getAllComponentInstances()
-		->createGeneralConstraint(resourceInstances);
+helper Specification::createRelationConstraints(ilp : IntegerLinearProgram, oclContext : OclAny) {
+	self.relations->createConstraint(ilp, oclContext);
 }
 
-query ComponentInstanceConfiguration::getAllComponentInstances() : OrderedSet(ComponentInstance) {
-	return self.componentInstances->closure(ci : ComponentInstance |
-		if ci.oclIsKindOf(StructuredComponentInstance) then
-			ci->asSet()->union(
-				ci.oclAsType(StructuredComponentInstance).embeddedCIC.componentInstances
+helper Relation::createConstraint(inout ilp : IntegerLinearProgram, oclContext : OclAny) {
+	var lower : Integer := self.lowerBound.evaluateOCL(oclContext).asInteger();
+	var upper : Integer := self.upperBound.evaluateOCL(oclContext).asInteger();
+	-- a negative lower bound makes no sense (probably a specification error?)
+	assert fatal (lower >= 0) with
+		log("lower bound >= 0 expected (" + self.name + ")");
+	-- -1 means "unbounded", which is just for usability (since the model has
+	-- has a finite number of model elements, an explicit bound could be
+	-- computed)
+	-- an upper bound of 0 is questionable (could be used to quickly disable
+	-- a relation (set lower and upper bound to 0) => do not complain for now)
+	assert fatal (upper >= -1) with
+		log("upper bound >= -1 expected (" + self.name + ")");
+
+	var relation : Sequence(Sequence(OclAny)) := self.evaluateOCL(oclContext)
+		.asTupleValueSequence()
+		->collectNested(tv : TupleValue |
+			tv.toSequence()
+		);
+	relation->createVariables(ilp);
+	var sources : OrderedSet(OclAny) := relation->collect(seq : Sequence(OclAny) |
+		seq->at(1)
+	)->asOrderedSet()->sortedBy(
+		getVariableName()
+	);
+	sources->forEach(source) {
+		ilp.constraints += source.getRelations(relation)
+			->createAdditionConstraintExpressions(lower, upper, self.name);
+	};
+}
+
+helper Sequence(Sequence(OclAny))::createVariables(inout ilp : IntegerLinearProgram) {
+	self->select(seq : Sequence(OclAny) |
+		seq->getVariable().oclIsUndefined()
+	)->sortedBy(seq : Sequence(OclAny) |
+		seq->getVariableName()
+	)->forEach(seq) {
+		ilp.variables += seq->map createBinaryVariable()
+	};
+}
+
+query OclAny::getRelations(relation : Sequence(Sequence(OclAny))) : Sequence(Sequence(OclAny)) {
+	return relation->select(seq : Sequence(OclAny) |
+		seq->at(1) = self
+	)->sortedBy(seq : Sequence(OclAny) |
+		seq->getVariableName()
+	);
+}
+
+helper Sequence(Sequence(OclAny))::createAdditionConstraintExpressions(lower : Integer,
+	upper : Integer, relationName : String) : Sequence(ConstraintExpression) {
+	assert fatal (self->size() >= 1 and self->at(1)->size() = 2)
+		with log("unexpected sequence size");
+	var comment : String := if relationName.oclIsUndefined() or relationName = '' then
+		''
+	else
+		relationName + '_'
+	endif;
+	comment := comment + self->at(1)->at(1).getVariableName();
+	if (lower = upper) {
+		return Sequence {
+			self->createAdditionConstraintExpression(
+				ComparingOperator::EQUAL, lower.toString(), comment
 			)
+		};
+	} endif;
+	return self->createAdditionConstraintExpression(
+		ComparingOperator::GREATER_OR_EQUAL, lower.toString(), comment
+	)->asSequence()->union(
+		if (upper = -1) then
+			-- -1 means "unbounded" => no constraint for the upper bound
+			Sequence{}
 		else
-			ci->asSet()
-		endif			
-	)->sortedBy(getVariableName());
-}
-
-// mapping just for syntactic sugar reasons: use when statement
-mapping ComponentInstance::createGeneralConstraint(resourceInstanceSet : OrderedSet(ResourceInstance)) : ConstraintExpression
-	when {resourceInstanceSet->size() > 1}
-{
-	init {
-		result := self->asSequence()->product(
-			resourceInstanceSet
-		)->collectNested(Sequence{first, second})
-		->sortedBy(s | s->getVariableName())->createAdditionConstraintExpression('1', self.getVariableName());
-	}
-}
-
-query Tuple(first : ComponentInstance, second : ResourceInstance)::toSequence() : Sequence(OclAny) {
-	return Sequence{self.first, self.second};
+			self->createAdditionConstraintExpression(
+				ComparingOperator::LESS_OR_EQUAL, upper.toString(), comment
+			)->asSequence()
+		endif
+	);
 }
