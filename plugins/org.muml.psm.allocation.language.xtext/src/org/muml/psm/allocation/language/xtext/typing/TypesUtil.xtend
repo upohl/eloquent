@@ -12,9 +12,11 @@ import org.eclipse.ocl.pivot.internal.manager.TupleTypeManager
 import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal
 import org.eclipse.ocl.pivot.internal.utilities.PivotUtilInternal
 import org.eclipse.ocl.pivot.values.TemplateParameterSubstitutions
+import org.muml.psm.allocation.language.^as.Bound
 import org.muml.psm.allocation.language.^as.EvaluatableElement
 import org.muml.psm.allocation.language.^as.LocationConstraint
 import org.muml.psm.allocation.language.^as.QoSDimension
+import org.muml.psm.allocation.language.^as.Relation
 import org.muml.psm.allocation.language.^as.RequiredHardwareResourceInstanceConstraint
 import org.muml.psm.allocation.language.^as.ResourceConstraint
 import org.muml.psm.allocation.language.^as.TypedPair
@@ -72,6 +74,30 @@ class TypesUtil {
 		
 	// language specific constraint types are created below
 	
+	// relation
+	
+	/*@NonNull*/
+	static def TupleType createRelationTupleType(EnvironmentFactoryInternal envFactory,
+		Relation relation
+	) {
+		val Map<String, Type> namedParts = convertToNamedParts(relation.tupleDescriptor.typedPairs)
+		createTupleType(envFactory, namedParts)
+	}
+	
+	/*@NonNull*/
+	static def Type createRelationType(Relation relation) {
+		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(relation)
+		createSetType(envFactory,
+			createRelationTupleType(envFactory, relation)
+		)
+	}
+	
+	/*@NonNull*/
+	static def Type createBoundType(Bound bound) {
+		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(bound)
+		envFactory.metamodelManager.standardLibrary.integerType
+	}
+	
 	// location constraint
 	
 	/*@NonNull*/
@@ -81,7 +107,7 @@ class TypesUtil {
 		val Map<String, Type> namedParts = convertToNamedParts(constraint.tupleDescriptor.typedPairs)
 		createTupleType(envFactory, namedParts)
 	}
-	
+		
 	/*@NonNull*/
 	static def Type createLocationConstraintType(LocationConstraint constraint) {
 		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraint)
@@ -169,6 +195,14 @@ class TypesUtil {
 	
 	static def dispatch createType(EvaluatableElement element) {
 		throw new IllegalArgumentException("unexpected element: " + element)
+	}
+	
+	static def dispatch createType(Relation relation) {
+		createRelationType(relation)
+	}
+	
+	static def dispatch createType(Bound bound) {
+		createBoundType(bound)
 	}
 	
 	static def dispatch createType(LocationConstraint constraint) {

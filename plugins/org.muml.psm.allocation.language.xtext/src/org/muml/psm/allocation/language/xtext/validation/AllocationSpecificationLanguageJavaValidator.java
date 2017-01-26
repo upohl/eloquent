@@ -9,11 +9,13 @@ import org.eclipse.ocl.pivot.utilities.PivotUtil;
 import org.eclipse.ocl.xtext.essentialoclcs.ContextCS;
 import org.eclipse.xtext.validation.Check;
 import org.muml.psm.allocation.language.as.EvaluatableElement;
+import org.muml.psm.allocation.language.cs.BoundCS;
 import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
+import org.muml.psm.allocation.language.cs.RelationCS;
 import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
 import org.muml.psm.allocation.language.cs.TupleDescriptorCS;
@@ -28,6 +30,29 @@ import org.muml.psm.allocation.language.xtext.typing.TypesUtil;
 public class AllocationSpecificationLanguageJavaValidator extends org.muml.psm.allocation.language.xtext.validation.AbstractAllocationSpecificationLanguageJavaValidator {
 	private static final String typeMismatch = "Type mismatch: expected %s but got %s";
 	private static final String noPivotElement = "Unable to retrieve pivot element for object %s";
+	
+	@Check
+	public void checkRelationCS(RelationCS relationCS) {
+		TupleDescriptorCS tupleDescriptorCS = relationCS.getTupleDescriptor();
+		BoundCS lowerBoundCS = relationCS.getLowerBound();
+		BoundCS upperBoundCS = relationCS.getUpperBound();
+		ContextCS oclExpression = relationCS.getExpression();
+		if (tupleDescriptorCS == null || oclExpression == null
+				|| lowerBoundCS == null || upperBoundCS == null) {
+			// in this case a different error is displayed
+			return;
+		}
+		checkTypes(relationCS);
+	}
+	
+	@Check
+	public void checkBoundCS(BoundCS boundCS) {
+		if (boundCS.getExpression() == null) {
+			// in this case a different error is displayed
+			return;
+		}
+		checkTypes(boundCS);
+	}
 
 	@Check
 	public void checkLocationConstraintCS(LocationConstraintCS constraintCS) {
@@ -90,4 +115,5 @@ public class AllocationSpecificationLanguageJavaValidator extends org.muml.psm.a
 					CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION);
 		}
 	}
+	
 }
