@@ -5,20 +5,19 @@ import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import org.junit.runners.Parameterized.Parameters
 import org.muml.psm.allocation.algorithm.tests.qvto.QVToTransformationSingleOutExtentTest
-import org.muml.psm.allocation.algorithm.tests.util.TestDataUtil
 
 @RunWith(value = typeof(Parameterized))
 class OclContext2ILPTest extends QVToTransformationSingleOutExtentTest {
 	public static final String modelsDirectory = "platform:/plugin/org.muml.psm.allocation.algorithm.ilp.tests/fixtures/oclContext/model/"
 	public static final String uriPrefix = "platform:/plugin/org.muml.psm.allocation.algorithm.ilp.tests/fixtures/oclContext/"
 	
-	new(String expectedURI, String transformationURI, String... inputObjectURIs) {
-		super(expectedURI, transformationURI, inputObjectURIs)
+	new(String expectedURI, String transformationURI, String aslURI, String oclContextURI) {
+		super(expectedURI, transformationURI, aslURI, oclContextURI)
 	}
 	
 	@Parameters
 	def static Collection<Object[]> getTestData() {
-		TestDataUtil.createTestData(2,
+		#[
 			// simple allocation
 			#[uriPrefix + "generalConstraint_allocation.lp",
 			  "platform:/plugin/org.muml.psm.allocation.algorithm.ilp/transforms/Specification2ILP.qvto",
@@ -128,7 +127,7 @@ class OclContext2ILPTest extends QVToTransformationSingleOutExtentTest {
 			  "platform:/plugin/org.muml.psm.allocation.algorithm.ilp/transforms/Specification2ILP.qvto",
 			  uriPrefix + "differentLocationConstraint_singleEquality.allocation_specification",
 			  modelsDirectory + "simple.ecore"]
-		)
+		]
 	}
 	
 }
