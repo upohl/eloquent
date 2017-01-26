@@ -13,6 +13,7 @@ import org.muml.psm.allocation.language.cs.ConstraintCS
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS
 import org.muml.psm.allocation.language.cs.QoSDimensionCS
 import org.muml.psm.allocation.language.xtext.visitor.LanguageSpecificationCSPostOrderVisitor
+import org.muml.psm.allocation.language.cs.RelationCS
 
 class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVisitor {
 	
@@ -55,6 +56,11 @@ class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVi
 	
 	override public Continuation<?> visitEvaluatableElementCS(/*@NonNull*/ EvaluatableElementCS csElement) {
 		new PreContextCSCompletion(context, csElement)
+	}
+	
+	override public Continuation<?> visitRelationCS(/*@NonNull*/ RelationCS csElement) {
+		super.visitRelationCS(csElement)
+		visitEvaluatableElementCS(csElement)
 	}
 	
 	override public Continuation<?> visitConstraintCS(/*@NonNull*/ ConstraintCS csElement) {
