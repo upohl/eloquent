@@ -93,6 +93,9 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getStorageProviderImplementationClassAccess().getGroup(), "rule__StorageProviderImplementationClass__Group__0");
 					put(grammarAccess.getOCLContextAccess().getGroup(), "rule__OCLContext__Group__0");
 					put(grammarAccess.getServiceAccess().getGroup(), "rule__Service__Group__0");
+					put(grammarAccess.getRelationAccess().getGroup(), "rule__Relation__Group__0");
+					put(grammarAccess.getLowerBoundAccess().getGroup(), "rule__LowerBound__Group__0");
+					put(grammarAccess.getUpperBoundAccess().getGroup(), "rule__UpperBound__Group__0");
 					put(grammarAccess.getQosDimensionAccess().getGroup(), "rule__QosDimension__Group__0");
 					put(grammarAccess.getTypedPairAccess().getGroup(), "rule__TypedPair__Group__0");
 					put(grammarAccess.getTypedNamedPartAccess().getGroup(), "rule__TypedNamedPart__Group__0");
@@ -237,8 +240,9 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getSpecificationAccess().getOclContextAssignment_5(), "rule__Specification__OclContextAssignment_5");
 					put(grammarAccess.getSpecificationAccess().getOwnedImportsAssignment_6_0(), "rule__Specification__OwnedImportsAssignment_6_0");
 					put(grammarAccess.getSpecificationAccess().getOwnedContextsAssignment_6_1(), "rule__Specification__OwnedContextsAssignment_6_1");
-					put(grammarAccess.getSpecificationAccess().getServicesAssignment_6_2(), "rule__Specification__ServicesAssignment_6_2");
-					put(grammarAccess.getSpecificationAccess().getConstraintsAssignment_6_3(), "rule__Specification__ConstraintsAssignment_6_3");
+					put(grammarAccess.getSpecificationAccess().getRelationsAssignment_6_2(), "rule__Specification__RelationsAssignment_6_2");
+					put(grammarAccess.getSpecificationAccess().getServicesAssignment_6_3(), "rule__Specification__ServicesAssignment_6_3");
+					put(grammarAccess.getSpecificationAccess().getConstraintsAssignment_6_4(), "rule__Specification__ConstraintsAssignment_6_4");
 					put(grammarAccess.getSpecificationAccess().getGoalAssignment_7_0(), "rule__Specification__GoalAssignment_7_0");
 					put(grammarAccess.getSpecificationAccess().getMeasureAssignment_7_1(), "rule__Specification__MeasureAssignment_7_1");
 					put(grammarAccess.getNameProviderImplementationClassAccess().getImplementationAssignment_1(), "rule__NameProviderImplementationClass__ImplementationAssignment_1");
@@ -246,6 +250,13 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getOCLContextAccess().getOwnedTypeAssignment_1(), "rule__OCLContext__OwnedTypeAssignment_1");
 					put(grammarAccess.getServiceAccess().getNameAssignment_1(), "rule__Service__NameAssignment_1");
 					put(grammarAccess.getServiceAccess().getDimensionsAssignment_3(), "rule__Service__DimensionsAssignment_3");
+					put(grammarAccess.getRelationAccess().getNameAssignment_1(), "rule__Relation__NameAssignment_1");
+					put(grammarAccess.getRelationAccess().getTupleDescriptorAssignment_3(), "rule__Relation__TupleDescriptorAssignment_3");
+					put(grammarAccess.getRelationAccess().getLowerBoundAssignment_4(), "rule__Relation__LowerBoundAssignment_4");
+					put(grammarAccess.getRelationAccess().getUpperBoundAssignment_5(), "rule__Relation__UpperBoundAssignment_5");
+					put(grammarAccess.getRelationAccess().getExpressionAssignment_7(), "rule__Relation__ExpressionAssignment_7");
+					put(grammarAccess.getLowerBoundAccess().getExpressionAssignment_1(), "rule__LowerBound__ExpressionAssignment_1");
+					put(grammarAccess.getUpperBoundAccess().getExpressionAssignment_1(), "rule__UpperBound__ExpressionAssignment_1");
 					put(grammarAccess.getQosDimensionAccess().getNameAssignment_1(), "rule__QosDimension__NameAssignment_1");
 					put(grammarAccess.getQosDimensionAccess().getTupleDescriptorAssignment_3(), "rule__QosDimension__TupleDescriptorAssignment_3");
 					put(grammarAccess.getQosDimensionAccess().getExpressionAssignment_5(), "rule__QosDimension__ExpressionAssignment_5");

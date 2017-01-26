@@ -18,6 +18,11 @@ public class LanguageSpecificationCSContainmentVisitor extends org.muml.psm.allo
 		if (pivotElement == null) {
 			pivotElement = refreshNamedElement(org.muml.psm.allocation.language.as.Specification.class, org.muml.psm.allocation.language.as.AsPackage.Literals.SPECIFICATION, csElement);
 		}
+		for (org.muml.psm.allocation.language.cs.RelationCS it : csElement.getRelations()) {
+			pivotElement.getRelations().add(
+				PivotUtil.getPivot(org.muml.psm.allocation.language.as.Relation.class, it)
+			);
+		}
 		for (org.muml.psm.allocation.language.cs.ServiceCS it : csElement.getServices()) {
 			pivotElement.getServices().add(
 				PivotUtil.getPivot(org.muml.psm.allocation.language.as.Service.class, it)
@@ -46,6 +51,32 @@ public class LanguageSpecificationCSContainmentVisitor extends org.muml.psm.allo
 			PivotUtil.getPivot(org.eclipse.ocl.pivot.ExpressionInOCL.class, csElement.getExpression())
 		);
 		return null;
+	}
+	@Override
+	public @Nullable Continuation<?> visitRelationCS(org.muml.psm.allocation.language.cs.@NonNull RelationCS csElement) {
+		org.muml.psm.allocation.language.as.Relation pivotElement = PivotUtil.getPivot(org.muml.psm.allocation.language.as.Relation.class, csElement);
+		if (pivotElement == null) {
+			pivotElement = refreshNamedElement(org.muml.psm.allocation.language.as.Relation.class, org.muml.psm.allocation.language.as.AsPackage.Literals.RELATION, csElement);
+		}
+		pivotElement.setTupleDescriptor(
+			PivotUtil.getPivot(org.muml.psm.allocation.language.as.TupleDescriptor.class, csElement.getTupleDescriptor())
+		);
+		pivotElement.setLowerBound(
+			PivotUtil.getPivot(org.muml.psm.allocation.language.as.Bound.class, csElement.getLowerBound())
+		);
+		pivotElement.setUpperBound(
+			PivotUtil.getPivot(org.muml.psm.allocation.language.as.Bound.class, csElement.getUpperBound())
+		);
+		visitEvaluatableElementCS(csElement);
+		return null;
+	}
+	@Override
+	public @Nullable Continuation<?> visitBoundCS(org.muml.psm.allocation.language.cs.@NonNull BoundCS csElement) {
+		org.muml.psm.allocation.language.as.Bound pivotElement = PivotUtil.getPivot(org.muml.psm.allocation.language.as.Bound.class, csElement);
+		if (pivotElement == null) {
+			pivotElement = context.refreshModelElement(org.muml.psm.allocation.language.as.Bound.class, org.muml.psm.allocation.language.as.AsPackage.Literals.BOUND, csElement);
+		}
+		return visitEvaluatableElementCS(csElement);
 	}
 	@Override
 	public @Nullable Continuation<?> visitConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ConstraintCS csElement) {

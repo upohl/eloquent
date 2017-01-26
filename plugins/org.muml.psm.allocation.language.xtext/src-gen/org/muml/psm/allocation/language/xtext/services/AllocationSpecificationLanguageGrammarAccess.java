@@ -38,10 +38,12 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final RuleCall cOwnedImportsImportCSParserRuleCall_6_0_0 = (RuleCall)cOwnedImportsAssignment_6_0.eContents().get(0);
 		private final Assignment cOwnedContextsAssignment_6_1 = (Assignment)cAlternatives_6.eContents().get(1);
 		private final RuleCall cOwnedContextsClassifierContextDeclCSParserRuleCall_6_1_0 = (RuleCall)cOwnedContextsAssignment_6_1.eContents().get(0);
-		private final Assignment cServicesAssignment_6_2 = (Assignment)cAlternatives_6.eContents().get(2);
-		private final RuleCall cServicesServiceParserRuleCall_6_2_0 = (RuleCall)cServicesAssignment_6_2.eContents().get(0);
-		private final Assignment cConstraintsAssignment_6_3 = (Assignment)cAlternatives_6.eContents().get(3);
-		private final RuleCall cConstraintsConstraintParserRuleCall_6_3_0 = (RuleCall)cConstraintsAssignment_6_3.eContents().get(0);
+		private final Assignment cRelationsAssignment_6_2 = (Assignment)cAlternatives_6.eContents().get(2);
+		private final RuleCall cRelationsRelationParserRuleCall_6_2_0 = (RuleCall)cRelationsAssignment_6_2.eContents().get(0);
+		private final Assignment cServicesAssignment_6_3 = (Assignment)cAlternatives_6.eContents().get(3);
+		private final RuleCall cServicesServiceParserRuleCall_6_3_0 = (RuleCall)cServicesAssignment_6_3.eContents().get(0);
+		private final Assignment cConstraintsAssignment_6_4 = (Assignment)cAlternatives_6.eContents().get(4);
+		private final RuleCall cConstraintsConstraintParserRuleCall_6_4_0 = (RuleCall)cConstraintsAssignment_6_4.eContents().get(0);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Assignment cGoalAssignment_7_0 = (Assignment)cGroup_7.eContents().get(0);
 		private final RuleCall cGoalGoalEnumRuleCall_7_0_0 = (RuleCall)cGoalAssignment_7_0.eContents().get(0);
@@ -54,13 +56,13 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//	nameProviderImplementationClass=NameProviderImplementationClass
 		//	storageProviderImplementationClass=StorageProviderImplementationClass
 		//	oclContext=OCLContext (ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS
-		//	| services+=Service | constraints+=Constraint)* (goal=Goal measure=MeasureFunction)?
+		//	| relations+=Relation | services+=Service | constraints+=Constraint)* (goal=Goal measure=MeasureFunction)?
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
 		//{cs::SpecificationCS} name=ID '{' nameProviderImplementationClass=NameProviderImplementationClass
 		//storageProviderImplementationClass=StorageProviderImplementationClass oclContext=OCLContext (ownedImports+=ImportCS |
-		//ownedContexts+=ClassifierContextDeclCS | services+=Service | constraints+=Constraint)* (goal=Goal
+		//ownedContexts+=ClassifierContextDeclCS | relations+=Relation | services+=Service | constraints+=Constraint)* (goal=Goal
 		//measure=MeasureFunction)? '}'
 		public Group getGroup() { return cGroup; }
 
@@ -94,7 +96,8 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//OCLContext
 		public RuleCall getOclContextOCLContextParserRuleCall_5_0() { return cOclContextOCLContextParserRuleCall_5_0; }
 
-		//(ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS | services+=Service | constraints+=Constraint)*
+		//(ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS | relations+=Relation | services+=Service |
+		//constraints+=Constraint)*
 		public Alternatives getAlternatives_6() { return cAlternatives_6; }
 
 		//ownedImports+=ImportCS
@@ -109,17 +112,23 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//ClassifierContextDeclCS
 		public RuleCall getOwnedContextsClassifierContextDeclCSParserRuleCall_6_1_0() { return cOwnedContextsClassifierContextDeclCSParserRuleCall_6_1_0; }
 
+		//relations+=Relation
+		public Assignment getRelationsAssignment_6_2() { return cRelationsAssignment_6_2; }
+
+		//Relation
+		public RuleCall getRelationsRelationParserRuleCall_6_2_0() { return cRelationsRelationParserRuleCall_6_2_0; }
+
 		//services+=Service
-		public Assignment getServicesAssignment_6_2() { return cServicesAssignment_6_2; }
+		public Assignment getServicesAssignment_6_3() { return cServicesAssignment_6_3; }
 
 		//Service
-		public RuleCall getServicesServiceParserRuleCall_6_2_0() { return cServicesServiceParserRuleCall_6_2_0; }
+		public RuleCall getServicesServiceParserRuleCall_6_3_0() { return cServicesServiceParserRuleCall_6_3_0; }
 
 		//constraints+=Constraint
-		public Assignment getConstraintsAssignment_6_3() { return cConstraintsAssignment_6_3; }
+		public Assignment getConstraintsAssignment_6_4() { return cConstraintsAssignment_6_4; }
 
 		//Constraint
-		public RuleCall getConstraintsConstraintParserRuleCall_6_3_0() { return cConstraintsConstraintParserRuleCall_6_3_0; }
+		public RuleCall getConstraintsConstraintParserRuleCall_6_4_0() { return cConstraintsConstraintParserRuleCall_6_4_0; }
 
 		//(goal=Goal measure=MeasureFunction)?
 		public Group getGroup_7() { return cGroup_7; }
@@ -272,6 +281,140 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+	}
+
+	public class RelationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.Relation");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cRelationKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTupleDescriptorAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTupleDescriptorTupleDescriptorParserRuleCall_3_0 = (RuleCall)cTupleDescriptorAssignment_3.eContents().get(0);
+		private final Assignment cLowerBoundAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cLowerBoundLowerBoundParserRuleCall_4_0 = (RuleCall)cLowerBoundAssignment_4.eContents().get(0);
+		private final Assignment cUpperBoundAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cUpperBoundUpperBoundParserRuleCall_5_0 = (RuleCall)cUpperBoundAssignment_5.eContents().get(0);
+		private final Keyword cOclKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cExpressionAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cExpressionModelParserRuleCall_7_0 = (RuleCall)cExpressionAssignment_7.eContents().get(0);
+		private final Keyword cSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		
+		//Relation cs::RelationCS:
+		//	'relation' name=ID? '{'
+		//	tupleDescriptor=TupleDescriptor
+		//	lowerBound=LowerBound
+		//	upperBound=UpperBound
+		//	'ocl' expression=Model ';'
+		//	'}'
+		@Override public ParserRule getRule() { return rule; }
+
+		//'relation' name=ID? '{' tupleDescriptor=TupleDescriptor lowerBound=LowerBound upperBound=UpperBound 'ocl'
+		//expression=Model ';' '}'
+		public Group getGroup() { return cGroup; }
+
+		//'relation'
+		public Keyword getRelationKeyword_0() { return cRelationKeyword_0; }
+
+		//name=ID?
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDParserRuleCall_1_0() { return cNameIDParserRuleCall_1_0; }
+
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//tupleDescriptor=TupleDescriptor
+		public Assignment getTupleDescriptorAssignment_3() { return cTupleDescriptorAssignment_3; }
+
+		//TupleDescriptor
+		public RuleCall getTupleDescriptorTupleDescriptorParserRuleCall_3_0() { return cTupleDescriptorTupleDescriptorParserRuleCall_3_0; }
+
+		//lowerBound=LowerBound
+		public Assignment getLowerBoundAssignment_4() { return cLowerBoundAssignment_4; }
+
+		//LowerBound
+		public RuleCall getLowerBoundLowerBoundParserRuleCall_4_0() { return cLowerBoundLowerBoundParserRuleCall_4_0; }
+
+		//upperBound=UpperBound
+		public Assignment getUpperBoundAssignment_5() { return cUpperBoundAssignment_5; }
+
+		//UpperBound
+		public RuleCall getUpperBoundUpperBoundParserRuleCall_5_0() { return cUpperBoundUpperBoundParserRuleCall_5_0; }
+
+		//'ocl'
+		public Keyword getOclKeyword_6() { return cOclKeyword_6; }
+
+		//expression=Model
+		public Assignment getExpressionAssignment_7() { return cExpressionAssignment_7; }
+
+		//Model
+		public RuleCall getExpressionModelParserRuleCall_7_0() { return cExpressionModelParserRuleCall_7_0; }
+
+		//';'
+		public Keyword getSemicolonKeyword_8() { return cSemicolonKeyword_8; }
+
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
+	}
+
+	public class LowerBoundElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.LowerBound");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLowerKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cExpressionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cExpressionModelParserRuleCall_1_0 = (RuleCall)cExpressionAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//LowerBound cs::BoundCS:
+		//	'lower' expression=Model ';'
+		@Override public ParserRule getRule() { return rule; }
+
+		//'lower' expression=Model ';'
+		public Group getGroup() { return cGroup; }
+
+		//'lower'
+		public Keyword getLowerKeyword_0() { return cLowerKeyword_0; }
+
+		//expression=Model
+		public Assignment getExpressionAssignment_1() { return cExpressionAssignment_1; }
+
+		//Model
+		public RuleCall getExpressionModelParserRuleCall_1_0() { return cExpressionModelParserRuleCall_1_0; }
+
+		//';'
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+	}
+
+	public class UpperBoundElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.UpperBound");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cUpperKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cExpressionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cExpressionModelParserRuleCall_1_0 = (RuleCall)cExpressionAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//UpperBound cs::BoundCS:
+		//	'upper' expression=Model ';'
+		@Override public ParserRule getRule() { return rule; }
+
+		//'upper' expression=Model ';'
+		public Group getGroup() { return cGroup; }
+
+		//'upper'
+		public Keyword getUpperKeyword_0() { return cUpperKeyword_0; }
+
+		//expression=Model
+		public Assignment getExpressionAssignment_1() { return cExpressionAssignment_1; }
+
+		//Model
+		public RuleCall getExpressionModelParserRuleCall_1_0() { return cExpressionModelParserRuleCall_1_0; }
+
+		//';'
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
 	public class QosDimensionElements extends AbstractParserRuleElementFinder {
@@ -950,6 +1093,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	private final StorageProviderImplementationClassElements pStorageProviderImplementationClass;
 	private final OCLContextElements pOCLContext;
 	private final ServiceElements pService;
+	private final RelationElements pRelation;
+	private final LowerBoundElements pLowerBound;
+	private final UpperBoundElements pUpperBound;
 	private final QosDimensionElements pQosDimension;
 	private final TypedPairElements pTypedPair;
 	private final TypedNamedPartElements pTypedNamedPart;
@@ -986,6 +1132,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		this.pStorageProviderImplementationClass = new StorageProviderImplementationClassElements();
 		this.pOCLContext = new OCLContextElements();
 		this.pService = new ServiceElements();
+		this.pRelation = new RelationElements();
+		this.pLowerBound = new LowerBoundElements();
+		this.pUpperBound = new UpperBoundElements();
 		this.pQosDimension = new QosDimensionElements();
 		this.pTypedPair = new TypedPairElements();
 		this.pTypedNamedPart = new TypedNamedPartElements();
@@ -1041,7 +1190,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//	nameProviderImplementationClass=NameProviderImplementationClass
 	//	storageProviderImplementationClass=StorageProviderImplementationClass
 	//	oclContext=OCLContext (ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS
-	//	| services+=Service | constraints+=Constraint)* (goal=Goal measure=MeasureFunction)?
+	//	| relations+=Relation | services+=Service | constraints+=Constraint)* (goal=Goal measure=MeasureFunction)?
 	//	'}'
 	public SpecificationElements getSpecificationAccess() {
 		return pSpecification;
@@ -1091,6 +1240,41 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	
 	public ParserRule getServiceRule() {
 		return getServiceAccess().getRule();
+	}
+
+	//Relation cs::RelationCS:
+	//	'relation' name=ID? '{'
+	//	tupleDescriptor=TupleDescriptor
+	//	lowerBound=LowerBound
+	//	upperBound=UpperBound
+	//	'ocl' expression=Model ';'
+	//	'}'
+	public RelationElements getRelationAccess() {
+		return pRelation;
+	}
+	
+	public ParserRule getRelationRule() {
+		return getRelationAccess().getRule();
+	}
+
+	//LowerBound cs::BoundCS:
+	//	'lower' expression=Model ';'
+	public LowerBoundElements getLowerBoundAccess() {
+		return pLowerBound;
+	}
+	
+	public ParserRule getLowerBoundRule() {
+		return getLowerBoundAccess().getRule();
+	}
+
+	//UpperBound cs::BoundCS:
+	//	'upper' expression=Model ';'
+	public UpperBoundElements getUpperBoundAccess() {
+		return pUpperBound;
+	}
+	
+	public ParserRule getUpperBoundRule() {
+		return getUpperBoundAccess().getRule();
 	}
 
 	//QosDimension cs::QoSDimensionCS:

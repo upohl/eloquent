@@ -14,7 +14,7 @@ Specification returns cs::SpecificationCS:
 		storageProviderImplementationClass=StorageProviderImplementationClass
 		oclContext=OCLContext
 		(ownedImports += ImportCS | ownedContexts += ClassifierContextDeclCS
-			| services += Service | constraints += Constraint
+			| relations+=Relation| services += Service | constraints += Constraint
 		)*
 		(goal=Goal measure=MeasureFunction)? 
 	'}'
@@ -36,6 +36,23 @@ Service returns cs::ServiceCS:
 	'service' name=ID '{'
 		dimensions += QosDimension*
 	'}'
+;
+
+Relation returns cs::RelationCS:
+	'relation' (name=ID)? '{'
+		tupleDescriptor=TupleDescriptor
+		lowerBound=LowerBound
+		upperBound=UpperBound
+		'ocl' expression=Model ';'
+	'}'
+;
+
+LowerBound returns cs::BoundCS:
+	'lower' expression=Model ';'
+;
+
+UpperBound returns cs::BoundCS:
+	'upper' expression=Model ';'
 ;
 
 QosDimension returns cs::QoSDimensionCS:

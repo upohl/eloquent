@@ -78,6 +78,7 @@ import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
+import org.muml.psm.allocation.language.cs.BoundCS;
 import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.JavaImplementationProviderCS;
@@ -85,6 +86,7 @@ import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
 import org.muml.psm.allocation.language.cs.OCLContextCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
+import org.muml.psm.allocation.language.cs.RelationCS;
 import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
 import org.muml.psm.allocation.language.cs.ServiceCS;
@@ -257,6 +259,16 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 			}
 		else if (epackage == CsPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case CsPackage.BOUND_CS:
+				if (rule == grammarAccess.getLowerBoundRule()) {
+					sequence_LowerBound(context, (BoundCS) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getUpperBoundRule()) {
+					sequence_UpperBound(context, (BoundCS) semanticObject); 
+					return; 
+				}
+				else break;
 			case CsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS:
 				sequence_BoundWeightTupleDescriptor(context, (BoundWeightTupleDescriptorCS) semanticObject); 
 				return; 
@@ -281,6 +293,9 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				return; 
 			case CsPackage.QO_SDIMENSION_CS:
 				sequence_QosDimension(context, (QoSDimensionCS) semanticObject); 
+				return; 
+			case CsPackage.RELATION_CS:
+				sequence_Relation(context, (RelationCS) semanticObject); 
 				return; 
 			case CsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS:
 				sequence_RequiredHardwareResourceInstanceConstraint(context, (RequiredHardwareResourceInstanceConstraintCS) semanticObject); 
@@ -516,6 +531,24 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	
 	/**
 	 * Contexts:
+	 *     LowerBound returns BoundCS
+	 *
+	 * Constraint:
+	 *     expression=Model
+	 */
+	protected void sequence_LowerBound(ISerializationContext context, BoundCS semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getLowerBoundAccess().getExpressionModelParserRuleCall_1_0(), semanticObject.getExpression());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     MeasureFunction returns MeasureFunctionCS
 	 *
 	 * Constraint:
@@ -588,6 +621,18 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	
 	/**
 	 * Contexts:
+	 *     Relation returns RelationCS
+	 *
+	 * Constraint:
+	 *     (name=ID? tupleDescriptor=TupleDescriptor lowerBound=LowerBound upperBound=UpperBound expression=Model)
+	 */
+	protected void sequence_Relation(ISerializationContext context, RelationCS semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Constraint returns RequiredHardwareResourceInstanceConstraintCS
 	 *     RequiredHardwareResourceInstanceConstraint returns RequiredHardwareResourceInstanceConstraintCS
 	 *
@@ -634,7 +679,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 *         nameProviderImplementationClass=NameProviderImplementationClass 
 	 *         storageProviderImplementationClass=StorageProviderImplementationClass 
 	 *         oclContext=OCLContext 
-	 *         (ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS | services+=Service | constraints+=Constraint)* 
+	 *         (ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS | relations+=Relation | services+=Service | constraints+=Constraint)* 
 	 *         (goal=Goal measure=MeasureFunction)?
 	 *     )
 	 */
@@ -711,6 +756,24 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getTypedPairAccess().getFirstTypedNamedPartParserRuleCall_1_0(), semanticObject.getFirst());
 		feeder.accept(grammarAccess.getTypedPairAccess().getSecondTypedNamedPartParserRuleCall_3_0(), semanticObject.getSecond());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     UpperBound returns BoundCS
+	 *
+	 * Constraint:
+	 *     expression=Model
+	 */
+	protected void sequence_UpperBound(ISerializationContext context, BoundCS semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getUpperBoundAccess().getExpressionModelParserRuleCall_1_0(), semanticObject.getExpression());
 		feeder.finish();
 	}
 	
