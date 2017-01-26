@@ -15,9 +15,13 @@ Require-Bundle: org.junit;bundle-version="4.11.0",
  org.eclipse.jdt.annotation;bundle-version="2.0.100",
  org.muml.psm.allocation.algorithm,
  org.muml.psm.allocation.language.xtext;bundle-version="1.0.0",
- org.eclipse.m2m.qvt.oml.runtime;bundle-version="3.6.0"
+ org.eclipse.m2m.qvt.oml.runtime;bundle-version="3.6.0",
+ org.muml.pim;bundle-version="1.0.0",
+ org.muml.pm.hardware;bundle-version="1.0.0",
+ org.muml.psm.allocation.language;bundle-version="0.1.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: org.muml.psm.allocation.algorithm.tests,
+ org.muml.psm.allocation.algorithm.tests.muml,
  org.muml.psm.allocation.algorithm.tests.qvto,
  org.muml.psm.allocation.algorithm.tests.util
 Bundle-Vendor: %providerName

@@ -4,13 +4,13 @@ import java.util.Collection
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import org.junit.runners.Parameterized.Parameters
-import org.muml.psm.allocation.algorithm.tests.qvto.QVToBasedAlgorithmTest
+import org.muml.psm.allocation.algorithm.tests.muml.MUMLOCLContextBasedAlgorithmTest
 
 @RunWith(value = typeof(Parameterized))
-class Opt4JBasedAlgorithmTest extends QVToBasedAlgorithmTest {
+class Opt4JBasedAlgorithmTest extends MUMLOCLContextBasedAlgorithmTest {
 	
-	new(String expectedURI, String transformationURI, String... inputObjectURIs) {
-		super(expectedURI, transformationURI, inputObjectURIs)
+	new(String expectedURI, String transformationURI, String aslURI, String cicURI, String hwpicURI) {
+		super(expectedURI, transformationURI, aslURI, cicURI, hwpicURI)
 	}
 	
 	@Parameters

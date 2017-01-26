@@ -1,4 +1,4 @@
-package org.muml.psm.allocation.algorithm.ilp.tests
+package org.muml.psm.allocation.algorithm.tests.muml
 
 import org.muml.pim.instance.ComponentInstanceConfiguration
 import org.muml.pm.hardware.hwplatforminstance.HWPlatformInstanceConfiguration

@@ -1,16 +1,16 @@
 package org.muml.psm.allocation.algorithm.ilp.lpsolve.tests
 
-import org.muml.psm.allocation.algorithm.tests.qvto.QVToBasedAlgorithmTest
 import java.util.Collection
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import org.junit.runners.Parameterized.Parameters
+import org.muml.psm.allocation.algorithm.tests.muml.MUMLOCLContextBasedAlgorithmTest
 
 @RunWith(value = typeof(Parameterized))
-class LPSolveBasedAlgorithmTest extends QVToBasedAlgorithmTest {
+class LPSolveBasedAlgorithmTest extends MUMLOCLContextBasedAlgorithmTest {
 
-	new(String expectedURI, String transformationURI, String... inputObjectURIs) {
-		super(expectedURI, transformationURI, inputObjectURIs)
+	new(String expectedURI, String transformationURI, String aslURI, String cicURI, String hwpicURI) {
+		super(expectedURI, transformationURI, aslURI, cicURI, hwpicURI)
 	}
 	
 	@Parameters
