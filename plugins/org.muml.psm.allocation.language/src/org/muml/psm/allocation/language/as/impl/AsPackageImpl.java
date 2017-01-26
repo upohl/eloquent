@@ -16,6 +16,7 @@ import org.eclipse.ocl.pivot.PivotPackage;
 
 import org.muml.psm.allocation.language.as.AsFactory;
 import org.muml.psm.allocation.language.as.AsPackage;
+import org.muml.psm.allocation.language.as.Bound;
 import org.muml.psm.allocation.language.as.BoundWeightTupleDescriptor;
 import org.muml.psm.allocation.language.as.Constraint;
 import org.muml.psm.allocation.language.as.EvaluatableElement;
@@ -27,6 +28,7 @@ import org.muml.psm.allocation.language.as.MeasureFunction;
 import org.muml.psm.allocation.language.as.NameProvider;
 import org.muml.psm.allocation.language.as.OCLContext;
 import org.muml.psm.allocation.language.as.QoSDimension;
+import org.muml.psm.allocation.language.as.Relation;
 import org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint;
 import org.muml.psm.allocation.language.as.ResourceConstraint;
 import org.muml.psm.allocation.language.as.Service;
@@ -59,6 +61,20 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * @generated
 	 */
 	private EClass evaluatableElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass relationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass boundEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -274,7 +290,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecification_Services() {
+	public EReference getSpecification_Relations() {
 		return (EReference)specificationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -283,7 +299,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecification_Constraints() {
+	public EReference getSpecification_Services() {
 		return (EReference)specificationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -292,7 +308,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecification_Measure() {
+	public EReference getSpecification_Constraints() {
 		return (EReference)specificationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -301,8 +317,17 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getSpecification_Measure() {
+		return (EReference)specificationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getSpecification_Goal() {
-		return (EAttribute)specificationEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)specificationEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -311,15 +336,6 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * @generated
 	 */
 	public EReference getSpecification_NameProvider() {
-		return (EReference)specificationEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSpecification_StorageProvider() {
 		return (EReference)specificationEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -328,8 +344,17 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecification_OclContext() {
+	public EReference getSpecification_StorageProvider() {
 		return (EReference)specificationEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSpecification_OclContext() {
+		return (EReference)specificationEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -348,6 +373,51 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 */
 	public EReference getEvaluatableElement_Expression() {
 		return (EReference)evaluatableElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRelation() {
+		return relationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRelation_TupleDescriptor() {
+		return (EReference)relationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRelation_LowerBound() {
+		return (EReference)relationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRelation_UpperBound() {
+		return (EReference)relationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBound() {
+		return boundEClass;
 	}
 
 	/**
@@ -649,6 +719,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		// Create classes and their features
 		specificationEClass = createEClass(SPECIFICATION);
+		createEReference(specificationEClass, SPECIFICATION__RELATIONS);
 		createEReference(specificationEClass, SPECIFICATION__SERVICES);
 		createEReference(specificationEClass, SPECIFICATION__CONSTRAINTS);
 		createEReference(specificationEClass, SPECIFICATION__MEASURE);
@@ -659,6 +730,13 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		evaluatableElementEClass = createEClass(EVALUATABLE_ELEMENT);
 		createEReference(evaluatableElementEClass, EVALUATABLE_ELEMENT__EXPRESSION);
+
+		relationEClass = createEClass(RELATION);
+		createEReference(relationEClass, RELATION__TUPLE_DESCRIPTOR);
+		createEReference(relationEClass, RELATION__LOWER_BOUND);
+		createEReference(relationEClass, RELATION__UPPER_BOUND);
+
+		boundEClass = createEClass(BOUND);
 
 		constraintEClass = createEClass(CONSTRAINT);
 
@@ -742,6 +820,9 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		// Add supertypes to classes
 		specificationEClass.getESuperTypes().add(thePivotPackage.getModel());
 		evaluatableElementEClass.getESuperTypes().add(thePivotPackage.getElement());
+		relationEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
+		relationEClass.getESuperTypes().add(this.getEvaluatableElement());
+		boundEClass.getESuperTypes().add(this.getEvaluatableElement());
 		constraintEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
 		constraintEClass.getESuperTypes().add(this.getEvaluatableElement());
 		locationConstraintEClass.getESuperTypes().add(this.getConstraint());
@@ -761,6 +842,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(specificationEClass, Specification.class, "Specification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSpecification_Relations(), this.getRelation(), null, "relations", null, 0, -1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecification_Services(), this.getService(), null, "services", null, 0, -1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecification_Constraints(), this.getConstraint(), null, "constraints", null, 0, -1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecification_Measure(), this.getMeasureFunction(), null, "measure", null, 0, 1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -771,6 +853,13 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		initEClass(evaluatableElementEClass, EvaluatableElement.class, "EvaluatableElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEvaluatableElement_Expression(), thePivotPackage.getExpressionInOCL(), null, "expression", null, 1, 1, EvaluatableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(relationEClass, Relation.class, "Relation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRelation_TupleDescriptor(), this.getTupleDescriptor(), null, "tupleDescriptor", null, 1, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelation_LowerBound(), this.getBound(), null, "lowerBound", null, 1, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelation_UpperBound(), this.getBound(), null, "upperBound", null, 1, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(boundEClass, Bound.class, "Bound", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(constraintEClass, Constraint.class, "Constraint", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -864,6 +953,12 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
 		   });	
 		addAnnotation
+		  (relationEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "exactlyOnePair"
+		   });	
+		addAnnotation
 		  (locationConstraintEClass, 
 		   source, 
 		   new String[] {
@@ -879,6 +974,12 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 */
 	protected void createPivotAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+		addAnnotation
+		  (relationEClass, 
+		   source, 
+		   new String[] {
+			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
+		   });	
 		addAnnotation
 		  (locationConstraintEClass, 
 		   source, 

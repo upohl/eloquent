@@ -98,6 +98,26 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AsPackage.RELATION: {
+				Relation relation = (Relation)theEObject;
+				T result = caseRelation(relation);
+				if (result == null) result = caseNamedElement(relation);
+				if (result == null) result = caseEvaluatableElement(relation);
+				if (result == null) result = caseElement(relation);
+				if (result == null) result = caseNameable(relation);
+				if (result == null) result = caseVisitable(relation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AsPackage.BOUND: {
+				Bound bound = (Bound)theEObject;
+				T result = caseBound(bound);
+				if (result == null) result = caseEvaluatableElement(bound);
+				if (result == null) result = caseElement(bound);
+				if (result == null) result = caseVisitable(bound);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case AsPackage.CONSTRAINT: {
 				Constraint constraint = (Constraint)theEObject;
 				T result = caseConstraint(constraint);
@@ -282,6 +302,36 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEvaluatableElement(EvaluatableElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Relation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Relation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRelation(Relation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bound</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bound</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBound(Bound object) {
 		return null;
 	}
 

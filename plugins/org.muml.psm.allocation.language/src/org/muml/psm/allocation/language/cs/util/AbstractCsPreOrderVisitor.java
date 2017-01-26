@@ -37,6 +37,11 @@ public abstract class AbstractCsPreOrderVisitor
 	}
 
 	@Override
+	public @Nullable Continuation<?> visitBoundCS(org.muml.psm.allocation.language.cs.@NonNull BoundCS csElement) {
+		return visitEvaluatableElementCS(csElement);
+	}
+
+	@Override
 	public @Nullable Continuation<?> visitBoundWeightTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull BoundWeightTupleDescriptorCS csElement) {
 		return visitWeightTupleDescriptorCS(csElement);
 	}
@@ -73,6 +78,11 @@ public abstract class AbstractCsPreOrderVisitor
 
 	@Override
 	public @Nullable Continuation<?> visitQoSDimensionCS(org.muml.psm.allocation.language.cs.@NonNull QoSDimensionCS csElement) {
+		return visitNamedElementCS(csElement);
+	}
+
+	@Override
+	public @Nullable Continuation<?> visitRelationCS(org.muml.psm.allocation.language.cs.@NonNull RelationCS csElement) {
 		return visitNamedElementCS(csElement);
 	}
 

@@ -88,6 +88,14 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 				return createEvaluatableElementAdapter();
 			}
 			@Override
+			public Adapter caseRelation(Relation object) {
+				return createRelationAdapter();
+			}
+			@Override
+			public Adapter caseBound(Bound object) {
+				return createBoundAdapter();
+			}
+			@Override
 			public Adapter caseConstraint(Constraint object) {
 				return createConstraintAdapter();
 			}
@@ -224,6 +232,34 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEvaluatableElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.Relation <em>Relation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.as.Relation
+	 * @generated
+	 */
+	public Adapter createRelationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.Bound <em>Bound</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.as.Bound
+	 * @generated
+	 */
+	public Adapter createBoundAdapter() {
 		return null;
 	}
 

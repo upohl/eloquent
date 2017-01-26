@@ -19,6 +19,7 @@ import org.eclipse.ocl.pivot.Model;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.muml.psm.allocation.language.as.Specification#getRelations <em>Relations</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.Specification#getServices <em>Services</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.Specification#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.Specification#getMeasure <em>Measure</em>}</li>
@@ -33,6 +34,21 @@ import org.eclipse.ocl.pivot.Model;
  * @generated
  */
 public interface Specification extends Model {
+	/**
+	 * Returns the value of the '<em><b>Relations</b></em>' containment reference list.
+	 * The list contents are of type {@link org.muml.psm.allocation.language.as.Relation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Contains a set of relations.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Relations</em>' containment reference list.
+	 * @see org.muml.psm.allocation.language.as.AsPackage#getSpecification_Relations()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Relation> getRelations();
+
 	/**
 	 * Returns the value of the '<em><b>Services</b></em>' containment reference list.
 	 * The list contents are of type {@link org.muml.psm.allocation.language.as.Service}.

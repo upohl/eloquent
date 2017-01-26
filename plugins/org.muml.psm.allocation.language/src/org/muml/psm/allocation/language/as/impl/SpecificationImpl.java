@@ -25,6 +25,7 @@ import org.muml.psm.allocation.language.as.Goal;
 import org.muml.psm.allocation.language.as.MeasureFunction;
 import org.muml.psm.allocation.language.as.NameProvider;
 import org.muml.psm.allocation.language.as.OCLContext;
+import org.muml.psm.allocation.language.as.Relation;
 import org.muml.psm.allocation.language.as.Service;
 import org.muml.psm.allocation.language.as.Specification;
 import org.muml.psm.allocation.language.as.StorageProvider;
@@ -37,6 +38,7 @@ import org.muml.psm.allocation.language.as.StorageProvider;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.muml.psm.allocation.language.as.impl.SpecificationImpl#getRelations <em>Relations</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.impl.SpecificationImpl#getServices <em>Services</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.impl.SpecificationImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.as.impl.SpecificationImpl#getMeasure <em>Measure</em>}</li>
@@ -49,6 +51,16 @@ import org.muml.psm.allocation.language.as.StorageProvider;
  * @generated
  */
 public class SpecificationImpl extends ModelImpl implements Specification {
+	/**
+	 * The cached value of the '{@link #getRelations() <em>Relations</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRelations()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Relation> relations;
+
 	/**
 	 * The cached value of the '{@link #getServices() <em>Services</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -146,6 +158,18 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 	@Override
 	protected EClass eStaticClass() {
 		return AsPackage.Literals.SPECIFICATION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Relation> getRelations() {
+		if (relations == null) {
+			relations = new EObjectContainmentEList<Relation>(Relation.class, this, AsPackage.SPECIFICATION__RELATIONS);
+		}
+		return relations;
 	}
 
 	/**
@@ -363,6 +387,8 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case AsPackage.SPECIFICATION__RELATIONS:
+				return ((InternalEList<?>)getRelations()).basicRemove(otherEnd, msgs);
 			case AsPackage.SPECIFICATION__SERVICES:
 				return ((InternalEList<?>)getServices()).basicRemove(otherEnd, msgs);
 			case AsPackage.SPECIFICATION__CONSTRAINTS:
@@ -383,6 +409,8 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case AsPackage.SPECIFICATION__RELATIONS:
+				return getRelations();
 			case AsPackage.SPECIFICATION__SERVICES:
 				return getServices();
 			case AsPackage.SPECIFICATION__CONSTRAINTS:
@@ -412,6 +440,10 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case AsPackage.SPECIFICATION__RELATIONS:
+				getRelations().clear();
+				getRelations().addAll((Collection<? extends Relation>)newValue);
+				return;
 			case AsPackage.SPECIFICATION__SERVICES:
 				getServices().clear();
 				getServices().addAll((Collection<? extends Service>)newValue);
@@ -447,6 +479,9 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case AsPackage.SPECIFICATION__RELATIONS:
+				getRelations().clear();
+				return;
 			case AsPackage.SPECIFICATION__SERVICES:
 				getServices().clear();
 				return;
@@ -480,6 +515,8 @@ public class SpecificationImpl extends ModelImpl implements Specification {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case AsPackage.SPECIFICATION__RELATIONS:
+				return relations != null && !relations.isEmpty();
 			case AsPackage.SPECIFICATION__SERVICES:
 				return services != null && !services.isEmpty();
 			case AsPackage.SPECIFICATION__CONSTRAINTS:

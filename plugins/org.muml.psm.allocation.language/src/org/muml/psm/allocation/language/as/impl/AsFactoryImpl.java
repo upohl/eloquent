@@ -58,6 +58,8 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case AsPackage.SPECIFICATION: return createSpecification();
+			case AsPackage.RELATION: return createRelation();
+			case AsPackage.BOUND: return createBound();
 			case AsPackage.LOCATION_CONSTRAINT: return createLocationConstraint();
 			case AsPackage.RESOURCE_CONSTRAINT: return createResourceConstraint();
 			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT: return createRequiredHardwareResourceInstanceConstraint();
@@ -118,6 +120,26 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	public Specification createSpecification() {
 		SpecificationImpl specification = new SpecificationImpl();
 		return specification;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Relation createRelation() {
+		RelationImpl relation = new RelationImpl();
+		return relation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Bound createBound() {
+		BoundImpl bound = new BoundImpl();
+		return bound;
 	}
 
 	/**

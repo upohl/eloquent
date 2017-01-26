@@ -36,6 +36,7 @@ import org.muml.psm.allocation.language.cs.JavaImplementationProviderCS;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
 import org.muml.psm.allocation.language.cs.NameProviderCS;
 import org.muml.psm.allocation.language.cs.OCLContextCS;
+import org.muml.psm.allocation.language.cs.RelationCS;
 import org.muml.psm.allocation.language.cs.ServiceCS;
 import org.muml.psm.allocation.language.cs.SpecificationCS;
 import org.muml.psm.allocation.language.cs.StorageProviderCS;
@@ -51,6 +52,7 @@ import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
  * </p>
  * <ul>
  *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getExtensions <em>Extensions</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getRelations <em>Relations</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getServices <em>Services</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.impl.SpecificationCSImpl#getMeasure <em>Measure</em>}</li>
@@ -74,6 +76,16 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 	 * @ordered
 	 */
 	protected EList<Extension> extensions;
+
+	/**
+	 * The cached value of the '{@link #getRelations() <em>Relations</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRelations()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<RelationCS> relations;
 
 	/**
 	 * The cached value of the '{@link #getServices() <em>Services</em>}' containment reference list.
@@ -204,6 +216,18 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 			extensions = new EObjectContainmentWithInverseEList<Extension>(Extension.class, this, CsPackage.SPECIFICATION_CS__EXTENSIONS, CorePackage.EXTENSION__EXTENDABLE_BASE);
 		}
 		return extensions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<RelationCS> getRelations() {
+		if (relations == null) {
+			relations = new EObjectContainmentEList<RelationCS>(RelationCS.class, this, CsPackage.SPECIFICATION_CS__RELATIONS);
+		}
+		return relations;
 	}
 
 	/**
@@ -548,6 +572,8 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 		switch (featureID) {
 			case CsPackage.SPECIFICATION_CS__EXTENSIONS:
 				return ((InternalEList<?>)getExtensions()).basicRemove(otherEnd, msgs);
+			case CsPackage.SPECIFICATION_CS__RELATIONS:
+				return ((InternalEList<?>)getRelations()).basicRemove(otherEnd, msgs);
 			case CsPackage.SPECIFICATION_CS__SERVICES:
 				return ((InternalEList<?>)getServices()).basicRemove(otherEnd, msgs);
 			case CsPackage.SPECIFICATION_CS__CONSTRAINTS:
@@ -574,6 +600,8 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 		switch (featureID) {
 			case CsPackage.SPECIFICATION_CS__EXTENSIONS:
 				return getExtensions();
+			case CsPackage.SPECIFICATION_CS__RELATIONS:
+				return getRelations();
 			case CsPackage.SPECIFICATION_CS__SERVICES:
 				return getServices();
 			case CsPackage.SPECIFICATION_CS__CONSTRAINTS:
@@ -610,6 +638,10 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 			case CsPackage.SPECIFICATION_CS__EXTENSIONS:
 				getExtensions().clear();
 				getExtensions().addAll((Collection<? extends Extension>)newValue);
+				return;
+			case CsPackage.SPECIFICATION_CS__RELATIONS:
+				getRelations().clear();
+				getRelations().addAll((Collection<? extends RelationCS>)newValue);
 				return;
 			case CsPackage.SPECIFICATION_CS__SERVICES:
 				getServices().clear();
@@ -655,6 +687,9 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 			case CsPackage.SPECIFICATION_CS__EXTENSIONS:
 				getExtensions().clear();
 				return;
+			case CsPackage.SPECIFICATION_CS__RELATIONS:
+				getRelations().clear();
+				return;
 			case CsPackage.SPECIFICATION_CS__SERVICES:
 				getServices().clear();
 				return;
@@ -696,6 +731,8 @@ public class SpecificationCSImpl extends CompleteOCLDocumentCSImpl implements Sp
 		switch (featureID) {
 			case CsPackage.SPECIFICATION_CS__EXTENSIONS:
 				return extensions != null && !extensions.isEmpty();
+			case CsPackage.SPECIFICATION_CS__RELATIONS:
+				return relations != null && !relations.isEmpty();
 			case CsPackage.SPECIFICATION_CS__SERVICES:
 				return services != null && !services.isEmpty();
 			case CsPackage.SPECIFICATION_CS__CONSTRAINTS:

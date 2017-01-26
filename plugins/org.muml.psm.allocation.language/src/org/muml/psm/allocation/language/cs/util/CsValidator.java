@@ -91,6 +91,10 @@ public class CsValidator extends EObjectValidator {
 				return validateSpecificationCS((SpecificationCS)value, diagnostics, context);
 			case CsPackage.EVALUATABLE_ELEMENT_CS:
 				return validateEvaluatableElementCS((EvaluatableElementCS)value, diagnostics, context);
+			case CsPackage.RELATION_CS:
+				return validateRelationCS((RelationCS)value, diagnostics, context);
+			case CsPackage.BOUND_CS:
+				return validateBoundCS((BoundCS)value, diagnostics, context);
 			case CsPackage.CONSTRAINT_CS:
 				return validateConstraintCS((ConstraintCS)value, diagnostics, context);
 			case CsPackage.LOCATION_CONSTRAINT_CS:
@@ -148,6 +152,63 @@ public class CsValidator extends EObjectValidator {
 	 */
 	public boolean validateEvaluatableElementCS(EvaluatableElementCS evaluatableElementCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(evaluatableElementCS, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRelationCS(RelationCS relationCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(relationCS, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(relationCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(relationCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(relationCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(relationCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(relationCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(relationCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(relationCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(relationCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validateRelationCS_exactlyOnePair(relationCS, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the exactlyOnePair constraint of '<em>Relation CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String RELATION_CS__EXACTLY_ONE_PAIR__EEXPRESSION = "self.tupleDescriptor.typedPairs->size() = 1";
+
+	/**
+	 * Validates the exactlyOnePair constraint of '<em>Relation CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRelationCS_exactlyOnePair(RelationCS relationCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(CsPackage.Literals.RELATION_CS,
+				 relationCS,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "exactlyOnePair",
+				 RELATION_CS__EXACTLY_ONE_PAIR__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBoundCS(BoundCS boundCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(boundCS, diagnostics, context);
 	}
 
 	/**

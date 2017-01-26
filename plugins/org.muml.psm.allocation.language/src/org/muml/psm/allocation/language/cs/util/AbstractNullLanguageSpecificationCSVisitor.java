@@ -33,6 +33,11 @@ public abstract class AbstractNullLanguageSpecificationCSVisitor<@Nullable R, C>
 	}	
 
 	@Override
+	public R visitBoundCS(org.muml.psm.allocation.language.cs.@NonNull BoundCS object) {
+		return null;
+	}
+
+	@Override
 	public R visitBoundWeightTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull BoundWeightTupleDescriptorCS object) {
 		return null;
 	}
@@ -69,6 +74,11 @@ public abstract class AbstractNullLanguageSpecificationCSVisitor<@Nullable R, C>
 
 	@Override
 	public R visitQoSDimensionCS(org.muml.psm.allocation.language.cs.@NonNull QoSDimensionCS object) {
+		return null;
+	}
+
+	@Override
+	public R visitRelationCS(org.muml.psm.allocation.language.cs.@NonNull RelationCS object) {
 		return null;
 	}
 

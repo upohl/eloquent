@@ -115,6 +115,32 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CsPackage.RELATION_CS: {
+				RelationCS relationCS = (RelationCS)theEObject;
+				T result = caseRelationCS(relationCS);
+				if (result == null) result = caseNamedElementCS(relationCS);
+				if (result == null) result = caseEvaluatableElementCS(relationCS);
+				if (result == null) result = caseModelElementCS(relationCS);
+				if (result == null) result = caseNameable(relationCS);
+				if (result == null) result = casePivotableElementCS(relationCS);
+				if (result == null) result = caseElementCS(relationCS);
+				if (result == null) result = casePivotable(relationCS);
+				if (result == null) result = caseVisitableCS(relationCS);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CsPackage.BOUND_CS: {
+				BoundCS boundCS = (BoundCS)theEObject;
+				T result = caseBoundCS(boundCS);
+				if (result == null) result = caseEvaluatableElementCS(boundCS);
+				if (result == null) result = caseModelElementCS(boundCS);
+				if (result == null) result = casePivotableElementCS(boundCS);
+				if (result == null) result = caseElementCS(boundCS);
+				if (result == null) result = casePivotable(boundCS);
+				if (result == null) result = caseVisitableCS(boundCS);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case CsPackage.CONSTRAINT_CS: {
 				ConstraintCS constraintCS = (ConstraintCS)theEObject;
 				T result = caseConstraintCS(constraintCS);
@@ -342,6 +368,36 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEvaluatableElementCS(EvaluatableElementCS object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Relation CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Relation CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRelationCS(RelationCS object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bound CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bound CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBoundCS(BoundCS object) {
 		return null;
 	}
 

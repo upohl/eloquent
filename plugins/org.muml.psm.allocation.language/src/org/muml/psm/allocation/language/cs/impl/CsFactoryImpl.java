@@ -58,6 +58,8 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case CsPackage.SPECIFICATION_CS: return createSpecificationCS();
+			case CsPackage.RELATION_CS: return createRelationCS();
+			case CsPackage.BOUND_CS: return createBoundCS();
 			case CsPackage.LOCATION_CONSTRAINT_CS: return createLocationConstraintCS();
 			case CsPackage.RESOURCE_CONSTRAINT_CS: return createResourceConstraintCS();
 			case CsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS: return createRequiredHardwareResourceInstanceConstraintCS();
@@ -118,6 +120,26 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	public SpecificationCS createSpecificationCS() {
 		SpecificationCSImpl specificationCS = new SpecificationCSImpl();
 		return specificationCS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RelationCS createRelationCS() {
+		RelationCSImpl relationCS = new RelationCSImpl();
+		return relationCS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BoundCS createBoundCS() {
+		BoundCSImpl boundCS = new BoundCSImpl();
+		return boundCS;
 	}
 
 	/**

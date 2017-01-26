@@ -14,6 +14,7 @@
       <genEnumLiterals ecoreEnumLiteral="LanguageSpecificationAS.ecore#//Goal/MIN"/>
     </genEnums>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//Specification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//Specification/relations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//Specification/services"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//Specification/constraints"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//Specification/measure"/>
@@ -25,6 +26,12 @@
     <genClasses image="false" ecoreClass="LanguageSpecificationAS.ecore#//EvaluatableElement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//EvaluatableElement/expression"/>
     </genClasses>
+    <genClasses ecoreClass="LanguageSpecificationAS.ecore#//Relation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//Relation/tupleDescriptor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//Relation/lowerBound"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//Relation/upperBound"/>
+    </genClasses>
+    <genClasses ecoreClass="LanguageSpecificationAS.ecore#//Bound"/>
     <genClasses image="false" ecoreClass="LanguageSpecificationAS.ecore#//Constraint"/>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//LocationConstraint">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//LocationConstraint/tupleDescriptor"/>

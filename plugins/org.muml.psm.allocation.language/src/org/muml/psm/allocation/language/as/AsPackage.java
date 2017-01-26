@@ -155,13 +155,22 @@ public interface AsPackage extends EPackage {
 	int SPECIFICATION__OWNED_PACKAGES = PivotPackage.MODEL__OWNED_PACKAGES;
 
 	/**
+	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__RELATIONS = PivotPackage.MODEL_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Services</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__SERVICES = PivotPackage.MODEL_FEATURE_COUNT + 0;
+	int SPECIFICATION__SERVICES = PivotPackage.MODEL_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
@@ -170,7 +179,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__CONSTRAINTS = PivotPackage.MODEL_FEATURE_COUNT + 1;
+	int SPECIFICATION__CONSTRAINTS = PivotPackage.MODEL_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Measure</b></em>' containment reference.
@@ -179,7 +188,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__MEASURE = PivotPackage.MODEL_FEATURE_COUNT + 2;
+	int SPECIFICATION__MEASURE = PivotPackage.MODEL_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Goal</b></em>' attribute.
@@ -188,7 +197,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__GOAL = PivotPackage.MODEL_FEATURE_COUNT + 3;
+	int SPECIFICATION__GOAL = PivotPackage.MODEL_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Name Provider</b></em>' reference.
@@ -197,7 +206,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__NAME_PROVIDER = PivotPackage.MODEL_FEATURE_COUNT + 4;
+	int SPECIFICATION__NAME_PROVIDER = PivotPackage.MODEL_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Storage Provider</b></em>' reference.
@@ -206,7 +215,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__STORAGE_PROVIDER = PivotPackage.MODEL_FEATURE_COUNT + 5;
+	int SPECIFICATION__STORAGE_PROVIDER = PivotPackage.MODEL_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Ocl Context</b></em>' containment reference.
@@ -215,7 +224,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__OCL_CONTEXT = PivotPackage.MODEL_FEATURE_COUNT + 6;
+	int SPECIFICATION__OCL_CONTEXT = PivotPackage.MODEL_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Specification</em>' class.
@@ -224,7 +233,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_FEATURE_COUNT = PivotPackage.MODEL_FEATURE_COUNT + 7;
+	int SPECIFICATION_FEATURE_COUNT = PivotPackage.MODEL_FEATURE_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.EvaluatableElementImpl <em>Evaluatable Element</em>}' class.
@@ -291,6 +300,170 @@ public interface AsPackage extends EPackage {
 	int EVALUATABLE_ELEMENT_FEATURE_COUNT = PivotPackage.ELEMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.RelationImpl <em>Relation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.as.impl.RelationImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getRelation()
+	 * @generated
+	 */
+	int RELATION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__ANNOTATING_COMMENTS = PivotPackage.NAMED_ELEMENT__ANNOTATING_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__OWNED_ANNOTATIONS = PivotPackage.NAMED_ELEMENT__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__OWNED_COMMENTS = PivotPackage.NAMED_ELEMENT__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__OWNED_EXTENSIONS = PivotPackage.NAMED_ELEMENT__OWNED_EXTENSIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__NAME = PivotPackage.NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__EXPRESSION = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__TUPLE_DESCRIPTOR = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Lower Bound</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__LOWER_BOUND = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Upper Bound</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__UPPER_BOUND = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Relation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_FEATURE_COUNT = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.BoundImpl <em>Bound</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.as.impl.BoundImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getBound()
+	 * @generated
+	 */
+	int BOUND = 3;
+
+	/**
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUND__ANNOTATING_COMMENTS = EVALUATABLE_ELEMENT__ANNOTATING_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUND__OWNED_ANNOTATIONS = EVALUATABLE_ELEMENT__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUND__OWNED_COMMENTS = EVALUATABLE_ELEMENT__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUND__OWNED_EXTENSIONS = EVALUATABLE_ELEMENT__OWNED_EXTENSIONS;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUND__EXPRESSION = EVALUATABLE_ELEMENT__EXPRESSION;
+
+	/**
+	 * The number of structural features of the '<em>Bound</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUND_FEATURE_COUNT = EVALUATABLE_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.ConstraintImpl <em>Constraint</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -298,7 +471,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getConstraint()
 	 * @generated
 	 */
-	int CONSTRAINT = 2;
+	int CONSTRAINT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -371,7 +544,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getLocationConstraint()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT = 3;
+	int LOCATION_CONSTRAINT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -462,7 +635,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getResourceConstraint()
 	 * @generated
 	 */
-	int RESOURCE_CONSTRAINT = 4;
+	int RESOURCE_CONSTRAINT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -544,7 +717,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getRequiredHardwareResourceInstanceConstraint()
 	 * @generated
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT = 5;
+	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -626,7 +799,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getTupleDescriptor()
 	 * @generated
 	 */
-	int TUPLE_DESCRIPTOR = 6;
+	int TUPLE_DESCRIPTOR = 8;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -690,7 +863,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getWeightTupleDescriptor()
 	 * @generated
 	 */
-	int WEIGHT_TUPLE_DESCRIPTOR = 7;
+	int WEIGHT_TUPLE_DESCRIPTOR = 9;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -763,7 +936,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getBoundWeightTupleDescriptor()
 	 * @generated
 	 */
-	int BOUND_WEIGHT_TUPLE_DESCRIPTOR = 8;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR = 10;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -845,7 +1018,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getTypedNamedPart()
 	 * @generated
 	 */
-	int TYPED_NAMED_PART = 9;
+	int TYPED_NAMED_PART = 11;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -936,7 +1109,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getTypedPair()
 	 * @generated
 	 */
-	int TYPED_PAIR = 10;
+	int TYPED_PAIR = 12;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1009,7 +1182,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getMeasureFunction()
 	 * @generated
 	 */
-	int MEASURE_FUNCTION = 11;
+	int MEASURE_FUNCTION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1073,7 +1246,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getService()
 	 * @generated
 	 */
-	int SERVICE = 12;
+	int SERVICE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1146,7 +1319,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getQoSDimension()
 	 * @generated
 	 */
-	int QO_SDIMENSION = 13;
+	int QO_SDIMENSION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1228,7 +1401,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getJavaImplementationProvider()
 	 * @generated
 	 */
-	int JAVA_IMPLEMENTATION_PROVIDER = 14;
+	int JAVA_IMPLEMENTATION_PROVIDER = 16;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1283,7 +1456,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getNameProvider()
 	 * @generated
 	 */
-	int NAME_PROVIDER = 15;
+	int NAME_PROVIDER = 17;
 
 	/**
 	 * The number of structural features of the '<em>Name Provider</em>' class.
@@ -1302,7 +1475,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getStorageProvider()
 	 * @generated
 	 */
-	int STORAGE_PROVIDER = 16;
+	int STORAGE_PROVIDER = 18;
 
 	/**
 	 * The number of structural features of the '<em>Storage Provider</em>' class.
@@ -1321,7 +1494,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getOCLContext()
 	 * @generated
 	 */
-	int OCL_CONTEXT = 17;
+	int OCL_CONTEXT = 19;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1412,7 +1585,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getLocationConstraintTypes()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_TYPES = 18;
+	int LOCATION_CONSTRAINT_TYPES = 20;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.Goal <em>Goal</em>}' enum.
@@ -1422,7 +1595,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getGoal()
 	 * @generated
 	 */
-	int GOAL = 19;
+	int GOAL = 21;
 
 
 	/**
@@ -1434,6 +1607,17 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSpecification();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.muml.psm.allocation.language.as.Specification#getRelations <em>Relations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Relations</em>'.
+	 * @see org.muml.psm.allocation.language.as.Specification#getRelations()
+	 * @see #getSpecification()
+	 * @generated
+	 */
+	EReference getSpecification_Relations();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link org.muml.psm.allocation.language.as.Specification#getServices <em>Services</em>}'.
@@ -1532,6 +1716,59 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getEvaluatableElement_Expression();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.Relation <em>Relation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Relation</em>'.
+	 * @see org.muml.psm.allocation.language.as.Relation
+	 * @generated
+	 */
+	EClass getRelation();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.Relation#getTupleDescriptor <em>Tuple Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.as.Relation#getTupleDescriptor()
+	 * @see #getRelation()
+	 * @generated
+	 */
+	EReference getRelation_TupleDescriptor();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.Relation#getLowerBound <em>Lower Bound</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Lower Bound</em>'.
+	 * @see org.muml.psm.allocation.language.as.Relation#getLowerBound()
+	 * @see #getRelation()
+	 * @generated
+	 */
+	EReference getRelation_LowerBound();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.Relation#getUpperBound <em>Upper Bound</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Upper Bound</em>'.
+	 * @see org.muml.psm.allocation.language.as.Relation#getUpperBound()
+	 * @see #getRelation()
+	 * @generated
+	 */
+	EReference getRelation_UpperBound();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.Bound <em>Bound</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Bound</em>'.
+	 * @see org.muml.psm.allocation.language.as.Bound
+	 * @generated
+	 */
+	EClass getBound();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.Constraint <em>Constraint</em>}'.
@@ -1878,6 +2115,14 @@ public interface AsPackage extends EPackage {
 		EClass SPECIFICATION = eINSTANCE.getSpecification();
 
 		/**
+		 * The meta object literal for the '<em><b>Relations</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION__RELATIONS = eINSTANCE.getSpecification_Relations();
+
+		/**
 		 * The meta object literal for the '<em><b>Services</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1950,6 +2195,50 @@ public interface AsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EVALUATABLE_ELEMENT__EXPRESSION = eINSTANCE.getEvaluatableElement_Expression();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.RelationImpl <em>Relation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.as.impl.RelationImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getRelation()
+		 * @generated
+		 */
+		EClass RELATION = eINSTANCE.getRelation();
+
+		/**
+		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RELATION__TUPLE_DESCRIPTOR = eINSTANCE.getRelation_TupleDescriptor();
+
+		/**
+		 * The meta object literal for the '<em><b>Lower Bound</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RELATION__LOWER_BOUND = eINSTANCE.getRelation_LowerBound();
+
+		/**
+		 * The meta object literal for the '<em><b>Upper Bound</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RELATION__UPPER_BOUND = eINSTANCE.getRelation_UpperBound();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.BoundImpl <em>Bound</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.as.impl.BoundImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getBound()
+		 * @generated
+		 */
+		EClass BOUND = eINSTANCE.getBound();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.ConstraintImpl <em>Constraint</em>}' class.

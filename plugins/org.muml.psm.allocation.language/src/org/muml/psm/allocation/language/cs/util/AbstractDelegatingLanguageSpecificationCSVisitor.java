@@ -29,6 +29,11 @@ public abstract class AbstractDelegatingLanguageSpecificationCSVisitor<R, C, @No
 	}
 
 	@Override
+	public R visitBoundCS(org.muml.psm.allocation.language.cs.@NonNull BoundCS object) {
+		return delegate.visitBoundCS(object);
+	}
+
+	@Override
 	public R visitBoundWeightTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull BoundWeightTupleDescriptorCS object) {
 		return delegate.visitBoundWeightTupleDescriptorCS(object);
 	}
@@ -66,6 +71,11 @@ public abstract class AbstractDelegatingLanguageSpecificationCSVisitor<R, C, @No
 	@Override
 	public R visitQoSDimensionCS(org.muml.psm.allocation.language.cs.@NonNull QoSDimensionCS object) {
 		return delegate.visitQoSDimensionCS(object);
+	}
+
+	@Override
+	public R visitRelationCS(org.muml.psm.allocation.language.cs.@NonNull RelationCS object) {
+		return delegate.visitRelationCS(object);
 	}
 
 	@Override

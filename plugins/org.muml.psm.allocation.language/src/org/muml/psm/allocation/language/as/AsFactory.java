@@ -31,6 +31,24 @@ public interface AsFactory extends EFactory {
 	Specification createSpecification();
 
 	/**
+	 * Returns a new object of class '<em>Relation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Relation</em>'.
+	 * @generated
+	 */
+	Relation createRelation();
+
+	/**
+	 * Returns a new object of class '<em>Bound</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bound</em>'.
+	 * @generated
+	 */
+	Bound createBound();
+
+	/**
 	 * Returns a new object of class '<em>Location Constraint</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -97,6 +97,14 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 				return createEvaluatableElementCSAdapter();
 			}
 			@Override
+			public Adapter caseRelationCS(RelationCS object) {
+				return createRelationCSAdapter();
+			}
+			@Override
+			public Adapter caseBoundCS(BoundCS object) {
+				return createBoundCSAdapter();
+			}
+			@Override
 			public Adapter caseConstraintCS(ConstraintCS object) {
 				return createConstraintCSAdapter();
 			}
@@ -257,6 +265,34 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEvaluatableElementCSAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.RelationCS <em>Relation CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.cs.RelationCS
+	 * @generated
+	 */
+	public Adapter createRelationCSAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.BoundCS <em>Bound CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.cs.BoundCS
+	 * @generated
+	 */
+	public Adapter createBoundCSAdapter() {
 		return null;
 	}
 

@@ -90,6 +90,10 @@ public class AsValidator extends EObjectValidator {
 				return validateSpecification((Specification)value, diagnostics, context);
 			case AsPackage.EVALUATABLE_ELEMENT:
 				return validateEvaluatableElement((EvaluatableElement)value, diagnostics, context);
+			case AsPackage.RELATION:
+				return validateRelation((Relation)value, diagnostics, context);
+			case AsPackage.BOUND:
+				return validateBound((Bound)value, diagnostics, context);
 			case AsPackage.CONSTRAINT:
 				return validateConstraint((Constraint)value, diagnostics, context);
 			case AsPackage.LOCATION_CONSTRAINT:
@@ -147,6 +151,63 @@ public class AsValidator extends EObjectValidator {
 	 */
 	public boolean validateEvaluatableElement(EvaluatableElement evaluatableElement, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(evaluatableElement, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRelation(Relation relation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(relation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(relation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(relation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(relation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(relation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(relation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(relation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(relation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(relation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateRelation_exactlyOnePair(relation, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the exactlyOnePair constraint of '<em>Relation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String RELATION__EXACTLY_ONE_PAIR__EEXPRESSION = "self.tupleDescriptor.typedPairs->size() = 1";
+
+	/**
+	 * Validates the exactlyOnePair constraint of '<em>Relation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRelation_exactlyOnePair(Relation relation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(AsPackage.Literals.RELATION,
+				 relation,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "exactlyOnePair",
+				 RELATION__EXACTLY_ONE_PAIR__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBound(Bound bound, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(bound, diagnostics, context);
 	}
 
 	/**

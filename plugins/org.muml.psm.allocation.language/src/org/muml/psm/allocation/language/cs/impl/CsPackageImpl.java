@@ -24,6 +24,7 @@ import org.eclipse.ocl.xtext.oclstdlibcs.OCLstdlibCSPackage;
 
 import org.muml.core.CorePackage;
 
+import org.muml.psm.allocation.language.cs.BoundCS;
 import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.ConstraintCS;
 import org.muml.psm.allocation.language.cs.CsFactory;
@@ -37,6 +38,7 @@ import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
 import org.muml.psm.allocation.language.cs.NameProviderCS;
 import org.muml.psm.allocation.language.cs.OCLContextCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
+import org.muml.psm.allocation.language.cs.RelationCS;
 import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
 import org.muml.psm.allocation.language.cs.ServiceCS;
@@ -69,6 +71,20 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * @generated
 	 */
 	private EClass evaluatableElementCSEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass relationCSEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass boundCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -286,7 +302,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificationCS_Services() {
+	public EReference getSpecificationCS_Relations() {
 		return (EReference)specificationCSEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -295,7 +311,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificationCS_Constraints() {
+	public EReference getSpecificationCS_Services() {
 		return (EReference)specificationCSEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -304,7 +320,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificationCS_Measure() {
+	public EReference getSpecificationCS_Constraints() {
 		return (EReference)specificationCSEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -313,8 +329,17 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getSpecificationCS_Measure() {
+		return (EReference)specificationCSEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getSpecificationCS_Goal() {
-		return (EAttribute)specificationCSEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)specificationCSEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -323,15 +348,6 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * @generated
 	 */
 	public EReference getSpecificationCS_NameProviderImplementationClass() {
-		return (EReference)specificationCSEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSpecificationCS_NameProvider() {
 		return (EReference)specificationCSEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -340,7 +356,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificationCS_StorageProviderImplementationClass() {
+	public EReference getSpecificationCS_NameProvider() {
 		return (EReference)specificationCSEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -349,7 +365,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificationCS_StorageProvider() {
+	public EReference getSpecificationCS_StorageProviderImplementationClass() {
 		return (EReference)specificationCSEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -358,8 +374,17 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificationCS_OclContext() {
+	public EReference getSpecificationCS_StorageProvider() {
 		return (EReference)specificationCSEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSpecificationCS_OclContext() {
+		return (EReference)specificationCSEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -378,6 +403,51 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 */
 	public EReference getEvaluatableElementCS_Expression() {
 		return (EReference)evaluatableElementCSEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRelationCS() {
+		return relationCSEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRelationCS_TupleDescriptor() {
+		return (EReference)relationCSEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRelationCS_LowerBound() {
+		return (EReference)relationCSEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRelationCS_UpperBound() {
+		return (EReference)relationCSEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBoundCS() {
+		return boundCSEClass;
 	}
 
 	/**
@@ -679,6 +749,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		// Create classes and their features
 		specificationCSEClass = createEClass(SPECIFICATION_CS);
+		createEReference(specificationCSEClass, SPECIFICATION_CS__RELATIONS);
 		createEReference(specificationCSEClass, SPECIFICATION_CS__SERVICES);
 		createEReference(specificationCSEClass, SPECIFICATION_CS__CONSTRAINTS);
 		createEReference(specificationCSEClass, SPECIFICATION_CS__MEASURE);
@@ -691,6 +762,13 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		evaluatableElementCSEClass = createEClass(EVALUATABLE_ELEMENT_CS);
 		createEReference(evaluatableElementCSEClass, EVALUATABLE_ELEMENT_CS__EXPRESSION);
+
+		relationCSEClass = createEClass(RELATION_CS);
+		createEReference(relationCSEClass, RELATION_CS__TUPLE_DESCRIPTOR);
+		createEReference(relationCSEClass, RELATION_CS__LOWER_BOUND);
+		createEReference(relationCSEClass, RELATION_CS__UPPER_BOUND);
+
+		boundCSEClass = createEClass(BOUND_CS);
 
 		constraintCSEClass = createEClass(CONSTRAINT_CS);
 
@@ -780,6 +858,9 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		specificationCSEClass.getESuperTypes().add(theCompleteOCLCSPackage.getCompleteOCLDocumentCS());
 		specificationCSEClass.getESuperTypes().add(theCorePackage.getExtendableElement());
 		evaluatableElementCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
+		relationCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
+		relationCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
+		boundCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
 		constraintCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
 		constraintCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
 		locationConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
@@ -800,6 +881,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(specificationCSEClass, SpecificationCS.class, "SpecificationCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSpecificationCS_Relations(), this.getRelationCS(), null, "relations", null, 0, -1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificationCS_Services(), this.getServiceCS(), null, "services", null, 0, -1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificationCS_Constraints(), this.getConstraintCS(), null, "constraints", null, 0, -1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificationCS_Measure(), this.getMeasureFunctionCS(), null, "measure", null, 0, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -812,6 +894,13 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		initEClass(evaluatableElementCSEClass, EvaluatableElementCS.class, "EvaluatableElementCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEvaluatableElementCS_Expression(), theEssentialOCLCSPackage.getContextCS(), null, "expression", null, 1, 1, EvaluatableElementCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(relationCSEClass, RelationCS.class, "RelationCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRelationCS_TupleDescriptor(), this.getTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, RelationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelationCS_LowerBound(), this.getBoundCS(), null, "lowerBound", null, 1, 1, RelationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelationCS_UpperBound(), this.getBoundCS(), null, "upperBound", null, 1, 1, RelationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(boundCSEClass, BoundCS.class, "BoundCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(constraintCSEClass, ConstraintCS.class, "ConstraintCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -905,6 +994,12 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
 		   });	
 		addAnnotation
+		  (relationCSEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "exactlyOnePair"
+		   });	
+		addAnnotation
 		  (locationConstraintCSEClass, 
 		   source, 
 		   new String[] {
@@ -920,6 +1015,12 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 */
 	protected void createPivotAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+		addAnnotation
+		  (relationCSEClass, 
+		   source, 
+		   new String[] {
+			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
+		   });	
 		addAnnotation
 		  (locationConstraintCSEClass, 
 		   source, 

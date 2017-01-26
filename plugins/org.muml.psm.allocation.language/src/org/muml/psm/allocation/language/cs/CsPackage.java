@@ -166,13 +166,22 @@ public interface CsPackage extends EPackage {
 	int SPECIFICATION_CS__EXTENSIONS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_CS__RELATIONS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Services</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__SERVICES = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 1;
+	int SPECIFICATION_CS__SERVICES = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
@@ -181,7 +190,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__CONSTRAINTS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 2;
+	int SPECIFICATION_CS__CONSTRAINTS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Measure</b></em>' containment reference.
@@ -190,7 +199,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__MEASURE = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 3;
+	int SPECIFICATION_CS__MEASURE = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Goal</b></em>' attribute.
@@ -199,7 +208,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__GOAL = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 4;
+	int SPECIFICATION_CS__GOAL = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Name Provider Implementation Class</b></em>' containment reference.
@@ -208,7 +217,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__NAME_PROVIDER_IMPLEMENTATION_CLASS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 5;
+	int SPECIFICATION_CS__NAME_PROVIDER_IMPLEMENTATION_CLASS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Name Provider</b></em>' reference.
@@ -217,7 +226,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__NAME_PROVIDER = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 6;
+	int SPECIFICATION_CS__NAME_PROVIDER = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Storage Provider Implementation Class</b></em>' containment reference.
@@ -226,7 +235,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__STORAGE_PROVIDER_IMPLEMENTATION_CLASS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 7;
+	int SPECIFICATION_CS__STORAGE_PROVIDER_IMPLEMENTATION_CLASS = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Storage Provider</b></em>' reference.
@@ -235,7 +244,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__STORAGE_PROVIDER = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 8;
+	int SPECIFICATION_CS__STORAGE_PROVIDER = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Ocl Context</b></em>' containment reference.
@@ -244,7 +253,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS__OCL_CONTEXT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 9;
+	int SPECIFICATION_CS__OCL_CONTEXT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of structural features of the '<em>Specification CS</em>' class.
@@ -253,7 +262,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_CS_FEATURE_COUNT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 10;
+	int SPECIFICATION_CS_FEATURE_COUNT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 11;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.EvaluatableElementCSImpl <em>Evaluatable Element CS</em>}' class.
@@ -329,6 +338,188 @@ public interface CsPackage extends EPackage {
 	int EVALUATABLE_ELEMENT_CS_FEATURE_COUNT = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.RelationCSImpl <em>Relation CS</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.cs.impl.RelationCSImpl
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getRelationCS()
+	 * @generated
+	 */
+	int RELATION_CS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Csi</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_CS__CSI = BaseCSPackage.NAMED_ELEMENT_CS__CSI;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_CS__PARENT = BaseCSPackage.NAMED_ELEMENT_CS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Pivot</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_CS__PIVOT = BaseCSPackage.NAMED_ELEMENT_CS__PIVOT;
+
+	/**
+	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_CS__ORIGINAL_XMI_ID = BaseCSPackage.NAMED_ELEMENT_CS__ORIGINAL_XMI_ID;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_CS__OWNED_ANNOTATIONS = BaseCSPackage.NAMED_ELEMENT_CS__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_CS__NAME = BaseCSPackage.NAMED_ELEMENT_CS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_CS__EXPRESSION = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_CS__TUPLE_DESCRIPTOR = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Lower Bound</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_CS__LOWER_BOUND = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Upper Bound</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_CS__UPPER_BOUND = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Relation CS</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_CS_FEATURE_COUNT = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 4;
+
+	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.BoundCSImpl <em>Bound CS</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.cs.impl.BoundCSImpl
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getBoundCS()
+	 * @generated
+	 */
+	int BOUND_CS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Csi</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUND_CS__CSI = EVALUATABLE_ELEMENT_CS__CSI;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUND_CS__PARENT = EVALUATABLE_ELEMENT_CS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Pivot</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUND_CS__PIVOT = EVALUATABLE_ELEMENT_CS__PIVOT;
+
+	/**
+	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUND_CS__ORIGINAL_XMI_ID = EVALUATABLE_ELEMENT_CS__ORIGINAL_XMI_ID;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUND_CS__OWNED_ANNOTATIONS = EVALUATABLE_ELEMENT_CS__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUND_CS__EXPRESSION = EVALUATABLE_ELEMENT_CS__EXPRESSION;
+
+	/**
+	 * The number of structural features of the '<em>Bound CS</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUND_CS_FEATURE_COUNT = EVALUATABLE_ELEMENT_CS_FEATURE_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.ConstraintCSImpl <em>Constraint CS</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -336,7 +527,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getConstraintCS()
 	 * @generated
 	 */
-	int CONSTRAINT_CS = 2;
+	int CONSTRAINT_CS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -418,7 +609,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getLocationConstraintCS()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_CS = 3;
+	int LOCATION_CONSTRAINT_CS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -518,7 +709,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getResourceConstraintCS()
 	 * @generated
 	 */
-	int RESOURCE_CONSTRAINT_CS = 4;
+	int RESOURCE_CONSTRAINT_CS = 6;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -609,7 +800,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getRequiredHardwareResourceInstanceConstraintCS()
 	 * @generated
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS = 5;
+	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -700,7 +891,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getTupleDescriptorCS()
 	 * @generated
 	 */
-	int TUPLE_DESCRIPTOR_CS = 6;
+	int TUPLE_DESCRIPTOR_CS = 8;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -773,7 +964,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getWeightTupleDescriptorCS()
 	 * @generated
 	 */
-	int WEIGHT_TUPLE_DESCRIPTOR_CS = 7;
+	int WEIGHT_TUPLE_DESCRIPTOR_CS = 9;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -855,7 +1046,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getBoundWeightTupleDescriptorCS()
 	 * @generated
 	 */
-	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS = 8;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS = 10;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -946,7 +1137,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getTypedNamedPartCS()
 	 * @generated
 	 */
-	int TYPED_NAMED_PART_CS = 9;
+	int TYPED_NAMED_PART_CS = 11;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1046,7 +1237,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getTypedPairCS()
 	 * @generated
 	 */
-	int TYPED_PAIR_CS = 10;
+	int TYPED_PAIR_CS = 12;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1128,7 +1319,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getMeasureFunctionCS()
 	 * @generated
 	 */
-	int MEASURE_FUNCTION_CS = 11;
+	int MEASURE_FUNCTION_CS = 13;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1201,7 +1392,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getServiceCS()
 	 * @generated
 	 */
-	int SERVICE_CS = 12;
+	int SERVICE_CS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1283,7 +1474,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getQoSDimensionCS()
 	 * @generated
 	 */
-	int QO_SDIMENSION_CS = 13;
+	int QO_SDIMENSION_CS = 15;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1374,7 +1565,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getJavaImplementationProviderCS()
 	 * @generated
 	 */
-	int JAVA_IMPLEMENTATION_PROVIDER_CS = 14;
+	int JAVA_IMPLEMENTATION_PROVIDER_CS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1447,7 +1638,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getNameProviderCS()
 	 * @generated
 	 */
-	int NAME_PROVIDER_CS = 15;
+	int NAME_PROVIDER_CS = 17;
 
 	/**
 	 * The number of structural features of the '<em>Name Provider CS</em>' class.
@@ -1466,7 +1657,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getStorageProviderCS()
 	 * @generated
 	 */
-	int STORAGE_PROVIDER_CS = 16;
+	int STORAGE_PROVIDER_CS = 18;
 
 	/**
 	 * The number of structural features of the '<em>Storage Provider CS</em>' class.
@@ -1485,7 +1676,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getOCLContextCS()
 	 * @generated
 	 */
-	int OCL_CONTEXT_CS = 17;
+	int OCL_CONTEXT_CS = 19;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1585,7 +1776,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getLocationConstraintTypes()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_TYPES = 18;
+	int LOCATION_CONSTRAINT_TYPES = 20;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.Goal <em>Goal</em>}' enum.
@@ -1595,7 +1786,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getGoal()
 	 * @generated
 	 */
-	int GOAL = 19;
+	int GOAL = 21;
 
 
 	/**
@@ -1607,6 +1798,17 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSpecificationCS();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.muml.psm.allocation.language.cs.SpecificationCS#getRelations <em>Relations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Relations</em>'.
+	 * @see org.muml.psm.allocation.language.cs.SpecificationCS#getRelations()
+	 * @see #getSpecificationCS()
+	 * @generated
+	 */
+	EReference getSpecificationCS_Relations();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link org.muml.psm.allocation.language.cs.SpecificationCS#getServices <em>Services</em>}'.
@@ -1727,6 +1929,59 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getEvaluatableElementCS_Expression();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.RelationCS <em>Relation CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Relation CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.RelationCS
+	 * @generated
+	 */
+	EClass getRelationCS();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.RelationCS#getTupleDescriptor <em>Tuple Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.cs.RelationCS#getTupleDescriptor()
+	 * @see #getRelationCS()
+	 * @generated
+	 */
+	EReference getRelationCS_TupleDescriptor();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.RelationCS#getLowerBound <em>Lower Bound</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Lower Bound</em>'.
+	 * @see org.muml.psm.allocation.language.cs.RelationCS#getLowerBound()
+	 * @see #getRelationCS()
+	 * @generated
+	 */
+	EReference getRelationCS_LowerBound();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.RelationCS#getUpperBound <em>Upper Bound</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Upper Bound</em>'.
+	 * @see org.muml.psm.allocation.language.cs.RelationCS#getUpperBound()
+	 * @see #getRelationCS()
+	 * @generated
+	 */
+	EReference getRelationCS_UpperBound();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.BoundCS <em>Bound CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Bound CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.BoundCS
+	 * @generated
+	 */
+	EClass getBoundCS();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.ConstraintCS <em>Constraint CS</em>}'.
@@ -2073,6 +2328,14 @@ public interface CsPackage extends EPackage {
 		EClass SPECIFICATION_CS = eINSTANCE.getSpecificationCS();
 
 		/**
+		 * The meta object literal for the '<em><b>Relations</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION_CS__RELATIONS = eINSTANCE.getSpecificationCS_Relations();
+
+		/**
 		 * The meta object literal for the '<em><b>Services</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2161,6 +2424,50 @@ public interface CsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EVALUATABLE_ELEMENT_CS__EXPRESSION = eINSTANCE.getEvaluatableElementCS_Expression();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.RelationCSImpl <em>Relation CS</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.cs.impl.RelationCSImpl
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getRelationCS()
+		 * @generated
+		 */
+		EClass RELATION_CS = eINSTANCE.getRelationCS();
+
+		/**
+		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RELATION_CS__TUPLE_DESCRIPTOR = eINSTANCE.getRelationCS_TupleDescriptor();
+
+		/**
+		 * The meta object literal for the '<em><b>Lower Bound</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RELATION_CS__LOWER_BOUND = eINSTANCE.getRelationCS_LowerBound();
+
+		/**
+		 * The meta object literal for the '<em><b>Upper Bound</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RELATION_CS__UPPER_BOUND = eINSTANCE.getRelationCS_UpperBound();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.BoundCSImpl <em>Bound CS</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.cs.impl.BoundCSImpl
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getBoundCS()
+		 * @generated
+		 */
+		EClass BOUND_CS = eINSTANCE.getBoundCS();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.ConstraintCSImpl <em>Constraint CS</em>}' class.

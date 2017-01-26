@@ -21,6 +21,7 @@ import org.muml.core.ExtendableElement;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.muml.psm.allocation.language.cs.SpecificationCS#getRelations <em>Relations</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.SpecificationCS#getServices <em>Services</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.SpecificationCS#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link org.muml.psm.allocation.language.cs.SpecificationCS#getMeasure <em>Measure</em>}</li>
@@ -37,6 +38,21 @@ import org.muml.core.ExtendableElement;
  * @generated
  */
 public interface SpecificationCS extends CompleteOCLDocumentCS, ExtendableElement {
+	/**
+	 * Returns the value of the '<em><b>Relations</b></em>' containment reference list.
+	 * The list contents are of type {@link org.muml.psm.allocation.language.cs.RelationCS}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Contains a set of relations.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Relations</em>' containment reference list.
+	 * @see org.muml.psm.allocation.language.cs.CsPackage#getSpecificationCS_Relations()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<RelationCS> getRelations();
+
 	/**
 	 * Returns the value of the '<em><b>Services</b></em>' containment reference list.
 	 * The list contents are of type {@link org.muml.psm.allocation.language.cs.ServiceCS}.

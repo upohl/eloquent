@@ -31,6 +31,24 @@ public interface CsFactory extends EFactory {
 	SpecificationCS createSpecificationCS();
 
 	/**
+	 * Returns a new object of class '<em>Relation CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Relation CS</em>'.
+	 * @generated
+	 */
+	RelationCS createRelationCS();
+
+	/**
+	 * Returns a new object of class '<em>Bound CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bound CS</em>'.
+	 * @generated
+	 */
+	BoundCS createBoundCS();
+
+	/**
 	 * Returns a new object of class '<em>Location Constraint CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
