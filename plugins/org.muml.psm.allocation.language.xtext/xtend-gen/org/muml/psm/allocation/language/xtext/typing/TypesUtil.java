@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.ocl.pivot.CollectionType;
+import org.eclipse.ocl.pivot.PrimitiveType;
 import org.eclipse.ocl.pivot.TupleType;
 import org.eclipse.ocl.pivot.Type;
 import org.eclipse.ocl.pivot.ids.IdResolver;
@@ -24,10 +25,12 @@ import org.eclipse.ocl.pivot.internal.utilities.PivotUtilInternal;
 import org.eclipse.ocl.pivot.values.TemplateParameterSubstitutions;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Pair;
+import org.muml.psm.allocation.language.as.Bound;
 import org.muml.psm.allocation.language.as.BoundWeightTupleDescriptor;
 import org.muml.psm.allocation.language.as.EvaluatableElement;
 import org.muml.psm.allocation.language.as.LocationConstraint;
 import org.muml.psm.allocation.language.as.QoSDimension;
+import org.muml.psm.allocation.language.as.Relation;
 import org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint;
 import org.muml.psm.allocation.language.as.ResourceConstraint;
 import org.muml.psm.allocation.language.as.TupleDescriptor;
@@ -122,6 +125,47 @@ public class TypesUtil {
       };
       typedPairs.forEach(_function);
       _xblockexpression = namedParts;
+    }
+    return _xblockexpression;
+  }
+  
+  /**
+   * @NonNull
+   */
+  public static TupleType createRelationTupleType(final EnvironmentFactoryInternal envFactory, final Relation relation) {
+    TupleType _xblockexpression = null;
+    {
+      TupleDescriptor _tupleDescriptor = relation.getTupleDescriptor();
+      EList<TypedPair> _typedPairs = _tupleDescriptor.getTypedPairs();
+      final Map<String, Type> namedParts = TypesUtil.convertToNamedParts(_typedPairs);
+      _xblockexpression = TypesUtil.createTupleType(envFactory, namedParts);
+    }
+    return _xblockexpression;
+  }
+  
+  /**
+   * @NonNull
+   */
+  public static Type createRelationType(final Relation relation) {
+    CollectionType _xblockexpression = null;
+    {
+      final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(relation);
+      TupleType _createRelationTupleType = TypesUtil.createRelationTupleType(envFactory, relation);
+      _xblockexpression = TypesUtil.createSetType(envFactory, _createRelationTupleType);
+    }
+    return _xblockexpression;
+  }
+  
+  /**
+   * @NonNull
+   */
+  public static Type createBoundType(final Bound bound) {
+    PrimitiveType _xblockexpression = null;
+    {
+      final EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory(bound);
+      PivotMetamodelManager _metamodelManager = envFactory.getMetamodelManager();
+      StandardLibraryInternal _standardLibrary = _metamodelManager.getStandardLibrary();
+      _xblockexpression = _standardLibrary.getIntegerType();
     }
     return _xblockexpression;
   }
@@ -259,6 +303,14 @@ public class TypesUtil {
     throw new IllegalArgumentException(("unexpected element: " + element));
   }
   
+  protected static Type _createType(final Relation relation) {
+    return TypesUtil.createRelationType(relation);
+  }
+  
+  protected static Type _createType(final Bound bound) {
+    return TypesUtil.createBoundType(bound);
+  }
+  
   protected static Type _createType(final LocationConstraint constraint) {
     return TypesUtil.createLocationConstraintType(constraint);
   }
@@ -282,8 +334,12 @@ public class TypesUtil {
       return _createType((RequiredHardwareResourceInstanceConstraint)constraint);
     } else if (constraint instanceof ResourceConstraint) {
       return _createType((ResourceConstraint)constraint);
+    } else if (constraint instanceof Bound) {
+      return _createType((Bound)constraint);
     } else if (constraint instanceof QoSDimension) {
       return _createType((QoSDimension)constraint);
+    } else if (constraint instanceof Relation) {
+      return _createType((Relation)constraint);
     } else if (constraint != null) {
       return _createType(constraint);
     } else {

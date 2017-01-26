@@ -17,6 +17,7 @@ import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.muml.psm.allocation.language.cs.ConstraintCS;
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
+import org.muml.psm.allocation.language.cs.RelationCS;
 import org.muml.psm.allocation.language.xtext.visitor.LanguageSpecificationCSPostOrderVisitor;
 
 @SuppressWarnings("all")
@@ -64,6 +65,16 @@ public class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPost
   @Override
   public Continuation<?> visitEvaluatableElementCS(final EvaluatableElementCS csElement) {
     return new SpecificationCSPostOrderVisitor.PreContextCSCompletion(this.context, csElement);
+  }
+  
+  @Override
+  public Continuation<?> visitRelationCS(final RelationCS csElement) {
+    Continuation<?> _xblockexpression = null;
+    {
+      super.visitRelationCS(csElement);
+      _xblockexpression = this.visitEvaluatableElementCS(csElement);
+    }
+    return _xblockexpression;
   }
   
   @Override
