@@ -6,11 +6,7 @@ import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.impl.ResourceImpl;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.internal.core.JavaProject;
@@ -21,7 +17,6 @@ import org.eclipse.ocl.xtext.base.cs2as.CS2AS;
 import org.eclipse.ocl.xtext.base.scoping.AbstractJavaClassScope;
 import org.eclipse.ocl.xtext.completeocl.utilities.CompleteOCLCSResource;
 import org.eclipse.ocl.xtext.oclstdlib.scoping.JavaClassScope;
-import org.eclipse.ocl.xtext.oclstdlibcs.JavaClassCS;
 import org.eclipse.xtext.xbase.lib.Conversions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
@@ -32,8 +27,6 @@ import org.osgi.framework.Bundle;
 
 @SuppressWarnings("all")
 public class SpecificationCSResource extends CompleteOCLCSResource {
-  protected Resource javaClassResource = new ResourceImpl();
-  
   /**
    * @NonNull
    */
@@ -103,22 +96,5 @@ public class SpecificationCSResource extends CompleteOCLCSResource {
       _xblockexpression = null;
     }
     return ((IJavaProject)_xblockexpression);
-  }
-  
-  @Override
-  protected void doLinking() {
-    EList<EObject> _contents = this.javaClassResource.getContents();
-    _contents.clear();
-    for (int i = (this.getContents().size() - 1); (i >= 0); i--) {
-      {
-        EList<EObject> _contents_1 = this.getContents();
-        final EObject object = _contents_1.get(i);
-        if ((object instanceof JavaClassCS)) {
-          EList<EObject> _contents_2 = this.javaClassResource.getContents();
-          _contents_2.add(object);
-        }
-      }
-    }
-    super.doLinking();
   }
 }
