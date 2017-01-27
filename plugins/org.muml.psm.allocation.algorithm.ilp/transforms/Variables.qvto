@@ -16,6 +16,9 @@ helper Sequence(OclAny)::createHelperVariablesAndConstraints(inout ilp : Integer
 	if (not variable.oclIsUndefined()) then {
 		return variable;
 	} endif;
+	-- indicates a specification error
+	assert fatal (self->size() > 2) with
+		log("sequence elements were never related to each other");
 	var left : Sequence(OclAny) := self->subSequence(1, self->size() - 2);
 	var right : Sequence(OclAny) := self->subSequence(3, self->size());
 	var leftVariable : Variable := left->createHelperVariablesAndConstraints(ilp);
