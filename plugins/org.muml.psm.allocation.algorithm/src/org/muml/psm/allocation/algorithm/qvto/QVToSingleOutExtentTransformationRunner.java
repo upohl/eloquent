@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.m2m.qvt.oml.ModelExtent;
 
 /**
@@ -20,24 +21,26 @@ public class QVToSingleOutExtentTransformationRunner extends QVToTransformationR
 	
 	public QVToSingleOutExtentTransformationRunner(String transformationURI,
 			Map<String, Object> configurationPropertyMap,
-			String...inputObjectURIs) {
+			EObject... inObjects) {
 		super(transformationURI, configurationPropertyMap,
-				createInOrOutObjectURIs(inputObjectURIs));
+				createModelExtentProviders(inObjects));
 	}
 	
-	private static String[] createInOrOutObjectURIs(String[] inputObjectURIs) {
-		String[] inOrOutputObjectURIs = new String[inputObjectURIs.length + 1];
-		for (int i = 0; i < inputObjectURIs.length; i++) {
-			inOrOutputObjectURIs[i] = inputObjectURIs[i];
+	private static IModelExtentProvider[] createModelExtentProviders(EObject[] inObjects) {
+		IModelExtentProvider[] modelExtentProvider = new IModelExtentProvider[inObjects.length + 1];
+		for (int i = 0; i < inObjects.length; i++) {
+			modelExtentProvider[i] = EObjectBasedModelExtentProvider.createIn(
+					inObjects[i]);
 		}
 		// set the out extent
-		inOrOutputObjectURIs[inputObjectURIs.length] = null;
-		return inOrOutputObjectURIs;
+		modelExtentProvider[inObjects.length] =
+				EObjectBasedModelExtentProvider.createOut(null); 
+		return modelExtentProvider;
 	}
 	
 	public QVToSingleOutExtentTransformationRunner(String transformationURI,
-			String... inputObjectURIs) {
-		this(transformationURI, Collections.<String, Object>emptyMap(), inputObjectURIs);
+			EObject... inObjects) {
+		this(transformationURI, Collections.<String, Object>emptyMap(), inObjects);
 	}
 	
 	public ModelExtent getOutExtent() {

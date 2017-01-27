@@ -7,13 +7,16 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
 import org.eclipse.m2m.qvt.oml.ExecutionDiagnostic;
+import org.muml.pim.instance.ComponentInstanceConfiguration;
+import org.muml.pm.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 import org.muml.psm.allocation.SystemAllocation;
 import org.muml.psm.allocation.algorithm.main.IAllocationComputationStrategy;
 import org.muml.psm.allocation.algorithm.main.IComputationResult;
+import org.muml.psm.allocation.language.oclcontext.OCLContext;
+import org.muml.psm.allocation.language.oclcontext.OclcontextFactory;
 
 public class QVToBasedAllocationComputationStrategy<T> implements
 		IAllocationComputationStrategy<T> {
@@ -24,13 +27,18 @@ public class QVToBasedAllocationComputationStrategy<T> implements
 			"Expected type SystemAllocation but got: %s";
 	private static final String unexpectedResultSize =
 			"Expected exactly one transformation result";
+	private static final String unexpectedArgumentType =
+			"Expected instance of %s (got: %s)";
 	
 	protected QVToBasedAllocationComputationStrategy(String transformationURI) {
 		this.transformationURI = transformationURI;
 	}
-	
-	private static String eObjectToURI(EObject eObject) {
-		return EcoreUtil.getURI(eObject).toString();
+		
+	private static void checkArgumentType(Class<?> clazz, EObject object) {
+		if (!clazz.isInstance(object)) {
+			throw new IllegalArgumentException(
+					String.format(unexpectedArgumentType, clazz,  object));
+		}
 	}
 
 	@Override
@@ -38,15 +46,21 @@ public class QVToBasedAllocationComputationStrategy<T> implements
 	public IComputationResult computeAllocation(
 			@NonNull EObject allocationSpecification, @NonNull EObject cic,
 			@NonNull EObject hpic, boolean storeILPModel, @Nullable IProgressMonitor progressMonitor) {
+		checkArgumentType(ComponentInstanceConfiguration.class, cic);
+		checkArgumentType(HWPlatformInstanceConfiguration.class, hpic);
+		OCLContext oclContext = OclcontextFactory.eINSTANCE.createOCLContext();
+		oclContext.setComponentInstanceConfiguration(
+				(ComponentInstanceConfiguration) cic);
+		oclContext.setHardwarePlatformInstanceConfiguration(
+				(HWPlatformInstanceConfiguration) hpic);
 		Map<String, Object> config = getConfigurationPropertyMap();
 		config.put("STORE_ILP_MODEL", storeILPModel);
 		QVToSingleOutExtentTransformationRunner runner =
 				new QVToSingleOutExtentTransformationRunner(
 						transformationURI,
 						config,
-						eObjectToURI(allocationSpecification),
-						eObjectToURI(cic),
-						eObjectToURI(hpic));
+						allocationSpecification,
+						oclContext);
 		ExecutionDiagnostic executionDiagnostic =
 				runner.runTransformation(progressMonitor);
 		BasicDiagnostic rootDiagnostic = createDiagnostic(executionDiagnostic);
