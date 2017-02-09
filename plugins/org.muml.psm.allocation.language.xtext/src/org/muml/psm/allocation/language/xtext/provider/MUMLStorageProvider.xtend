@@ -1,7 +1,9 @@
 package org.muml.psm.allocation.language.xtext.provider
 
 import org.eclipse.emf.ecore.impl.EObjectImpl
+import org.muml.pim.instance.AssemblyConnectorInstance
 import org.muml.pim.instance.ComponentInstance
+import org.muml.pm.hardware.hwplatforminstance.NetworkConnectorInstance
 import org.muml.pm.hardware.hwresourceinstance.StructuredResourceInstance
 import org.muml.psm.allocation.Allocation
 import org.muml.psm.allocation.AllocationFactory
@@ -47,6 +49,13 @@ class MUMLStorageProvider extends EObjectImpl implements StorageProvider {
 		allocation.componentInstance = source
 		allocation.resourceInstance = target
 		systemAllocation.allocations.add(allocation)
+		systemAllocation
+	}
+	
+	private MUMLNameProvider nameProvider = new MUMLNameProvider
+	
+	def dispatch SystemAllocation storePair(AssemblyConnectorInstance aci, NetworkConnectorInstance nci) {
+		println(nameProvider.getName(aci) + " -> " + nameProvider.getName(nci))
 		systemAllocation
 	}
 	

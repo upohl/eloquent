@@ -21,14 +21,18 @@ class SpecificationCSContainmentVisitor extends LanguageSpecificationCSContainme
 		val Specification specification = PivotUtil.getPivot(typeof(Specification), csElement)
 		val Collection<ClassLoader> classLoaders = this.context.getEnvironmentFactory()
 			.getMetamodelManager().getImplementationManager().getClassLoaders()
-		specification.nameProvider = new LazyNameProvider(
-			csElement.nameProviderImplementationClass.implementation.name,
-			classLoaders
-		)
-		specification.storageProvider = new LazyStorageProvider(
-			csElement.storageProviderImplementationClass.implementation.name,
-			classLoaders
-		)
+		if (csElement.nameProviderImplementationClass != null) {
+			specification.nameProvider = new LazyNameProvider(
+				csElement.nameProviderImplementationClass.implementation.name,
+				classLoaders
+			)
+		}
+		if (csElement.storageProviderImplementationClass != null) {
+			specification.storageProvider = new LazyStorageProvider(
+				csElement.storageProviderImplementationClass.implementation.name,
+				classLoaders
+			)
+		}
 		continuation
 	}
 	

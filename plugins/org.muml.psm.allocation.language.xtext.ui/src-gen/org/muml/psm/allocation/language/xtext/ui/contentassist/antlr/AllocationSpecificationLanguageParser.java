@@ -37,7 +37,7 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getSpecificationAccess().getAlternatives_6(), "rule__Specification__Alternatives_6");
+					put(grammarAccess.getSpecificationAccess().getAlternatives_4(), "rule__Specification__Alternatives_4");
 					put(grammarAccess.getConstraintAccess().getAlternatives_1(), "rule__Constraint__Alternatives_1");
 					put(grammarAccess.getResourceConstraintAccess().getAlternatives_0(), "rule__ResourceConstraint__Alternatives_0");
 					put(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getAlternatives_0(), "rule__RequiredHardwareResourceInstanceConstraint__Alternatives_0");
@@ -88,7 +88,7 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getLocationConstraintTypeAccess().getAlternatives(), "rule__LocationConstraintType__Alternatives");
 					put(grammarAccess.getGoalAccess().getAlternatives(), "rule__Goal__Alternatives");
 					put(grammarAccess.getSpecificationAccess().getGroup(), "rule__Specification__Group__0");
-					put(grammarAccess.getSpecificationAccess().getGroup_7(), "rule__Specification__Group_7__0");
+					put(grammarAccess.getSpecificationAccess().getGroup_5(), "rule__Specification__Group_5__0");
 					put(grammarAccess.getNameProviderImplementationClassAccess().getGroup(), "rule__NameProviderImplementationClass__Group__0");
 					put(grammarAccess.getStorageProviderImplementationClassAccess().getGroup(), "rule__StorageProviderImplementationClass__Group__0");
 					put(grammarAccess.getOCLContextAccess().getGroup(), "rule__OCLContext__Group__0");
@@ -235,16 +235,17 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getWildcardTypeRefCSAccess().getGroup(), "rule__WildcardTypeRefCS__Group__0");
 					put(grammarAccess.getWildcardTypeRefCSAccess().getGroup_2(), "rule__WildcardTypeRefCS__Group_2__0");
 					put(grammarAccess.getSpecificationAccess().getNameAssignment_1(), "rule__Specification__NameAssignment_1");
-					put(grammarAccess.getSpecificationAccess().getNameProviderImplementationClassAssignment_3(), "rule__Specification__NameProviderImplementationClassAssignment_3");
-					put(grammarAccess.getSpecificationAccess().getStorageProviderImplementationClassAssignment_4(), "rule__Specification__StorageProviderImplementationClassAssignment_4");
-					put(grammarAccess.getSpecificationAccess().getOclContextAssignment_5(), "rule__Specification__OclContextAssignment_5");
-					put(grammarAccess.getSpecificationAccess().getOwnedImportsAssignment_6_0(), "rule__Specification__OwnedImportsAssignment_6_0");
-					put(grammarAccess.getSpecificationAccess().getOwnedContextsAssignment_6_1(), "rule__Specification__OwnedContextsAssignment_6_1");
-					put(grammarAccess.getSpecificationAccess().getRelationsAssignment_6_2(), "rule__Specification__RelationsAssignment_6_2");
-					put(grammarAccess.getSpecificationAccess().getServicesAssignment_6_3(), "rule__Specification__ServicesAssignment_6_3");
-					put(grammarAccess.getSpecificationAccess().getConstraintsAssignment_6_4(), "rule__Specification__ConstraintsAssignment_6_4");
-					put(grammarAccess.getSpecificationAccess().getGoalAssignment_7_0(), "rule__Specification__GoalAssignment_7_0");
-					put(grammarAccess.getSpecificationAccess().getMeasureAssignment_7_1(), "rule__Specification__MeasureAssignment_7_1");
+					put(grammarAccess.getSpecificationAccess().getOwnedImportsAssignment_3_0(), "rule__Specification__OwnedImportsAssignment_3_0");
+					put(grammarAccess.getSpecificationAccess().getNameProviderImplementationClassAssignment_3_1(), "rule__Specification__NameProviderImplementationClassAssignment_3_1");
+					put(grammarAccess.getSpecificationAccess().getStorageProviderImplementationClassAssignment_3_2(), "rule__Specification__StorageProviderImplementationClassAssignment_3_2");
+					put(grammarAccess.getSpecificationAccess().getOclContextAssignment_3_3(), "rule__Specification__OclContextAssignment_3_3");
+					put(grammarAccess.getSpecificationAccess().getOwnedImportsAssignment_4_0(), "rule__Specification__OwnedImportsAssignment_4_0");
+					put(grammarAccess.getSpecificationAccess().getOwnedContextsAssignment_4_1(), "rule__Specification__OwnedContextsAssignment_4_1");
+					put(grammarAccess.getSpecificationAccess().getRelationsAssignment_4_2(), "rule__Specification__RelationsAssignment_4_2");
+					put(grammarAccess.getSpecificationAccess().getServicesAssignment_4_3(), "rule__Specification__ServicesAssignment_4_3");
+					put(grammarAccess.getSpecificationAccess().getConstraintsAssignment_4_4(), "rule__Specification__ConstraintsAssignment_4_4");
+					put(grammarAccess.getSpecificationAccess().getGoalAssignment_5_0(), "rule__Specification__GoalAssignment_5_0");
+					put(grammarAccess.getSpecificationAccess().getMeasureAssignment_5_1(), "rule__Specification__MeasureAssignment_5_1");
 					put(grammarAccess.getNameProviderImplementationClassAccess().getImplementationAssignment_1(), "rule__NameProviderImplementationClass__ImplementationAssignment_1");
 					put(grammarAccess.getStorageProviderImplementationClassAccess().getImplementationAssignment_1(), "rule__StorageProviderImplementationClass__ImplementationAssignment_1");
 					put(grammarAccess.getOCLContextAccess().getOwnedTypeAssignment_1(), "rule__OCLContext__OwnedTypeAssignment_1");
@@ -458,6 +459,7 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getTypedTypeRefCSAccess().getOwnedPathNameAssignment_0(), "rule__TypedTypeRefCS__OwnedPathNameAssignment_0");
 					put(grammarAccess.getTypedTypeRefCSAccess().getOwnedBindingAssignment_1_1(), "rule__TypedTypeRefCS__OwnedBindingAssignment_1_1");
 					put(grammarAccess.getWildcardTypeRefCSAccess().getOwnedExtendsAssignment_2_1(), "rule__WildcardTypeRefCS__OwnedExtendsAssignment_2_1");
+					put(grammarAccess.getSpecificationAccess().getUnorderedGroup_3(), "rule__Specification__UnorderedGroup_3");
 				}
 			};
 		}

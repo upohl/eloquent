@@ -27,43 +27,48 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cNameProviderImplementationClassAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cNameProviderImplementationClassNameProviderImplementationClassParserRuleCall_3_0 = (RuleCall)cNameProviderImplementationClassAssignment_3.eContents().get(0);
-		private final Assignment cStorageProviderImplementationClassAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cStorageProviderImplementationClassStorageProviderImplementationClassParserRuleCall_4_0 = (RuleCall)cStorageProviderImplementationClassAssignment_4.eContents().get(0);
-		private final Assignment cOclContextAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cOclContextOCLContextParserRuleCall_5_0 = (RuleCall)cOclContextAssignment_5.eContents().get(0);
-		private final Alternatives cAlternatives_6 = (Alternatives)cGroup.eContents().get(6);
-		private final Assignment cOwnedImportsAssignment_6_0 = (Assignment)cAlternatives_6.eContents().get(0);
-		private final RuleCall cOwnedImportsImportCSParserRuleCall_6_0_0 = (RuleCall)cOwnedImportsAssignment_6_0.eContents().get(0);
-		private final Assignment cOwnedContextsAssignment_6_1 = (Assignment)cAlternatives_6.eContents().get(1);
-		private final RuleCall cOwnedContextsClassifierContextDeclCSParserRuleCall_6_1_0 = (RuleCall)cOwnedContextsAssignment_6_1.eContents().get(0);
-		private final Assignment cRelationsAssignment_6_2 = (Assignment)cAlternatives_6.eContents().get(2);
-		private final RuleCall cRelationsRelationParserRuleCall_6_2_0 = (RuleCall)cRelationsAssignment_6_2.eContents().get(0);
-		private final Assignment cServicesAssignment_6_3 = (Assignment)cAlternatives_6.eContents().get(3);
-		private final RuleCall cServicesServiceParserRuleCall_6_3_0 = (RuleCall)cServicesAssignment_6_3.eContents().get(0);
-		private final Assignment cConstraintsAssignment_6_4 = (Assignment)cAlternatives_6.eContents().get(4);
-		private final RuleCall cConstraintsConstraintParserRuleCall_6_4_0 = (RuleCall)cConstraintsAssignment_6_4.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Assignment cGoalAssignment_7_0 = (Assignment)cGroup_7.eContents().get(0);
-		private final RuleCall cGoalGoalEnumRuleCall_7_0_0 = (RuleCall)cGoalAssignment_7_0.eContents().get(0);
-		private final Assignment cMeasureAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cMeasureMeasureFunctionParserRuleCall_7_1_0 = (RuleCall)cMeasureAssignment_7_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final UnorderedGroup cUnorderedGroup_3 = (UnorderedGroup)cGroup.eContents().get(3);
+		private final Assignment cOwnedImportsAssignment_3_0 = (Assignment)cUnorderedGroup_3.eContents().get(0);
+		private final RuleCall cOwnedImportsImportCSParserRuleCall_3_0_0 = (RuleCall)cOwnedImportsAssignment_3_0.eContents().get(0);
+		private final Assignment cNameProviderImplementationClassAssignment_3_1 = (Assignment)cUnorderedGroup_3.eContents().get(1);
+		private final RuleCall cNameProviderImplementationClassNameProviderImplementationClassParserRuleCall_3_1_0 = (RuleCall)cNameProviderImplementationClassAssignment_3_1.eContents().get(0);
+		private final Assignment cStorageProviderImplementationClassAssignment_3_2 = (Assignment)cUnorderedGroup_3.eContents().get(2);
+		private final RuleCall cStorageProviderImplementationClassStorageProviderImplementationClassParserRuleCall_3_2_0 = (RuleCall)cStorageProviderImplementationClassAssignment_3_2.eContents().get(0);
+		private final Assignment cOclContextAssignment_3_3 = (Assignment)cUnorderedGroup_3.eContents().get(3);
+		private final RuleCall cOclContextOCLContextParserRuleCall_3_3_0 = (RuleCall)cOclContextAssignment_3_3.eContents().get(0);
+		private final Alternatives cAlternatives_4 = (Alternatives)cGroup.eContents().get(4);
+		private final Assignment cOwnedImportsAssignment_4_0 = (Assignment)cAlternatives_4.eContents().get(0);
+		private final RuleCall cOwnedImportsImportCSParserRuleCall_4_0_0 = (RuleCall)cOwnedImportsAssignment_4_0.eContents().get(0);
+		private final Assignment cOwnedContextsAssignment_4_1 = (Assignment)cAlternatives_4.eContents().get(1);
+		private final RuleCall cOwnedContextsClassifierContextDeclCSParserRuleCall_4_1_0 = (RuleCall)cOwnedContextsAssignment_4_1.eContents().get(0);
+		private final Assignment cRelationsAssignment_4_2 = (Assignment)cAlternatives_4.eContents().get(2);
+		private final RuleCall cRelationsRelationParserRuleCall_4_2_0 = (RuleCall)cRelationsAssignment_4_2.eContents().get(0);
+		private final Assignment cServicesAssignment_4_3 = (Assignment)cAlternatives_4.eContents().get(3);
+		private final RuleCall cServicesServiceParserRuleCall_4_3_0 = (RuleCall)cServicesAssignment_4_3.eContents().get(0);
+		private final Assignment cConstraintsAssignment_4_4 = (Assignment)cAlternatives_4.eContents().get(4);
+		private final RuleCall cConstraintsConstraintParserRuleCall_4_4_0 = (RuleCall)cConstraintsAssignment_4_4.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Assignment cGoalAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
+		private final RuleCall cGoalGoalEnumRuleCall_5_0_0 = (RuleCall)cGoalAssignment_5_0.eContents().get(0);
+		private final Assignment cMeasureAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cMeasureMeasureFunctionParserRuleCall_5_1_0 = (RuleCall)cMeasureAssignment_5_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Specification cs::SpecificationCS:
-		//	{cs::SpecificationCS} name=ID '{'
-		//	nameProviderImplementationClass=NameProviderImplementationClass
-		//	storageProviderImplementationClass=StorageProviderImplementationClass
-		//	oclContext=OCLContext (ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS
+		//	{cs::SpecificationCS} name=ID '{' (ownedImports+=ImportCS*
+		//	& nameProviderImplementationClass=NameProviderImplementationClass
+		//	& storageProviderImplementationClass=StorageProviderImplementationClass
+		//	& oclContext=OCLContext) (ownedImports+=ImportCS
+		//	| ownedContexts+=ClassifierContextDeclCS
 		//	| relations+=Relation | services+=Service | constraints+=Constraint)* (goal=Goal measure=MeasureFunction)?
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//{cs::SpecificationCS} name=ID '{' nameProviderImplementationClass=NameProviderImplementationClass
-		//storageProviderImplementationClass=StorageProviderImplementationClass oclContext=OCLContext (ownedImports+=ImportCS |
-		//ownedContexts+=ClassifierContextDeclCS | relations+=Relation | services+=Service | constraints+=Constraint)* (goal=Goal
-		//measure=MeasureFunction)? '}'
+		//{cs::SpecificationCS} name=ID '{' (ownedImports+=ImportCS* &
+		//nameProviderImplementationClass=NameProviderImplementationClass &
+		//storageProviderImplementationClass=StorageProviderImplementationClass & oclContext=OCLContext) (ownedImports+=ImportCS
+		//| ownedContexts+=ClassifierContextDeclCS | relations+=Relation | services+=Service | constraints+=Constraint)*
+		//(goal=Goal measure=MeasureFunction)? '}'
 		public Group getGroup() { return cGroup; }
 
 		//{cs::SpecificationCS}
@@ -78,75 +83,85 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
+		//(ownedImports+=ImportCS* & nameProviderImplementationClass=NameProviderImplementationClass &
+		//storageProviderImplementationClass=StorageProviderImplementationClass & oclContext=OCLContext)
+		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
+
+		//ownedImports+=ImportCS*
+		public Assignment getOwnedImportsAssignment_3_0() { return cOwnedImportsAssignment_3_0; }
+
+		//ImportCS
+		public RuleCall getOwnedImportsImportCSParserRuleCall_3_0_0() { return cOwnedImportsImportCSParserRuleCall_3_0_0; }
+
 		//nameProviderImplementationClass=NameProviderImplementationClass
-		public Assignment getNameProviderImplementationClassAssignment_3() { return cNameProviderImplementationClassAssignment_3; }
+		public Assignment getNameProviderImplementationClassAssignment_3_1() { return cNameProviderImplementationClassAssignment_3_1; }
 
 		//NameProviderImplementationClass
-		public RuleCall getNameProviderImplementationClassNameProviderImplementationClassParserRuleCall_3_0() { return cNameProviderImplementationClassNameProviderImplementationClassParserRuleCall_3_0; }
+		public RuleCall getNameProviderImplementationClassNameProviderImplementationClassParserRuleCall_3_1_0() { return cNameProviderImplementationClassNameProviderImplementationClassParserRuleCall_3_1_0; }
 
 		//storageProviderImplementationClass=StorageProviderImplementationClass
-		public Assignment getStorageProviderImplementationClassAssignment_4() { return cStorageProviderImplementationClassAssignment_4; }
+		public Assignment getStorageProviderImplementationClassAssignment_3_2() { return cStorageProviderImplementationClassAssignment_3_2; }
 
 		//StorageProviderImplementationClass
-		public RuleCall getStorageProviderImplementationClassStorageProviderImplementationClassParserRuleCall_4_0() { return cStorageProviderImplementationClassStorageProviderImplementationClassParserRuleCall_4_0; }
+		public RuleCall getStorageProviderImplementationClassStorageProviderImplementationClassParserRuleCall_3_2_0() { return cStorageProviderImplementationClassStorageProviderImplementationClassParserRuleCall_3_2_0; }
 
 		//oclContext=OCLContext
-		public Assignment getOclContextAssignment_5() { return cOclContextAssignment_5; }
+		public Assignment getOclContextAssignment_3_3() { return cOclContextAssignment_3_3; }
 
 		//OCLContext
-		public RuleCall getOclContextOCLContextParserRuleCall_5_0() { return cOclContextOCLContextParserRuleCall_5_0; }
+		public RuleCall getOclContextOCLContextParserRuleCall_3_3_0() { return cOclContextOCLContextParserRuleCall_3_3_0; }
 
 		//(ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS | relations+=Relation | services+=Service |
 		//constraints+=Constraint)*
-		public Alternatives getAlternatives_6() { return cAlternatives_6; }
+		public Alternatives getAlternatives_4() { return cAlternatives_4; }
 
 		//ownedImports+=ImportCS
-		public Assignment getOwnedImportsAssignment_6_0() { return cOwnedImportsAssignment_6_0; }
+		public Assignment getOwnedImportsAssignment_4_0() { return cOwnedImportsAssignment_4_0; }
 
 		//ImportCS
-		public RuleCall getOwnedImportsImportCSParserRuleCall_6_0_0() { return cOwnedImportsImportCSParserRuleCall_6_0_0; }
+		public RuleCall getOwnedImportsImportCSParserRuleCall_4_0_0() { return cOwnedImportsImportCSParserRuleCall_4_0_0; }
 
 		//ownedContexts+=ClassifierContextDeclCS
-		public Assignment getOwnedContextsAssignment_6_1() { return cOwnedContextsAssignment_6_1; }
+		public Assignment getOwnedContextsAssignment_4_1() { return cOwnedContextsAssignment_4_1; }
 
 		//ClassifierContextDeclCS
-		public RuleCall getOwnedContextsClassifierContextDeclCSParserRuleCall_6_1_0() { return cOwnedContextsClassifierContextDeclCSParserRuleCall_6_1_0; }
+		public RuleCall getOwnedContextsClassifierContextDeclCSParserRuleCall_4_1_0() { return cOwnedContextsClassifierContextDeclCSParserRuleCall_4_1_0; }
 
 		//relations+=Relation
-		public Assignment getRelationsAssignment_6_2() { return cRelationsAssignment_6_2; }
+		public Assignment getRelationsAssignment_4_2() { return cRelationsAssignment_4_2; }
 
 		//Relation
-		public RuleCall getRelationsRelationParserRuleCall_6_2_0() { return cRelationsRelationParserRuleCall_6_2_0; }
+		public RuleCall getRelationsRelationParserRuleCall_4_2_0() { return cRelationsRelationParserRuleCall_4_2_0; }
 
 		//services+=Service
-		public Assignment getServicesAssignment_6_3() { return cServicesAssignment_6_3; }
+		public Assignment getServicesAssignment_4_3() { return cServicesAssignment_4_3; }
 
 		//Service
-		public RuleCall getServicesServiceParserRuleCall_6_3_0() { return cServicesServiceParserRuleCall_6_3_0; }
+		public RuleCall getServicesServiceParserRuleCall_4_3_0() { return cServicesServiceParserRuleCall_4_3_0; }
 
 		//constraints+=Constraint
-		public Assignment getConstraintsAssignment_6_4() { return cConstraintsAssignment_6_4; }
+		public Assignment getConstraintsAssignment_4_4() { return cConstraintsAssignment_4_4; }
 
 		//Constraint
-		public RuleCall getConstraintsConstraintParserRuleCall_6_4_0() { return cConstraintsConstraintParserRuleCall_6_4_0; }
+		public RuleCall getConstraintsConstraintParserRuleCall_4_4_0() { return cConstraintsConstraintParserRuleCall_4_4_0; }
 
 		//(goal=Goal measure=MeasureFunction)?
-		public Group getGroup_7() { return cGroup_7; }
+		public Group getGroup_5() { return cGroup_5; }
 
 		//goal=Goal
-		public Assignment getGoalAssignment_7_0() { return cGoalAssignment_7_0; }
+		public Assignment getGoalAssignment_5_0() { return cGoalAssignment_5_0; }
 
 		//Goal
-		public RuleCall getGoalGoalEnumRuleCall_7_0_0() { return cGoalGoalEnumRuleCall_7_0_0; }
+		public RuleCall getGoalGoalEnumRuleCall_5_0_0() { return cGoalGoalEnumRuleCall_5_0_0; }
 
 		//measure=MeasureFunction
-		public Assignment getMeasureAssignment_7_1() { return cMeasureAssignment_7_1; }
+		public Assignment getMeasureAssignment_5_1() { return cMeasureAssignment_5_1; }
 
 		//MeasureFunction
-		public RuleCall getMeasureMeasureFunctionParserRuleCall_7_1_0() { return cMeasureMeasureFunctionParserRuleCall_7_1_0; }
+		public RuleCall getMeasureMeasureFunctionParserRuleCall_5_1_0() { return cMeasureMeasureFunctionParserRuleCall_5_1_0; }
 
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class NameProviderImplementationClassElements extends AbstractParserRuleElementFinder {
@@ -1186,10 +1201,11 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 	
 	//Specification cs::SpecificationCS:
-	//	{cs::SpecificationCS} name=ID '{'
-	//	nameProviderImplementationClass=NameProviderImplementationClass
-	//	storageProviderImplementationClass=StorageProviderImplementationClass
-	//	oclContext=OCLContext (ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS
+	//	{cs::SpecificationCS} name=ID '{' (ownedImports+=ImportCS*
+	//	& nameProviderImplementationClass=NameProviderImplementationClass
+	//	& storageProviderImplementationClass=StorageProviderImplementationClass
+	//	& oclContext=OCLContext) (ownedImports+=ImportCS
+	//	| ownedContexts+=ClassifierContextDeclCS
 	//	| relations+=Relation | services+=Service | constraints+=Constraint)* (goal=Goal measure=MeasureFunction)?
 	//	'}'
 	public SpecificationElements getSpecificationAccess() {

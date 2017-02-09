@@ -676,10 +676,14 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         nameProviderImplementationClass=NameProviderImplementationClass 
-	 *         storageProviderImplementationClass=StorageProviderImplementationClass 
-	 *         oclContext=OCLContext 
-	 *         (ownedImports+=ImportCS | ownedContexts+=ClassifierContextDeclCS | relations+=Relation | services+=Service | constraints+=Constraint)* 
+	 *         (
+	 *             ownedImports+=ImportCS | 
+	 *             nameProviderImplementationClass=NameProviderImplementationClass | 
+	 *             storageProviderImplementationClass=StorageProviderImplementationClass | 
+	 *             oclContext=OCLContext
+	 *         )* 
+	 *         ownedImports+=ImportCS? 
+	 *         ((ownedContexts+=ClassifierContextDeclCS | relations+=Relation | services+=Service | constraints+=Constraint)? ownedImports+=ImportCS?)* 
 	 *         (goal=Goal measure=MeasureFunction)?
 	 *     )
 	 */

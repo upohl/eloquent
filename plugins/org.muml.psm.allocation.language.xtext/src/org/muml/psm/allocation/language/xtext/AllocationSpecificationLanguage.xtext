@@ -10,10 +10,15 @@ import "platform:/resource/org.eclipse.ocl.xtext.oclstdlib/model/OCLstdlibCS.eco
 Specification returns cs::SpecificationCS:
 	{cs::SpecificationCS}
 	name=ID '{'
-		nameProviderImplementationClass=NameProviderImplementationClass
-		storageProviderImplementationClass=StorageProviderImplementationClass
-		oclContext=OCLContext
-		(ownedImports += ImportCS | ownedContexts += ClassifierContextDeclCS
+		// preamble
+		((ownedImports += ImportCS)*
+			& nameProviderImplementationClass=NameProviderImplementationClass
+			& storageProviderImplementationClass=StorageProviderImplementationClass
+			& oclContext=OCLContext
+		)
+		// end of preamble
+		(ownedImports += ImportCS
+			| ownedContexts += ClassifierContextDeclCS
 			| relations+=Relation| services += Service | constraints += Constraint
 		)*
 		(goal=Goal measure=MeasureFunction)? 
