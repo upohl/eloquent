@@ -29,6 +29,12 @@ class SameLocation2ILPTest extends MUMLOCLContextBasedTest {
 			  uriPrefix + "collocationConstraintSimple.allocation_specification",
 			  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.1/@modelElements.0",
 			  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0/@embeddedHPIC"],
+			// change the preamble order (basically the same as above)
+			#[uriPrefix + "locationConstraintSimple.lp",
+			  "platform:/plugin/org.muml.psm.allocation.algorithm.ilp/transforms/Specification2ILP.qvto",
+			  uriPrefix + "collocationConstraintPreambleOrder.allocation_specification",
+			  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.1/@modelElements.0",
+			  GeneralConstraint2ILPTest.modelsDirectory + "simple.fujaba#//@categories.8/@modelElements.0/@hwplatformInstances.0/@embeddedHPIC"],
 			// two sameLocation constraints (only one embedded component instance)
 			#[uriPrefix + "locationConstraintStructured.lp",
 			  "platform:/plugin/org.muml.psm.allocation.algorithm.ilp/transforms/Specification2ILP.qvto",

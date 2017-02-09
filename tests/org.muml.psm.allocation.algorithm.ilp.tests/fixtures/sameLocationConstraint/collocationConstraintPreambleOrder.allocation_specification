@@ -1,0 +1,36 @@
+testSpecificationName {
+	-- change the order of the different language elements
+
+	nameProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLNameProvider';
+	
+	-- imports and includes have to be grouped (within the group the order is arbitrary)
+	import 'http://www.muml.org/psm/allocation/language/oclcontext/1.0.0'
+	include 'platform:/plugin/org.muml.psm.allocation.language.xtext/operations/OCLContext.ocl' -- unused
+	import 'http://www.eclipse.org/emf/2002/Ecore' -- unused
+	
+	storageProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLStorageProvider';
+	oclContext oclcontext::OCLContext;
+
+	constraint collocation foo {
+		descriptors (a : pim::instance::ComponentInstance, b : pim::instance::ComponentInstance);
+		ocl let c1 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c1')
+		in
+		let c2 : pim::instance::ComponentInstance = self.componentInstanceConfiguration.componentInstances->any(name='c2')
+		in
+		Set{Tuple{a : pim::instance::ComponentInstance = c1, b : pim::instance::ComponentInstance = c2}};
+	}
+	
+	-- imports are also possible here
+	import 'http://www.muml.org/psm/allocation/language/oclcontext/1.0.0' -- already imported
+	
+	relation alloc {
+		descriptors (first : pim::instance::ComponentInstance, second : hardware::hwresourceinstance::ResourceInstance);
+		lower 1;
+		upper 1;
+		ocl self.componentInstanceConfiguration.componentInstances->product(
+			self.hardwarePlatformInstanceConfiguration.resources
+		);
+	}
+	
+	include 'platform:/plugin/org.muml.psm.allocation.language.xtext/operations/OCLContext.ocl' -- already included (unused)
+}
