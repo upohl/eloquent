@@ -1950,7 +1950,8 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//CollectionTypeCS:
-	//	name=CollectionTypeIdentifier ('(' ownedType=TypeExpCS ')')?;
+	//	name=CollectionTypeIdentifier ('(' ownedType=TypeExpWithoutMultiplicityCS ownedCollectionMultiplicity=MultiplicityCS?
+	//	')')?;
 	public EssentialOCLGrammarAccess.CollectionTypeCSElements getCollectionTypeCSAccess() {
 		return gaEssentialOCL.getCollectionTypeCSAccess();
 	}
@@ -2027,7 +2028,8 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//ShadowPartCS:
-	//	referredProperty=[pivot::Property|super::UnrestrictedName] '=' ownedInitExpression=(ExpCS | PatternExpCS);
+	//	referredProperty=[pivot::Property|super::UnrestrictedName] '=' ownedInitExpression=(ExpCS | PatternExpCS) |
+	//	ownedInitExpression=StringLiteralExpCS;
 	public EssentialOCLGrammarAccess.ShadowPartCSElements getShadowPartCSAccess() {
 		return gaEssentialOCL.getShadowPartCSAccess();
 	}
@@ -2215,8 +2217,18 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getTypeNameExpCSAccess().getRule();
 	}
 
+	//TypeExpWithoutMultiplicityCS base::TypedRefCS:
+	//	TypeNameExpCS | TypeLiteralCS | CollectionPatternCS
+	public EssentialOCLGrammarAccess.TypeExpWithoutMultiplicityCSElements getTypeExpWithoutMultiplicityCSAccess() {
+		return gaEssentialOCL.getTypeExpWithoutMultiplicityCSAccess();
+	}
+	
+	public ParserRule getTypeExpWithoutMultiplicityCSRule() {
+		return getTypeExpWithoutMultiplicityCSAccess().getRule();
+	}
+
 	//TypeExpCS base::TypedRefCS:
-	//	(TypeNameExpCS | TypeLiteralCS | CollectionPatternCS) ownedMultiplicity=MultiplicityCS?
+	//	TypeExpWithoutMultiplicityCS ownedMultiplicity=MultiplicityCS?
 	public EssentialOCLGrammarAccess.TypeExpCSElements getTypeExpCSAccess() {
 		return gaEssentialOCL.getTypeExpCSAccess();
 	}
@@ -2301,8 +2313,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 	/// * A curly bracket clause is a generalized rule for the literal arguments of collections, maps, tuples and shadows.* /
 	//CurlyBracketedClauseCS:
-	//	{CurlyBracketedClauseCS} '{' ((ownedParts+=ShadowPartCS (',' ownedParts+=ShadowPartCS)*)?
-	//	| value=StringLiteral) '}';
+	//	{CurlyBracketedClauseCS} '{' (ownedParts+=ShadowPartCS (',' ownedParts+=ShadowPartCS)*)? '}';
 	public EssentialOCLGrammarAccess.CurlyBracketedClauseCSElements getCurlyBracketedClauseCSAccess() {
 		return gaEssentialOCL.getCurlyBracketedClauseCSAccess();
 	}

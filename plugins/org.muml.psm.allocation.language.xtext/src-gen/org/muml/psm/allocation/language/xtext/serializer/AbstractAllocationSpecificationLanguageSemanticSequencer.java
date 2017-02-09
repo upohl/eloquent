@@ -178,6 +178,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				if (rule == grammarAccess.getTypedRefCSRule()
 						|| rule == grammarAccess.getPrimitiveTypeCSRule()
 						|| rule == grammarAccess.getTypeLiteralCSRule()
+						|| rule == grammarAccess.getTypeExpWithoutMultiplicityCSRule()
 						|| rule == grammarAccess.getTypeRefCSRule()) {
 					sequence_PrimitiveTypeCS(context, (PrimitiveTypeRefCS) semanticObject); 
 					return; 
@@ -207,6 +208,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				if (rule == grammarAccess.getTypedRefCSRule()
 						|| rule == grammarAccess.getTupleTypeCSRule()
 						|| rule == grammarAccess.getTypeLiteralCSRule()
+						|| rule == grammarAccess.getTypeExpWithoutMultiplicityCSRule()
 						|| rule == grammarAccess.getTypeRefCSRule()) {
 					sequence_TupleTypeCS(context, (TupleTypeCS) semanticObject); 
 					return; 
@@ -334,7 +336,8 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				sequence_CollectionLiteralPartCS(context, (CollectionLiteralPartCS) semanticObject); 
 				return; 
 			case EssentialOCLCSPackage.COLLECTION_PATTERN_CS:
-				if (rule == grammarAccess.getCollectionPatternCSRule()) {
+				if (rule == grammarAccess.getCollectionPatternCSRule()
+						|| rule == grammarAccess.getTypeExpWithoutMultiplicityCSRule()) {
 					sequence_CollectionPatternCS(context, (CollectionPatternCS) semanticObject); 
 					return; 
 				}
@@ -347,6 +350,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				if (rule == grammarAccess.getTypedRefCSRule()
 						|| rule == grammarAccess.getCollectionTypeCSRule()
 						|| rule == grammarAccess.getTypeLiteralCSRule()
+						|| rule == grammarAccess.getTypeExpWithoutMultiplicityCSRule()
 						|| rule == grammarAccess.getTypeRefCSRule()) {
 					sequence_CollectionTypeCS(context, (CollectionTypeCS) semanticObject); 
 					return; 
@@ -400,6 +404,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				if (rule == grammarAccess.getTypedRefCSRule()
 						|| rule == grammarAccess.getMapTypeCSRule()
 						|| rule == grammarAccess.getTypeLiteralCSRule()
+						|| rule == grammarAccess.getTypeExpWithoutMultiplicityCSRule()
 						|| rule == grammarAccess.getTypeRefCSRule()) {
 					sequence_MapTypeCS(context, (MapTypeCS) semanticObject); 
 					return; 
@@ -491,7 +496,8 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 					sequence_TypeExpCS_TypeNameExpCS(context, (TypeNameExpCS) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getTypeNameExpCSRule()) {
+				else if (rule == grammarAccess.getTypeNameExpCSRule()
+						|| rule == grammarAccess.getTypeExpWithoutMultiplicityCSRule()) {
 					sequence_TypeNameExpCS(context, (TypeNameExpCS) semanticObject); 
 					return; 
 				}

@@ -12022,25 +12022,27 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleCollectionTypeCS"
-    // InternalAllocationSpecificationLanguage.g:4239:1: ruleCollectionTypeCS returns [EObject current=null] : ( ( (lv_name_0_0= ruleCollectionTypeIdentifier ) ) (otherlv_1= '(' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) otherlv_3= ')' )? ) ;
+    // InternalAllocationSpecificationLanguage.g:4239:1: ruleCollectionTypeCS returns [EObject current=null] : ( ( (lv_name_0_0= ruleCollectionTypeIdentifier ) ) (otherlv_1= '(' ( (lv_ownedType_2_0= ruleTypeExpWithoutMultiplicityCS ) ) ( (lv_ownedCollectionMultiplicity_3_0= ruleMultiplicityCS ) )? otherlv_4= ')' )? ) ;
     public final EObject ruleCollectionTypeCS() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
-        Token otherlv_3=null;
+        Token otherlv_4=null;
         AntlrDatatypeRuleToken lv_name_0_0 = null;
 
         EObject lv_ownedType_2_0 = null;
+
+        EObject lv_ownedCollectionMultiplicity_3_0 = null;
 
 
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:4242:28: ( ( ( (lv_name_0_0= ruleCollectionTypeIdentifier ) ) (otherlv_1= '(' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) otherlv_3= ')' )? ) )
-            // InternalAllocationSpecificationLanguage.g:4243:1: ( ( (lv_name_0_0= ruleCollectionTypeIdentifier ) ) (otherlv_1= '(' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) otherlv_3= ')' )? )
+            // InternalAllocationSpecificationLanguage.g:4242:28: ( ( ( (lv_name_0_0= ruleCollectionTypeIdentifier ) ) (otherlv_1= '(' ( (lv_ownedType_2_0= ruleTypeExpWithoutMultiplicityCS ) ) ( (lv_ownedCollectionMultiplicity_3_0= ruleMultiplicityCS ) )? otherlv_4= ')' )? ) )
+            // InternalAllocationSpecificationLanguage.g:4243:1: ( ( (lv_name_0_0= ruleCollectionTypeIdentifier ) ) (otherlv_1= '(' ( (lv_ownedType_2_0= ruleTypeExpWithoutMultiplicityCS ) ) ( (lv_ownedCollectionMultiplicity_3_0= ruleMultiplicityCS ) )? otherlv_4= ')' )? )
             {
-            // InternalAllocationSpecificationLanguage.g:4243:1: ( ( (lv_name_0_0= ruleCollectionTypeIdentifier ) ) (otherlv_1= '(' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) otherlv_3= ')' )? )
-            // InternalAllocationSpecificationLanguage.g:4243:2: ( (lv_name_0_0= ruleCollectionTypeIdentifier ) ) (otherlv_1= '(' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) otherlv_3= ')' )?
+            // InternalAllocationSpecificationLanguage.g:4243:1: ( ( (lv_name_0_0= ruleCollectionTypeIdentifier ) ) (otherlv_1= '(' ( (lv_ownedType_2_0= ruleTypeExpWithoutMultiplicityCS ) ) ( (lv_ownedCollectionMultiplicity_3_0= ruleMultiplicityCS ) )? otherlv_4= ')' )? )
+            // InternalAllocationSpecificationLanguage.g:4243:2: ( (lv_name_0_0= ruleCollectionTypeIdentifier ) ) (otherlv_1= '(' ( (lv_ownedType_2_0= ruleTypeExpWithoutMultiplicityCS ) ) ( (lv_ownedCollectionMultiplicity_3_0= ruleMultiplicityCS ) )? otherlv_4= ')' )?
             {
             // InternalAllocationSpecificationLanguage.g:4243:2: ( (lv_name_0_0= ruleCollectionTypeIdentifier ) )
             // InternalAllocationSpecificationLanguage.g:4244:1: (lv_name_0_0= ruleCollectionTypeIdentifier )
@@ -12077,16 +12079,16 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:4261:2: (otherlv_1= '(' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) otherlv_3= ')' )?
-            int alt63=2;
-            int LA63_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:4261:2: (otherlv_1= '(' ( (lv_ownedType_2_0= ruleTypeExpWithoutMultiplicityCS ) ) ( (lv_ownedCollectionMultiplicity_3_0= ruleMultiplicityCS ) )? otherlv_4= ')' )?
+            int alt64=2;
+            int LA64_0 = input.LA(1);
 
-            if ( (LA63_0==29) ) {
-                alt63=1;
+            if ( (LA64_0==29) ) {
+                alt64=1;
             }
-            switch (alt63) {
+            switch (alt64) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:4261:4: otherlv_1= '(' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) otherlv_3= ')'
+                    // InternalAllocationSpecificationLanguage.g:4261:4: otherlv_1= '(' ( (lv_ownedType_2_0= ruleTypeExpWithoutMultiplicityCS ) ) ( (lv_ownedCollectionMultiplicity_3_0= ruleMultiplicityCS ) )? otherlv_4= ')'
                     {
                     otherlv_1=(Token)match(input,29,FollowSets000.FOLLOW_11); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -12094,19 +12096,19 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                           	newLeafNode(otherlv_1, grammarAccess.getCollectionTypeCSAccess().getLeftParenthesisKeyword_1_0());
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:4265:1: ( (lv_ownedType_2_0= ruleTypeExpCS ) )
-                    // InternalAllocationSpecificationLanguage.g:4266:1: (lv_ownedType_2_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:4265:1: ( (lv_ownedType_2_0= ruleTypeExpWithoutMultiplicityCS ) )
+                    // InternalAllocationSpecificationLanguage.g:4266:1: (lv_ownedType_2_0= ruleTypeExpWithoutMultiplicityCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:4266:1: (lv_ownedType_2_0= ruleTypeExpCS )
-                    // InternalAllocationSpecificationLanguage.g:4267:3: lv_ownedType_2_0= ruleTypeExpCS
+                    // InternalAllocationSpecificationLanguage.g:4266:1: (lv_ownedType_2_0= ruleTypeExpWithoutMultiplicityCS )
+                    // InternalAllocationSpecificationLanguage.g:4267:3: lv_ownedType_2_0= ruleTypeExpWithoutMultiplicityCS
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getCollectionTypeCSAccess().getOwnedTypeTypeExpCSParserRuleCall_1_1_0()); 
+                      	        newCompositeNode(grammarAccess.getCollectionTypeCSAccess().getOwnedTypeTypeExpWithoutMultiplicityCSParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_22);
-                    lv_ownedType_2_0=ruleTypeExpCS();
+                    pushFollow(FollowSets000.FOLLOW_50);
+                    lv_ownedType_2_0=ruleTypeExpWithoutMultiplicityCS();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -12119,7 +12121,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                              			current, 
                              			"ownedType",
                               		lv_ownedType_2_0, 
-                              		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.TypeExpCS");
+                              		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.TypeExpWithoutMultiplicityCS");
                       	        afterParserOrEnumRuleCall();
                       	    
                     }
@@ -12129,10 +12131,56 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    otherlv_3=(Token)match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    // InternalAllocationSpecificationLanguage.g:4283:2: ( (lv_ownedCollectionMultiplicity_3_0= ruleMultiplicityCS ) )?
+                    int alt63=2;
+                    int LA63_0 = input.LA(1);
+
+                    if ( (LA63_0==106) ) {
+                        alt63=1;
+                    }
+                    switch (alt63) {
+                        case 1 :
+                            // InternalAllocationSpecificationLanguage.g:4284:1: (lv_ownedCollectionMultiplicity_3_0= ruleMultiplicityCS )
+                            {
+                            // InternalAllocationSpecificationLanguage.g:4284:1: (lv_ownedCollectionMultiplicity_3_0= ruleMultiplicityCS )
+                            // InternalAllocationSpecificationLanguage.g:4285:3: lv_ownedCollectionMultiplicity_3_0= ruleMultiplicityCS
+                            {
+                            if ( state.backtracking==0 ) {
+                               
+                              	        newCompositeNode(grammarAccess.getCollectionTypeCSAccess().getOwnedCollectionMultiplicityMultiplicityCSParserRuleCall_1_2_0()); 
+                              	    
+                            }
+                            pushFollow(FollowSets000.FOLLOW_22);
+                            lv_ownedCollectionMultiplicity_3_0=ruleMultiplicityCS();
+
+                            state._fsp--;
+                            if (state.failed) return current;
+                            if ( state.backtracking==0 ) {
+
+                              	        if (current==null) {
+                              	            current = createModelElementForParent(grammarAccess.getCollectionTypeCSRule());
+                              	        }
+                                     		set(
+                                     			current, 
+                                     			"ownedCollectionMultiplicity",
+                                      		lv_ownedCollectionMultiplicity_3_0, 
+                                      		"org.eclipse.ocl.xtext.base.Base.MultiplicityCS");
+                              	        afterParserOrEnumRuleCall();
+                              	    
+                            }
+
+                            }
+
+
+                            }
+                            break;
+
+                    }
+
+                    otherlv_4=(Token)match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                          	newLeafNode(otherlv_3, grammarAccess.getCollectionTypeCSAccess().getRightParenthesisKeyword_1_2());
+                          	newLeafNode(otherlv_4, grammarAccess.getCollectionTypeCSAccess().getRightParenthesisKeyword_1_3());
                           
                     }
 
@@ -12164,7 +12212,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleMapTypeCS"
-    // InternalAllocationSpecificationLanguage.g:4295:1: entryRuleMapTypeCS returns [EObject current=null] : iv_ruleMapTypeCS= ruleMapTypeCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:4313:1: entryRuleMapTypeCS returns [EObject current=null] : iv_ruleMapTypeCS= ruleMapTypeCS EOF ;
     public final EObject entryRuleMapTypeCS() throws RecognitionException {
         EObject current = null;
 
@@ -12172,8 +12220,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:4296:2: (iv_ruleMapTypeCS= ruleMapTypeCS EOF )
-            // InternalAllocationSpecificationLanguage.g:4297:2: iv_ruleMapTypeCS= ruleMapTypeCS EOF
+            // InternalAllocationSpecificationLanguage.g:4314:2: (iv_ruleMapTypeCS= ruleMapTypeCS EOF )
+            // InternalAllocationSpecificationLanguage.g:4315:2: iv_ruleMapTypeCS= ruleMapTypeCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMapTypeCSRule()); 
@@ -12204,7 +12252,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleMapTypeCS"
-    // InternalAllocationSpecificationLanguage.g:4304:1: ruleMapTypeCS returns [EObject current=null] : ( ( (lv_name_0_0= 'Map' ) ) (otherlv_1= '(' ( (lv_ownedKeyType_2_0= ruleTypeExpCS ) ) otherlv_3= ',' ( (lv_ownedValueType_4_0= ruleTypeExpCS ) ) otherlv_5= ')' )? ) ;
+    // InternalAllocationSpecificationLanguage.g:4322:1: ruleMapTypeCS returns [EObject current=null] : ( ( (lv_name_0_0= 'Map' ) ) (otherlv_1= '(' ( (lv_ownedKeyType_2_0= ruleTypeExpCS ) ) otherlv_3= ',' ( (lv_ownedValueType_4_0= ruleTypeExpCS ) ) otherlv_5= ')' )? ) ;
     public final EObject ruleMapTypeCS() throws RecognitionException {
         EObject current = null;
 
@@ -12220,17 +12268,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:4307:28: ( ( ( (lv_name_0_0= 'Map' ) ) (otherlv_1= '(' ( (lv_ownedKeyType_2_0= ruleTypeExpCS ) ) otherlv_3= ',' ( (lv_ownedValueType_4_0= ruleTypeExpCS ) ) otherlv_5= ')' )? ) )
-            // InternalAllocationSpecificationLanguage.g:4308:1: ( ( (lv_name_0_0= 'Map' ) ) (otherlv_1= '(' ( (lv_ownedKeyType_2_0= ruleTypeExpCS ) ) otherlv_3= ',' ( (lv_ownedValueType_4_0= ruleTypeExpCS ) ) otherlv_5= ')' )? )
+            // InternalAllocationSpecificationLanguage.g:4325:28: ( ( ( (lv_name_0_0= 'Map' ) ) (otherlv_1= '(' ( (lv_ownedKeyType_2_0= ruleTypeExpCS ) ) otherlv_3= ',' ( (lv_ownedValueType_4_0= ruleTypeExpCS ) ) otherlv_5= ')' )? ) )
+            // InternalAllocationSpecificationLanguage.g:4326:1: ( ( (lv_name_0_0= 'Map' ) ) (otherlv_1= '(' ( (lv_ownedKeyType_2_0= ruleTypeExpCS ) ) otherlv_3= ',' ( (lv_ownedValueType_4_0= ruleTypeExpCS ) ) otherlv_5= ')' )? )
             {
-            // InternalAllocationSpecificationLanguage.g:4308:1: ( ( (lv_name_0_0= 'Map' ) ) (otherlv_1= '(' ( (lv_ownedKeyType_2_0= ruleTypeExpCS ) ) otherlv_3= ',' ( (lv_ownedValueType_4_0= ruleTypeExpCS ) ) otherlv_5= ')' )? )
-            // InternalAllocationSpecificationLanguage.g:4308:2: ( (lv_name_0_0= 'Map' ) ) (otherlv_1= '(' ( (lv_ownedKeyType_2_0= ruleTypeExpCS ) ) otherlv_3= ',' ( (lv_ownedValueType_4_0= ruleTypeExpCS ) ) otherlv_5= ')' )?
+            // InternalAllocationSpecificationLanguage.g:4326:1: ( ( (lv_name_0_0= 'Map' ) ) (otherlv_1= '(' ( (lv_ownedKeyType_2_0= ruleTypeExpCS ) ) otherlv_3= ',' ( (lv_ownedValueType_4_0= ruleTypeExpCS ) ) otherlv_5= ')' )? )
+            // InternalAllocationSpecificationLanguage.g:4326:2: ( (lv_name_0_0= 'Map' ) ) (otherlv_1= '(' ( (lv_ownedKeyType_2_0= ruleTypeExpCS ) ) otherlv_3= ',' ( (lv_ownedValueType_4_0= ruleTypeExpCS ) ) otherlv_5= ')' )?
             {
-            // InternalAllocationSpecificationLanguage.g:4308:2: ( (lv_name_0_0= 'Map' ) )
-            // InternalAllocationSpecificationLanguage.g:4309:1: (lv_name_0_0= 'Map' )
+            // InternalAllocationSpecificationLanguage.g:4326:2: ( (lv_name_0_0= 'Map' ) )
+            // InternalAllocationSpecificationLanguage.g:4327:1: (lv_name_0_0= 'Map' )
             {
-            // InternalAllocationSpecificationLanguage.g:4309:1: (lv_name_0_0= 'Map' )
-            // InternalAllocationSpecificationLanguage.g:4310:3: lv_name_0_0= 'Map'
+            // InternalAllocationSpecificationLanguage.g:4327:1: (lv_name_0_0= 'Map' )
+            // InternalAllocationSpecificationLanguage.g:4328:3: lv_name_0_0= 'Map'
             {
             lv_name_0_0=(Token)match(input,89,FollowSets000.FOLLOW_49); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -12252,16 +12300,16 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:4323:2: (otherlv_1= '(' ( (lv_ownedKeyType_2_0= ruleTypeExpCS ) ) otherlv_3= ',' ( (lv_ownedValueType_4_0= ruleTypeExpCS ) ) otherlv_5= ')' )?
-            int alt64=2;
-            int LA64_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:4341:2: (otherlv_1= '(' ( (lv_ownedKeyType_2_0= ruleTypeExpCS ) ) otherlv_3= ',' ( (lv_ownedValueType_4_0= ruleTypeExpCS ) ) otherlv_5= ')' )?
+            int alt65=2;
+            int LA65_0 = input.LA(1);
 
-            if ( (LA64_0==29) ) {
-                alt64=1;
+            if ( (LA65_0==29) ) {
+                alt65=1;
             }
-            switch (alt64) {
+            switch (alt65) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:4323:4: otherlv_1= '(' ( (lv_ownedKeyType_2_0= ruleTypeExpCS ) ) otherlv_3= ',' ( (lv_ownedValueType_4_0= ruleTypeExpCS ) ) otherlv_5= ')'
+                    // InternalAllocationSpecificationLanguage.g:4341:4: otherlv_1= '(' ( (lv_ownedKeyType_2_0= ruleTypeExpCS ) ) otherlv_3= ',' ( (lv_ownedValueType_4_0= ruleTypeExpCS ) ) otherlv_5= ')'
                     {
                     otherlv_1=(Token)match(input,29,FollowSets000.FOLLOW_11); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -12269,11 +12317,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                           	newLeafNode(otherlv_1, grammarAccess.getMapTypeCSAccess().getLeftParenthesisKeyword_1_0());
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:4327:1: ( (lv_ownedKeyType_2_0= ruleTypeExpCS ) )
-                    // InternalAllocationSpecificationLanguage.g:4328:1: (lv_ownedKeyType_2_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:4345:1: ( (lv_ownedKeyType_2_0= ruleTypeExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:4346:1: (lv_ownedKeyType_2_0= ruleTypeExpCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:4328:1: (lv_ownedKeyType_2_0= ruleTypeExpCS )
-                    // InternalAllocationSpecificationLanguage.g:4329:3: lv_ownedKeyType_2_0= ruleTypeExpCS
+                    // InternalAllocationSpecificationLanguage.g:4346:1: (lv_ownedKeyType_2_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:4347:3: lv_ownedKeyType_2_0= ruleTypeExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -12310,11 +12358,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                           	newLeafNode(otherlv_3, grammarAccess.getMapTypeCSAccess().getCommaKeyword_1_2());
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:4349:1: ( (lv_ownedValueType_4_0= ruleTypeExpCS ) )
-                    // InternalAllocationSpecificationLanguage.g:4350:1: (lv_ownedValueType_4_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:4367:1: ( (lv_ownedValueType_4_0= ruleTypeExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:4368:1: (lv_ownedValueType_4_0= ruleTypeExpCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:4350:1: (lv_ownedValueType_4_0= ruleTypeExpCS )
-                    // InternalAllocationSpecificationLanguage.g:4351:3: lv_ownedValueType_4_0= ruleTypeExpCS
+                    // InternalAllocationSpecificationLanguage.g:4368:1: (lv_ownedValueType_4_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:4369:3: lv_ownedValueType_4_0= ruleTypeExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -12380,7 +12428,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleTupleTypeCS"
-    // InternalAllocationSpecificationLanguage.g:4379:1: entryRuleTupleTypeCS returns [EObject current=null] : iv_ruleTupleTypeCS= ruleTupleTypeCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:4397:1: entryRuleTupleTypeCS returns [EObject current=null] : iv_ruleTupleTypeCS= ruleTupleTypeCS EOF ;
     public final EObject entryRuleTupleTypeCS() throws RecognitionException {
         EObject current = null;
 
@@ -12388,8 +12436,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:4380:2: (iv_ruleTupleTypeCS= ruleTupleTypeCS EOF )
-            // InternalAllocationSpecificationLanguage.g:4381:2: iv_ruleTupleTypeCS= ruleTupleTypeCS EOF
+            // InternalAllocationSpecificationLanguage.g:4398:2: (iv_ruleTupleTypeCS= ruleTupleTypeCS EOF )
+            // InternalAllocationSpecificationLanguage.g:4399:2: iv_ruleTupleTypeCS= ruleTupleTypeCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTupleTypeCSRule()); 
@@ -12420,7 +12468,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleTupleTypeCS"
-    // InternalAllocationSpecificationLanguage.g:4388:1: ruleTupleTypeCS returns [EObject current=null] : ( ( (lv_name_0_0= 'Tuple' ) ) (otherlv_1= '(' ( ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )* )? otherlv_5= ')' )? ) ;
+    // InternalAllocationSpecificationLanguage.g:4406:1: ruleTupleTypeCS returns [EObject current=null] : ( ( (lv_name_0_0= 'Tuple' ) ) (otherlv_1= '(' ( ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )* )? otherlv_5= ')' )? ) ;
     public final EObject ruleTupleTypeCS() throws RecognitionException {
         EObject current = null;
 
@@ -12436,17 +12484,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:4391:28: ( ( ( (lv_name_0_0= 'Tuple' ) ) (otherlv_1= '(' ( ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )* )? otherlv_5= ')' )? ) )
-            // InternalAllocationSpecificationLanguage.g:4392:1: ( ( (lv_name_0_0= 'Tuple' ) ) (otherlv_1= '(' ( ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )* )? otherlv_5= ')' )? )
+            // InternalAllocationSpecificationLanguage.g:4409:28: ( ( ( (lv_name_0_0= 'Tuple' ) ) (otherlv_1= '(' ( ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )* )? otherlv_5= ')' )? ) )
+            // InternalAllocationSpecificationLanguage.g:4410:1: ( ( (lv_name_0_0= 'Tuple' ) ) (otherlv_1= '(' ( ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )* )? otherlv_5= ')' )? )
             {
-            // InternalAllocationSpecificationLanguage.g:4392:1: ( ( (lv_name_0_0= 'Tuple' ) ) (otherlv_1= '(' ( ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )* )? otherlv_5= ')' )? )
-            // InternalAllocationSpecificationLanguage.g:4392:2: ( (lv_name_0_0= 'Tuple' ) ) (otherlv_1= '(' ( ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )* )? otherlv_5= ')' )?
+            // InternalAllocationSpecificationLanguage.g:4410:1: ( ( (lv_name_0_0= 'Tuple' ) ) (otherlv_1= '(' ( ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )* )? otherlv_5= ')' )? )
+            // InternalAllocationSpecificationLanguage.g:4410:2: ( (lv_name_0_0= 'Tuple' ) ) (otherlv_1= '(' ( ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )* )? otherlv_5= ')' )?
             {
-            // InternalAllocationSpecificationLanguage.g:4392:2: ( (lv_name_0_0= 'Tuple' ) )
-            // InternalAllocationSpecificationLanguage.g:4393:1: (lv_name_0_0= 'Tuple' )
+            // InternalAllocationSpecificationLanguage.g:4410:2: ( (lv_name_0_0= 'Tuple' ) )
+            // InternalAllocationSpecificationLanguage.g:4411:1: (lv_name_0_0= 'Tuple' )
             {
-            // InternalAllocationSpecificationLanguage.g:4393:1: (lv_name_0_0= 'Tuple' )
-            // InternalAllocationSpecificationLanguage.g:4394:3: lv_name_0_0= 'Tuple'
+            // InternalAllocationSpecificationLanguage.g:4411:1: (lv_name_0_0= 'Tuple' )
+            // InternalAllocationSpecificationLanguage.g:4412:3: lv_name_0_0= 'Tuple'
             {
             lv_name_0_0=(Token)match(input,90,FollowSets000.FOLLOW_49); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -12468,16 +12516,16 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:4407:2: (otherlv_1= '(' ( ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )* )? otherlv_5= ')' )?
-            int alt67=2;
-            int LA67_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:4425:2: (otherlv_1= '(' ( ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )* )? otherlv_5= ')' )?
+            int alt68=2;
+            int LA68_0 = input.LA(1);
 
-            if ( (LA67_0==29) ) {
-                alt67=1;
+            if ( (LA68_0==29) ) {
+                alt68=1;
             }
-            switch (alt67) {
+            switch (alt68) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:4407:4: otherlv_1= '(' ( ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )* )? otherlv_5= ')'
+                    // InternalAllocationSpecificationLanguage.g:4425:4: otherlv_1= '(' ( ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )* )? otherlv_5= ')'
                     {
                     otherlv_1=(Token)match(input,29,FollowSets000.FOLLOW_36); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -12485,22 +12533,22 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                           	newLeafNode(otherlv_1, grammarAccess.getTupleTypeCSAccess().getLeftParenthesisKeyword_1_0());
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:4411:1: ( ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )* )?
-                    int alt66=2;
-                    int LA66_0 = input.LA(1);
+                    // InternalAllocationSpecificationLanguage.g:4429:1: ( ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )* )?
+                    int alt67=2;
+                    int LA67_0 = input.LA(1);
 
-                    if ( ((LA66_0>=RULE_SIMPLE_ID && LA66_0<=RULE_ESCAPED_ID)||(LA66_0>=50 && LA66_0<=52)) ) {
-                        alt66=1;
+                    if ( ((LA67_0>=RULE_SIMPLE_ID && LA67_0<=RULE_ESCAPED_ID)||(LA67_0>=50 && LA67_0<=52)) ) {
+                        alt67=1;
                     }
-                    switch (alt66) {
+                    switch (alt67) {
                         case 1 :
-                            // InternalAllocationSpecificationLanguage.g:4411:2: ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )*
+                            // InternalAllocationSpecificationLanguage.g:4429:2: ( (lv_ownedParts_2_0= ruleTuplePartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )*
                             {
-                            // InternalAllocationSpecificationLanguage.g:4411:2: ( (lv_ownedParts_2_0= ruleTuplePartCS ) )
-                            // InternalAllocationSpecificationLanguage.g:4412:1: (lv_ownedParts_2_0= ruleTuplePartCS )
+                            // InternalAllocationSpecificationLanguage.g:4429:2: ( (lv_ownedParts_2_0= ruleTuplePartCS ) )
+                            // InternalAllocationSpecificationLanguage.g:4430:1: (lv_ownedParts_2_0= ruleTuplePartCS )
                             {
-                            // InternalAllocationSpecificationLanguage.g:4412:1: (lv_ownedParts_2_0= ruleTuplePartCS )
-                            // InternalAllocationSpecificationLanguage.g:4413:3: lv_ownedParts_2_0= ruleTuplePartCS
+                            // InternalAllocationSpecificationLanguage.g:4430:1: (lv_ownedParts_2_0= ruleTuplePartCS )
+                            // InternalAllocationSpecificationLanguage.g:4431:3: lv_ownedParts_2_0= ruleTuplePartCS
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -12531,20 +12579,20 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                             }
 
-                            // InternalAllocationSpecificationLanguage.g:4429:2: (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )*
-                            loop65:
+                            // InternalAllocationSpecificationLanguage.g:4447:2: (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) ) )*
+                            loop66:
                             do {
-                                int alt65=2;
-                                int LA65_0 = input.LA(1);
+                                int alt66=2;
+                                int LA66_0 = input.LA(1);
 
-                                if ( (LA65_0==30) ) {
-                                    alt65=1;
+                                if ( (LA66_0==30) ) {
+                                    alt66=1;
                                 }
 
 
-                                switch (alt65) {
+                                switch (alt66) {
                             	case 1 :
-                            	    // InternalAllocationSpecificationLanguage.g:4429:4: otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) )
+                            	    // InternalAllocationSpecificationLanguage.g:4447:4: otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTuplePartCS ) )
                             	    {
                             	    otherlv_3=(Token)match(input,30,FollowSets000.FOLLOW_11); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
@@ -12552,11 +12600,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                             	          	newLeafNode(otherlv_3, grammarAccess.getTupleTypeCSAccess().getCommaKeyword_1_1_1_0());
                             	          
                             	    }
-                            	    // InternalAllocationSpecificationLanguage.g:4433:1: ( (lv_ownedParts_4_0= ruleTuplePartCS ) )
-                            	    // InternalAllocationSpecificationLanguage.g:4434:1: (lv_ownedParts_4_0= ruleTuplePartCS )
+                            	    // InternalAllocationSpecificationLanguage.g:4451:1: ( (lv_ownedParts_4_0= ruleTuplePartCS ) )
+                            	    // InternalAllocationSpecificationLanguage.g:4452:1: (lv_ownedParts_4_0= ruleTuplePartCS )
                             	    {
-                            	    // InternalAllocationSpecificationLanguage.g:4434:1: (lv_ownedParts_4_0= ruleTuplePartCS )
-                            	    // InternalAllocationSpecificationLanguage.g:4435:3: lv_ownedParts_4_0= ruleTuplePartCS
+                            	    // InternalAllocationSpecificationLanguage.g:4452:1: (lv_ownedParts_4_0= ruleTuplePartCS )
+                            	    // InternalAllocationSpecificationLanguage.g:4453:3: lv_ownedParts_4_0= ruleTuplePartCS
                             	    {
                             	    if ( state.backtracking==0 ) {
                             	       
@@ -12592,7 +12640,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                             	    break;
 
                             	default :
-                            	    break loop65;
+                            	    break loop66;
                                 }
                             } while (true);
 
@@ -12637,7 +12685,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleTuplePartCS"
-    // InternalAllocationSpecificationLanguage.g:4463:1: entryRuleTuplePartCS returns [EObject current=null] : iv_ruleTuplePartCS= ruleTuplePartCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:4481:1: entryRuleTuplePartCS returns [EObject current=null] : iv_ruleTuplePartCS= ruleTuplePartCS EOF ;
     public final EObject entryRuleTuplePartCS() throws RecognitionException {
         EObject current = null;
 
@@ -12645,8 +12693,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:4464:2: (iv_ruleTuplePartCS= ruleTuplePartCS EOF )
-            // InternalAllocationSpecificationLanguage.g:4465:2: iv_ruleTuplePartCS= ruleTuplePartCS EOF
+            // InternalAllocationSpecificationLanguage.g:4482:2: (iv_ruleTuplePartCS= ruleTuplePartCS EOF )
+            // InternalAllocationSpecificationLanguage.g:4483:2: iv_ruleTuplePartCS= ruleTuplePartCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTuplePartCSRule()); 
@@ -12677,7 +12725,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleTuplePartCS"
-    // InternalAllocationSpecificationLanguage.g:4472:1: ruleTuplePartCS returns [EObject current=null] : ( ( (lv_name_0_0= ruleUnrestrictedName ) ) otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) ) ;
+    // InternalAllocationSpecificationLanguage.g:4490:1: ruleTuplePartCS returns [EObject current=null] : ( ( (lv_name_0_0= ruleUnrestrictedName ) ) otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) ) ;
     public final EObject ruleTuplePartCS() throws RecognitionException {
         EObject current = null;
 
@@ -12690,17 +12738,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:4475:28: ( ( ( (lv_name_0_0= ruleUnrestrictedName ) ) otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) ) )
-            // InternalAllocationSpecificationLanguage.g:4476:1: ( ( (lv_name_0_0= ruleUnrestrictedName ) ) otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:4493:28: ( ( ( (lv_name_0_0= ruleUnrestrictedName ) ) otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) ) )
+            // InternalAllocationSpecificationLanguage.g:4494:1: ( ( (lv_name_0_0= ruleUnrestrictedName ) ) otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) )
             {
-            // InternalAllocationSpecificationLanguage.g:4476:1: ( ( (lv_name_0_0= ruleUnrestrictedName ) ) otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) )
-            // InternalAllocationSpecificationLanguage.g:4476:2: ( (lv_name_0_0= ruleUnrestrictedName ) ) otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:4494:1: ( ( (lv_name_0_0= ruleUnrestrictedName ) ) otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:4494:2: ( (lv_name_0_0= ruleUnrestrictedName ) ) otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) )
             {
-            // InternalAllocationSpecificationLanguage.g:4476:2: ( (lv_name_0_0= ruleUnrestrictedName ) )
-            // InternalAllocationSpecificationLanguage.g:4477:1: (lv_name_0_0= ruleUnrestrictedName )
+            // InternalAllocationSpecificationLanguage.g:4494:2: ( (lv_name_0_0= ruleUnrestrictedName ) )
+            // InternalAllocationSpecificationLanguage.g:4495:1: (lv_name_0_0= ruleUnrestrictedName )
             {
-            // InternalAllocationSpecificationLanguage.g:4477:1: (lv_name_0_0= ruleUnrestrictedName )
-            // InternalAllocationSpecificationLanguage.g:4478:3: lv_name_0_0= ruleUnrestrictedName
+            // InternalAllocationSpecificationLanguage.g:4495:1: (lv_name_0_0= ruleUnrestrictedName )
+            // InternalAllocationSpecificationLanguage.g:4496:3: lv_name_0_0= ruleUnrestrictedName
             {
             if ( state.backtracking==0 ) {
                
@@ -12737,11 +12785,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_1, grammarAccess.getTuplePartCSAccess().getColonKeyword_1());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:4498:1: ( (lv_ownedType_2_0= ruleTypeExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:4499:1: (lv_ownedType_2_0= ruleTypeExpCS )
+            // InternalAllocationSpecificationLanguage.g:4516:1: ( (lv_ownedType_2_0= ruleTypeExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:4517:1: (lv_ownedType_2_0= ruleTypeExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:4499:1: (lv_ownedType_2_0= ruleTypeExpCS )
-            // InternalAllocationSpecificationLanguage.g:4500:3: lv_ownedType_2_0= ruleTypeExpCS
+            // InternalAllocationSpecificationLanguage.g:4517:1: (lv_ownedType_2_0= ruleTypeExpCS )
+            // InternalAllocationSpecificationLanguage.g:4518:3: lv_ownedType_2_0= ruleTypeExpCS
             {
             if ( state.backtracking==0 ) {
                
@@ -12795,7 +12843,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleCollectionLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:4524:1: entryRuleCollectionLiteralExpCS returns [EObject current=null] : iv_ruleCollectionLiteralExpCS= ruleCollectionLiteralExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:4542:1: entryRuleCollectionLiteralExpCS returns [EObject current=null] : iv_ruleCollectionLiteralExpCS= ruleCollectionLiteralExpCS EOF ;
     public final EObject entryRuleCollectionLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -12803,8 +12851,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:4525:2: (iv_ruleCollectionLiteralExpCS= ruleCollectionLiteralExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:4526:2: iv_ruleCollectionLiteralExpCS= ruleCollectionLiteralExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:4543:2: (iv_ruleCollectionLiteralExpCS= ruleCollectionLiteralExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:4544:2: iv_ruleCollectionLiteralExpCS= ruleCollectionLiteralExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCollectionLiteralExpCSRule()); 
@@ -12835,7 +12883,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleCollectionLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:4533:1: ruleCollectionLiteralExpCS returns [EObject current=null] : ( ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleCollectionLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) ) )* )? otherlv_5= '}' ) ;
+    // InternalAllocationSpecificationLanguage.g:4551:1: ruleCollectionLiteralExpCS returns [EObject current=null] : ( ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleCollectionLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) ) )* )? otherlv_5= '}' ) ;
     public final EObject ruleCollectionLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -12852,17 +12900,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:4536:28: ( ( ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleCollectionLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) ) )* )? otherlv_5= '}' ) )
-            // InternalAllocationSpecificationLanguage.g:4537:1: ( ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleCollectionLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) ) )* )? otherlv_5= '}' )
+            // InternalAllocationSpecificationLanguage.g:4554:28: ( ( ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleCollectionLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) ) )* )? otherlv_5= '}' ) )
+            // InternalAllocationSpecificationLanguage.g:4555:1: ( ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleCollectionLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) ) )* )? otherlv_5= '}' )
             {
-            // InternalAllocationSpecificationLanguage.g:4537:1: ( ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleCollectionLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) ) )* )? otherlv_5= '}' )
-            // InternalAllocationSpecificationLanguage.g:4537:2: ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleCollectionLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) ) )* )? otherlv_5= '}'
+            // InternalAllocationSpecificationLanguage.g:4555:1: ( ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleCollectionLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) ) )* )? otherlv_5= '}' )
+            // InternalAllocationSpecificationLanguage.g:4555:2: ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleCollectionLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) ) )* )? otherlv_5= '}'
             {
-            // InternalAllocationSpecificationLanguage.g:4537:2: ( (lv_ownedType_0_0= ruleCollectionTypeCS ) )
-            // InternalAllocationSpecificationLanguage.g:4538:1: (lv_ownedType_0_0= ruleCollectionTypeCS )
+            // InternalAllocationSpecificationLanguage.g:4555:2: ( (lv_ownedType_0_0= ruleCollectionTypeCS ) )
+            // InternalAllocationSpecificationLanguage.g:4556:1: (lv_ownedType_0_0= ruleCollectionTypeCS )
             {
-            // InternalAllocationSpecificationLanguage.g:4538:1: (lv_ownedType_0_0= ruleCollectionTypeCS )
-            // InternalAllocationSpecificationLanguage.g:4539:3: lv_ownedType_0_0= ruleCollectionTypeCS
+            // InternalAllocationSpecificationLanguage.g:4556:1: (lv_ownedType_0_0= ruleCollectionTypeCS )
+            // InternalAllocationSpecificationLanguage.g:4557:3: lv_ownedType_0_0= ruleCollectionTypeCS
             {
             if ( state.backtracking==0 ) {
                
@@ -12893,35 +12941,35 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            otherlv_1=(Token)match(input,17,FollowSets000.FOLLOW_50); if (state.failed) return current;
+            otherlv_1=(Token)match(input,17,FollowSets000.FOLLOW_51); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getCollectionLiteralExpCSAccess().getLeftCurlyBracketKeyword_1());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:4559:1: ( ( (lv_ownedParts_2_0= ruleCollectionLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) ) )* )?
-            int alt69=2;
-            int LA69_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:4577:1: ( ( (lv_ownedParts_2_0= ruleCollectionLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) ) )* )?
+            int alt70=2;
+            int LA70_0 = input.LA(1);
 
-            if ( (LA69_0==RULE_SINGLE_QUOTED_STRING||(LA69_0>=RULE_SIMPLE_ID && LA69_0<=RULE_INT)||LA69_0==29||LA69_0==32||(LA69_0>=50 && LA69_0<=52)||(LA69_0>=64 && LA69_0<=76)||(LA69_0>=89 && LA69_0<=90)||(LA69_0>=92 && LA69_0<=96)||LA69_0==99||(LA69_0>=101 && LA69_0<=104)||LA69_0==110||(LA69_0>=115 && LA69_0<=116)) ) {
-                alt69=1;
+            if ( (LA70_0==RULE_SINGLE_QUOTED_STRING||(LA70_0>=RULE_SIMPLE_ID && LA70_0<=RULE_INT)||LA70_0==29||LA70_0==32||(LA70_0>=50 && LA70_0<=52)||(LA70_0>=64 && LA70_0<=76)||(LA70_0>=89 && LA70_0<=90)||(LA70_0>=92 && LA70_0<=96)||LA70_0==99||(LA70_0>=101 && LA70_0<=104)||LA70_0==110||(LA70_0>=115 && LA70_0<=116)) ) {
+                alt70=1;
             }
-            switch (alt69) {
+            switch (alt70) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:4559:2: ( (lv_ownedParts_2_0= ruleCollectionLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) ) )*
+                    // InternalAllocationSpecificationLanguage.g:4577:2: ( (lv_ownedParts_2_0= ruleCollectionLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) ) )*
                     {
-                    // InternalAllocationSpecificationLanguage.g:4559:2: ( (lv_ownedParts_2_0= ruleCollectionLiteralPartCS ) )
-                    // InternalAllocationSpecificationLanguage.g:4560:1: (lv_ownedParts_2_0= ruleCollectionLiteralPartCS )
+                    // InternalAllocationSpecificationLanguage.g:4577:2: ( (lv_ownedParts_2_0= ruleCollectionLiteralPartCS ) )
+                    // InternalAllocationSpecificationLanguage.g:4578:1: (lv_ownedParts_2_0= ruleCollectionLiteralPartCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:4560:1: (lv_ownedParts_2_0= ruleCollectionLiteralPartCS )
-                    // InternalAllocationSpecificationLanguage.g:4561:3: lv_ownedParts_2_0= ruleCollectionLiteralPartCS
+                    // InternalAllocationSpecificationLanguage.g:4578:1: (lv_ownedParts_2_0= ruleCollectionLiteralPartCS )
+                    // InternalAllocationSpecificationLanguage.g:4579:3: lv_ownedParts_2_0= ruleCollectionLiteralPartCS
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getCollectionLiteralExpCSAccess().getOwnedPartsCollectionLiteralPartCSParserRuleCall_2_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_51);
+                    pushFollow(FollowSets000.FOLLOW_52);
                     lv_ownedParts_2_0=ruleCollectionLiteralPartCS();
 
                     state._fsp--;
@@ -12945,39 +12993,39 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    // InternalAllocationSpecificationLanguage.g:4577:2: (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) ) )*
-                    loop68:
+                    // InternalAllocationSpecificationLanguage.g:4595:2: (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) ) )*
+                    loop69:
                     do {
-                        int alt68=2;
-                        int LA68_0 = input.LA(1);
+                        int alt69=2;
+                        int LA69_0 = input.LA(1);
 
-                        if ( (LA68_0==30) ) {
-                            alt68=1;
+                        if ( (LA69_0==30) ) {
+                            alt69=1;
                         }
 
 
-                        switch (alt68) {
+                        switch (alt69) {
                     	case 1 :
-                    	    // InternalAllocationSpecificationLanguage.g:4577:4: otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) )
+                    	    // InternalAllocationSpecificationLanguage.g:4595:4: otherlv_3= ',' ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) )
                     	    {
-                    	    otherlv_3=(Token)match(input,30,FollowSets000.FOLLOW_52); if (state.failed) return current;
+                    	    otherlv_3=(Token)match(input,30,FollowSets000.FOLLOW_53); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_3, grammarAccess.getCollectionLiteralExpCSAccess().getCommaKeyword_2_1_0());
                     	          
                     	    }
-                    	    // InternalAllocationSpecificationLanguage.g:4581:1: ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) )
-                    	    // InternalAllocationSpecificationLanguage.g:4582:1: (lv_ownedParts_4_0= ruleCollectionLiteralPartCS )
+                    	    // InternalAllocationSpecificationLanguage.g:4599:1: ( (lv_ownedParts_4_0= ruleCollectionLiteralPartCS ) )
+                    	    // InternalAllocationSpecificationLanguage.g:4600:1: (lv_ownedParts_4_0= ruleCollectionLiteralPartCS )
                     	    {
-                    	    // InternalAllocationSpecificationLanguage.g:4582:1: (lv_ownedParts_4_0= ruleCollectionLiteralPartCS )
-                    	    // InternalAllocationSpecificationLanguage.g:4583:3: lv_ownedParts_4_0= ruleCollectionLiteralPartCS
+                    	    // InternalAllocationSpecificationLanguage.g:4600:1: (lv_ownedParts_4_0= ruleCollectionLiteralPartCS )
+                    	    // InternalAllocationSpecificationLanguage.g:4601:3: lv_ownedParts_4_0= ruleCollectionLiteralPartCS
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getCollectionLiteralExpCSAccess().getOwnedPartsCollectionLiteralPartCSParserRuleCall_2_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FollowSets000.FOLLOW_51);
+                    	    pushFollow(FollowSets000.FOLLOW_52);
                     	    lv_ownedParts_4_0=ruleCollectionLiteralPartCS();
 
                     	    state._fsp--;
@@ -13006,7 +13054,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     	    break;
 
                     	default :
-                    	    break loop68;
+                    	    break loop69;
                         }
                     } while (true);
 
@@ -13045,7 +13093,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleCollectionLiteralPartCS"
-    // InternalAllocationSpecificationLanguage.g:4611:1: entryRuleCollectionLiteralPartCS returns [EObject current=null] : iv_ruleCollectionLiteralPartCS= ruleCollectionLiteralPartCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:4629:1: entryRuleCollectionLiteralPartCS returns [EObject current=null] : iv_ruleCollectionLiteralPartCS= ruleCollectionLiteralPartCS EOF ;
     public final EObject entryRuleCollectionLiteralPartCS() throws RecognitionException {
         EObject current = null;
 
@@ -13053,8 +13101,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:4612:2: (iv_ruleCollectionLiteralPartCS= ruleCollectionLiteralPartCS EOF )
-            // InternalAllocationSpecificationLanguage.g:4613:2: iv_ruleCollectionLiteralPartCS= ruleCollectionLiteralPartCS EOF
+            // InternalAllocationSpecificationLanguage.g:4630:2: (iv_ruleCollectionLiteralPartCS= ruleCollectionLiteralPartCS EOF )
+            // InternalAllocationSpecificationLanguage.g:4631:2: iv_ruleCollectionLiteralPartCS= ruleCollectionLiteralPartCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCollectionLiteralPartCSRule()); 
@@ -13085,7 +13133,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleCollectionLiteralPartCS"
-    // InternalAllocationSpecificationLanguage.g:4620:1: ruleCollectionLiteralPartCS returns [EObject current=null] : ( ( ( (lv_ownedExpression_0_0= ruleExpCS ) ) (otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) ) )? ) | ( (lv_ownedExpression_3_0= rulePatternExpCS ) ) ) ;
+    // InternalAllocationSpecificationLanguage.g:4638:1: ruleCollectionLiteralPartCS returns [EObject current=null] : ( ( ( (lv_ownedExpression_0_0= ruleExpCS ) ) (otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) ) )? ) | ( (lv_ownedExpression_3_0= rulePatternExpCS ) ) ) ;
     public final EObject ruleCollectionLiteralPartCS() throws RecognitionException {
         EObject current = null;
 
@@ -13100,11 +13148,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:4623:28: ( ( ( ( (lv_ownedExpression_0_0= ruleExpCS ) ) (otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) ) )? ) | ( (lv_ownedExpression_3_0= rulePatternExpCS ) ) ) )
-            // InternalAllocationSpecificationLanguage.g:4624:1: ( ( ( (lv_ownedExpression_0_0= ruleExpCS ) ) (otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) ) )? ) | ( (lv_ownedExpression_3_0= rulePatternExpCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:4641:28: ( ( ( ( (lv_ownedExpression_0_0= ruleExpCS ) ) (otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) ) )? ) | ( (lv_ownedExpression_3_0= rulePatternExpCS ) ) ) )
+            // InternalAllocationSpecificationLanguage.g:4642:1: ( ( ( (lv_ownedExpression_0_0= ruleExpCS ) ) (otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) ) )? ) | ( (lv_ownedExpression_3_0= rulePatternExpCS ) ) )
             {
-            // InternalAllocationSpecificationLanguage.g:4624:1: ( ( ( (lv_ownedExpression_0_0= ruleExpCS ) ) (otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) ) )? ) | ( (lv_ownedExpression_3_0= rulePatternExpCS ) ) )
-            int alt71=2;
+            // InternalAllocationSpecificationLanguage.g:4642:1: ( ( ( (lv_ownedExpression_0_0= ruleExpCS ) ) (otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) ) )? ) | ( (lv_ownedExpression_3_0= rulePatternExpCS ) ) )
+            int alt72=2;
             switch ( input.LA(1) ) {
             case RULE_SINGLE_QUOTED_STRING:
             case RULE_INT:
@@ -13138,23 +13186,23 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             case 115:
             case 116:
                 {
-                alt71=1;
+                alt72=1;
                 }
                 break;
             case RULE_SIMPLE_ID:
                 {
-                int LA71_2 = input.LA(2);
+                int LA72_2 = input.LA(2);
 
-                if ( (LA71_2==EOF||(LA71_2>=17 && LA71_2<=18)||(LA71_2>=29 && LA71_2<=30)||(LA71_2>=42 && LA71_2<=44)||LA71_2==49||(LA71_2>=61 && LA71_2<=62)||LA71_2==74||(LA71_2>=76 && LA71_2<=88)||LA71_2==91||LA71_2==97||(LA71_2>=105 && LA71_2<=106)) ) {
-                    alt71=1;
+                if ( (LA72_2==32) ) {
+                    alt72=2;
                 }
-                else if ( (LA71_2==32) ) {
-                    alt71=2;
+                else if ( (LA72_2==EOF||(LA72_2>=17 && LA72_2<=18)||(LA72_2>=29 && LA72_2<=30)||(LA72_2>=42 && LA72_2<=44)||LA72_2==49||(LA72_2>=61 && LA72_2<=62)||LA72_2==74||(LA72_2>=76 && LA72_2<=88)||LA72_2==91||LA72_2==97||(LA72_2>=105 && LA72_2<=106)) ) {
+                    alt72=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 71, 2, input);
+                        new NoViableAltException("", 72, 2, input);
 
                     throw nvae;
                 }
@@ -13162,18 +13210,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                 break;
             case RULE_ESCAPED_ID:
                 {
-                int LA71_3 = input.LA(2);
+                int LA72_3 = input.LA(2);
 
-                if ( (LA71_3==32) ) {
-                    alt71=2;
+                if ( (LA72_3==EOF||(LA72_3>=17 && LA72_3<=18)||(LA72_3>=29 && LA72_3<=30)||(LA72_3>=42 && LA72_3<=44)||LA72_3==49||(LA72_3>=61 && LA72_3<=62)||LA72_3==74||(LA72_3>=76 && LA72_3<=88)||LA72_3==91||LA72_3==97||(LA72_3>=105 && LA72_3<=106)) ) {
+                    alt72=1;
                 }
-                else if ( (LA71_3==EOF||(LA71_3>=17 && LA71_3<=18)||(LA71_3>=29 && LA71_3<=30)||(LA71_3>=42 && LA71_3<=44)||LA71_3==49||(LA71_3>=61 && LA71_3<=62)||LA71_3==74||(LA71_3>=76 && LA71_3<=88)||LA71_3==91||LA71_3==97||(LA71_3>=105 && LA71_3<=106)) ) {
-                    alt71=1;
+                else if ( (LA72_3==32) ) {
+                    alt72=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 71, 3, input);
+                        new NoViableAltException("", 72, 3, input);
 
                     throw nvae;
                 }
@@ -13181,18 +13229,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                 break;
             case 50:
                 {
-                int LA71_4 = input.LA(2);
+                int LA72_4 = input.LA(2);
 
-                if ( (LA71_4==EOF||(LA71_4>=17 && LA71_4<=18)||(LA71_4>=29 && LA71_4<=30)||(LA71_4>=42 && LA71_4<=44)||LA71_4==49||(LA71_4>=61 && LA71_4<=62)||LA71_4==74||(LA71_4>=76 && LA71_4<=88)||LA71_4==91||LA71_4==97||(LA71_4>=105 && LA71_4<=106)) ) {
-                    alt71=1;
+                if ( (LA72_4==EOF||(LA72_4>=17 && LA72_4<=18)||(LA72_4>=29 && LA72_4<=30)||(LA72_4>=42 && LA72_4<=44)||LA72_4==49||(LA72_4>=61 && LA72_4<=62)||LA72_4==74||(LA72_4>=76 && LA72_4<=88)||LA72_4==91||LA72_4==97||(LA72_4>=105 && LA72_4<=106)) ) {
+                    alt72=1;
                 }
-                else if ( (LA71_4==32) ) {
-                    alt71=2;
+                else if ( (LA72_4==32) ) {
+                    alt72=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 71, 4, input);
+                        new NoViableAltException("", 72, 4, input);
 
                     throw nvae;
                 }
@@ -13200,18 +13248,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                 break;
             case 51:
                 {
-                int LA71_5 = input.LA(2);
+                int LA72_5 = input.LA(2);
 
-                if ( (LA71_5==EOF||(LA71_5>=17 && LA71_5<=18)||(LA71_5>=29 && LA71_5<=30)||(LA71_5>=42 && LA71_5<=44)||LA71_5==49||(LA71_5>=61 && LA71_5<=62)||LA71_5==74||(LA71_5>=76 && LA71_5<=88)||LA71_5==91||LA71_5==97||(LA71_5>=105 && LA71_5<=106)) ) {
-                    alt71=1;
+                if ( (LA72_5==32) ) {
+                    alt72=2;
                 }
-                else if ( (LA71_5==32) ) {
-                    alt71=2;
+                else if ( (LA72_5==EOF||(LA72_5>=17 && LA72_5<=18)||(LA72_5>=29 && LA72_5<=30)||(LA72_5>=42 && LA72_5<=44)||LA72_5==49||(LA72_5>=61 && LA72_5<=62)||LA72_5==74||(LA72_5>=76 && LA72_5<=88)||LA72_5==91||LA72_5==97||(LA72_5>=105 && LA72_5<=106)) ) {
+                    alt72=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 71, 5, input);
+                        new NoViableAltException("", 72, 5, input);
 
                     throw nvae;
                 }
@@ -13219,18 +13267,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                 break;
             case 52:
                 {
-                int LA71_6 = input.LA(2);
+                int LA72_6 = input.LA(2);
 
-                if ( (LA71_6==32) ) {
-                    alt71=2;
+                if ( (LA72_6==32) ) {
+                    alt72=2;
                 }
-                else if ( (LA71_6==EOF||(LA71_6>=17 && LA71_6<=18)||(LA71_6>=29 && LA71_6<=30)||(LA71_6>=42 && LA71_6<=44)||LA71_6==49||(LA71_6>=61 && LA71_6<=62)||LA71_6==74||(LA71_6>=76 && LA71_6<=88)||LA71_6==91||LA71_6==97||(LA71_6>=105 && LA71_6<=106)) ) {
-                    alt71=1;
+                else if ( (LA72_6==EOF||(LA72_6>=17 && LA72_6<=18)||(LA72_6>=29 && LA72_6<=30)||(LA72_6>=42 && LA72_6<=44)||LA72_6==49||(LA72_6>=61 && LA72_6<=62)||LA72_6==74||(LA72_6>=76 && LA72_6<=88)||LA72_6==91||LA72_6==97||(LA72_6>=105 && LA72_6<=106)) ) {
+                    alt72=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 71, 6, input);
+                        new NoViableAltException("", 72, 6, input);
 
                     throw nvae;
                 }
@@ -13238,36 +13286,36 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                 break;
             case 32:
                 {
-                alt71=2;
+                alt72=2;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 71, 0, input);
+                    new NoViableAltException("", 72, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt71) {
+            switch (alt72) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:4624:2: ( ( (lv_ownedExpression_0_0= ruleExpCS ) ) (otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) ) )? )
+                    // InternalAllocationSpecificationLanguage.g:4642:2: ( ( (lv_ownedExpression_0_0= ruleExpCS ) ) (otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) ) )? )
                     {
-                    // InternalAllocationSpecificationLanguage.g:4624:2: ( ( (lv_ownedExpression_0_0= ruleExpCS ) ) (otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) ) )? )
-                    // InternalAllocationSpecificationLanguage.g:4624:3: ( (lv_ownedExpression_0_0= ruleExpCS ) ) (otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) ) )?
+                    // InternalAllocationSpecificationLanguage.g:4642:2: ( ( (lv_ownedExpression_0_0= ruleExpCS ) ) (otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) ) )? )
+                    // InternalAllocationSpecificationLanguage.g:4642:3: ( (lv_ownedExpression_0_0= ruleExpCS ) ) (otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) ) )?
                     {
-                    // InternalAllocationSpecificationLanguage.g:4624:3: ( (lv_ownedExpression_0_0= ruleExpCS ) )
-                    // InternalAllocationSpecificationLanguage.g:4625:1: (lv_ownedExpression_0_0= ruleExpCS )
+                    // InternalAllocationSpecificationLanguage.g:4642:3: ( (lv_ownedExpression_0_0= ruleExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:4643:1: (lv_ownedExpression_0_0= ruleExpCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:4625:1: (lv_ownedExpression_0_0= ruleExpCS )
-                    // InternalAllocationSpecificationLanguage.g:4626:3: lv_ownedExpression_0_0= ruleExpCS
+                    // InternalAllocationSpecificationLanguage.g:4643:1: (lv_ownedExpression_0_0= ruleExpCS )
+                    // InternalAllocationSpecificationLanguage.g:4644:3: lv_ownedExpression_0_0= ruleExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getCollectionLiteralPartCSAccess().getOwnedExpressionExpCSParserRuleCall_0_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_53);
+                    pushFollow(FollowSets000.FOLLOW_54);
                     lv_ownedExpression_0_0=ruleExpCS();
 
                     state._fsp--;
@@ -13291,16 +13339,16 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    // InternalAllocationSpecificationLanguage.g:4642:2: (otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) ) )?
-                    int alt70=2;
-                    int LA70_0 = input.LA(1);
+                    // InternalAllocationSpecificationLanguage.g:4660:2: (otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) ) )?
+                    int alt71=2;
+                    int LA71_0 = input.LA(1);
 
-                    if ( (LA70_0==97) ) {
-                        alt70=1;
+                    if ( (LA71_0==97) ) {
+                        alt71=1;
                     }
-                    switch (alt70) {
+                    switch (alt71) {
                         case 1 :
-                            // InternalAllocationSpecificationLanguage.g:4642:4: otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) )
+                            // InternalAllocationSpecificationLanguage.g:4660:4: otherlv_1= '..' ( (lv_ownedLastExpression_2_0= ruleExpCS ) )
                             {
                             otherlv_1=(Token)match(input,97,FollowSets000.FOLLOW_19); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -13308,11 +13356,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                                   	newLeafNode(otherlv_1, grammarAccess.getCollectionLiteralPartCSAccess().getFullStopFullStopKeyword_0_1_0());
                                   
                             }
-                            // InternalAllocationSpecificationLanguage.g:4646:1: ( (lv_ownedLastExpression_2_0= ruleExpCS ) )
-                            // InternalAllocationSpecificationLanguage.g:4647:1: (lv_ownedLastExpression_2_0= ruleExpCS )
+                            // InternalAllocationSpecificationLanguage.g:4664:1: ( (lv_ownedLastExpression_2_0= ruleExpCS ) )
+                            // InternalAllocationSpecificationLanguage.g:4665:1: (lv_ownedLastExpression_2_0= ruleExpCS )
                             {
-                            // InternalAllocationSpecificationLanguage.g:4647:1: (lv_ownedLastExpression_2_0= ruleExpCS )
-                            // InternalAllocationSpecificationLanguage.g:4648:3: lv_ownedLastExpression_2_0= ruleExpCS
+                            // InternalAllocationSpecificationLanguage.g:4665:1: (lv_ownedLastExpression_2_0= ruleExpCS )
+                            // InternalAllocationSpecificationLanguage.g:4666:3: lv_ownedLastExpression_2_0= ruleExpCS
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -13356,13 +13404,13 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:4665:6: ( (lv_ownedExpression_3_0= rulePatternExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:4683:6: ( (lv_ownedExpression_3_0= rulePatternExpCS ) )
                     {
-                    // InternalAllocationSpecificationLanguage.g:4665:6: ( (lv_ownedExpression_3_0= rulePatternExpCS ) )
-                    // InternalAllocationSpecificationLanguage.g:4666:1: (lv_ownedExpression_3_0= rulePatternExpCS )
+                    // InternalAllocationSpecificationLanguage.g:4683:6: ( (lv_ownedExpression_3_0= rulePatternExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:4684:1: (lv_ownedExpression_3_0= rulePatternExpCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:4666:1: (lv_ownedExpression_3_0= rulePatternExpCS )
-                    // InternalAllocationSpecificationLanguage.g:4667:3: lv_ownedExpression_3_0= rulePatternExpCS
+                    // InternalAllocationSpecificationLanguage.g:4684:1: (lv_ownedExpression_3_0= rulePatternExpCS )
+                    // InternalAllocationSpecificationLanguage.g:4685:3: lv_ownedExpression_3_0= rulePatternExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -13419,7 +13467,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleCollectionPatternCS"
-    // InternalAllocationSpecificationLanguage.g:4691:1: entryRuleCollectionPatternCS returns [EObject current=null] : iv_ruleCollectionPatternCS= ruleCollectionPatternCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:4709:1: entryRuleCollectionPatternCS returns [EObject current=null] : iv_ruleCollectionPatternCS= ruleCollectionPatternCS EOF ;
     public final EObject entryRuleCollectionPatternCS() throws RecognitionException {
         EObject current = null;
 
@@ -13427,8 +13475,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:4692:2: (iv_ruleCollectionPatternCS= ruleCollectionPatternCS EOF )
-            // InternalAllocationSpecificationLanguage.g:4693:2: iv_ruleCollectionPatternCS= ruleCollectionPatternCS EOF
+            // InternalAllocationSpecificationLanguage.g:4710:2: (iv_ruleCollectionPatternCS= ruleCollectionPatternCS EOF )
+            // InternalAllocationSpecificationLanguage.g:4711:2: iv_ruleCollectionPatternCS= ruleCollectionPatternCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCollectionPatternCSRule()); 
@@ -13459,7 +13507,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleCollectionPatternCS"
-    // InternalAllocationSpecificationLanguage.g:4700:1: ruleCollectionPatternCS returns [EObject current=null] : ( ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= rulePatternExpCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) ) )* (otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) ) ) )? otherlv_7= '}' ) ;
+    // InternalAllocationSpecificationLanguage.g:4718:1: ruleCollectionPatternCS returns [EObject current=null] : ( ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= rulePatternExpCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) ) )* (otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) ) ) )? otherlv_7= '}' ) ;
     public final EObject ruleCollectionPatternCS() throws RecognitionException {
         EObject current = null;
 
@@ -13479,17 +13527,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:4703:28: ( ( ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= rulePatternExpCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) ) )* (otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) ) ) )? otherlv_7= '}' ) )
-            // InternalAllocationSpecificationLanguage.g:4704:1: ( ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= rulePatternExpCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) ) )* (otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) ) ) )? otherlv_7= '}' )
+            // InternalAllocationSpecificationLanguage.g:4721:28: ( ( ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= rulePatternExpCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) ) )* (otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) ) ) )? otherlv_7= '}' ) )
+            // InternalAllocationSpecificationLanguage.g:4722:1: ( ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= rulePatternExpCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) ) )* (otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) ) ) )? otherlv_7= '}' )
             {
-            // InternalAllocationSpecificationLanguage.g:4704:1: ( ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= rulePatternExpCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) ) )* (otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) ) ) )? otherlv_7= '}' )
-            // InternalAllocationSpecificationLanguage.g:4704:2: ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= rulePatternExpCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) ) )* (otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) ) ) )? otherlv_7= '}'
+            // InternalAllocationSpecificationLanguage.g:4722:1: ( ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= rulePatternExpCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) ) )* (otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) ) ) )? otherlv_7= '}' )
+            // InternalAllocationSpecificationLanguage.g:4722:2: ( (lv_ownedType_0_0= ruleCollectionTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= rulePatternExpCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) ) )* (otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) ) ) )? otherlv_7= '}'
             {
-            // InternalAllocationSpecificationLanguage.g:4704:2: ( (lv_ownedType_0_0= ruleCollectionTypeCS ) )
-            // InternalAllocationSpecificationLanguage.g:4705:1: (lv_ownedType_0_0= ruleCollectionTypeCS )
+            // InternalAllocationSpecificationLanguage.g:4722:2: ( (lv_ownedType_0_0= ruleCollectionTypeCS ) )
+            // InternalAllocationSpecificationLanguage.g:4723:1: (lv_ownedType_0_0= ruleCollectionTypeCS )
             {
-            // InternalAllocationSpecificationLanguage.g:4705:1: (lv_ownedType_0_0= ruleCollectionTypeCS )
-            // InternalAllocationSpecificationLanguage.g:4706:3: lv_ownedType_0_0= ruleCollectionTypeCS
+            // InternalAllocationSpecificationLanguage.g:4723:1: (lv_ownedType_0_0= ruleCollectionTypeCS )
+            // InternalAllocationSpecificationLanguage.g:4724:3: lv_ownedType_0_0= ruleCollectionTypeCS
             {
             if ( state.backtracking==0 ) {
                
@@ -13520,35 +13568,35 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            otherlv_1=(Token)match(input,17,FollowSets000.FOLLOW_50); if (state.failed) return current;
+            otherlv_1=(Token)match(input,17,FollowSets000.FOLLOW_51); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getCollectionPatternCSAccess().getLeftCurlyBracketKeyword_1());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:4726:1: ( ( (lv_ownedParts_2_0= rulePatternExpCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) ) )* (otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) ) ) )?
-            int alt73=2;
-            int LA73_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:4744:1: ( ( (lv_ownedParts_2_0= rulePatternExpCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) ) )* (otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) ) ) )?
+            int alt74=2;
+            int LA74_0 = input.LA(1);
 
-            if ( ((LA73_0>=RULE_SIMPLE_ID && LA73_0<=RULE_ESCAPED_ID)||LA73_0==32||(LA73_0>=50 && LA73_0<=52)) ) {
-                alt73=1;
+            if ( ((LA74_0>=RULE_SIMPLE_ID && LA74_0<=RULE_ESCAPED_ID)||LA74_0==32||(LA74_0>=50 && LA74_0<=52)) ) {
+                alt74=1;
             }
-            switch (alt73) {
+            switch (alt74) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:4726:2: ( (lv_ownedParts_2_0= rulePatternExpCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) ) )* (otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) ) )
+                    // InternalAllocationSpecificationLanguage.g:4744:2: ( (lv_ownedParts_2_0= rulePatternExpCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) ) )* (otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) ) )
                     {
-                    // InternalAllocationSpecificationLanguage.g:4726:2: ( (lv_ownedParts_2_0= rulePatternExpCS ) )
-                    // InternalAllocationSpecificationLanguage.g:4727:1: (lv_ownedParts_2_0= rulePatternExpCS )
+                    // InternalAllocationSpecificationLanguage.g:4744:2: ( (lv_ownedParts_2_0= rulePatternExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:4745:1: (lv_ownedParts_2_0= rulePatternExpCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:4727:1: (lv_ownedParts_2_0= rulePatternExpCS )
-                    // InternalAllocationSpecificationLanguage.g:4728:3: lv_ownedParts_2_0= rulePatternExpCS
+                    // InternalAllocationSpecificationLanguage.g:4745:1: (lv_ownedParts_2_0= rulePatternExpCS )
+                    // InternalAllocationSpecificationLanguage.g:4746:3: lv_ownedParts_2_0= rulePatternExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getCollectionPatternCSAccess().getOwnedPartsPatternExpCSParserRuleCall_2_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_54);
+                    pushFollow(FollowSets000.FOLLOW_55);
                     lv_ownedParts_2_0=rulePatternExpCS();
 
                     state._fsp--;
@@ -13572,39 +13620,39 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    // InternalAllocationSpecificationLanguage.g:4744:2: (otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) ) )*
-                    loop72:
+                    // InternalAllocationSpecificationLanguage.g:4762:2: (otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) ) )*
+                    loop73:
                     do {
-                        int alt72=2;
-                        int LA72_0 = input.LA(1);
+                        int alt73=2;
+                        int LA73_0 = input.LA(1);
 
-                        if ( (LA72_0==30) ) {
-                            alt72=1;
+                        if ( (LA73_0==30) ) {
+                            alt73=1;
                         }
 
 
-                        switch (alt72) {
+                        switch (alt73) {
                     	case 1 :
-                    	    // InternalAllocationSpecificationLanguage.g:4744:4: otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) )
+                    	    // InternalAllocationSpecificationLanguage.g:4762:4: otherlv_3= ',' ( (lv_ownedParts_4_0= rulePatternExpCS ) )
                     	    {
-                    	    otherlv_3=(Token)match(input,30,FollowSets000.FOLLOW_52); if (state.failed) return current;
+                    	    otherlv_3=(Token)match(input,30,FollowSets000.FOLLOW_53); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_3, grammarAccess.getCollectionPatternCSAccess().getCommaKeyword_2_1_0());
                     	          
                     	    }
-                    	    // InternalAllocationSpecificationLanguage.g:4748:1: ( (lv_ownedParts_4_0= rulePatternExpCS ) )
-                    	    // InternalAllocationSpecificationLanguage.g:4749:1: (lv_ownedParts_4_0= rulePatternExpCS )
+                    	    // InternalAllocationSpecificationLanguage.g:4766:1: ( (lv_ownedParts_4_0= rulePatternExpCS ) )
+                    	    // InternalAllocationSpecificationLanguage.g:4767:1: (lv_ownedParts_4_0= rulePatternExpCS )
                     	    {
-                    	    // InternalAllocationSpecificationLanguage.g:4749:1: (lv_ownedParts_4_0= rulePatternExpCS )
-                    	    // InternalAllocationSpecificationLanguage.g:4750:3: lv_ownedParts_4_0= rulePatternExpCS
+                    	    // InternalAllocationSpecificationLanguage.g:4767:1: (lv_ownedParts_4_0= rulePatternExpCS )
+                    	    // InternalAllocationSpecificationLanguage.g:4768:3: lv_ownedParts_4_0= rulePatternExpCS
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getCollectionPatternCSAccess().getOwnedPartsPatternExpCSParserRuleCall_2_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FollowSets000.FOLLOW_54);
+                    	    pushFollow(FollowSets000.FOLLOW_55);
                     	    lv_ownedParts_4_0=rulePatternExpCS();
 
                     	    state._fsp--;
@@ -13633,12 +13681,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     	    break;
 
                     	default :
-                    	    break loop72;
+                    	    break loop73;
                         }
                     } while (true);
 
-                    // InternalAllocationSpecificationLanguage.g:4766:4: (otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) ) )
-                    // InternalAllocationSpecificationLanguage.g:4766:6: otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) )
+                    // InternalAllocationSpecificationLanguage.g:4784:4: (otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) ) )
+                    // InternalAllocationSpecificationLanguage.g:4784:6: otherlv_5= '++' ( (lv_restVariableName_6_0= ruleIdentifier ) )
                     {
                     otherlv_5=(Token)match(input,98,FollowSets000.FOLLOW_12); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -13646,11 +13694,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                           	newLeafNode(otherlv_5, grammarAccess.getCollectionPatternCSAccess().getPlusSignPlusSignKeyword_2_2_0());
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:4770:1: ( (lv_restVariableName_6_0= ruleIdentifier ) )
-                    // InternalAllocationSpecificationLanguage.g:4771:1: (lv_restVariableName_6_0= ruleIdentifier )
+                    // InternalAllocationSpecificationLanguage.g:4788:1: ( (lv_restVariableName_6_0= ruleIdentifier ) )
+                    // InternalAllocationSpecificationLanguage.g:4789:1: (lv_restVariableName_6_0= ruleIdentifier )
                     {
-                    // InternalAllocationSpecificationLanguage.g:4771:1: (lv_restVariableName_6_0= ruleIdentifier )
-                    // InternalAllocationSpecificationLanguage.g:4772:3: lv_restVariableName_6_0= ruleIdentifier
+                    // InternalAllocationSpecificationLanguage.g:4789:1: (lv_restVariableName_6_0= ruleIdentifier )
+                    // InternalAllocationSpecificationLanguage.g:4790:3: lv_restVariableName_6_0= ruleIdentifier
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -13719,7 +13767,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleShadowPartCS"
-    // InternalAllocationSpecificationLanguage.g:4800:1: entryRuleShadowPartCS returns [EObject current=null] : iv_ruleShadowPartCS= ruleShadowPartCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:4818:1: entryRuleShadowPartCS returns [EObject current=null] : iv_ruleShadowPartCS= ruleShadowPartCS EOF ;
     public final EObject entryRuleShadowPartCS() throws RecognitionException {
         EObject current = null;
 
@@ -13727,8 +13775,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:4801:2: (iv_ruleShadowPartCS= ruleShadowPartCS EOF )
-            // InternalAllocationSpecificationLanguage.g:4802:2: iv_ruleShadowPartCS= ruleShadowPartCS EOF
+            // InternalAllocationSpecificationLanguage.g:4819:2: (iv_ruleShadowPartCS= ruleShadowPartCS EOF )
+            // InternalAllocationSpecificationLanguage.g:4820:2: iv_ruleShadowPartCS= ruleShadowPartCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getShadowPartCSRule()); 
@@ -13759,7 +13807,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleShadowPartCS"
-    // InternalAllocationSpecificationLanguage.g:4809:1: ruleShadowPartCS returns [EObject current=null] : ( ( ( ruleUnrestrictedName ) ) otherlv_1= '=' ( ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) ) ) ) ;
+    // InternalAllocationSpecificationLanguage.g:4827:1: ruleShadowPartCS returns [EObject current=null] : ( ( ( ( ruleUnrestrictedName ) ) otherlv_1= '=' ( ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) ) ) ) | ( (lv_ownedInitExpression_3_0= ruleStringLiteralExpCS ) ) ) ;
     public final EObject ruleShadowPartCS() throws RecognitionException {
         EObject current = null;
 
@@ -13768,253 +13816,326 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
         EObject lv_ownedInitExpression_2_2 = null;
 
+        EObject lv_ownedInitExpression_3_0 = null;
+
 
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:4812:28: ( ( ( ( ruleUnrestrictedName ) ) otherlv_1= '=' ( ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) ) ) ) )
-            // InternalAllocationSpecificationLanguage.g:4813:1: ( ( ( ruleUnrestrictedName ) ) otherlv_1= '=' ( ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) ) ) )
+            // InternalAllocationSpecificationLanguage.g:4830:28: ( ( ( ( ( ruleUnrestrictedName ) ) otherlv_1= '=' ( ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) ) ) ) | ( (lv_ownedInitExpression_3_0= ruleStringLiteralExpCS ) ) ) )
+            // InternalAllocationSpecificationLanguage.g:4831:1: ( ( ( ( ruleUnrestrictedName ) ) otherlv_1= '=' ( ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) ) ) ) | ( (lv_ownedInitExpression_3_0= ruleStringLiteralExpCS ) ) )
             {
-            // InternalAllocationSpecificationLanguage.g:4813:1: ( ( ( ruleUnrestrictedName ) ) otherlv_1= '=' ( ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) ) ) )
-            // InternalAllocationSpecificationLanguage.g:4813:2: ( ( ruleUnrestrictedName ) ) otherlv_1= '=' ( ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) ) )
-            {
-            // InternalAllocationSpecificationLanguage.g:4813:2: ( ( ruleUnrestrictedName ) )
-            // InternalAllocationSpecificationLanguage.g:4814:1: ( ruleUnrestrictedName )
-            {
-            // InternalAllocationSpecificationLanguage.g:4814:1: ( ruleUnrestrictedName )
-            // InternalAllocationSpecificationLanguage.g:4815:3: ruleUnrestrictedName
-            {
-            if ( state.backtracking==0 ) {
-               
-              		  /* */ 
-              		
+            // InternalAllocationSpecificationLanguage.g:4831:1: ( ( ( ( ruleUnrestrictedName ) ) otherlv_1= '=' ( ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) ) ) ) | ( (lv_ownedInitExpression_3_0= ruleStringLiteralExpCS ) ) )
+            int alt76=2;
+            int LA76_0 = input.LA(1);
+
+            if ( ((LA76_0>=RULE_SIMPLE_ID && LA76_0<=RULE_ESCAPED_ID)||(LA76_0>=50 && LA76_0<=52)) ) {
+                alt76=1;
             }
-            if ( state.backtracking==0 ) {
-
-              			if (current==null) {
-              	            current = createModelElement(grammarAccess.getShadowPartCSRule());
-              	        }
-                      
+            else if ( (LA76_0==RULE_SINGLE_QUOTED_STRING) ) {
+                alt76=2;
             }
-            if ( state.backtracking==0 ) {
-               
-              	        newCompositeNode(grammarAccess.getShadowPartCSAccess().getReferredPropertyPropertyCrossReference_0_0()); 
-              	    
-            }
-            pushFollow(FollowSets000.FOLLOW_39);
-            ruleUnrestrictedName();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               
-              	        afterParserOrEnumRuleCall();
-              	    
-            }
-
-            }
-
-
-            }
-
-            otherlv_1=(Token)match(input,49,FollowSets000.FOLLOW_52); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-                  	newLeafNode(otherlv_1, grammarAccess.getShadowPartCSAccess().getEqualsSignKeyword_1());
-                  
-            }
-            // InternalAllocationSpecificationLanguage.g:4835:1: ( ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) ) )
-            // InternalAllocationSpecificationLanguage.g:4836:1: ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) )
-            {
-            // InternalAllocationSpecificationLanguage.g:4836:1: ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:4837:1: (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS )
-            {
-            // InternalAllocationSpecificationLanguage.g:4837:1: (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS )
-            int alt74=2;
-            switch ( input.LA(1) ) {
-            case RULE_SINGLE_QUOTED_STRING:
-            case RULE_INT:
-            case 29:
-            case 64:
-            case 65:
-            case 66:
-            case 67:
-            case 68:
-            case 69:
-            case 70:
-            case 71:
-            case 72:
-            case 73:
-            case 74:
-            case 75:
-            case 76:
-            case 89:
-            case 90:
-            case 92:
-            case 93:
-            case 94:
-            case 95:
-            case 96:
-            case 99:
-            case 101:
-            case 102:
-            case 103:
-            case 104:
-            case 110:
-            case 115:
-            case 116:
-                {
-                alt74=1;
-                }
-                break;
-            case RULE_SIMPLE_ID:
-                {
-                int LA74_2 = input.LA(2);
-
-                if ( (LA74_2==EOF||(LA74_2>=17 && LA74_2<=18)||(LA74_2>=29 && LA74_2<=30)||(LA74_2>=42 && LA74_2<=44)||LA74_2==49||(LA74_2>=61 && LA74_2<=62)||LA74_2==74||(LA74_2>=76 && LA74_2<=88)||LA74_2==91||(LA74_2>=105 && LA74_2<=106)) ) {
-                    alt74=1;
-                }
-                else if ( (LA74_2==32) ) {
-                    alt74=2;
-                }
-                else {
-                    if (state.backtracking>0) {state.failed=true; return current;}
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 74, 2, input);
-
-                    throw nvae;
-                }
-                }
-                break;
-            case RULE_ESCAPED_ID:
-                {
-                int LA74_3 = input.LA(2);
-
-                if ( (LA74_3==EOF||(LA74_3>=17 && LA74_3<=18)||(LA74_3>=29 && LA74_3<=30)||(LA74_3>=42 && LA74_3<=44)||LA74_3==49||(LA74_3>=61 && LA74_3<=62)||LA74_3==74||(LA74_3>=76 && LA74_3<=88)||LA74_3==91||(LA74_3>=105 && LA74_3<=106)) ) {
-                    alt74=1;
-                }
-                else if ( (LA74_3==32) ) {
-                    alt74=2;
-                }
-                else {
-                    if (state.backtracking>0) {state.failed=true; return current;}
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 74, 3, input);
-
-                    throw nvae;
-                }
-                }
-                break;
-            case 50:
-                {
-                int LA74_4 = input.LA(2);
-
-                if ( (LA74_4==EOF||(LA74_4>=17 && LA74_4<=18)||(LA74_4>=29 && LA74_4<=30)||(LA74_4>=42 && LA74_4<=44)||LA74_4==49||(LA74_4>=61 && LA74_4<=62)||LA74_4==74||(LA74_4>=76 && LA74_4<=88)||LA74_4==91||(LA74_4>=105 && LA74_4<=106)) ) {
-                    alt74=1;
-                }
-                else if ( (LA74_4==32) ) {
-                    alt74=2;
-                }
-                else {
-                    if (state.backtracking>0) {state.failed=true; return current;}
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 74, 4, input);
-
-                    throw nvae;
-                }
-                }
-                break;
-            case 51:
-                {
-                int LA74_5 = input.LA(2);
-
-                if ( (LA74_5==EOF||(LA74_5>=17 && LA74_5<=18)||(LA74_5>=29 && LA74_5<=30)||(LA74_5>=42 && LA74_5<=44)||LA74_5==49||(LA74_5>=61 && LA74_5<=62)||LA74_5==74||(LA74_5>=76 && LA74_5<=88)||LA74_5==91||(LA74_5>=105 && LA74_5<=106)) ) {
-                    alt74=1;
-                }
-                else if ( (LA74_5==32) ) {
-                    alt74=2;
-                }
-                else {
-                    if (state.backtracking>0) {state.failed=true; return current;}
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 74, 5, input);
-
-                    throw nvae;
-                }
-                }
-                break;
-            case 52:
-                {
-                int LA74_6 = input.LA(2);
-
-                if ( (LA74_6==EOF||(LA74_6>=17 && LA74_6<=18)||(LA74_6>=29 && LA74_6<=30)||(LA74_6>=42 && LA74_6<=44)||LA74_6==49||(LA74_6>=61 && LA74_6<=62)||LA74_6==74||(LA74_6>=76 && LA74_6<=88)||LA74_6==91||(LA74_6>=105 && LA74_6<=106)) ) {
-                    alt74=1;
-                }
-                else if ( (LA74_6==32) ) {
-                    alt74=2;
-                }
-                else {
-                    if (state.backtracking>0) {state.failed=true; return current;}
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 74, 6, input);
-
-                    throw nvae;
-                }
-                }
-                break;
-            case 32:
-                {
-                alt74=2;
-                }
-                break;
-            default:
+            else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 74, 0, input);
+                    new NoViableAltException("", 76, 0, input);
 
                 throw nvae;
             }
-
-            switch (alt74) {
+            switch (alt76) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:4838:3: lv_ownedInitExpression_2_1= ruleExpCS
+                    // InternalAllocationSpecificationLanguage.g:4831:2: ( ( ( ruleUnrestrictedName ) ) otherlv_1= '=' ( ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) ) ) )
+                    {
+                    // InternalAllocationSpecificationLanguage.g:4831:2: ( ( ( ruleUnrestrictedName ) ) otherlv_1= '=' ( ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) ) ) )
+                    // InternalAllocationSpecificationLanguage.g:4831:3: ( ( ruleUnrestrictedName ) ) otherlv_1= '=' ( ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) ) )
+                    {
+                    // InternalAllocationSpecificationLanguage.g:4831:3: ( ( ruleUnrestrictedName ) )
+                    // InternalAllocationSpecificationLanguage.g:4832:1: ( ruleUnrestrictedName )
+                    {
+                    // InternalAllocationSpecificationLanguage.g:4832:1: ( ruleUnrestrictedName )
+                    // InternalAllocationSpecificationLanguage.g:4833:3: ruleUnrestrictedName
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getShadowPartCSAccess().getOwnedInitExpressionExpCSParserRuleCall_2_0_0()); 
+                      		  /* */ 
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			if (current==null) {
+                      	            current = createModelElement(grammarAccess.getShadowPartCSRule());
+                      	        }
+                              
+                    }
+                    if ( state.backtracking==0 ) {
+                       
+                      	        newCompositeNode(grammarAccess.getShadowPartCSAccess().getReferredPropertyPropertyCrossReference_0_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_2);
-                    lv_ownedInitExpression_2_1=ruleExpCS();
+                    pushFollow(FollowSets000.FOLLOW_39);
+                    ruleUnrestrictedName();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
-
-                      	        if (current==null) {
-                      	            current = createModelElementForParent(grammarAccess.getShadowPartCSRule());
-                      	        }
-                             		set(
-                             			current, 
-                             			"ownedInitExpression",
-                              		lv_ownedInitExpression_2_1, 
-                              		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.ExpCS");
+                       
                       	        afterParserOrEnumRuleCall();
                       	    
                     }
+
+                    }
+
+
+                    }
+
+                    otherlv_1=(Token)match(input,49,FollowSets000.FOLLOW_53); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                          	newLeafNode(otherlv_1, grammarAccess.getShadowPartCSAccess().getEqualsSignKeyword_0_1());
+                          
+                    }
+                    // InternalAllocationSpecificationLanguage.g:4853:1: ( ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) ) )
+                    // InternalAllocationSpecificationLanguage.g:4854:1: ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) )
+                    {
+                    // InternalAllocationSpecificationLanguage.g:4854:1: ( (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:4855:1: (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS )
+                    {
+                    // InternalAllocationSpecificationLanguage.g:4855:1: (lv_ownedInitExpression_2_1= ruleExpCS | lv_ownedInitExpression_2_2= rulePatternExpCS )
+                    int alt75=2;
+                    switch ( input.LA(1) ) {
+                    case RULE_SINGLE_QUOTED_STRING:
+                    case RULE_INT:
+                    case 29:
+                    case 64:
+                    case 65:
+                    case 66:
+                    case 67:
+                    case 68:
+                    case 69:
+                    case 70:
+                    case 71:
+                    case 72:
+                    case 73:
+                    case 74:
+                    case 75:
+                    case 76:
+                    case 89:
+                    case 90:
+                    case 92:
+                    case 93:
+                    case 94:
+                    case 95:
+                    case 96:
+                    case 99:
+                    case 101:
+                    case 102:
+                    case 103:
+                    case 104:
+                    case 110:
+                    case 115:
+                    case 116:
+                        {
+                        alt75=1;
+                        }
+                        break;
+                    case RULE_SIMPLE_ID:
+                        {
+                        int LA75_2 = input.LA(2);
+
+                        if ( (LA75_2==32) ) {
+                            alt75=2;
+                        }
+                        else if ( (LA75_2==EOF||(LA75_2>=17 && LA75_2<=18)||(LA75_2>=29 && LA75_2<=30)||(LA75_2>=42 && LA75_2<=44)||LA75_2==49||(LA75_2>=61 && LA75_2<=62)||LA75_2==74||(LA75_2>=76 && LA75_2<=88)||LA75_2==91||(LA75_2>=105 && LA75_2<=106)) ) {
+                            alt75=1;
+                        }
+                        else {
+                            if (state.backtracking>0) {state.failed=true; return current;}
+                            NoViableAltException nvae =
+                                new NoViableAltException("", 75, 2, input);
+
+                            throw nvae;
+                        }
+                        }
+                        break;
+                    case RULE_ESCAPED_ID:
+                        {
+                        int LA75_3 = input.LA(2);
+
+                        if ( (LA75_3==EOF||(LA75_3>=17 && LA75_3<=18)||(LA75_3>=29 && LA75_3<=30)||(LA75_3>=42 && LA75_3<=44)||LA75_3==49||(LA75_3>=61 && LA75_3<=62)||LA75_3==74||(LA75_3>=76 && LA75_3<=88)||LA75_3==91||(LA75_3>=105 && LA75_3<=106)) ) {
+                            alt75=1;
+                        }
+                        else if ( (LA75_3==32) ) {
+                            alt75=2;
+                        }
+                        else {
+                            if (state.backtracking>0) {state.failed=true; return current;}
+                            NoViableAltException nvae =
+                                new NoViableAltException("", 75, 3, input);
+
+                            throw nvae;
+                        }
+                        }
+                        break;
+                    case 50:
+                        {
+                        int LA75_4 = input.LA(2);
+
+                        if ( (LA75_4==EOF||(LA75_4>=17 && LA75_4<=18)||(LA75_4>=29 && LA75_4<=30)||(LA75_4>=42 && LA75_4<=44)||LA75_4==49||(LA75_4>=61 && LA75_4<=62)||LA75_4==74||(LA75_4>=76 && LA75_4<=88)||LA75_4==91||(LA75_4>=105 && LA75_4<=106)) ) {
+                            alt75=1;
+                        }
+                        else if ( (LA75_4==32) ) {
+                            alt75=2;
+                        }
+                        else {
+                            if (state.backtracking>0) {state.failed=true; return current;}
+                            NoViableAltException nvae =
+                                new NoViableAltException("", 75, 4, input);
+
+                            throw nvae;
+                        }
+                        }
+                        break;
+                    case 51:
+                        {
+                        int LA75_5 = input.LA(2);
+
+                        if ( (LA75_5==EOF||(LA75_5>=17 && LA75_5<=18)||(LA75_5>=29 && LA75_5<=30)||(LA75_5>=42 && LA75_5<=44)||LA75_5==49||(LA75_5>=61 && LA75_5<=62)||LA75_5==74||(LA75_5>=76 && LA75_5<=88)||LA75_5==91||(LA75_5>=105 && LA75_5<=106)) ) {
+                            alt75=1;
+                        }
+                        else if ( (LA75_5==32) ) {
+                            alt75=2;
+                        }
+                        else {
+                            if (state.backtracking>0) {state.failed=true; return current;}
+                            NoViableAltException nvae =
+                                new NoViableAltException("", 75, 5, input);
+
+                            throw nvae;
+                        }
+                        }
+                        break;
+                    case 52:
+                        {
+                        int LA75_6 = input.LA(2);
+
+                        if ( (LA75_6==32) ) {
+                            alt75=2;
+                        }
+                        else if ( (LA75_6==EOF||(LA75_6>=17 && LA75_6<=18)||(LA75_6>=29 && LA75_6<=30)||(LA75_6>=42 && LA75_6<=44)||LA75_6==49||(LA75_6>=61 && LA75_6<=62)||LA75_6==74||(LA75_6>=76 && LA75_6<=88)||LA75_6==91||(LA75_6>=105 && LA75_6<=106)) ) {
+                            alt75=1;
+                        }
+                        else {
+                            if (state.backtracking>0) {state.failed=true; return current;}
+                            NoViableAltException nvae =
+                                new NoViableAltException("", 75, 6, input);
+
+                            throw nvae;
+                        }
+                        }
+                        break;
+                    case 32:
+                        {
+                        alt75=2;
+                        }
+                        break;
+                    default:
+                        if (state.backtracking>0) {state.failed=true; return current;}
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 75, 0, input);
+
+                        throw nvae;
+                    }
+
+                    switch (alt75) {
+                        case 1 :
+                            // InternalAllocationSpecificationLanguage.g:4856:3: lv_ownedInitExpression_2_1= ruleExpCS
+                            {
+                            if ( state.backtracking==0 ) {
+                               
+                              	        newCompositeNode(grammarAccess.getShadowPartCSAccess().getOwnedInitExpressionExpCSParserRuleCall_0_2_0_0()); 
+                              	    
+                            }
+                            pushFollow(FollowSets000.FOLLOW_2);
+                            lv_ownedInitExpression_2_1=ruleExpCS();
+
+                            state._fsp--;
+                            if (state.failed) return current;
+                            if ( state.backtracking==0 ) {
+
+                              	        if (current==null) {
+                              	            current = createModelElementForParent(grammarAccess.getShadowPartCSRule());
+                              	        }
+                                     		set(
+                                     			current, 
+                                     			"ownedInitExpression",
+                                      		lv_ownedInitExpression_2_1, 
+                                      		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.ExpCS");
+                              	        afterParserOrEnumRuleCall();
+                              	    
+                            }
+
+                            }
+                            break;
+                        case 2 :
+                            // InternalAllocationSpecificationLanguage.g:4871:8: lv_ownedInitExpression_2_2= rulePatternExpCS
+                            {
+                            if ( state.backtracking==0 ) {
+                               
+                              	        newCompositeNode(grammarAccess.getShadowPartCSAccess().getOwnedInitExpressionPatternExpCSParserRuleCall_0_2_0_1()); 
+                              	    
+                            }
+                            pushFollow(FollowSets000.FOLLOW_2);
+                            lv_ownedInitExpression_2_2=rulePatternExpCS();
+
+                            state._fsp--;
+                            if (state.failed) return current;
+                            if ( state.backtracking==0 ) {
+
+                              	        if (current==null) {
+                              	            current = createModelElementForParent(grammarAccess.getShadowPartCSRule());
+                              	        }
+                                     		set(
+                                     			current, 
+                                     			"ownedInitExpression",
+                                      		lv_ownedInitExpression_2_2, 
+                                      		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.PatternExpCS");
+                              	        afterParserOrEnumRuleCall();
+                              	    
+                            }
+
+                            }
+                            break;
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:4853:8: lv_ownedInitExpression_2_2= rulePatternExpCS
+                    // InternalAllocationSpecificationLanguage.g:4890:6: ( (lv_ownedInitExpression_3_0= ruleStringLiteralExpCS ) )
+                    {
+                    // InternalAllocationSpecificationLanguage.g:4890:6: ( (lv_ownedInitExpression_3_0= ruleStringLiteralExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:4891:1: (lv_ownedInitExpression_3_0= ruleStringLiteralExpCS )
+                    {
+                    // InternalAllocationSpecificationLanguage.g:4891:1: (lv_ownedInitExpression_3_0= ruleStringLiteralExpCS )
+                    // InternalAllocationSpecificationLanguage.g:4892:3: lv_ownedInitExpression_3_0= ruleStringLiteralExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getShadowPartCSAccess().getOwnedInitExpressionPatternExpCSParserRuleCall_2_0_1()); 
+                      	        newCompositeNode(grammarAccess.getShadowPartCSAccess().getOwnedInitExpressionStringLiteralExpCSParserRuleCall_1_0()); 
                       	    
                     }
                     pushFollow(FollowSets000.FOLLOW_2);
-                    lv_ownedInitExpression_2_2=rulePatternExpCS();
+                    lv_ownedInitExpression_3_0=ruleStringLiteralExpCS();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -14026,23 +14147,20 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                              		set(
                              			current, 
                              			"ownedInitExpression",
-                              		lv_ownedInitExpression_2_2, 
-                              		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.PatternExpCS");
+                              		lv_ownedInitExpression_3_0, 
+                              		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.StringLiteralExpCS");
                       	        afterParserOrEnumRuleCall();
                       	    
                     }
 
                     }
+
+
+                    }
+
+
+                    }
                     break;
-
-            }
-
-
-            }
-
-
-            }
-
 
             }
 
@@ -14066,7 +14184,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRulePatternExpCS"
-    // InternalAllocationSpecificationLanguage.g:4879:1: entryRulePatternExpCS returns [EObject current=null] : iv_rulePatternExpCS= rulePatternExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:4916:1: entryRulePatternExpCS returns [EObject current=null] : iv_rulePatternExpCS= rulePatternExpCS EOF ;
     public final EObject entryRulePatternExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -14074,8 +14192,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:4880:2: (iv_rulePatternExpCS= rulePatternExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:4881:2: iv_rulePatternExpCS= rulePatternExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:4917:2: (iv_rulePatternExpCS= rulePatternExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:4918:2: iv_rulePatternExpCS= rulePatternExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPatternExpCSRule()); 
@@ -14106,7 +14224,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "rulePatternExpCS"
-    // InternalAllocationSpecificationLanguage.g:4888:1: rulePatternExpCS returns [EObject current=null] : ( ( (lv_patternVariableName_0_0= ruleUnrestrictedName ) )? otherlv_1= ':' ( (lv_ownedPatternType_2_0= ruleTypeExpCS ) ) ) ;
+    // InternalAllocationSpecificationLanguage.g:4925:1: rulePatternExpCS returns [EObject current=null] : ( ( (lv_patternVariableName_0_0= ruleUnrestrictedName ) )? otherlv_1= ':' ( (lv_ownedPatternType_2_0= ruleTypeExpCS ) ) ) ;
     public final EObject rulePatternExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -14119,25 +14237,25 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:4891:28: ( ( ( (lv_patternVariableName_0_0= ruleUnrestrictedName ) )? otherlv_1= ':' ( (lv_ownedPatternType_2_0= ruleTypeExpCS ) ) ) )
-            // InternalAllocationSpecificationLanguage.g:4892:1: ( ( (lv_patternVariableName_0_0= ruleUnrestrictedName ) )? otherlv_1= ':' ( (lv_ownedPatternType_2_0= ruleTypeExpCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:4928:28: ( ( ( (lv_patternVariableName_0_0= ruleUnrestrictedName ) )? otherlv_1= ':' ( (lv_ownedPatternType_2_0= ruleTypeExpCS ) ) ) )
+            // InternalAllocationSpecificationLanguage.g:4929:1: ( ( (lv_patternVariableName_0_0= ruleUnrestrictedName ) )? otherlv_1= ':' ( (lv_ownedPatternType_2_0= ruleTypeExpCS ) ) )
             {
-            // InternalAllocationSpecificationLanguage.g:4892:1: ( ( (lv_patternVariableName_0_0= ruleUnrestrictedName ) )? otherlv_1= ':' ( (lv_ownedPatternType_2_0= ruleTypeExpCS ) ) )
-            // InternalAllocationSpecificationLanguage.g:4892:2: ( (lv_patternVariableName_0_0= ruleUnrestrictedName ) )? otherlv_1= ':' ( (lv_ownedPatternType_2_0= ruleTypeExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:4929:1: ( ( (lv_patternVariableName_0_0= ruleUnrestrictedName ) )? otherlv_1= ':' ( (lv_ownedPatternType_2_0= ruleTypeExpCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:4929:2: ( (lv_patternVariableName_0_0= ruleUnrestrictedName ) )? otherlv_1= ':' ( (lv_ownedPatternType_2_0= ruleTypeExpCS ) )
             {
-            // InternalAllocationSpecificationLanguage.g:4892:2: ( (lv_patternVariableName_0_0= ruleUnrestrictedName ) )?
-            int alt75=2;
-            int LA75_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:4929:2: ( (lv_patternVariableName_0_0= ruleUnrestrictedName ) )?
+            int alt77=2;
+            int LA77_0 = input.LA(1);
 
-            if ( ((LA75_0>=RULE_SIMPLE_ID && LA75_0<=RULE_ESCAPED_ID)||(LA75_0>=50 && LA75_0<=52)) ) {
-                alt75=1;
+            if ( ((LA77_0>=RULE_SIMPLE_ID && LA77_0<=RULE_ESCAPED_ID)||(LA77_0>=50 && LA77_0<=52)) ) {
+                alt77=1;
             }
-            switch (alt75) {
+            switch (alt77) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:4893:1: (lv_patternVariableName_0_0= ruleUnrestrictedName )
+                    // InternalAllocationSpecificationLanguage.g:4930:1: (lv_patternVariableName_0_0= ruleUnrestrictedName )
                     {
-                    // InternalAllocationSpecificationLanguage.g:4893:1: (lv_patternVariableName_0_0= ruleUnrestrictedName )
-                    // InternalAllocationSpecificationLanguage.g:4894:3: lv_patternVariableName_0_0= ruleUnrestrictedName
+                    // InternalAllocationSpecificationLanguage.g:4930:1: (lv_patternVariableName_0_0= ruleUnrestrictedName )
+                    // InternalAllocationSpecificationLanguage.g:4931:3: lv_patternVariableName_0_0= ruleUnrestrictedName
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -14177,11 +14295,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_1, grammarAccess.getPatternExpCSAccess().getColonKeyword_1());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:4914:1: ( (lv_ownedPatternType_2_0= ruleTypeExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:4915:1: (lv_ownedPatternType_2_0= ruleTypeExpCS )
+            // InternalAllocationSpecificationLanguage.g:4951:1: ( (lv_ownedPatternType_2_0= ruleTypeExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:4952:1: (lv_ownedPatternType_2_0= ruleTypeExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:4915:1: (lv_ownedPatternType_2_0= ruleTypeExpCS )
-            // InternalAllocationSpecificationLanguage.g:4916:3: lv_ownedPatternType_2_0= ruleTypeExpCS
+            // InternalAllocationSpecificationLanguage.g:4952:1: (lv_ownedPatternType_2_0= ruleTypeExpCS )
+            // InternalAllocationSpecificationLanguage.g:4953:3: lv_ownedPatternType_2_0= ruleTypeExpCS
             {
             if ( state.backtracking==0 ) {
                
@@ -14235,7 +14353,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleLambdaLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:4940:1: entryRuleLambdaLiteralExpCS returns [EObject current=null] : iv_ruleLambdaLiteralExpCS= ruleLambdaLiteralExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:4977:1: entryRuleLambdaLiteralExpCS returns [EObject current=null] : iv_ruleLambdaLiteralExpCS= ruleLambdaLiteralExpCS EOF ;
     public final EObject entryRuleLambdaLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -14243,8 +14361,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:4941:2: (iv_ruleLambdaLiteralExpCS= ruleLambdaLiteralExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:4942:2: iv_ruleLambdaLiteralExpCS= ruleLambdaLiteralExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:4978:2: (iv_ruleLambdaLiteralExpCS= ruleLambdaLiteralExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:4979:2: iv_ruleLambdaLiteralExpCS= ruleLambdaLiteralExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLambdaLiteralExpCSRule()); 
@@ -14275,7 +14393,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleLambdaLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:4949:1: ruleLambdaLiteralExpCS returns [EObject current=null] : (otherlv_0= 'Lambda' otherlv_1= '{' ( (lv_ownedExpressionCS_2_0= ruleExpCS ) ) otherlv_3= '}' ) ;
+    // InternalAllocationSpecificationLanguage.g:4986:1: ruleLambdaLiteralExpCS returns [EObject current=null] : (otherlv_0= 'Lambda' otherlv_1= '{' ( (lv_ownedExpressionCS_2_0= ruleExpCS ) ) otherlv_3= '}' ) ;
     public final EObject ruleLambdaLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -14288,11 +14406,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:4952:28: ( (otherlv_0= 'Lambda' otherlv_1= '{' ( (lv_ownedExpressionCS_2_0= ruleExpCS ) ) otherlv_3= '}' ) )
-            // InternalAllocationSpecificationLanguage.g:4953:1: (otherlv_0= 'Lambda' otherlv_1= '{' ( (lv_ownedExpressionCS_2_0= ruleExpCS ) ) otherlv_3= '}' )
+            // InternalAllocationSpecificationLanguage.g:4989:28: ( (otherlv_0= 'Lambda' otherlv_1= '{' ( (lv_ownedExpressionCS_2_0= ruleExpCS ) ) otherlv_3= '}' ) )
+            // InternalAllocationSpecificationLanguage.g:4990:1: (otherlv_0= 'Lambda' otherlv_1= '{' ( (lv_ownedExpressionCS_2_0= ruleExpCS ) ) otherlv_3= '}' )
             {
-            // InternalAllocationSpecificationLanguage.g:4953:1: (otherlv_0= 'Lambda' otherlv_1= '{' ( (lv_ownedExpressionCS_2_0= ruleExpCS ) ) otherlv_3= '}' )
-            // InternalAllocationSpecificationLanguage.g:4953:3: otherlv_0= 'Lambda' otherlv_1= '{' ( (lv_ownedExpressionCS_2_0= ruleExpCS ) ) otherlv_3= '}'
+            // InternalAllocationSpecificationLanguage.g:4990:1: (otherlv_0= 'Lambda' otherlv_1= '{' ( (lv_ownedExpressionCS_2_0= ruleExpCS ) ) otherlv_3= '}' )
+            // InternalAllocationSpecificationLanguage.g:4990:3: otherlv_0= 'Lambda' otherlv_1= '{' ( (lv_ownedExpressionCS_2_0= ruleExpCS ) ) otherlv_3= '}'
             {
             otherlv_0=(Token)match(input,99,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -14306,11 +14424,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_1, grammarAccess.getLambdaLiteralExpCSAccess().getLeftCurlyBracketKeyword_1());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:4961:1: ( (lv_ownedExpressionCS_2_0= ruleExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:4962:1: (lv_ownedExpressionCS_2_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:4998:1: ( (lv_ownedExpressionCS_2_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:4999:1: (lv_ownedExpressionCS_2_0= ruleExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:4962:1: (lv_ownedExpressionCS_2_0= ruleExpCS )
-            // InternalAllocationSpecificationLanguage.g:4963:3: lv_ownedExpressionCS_2_0= ruleExpCS
+            // InternalAllocationSpecificationLanguage.g:4999:1: (lv_ownedExpressionCS_2_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:5000:3: lv_ownedExpressionCS_2_0= ruleExpCS
             {
             if ( state.backtracking==0 ) {
                
@@ -14370,7 +14488,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleMapLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:4991:1: entryRuleMapLiteralExpCS returns [EObject current=null] : iv_ruleMapLiteralExpCS= ruleMapLiteralExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:5028:1: entryRuleMapLiteralExpCS returns [EObject current=null] : iv_ruleMapLiteralExpCS= ruleMapLiteralExpCS EOF ;
     public final EObject entryRuleMapLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -14378,8 +14496,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:4992:2: (iv_ruleMapLiteralExpCS= ruleMapLiteralExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:4993:2: iv_ruleMapLiteralExpCS= ruleMapLiteralExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:5029:2: (iv_ruleMapLiteralExpCS= ruleMapLiteralExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5030:2: iv_ruleMapLiteralExpCS= ruleMapLiteralExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMapLiteralExpCSRule()); 
@@ -14410,7 +14528,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleMapLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5000:1: ruleMapLiteralExpCS returns [EObject current=null] : ( ( (lv_ownedType_0_0= ruleMapTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleMapLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) ) )* )? otherlv_5= '}' ) ;
+    // InternalAllocationSpecificationLanguage.g:5037:1: ruleMapLiteralExpCS returns [EObject current=null] : ( ( (lv_ownedType_0_0= ruleMapTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleMapLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) ) )* )? otherlv_5= '}' ) ;
     public final EObject ruleMapLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -14427,17 +14545,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5003:28: ( ( ( (lv_ownedType_0_0= ruleMapTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleMapLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) ) )* )? otherlv_5= '}' ) )
-            // InternalAllocationSpecificationLanguage.g:5004:1: ( ( (lv_ownedType_0_0= ruleMapTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleMapLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) ) )* )? otherlv_5= '}' )
+            // InternalAllocationSpecificationLanguage.g:5040:28: ( ( ( (lv_ownedType_0_0= ruleMapTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleMapLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) ) )* )? otherlv_5= '}' ) )
+            // InternalAllocationSpecificationLanguage.g:5041:1: ( ( (lv_ownedType_0_0= ruleMapTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleMapLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) ) )* )? otherlv_5= '}' )
             {
-            // InternalAllocationSpecificationLanguage.g:5004:1: ( ( (lv_ownedType_0_0= ruleMapTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleMapLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) ) )* )? otherlv_5= '}' )
-            // InternalAllocationSpecificationLanguage.g:5004:2: ( (lv_ownedType_0_0= ruleMapTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleMapLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) ) )* )? otherlv_5= '}'
+            // InternalAllocationSpecificationLanguage.g:5041:1: ( ( (lv_ownedType_0_0= ruleMapTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleMapLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) ) )* )? otherlv_5= '}' )
+            // InternalAllocationSpecificationLanguage.g:5041:2: ( (lv_ownedType_0_0= ruleMapTypeCS ) ) otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleMapLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) ) )* )? otherlv_5= '}'
             {
-            // InternalAllocationSpecificationLanguage.g:5004:2: ( (lv_ownedType_0_0= ruleMapTypeCS ) )
-            // InternalAllocationSpecificationLanguage.g:5005:1: (lv_ownedType_0_0= ruleMapTypeCS )
+            // InternalAllocationSpecificationLanguage.g:5041:2: ( (lv_ownedType_0_0= ruleMapTypeCS ) )
+            // InternalAllocationSpecificationLanguage.g:5042:1: (lv_ownedType_0_0= ruleMapTypeCS )
             {
-            // InternalAllocationSpecificationLanguage.g:5005:1: (lv_ownedType_0_0= ruleMapTypeCS )
-            // InternalAllocationSpecificationLanguage.g:5006:3: lv_ownedType_0_0= ruleMapTypeCS
+            // InternalAllocationSpecificationLanguage.g:5042:1: (lv_ownedType_0_0= ruleMapTypeCS )
+            // InternalAllocationSpecificationLanguage.g:5043:3: lv_ownedType_0_0= ruleMapTypeCS
             {
             if ( state.backtracking==0 ) {
                
@@ -14468,35 +14586,35 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            otherlv_1=(Token)match(input,17,FollowSets000.FOLLOW_55); if (state.failed) return current;
+            otherlv_1=(Token)match(input,17,FollowSets000.FOLLOW_56); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getMapLiteralExpCSAccess().getLeftCurlyBracketKeyword_1());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:5026:1: ( ( (lv_ownedParts_2_0= ruleMapLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) ) )* )?
-            int alt77=2;
-            int LA77_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:5063:1: ( ( (lv_ownedParts_2_0= ruleMapLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) ) )* )?
+            int alt79=2;
+            int LA79_0 = input.LA(1);
 
-            if ( (LA77_0==RULE_SINGLE_QUOTED_STRING||(LA77_0>=RULE_SIMPLE_ID && LA77_0<=RULE_INT)||LA77_0==29||(LA77_0>=50 && LA77_0<=52)||(LA77_0>=64 && LA77_0<=76)||(LA77_0>=89 && LA77_0<=90)||(LA77_0>=92 && LA77_0<=96)||LA77_0==99||(LA77_0>=101 && LA77_0<=104)||LA77_0==110||(LA77_0>=115 && LA77_0<=116)) ) {
-                alt77=1;
+            if ( (LA79_0==RULE_SINGLE_QUOTED_STRING||(LA79_0>=RULE_SIMPLE_ID && LA79_0<=RULE_INT)||LA79_0==29||(LA79_0>=50 && LA79_0<=52)||(LA79_0>=64 && LA79_0<=76)||(LA79_0>=89 && LA79_0<=90)||(LA79_0>=92 && LA79_0<=96)||LA79_0==99||(LA79_0>=101 && LA79_0<=104)||LA79_0==110||(LA79_0>=115 && LA79_0<=116)) ) {
+                alt79=1;
             }
-            switch (alt77) {
+            switch (alt79) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:5026:2: ( (lv_ownedParts_2_0= ruleMapLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) ) )*
+                    // InternalAllocationSpecificationLanguage.g:5063:2: ( (lv_ownedParts_2_0= ruleMapLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) ) )*
                     {
-                    // InternalAllocationSpecificationLanguage.g:5026:2: ( (lv_ownedParts_2_0= ruleMapLiteralPartCS ) )
-                    // InternalAllocationSpecificationLanguage.g:5027:1: (lv_ownedParts_2_0= ruleMapLiteralPartCS )
+                    // InternalAllocationSpecificationLanguage.g:5063:2: ( (lv_ownedParts_2_0= ruleMapLiteralPartCS ) )
+                    // InternalAllocationSpecificationLanguage.g:5064:1: (lv_ownedParts_2_0= ruleMapLiteralPartCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:5027:1: (lv_ownedParts_2_0= ruleMapLiteralPartCS )
-                    // InternalAllocationSpecificationLanguage.g:5028:3: lv_ownedParts_2_0= ruleMapLiteralPartCS
+                    // InternalAllocationSpecificationLanguage.g:5064:1: (lv_ownedParts_2_0= ruleMapLiteralPartCS )
+                    // InternalAllocationSpecificationLanguage.g:5065:3: lv_ownedParts_2_0= ruleMapLiteralPartCS
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getMapLiteralExpCSAccess().getOwnedPartsMapLiteralPartCSParserRuleCall_2_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_51);
+                    pushFollow(FollowSets000.FOLLOW_52);
                     lv_ownedParts_2_0=ruleMapLiteralPartCS();
 
                     state._fsp--;
@@ -14520,20 +14638,20 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    // InternalAllocationSpecificationLanguage.g:5044:2: (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) ) )*
-                    loop76:
+                    // InternalAllocationSpecificationLanguage.g:5081:2: (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) ) )*
+                    loop78:
                     do {
-                        int alt76=2;
-                        int LA76_0 = input.LA(1);
+                        int alt78=2;
+                        int LA78_0 = input.LA(1);
 
-                        if ( (LA76_0==30) ) {
-                            alt76=1;
+                        if ( (LA78_0==30) ) {
+                            alt78=1;
                         }
 
 
-                        switch (alt76) {
+                        switch (alt78) {
                     	case 1 :
-                    	    // InternalAllocationSpecificationLanguage.g:5044:4: otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) )
+                    	    // InternalAllocationSpecificationLanguage.g:5081:4: otherlv_3= ',' ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) )
                     	    {
                     	    otherlv_3=(Token)match(input,30,FollowSets000.FOLLOW_19); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
@@ -14541,18 +14659,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     	          	newLeafNode(otherlv_3, grammarAccess.getMapLiteralExpCSAccess().getCommaKeyword_2_1_0());
                     	          
                     	    }
-                    	    // InternalAllocationSpecificationLanguage.g:5048:1: ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) )
-                    	    // InternalAllocationSpecificationLanguage.g:5049:1: (lv_ownedParts_4_0= ruleMapLiteralPartCS )
+                    	    // InternalAllocationSpecificationLanguage.g:5085:1: ( (lv_ownedParts_4_0= ruleMapLiteralPartCS ) )
+                    	    // InternalAllocationSpecificationLanguage.g:5086:1: (lv_ownedParts_4_0= ruleMapLiteralPartCS )
                     	    {
-                    	    // InternalAllocationSpecificationLanguage.g:5049:1: (lv_ownedParts_4_0= ruleMapLiteralPartCS )
-                    	    // InternalAllocationSpecificationLanguage.g:5050:3: lv_ownedParts_4_0= ruleMapLiteralPartCS
+                    	    // InternalAllocationSpecificationLanguage.g:5086:1: (lv_ownedParts_4_0= ruleMapLiteralPartCS )
+                    	    // InternalAllocationSpecificationLanguage.g:5087:3: lv_ownedParts_4_0= ruleMapLiteralPartCS
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getMapLiteralExpCSAccess().getOwnedPartsMapLiteralPartCSParserRuleCall_2_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FollowSets000.FOLLOW_51);
+                    	    pushFollow(FollowSets000.FOLLOW_52);
                     	    lv_ownedParts_4_0=ruleMapLiteralPartCS();
 
                     	    state._fsp--;
@@ -14581,7 +14699,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     	    break;
 
                     	default :
-                    	    break loop76;
+                    	    break loop78;
                         }
                     } while (true);
 
@@ -14620,7 +14738,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleMapLiteralPartCS"
-    // InternalAllocationSpecificationLanguage.g:5078:1: entryRuleMapLiteralPartCS returns [EObject current=null] : iv_ruleMapLiteralPartCS= ruleMapLiteralPartCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:5115:1: entryRuleMapLiteralPartCS returns [EObject current=null] : iv_ruleMapLiteralPartCS= ruleMapLiteralPartCS EOF ;
     public final EObject entryRuleMapLiteralPartCS() throws RecognitionException {
         EObject current = null;
 
@@ -14628,8 +14746,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:5079:2: (iv_ruleMapLiteralPartCS= ruleMapLiteralPartCS EOF )
-            // InternalAllocationSpecificationLanguage.g:5080:2: iv_ruleMapLiteralPartCS= ruleMapLiteralPartCS EOF
+            // InternalAllocationSpecificationLanguage.g:5116:2: (iv_ruleMapLiteralPartCS= ruleMapLiteralPartCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5117:2: iv_ruleMapLiteralPartCS= ruleMapLiteralPartCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMapLiteralPartCSRule()); 
@@ -14660,7 +14778,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleMapLiteralPartCS"
-    // InternalAllocationSpecificationLanguage.g:5087:1: ruleMapLiteralPartCS returns [EObject current=null] : ( ( (lv_ownedKey_0_0= ruleExpCS ) ) otherlv_1= '<-' ( (lv_ownedValue_2_0= ruleExpCS ) ) ) ;
+    // InternalAllocationSpecificationLanguage.g:5124:1: ruleMapLiteralPartCS returns [EObject current=null] : ( ( (lv_ownedKey_0_0= ruleExpCS ) ) otherlv_1= '<-' ( (lv_ownedValue_2_0= ruleExpCS ) ) ) ;
     public final EObject ruleMapLiteralPartCS() throws RecognitionException {
         EObject current = null;
 
@@ -14673,24 +14791,24 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5090:28: ( ( ( (lv_ownedKey_0_0= ruleExpCS ) ) otherlv_1= '<-' ( (lv_ownedValue_2_0= ruleExpCS ) ) ) )
-            // InternalAllocationSpecificationLanguage.g:5091:1: ( ( (lv_ownedKey_0_0= ruleExpCS ) ) otherlv_1= '<-' ( (lv_ownedValue_2_0= ruleExpCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:5127:28: ( ( ( (lv_ownedKey_0_0= ruleExpCS ) ) otherlv_1= '<-' ( (lv_ownedValue_2_0= ruleExpCS ) ) ) )
+            // InternalAllocationSpecificationLanguage.g:5128:1: ( ( (lv_ownedKey_0_0= ruleExpCS ) ) otherlv_1= '<-' ( (lv_ownedValue_2_0= ruleExpCS ) ) )
             {
-            // InternalAllocationSpecificationLanguage.g:5091:1: ( ( (lv_ownedKey_0_0= ruleExpCS ) ) otherlv_1= '<-' ( (lv_ownedValue_2_0= ruleExpCS ) ) )
-            // InternalAllocationSpecificationLanguage.g:5091:2: ( (lv_ownedKey_0_0= ruleExpCS ) ) otherlv_1= '<-' ( (lv_ownedValue_2_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:5128:1: ( ( (lv_ownedKey_0_0= ruleExpCS ) ) otherlv_1= '<-' ( (lv_ownedValue_2_0= ruleExpCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:5128:2: ( (lv_ownedKey_0_0= ruleExpCS ) ) otherlv_1= '<-' ( (lv_ownedValue_2_0= ruleExpCS ) )
             {
-            // InternalAllocationSpecificationLanguage.g:5091:2: ( (lv_ownedKey_0_0= ruleExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:5092:1: (lv_ownedKey_0_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:5128:2: ( (lv_ownedKey_0_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:5129:1: (lv_ownedKey_0_0= ruleExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:5092:1: (lv_ownedKey_0_0= ruleExpCS )
-            // InternalAllocationSpecificationLanguage.g:5093:3: lv_ownedKey_0_0= ruleExpCS
+            // InternalAllocationSpecificationLanguage.g:5129:1: (lv_ownedKey_0_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:5130:3: lv_ownedKey_0_0= ruleExpCS
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getMapLiteralPartCSAccess().getOwnedKeyExpCSParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_56);
+            pushFollow(FollowSets000.FOLLOW_57);
             lv_ownedKey_0_0=ruleExpCS();
 
             state._fsp--;
@@ -14720,11 +14838,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_1, grammarAccess.getMapLiteralPartCSAccess().getLessThanSignHyphenMinusKeyword_1());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:5113:1: ( (lv_ownedValue_2_0= ruleExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:5114:1: (lv_ownedValue_2_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:5150:1: ( (lv_ownedValue_2_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:5151:1: (lv_ownedValue_2_0= ruleExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:5114:1: (lv_ownedValue_2_0= ruleExpCS )
-            // InternalAllocationSpecificationLanguage.g:5115:3: lv_ownedValue_2_0= ruleExpCS
+            // InternalAllocationSpecificationLanguage.g:5151:1: (lv_ownedValue_2_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:5152:3: lv_ownedValue_2_0= ruleExpCS
             {
             if ( state.backtracking==0 ) {
                
@@ -14778,7 +14896,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRulePrimitiveLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5139:1: entryRulePrimitiveLiteralExpCS returns [EObject current=null] : iv_rulePrimitiveLiteralExpCS= rulePrimitiveLiteralExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:5176:1: entryRulePrimitiveLiteralExpCS returns [EObject current=null] : iv_rulePrimitiveLiteralExpCS= rulePrimitiveLiteralExpCS EOF ;
     public final EObject entryRulePrimitiveLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -14786,8 +14904,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:5140:2: (iv_rulePrimitiveLiteralExpCS= rulePrimitiveLiteralExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:5141:2: iv_rulePrimitiveLiteralExpCS= rulePrimitiveLiteralExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:5177:2: (iv_rulePrimitiveLiteralExpCS= rulePrimitiveLiteralExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5178:2: iv_rulePrimitiveLiteralExpCS= rulePrimitiveLiteralExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPrimitiveLiteralExpCSRule()); 
@@ -14818,7 +14936,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "rulePrimitiveLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5148:1: rulePrimitiveLiteralExpCS returns [EObject current=null] : (this_NumberLiteralExpCS_0= ruleNumberLiteralExpCS | this_StringLiteralExpCS_1= ruleStringLiteralExpCS | this_BooleanLiteralExpCS_2= ruleBooleanLiteralExpCS | this_UnlimitedNaturalLiteralExpCS_3= ruleUnlimitedNaturalLiteralExpCS | this_InvalidLiteralExpCS_4= ruleInvalidLiteralExpCS | this_NullLiteralExpCS_5= ruleNullLiteralExpCS ) ;
+    // InternalAllocationSpecificationLanguage.g:5185:1: rulePrimitiveLiteralExpCS returns [EObject current=null] : (this_NumberLiteralExpCS_0= ruleNumberLiteralExpCS | this_StringLiteralExpCS_1= ruleStringLiteralExpCS | this_BooleanLiteralExpCS_2= ruleBooleanLiteralExpCS | this_UnlimitedNaturalLiteralExpCS_3= ruleUnlimitedNaturalLiteralExpCS | this_InvalidLiteralExpCS_4= ruleInvalidLiteralExpCS | this_NullLiteralExpCS_5= ruleNullLiteralExpCS ) ;
     public final EObject rulePrimitiveLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -14838,54 +14956,54 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5151:28: ( (this_NumberLiteralExpCS_0= ruleNumberLiteralExpCS | this_StringLiteralExpCS_1= ruleStringLiteralExpCS | this_BooleanLiteralExpCS_2= ruleBooleanLiteralExpCS | this_UnlimitedNaturalLiteralExpCS_3= ruleUnlimitedNaturalLiteralExpCS | this_InvalidLiteralExpCS_4= ruleInvalidLiteralExpCS | this_NullLiteralExpCS_5= ruleNullLiteralExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:5152:1: (this_NumberLiteralExpCS_0= ruleNumberLiteralExpCS | this_StringLiteralExpCS_1= ruleStringLiteralExpCS | this_BooleanLiteralExpCS_2= ruleBooleanLiteralExpCS | this_UnlimitedNaturalLiteralExpCS_3= ruleUnlimitedNaturalLiteralExpCS | this_InvalidLiteralExpCS_4= ruleInvalidLiteralExpCS | this_NullLiteralExpCS_5= ruleNullLiteralExpCS )
+            // InternalAllocationSpecificationLanguage.g:5188:28: ( (this_NumberLiteralExpCS_0= ruleNumberLiteralExpCS | this_StringLiteralExpCS_1= ruleStringLiteralExpCS | this_BooleanLiteralExpCS_2= ruleBooleanLiteralExpCS | this_UnlimitedNaturalLiteralExpCS_3= ruleUnlimitedNaturalLiteralExpCS | this_InvalidLiteralExpCS_4= ruleInvalidLiteralExpCS | this_NullLiteralExpCS_5= ruleNullLiteralExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:5189:1: (this_NumberLiteralExpCS_0= ruleNumberLiteralExpCS | this_StringLiteralExpCS_1= ruleStringLiteralExpCS | this_BooleanLiteralExpCS_2= ruleBooleanLiteralExpCS | this_UnlimitedNaturalLiteralExpCS_3= ruleUnlimitedNaturalLiteralExpCS | this_InvalidLiteralExpCS_4= ruleInvalidLiteralExpCS | this_NullLiteralExpCS_5= ruleNullLiteralExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:5152:1: (this_NumberLiteralExpCS_0= ruleNumberLiteralExpCS | this_StringLiteralExpCS_1= ruleStringLiteralExpCS | this_BooleanLiteralExpCS_2= ruleBooleanLiteralExpCS | this_UnlimitedNaturalLiteralExpCS_3= ruleUnlimitedNaturalLiteralExpCS | this_InvalidLiteralExpCS_4= ruleInvalidLiteralExpCS | this_NullLiteralExpCS_5= ruleNullLiteralExpCS )
-            int alt78=6;
+            // InternalAllocationSpecificationLanguage.g:5189:1: (this_NumberLiteralExpCS_0= ruleNumberLiteralExpCS | this_StringLiteralExpCS_1= ruleStringLiteralExpCS | this_BooleanLiteralExpCS_2= ruleBooleanLiteralExpCS | this_UnlimitedNaturalLiteralExpCS_3= ruleUnlimitedNaturalLiteralExpCS | this_InvalidLiteralExpCS_4= ruleInvalidLiteralExpCS | this_NullLiteralExpCS_5= ruleNullLiteralExpCS )
+            int alt80=6;
             switch ( input.LA(1) ) {
             case RULE_INT:
                 {
-                alt78=1;
+                alt80=1;
                 }
                 break;
             case RULE_SINGLE_QUOTED_STRING:
                 {
-                alt78=2;
+                alt80=2;
                 }
                 break;
             case 101:
             case 102:
                 {
-                alt78=3;
+                alt80=3;
                 }
                 break;
             case 76:
                 {
-                alt78=4;
+                alt80=4;
                 }
                 break;
             case 103:
                 {
-                alt78=5;
+                alt80=5;
                 }
                 break;
             case 104:
                 {
-                alt78=6;
+                alt80=6;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 78, 0, input);
+                    new NoViableAltException("", 80, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt78) {
+            switch (alt80) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:5153:2: this_NumberLiteralExpCS_0= ruleNumberLiteralExpCS
+                    // InternalAllocationSpecificationLanguage.g:5190:2: this_NumberLiteralExpCS_0= ruleNumberLiteralExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -14912,7 +15030,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:5166:2: this_StringLiteralExpCS_1= ruleStringLiteralExpCS
+                    // InternalAllocationSpecificationLanguage.g:5203:2: this_StringLiteralExpCS_1= ruleStringLiteralExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -14939,7 +15057,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 3 :
-                    // InternalAllocationSpecificationLanguage.g:5179:2: this_BooleanLiteralExpCS_2= ruleBooleanLiteralExpCS
+                    // InternalAllocationSpecificationLanguage.g:5216:2: this_BooleanLiteralExpCS_2= ruleBooleanLiteralExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -14966,7 +15084,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 4 :
-                    // InternalAllocationSpecificationLanguage.g:5192:2: this_UnlimitedNaturalLiteralExpCS_3= ruleUnlimitedNaturalLiteralExpCS
+                    // InternalAllocationSpecificationLanguage.g:5229:2: this_UnlimitedNaturalLiteralExpCS_3= ruleUnlimitedNaturalLiteralExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -14993,7 +15111,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 5 :
-                    // InternalAllocationSpecificationLanguage.g:5205:2: this_InvalidLiteralExpCS_4= ruleInvalidLiteralExpCS
+                    // InternalAllocationSpecificationLanguage.g:5242:2: this_InvalidLiteralExpCS_4= ruleInvalidLiteralExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -15020,7 +15138,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 6 :
-                    // InternalAllocationSpecificationLanguage.g:5218:2: this_NullLiteralExpCS_5= ruleNullLiteralExpCS
+                    // InternalAllocationSpecificationLanguage.g:5255:2: this_NullLiteralExpCS_5= ruleNullLiteralExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -15069,7 +15187,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleTupleLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5237:1: entryRuleTupleLiteralExpCS returns [EObject current=null] : iv_ruleTupleLiteralExpCS= ruleTupleLiteralExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:5274:1: entryRuleTupleLiteralExpCS returns [EObject current=null] : iv_ruleTupleLiteralExpCS= ruleTupleLiteralExpCS EOF ;
     public final EObject entryRuleTupleLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -15077,8 +15195,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:5238:2: (iv_ruleTupleLiteralExpCS= ruleTupleLiteralExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:5239:2: iv_ruleTupleLiteralExpCS= ruleTupleLiteralExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:5275:2: (iv_ruleTupleLiteralExpCS= ruleTupleLiteralExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5276:2: iv_ruleTupleLiteralExpCS= ruleTupleLiteralExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTupleLiteralExpCSRule()); 
@@ -15109,7 +15227,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleTupleLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5246:1: ruleTupleLiteralExpCS returns [EObject current=null] : (otherlv_0= 'Tuple' otherlv_1= '{' ( (lv_ownedParts_2_0= ruleTupleLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTupleLiteralPartCS ) ) )* otherlv_5= '}' ) ;
+    // InternalAllocationSpecificationLanguage.g:5283:1: ruleTupleLiteralExpCS returns [EObject current=null] : (otherlv_0= 'Tuple' otherlv_1= '{' ( (lv_ownedParts_2_0= ruleTupleLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTupleLiteralPartCS ) ) )* otherlv_5= '}' ) ;
     public final EObject ruleTupleLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -15125,11 +15243,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5249:28: ( (otherlv_0= 'Tuple' otherlv_1= '{' ( (lv_ownedParts_2_0= ruleTupleLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTupleLiteralPartCS ) ) )* otherlv_5= '}' ) )
-            // InternalAllocationSpecificationLanguage.g:5250:1: (otherlv_0= 'Tuple' otherlv_1= '{' ( (lv_ownedParts_2_0= ruleTupleLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTupleLiteralPartCS ) ) )* otherlv_5= '}' )
+            // InternalAllocationSpecificationLanguage.g:5286:28: ( (otherlv_0= 'Tuple' otherlv_1= '{' ( (lv_ownedParts_2_0= ruleTupleLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTupleLiteralPartCS ) ) )* otherlv_5= '}' ) )
+            // InternalAllocationSpecificationLanguage.g:5287:1: (otherlv_0= 'Tuple' otherlv_1= '{' ( (lv_ownedParts_2_0= ruleTupleLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTupleLiteralPartCS ) ) )* otherlv_5= '}' )
             {
-            // InternalAllocationSpecificationLanguage.g:5250:1: (otherlv_0= 'Tuple' otherlv_1= '{' ( (lv_ownedParts_2_0= ruleTupleLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTupleLiteralPartCS ) ) )* otherlv_5= '}' )
-            // InternalAllocationSpecificationLanguage.g:5250:3: otherlv_0= 'Tuple' otherlv_1= '{' ( (lv_ownedParts_2_0= ruleTupleLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTupleLiteralPartCS ) ) )* otherlv_5= '}'
+            // InternalAllocationSpecificationLanguage.g:5287:1: (otherlv_0= 'Tuple' otherlv_1= '{' ( (lv_ownedParts_2_0= ruleTupleLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTupleLiteralPartCS ) ) )* otherlv_5= '}' )
+            // InternalAllocationSpecificationLanguage.g:5287:3: otherlv_0= 'Tuple' otherlv_1= '{' ( (lv_ownedParts_2_0= ruleTupleLiteralPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTupleLiteralPartCS ) ) )* otherlv_5= '}'
             {
             otherlv_0=(Token)match(input,90,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -15143,18 +15261,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_1, grammarAccess.getTupleLiteralExpCSAccess().getLeftCurlyBracketKeyword_1());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:5258:1: ( (lv_ownedParts_2_0= ruleTupleLiteralPartCS ) )
-            // InternalAllocationSpecificationLanguage.g:5259:1: (lv_ownedParts_2_0= ruleTupleLiteralPartCS )
+            // InternalAllocationSpecificationLanguage.g:5295:1: ( (lv_ownedParts_2_0= ruleTupleLiteralPartCS ) )
+            // InternalAllocationSpecificationLanguage.g:5296:1: (lv_ownedParts_2_0= ruleTupleLiteralPartCS )
             {
-            // InternalAllocationSpecificationLanguage.g:5259:1: (lv_ownedParts_2_0= ruleTupleLiteralPartCS )
-            // InternalAllocationSpecificationLanguage.g:5260:3: lv_ownedParts_2_0= ruleTupleLiteralPartCS
+            // InternalAllocationSpecificationLanguage.g:5296:1: (lv_ownedParts_2_0= ruleTupleLiteralPartCS )
+            // InternalAllocationSpecificationLanguage.g:5297:3: lv_ownedParts_2_0= ruleTupleLiteralPartCS
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getTupleLiteralExpCSAccess().getOwnedPartsTupleLiteralPartCSParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_51);
+            pushFollow(FollowSets000.FOLLOW_52);
             lv_ownedParts_2_0=ruleTupleLiteralPartCS();
 
             state._fsp--;
@@ -15178,20 +15296,20 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:5276:2: (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTupleLiteralPartCS ) ) )*
-            loop79:
+            // InternalAllocationSpecificationLanguage.g:5313:2: (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTupleLiteralPartCS ) ) )*
+            loop81:
             do {
-                int alt79=2;
-                int LA79_0 = input.LA(1);
+                int alt81=2;
+                int LA81_0 = input.LA(1);
 
-                if ( (LA79_0==30) ) {
-                    alt79=1;
+                if ( (LA81_0==30) ) {
+                    alt81=1;
                 }
 
 
-                switch (alt79) {
+                switch (alt81) {
             	case 1 :
-            	    // InternalAllocationSpecificationLanguage.g:5276:4: otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTupleLiteralPartCS ) )
+            	    // InternalAllocationSpecificationLanguage.g:5313:4: otherlv_3= ',' ( (lv_ownedParts_4_0= ruleTupleLiteralPartCS ) )
             	    {
             	    otherlv_3=(Token)match(input,30,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -15199,18 +15317,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	          	newLeafNode(otherlv_3, grammarAccess.getTupleLiteralExpCSAccess().getCommaKeyword_3_0());
             	          
             	    }
-            	    // InternalAllocationSpecificationLanguage.g:5280:1: ( (lv_ownedParts_4_0= ruleTupleLiteralPartCS ) )
-            	    // InternalAllocationSpecificationLanguage.g:5281:1: (lv_ownedParts_4_0= ruleTupleLiteralPartCS )
+            	    // InternalAllocationSpecificationLanguage.g:5317:1: ( (lv_ownedParts_4_0= ruleTupleLiteralPartCS ) )
+            	    // InternalAllocationSpecificationLanguage.g:5318:1: (lv_ownedParts_4_0= ruleTupleLiteralPartCS )
             	    {
-            	    // InternalAllocationSpecificationLanguage.g:5281:1: (lv_ownedParts_4_0= ruleTupleLiteralPartCS )
-            	    // InternalAllocationSpecificationLanguage.g:5282:3: lv_ownedParts_4_0= ruleTupleLiteralPartCS
+            	    // InternalAllocationSpecificationLanguage.g:5318:1: (lv_ownedParts_4_0= ruleTupleLiteralPartCS )
+            	    // InternalAllocationSpecificationLanguage.g:5319:3: lv_ownedParts_4_0= ruleTupleLiteralPartCS
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getTupleLiteralExpCSAccess().getOwnedPartsTupleLiteralPartCSParserRuleCall_3_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_51);
+            	    pushFollow(FollowSets000.FOLLOW_52);
             	    lv_ownedParts_4_0=ruleTupleLiteralPartCS();
 
             	    state._fsp--;
@@ -15239,7 +15357,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop79;
+            	    break loop81;
                 }
             } while (true);
 
@@ -15272,7 +15390,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleTupleLiteralPartCS"
-    // InternalAllocationSpecificationLanguage.g:5310:1: entryRuleTupleLiteralPartCS returns [EObject current=null] : iv_ruleTupleLiteralPartCS= ruleTupleLiteralPartCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:5347:1: entryRuleTupleLiteralPartCS returns [EObject current=null] : iv_ruleTupleLiteralPartCS= ruleTupleLiteralPartCS EOF ;
     public final EObject entryRuleTupleLiteralPartCS() throws RecognitionException {
         EObject current = null;
 
@@ -15280,8 +15398,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:5311:2: (iv_ruleTupleLiteralPartCS= ruleTupleLiteralPartCS EOF )
-            // InternalAllocationSpecificationLanguage.g:5312:2: iv_ruleTupleLiteralPartCS= ruleTupleLiteralPartCS EOF
+            // InternalAllocationSpecificationLanguage.g:5348:2: (iv_ruleTupleLiteralPartCS= ruleTupleLiteralPartCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5349:2: iv_ruleTupleLiteralPartCS= ruleTupleLiteralPartCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTupleLiteralPartCSRule()); 
@@ -15312,7 +15430,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleTupleLiteralPartCS"
-    // InternalAllocationSpecificationLanguage.g:5319:1: ruleTupleLiteralPartCS returns [EObject current=null] : ( ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) )? otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) ) ;
+    // InternalAllocationSpecificationLanguage.g:5356:1: ruleTupleLiteralPartCS returns [EObject current=null] : ( ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) )? otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) ) ;
     public final EObject ruleTupleLiteralPartCS() throws RecognitionException {
         EObject current = null;
 
@@ -15328,24 +15446,24 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5322:28: ( ( ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) )? otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) ) )
-            // InternalAllocationSpecificationLanguage.g:5323:1: ( ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) )? otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:5359:28: ( ( ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) )? otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) ) )
+            // InternalAllocationSpecificationLanguage.g:5360:1: ( ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) )? otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )
             {
-            // InternalAllocationSpecificationLanguage.g:5323:1: ( ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) )? otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )
-            // InternalAllocationSpecificationLanguage.g:5323:2: ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) )? otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:5360:1: ( ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) )? otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:5360:2: ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) )? otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) )
             {
-            // InternalAllocationSpecificationLanguage.g:5323:2: ( (lv_name_0_0= ruleUnrestrictedName ) )
-            // InternalAllocationSpecificationLanguage.g:5324:1: (lv_name_0_0= ruleUnrestrictedName )
+            // InternalAllocationSpecificationLanguage.g:5360:2: ( (lv_name_0_0= ruleUnrestrictedName ) )
+            // InternalAllocationSpecificationLanguage.g:5361:1: (lv_name_0_0= ruleUnrestrictedName )
             {
-            // InternalAllocationSpecificationLanguage.g:5324:1: (lv_name_0_0= ruleUnrestrictedName )
-            // InternalAllocationSpecificationLanguage.g:5325:3: lv_name_0_0= ruleUnrestrictedName
+            // InternalAllocationSpecificationLanguage.g:5361:1: (lv_name_0_0= ruleUnrestrictedName )
+            // InternalAllocationSpecificationLanguage.g:5362:3: lv_name_0_0= ruleUnrestrictedName
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getTupleLiteralPartCSAccess().getNameUnrestrictedNameParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_57);
+            pushFollow(FollowSets000.FOLLOW_58);
             lv_name_0_0=ruleUnrestrictedName();
 
             state._fsp--;
@@ -15369,16 +15487,16 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:5341:2: (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) )?
-            int alt80=2;
-            int LA80_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:5378:2: (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) )?
+            int alt82=2;
+            int LA82_0 = input.LA(1);
 
-            if ( (LA80_0==32) ) {
-                alt80=1;
+            if ( (LA82_0==32) ) {
+                alt82=1;
             }
-            switch (alt80) {
+            switch (alt82) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:5341:4: otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:5378:4: otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) )
                     {
                     otherlv_1=(Token)match(input,32,FollowSets000.FOLLOW_11); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -15386,11 +15504,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                           	newLeafNode(otherlv_1, grammarAccess.getTupleLiteralPartCSAccess().getColonKeyword_1_0());
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:5345:1: ( (lv_ownedType_2_0= ruleTypeExpCS ) )
-                    // InternalAllocationSpecificationLanguage.g:5346:1: (lv_ownedType_2_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:5382:1: ( (lv_ownedType_2_0= ruleTypeExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:5383:1: (lv_ownedType_2_0= ruleTypeExpCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:5346:1: (lv_ownedType_2_0= ruleTypeExpCS )
-                    // InternalAllocationSpecificationLanguage.g:5347:3: lv_ownedType_2_0= ruleTypeExpCS
+                    // InternalAllocationSpecificationLanguage.g:5383:1: (lv_ownedType_2_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:5384:3: lv_ownedType_2_0= ruleTypeExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -15433,11 +15551,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_3, grammarAccess.getTupleLiteralPartCSAccess().getEqualsSignKeyword_2());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:5367:1: ( (lv_ownedInitExpression_4_0= ruleExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:5368:1: (lv_ownedInitExpression_4_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:5404:1: ( (lv_ownedInitExpression_4_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:5405:1: (lv_ownedInitExpression_4_0= ruleExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:5368:1: (lv_ownedInitExpression_4_0= ruleExpCS )
-            // InternalAllocationSpecificationLanguage.g:5369:3: lv_ownedInitExpression_4_0= ruleExpCS
+            // InternalAllocationSpecificationLanguage.g:5405:1: (lv_ownedInitExpression_4_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:5406:3: lv_ownedInitExpression_4_0= ruleExpCS
             {
             if ( state.backtracking==0 ) {
                
@@ -15491,7 +15609,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleNumberLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5393:1: entryRuleNumberLiteralExpCS returns [EObject current=null] : iv_ruleNumberLiteralExpCS= ruleNumberLiteralExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:5430:1: entryRuleNumberLiteralExpCS returns [EObject current=null] : iv_ruleNumberLiteralExpCS= ruleNumberLiteralExpCS EOF ;
     public final EObject entryRuleNumberLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -15499,8 +15617,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:5394:2: (iv_ruleNumberLiteralExpCS= ruleNumberLiteralExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:5395:2: iv_ruleNumberLiteralExpCS= ruleNumberLiteralExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:5431:2: (iv_ruleNumberLiteralExpCS= ruleNumberLiteralExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5432:2: iv_ruleNumberLiteralExpCS= ruleNumberLiteralExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNumberLiteralExpCSRule()); 
@@ -15531,7 +15649,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleNumberLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5402:1: ruleNumberLiteralExpCS returns [EObject current=null] : ( (lv_symbol_0_0= ruleNUMBER_LITERAL ) ) ;
+    // InternalAllocationSpecificationLanguage.g:5439:1: ruleNumberLiteralExpCS returns [EObject current=null] : ( (lv_symbol_0_0= ruleNUMBER_LITERAL ) ) ;
     public final EObject ruleNumberLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -15541,14 +15659,14 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5405:28: ( ( (lv_symbol_0_0= ruleNUMBER_LITERAL ) ) )
-            // InternalAllocationSpecificationLanguage.g:5406:1: ( (lv_symbol_0_0= ruleNUMBER_LITERAL ) )
+            // InternalAllocationSpecificationLanguage.g:5442:28: ( ( (lv_symbol_0_0= ruleNUMBER_LITERAL ) ) )
+            // InternalAllocationSpecificationLanguage.g:5443:1: ( (lv_symbol_0_0= ruleNUMBER_LITERAL ) )
             {
-            // InternalAllocationSpecificationLanguage.g:5406:1: ( (lv_symbol_0_0= ruleNUMBER_LITERAL ) )
-            // InternalAllocationSpecificationLanguage.g:5407:1: (lv_symbol_0_0= ruleNUMBER_LITERAL )
+            // InternalAllocationSpecificationLanguage.g:5443:1: ( (lv_symbol_0_0= ruleNUMBER_LITERAL ) )
+            // InternalAllocationSpecificationLanguage.g:5444:1: (lv_symbol_0_0= ruleNUMBER_LITERAL )
             {
-            // InternalAllocationSpecificationLanguage.g:5407:1: (lv_symbol_0_0= ruleNUMBER_LITERAL )
-            // InternalAllocationSpecificationLanguage.g:5408:3: lv_symbol_0_0= ruleNUMBER_LITERAL
+            // InternalAllocationSpecificationLanguage.g:5444:1: (lv_symbol_0_0= ruleNUMBER_LITERAL )
+            // InternalAllocationSpecificationLanguage.g:5445:3: lv_symbol_0_0= ruleNUMBER_LITERAL
             {
             if ( state.backtracking==0 ) {
                
@@ -15599,7 +15717,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleStringLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5432:1: entryRuleStringLiteralExpCS returns [EObject current=null] : iv_ruleStringLiteralExpCS= ruleStringLiteralExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:5469:1: entryRuleStringLiteralExpCS returns [EObject current=null] : iv_ruleStringLiteralExpCS= ruleStringLiteralExpCS EOF ;
     public final EObject entryRuleStringLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -15607,8 +15725,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:5433:2: (iv_ruleStringLiteralExpCS= ruleStringLiteralExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:5434:2: iv_ruleStringLiteralExpCS= ruleStringLiteralExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:5470:2: (iv_ruleStringLiteralExpCS= ruleStringLiteralExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5471:2: iv_ruleStringLiteralExpCS= ruleStringLiteralExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getStringLiteralExpCSRule()); 
@@ -15639,7 +15757,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleStringLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5441:1: ruleStringLiteralExpCS returns [EObject current=null] : ( (lv_segments_0_0= ruleStringLiteral ) )+ ;
+    // InternalAllocationSpecificationLanguage.g:5478:1: ruleStringLiteralExpCS returns [EObject current=null] : ( (lv_segments_0_0= ruleStringLiteral ) )+ ;
     public final EObject ruleStringLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -15649,34 +15767,34 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5444:28: ( ( (lv_segments_0_0= ruleStringLiteral ) )+ )
-            // InternalAllocationSpecificationLanguage.g:5445:1: ( (lv_segments_0_0= ruleStringLiteral ) )+
+            // InternalAllocationSpecificationLanguage.g:5481:28: ( ( (lv_segments_0_0= ruleStringLiteral ) )+ )
+            // InternalAllocationSpecificationLanguage.g:5482:1: ( (lv_segments_0_0= ruleStringLiteral ) )+
             {
-            // InternalAllocationSpecificationLanguage.g:5445:1: ( (lv_segments_0_0= ruleStringLiteral ) )+
-            int cnt81=0;
-            loop81:
+            // InternalAllocationSpecificationLanguage.g:5482:1: ( (lv_segments_0_0= ruleStringLiteral ) )+
+            int cnt83=0;
+            loop83:
             do {
-                int alt81=2;
-                int LA81_0 = input.LA(1);
+                int alt83=2;
+                int LA83_0 = input.LA(1);
 
-                if ( (LA81_0==RULE_SINGLE_QUOTED_STRING) ) {
-                    alt81=1;
+                if ( (LA83_0==RULE_SINGLE_QUOTED_STRING) ) {
+                    alt83=1;
                 }
 
 
-                switch (alt81) {
+                switch (alt83) {
             	case 1 :
-            	    // InternalAllocationSpecificationLanguage.g:5446:1: (lv_segments_0_0= ruleStringLiteral )
+            	    // InternalAllocationSpecificationLanguage.g:5483:1: (lv_segments_0_0= ruleStringLiteral )
             	    {
-            	    // InternalAllocationSpecificationLanguage.g:5446:1: (lv_segments_0_0= ruleStringLiteral )
-            	    // InternalAllocationSpecificationLanguage.g:5447:3: lv_segments_0_0= ruleStringLiteral
+            	    // InternalAllocationSpecificationLanguage.g:5483:1: (lv_segments_0_0= ruleStringLiteral )
+            	    // InternalAllocationSpecificationLanguage.g:5484:3: lv_segments_0_0= ruleStringLiteral
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getStringLiteralExpCSAccess().getSegmentsStringLiteralParserRuleCall_0()); 
             	      	    
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_58);
+            	    pushFollow(FollowSets000.FOLLOW_59);
             	    lv_segments_0_0=ruleStringLiteral();
 
             	    state._fsp--;
@@ -15702,13 +15820,13 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    if ( cnt81 >= 1 ) break loop81;
+            	    if ( cnt83 >= 1 ) break loop83;
             	    if (state.backtracking>0) {state.failed=true; return current;}
                         EarlyExitException eee =
-                            new EarlyExitException(81, input);
+                            new EarlyExitException(83, input);
                         throw eee;
                 }
-                cnt81++;
+                cnt83++;
             } while (true);
 
 
@@ -15731,7 +15849,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleBooleanLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5471:1: entryRuleBooleanLiteralExpCS returns [EObject current=null] : iv_ruleBooleanLiteralExpCS= ruleBooleanLiteralExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:5508:1: entryRuleBooleanLiteralExpCS returns [EObject current=null] : iv_ruleBooleanLiteralExpCS= ruleBooleanLiteralExpCS EOF ;
     public final EObject entryRuleBooleanLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -15739,8 +15857,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:5472:2: (iv_ruleBooleanLiteralExpCS= ruleBooleanLiteralExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:5473:2: iv_ruleBooleanLiteralExpCS= ruleBooleanLiteralExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:5509:2: (iv_ruleBooleanLiteralExpCS= ruleBooleanLiteralExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5510:2: iv_ruleBooleanLiteralExpCS= ruleBooleanLiteralExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBooleanLiteralExpCSRule()); 
@@ -15771,7 +15889,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleBooleanLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5480:1: ruleBooleanLiteralExpCS returns [EObject current=null] : ( ( (lv_symbol_0_0= 'true' ) ) | ( (lv_symbol_1_0= 'false' ) ) ) ;
+    // InternalAllocationSpecificationLanguage.g:5517:1: ruleBooleanLiteralExpCS returns [EObject current=null] : ( ( (lv_symbol_0_0= 'true' ) ) | ( (lv_symbol_1_0= 'false' ) ) ) ;
     public final EObject ruleBooleanLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -15781,35 +15899,35 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5483:28: ( ( ( (lv_symbol_0_0= 'true' ) ) | ( (lv_symbol_1_0= 'false' ) ) ) )
-            // InternalAllocationSpecificationLanguage.g:5484:1: ( ( (lv_symbol_0_0= 'true' ) ) | ( (lv_symbol_1_0= 'false' ) ) )
+            // InternalAllocationSpecificationLanguage.g:5520:28: ( ( ( (lv_symbol_0_0= 'true' ) ) | ( (lv_symbol_1_0= 'false' ) ) ) )
+            // InternalAllocationSpecificationLanguage.g:5521:1: ( ( (lv_symbol_0_0= 'true' ) ) | ( (lv_symbol_1_0= 'false' ) ) )
             {
-            // InternalAllocationSpecificationLanguage.g:5484:1: ( ( (lv_symbol_0_0= 'true' ) ) | ( (lv_symbol_1_0= 'false' ) ) )
-            int alt82=2;
-            int LA82_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:5521:1: ( ( (lv_symbol_0_0= 'true' ) ) | ( (lv_symbol_1_0= 'false' ) ) )
+            int alt84=2;
+            int LA84_0 = input.LA(1);
 
-            if ( (LA82_0==101) ) {
-                alt82=1;
+            if ( (LA84_0==101) ) {
+                alt84=1;
             }
-            else if ( (LA82_0==102) ) {
-                alt82=2;
+            else if ( (LA84_0==102) ) {
+                alt84=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 82, 0, input);
+                    new NoViableAltException("", 84, 0, input);
 
                 throw nvae;
             }
-            switch (alt82) {
+            switch (alt84) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:5484:2: ( (lv_symbol_0_0= 'true' ) )
+                    // InternalAllocationSpecificationLanguage.g:5521:2: ( (lv_symbol_0_0= 'true' ) )
                     {
-                    // InternalAllocationSpecificationLanguage.g:5484:2: ( (lv_symbol_0_0= 'true' ) )
-                    // InternalAllocationSpecificationLanguage.g:5485:1: (lv_symbol_0_0= 'true' )
+                    // InternalAllocationSpecificationLanguage.g:5521:2: ( (lv_symbol_0_0= 'true' ) )
+                    // InternalAllocationSpecificationLanguage.g:5522:1: (lv_symbol_0_0= 'true' )
                     {
-                    // InternalAllocationSpecificationLanguage.g:5485:1: (lv_symbol_0_0= 'true' )
-                    // InternalAllocationSpecificationLanguage.g:5486:3: lv_symbol_0_0= 'true'
+                    // InternalAllocationSpecificationLanguage.g:5522:1: (lv_symbol_0_0= 'true' )
+                    // InternalAllocationSpecificationLanguage.g:5523:3: lv_symbol_0_0= 'true'
                     {
                     lv_symbol_0_0=(Token)match(input,101,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -15835,13 +15953,13 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:5500:6: ( (lv_symbol_1_0= 'false' ) )
+                    // InternalAllocationSpecificationLanguage.g:5537:6: ( (lv_symbol_1_0= 'false' ) )
                     {
-                    // InternalAllocationSpecificationLanguage.g:5500:6: ( (lv_symbol_1_0= 'false' ) )
-                    // InternalAllocationSpecificationLanguage.g:5501:1: (lv_symbol_1_0= 'false' )
+                    // InternalAllocationSpecificationLanguage.g:5537:6: ( (lv_symbol_1_0= 'false' ) )
+                    // InternalAllocationSpecificationLanguage.g:5538:1: (lv_symbol_1_0= 'false' )
                     {
-                    // InternalAllocationSpecificationLanguage.g:5501:1: (lv_symbol_1_0= 'false' )
-                    // InternalAllocationSpecificationLanguage.g:5502:3: lv_symbol_1_0= 'false'
+                    // InternalAllocationSpecificationLanguage.g:5538:1: (lv_symbol_1_0= 'false' )
+                    // InternalAllocationSpecificationLanguage.g:5539:3: lv_symbol_1_0= 'false'
                     {
                     lv_symbol_1_0=(Token)match(input,102,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -15889,7 +16007,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleUnlimitedNaturalLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5523:1: entryRuleUnlimitedNaturalLiteralExpCS returns [EObject current=null] : iv_ruleUnlimitedNaturalLiteralExpCS= ruleUnlimitedNaturalLiteralExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:5560:1: entryRuleUnlimitedNaturalLiteralExpCS returns [EObject current=null] : iv_ruleUnlimitedNaturalLiteralExpCS= ruleUnlimitedNaturalLiteralExpCS EOF ;
     public final EObject entryRuleUnlimitedNaturalLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -15897,8 +16015,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:5524:2: (iv_ruleUnlimitedNaturalLiteralExpCS= ruleUnlimitedNaturalLiteralExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:5525:2: iv_ruleUnlimitedNaturalLiteralExpCS= ruleUnlimitedNaturalLiteralExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:5561:2: (iv_ruleUnlimitedNaturalLiteralExpCS= ruleUnlimitedNaturalLiteralExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5562:2: iv_ruleUnlimitedNaturalLiteralExpCS= ruleUnlimitedNaturalLiteralExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUnlimitedNaturalLiteralExpCSRule()); 
@@ -15929,7 +16047,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleUnlimitedNaturalLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5532:1: ruleUnlimitedNaturalLiteralExpCS returns [EObject current=null] : ( () otherlv_1= '*' ) ;
+    // InternalAllocationSpecificationLanguage.g:5569:1: ruleUnlimitedNaturalLiteralExpCS returns [EObject current=null] : ( () otherlv_1= '*' ) ;
     public final EObject ruleUnlimitedNaturalLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -15938,14 +16056,14 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5535:28: ( ( () otherlv_1= '*' ) )
-            // InternalAllocationSpecificationLanguage.g:5536:1: ( () otherlv_1= '*' )
+            // InternalAllocationSpecificationLanguage.g:5572:28: ( ( () otherlv_1= '*' ) )
+            // InternalAllocationSpecificationLanguage.g:5573:1: ( () otherlv_1= '*' )
             {
-            // InternalAllocationSpecificationLanguage.g:5536:1: ( () otherlv_1= '*' )
-            // InternalAllocationSpecificationLanguage.g:5536:2: () otherlv_1= '*'
+            // InternalAllocationSpecificationLanguage.g:5573:1: ( () otherlv_1= '*' )
+            // InternalAllocationSpecificationLanguage.g:5573:2: () otherlv_1= '*'
             {
-            // InternalAllocationSpecificationLanguage.g:5536:2: ()
-            // InternalAllocationSpecificationLanguage.g:5537:2: 
+            // InternalAllocationSpecificationLanguage.g:5573:2: ()
+            // InternalAllocationSpecificationLanguage.g:5574:2: 
             {
             if ( state.backtracking==0 ) {
                
@@ -15991,7 +16109,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleInvalidLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5557:1: entryRuleInvalidLiteralExpCS returns [EObject current=null] : iv_ruleInvalidLiteralExpCS= ruleInvalidLiteralExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:5594:1: entryRuleInvalidLiteralExpCS returns [EObject current=null] : iv_ruleInvalidLiteralExpCS= ruleInvalidLiteralExpCS EOF ;
     public final EObject entryRuleInvalidLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -15999,8 +16117,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:5558:2: (iv_ruleInvalidLiteralExpCS= ruleInvalidLiteralExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:5559:2: iv_ruleInvalidLiteralExpCS= ruleInvalidLiteralExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:5595:2: (iv_ruleInvalidLiteralExpCS= ruleInvalidLiteralExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5596:2: iv_ruleInvalidLiteralExpCS= ruleInvalidLiteralExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getInvalidLiteralExpCSRule()); 
@@ -16031,7 +16149,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleInvalidLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5566:1: ruleInvalidLiteralExpCS returns [EObject current=null] : ( () otherlv_1= 'invalid' ) ;
+    // InternalAllocationSpecificationLanguage.g:5603:1: ruleInvalidLiteralExpCS returns [EObject current=null] : ( () otherlv_1= 'invalid' ) ;
     public final EObject ruleInvalidLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -16040,14 +16158,14 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5569:28: ( ( () otherlv_1= 'invalid' ) )
-            // InternalAllocationSpecificationLanguage.g:5570:1: ( () otherlv_1= 'invalid' )
+            // InternalAllocationSpecificationLanguage.g:5606:28: ( ( () otherlv_1= 'invalid' ) )
+            // InternalAllocationSpecificationLanguage.g:5607:1: ( () otherlv_1= 'invalid' )
             {
-            // InternalAllocationSpecificationLanguage.g:5570:1: ( () otherlv_1= 'invalid' )
-            // InternalAllocationSpecificationLanguage.g:5570:2: () otherlv_1= 'invalid'
+            // InternalAllocationSpecificationLanguage.g:5607:1: ( () otherlv_1= 'invalid' )
+            // InternalAllocationSpecificationLanguage.g:5607:2: () otherlv_1= 'invalid'
             {
-            // InternalAllocationSpecificationLanguage.g:5570:2: ()
-            // InternalAllocationSpecificationLanguage.g:5571:2: 
+            // InternalAllocationSpecificationLanguage.g:5607:2: ()
+            // InternalAllocationSpecificationLanguage.g:5608:2: 
             {
             if ( state.backtracking==0 ) {
                
@@ -16093,7 +16211,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleNullLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5591:1: entryRuleNullLiteralExpCS returns [EObject current=null] : iv_ruleNullLiteralExpCS= ruleNullLiteralExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:5628:1: entryRuleNullLiteralExpCS returns [EObject current=null] : iv_ruleNullLiteralExpCS= ruleNullLiteralExpCS EOF ;
     public final EObject entryRuleNullLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -16101,8 +16219,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:5592:2: (iv_ruleNullLiteralExpCS= ruleNullLiteralExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:5593:2: iv_ruleNullLiteralExpCS= ruleNullLiteralExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:5629:2: (iv_ruleNullLiteralExpCS= ruleNullLiteralExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5630:2: iv_ruleNullLiteralExpCS= ruleNullLiteralExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNullLiteralExpCSRule()); 
@@ -16133,7 +16251,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleNullLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5600:1: ruleNullLiteralExpCS returns [EObject current=null] : ( () otherlv_1= 'null' ) ;
+    // InternalAllocationSpecificationLanguage.g:5637:1: ruleNullLiteralExpCS returns [EObject current=null] : ( () otherlv_1= 'null' ) ;
     public final EObject ruleNullLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -16142,14 +16260,14 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5603:28: ( ( () otherlv_1= 'null' ) )
-            // InternalAllocationSpecificationLanguage.g:5604:1: ( () otherlv_1= 'null' )
+            // InternalAllocationSpecificationLanguage.g:5640:28: ( ( () otherlv_1= 'null' ) )
+            // InternalAllocationSpecificationLanguage.g:5641:1: ( () otherlv_1= 'null' )
             {
-            // InternalAllocationSpecificationLanguage.g:5604:1: ( () otherlv_1= 'null' )
-            // InternalAllocationSpecificationLanguage.g:5604:2: () otherlv_1= 'null'
+            // InternalAllocationSpecificationLanguage.g:5641:1: ( () otherlv_1= 'null' )
+            // InternalAllocationSpecificationLanguage.g:5641:2: () otherlv_1= 'null'
             {
-            // InternalAllocationSpecificationLanguage.g:5604:2: ()
-            // InternalAllocationSpecificationLanguage.g:5605:2: 
+            // InternalAllocationSpecificationLanguage.g:5641:2: ()
+            // InternalAllocationSpecificationLanguage.g:5642:2: 
             {
             if ( state.backtracking==0 ) {
                
@@ -16195,7 +16313,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleTypeLiteralCS"
-    // InternalAllocationSpecificationLanguage.g:5625:1: entryRuleTypeLiteralCS returns [EObject current=null] : iv_ruleTypeLiteralCS= ruleTypeLiteralCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:5662:1: entryRuleTypeLiteralCS returns [EObject current=null] : iv_ruleTypeLiteralCS= ruleTypeLiteralCS EOF ;
     public final EObject entryRuleTypeLiteralCS() throws RecognitionException {
         EObject current = null;
 
@@ -16203,8 +16321,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:5626:2: (iv_ruleTypeLiteralCS= ruleTypeLiteralCS EOF )
-            // InternalAllocationSpecificationLanguage.g:5627:2: iv_ruleTypeLiteralCS= ruleTypeLiteralCS EOF
+            // InternalAllocationSpecificationLanguage.g:5663:2: (iv_ruleTypeLiteralCS= ruleTypeLiteralCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5664:2: iv_ruleTypeLiteralCS= ruleTypeLiteralCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTypeLiteralCSRule()); 
@@ -16235,7 +16353,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleTypeLiteralCS"
-    // InternalAllocationSpecificationLanguage.g:5634:1: ruleTypeLiteralCS returns [EObject current=null] : (this_PrimitiveTypeCS_0= rulePrimitiveTypeCS | this_CollectionTypeCS_1= ruleCollectionTypeCS | this_MapTypeCS_2= ruleMapTypeCS | this_TupleTypeCS_3= ruleTupleTypeCS ) ;
+    // InternalAllocationSpecificationLanguage.g:5671:1: ruleTypeLiteralCS returns [EObject current=null] : (this_PrimitiveTypeCS_0= rulePrimitiveTypeCS | this_CollectionTypeCS_1= ruleCollectionTypeCS | this_MapTypeCS_2= ruleMapTypeCS | this_TupleTypeCS_3= ruleTupleTypeCS ) ;
     public final EObject ruleTypeLiteralCS() throws RecognitionException {
         EObject current = null;
 
@@ -16251,11 +16369,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5637:28: ( (this_PrimitiveTypeCS_0= rulePrimitiveTypeCS | this_CollectionTypeCS_1= ruleCollectionTypeCS | this_MapTypeCS_2= ruleMapTypeCS | this_TupleTypeCS_3= ruleTupleTypeCS ) )
-            // InternalAllocationSpecificationLanguage.g:5638:1: (this_PrimitiveTypeCS_0= rulePrimitiveTypeCS | this_CollectionTypeCS_1= ruleCollectionTypeCS | this_MapTypeCS_2= ruleMapTypeCS | this_TupleTypeCS_3= ruleTupleTypeCS )
+            // InternalAllocationSpecificationLanguage.g:5674:28: ( (this_PrimitiveTypeCS_0= rulePrimitiveTypeCS | this_CollectionTypeCS_1= ruleCollectionTypeCS | this_MapTypeCS_2= ruleMapTypeCS | this_TupleTypeCS_3= ruleTupleTypeCS ) )
+            // InternalAllocationSpecificationLanguage.g:5675:1: (this_PrimitiveTypeCS_0= rulePrimitiveTypeCS | this_CollectionTypeCS_1= ruleCollectionTypeCS | this_MapTypeCS_2= ruleMapTypeCS | this_TupleTypeCS_3= ruleTupleTypeCS )
             {
-            // InternalAllocationSpecificationLanguage.g:5638:1: (this_PrimitiveTypeCS_0= rulePrimitiveTypeCS | this_CollectionTypeCS_1= ruleCollectionTypeCS | this_MapTypeCS_2= ruleMapTypeCS | this_TupleTypeCS_3= ruleTupleTypeCS )
-            int alt83=4;
+            // InternalAllocationSpecificationLanguage.g:5675:1: (this_PrimitiveTypeCS_0= rulePrimitiveTypeCS | this_CollectionTypeCS_1= ruleCollectionTypeCS | this_MapTypeCS_2= ruleMapTypeCS | this_TupleTypeCS_3= ruleTupleTypeCS )
+            int alt85=4;
             switch ( input.LA(1) ) {
             case 64:
             case 65:
@@ -16268,7 +16386,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             case 72:
             case 73:
                 {
-                alt83=1;
+                alt85=1;
                 }
                 break;
             case 92:
@@ -16277,30 +16395,30 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             case 95:
             case 96:
                 {
-                alt83=2;
+                alt85=2;
                 }
                 break;
             case 89:
                 {
-                alt83=3;
+                alt85=3;
                 }
                 break;
             case 90:
                 {
-                alt83=4;
+                alt85=4;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 83, 0, input);
+                    new NoViableAltException("", 85, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt83) {
+            switch (alt85) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:5639:2: this_PrimitiveTypeCS_0= rulePrimitiveTypeCS
+                    // InternalAllocationSpecificationLanguage.g:5676:2: this_PrimitiveTypeCS_0= rulePrimitiveTypeCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16327,7 +16445,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:5652:2: this_CollectionTypeCS_1= ruleCollectionTypeCS
+                    // InternalAllocationSpecificationLanguage.g:5689:2: this_CollectionTypeCS_1= ruleCollectionTypeCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16354,7 +16472,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 3 :
-                    // InternalAllocationSpecificationLanguage.g:5665:2: this_MapTypeCS_2= ruleMapTypeCS
+                    // InternalAllocationSpecificationLanguage.g:5702:2: this_MapTypeCS_2= ruleMapTypeCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16381,7 +16499,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 4 :
-                    // InternalAllocationSpecificationLanguage.g:5678:2: this_TupleTypeCS_3= ruleTupleTypeCS
+                    // InternalAllocationSpecificationLanguage.g:5715:2: this_TupleTypeCS_3= ruleTupleTypeCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16430,7 +16548,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleTypeLiteralWithMultiplicityCS"
-    // InternalAllocationSpecificationLanguage.g:5697:1: entryRuleTypeLiteralWithMultiplicityCS returns [EObject current=null] : iv_ruleTypeLiteralWithMultiplicityCS= ruleTypeLiteralWithMultiplicityCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:5734:1: entryRuleTypeLiteralWithMultiplicityCS returns [EObject current=null] : iv_ruleTypeLiteralWithMultiplicityCS= ruleTypeLiteralWithMultiplicityCS EOF ;
     public final EObject entryRuleTypeLiteralWithMultiplicityCS() throws RecognitionException {
         EObject current = null;
 
@@ -16438,8 +16556,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:5698:2: (iv_ruleTypeLiteralWithMultiplicityCS= ruleTypeLiteralWithMultiplicityCS EOF )
-            // InternalAllocationSpecificationLanguage.g:5699:2: iv_ruleTypeLiteralWithMultiplicityCS= ruleTypeLiteralWithMultiplicityCS EOF
+            // InternalAllocationSpecificationLanguage.g:5735:2: (iv_ruleTypeLiteralWithMultiplicityCS= ruleTypeLiteralWithMultiplicityCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5736:2: iv_ruleTypeLiteralWithMultiplicityCS= ruleTypeLiteralWithMultiplicityCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTypeLiteralWithMultiplicityCSRule()); 
@@ -16470,7 +16588,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleTypeLiteralWithMultiplicityCS"
-    // InternalAllocationSpecificationLanguage.g:5706:1: ruleTypeLiteralWithMultiplicityCS returns [EObject current=null] : (this_TypeLiteralCS_0= ruleTypeLiteralCS ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )? ) ;
+    // InternalAllocationSpecificationLanguage.g:5743:1: ruleTypeLiteralWithMultiplicityCS returns [EObject current=null] : (this_TypeLiteralCS_0= ruleTypeLiteralCS ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )? ) ;
     public final EObject ruleTypeLiteralWithMultiplicityCS() throws RecognitionException {
         EObject current = null;
 
@@ -16482,11 +16600,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5709:28: ( (this_TypeLiteralCS_0= ruleTypeLiteralCS ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )? ) )
-            // InternalAllocationSpecificationLanguage.g:5710:1: (this_TypeLiteralCS_0= ruleTypeLiteralCS ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )? )
+            // InternalAllocationSpecificationLanguage.g:5746:28: ( (this_TypeLiteralCS_0= ruleTypeLiteralCS ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )? ) )
+            // InternalAllocationSpecificationLanguage.g:5747:1: (this_TypeLiteralCS_0= ruleTypeLiteralCS ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )? )
             {
-            // InternalAllocationSpecificationLanguage.g:5710:1: (this_TypeLiteralCS_0= ruleTypeLiteralCS ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )? )
-            // InternalAllocationSpecificationLanguage.g:5711:2: this_TypeLiteralCS_0= ruleTypeLiteralCS ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )?
+            // InternalAllocationSpecificationLanguage.g:5747:1: (this_TypeLiteralCS_0= ruleTypeLiteralCS ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )? )
+            // InternalAllocationSpecificationLanguage.g:5748:2: this_TypeLiteralCS_0= ruleTypeLiteralCS ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )?
             {
             if ( state.backtracking==0 ) {
                
@@ -16498,7 +16616,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                       newCompositeNode(grammarAccess.getTypeLiteralWithMultiplicityCSAccess().getTypeLiteralCSParserRuleCall_0()); 
                   
             }
-            pushFollow(FollowSets000.FOLLOW_59);
+            pushFollow(FollowSets000.FOLLOW_60);
             this_TypeLiteralCS_0=ruleTypeLiteralCS();
 
             state._fsp--;
@@ -16509,19 +16627,19 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                       afterParserOrEnumRuleCall();
                   
             }
-            // InternalAllocationSpecificationLanguage.g:5722:1: ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )?
-            int alt84=2;
-            int LA84_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:5759:1: ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )?
+            int alt86=2;
+            int LA86_0 = input.LA(1);
 
-            if ( (LA84_0==106) ) {
-                alt84=1;
+            if ( (LA86_0==106) ) {
+                alt86=1;
             }
-            switch (alt84) {
+            switch (alt86) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:5723:1: (lv_ownedMultiplicity_1_0= ruleMultiplicityCS )
+                    // InternalAllocationSpecificationLanguage.g:5760:1: (lv_ownedMultiplicity_1_0= ruleMultiplicityCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:5723:1: (lv_ownedMultiplicity_1_0= ruleMultiplicityCS )
-                    // InternalAllocationSpecificationLanguage.g:5724:3: lv_ownedMultiplicity_1_0= ruleMultiplicityCS
+                    // InternalAllocationSpecificationLanguage.g:5760:1: (lv_ownedMultiplicity_1_0= ruleMultiplicityCS )
+                    // InternalAllocationSpecificationLanguage.g:5761:3: lv_ownedMultiplicity_1_0= ruleMultiplicityCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -16578,7 +16696,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleTypeLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5748:1: entryRuleTypeLiteralExpCS returns [EObject current=null] : iv_ruleTypeLiteralExpCS= ruleTypeLiteralExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:5785:1: entryRuleTypeLiteralExpCS returns [EObject current=null] : iv_ruleTypeLiteralExpCS= ruleTypeLiteralExpCS EOF ;
     public final EObject entryRuleTypeLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -16586,8 +16704,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:5749:2: (iv_ruleTypeLiteralExpCS= ruleTypeLiteralExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:5750:2: iv_ruleTypeLiteralExpCS= ruleTypeLiteralExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:5786:2: (iv_ruleTypeLiteralExpCS= ruleTypeLiteralExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5787:2: iv_ruleTypeLiteralExpCS= ruleTypeLiteralExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTypeLiteralExpCSRule()); 
@@ -16618,7 +16736,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleTypeLiteralExpCS"
-    // InternalAllocationSpecificationLanguage.g:5757:1: ruleTypeLiteralExpCS returns [EObject current=null] : ( (lv_ownedType_0_0= ruleTypeLiteralWithMultiplicityCS ) ) ;
+    // InternalAllocationSpecificationLanguage.g:5794:1: ruleTypeLiteralExpCS returns [EObject current=null] : ( (lv_ownedType_0_0= ruleTypeLiteralWithMultiplicityCS ) ) ;
     public final EObject ruleTypeLiteralExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -16628,14 +16746,14 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5760:28: ( ( (lv_ownedType_0_0= ruleTypeLiteralWithMultiplicityCS ) ) )
-            // InternalAllocationSpecificationLanguage.g:5761:1: ( (lv_ownedType_0_0= ruleTypeLiteralWithMultiplicityCS ) )
+            // InternalAllocationSpecificationLanguage.g:5797:28: ( ( (lv_ownedType_0_0= ruleTypeLiteralWithMultiplicityCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:5798:1: ( (lv_ownedType_0_0= ruleTypeLiteralWithMultiplicityCS ) )
             {
-            // InternalAllocationSpecificationLanguage.g:5761:1: ( (lv_ownedType_0_0= ruleTypeLiteralWithMultiplicityCS ) )
-            // InternalAllocationSpecificationLanguage.g:5762:1: (lv_ownedType_0_0= ruleTypeLiteralWithMultiplicityCS )
+            // InternalAllocationSpecificationLanguage.g:5798:1: ( (lv_ownedType_0_0= ruleTypeLiteralWithMultiplicityCS ) )
+            // InternalAllocationSpecificationLanguage.g:5799:1: (lv_ownedType_0_0= ruleTypeLiteralWithMultiplicityCS )
             {
-            // InternalAllocationSpecificationLanguage.g:5762:1: (lv_ownedType_0_0= ruleTypeLiteralWithMultiplicityCS )
-            // InternalAllocationSpecificationLanguage.g:5763:3: lv_ownedType_0_0= ruleTypeLiteralWithMultiplicityCS
+            // InternalAllocationSpecificationLanguage.g:5799:1: (lv_ownedType_0_0= ruleTypeLiteralWithMultiplicityCS )
+            // InternalAllocationSpecificationLanguage.g:5800:3: lv_ownedType_0_0= ruleTypeLiteralWithMultiplicityCS
             {
             if ( state.backtracking==0 ) {
                
@@ -16686,7 +16804,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleTypeNameExpCS"
-    // InternalAllocationSpecificationLanguage.g:5787:1: entryRuleTypeNameExpCS returns [EObject current=null] : iv_ruleTypeNameExpCS= ruleTypeNameExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:5824:1: entryRuleTypeNameExpCS returns [EObject current=null] : iv_ruleTypeNameExpCS= ruleTypeNameExpCS EOF ;
     public final EObject entryRuleTypeNameExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -16694,8 +16812,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:5788:2: (iv_ruleTypeNameExpCS= ruleTypeNameExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:5789:2: iv_ruleTypeNameExpCS= ruleTypeNameExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:5825:2: (iv_ruleTypeNameExpCS= ruleTypeNameExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5826:2: iv_ruleTypeNameExpCS= ruleTypeNameExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTypeNameExpCSRule()); 
@@ -16726,7 +16844,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleTypeNameExpCS"
-    // InternalAllocationSpecificationLanguage.g:5796:1: ruleTypeNameExpCS returns [EObject current=null] : ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( ( (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS ) ) (otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}' )? )? ) ;
+    // InternalAllocationSpecificationLanguage.g:5833:1: ruleTypeNameExpCS returns [EObject current=null] : ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( ( (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS ) ) (otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}' )? )? ) ;
     public final EObject ruleTypeNameExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -16742,24 +16860,24 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5799:28: ( ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( ( (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS ) ) (otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}' )? )? ) )
-            // InternalAllocationSpecificationLanguage.g:5800:1: ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( ( (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS ) ) (otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}' )? )? )
+            // InternalAllocationSpecificationLanguage.g:5836:28: ( ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( ( (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS ) ) (otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}' )? )? ) )
+            // InternalAllocationSpecificationLanguage.g:5837:1: ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( ( (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS ) ) (otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}' )? )? )
             {
-            // InternalAllocationSpecificationLanguage.g:5800:1: ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( ( (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS ) ) (otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}' )? )? )
-            // InternalAllocationSpecificationLanguage.g:5800:2: ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( ( (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS ) ) (otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}' )? )?
+            // InternalAllocationSpecificationLanguage.g:5837:1: ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( ( (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS ) ) (otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}' )? )? )
+            // InternalAllocationSpecificationLanguage.g:5837:2: ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( ( (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS ) ) (otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}' )? )?
             {
-            // InternalAllocationSpecificationLanguage.g:5800:2: ( (lv_ownedPathName_0_0= rulePathNameCS ) )
-            // InternalAllocationSpecificationLanguage.g:5801:1: (lv_ownedPathName_0_0= rulePathNameCS )
+            // InternalAllocationSpecificationLanguage.g:5837:2: ( (lv_ownedPathName_0_0= rulePathNameCS ) )
+            // InternalAllocationSpecificationLanguage.g:5838:1: (lv_ownedPathName_0_0= rulePathNameCS )
             {
-            // InternalAllocationSpecificationLanguage.g:5801:1: (lv_ownedPathName_0_0= rulePathNameCS )
-            // InternalAllocationSpecificationLanguage.g:5802:3: lv_ownedPathName_0_0= rulePathNameCS
+            // InternalAllocationSpecificationLanguage.g:5838:1: (lv_ownedPathName_0_0= rulePathNameCS )
+            // InternalAllocationSpecificationLanguage.g:5839:3: lv_ownedPathName_0_0= rulePathNameCS
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getTypeNameExpCSAccess().getOwnedPathNamePathNameCSParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_60);
+            pushFollow(FollowSets000.FOLLOW_61);
             lv_ownedPathName_0_0=rulePathNameCS();
 
             state._fsp--;
@@ -16783,29 +16901,29 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:5818:2: ( ( (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS ) ) (otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}' )? )?
-            int alt86=2;
-            int LA86_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:5855:2: ( ( (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS ) ) (otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}' )? )?
+            int alt88=2;
+            int LA88_0 = input.LA(1);
 
-            if ( (LA86_0==17) ) {
-                alt86=1;
+            if ( (LA88_0==17) ) {
+                alt88=1;
             }
-            switch (alt86) {
+            switch (alt88) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:5818:3: ( (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS ) ) (otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}' )?
+                    // InternalAllocationSpecificationLanguage.g:5855:3: ( (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS ) ) (otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}' )?
                     {
-                    // InternalAllocationSpecificationLanguage.g:5818:3: ( (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS ) )
-                    // InternalAllocationSpecificationLanguage.g:5819:1: (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS )
+                    // InternalAllocationSpecificationLanguage.g:5855:3: ( (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS ) )
+                    // InternalAllocationSpecificationLanguage.g:5856:1: (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:5819:1: (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS )
-                    // InternalAllocationSpecificationLanguage.g:5820:3: lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS
+                    // InternalAllocationSpecificationLanguage.g:5856:1: (lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS )
+                    // InternalAllocationSpecificationLanguage.g:5857:3: lv_ownedCurlyBracketedClause_1_0= ruleCurlyBracketedClauseCS
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getTypeNameExpCSAccess().getOwnedCurlyBracketedClauseCurlyBracketedClauseCSParserRuleCall_1_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_60);
+                    pushFollow(FollowSets000.FOLLOW_61);
                     lv_ownedCurlyBracketedClause_1_0=ruleCurlyBracketedClauseCS();
 
                     state._fsp--;
@@ -16829,16 +16947,16 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    // InternalAllocationSpecificationLanguage.g:5836:2: (otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}' )?
-                    int alt85=2;
-                    int LA85_0 = input.LA(1);
+                    // InternalAllocationSpecificationLanguage.g:5873:2: (otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}' )?
+                    int alt87=2;
+                    int LA87_0 = input.LA(1);
 
-                    if ( (LA85_0==17) ) {
-                        alt85=1;
+                    if ( (LA87_0==17) ) {
+                        alt87=1;
                     }
-                    switch (alt85) {
+                    switch (alt87) {
                         case 1 :
-                            // InternalAllocationSpecificationLanguage.g:5836:4: otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}'
+                            // InternalAllocationSpecificationLanguage.g:5873:4: otherlv_2= '{' ( (lv_ownedPatternGuard_3_0= ruleExpCS ) ) otherlv_4= '}'
                             {
                             otherlv_2=(Token)match(input,17,FollowSets000.FOLLOW_19); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -16846,11 +16964,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                                   	newLeafNode(otherlv_2, grammarAccess.getTypeNameExpCSAccess().getLeftCurlyBracketKeyword_1_1_0());
                                   
                             }
-                            // InternalAllocationSpecificationLanguage.g:5840:1: ( (lv_ownedPatternGuard_3_0= ruleExpCS ) )
-                            // InternalAllocationSpecificationLanguage.g:5841:1: (lv_ownedPatternGuard_3_0= ruleExpCS )
+                            // InternalAllocationSpecificationLanguage.g:5877:1: ( (lv_ownedPatternGuard_3_0= ruleExpCS ) )
+                            // InternalAllocationSpecificationLanguage.g:5878:1: (lv_ownedPatternGuard_3_0= ruleExpCS )
                             {
-                            // InternalAllocationSpecificationLanguage.g:5841:1: (lv_ownedPatternGuard_3_0= ruleExpCS )
-                            // InternalAllocationSpecificationLanguage.g:5842:3: lv_ownedPatternGuard_3_0= ruleExpCS
+                            // InternalAllocationSpecificationLanguage.g:5878:1: (lv_ownedPatternGuard_3_0= ruleExpCS )
+                            // InternalAllocationSpecificationLanguage.g:5879:3: lv_ownedPatternGuard_3_0= ruleExpCS
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -16921,8 +17039,173 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     // $ANTLR end "ruleTypeNameExpCS"
 
 
+    // $ANTLR start "entryRuleTypeExpWithoutMultiplicityCS"
+    // InternalAllocationSpecificationLanguage.g:5907:1: entryRuleTypeExpWithoutMultiplicityCS returns [EObject current=null] : iv_ruleTypeExpWithoutMultiplicityCS= ruleTypeExpWithoutMultiplicityCS EOF ;
+    public final EObject entryRuleTypeExpWithoutMultiplicityCS() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleTypeExpWithoutMultiplicityCS = null;
+
+
+        try {
+            // InternalAllocationSpecificationLanguage.g:5908:2: (iv_ruleTypeExpWithoutMultiplicityCS= ruleTypeExpWithoutMultiplicityCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5909:2: iv_ruleTypeExpWithoutMultiplicityCS= ruleTypeExpWithoutMultiplicityCS EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getTypeExpWithoutMultiplicityCSRule()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_1);
+            iv_ruleTypeExpWithoutMultiplicityCS=ruleTypeExpWithoutMultiplicityCS();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleTypeExpWithoutMultiplicityCS; 
+            }
+            match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return current;
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleTypeExpWithoutMultiplicityCS"
+
+
+    // $ANTLR start "ruleTypeExpWithoutMultiplicityCS"
+    // InternalAllocationSpecificationLanguage.g:5916:1: ruleTypeExpWithoutMultiplicityCS returns [EObject current=null] : (this_TypeNameExpCS_0= ruleTypeNameExpCS | this_TypeLiteralCS_1= ruleTypeLiteralCS | this_CollectionPatternCS_2= ruleCollectionPatternCS ) ;
+    public final EObject ruleTypeExpWithoutMultiplicityCS() throws RecognitionException {
+        EObject current = null;
+
+        EObject this_TypeNameExpCS_0 = null;
+
+        EObject this_TypeLiteralCS_1 = null;
+
+        EObject this_CollectionPatternCS_2 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // InternalAllocationSpecificationLanguage.g:5919:28: ( (this_TypeNameExpCS_0= ruleTypeNameExpCS | this_TypeLiteralCS_1= ruleTypeLiteralCS | this_CollectionPatternCS_2= ruleCollectionPatternCS ) )
+            // InternalAllocationSpecificationLanguage.g:5920:1: (this_TypeNameExpCS_0= ruleTypeNameExpCS | this_TypeLiteralCS_1= ruleTypeLiteralCS | this_CollectionPatternCS_2= ruleCollectionPatternCS )
+            {
+            // InternalAllocationSpecificationLanguage.g:5920:1: (this_TypeNameExpCS_0= ruleTypeNameExpCS | this_TypeLiteralCS_1= ruleTypeLiteralCS | this_CollectionPatternCS_2= ruleCollectionPatternCS )
+            int alt89=3;
+            alt89 = dfa89.predict(input);
+            switch (alt89) {
+                case 1 :
+                    // InternalAllocationSpecificationLanguage.g:5921:2: this_TypeNameExpCS_0= ruleTypeNameExpCS
+                    {
+                    if ( state.backtracking==0 ) {
+                       
+                      	  /* */ 
+                      	
+                    }
+                    if ( state.backtracking==0 ) {
+                       
+                              newCompositeNode(grammarAccess.getTypeExpWithoutMultiplicityCSAccess().getTypeNameExpCSParserRuleCall_0()); 
+                          
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_TypeNameExpCS_0=ruleTypeNameExpCS();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+                       
+                              current = this_TypeNameExpCS_0; 
+                              afterParserOrEnumRuleCall();
+                          
+                    }
+
+                    }
+                    break;
+                case 2 :
+                    // InternalAllocationSpecificationLanguage.g:5934:2: this_TypeLiteralCS_1= ruleTypeLiteralCS
+                    {
+                    if ( state.backtracking==0 ) {
+                       
+                      	  /* */ 
+                      	
+                    }
+                    if ( state.backtracking==0 ) {
+                       
+                              newCompositeNode(grammarAccess.getTypeExpWithoutMultiplicityCSAccess().getTypeLiteralCSParserRuleCall_1()); 
+                          
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_TypeLiteralCS_1=ruleTypeLiteralCS();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+                       
+                              current = this_TypeLiteralCS_1; 
+                              afterParserOrEnumRuleCall();
+                          
+                    }
+
+                    }
+                    break;
+                case 3 :
+                    // InternalAllocationSpecificationLanguage.g:5947:2: this_CollectionPatternCS_2= ruleCollectionPatternCS
+                    {
+                    if ( state.backtracking==0 ) {
+                       
+                      	  /* */ 
+                      	
+                    }
+                    if ( state.backtracking==0 ) {
+                       
+                              newCompositeNode(grammarAccess.getTypeExpWithoutMultiplicityCSAccess().getCollectionPatternCSParserRuleCall_2()); 
+                          
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_CollectionPatternCS_2=ruleCollectionPatternCS();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+                       
+                              current = this_CollectionPatternCS_2; 
+                              afterParserOrEnumRuleCall();
+                          
+                    }
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+               leaveRule(); 
+            }
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleTypeExpWithoutMultiplicityCS"
+
+
     // $ANTLR start "entryRuleTypeExpCS"
-    // InternalAllocationSpecificationLanguage.g:5870:1: entryRuleTypeExpCS returns [EObject current=null] : iv_ruleTypeExpCS= ruleTypeExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:5966:1: entryRuleTypeExpCS returns [EObject current=null] : iv_ruleTypeExpCS= ruleTypeExpCS EOF ;
     public final EObject entryRuleTypeExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -16930,8 +17213,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:5871:2: (iv_ruleTypeExpCS= ruleTypeExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:5872:2: iv_ruleTypeExpCS= ruleTypeExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:5967:2: (iv_ruleTypeExpCS= ruleTypeExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:5968:2: iv_ruleTypeExpCS= ruleTypeExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTypeExpCSRule()); 
@@ -16962,129 +17245,58 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleTypeExpCS"
-    // InternalAllocationSpecificationLanguage.g:5879:1: ruleTypeExpCS returns [EObject current=null] : ( (this_TypeNameExpCS_0= ruleTypeNameExpCS | this_TypeLiteralCS_1= ruleTypeLiteralCS | this_CollectionPatternCS_2= ruleCollectionPatternCS ) ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )? ) ;
+    // InternalAllocationSpecificationLanguage.g:5975:1: ruleTypeExpCS returns [EObject current=null] : (this_TypeExpWithoutMultiplicityCS_0= ruleTypeExpWithoutMultiplicityCS ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )? ) ;
     public final EObject ruleTypeExpCS() throws RecognitionException {
         EObject current = null;
 
-        EObject this_TypeNameExpCS_0 = null;
+        EObject this_TypeExpWithoutMultiplicityCS_0 = null;
 
-        EObject this_TypeLiteralCS_1 = null;
-
-        EObject this_CollectionPatternCS_2 = null;
-
-        EObject lv_ownedMultiplicity_3_0 = null;
+        EObject lv_ownedMultiplicity_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5882:28: ( ( (this_TypeNameExpCS_0= ruleTypeNameExpCS | this_TypeLiteralCS_1= ruleTypeLiteralCS | this_CollectionPatternCS_2= ruleCollectionPatternCS ) ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )? ) )
-            // InternalAllocationSpecificationLanguage.g:5883:1: ( (this_TypeNameExpCS_0= ruleTypeNameExpCS | this_TypeLiteralCS_1= ruleTypeLiteralCS | this_CollectionPatternCS_2= ruleCollectionPatternCS ) ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )? )
+            // InternalAllocationSpecificationLanguage.g:5978:28: ( (this_TypeExpWithoutMultiplicityCS_0= ruleTypeExpWithoutMultiplicityCS ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )? ) )
+            // InternalAllocationSpecificationLanguage.g:5979:1: (this_TypeExpWithoutMultiplicityCS_0= ruleTypeExpWithoutMultiplicityCS ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )? )
             {
-            // InternalAllocationSpecificationLanguage.g:5883:1: ( (this_TypeNameExpCS_0= ruleTypeNameExpCS | this_TypeLiteralCS_1= ruleTypeLiteralCS | this_CollectionPatternCS_2= ruleCollectionPatternCS ) ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )? )
-            // InternalAllocationSpecificationLanguage.g:5883:2: (this_TypeNameExpCS_0= ruleTypeNameExpCS | this_TypeLiteralCS_1= ruleTypeLiteralCS | this_CollectionPatternCS_2= ruleCollectionPatternCS ) ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )?
+            // InternalAllocationSpecificationLanguage.g:5979:1: (this_TypeExpWithoutMultiplicityCS_0= ruleTypeExpWithoutMultiplicityCS ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )? )
+            // InternalAllocationSpecificationLanguage.g:5980:2: this_TypeExpWithoutMultiplicityCS_0= ruleTypeExpWithoutMultiplicityCS ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )?
             {
-            // InternalAllocationSpecificationLanguage.g:5883:2: (this_TypeNameExpCS_0= ruleTypeNameExpCS | this_TypeLiteralCS_1= ruleTypeLiteralCS | this_CollectionPatternCS_2= ruleCollectionPatternCS )
-            int alt87=3;
-            alt87 = dfa87.predict(input);
-            switch (alt87) {
-                case 1 :
-                    // InternalAllocationSpecificationLanguage.g:5884:2: this_TypeNameExpCS_0= ruleTypeNameExpCS
-                    {
-                    if ( state.backtracking==0 ) {
-                       
-                      	  /* */ 
-                      	
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getTypeExpCSAccess().getTypeNameExpCSParserRuleCall_0_0()); 
-                          
-                    }
-                    pushFollow(FollowSets000.FOLLOW_59);
-                    this_TypeNameExpCS_0=ruleTypeNameExpCS();
-
-                    state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-                       
-                              current = this_TypeNameExpCS_0; 
-                              afterParserOrEnumRuleCall();
-                          
-                    }
-
-                    }
-                    break;
-                case 2 :
-                    // InternalAllocationSpecificationLanguage.g:5897:2: this_TypeLiteralCS_1= ruleTypeLiteralCS
-                    {
-                    if ( state.backtracking==0 ) {
-                       
-                      	  /* */ 
-                      	
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getTypeExpCSAccess().getTypeLiteralCSParserRuleCall_0_1()); 
-                          
-                    }
-                    pushFollow(FollowSets000.FOLLOW_59);
-                    this_TypeLiteralCS_1=ruleTypeLiteralCS();
-
-                    state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-                       
-                              current = this_TypeLiteralCS_1; 
-                              afterParserOrEnumRuleCall();
-                          
-                    }
-
-                    }
-                    break;
-                case 3 :
-                    // InternalAllocationSpecificationLanguage.g:5910:2: this_CollectionPatternCS_2= ruleCollectionPatternCS
-                    {
-                    if ( state.backtracking==0 ) {
-                       
-                      	  /* */ 
-                      	
-                    }
-                    if ( state.backtracking==0 ) {
-                       
-                              newCompositeNode(grammarAccess.getTypeExpCSAccess().getCollectionPatternCSParserRuleCall_0_2()); 
-                          
-                    }
-                    pushFollow(FollowSets000.FOLLOW_59);
-                    this_CollectionPatternCS_2=ruleCollectionPatternCS();
-
-                    state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-                       
-                              current = this_CollectionPatternCS_2; 
-                              afterParserOrEnumRuleCall();
-                          
-                    }
-
-                    }
-                    break;
-
+            if ( state.backtracking==0 ) {
+               
+              	  /* */ 
+              	
             }
-
-            // InternalAllocationSpecificationLanguage.g:5921:2: ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )?
-            int alt88=2;
-            int LA88_0 = input.LA(1);
-
-            if ( (LA88_0==106) ) {
-                alt88=1;
+            if ( state.backtracking==0 ) {
+               
+                      newCompositeNode(grammarAccess.getTypeExpCSAccess().getTypeExpWithoutMultiplicityCSParserRuleCall_0()); 
+                  
             }
-            switch (alt88) {
+            pushFollow(FollowSets000.FOLLOW_60);
+            this_TypeExpWithoutMultiplicityCS_0=ruleTypeExpWithoutMultiplicityCS();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               
+                      current = this_TypeExpWithoutMultiplicityCS_0; 
+                      afterParserOrEnumRuleCall();
+                  
+            }
+            // InternalAllocationSpecificationLanguage.g:5991:1: ( (lv_ownedMultiplicity_1_0= ruleMultiplicityCS ) )?
+            int alt90=2;
+            int LA90_0 = input.LA(1);
+
+            if ( (LA90_0==106) ) {
+                alt90=1;
+            }
+            switch (alt90) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:5922:1: (lv_ownedMultiplicity_3_0= ruleMultiplicityCS )
+                    // InternalAllocationSpecificationLanguage.g:5992:1: (lv_ownedMultiplicity_1_0= ruleMultiplicityCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:5922:1: (lv_ownedMultiplicity_3_0= ruleMultiplicityCS )
-                    // InternalAllocationSpecificationLanguage.g:5923:3: lv_ownedMultiplicity_3_0= ruleMultiplicityCS
+                    // InternalAllocationSpecificationLanguage.g:5992:1: (lv_ownedMultiplicity_1_0= ruleMultiplicityCS )
+                    // InternalAllocationSpecificationLanguage.g:5993:3: lv_ownedMultiplicity_1_0= ruleMultiplicityCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -17092,7 +17304,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                       	    
                     }
                     pushFollow(FollowSets000.FOLLOW_2);
-                    lv_ownedMultiplicity_3_0=ruleMultiplicityCS();
+                    lv_ownedMultiplicity_1_0=ruleMultiplicityCS();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -17104,7 +17316,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                              		set(
                              			current, 
                              			"ownedMultiplicity",
-                              		lv_ownedMultiplicity_3_0, 
+                              		lv_ownedMultiplicity_1_0, 
                               		"org.eclipse.ocl.xtext.base.Base.MultiplicityCS");
                       	        afterParserOrEnumRuleCall();
                       	    
@@ -17141,7 +17353,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleExpCS"
-    // InternalAllocationSpecificationLanguage.g:5947:1: entryRuleExpCS returns [EObject current=null] : iv_ruleExpCS= ruleExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:6017:1: entryRuleExpCS returns [EObject current=null] : iv_ruleExpCS= ruleExpCS EOF ;
     public final EObject entryRuleExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -17149,8 +17361,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:5948:2: (iv_ruleExpCS= ruleExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:5949:2: iv_ruleExpCS= ruleExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:6018:2: (iv_ruleExpCS= ruleExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:6019:2: iv_ruleExpCS= ruleExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExpCSRule()); 
@@ -17181,7 +17393,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleExpCS"
-    // InternalAllocationSpecificationLanguage.g:5956:1: ruleExpCS returns [EObject current=null] : ( (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? ) | this_PrefixedLetExpCS_4= rulePrefixedLetExpCS ) ;
+    // InternalAllocationSpecificationLanguage.g:6026:1: ruleExpCS returns [EObject current=null] : ( (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? ) | this_PrefixedLetExpCS_4= rulePrefixedLetExpCS ) ;
     public final EObject ruleExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -17197,18 +17409,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:5959:28: ( ( (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? ) | this_PrefixedLetExpCS_4= rulePrefixedLetExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:5960:1: ( (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? ) | this_PrefixedLetExpCS_4= rulePrefixedLetExpCS )
+            // InternalAllocationSpecificationLanguage.g:6029:28: ( ( (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? ) | this_PrefixedLetExpCS_4= rulePrefixedLetExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:6030:1: ( (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? ) | this_PrefixedLetExpCS_4= rulePrefixedLetExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:5960:1: ( (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? ) | this_PrefixedLetExpCS_4= rulePrefixedLetExpCS )
-            int alt90=2;
-            alt90 = dfa90.predict(input);
-            switch (alt90) {
+            // InternalAllocationSpecificationLanguage.g:6030:1: ( (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? ) | this_PrefixedLetExpCS_4= rulePrefixedLetExpCS )
+            int alt92=2;
+            alt92 = dfa92.predict(input);
+            switch (alt92) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:5960:2: (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? )
+                    // InternalAllocationSpecificationLanguage.g:6030:2: (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? )
                     {
-                    // InternalAllocationSpecificationLanguage.g:5960:2: (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? )
-                    // InternalAllocationSpecificationLanguage.g:5961:2: this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )?
+                    // InternalAllocationSpecificationLanguage.g:6030:2: (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? )
+                    // InternalAllocationSpecificationLanguage.g:6031:2: this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )?
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -17220,7 +17432,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                               newCompositeNode(grammarAccess.getExpCSAccess().getPrefixedPrimaryExpCSParserRuleCall_0_0()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_61);
+                    pushFollow(FollowSets000.FOLLOW_62);
                     this_PrefixedPrimaryExpCS_0=rulePrefixedPrimaryExpCS();
 
                     state._fsp--;
@@ -17231,19 +17443,19 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                               afterParserOrEnumRuleCall();
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:5972:1: ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )?
-                    int alt89=2;
-                    int LA89_0 = input.LA(1);
+                    // InternalAllocationSpecificationLanguage.g:6042:1: ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )?
+                    int alt91=2;
+                    int LA91_0 = input.LA(1);
 
-                    if ( ((LA89_0>=42 && LA89_0<=44)||LA89_0==49||(LA89_0>=61 && LA89_0<=62)||LA89_0==74||(LA89_0>=76 && LA89_0<=88)) ) {
-                        alt89=1;
+                    if ( ((LA91_0>=42 && LA91_0<=44)||LA91_0==49||(LA91_0>=61 && LA91_0<=62)||LA91_0==74||(LA91_0>=76 && LA91_0<=88)) ) {
+                        alt91=1;
                     }
-                    switch (alt89) {
+                    switch (alt91) {
                         case 1 :
-                            // InternalAllocationSpecificationLanguage.g:5972:2: () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) )
+                            // InternalAllocationSpecificationLanguage.g:6042:2: () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) )
                             {
-                            // InternalAllocationSpecificationLanguage.g:5972:2: ()
-                            // InternalAllocationSpecificationLanguage.g:5973:2: 
+                            // InternalAllocationSpecificationLanguage.g:6042:2: ()
+                            // InternalAllocationSpecificationLanguage.g:6043:2: 
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -17260,11 +17472,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                             }
 
-                            // InternalAllocationSpecificationLanguage.g:5981:2: ( (lv_name_2_0= ruleBinaryOperatorName ) )
-                            // InternalAllocationSpecificationLanguage.g:5982:1: (lv_name_2_0= ruleBinaryOperatorName )
+                            // InternalAllocationSpecificationLanguage.g:6051:2: ( (lv_name_2_0= ruleBinaryOperatorName ) )
+                            // InternalAllocationSpecificationLanguage.g:6052:1: (lv_name_2_0= ruleBinaryOperatorName )
                             {
-                            // InternalAllocationSpecificationLanguage.g:5982:1: (lv_name_2_0= ruleBinaryOperatorName )
-                            // InternalAllocationSpecificationLanguage.g:5983:3: lv_name_2_0= ruleBinaryOperatorName
+                            // InternalAllocationSpecificationLanguage.g:6052:1: (lv_name_2_0= ruleBinaryOperatorName )
+                            // InternalAllocationSpecificationLanguage.g:6053:3: lv_name_2_0= ruleBinaryOperatorName
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -17295,11 +17507,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                             }
 
-                            // InternalAllocationSpecificationLanguage.g:5999:2: ( (lv_ownedRight_3_0= ruleExpCS ) )
-                            // InternalAllocationSpecificationLanguage.g:6000:1: (lv_ownedRight_3_0= ruleExpCS )
+                            // InternalAllocationSpecificationLanguage.g:6069:2: ( (lv_ownedRight_3_0= ruleExpCS ) )
+                            // InternalAllocationSpecificationLanguage.g:6070:1: (lv_ownedRight_3_0= ruleExpCS )
                             {
-                            // InternalAllocationSpecificationLanguage.g:6000:1: (lv_ownedRight_3_0= ruleExpCS )
-                            // InternalAllocationSpecificationLanguage.g:6001:3: lv_ownedRight_3_0= ruleExpCS
+                            // InternalAllocationSpecificationLanguage.g:6070:1: (lv_ownedRight_3_0= ruleExpCS )
+                            // InternalAllocationSpecificationLanguage.g:6071:3: lv_ownedRight_3_0= ruleExpCS
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -17343,7 +17555,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:6019:2: this_PrefixedLetExpCS_4= rulePrefixedLetExpCS
+                    // InternalAllocationSpecificationLanguage.g:6089:2: this_PrefixedLetExpCS_4= rulePrefixedLetExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -17392,7 +17604,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRulePrefixedLetExpCS"
-    // InternalAllocationSpecificationLanguage.g:6038:1: entryRulePrefixedLetExpCS returns [EObject current=null] : iv_rulePrefixedLetExpCS= rulePrefixedLetExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:6108:1: entryRulePrefixedLetExpCS returns [EObject current=null] : iv_rulePrefixedLetExpCS= rulePrefixedLetExpCS EOF ;
     public final EObject entryRulePrefixedLetExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -17400,8 +17612,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:6039:2: (iv_rulePrefixedLetExpCS= rulePrefixedLetExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:6040:2: iv_rulePrefixedLetExpCS= rulePrefixedLetExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:6109:2: (iv_rulePrefixedLetExpCS= rulePrefixedLetExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:6110:2: iv_rulePrefixedLetExpCS= rulePrefixedLetExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPrefixedLetExpCSRule()); 
@@ -17432,7 +17644,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "rulePrefixedLetExpCS"
-    // InternalAllocationSpecificationLanguage.g:6047:1: rulePrefixedLetExpCS returns [EObject current=null] : ( ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedLetExpCS ) ) ) | this_LetExpCS_3= ruleLetExpCS ) ;
+    // InternalAllocationSpecificationLanguage.g:6117:1: rulePrefixedLetExpCS returns [EObject current=null] : ( ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedLetExpCS ) ) ) | this_LetExpCS_3= ruleLetExpCS ) ;
     public final EObject rulePrefixedLetExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -17446,35 +17658,35 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:6050:28: ( ( ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedLetExpCS ) ) ) | this_LetExpCS_3= ruleLetExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:6051:1: ( ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedLetExpCS ) ) ) | this_LetExpCS_3= ruleLetExpCS )
+            // InternalAllocationSpecificationLanguage.g:6120:28: ( ( ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedLetExpCS ) ) ) | this_LetExpCS_3= ruleLetExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:6121:1: ( ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedLetExpCS ) ) ) | this_LetExpCS_3= ruleLetExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:6051:1: ( ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedLetExpCS ) ) ) | this_LetExpCS_3= ruleLetExpCS )
-            int alt91=2;
-            int LA91_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:6121:1: ( ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedLetExpCS ) ) ) | this_LetExpCS_3= ruleLetExpCS )
+            int alt93=2;
+            int LA93_0 = input.LA(1);
 
-            if ( ((LA91_0>=74 && LA91_0<=75)) ) {
-                alt91=1;
+            if ( ((LA93_0>=74 && LA93_0<=75)) ) {
+                alt93=1;
             }
-            else if ( (LA91_0==115) ) {
-                alt91=2;
+            else if ( (LA93_0==115) ) {
+                alt93=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 91, 0, input);
+                    new NoViableAltException("", 93, 0, input);
 
                 throw nvae;
             }
-            switch (alt91) {
+            switch (alt93) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:6051:2: ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedLetExpCS ) ) )
+                    // InternalAllocationSpecificationLanguage.g:6121:2: ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedLetExpCS ) ) )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6051:2: ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedLetExpCS ) ) )
-                    // InternalAllocationSpecificationLanguage.g:6051:3: () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedLetExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:6121:2: ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedLetExpCS ) ) )
+                    // InternalAllocationSpecificationLanguage.g:6121:3: () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedLetExpCS ) )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6051:3: ()
-                    // InternalAllocationSpecificationLanguage.g:6052:2: 
+                    // InternalAllocationSpecificationLanguage.g:6121:3: ()
+                    // InternalAllocationSpecificationLanguage.g:6122:2: 
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -17491,11 +17703,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    // InternalAllocationSpecificationLanguage.g:6060:2: ( (lv_name_1_0= ruleUnaryOperatorName ) )
-                    // InternalAllocationSpecificationLanguage.g:6061:1: (lv_name_1_0= ruleUnaryOperatorName )
+                    // InternalAllocationSpecificationLanguage.g:6130:2: ( (lv_name_1_0= ruleUnaryOperatorName ) )
+                    // InternalAllocationSpecificationLanguage.g:6131:1: (lv_name_1_0= ruleUnaryOperatorName )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6061:1: (lv_name_1_0= ruleUnaryOperatorName )
-                    // InternalAllocationSpecificationLanguage.g:6062:3: lv_name_1_0= ruleUnaryOperatorName
+                    // InternalAllocationSpecificationLanguage.g:6131:1: (lv_name_1_0= ruleUnaryOperatorName )
+                    // InternalAllocationSpecificationLanguage.g:6132:3: lv_name_1_0= ruleUnaryOperatorName
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -17526,11 +17738,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    // InternalAllocationSpecificationLanguage.g:6078:2: ( (lv_ownedRight_2_0= rulePrefixedLetExpCS ) )
-                    // InternalAllocationSpecificationLanguage.g:6079:1: (lv_ownedRight_2_0= rulePrefixedLetExpCS )
+                    // InternalAllocationSpecificationLanguage.g:6148:2: ( (lv_ownedRight_2_0= rulePrefixedLetExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:6149:1: (lv_ownedRight_2_0= rulePrefixedLetExpCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6079:1: (lv_ownedRight_2_0= rulePrefixedLetExpCS )
-                    // InternalAllocationSpecificationLanguage.g:6080:3: lv_ownedRight_2_0= rulePrefixedLetExpCS
+                    // InternalAllocationSpecificationLanguage.g:6149:1: (lv_ownedRight_2_0= rulePrefixedLetExpCS )
+                    // InternalAllocationSpecificationLanguage.g:6150:3: lv_ownedRight_2_0= rulePrefixedLetExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -17568,7 +17780,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:6098:2: this_LetExpCS_3= ruleLetExpCS
+                    // InternalAllocationSpecificationLanguage.g:6168:2: this_LetExpCS_3= ruleLetExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -17617,7 +17829,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRulePrefixedPrimaryExpCS"
-    // InternalAllocationSpecificationLanguage.g:6117:1: entryRulePrefixedPrimaryExpCS returns [EObject current=null] : iv_rulePrefixedPrimaryExpCS= rulePrefixedPrimaryExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:6187:1: entryRulePrefixedPrimaryExpCS returns [EObject current=null] : iv_rulePrefixedPrimaryExpCS= rulePrefixedPrimaryExpCS EOF ;
     public final EObject entryRulePrefixedPrimaryExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -17625,8 +17837,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:6118:2: (iv_rulePrefixedPrimaryExpCS= rulePrefixedPrimaryExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:6119:2: iv_rulePrefixedPrimaryExpCS= rulePrefixedPrimaryExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:6188:2: (iv_rulePrefixedPrimaryExpCS= rulePrefixedPrimaryExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:6189:2: iv_rulePrefixedPrimaryExpCS= rulePrefixedPrimaryExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPrefixedPrimaryExpCSRule()); 
@@ -17657,7 +17869,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "rulePrefixedPrimaryExpCS"
-    // InternalAllocationSpecificationLanguage.g:6126:1: rulePrefixedPrimaryExpCS returns [EObject current=null] : ( ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS ) ) ) | this_PrimaryExpCS_3= rulePrimaryExpCS ) ;
+    // InternalAllocationSpecificationLanguage.g:6196:1: rulePrefixedPrimaryExpCS returns [EObject current=null] : ( ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS ) ) ) | this_PrimaryExpCS_3= rulePrimaryExpCS ) ;
     public final EObject rulePrefixedPrimaryExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -17671,35 +17883,35 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:6129:28: ( ( ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS ) ) ) | this_PrimaryExpCS_3= rulePrimaryExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:6130:1: ( ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS ) ) ) | this_PrimaryExpCS_3= rulePrimaryExpCS )
+            // InternalAllocationSpecificationLanguage.g:6199:28: ( ( ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS ) ) ) | this_PrimaryExpCS_3= rulePrimaryExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:6200:1: ( ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS ) ) ) | this_PrimaryExpCS_3= rulePrimaryExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:6130:1: ( ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS ) ) ) | this_PrimaryExpCS_3= rulePrimaryExpCS )
-            int alt92=2;
-            int LA92_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:6200:1: ( ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS ) ) ) | this_PrimaryExpCS_3= rulePrimaryExpCS )
+            int alt94=2;
+            int LA94_0 = input.LA(1);
 
-            if ( ((LA92_0>=74 && LA92_0<=75)) ) {
-                alt92=1;
+            if ( ((LA94_0>=74 && LA94_0<=75)) ) {
+                alt94=1;
             }
-            else if ( (LA92_0==RULE_SINGLE_QUOTED_STRING||(LA92_0>=RULE_SIMPLE_ID && LA92_0<=RULE_INT)||LA92_0==29||(LA92_0>=50 && LA92_0<=52)||(LA92_0>=64 && LA92_0<=73)||LA92_0==76||(LA92_0>=89 && LA92_0<=90)||(LA92_0>=92 && LA92_0<=96)||LA92_0==99||(LA92_0>=101 && LA92_0<=104)||LA92_0==110||LA92_0==116) ) {
-                alt92=2;
+            else if ( (LA94_0==RULE_SINGLE_QUOTED_STRING||(LA94_0>=RULE_SIMPLE_ID && LA94_0<=RULE_INT)||LA94_0==29||(LA94_0>=50 && LA94_0<=52)||(LA94_0>=64 && LA94_0<=73)||LA94_0==76||(LA94_0>=89 && LA94_0<=90)||(LA94_0>=92 && LA94_0<=96)||LA94_0==99||(LA94_0>=101 && LA94_0<=104)||LA94_0==110||LA94_0==116) ) {
+                alt94=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 92, 0, input);
+                    new NoViableAltException("", 94, 0, input);
 
                 throw nvae;
             }
-            switch (alt92) {
+            switch (alt94) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:6130:2: ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS ) ) )
+                    // InternalAllocationSpecificationLanguage.g:6200:2: ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS ) ) )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6130:2: ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS ) ) )
-                    // InternalAllocationSpecificationLanguage.g:6130:3: () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:6200:2: ( () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS ) ) )
+                    // InternalAllocationSpecificationLanguage.g:6200:3: () ( (lv_name_1_0= ruleUnaryOperatorName ) ) ( (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS ) )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6130:3: ()
-                    // InternalAllocationSpecificationLanguage.g:6131:2: 
+                    // InternalAllocationSpecificationLanguage.g:6200:3: ()
+                    // InternalAllocationSpecificationLanguage.g:6201:2: 
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -17716,18 +17928,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    // InternalAllocationSpecificationLanguage.g:6139:2: ( (lv_name_1_0= ruleUnaryOperatorName ) )
-                    // InternalAllocationSpecificationLanguage.g:6140:1: (lv_name_1_0= ruleUnaryOperatorName )
+                    // InternalAllocationSpecificationLanguage.g:6209:2: ( (lv_name_1_0= ruleUnaryOperatorName ) )
+                    // InternalAllocationSpecificationLanguage.g:6210:1: (lv_name_1_0= ruleUnaryOperatorName )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6140:1: (lv_name_1_0= ruleUnaryOperatorName )
-                    // InternalAllocationSpecificationLanguage.g:6141:3: lv_name_1_0= ruleUnaryOperatorName
+                    // InternalAllocationSpecificationLanguage.g:6210:1: (lv_name_1_0= ruleUnaryOperatorName )
+                    // InternalAllocationSpecificationLanguage.g:6211:3: lv_name_1_0= ruleUnaryOperatorName
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getPrefixedPrimaryExpCSAccess().getNameUnaryOperatorNameParserRuleCall_0_1_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_62);
+                    pushFollow(FollowSets000.FOLLOW_63);
                     lv_name_1_0=ruleUnaryOperatorName();
 
                     state._fsp--;
@@ -17751,11 +17963,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    // InternalAllocationSpecificationLanguage.g:6157:2: ( (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS ) )
-                    // InternalAllocationSpecificationLanguage.g:6158:1: (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS )
+                    // InternalAllocationSpecificationLanguage.g:6227:2: ( (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:6228:1: (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6158:1: (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS )
-                    // InternalAllocationSpecificationLanguage.g:6159:3: lv_ownedRight_2_0= rulePrefixedPrimaryExpCS
+                    // InternalAllocationSpecificationLanguage.g:6228:1: (lv_ownedRight_2_0= rulePrefixedPrimaryExpCS )
+                    // InternalAllocationSpecificationLanguage.g:6229:3: lv_ownedRight_2_0= rulePrefixedPrimaryExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -17793,7 +18005,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:6177:2: this_PrimaryExpCS_3= rulePrimaryExpCS
+                    // InternalAllocationSpecificationLanguage.g:6247:2: this_PrimaryExpCS_3= rulePrimaryExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -17842,7 +18054,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRulePrimaryExpCS"
-    // InternalAllocationSpecificationLanguage.g:6196:1: entryRulePrimaryExpCS returns [EObject current=null] : iv_rulePrimaryExpCS= rulePrimaryExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:6266:1: entryRulePrimaryExpCS returns [EObject current=null] : iv_rulePrimaryExpCS= rulePrimaryExpCS EOF ;
     public final EObject entryRulePrimaryExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -17850,8 +18062,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:6197:2: (iv_rulePrimaryExpCS= rulePrimaryExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:6198:2: iv_rulePrimaryExpCS= rulePrimaryExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:6267:2: (iv_rulePrimaryExpCS= rulePrimaryExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:6268:2: iv_rulePrimaryExpCS= rulePrimaryExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPrimaryExpCSRule()); 
@@ -17882,7 +18094,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "rulePrimaryExpCS"
-    // InternalAllocationSpecificationLanguage.g:6205:1: rulePrimaryExpCS returns [EObject current=null] : (this_NestedExpCS_0= ruleNestedExpCS | this_IfExpCS_1= ruleIfExpCS | this_SelfExpCS_2= ruleSelfExpCS | this_PrimitiveLiteralExpCS_3= rulePrimitiveLiteralExpCS | this_TupleLiteralExpCS_4= ruleTupleLiteralExpCS | this_MapLiteralExpCS_5= ruleMapLiteralExpCS | this_CollectionLiteralExpCS_6= ruleCollectionLiteralExpCS | this_LambdaLiteralExpCS_7= ruleLambdaLiteralExpCS | this_TypeLiteralExpCS_8= ruleTypeLiteralExpCS | this_NameExpCS_9= ruleNameExpCS ) ;
+    // InternalAllocationSpecificationLanguage.g:6275:1: rulePrimaryExpCS returns [EObject current=null] : (this_NestedExpCS_0= ruleNestedExpCS | this_IfExpCS_1= ruleIfExpCS | this_SelfExpCS_2= ruleSelfExpCS | this_PrimitiveLiteralExpCS_3= rulePrimitiveLiteralExpCS | this_TupleLiteralExpCS_4= ruleTupleLiteralExpCS | this_MapLiteralExpCS_5= ruleMapLiteralExpCS | this_CollectionLiteralExpCS_6= ruleCollectionLiteralExpCS | this_LambdaLiteralExpCS_7= ruleLambdaLiteralExpCS | this_TypeLiteralExpCS_8= ruleTypeLiteralExpCS | this_NameExpCS_9= ruleNameExpCS ) ;
     public final EObject rulePrimaryExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -17910,15 +18122,15 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:6208:28: ( (this_NestedExpCS_0= ruleNestedExpCS | this_IfExpCS_1= ruleIfExpCS | this_SelfExpCS_2= ruleSelfExpCS | this_PrimitiveLiteralExpCS_3= rulePrimitiveLiteralExpCS | this_TupleLiteralExpCS_4= ruleTupleLiteralExpCS | this_MapLiteralExpCS_5= ruleMapLiteralExpCS | this_CollectionLiteralExpCS_6= ruleCollectionLiteralExpCS | this_LambdaLiteralExpCS_7= ruleLambdaLiteralExpCS | this_TypeLiteralExpCS_8= ruleTypeLiteralExpCS | this_NameExpCS_9= ruleNameExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:6209:1: (this_NestedExpCS_0= ruleNestedExpCS | this_IfExpCS_1= ruleIfExpCS | this_SelfExpCS_2= ruleSelfExpCS | this_PrimitiveLiteralExpCS_3= rulePrimitiveLiteralExpCS | this_TupleLiteralExpCS_4= ruleTupleLiteralExpCS | this_MapLiteralExpCS_5= ruleMapLiteralExpCS | this_CollectionLiteralExpCS_6= ruleCollectionLiteralExpCS | this_LambdaLiteralExpCS_7= ruleLambdaLiteralExpCS | this_TypeLiteralExpCS_8= ruleTypeLiteralExpCS | this_NameExpCS_9= ruleNameExpCS )
+            // InternalAllocationSpecificationLanguage.g:6278:28: ( (this_NestedExpCS_0= ruleNestedExpCS | this_IfExpCS_1= ruleIfExpCS | this_SelfExpCS_2= ruleSelfExpCS | this_PrimitiveLiteralExpCS_3= rulePrimitiveLiteralExpCS | this_TupleLiteralExpCS_4= ruleTupleLiteralExpCS | this_MapLiteralExpCS_5= ruleMapLiteralExpCS | this_CollectionLiteralExpCS_6= ruleCollectionLiteralExpCS | this_LambdaLiteralExpCS_7= ruleLambdaLiteralExpCS | this_TypeLiteralExpCS_8= ruleTypeLiteralExpCS | this_NameExpCS_9= ruleNameExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:6279:1: (this_NestedExpCS_0= ruleNestedExpCS | this_IfExpCS_1= ruleIfExpCS | this_SelfExpCS_2= ruleSelfExpCS | this_PrimitiveLiteralExpCS_3= rulePrimitiveLiteralExpCS | this_TupleLiteralExpCS_4= ruleTupleLiteralExpCS | this_MapLiteralExpCS_5= ruleMapLiteralExpCS | this_CollectionLiteralExpCS_6= ruleCollectionLiteralExpCS | this_LambdaLiteralExpCS_7= ruleLambdaLiteralExpCS | this_TypeLiteralExpCS_8= ruleTypeLiteralExpCS | this_NameExpCS_9= ruleNameExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:6209:1: (this_NestedExpCS_0= ruleNestedExpCS | this_IfExpCS_1= ruleIfExpCS | this_SelfExpCS_2= ruleSelfExpCS | this_PrimitiveLiteralExpCS_3= rulePrimitiveLiteralExpCS | this_TupleLiteralExpCS_4= ruleTupleLiteralExpCS | this_MapLiteralExpCS_5= ruleMapLiteralExpCS | this_CollectionLiteralExpCS_6= ruleCollectionLiteralExpCS | this_LambdaLiteralExpCS_7= ruleLambdaLiteralExpCS | this_TypeLiteralExpCS_8= ruleTypeLiteralExpCS | this_NameExpCS_9= ruleNameExpCS )
-            int alt93=10;
-            alt93 = dfa93.predict(input);
-            switch (alt93) {
+            // InternalAllocationSpecificationLanguage.g:6279:1: (this_NestedExpCS_0= ruleNestedExpCS | this_IfExpCS_1= ruleIfExpCS | this_SelfExpCS_2= ruleSelfExpCS | this_PrimitiveLiteralExpCS_3= rulePrimitiveLiteralExpCS | this_TupleLiteralExpCS_4= ruleTupleLiteralExpCS | this_MapLiteralExpCS_5= ruleMapLiteralExpCS | this_CollectionLiteralExpCS_6= ruleCollectionLiteralExpCS | this_LambdaLiteralExpCS_7= ruleLambdaLiteralExpCS | this_TypeLiteralExpCS_8= ruleTypeLiteralExpCS | this_NameExpCS_9= ruleNameExpCS )
+            int alt95=10;
+            alt95 = dfa95.predict(input);
+            switch (alt95) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:6210:2: this_NestedExpCS_0= ruleNestedExpCS
+                    // InternalAllocationSpecificationLanguage.g:6280:2: this_NestedExpCS_0= ruleNestedExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -17945,7 +18157,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:6223:2: this_IfExpCS_1= ruleIfExpCS
+                    // InternalAllocationSpecificationLanguage.g:6293:2: this_IfExpCS_1= ruleIfExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -17972,7 +18184,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 3 :
-                    // InternalAllocationSpecificationLanguage.g:6236:2: this_SelfExpCS_2= ruleSelfExpCS
+                    // InternalAllocationSpecificationLanguage.g:6306:2: this_SelfExpCS_2= ruleSelfExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -17999,7 +18211,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 4 :
-                    // InternalAllocationSpecificationLanguage.g:6249:2: this_PrimitiveLiteralExpCS_3= rulePrimitiveLiteralExpCS
+                    // InternalAllocationSpecificationLanguage.g:6319:2: this_PrimitiveLiteralExpCS_3= rulePrimitiveLiteralExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -18026,7 +18238,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 5 :
-                    // InternalAllocationSpecificationLanguage.g:6262:2: this_TupleLiteralExpCS_4= ruleTupleLiteralExpCS
+                    // InternalAllocationSpecificationLanguage.g:6332:2: this_TupleLiteralExpCS_4= ruleTupleLiteralExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -18053,7 +18265,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 6 :
-                    // InternalAllocationSpecificationLanguage.g:6275:2: this_MapLiteralExpCS_5= ruleMapLiteralExpCS
+                    // InternalAllocationSpecificationLanguage.g:6345:2: this_MapLiteralExpCS_5= ruleMapLiteralExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -18080,7 +18292,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 7 :
-                    // InternalAllocationSpecificationLanguage.g:6288:2: this_CollectionLiteralExpCS_6= ruleCollectionLiteralExpCS
+                    // InternalAllocationSpecificationLanguage.g:6358:2: this_CollectionLiteralExpCS_6= ruleCollectionLiteralExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -18107,7 +18319,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 8 :
-                    // InternalAllocationSpecificationLanguage.g:6301:2: this_LambdaLiteralExpCS_7= ruleLambdaLiteralExpCS
+                    // InternalAllocationSpecificationLanguage.g:6371:2: this_LambdaLiteralExpCS_7= ruleLambdaLiteralExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -18134,7 +18346,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 9 :
-                    // InternalAllocationSpecificationLanguage.g:6314:2: this_TypeLiteralExpCS_8= ruleTypeLiteralExpCS
+                    // InternalAllocationSpecificationLanguage.g:6384:2: this_TypeLiteralExpCS_8= ruleTypeLiteralExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -18161,7 +18373,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 10 :
-                    // InternalAllocationSpecificationLanguage.g:6327:2: this_NameExpCS_9= ruleNameExpCS
+                    // InternalAllocationSpecificationLanguage.g:6397:2: this_NameExpCS_9= ruleNameExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -18210,7 +18422,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleNameExpCS"
-    // InternalAllocationSpecificationLanguage.g:6346:1: entryRuleNameExpCS returns [EObject current=null] : iv_ruleNameExpCS= ruleNameExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:6416:1: entryRuleNameExpCS returns [EObject current=null] : iv_ruleNameExpCS= ruleNameExpCS EOF ;
     public final EObject entryRuleNameExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -18218,8 +18430,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:6347:2: (iv_ruleNameExpCS= ruleNameExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:6348:2: iv_ruleNameExpCS= ruleNameExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:6417:2: (iv_ruleNameExpCS= ruleNameExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:6418:2: iv_ruleNameExpCS= ruleNameExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNameExpCSRule()); 
@@ -18250,7 +18462,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleNameExpCS"
-    // InternalAllocationSpecificationLanguage.g:6355:1: ruleNameExpCS returns [EObject current=null] : ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( (lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS ) )* ( (lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS ) )? ( (lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS ) )? ( ( (lv_isPre_4_0= '@' ) ) otherlv_5= 'pre' )? ) ;
+    // InternalAllocationSpecificationLanguage.g:6425:1: ruleNameExpCS returns [EObject current=null] : ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( (lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS ) )* ( (lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS ) )? ( (lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS ) )? ( ( (lv_isPre_4_0= '@' ) ) otherlv_5= 'pre' )? ) ;
     public final EObject ruleNameExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -18268,24 +18480,24 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:6358:28: ( ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( (lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS ) )* ( (lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS ) )? ( (lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS ) )? ( ( (lv_isPre_4_0= '@' ) ) otherlv_5= 'pre' )? ) )
-            // InternalAllocationSpecificationLanguage.g:6359:1: ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( (lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS ) )* ( (lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS ) )? ( (lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS ) )? ( ( (lv_isPre_4_0= '@' ) ) otherlv_5= 'pre' )? )
+            // InternalAllocationSpecificationLanguage.g:6428:28: ( ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( (lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS ) )* ( (lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS ) )? ( (lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS ) )? ( ( (lv_isPre_4_0= '@' ) ) otherlv_5= 'pre' )? ) )
+            // InternalAllocationSpecificationLanguage.g:6429:1: ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( (lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS ) )* ( (lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS ) )? ( (lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS ) )? ( ( (lv_isPre_4_0= '@' ) ) otherlv_5= 'pre' )? )
             {
-            // InternalAllocationSpecificationLanguage.g:6359:1: ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( (lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS ) )* ( (lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS ) )? ( (lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS ) )? ( ( (lv_isPre_4_0= '@' ) ) otherlv_5= 'pre' )? )
-            // InternalAllocationSpecificationLanguage.g:6359:2: ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( (lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS ) )* ( (lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS ) )? ( (lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS ) )? ( ( (lv_isPre_4_0= '@' ) ) otherlv_5= 'pre' )?
+            // InternalAllocationSpecificationLanguage.g:6429:1: ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( (lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS ) )* ( (lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS ) )? ( (lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS ) )? ( ( (lv_isPre_4_0= '@' ) ) otherlv_5= 'pre' )? )
+            // InternalAllocationSpecificationLanguage.g:6429:2: ( (lv_ownedPathName_0_0= rulePathNameCS ) ) ( (lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS ) )* ( (lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS ) )? ( (lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS ) )? ( ( (lv_isPre_4_0= '@' ) ) otherlv_5= 'pre' )?
             {
-            // InternalAllocationSpecificationLanguage.g:6359:2: ( (lv_ownedPathName_0_0= rulePathNameCS ) )
-            // InternalAllocationSpecificationLanguage.g:6360:1: (lv_ownedPathName_0_0= rulePathNameCS )
+            // InternalAllocationSpecificationLanguage.g:6429:2: ( (lv_ownedPathName_0_0= rulePathNameCS ) )
+            // InternalAllocationSpecificationLanguage.g:6430:1: (lv_ownedPathName_0_0= rulePathNameCS )
             {
-            // InternalAllocationSpecificationLanguage.g:6360:1: (lv_ownedPathName_0_0= rulePathNameCS )
-            // InternalAllocationSpecificationLanguage.g:6361:3: lv_ownedPathName_0_0= rulePathNameCS
+            // InternalAllocationSpecificationLanguage.g:6430:1: (lv_ownedPathName_0_0= rulePathNameCS )
+            // InternalAllocationSpecificationLanguage.g:6431:3: lv_ownedPathName_0_0= rulePathNameCS
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getNameExpCSAccess().getOwnedPathNamePathNameCSParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_63);
+            pushFollow(FollowSets000.FOLLOW_64);
             lv_ownedPathName_0_0=rulePathNameCS();
 
             state._fsp--;
@@ -18309,30 +18521,30 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:6377:2: ( (lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS ) )*
-            loop94:
+            // InternalAllocationSpecificationLanguage.g:6447:2: ( (lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS ) )*
+            loop96:
             do {
-                int alt94=2;
-                int LA94_0 = input.LA(1);
+                int alt96=2;
+                int LA96_0 = input.LA(1);
 
-                if ( (LA94_0==106) ) {
-                    alt94=1;
+                if ( (LA96_0==106) ) {
+                    alt96=1;
                 }
 
 
-                switch (alt94) {
+                switch (alt96) {
             	case 1 :
-            	    // InternalAllocationSpecificationLanguage.g:6378:1: (lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS )
+            	    // InternalAllocationSpecificationLanguage.g:6448:1: (lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS )
             	    {
-            	    // InternalAllocationSpecificationLanguage.g:6378:1: (lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS )
-            	    // InternalAllocationSpecificationLanguage.g:6379:3: lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS
+            	    // InternalAllocationSpecificationLanguage.g:6448:1: (lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS )
+            	    // InternalAllocationSpecificationLanguage.g:6449:3: lv_ownedSquareBracketedClauses_1_0= ruleSquareBracketedClauseCS
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getNameExpCSAccess().getOwnedSquareBracketedClausesSquareBracketedClauseCSParserRuleCall_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_63);
+            	    pushFollow(FollowSets000.FOLLOW_64);
             	    lv_ownedSquareBracketedClauses_1_0=ruleSquareBracketedClauseCS();
 
             	    state._fsp--;
@@ -18358,30 +18570,30 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop94;
+            	    break loop96;
                 }
             } while (true);
 
-            // InternalAllocationSpecificationLanguage.g:6395:3: ( (lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS ) )?
-            int alt95=2;
-            int LA95_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:6465:3: ( (lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS ) )?
+            int alt97=2;
+            int LA97_0 = input.LA(1);
 
-            if ( (LA95_0==29) ) {
-                alt95=1;
+            if ( (LA97_0==29) ) {
+                alt97=1;
             }
-            switch (alt95) {
+            switch (alt97) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:6396:1: (lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS )
+                    // InternalAllocationSpecificationLanguage.g:6466:1: (lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6396:1: (lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS )
-                    // InternalAllocationSpecificationLanguage.g:6397:3: lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS
+                    // InternalAllocationSpecificationLanguage.g:6466:1: (lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS )
+                    // InternalAllocationSpecificationLanguage.g:6467:3: lv_ownedRoundBracketedClause_2_0= ruleRoundBracketedClauseCS
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getNameExpCSAccess().getOwnedRoundBracketedClauseRoundBracketedClauseCSParserRuleCall_2_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_64);
+                    pushFollow(FollowSets000.FOLLOW_65);
                     lv_ownedRoundBracketedClause_2_0=ruleRoundBracketedClauseCS();
 
                     state._fsp--;
@@ -18408,26 +18620,26 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:6413:3: ( (lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS ) )?
-            int alt96=2;
-            int LA96_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:6483:3: ( (lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS ) )?
+            int alt98=2;
+            int LA98_0 = input.LA(1);
 
-            if ( (LA96_0==17) ) {
-                alt96=1;
+            if ( (LA98_0==17) ) {
+                alt98=1;
             }
-            switch (alt96) {
+            switch (alt98) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:6414:1: (lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS )
+                    // InternalAllocationSpecificationLanguage.g:6484:1: (lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6414:1: (lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS )
-                    // InternalAllocationSpecificationLanguage.g:6415:3: lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS
+                    // InternalAllocationSpecificationLanguage.g:6484:1: (lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS )
+                    // InternalAllocationSpecificationLanguage.g:6485:3: lv_ownedCurlyBracketedClause_3_0= ruleCurlyBracketedClauseCS
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getNameExpCSAccess().getOwnedCurlyBracketedClauseCurlyBracketedClauseCSParserRuleCall_3_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_65);
+                    pushFollow(FollowSets000.FOLLOW_66);
                     lv_ownedCurlyBracketedClause_3_0=ruleCurlyBracketedClauseCS();
 
                     state._fsp--;
@@ -18454,24 +18666,24 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:6431:3: ( ( (lv_isPre_4_0= '@' ) ) otherlv_5= 'pre' )?
-            int alt97=2;
-            int LA97_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:6501:3: ( ( (lv_isPre_4_0= '@' ) ) otherlv_5= 'pre' )?
+            int alt99=2;
+            int LA99_0 = input.LA(1);
 
-            if ( (LA97_0==105) ) {
-                alt97=1;
+            if ( (LA99_0==105) ) {
+                alt99=1;
             }
-            switch (alt97) {
+            switch (alt99) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:6431:4: ( (lv_isPre_4_0= '@' ) ) otherlv_5= 'pre'
+                    // InternalAllocationSpecificationLanguage.g:6501:4: ( (lv_isPre_4_0= '@' ) ) otherlv_5= 'pre'
                     {
-                    // InternalAllocationSpecificationLanguage.g:6431:4: ( (lv_isPre_4_0= '@' ) )
-                    // InternalAllocationSpecificationLanguage.g:6432:1: (lv_isPre_4_0= '@' )
+                    // InternalAllocationSpecificationLanguage.g:6501:4: ( (lv_isPre_4_0= '@' ) )
+                    // InternalAllocationSpecificationLanguage.g:6502:1: (lv_isPre_4_0= '@' )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6432:1: (lv_isPre_4_0= '@' )
-                    // InternalAllocationSpecificationLanguage.g:6433:3: lv_isPre_4_0= '@'
+                    // InternalAllocationSpecificationLanguage.g:6502:1: (lv_isPre_4_0= '@' )
+                    // InternalAllocationSpecificationLanguage.g:6503:3: lv_isPre_4_0= '@'
                     {
-                    lv_isPre_4_0=(Token)match(input,105,FollowSets000.FOLLOW_66); if (state.failed) return current;
+                    lv_isPre_4_0=(Token)match(input,105,FollowSets000.FOLLOW_67); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_isPre_4_0, grammarAccess.getNameExpCSAccess().getIsPreCommercialAtKeyword_4_0_0());
@@ -18526,7 +18738,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleCurlyBracketedClauseCS"
-    // InternalAllocationSpecificationLanguage.g:6458:1: entryRuleCurlyBracketedClauseCS returns [EObject current=null] : iv_ruleCurlyBracketedClauseCS= ruleCurlyBracketedClauseCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:6528:1: entryRuleCurlyBracketedClauseCS returns [EObject current=null] : iv_ruleCurlyBracketedClauseCS= ruleCurlyBracketedClauseCS EOF ;
     public final EObject entryRuleCurlyBracketedClauseCS() throws RecognitionException {
         EObject current = null;
 
@@ -18534,8 +18746,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:6459:2: (iv_ruleCurlyBracketedClauseCS= ruleCurlyBracketedClauseCS EOF )
-            // InternalAllocationSpecificationLanguage.g:6460:2: iv_ruleCurlyBracketedClauseCS= ruleCurlyBracketedClauseCS EOF
+            // InternalAllocationSpecificationLanguage.g:6529:2: (iv_ruleCurlyBracketedClauseCS= ruleCurlyBracketedClauseCS EOF )
+            // InternalAllocationSpecificationLanguage.g:6530:2: iv_ruleCurlyBracketedClauseCS= ruleCurlyBracketedClauseCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCurlyBracketedClauseCSRule()); 
@@ -18566,31 +18778,29 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleCurlyBracketedClauseCS"
-    // InternalAllocationSpecificationLanguage.g:6467:1: ruleCurlyBracketedClauseCS returns [EObject current=null] : ( () otherlv_1= '{' ( ( ( (lv_ownedParts_2_0= ruleShadowPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )* )? | ( (lv_value_5_0= ruleStringLiteral ) ) ) otherlv_6= '}' ) ;
+    // InternalAllocationSpecificationLanguage.g:6537:1: ruleCurlyBracketedClauseCS returns [EObject current=null] : ( () otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleShadowPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )* )? otherlv_5= '}' ) ;
     public final EObject ruleCurlyBracketedClauseCS() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
         Token otherlv_3=null;
-        Token otherlv_6=null;
+        Token otherlv_5=null;
         EObject lv_ownedParts_2_0 = null;
 
         EObject lv_ownedParts_4_0 = null;
-
-        AntlrDatatypeRuleToken lv_value_5_0 = null;
 
 
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:6470:28: ( ( () otherlv_1= '{' ( ( ( (lv_ownedParts_2_0= ruleShadowPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )* )? | ( (lv_value_5_0= ruleStringLiteral ) ) ) otherlv_6= '}' ) )
-            // InternalAllocationSpecificationLanguage.g:6471:1: ( () otherlv_1= '{' ( ( ( (lv_ownedParts_2_0= ruleShadowPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )* )? | ( (lv_value_5_0= ruleStringLiteral ) ) ) otherlv_6= '}' )
+            // InternalAllocationSpecificationLanguage.g:6540:28: ( ( () otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleShadowPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )* )? otherlv_5= '}' ) )
+            // InternalAllocationSpecificationLanguage.g:6541:1: ( () otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleShadowPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )* )? otherlv_5= '}' )
             {
-            // InternalAllocationSpecificationLanguage.g:6471:1: ( () otherlv_1= '{' ( ( ( (lv_ownedParts_2_0= ruleShadowPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )* )? | ( (lv_value_5_0= ruleStringLiteral ) ) ) otherlv_6= '}' )
-            // InternalAllocationSpecificationLanguage.g:6471:2: () otherlv_1= '{' ( ( ( (lv_ownedParts_2_0= ruleShadowPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )* )? | ( (lv_value_5_0= ruleStringLiteral ) ) ) otherlv_6= '}'
+            // InternalAllocationSpecificationLanguage.g:6541:1: ( () otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleShadowPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )* )? otherlv_5= '}' )
+            // InternalAllocationSpecificationLanguage.g:6541:2: () otherlv_1= '{' ( ( (lv_ownedParts_2_0= ruleShadowPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )* )? otherlv_5= '}'
             {
-            // InternalAllocationSpecificationLanguage.g:6471:2: ()
-            // InternalAllocationSpecificationLanguage.g:6472:2: 
+            // InternalAllocationSpecificationLanguage.g:6541:2: ()
+            // InternalAllocationSpecificationLanguage.g:6542:2: 
             {
             if ( state.backtracking==0 ) {
                
@@ -18607,169 +18817,36 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            otherlv_1=(Token)match(input,17,FollowSets000.FOLLOW_67); if (state.failed) return current;
+            otherlv_1=(Token)match(input,17,FollowSets000.FOLLOW_68); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getCurlyBracketedClauseCSAccess().getLeftCurlyBracketKeyword_1());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:6484:1: ( ( ( (lv_ownedParts_2_0= ruleShadowPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )* )? | ( (lv_value_5_0= ruleStringLiteral ) ) )
-            int alt100=2;
-            int LA100_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:6554:1: ( ( (lv_ownedParts_2_0= ruleShadowPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )* )?
+            int alt101=2;
+            int LA101_0 = input.LA(1);
 
-            if ( ((LA100_0>=RULE_SIMPLE_ID && LA100_0<=RULE_ESCAPED_ID)||LA100_0==18||(LA100_0>=50 && LA100_0<=52)) ) {
-                alt100=1;
+            if ( (LA101_0==RULE_SINGLE_QUOTED_STRING||(LA101_0>=RULE_SIMPLE_ID && LA101_0<=RULE_ESCAPED_ID)||(LA101_0>=50 && LA101_0<=52)) ) {
+                alt101=1;
             }
-            else if ( (LA100_0==RULE_SINGLE_QUOTED_STRING) ) {
-                alt100=2;
-            }
-            else {
-                if (state.backtracking>0) {state.failed=true; return current;}
-                NoViableAltException nvae =
-                    new NoViableAltException("", 100, 0, input);
-
-                throw nvae;
-            }
-            switch (alt100) {
+            switch (alt101) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:6484:2: ( ( (lv_ownedParts_2_0= ruleShadowPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )* )?
+                    // InternalAllocationSpecificationLanguage.g:6554:2: ( (lv_ownedParts_2_0= ruleShadowPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )*
                     {
-                    // InternalAllocationSpecificationLanguage.g:6484:2: ( ( (lv_ownedParts_2_0= ruleShadowPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )* )?
-                    int alt99=2;
-                    int LA99_0 = input.LA(1);
-
-                    if ( ((LA99_0>=RULE_SIMPLE_ID && LA99_0<=RULE_ESCAPED_ID)||(LA99_0>=50 && LA99_0<=52)) ) {
-                        alt99=1;
-                    }
-                    switch (alt99) {
-                        case 1 :
-                            // InternalAllocationSpecificationLanguage.g:6484:3: ( (lv_ownedParts_2_0= ruleShadowPartCS ) ) (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )*
-                            {
-                            // InternalAllocationSpecificationLanguage.g:6484:3: ( (lv_ownedParts_2_0= ruleShadowPartCS ) )
-                            // InternalAllocationSpecificationLanguage.g:6485:1: (lv_ownedParts_2_0= ruleShadowPartCS )
-                            {
-                            // InternalAllocationSpecificationLanguage.g:6485:1: (lv_ownedParts_2_0= ruleShadowPartCS )
-                            // InternalAllocationSpecificationLanguage.g:6486:3: lv_ownedParts_2_0= ruleShadowPartCS
-                            {
-                            if ( state.backtracking==0 ) {
-                               
-                              	        newCompositeNode(grammarAccess.getCurlyBracketedClauseCSAccess().getOwnedPartsShadowPartCSParserRuleCall_2_0_0_0()); 
-                              	    
-                            }
-                            pushFollow(FollowSets000.FOLLOW_51);
-                            lv_ownedParts_2_0=ruleShadowPartCS();
-
-                            state._fsp--;
-                            if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                              	        if (current==null) {
-                              	            current = createModelElementForParent(grammarAccess.getCurlyBracketedClauseCSRule());
-                              	        }
-                                     		add(
-                                     			current, 
-                                     			"ownedParts",
-                                      		lv_ownedParts_2_0, 
-                                      		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.ShadowPartCS");
-                              	        afterParserOrEnumRuleCall();
-                              	    
-                            }
-
-                            }
-
-
-                            }
-
-                            // InternalAllocationSpecificationLanguage.g:6502:2: (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )*
-                            loop98:
-                            do {
-                                int alt98=2;
-                                int LA98_0 = input.LA(1);
-
-                                if ( (LA98_0==30) ) {
-                                    alt98=1;
-                                }
-
-
-                                switch (alt98) {
-                            	case 1 :
-                            	    // InternalAllocationSpecificationLanguage.g:6502:4: otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) )
-                            	    {
-                            	    otherlv_3=(Token)match(input,30,FollowSets000.FOLLOW_11); if (state.failed) return current;
-                            	    if ( state.backtracking==0 ) {
-
-                            	          	newLeafNode(otherlv_3, grammarAccess.getCurlyBracketedClauseCSAccess().getCommaKeyword_2_0_1_0());
-                            	          
-                            	    }
-                            	    // InternalAllocationSpecificationLanguage.g:6506:1: ( (lv_ownedParts_4_0= ruleShadowPartCS ) )
-                            	    // InternalAllocationSpecificationLanguage.g:6507:1: (lv_ownedParts_4_0= ruleShadowPartCS )
-                            	    {
-                            	    // InternalAllocationSpecificationLanguage.g:6507:1: (lv_ownedParts_4_0= ruleShadowPartCS )
-                            	    // InternalAllocationSpecificationLanguage.g:6508:3: lv_ownedParts_4_0= ruleShadowPartCS
-                            	    {
-                            	    if ( state.backtracking==0 ) {
-                            	       
-                            	      	        newCompositeNode(grammarAccess.getCurlyBracketedClauseCSAccess().getOwnedPartsShadowPartCSParserRuleCall_2_0_1_1_0()); 
-                            	      	    
-                            	    }
-                            	    pushFollow(FollowSets000.FOLLOW_51);
-                            	    lv_ownedParts_4_0=ruleShadowPartCS();
-
-                            	    state._fsp--;
-                            	    if (state.failed) return current;
-                            	    if ( state.backtracking==0 ) {
-
-                            	      	        if (current==null) {
-                            	      	            current = createModelElementForParent(grammarAccess.getCurlyBracketedClauseCSRule());
-                            	      	        }
-                            	             		add(
-                            	             			current, 
-                            	             			"ownedParts",
-                            	              		lv_ownedParts_4_0, 
-                            	              		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.ShadowPartCS");
-                            	      	        afterParserOrEnumRuleCall();
-                            	      	    
-                            	    }
-
-                            	    }
-
-
-                            	    }
-
-
-                            	    }
-                            	    break;
-
-                            	default :
-                            	    break loop98;
-                                }
-                            } while (true);
-
-
-                            }
-                            break;
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // InternalAllocationSpecificationLanguage.g:6525:6: ( (lv_value_5_0= ruleStringLiteral ) )
+                    // InternalAllocationSpecificationLanguage.g:6554:2: ( (lv_ownedParts_2_0= ruleShadowPartCS ) )
+                    // InternalAllocationSpecificationLanguage.g:6555:1: (lv_ownedParts_2_0= ruleShadowPartCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6525:6: ( (lv_value_5_0= ruleStringLiteral ) )
-                    // InternalAllocationSpecificationLanguage.g:6526:1: (lv_value_5_0= ruleStringLiteral )
-                    {
-                    // InternalAllocationSpecificationLanguage.g:6526:1: (lv_value_5_0= ruleStringLiteral )
-                    // InternalAllocationSpecificationLanguage.g:6527:3: lv_value_5_0= ruleStringLiteral
+                    // InternalAllocationSpecificationLanguage.g:6555:1: (lv_ownedParts_2_0= ruleShadowPartCS )
+                    // InternalAllocationSpecificationLanguage.g:6556:3: lv_ownedParts_2_0= ruleShadowPartCS
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getCurlyBracketedClauseCSAccess().getValueStringLiteralParserRuleCall_2_1_0()); 
+                      	        newCompositeNode(grammarAccess.getCurlyBracketedClauseCSAccess().getOwnedPartsShadowPartCSParserRuleCall_2_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_8);
-                    lv_value_5_0=ruleStringLiteral();
+                    pushFollow(FollowSets000.FOLLOW_52);
+                    lv_ownedParts_2_0=ruleShadowPartCS();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -18778,11 +18855,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                       	        if (current==null) {
                       	            current = createModelElementForParent(grammarAccess.getCurlyBracketedClauseCSRule());
                       	        }
-                             		set(
+                             		add(
                              			current, 
-                             			"value",
-                              		lv_value_5_0, 
-                              		"org.eclipse.ocl.xtext.base.Base.StringLiteral");
+                             			"ownedParts",
+                              		lv_ownedParts_2_0, 
+                              		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.ShadowPartCS");
                       	        afterParserOrEnumRuleCall();
                       	    
                     }
@@ -18792,16 +18869,81 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
+                    // InternalAllocationSpecificationLanguage.g:6572:2: (otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) ) )*
+                    loop100:
+                    do {
+                        int alt100=2;
+                        int LA100_0 = input.LA(1);
+
+                        if ( (LA100_0==30) ) {
+                            alt100=1;
+                        }
+
+
+                        switch (alt100) {
+                    	case 1 :
+                    	    // InternalAllocationSpecificationLanguage.g:6572:4: otherlv_3= ',' ( (lv_ownedParts_4_0= ruleShadowPartCS ) )
+                    	    {
+                    	    otherlv_3=(Token)match(input,30,FollowSets000.FOLLOW_40); if (state.failed) return current;
+                    	    if ( state.backtracking==0 ) {
+
+                    	          	newLeafNode(otherlv_3, grammarAccess.getCurlyBracketedClauseCSAccess().getCommaKeyword_2_1_0());
+                    	          
+                    	    }
+                    	    // InternalAllocationSpecificationLanguage.g:6576:1: ( (lv_ownedParts_4_0= ruleShadowPartCS ) )
+                    	    // InternalAllocationSpecificationLanguage.g:6577:1: (lv_ownedParts_4_0= ruleShadowPartCS )
+                    	    {
+                    	    // InternalAllocationSpecificationLanguage.g:6577:1: (lv_ownedParts_4_0= ruleShadowPartCS )
+                    	    // InternalAllocationSpecificationLanguage.g:6578:3: lv_ownedParts_4_0= ruleShadowPartCS
+                    	    {
+                    	    if ( state.backtracking==0 ) {
+                    	       
+                    	      	        newCompositeNode(grammarAccess.getCurlyBracketedClauseCSAccess().getOwnedPartsShadowPartCSParserRuleCall_2_1_1_0()); 
+                    	      	    
+                    	    }
+                    	    pushFollow(FollowSets000.FOLLOW_52);
+                    	    lv_ownedParts_4_0=ruleShadowPartCS();
+
+                    	    state._fsp--;
+                    	    if (state.failed) return current;
+                    	    if ( state.backtracking==0 ) {
+
+                    	      	        if (current==null) {
+                    	      	            current = createModelElementForParent(grammarAccess.getCurlyBracketedClauseCSRule());
+                    	      	        }
+                    	             		add(
+                    	             			current, 
+                    	             			"ownedParts",
+                    	              		lv_ownedParts_4_0, 
+                    	              		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.ShadowPartCS");
+                    	      	        afterParserOrEnumRuleCall();
+                    	      	    
+                    	    }
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop100;
+                        }
+                    } while (true);
+
 
                     }
                     break;
 
             }
 
-            otherlv_6=(Token)match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            otherlv_5=(Token)match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-                  	newLeafNode(otherlv_6, grammarAccess.getCurlyBracketedClauseCSAccess().getRightCurlyBracketKeyword_3());
+                  	newLeafNode(otherlv_5, grammarAccess.getCurlyBracketedClauseCSAccess().getRightCurlyBracketKeyword_3());
                   
             }
 
@@ -18827,7 +18969,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleRoundBracketedClauseCS"
-    // InternalAllocationSpecificationLanguage.g:6555:1: entryRuleRoundBracketedClauseCS returns [EObject current=null] : iv_ruleRoundBracketedClauseCS= ruleRoundBracketedClauseCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:6606:1: entryRuleRoundBracketedClauseCS returns [EObject current=null] : iv_ruleRoundBracketedClauseCS= ruleRoundBracketedClauseCS EOF ;
     public final EObject entryRuleRoundBracketedClauseCS() throws RecognitionException {
         EObject current = null;
 
@@ -18835,8 +18977,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:6556:2: (iv_ruleRoundBracketedClauseCS= ruleRoundBracketedClauseCS EOF )
-            // InternalAllocationSpecificationLanguage.g:6557:2: iv_ruleRoundBracketedClauseCS= ruleRoundBracketedClauseCS EOF
+            // InternalAllocationSpecificationLanguage.g:6607:2: (iv_ruleRoundBracketedClauseCS= ruleRoundBracketedClauseCS EOF )
+            // InternalAllocationSpecificationLanguage.g:6608:2: iv_ruleRoundBracketedClauseCS= ruleRoundBracketedClauseCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRoundBracketedClauseCSRule()); 
@@ -18867,7 +19009,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleRoundBracketedClauseCS"
-    // InternalAllocationSpecificationLanguage.g:6564:1: ruleRoundBracketedClauseCS returns [EObject current=null] : ( () otherlv_1= '(' ( ( (lv_ownedArguments_2_0= ruleNavigatingArgCS ) ) ( (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS ) )* ( ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )* )? ( ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )* )* )? otherlv_8= ')' ) ;
+    // InternalAllocationSpecificationLanguage.g:6615:1: ruleRoundBracketedClauseCS returns [EObject current=null] : ( () otherlv_1= '(' ( ( (lv_ownedArguments_2_0= ruleNavigatingArgCS ) ) ( (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS ) )* ( ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )* )? ( ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )* )* )? otherlv_8= ')' ) ;
     public final EObject ruleRoundBracketedClauseCS() throws RecognitionException {
         EObject current = null;
 
@@ -18889,14 +19031,14 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:6567:28: ( ( () otherlv_1= '(' ( ( (lv_ownedArguments_2_0= ruleNavigatingArgCS ) ) ( (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS ) )* ( ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )* )? ( ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )* )* )? otherlv_8= ')' ) )
-            // InternalAllocationSpecificationLanguage.g:6568:1: ( () otherlv_1= '(' ( ( (lv_ownedArguments_2_0= ruleNavigatingArgCS ) ) ( (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS ) )* ( ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )* )? ( ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )* )* )? otherlv_8= ')' )
+            // InternalAllocationSpecificationLanguage.g:6618:28: ( ( () otherlv_1= '(' ( ( (lv_ownedArguments_2_0= ruleNavigatingArgCS ) ) ( (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS ) )* ( ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )* )? ( ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )* )* )? otherlv_8= ')' ) )
+            // InternalAllocationSpecificationLanguage.g:6619:1: ( () otherlv_1= '(' ( ( (lv_ownedArguments_2_0= ruleNavigatingArgCS ) ) ( (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS ) )* ( ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )* )? ( ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )* )* )? otherlv_8= ')' )
             {
-            // InternalAllocationSpecificationLanguage.g:6568:1: ( () otherlv_1= '(' ( ( (lv_ownedArguments_2_0= ruleNavigatingArgCS ) ) ( (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS ) )* ( ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )* )? ( ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )* )* )? otherlv_8= ')' )
-            // InternalAllocationSpecificationLanguage.g:6568:2: () otherlv_1= '(' ( ( (lv_ownedArguments_2_0= ruleNavigatingArgCS ) ) ( (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS ) )* ( ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )* )? ( ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )* )* )? otherlv_8= ')'
+            // InternalAllocationSpecificationLanguage.g:6619:1: ( () otherlv_1= '(' ( ( (lv_ownedArguments_2_0= ruleNavigatingArgCS ) ) ( (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS ) )* ( ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )* )? ( ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )* )* )? otherlv_8= ')' )
+            // InternalAllocationSpecificationLanguage.g:6619:2: () otherlv_1= '(' ( ( (lv_ownedArguments_2_0= ruleNavigatingArgCS ) ) ( (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS ) )* ( ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )* )? ( ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )* )* )? otherlv_8= ')'
             {
-            // InternalAllocationSpecificationLanguage.g:6568:2: ()
-            // InternalAllocationSpecificationLanguage.g:6569:2: 
+            // InternalAllocationSpecificationLanguage.g:6619:2: ()
+            // InternalAllocationSpecificationLanguage.g:6620:2: 
             {
             if ( state.backtracking==0 ) {
                
@@ -18913,35 +19055,35 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            otherlv_1=(Token)match(input,29,FollowSets000.FOLLOW_68); if (state.failed) return current;
+            otherlv_1=(Token)match(input,29,FollowSets000.FOLLOW_69); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getRoundBracketedClauseCSAccess().getLeftParenthesisKeyword_1());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:6581:1: ( ( (lv_ownedArguments_2_0= ruleNavigatingArgCS ) ) ( (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS ) )* ( ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )* )? ( ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )* )* )?
-            int alt106=2;
-            int LA106_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:6632:1: ( ( (lv_ownedArguments_2_0= ruleNavigatingArgCS ) ) ( (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS ) )* ( ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )* )? ( ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )* )* )?
+            int alt107=2;
+            int LA107_0 = input.LA(1);
 
-            if ( (LA106_0==RULE_SINGLE_QUOTED_STRING||(LA106_0>=RULE_SIMPLE_ID && LA106_0<=RULE_INT)||LA106_0==29||LA106_0==32||(LA106_0>=50 && LA106_0<=52)||(LA106_0>=63 && LA106_0<=76)||(LA106_0>=89 && LA106_0<=90)||(LA106_0>=92 && LA106_0<=96)||LA106_0==99||(LA106_0>=101 && LA106_0<=104)||LA106_0==110||(LA106_0>=115 && LA106_0<=116)) ) {
-                alt106=1;
+            if ( (LA107_0==RULE_SINGLE_QUOTED_STRING||(LA107_0>=RULE_SIMPLE_ID && LA107_0<=RULE_INT)||LA107_0==29||LA107_0==32||(LA107_0>=50 && LA107_0<=52)||(LA107_0>=63 && LA107_0<=76)||(LA107_0>=89 && LA107_0<=90)||(LA107_0>=92 && LA107_0<=96)||LA107_0==99||(LA107_0>=101 && LA107_0<=104)||LA107_0==110||(LA107_0>=115 && LA107_0<=116)) ) {
+                alt107=1;
             }
-            switch (alt106) {
+            switch (alt107) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:6581:2: ( (lv_ownedArguments_2_0= ruleNavigatingArgCS ) ) ( (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS ) )* ( ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )* )? ( ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )* )*
+                    // InternalAllocationSpecificationLanguage.g:6632:2: ( (lv_ownedArguments_2_0= ruleNavigatingArgCS ) ) ( (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS ) )* ( ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )* )? ( ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )* )*
                     {
-                    // InternalAllocationSpecificationLanguage.g:6581:2: ( (lv_ownedArguments_2_0= ruleNavigatingArgCS ) )
-                    // InternalAllocationSpecificationLanguage.g:6582:1: (lv_ownedArguments_2_0= ruleNavigatingArgCS )
+                    // InternalAllocationSpecificationLanguage.g:6632:2: ( (lv_ownedArguments_2_0= ruleNavigatingArgCS ) )
+                    // InternalAllocationSpecificationLanguage.g:6633:1: (lv_ownedArguments_2_0= ruleNavigatingArgCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6582:1: (lv_ownedArguments_2_0= ruleNavigatingArgCS )
-                    // InternalAllocationSpecificationLanguage.g:6583:3: lv_ownedArguments_2_0= ruleNavigatingArgCS
+                    // InternalAllocationSpecificationLanguage.g:6633:1: (lv_ownedArguments_2_0= ruleNavigatingArgCS )
+                    // InternalAllocationSpecificationLanguage.g:6634:3: lv_ownedArguments_2_0= ruleNavigatingArgCS
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getRoundBracketedClauseCSAccess().getOwnedArgumentsNavigatingArgCSParserRuleCall_2_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_69);
+                    pushFollow(FollowSets000.FOLLOW_70);
                     lv_ownedArguments_2_0=ruleNavigatingArgCS();
 
                     state._fsp--;
@@ -18965,30 +19107,30 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    // InternalAllocationSpecificationLanguage.g:6599:2: ( (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS ) )*
-                    loop101:
+                    // InternalAllocationSpecificationLanguage.g:6650:2: ( (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS ) )*
+                    loop102:
                     do {
-                        int alt101=2;
-                        int LA101_0 = input.LA(1);
+                        int alt102=2;
+                        int LA102_0 = input.LA(1);
 
-                        if ( (LA101_0==30) ) {
-                            alt101=1;
+                        if ( (LA102_0==30) ) {
+                            alt102=1;
                         }
 
 
-                        switch (alt101) {
+                        switch (alt102) {
                     	case 1 :
-                    	    // InternalAllocationSpecificationLanguage.g:6600:1: (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS )
+                    	    // InternalAllocationSpecificationLanguage.g:6651:1: (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS )
                     	    {
-                    	    // InternalAllocationSpecificationLanguage.g:6600:1: (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS )
-                    	    // InternalAllocationSpecificationLanguage.g:6601:3: lv_ownedArguments_3_0= ruleNavigatingCommaArgCS
+                    	    // InternalAllocationSpecificationLanguage.g:6651:1: (lv_ownedArguments_3_0= ruleNavigatingCommaArgCS )
+                    	    // InternalAllocationSpecificationLanguage.g:6652:3: lv_ownedArguments_3_0= ruleNavigatingCommaArgCS
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getRoundBracketedClauseCSAccess().getOwnedArgumentsNavigatingCommaArgCSParserRuleCall_2_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FollowSets000.FOLLOW_69);
+                    	    pushFollow(FollowSets000.FOLLOW_70);
                     	    lv_ownedArguments_3_0=ruleNavigatingCommaArgCS();
 
                     	    state._fsp--;
@@ -19014,33 +19156,33 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     	    break;
 
                     	default :
-                    	    break loop101;
+                    	    break loop102;
                         }
                     } while (true);
 
-                    // InternalAllocationSpecificationLanguage.g:6617:3: ( ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )* )?
-                    int alt103=2;
-                    int LA103_0 = input.LA(1);
+                    // InternalAllocationSpecificationLanguage.g:6668:3: ( ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )* )?
+                    int alt104=2;
+                    int LA104_0 = input.LA(1);
 
-                    if ( (LA103_0==20) ) {
-                        alt103=1;
+                    if ( (LA104_0==20) ) {
+                        alt104=1;
                     }
-                    switch (alt103) {
+                    switch (alt104) {
                         case 1 :
-                            // InternalAllocationSpecificationLanguage.g:6617:4: ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )*
+                            // InternalAllocationSpecificationLanguage.g:6668:4: ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) ) ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )*
                             {
-                            // InternalAllocationSpecificationLanguage.g:6617:4: ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) )
-                            // InternalAllocationSpecificationLanguage.g:6618:1: (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS )
+                            // InternalAllocationSpecificationLanguage.g:6668:4: ( (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS ) )
+                            // InternalAllocationSpecificationLanguage.g:6669:1: (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS )
                             {
-                            // InternalAllocationSpecificationLanguage.g:6618:1: (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS )
-                            // InternalAllocationSpecificationLanguage.g:6619:3: lv_ownedArguments_4_0= ruleNavigatingSemiArgCS
+                            // InternalAllocationSpecificationLanguage.g:6669:1: (lv_ownedArguments_4_0= ruleNavigatingSemiArgCS )
+                            // InternalAllocationSpecificationLanguage.g:6670:3: lv_ownedArguments_4_0= ruleNavigatingSemiArgCS
                             {
                             if ( state.backtracking==0 ) {
                                
                               	        newCompositeNode(grammarAccess.getRoundBracketedClauseCSAccess().getOwnedArgumentsNavigatingSemiArgCSParserRuleCall_2_2_0_0()); 
                               	    
                             }
-                            pushFollow(FollowSets000.FOLLOW_70);
+                            pushFollow(FollowSets000.FOLLOW_71);
                             lv_ownedArguments_4_0=ruleNavigatingSemiArgCS();
 
                             state._fsp--;
@@ -19064,30 +19206,30 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                             }
 
-                            // InternalAllocationSpecificationLanguage.g:6635:2: ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )*
-                            loop102:
+                            // InternalAllocationSpecificationLanguage.g:6686:2: ( (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS ) )*
+                            loop103:
                             do {
-                                int alt102=2;
-                                int LA102_0 = input.LA(1);
+                                int alt103=2;
+                                int LA103_0 = input.LA(1);
 
-                                if ( (LA102_0==30) ) {
-                                    alt102=1;
+                                if ( (LA103_0==30) ) {
+                                    alt103=1;
                                 }
 
 
-                                switch (alt102) {
+                                switch (alt103) {
                             	case 1 :
-                            	    // InternalAllocationSpecificationLanguage.g:6636:1: (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS )
+                            	    // InternalAllocationSpecificationLanguage.g:6687:1: (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS )
                             	    {
-                            	    // InternalAllocationSpecificationLanguage.g:6636:1: (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS )
-                            	    // InternalAllocationSpecificationLanguage.g:6637:3: lv_ownedArguments_5_0= ruleNavigatingCommaArgCS
+                            	    // InternalAllocationSpecificationLanguage.g:6687:1: (lv_ownedArguments_5_0= ruleNavigatingCommaArgCS )
+                            	    // InternalAllocationSpecificationLanguage.g:6688:3: lv_ownedArguments_5_0= ruleNavigatingCommaArgCS
                             	    {
                             	    if ( state.backtracking==0 ) {
                             	       
                             	      	        newCompositeNode(grammarAccess.getRoundBracketedClauseCSAccess().getOwnedArgumentsNavigatingCommaArgCSParserRuleCall_2_2_1_0()); 
                             	      	    
                             	    }
-                            	    pushFollow(FollowSets000.FOLLOW_70);
+                            	    pushFollow(FollowSets000.FOLLOW_71);
                             	    lv_ownedArguments_5_0=ruleNavigatingCommaArgCS();
 
                             	    state._fsp--;
@@ -19113,7 +19255,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                             	    break;
 
                             	default :
-                            	    break loop102;
+                            	    break loop103;
                                 }
                             } while (true);
 
@@ -19123,33 +19265,33 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    // InternalAllocationSpecificationLanguage.g:6653:5: ( ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )* )*
-                    loop105:
+                    // InternalAllocationSpecificationLanguage.g:6704:5: ( ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )* )*
+                    loop106:
                     do {
-                        int alt105=2;
-                        int LA105_0 = input.LA(1);
+                        int alt106=2;
+                        int LA106_0 = input.LA(1);
 
-                        if ( (LA105_0==109) ) {
-                            alt105=1;
+                        if ( (LA106_0==109) ) {
+                            alt106=1;
                         }
 
 
-                        switch (alt105) {
+                        switch (alt106) {
                     	case 1 :
-                    	    // InternalAllocationSpecificationLanguage.g:6653:6: ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )*
+                    	    // InternalAllocationSpecificationLanguage.g:6704:6: ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) ) ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )*
                     	    {
-                    	    // InternalAllocationSpecificationLanguage.g:6653:6: ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) )
-                    	    // InternalAllocationSpecificationLanguage.g:6654:1: (lv_ownedArguments_6_0= ruleNavigatingBarArgCS )
+                    	    // InternalAllocationSpecificationLanguage.g:6704:6: ( (lv_ownedArguments_6_0= ruleNavigatingBarArgCS ) )
+                    	    // InternalAllocationSpecificationLanguage.g:6705:1: (lv_ownedArguments_6_0= ruleNavigatingBarArgCS )
                     	    {
-                    	    // InternalAllocationSpecificationLanguage.g:6654:1: (lv_ownedArguments_6_0= ruleNavigatingBarArgCS )
-                    	    // InternalAllocationSpecificationLanguage.g:6655:3: lv_ownedArguments_6_0= ruleNavigatingBarArgCS
+                    	    // InternalAllocationSpecificationLanguage.g:6705:1: (lv_ownedArguments_6_0= ruleNavigatingBarArgCS )
+                    	    // InternalAllocationSpecificationLanguage.g:6706:3: lv_ownedArguments_6_0= ruleNavigatingBarArgCS
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getRoundBracketedClauseCSAccess().getOwnedArgumentsNavigatingBarArgCSParserRuleCall_2_3_0_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FollowSets000.FOLLOW_70);
+                    	    pushFollow(FollowSets000.FOLLOW_71);
                     	    lv_ownedArguments_6_0=ruleNavigatingBarArgCS();
 
                     	    state._fsp--;
@@ -19173,30 +19315,30 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     	    }
 
-                    	    // InternalAllocationSpecificationLanguage.g:6671:2: ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )*
-                    	    loop104:
+                    	    // InternalAllocationSpecificationLanguage.g:6722:2: ( (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS ) )*
+                    	    loop105:
                     	    do {
-                    	        int alt104=2;
-                    	        int LA104_0 = input.LA(1);
+                    	        int alt105=2;
+                    	        int LA105_0 = input.LA(1);
 
-                    	        if ( (LA104_0==30) ) {
-                    	            alt104=1;
+                    	        if ( (LA105_0==30) ) {
+                    	            alt105=1;
                     	        }
 
 
-                    	        switch (alt104) {
+                    	        switch (alt105) {
                     	    	case 1 :
-                    	    	    // InternalAllocationSpecificationLanguage.g:6672:1: (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS )
+                    	    	    // InternalAllocationSpecificationLanguage.g:6723:1: (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS )
                     	    	    {
-                    	    	    // InternalAllocationSpecificationLanguage.g:6672:1: (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS )
-                    	    	    // InternalAllocationSpecificationLanguage.g:6673:3: lv_ownedArguments_7_0= ruleNavigatingCommaArgCS
+                    	    	    // InternalAllocationSpecificationLanguage.g:6723:1: (lv_ownedArguments_7_0= ruleNavigatingCommaArgCS )
+                    	    	    // InternalAllocationSpecificationLanguage.g:6724:3: lv_ownedArguments_7_0= ruleNavigatingCommaArgCS
                     	    	    {
                     	    	    if ( state.backtracking==0 ) {
                     	    	       
                     	    	      	        newCompositeNode(grammarAccess.getRoundBracketedClauseCSAccess().getOwnedArgumentsNavigatingCommaArgCSParserRuleCall_2_3_1_0()); 
                     	    	      	    
                     	    	    }
-                    	    	    pushFollow(FollowSets000.FOLLOW_70);
+                    	    	    pushFollow(FollowSets000.FOLLOW_71);
                     	    	    lv_ownedArguments_7_0=ruleNavigatingCommaArgCS();
 
                     	    	    state._fsp--;
@@ -19222,7 +19364,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     	    	    break;
 
                     	    	default :
-                    	    	    break loop104;
+                    	    	    break loop105;
                     	        }
                     	    } while (true);
 
@@ -19231,7 +19373,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     	    break;
 
                     	default :
-                    	    break loop105;
+                    	    break loop106;
                         }
                     } while (true);
 
@@ -19270,7 +19412,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleSquareBracketedClauseCS"
-    // InternalAllocationSpecificationLanguage.g:6701:1: entryRuleSquareBracketedClauseCS returns [EObject current=null] : iv_ruleSquareBracketedClauseCS= ruleSquareBracketedClauseCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:6752:1: entryRuleSquareBracketedClauseCS returns [EObject current=null] : iv_ruleSquareBracketedClauseCS= ruleSquareBracketedClauseCS EOF ;
     public final EObject entryRuleSquareBracketedClauseCS() throws RecognitionException {
         EObject current = null;
 
@@ -19278,8 +19420,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:6702:2: (iv_ruleSquareBracketedClauseCS= ruleSquareBracketedClauseCS EOF )
-            // InternalAllocationSpecificationLanguage.g:6703:2: iv_ruleSquareBracketedClauseCS= ruleSquareBracketedClauseCS EOF
+            // InternalAllocationSpecificationLanguage.g:6753:2: (iv_ruleSquareBracketedClauseCS= ruleSquareBracketedClauseCS EOF )
+            // InternalAllocationSpecificationLanguage.g:6754:2: iv_ruleSquareBracketedClauseCS= ruleSquareBracketedClauseCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSquareBracketedClauseCSRule()); 
@@ -19310,7 +19452,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleSquareBracketedClauseCS"
-    // InternalAllocationSpecificationLanguage.g:6710:1: ruleSquareBracketedClauseCS returns [EObject current=null] : (otherlv_0= '[' ( (lv_ownedTerms_1_0= ruleExpCS ) ) (otherlv_2= ',' ( (lv_ownedTerms_3_0= ruleExpCS ) ) )* otherlv_4= ']' ) ;
+    // InternalAllocationSpecificationLanguage.g:6761:1: ruleSquareBracketedClauseCS returns [EObject current=null] : (otherlv_0= '[' ( (lv_ownedTerms_1_0= ruleExpCS ) ) (otherlv_2= ',' ( (lv_ownedTerms_3_0= ruleExpCS ) ) )* otherlv_4= ']' ) ;
     public final EObject ruleSquareBracketedClauseCS() throws RecognitionException {
         EObject current = null;
 
@@ -19325,11 +19467,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:6713:28: ( (otherlv_0= '[' ( (lv_ownedTerms_1_0= ruleExpCS ) ) (otherlv_2= ',' ( (lv_ownedTerms_3_0= ruleExpCS ) ) )* otherlv_4= ']' ) )
-            // InternalAllocationSpecificationLanguage.g:6714:1: (otherlv_0= '[' ( (lv_ownedTerms_1_0= ruleExpCS ) ) (otherlv_2= ',' ( (lv_ownedTerms_3_0= ruleExpCS ) ) )* otherlv_4= ']' )
+            // InternalAllocationSpecificationLanguage.g:6764:28: ( (otherlv_0= '[' ( (lv_ownedTerms_1_0= ruleExpCS ) ) (otherlv_2= ',' ( (lv_ownedTerms_3_0= ruleExpCS ) ) )* otherlv_4= ']' ) )
+            // InternalAllocationSpecificationLanguage.g:6765:1: (otherlv_0= '[' ( (lv_ownedTerms_1_0= ruleExpCS ) ) (otherlv_2= ',' ( (lv_ownedTerms_3_0= ruleExpCS ) ) )* otherlv_4= ']' )
             {
-            // InternalAllocationSpecificationLanguage.g:6714:1: (otherlv_0= '[' ( (lv_ownedTerms_1_0= ruleExpCS ) ) (otherlv_2= ',' ( (lv_ownedTerms_3_0= ruleExpCS ) ) )* otherlv_4= ']' )
-            // InternalAllocationSpecificationLanguage.g:6714:3: otherlv_0= '[' ( (lv_ownedTerms_1_0= ruleExpCS ) ) (otherlv_2= ',' ( (lv_ownedTerms_3_0= ruleExpCS ) ) )* otherlv_4= ']'
+            // InternalAllocationSpecificationLanguage.g:6765:1: (otherlv_0= '[' ( (lv_ownedTerms_1_0= ruleExpCS ) ) (otherlv_2= ',' ( (lv_ownedTerms_3_0= ruleExpCS ) ) )* otherlv_4= ']' )
+            // InternalAllocationSpecificationLanguage.g:6765:3: otherlv_0= '[' ( (lv_ownedTerms_1_0= ruleExpCS ) ) (otherlv_2= ',' ( (lv_ownedTerms_3_0= ruleExpCS ) ) )* otherlv_4= ']'
             {
             otherlv_0=(Token)match(input,106,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19337,18 +19479,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_0, grammarAccess.getSquareBracketedClauseCSAccess().getLeftSquareBracketKeyword_0());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:6718:1: ( (lv_ownedTerms_1_0= ruleExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:6719:1: (lv_ownedTerms_1_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:6769:1: ( (lv_ownedTerms_1_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:6770:1: (lv_ownedTerms_1_0= ruleExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:6719:1: (lv_ownedTerms_1_0= ruleExpCS )
-            // InternalAllocationSpecificationLanguage.g:6720:3: lv_ownedTerms_1_0= ruleExpCS
+            // InternalAllocationSpecificationLanguage.g:6770:1: (lv_ownedTerms_1_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:6771:3: lv_ownedTerms_1_0= ruleExpCS
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getSquareBracketedClauseCSAccess().getOwnedTermsExpCSParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_71);
+            pushFollow(FollowSets000.FOLLOW_72);
             lv_ownedTerms_1_0=ruleExpCS();
 
             state._fsp--;
@@ -19372,20 +19514,20 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:6736:2: (otherlv_2= ',' ( (lv_ownedTerms_3_0= ruleExpCS ) ) )*
-            loop107:
+            // InternalAllocationSpecificationLanguage.g:6787:2: (otherlv_2= ',' ( (lv_ownedTerms_3_0= ruleExpCS ) ) )*
+            loop108:
             do {
-                int alt107=2;
-                int LA107_0 = input.LA(1);
+                int alt108=2;
+                int LA108_0 = input.LA(1);
 
-                if ( (LA107_0==30) ) {
-                    alt107=1;
+                if ( (LA108_0==30) ) {
+                    alt108=1;
                 }
 
 
-                switch (alt107) {
+                switch (alt108) {
             	case 1 :
-            	    // InternalAllocationSpecificationLanguage.g:6736:4: otherlv_2= ',' ( (lv_ownedTerms_3_0= ruleExpCS ) )
+            	    // InternalAllocationSpecificationLanguage.g:6787:4: otherlv_2= ',' ( (lv_ownedTerms_3_0= ruleExpCS ) )
             	    {
             	    otherlv_2=(Token)match(input,30,FollowSets000.FOLLOW_19); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -19393,18 +19535,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	          	newLeafNode(otherlv_2, grammarAccess.getSquareBracketedClauseCSAccess().getCommaKeyword_2_0());
             	          
             	    }
-            	    // InternalAllocationSpecificationLanguage.g:6740:1: ( (lv_ownedTerms_3_0= ruleExpCS ) )
-            	    // InternalAllocationSpecificationLanguage.g:6741:1: (lv_ownedTerms_3_0= ruleExpCS )
+            	    // InternalAllocationSpecificationLanguage.g:6791:1: ( (lv_ownedTerms_3_0= ruleExpCS ) )
+            	    // InternalAllocationSpecificationLanguage.g:6792:1: (lv_ownedTerms_3_0= ruleExpCS )
             	    {
-            	    // InternalAllocationSpecificationLanguage.g:6741:1: (lv_ownedTerms_3_0= ruleExpCS )
-            	    // InternalAllocationSpecificationLanguage.g:6742:3: lv_ownedTerms_3_0= ruleExpCS
+            	    // InternalAllocationSpecificationLanguage.g:6792:1: (lv_ownedTerms_3_0= ruleExpCS )
+            	    // InternalAllocationSpecificationLanguage.g:6793:3: lv_ownedTerms_3_0= ruleExpCS
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getSquareBracketedClauseCSAccess().getOwnedTermsExpCSParserRuleCall_2_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_71);
+            	    pushFollow(FollowSets000.FOLLOW_72);
             	    lv_ownedTerms_3_0=ruleExpCS();
 
             	    state._fsp--;
@@ -19433,7 +19575,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop107;
+            	    break loop108;
                 }
             } while (true);
 
@@ -19466,7 +19608,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleNavigatingArgCS"
-    // InternalAllocationSpecificationLanguage.g:6770:1: entryRuleNavigatingArgCS returns [EObject current=null] : iv_ruleNavigatingArgCS= ruleNavigatingArgCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:6821:1: entryRuleNavigatingArgCS returns [EObject current=null] : iv_ruleNavigatingArgCS= ruleNavigatingArgCS EOF ;
     public final EObject entryRuleNavigatingArgCS() throws RecognitionException {
         EObject current = null;
 
@@ -19474,8 +19616,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:6771:2: (iv_ruleNavigatingArgCS= ruleNavigatingArgCS EOF )
-            // InternalAllocationSpecificationLanguage.g:6772:2: iv_ruleNavigatingArgCS= ruleNavigatingArgCS EOF
+            // InternalAllocationSpecificationLanguage.g:6822:2: (iv_ruleNavigatingArgCS= ruleNavigatingArgCS EOF )
+            // InternalAllocationSpecificationLanguage.g:6823:2: iv_ruleNavigatingArgCS= ruleNavigatingArgCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNavigatingArgCSRule()); 
@@ -19506,7 +19648,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleNavigatingArgCS"
-    // InternalAllocationSpecificationLanguage.g:6779:1: ruleNavigatingArgCS returns [EObject current=null] : ( ( ( (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS ) ) ( (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? ) | (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) ) )? ) | (otherlv_7= ':' ( (lv_ownedType_8_0= ruleTypeExpCS ) ) ) ) ;
+    // InternalAllocationSpecificationLanguage.g:6830:1: ruleNavigatingArgCS returns [EObject current=null] : ( ( ( (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS ) ) ( (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? ) | (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) ) )? ) | (otherlv_7= ':' ( (lv_ownedType_8_0= ruleTypeExpCS ) ) ) ) ;
     public final EObject ruleNavigatingArgCS() throws RecognitionException {
         EObject current = null;
 
@@ -19528,45 +19670,45 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:6782:28: ( ( ( ( (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS ) ) ( (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? ) | (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) ) )? ) | (otherlv_7= ':' ( (lv_ownedType_8_0= ruleTypeExpCS ) ) ) ) )
-            // InternalAllocationSpecificationLanguage.g:6783:1: ( ( ( (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS ) ) ( (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? ) | (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) ) )? ) | (otherlv_7= ':' ( (lv_ownedType_8_0= ruleTypeExpCS ) ) ) )
+            // InternalAllocationSpecificationLanguage.g:6833:28: ( ( ( ( (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS ) ) ( (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? ) | (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) ) )? ) | (otherlv_7= ':' ( (lv_ownedType_8_0= ruleTypeExpCS ) ) ) ) )
+            // InternalAllocationSpecificationLanguage.g:6834:1: ( ( ( (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS ) ) ( (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? ) | (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) ) )? ) | (otherlv_7= ':' ( (lv_ownedType_8_0= ruleTypeExpCS ) ) ) )
             {
-            // InternalAllocationSpecificationLanguage.g:6783:1: ( ( ( (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS ) ) ( (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? ) | (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) ) )? ) | (otherlv_7= ':' ( (lv_ownedType_8_0= ruleTypeExpCS ) ) ) )
-            int alt110=2;
-            int LA110_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:6834:1: ( ( ( (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS ) ) ( (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? ) | (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) ) )? ) | (otherlv_7= ':' ( (lv_ownedType_8_0= ruleTypeExpCS ) ) ) )
+            int alt111=2;
+            int LA111_0 = input.LA(1);
 
-            if ( (LA110_0==RULE_SINGLE_QUOTED_STRING||(LA110_0>=RULE_SIMPLE_ID && LA110_0<=RULE_INT)||LA110_0==29||(LA110_0>=50 && LA110_0<=52)||(LA110_0>=63 && LA110_0<=76)||(LA110_0>=89 && LA110_0<=90)||(LA110_0>=92 && LA110_0<=96)||LA110_0==99||(LA110_0>=101 && LA110_0<=104)||LA110_0==110||(LA110_0>=115 && LA110_0<=116)) ) {
-                alt110=1;
+            if ( (LA111_0==RULE_SINGLE_QUOTED_STRING||(LA111_0>=RULE_SIMPLE_ID && LA111_0<=RULE_INT)||LA111_0==29||(LA111_0>=50 && LA111_0<=52)||(LA111_0>=63 && LA111_0<=76)||(LA111_0>=89 && LA111_0<=90)||(LA111_0>=92 && LA111_0<=96)||LA111_0==99||(LA111_0>=101 && LA111_0<=104)||LA111_0==110||(LA111_0>=115 && LA111_0<=116)) ) {
+                alt111=1;
             }
-            else if ( (LA110_0==32) ) {
-                alt110=2;
+            else if ( (LA111_0==32) ) {
+                alt111=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 110, 0, input);
+                    new NoViableAltException("", 111, 0, input);
 
                 throw nvae;
             }
-            switch (alt110) {
+            switch (alt111) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:6783:2: ( ( (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS ) ) ( (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? ) | (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) ) )? )
+                    // InternalAllocationSpecificationLanguage.g:6834:2: ( ( (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS ) ) ( (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? ) | (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) ) )? )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6783:2: ( ( (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS ) ) ( (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? ) | (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) ) )? )
-                    // InternalAllocationSpecificationLanguage.g:6783:3: ( (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS ) ) ( (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? ) | (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) ) )?
+                    // InternalAllocationSpecificationLanguage.g:6834:2: ( ( (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS ) ) ( (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? ) | (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) ) )? )
+                    // InternalAllocationSpecificationLanguage.g:6834:3: ( (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS ) ) ( (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? ) | (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) ) )?
                     {
-                    // InternalAllocationSpecificationLanguage.g:6783:3: ( (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS ) )
-                    // InternalAllocationSpecificationLanguage.g:6784:1: (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS )
+                    // InternalAllocationSpecificationLanguage.g:6834:3: ( (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:6835:1: (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6784:1: (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS )
-                    // InternalAllocationSpecificationLanguage.g:6785:3: lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS
+                    // InternalAllocationSpecificationLanguage.g:6835:1: (lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS )
+                    // InternalAllocationSpecificationLanguage.g:6836:3: lv_ownedNameExpression_0_0= ruleNavigatingArgExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getNavigatingArgCSAccess().getOwnedNameExpressionNavigatingArgExpCSParserRuleCall_0_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_72);
+                    pushFollow(FollowSets000.FOLLOW_73);
                     lv_ownedNameExpression_0_0=ruleNavigatingArgExpCS();
 
                     state._fsp--;
@@ -19590,22 +19732,22 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    // InternalAllocationSpecificationLanguage.g:6801:2: ( (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? ) | (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) ) )?
-                    int alt109=3;
-                    int LA109_0 = input.LA(1);
+                    // InternalAllocationSpecificationLanguage.g:6852:2: ( (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? ) | (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) ) )?
+                    int alt110=3;
+                    int LA110_0 = input.LA(1);
 
-                    if ( (LA109_0==32) ) {
-                        alt109=1;
+                    if ( (LA110_0==32) ) {
+                        alt110=1;
                     }
-                    else if ( (LA109_0==108) ) {
-                        alt109=2;
+                    else if ( (LA110_0==108) ) {
+                        alt110=2;
                     }
-                    switch (alt109) {
+                    switch (alt110) {
                         case 1 :
-                            // InternalAllocationSpecificationLanguage.g:6801:3: (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? )
+                            // InternalAllocationSpecificationLanguage.g:6852:3: (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? )
                             {
-                            // InternalAllocationSpecificationLanguage.g:6801:3: (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? )
-                            // InternalAllocationSpecificationLanguage.g:6801:5: otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )?
+                            // InternalAllocationSpecificationLanguage.g:6852:3: (otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )? )
+                            // InternalAllocationSpecificationLanguage.g:6852:5: otherlv_1= ':' ( (lv_ownedType_2_0= ruleTypeExpCS ) ) (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )?
                             {
                             otherlv_1=(Token)match(input,32,FollowSets000.FOLLOW_11); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -19613,18 +19755,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                                   	newLeafNode(otherlv_1, grammarAccess.getNavigatingArgCSAccess().getColonKeyword_0_1_0_0());
                                   
                             }
-                            // InternalAllocationSpecificationLanguage.g:6805:1: ( (lv_ownedType_2_0= ruleTypeExpCS ) )
-                            // InternalAllocationSpecificationLanguage.g:6806:1: (lv_ownedType_2_0= ruleTypeExpCS )
+                            // InternalAllocationSpecificationLanguage.g:6856:1: ( (lv_ownedType_2_0= ruleTypeExpCS ) )
+                            // InternalAllocationSpecificationLanguage.g:6857:1: (lv_ownedType_2_0= ruleTypeExpCS )
                             {
-                            // InternalAllocationSpecificationLanguage.g:6806:1: (lv_ownedType_2_0= ruleTypeExpCS )
-                            // InternalAllocationSpecificationLanguage.g:6807:3: lv_ownedType_2_0= ruleTypeExpCS
+                            // InternalAllocationSpecificationLanguage.g:6857:1: (lv_ownedType_2_0= ruleTypeExpCS )
+                            // InternalAllocationSpecificationLanguage.g:6858:3: lv_ownedType_2_0= ruleTypeExpCS
                             {
                             if ( state.backtracking==0 ) {
                                
                               	        newCompositeNode(grammarAccess.getNavigatingArgCSAccess().getOwnedTypeTypeExpCSParserRuleCall_0_1_0_1_0()); 
                               	    
                             }
-                            pushFollow(FollowSets000.FOLLOW_73);
+                            pushFollow(FollowSets000.FOLLOW_74);
                             lv_ownedType_2_0=ruleTypeExpCS();
 
                             state._fsp--;
@@ -19648,16 +19790,16 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                             }
 
-                            // InternalAllocationSpecificationLanguage.g:6823:2: (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )?
-                            int alt108=2;
-                            int LA108_0 = input.LA(1);
+                            // InternalAllocationSpecificationLanguage.g:6874:2: (otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) ) )?
+                            int alt109=2;
+                            int LA109_0 = input.LA(1);
 
-                            if ( (LA108_0==49) ) {
-                                alt108=1;
+                            if ( (LA109_0==49) ) {
+                                alt109=1;
                             }
-                            switch (alt108) {
+                            switch (alt109) {
                                 case 1 :
-                                    // InternalAllocationSpecificationLanguage.g:6823:4: otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) )
+                                    // InternalAllocationSpecificationLanguage.g:6874:4: otherlv_3= '=' ( (lv_ownedInitExpression_4_0= ruleExpCS ) )
                                     {
                                     otherlv_3=(Token)match(input,49,FollowSets000.FOLLOW_19); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
@@ -19665,11 +19807,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                                           	newLeafNode(otherlv_3, grammarAccess.getNavigatingArgCSAccess().getEqualsSignKeyword_0_1_0_2_0());
                                           
                                     }
-                                    // InternalAllocationSpecificationLanguage.g:6827:1: ( (lv_ownedInitExpression_4_0= ruleExpCS ) )
-                                    // InternalAllocationSpecificationLanguage.g:6828:1: (lv_ownedInitExpression_4_0= ruleExpCS )
+                                    // InternalAllocationSpecificationLanguage.g:6878:1: ( (lv_ownedInitExpression_4_0= ruleExpCS ) )
+                                    // InternalAllocationSpecificationLanguage.g:6879:1: (lv_ownedInitExpression_4_0= ruleExpCS )
                                     {
-                                    // InternalAllocationSpecificationLanguage.g:6828:1: (lv_ownedInitExpression_4_0= ruleExpCS )
-                                    // InternalAllocationSpecificationLanguage.g:6829:3: lv_ownedInitExpression_4_0= ruleExpCS
+                                    // InternalAllocationSpecificationLanguage.g:6879:1: (lv_ownedInitExpression_4_0= ruleExpCS )
+                                    // InternalAllocationSpecificationLanguage.g:6880:3: lv_ownedInitExpression_4_0= ruleExpCS
                                     {
                                     if ( state.backtracking==0 ) {
                                        
@@ -19713,10 +19855,10 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                             }
                             break;
                         case 2 :
-                            // InternalAllocationSpecificationLanguage.g:6846:6: (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) )
+                            // InternalAllocationSpecificationLanguage.g:6897:6: (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) )
                             {
-                            // InternalAllocationSpecificationLanguage.g:6846:6: (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) )
-                            // InternalAllocationSpecificationLanguage.g:6846:8: otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) )
+                            // InternalAllocationSpecificationLanguage.g:6897:6: (otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) ) )
+                            // InternalAllocationSpecificationLanguage.g:6897:8: otherlv_5= 'in' ( (lv_ownedInitExpression_6_0= ruleExpCS ) )
                             {
                             otherlv_5=(Token)match(input,108,FollowSets000.FOLLOW_19); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -19724,11 +19866,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                                   	newLeafNode(otherlv_5, grammarAccess.getNavigatingArgCSAccess().getInKeyword_0_1_1_0());
                                   
                             }
-                            // InternalAllocationSpecificationLanguage.g:6850:1: ( (lv_ownedInitExpression_6_0= ruleExpCS ) )
-                            // InternalAllocationSpecificationLanguage.g:6851:1: (lv_ownedInitExpression_6_0= ruleExpCS )
+                            // InternalAllocationSpecificationLanguage.g:6901:1: ( (lv_ownedInitExpression_6_0= ruleExpCS ) )
+                            // InternalAllocationSpecificationLanguage.g:6902:1: (lv_ownedInitExpression_6_0= ruleExpCS )
                             {
-                            // InternalAllocationSpecificationLanguage.g:6851:1: (lv_ownedInitExpression_6_0= ruleExpCS )
-                            // InternalAllocationSpecificationLanguage.g:6852:3: lv_ownedInitExpression_6_0= ruleExpCS
+                            // InternalAllocationSpecificationLanguage.g:6902:1: (lv_ownedInitExpression_6_0= ruleExpCS )
+                            // InternalAllocationSpecificationLanguage.g:6903:3: lv_ownedInitExpression_6_0= ruleExpCS
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -19775,10 +19917,10 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:6869:6: (otherlv_7= ':' ( (lv_ownedType_8_0= ruleTypeExpCS ) ) )
+                    // InternalAllocationSpecificationLanguage.g:6920:6: (otherlv_7= ':' ( (lv_ownedType_8_0= ruleTypeExpCS ) ) )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6869:6: (otherlv_7= ':' ( (lv_ownedType_8_0= ruleTypeExpCS ) ) )
-                    // InternalAllocationSpecificationLanguage.g:6869:8: otherlv_7= ':' ( (lv_ownedType_8_0= ruleTypeExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:6920:6: (otherlv_7= ':' ( (lv_ownedType_8_0= ruleTypeExpCS ) ) )
+                    // InternalAllocationSpecificationLanguage.g:6920:8: otherlv_7= ':' ( (lv_ownedType_8_0= ruleTypeExpCS ) )
                     {
                     otherlv_7=(Token)match(input,32,FollowSets000.FOLLOW_11); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -19786,11 +19928,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                           	newLeafNode(otherlv_7, grammarAccess.getNavigatingArgCSAccess().getColonKeyword_1_0());
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:6873:1: ( (lv_ownedType_8_0= ruleTypeExpCS ) )
-                    // InternalAllocationSpecificationLanguage.g:6874:1: (lv_ownedType_8_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:6924:1: ( (lv_ownedType_8_0= ruleTypeExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:6925:1: (lv_ownedType_8_0= ruleTypeExpCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6874:1: (lv_ownedType_8_0= ruleTypeExpCS )
-                    // InternalAllocationSpecificationLanguage.g:6875:3: lv_ownedType_8_0= ruleTypeExpCS
+                    // InternalAllocationSpecificationLanguage.g:6925:1: (lv_ownedType_8_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:6926:3: lv_ownedType_8_0= ruleTypeExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -19850,7 +19992,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleNavigatingBarArgCS"
-    // InternalAllocationSpecificationLanguage.g:6899:1: entryRuleNavigatingBarArgCS returns [EObject current=null] : iv_ruleNavigatingBarArgCS= ruleNavigatingBarArgCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:6950:1: entryRuleNavigatingBarArgCS returns [EObject current=null] : iv_ruleNavigatingBarArgCS= ruleNavigatingBarArgCS EOF ;
     public final EObject entryRuleNavigatingBarArgCS() throws RecognitionException {
         EObject current = null;
 
@@ -19858,8 +20000,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:6900:2: (iv_ruleNavigatingBarArgCS= ruleNavigatingBarArgCS EOF )
-            // InternalAllocationSpecificationLanguage.g:6901:2: iv_ruleNavigatingBarArgCS= ruleNavigatingBarArgCS EOF
+            // InternalAllocationSpecificationLanguage.g:6951:2: (iv_ruleNavigatingBarArgCS= ruleNavigatingBarArgCS EOF )
+            // InternalAllocationSpecificationLanguage.g:6952:2: iv_ruleNavigatingBarArgCS= ruleNavigatingBarArgCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNavigatingBarArgCSRule()); 
@@ -19890,7 +20032,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleNavigatingBarArgCS"
-    // InternalAllocationSpecificationLanguage.g:6908:1: ruleNavigatingBarArgCS returns [EObject current=null] : ( ( (lv_prefix_0_0= '|' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )? ) ;
+    // InternalAllocationSpecificationLanguage.g:6959:1: ruleNavigatingBarArgCS returns [EObject current=null] : ( ( (lv_prefix_0_0= '|' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )? ) ;
     public final EObject ruleNavigatingBarArgCS() throws RecognitionException {
         EObject current = null;
 
@@ -19907,19 +20049,19 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:6911:28: ( ( ( (lv_prefix_0_0= '|' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )? ) )
-            // InternalAllocationSpecificationLanguage.g:6912:1: ( ( (lv_prefix_0_0= '|' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )? )
+            // InternalAllocationSpecificationLanguage.g:6962:28: ( ( ( (lv_prefix_0_0= '|' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )? ) )
+            // InternalAllocationSpecificationLanguage.g:6963:1: ( ( (lv_prefix_0_0= '|' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )? )
             {
-            // InternalAllocationSpecificationLanguage.g:6912:1: ( ( (lv_prefix_0_0= '|' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )? )
-            // InternalAllocationSpecificationLanguage.g:6912:2: ( (lv_prefix_0_0= '|' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )?
+            // InternalAllocationSpecificationLanguage.g:6963:1: ( ( (lv_prefix_0_0= '|' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )? )
+            // InternalAllocationSpecificationLanguage.g:6963:2: ( (lv_prefix_0_0= '|' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )?
             {
-            // InternalAllocationSpecificationLanguage.g:6912:2: ( (lv_prefix_0_0= '|' ) )
-            // InternalAllocationSpecificationLanguage.g:6913:1: (lv_prefix_0_0= '|' )
+            // InternalAllocationSpecificationLanguage.g:6963:2: ( (lv_prefix_0_0= '|' ) )
+            // InternalAllocationSpecificationLanguage.g:6964:1: (lv_prefix_0_0= '|' )
             {
-            // InternalAllocationSpecificationLanguage.g:6913:1: (lv_prefix_0_0= '|' )
-            // InternalAllocationSpecificationLanguage.g:6914:3: lv_prefix_0_0= '|'
+            // InternalAllocationSpecificationLanguage.g:6964:1: (lv_prefix_0_0= '|' )
+            // InternalAllocationSpecificationLanguage.g:6965:3: lv_prefix_0_0= '|'
             {
-            lv_prefix_0_0=(Token)match(input,109,FollowSets000.FOLLOW_74); if (state.failed) return current;
+            lv_prefix_0_0=(Token)match(input,109,FollowSets000.FOLLOW_75); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       newLeafNode(lv_prefix_0_0, grammarAccess.getNavigatingBarArgCSAccess().getPrefixVerticalLineKeyword_0_0());
@@ -19939,18 +20081,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:6927:2: ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:6928:1: (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS )
+            // InternalAllocationSpecificationLanguage.g:6978:2: ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:6979:1: (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:6928:1: (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS )
-            // InternalAllocationSpecificationLanguage.g:6929:3: lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS
+            // InternalAllocationSpecificationLanguage.g:6979:1: (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS )
+            // InternalAllocationSpecificationLanguage.g:6980:3: lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getNavigatingBarArgCSAccess().getOwnedNameExpressionNavigatingArgExpCSParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_75);
+            pushFollow(FollowSets000.FOLLOW_76);
             lv_ownedNameExpression_1_0=ruleNavigatingArgExpCS();
 
             state._fsp--;
@@ -19974,16 +20116,16 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:6945:2: (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )?
-            int alt112=2;
-            int LA112_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:6996:2: (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )?
+            int alt113=2;
+            int LA113_0 = input.LA(1);
 
-            if ( (LA112_0==32) ) {
-                alt112=1;
+            if ( (LA113_0==32) ) {
+                alt113=1;
             }
-            switch (alt112) {
+            switch (alt113) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:6945:4: otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )?
+                    // InternalAllocationSpecificationLanguage.g:6996:4: otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )?
                     {
                     otherlv_2=(Token)match(input,32,FollowSets000.FOLLOW_11); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -19991,18 +20133,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                           	newLeafNode(otherlv_2, grammarAccess.getNavigatingBarArgCSAccess().getColonKeyword_2_0());
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:6949:1: ( (lv_ownedType_3_0= ruleTypeExpCS ) )
-                    // InternalAllocationSpecificationLanguage.g:6950:1: (lv_ownedType_3_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:7000:1: ( (lv_ownedType_3_0= ruleTypeExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:7001:1: (lv_ownedType_3_0= ruleTypeExpCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:6950:1: (lv_ownedType_3_0= ruleTypeExpCS )
-                    // InternalAllocationSpecificationLanguage.g:6951:3: lv_ownedType_3_0= ruleTypeExpCS
+                    // InternalAllocationSpecificationLanguage.g:7001:1: (lv_ownedType_3_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:7002:3: lv_ownedType_3_0= ruleTypeExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getNavigatingBarArgCSAccess().getOwnedTypeTypeExpCSParserRuleCall_2_1_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_73);
+                    pushFollow(FollowSets000.FOLLOW_74);
                     lv_ownedType_3_0=ruleTypeExpCS();
 
                     state._fsp--;
@@ -20026,16 +20168,16 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    // InternalAllocationSpecificationLanguage.g:6967:2: (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )?
-                    int alt111=2;
-                    int LA111_0 = input.LA(1);
+                    // InternalAllocationSpecificationLanguage.g:7018:2: (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )?
+                    int alt112=2;
+                    int LA112_0 = input.LA(1);
 
-                    if ( (LA111_0==49) ) {
-                        alt111=1;
+                    if ( (LA112_0==49) ) {
+                        alt112=1;
                     }
-                    switch (alt111) {
+                    switch (alt112) {
                         case 1 :
-                            // InternalAllocationSpecificationLanguage.g:6967:4: otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) )
+                            // InternalAllocationSpecificationLanguage.g:7018:4: otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) )
                             {
                             otherlv_4=(Token)match(input,49,FollowSets000.FOLLOW_19); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -20043,11 +20185,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                                   	newLeafNode(otherlv_4, grammarAccess.getNavigatingBarArgCSAccess().getEqualsSignKeyword_2_2_0());
                                   
                             }
-                            // InternalAllocationSpecificationLanguage.g:6971:1: ( (lv_ownedInitExpression_5_0= ruleExpCS ) )
-                            // InternalAllocationSpecificationLanguage.g:6972:1: (lv_ownedInitExpression_5_0= ruleExpCS )
+                            // InternalAllocationSpecificationLanguage.g:7022:1: ( (lv_ownedInitExpression_5_0= ruleExpCS ) )
+                            // InternalAllocationSpecificationLanguage.g:7023:1: (lv_ownedInitExpression_5_0= ruleExpCS )
                             {
-                            // InternalAllocationSpecificationLanguage.g:6972:1: (lv_ownedInitExpression_5_0= ruleExpCS )
-                            // InternalAllocationSpecificationLanguage.g:6973:3: lv_ownedInitExpression_5_0= ruleExpCS
+                            // InternalAllocationSpecificationLanguage.g:7023:1: (lv_ownedInitExpression_5_0= ruleExpCS )
+                            // InternalAllocationSpecificationLanguage.g:7024:3: lv_ownedInitExpression_5_0= ruleExpCS
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -20113,7 +20255,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleNavigatingCommaArgCS"
-    // InternalAllocationSpecificationLanguage.g:6997:1: entryRuleNavigatingCommaArgCS returns [EObject current=null] : iv_ruleNavigatingCommaArgCS= ruleNavigatingCommaArgCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:7048:1: entryRuleNavigatingCommaArgCS returns [EObject current=null] : iv_ruleNavigatingCommaArgCS= ruleNavigatingCommaArgCS EOF ;
     public final EObject entryRuleNavigatingCommaArgCS() throws RecognitionException {
         EObject current = null;
 
@@ -20121,8 +20263,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:6998:2: (iv_ruleNavigatingCommaArgCS= ruleNavigatingCommaArgCS EOF )
-            // InternalAllocationSpecificationLanguage.g:6999:2: iv_ruleNavigatingCommaArgCS= ruleNavigatingCommaArgCS EOF
+            // InternalAllocationSpecificationLanguage.g:7049:2: (iv_ruleNavigatingCommaArgCS= ruleNavigatingCommaArgCS EOF )
+            // InternalAllocationSpecificationLanguage.g:7050:2: iv_ruleNavigatingCommaArgCS= ruleNavigatingCommaArgCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNavigatingCommaArgCSRule()); 
@@ -20153,7 +20295,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleNavigatingCommaArgCS"
-    // InternalAllocationSpecificationLanguage.g:7006:1: ruleNavigatingCommaArgCS returns [EObject current=null] : ( ( (lv_prefix_0_0= ',' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) ( (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? ) | (otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) ) ) )? ) ;
+    // InternalAllocationSpecificationLanguage.g:7057:1: ruleNavigatingCommaArgCS returns [EObject current=null] : ( ( (lv_prefix_0_0= ',' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) ( (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? ) | (otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) ) ) )? ) ;
     public final EObject ruleNavigatingCommaArgCS() throws RecognitionException {
         EObject current = null;
 
@@ -20173,19 +20315,19 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7009:28: ( ( ( (lv_prefix_0_0= ',' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) ( (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? ) | (otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) ) ) )? ) )
-            // InternalAllocationSpecificationLanguage.g:7010:1: ( ( (lv_prefix_0_0= ',' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) ( (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? ) | (otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) ) ) )? )
+            // InternalAllocationSpecificationLanguage.g:7060:28: ( ( ( (lv_prefix_0_0= ',' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) ( (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? ) | (otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) ) ) )? ) )
+            // InternalAllocationSpecificationLanguage.g:7061:1: ( ( (lv_prefix_0_0= ',' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) ( (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? ) | (otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) ) ) )? )
             {
-            // InternalAllocationSpecificationLanguage.g:7010:1: ( ( (lv_prefix_0_0= ',' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) ( (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? ) | (otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) ) ) )? )
-            // InternalAllocationSpecificationLanguage.g:7010:2: ( (lv_prefix_0_0= ',' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) ( (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? ) | (otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) ) ) )?
+            // InternalAllocationSpecificationLanguage.g:7061:1: ( ( (lv_prefix_0_0= ',' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) ( (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? ) | (otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) ) ) )? )
+            // InternalAllocationSpecificationLanguage.g:7061:2: ( (lv_prefix_0_0= ',' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) ( (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? ) | (otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) ) ) )?
             {
-            // InternalAllocationSpecificationLanguage.g:7010:2: ( (lv_prefix_0_0= ',' ) )
-            // InternalAllocationSpecificationLanguage.g:7011:1: (lv_prefix_0_0= ',' )
+            // InternalAllocationSpecificationLanguage.g:7061:2: ( (lv_prefix_0_0= ',' ) )
+            // InternalAllocationSpecificationLanguage.g:7062:1: (lv_prefix_0_0= ',' )
             {
-            // InternalAllocationSpecificationLanguage.g:7011:1: (lv_prefix_0_0= ',' )
-            // InternalAllocationSpecificationLanguage.g:7012:3: lv_prefix_0_0= ','
+            // InternalAllocationSpecificationLanguage.g:7062:1: (lv_prefix_0_0= ',' )
+            // InternalAllocationSpecificationLanguage.g:7063:3: lv_prefix_0_0= ','
             {
-            lv_prefix_0_0=(Token)match(input,30,FollowSets000.FOLLOW_74); if (state.failed) return current;
+            lv_prefix_0_0=(Token)match(input,30,FollowSets000.FOLLOW_75); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       newLeafNode(lv_prefix_0_0, grammarAccess.getNavigatingCommaArgCSAccess().getPrefixCommaKeyword_0_0());
@@ -20205,18 +20347,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:7025:2: ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:7026:1: (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS )
+            // InternalAllocationSpecificationLanguage.g:7076:2: ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:7077:1: (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:7026:1: (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS )
-            // InternalAllocationSpecificationLanguage.g:7027:3: lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS
+            // InternalAllocationSpecificationLanguage.g:7077:1: (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS )
+            // InternalAllocationSpecificationLanguage.g:7078:3: lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getNavigatingCommaArgCSAccess().getOwnedNameExpressionNavigatingArgExpCSParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_72);
+            pushFollow(FollowSets000.FOLLOW_73);
             lv_ownedNameExpression_1_0=ruleNavigatingArgExpCS();
 
             state._fsp--;
@@ -20240,22 +20382,22 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:7043:2: ( (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? ) | (otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) ) ) )?
-            int alt114=3;
-            int LA114_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:7094:2: ( (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? ) | (otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) ) ) )?
+            int alt115=3;
+            int LA115_0 = input.LA(1);
 
-            if ( (LA114_0==32) ) {
-                alt114=1;
+            if ( (LA115_0==32) ) {
+                alt115=1;
             }
-            else if ( (LA114_0==108) ) {
-                alt114=2;
+            else if ( (LA115_0==108) ) {
+                alt115=2;
             }
-            switch (alt114) {
+            switch (alt115) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:7043:3: (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )
+                    // InternalAllocationSpecificationLanguage.g:7094:3: (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )
                     {
-                    // InternalAllocationSpecificationLanguage.g:7043:3: (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )
-                    // InternalAllocationSpecificationLanguage.g:7043:5: otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )?
+                    // InternalAllocationSpecificationLanguage.g:7094:3: (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )
+                    // InternalAllocationSpecificationLanguage.g:7094:5: otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )?
                     {
                     otherlv_2=(Token)match(input,32,FollowSets000.FOLLOW_11); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20263,18 +20405,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                           	newLeafNode(otherlv_2, grammarAccess.getNavigatingCommaArgCSAccess().getColonKeyword_2_0_0());
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:7047:1: ( (lv_ownedType_3_0= ruleTypeExpCS ) )
-                    // InternalAllocationSpecificationLanguage.g:7048:1: (lv_ownedType_3_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:7098:1: ( (lv_ownedType_3_0= ruleTypeExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:7099:1: (lv_ownedType_3_0= ruleTypeExpCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:7048:1: (lv_ownedType_3_0= ruleTypeExpCS )
-                    // InternalAllocationSpecificationLanguage.g:7049:3: lv_ownedType_3_0= ruleTypeExpCS
+                    // InternalAllocationSpecificationLanguage.g:7099:1: (lv_ownedType_3_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:7100:3: lv_ownedType_3_0= ruleTypeExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getNavigatingCommaArgCSAccess().getOwnedTypeTypeExpCSParserRuleCall_2_0_1_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_73);
+                    pushFollow(FollowSets000.FOLLOW_74);
                     lv_ownedType_3_0=ruleTypeExpCS();
 
                     state._fsp--;
@@ -20298,16 +20440,16 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    // InternalAllocationSpecificationLanguage.g:7065:2: (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )?
-                    int alt113=2;
-                    int LA113_0 = input.LA(1);
+                    // InternalAllocationSpecificationLanguage.g:7116:2: (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )?
+                    int alt114=2;
+                    int LA114_0 = input.LA(1);
 
-                    if ( (LA113_0==49) ) {
-                        alt113=1;
+                    if ( (LA114_0==49) ) {
+                        alt114=1;
                     }
-                    switch (alt113) {
+                    switch (alt114) {
                         case 1 :
-                            // InternalAllocationSpecificationLanguage.g:7065:4: otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) )
+                            // InternalAllocationSpecificationLanguage.g:7116:4: otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) )
                             {
                             otherlv_4=(Token)match(input,49,FollowSets000.FOLLOW_19); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -20315,11 +20457,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                                   	newLeafNode(otherlv_4, grammarAccess.getNavigatingCommaArgCSAccess().getEqualsSignKeyword_2_0_2_0());
                                   
                             }
-                            // InternalAllocationSpecificationLanguage.g:7069:1: ( (lv_ownedInitExpression_5_0= ruleExpCS ) )
-                            // InternalAllocationSpecificationLanguage.g:7070:1: (lv_ownedInitExpression_5_0= ruleExpCS )
+                            // InternalAllocationSpecificationLanguage.g:7120:1: ( (lv_ownedInitExpression_5_0= ruleExpCS ) )
+                            // InternalAllocationSpecificationLanguage.g:7121:1: (lv_ownedInitExpression_5_0= ruleExpCS )
                             {
-                            // InternalAllocationSpecificationLanguage.g:7070:1: (lv_ownedInitExpression_5_0= ruleExpCS )
-                            // InternalAllocationSpecificationLanguage.g:7071:3: lv_ownedInitExpression_5_0= ruleExpCS
+                            // InternalAllocationSpecificationLanguage.g:7121:1: (lv_ownedInitExpression_5_0= ruleExpCS )
+                            // InternalAllocationSpecificationLanguage.g:7122:3: lv_ownedInitExpression_5_0= ruleExpCS
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -20363,10 +20505,10 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:7088:6: (otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) ) )
+                    // InternalAllocationSpecificationLanguage.g:7139:6: (otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) ) )
                     {
-                    // InternalAllocationSpecificationLanguage.g:7088:6: (otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) ) )
-                    // InternalAllocationSpecificationLanguage.g:7088:8: otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:7139:6: (otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) ) )
+                    // InternalAllocationSpecificationLanguage.g:7139:8: otherlv_6= 'in' ( (lv_ownedInitExpression_7_0= ruleExpCS ) )
                     {
                     otherlv_6=(Token)match(input,108,FollowSets000.FOLLOW_19); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20374,11 +20516,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                           	newLeafNode(otherlv_6, grammarAccess.getNavigatingCommaArgCSAccess().getInKeyword_2_1_0());
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:7092:1: ( (lv_ownedInitExpression_7_0= ruleExpCS ) )
-                    // InternalAllocationSpecificationLanguage.g:7093:1: (lv_ownedInitExpression_7_0= ruleExpCS )
+                    // InternalAllocationSpecificationLanguage.g:7143:1: ( (lv_ownedInitExpression_7_0= ruleExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:7144:1: (lv_ownedInitExpression_7_0= ruleExpCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:7093:1: (lv_ownedInitExpression_7_0= ruleExpCS )
-                    // InternalAllocationSpecificationLanguage.g:7094:3: lv_ownedInitExpression_7_0= ruleExpCS
+                    // InternalAllocationSpecificationLanguage.g:7144:1: (lv_ownedInitExpression_7_0= ruleExpCS )
+                    // InternalAllocationSpecificationLanguage.g:7145:3: lv_ownedInitExpression_7_0= ruleExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -20441,7 +20583,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleNavigatingSemiArgCS"
-    // InternalAllocationSpecificationLanguage.g:7118:1: entryRuleNavigatingSemiArgCS returns [EObject current=null] : iv_ruleNavigatingSemiArgCS= ruleNavigatingSemiArgCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:7169:1: entryRuleNavigatingSemiArgCS returns [EObject current=null] : iv_ruleNavigatingSemiArgCS= ruleNavigatingSemiArgCS EOF ;
     public final EObject entryRuleNavigatingSemiArgCS() throws RecognitionException {
         EObject current = null;
 
@@ -20449,8 +20591,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:7119:2: (iv_ruleNavigatingSemiArgCS= ruleNavigatingSemiArgCS EOF )
-            // InternalAllocationSpecificationLanguage.g:7120:2: iv_ruleNavigatingSemiArgCS= ruleNavigatingSemiArgCS EOF
+            // InternalAllocationSpecificationLanguage.g:7170:2: (iv_ruleNavigatingSemiArgCS= ruleNavigatingSemiArgCS EOF )
+            // InternalAllocationSpecificationLanguage.g:7171:2: iv_ruleNavigatingSemiArgCS= ruleNavigatingSemiArgCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNavigatingSemiArgCSRule()); 
@@ -20481,7 +20623,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleNavigatingSemiArgCS"
-    // InternalAllocationSpecificationLanguage.g:7127:1: ruleNavigatingSemiArgCS returns [EObject current=null] : ( ( (lv_prefix_0_0= ';' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )? ) ;
+    // InternalAllocationSpecificationLanguage.g:7178:1: ruleNavigatingSemiArgCS returns [EObject current=null] : ( ( (lv_prefix_0_0= ';' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )? ) ;
     public final EObject ruleNavigatingSemiArgCS() throws RecognitionException {
         EObject current = null;
 
@@ -20498,19 +20640,19 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7130:28: ( ( ( (lv_prefix_0_0= ';' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )? ) )
-            // InternalAllocationSpecificationLanguage.g:7131:1: ( ( (lv_prefix_0_0= ';' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )? )
+            // InternalAllocationSpecificationLanguage.g:7181:28: ( ( ( (lv_prefix_0_0= ';' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )? ) )
+            // InternalAllocationSpecificationLanguage.g:7182:1: ( ( (lv_prefix_0_0= ';' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )? )
             {
-            // InternalAllocationSpecificationLanguage.g:7131:1: ( ( (lv_prefix_0_0= ';' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )? )
-            // InternalAllocationSpecificationLanguage.g:7131:2: ( (lv_prefix_0_0= ';' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )?
+            // InternalAllocationSpecificationLanguage.g:7182:1: ( ( (lv_prefix_0_0= ';' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )? )
+            // InternalAllocationSpecificationLanguage.g:7182:2: ( (lv_prefix_0_0= ';' ) ) ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) ) (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )?
             {
-            // InternalAllocationSpecificationLanguage.g:7131:2: ( (lv_prefix_0_0= ';' ) )
-            // InternalAllocationSpecificationLanguage.g:7132:1: (lv_prefix_0_0= ';' )
+            // InternalAllocationSpecificationLanguage.g:7182:2: ( (lv_prefix_0_0= ';' ) )
+            // InternalAllocationSpecificationLanguage.g:7183:1: (lv_prefix_0_0= ';' )
             {
-            // InternalAllocationSpecificationLanguage.g:7132:1: (lv_prefix_0_0= ';' )
-            // InternalAllocationSpecificationLanguage.g:7133:3: lv_prefix_0_0= ';'
+            // InternalAllocationSpecificationLanguage.g:7183:1: (lv_prefix_0_0= ';' )
+            // InternalAllocationSpecificationLanguage.g:7184:3: lv_prefix_0_0= ';'
             {
-            lv_prefix_0_0=(Token)match(input,20,FollowSets000.FOLLOW_74); if (state.failed) return current;
+            lv_prefix_0_0=(Token)match(input,20,FollowSets000.FOLLOW_75); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       newLeafNode(lv_prefix_0_0, grammarAccess.getNavigatingSemiArgCSAccess().getPrefixSemicolonKeyword_0_0());
@@ -20530,18 +20672,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:7146:2: ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:7147:1: (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS )
+            // InternalAllocationSpecificationLanguage.g:7197:2: ( (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:7198:1: (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:7147:1: (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS )
-            // InternalAllocationSpecificationLanguage.g:7148:3: lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS
+            // InternalAllocationSpecificationLanguage.g:7198:1: (lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS )
+            // InternalAllocationSpecificationLanguage.g:7199:3: lv_ownedNameExpression_1_0= ruleNavigatingArgExpCS
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getNavigatingSemiArgCSAccess().getOwnedNameExpressionNavigatingArgExpCSParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_75);
+            pushFollow(FollowSets000.FOLLOW_76);
             lv_ownedNameExpression_1_0=ruleNavigatingArgExpCS();
 
             state._fsp--;
@@ -20565,16 +20707,16 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:7164:2: (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )?
-            int alt116=2;
-            int LA116_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:7215:2: (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )? )?
+            int alt117=2;
+            int LA117_0 = input.LA(1);
 
-            if ( (LA116_0==32) ) {
-                alt116=1;
+            if ( (LA117_0==32) ) {
+                alt117=1;
             }
-            switch (alt116) {
+            switch (alt117) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:7164:4: otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )?
+                    // InternalAllocationSpecificationLanguage.g:7215:4: otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )?
                     {
                     otherlv_2=(Token)match(input,32,FollowSets000.FOLLOW_11); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20582,18 +20724,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                           	newLeafNode(otherlv_2, grammarAccess.getNavigatingSemiArgCSAccess().getColonKeyword_2_0());
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:7168:1: ( (lv_ownedType_3_0= ruleTypeExpCS ) )
-                    // InternalAllocationSpecificationLanguage.g:7169:1: (lv_ownedType_3_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:7219:1: ( (lv_ownedType_3_0= ruleTypeExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:7220:1: (lv_ownedType_3_0= ruleTypeExpCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:7169:1: (lv_ownedType_3_0= ruleTypeExpCS )
-                    // InternalAllocationSpecificationLanguage.g:7170:3: lv_ownedType_3_0= ruleTypeExpCS
+                    // InternalAllocationSpecificationLanguage.g:7220:1: (lv_ownedType_3_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:7221:3: lv_ownedType_3_0= ruleTypeExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getNavigatingSemiArgCSAccess().getOwnedTypeTypeExpCSParserRuleCall_2_1_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_73);
+                    pushFollow(FollowSets000.FOLLOW_74);
                     lv_ownedType_3_0=ruleTypeExpCS();
 
                     state._fsp--;
@@ -20617,16 +20759,16 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    // InternalAllocationSpecificationLanguage.g:7186:2: (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )?
-                    int alt115=2;
-                    int LA115_0 = input.LA(1);
+                    // InternalAllocationSpecificationLanguage.g:7237:2: (otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )?
+                    int alt116=2;
+                    int LA116_0 = input.LA(1);
 
-                    if ( (LA115_0==49) ) {
-                        alt115=1;
+                    if ( (LA116_0==49) ) {
+                        alt116=1;
                     }
-                    switch (alt115) {
+                    switch (alt116) {
                         case 1 :
-                            // InternalAllocationSpecificationLanguage.g:7186:4: otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) )
+                            // InternalAllocationSpecificationLanguage.g:7237:4: otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) )
                             {
                             otherlv_4=(Token)match(input,49,FollowSets000.FOLLOW_19); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -20634,11 +20776,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                                   	newLeafNode(otherlv_4, grammarAccess.getNavigatingSemiArgCSAccess().getEqualsSignKeyword_2_2_0());
                                   
                             }
-                            // InternalAllocationSpecificationLanguage.g:7190:1: ( (lv_ownedInitExpression_5_0= ruleExpCS ) )
-                            // InternalAllocationSpecificationLanguage.g:7191:1: (lv_ownedInitExpression_5_0= ruleExpCS )
+                            // InternalAllocationSpecificationLanguage.g:7241:1: ( (lv_ownedInitExpression_5_0= ruleExpCS ) )
+                            // InternalAllocationSpecificationLanguage.g:7242:1: (lv_ownedInitExpression_5_0= ruleExpCS )
                             {
-                            // InternalAllocationSpecificationLanguage.g:7191:1: (lv_ownedInitExpression_5_0= ruleExpCS )
-                            // InternalAllocationSpecificationLanguage.g:7192:3: lv_ownedInitExpression_5_0= ruleExpCS
+                            // InternalAllocationSpecificationLanguage.g:7242:1: (lv_ownedInitExpression_5_0= ruleExpCS )
+                            // InternalAllocationSpecificationLanguage.g:7243:3: lv_ownedInitExpression_5_0= ruleExpCS
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -20704,7 +20846,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleIfExpCS"
-    // InternalAllocationSpecificationLanguage.g:7216:1: entryRuleIfExpCS returns [EObject current=null] : iv_ruleIfExpCS= ruleIfExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:7267:1: entryRuleIfExpCS returns [EObject current=null] : iv_ruleIfExpCS= ruleIfExpCS EOF ;
     public final EObject entryRuleIfExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -20712,8 +20854,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:7217:2: (iv_ruleIfExpCS= ruleIfExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:7218:2: iv_ruleIfExpCS= ruleIfExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:7268:2: (iv_ruleIfExpCS= ruleIfExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:7269:2: iv_ruleIfExpCS= ruleIfExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIfExpCSRule()); 
@@ -20744,7 +20886,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleIfExpCS"
-    // InternalAllocationSpecificationLanguage.g:7225:1: ruleIfExpCS returns [EObject current=null] : (otherlv_0= 'if' ( ( (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS ) ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) ( (lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS ) )* otherlv_5= 'else' ( (lv_ownedElseExpression_6_0= ruleExpCS ) ) otherlv_7= 'endif' ) ;
+    // InternalAllocationSpecificationLanguage.g:7276:1: ruleIfExpCS returns [EObject current=null] : (otherlv_0= 'if' ( ( (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS ) ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) ( (lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS ) )* otherlv_5= 'else' ( (lv_ownedElseExpression_6_0= ruleExpCS ) ) otherlv_7= 'endif' ) ;
     public final EObject ruleIfExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -20766,26 +20908,26 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7228:28: ( (otherlv_0= 'if' ( ( (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS ) ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) ( (lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS ) )* otherlv_5= 'else' ( (lv_ownedElseExpression_6_0= ruleExpCS ) ) otherlv_7= 'endif' ) )
-            // InternalAllocationSpecificationLanguage.g:7229:1: (otherlv_0= 'if' ( ( (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS ) ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) ( (lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS ) )* otherlv_5= 'else' ( (lv_ownedElseExpression_6_0= ruleExpCS ) ) otherlv_7= 'endif' )
+            // InternalAllocationSpecificationLanguage.g:7279:28: ( (otherlv_0= 'if' ( ( (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS ) ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) ( (lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS ) )* otherlv_5= 'else' ( (lv_ownedElseExpression_6_0= ruleExpCS ) ) otherlv_7= 'endif' ) )
+            // InternalAllocationSpecificationLanguage.g:7280:1: (otherlv_0= 'if' ( ( (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS ) ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) ( (lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS ) )* otherlv_5= 'else' ( (lv_ownedElseExpression_6_0= ruleExpCS ) ) otherlv_7= 'endif' )
             {
-            // InternalAllocationSpecificationLanguage.g:7229:1: (otherlv_0= 'if' ( ( (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS ) ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) ( (lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS ) )* otherlv_5= 'else' ( (lv_ownedElseExpression_6_0= ruleExpCS ) ) otherlv_7= 'endif' )
-            // InternalAllocationSpecificationLanguage.g:7229:3: otherlv_0= 'if' ( ( (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS ) ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) ( (lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS ) )* otherlv_5= 'else' ( (lv_ownedElseExpression_6_0= ruleExpCS ) ) otherlv_7= 'endif'
+            // InternalAllocationSpecificationLanguage.g:7280:1: (otherlv_0= 'if' ( ( (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS ) ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) ( (lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS ) )* otherlv_5= 'else' ( (lv_ownedElseExpression_6_0= ruleExpCS ) ) otherlv_7= 'endif' )
+            // InternalAllocationSpecificationLanguage.g:7280:3: otherlv_0= 'if' ( ( (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS ) ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) ( (lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS ) )* otherlv_5= 'else' ( (lv_ownedElseExpression_6_0= ruleExpCS ) ) otherlv_7= 'endif'
             {
-            otherlv_0=(Token)match(input,110,FollowSets000.FOLLOW_52); if (state.failed) return current;
+            otherlv_0=(Token)match(input,110,FollowSets000.FOLLOW_53); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getIfExpCSAccess().getIfKeyword_0());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:7233:1: ( ( (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS ) ) )
-            // InternalAllocationSpecificationLanguage.g:7234:1: ( (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:7284:1: ( ( (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:7285:1: ( (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS ) )
             {
-            // InternalAllocationSpecificationLanguage.g:7234:1: ( (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:7235:1: (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS )
+            // InternalAllocationSpecificationLanguage.g:7285:1: ( (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:7286:1: (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:7235:1: (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS )
-            int alt117=2;
+            // InternalAllocationSpecificationLanguage.g:7286:1: (lv_ownedCondition_1_1= ruleExpCS | lv_ownedCondition_1_2= rulePatternExpCS )
+            int alt118=2;
             switch ( input.LA(1) ) {
             case RULE_SINGLE_QUOTED_STRING:
             case RULE_INT:
@@ -20819,23 +20961,23 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             case 115:
             case 116:
                 {
-                alt117=1;
+                alt118=1;
                 }
                 break;
             case RULE_SIMPLE_ID:
                 {
-                int LA117_2 = input.LA(2);
+                int LA118_2 = input.LA(2);
 
-                if ( (LA117_2==17||LA117_2==29||(LA117_2>=42 && LA117_2<=44)||LA117_2==49||(LA117_2>=61 && LA117_2<=62)||LA117_2==74||(LA117_2>=76 && LA117_2<=88)||LA117_2==91||(LA117_2>=105 && LA117_2<=106)||LA117_2==111) ) {
-                    alt117=1;
+                if ( (LA118_2==17||LA118_2==29||(LA118_2>=42 && LA118_2<=44)||LA118_2==49||(LA118_2>=61 && LA118_2<=62)||LA118_2==74||(LA118_2>=76 && LA118_2<=88)||LA118_2==91||(LA118_2>=105 && LA118_2<=106)||LA118_2==111) ) {
+                    alt118=1;
                 }
-                else if ( (LA117_2==32) ) {
-                    alt117=2;
+                else if ( (LA118_2==32) ) {
+                    alt118=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 117, 2, input);
+                        new NoViableAltException("", 118, 2, input);
 
                     throw nvae;
                 }
@@ -20843,18 +20985,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                 break;
             case RULE_ESCAPED_ID:
                 {
-                int LA117_3 = input.LA(2);
+                int LA118_3 = input.LA(2);
 
-                if ( (LA117_3==17||LA117_3==29||(LA117_3>=42 && LA117_3<=44)||LA117_3==49||(LA117_3>=61 && LA117_3<=62)||LA117_3==74||(LA117_3>=76 && LA117_3<=88)||LA117_3==91||(LA117_3>=105 && LA117_3<=106)||LA117_3==111) ) {
-                    alt117=1;
+                if ( (LA118_3==17||LA118_3==29||(LA118_3>=42 && LA118_3<=44)||LA118_3==49||(LA118_3>=61 && LA118_3<=62)||LA118_3==74||(LA118_3>=76 && LA118_3<=88)||LA118_3==91||(LA118_3>=105 && LA118_3<=106)||LA118_3==111) ) {
+                    alt118=1;
                 }
-                else if ( (LA117_3==32) ) {
-                    alt117=2;
+                else if ( (LA118_3==32) ) {
+                    alt118=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 117, 3, input);
+                        new NoViableAltException("", 118, 3, input);
 
                     throw nvae;
                 }
@@ -20862,18 +21004,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                 break;
             case 50:
                 {
-                int LA117_4 = input.LA(2);
+                int LA118_4 = input.LA(2);
 
-                if ( (LA117_4==17||LA117_4==29||(LA117_4>=42 && LA117_4<=44)||LA117_4==49||(LA117_4>=61 && LA117_4<=62)||LA117_4==74||(LA117_4>=76 && LA117_4<=88)||LA117_4==91||(LA117_4>=105 && LA117_4<=106)||LA117_4==111) ) {
-                    alt117=1;
+                if ( (LA118_4==17||LA118_4==29||(LA118_4>=42 && LA118_4<=44)||LA118_4==49||(LA118_4>=61 && LA118_4<=62)||LA118_4==74||(LA118_4>=76 && LA118_4<=88)||LA118_4==91||(LA118_4>=105 && LA118_4<=106)||LA118_4==111) ) {
+                    alt118=1;
                 }
-                else if ( (LA117_4==32) ) {
-                    alt117=2;
+                else if ( (LA118_4==32) ) {
+                    alt118=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 117, 4, input);
+                        new NoViableAltException("", 118, 4, input);
 
                     throw nvae;
                 }
@@ -20881,18 +21023,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                 break;
             case 51:
                 {
-                int LA117_5 = input.LA(2);
+                int LA118_5 = input.LA(2);
 
-                if ( (LA117_5==17||LA117_5==29||(LA117_5>=42 && LA117_5<=44)||LA117_5==49||(LA117_5>=61 && LA117_5<=62)||LA117_5==74||(LA117_5>=76 && LA117_5<=88)||LA117_5==91||(LA117_5>=105 && LA117_5<=106)||LA117_5==111) ) {
-                    alt117=1;
+                if ( (LA118_5==32) ) {
+                    alt118=2;
                 }
-                else if ( (LA117_5==32) ) {
-                    alt117=2;
+                else if ( (LA118_5==17||LA118_5==29||(LA118_5>=42 && LA118_5<=44)||LA118_5==49||(LA118_5>=61 && LA118_5<=62)||LA118_5==74||(LA118_5>=76 && LA118_5<=88)||LA118_5==91||(LA118_5>=105 && LA118_5<=106)||LA118_5==111) ) {
+                    alt118=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 117, 5, input);
+                        new NoViableAltException("", 118, 5, input);
 
                     throw nvae;
                 }
@@ -20900,18 +21042,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                 break;
             case 52:
                 {
-                int LA117_6 = input.LA(2);
+                int LA118_6 = input.LA(2);
 
-                if ( (LA117_6==17||LA117_6==29||(LA117_6>=42 && LA117_6<=44)||LA117_6==49||(LA117_6>=61 && LA117_6<=62)||LA117_6==74||(LA117_6>=76 && LA117_6<=88)||LA117_6==91||(LA117_6>=105 && LA117_6<=106)||LA117_6==111) ) {
-                    alt117=1;
+                if ( (LA118_6==17||LA118_6==29||(LA118_6>=42 && LA118_6<=44)||LA118_6==49||(LA118_6>=61 && LA118_6<=62)||LA118_6==74||(LA118_6>=76 && LA118_6<=88)||LA118_6==91||(LA118_6>=105 && LA118_6<=106)||LA118_6==111) ) {
+                    alt118=1;
                 }
-                else if ( (LA117_6==32) ) {
-                    alt117=2;
+                else if ( (LA118_6==32) ) {
+                    alt118=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 117, 6, input);
+                        new NoViableAltException("", 118, 6, input);
 
                     throw nvae;
                 }
@@ -20919,27 +21061,27 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                 break;
             case 32:
                 {
-                alt117=2;
+                alt118=2;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 117, 0, input);
+                    new NoViableAltException("", 118, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt117) {
+            switch (alt118) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:7236:3: lv_ownedCondition_1_1= ruleExpCS
+                    // InternalAllocationSpecificationLanguage.g:7287:3: lv_ownedCondition_1_1= ruleExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getIfExpCSAccess().getOwnedConditionExpCSParserRuleCall_1_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_76);
+                    pushFollow(FollowSets000.FOLLOW_77);
                     lv_ownedCondition_1_1=ruleExpCS();
 
                     state._fsp--;
@@ -20961,14 +21103,14 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:7251:8: lv_ownedCondition_1_2= rulePatternExpCS
+                    // InternalAllocationSpecificationLanguage.g:7302:8: lv_ownedCondition_1_2= rulePatternExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getIfExpCSAccess().getOwnedConditionPatternExpCSParserRuleCall_1_0_1()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_76);
+                    pushFollow(FollowSets000.FOLLOW_77);
                     lv_ownedCondition_1_2=rulePatternExpCS();
 
                     state._fsp--;
@@ -21004,18 +21146,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_2, grammarAccess.getIfExpCSAccess().getThenKeyword_2());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:7273:1: ( (lv_ownedThenExpression_3_0= ruleExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:7274:1: (lv_ownedThenExpression_3_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:7324:1: ( (lv_ownedThenExpression_3_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:7325:1: (lv_ownedThenExpression_3_0= ruleExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:7274:1: (lv_ownedThenExpression_3_0= ruleExpCS )
-            // InternalAllocationSpecificationLanguage.g:7275:3: lv_ownedThenExpression_3_0= ruleExpCS
+            // InternalAllocationSpecificationLanguage.g:7325:1: (lv_ownedThenExpression_3_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:7326:3: lv_ownedThenExpression_3_0= ruleExpCS
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getIfExpCSAccess().getOwnedThenExpressionExpCSParserRuleCall_3_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_77);
+            pushFollow(FollowSets000.FOLLOW_78);
             lv_ownedThenExpression_3_0=ruleExpCS();
 
             state._fsp--;
@@ -21039,30 +21181,30 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:7291:2: ( (lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS ) )*
-            loop118:
+            // InternalAllocationSpecificationLanguage.g:7342:2: ( (lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS ) )*
+            loop119:
             do {
-                int alt118=2;
-                int LA118_0 = input.LA(1);
+                int alt119=2;
+                int LA119_0 = input.LA(1);
 
-                if ( (LA118_0==114) ) {
-                    alt118=1;
+                if ( (LA119_0==114) ) {
+                    alt119=1;
                 }
 
 
-                switch (alt118) {
+                switch (alt119) {
             	case 1 :
-            	    // InternalAllocationSpecificationLanguage.g:7292:1: (lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS )
+            	    // InternalAllocationSpecificationLanguage.g:7343:1: (lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS )
             	    {
-            	    // InternalAllocationSpecificationLanguage.g:7292:1: (lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS )
-            	    // InternalAllocationSpecificationLanguage.g:7293:3: lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS
+            	    // InternalAllocationSpecificationLanguage.g:7343:1: (lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS )
+            	    // InternalAllocationSpecificationLanguage.g:7344:3: lv_ownedIfThenExpressions_4_0= ruleElseIfThenExpCS
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getIfExpCSAccess().getOwnedIfThenExpressionsElseIfThenExpCSParserRuleCall_4_0()); 
             	      	    
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_77);
+            	    pushFollow(FollowSets000.FOLLOW_78);
             	    lv_ownedIfThenExpressions_4_0=ruleElseIfThenExpCS();
 
             	    state._fsp--;
@@ -21088,7 +21230,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop118;
+            	    break loop119;
                 }
             } while (true);
 
@@ -21098,18 +21240,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_5, grammarAccess.getIfExpCSAccess().getElseKeyword_5());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:7313:1: ( (lv_ownedElseExpression_6_0= ruleExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:7314:1: (lv_ownedElseExpression_6_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:7364:1: ( (lv_ownedElseExpression_6_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:7365:1: (lv_ownedElseExpression_6_0= ruleExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:7314:1: (lv_ownedElseExpression_6_0= ruleExpCS )
-            // InternalAllocationSpecificationLanguage.g:7315:3: lv_ownedElseExpression_6_0= ruleExpCS
+            // InternalAllocationSpecificationLanguage.g:7365:1: (lv_ownedElseExpression_6_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:7366:3: lv_ownedElseExpression_6_0= ruleExpCS
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getIfExpCSAccess().getOwnedElseExpressionExpCSParserRuleCall_6_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_78);
+            pushFollow(FollowSets000.FOLLOW_79);
             lv_ownedElseExpression_6_0=ruleExpCS();
 
             state._fsp--;
@@ -21162,7 +21304,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleElseIfThenExpCS"
-    // InternalAllocationSpecificationLanguage.g:7343:1: entryRuleElseIfThenExpCS returns [EObject current=null] : iv_ruleElseIfThenExpCS= ruleElseIfThenExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:7394:1: entryRuleElseIfThenExpCS returns [EObject current=null] : iv_ruleElseIfThenExpCS= ruleElseIfThenExpCS EOF ;
     public final EObject entryRuleElseIfThenExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -21170,8 +21312,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:7344:2: (iv_ruleElseIfThenExpCS= ruleElseIfThenExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:7345:2: iv_ruleElseIfThenExpCS= ruleElseIfThenExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:7395:2: (iv_ruleElseIfThenExpCS= ruleElseIfThenExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:7396:2: iv_ruleElseIfThenExpCS= ruleElseIfThenExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getElseIfThenExpCSRule()); 
@@ -21202,7 +21344,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleElseIfThenExpCS"
-    // InternalAllocationSpecificationLanguage.g:7352:1: ruleElseIfThenExpCS returns [EObject current=null] : (otherlv_0= 'elseif' ( (lv_ownedCondition_1_0= ruleExpCS ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) ) ;
+    // InternalAllocationSpecificationLanguage.g:7403:1: ruleElseIfThenExpCS returns [EObject current=null] : (otherlv_0= 'elseif' ( (lv_ownedCondition_1_0= ruleExpCS ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) ) ;
     public final EObject ruleElseIfThenExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -21216,11 +21358,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7355:28: ( (otherlv_0= 'elseif' ( (lv_ownedCondition_1_0= ruleExpCS ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) ) )
-            // InternalAllocationSpecificationLanguage.g:7356:1: (otherlv_0= 'elseif' ( (lv_ownedCondition_1_0= ruleExpCS ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:7406:28: ( (otherlv_0= 'elseif' ( (lv_ownedCondition_1_0= ruleExpCS ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) ) )
+            // InternalAllocationSpecificationLanguage.g:7407:1: (otherlv_0= 'elseif' ( (lv_ownedCondition_1_0= ruleExpCS ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) )
             {
-            // InternalAllocationSpecificationLanguage.g:7356:1: (otherlv_0= 'elseif' ( (lv_ownedCondition_1_0= ruleExpCS ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) )
-            // InternalAllocationSpecificationLanguage.g:7356:3: otherlv_0= 'elseif' ( (lv_ownedCondition_1_0= ruleExpCS ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:7407:1: (otherlv_0= 'elseif' ( (lv_ownedCondition_1_0= ruleExpCS ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:7407:3: otherlv_0= 'elseif' ( (lv_ownedCondition_1_0= ruleExpCS ) ) otherlv_2= 'then' ( (lv_ownedThenExpression_3_0= ruleExpCS ) )
             {
             otherlv_0=(Token)match(input,114,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -21228,18 +21370,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_0, grammarAccess.getElseIfThenExpCSAccess().getElseifKeyword_0());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:7360:1: ( (lv_ownedCondition_1_0= ruleExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:7361:1: (lv_ownedCondition_1_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:7411:1: ( (lv_ownedCondition_1_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:7412:1: (lv_ownedCondition_1_0= ruleExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:7361:1: (lv_ownedCondition_1_0= ruleExpCS )
-            // InternalAllocationSpecificationLanguage.g:7362:3: lv_ownedCondition_1_0= ruleExpCS
+            // InternalAllocationSpecificationLanguage.g:7412:1: (lv_ownedCondition_1_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:7413:3: lv_ownedCondition_1_0= ruleExpCS
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getElseIfThenExpCSAccess().getOwnedConditionExpCSParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_76);
+            pushFollow(FollowSets000.FOLLOW_77);
             lv_ownedCondition_1_0=ruleExpCS();
 
             state._fsp--;
@@ -21269,11 +21411,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_2, grammarAccess.getElseIfThenExpCSAccess().getThenKeyword_2());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:7382:1: ( (lv_ownedThenExpression_3_0= ruleExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:7383:1: (lv_ownedThenExpression_3_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:7433:1: ( (lv_ownedThenExpression_3_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:7434:1: (lv_ownedThenExpression_3_0= ruleExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:7383:1: (lv_ownedThenExpression_3_0= ruleExpCS )
-            // InternalAllocationSpecificationLanguage.g:7384:3: lv_ownedThenExpression_3_0= ruleExpCS
+            // InternalAllocationSpecificationLanguage.g:7434:1: (lv_ownedThenExpression_3_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:7435:3: lv_ownedThenExpression_3_0= ruleExpCS
             {
             if ( state.backtracking==0 ) {
                
@@ -21327,7 +21469,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleLetExpCS"
-    // InternalAllocationSpecificationLanguage.g:7408:1: entryRuleLetExpCS returns [EObject current=null] : iv_ruleLetExpCS= ruleLetExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:7459:1: entryRuleLetExpCS returns [EObject current=null] : iv_ruleLetExpCS= ruleLetExpCS EOF ;
     public final EObject entryRuleLetExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -21335,8 +21477,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:7409:2: (iv_ruleLetExpCS= ruleLetExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:7410:2: iv_ruleLetExpCS= ruleLetExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:7460:2: (iv_ruleLetExpCS= ruleLetExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:7461:2: iv_ruleLetExpCS= ruleLetExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLetExpCSRule()); 
@@ -21367,7 +21509,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleLetExpCS"
-    // InternalAllocationSpecificationLanguage.g:7417:1: ruleLetExpCS returns [EObject current=null] : (otherlv_0= 'let' ( (lv_ownedVariables_1_0= ruleLetVariableCS ) ) (otherlv_2= ',' ( (lv_ownedVariables_3_0= ruleLetVariableCS ) ) )* otherlv_4= 'in' ( (lv_ownedInExpression_5_0= ruleExpCS ) ) ) ;
+    // InternalAllocationSpecificationLanguage.g:7468:1: ruleLetExpCS returns [EObject current=null] : (otherlv_0= 'let' ( (lv_ownedVariables_1_0= ruleLetVariableCS ) ) (otherlv_2= ',' ( (lv_ownedVariables_3_0= ruleLetVariableCS ) ) )* otherlv_4= 'in' ( (lv_ownedInExpression_5_0= ruleExpCS ) ) ) ;
     public final EObject ruleLetExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -21384,11 +21526,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7420:28: ( (otherlv_0= 'let' ( (lv_ownedVariables_1_0= ruleLetVariableCS ) ) (otherlv_2= ',' ( (lv_ownedVariables_3_0= ruleLetVariableCS ) ) )* otherlv_4= 'in' ( (lv_ownedInExpression_5_0= ruleExpCS ) ) ) )
-            // InternalAllocationSpecificationLanguage.g:7421:1: (otherlv_0= 'let' ( (lv_ownedVariables_1_0= ruleLetVariableCS ) ) (otherlv_2= ',' ( (lv_ownedVariables_3_0= ruleLetVariableCS ) ) )* otherlv_4= 'in' ( (lv_ownedInExpression_5_0= ruleExpCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:7471:28: ( (otherlv_0= 'let' ( (lv_ownedVariables_1_0= ruleLetVariableCS ) ) (otherlv_2= ',' ( (lv_ownedVariables_3_0= ruleLetVariableCS ) ) )* otherlv_4= 'in' ( (lv_ownedInExpression_5_0= ruleExpCS ) ) ) )
+            // InternalAllocationSpecificationLanguage.g:7472:1: (otherlv_0= 'let' ( (lv_ownedVariables_1_0= ruleLetVariableCS ) ) (otherlv_2= ',' ( (lv_ownedVariables_3_0= ruleLetVariableCS ) ) )* otherlv_4= 'in' ( (lv_ownedInExpression_5_0= ruleExpCS ) ) )
             {
-            // InternalAllocationSpecificationLanguage.g:7421:1: (otherlv_0= 'let' ( (lv_ownedVariables_1_0= ruleLetVariableCS ) ) (otherlv_2= ',' ( (lv_ownedVariables_3_0= ruleLetVariableCS ) ) )* otherlv_4= 'in' ( (lv_ownedInExpression_5_0= ruleExpCS ) ) )
-            // InternalAllocationSpecificationLanguage.g:7421:3: otherlv_0= 'let' ( (lv_ownedVariables_1_0= ruleLetVariableCS ) ) (otherlv_2= ',' ( (lv_ownedVariables_3_0= ruleLetVariableCS ) ) )* otherlv_4= 'in' ( (lv_ownedInExpression_5_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:7472:1: (otherlv_0= 'let' ( (lv_ownedVariables_1_0= ruleLetVariableCS ) ) (otherlv_2= ',' ( (lv_ownedVariables_3_0= ruleLetVariableCS ) ) )* otherlv_4= 'in' ( (lv_ownedInExpression_5_0= ruleExpCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:7472:3: otherlv_0= 'let' ( (lv_ownedVariables_1_0= ruleLetVariableCS ) ) (otherlv_2= ',' ( (lv_ownedVariables_3_0= ruleLetVariableCS ) ) )* otherlv_4= 'in' ( (lv_ownedInExpression_5_0= ruleExpCS ) )
             {
             otherlv_0=(Token)match(input,115,FollowSets000.FOLLOW_11); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -21396,18 +21538,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_0, grammarAccess.getLetExpCSAccess().getLetKeyword_0());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:7425:1: ( (lv_ownedVariables_1_0= ruleLetVariableCS ) )
-            // InternalAllocationSpecificationLanguage.g:7426:1: (lv_ownedVariables_1_0= ruleLetVariableCS )
+            // InternalAllocationSpecificationLanguage.g:7476:1: ( (lv_ownedVariables_1_0= ruleLetVariableCS ) )
+            // InternalAllocationSpecificationLanguage.g:7477:1: (lv_ownedVariables_1_0= ruleLetVariableCS )
             {
-            // InternalAllocationSpecificationLanguage.g:7426:1: (lv_ownedVariables_1_0= ruleLetVariableCS )
-            // InternalAllocationSpecificationLanguage.g:7427:3: lv_ownedVariables_1_0= ruleLetVariableCS
+            // InternalAllocationSpecificationLanguage.g:7477:1: (lv_ownedVariables_1_0= ruleLetVariableCS )
+            // InternalAllocationSpecificationLanguage.g:7478:3: lv_ownedVariables_1_0= ruleLetVariableCS
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getLetExpCSAccess().getOwnedVariablesLetVariableCSParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_79);
+            pushFollow(FollowSets000.FOLLOW_80);
             lv_ownedVariables_1_0=ruleLetVariableCS();
 
             state._fsp--;
@@ -21431,20 +21573,20 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:7443:2: (otherlv_2= ',' ( (lv_ownedVariables_3_0= ruleLetVariableCS ) ) )*
-            loop119:
+            // InternalAllocationSpecificationLanguage.g:7494:2: (otherlv_2= ',' ( (lv_ownedVariables_3_0= ruleLetVariableCS ) ) )*
+            loop120:
             do {
-                int alt119=2;
-                int LA119_0 = input.LA(1);
+                int alt120=2;
+                int LA120_0 = input.LA(1);
 
-                if ( (LA119_0==30) ) {
-                    alt119=1;
+                if ( (LA120_0==30) ) {
+                    alt120=1;
                 }
 
 
-                switch (alt119) {
+                switch (alt120) {
             	case 1 :
-            	    // InternalAllocationSpecificationLanguage.g:7443:4: otherlv_2= ',' ( (lv_ownedVariables_3_0= ruleLetVariableCS ) )
+            	    // InternalAllocationSpecificationLanguage.g:7494:4: otherlv_2= ',' ( (lv_ownedVariables_3_0= ruleLetVariableCS ) )
             	    {
             	    otherlv_2=(Token)match(input,30,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -21452,18 +21594,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	          	newLeafNode(otherlv_2, grammarAccess.getLetExpCSAccess().getCommaKeyword_2_0());
             	          
             	    }
-            	    // InternalAllocationSpecificationLanguage.g:7447:1: ( (lv_ownedVariables_3_0= ruleLetVariableCS ) )
-            	    // InternalAllocationSpecificationLanguage.g:7448:1: (lv_ownedVariables_3_0= ruleLetVariableCS )
+            	    // InternalAllocationSpecificationLanguage.g:7498:1: ( (lv_ownedVariables_3_0= ruleLetVariableCS ) )
+            	    // InternalAllocationSpecificationLanguage.g:7499:1: (lv_ownedVariables_3_0= ruleLetVariableCS )
             	    {
-            	    // InternalAllocationSpecificationLanguage.g:7448:1: (lv_ownedVariables_3_0= ruleLetVariableCS )
-            	    // InternalAllocationSpecificationLanguage.g:7449:3: lv_ownedVariables_3_0= ruleLetVariableCS
+            	    // InternalAllocationSpecificationLanguage.g:7499:1: (lv_ownedVariables_3_0= ruleLetVariableCS )
+            	    // InternalAllocationSpecificationLanguage.g:7500:3: lv_ownedVariables_3_0= ruleLetVariableCS
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getLetExpCSAccess().getOwnedVariablesLetVariableCSParserRuleCall_2_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_79);
+            	    pushFollow(FollowSets000.FOLLOW_80);
             	    lv_ownedVariables_3_0=ruleLetVariableCS();
 
             	    state._fsp--;
@@ -21492,7 +21634,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop119;
+            	    break loop120;
                 }
             } while (true);
 
@@ -21502,11 +21644,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_4, grammarAccess.getLetExpCSAccess().getInKeyword_3());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:7469:1: ( (lv_ownedInExpression_5_0= ruleExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:7470:1: (lv_ownedInExpression_5_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:7520:1: ( (lv_ownedInExpression_5_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:7521:1: (lv_ownedInExpression_5_0= ruleExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:7470:1: (lv_ownedInExpression_5_0= ruleExpCS )
-            // InternalAllocationSpecificationLanguage.g:7471:3: lv_ownedInExpression_5_0= ruleExpCS
+            // InternalAllocationSpecificationLanguage.g:7521:1: (lv_ownedInExpression_5_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:7522:3: lv_ownedInExpression_5_0= ruleExpCS
             {
             if ( state.backtracking==0 ) {
                
@@ -21560,7 +21702,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleLetVariableCS"
-    // InternalAllocationSpecificationLanguage.g:7495:1: entryRuleLetVariableCS returns [EObject current=null] : iv_ruleLetVariableCS= ruleLetVariableCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:7546:1: entryRuleLetVariableCS returns [EObject current=null] : iv_ruleLetVariableCS= ruleLetVariableCS EOF ;
     public final EObject entryRuleLetVariableCS() throws RecognitionException {
         EObject current = null;
 
@@ -21568,8 +21710,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:7496:2: (iv_ruleLetVariableCS= ruleLetVariableCS EOF )
-            // InternalAllocationSpecificationLanguage.g:7497:2: iv_ruleLetVariableCS= ruleLetVariableCS EOF
+            // InternalAllocationSpecificationLanguage.g:7547:2: (iv_ruleLetVariableCS= ruleLetVariableCS EOF )
+            // InternalAllocationSpecificationLanguage.g:7548:2: iv_ruleLetVariableCS= ruleLetVariableCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLetVariableCSRule()); 
@@ -21600,7 +21742,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleLetVariableCS"
-    // InternalAllocationSpecificationLanguage.g:7504:1: ruleLetVariableCS returns [EObject current=null] : ( ( (lv_name_0_0= ruleUnrestrictedName ) ) ( (lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS ) )? (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) )? otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) ) ;
+    // InternalAllocationSpecificationLanguage.g:7555:1: ruleLetVariableCS returns [EObject current=null] : ( ( (lv_name_0_0= ruleUnrestrictedName ) ) ( (lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS ) )? (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) )? otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) ) ;
     public final EObject ruleLetVariableCS() throws RecognitionException {
         EObject current = null;
 
@@ -21618,24 +21760,24 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7507:28: ( ( ( (lv_name_0_0= ruleUnrestrictedName ) ) ( (lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS ) )? (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) )? otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) ) )
-            // InternalAllocationSpecificationLanguage.g:7508:1: ( ( (lv_name_0_0= ruleUnrestrictedName ) ) ( (lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS ) )? (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) )? otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:7558:28: ( ( ( (lv_name_0_0= ruleUnrestrictedName ) ) ( (lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS ) )? (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) )? otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) ) )
+            // InternalAllocationSpecificationLanguage.g:7559:1: ( ( (lv_name_0_0= ruleUnrestrictedName ) ) ( (lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS ) )? (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) )? otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )
             {
-            // InternalAllocationSpecificationLanguage.g:7508:1: ( ( (lv_name_0_0= ruleUnrestrictedName ) ) ( (lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS ) )? (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) )? otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )
-            // InternalAllocationSpecificationLanguage.g:7508:2: ( (lv_name_0_0= ruleUnrestrictedName ) ) ( (lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS ) )? (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) )? otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:7559:1: ( ( (lv_name_0_0= ruleUnrestrictedName ) ) ( (lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS ) )? (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) )? otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:7559:2: ( (lv_name_0_0= ruleUnrestrictedName ) ) ( (lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS ) )? (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) )? otherlv_4= '=' ( (lv_ownedInitExpression_5_0= ruleExpCS ) )
             {
-            // InternalAllocationSpecificationLanguage.g:7508:2: ( (lv_name_0_0= ruleUnrestrictedName ) )
-            // InternalAllocationSpecificationLanguage.g:7509:1: (lv_name_0_0= ruleUnrestrictedName )
+            // InternalAllocationSpecificationLanguage.g:7559:2: ( (lv_name_0_0= ruleUnrestrictedName ) )
+            // InternalAllocationSpecificationLanguage.g:7560:1: (lv_name_0_0= ruleUnrestrictedName )
             {
-            // InternalAllocationSpecificationLanguage.g:7509:1: (lv_name_0_0= ruleUnrestrictedName )
-            // InternalAllocationSpecificationLanguage.g:7510:3: lv_name_0_0= ruleUnrestrictedName
+            // InternalAllocationSpecificationLanguage.g:7560:1: (lv_name_0_0= ruleUnrestrictedName )
+            // InternalAllocationSpecificationLanguage.g:7561:3: lv_name_0_0= ruleUnrestrictedName
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getLetVariableCSAccess().getNameUnrestrictedNameParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_80);
+            pushFollow(FollowSets000.FOLLOW_81);
             lv_name_0_0=ruleUnrestrictedName();
 
             state._fsp--;
@@ -21659,26 +21801,26 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:7526:2: ( (lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS ) )?
-            int alt120=2;
-            int LA120_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:7577:2: ( (lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS ) )?
+            int alt121=2;
+            int LA121_0 = input.LA(1);
 
-            if ( (LA120_0==29) ) {
-                alt120=1;
+            if ( (LA121_0==29) ) {
+                alt121=1;
             }
-            switch (alt120) {
+            switch (alt121) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:7527:1: (lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS )
+                    // InternalAllocationSpecificationLanguage.g:7578:1: (lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:7527:1: (lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS )
-                    // InternalAllocationSpecificationLanguage.g:7528:3: lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS
+                    // InternalAllocationSpecificationLanguage.g:7578:1: (lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS )
+                    // InternalAllocationSpecificationLanguage.g:7579:3: lv_ownedRoundBracketedClause_1_0= ruleRoundBracketedClauseCS
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getLetVariableCSAccess().getOwnedRoundBracketedClauseRoundBracketedClauseCSParserRuleCall_1_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_57);
+                    pushFollow(FollowSets000.FOLLOW_58);
                     lv_ownedRoundBracketedClause_1_0=ruleRoundBracketedClauseCS();
 
                     state._fsp--;
@@ -21705,16 +21847,16 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:7544:3: (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) )?
-            int alt121=2;
-            int LA121_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:7595:3: (otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) ) )?
+            int alt122=2;
+            int LA122_0 = input.LA(1);
 
-            if ( (LA121_0==32) ) {
-                alt121=1;
+            if ( (LA122_0==32) ) {
+                alt122=1;
             }
-            switch (alt121) {
+            switch (alt122) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:7544:5: otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:7595:5: otherlv_2= ':' ( (lv_ownedType_3_0= ruleTypeExpCS ) )
                     {
                     otherlv_2=(Token)match(input,32,FollowSets000.FOLLOW_11); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21722,11 +21864,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                           	newLeafNode(otherlv_2, grammarAccess.getLetVariableCSAccess().getColonKeyword_2_0());
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:7548:1: ( (lv_ownedType_3_0= ruleTypeExpCS ) )
-                    // InternalAllocationSpecificationLanguage.g:7549:1: (lv_ownedType_3_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:7599:1: ( (lv_ownedType_3_0= ruleTypeExpCS ) )
+                    // InternalAllocationSpecificationLanguage.g:7600:1: (lv_ownedType_3_0= ruleTypeExpCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:7549:1: (lv_ownedType_3_0= ruleTypeExpCS )
-                    // InternalAllocationSpecificationLanguage.g:7550:3: lv_ownedType_3_0= ruleTypeExpCS
+                    // InternalAllocationSpecificationLanguage.g:7600:1: (lv_ownedType_3_0= ruleTypeExpCS )
+                    // InternalAllocationSpecificationLanguage.g:7601:3: lv_ownedType_3_0= ruleTypeExpCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -21769,11 +21911,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_4, grammarAccess.getLetVariableCSAccess().getEqualsSignKeyword_3());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:7570:1: ( (lv_ownedInitExpression_5_0= ruleExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:7571:1: (lv_ownedInitExpression_5_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:7621:1: ( (lv_ownedInitExpression_5_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:7622:1: (lv_ownedInitExpression_5_0= ruleExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:7571:1: (lv_ownedInitExpression_5_0= ruleExpCS )
-            // InternalAllocationSpecificationLanguage.g:7572:3: lv_ownedInitExpression_5_0= ruleExpCS
+            // InternalAllocationSpecificationLanguage.g:7622:1: (lv_ownedInitExpression_5_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:7623:3: lv_ownedInitExpression_5_0= ruleExpCS
             {
             if ( state.backtracking==0 ) {
                
@@ -21827,7 +21969,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleNestedExpCS"
-    // InternalAllocationSpecificationLanguage.g:7596:1: entryRuleNestedExpCS returns [EObject current=null] : iv_ruleNestedExpCS= ruleNestedExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:7647:1: entryRuleNestedExpCS returns [EObject current=null] : iv_ruleNestedExpCS= ruleNestedExpCS EOF ;
     public final EObject entryRuleNestedExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -21835,8 +21977,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:7597:2: (iv_ruleNestedExpCS= ruleNestedExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:7598:2: iv_ruleNestedExpCS= ruleNestedExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:7648:2: (iv_ruleNestedExpCS= ruleNestedExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:7649:2: iv_ruleNestedExpCS= ruleNestedExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNestedExpCSRule()); 
@@ -21867,7 +22009,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleNestedExpCS"
-    // InternalAllocationSpecificationLanguage.g:7605:1: ruleNestedExpCS returns [EObject current=null] : (otherlv_0= '(' ( (lv_ownedExpression_1_0= ruleExpCS ) ) otherlv_2= ')' ) ;
+    // InternalAllocationSpecificationLanguage.g:7656:1: ruleNestedExpCS returns [EObject current=null] : (otherlv_0= '(' ( (lv_ownedExpression_1_0= ruleExpCS ) ) otherlv_2= ')' ) ;
     public final EObject ruleNestedExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -21879,11 +22021,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7608:28: ( (otherlv_0= '(' ( (lv_ownedExpression_1_0= ruleExpCS ) ) otherlv_2= ')' ) )
-            // InternalAllocationSpecificationLanguage.g:7609:1: (otherlv_0= '(' ( (lv_ownedExpression_1_0= ruleExpCS ) ) otherlv_2= ')' )
+            // InternalAllocationSpecificationLanguage.g:7659:28: ( (otherlv_0= '(' ( (lv_ownedExpression_1_0= ruleExpCS ) ) otherlv_2= ')' ) )
+            // InternalAllocationSpecificationLanguage.g:7660:1: (otherlv_0= '(' ( (lv_ownedExpression_1_0= ruleExpCS ) ) otherlv_2= ')' )
             {
-            // InternalAllocationSpecificationLanguage.g:7609:1: (otherlv_0= '(' ( (lv_ownedExpression_1_0= ruleExpCS ) ) otherlv_2= ')' )
-            // InternalAllocationSpecificationLanguage.g:7609:3: otherlv_0= '(' ( (lv_ownedExpression_1_0= ruleExpCS ) ) otherlv_2= ')'
+            // InternalAllocationSpecificationLanguage.g:7660:1: (otherlv_0= '(' ( (lv_ownedExpression_1_0= ruleExpCS ) ) otherlv_2= ')' )
+            // InternalAllocationSpecificationLanguage.g:7660:3: otherlv_0= '(' ( (lv_ownedExpression_1_0= ruleExpCS ) ) otherlv_2= ')'
             {
             otherlv_0=(Token)match(input,29,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -21891,11 +22033,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_0, grammarAccess.getNestedExpCSAccess().getLeftParenthesisKeyword_0());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:7613:1: ( (lv_ownedExpression_1_0= ruleExpCS ) )
-            // InternalAllocationSpecificationLanguage.g:7614:1: (lv_ownedExpression_1_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:7664:1: ( (lv_ownedExpression_1_0= ruleExpCS ) )
+            // InternalAllocationSpecificationLanguage.g:7665:1: (lv_ownedExpression_1_0= ruleExpCS )
             {
-            // InternalAllocationSpecificationLanguage.g:7614:1: (lv_ownedExpression_1_0= ruleExpCS )
-            // InternalAllocationSpecificationLanguage.g:7615:3: lv_ownedExpression_1_0= ruleExpCS
+            // InternalAllocationSpecificationLanguage.g:7665:1: (lv_ownedExpression_1_0= ruleExpCS )
+            // InternalAllocationSpecificationLanguage.g:7666:3: lv_ownedExpression_1_0= ruleExpCS
             {
             if ( state.backtracking==0 ) {
                
@@ -21955,7 +22097,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleSelfExpCS"
-    // InternalAllocationSpecificationLanguage.g:7643:1: entryRuleSelfExpCS returns [EObject current=null] : iv_ruleSelfExpCS= ruleSelfExpCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:7694:1: entryRuleSelfExpCS returns [EObject current=null] : iv_ruleSelfExpCS= ruleSelfExpCS EOF ;
     public final EObject entryRuleSelfExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -21963,8 +22105,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:7644:2: (iv_ruleSelfExpCS= ruleSelfExpCS EOF )
-            // InternalAllocationSpecificationLanguage.g:7645:2: iv_ruleSelfExpCS= ruleSelfExpCS EOF
+            // InternalAllocationSpecificationLanguage.g:7695:2: (iv_ruleSelfExpCS= ruleSelfExpCS EOF )
+            // InternalAllocationSpecificationLanguage.g:7696:2: iv_ruleSelfExpCS= ruleSelfExpCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSelfExpCSRule()); 
@@ -21995,7 +22137,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleSelfExpCS"
-    // InternalAllocationSpecificationLanguage.g:7652:1: ruleSelfExpCS returns [EObject current=null] : ( () otherlv_1= 'self' ) ;
+    // InternalAllocationSpecificationLanguage.g:7703:1: ruleSelfExpCS returns [EObject current=null] : ( () otherlv_1= 'self' ) ;
     public final EObject ruleSelfExpCS() throws RecognitionException {
         EObject current = null;
 
@@ -22004,14 +22146,14 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7655:28: ( ( () otherlv_1= 'self' ) )
-            // InternalAllocationSpecificationLanguage.g:7656:1: ( () otherlv_1= 'self' )
+            // InternalAllocationSpecificationLanguage.g:7706:28: ( ( () otherlv_1= 'self' ) )
+            // InternalAllocationSpecificationLanguage.g:7707:1: ( () otherlv_1= 'self' )
             {
-            // InternalAllocationSpecificationLanguage.g:7656:1: ( () otherlv_1= 'self' )
-            // InternalAllocationSpecificationLanguage.g:7656:2: () otherlv_1= 'self'
+            // InternalAllocationSpecificationLanguage.g:7707:1: ( () otherlv_1= 'self' )
+            // InternalAllocationSpecificationLanguage.g:7707:2: () otherlv_1= 'self'
             {
-            // InternalAllocationSpecificationLanguage.g:7656:2: ()
-            // InternalAllocationSpecificationLanguage.g:7657:2: 
+            // InternalAllocationSpecificationLanguage.g:7707:2: ()
+            // InternalAllocationSpecificationLanguage.g:7708:2: 
             {
             if ( state.backtracking==0 ) {
                
@@ -22057,7 +22199,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleMultiplicityBoundsCS"
-    // InternalAllocationSpecificationLanguage.g:7677:1: entryRuleMultiplicityBoundsCS returns [EObject current=null] : iv_ruleMultiplicityBoundsCS= ruleMultiplicityBoundsCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:7728:1: entryRuleMultiplicityBoundsCS returns [EObject current=null] : iv_ruleMultiplicityBoundsCS= ruleMultiplicityBoundsCS EOF ;
     public final EObject entryRuleMultiplicityBoundsCS() throws RecognitionException {
         EObject current = null;
 
@@ -22065,8 +22207,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:7678:2: (iv_ruleMultiplicityBoundsCS= ruleMultiplicityBoundsCS EOF )
-            // InternalAllocationSpecificationLanguage.g:7679:2: iv_ruleMultiplicityBoundsCS= ruleMultiplicityBoundsCS EOF
+            // InternalAllocationSpecificationLanguage.g:7729:2: (iv_ruleMultiplicityBoundsCS= ruleMultiplicityBoundsCS EOF )
+            // InternalAllocationSpecificationLanguage.g:7730:2: iv_ruleMultiplicityBoundsCS= ruleMultiplicityBoundsCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMultiplicityBoundsCSRule()); 
@@ -22097,7 +22239,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleMultiplicityBoundsCS"
-    // InternalAllocationSpecificationLanguage.g:7686:1: ruleMultiplicityBoundsCS returns [EObject current=null] : ( ( (lv_lowerBound_0_0= ruleLOWER ) ) (otherlv_1= '..' ( (lv_upperBound_2_0= ruleUPPER ) ) )? ) ;
+    // InternalAllocationSpecificationLanguage.g:7737:1: ruleMultiplicityBoundsCS returns [EObject current=null] : ( ( (lv_lowerBound_0_0= ruleLOWER ) ) (otherlv_1= '..' ( (lv_upperBound_2_0= ruleUPPER ) ) )? ) ;
     public final EObject ruleMultiplicityBoundsCS() throws RecognitionException {
         EObject current = null;
 
@@ -22110,24 +22252,24 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7689:28: ( ( ( (lv_lowerBound_0_0= ruleLOWER ) ) (otherlv_1= '..' ( (lv_upperBound_2_0= ruleUPPER ) ) )? ) )
-            // InternalAllocationSpecificationLanguage.g:7690:1: ( ( (lv_lowerBound_0_0= ruleLOWER ) ) (otherlv_1= '..' ( (lv_upperBound_2_0= ruleUPPER ) ) )? )
+            // InternalAllocationSpecificationLanguage.g:7740:28: ( ( ( (lv_lowerBound_0_0= ruleLOWER ) ) (otherlv_1= '..' ( (lv_upperBound_2_0= ruleUPPER ) ) )? ) )
+            // InternalAllocationSpecificationLanguage.g:7741:1: ( ( (lv_lowerBound_0_0= ruleLOWER ) ) (otherlv_1= '..' ( (lv_upperBound_2_0= ruleUPPER ) ) )? )
             {
-            // InternalAllocationSpecificationLanguage.g:7690:1: ( ( (lv_lowerBound_0_0= ruleLOWER ) ) (otherlv_1= '..' ( (lv_upperBound_2_0= ruleUPPER ) ) )? )
-            // InternalAllocationSpecificationLanguage.g:7690:2: ( (lv_lowerBound_0_0= ruleLOWER ) ) (otherlv_1= '..' ( (lv_upperBound_2_0= ruleUPPER ) ) )?
+            // InternalAllocationSpecificationLanguage.g:7741:1: ( ( (lv_lowerBound_0_0= ruleLOWER ) ) (otherlv_1= '..' ( (lv_upperBound_2_0= ruleUPPER ) ) )? )
+            // InternalAllocationSpecificationLanguage.g:7741:2: ( (lv_lowerBound_0_0= ruleLOWER ) ) (otherlv_1= '..' ( (lv_upperBound_2_0= ruleUPPER ) ) )?
             {
-            // InternalAllocationSpecificationLanguage.g:7690:2: ( (lv_lowerBound_0_0= ruleLOWER ) )
-            // InternalAllocationSpecificationLanguage.g:7691:1: (lv_lowerBound_0_0= ruleLOWER )
+            // InternalAllocationSpecificationLanguage.g:7741:2: ( (lv_lowerBound_0_0= ruleLOWER ) )
+            // InternalAllocationSpecificationLanguage.g:7742:1: (lv_lowerBound_0_0= ruleLOWER )
             {
-            // InternalAllocationSpecificationLanguage.g:7691:1: (lv_lowerBound_0_0= ruleLOWER )
-            // InternalAllocationSpecificationLanguage.g:7692:3: lv_lowerBound_0_0= ruleLOWER
+            // InternalAllocationSpecificationLanguage.g:7742:1: (lv_lowerBound_0_0= ruleLOWER )
+            // InternalAllocationSpecificationLanguage.g:7743:3: lv_lowerBound_0_0= ruleLOWER
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getMultiplicityBoundsCSAccess().getLowerBoundLOWERParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_53);
+            pushFollow(FollowSets000.FOLLOW_54);
             lv_lowerBound_0_0=ruleLOWER();
 
             state._fsp--;
@@ -22151,28 +22293,28 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:7708:2: (otherlv_1= '..' ( (lv_upperBound_2_0= ruleUPPER ) ) )?
-            int alt122=2;
-            int LA122_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:7759:2: (otherlv_1= '..' ( (lv_upperBound_2_0= ruleUPPER ) ) )?
+            int alt123=2;
+            int LA123_0 = input.LA(1);
 
-            if ( (LA122_0==97) ) {
-                alt122=1;
+            if ( (LA123_0==97) ) {
+                alt123=1;
             }
-            switch (alt122) {
+            switch (alt123) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:7708:4: otherlv_1= '..' ( (lv_upperBound_2_0= ruleUPPER ) )
+                    // InternalAllocationSpecificationLanguage.g:7759:4: otherlv_1= '..' ( (lv_upperBound_2_0= ruleUPPER ) )
                     {
-                    otherlv_1=(Token)match(input,97,FollowSets000.FOLLOW_81); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,97,FollowSets000.FOLLOW_82); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getMultiplicityBoundsCSAccess().getFullStopFullStopKeyword_1_0());
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:7712:1: ( (lv_upperBound_2_0= ruleUPPER ) )
-                    // InternalAllocationSpecificationLanguage.g:7713:1: (lv_upperBound_2_0= ruleUPPER )
+                    // InternalAllocationSpecificationLanguage.g:7763:1: ( (lv_upperBound_2_0= ruleUPPER ) )
+                    // InternalAllocationSpecificationLanguage.g:7764:1: (lv_upperBound_2_0= ruleUPPER )
                     {
-                    // InternalAllocationSpecificationLanguage.g:7713:1: (lv_upperBound_2_0= ruleUPPER )
-                    // InternalAllocationSpecificationLanguage.g:7714:3: lv_upperBound_2_0= ruleUPPER
+                    // InternalAllocationSpecificationLanguage.g:7764:1: (lv_upperBound_2_0= ruleUPPER )
+                    // InternalAllocationSpecificationLanguage.g:7765:3: lv_upperBound_2_0= ruleUPPER
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -22232,7 +22374,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleMultiplicityCS"
-    // InternalAllocationSpecificationLanguage.g:7738:1: entryRuleMultiplicityCS returns [EObject current=null] : iv_ruleMultiplicityCS= ruleMultiplicityCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:7789:1: entryRuleMultiplicityCS returns [EObject current=null] : iv_ruleMultiplicityCS= ruleMultiplicityCS EOF ;
     public final EObject entryRuleMultiplicityCS() throws RecognitionException {
         EObject current = null;
 
@@ -22240,8 +22382,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:7739:2: (iv_ruleMultiplicityCS= ruleMultiplicityCS EOF )
-            // InternalAllocationSpecificationLanguage.g:7740:2: iv_ruleMultiplicityCS= ruleMultiplicityCS EOF
+            // InternalAllocationSpecificationLanguage.g:7790:2: (iv_ruleMultiplicityCS= ruleMultiplicityCS EOF )
+            // InternalAllocationSpecificationLanguage.g:7791:2: iv_ruleMultiplicityCS= ruleMultiplicityCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMultiplicityCSRule()); 
@@ -22272,7 +22414,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleMultiplicityCS"
-    // InternalAllocationSpecificationLanguage.g:7747:1: ruleMultiplicityCS returns [EObject current=null] : (otherlv_0= '[' (this_MultiplicityBoundsCS_1= ruleMultiplicityBoundsCS | this_MultiplicityStringCS_2= ruleMultiplicityStringCS ) (otherlv_3= '|?' | ( (lv_isNullFree_4_0= '|1' ) ) )? otherlv_5= ']' ) ;
+    // InternalAllocationSpecificationLanguage.g:7798:1: ruleMultiplicityCS returns [EObject current=null] : (otherlv_0= '[' (this_MultiplicityBoundsCS_1= ruleMultiplicityBoundsCS | this_MultiplicityStringCS_2= ruleMultiplicityStringCS ) (otherlv_3= '|?' | ( (lv_isNullFree_4_0= '|1' ) ) )? otherlv_5= ']' ) ;
     public final EObject ruleMultiplicityCS() throws RecognitionException {
         EObject current = null;
 
@@ -22288,38 +22430,38 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7750:28: ( (otherlv_0= '[' (this_MultiplicityBoundsCS_1= ruleMultiplicityBoundsCS | this_MultiplicityStringCS_2= ruleMultiplicityStringCS ) (otherlv_3= '|?' | ( (lv_isNullFree_4_0= '|1' ) ) )? otherlv_5= ']' ) )
-            // InternalAllocationSpecificationLanguage.g:7751:1: (otherlv_0= '[' (this_MultiplicityBoundsCS_1= ruleMultiplicityBoundsCS | this_MultiplicityStringCS_2= ruleMultiplicityStringCS ) (otherlv_3= '|?' | ( (lv_isNullFree_4_0= '|1' ) ) )? otherlv_5= ']' )
+            // InternalAllocationSpecificationLanguage.g:7801:28: ( (otherlv_0= '[' (this_MultiplicityBoundsCS_1= ruleMultiplicityBoundsCS | this_MultiplicityStringCS_2= ruleMultiplicityStringCS ) (otherlv_3= '|?' | ( (lv_isNullFree_4_0= '|1' ) ) )? otherlv_5= ']' ) )
+            // InternalAllocationSpecificationLanguage.g:7802:1: (otherlv_0= '[' (this_MultiplicityBoundsCS_1= ruleMultiplicityBoundsCS | this_MultiplicityStringCS_2= ruleMultiplicityStringCS ) (otherlv_3= '|?' | ( (lv_isNullFree_4_0= '|1' ) ) )? otherlv_5= ']' )
             {
-            // InternalAllocationSpecificationLanguage.g:7751:1: (otherlv_0= '[' (this_MultiplicityBoundsCS_1= ruleMultiplicityBoundsCS | this_MultiplicityStringCS_2= ruleMultiplicityStringCS ) (otherlv_3= '|?' | ( (lv_isNullFree_4_0= '|1' ) ) )? otherlv_5= ']' )
-            // InternalAllocationSpecificationLanguage.g:7751:3: otherlv_0= '[' (this_MultiplicityBoundsCS_1= ruleMultiplicityBoundsCS | this_MultiplicityStringCS_2= ruleMultiplicityStringCS ) (otherlv_3= '|?' | ( (lv_isNullFree_4_0= '|1' ) ) )? otherlv_5= ']'
+            // InternalAllocationSpecificationLanguage.g:7802:1: (otherlv_0= '[' (this_MultiplicityBoundsCS_1= ruleMultiplicityBoundsCS | this_MultiplicityStringCS_2= ruleMultiplicityStringCS ) (otherlv_3= '|?' | ( (lv_isNullFree_4_0= '|1' ) ) )? otherlv_5= ']' )
+            // InternalAllocationSpecificationLanguage.g:7802:3: otherlv_0= '[' (this_MultiplicityBoundsCS_1= ruleMultiplicityBoundsCS | this_MultiplicityStringCS_2= ruleMultiplicityStringCS ) (otherlv_3= '|?' | ( (lv_isNullFree_4_0= '|1' ) ) )? otherlv_5= ']'
             {
-            otherlv_0=(Token)match(input,106,FollowSets000.FOLLOW_82); if (state.failed) return current;
+            otherlv_0=(Token)match(input,106,FollowSets000.FOLLOW_83); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getMultiplicityCSAccess().getLeftSquareBracketKeyword_0());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:7755:1: (this_MultiplicityBoundsCS_1= ruleMultiplicityBoundsCS | this_MultiplicityStringCS_2= ruleMultiplicityStringCS )
-            int alt123=2;
-            int LA123_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:7806:1: (this_MultiplicityBoundsCS_1= ruleMultiplicityBoundsCS | this_MultiplicityStringCS_2= ruleMultiplicityStringCS )
+            int alt124=2;
+            int LA124_0 = input.LA(1);
 
-            if ( (LA123_0==RULE_INT) ) {
-                alt123=1;
+            if ( (LA124_0==RULE_INT) ) {
+                alt124=1;
             }
-            else if ( (LA123_0==42||LA123_0==63||LA123_0==76) ) {
-                alt123=2;
+            else if ( (LA124_0==42||LA124_0==63||LA124_0==76) ) {
+                alt124=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 123, 0, input);
+                    new NoViableAltException("", 124, 0, input);
 
                 throw nvae;
             }
-            switch (alt123) {
+            switch (alt124) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:7756:2: this_MultiplicityBoundsCS_1= ruleMultiplicityBoundsCS
+                    // InternalAllocationSpecificationLanguage.g:7807:2: this_MultiplicityBoundsCS_1= ruleMultiplicityBoundsCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -22331,7 +22473,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                               newCompositeNode(grammarAccess.getMultiplicityCSAccess().getMultiplicityBoundsCSParserRuleCall_1_0()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_83);
+                    pushFollow(FollowSets000.FOLLOW_84);
                     this_MultiplicityBoundsCS_1=ruleMultiplicityBoundsCS();
 
                     state._fsp--;
@@ -22346,7 +22488,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:7769:2: this_MultiplicityStringCS_2= ruleMultiplicityStringCS
+                    // InternalAllocationSpecificationLanguage.g:7820:2: this_MultiplicityStringCS_2= ruleMultiplicityStringCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -22358,7 +22500,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                               newCompositeNode(grammarAccess.getMultiplicityCSAccess().getMultiplicityStringCSParserRuleCall_1_1()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_83);
+                    pushFollow(FollowSets000.FOLLOW_84);
                     this_MultiplicityStringCS_2=ruleMultiplicityStringCS();
 
                     state._fsp--;
@@ -22375,21 +22517,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:7780:2: (otherlv_3= '|?' | ( (lv_isNullFree_4_0= '|1' ) ) )?
-            int alt124=3;
-            int LA124_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:7831:2: (otherlv_3= '|?' | ( (lv_isNullFree_4_0= '|1' ) ) )?
+            int alt125=3;
+            int LA125_0 = input.LA(1);
 
-            if ( (LA124_0==117) ) {
-                alt124=1;
+            if ( (LA125_0==117) ) {
+                alt125=1;
             }
-            else if ( (LA124_0==118) ) {
-                alt124=2;
+            else if ( (LA125_0==118) ) {
+                alt125=2;
             }
-            switch (alt124) {
+            switch (alt125) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:7780:4: otherlv_3= '|?'
+                    // InternalAllocationSpecificationLanguage.g:7831:4: otherlv_3= '|?'
                     {
-                    otherlv_3=(Token)match(input,117,FollowSets000.FOLLOW_84); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,117,FollowSets000.FOLLOW_85); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getMultiplicityCSAccess().getVerticalLineQuestionMarkKeyword_2_0());
@@ -22399,15 +22541,15 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:7785:6: ( (lv_isNullFree_4_0= '|1' ) )
+                    // InternalAllocationSpecificationLanguage.g:7836:6: ( (lv_isNullFree_4_0= '|1' ) )
                     {
-                    // InternalAllocationSpecificationLanguage.g:7785:6: ( (lv_isNullFree_4_0= '|1' ) )
-                    // InternalAllocationSpecificationLanguage.g:7786:1: (lv_isNullFree_4_0= '|1' )
+                    // InternalAllocationSpecificationLanguage.g:7836:6: ( (lv_isNullFree_4_0= '|1' ) )
+                    // InternalAllocationSpecificationLanguage.g:7837:1: (lv_isNullFree_4_0= '|1' )
                     {
-                    // InternalAllocationSpecificationLanguage.g:7786:1: (lv_isNullFree_4_0= '|1' )
-                    // InternalAllocationSpecificationLanguage.g:7787:3: lv_isNullFree_4_0= '|1'
+                    // InternalAllocationSpecificationLanguage.g:7837:1: (lv_isNullFree_4_0= '|1' )
+                    // InternalAllocationSpecificationLanguage.g:7838:3: lv_isNullFree_4_0= '|1'
                     {
-                    lv_isNullFree_4_0=(Token)match(input,118,FollowSets000.FOLLOW_84); if (state.failed) return current;
+                    lv_isNullFree_4_0=(Token)match(input,118,FollowSets000.FOLLOW_85); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_isNullFree_4_0, grammarAccess.getMultiplicityCSAccess().getIsNullFree1Keyword_2_1_0());
@@ -22462,7 +22604,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleMultiplicityStringCS"
-    // InternalAllocationSpecificationLanguage.g:7812:1: entryRuleMultiplicityStringCS returns [EObject current=null] : iv_ruleMultiplicityStringCS= ruleMultiplicityStringCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:7863:1: entryRuleMultiplicityStringCS returns [EObject current=null] : iv_ruleMultiplicityStringCS= ruleMultiplicityStringCS EOF ;
     public final EObject entryRuleMultiplicityStringCS() throws RecognitionException {
         EObject current = null;
 
@@ -22470,8 +22612,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:7813:2: (iv_ruleMultiplicityStringCS= ruleMultiplicityStringCS EOF )
-            // InternalAllocationSpecificationLanguage.g:7814:2: iv_ruleMultiplicityStringCS= ruleMultiplicityStringCS EOF
+            // InternalAllocationSpecificationLanguage.g:7864:2: (iv_ruleMultiplicityStringCS= ruleMultiplicityStringCS EOF )
+            // InternalAllocationSpecificationLanguage.g:7865:2: iv_ruleMultiplicityStringCS= ruleMultiplicityStringCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMultiplicityStringCSRule()); 
@@ -22502,7 +22644,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleMultiplicityStringCS"
-    // InternalAllocationSpecificationLanguage.g:7821:1: ruleMultiplicityStringCS returns [EObject current=null] : ( ( (lv_stringBounds_0_1= '*' | lv_stringBounds_0_2= '+' | lv_stringBounds_0_3= '?' ) ) ) ;
+    // InternalAllocationSpecificationLanguage.g:7872:1: ruleMultiplicityStringCS returns [EObject current=null] : ( ( (lv_stringBounds_0_1= '*' | lv_stringBounds_0_2= '+' | lv_stringBounds_0_3= '?' ) ) ) ;
     public final EObject ruleMultiplicityStringCS() throws RecognitionException {
         EObject current = null;
 
@@ -22513,44 +22655,44 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7824:28: ( ( ( (lv_stringBounds_0_1= '*' | lv_stringBounds_0_2= '+' | lv_stringBounds_0_3= '?' ) ) ) )
-            // InternalAllocationSpecificationLanguage.g:7825:1: ( ( (lv_stringBounds_0_1= '*' | lv_stringBounds_0_2= '+' | lv_stringBounds_0_3= '?' ) ) )
+            // InternalAllocationSpecificationLanguage.g:7875:28: ( ( ( (lv_stringBounds_0_1= '*' | lv_stringBounds_0_2= '+' | lv_stringBounds_0_3= '?' ) ) ) )
+            // InternalAllocationSpecificationLanguage.g:7876:1: ( ( (lv_stringBounds_0_1= '*' | lv_stringBounds_0_2= '+' | lv_stringBounds_0_3= '?' ) ) )
             {
-            // InternalAllocationSpecificationLanguage.g:7825:1: ( ( (lv_stringBounds_0_1= '*' | lv_stringBounds_0_2= '+' | lv_stringBounds_0_3= '?' ) ) )
-            // InternalAllocationSpecificationLanguage.g:7826:1: ( (lv_stringBounds_0_1= '*' | lv_stringBounds_0_2= '+' | lv_stringBounds_0_3= '?' ) )
+            // InternalAllocationSpecificationLanguage.g:7876:1: ( ( (lv_stringBounds_0_1= '*' | lv_stringBounds_0_2= '+' | lv_stringBounds_0_3= '?' ) ) )
+            // InternalAllocationSpecificationLanguage.g:7877:1: ( (lv_stringBounds_0_1= '*' | lv_stringBounds_0_2= '+' | lv_stringBounds_0_3= '?' ) )
             {
-            // InternalAllocationSpecificationLanguage.g:7826:1: ( (lv_stringBounds_0_1= '*' | lv_stringBounds_0_2= '+' | lv_stringBounds_0_3= '?' ) )
-            // InternalAllocationSpecificationLanguage.g:7827:1: (lv_stringBounds_0_1= '*' | lv_stringBounds_0_2= '+' | lv_stringBounds_0_3= '?' )
+            // InternalAllocationSpecificationLanguage.g:7877:1: ( (lv_stringBounds_0_1= '*' | lv_stringBounds_0_2= '+' | lv_stringBounds_0_3= '?' ) )
+            // InternalAllocationSpecificationLanguage.g:7878:1: (lv_stringBounds_0_1= '*' | lv_stringBounds_0_2= '+' | lv_stringBounds_0_3= '?' )
             {
-            // InternalAllocationSpecificationLanguage.g:7827:1: (lv_stringBounds_0_1= '*' | lv_stringBounds_0_2= '+' | lv_stringBounds_0_3= '?' )
-            int alt125=3;
+            // InternalAllocationSpecificationLanguage.g:7878:1: (lv_stringBounds_0_1= '*' | lv_stringBounds_0_2= '+' | lv_stringBounds_0_3= '?' )
+            int alt126=3;
             switch ( input.LA(1) ) {
             case 76:
                 {
-                alt125=1;
+                alt126=1;
                 }
                 break;
             case 42:
                 {
-                alt125=2;
+                alt126=2;
                 }
                 break;
             case 63:
                 {
-                alt125=3;
+                alt126=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 125, 0, input);
+                    new NoViableAltException("", 126, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt125) {
+            switch (alt126) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:7828:3: lv_stringBounds_0_1= '*'
+                    // InternalAllocationSpecificationLanguage.g:7879:3: lv_stringBounds_0_1= '*'
                     {
                     lv_stringBounds_0_1=(Token)match(input,76,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -22570,7 +22712,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:7840:8: lv_stringBounds_0_2= '+'
+                    // InternalAllocationSpecificationLanguage.g:7891:8: lv_stringBounds_0_2= '+'
                     {
                     lv_stringBounds_0_2=(Token)match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -22590,7 +22732,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 3 :
-                    // InternalAllocationSpecificationLanguage.g:7852:8: lv_stringBounds_0_3= '?'
+                    // InternalAllocationSpecificationLanguage.g:7903:8: lv_stringBounds_0_3= '?'
                     {
                     lv_stringBounds_0_3=(Token)match(input,63,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -22638,7 +22780,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRulePathNameCS"
-    // InternalAllocationSpecificationLanguage.g:7875:1: entryRulePathNameCS returns [EObject current=null] : iv_rulePathNameCS= rulePathNameCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:7926:1: entryRulePathNameCS returns [EObject current=null] : iv_rulePathNameCS= rulePathNameCS EOF ;
     public final EObject entryRulePathNameCS() throws RecognitionException {
         EObject current = null;
 
@@ -22646,8 +22788,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:7876:2: (iv_rulePathNameCS= rulePathNameCS EOF )
-            // InternalAllocationSpecificationLanguage.g:7877:2: iv_rulePathNameCS= rulePathNameCS EOF
+            // InternalAllocationSpecificationLanguage.g:7927:2: (iv_rulePathNameCS= rulePathNameCS EOF )
+            // InternalAllocationSpecificationLanguage.g:7928:2: iv_rulePathNameCS= rulePathNameCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPathNameCSRule()); 
@@ -22678,7 +22820,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "rulePathNameCS"
-    // InternalAllocationSpecificationLanguage.g:7884:1: rulePathNameCS returns [EObject current=null] : ( ( (lv_ownedPathElements_0_0= ruleFirstPathElementCS ) ) (otherlv_1= '::' ( (lv_ownedPathElements_2_0= ruleNextPathElementCS ) ) )* ) ;
+    // InternalAllocationSpecificationLanguage.g:7935:1: rulePathNameCS returns [EObject current=null] : ( ( (lv_ownedPathElements_0_0= ruleFirstPathElementCS ) ) (otherlv_1= '::' ( (lv_ownedPathElements_2_0= ruleNextPathElementCS ) ) )* ) ;
     public final EObject rulePathNameCS() throws RecognitionException {
         EObject current = null;
 
@@ -22691,17 +22833,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7887:28: ( ( ( (lv_ownedPathElements_0_0= ruleFirstPathElementCS ) ) (otherlv_1= '::' ( (lv_ownedPathElements_2_0= ruleNextPathElementCS ) ) )* ) )
-            // InternalAllocationSpecificationLanguage.g:7888:1: ( ( (lv_ownedPathElements_0_0= ruleFirstPathElementCS ) ) (otherlv_1= '::' ( (lv_ownedPathElements_2_0= ruleNextPathElementCS ) ) )* )
+            // InternalAllocationSpecificationLanguage.g:7938:28: ( ( ( (lv_ownedPathElements_0_0= ruleFirstPathElementCS ) ) (otherlv_1= '::' ( (lv_ownedPathElements_2_0= ruleNextPathElementCS ) ) )* ) )
+            // InternalAllocationSpecificationLanguage.g:7939:1: ( ( (lv_ownedPathElements_0_0= ruleFirstPathElementCS ) ) (otherlv_1= '::' ( (lv_ownedPathElements_2_0= ruleNextPathElementCS ) ) )* )
             {
-            // InternalAllocationSpecificationLanguage.g:7888:1: ( ( (lv_ownedPathElements_0_0= ruleFirstPathElementCS ) ) (otherlv_1= '::' ( (lv_ownedPathElements_2_0= ruleNextPathElementCS ) ) )* )
-            // InternalAllocationSpecificationLanguage.g:7888:2: ( (lv_ownedPathElements_0_0= ruleFirstPathElementCS ) ) (otherlv_1= '::' ( (lv_ownedPathElements_2_0= ruleNextPathElementCS ) ) )*
+            // InternalAllocationSpecificationLanguage.g:7939:1: ( ( (lv_ownedPathElements_0_0= ruleFirstPathElementCS ) ) (otherlv_1= '::' ( (lv_ownedPathElements_2_0= ruleNextPathElementCS ) ) )* )
+            // InternalAllocationSpecificationLanguage.g:7939:2: ( (lv_ownedPathElements_0_0= ruleFirstPathElementCS ) ) (otherlv_1= '::' ( (lv_ownedPathElements_2_0= ruleNextPathElementCS ) ) )*
             {
-            // InternalAllocationSpecificationLanguage.g:7888:2: ( (lv_ownedPathElements_0_0= ruleFirstPathElementCS ) )
-            // InternalAllocationSpecificationLanguage.g:7889:1: (lv_ownedPathElements_0_0= ruleFirstPathElementCS )
+            // InternalAllocationSpecificationLanguage.g:7939:2: ( (lv_ownedPathElements_0_0= ruleFirstPathElementCS ) )
+            // InternalAllocationSpecificationLanguage.g:7940:1: (lv_ownedPathElements_0_0= ruleFirstPathElementCS )
             {
-            // InternalAllocationSpecificationLanguage.g:7889:1: (lv_ownedPathElements_0_0= ruleFirstPathElementCS )
-            // InternalAllocationSpecificationLanguage.g:7890:3: lv_ownedPathElements_0_0= ruleFirstPathElementCS
+            // InternalAllocationSpecificationLanguage.g:7940:1: (lv_ownedPathElements_0_0= ruleFirstPathElementCS )
+            // InternalAllocationSpecificationLanguage.g:7941:3: lv_ownedPathElements_0_0= ruleFirstPathElementCS
             {
             if ( state.backtracking==0 ) {
                
@@ -22732,20 +22874,20 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:7906:2: (otherlv_1= '::' ( (lv_ownedPathElements_2_0= ruleNextPathElementCS ) ) )*
-            loop126:
+            // InternalAllocationSpecificationLanguage.g:7957:2: (otherlv_1= '::' ( (lv_ownedPathElements_2_0= ruleNextPathElementCS ) ) )*
+            loop127:
             do {
-                int alt126=2;
-                int LA126_0 = input.LA(1);
+                int alt127=2;
+                int LA127_0 = input.LA(1);
 
-                if ( (LA126_0==91) ) {
-                    alt126=1;
+                if ( (LA127_0==91) ) {
+                    alt127=1;
                 }
 
 
-                switch (alt126) {
+                switch (alt127) {
             	case 1 :
-            	    // InternalAllocationSpecificationLanguage.g:7906:4: otherlv_1= '::' ( (lv_ownedPathElements_2_0= ruleNextPathElementCS ) )
+            	    // InternalAllocationSpecificationLanguage.g:7957:4: otherlv_1= '::' ( (lv_ownedPathElements_2_0= ruleNextPathElementCS ) )
             	    {
             	    otherlv_1=(Token)match(input,91,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -22753,11 +22895,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	          	newLeafNode(otherlv_1, grammarAccess.getPathNameCSAccess().getColonColonKeyword_1_0());
             	          
             	    }
-            	    // InternalAllocationSpecificationLanguage.g:7910:1: ( (lv_ownedPathElements_2_0= ruleNextPathElementCS ) )
-            	    // InternalAllocationSpecificationLanguage.g:7911:1: (lv_ownedPathElements_2_0= ruleNextPathElementCS )
+            	    // InternalAllocationSpecificationLanguage.g:7961:1: ( (lv_ownedPathElements_2_0= ruleNextPathElementCS ) )
+            	    // InternalAllocationSpecificationLanguage.g:7962:1: (lv_ownedPathElements_2_0= ruleNextPathElementCS )
             	    {
-            	    // InternalAllocationSpecificationLanguage.g:7911:1: (lv_ownedPathElements_2_0= ruleNextPathElementCS )
-            	    // InternalAllocationSpecificationLanguage.g:7912:3: lv_ownedPathElements_2_0= ruleNextPathElementCS
+            	    // InternalAllocationSpecificationLanguage.g:7962:1: (lv_ownedPathElements_2_0= ruleNextPathElementCS )
+            	    // InternalAllocationSpecificationLanguage.g:7963:3: lv_ownedPathElements_2_0= ruleNextPathElementCS
             	    {
             	    if ( state.backtracking==0 ) {
             	       
@@ -22793,7 +22935,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop126;
+            	    break loop127;
                 }
             } while (true);
 
@@ -22820,7 +22962,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleFirstPathElementCS"
-    // InternalAllocationSpecificationLanguage.g:7936:1: entryRuleFirstPathElementCS returns [EObject current=null] : iv_ruleFirstPathElementCS= ruleFirstPathElementCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:7987:1: entryRuleFirstPathElementCS returns [EObject current=null] : iv_ruleFirstPathElementCS= ruleFirstPathElementCS EOF ;
     public final EObject entryRuleFirstPathElementCS() throws RecognitionException {
         EObject current = null;
 
@@ -22828,8 +22970,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:7937:2: (iv_ruleFirstPathElementCS= ruleFirstPathElementCS EOF )
-            // InternalAllocationSpecificationLanguage.g:7938:2: iv_ruleFirstPathElementCS= ruleFirstPathElementCS EOF
+            // InternalAllocationSpecificationLanguage.g:7988:2: (iv_ruleFirstPathElementCS= ruleFirstPathElementCS EOF )
+            // InternalAllocationSpecificationLanguage.g:7989:2: iv_ruleFirstPathElementCS= ruleFirstPathElementCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFirstPathElementCSRule()); 
@@ -22860,21 +23002,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleFirstPathElementCS"
-    // InternalAllocationSpecificationLanguage.g:7945:1: ruleFirstPathElementCS returns [EObject current=null] : ( ( ruleUnrestrictedName ) ) ;
+    // InternalAllocationSpecificationLanguage.g:7996:1: ruleFirstPathElementCS returns [EObject current=null] : ( ( ruleUnrestrictedName ) ) ;
     public final EObject ruleFirstPathElementCS() throws RecognitionException {
         EObject current = null;
 
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7948:28: ( ( ( ruleUnrestrictedName ) ) )
-            // InternalAllocationSpecificationLanguage.g:7949:1: ( ( ruleUnrestrictedName ) )
+            // InternalAllocationSpecificationLanguage.g:7999:28: ( ( ( ruleUnrestrictedName ) ) )
+            // InternalAllocationSpecificationLanguage.g:8000:1: ( ( ruleUnrestrictedName ) )
             {
-            // InternalAllocationSpecificationLanguage.g:7949:1: ( ( ruleUnrestrictedName ) )
-            // InternalAllocationSpecificationLanguage.g:7950:1: ( ruleUnrestrictedName )
+            // InternalAllocationSpecificationLanguage.g:8000:1: ( ( ruleUnrestrictedName ) )
+            // InternalAllocationSpecificationLanguage.g:8001:1: ( ruleUnrestrictedName )
             {
-            // InternalAllocationSpecificationLanguage.g:7950:1: ( ruleUnrestrictedName )
-            // InternalAllocationSpecificationLanguage.g:7951:3: ruleUnrestrictedName
+            // InternalAllocationSpecificationLanguage.g:8001:1: ( ruleUnrestrictedName )
+            // InternalAllocationSpecificationLanguage.g:8002:3: ruleUnrestrictedName
             {
             if ( state.backtracking==0 ) {
                
@@ -22929,7 +23071,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleNextPathElementCS"
-    // InternalAllocationSpecificationLanguage.g:7975:1: entryRuleNextPathElementCS returns [EObject current=null] : iv_ruleNextPathElementCS= ruleNextPathElementCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:8026:1: entryRuleNextPathElementCS returns [EObject current=null] : iv_ruleNextPathElementCS= ruleNextPathElementCS EOF ;
     public final EObject entryRuleNextPathElementCS() throws RecognitionException {
         EObject current = null;
 
@@ -22937,8 +23079,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:7976:2: (iv_ruleNextPathElementCS= ruleNextPathElementCS EOF )
-            // InternalAllocationSpecificationLanguage.g:7977:2: iv_ruleNextPathElementCS= ruleNextPathElementCS EOF
+            // InternalAllocationSpecificationLanguage.g:8027:2: (iv_ruleNextPathElementCS= ruleNextPathElementCS EOF )
+            // InternalAllocationSpecificationLanguage.g:8028:2: iv_ruleNextPathElementCS= ruleNextPathElementCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNextPathElementCSRule()); 
@@ -22969,21 +23111,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleNextPathElementCS"
-    // InternalAllocationSpecificationLanguage.g:7984:1: ruleNextPathElementCS returns [EObject current=null] : ( ( ruleUnreservedName ) ) ;
+    // InternalAllocationSpecificationLanguage.g:8035:1: ruleNextPathElementCS returns [EObject current=null] : ( ( ruleUnreservedName ) ) ;
     public final EObject ruleNextPathElementCS() throws RecognitionException {
         EObject current = null;
 
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7987:28: ( ( ( ruleUnreservedName ) ) )
-            // InternalAllocationSpecificationLanguage.g:7988:1: ( ( ruleUnreservedName ) )
+            // InternalAllocationSpecificationLanguage.g:8038:28: ( ( ( ruleUnreservedName ) ) )
+            // InternalAllocationSpecificationLanguage.g:8039:1: ( ( ruleUnreservedName ) )
             {
-            // InternalAllocationSpecificationLanguage.g:7988:1: ( ( ruleUnreservedName ) )
-            // InternalAllocationSpecificationLanguage.g:7989:1: ( ruleUnreservedName )
+            // InternalAllocationSpecificationLanguage.g:8039:1: ( ( ruleUnreservedName ) )
+            // InternalAllocationSpecificationLanguage.g:8040:1: ( ruleUnreservedName )
             {
-            // InternalAllocationSpecificationLanguage.g:7989:1: ( ruleUnreservedName )
-            // InternalAllocationSpecificationLanguage.g:7990:3: ruleUnreservedName
+            // InternalAllocationSpecificationLanguage.g:8040:1: ( ruleUnreservedName )
+            // InternalAllocationSpecificationLanguage.g:8041:3: ruleUnreservedName
             {
             if ( state.backtracking==0 ) {
                
@@ -23038,7 +23180,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleTemplateBindingCS"
-    // InternalAllocationSpecificationLanguage.g:8014:1: entryRuleTemplateBindingCS returns [EObject current=null] : iv_ruleTemplateBindingCS= ruleTemplateBindingCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:8065:1: entryRuleTemplateBindingCS returns [EObject current=null] : iv_ruleTemplateBindingCS= ruleTemplateBindingCS EOF ;
     public final EObject entryRuleTemplateBindingCS() throws RecognitionException {
         EObject current = null;
 
@@ -23046,8 +23188,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:8015:2: (iv_ruleTemplateBindingCS= ruleTemplateBindingCS EOF )
-            // InternalAllocationSpecificationLanguage.g:8016:2: iv_ruleTemplateBindingCS= ruleTemplateBindingCS EOF
+            // InternalAllocationSpecificationLanguage.g:8066:2: (iv_ruleTemplateBindingCS= ruleTemplateBindingCS EOF )
+            // InternalAllocationSpecificationLanguage.g:8067:2: iv_ruleTemplateBindingCS= ruleTemplateBindingCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTemplateBindingCSRule()); 
@@ -23078,7 +23220,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleTemplateBindingCS"
-    // InternalAllocationSpecificationLanguage.g:8023:1: ruleTemplateBindingCS returns [EObject current=null] : ( ( (lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS ) ) (otherlv_1= ',' ( (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS ) ) )* ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )? ) ;
+    // InternalAllocationSpecificationLanguage.g:8074:1: ruleTemplateBindingCS returns [EObject current=null] : ( ( (lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS ) ) (otherlv_1= ',' ( (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS ) ) )* ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )? ) ;
     public final EObject ruleTemplateBindingCS() throws RecognitionException {
         EObject current = null;
 
@@ -23093,24 +23235,24 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:8026:28: ( ( ( (lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS ) ) (otherlv_1= ',' ( (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS ) ) )* ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )? ) )
-            // InternalAllocationSpecificationLanguage.g:8027:1: ( ( (lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS ) ) (otherlv_1= ',' ( (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS ) ) )* ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )? )
+            // InternalAllocationSpecificationLanguage.g:8077:28: ( ( ( (lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS ) ) (otherlv_1= ',' ( (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS ) ) )* ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )? ) )
+            // InternalAllocationSpecificationLanguage.g:8078:1: ( ( (lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS ) ) (otherlv_1= ',' ( (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS ) ) )* ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )? )
             {
-            // InternalAllocationSpecificationLanguage.g:8027:1: ( ( (lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS ) ) (otherlv_1= ',' ( (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS ) ) )* ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )? )
-            // InternalAllocationSpecificationLanguage.g:8027:2: ( (lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS ) ) (otherlv_1= ',' ( (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS ) ) )* ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )?
+            // InternalAllocationSpecificationLanguage.g:8078:1: ( ( (lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS ) ) (otherlv_1= ',' ( (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS ) ) )* ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )? )
+            // InternalAllocationSpecificationLanguage.g:8078:2: ( (lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS ) ) (otherlv_1= ',' ( (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS ) ) )* ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )?
             {
-            // InternalAllocationSpecificationLanguage.g:8027:2: ( (lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS ) )
-            // InternalAllocationSpecificationLanguage.g:8028:1: (lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS )
+            // InternalAllocationSpecificationLanguage.g:8078:2: ( (lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS ) )
+            // InternalAllocationSpecificationLanguage.g:8079:1: (lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS )
             {
-            // InternalAllocationSpecificationLanguage.g:8028:1: (lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS )
-            // InternalAllocationSpecificationLanguage.g:8029:3: lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS
+            // InternalAllocationSpecificationLanguage.g:8079:1: (lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS )
+            // InternalAllocationSpecificationLanguage.g:8080:3: lv_ownedSubstitutions_0_0= ruleTemplateParameterSubstitutionCS
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getTemplateBindingCSAccess().getOwnedSubstitutionsTemplateParameterSubstitutionCSParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_85);
+            pushFollow(FollowSets000.FOLLOW_86);
             lv_ownedSubstitutions_0_0=ruleTemplateParameterSubstitutionCS();
 
             state._fsp--;
@@ -23134,39 +23276,39 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:8045:2: (otherlv_1= ',' ( (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS ) ) )*
-            loop127:
+            // InternalAllocationSpecificationLanguage.g:8096:2: (otherlv_1= ',' ( (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS ) ) )*
+            loop128:
             do {
-                int alt127=2;
-                int LA127_0 = input.LA(1);
+                int alt128=2;
+                int LA128_0 = input.LA(1);
 
-                if ( (LA127_0==30) ) {
-                    alt127=1;
+                if ( (LA128_0==30) ) {
+                    alt128=1;
                 }
 
 
-                switch (alt127) {
+                switch (alt128) {
             	case 1 :
-            	    // InternalAllocationSpecificationLanguage.g:8045:4: otherlv_1= ',' ( (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS ) )
+            	    // InternalAllocationSpecificationLanguage.g:8096:4: otherlv_1= ',' ( (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS ) )
             	    {
-            	    otherlv_1=(Token)match(input,30,FollowSets000.FOLLOW_86); if (state.failed) return current;
+            	    otherlv_1=(Token)match(input,30,FollowSets000.FOLLOW_87); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_1, grammarAccess.getTemplateBindingCSAccess().getCommaKeyword_1_0());
             	          
             	    }
-            	    // InternalAllocationSpecificationLanguage.g:8049:1: ( (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS ) )
-            	    // InternalAllocationSpecificationLanguage.g:8050:1: (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS )
+            	    // InternalAllocationSpecificationLanguage.g:8100:1: ( (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS ) )
+            	    // InternalAllocationSpecificationLanguage.g:8101:1: (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS )
             	    {
-            	    // InternalAllocationSpecificationLanguage.g:8050:1: (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS )
-            	    // InternalAllocationSpecificationLanguage.g:8051:3: lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS
+            	    // InternalAllocationSpecificationLanguage.g:8101:1: (lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS )
+            	    // InternalAllocationSpecificationLanguage.g:8102:3: lv_ownedSubstitutions_2_0= ruleTemplateParameterSubstitutionCS
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getTemplateBindingCSAccess().getOwnedSubstitutionsTemplateParameterSubstitutionCSParserRuleCall_1_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_85);
+            	    pushFollow(FollowSets000.FOLLOW_86);
             	    lv_ownedSubstitutions_2_0=ruleTemplateParameterSubstitutionCS();
 
             	    state._fsp--;
@@ -23195,23 +23337,23 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             	    break;
 
             	default :
-            	    break loop127;
+            	    break loop128;
                 }
             } while (true);
 
-            // InternalAllocationSpecificationLanguage.g:8067:4: ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )?
-            int alt128=2;
-            int LA128_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:8118:4: ( (lv_ownedMultiplicity_3_0= ruleMultiplicityCS ) )?
+            int alt129=2;
+            int LA129_0 = input.LA(1);
 
-            if ( (LA128_0==106) ) {
-                alt128=1;
+            if ( (LA129_0==106) ) {
+                alt129=1;
             }
-            switch (alt128) {
+            switch (alt129) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:8068:1: (lv_ownedMultiplicity_3_0= ruleMultiplicityCS )
+                    // InternalAllocationSpecificationLanguage.g:8119:1: (lv_ownedMultiplicity_3_0= ruleMultiplicityCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:8068:1: (lv_ownedMultiplicity_3_0= ruleMultiplicityCS )
-                    // InternalAllocationSpecificationLanguage.g:8069:3: lv_ownedMultiplicity_3_0= ruleMultiplicityCS
+                    // InternalAllocationSpecificationLanguage.g:8119:1: (lv_ownedMultiplicity_3_0= ruleMultiplicityCS )
+                    // InternalAllocationSpecificationLanguage.g:8120:3: lv_ownedMultiplicity_3_0= ruleMultiplicityCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -23268,7 +23410,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleTemplateParameterSubstitutionCS"
-    // InternalAllocationSpecificationLanguage.g:8093:1: entryRuleTemplateParameterSubstitutionCS returns [EObject current=null] : iv_ruleTemplateParameterSubstitutionCS= ruleTemplateParameterSubstitutionCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:8144:1: entryRuleTemplateParameterSubstitutionCS returns [EObject current=null] : iv_ruleTemplateParameterSubstitutionCS= ruleTemplateParameterSubstitutionCS EOF ;
     public final EObject entryRuleTemplateParameterSubstitutionCS() throws RecognitionException {
         EObject current = null;
 
@@ -23276,8 +23418,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:8094:2: (iv_ruleTemplateParameterSubstitutionCS= ruleTemplateParameterSubstitutionCS EOF )
-            // InternalAllocationSpecificationLanguage.g:8095:2: iv_ruleTemplateParameterSubstitutionCS= ruleTemplateParameterSubstitutionCS EOF
+            // InternalAllocationSpecificationLanguage.g:8145:2: (iv_ruleTemplateParameterSubstitutionCS= ruleTemplateParameterSubstitutionCS EOF )
+            // InternalAllocationSpecificationLanguage.g:8146:2: iv_ruleTemplateParameterSubstitutionCS= ruleTemplateParameterSubstitutionCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTemplateParameterSubstitutionCSRule()); 
@@ -23308,7 +23450,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleTemplateParameterSubstitutionCS"
-    // InternalAllocationSpecificationLanguage.g:8102:1: ruleTemplateParameterSubstitutionCS returns [EObject current=null] : ( (lv_ownedActualParameter_0_0= ruleTypeRefCS ) ) ;
+    // InternalAllocationSpecificationLanguage.g:8153:1: ruleTemplateParameterSubstitutionCS returns [EObject current=null] : ( (lv_ownedActualParameter_0_0= ruleTypeRefCS ) ) ;
     public final EObject ruleTemplateParameterSubstitutionCS() throws RecognitionException {
         EObject current = null;
 
@@ -23318,14 +23460,14 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:8105:28: ( ( (lv_ownedActualParameter_0_0= ruleTypeRefCS ) ) )
-            // InternalAllocationSpecificationLanguage.g:8106:1: ( (lv_ownedActualParameter_0_0= ruleTypeRefCS ) )
+            // InternalAllocationSpecificationLanguage.g:8156:28: ( ( (lv_ownedActualParameter_0_0= ruleTypeRefCS ) ) )
+            // InternalAllocationSpecificationLanguage.g:8157:1: ( (lv_ownedActualParameter_0_0= ruleTypeRefCS ) )
             {
-            // InternalAllocationSpecificationLanguage.g:8106:1: ( (lv_ownedActualParameter_0_0= ruleTypeRefCS ) )
-            // InternalAllocationSpecificationLanguage.g:8107:1: (lv_ownedActualParameter_0_0= ruleTypeRefCS )
+            // InternalAllocationSpecificationLanguage.g:8157:1: ( (lv_ownedActualParameter_0_0= ruleTypeRefCS ) )
+            // InternalAllocationSpecificationLanguage.g:8158:1: (lv_ownedActualParameter_0_0= ruleTypeRefCS )
             {
-            // InternalAllocationSpecificationLanguage.g:8107:1: (lv_ownedActualParameter_0_0= ruleTypeRefCS )
-            // InternalAllocationSpecificationLanguage.g:8108:3: lv_ownedActualParameter_0_0= ruleTypeRefCS
+            // InternalAllocationSpecificationLanguage.g:8158:1: (lv_ownedActualParameter_0_0= ruleTypeRefCS )
+            // InternalAllocationSpecificationLanguage.g:8159:3: lv_ownedActualParameter_0_0= ruleTypeRefCS
             {
             if ( state.backtracking==0 ) {
                
@@ -23376,7 +23518,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleTypeParameterCS"
-    // InternalAllocationSpecificationLanguage.g:8132:1: entryRuleTypeParameterCS returns [EObject current=null] : iv_ruleTypeParameterCS= ruleTypeParameterCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:8183:1: entryRuleTypeParameterCS returns [EObject current=null] : iv_ruleTypeParameterCS= ruleTypeParameterCS EOF ;
     public final EObject entryRuleTypeParameterCS() throws RecognitionException {
         EObject current = null;
 
@@ -23384,8 +23526,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:8133:2: (iv_ruleTypeParameterCS= ruleTypeParameterCS EOF )
-            // InternalAllocationSpecificationLanguage.g:8134:2: iv_ruleTypeParameterCS= ruleTypeParameterCS EOF
+            // InternalAllocationSpecificationLanguage.g:8184:2: (iv_ruleTypeParameterCS= ruleTypeParameterCS EOF )
+            // InternalAllocationSpecificationLanguage.g:8185:2: iv_ruleTypeParameterCS= ruleTypeParameterCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTypeParameterCSRule()); 
@@ -23416,7 +23558,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleTypeParameterCS"
-    // InternalAllocationSpecificationLanguage.g:8141:1: ruleTypeParameterCS returns [EObject current=null] : ( ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= 'extends' ( (lv_ownedExtends_2_0= ruleTypedRefCS ) ) (otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) ) )* )? ) ;
+    // InternalAllocationSpecificationLanguage.g:8192:1: ruleTypeParameterCS returns [EObject current=null] : ( ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= 'extends' ( (lv_ownedExtends_2_0= ruleTypedRefCS ) ) (otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) ) )* )? ) ;
     public final EObject ruleTypeParameterCS() throws RecognitionException {
         EObject current = null;
 
@@ -23432,24 +23574,24 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:8144:28: ( ( ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= 'extends' ( (lv_ownedExtends_2_0= ruleTypedRefCS ) ) (otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) ) )* )? ) )
-            // InternalAllocationSpecificationLanguage.g:8145:1: ( ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= 'extends' ( (lv_ownedExtends_2_0= ruleTypedRefCS ) ) (otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) ) )* )? )
+            // InternalAllocationSpecificationLanguage.g:8195:28: ( ( ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= 'extends' ( (lv_ownedExtends_2_0= ruleTypedRefCS ) ) (otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) ) )* )? ) )
+            // InternalAllocationSpecificationLanguage.g:8196:1: ( ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= 'extends' ( (lv_ownedExtends_2_0= ruleTypedRefCS ) ) (otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) ) )* )? )
             {
-            // InternalAllocationSpecificationLanguage.g:8145:1: ( ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= 'extends' ( (lv_ownedExtends_2_0= ruleTypedRefCS ) ) (otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) ) )* )? )
-            // InternalAllocationSpecificationLanguage.g:8145:2: ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= 'extends' ( (lv_ownedExtends_2_0= ruleTypedRefCS ) ) (otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) ) )* )?
+            // InternalAllocationSpecificationLanguage.g:8196:1: ( ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= 'extends' ( (lv_ownedExtends_2_0= ruleTypedRefCS ) ) (otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) ) )* )? )
+            // InternalAllocationSpecificationLanguage.g:8196:2: ( (lv_name_0_0= ruleUnrestrictedName ) ) (otherlv_1= 'extends' ( (lv_ownedExtends_2_0= ruleTypedRefCS ) ) (otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) ) )* )?
             {
-            // InternalAllocationSpecificationLanguage.g:8145:2: ( (lv_name_0_0= ruleUnrestrictedName ) )
-            // InternalAllocationSpecificationLanguage.g:8146:1: (lv_name_0_0= ruleUnrestrictedName )
+            // InternalAllocationSpecificationLanguage.g:8196:2: ( (lv_name_0_0= ruleUnrestrictedName ) )
+            // InternalAllocationSpecificationLanguage.g:8197:1: (lv_name_0_0= ruleUnrestrictedName )
             {
-            // InternalAllocationSpecificationLanguage.g:8146:1: (lv_name_0_0= ruleUnrestrictedName )
-            // InternalAllocationSpecificationLanguage.g:8147:3: lv_name_0_0= ruleUnrestrictedName
+            // InternalAllocationSpecificationLanguage.g:8197:1: (lv_name_0_0= ruleUnrestrictedName )
+            // InternalAllocationSpecificationLanguage.g:8198:3: lv_name_0_0= ruleUnrestrictedName
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getTypeParameterCSAccess().getNameUnrestrictedNameParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_87);
+            pushFollow(FollowSets000.FOLLOW_88);
             lv_name_0_0=ruleUnrestrictedName();
 
             state._fsp--;
@@ -23473,16 +23615,16 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:8163:2: (otherlv_1= 'extends' ( (lv_ownedExtends_2_0= ruleTypedRefCS ) ) (otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) ) )* )?
-            int alt130=2;
-            int LA130_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:8214:2: (otherlv_1= 'extends' ( (lv_ownedExtends_2_0= ruleTypedRefCS ) ) (otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) ) )* )?
+            int alt131=2;
+            int LA131_0 = input.LA(1);
 
-            if ( (LA130_0==119) ) {
-                alt130=1;
+            if ( (LA131_0==119) ) {
+                alt131=1;
             }
-            switch (alt130) {
+            switch (alt131) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:8163:4: otherlv_1= 'extends' ( (lv_ownedExtends_2_0= ruleTypedRefCS ) ) (otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) ) )*
+                    // InternalAllocationSpecificationLanguage.g:8214:4: otherlv_1= 'extends' ( (lv_ownedExtends_2_0= ruleTypedRefCS ) ) (otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) ) )*
                     {
                     otherlv_1=(Token)match(input,119,FollowSets000.FOLLOW_11); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -23490,18 +23632,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                           	newLeafNode(otherlv_1, grammarAccess.getTypeParameterCSAccess().getExtendsKeyword_1_0());
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:8167:1: ( (lv_ownedExtends_2_0= ruleTypedRefCS ) )
-                    // InternalAllocationSpecificationLanguage.g:8168:1: (lv_ownedExtends_2_0= ruleTypedRefCS )
+                    // InternalAllocationSpecificationLanguage.g:8218:1: ( (lv_ownedExtends_2_0= ruleTypedRefCS ) )
+                    // InternalAllocationSpecificationLanguage.g:8219:1: (lv_ownedExtends_2_0= ruleTypedRefCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:8168:1: (lv_ownedExtends_2_0= ruleTypedRefCS )
-                    // InternalAllocationSpecificationLanguage.g:8169:3: lv_ownedExtends_2_0= ruleTypedRefCS
+                    // InternalAllocationSpecificationLanguage.g:8219:1: (lv_ownedExtends_2_0= ruleTypedRefCS )
+                    // InternalAllocationSpecificationLanguage.g:8220:3: lv_ownedExtends_2_0= ruleTypedRefCS
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getTypeParameterCSAccess().getOwnedExtendsTypedRefCSParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_88);
+                    pushFollow(FollowSets000.FOLLOW_89);
                     lv_ownedExtends_2_0=ruleTypedRefCS();
 
                     state._fsp--;
@@ -23525,20 +23667,20 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                     }
 
-                    // InternalAllocationSpecificationLanguage.g:8185:2: (otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) ) )*
-                    loop129:
+                    // InternalAllocationSpecificationLanguage.g:8236:2: (otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) ) )*
+                    loop130:
                     do {
-                        int alt129=2;
-                        int LA129_0 = input.LA(1);
+                        int alt130=2;
+                        int LA130_0 = input.LA(1);
 
-                        if ( (LA129_0==120) ) {
-                            alt129=1;
+                        if ( (LA130_0==120) ) {
+                            alt130=1;
                         }
 
 
-                        switch (alt129) {
+                        switch (alt130) {
                     	case 1 :
-                    	    // InternalAllocationSpecificationLanguage.g:8185:4: otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) )
+                    	    // InternalAllocationSpecificationLanguage.g:8236:4: otherlv_3= '&&' ( (lv_ownedExtends_4_0= ruleTypedRefCS ) )
                     	    {
                     	    otherlv_3=(Token)match(input,120,FollowSets000.FOLLOW_11); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
@@ -23546,18 +23688,18 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     	          	newLeafNode(otherlv_3, grammarAccess.getTypeParameterCSAccess().getAmpersandAmpersandKeyword_1_2_0());
                     	          
                     	    }
-                    	    // InternalAllocationSpecificationLanguage.g:8189:1: ( (lv_ownedExtends_4_0= ruleTypedRefCS ) )
-                    	    // InternalAllocationSpecificationLanguage.g:8190:1: (lv_ownedExtends_4_0= ruleTypedRefCS )
+                    	    // InternalAllocationSpecificationLanguage.g:8240:1: ( (lv_ownedExtends_4_0= ruleTypedRefCS ) )
+                    	    // InternalAllocationSpecificationLanguage.g:8241:1: (lv_ownedExtends_4_0= ruleTypedRefCS )
                     	    {
-                    	    // InternalAllocationSpecificationLanguage.g:8190:1: (lv_ownedExtends_4_0= ruleTypedRefCS )
-                    	    // InternalAllocationSpecificationLanguage.g:8191:3: lv_ownedExtends_4_0= ruleTypedRefCS
+                    	    // InternalAllocationSpecificationLanguage.g:8241:1: (lv_ownedExtends_4_0= ruleTypedRefCS )
+                    	    // InternalAllocationSpecificationLanguage.g:8242:3: lv_ownedExtends_4_0= ruleTypedRefCS
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getTypeParameterCSAccess().getOwnedExtendsTypedRefCSParserRuleCall_1_2_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FollowSets000.FOLLOW_88);
+                    	    pushFollow(FollowSets000.FOLLOW_89);
                     	    lv_ownedExtends_4_0=ruleTypedRefCS();
 
                     	    state._fsp--;
@@ -23586,7 +23728,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     	    break;
 
                     	default :
-                    	    break loop129;
+                    	    break loop130;
                         }
                     } while (true);
 
@@ -23619,7 +23761,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleTypeRefCS"
-    // InternalAllocationSpecificationLanguage.g:8215:1: entryRuleTypeRefCS returns [EObject current=null] : iv_ruleTypeRefCS= ruleTypeRefCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:8266:1: entryRuleTypeRefCS returns [EObject current=null] : iv_ruleTypeRefCS= ruleTypeRefCS EOF ;
     public final EObject entryRuleTypeRefCS() throws RecognitionException {
         EObject current = null;
 
@@ -23627,8 +23769,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:8216:2: (iv_ruleTypeRefCS= ruleTypeRefCS EOF )
-            // InternalAllocationSpecificationLanguage.g:8217:2: iv_ruleTypeRefCS= ruleTypeRefCS EOF
+            // InternalAllocationSpecificationLanguage.g:8267:2: (iv_ruleTypeRefCS= ruleTypeRefCS EOF )
+            // InternalAllocationSpecificationLanguage.g:8268:2: iv_ruleTypeRefCS= ruleTypeRefCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTypeRefCSRule()); 
@@ -23659,7 +23801,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleTypeRefCS"
-    // InternalAllocationSpecificationLanguage.g:8224:1: ruleTypeRefCS returns [EObject current=null] : (this_TypedRefCS_0= ruleTypedRefCS | this_WildcardTypeRefCS_1= ruleWildcardTypeRefCS ) ;
+    // InternalAllocationSpecificationLanguage.g:8275:1: ruleTypeRefCS returns [EObject current=null] : (this_TypedRefCS_0= ruleTypedRefCS | this_WildcardTypeRefCS_1= ruleWildcardTypeRefCS ) ;
     public final EObject ruleTypeRefCS() throws RecognitionException {
         EObject current = null;
 
@@ -23671,29 +23813,29 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:8227:28: ( (this_TypedRefCS_0= ruleTypedRefCS | this_WildcardTypeRefCS_1= ruleWildcardTypeRefCS ) )
-            // InternalAllocationSpecificationLanguage.g:8228:1: (this_TypedRefCS_0= ruleTypedRefCS | this_WildcardTypeRefCS_1= ruleWildcardTypeRefCS )
+            // InternalAllocationSpecificationLanguage.g:8278:28: ( (this_TypedRefCS_0= ruleTypedRefCS | this_WildcardTypeRefCS_1= ruleWildcardTypeRefCS ) )
+            // InternalAllocationSpecificationLanguage.g:8279:1: (this_TypedRefCS_0= ruleTypedRefCS | this_WildcardTypeRefCS_1= ruleWildcardTypeRefCS )
             {
-            // InternalAllocationSpecificationLanguage.g:8228:1: (this_TypedRefCS_0= ruleTypedRefCS | this_WildcardTypeRefCS_1= ruleWildcardTypeRefCS )
-            int alt131=2;
-            int LA131_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:8279:1: (this_TypedRefCS_0= ruleTypedRefCS | this_WildcardTypeRefCS_1= ruleWildcardTypeRefCS )
+            int alt132=2;
+            int LA132_0 = input.LA(1);
 
-            if ( ((LA131_0>=RULE_SIMPLE_ID && LA131_0<=RULE_ESCAPED_ID)||(LA131_0>=50 && LA131_0<=52)||(LA131_0>=64 && LA131_0<=73)||(LA131_0>=89 && LA131_0<=90)||(LA131_0>=92 && LA131_0<=96)) ) {
-                alt131=1;
+            if ( ((LA132_0>=RULE_SIMPLE_ID && LA132_0<=RULE_ESCAPED_ID)||(LA132_0>=50 && LA132_0<=52)||(LA132_0>=64 && LA132_0<=73)||(LA132_0>=89 && LA132_0<=90)||(LA132_0>=92 && LA132_0<=96)) ) {
+                alt132=1;
             }
-            else if ( (LA131_0==63) ) {
-                alt131=2;
+            else if ( (LA132_0==63) ) {
+                alt132=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 131, 0, input);
+                    new NoViableAltException("", 132, 0, input);
 
                 throw nvae;
             }
-            switch (alt131) {
+            switch (alt132) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:8229:2: this_TypedRefCS_0= ruleTypedRefCS
+                    // InternalAllocationSpecificationLanguage.g:8280:2: this_TypedRefCS_0= ruleTypedRefCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -23720,7 +23862,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:8242:2: this_WildcardTypeRefCS_1= ruleWildcardTypeRefCS
+                    // InternalAllocationSpecificationLanguage.g:8293:2: this_WildcardTypeRefCS_1= ruleWildcardTypeRefCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -23769,7 +23911,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleTypedTypeRefCS"
-    // InternalAllocationSpecificationLanguage.g:8261:1: entryRuleTypedTypeRefCS returns [EObject current=null] : iv_ruleTypedTypeRefCS= ruleTypedTypeRefCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:8312:1: entryRuleTypedTypeRefCS returns [EObject current=null] : iv_ruleTypedTypeRefCS= ruleTypedTypeRefCS EOF ;
     public final EObject entryRuleTypedTypeRefCS() throws RecognitionException {
         EObject current = null;
 
@@ -23777,8 +23919,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:8262:2: (iv_ruleTypedTypeRefCS= ruleTypedTypeRefCS EOF )
-            // InternalAllocationSpecificationLanguage.g:8263:2: iv_ruleTypedTypeRefCS= ruleTypedTypeRefCS EOF
+            // InternalAllocationSpecificationLanguage.g:8313:2: (iv_ruleTypedTypeRefCS= ruleTypedTypeRefCS EOF )
+            // InternalAllocationSpecificationLanguage.g:8314:2: iv_ruleTypedTypeRefCS= ruleTypedTypeRefCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTypedTypeRefCSRule()); 
@@ -23809,7 +23951,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleTypedTypeRefCS"
-    // InternalAllocationSpecificationLanguage.g:8270:1: ruleTypedTypeRefCS returns [EObject current=null] : ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) (otherlv_1= '(' ( (lv_ownedBinding_2_0= ruleTemplateBindingCS ) ) otherlv_3= ')' )? ) ;
+    // InternalAllocationSpecificationLanguage.g:8321:1: ruleTypedTypeRefCS returns [EObject current=null] : ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) (otherlv_1= '(' ( (lv_ownedBinding_2_0= ruleTemplateBindingCS ) ) otherlv_3= ')' )? ) ;
     public final EObject ruleTypedTypeRefCS() throws RecognitionException {
         EObject current = null;
 
@@ -23823,17 +23965,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:8273:28: ( ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) (otherlv_1= '(' ( (lv_ownedBinding_2_0= ruleTemplateBindingCS ) ) otherlv_3= ')' )? ) )
-            // InternalAllocationSpecificationLanguage.g:8274:1: ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) (otherlv_1= '(' ( (lv_ownedBinding_2_0= ruleTemplateBindingCS ) ) otherlv_3= ')' )? )
+            // InternalAllocationSpecificationLanguage.g:8324:28: ( ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) (otherlv_1= '(' ( (lv_ownedBinding_2_0= ruleTemplateBindingCS ) ) otherlv_3= ')' )? ) )
+            // InternalAllocationSpecificationLanguage.g:8325:1: ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) (otherlv_1= '(' ( (lv_ownedBinding_2_0= ruleTemplateBindingCS ) ) otherlv_3= ')' )? )
             {
-            // InternalAllocationSpecificationLanguage.g:8274:1: ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) (otherlv_1= '(' ( (lv_ownedBinding_2_0= ruleTemplateBindingCS ) ) otherlv_3= ')' )? )
-            // InternalAllocationSpecificationLanguage.g:8274:2: ( (lv_ownedPathName_0_0= rulePathNameCS ) ) (otherlv_1= '(' ( (lv_ownedBinding_2_0= ruleTemplateBindingCS ) ) otherlv_3= ')' )?
+            // InternalAllocationSpecificationLanguage.g:8325:1: ( ( (lv_ownedPathName_0_0= rulePathNameCS ) ) (otherlv_1= '(' ( (lv_ownedBinding_2_0= ruleTemplateBindingCS ) ) otherlv_3= ')' )? )
+            // InternalAllocationSpecificationLanguage.g:8325:2: ( (lv_ownedPathName_0_0= rulePathNameCS ) ) (otherlv_1= '(' ( (lv_ownedBinding_2_0= ruleTemplateBindingCS ) ) otherlv_3= ')' )?
             {
-            // InternalAllocationSpecificationLanguage.g:8274:2: ( (lv_ownedPathName_0_0= rulePathNameCS ) )
-            // InternalAllocationSpecificationLanguage.g:8275:1: (lv_ownedPathName_0_0= rulePathNameCS )
+            // InternalAllocationSpecificationLanguage.g:8325:2: ( (lv_ownedPathName_0_0= rulePathNameCS ) )
+            // InternalAllocationSpecificationLanguage.g:8326:1: (lv_ownedPathName_0_0= rulePathNameCS )
             {
-            // InternalAllocationSpecificationLanguage.g:8275:1: (lv_ownedPathName_0_0= rulePathNameCS )
-            // InternalAllocationSpecificationLanguage.g:8276:3: lv_ownedPathName_0_0= rulePathNameCS
+            // InternalAllocationSpecificationLanguage.g:8326:1: (lv_ownedPathName_0_0= rulePathNameCS )
+            // InternalAllocationSpecificationLanguage.g:8327:3: lv_ownedPathName_0_0= rulePathNameCS
             {
             if ( state.backtracking==0 ) {
                
@@ -23864,28 +24006,28 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            // InternalAllocationSpecificationLanguage.g:8292:2: (otherlv_1= '(' ( (lv_ownedBinding_2_0= ruleTemplateBindingCS ) ) otherlv_3= ')' )?
-            int alt132=2;
-            int LA132_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:8343:2: (otherlv_1= '(' ( (lv_ownedBinding_2_0= ruleTemplateBindingCS ) ) otherlv_3= ')' )?
+            int alt133=2;
+            int LA133_0 = input.LA(1);
 
-            if ( (LA132_0==29) ) {
-                alt132=1;
+            if ( (LA133_0==29) ) {
+                alt133=1;
             }
-            switch (alt132) {
+            switch (alt133) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:8292:4: otherlv_1= '(' ( (lv_ownedBinding_2_0= ruleTemplateBindingCS ) ) otherlv_3= ')'
+                    // InternalAllocationSpecificationLanguage.g:8343:4: otherlv_1= '(' ( (lv_ownedBinding_2_0= ruleTemplateBindingCS ) ) otherlv_3= ')'
                     {
-                    otherlv_1=(Token)match(input,29,FollowSets000.FOLLOW_86); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,29,FollowSets000.FOLLOW_87); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getTypedTypeRefCSAccess().getLeftParenthesisKeyword_1_0());
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:8296:1: ( (lv_ownedBinding_2_0= ruleTemplateBindingCS ) )
-                    // InternalAllocationSpecificationLanguage.g:8297:1: (lv_ownedBinding_2_0= ruleTemplateBindingCS )
+                    // InternalAllocationSpecificationLanguage.g:8347:1: ( (lv_ownedBinding_2_0= ruleTemplateBindingCS ) )
+                    // InternalAllocationSpecificationLanguage.g:8348:1: (lv_ownedBinding_2_0= ruleTemplateBindingCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:8297:1: (lv_ownedBinding_2_0= ruleTemplateBindingCS )
-                    // InternalAllocationSpecificationLanguage.g:8298:3: lv_ownedBinding_2_0= ruleTemplateBindingCS
+                    // InternalAllocationSpecificationLanguage.g:8348:1: (lv_ownedBinding_2_0= ruleTemplateBindingCS )
+                    // InternalAllocationSpecificationLanguage.g:8349:3: lv_ownedBinding_2_0= ruleTemplateBindingCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -23951,7 +24093,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleWildcardTypeRefCS"
-    // InternalAllocationSpecificationLanguage.g:8326:1: entryRuleWildcardTypeRefCS returns [EObject current=null] : iv_ruleWildcardTypeRefCS= ruleWildcardTypeRefCS EOF ;
+    // InternalAllocationSpecificationLanguage.g:8377:1: entryRuleWildcardTypeRefCS returns [EObject current=null] : iv_ruleWildcardTypeRefCS= ruleWildcardTypeRefCS EOF ;
     public final EObject entryRuleWildcardTypeRefCS() throws RecognitionException {
         EObject current = null;
 
@@ -23959,8 +24101,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:8327:2: (iv_ruleWildcardTypeRefCS= ruleWildcardTypeRefCS EOF )
-            // InternalAllocationSpecificationLanguage.g:8328:2: iv_ruleWildcardTypeRefCS= ruleWildcardTypeRefCS EOF
+            // InternalAllocationSpecificationLanguage.g:8378:2: (iv_ruleWildcardTypeRefCS= ruleWildcardTypeRefCS EOF )
+            // InternalAllocationSpecificationLanguage.g:8379:2: iv_ruleWildcardTypeRefCS= ruleWildcardTypeRefCS EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getWildcardTypeRefCSRule()); 
@@ -23991,7 +24133,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleWildcardTypeRefCS"
-    // InternalAllocationSpecificationLanguage.g:8335:1: ruleWildcardTypeRefCS returns [EObject current=null] : ( () otherlv_1= '?' (otherlv_2= 'extends' ( (lv_ownedExtends_3_0= ruleTypedRefCS ) ) )? ) ;
+    // InternalAllocationSpecificationLanguage.g:8386:1: ruleWildcardTypeRefCS returns [EObject current=null] : ( () otherlv_1= '?' (otherlv_2= 'extends' ( (lv_ownedExtends_3_0= ruleTypedRefCS ) ) )? ) ;
     public final EObject ruleWildcardTypeRefCS() throws RecognitionException {
         EObject current = null;
 
@@ -24003,14 +24145,14 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:8338:28: ( ( () otherlv_1= '?' (otherlv_2= 'extends' ( (lv_ownedExtends_3_0= ruleTypedRefCS ) ) )? ) )
-            // InternalAllocationSpecificationLanguage.g:8339:1: ( () otherlv_1= '?' (otherlv_2= 'extends' ( (lv_ownedExtends_3_0= ruleTypedRefCS ) ) )? )
+            // InternalAllocationSpecificationLanguage.g:8389:28: ( ( () otherlv_1= '?' (otherlv_2= 'extends' ( (lv_ownedExtends_3_0= ruleTypedRefCS ) ) )? ) )
+            // InternalAllocationSpecificationLanguage.g:8390:1: ( () otherlv_1= '?' (otherlv_2= 'extends' ( (lv_ownedExtends_3_0= ruleTypedRefCS ) ) )? )
             {
-            // InternalAllocationSpecificationLanguage.g:8339:1: ( () otherlv_1= '?' (otherlv_2= 'extends' ( (lv_ownedExtends_3_0= ruleTypedRefCS ) ) )? )
-            // InternalAllocationSpecificationLanguage.g:8339:2: () otherlv_1= '?' (otherlv_2= 'extends' ( (lv_ownedExtends_3_0= ruleTypedRefCS ) ) )?
+            // InternalAllocationSpecificationLanguage.g:8390:1: ( () otherlv_1= '?' (otherlv_2= 'extends' ( (lv_ownedExtends_3_0= ruleTypedRefCS ) ) )? )
+            // InternalAllocationSpecificationLanguage.g:8390:2: () otherlv_1= '?' (otherlv_2= 'extends' ( (lv_ownedExtends_3_0= ruleTypedRefCS ) ) )?
             {
-            // InternalAllocationSpecificationLanguage.g:8339:2: ()
-            // InternalAllocationSpecificationLanguage.g:8340:2: 
+            // InternalAllocationSpecificationLanguage.g:8390:2: ()
+            // InternalAllocationSpecificationLanguage.g:8391:2: 
             {
             if ( state.backtracking==0 ) {
                
@@ -24027,22 +24169,22 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             }
 
-            otherlv_1=(Token)match(input,63,FollowSets000.FOLLOW_87); if (state.failed) return current;
+            otherlv_1=(Token)match(input,63,FollowSets000.FOLLOW_88); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getWildcardTypeRefCSAccess().getQuestionMarkKeyword_1());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:8352:1: (otherlv_2= 'extends' ( (lv_ownedExtends_3_0= ruleTypedRefCS ) ) )?
-            int alt133=2;
-            int LA133_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:8403:1: (otherlv_2= 'extends' ( (lv_ownedExtends_3_0= ruleTypedRefCS ) ) )?
+            int alt134=2;
+            int LA134_0 = input.LA(1);
 
-            if ( (LA133_0==119) ) {
-                alt133=1;
+            if ( (LA134_0==119) ) {
+                alt134=1;
             }
-            switch (alt133) {
+            switch (alt134) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:8352:3: otherlv_2= 'extends' ( (lv_ownedExtends_3_0= ruleTypedRefCS ) )
+                    // InternalAllocationSpecificationLanguage.g:8403:3: otherlv_2= 'extends' ( (lv_ownedExtends_3_0= ruleTypedRefCS ) )
                     {
                     otherlv_2=(Token)match(input,119,FollowSets000.FOLLOW_11); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -24050,11 +24192,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                           	newLeafNode(otherlv_2, grammarAccess.getWildcardTypeRefCSAccess().getExtendsKeyword_2_0());
                           
                     }
-                    // InternalAllocationSpecificationLanguage.g:8356:1: ( (lv_ownedExtends_3_0= ruleTypedRefCS ) )
-                    // InternalAllocationSpecificationLanguage.g:8357:1: (lv_ownedExtends_3_0= ruleTypedRefCS )
+                    // InternalAllocationSpecificationLanguage.g:8407:1: ( (lv_ownedExtends_3_0= ruleTypedRefCS ) )
+                    // InternalAllocationSpecificationLanguage.g:8408:1: (lv_ownedExtends_3_0= ruleTypedRefCS )
                     {
-                    // InternalAllocationSpecificationLanguage.g:8357:1: (lv_ownedExtends_3_0= ruleTypedRefCS )
-                    // InternalAllocationSpecificationLanguage.g:8358:3: lv_ownedExtends_3_0= ruleTypedRefCS
+                    // InternalAllocationSpecificationLanguage.g:8408:1: (lv_ownedExtends_3_0= ruleTypedRefCS )
+                    // InternalAllocationSpecificationLanguage.g:8409:3: lv_ownedExtends_3_0= ruleTypedRefCS
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -24114,7 +24256,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleID"
-    // InternalAllocationSpecificationLanguage.g:8382:1: entryRuleID returns [String current=null] : iv_ruleID= ruleID EOF ;
+    // InternalAllocationSpecificationLanguage.g:8433:1: entryRuleID returns [String current=null] : iv_ruleID= ruleID EOF ;
     public final String entryRuleID() throws RecognitionException {
         String current = null;
 
@@ -24122,8 +24264,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:8383:2: (iv_ruleID= ruleID EOF )
-            // InternalAllocationSpecificationLanguage.g:8384:2: iv_ruleID= ruleID EOF
+            // InternalAllocationSpecificationLanguage.g:8434:2: (iv_ruleID= ruleID EOF )
+            // InternalAllocationSpecificationLanguage.g:8435:2: iv_ruleID= ruleID EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIDRule()); 
@@ -24154,7 +24296,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleID"
-    // InternalAllocationSpecificationLanguage.g:8391:1: ruleID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_SIMPLE_ID_0= RULE_SIMPLE_ID | this_ESCAPED_ID_1= RULE_ESCAPED_ID ) ;
+    // InternalAllocationSpecificationLanguage.g:8442:1: ruleID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_SIMPLE_ID_0= RULE_SIMPLE_ID | this_ESCAPED_ID_1= RULE_ESCAPED_ID ) ;
     public final AntlrDatatypeRuleToken ruleID() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -24164,29 +24306,29 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:8394:28: ( (this_SIMPLE_ID_0= RULE_SIMPLE_ID | this_ESCAPED_ID_1= RULE_ESCAPED_ID ) )
-            // InternalAllocationSpecificationLanguage.g:8395:1: (this_SIMPLE_ID_0= RULE_SIMPLE_ID | this_ESCAPED_ID_1= RULE_ESCAPED_ID )
+            // InternalAllocationSpecificationLanguage.g:8445:28: ( (this_SIMPLE_ID_0= RULE_SIMPLE_ID | this_ESCAPED_ID_1= RULE_ESCAPED_ID ) )
+            // InternalAllocationSpecificationLanguage.g:8446:1: (this_SIMPLE_ID_0= RULE_SIMPLE_ID | this_ESCAPED_ID_1= RULE_ESCAPED_ID )
             {
-            // InternalAllocationSpecificationLanguage.g:8395:1: (this_SIMPLE_ID_0= RULE_SIMPLE_ID | this_ESCAPED_ID_1= RULE_ESCAPED_ID )
-            int alt134=2;
-            int LA134_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:8446:1: (this_SIMPLE_ID_0= RULE_SIMPLE_ID | this_ESCAPED_ID_1= RULE_ESCAPED_ID )
+            int alt135=2;
+            int LA135_0 = input.LA(1);
 
-            if ( (LA134_0==RULE_SIMPLE_ID) ) {
-                alt134=1;
+            if ( (LA135_0==RULE_SIMPLE_ID) ) {
+                alt135=1;
             }
-            else if ( (LA134_0==RULE_ESCAPED_ID) ) {
-                alt134=2;
+            else if ( (LA135_0==RULE_ESCAPED_ID) ) {
+                alt135=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 134, 0, input);
+                    new NoViableAltException("", 135, 0, input);
 
                 throw nvae;
             }
-            switch (alt134) {
+            switch (alt135) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:8395:6: this_SIMPLE_ID_0= RULE_SIMPLE_ID
+                    // InternalAllocationSpecificationLanguage.g:8446:6: this_SIMPLE_ID_0= RULE_SIMPLE_ID
                     {
                     this_SIMPLE_ID_0=(Token)match(input,RULE_SIMPLE_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -24203,7 +24345,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:8403:10: this_ESCAPED_ID_1= RULE_ESCAPED_ID
+                    // InternalAllocationSpecificationLanguage.g:8454:10: this_ESCAPED_ID_1= RULE_ESCAPED_ID
                     {
                     this_ESCAPED_ID_1=(Token)match(input,RULE_ESCAPED_ID,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -24242,7 +24384,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleIdentifier"
-    // InternalAllocationSpecificationLanguage.g:8418:1: entryRuleIdentifier returns [String current=null] : iv_ruleIdentifier= ruleIdentifier EOF ;
+    // InternalAllocationSpecificationLanguage.g:8469:1: entryRuleIdentifier returns [String current=null] : iv_ruleIdentifier= ruleIdentifier EOF ;
     public final String entryRuleIdentifier() throws RecognitionException {
         String current = null;
 
@@ -24250,8 +24392,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:8419:2: (iv_ruleIdentifier= ruleIdentifier EOF )
-            // InternalAllocationSpecificationLanguage.g:8420:2: iv_ruleIdentifier= ruleIdentifier EOF
+            // InternalAllocationSpecificationLanguage.g:8470:2: (iv_ruleIdentifier= ruleIdentifier EOF )
+            // InternalAllocationSpecificationLanguage.g:8471:2: iv_ruleIdentifier= ruleIdentifier EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIdentifierRule()); 
@@ -24282,7 +24424,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleIdentifier"
-    // InternalAllocationSpecificationLanguage.g:8427:1: ruleIdentifier returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= ruleID ;
+    // InternalAllocationSpecificationLanguage.g:8478:1: ruleIdentifier returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= ruleID ;
     public final AntlrDatatypeRuleToken ruleIdentifier() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -24292,8 +24434,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:8430:28: (this_ID_0= ruleID )
-            // InternalAllocationSpecificationLanguage.g:8432:5: this_ID_0= ruleID
+            // InternalAllocationSpecificationLanguage.g:8481:28: (this_ID_0= ruleID )
+            // InternalAllocationSpecificationLanguage.g:8483:5: this_ID_0= ruleID
             {
             if ( state.backtracking==0 ) {
                
@@ -24335,7 +24477,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleLOWER"
-    // InternalAllocationSpecificationLanguage.g:8450:1: entryRuleLOWER returns [String current=null] : iv_ruleLOWER= ruleLOWER EOF ;
+    // InternalAllocationSpecificationLanguage.g:8501:1: entryRuleLOWER returns [String current=null] : iv_ruleLOWER= ruleLOWER EOF ;
     public final String entryRuleLOWER() throws RecognitionException {
         String current = null;
 
@@ -24343,8 +24485,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:8451:2: (iv_ruleLOWER= ruleLOWER EOF )
-            // InternalAllocationSpecificationLanguage.g:8452:2: iv_ruleLOWER= ruleLOWER EOF
+            // InternalAllocationSpecificationLanguage.g:8502:2: (iv_ruleLOWER= ruleLOWER EOF )
+            // InternalAllocationSpecificationLanguage.g:8503:2: iv_ruleLOWER= ruleLOWER EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLOWERRule()); 
@@ -24375,7 +24517,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleLOWER"
-    // InternalAllocationSpecificationLanguage.g:8459:1: ruleLOWER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_INT_0= RULE_INT ;
+    // InternalAllocationSpecificationLanguage.g:8510:1: ruleLOWER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_INT_0= RULE_INT ;
     public final AntlrDatatypeRuleToken ruleLOWER() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -24384,8 +24526,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:8462:28: (this_INT_0= RULE_INT )
-            // InternalAllocationSpecificationLanguage.g:8463:5: this_INT_0= RULE_INT
+            // InternalAllocationSpecificationLanguage.g:8513:28: (this_INT_0= RULE_INT )
+            // InternalAllocationSpecificationLanguage.g:8514:5: this_INT_0= RULE_INT
             {
             this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -24418,7 +24560,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleNUMBER_LITERAL"
-    // InternalAllocationSpecificationLanguage.g:8478:1: entryRuleNUMBER_LITERAL returns [String current=null] : iv_ruleNUMBER_LITERAL= ruleNUMBER_LITERAL EOF ;
+    // InternalAllocationSpecificationLanguage.g:8529:1: entryRuleNUMBER_LITERAL returns [String current=null] : iv_ruleNUMBER_LITERAL= ruleNUMBER_LITERAL EOF ;
     public final String entryRuleNUMBER_LITERAL() throws RecognitionException {
         String current = null;
 
@@ -24426,8 +24568,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:8479:2: (iv_ruleNUMBER_LITERAL= ruleNUMBER_LITERAL EOF )
-            // InternalAllocationSpecificationLanguage.g:8480:2: iv_ruleNUMBER_LITERAL= ruleNUMBER_LITERAL EOF
+            // InternalAllocationSpecificationLanguage.g:8530:2: (iv_ruleNUMBER_LITERAL= ruleNUMBER_LITERAL EOF )
+            // InternalAllocationSpecificationLanguage.g:8531:2: iv_ruleNUMBER_LITERAL= ruleNUMBER_LITERAL EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNUMBER_LITERALRule()); 
@@ -24458,7 +24600,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleNUMBER_LITERAL"
-    // InternalAllocationSpecificationLanguage.g:8487:1: ruleNUMBER_LITERAL returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_INT_0= RULE_INT ;
+    // InternalAllocationSpecificationLanguage.g:8538:1: ruleNUMBER_LITERAL returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_INT_0= RULE_INT ;
     public final AntlrDatatypeRuleToken ruleNUMBER_LITERAL() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -24467,8 +24609,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:8490:28: (this_INT_0= RULE_INT )
-            // InternalAllocationSpecificationLanguage.g:8491:5: this_INT_0= RULE_INT
+            // InternalAllocationSpecificationLanguage.g:8541:28: (this_INT_0= RULE_INT )
+            // InternalAllocationSpecificationLanguage.g:8542:5: this_INT_0= RULE_INT
             {
             this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -24501,7 +24643,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleStringLiteral"
-    // InternalAllocationSpecificationLanguage.g:8506:1: entryRuleStringLiteral returns [String current=null] : iv_ruleStringLiteral= ruleStringLiteral EOF ;
+    // InternalAllocationSpecificationLanguage.g:8557:1: entryRuleStringLiteral returns [String current=null] : iv_ruleStringLiteral= ruleStringLiteral EOF ;
     public final String entryRuleStringLiteral() throws RecognitionException {
         String current = null;
 
@@ -24509,8 +24651,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:8507:2: (iv_ruleStringLiteral= ruleStringLiteral EOF )
-            // InternalAllocationSpecificationLanguage.g:8508:2: iv_ruleStringLiteral= ruleStringLiteral EOF
+            // InternalAllocationSpecificationLanguage.g:8558:2: (iv_ruleStringLiteral= ruleStringLiteral EOF )
+            // InternalAllocationSpecificationLanguage.g:8559:2: iv_ruleStringLiteral= ruleStringLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getStringLiteralRule()); 
@@ -24541,7 +24683,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleStringLiteral"
-    // InternalAllocationSpecificationLanguage.g:8515:1: ruleStringLiteral returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_SINGLE_QUOTED_STRING_0= RULE_SINGLE_QUOTED_STRING ;
+    // InternalAllocationSpecificationLanguage.g:8566:1: ruleStringLiteral returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_SINGLE_QUOTED_STRING_0= RULE_SINGLE_QUOTED_STRING ;
     public final AntlrDatatypeRuleToken ruleStringLiteral() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -24550,8 +24692,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:8518:28: (this_SINGLE_QUOTED_STRING_0= RULE_SINGLE_QUOTED_STRING )
-            // InternalAllocationSpecificationLanguage.g:8519:5: this_SINGLE_QUOTED_STRING_0= RULE_SINGLE_QUOTED_STRING
+            // InternalAllocationSpecificationLanguage.g:8569:28: (this_SINGLE_QUOTED_STRING_0= RULE_SINGLE_QUOTED_STRING )
+            // InternalAllocationSpecificationLanguage.g:8570:5: this_SINGLE_QUOTED_STRING_0= RULE_SINGLE_QUOTED_STRING
             {
             this_SINGLE_QUOTED_STRING_0=(Token)match(input,RULE_SINGLE_QUOTED_STRING,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -24584,7 +24726,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleUPPER"
-    // InternalAllocationSpecificationLanguage.g:8534:1: entryRuleUPPER returns [String current=null] : iv_ruleUPPER= ruleUPPER EOF ;
+    // InternalAllocationSpecificationLanguage.g:8585:1: entryRuleUPPER returns [String current=null] : iv_ruleUPPER= ruleUPPER EOF ;
     public final String entryRuleUPPER() throws RecognitionException {
         String current = null;
 
@@ -24592,8 +24734,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:8535:2: (iv_ruleUPPER= ruleUPPER EOF )
-            // InternalAllocationSpecificationLanguage.g:8536:2: iv_ruleUPPER= ruleUPPER EOF
+            // InternalAllocationSpecificationLanguage.g:8586:2: (iv_ruleUPPER= ruleUPPER EOF )
+            // InternalAllocationSpecificationLanguage.g:8587:2: iv_ruleUPPER= ruleUPPER EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUPPERRule()); 
@@ -24624,7 +24766,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleUPPER"
-    // InternalAllocationSpecificationLanguage.g:8543:1: ruleUPPER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT | kw= '*' ) ;
+    // InternalAllocationSpecificationLanguage.g:8594:1: ruleUPPER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT | kw= '*' ) ;
     public final AntlrDatatypeRuleToken ruleUPPER() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -24634,29 +24776,29 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:8546:28: ( (this_INT_0= RULE_INT | kw= '*' ) )
-            // InternalAllocationSpecificationLanguage.g:8547:1: (this_INT_0= RULE_INT | kw= '*' )
+            // InternalAllocationSpecificationLanguage.g:8597:28: ( (this_INT_0= RULE_INT | kw= '*' ) )
+            // InternalAllocationSpecificationLanguage.g:8598:1: (this_INT_0= RULE_INT | kw= '*' )
             {
-            // InternalAllocationSpecificationLanguage.g:8547:1: (this_INT_0= RULE_INT | kw= '*' )
-            int alt135=2;
-            int LA135_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:8598:1: (this_INT_0= RULE_INT | kw= '*' )
+            int alt136=2;
+            int LA136_0 = input.LA(1);
 
-            if ( (LA135_0==RULE_INT) ) {
-                alt135=1;
+            if ( (LA136_0==RULE_INT) ) {
+                alt136=1;
             }
-            else if ( (LA135_0==76) ) {
-                alt135=2;
+            else if ( (LA136_0==76) ) {
+                alt136=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 135, 0, input);
+                    new NoViableAltException("", 136, 0, input);
 
                 throw nvae;
             }
-            switch (alt135) {
+            switch (alt136) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:8547:6: this_INT_0= RULE_INT
+                    // InternalAllocationSpecificationLanguage.g:8598:6: this_INT_0= RULE_INT
                     {
                     this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -24673,7 +24815,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:8556:2: kw= '*'
+                    // InternalAllocationSpecificationLanguage.g:8607:2: kw= '*'
                     {
                     kw=(Token)match(input,76,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -24708,7 +24850,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "entryRuleURI"
-    // InternalAllocationSpecificationLanguage.g:8569:1: entryRuleURI returns [String current=null] : iv_ruleURI= ruleURI EOF ;
+    // InternalAllocationSpecificationLanguage.g:8620:1: entryRuleURI returns [String current=null] : iv_ruleURI= ruleURI EOF ;
     public final String entryRuleURI() throws RecognitionException {
         String current = null;
 
@@ -24716,8 +24858,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:8570:2: (iv_ruleURI= ruleURI EOF )
-            // InternalAllocationSpecificationLanguage.g:8571:2: iv_ruleURI= ruleURI EOF
+            // InternalAllocationSpecificationLanguage.g:8621:2: (iv_ruleURI= ruleURI EOF )
+            // InternalAllocationSpecificationLanguage.g:8622:2: iv_ruleURI= ruleURI EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getURIRule()); 
@@ -24748,7 +24890,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleURI"
-    // InternalAllocationSpecificationLanguage.g:8578:1: ruleURI returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_SINGLE_QUOTED_STRING_0= RULE_SINGLE_QUOTED_STRING ;
+    // InternalAllocationSpecificationLanguage.g:8629:1: ruleURI returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_SINGLE_QUOTED_STRING_0= RULE_SINGLE_QUOTED_STRING ;
     public final AntlrDatatypeRuleToken ruleURI() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -24757,8 +24899,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:8581:28: (this_SINGLE_QUOTED_STRING_0= RULE_SINGLE_QUOTED_STRING )
-            // InternalAllocationSpecificationLanguage.g:8582:5: this_SINGLE_QUOTED_STRING_0= RULE_SINGLE_QUOTED_STRING
+            // InternalAllocationSpecificationLanguage.g:8632:28: (this_SINGLE_QUOTED_STRING_0= RULE_SINGLE_QUOTED_STRING )
+            // InternalAllocationSpecificationLanguage.g:8633:5: this_SINGLE_QUOTED_STRING_0= RULE_SINGLE_QUOTED_STRING
             {
             this_SINGLE_QUOTED_STRING_0=(Token)match(input,RULE_SINGLE_QUOTED_STRING,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -24791,7 +24933,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleLocationConstraintType"
-    // InternalAllocationSpecificationLanguage.g:8597:1: ruleLocationConstraintType returns [Enumerator current=null] : ( (enumLiteral_0= 'sameLocation' ) | (enumLiteral_1= 'collocation' ) | (enumLiteral_2= 'differentLocation' ) | (enumLiteral_3= 'separateLocation' ) ) ;
+    // InternalAllocationSpecificationLanguage.g:8648:1: ruleLocationConstraintType returns [Enumerator current=null] : ( (enumLiteral_0= 'sameLocation' ) | (enumLiteral_1= 'collocation' ) | (enumLiteral_2= 'differentLocation' ) | (enumLiteral_3= 'separateLocation' ) ) ;
     public final Enumerator ruleLocationConstraintType() throws RecognitionException {
         Enumerator current = null;
 
@@ -24802,46 +24944,46 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
          enterRule(); 
         try {
-            // InternalAllocationSpecificationLanguage.g:8599:28: ( ( (enumLiteral_0= 'sameLocation' ) | (enumLiteral_1= 'collocation' ) | (enumLiteral_2= 'differentLocation' ) | (enumLiteral_3= 'separateLocation' ) ) )
-            // InternalAllocationSpecificationLanguage.g:8600:1: ( (enumLiteral_0= 'sameLocation' ) | (enumLiteral_1= 'collocation' ) | (enumLiteral_2= 'differentLocation' ) | (enumLiteral_3= 'separateLocation' ) )
+            // InternalAllocationSpecificationLanguage.g:8650:28: ( ( (enumLiteral_0= 'sameLocation' ) | (enumLiteral_1= 'collocation' ) | (enumLiteral_2= 'differentLocation' ) | (enumLiteral_3= 'separateLocation' ) ) )
+            // InternalAllocationSpecificationLanguage.g:8651:1: ( (enumLiteral_0= 'sameLocation' ) | (enumLiteral_1= 'collocation' ) | (enumLiteral_2= 'differentLocation' ) | (enumLiteral_3= 'separateLocation' ) )
             {
-            // InternalAllocationSpecificationLanguage.g:8600:1: ( (enumLiteral_0= 'sameLocation' ) | (enumLiteral_1= 'collocation' ) | (enumLiteral_2= 'differentLocation' ) | (enumLiteral_3= 'separateLocation' ) )
-            int alt136=4;
+            // InternalAllocationSpecificationLanguage.g:8651:1: ( (enumLiteral_0= 'sameLocation' ) | (enumLiteral_1= 'collocation' ) | (enumLiteral_2= 'differentLocation' ) | (enumLiteral_3= 'separateLocation' ) )
+            int alt137=4;
             switch ( input.LA(1) ) {
             case 121:
                 {
-                alt136=1;
+                alt137=1;
                 }
                 break;
             case 122:
                 {
-                alt136=2;
+                alt137=2;
                 }
                 break;
             case 123:
                 {
-                alt136=3;
+                alt137=3;
                 }
                 break;
             case 124:
                 {
-                alt136=4;
+                alt137=4;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 136, 0, input);
+                    new NoViableAltException("", 137, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt136) {
+            switch (alt137) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:8600:2: (enumLiteral_0= 'sameLocation' )
+                    // InternalAllocationSpecificationLanguage.g:8651:2: (enumLiteral_0= 'sameLocation' )
                     {
-                    // InternalAllocationSpecificationLanguage.g:8600:2: (enumLiteral_0= 'sameLocation' )
-                    // InternalAllocationSpecificationLanguage.g:8600:4: enumLiteral_0= 'sameLocation'
+                    // InternalAllocationSpecificationLanguage.g:8651:2: (enumLiteral_0= 'sameLocation' )
+                    // InternalAllocationSpecificationLanguage.g:8651:4: enumLiteral_0= 'sameLocation'
                     {
                     enumLiteral_0=(Token)match(input,121,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -24857,10 +24999,10 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:8606:6: (enumLiteral_1= 'collocation' )
+                    // InternalAllocationSpecificationLanguage.g:8657:6: (enumLiteral_1= 'collocation' )
                     {
-                    // InternalAllocationSpecificationLanguage.g:8606:6: (enumLiteral_1= 'collocation' )
-                    // InternalAllocationSpecificationLanguage.g:8606:8: enumLiteral_1= 'collocation'
+                    // InternalAllocationSpecificationLanguage.g:8657:6: (enumLiteral_1= 'collocation' )
+                    // InternalAllocationSpecificationLanguage.g:8657:8: enumLiteral_1= 'collocation'
                     {
                     enumLiteral_1=(Token)match(input,122,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -24876,10 +25018,10 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 3 :
-                    // InternalAllocationSpecificationLanguage.g:8612:6: (enumLiteral_2= 'differentLocation' )
+                    // InternalAllocationSpecificationLanguage.g:8663:6: (enumLiteral_2= 'differentLocation' )
                     {
-                    // InternalAllocationSpecificationLanguage.g:8612:6: (enumLiteral_2= 'differentLocation' )
-                    // InternalAllocationSpecificationLanguage.g:8612:8: enumLiteral_2= 'differentLocation'
+                    // InternalAllocationSpecificationLanguage.g:8663:6: (enumLiteral_2= 'differentLocation' )
+                    // InternalAllocationSpecificationLanguage.g:8663:8: enumLiteral_2= 'differentLocation'
                     {
                     enumLiteral_2=(Token)match(input,123,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -24895,10 +25037,10 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 4 :
-                    // InternalAllocationSpecificationLanguage.g:8618:6: (enumLiteral_3= 'separateLocation' )
+                    // InternalAllocationSpecificationLanguage.g:8669:6: (enumLiteral_3= 'separateLocation' )
                     {
-                    // InternalAllocationSpecificationLanguage.g:8618:6: (enumLiteral_3= 'separateLocation' )
-                    // InternalAllocationSpecificationLanguage.g:8618:8: enumLiteral_3= 'separateLocation'
+                    // InternalAllocationSpecificationLanguage.g:8669:6: (enumLiteral_3= 'separateLocation' )
+                    // InternalAllocationSpecificationLanguage.g:8669:8: enumLiteral_3= 'separateLocation'
                     {
                     enumLiteral_3=(Token)match(input,124,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -24936,7 +25078,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleGoal"
-    // InternalAllocationSpecificationLanguage.g:8628:1: ruleGoal returns [Enumerator current=null] : ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'max' ) ) ;
+    // InternalAllocationSpecificationLanguage.g:8679:1: ruleGoal returns [Enumerator current=null] : ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'max' ) ) ;
     public final Enumerator ruleGoal() throws RecognitionException {
         Enumerator current = null;
 
@@ -24945,32 +25087,32 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
          enterRule(); 
         try {
-            // InternalAllocationSpecificationLanguage.g:8630:28: ( ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'max' ) ) )
-            // InternalAllocationSpecificationLanguage.g:8631:1: ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'max' ) )
+            // InternalAllocationSpecificationLanguage.g:8681:28: ( ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'max' ) ) )
+            // InternalAllocationSpecificationLanguage.g:8682:1: ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'max' ) )
             {
-            // InternalAllocationSpecificationLanguage.g:8631:1: ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'max' ) )
-            int alt137=2;
-            int LA137_0 = input.LA(1);
+            // InternalAllocationSpecificationLanguage.g:8682:1: ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'max' ) )
+            int alt138=2;
+            int LA138_0 = input.LA(1);
 
-            if ( (LA137_0==125) ) {
-                alt137=1;
+            if ( (LA138_0==125) ) {
+                alt138=1;
             }
-            else if ( (LA137_0==126) ) {
-                alt137=2;
+            else if ( (LA138_0==126) ) {
+                alt138=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 137, 0, input);
+                    new NoViableAltException("", 138, 0, input);
 
                 throw nvae;
             }
-            switch (alt137) {
+            switch (alt138) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:8631:2: (enumLiteral_0= 'min' )
+                    // InternalAllocationSpecificationLanguage.g:8682:2: (enumLiteral_0= 'min' )
                     {
-                    // InternalAllocationSpecificationLanguage.g:8631:2: (enumLiteral_0= 'min' )
-                    // InternalAllocationSpecificationLanguage.g:8631:4: enumLiteral_0= 'min'
+                    // InternalAllocationSpecificationLanguage.g:8682:2: (enumLiteral_0= 'min' )
+                    // InternalAllocationSpecificationLanguage.g:8682:4: enumLiteral_0= 'min'
                     {
                     enumLiteral_0=(Token)match(input,125,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -24986,10 +25128,10 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     break;
                 case 2 :
-                    // InternalAllocationSpecificationLanguage.g:8637:6: (enumLiteral_1= 'max' )
+                    // InternalAllocationSpecificationLanguage.g:8688:6: (enumLiteral_1= 'max' )
                     {
-                    // InternalAllocationSpecificationLanguage.g:8637:6: (enumLiteral_1= 'max' )
-                    // InternalAllocationSpecificationLanguage.g:8637:8: enumLiteral_1= 'max'
+                    // InternalAllocationSpecificationLanguage.g:8688:6: (enumLiteral_1= 'max' )
+                    // InternalAllocationSpecificationLanguage.g:8688:8: enumLiteral_1= 'max'
                     {
                     enumLiteral_1=(Token)match(input,126,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -25084,24 +25226,24 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         {
         getUnorderedGroupHelper().select(grammarAccess.getSpecificationAccess().getUnorderedGroup_3(), 0);
         // InternalAllocationSpecificationLanguage.g:144:6: ({...}? => ( (lv_ownedImports_4_0= ruleImportCS ) ) )+
-        int cnt138=0;
-        loop138:
+        int cnt139=0;
+        loop139:
         do {
-            int alt138=2;
-            int LA138_0 = input.LA(1);
+            int alt139=2;
+            int LA139_0 = input.LA(1);
 
-            if ( (LA138_0==50) && ((true))) {
-                alt138=1;
+            if ( (LA139_0==50) && ((true))) {
+                alt139=1;
             }
-            else if ( (LA138_0==51) && ((true))) {
-                alt138=1;
+            else if ( (LA139_0==51) && ((true))) {
+                alt139=1;
             }
-            else if ( (LA138_0==52) && ((true))) {
-                alt138=1;
+            else if ( (LA139_0==52) && ((true))) {
+                alt139=1;
             }
 
 
-            switch (alt138) {
+            switch (alt139) {
         	case 1 :
         	    // InternalAllocationSpecificationLanguage.g:144:7: {...}? => ( (lv_ownedImports_4_0= ruleImportCS ) )
         	    {
@@ -25120,7 +25262,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         	      	        newCompositeNode(grammarAccess.getSpecificationAccess().getOwnedImportsImportCSParserRuleCall_3_0_0()); 
         	      	    
         	    }
-        	    pushFollow(FollowSets000.FOLLOW_89);
+        	    pushFollow(FollowSets000.FOLLOW_90);
         	    lv_ownedImports_4_0=ruleImportCS();
 
         	    state._fsp--;
@@ -25136,13 +25278,13 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         	    break;
 
         	default :
-        	    if ( cnt138 >= 1 ) break loop138;
+        	    if ( cnt139 >= 1 ) break loop139;
         	    if (state.backtracking>0) {state.failed=true; return ;}
                     EarlyExitException eee =
-                        new EarlyExitException(138, input);
+                        new EarlyExitException(139, input);
                     throw eee;
             }
-            cnt138++;
+            cnt139++;
         } while (true);
 
 
@@ -25388,13 +25530,13 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     }
     // $ANTLR end synpred33_InternalAllocationSpecificationLanguage
 
-    // $ANTLR start synpred138_InternalAllocationSpecificationLanguage
-    public final void synpred138_InternalAllocationSpecificationLanguage_fragment() throws RecognitionException {   
+    // $ANTLR start synpred140_InternalAllocationSpecificationLanguage
+    public final void synpred140_InternalAllocationSpecificationLanguage_fragment() throws RecognitionException {   
         EObject this_TypeLiteralCS_1 = null;
 
 
-        // InternalAllocationSpecificationLanguage.g:5897:2: (this_TypeLiteralCS_1= ruleTypeLiteralCS )
-        // InternalAllocationSpecificationLanguage.g:5897:2: this_TypeLiteralCS_1= ruleTypeLiteralCS
+        // InternalAllocationSpecificationLanguage.g:5934:2: (this_TypeLiteralCS_1= ruleTypeLiteralCS )
+        // InternalAllocationSpecificationLanguage.g:5934:2: this_TypeLiteralCS_1= ruleTypeLiteralCS
         {
         if ( state.backtracking==0 ) {
            
@@ -25409,10 +25551,10 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
         }
     }
-    // $ANTLR end synpred138_InternalAllocationSpecificationLanguage
+    // $ANTLR end synpred140_InternalAllocationSpecificationLanguage
 
-    // $ANTLR start synpred141_InternalAllocationSpecificationLanguage
-    public final void synpred141_InternalAllocationSpecificationLanguage_fragment() throws RecognitionException {   
+    // $ANTLR start synpred143_InternalAllocationSpecificationLanguage
+    public final void synpred143_InternalAllocationSpecificationLanguage_fragment() throws RecognitionException {   
         EObject this_PrefixedPrimaryExpCS_0 = null;
 
         AntlrDatatypeRuleToken lv_name_2_0 = null;
@@ -25420,35 +25562,35 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         EObject lv_ownedRight_3_0 = null;
 
 
-        // InternalAllocationSpecificationLanguage.g:5960:2: ( (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? ) )
-        // InternalAllocationSpecificationLanguage.g:5960:2: (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? )
+        // InternalAllocationSpecificationLanguage.g:6030:2: ( (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? ) )
+        // InternalAllocationSpecificationLanguage.g:6030:2: (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? )
         {
-        // InternalAllocationSpecificationLanguage.g:5960:2: (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? )
-        // InternalAllocationSpecificationLanguage.g:5961:2: this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )?
+        // InternalAllocationSpecificationLanguage.g:6030:2: (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? )
+        // InternalAllocationSpecificationLanguage.g:6031:2: this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )?
         {
         if ( state.backtracking==0 ) {
            
           	  /* */ 
           	
         }
-        pushFollow(FollowSets000.FOLLOW_61);
+        pushFollow(FollowSets000.FOLLOW_62);
         this_PrefixedPrimaryExpCS_0=rulePrefixedPrimaryExpCS();
 
         state._fsp--;
         if (state.failed) return ;
-        // InternalAllocationSpecificationLanguage.g:5972:1: ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )?
-        int alt152=2;
-        int LA152_0 = input.LA(1);
+        // InternalAllocationSpecificationLanguage.g:6042:1: ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )?
+        int alt155=2;
+        int LA155_0 = input.LA(1);
 
-        if ( ((LA152_0>=42 && LA152_0<=44)||LA152_0==49||(LA152_0>=61 && LA152_0<=62)||LA152_0==74||(LA152_0>=76 && LA152_0<=88)) ) {
-            alt152=1;
+        if ( ((LA155_0>=42 && LA155_0<=44)||LA155_0==49||(LA155_0>=61 && LA155_0<=62)||LA155_0==74||(LA155_0>=76 && LA155_0<=88)) ) {
+            alt155=1;
         }
-        switch (alt152) {
+        switch (alt155) {
             case 1 :
-                // InternalAllocationSpecificationLanguage.g:5972:2: () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) )
+                // InternalAllocationSpecificationLanguage.g:6042:2: () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) )
                 {
-                // InternalAllocationSpecificationLanguage.g:5972:2: ()
-                // InternalAllocationSpecificationLanguage.g:5973:2: 
+                // InternalAllocationSpecificationLanguage.g:6042:2: ()
+                // InternalAllocationSpecificationLanguage.g:6043:2: 
                 {
                 if ( state.backtracking==0 ) {
                    
@@ -25458,11 +25600,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                 }
 
-                // InternalAllocationSpecificationLanguage.g:5981:2: ( (lv_name_2_0= ruleBinaryOperatorName ) )
-                // InternalAllocationSpecificationLanguage.g:5982:1: (lv_name_2_0= ruleBinaryOperatorName )
+                // InternalAllocationSpecificationLanguage.g:6051:2: ( (lv_name_2_0= ruleBinaryOperatorName ) )
+                // InternalAllocationSpecificationLanguage.g:6052:1: (lv_name_2_0= ruleBinaryOperatorName )
                 {
-                // InternalAllocationSpecificationLanguage.g:5982:1: (lv_name_2_0= ruleBinaryOperatorName )
-                // InternalAllocationSpecificationLanguage.g:5983:3: lv_name_2_0= ruleBinaryOperatorName
+                // InternalAllocationSpecificationLanguage.g:6052:1: (lv_name_2_0= ruleBinaryOperatorName )
+                // InternalAllocationSpecificationLanguage.g:6053:3: lv_name_2_0= ruleBinaryOperatorName
                 {
                 if ( state.backtracking==0 ) {
                    
@@ -25480,11 +25622,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                 }
 
-                // InternalAllocationSpecificationLanguage.g:5999:2: ( (lv_ownedRight_3_0= ruleExpCS ) )
-                // InternalAllocationSpecificationLanguage.g:6000:1: (lv_ownedRight_3_0= ruleExpCS )
+                // InternalAllocationSpecificationLanguage.g:6069:2: ( (lv_ownedRight_3_0= ruleExpCS ) )
+                // InternalAllocationSpecificationLanguage.g:6070:1: (lv_ownedRight_3_0= ruleExpCS )
                 {
-                // InternalAllocationSpecificationLanguage.g:6000:1: (lv_ownedRight_3_0= ruleExpCS )
-                // InternalAllocationSpecificationLanguage.g:6001:3: lv_ownedRight_3_0= ruleExpCS
+                // InternalAllocationSpecificationLanguage.g:6070:1: (lv_ownedRight_3_0= ruleExpCS )
+                // InternalAllocationSpecificationLanguage.g:6071:3: lv_ownedRight_3_0= ruleExpCS
                 {
                 if ( state.backtracking==0 ) {
                    
@@ -25514,15 +25656,15 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
         }
     }
-    // $ANTLR end synpred141_InternalAllocationSpecificationLanguage
+    // $ANTLR end synpred143_InternalAllocationSpecificationLanguage
 
-    // $ANTLR start synpred148_InternalAllocationSpecificationLanguage
-    public final void synpred148_InternalAllocationSpecificationLanguage_fragment() throws RecognitionException {   
+    // $ANTLR start synpred150_InternalAllocationSpecificationLanguage
+    public final void synpred150_InternalAllocationSpecificationLanguage_fragment() throws RecognitionException {   
         EObject this_TupleLiteralExpCS_4 = null;
 
 
-        // InternalAllocationSpecificationLanguage.g:6262:2: (this_TupleLiteralExpCS_4= ruleTupleLiteralExpCS )
-        // InternalAllocationSpecificationLanguage.g:6262:2: this_TupleLiteralExpCS_4= ruleTupleLiteralExpCS
+        // InternalAllocationSpecificationLanguage.g:6332:2: (this_TupleLiteralExpCS_4= ruleTupleLiteralExpCS )
+        // InternalAllocationSpecificationLanguage.g:6332:2: this_TupleLiteralExpCS_4= ruleTupleLiteralExpCS
         {
         if ( state.backtracking==0 ) {
            
@@ -25537,15 +25679,15 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
         }
     }
-    // $ANTLR end synpred148_InternalAllocationSpecificationLanguage
+    // $ANTLR end synpred150_InternalAllocationSpecificationLanguage
 
-    // $ANTLR start synpred149_InternalAllocationSpecificationLanguage
-    public final void synpred149_InternalAllocationSpecificationLanguage_fragment() throws RecognitionException {   
+    // $ANTLR start synpred151_InternalAllocationSpecificationLanguage
+    public final void synpred151_InternalAllocationSpecificationLanguage_fragment() throws RecognitionException {   
         EObject this_MapLiteralExpCS_5 = null;
 
 
-        // InternalAllocationSpecificationLanguage.g:6275:2: (this_MapLiteralExpCS_5= ruleMapLiteralExpCS )
-        // InternalAllocationSpecificationLanguage.g:6275:2: this_MapLiteralExpCS_5= ruleMapLiteralExpCS
+        // InternalAllocationSpecificationLanguage.g:6345:2: (this_MapLiteralExpCS_5= ruleMapLiteralExpCS )
+        // InternalAllocationSpecificationLanguage.g:6345:2: this_MapLiteralExpCS_5= ruleMapLiteralExpCS
         {
         if ( state.backtracking==0 ) {
            
@@ -25560,15 +25702,15 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
         }
     }
-    // $ANTLR end synpred149_InternalAllocationSpecificationLanguage
+    // $ANTLR end synpred151_InternalAllocationSpecificationLanguage
 
-    // $ANTLR start synpred150_InternalAllocationSpecificationLanguage
-    public final void synpred150_InternalAllocationSpecificationLanguage_fragment() throws RecognitionException {   
+    // $ANTLR start synpred152_InternalAllocationSpecificationLanguage
+    public final void synpred152_InternalAllocationSpecificationLanguage_fragment() throws RecognitionException {   
         EObject this_CollectionLiteralExpCS_6 = null;
 
 
-        // InternalAllocationSpecificationLanguage.g:6288:2: (this_CollectionLiteralExpCS_6= ruleCollectionLiteralExpCS )
-        // InternalAllocationSpecificationLanguage.g:6288:2: this_CollectionLiteralExpCS_6= ruleCollectionLiteralExpCS
+        // InternalAllocationSpecificationLanguage.g:6358:2: (this_CollectionLiteralExpCS_6= ruleCollectionLiteralExpCS )
+        // InternalAllocationSpecificationLanguage.g:6358:2: this_CollectionLiteralExpCS_6= ruleCollectionLiteralExpCS
         {
         if ( state.backtracking==0 ) {
            
@@ -25583,15 +25725,15 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
         }
     }
-    // $ANTLR end synpred150_InternalAllocationSpecificationLanguage
+    // $ANTLR end synpred152_InternalAllocationSpecificationLanguage
 
-    // $ANTLR start synpred152_InternalAllocationSpecificationLanguage
-    public final void synpred152_InternalAllocationSpecificationLanguage_fragment() throws RecognitionException {   
+    // $ANTLR start synpred154_InternalAllocationSpecificationLanguage
+    public final void synpred154_InternalAllocationSpecificationLanguage_fragment() throws RecognitionException {   
         EObject this_TypeLiteralExpCS_8 = null;
 
 
-        // InternalAllocationSpecificationLanguage.g:6314:2: (this_TypeLiteralExpCS_8= ruleTypeLiteralExpCS )
-        // InternalAllocationSpecificationLanguage.g:6314:2: this_TypeLiteralExpCS_8= ruleTypeLiteralExpCS
+        // InternalAllocationSpecificationLanguage.g:6384:2: (this_TypeLiteralExpCS_8= ruleTypeLiteralExpCS )
+        // InternalAllocationSpecificationLanguage.g:6384:2: this_TypeLiteralExpCS_8= ruleTypeLiteralExpCS
         {
         if ( state.backtracking==0 ) {
            
@@ -25606,15 +25748,15 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
         }
     }
-    // $ANTLR end synpred152_InternalAllocationSpecificationLanguage
+    // $ANTLR end synpred154_InternalAllocationSpecificationLanguage
 
     // Delegated rules
 
-    public final boolean synpred141_InternalAllocationSpecificationLanguage() {
+    public final boolean synpred143_InternalAllocationSpecificationLanguage() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred141_InternalAllocationSpecificationLanguage_fragment(); // can never throw exception
+            synpred143_InternalAllocationSpecificationLanguage_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -25643,6 +25785,20 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         int start = input.mark();
         try {
             synpred32_InternalAllocationSpecificationLanguage_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred140_InternalAllocationSpecificationLanguage() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred140_InternalAllocationSpecificationLanguage_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -25708,11 +25864,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         state.failed=false;
         return success;
     }
-    public final boolean synpred149_InternalAllocationSpecificationLanguage() {
+    public final boolean synpred151_InternalAllocationSpecificationLanguage() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred149_InternalAllocationSpecificationLanguage_fragment(); // can never throw exception
+            synpred151_InternalAllocationSpecificationLanguage_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -25750,25 +25906,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         state.failed=false;
         return success;
     }
-    public final boolean synpred138_InternalAllocationSpecificationLanguage() {
+    public final boolean synpred154_InternalAllocationSpecificationLanguage() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred138_InternalAllocationSpecificationLanguage_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred148_InternalAllocationSpecificationLanguage() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred148_InternalAllocationSpecificationLanguage_fragment(); // can never throw exception
+            synpred154_InternalAllocationSpecificationLanguage_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -25796,14 +25938,14 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
     protected DFA2 dfa2 = new DFA2(this);
     protected DFA24 dfa24 = new DFA24(this);
-    protected DFA87 dfa87 = new DFA87(this);
-    protected DFA90 dfa90 = new DFA90(this);
-    protected DFA93 dfa93 = new DFA93(this);
+    protected DFA89 dfa89 = new DFA89(this);
+    protected DFA92 dfa92 = new DFA92(this);
+    protected DFA95 dfa95 = new DFA95(this);
     static final String dfa_1s = "\17\uffff";
     static final String dfa_2s = "\1\22\3\4\4\uffff\6\0\1\uffff";
     static final String dfa_3s = "\1\176\3\64\4\uffff\6\0\1\uffff";
     static final String dfa_4s = "\4\uffff\1\5\1\2\1\3\1\4\6\uffff\1\1";
-    static final String dfa_5s = "\1\5\7\uffff\1\6\1\2\1\3\1\1\1\0\1\4\1\uffff}>";
+    static final String dfa_5s = "\1\5\7\uffff\1\6\1\2\1\1\1\0\1\3\1\4\1\uffff}>";
     static final String[] dfa_6s = {
             "\1\4\1\5\1\uffff\1\6\1\7\2\4\13\uffff\1\4\10\uffff\1\4\4\uffff\1\1\1\2\1\3\110\uffff\2\4",
             "\1\15\1\uffff\1\10\1\11\52\uffff\1\12\1\13\1\14",
@@ -25850,21 +25992,6 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA2_12 = input.LA(1);
-
-                         
-                        int index2_12 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( synpred2_InternalAllocationSpecificationLanguage() && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecificationAccess().getUnorderedGroup_3(), 0) ) {s = 14;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getSpecificationAccess().getUnorderedGroup_3()) ) {s = 4;}
-
-                         
-                        input.seek(index2_12);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
                         int LA2_11 = input.LA(1);
 
                          
@@ -25877,6 +26004,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
                          
                         input.seek(index2_11);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA2_10 = input.LA(1);
+
+                         
+                        int index2_10 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( synpred2_InternalAllocationSpecificationLanguage() && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecificationAccess().getUnorderedGroup_3(), 0) ) {s = 14;}
+
+                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getSpecificationAccess().getUnorderedGroup_3()) ) {s = 4;}
+
+                         
+                        input.seek(index2_10);
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
@@ -25895,10 +26037,10 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
-                        int LA2_10 = input.LA(1);
+                        int LA2_12 = input.LA(1);
 
                          
-                        int index2_10 = input.index();
+                        int index2_12 = input.index();
                         input.rewind();
                         s = -1;
                         if ( synpred2_InternalAllocationSpecificationLanguage() && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecificationAccess().getUnorderedGroup_3(), 0) ) {s = 14;}
@@ -25906,7 +26048,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                         else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getSpecificationAccess().getUnorderedGroup_3()) ) {s = 4;}
 
                          
-                        input.seek(index2_10);
+                        input.seek(index2_12);
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
@@ -25973,9 +26115,9 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
     }
     static final String dfa_7s = "\20\uffff";
-    static final String dfa_8s = "\1\57\1\60\1\6\5\40\1\6\5\35\2\uffff";
-    static final String dfa_9s = "\2\60\1\64\5\40\1\75\5\40\2\uffff";
-    static final String dfa_10s = "\16\uffff\1\1\1\2";
+    static final String dfa_8s = "\1\57\1\60\1\6\5\40\1\6\1\uffff\5\35\1\uffff";
+    static final String dfa_9s = "\2\60\1\64\5\40\1\75\1\uffff\5\40\1\uffff";
+    static final String dfa_10s = "\11\uffff\1\1\5\uffff\1\2";
     static final String dfa_11s = "\20\uffff}>";
     static final String[] dfa_12s = {
             "\1\1\1\2",
@@ -25986,13 +26128,13 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             "\1\10",
             "\1\10",
             "\1\10",
-            "\1\11\1\12\25\uffff\1\16\24\uffff\1\13\1\14\1\15\10\uffff\1\16",
-            "\1\16\2\uffff\1\17",
-            "\1\16\2\uffff\1\17",
-            "\1\16\2\uffff\1\17",
-            "\1\16\2\uffff\1\17",
-            "\1\16\2\uffff\1\17",
+            "\1\12\1\13\25\uffff\1\11\24\uffff\1\14\1\15\1\16\10\uffff\1\11",
             "",
+            "\1\11\2\uffff\1\17",
+            "\1\11\2\uffff\1\17",
+            "\1\11\2\uffff\1\17",
+            "\1\11\2\uffff\1\17",
+            "\1\11\2\uffff\1\17",
             ""
     };
 
@@ -26059,11 +26201,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     static final short[] dfa_17 = DFA.unpackEncodedString(dfa_17s);
     static final short[][] dfa_18 = unpackEncodedStringArray(dfa_18s);
 
-    class DFA87 extends DFA {
+    class DFA89 extends DFA {
 
-        public DFA87(BaseRecognizer recognizer) {
+        public DFA89(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 87;
+            this.decisionNumber = 89;
             this.eot = dfa_13;
             this.eof = dfa_13;
             this.min = dfa_14;
@@ -26073,91 +26215,91 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             this.transition = dfa_18;
         }
         public String getDescription() {
-            return "5883:2: (this_TypeNameExpCS_0= ruleTypeNameExpCS | this_TypeLiteralCS_1= ruleTypeLiteralCS | this_CollectionPatternCS_2= ruleCollectionPatternCS )";
+            return "5920:1: (this_TypeNameExpCS_0= ruleTypeNameExpCS | this_TypeLiteralCS_1= ruleTypeLiteralCS | this_CollectionPatternCS_2= ruleCollectionPatternCS )";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA87_16 = input.LA(1);
+                        int LA89_16 = input.LA(1);
 
                          
-                        int index87_16 = input.index();
+                        int index89_16 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred138_InternalAllocationSpecificationLanguage()) ) {s = 6;}
+                        if ( (synpred140_InternalAllocationSpecificationLanguage()) ) {s = 6;}
 
                         else if ( (true) ) {s = 23;}
 
                          
-                        input.seek(index87_16);
+                        input.seek(index89_16);
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA87_17 = input.LA(1);
+                        int LA89_17 = input.LA(1);
 
                          
-                        int index87_17 = input.index();
+                        int index89_17 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred138_InternalAllocationSpecificationLanguage()) ) {s = 6;}
+                        if ( (synpred140_InternalAllocationSpecificationLanguage()) ) {s = 6;}
 
                         else if ( (true) ) {s = 23;}
 
                          
-                        input.seek(index87_17);
+                        input.seek(index89_17);
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA87_18 = input.LA(1);
+                        int LA89_18 = input.LA(1);
 
                          
-                        int index87_18 = input.index();
+                        int index89_18 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred138_InternalAllocationSpecificationLanguage()) ) {s = 6;}
+                        if ( (synpred140_InternalAllocationSpecificationLanguage()) ) {s = 6;}
 
                         else if ( (true) ) {s = 23;}
 
                          
-                        input.seek(index87_18);
+                        input.seek(index89_18);
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
-                        int LA87_19 = input.LA(1);
+                        int LA89_19 = input.LA(1);
 
                          
-                        int index87_19 = input.index();
+                        int index89_19 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred138_InternalAllocationSpecificationLanguage()) ) {s = 6;}
+                        if ( (synpred140_InternalAllocationSpecificationLanguage()) ) {s = 6;}
 
                         else if ( (true) ) {s = 23;}
 
                          
-                        input.seek(index87_19);
+                        input.seek(index89_19);
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
-                        int LA87_20 = input.LA(1);
+                        int LA89_20 = input.LA(1);
 
                          
-                        int index87_20 = input.index();
+                        int index89_20 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred138_InternalAllocationSpecificationLanguage()) ) {s = 6;}
+                        if ( (synpred140_InternalAllocationSpecificationLanguage()) ) {s = 6;}
 
                         else if ( (true) ) {s = 23;}
 
                          
-                        input.seek(index87_20);
+                        input.seek(index89_20);
                         if ( s>=0 ) return s;
                         break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 87, _s, input);
+                new NoViableAltException(getDescription(), 89, _s, input);
             error(nvae);
             throw nvae;
         }
@@ -26214,11 +26356,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     static final short[] dfa_23 = DFA.unpackEncodedString(dfa_23s);
     static final short[][] dfa_24 = unpackEncodedStringArray(dfa_24s);
 
-    class DFA90 extends DFA {
+    class DFA92 extends DFA {
 
-        public DFA90(BaseRecognizer recognizer) {
+        public DFA92(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 90;
+            this.decisionNumber = 92;
             this.eot = dfa_19;
             this.eof = dfa_19;
             this.min = dfa_20;
@@ -26228,46 +26370,46 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             this.transition = dfa_24;
         }
         public String getDescription() {
-            return "5960:1: ( (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? ) | this_PrefixedLetExpCS_4= rulePrefixedLetExpCS )";
+            return "6030:1: ( (this_PrefixedPrimaryExpCS_0= rulePrefixedPrimaryExpCS ( () ( (lv_name_2_0= ruleBinaryOperatorName ) ) ( (lv_ownedRight_3_0= ruleExpCS ) ) )? ) | this_PrefixedLetExpCS_4= rulePrefixedLetExpCS )";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA90_1 = input.LA(1);
+                        int LA92_1 = input.LA(1);
 
                          
-                        int index90_1 = input.index();
+                        int index92_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred141_InternalAllocationSpecificationLanguage()) ) {s = 3;}
+                        if ( (synpred143_InternalAllocationSpecificationLanguage()) ) {s = 3;}
 
                         else if ( (true) ) {s = 36;}
 
                          
-                        input.seek(index90_1);
+                        input.seek(index92_1);
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA90_2 = input.LA(1);
+                        int LA92_2 = input.LA(1);
 
                          
-                        int index90_2 = input.index();
+                        int index92_2 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred141_InternalAllocationSpecificationLanguage()) ) {s = 3;}
+                        if ( (synpred143_InternalAllocationSpecificationLanguage()) ) {s = 3;}
 
                         else if ( (true) ) {s = 36;}
 
                          
-                        input.seek(index90_2);
+                        input.seek(index92_2);
                         if ( s>=0 ) return s;
                         break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 90, _s, input);
+                new NoViableAltException(getDescription(), 92, _s, input);
             error(nvae);
             throw nvae;
         }
@@ -26321,11 +26463,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     static final short[] dfa_28 = DFA.unpackEncodedString(dfa_28s);
     static final short[][] dfa_29 = unpackEncodedStringArray(dfa_29s);
 
-    class DFA93 extends DFA {
+    class DFA95 extends DFA {
 
-        public DFA93(BaseRecognizer recognizer) {
+        public DFA95(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 93;
+            this.decisionNumber = 95;
             this.eot = dfa_19;
             this.eof = dfa_19;
             this.min = dfa_25;
@@ -26335,121 +26477,121 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             this.transition = dfa_29;
         }
         public String getDescription() {
-            return "6209:1: (this_NestedExpCS_0= ruleNestedExpCS | this_IfExpCS_1= ruleIfExpCS | this_SelfExpCS_2= ruleSelfExpCS | this_PrimitiveLiteralExpCS_3= rulePrimitiveLiteralExpCS | this_TupleLiteralExpCS_4= ruleTupleLiteralExpCS | this_MapLiteralExpCS_5= ruleMapLiteralExpCS | this_CollectionLiteralExpCS_6= ruleCollectionLiteralExpCS | this_LambdaLiteralExpCS_7= ruleLambdaLiteralExpCS | this_TypeLiteralExpCS_8= ruleTypeLiteralExpCS | this_NameExpCS_9= ruleNameExpCS )";
+            return "6279:1: (this_NestedExpCS_0= ruleNestedExpCS | this_IfExpCS_1= ruleIfExpCS | this_SelfExpCS_2= ruleSelfExpCS | this_PrimitiveLiteralExpCS_3= rulePrimitiveLiteralExpCS | this_TupleLiteralExpCS_4= ruleTupleLiteralExpCS | this_MapLiteralExpCS_5= ruleMapLiteralExpCS | this_CollectionLiteralExpCS_6= ruleCollectionLiteralExpCS | this_LambdaLiteralExpCS_7= ruleLambdaLiteralExpCS | this_TypeLiteralExpCS_8= ruleTypeLiteralExpCS | this_NameExpCS_9= ruleNameExpCS )";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA93_11 = input.LA(1);
+                        int LA95_11 = input.LA(1);
 
                          
-                        int index93_11 = input.index();
+                        int index95_11 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred148_InternalAllocationSpecificationLanguage()) ) {s = 34;}
+                        if ( (synpred150_InternalAllocationSpecificationLanguage()) ) {s = 34;}
 
-                        else if ( (synpred152_InternalAllocationSpecificationLanguage()) ) {s = 19;}
+                        else if ( (synpred154_InternalAllocationSpecificationLanguage()) ) {s = 19;}
 
                          
-                        input.seek(index93_11);
+                        input.seek(index95_11);
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA93_12 = input.LA(1);
+                        int LA95_12 = input.LA(1);
 
                          
-                        int index93_12 = input.index();
+                        int index95_12 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred149_InternalAllocationSpecificationLanguage()) ) {s = 35;}
+                        if ( (synpred151_InternalAllocationSpecificationLanguage()) ) {s = 35;}
 
-                        else if ( (synpred152_InternalAllocationSpecificationLanguage()) ) {s = 19;}
+                        else if ( (synpred154_InternalAllocationSpecificationLanguage()) ) {s = 19;}
 
                          
-                        input.seek(index93_12);
+                        input.seek(index95_12);
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA93_13 = input.LA(1);
+                        int LA95_13 = input.LA(1);
 
                          
-                        int index93_13 = input.index();
+                        int index95_13 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred150_InternalAllocationSpecificationLanguage()) ) {s = 36;}
+                        if ( (synpred152_InternalAllocationSpecificationLanguage()) ) {s = 36;}
 
-                        else if ( (synpred152_InternalAllocationSpecificationLanguage()) ) {s = 19;}
+                        else if ( (synpred154_InternalAllocationSpecificationLanguage()) ) {s = 19;}
 
                          
-                        input.seek(index93_13);
+                        input.seek(index95_13);
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
-                        int LA93_14 = input.LA(1);
+                        int LA95_14 = input.LA(1);
 
                          
-                        int index93_14 = input.index();
+                        int index95_14 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred150_InternalAllocationSpecificationLanguage()) ) {s = 36;}
+                        if ( (synpred152_InternalAllocationSpecificationLanguage()) ) {s = 36;}
 
-                        else if ( (synpred152_InternalAllocationSpecificationLanguage()) ) {s = 19;}
+                        else if ( (synpred154_InternalAllocationSpecificationLanguage()) ) {s = 19;}
 
                          
-                        input.seek(index93_14);
+                        input.seek(index95_14);
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
-                        int LA93_15 = input.LA(1);
+                        int LA95_15 = input.LA(1);
 
                          
-                        int index93_15 = input.index();
+                        int index95_15 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred150_InternalAllocationSpecificationLanguage()) ) {s = 36;}
+                        if ( (synpred152_InternalAllocationSpecificationLanguage()) ) {s = 36;}
 
-                        else if ( (synpred152_InternalAllocationSpecificationLanguage()) ) {s = 19;}
+                        else if ( (synpred154_InternalAllocationSpecificationLanguage()) ) {s = 19;}
 
                          
-                        input.seek(index93_15);
+                        input.seek(index95_15);
                         if ( s>=0 ) return s;
                         break;
                     case 5 : 
-                        int LA93_16 = input.LA(1);
+                        int LA95_16 = input.LA(1);
 
                          
-                        int index93_16 = input.index();
+                        int index95_16 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred150_InternalAllocationSpecificationLanguage()) ) {s = 36;}
+                        if ( (synpred152_InternalAllocationSpecificationLanguage()) ) {s = 36;}
 
-                        else if ( (synpred152_InternalAllocationSpecificationLanguage()) ) {s = 19;}
+                        else if ( (synpred154_InternalAllocationSpecificationLanguage()) ) {s = 19;}
 
                          
-                        input.seek(index93_16);
+                        input.seek(index95_16);
                         if ( s>=0 ) return s;
                         break;
                     case 6 : 
-                        int LA93_17 = input.LA(1);
+                        int LA95_17 = input.LA(1);
 
                          
-                        int index93_17 = input.index();
+                        int index95_17 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred150_InternalAllocationSpecificationLanguage()) ) {s = 36;}
+                        if ( (synpred152_InternalAllocationSpecificationLanguage()) ) {s = 36;}
 
-                        else if ( (synpred152_InternalAllocationSpecificationLanguage()) ) {s = 19;}
+                        else if ( (synpred154_InternalAllocationSpecificationLanguage()) ) {s = 19;}
 
                          
-                        input.seek(index93_17);
+                        input.seek(index95_17);
                         if ( s>=0 ) return s;
                         break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 93, _s, input);
+                new NoViableAltException(getDescription(), 95, _s, input);
             error(nvae);
             throw nvae;
         }
@@ -26507,46 +26649,47 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x4000000040000000L});
         public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000000000002L,0x0000000008000000L});
         public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000020000002L});
-        public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x001C0001200401D0L,0x001841E9F6001FFFL});
-        public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0000000040040000L});
-        public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x001C0001200001D0L,0x001841E9F6001FFFL});
-        public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000000000000002L,0x0000000200000000L});
-        public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000040000000L,0x0000000400000000L});
-        public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x001C0000200401D0L,0x001841E9F6001FFFL});
-        public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000000000000L,0x0000001000000000L});
-        public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0002000100000000L});
-        public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0000000000000012L});
-        public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000000000002L,0x0000040000000000L});
-        public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0000000000020002L});
-        public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x60021C0000000002L,0x0000000001FFF400L});
-        public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x001C0000200001D0L,0x001041E9F6001FFFL});
-        public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x0000000020020002L,0x0000060000000000L});
-        public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x0000000000020002L,0x0000020000000000L});
-        public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x0000000000000002L,0x0000020000000000L});
-        public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x0040000000000000L});
-        public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x001C0000000400D0L,0x00000001F60003FFL});
-        public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x801C0001A00001D0L,0x001841E9F6001FFFL});
-        public static final BitSet FOLLOW_69 = new BitSet(new long[]{0x00000000C0100000L,0x0000200000000000L});
-        public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x00000000C0000000L,0x0000200000000000L});
-        public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x0000000040000000L,0x0000080000000000L});
-        public static final BitSet FOLLOW_72 = new BitSet(new long[]{0x0000000100000002L,0x0000100000000000L});
-        public static final BitSet FOLLOW_73 = new BitSet(new long[]{0x0002000000000002L});
-        public static final BitSet FOLLOW_74 = new BitSet(new long[]{0x801C0000200001D0L,0x001841E9F6001FFFL});
-        public static final BitSet FOLLOW_75 = new BitSet(new long[]{0x0000000100000002L});
-        public static final BitSet FOLLOW_76 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-        public static final BitSet FOLLOW_77 = new BitSet(new long[]{0x0000000000000000L,0x0005000000000000L});
-        public static final BitSet FOLLOW_78 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
-        public static final BitSet FOLLOW_79 = new BitSet(new long[]{0x0000000040000000L,0x0000100000000000L});
-        public static final BitSet FOLLOW_80 = new BitSet(new long[]{0x0002000120000000L});
-        public static final BitSet FOLLOW_81 = new BitSet(new long[]{0x0000000000000100L,0x0000000000001000L});
-        public static final BitSet FOLLOW_82 = new BitSet(new long[]{0x8000040000000100L,0x0000000000001000L});
-        public static final BitSet FOLLOW_83 = new BitSet(new long[]{0x0000000000000000L,0x0060080000000000L});
-        public static final BitSet FOLLOW_84 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
-        public static final BitSet FOLLOW_85 = new BitSet(new long[]{0x0000000040000002L,0x0000040000000000L});
-        public static final BitSet FOLLOW_86 = new BitSet(new long[]{0x801C0000000000C0L,0x00000001F60003FFL});
-        public static final BitSet FOLLOW_87 = new BitSet(new long[]{0x0000000000000002L,0x0080000000000000L});
-        public static final BitSet FOLLOW_88 = new BitSet(new long[]{0x0000000000000002L,0x0100000000000000L});
-        public static final BitSet FOLLOW_89 = new BitSet(new long[]{0x001C000000000002L});
+        public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000080000000L,0x0000040000000000L});
+        public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x001C0001200401D0L,0x001841E9F6001FFFL});
+        public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0000000040040000L});
+        public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x001C0001200001D0L,0x001841E9F6001FFFL});
+        public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000000002L,0x0000000200000000L});
+        public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000000040000000L,0x0000000400000000L});
+        public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x001C0000200401D0L,0x001841E9F6001FFFL});
+        public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0000000000000000L,0x0000001000000000L});
+        public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0002000100000000L});
+        public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000000000012L});
+        public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0000000000000002L,0x0000040000000000L});
+        public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x0000000000020002L});
+        public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x60021C0000000002L,0x0000000001FFF400L});
+        public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x001C0000200001D0L,0x001041E9F6001FFFL});
+        public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x0000000020020002L,0x0000060000000000L});
+        public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x0000000000020002L,0x0000020000000000L});
+        public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x0000000000000002L,0x0000020000000000L});
+        public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x0040000000000000L});
+        public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x001C0000000400D0L,0x00000001F60003FFL});
+        public static final BitSet FOLLOW_69 = new BitSet(new long[]{0x801C0001A00001D0L,0x001841E9F6001FFFL});
+        public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x00000000C0100000L,0x0000200000000000L});
+        public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x00000000C0000000L,0x0000200000000000L});
+        public static final BitSet FOLLOW_72 = new BitSet(new long[]{0x0000000040000000L,0x0000080000000000L});
+        public static final BitSet FOLLOW_73 = new BitSet(new long[]{0x0000000100000002L,0x0000100000000000L});
+        public static final BitSet FOLLOW_74 = new BitSet(new long[]{0x0002000000000002L});
+        public static final BitSet FOLLOW_75 = new BitSet(new long[]{0x801C0000200001D0L,0x001841E9F6001FFFL});
+        public static final BitSet FOLLOW_76 = new BitSet(new long[]{0x0000000100000002L});
+        public static final BitSet FOLLOW_77 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
+        public static final BitSet FOLLOW_78 = new BitSet(new long[]{0x0000000000000000L,0x0005000000000000L});
+        public static final BitSet FOLLOW_79 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+        public static final BitSet FOLLOW_80 = new BitSet(new long[]{0x0000000040000000L,0x0000100000000000L});
+        public static final BitSet FOLLOW_81 = new BitSet(new long[]{0x0002000120000000L});
+        public static final BitSet FOLLOW_82 = new BitSet(new long[]{0x0000000000000100L,0x0000000000001000L});
+        public static final BitSet FOLLOW_83 = new BitSet(new long[]{0x8000040000000100L,0x0000000000001000L});
+        public static final BitSet FOLLOW_84 = new BitSet(new long[]{0x0000000000000000L,0x0060080000000000L});
+        public static final BitSet FOLLOW_85 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
+        public static final BitSet FOLLOW_86 = new BitSet(new long[]{0x0000000040000002L,0x0000040000000000L});
+        public static final BitSet FOLLOW_87 = new BitSet(new long[]{0x801C0000000000C0L,0x00000001F60003FFL});
+        public static final BitSet FOLLOW_88 = new BitSet(new long[]{0x0000000000000002L,0x0080000000000000L});
+        public static final BitSet FOLLOW_89 = new BitSet(new long[]{0x0000000000000002L,0x0100000000000000L});
+        public static final BitSet FOLLOW_90 = new BitSet(new long[]{0x001C000000000002L});
     }
 
 
