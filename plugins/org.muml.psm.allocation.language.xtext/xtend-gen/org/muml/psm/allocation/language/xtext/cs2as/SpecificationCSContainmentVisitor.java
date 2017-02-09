@@ -1,5 +1,6 @@
 package org.muml.psm.allocation.language.xtext.cs2as;
 
+import com.google.common.base.Objects;
 import java.util.Collection;
 import org.eclipse.ocl.pivot.internal.library.ImplementationManager;
 import org.eclipse.ocl.pivot.internal.manager.PivotMetamodelManager;
@@ -32,15 +33,23 @@ public class SpecificationCSContainmentVisitor extends LanguageSpecificationCSCo
       ImplementationManager _implementationManager = _metamodelManager.getImplementationManager();
       final Collection<ClassLoader> classLoaders = _implementationManager.getClassLoaders();
       JavaImplementationProviderCS _nameProviderImplementationClass = csElement.getNameProviderImplementationClass();
-      JavaClassCS _implementation = _nameProviderImplementationClass.getImplementation();
-      String _name = _implementation.getName();
-      LazyNameProvider _lazyNameProvider = new LazyNameProvider(_name, classLoaders);
-      specification.setNameProvider(_lazyNameProvider);
+      boolean _notEquals = (!Objects.equal(_nameProviderImplementationClass, null));
+      if (_notEquals) {
+        JavaImplementationProviderCS _nameProviderImplementationClass_1 = csElement.getNameProviderImplementationClass();
+        JavaClassCS _implementation = _nameProviderImplementationClass_1.getImplementation();
+        String _name = _implementation.getName();
+        LazyNameProvider _lazyNameProvider = new LazyNameProvider(_name, classLoaders);
+        specification.setNameProvider(_lazyNameProvider);
+      }
       JavaImplementationProviderCS _storageProviderImplementationClass = csElement.getStorageProviderImplementationClass();
-      JavaClassCS _implementation_1 = _storageProviderImplementationClass.getImplementation();
-      String _name_1 = _implementation_1.getName();
-      LazyStorageProvider _lazyStorageProvider = new LazyStorageProvider(_name_1, classLoaders);
-      specification.setStorageProvider(_lazyStorageProvider);
+      boolean _notEquals_1 = (!Objects.equal(_storageProviderImplementationClass, null));
+      if (_notEquals_1) {
+        JavaImplementationProviderCS _storageProviderImplementationClass_1 = csElement.getStorageProviderImplementationClass();
+        JavaClassCS _implementation_1 = _storageProviderImplementationClass_1.getImplementation();
+        String _name_1 = _implementation_1.getName();
+        LazyStorageProvider _lazyStorageProvider = new LazyStorageProvider(_name_1, classLoaders);
+        specification.setStorageProvider(_lazyStorageProvider);
+      }
       _xblockexpression = continuation;
     }
     return _xblockexpression;
