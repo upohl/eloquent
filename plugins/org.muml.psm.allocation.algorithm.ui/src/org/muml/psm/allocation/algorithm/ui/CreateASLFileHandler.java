@@ -23,8 +23,27 @@ public class CreateASLFileHandler extends AbstractHandler {
 	private static final String illegal_template =
 			"template does not conform to the grammar";
 	private static final String file_extension = "allocation_specification";
+	// what a mess...
 	private static final String template =
-			"%s {\n\tinclude 'platform:/plugin/org.muml.psm.allocation.language.xtext/operations/OCLContext.ocl'\n}";
+			new StringBuilder()
+				.append("%s {\n")
+				.append("\timport 'http://www.muml.org/psm/allocation/language/oclcontext/1.0.0'\n")
+				.append("\tinclude 'platform:/plugin/org.muml.psm.allocation.language.xtext/operations/OCLContext.ocl'\n")
+				.append("\n")
+				.append("\toclContext oclcontext::OCLContext;\n")
+				.append("\n")
+				.append("\tnameProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLNameProvider';\n")
+				.append("\tstorageProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLStorageProvider';\n")
+				.append("\n")
+				.append("\trelation allocate {\n")
+				.append("\t\tdescriptors (first : pim::instance::ComponentInstance, second : hardware::hwresourceinstance::ResourceInstance);\n")
+				.append("\t\tlower 1;\n")
+				.append("\t\tupper 1;\n")
+				.append("\t\tocl self.componentInstanceConfiguration.componentInstances->product(\n")
+				.append("\t\t\tself.hardwarePlatformInstanceConfiguration.resources\n")
+				.append("\t\t);\n")
+				.append("\t}\n")
+				.append("}").toString();
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
@@ -43,6 +62,7 @@ public class CreateASLFileHandler extends AbstractHandler {
 	private static void createASLFile(IFile file) {
 		ResourceSet resSet = new ResourceSetImpl();
 		IPath path = getNonexistentPath(file.getFullPath(), file_extension);
+		// hrm what about illegal names?
 		String name = path.removeFileExtension().lastSegment();
 		// XXX: hrm is path.toString already encoded?
 		Resource resource = resSet.createResource(
