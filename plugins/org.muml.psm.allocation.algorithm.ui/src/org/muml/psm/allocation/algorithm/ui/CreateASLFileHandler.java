@@ -39,8 +39,8 @@ public class CreateASLFileHandler extends AbstractHandler {
 				.append("\t\tdescriptors (first : pim::instance::ComponentInstance, second : hardware::hwresourceinstance::ResourceInstance);\n")
 				.append("\t\tlower 1;\n")
 				.append("\t\tupper 1;\n")
-				.append("\t\tocl self.componentInstanceConfiguration.componentInstances->product(\n")
-				.append("\t\t\tself.hardwarePlatformInstanceConfiguration.resources\n")
+				.append("\t\tocl self.getAllSWInstances()->product(\n")
+				.append("\t\t\tself.getAllStructuredHWInstances()\n")
 				.append("\t\t);\n")
 				.append("\t}\n")
 				.append("}").toString();
