@@ -28,6 +28,13 @@
 		def: getAllHWInstances() : Set(hwresourceinstance::ResourceInstance) =
 			self.getAllHWPlatformInstances()->collect(embeddedHPIC.resources)->asSet()
 			
+		def: getAllStructuredHWInstances() : Set(hwresourceinstance::StructuredResourceInstance) =
+			self.getAllHWInstances()->select(
+				oclIsKindOf(hwresourceinstance::StructuredResourceInstance)
+			)->collect(
+				oclAsType(hwresourceinstance::StructuredResourceInstance)
+			)->asSet()
+			
 		def: getAllHWPlatformInstances() : Set(hwplatforminstance::HWPlatformInstance) =
 			self.hardwarePlatformInstanceConfiguration.getAllEmbeddedPlatformInstances()
 			
