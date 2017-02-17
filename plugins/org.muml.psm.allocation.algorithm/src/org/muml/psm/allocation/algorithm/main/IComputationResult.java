@@ -3,17 +3,16 @@ package org.muml.psm.allocation.algorithm.main;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
-import org.muml.psm.allocation.SystemAllocation;
 
 /**
- * Provides access to computation details and the <code>SystemAllocation</code>.
+ * Provides access to computation details and the storage object (if available).
  * The <code>getDiagnostic</code> method returns a Diagnostic, which provides
  * details about the allocation computation (for example, in case of a failure).
- * The<code>SystemAllocation</code> can be accessed using the
- * <code>getSystemAlloction</code> method.
+ * The storage object can be accessed using the <code>getStorageObject</code>
+ * method (if available).
  *
  */
-public interface IComputationResult {
+public interface IComputationResult<T> {
 	
 	/**
 	 * Provides information about the allocation computation.
@@ -27,27 +26,28 @@ public interface IComputationResult {
 	public Diagnostic getDiagnostic();
 	
 	/**
-	 * Returns the computed <code>SystemAllocation</code>. If the
-	 * computation was not successful, <code>null</code> is returned.
+	 * Returns the computed storage object, if available. If no
+	 * storage object is available or the computation was not
+	 * successful, <code>null</code> is returned.
 	 * 
-	 * @return the systemAllocation or <code>null</code>
+	 * @return the storage object or <code>null</code>
 	 */
 	@Nullable
-	public SystemAllocation getSystemAllocation();
+	public T getStorageObject();
 	
 	
 	/**
 	 * Default implementation of the <code>IComputationResult</code> interface.
 	 *
 	 */
-	public static class DefaultComputationResult implements IComputationResult {
+	public static class DefaultComputationResult<T> implements IComputationResult<T> {
 		private Diagnostic diagnostic;
-		private SystemAllocation systemAllocation;
+		private T storageObject;
 		
 		public DefaultComputationResult(@NonNull Diagnostic diagnostic,
-				@Nullable SystemAllocation systemAllocation) {
+				@Nullable T storageObject) {
 			this.diagnostic = diagnostic;
-			this.systemAllocation = systemAllocation;
+			this.storageObject = storageObject;
 		}
 
 		@Override
@@ -58,8 +58,8 @@ public interface IComputationResult {
 
 		@Override
 		@Nullable
-		public SystemAllocation getSystemAllocation() {
-			return systemAllocation;
+		public T getStorageObject() {
+			return storageObject;
 		}
 
 	}

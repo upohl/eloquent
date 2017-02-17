@@ -4,22 +4,29 @@ import java.lang.reflect.InvocationTargetException
 import org.eclipse.core.runtime.IProgressMonitor
 import org.eclipse.core.runtime.Status
 import org.eclipse.emf.ecore.EObject
+import org.eclipse.jface.viewers.IStructuredSelection
+import org.eclipse.ui.IWorkbench
 import org.muml.core.export.operation.IFujabaExportOperation
-import org.muml.core.export.pages.AbstractFujabaExportSourcePage
-import org.muml.core.export.pages.ElementSelectionMode
 import org.muml.core.export.wizard.AbstractFujabaExportWizard
-import org.muml.pim.instance.ComponentInstanceConfiguration
-import org.muml.pm.hardware.hwplatforminstance.HWPlatformInstanceConfiguration
+import org.muml.psm.allocation.algorithm.ui.wizard.AllocationWizard.DefaultOCLContextSelectionProvider
+import org.muml.psm.allocation.algorithm.ui.wizard.ExtensionUtil
+import org.muml.psm.allocation.algorithm.ui.wizard.IOCLContextSelectionProvider
+import org.muml.psm.allocation.algorithm.ui.wizard.IOCLContextSelectionProvider.PageContext
 
 class EvaluationContextWizard extends AbstractFujabaExportWizard {
-	AbstractFujabaExportSourcePage cicSourcePage
-	AbstractFujabaExportSourcePage hpicSourcePage
-	ComponentInstanceConfiguration cic
-	HWPlatformInstanceConfiguration hpic
+	
+	private EObject oclContext
+	private IOCLContextSelectionProvider oclContextSelectionProvider
+	
+	override init(IWorkbench workbench, IStructuredSelection currentSelection) {
+		super.init(workbench, currentSelection)
+		oclContextSelectionProvider = ExtensionUtil.getOCLContextSelectionProvider(
+			currentSelection
+		) ?: new DefaultOCLContextSelectionProvider()
+	}
 	
 	override wizardCreateExportOperation() {
-		cic = cicSourcePage.sourceElements.get(0) as ComponentInstanceConfiguration
-		hpic = hpicSourcePage.sourceElements.get(0) as HWPlatformInstanceConfiguration
+		oclContext = oclContextSelectionProvider.OCLContext		
 		new IFujabaExportOperation() {
 			
 			override getStatus() {
@@ -33,64 +40,20 @@ class EvaluationContextWizard extends AbstractFujabaExportWizard {
 	}
 	
 	override addPages() {
-		// cic and hpic selection source page
-		cicSourcePage = new AbstractFujabaExportSourcePage("CicSP", toolkit,
-				getResourceSet(), initialSelection) {
-					
-			/*{
-				setTitle("Select Component Instance Configuration");
-				setDescription("Select Component Instance Configuration, whose component instances should be allocated");
-			}*/
-
-			override wizardPageGetSourceFileExtension() {
-				return "muml";
-			}
-
-			override wizardPageGetSupportedSelectionMode() {
-				return ElementSelectionMode.ELEMENT_SELECTION_MODE_SINGLE;
-			}
-
-			override wizardPageSupportsSourceModelElement(EObject element) {
-				return element instanceof ComponentInstanceConfiguration;
-			}
-			
-		}
-		addPage(cicSourcePage)
-		// hpic source page
-		hpicSourcePage = new AbstractFujabaExportSourcePage("HpicSP", toolkit,
-				getResourceSet(), initialSelection) {
-			
-			/*{
-				setTitle("Select HW Platform Instance Configuration");
-				setDescription("The HW Platform Instance Configuration provides the ECUs");
-			}*/
-
-			override wizardPageGetSourceFileExtension() {
-				"muml"
-			}
-
-			override wizardPageGetSupportedSelectionMode() {
-				ElementSelectionMode.ELEMENT_SELECTION_MODE_SINGLE
-			}
-
-			override wizardPageSupportsSourceModelElement(EObject element) {
-				element instanceof HWPlatformInstanceConfiguration
-			}
-			
-		}
-		addPage(hpicSourcePage)
+		oclContextSelectionProvider.getWizardPages(
+			PageContext.AllocationView, toolkit,
+			getResourceSet(), initialSelection
+		).forEach[page |
+			addPage(page)
+		]
 	}
 	
 	override wizardGetId() {
 		"org.muml.psm.allocation.language.ui.view.EvaluationContextWizard"
 	}
 	
-	def getComponentInstanceConfiguration() {
-		cic
-	}
-	
-	def getHWPlatformInstanceConfiguration() {
-		hpic
+	def getOclContext() {
+		oclContext
 	}
 	
 }

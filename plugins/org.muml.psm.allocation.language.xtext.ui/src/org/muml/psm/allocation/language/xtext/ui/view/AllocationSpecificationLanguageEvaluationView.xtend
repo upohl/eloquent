@@ -4,6 +4,7 @@ import com.google.inject.Inject
 import com.google.inject.name.Named
 import java.io.PrintWriter
 import java.io.StringWriter
+import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.jface.resource.JFaceResources
 import org.eclipse.jface.text.Document
@@ -26,12 +27,9 @@ import org.eclipse.ui.part.ViewPart
 import org.eclipse.xtext.Constants
 import org.eclipse.xtext.resource.EObjectAtOffsetHelper
 import org.eclipse.xtext.ui.editor.XtextEditor
-import org.muml.pim.instance.ComponentInstanceConfiguration
-import org.muml.pm.hardware.hwplatforminstance.HWPlatformInstanceConfiguration
 import org.muml.psm.allocation.algorithm.ocl.OCLEvaluator
 import org.muml.psm.allocation.language.^as.EvaluatableElement
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS
-import org.muml.psm.allocation.language.oclcontext.OclcontextFactory
 import org.muml.psm.allocation.language.xtext.typing.TypesUtil
 
 class AllocationSpecificationLanguageEvaluationView extends ViewPart implements ISelectionListener {
@@ -39,14 +37,11 @@ class AllocationSpecificationLanguageEvaluationView extends ViewPart implements 
 	@Inject @Named(Constants.LANGUAGE_NAME) String languageName
 	String evaluatableElementFragmentURI
 	XtextEditor editor
-	ComponentInstanceConfiguration cic
-	HWPlatformInstanceConfiguration hpic
+	EObject oclContext
 	
-	public def getCic() { return cic; }
-	public def setCic(ComponentInstanceConfiguration cic) { this.cic = cic; }
-	public def getHpic() { return hpic; }
-	public def setHpic(HWPlatformInstanceConfiguration hpic) { this.hpic = hpic; }
-	
+	def setOclContext(EObject oclContext) {
+		this.oclContext = oclContext
+	}
 	
 	ITextViewer resultTextViewer
 	
@@ -95,28 +90,20 @@ class AllocationSpecificationLanguageEvaluationView extends ViewPart implements 
 			resource.getEObject(evaluatableElementFragmentURI)
 		} as EvaluatableElementCS
 	}
-	
-	private def getContext() {
-		val ctx = OclcontextFactory.eINSTANCE.createOCLContext
-		ctx.componentInstanceConfiguration = cic
-		ctx.hardwarePlatformInstanceConfiguration = hpic
-		ctx
-	}
-	
+		
 	def evaluate() {
 		val StringBuilder builder = new StringBuilder
 		if (editor != null) {
 			val result = editor.document.readOnly [ resource |
-				val element = PivotUtil.getPivot(typeof(EvaluatableElement), resource.getEvaluatableElementCS);
-				val ctx = getContext
-				if (element != null && ctx.componentInstanceConfiguration != null && ctx.hardwarePlatformInstanceConfiguration != null) {
+				val element = PivotUtil.getPivot(typeof(EvaluatableElement), resource.getEvaluatableElementCS);				
+				if (element != null && oclContext != null) {
 					builder.append("Evaluating: " + element.getName + "\n")
 					builder.append("Expected type: " + TypesUtil.createType(element))
 					builder.append("\n")
 					builder.append("Actual type: " + element.expression.type)
 					builder.append("\nResult:\n\n")
 					try {
-						OCLEvaluator.evaluate(element.expression, ctx)
+						OCLEvaluator.evaluate(element.expression, oclContext)
 					} catch (InvalidValueException e) {
 						val StringWriter writer = new StringWriter()
 						e.printStackTrace(new PrintWriter(writer))

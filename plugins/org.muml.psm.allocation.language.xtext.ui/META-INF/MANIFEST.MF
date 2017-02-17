@@ -22,7 +22,8 @@ Require-Bundle: org.muml.psm.allocation.language.xtext;visibility:=reexport,
  org.muml.pm.hardware;bundle-version="1.0.0",
  org.muml.psm.allocation.algorithm;bundle-version="1.0.0",
  org.eclipse.xtext.xbase.lib,
- org.eclipse.ocl.xtext.completeocl.ui;bundle-version="1.0.0"
+ org.eclipse.ocl.xtext.completeocl.ui;bundle-version="1.0.0",
+ org.muml.psm.allocation.algorithm.ui;bundle-version="1.0.0"
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7

@@ -26,9 +26,7 @@ class OpenEvaluationContextWizardHandler extends BaseHandler {
 		wizardDialog.open
 		val view = HandlerUtil.getActiveWorkbenchWindow(event).activePage.showView(viewID)
 			 as AllocationSpecificationLanguageEvaluationView
-		view.cic = wizard.componentInstanceConfiguration
-		view.hpic = wizard.HWPlatformInstanceConfiguration
-		null
+		view.oclContext = wizard.oclContext
 	}
 	
 }

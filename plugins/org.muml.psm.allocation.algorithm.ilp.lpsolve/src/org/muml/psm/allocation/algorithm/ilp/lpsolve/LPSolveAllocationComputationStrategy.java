@@ -1,6 +1,5 @@
 package org.muml.psm.allocation.algorithm.ilp.lpsolve;
 
-import java.util.Collections;
 import java.util.Map;
 
 import org.muml.psm.allocation.algorithm.qvto.QVToBasedAllocationComputationStrategy;

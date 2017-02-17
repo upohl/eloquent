@@ -74,15 +74,15 @@ public class AllocationComputationStrategyExtension {
 		 * @return the allocation computation strategy
 		 */
 		@NonNull
-		public IAllocationComputationStrategy<?> getAllocationComputationStrategy()
+		public IAllocationComputationStrategy<?, ?> getAllocationComputationStrategy()
 				throws CoreException {
 			Object object = configurationElement.createExecutableExtension(
 					classAttribute);
-			if (!(object instanceof IAllocationComputationStrategy<?>)) {
+			if (!(object instanceof IAllocationComputationStrategy<?, ?>)) {
 				throw new IllegalStateException(
 						String.format(invalidClass, object));
 			}
-			return (IAllocationComputationStrategy<?>) object;
+			return (IAllocationComputationStrategy<?, ?>) object;
 		}
 	}
 }

@@ -5,7 +5,6 @@ import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
-import org.muml.psm.allocation.SystemAllocation;
 
 /** 
  * Main entry point for computing an allocation. The
@@ -14,13 +13,12 @@ import org.muml.psm.allocation.SystemAllocation;
  * method.
  *
  */
-public class AllocationAlgorithm {
+public class AllocationAlgorithm<T> {
 	private static final String resultNull =
-			"result is null: computeAllocation has to be called before getSystemAlloction";
+			"result is null: computeAllocation has to be called before getStorageObject";
 	private EObject allocationSpecification;
-	private EObject cic;
-	private EObject hpic;
-	private IComputationResult result;
+	private EObject oclContext;
+	private IComputationResult<T> result;
 	private boolean storeILPModel;
 	
 	/**
@@ -31,10 +29,9 @@ public class AllocationAlgorithm {
 	 * @param hpic						the hardware platform instance configuration model element
 	 */
 	public AllocationAlgorithm(EObject allocationSpecification,
-		EObject cic, EObject hpic, boolean storeILPModel) {
+		EObject oclContext, boolean storeILPModel) {
 		this.allocationSpecification = allocationSpecification;
-		this.cic = cic;
-		this.hpic = hpic;
+		this.oclContext = oclContext;
 		this.storeILPModel = storeILPModel;
 	}
 	
@@ -47,31 +44,31 @@ public class AllocationAlgorithm {
 	 * @return					the diagnostic, which provides details about the computation
 	 */
 	@NonNull
-	public Diagnostic computeAllocation(@NonNull IAllocationComputationStrategy<?> acs,
+	public Diagnostic computeAllocation(@NonNull IAllocationComputationStrategy<T, ?> acs,
 			@Nullable IProgressMonitor progressMonitor) {
-		result = acs.computeAllocation(allocationSpecification, cic, hpic, storeILPModel, progressMonitor);
+		result = acs.computeAllocation(allocationSpecification, oclContext, storeILPModel, progressMonitor);
 		return result.getDiagnostic();
 	}
 	
 	@NonNull
-	public Diagnostic computeAllocation(IAllocationComputationStrategy<?> acs) {
+	public Diagnostic computeAllocation(IAllocationComputationStrategy<T, ?> acs) {
 		return computeAllocation(acs, null);
 	}
 	
 	/**
-	 * Returns a previously computed <code>SystemAllocation</code>. Throws an
+	 * Returns the storage object (if available). Throws an
 	 * <code>IllegalStateException</code>, if it was called before the
 	 * <code>computeAllocation</code>
 	 * method.
 	 * 
-	 * @return the systemAllocation or <code>null</code>
+	 * @return the storage object or <code>null</code>
 	 */
 	@Nullable
-	public SystemAllocation getSystemAllocation() {
+	public T getStorageObject() {
 		if (result == null) {
 			throw new IllegalStateException(resultNull);
 		}
-		return result.getSystemAllocation();
+		return result.getStorageObject();
 	}
 
 }

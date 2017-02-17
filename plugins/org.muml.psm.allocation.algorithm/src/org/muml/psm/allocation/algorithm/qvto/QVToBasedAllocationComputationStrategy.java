@@ -10,49 +10,27 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
 import org.eclipse.m2m.qvt.oml.ExecutionDiagnostic;
-import org.muml.pim.instance.ComponentInstanceConfiguration;
-import org.muml.pm.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
-import org.muml.psm.allocation.SystemAllocation;
 import org.muml.psm.allocation.algorithm.main.IAllocationComputationStrategy;
 import org.muml.psm.allocation.algorithm.main.IComputationResult;
-import org.muml.psm.allocation.language.oclcontext.OCLContext;
-import org.muml.psm.allocation.language.oclcontext.OclcontextFactory;
 
-public class QVToBasedAllocationComputationStrategy<T> implements
-		IAllocationComputationStrategy<T> {
+public class QVToBasedAllocationComputationStrategy<V> implements
+		IAllocationComputationStrategy<EObject, V> {
 	
 	private final String transformationURI;
 	
-	private static final String unexpectedResult =
-			"Expected type SystemAllocation but got: %s";
 	private static final String unexpectedResultSize =
 			"Expected exactly one transformation result";
-	private static final String unexpectedArgumentType =
-			"Expected instance of %s (got: %s)";
 	
 	protected QVToBasedAllocationComputationStrategy(String transformationURI) {
 		this.transformationURI = transformationURI;
 	}
-		
-	private static void checkArgumentType(Class<?> clazz, EObject object) {
-		if (!clazz.isInstance(object)) {
-			throw new IllegalArgumentException(
-					String.format(unexpectedArgumentType, clazz,  object));
-		}
-	}
 
 	@Override
 	@NonNull
-	public IComputationResult computeAllocation(
-			@NonNull EObject allocationSpecification, @NonNull EObject cic,
-			@NonNull EObject hpic, boolean storeILPModel, @Nullable IProgressMonitor progressMonitor) {
-		checkArgumentType(ComponentInstanceConfiguration.class, cic);
-		checkArgumentType(HWPlatformInstanceConfiguration.class, hpic);
-		OCLContext oclContext = OclcontextFactory.eINSTANCE.createOCLContext();
-		oclContext.setComponentInstanceConfiguration(
-				(ComponentInstanceConfiguration) cic);
-		oclContext.setHardwarePlatformInstanceConfiguration(
-				(HWPlatformInstanceConfiguration) hpic);
+	public IComputationResult<EObject> computeAllocation(
+			@NonNull EObject allocationSpecification,
+			@NonNull EObject oclContext, boolean storeILPModel,
+			@Nullable IProgressMonitor progressMonitor) {
 		Map<String, Object> config = getConfigurationPropertyMap();
 		config.put("STORE_ILP_MODEL", storeILPModel);
 		QVToSingleOutExtentTransformationRunner runner =
@@ -65,13 +43,13 @@ public class QVToBasedAllocationComputationStrategy<T> implements
 				runner.runTransformation(progressMonitor);
 		BasicDiagnostic rootDiagnostic = createDiagnostic(executionDiagnostic);
 		checkResult(rootDiagnostic, runner);
-		SystemAllocation systemAllocation = null;
+		EObject result = null;
 		if (rootDiagnostic.getSeverity() == Diagnostic.OK) {
-			systemAllocation = (SystemAllocation) runner.getOutExtent()
+			result = runner.getOutExtent()
 					.getContents().get(0);
 		}
-		return new IComputationResult.DefaultComputationResult(
-				rootDiagnostic, systemAllocation);
+		return new IComputationResult.DefaultComputationResult<EObject>(
+				rootDiagnostic, result);
 	}
 	
 	protected Map<String, Object> getConfigurationPropertyMap() {
@@ -80,7 +58,7 @@ public class QVToBasedAllocationComputationStrategy<T> implements
 	
 	@Override
 	@Nullable
-	public T getConfiguration() {
+	public V getConfiguration() {
 		// by default our strategy cannot be configured
 		return null;
 	}
@@ -108,13 +86,6 @@ public class QVToBasedAllocationComputationStrategy<T> implements
 		if (runner.getOutExtent().getContents().size() != 1) {
 			rootDiagnostic.add(
 					createDiagnostic(Diagnostic.ERROR, unexpectedResultSize));
-			return;
-		}
-		EObject object = runner.getOutExtent().getContents().get(0);
-		if (!(object instanceof SystemAllocation)) {
-			rootDiagnostic.add(
-					createDiagnostic(Diagnostic.ERROR,
-							String.format(unexpectedResult, object.getClass().getName())));
 		}
 	}
 
