@@ -42,13 +42,9 @@ import org.eclipse.xtext.ui.editor.XtextEditor;
 import org.eclipse.xtext.ui.editor.model.IXtextDocument;
 import org.eclipse.xtext.util.concurrent.IUnitOfWork;
 import org.eclipse.xtext.xbase.lib.Exceptions;
-import org.muml.pim.instance.ComponentInstanceConfiguration;
-import org.muml.pm.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 import org.muml.psm.allocation.algorithm.ocl.OCLEvaluator;
 import org.muml.psm.allocation.language.as.EvaluatableElement;
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
-import org.muml.psm.allocation.language.oclcontext.OCLContext;
-import org.muml.psm.allocation.language.oclcontext.OclcontextFactory;
 import org.muml.psm.allocation.language.xtext.typing.TypesUtil;
 
 @SuppressWarnings("all")
@@ -64,24 +60,10 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
   
   private XtextEditor editor;
   
-  private ComponentInstanceConfiguration cic;
+  private EObject oclContext;
   
-  private HWPlatformInstanceConfiguration hpic;
-  
-  public ComponentInstanceConfiguration getCic() {
-    return this.cic;
-  }
-  
-  public ComponentInstanceConfiguration setCic(final ComponentInstanceConfiguration cic) {
-    return this.cic = cic;
-  }
-  
-  public HWPlatformInstanceConfiguration getHpic() {
-    return this.hpic;
-  }
-  
-  public HWPlatformInstanceConfiguration setHpic(final HWPlatformInstanceConfiguration hpic) {
-    return this.hpic = hpic;
+  public EObject setOclContext(final EObject oclContext) {
+    return this.oclContext = oclContext;
   }
   
   private ITextViewer resultTextViewer;
@@ -156,17 +138,6 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
     return _xifexpression;
   }
   
-  private OCLContext getContext() {
-    OCLContext _xblockexpression = null;
-    {
-      final OCLContext ctx = OclcontextFactory.eINSTANCE.createOCLContext();
-      ctx.setComponentInstanceConfiguration(this.cic);
-      ctx.setHardwarePlatformInstanceConfiguration(this.hpic);
-      _xblockexpression = ctx;
-    }
-    return _xblockexpression;
-  }
-  
   public void evaluate() {
     final StringBuilder builder = new StringBuilder();
     boolean _notEquals = (!Objects.equal(this.editor, null));
@@ -179,9 +150,8 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
           {
             EvaluatableElementCS _evaluatableElementCS = AllocationSpecificationLanguageEvaluationView.this.getEvaluatableElementCS(resource);
             final EvaluatableElement element = PivotUtil.<EvaluatableElement>getPivot(EvaluatableElement.class, _evaluatableElementCS);
-            final OCLContext ctx = AllocationSpecificationLanguageEvaluationView.this.getContext();
             Object _xifexpression = null;
-            if ((((!Objects.equal(element, null)) && (!Objects.equal(ctx.getComponentInstanceConfiguration(), null))) && (!Objects.equal(ctx.getHardwarePlatformInstanceConfiguration(), null)))) {
+            if (((!Objects.equal(element, null)) && (!Objects.equal(AllocationSpecificationLanguageEvaluationView.this.oclContext, null)))) {
               Object _xblockexpression_1 = null;
               {
                 String _name = AllocationSpecificationLanguageEvaluationView.this.getName(element);
@@ -200,7 +170,7 @@ public class AllocationSpecificationLanguageEvaluationView extends ViewPart impl
                 Object _xtrycatchfinallyexpression = null;
                 try {
                   ExpressionInOCL _expression_1 = element.getExpression();
-                  _xtrycatchfinallyexpression = OCLEvaluator.evaluate(_expression_1, ctx);
+                  _xtrycatchfinallyexpression = OCLEvaluator.evaluate(_expression_1, AllocationSpecificationLanguageEvaluationView.this.oclContext);
                 } catch (final Throwable _t) {
                   if (_t instanceof InvalidValueException) {
                     final InvalidValueException e = (InvalidValueException)_t;
