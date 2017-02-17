@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: de.fraunhofer.iem.seminar
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: de.fraunhofer.iem.seminar; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib,
+ org.eclipse.emf.common,
+ org.muml.psm.allocation.language;bundle-version="0.1.0",
+ org.muml.psm.allocation.language.xtext;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: de.fraunhofer.iem,
+ de.fraunhofer.iem.generator,
+ de.fraunhofer.iem.parser.antlr,
+ de.fraunhofer.iem.parser.antlr.internal,
+ de.fraunhofer.iem.provider,
+ de.fraunhofer.iem.scoping,
+ de.fraunhofer.iem.seminar,
+ de.fraunhofer.iem.seminar.impl,
+ de.fraunhofer.iem.seminar.util,
+ de.fraunhofer.iem.serializer,
+ de.fraunhofer.iem.services,
+ de.fraunhofer.iem.validation,
+ org.muml.psm.allocation.language.xtext.provider
+Import-Package: org.apache.log4j

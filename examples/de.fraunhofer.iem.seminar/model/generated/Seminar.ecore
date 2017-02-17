@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="seminar" nsURI="http://www.fraunhofer.de/iem/Seminar" nsPrefix="seminar">
+  <eClassifiers xsi:type="ecore:EClass" name="Seminar">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supervisors" upperBound="-1"
+        eType="#//Supervisor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="students" upperBound="-1"
+        eType="#//Student" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topics" upperBound="-1"
+        eType="#//Topic" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="preferences" upperBound="-1"
+        eType="#//Preference" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supervises" upperBound="-1"
+        eType="#//Supervise" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assignments" upperBound="-1"
+        eType="#//Assignment" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Supervisor">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Student">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Topic">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Preference">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="student" eType="#//Student"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topic" eType="#//Topic"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Supervise">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supervisor" eType="#//Supervisor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topic" eType="#//Topic"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Assignment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="student" eType="#//Student"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topic" eType="#//Topic"/>
+  </eClassifiers>
+</ecore:EPackage>
