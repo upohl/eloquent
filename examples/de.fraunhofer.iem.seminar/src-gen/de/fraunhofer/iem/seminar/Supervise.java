@@ -25,55 +25,55 @@ import org.eclipse.emf.ecore.EObject;
 public interface Supervise extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Supervisor</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Supervisor</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Supervisor</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Supervisor</em>' reference.
-   * @see #setSupervisor(Supervisor)
-   * @see de.fraunhofer.iem.seminar.SeminarPackage#getSupervise_Supervisor()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Supervisor</em>' reference.
+	 * @see #setSupervisor(Supervisor)
+	 * @see de.fraunhofer.iem.seminar.SeminarPackage#getSupervise_Supervisor()
+	 * @model
+	 * @generated
+	 */
   Supervisor getSupervisor();
 
   /**
-   * Sets the value of the '{@link de.fraunhofer.iem.seminar.Supervise#getSupervisor <em>Supervisor</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link de.fraunhofer.iem.seminar.Supervise#getSupervisor <em>Supervisor</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Supervisor</em>' reference.
-   * @see #getSupervisor()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Supervisor</em>' reference.
+	 * @see #getSupervisor()
+	 * @generated
+	 */
   void setSupervisor(Supervisor value);
 
   /**
-   * Returns the value of the '<em><b>Topic</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Topic</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Topic</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Topic</em>' reference.
-   * @see #setTopic(Topic)
-   * @see de.fraunhofer.iem.seminar.SeminarPackage#getSupervise_Topic()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Topic</em>' reference.
+	 * @see #setTopic(Topic)
+	 * @see de.fraunhofer.iem.seminar.SeminarPackage#getSupervise_Topic()
+	 * @model
+	 * @generated
+	 */
   Topic getTopic();
 
   /**
-   * Sets the value of the '{@link de.fraunhofer.iem.seminar.Supervise#getTopic <em>Topic</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link de.fraunhofer.iem.seminar.Supervise#getTopic <em>Topic</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Topic</em>' reference.
-   * @see #getTopic()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Topic</em>' reference.
+	 * @see #getTopic()
+	 * @generated
+	 */
   void setTopic(Topic value);
 
 } // Supervise

@@ -33,208 +33,200 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class PreferenceImpl extends MinimalEObjectImpl.Container implements Preference
 {
   /**
-   * The cached value of the '{@link #getStudent() <em>Student</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getStudent() <em>Student</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getStudent()
-   * @generated
-   * @ordered
-   */
+	 * @see #getStudent()
+	 * @generated
+	 * @ordered
+	 */
   protected Student student;
 
   /**
-   * The cached value of the '{@link #getTopic() <em>Topic</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getTopic() <em>Topic</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTopic()
-   * @generated
-   * @ordered
-   */
+	 * @see #getTopic()
+	 * @generated
+	 * @ordered
+	 */
   protected Topic topic;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected PreferenceImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return SeminarPackage.Literals.PREFERENCE;
-  }
+		return SeminarPackage.Literals.PREFERENCE;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Student getStudent()
   {
-    if (student != null && student.eIsProxy())
-    {
-      InternalEObject oldStudent = (InternalEObject)student;
-      student = (Student)eResolveProxy(oldStudent);
-      if (student != oldStudent)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SeminarPackage.PREFERENCE__STUDENT, oldStudent, student));
-      }
-    }
-    return student;
-  }
+		if (student != null && student.eIsProxy()) {
+			InternalEObject oldStudent = (InternalEObject)student;
+			student = (Student)eResolveProxy(oldStudent);
+			if (student != oldStudent) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SeminarPackage.PREFERENCE__STUDENT, oldStudent, student));
+			}
+		}
+		return student;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Student basicGetStudent()
   {
-    return student;
-  }
+		return student;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setStudent(Student newStudent)
   {
-    Student oldStudent = student;
-    student = newStudent;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SeminarPackage.PREFERENCE__STUDENT, oldStudent, student));
-  }
+		Student oldStudent = student;
+		student = newStudent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SeminarPackage.PREFERENCE__STUDENT, oldStudent, student));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Topic getTopic()
   {
-    if (topic != null && topic.eIsProxy())
-    {
-      InternalEObject oldTopic = (InternalEObject)topic;
-      topic = (Topic)eResolveProxy(oldTopic);
-      if (topic != oldTopic)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SeminarPackage.PREFERENCE__TOPIC, oldTopic, topic));
-      }
-    }
-    return topic;
-  }
+		if (topic != null && topic.eIsProxy()) {
+			InternalEObject oldTopic = (InternalEObject)topic;
+			topic = (Topic)eResolveProxy(oldTopic);
+			if (topic != oldTopic) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SeminarPackage.PREFERENCE__TOPIC, oldTopic, topic));
+			}
+		}
+		return topic;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Topic basicGetTopic()
   {
-    return topic;
-  }
+		return topic;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setTopic(Topic newTopic)
   {
-    Topic oldTopic = topic;
-    topic = newTopic;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SeminarPackage.PREFERENCE__TOPIC, oldTopic, topic));
-  }
+		Topic oldTopic = topic;
+		topic = newTopic;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SeminarPackage.PREFERENCE__TOPIC, oldTopic, topic));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case SeminarPackage.PREFERENCE__STUDENT:
-        if (resolve) return getStudent();
-        return basicGetStudent();
-      case SeminarPackage.PREFERENCE__TOPIC:
-        if (resolve) return getTopic();
-        return basicGetTopic();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case SeminarPackage.PREFERENCE__STUDENT:
+				if (resolve) return getStudent();
+				return basicGetStudent();
+			case SeminarPackage.PREFERENCE__TOPIC:
+				if (resolve) return getTopic();
+				return basicGetTopic();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case SeminarPackage.PREFERENCE__STUDENT:
-        setStudent((Student)newValue);
-        return;
-      case SeminarPackage.PREFERENCE__TOPIC:
-        setTopic((Topic)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case SeminarPackage.PREFERENCE__STUDENT:
+				setStudent((Student)newValue);
+				return;
+			case SeminarPackage.PREFERENCE__TOPIC:
+				setTopic((Topic)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case SeminarPackage.PREFERENCE__STUDENT:
-        setStudent((Student)null);
-        return;
-      case SeminarPackage.PREFERENCE__TOPIC:
-        setTopic((Topic)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case SeminarPackage.PREFERENCE__STUDENT:
+				setStudent((Student)null);
+				return;
+			case SeminarPackage.PREFERENCE__TOPIC:
+				setTopic((Topic)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case SeminarPackage.PREFERENCE__STUDENT:
-        return student != null;
-      case SeminarPackage.PREFERENCE__TOPIC:
-        return topic != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case SeminarPackage.PREFERENCE__STUDENT:
+				return student != null;
+			case SeminarPackage.PREFERENCE__TOPIC:
+				return topic != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
 } //PreferenceImpl
