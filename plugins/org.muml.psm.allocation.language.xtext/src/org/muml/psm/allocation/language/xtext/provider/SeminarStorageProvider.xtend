@@ -6,7 +6,14 @@ import de.fraunhofer.iem.seminar.SeminarFactory
 import de.fraunhofer.iem.seminar.Student
 import de.fraunhofer.iem.seminar.Topic
 import org.eclipse.emf.ecore.impl.EObjectImpl
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain
+import org.eclipse.emf.edit.domain.EditingDomain
 import org.muml.psm.allocation.language.^as.StorageProvider
+import org.eclipse.emf.common.command.Command
+import org.eclipse.emf.edit.command.AddCommand
+import java.util.HashMap
+import org.eclipse.xtext.resource.XtextResource
+import java.io.FileOutputStream
 
 /**
  * MUML-specific StorageProvider. Currently, only ComponentInstances
@@ -40,10 +47,13 @@ class SeminarStorageProvider extends EObjectImpl implements StorageProvider {
 	
 	def dispatch Seminar storePair(Student source, Topic target) {
 		val Assignment assignment = SeminarFactory.eINSTANCE.createAssignment()
+  		 val EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(seminar);
 		assignment.student = source
 		assignment.topic = target
-		seminar.assignments.add(assignment)
-	//	seminar.eResource.save(newHashMap())
+		val Command command = AddCommand.create(editingDomain, seminar, assignment, seminar.assignments);
+		//	seminar.assignments.add(assignment)
+		editingDomain.getCommandStack().execute(command);
+		seminar.eResource.save(newHashMap())
 		seminar
 	}
 	
