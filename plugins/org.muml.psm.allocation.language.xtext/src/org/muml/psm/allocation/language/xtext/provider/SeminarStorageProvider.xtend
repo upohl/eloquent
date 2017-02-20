@@ -14,6 +14,11 @@ import org.eclipse.emf.edit.command.AddCommand
 import java.util.HashMap
 import org.eclipse.xtext.resource.XtextResource
 import java.io.FileOutputStream
+import org.eclipse.xtext.serializer.impl.Serializer
+import com.google.inject.Guice
+import de.fraunhofer.iem.SeminarRuntimeModule
+import de.fraunhofer.iem.seminar.SeminarPackage
+import org.eclipse.emf.edit.command.DeleteCommand
 
 /**
  * MUML-specific StorageProvider. Currently, only ComponentInstances
@@ -50,9 +55,14 @@ class SeminarStorageProvider extends EObjectImpl implements StorageProvider {
   		 val EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(seminar);
 		assignment.student = source
 		assignment.topic = target
-		val Command command = AddCommand.create(editingDomain, seminar, assignment, seminar.assignments);
-		//	seminar.assignments.add(assignment)
-		editingDomain.getCommandStack().execute(command);
+		val Command deleteCommand = DeleteCommand.create(editingDomain,seminar.assignments);
+		editingDomain.getCommandStack().execute(deleteCommand);
+		
+		val Command addCommand = AddCommand.create(editingDomain, seminar, seminar.assignments ,assignment);
+	//	seminar.assignments.add(assignment)
+		editingDomain.getCommandStack().execute(addCommand);
+	//	val serializer = Guice.createInjector(new SeminarRuntimeModule()).getInstance(Serializer);
+	// val String dsl = serializer.serialize(seminar);
 		seminar.eResource.save(newHashMap())
 		seminar
 	}
