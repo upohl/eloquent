@@ -66,6 +66,7 @@ public class SeminarFactoryImpl extends EFactoryImpl implements SeminarFactory
 			case SeminarPackage.STUDENT: return createStudent();
 			case SeminarPackage.TOPIC: return createTopic();
 			case SeminarPackage.PREFERENCE: return createPreference();
+			case SeminarPackage.RATING: return createRating();
 			case SeminarPackage.SUPERVISE: return createSupervise();
 			case SeminarPackage.ASSIGNMENT: return createAssignment();
 			default:
@@ -126,6 +127,17 @@ public class SeminarFactoryImpl extends EFactoryImpl implements SeminarFactory
   {
 		PreferenceImpl preference = new PreferenceImpl();
 		return preference;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public Rating createRating()
+  {
+		RatingImpl rating = new RatingImpl();
+		return rating;
 	}
 
   /**

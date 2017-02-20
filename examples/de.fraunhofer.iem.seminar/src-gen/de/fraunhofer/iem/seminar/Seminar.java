@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.fraunhofer.iem.seminar.Seminar#getStudents <em>Students</em>}</li>
  *   <li>{@link de.fraunhofer.iem.seminar.Seminar#getTopics <em>Topics</em>}</li>
  *   <li>{@link de.fraunhofer.iem.seminar.Seminar#getPreferences <em>Preferences</em>}</li>
+ *   <li>{@link de.fraunhofer.iem.seminar.Seminar#getRatings <em>Ratings</em>}</li>
  *   <li>{@link de.fraunhofer.iem.seminar.Seminar#getSupervises <em>Supervises</em>}</li>
  *   <li>{@link de.fraunhofer.iem.seminar.Seminar#getAssignments <em>Assignments</em>}</li>
  * </ul>
@@ -93,6 +94,22 @@ public interface Seminar extends EObject
 	 * @generated
 	 */
   EList<Preference> getPreferences();
+
+  /**
+	 * Returns the value of the '<em><b>Ratings</b></em>' containment reference list.
+	 * The list contents are of type {@link de.fraunhofer.iem.seminar.Rating}.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Ratings</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ratings</em>' containment reference list.
+	 * @see de.fraunhofer.iem.seminar.SeminarPackage#getSeminar_Ratings()
+	 * @model containment="true"
+	 * @generated
+	 */
+  EList<Rating> getRatings();
 
   /**
 	 * Returns the value of the '<em><b>Supervises</b></em>' containment reference list.

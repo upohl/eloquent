@@ -1,4 +1,5 @@
 grammar de.fraunhofer.iem.Seminar with org.eclipse.xtext.common.Terminals
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 generate seminar "http://www.fraunhofer.de/iem/Seminar"
 
@@ -7,6 +8,7 @@ Seminar:
 	('students:'students+=Student*(','+ students+=Student)* ';')*
 	('topics:'topics+=Topic*(','+ topics+=Topic)* ';')*	
 	preferences+=Preference*
+	ratings+=Rating*
 	supervises+=Supervise*
 	assignments+=Assignment*;
 
@@ -21,8 +23,14 @@ Topic:
 	name=ID;
 	
 Preference: 
-	student=[Student] 'prefers' topic=[Topic]';' 
+	student=[Student] 'likes' topics+=[Topic](','+ topics+=[Topic])*';' 
 ;
+
+Rating:
+	student=[Student] 'rates' topic=[Topic] 'with' rating=REAL';'
+;
+
+terminal REAL returns ecore::EDouble: ('0'..'9').('0'..'9')+;
 
 Supervise:
 	supervisor=[Supervisor] 'supervises' topic=[Topic]';'

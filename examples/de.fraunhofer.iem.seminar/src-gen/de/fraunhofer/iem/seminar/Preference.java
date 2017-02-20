@@ -3,6 +3,8 @@
  */
 package de.fraunhofer.iem.seminar;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link de.fraunhofer.iem.seminar.Preference#getStudent <em>Student</em>}</li>
- *   <li>{@link de.fraunhofer.iem.seminar.Preference#getTopic <em>Topic</em>}</li>
+ *   <li>{@link de.fraunhofer.iem.seminar.Preference#getTopics <em>Topics</em>}</li>
  * </ul>
  *
  * @see de.fraunhofer.iem.seminar.SeminarPackage#getPreference()
@@ -51,29 +53,19 @@ public interface Preference extends EObject
   void setStudent(Student value);
 
   /**
-	 * Returns the value of the '<em><b>Topic</b></em>' reference.
+	 * Returns the value of the '<em><b>Topics</b></em>' reference list.
+	 * The list contents are of type {@link de.fraunhofer.iem.seminar.Topic}.
 	 * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Topic</em>' reference isn't clear,
+   * If the meaning of the '<em>Topics</em>' reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Topic</em>' reference.
-	 * @see #setTopic(Topic)
-	 * @see de.fraunhofer.iem.seminar.SeminarPackage#getPreference_Topic()
+	 * @return the value of the '<em>Topics</em>' reference list.
+	 * @see de.fraunhofer.iem.seminar.SeminarPackage#getPreference_Topics()
 	 * @model
 	 * @generated
 	 */
-  Topic getTopic();
-
-  /**
-	 * Sets the value of the '{@link de.fraunhofer.iem.seminar.Preference#getTopic <em>Topic</em>}' reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Topic</em>' reference.
-	 * @see #getTopic()
-	 * @generated
-	 */
-  void setTopic(Topic value);
+  EList<Topic> getTopics();
 
 } // Preference

@@ -22,26 +22,29 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalSeminarParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'supervisors:'", "';'", "','", "'students:'", "'topics:'", "'prefers'", "'supervises'", "'is'", "'assigned'", "'to'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_REAL", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'supervisors:'", "';'", "','", "'students:'", "'topics:'", "'likes'", "'rates'", "'with'", "'supervises'", "'is'", "'assigned'", "'to'"
     };
-    public static final int RULE_STRING=6;
-    public static final int RULE_SL_COMMENT=8;
+    public static final int RULE_STRING=7;
+    public static final int RULE_SL_COMMENT=9;
     public static final int T__19=19;
     public static final int T__15=15;
     public static final int T__16=16;
     public static final int T__17=17;
     public static final int T__18=18;
-    public static final int T__11=11;
     public static final int T__12=12;
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int EOF=-1;
     public static final int RULE_ID=4;
-    public static final int RULE_WS=9;
-    public static final int RULE_ANY_OTHER=10;
-    public static final int RULE_INT=5;
-    public static final int RULE_ML_COMMENT=7;
+    public static final int RULE_WS=10;
+    public static final int RULE_REAL=5;
+    public static final int RULE_ANY_OTHER=11;
+    public static final int RULE_INT=6;
+    public static final int T__22=22;
+    public static final int RULE_ML_COMMENT=8;
+    public static final int T__23=23;
     public static final int T__20=20;
+    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -463,12 +466,89 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rulePreference"
 
 
+    // $ANTLR start "entryRuleRating"
+    // InternalSeminar.g:178:1: entryRuleRating : ruleRating EOF ;
+    public final void entryRuleRating() throws RecognitionException {
+        try {
+            // InternalSeminar.g:179:1: ( ruleRating EOF )
+            // InternalSeminar.g:180:1: ruleRating EOF
+            {
+             before(grammarAccess.getRatingRule()); 
+            pushFollow(FOLLOW_1);
+            ruleRating();
+
+            state._fsp--;
+
+             after(grammarAccess.getRatingRule()); 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleRating"
+
+
+    // $ANTLR start "ruleRating"
+    // InternalSeminar.g:187:1: ruleRating : ( ( rule__Rating__Group__0 ) ) ;
+    public final void ruleRating() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:191:2: ( ( ( rule__Rating__Group__0 ) ) )
+            // InternalSeminar.g:192:2: ( ( rule__Rating__Group__0 ) )
+            {
+            // InternalSeminar.g:192:2: ( ( rule__Rating__Group__0 ) )
+            // InternalSeminar.g:193:3: ( rule__Rating__Group__0 )
+            {
+             before(grammarAccess.getRatingAccess().getGroup()); 
+            // InternalSeminar.g:194:3: ( rule__Rating__Group__0 )
+            // InternalSeminar.g:194:4: rule__Rating__Group__0
+            {
+            pushFollow(FOLLOW_2);
+            rule__Rating__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getRatingAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleRating"
+
+
     // $ANTLR start "entryRuleSupervise"
-    // InternalSeminar.g:178:1: entryRuleSupervise : ruleSupervise EOF ;
+    // InternalSeminar.g:203:1: entryRuleSupervise : ruleSupervise EOF ;
     public final void entryRuleSupervise() throws RecognitionException {
         try {
-            // InternalSeminar.g:179:1: ( ruleSupervise EOF )
-            // InternalSeminar.g:180:1: ruleSupervise EOF
+            // InternalSeminar.g:204:1: ( ruleSupervise EOF )
+            // InternalSeminar.g:205:1: ruleSupervise EOF
             {
              before(grammarAccess.getSuperviseRule()); 
             pushFollow(FOLLOW_1);
@@ -494,21 +574,21 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleSupervise"
-    // InternalSeminar.g:187:1: ruleSupervise : ( ( rule__Supervise__Group__0 ) ) ;
+    // InternalSeminar.g:212:1: ruleSupervise : ( ( rule__Supervise__Group__0 ) ) ;
     public final void ruleSupervise() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:191:2: ( ( ( rule__Supervise__Group__0 ) ) )
-            // InternalSeminar.g:192:2: ( ( rule__Supervise__Group__0 ) )
+            // InternalSeminar.g:216:2: ( ( ( rule__Supervise__Group__0 ) ) )
+            // InternalSeminar.g:217:2: ( ( rule__Supervise__Group__0 ) )
             {
-            // InternalSeminar.g:192:2: ( ( rule__Supervise__Group__0 ) )
-            // InternalSeminar.g:193:3: ( rule__Supervise__Group__0 )
+            // InternalSeminar.g:217:2: ( ( rule__Supervise__Group__0 ) )
+            // InternalSeminar.g:218:3: ( rule__Supervise__Group__0 )
             {
              before(grammarAccess.getSuperviseAccess().getGroup()); 
-            // InternalSeminar.g:194:3: ( rule__Supervise__Group__0 )
-            // InternalSeminar.g:194:4: rule__Supervise__Group__0
+            // InternalSeminar.g:219:3: ( rule__Supervise__Group__0 )
+            // InternalSeminar.g:219:4: rule__Supervise__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Supervise__Group__0();
@@ -541,11 +621,11 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleAssignment"
-    // InternalSeminar.g:203:1: entryRuleAssignment : ruleAssignment EOF ;
+    // InternalSeminar.g:228:1: entryRuleAssignment : ruleAssignment EOF ;
     public final void entryRuleAssignment() throws RecognitionException {
         try {
-            // InternalSeminar.g:204:1: ( ruleAssignment EOF )
-            // InternalSeminar.g:205:1: ruleAssignment EOF
+            // InternalSeminar.g:229:1: ( ruleAssignment EOF )
+            // InternalSeminar.g:230:1: ruleAssignment EOF
             {
              before(grammarAccess.getAssignmentRule()); 
             pushFollow(FOLLOW_1);
@@ -571,21 +651,21 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleAssignment"
-    // InternalSeminar.g:212:1: ruleAssignment : ( ( rule__Assignment__Group__0 ) ) ;
+    // InternalSeminar.g:237:1: ruleAssignment : ( ( rule__Assignment__Group__0 ) ) ;
     public final void ruleAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:216:2: ( ( ( rule__Assignment__Group__0 ) ) )
-            // InternalSeminar.g:217:2: ( ( rule__Assignment__Group__0 ) )
+            // InternalSeminar.g:241:2: ( ( ( rule__Assignment__Group__0 ) ) )
+            // InternalSeminar.g:242:2: ( ( rule__Assignment__Group__0 ) )
             {
-            // InternalSeminar.g:217:2: ( ( rule__Assignment__Group__0 ) )
-            // InternalSeminar.g:218:3: ( rule__Assignment__Group__0 )
+            // InternalSeminar.g:242:2: ( ( rule__Assignment__Group__0 ) )
+            // InternalSeminar.g:243:3: ( rule__Assignment__Group__0 )
             {
              before(grammarAccess.getAssignmentAccess().getGroup()); 
-            // InternalSeminar.g:219:3: ( rule__Assignment__Group__0 )
-            // InternalSeminar.g:219:4: rule__Assignment__Group__0
+            // InternalSeminar.g:244:3: ( rule__Assignment__Group__0 )
+            // InternalSeminar.g:244:4: rule__Assignment__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Assignment__Group__0();
@@ -618,14 +698,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group__0"
-    // InternalSeminar.g:227:1: rule__Seminar__Group__0 : rule__Seminar__Group__0__Impl rule__Seminar__Group__1 ;
+    // InternalSeminar.g:252:1: rule__Seminar__Group__0 : rule__Seminar__Group__0__Impl rule__Seminar__Group__1 ;
     public final void rule__Seminar__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:231:1: ( rule__Seminar__Group__0__Impl rule__Seminar__Group__1 )
-            // InternalSeminar.g:232:2: rule__Seminar__Group__0__Impl rule__Seminar__Group__1
+            // InternalSeminar.g:256:1: ( rule__Seminar__Group__0__Impl rule__Seminar__Group__1 )
+            // InternalSeminar.g:257:2: rule__Seminar__Group__0__Impl rule__Seminar__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__Seminar__Group__0__Impl();
@@ -656,33 +736,33 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group__0__Impl"
-    // InternalSeminar.g:239:1: rule__Seminar__Group__0__Impl : ( ( rule__Seminar__Group_0__0 )* ) ;
+    // InternalSeminar.g:264:1: rule__Seminar__Group__0__Impl : ( ( rule__Seminar__Group_0__0 )* ) ;
     public final void rule__Seminar__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:243:1: ( ( ( rule__Seminar__Group_0__0 )* ) )
-            // InternalSeminar.g:244:1: ( ( rule__Seminar__Group_0__0 )* )
+            // InternalSeminar.g:268:1: ( ( ( rule__Seminar__Group_0__0 )* ) )
+            // InternalSeminar.g:269:1: ( ( rule__Seminar__Group_0__0 )* )
             {
-            // InternalSeminar.g:244:1: ( ( rule__Seminar__Group_0__0 )* )
-            // InternalSeminar.g:245:2: ( rule__Seminar__Group_0__0 )*
+            // InternalSeminar.g:269:1: ( ( rule__Seminar__Group_0__0 )* )
+            // InternalSeminar.g:270:2: ( rule__Seminar__Group_0__0 )*
             {
              before(grammarAccess.getSeminarAccess().getGroup_0()); 
-            // InternalSeminar.g:246:2: ( rule__Seminar__Group_0__0 )*
+            // InternalSeminar.g:271:2: ( rule__Seminar__Group_0__0 )*
             loop1:
             do {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==11) ) {
+                if ( (LA1_0==12) ) {
                     alt1=1;
                 }
 
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalSeminar.g:246:3: rule__Seminar__Group_0__0
+            	    // InternalSeminar.g:271:3: rule__Seminar__Group_0__0
             	    {
             	    pushFollow(FOLLOW_4);
             	    rule__Seminar__Group_0__0();
@@ -721,14 +801,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group__1"
-    // InternalSeminar.g:254:1: rule__Seminar__Group__1 : rule__Seminar__Group__1__Impl rule__Seminar__Group__2 ;
+    // InternalSeminar.g:279:1: rule__Seminar__Group__1 : rule__Seminar__Group__1__Impl rule__Seminar__Group__2 ;
     public final void rule__Seminar__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:258:1: ( rule__Seminar__Group__1__Impl rule__Seminar__Group__2 )
-            // InternalSeminar.g:259:2: rule__Seminar__Group__1__Impl rule__Seminar__Group__2
+            // InternalSeminar.g:283:1: ( rule__Seminar__Group__1__Impl rule__Seminar__Group__2 )
+            // InternalSeminar.g:284:2: rule__Seminar__Group__1__Impl rule__Seminar__Group__2
             {
             pushFollow(FOLLOW_3);
             rule__Seminar__Group__1__Impl();
@@ -759,33 +839,33 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group__1__Impl"
-    // InternalSeminar.g:266:1: rule__Seminar__Group__1__Impl : ( ( rule__Seminar__Group_1__0 )* ) ;
+    // InternalSeminar.g:291:1: rule__Seminar__Group__1__Impl : ( ( rule__Seminar__Group_1__0 )* ) ;
     public final void rule__Seminar__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:270:1: ( ( ( rule__Seminar__Group_1__0 )* ) )
-            // InternalSeminar.g:271:1: ( ( rule__Seminar__Group_1__0 )* )
+            // InternalSeminar.g:295:1: ( ( ( rule__Seminar__Group_1__0 )* ) )
+            // InternalSeminar.g:296:1: ( ( rule__Seminar__Group_1__0 )* )
             {
-            // InternalSeminar.g:271:1: ( ( rule__Seminar__Group_1__0 )* )
-            // InternalSeminar.g:272:2: ( rule__Seminar__Group_1__0 )*
+            // InternalSeminar.g:296:1: ( ( rule__Seminar__Group_1__0 )* )
+            // InternalSeminar.g:297:2: ( rule__Seminar__Group_1__0 )*
             {
              before(grammarAccess.getSeminarAccess().getGroup_1()); 
-            // InternalSeminar.g:273:2: ( rule__Seminar__Group_1__0 )*
+            // InternalSeminar.g:298:2: ( rule__Seminar__Group_1__0 )*
             loop2:
             do {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0==14) ) {
+                if ( (LA2_0==15) ) {
                     alt2=1;
                 }
 
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalSeminar.g:273:3: rule__Seminar__Group_1__0
+            	    // InternalSeminar.g:298:3: rule__Seminar__Group_1__0
             	    {
             	    pushFollow(FOLLOW_5);
             	    rule__Seminar__Group_1__0();
@@ -824,14 +904,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group__2"
-    // InternalSeminar.g:281:1: rule__Seminar__Group__2 : rule__Seminar__Group__2__Impl rule__Seminar__Group__3 ;
+    // InternalSeminar.g:306:1: rule__Seminar__Group__2 : rule__Seminar__Group__2__Impl rule__Seminar__Group__3 ;
     public final void rule__Seminar__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:285:1: ( rule__Seminar__Group__2__Impl rule__Seminar__Group__3 )
-            // InternalSeminar.g:286:2: rule__Seminar__Group__2__Impl rule__Seminar__Group__3
+            // InternalSeminar.g:310:1: ( rule__Seminar__Group__2__Impl rule__Seminar__Group__3 )
+            // InternalSeminar.g:311:2: rule__Seminar__Group__2__Impl rule__Seminar__Group__3
             {
             pushFollow(FOLLOW_3);
             rule__Seminar__Group__2__Impl();
@@ -862,33 +942,33 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group__2__Impl"
-    // InternalSeminar.g:293:1: rule__Seminar__Group__2__Impl : ( ( rule__Seminar__Group_2__0 )* ) ;
+    // InternalSeminar.g:318:1: rule__Seminar__Group__2__Impl : ( ( rule__Seminar__Group_2__0 )* ) ;
     public final void rule__Seminar__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:297:1: ( ( ( rule__Seminar__Group_2__0 )* ) )
-            // InternalSeminar.g:298:1: ( ( rule__Seminar__Group_2__0 )* )
+            // InternalSeminar.g:322:1: ( ( ( rule__Seminar__Group_2__0 )* ) )
+            // InternalSeminar.g:323:1: ( ( rule__Seminar__Group_2__0 )* )
             {
-            // InternalSeminar.g:298:1: ( ( rule__Seminar__Group_2__0 )* )
-            // InternalSeminar.g:299:2: ( rule__Seminar__Group_2__0 )*
+            // InternalSeminar.g:323:1: ( ( rule__Seminar__Group_2__0 )* )
+            // InternalSeminar.g:324:2: ( rule__Seminar__Group_2__0 )*
             {
              before(grammarAccess.getSeminarAccess().getGroup_2()); 
-            // InternalSeminar.g:300:2: ( rule__Seminar__Group_2__0 )*
+            // InternalSeminar.g:325:2: ( rule__Seminar__Group_2__0 )*
             loop3:
             do {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==15) ) {
+                if ( (LA3_0==16) ) {
                     alt3=1;
                 }
 
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalSeminar.g:300:3: rule__Seminar__Group_2__0
+            	    // InternalSeminar.g:325:3: rule__Seminar__Group_2__0
             	    {
             	    pushFollow(FOLLOW_6);
             	    rule__Seminar__Group_2__0();
@@ -927,14 +1007,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group__3"
-    // InternalSeminar.g:308:1: rule__Seminar__Group__3 : rule__Seminar__Group__3__Impl rule__Seminar__Group__4 ;
+    // InternalSeminar.g:333:1: rule__Seminar__Group__3 : rule__Seminar__Group__3__Impl rule__Seminar__Group__4 ;
     public final void rule__Seminar__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:312:1: ( rule__Seminar__Group__3__Impl rule__Seminar__Group__4 )
-            // InternalSeminar.g:313:2: rule__Seminar__Group__3__Impl rule__Seminar__Group__4
+            // InternalSeminar.g:337:1: ( rule__Seminar__Group__3__Impl rule__Seminar__Group__4 )
+            // InternalSeminar.g:338:2: rule__Seminar__Group__3__Impl rule__Seminar__Group__4
             {
             pushFollow(FOLLOW_3);
             rule__Seminar__Group__3__Impl();
@@ -965,20 +1045,20 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group__3__Impl"
-    // InternalSeminar.g:320:1: rule__Seminar__Group__3__Impl : ( ( rule__Seminar__PreferencesAssignment_3 )* ) ;
+    // InternalSeminar.g:345:1: rule__Seminar__Group__3__Impl : ( ( rule__Seminar__PreferencesAssignment_3 )* ) ;
     public final void rule__Seminar__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:324:1: ( ( ( rule__Seminar__PreferencesAssignment_3 )* ) )
-            // InternalSeminar.g:325:1: ( ( rule__Seminar__PreferencesAssignment_3 )* )
+            // InternalSeminar.g:349:1: ( ( ( rule__Seminar__PreferencesAssignment_3 )* ) )
+            // InternalSeminar.g:350:1: ( ( rule__Seminar__PreferencesAssignment_3 )* )
             {
-            // InternalSeminar.g:325:1: ( ( rule__Seminar__PreferencesAssignment_3 )* )
-            // InternalSeminar.g:326:2: ( rule__Seminar__PreferencesAssignment_3 )*
+            // InternalSeminar.g:350:1: ( ( rule__Seminar__PreferencesAssignment_3 )* )
+            // InternalSeminar.g:351:2: ( rule__Seminar__PreferencesAssignment_3 )*
             {
              before(grammarAccess.getSeminarAccess().getPreferencesAssignment_3()); 
-            // InternalSeminar.g:327:2: ( rule__Seminar__PreferencesAssignment_3 )*
+            // InternalSeminar.g:352:2: ( rule__Seminar__PreferencesAssignment_3 )*
             loop4:
             do {
                 int alt4=2;
@@ -987,7 +1067,7 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
                 if ( (LA4_0==RULE_ID) ) {
                     int LA4_1 = input.LA(2);
 
-                    if ( (LA4_1==16) ) {
+                    if ( (LA4_1==17) ) {
                         alt4=1;
                     }
 
@@ -997,7 +1077,7 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalSeminar.g:327:3: rule__Seminar__PreferencesAssignment_3
+            	    // InternalSeminar.g:352:3: rule__Seminar__PreferencesAssignment_3
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__Seminar__PreferencesAssignment_3();
@@ -1036,14 +1116,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group__4"
-    // InternalSeminar.g:335:1: rule__Seminar__Group__4 : rule__Seminar__Group__4__Impl rule__Seminar__Group__5 ;
+    // InternalSeminar.g:360:1: rule__Seminar__Group__4 : rule__Seminar__Group__4__Impl rule__Seminar__Group__5 ;
     public final void rule__Seminar__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:339:1: ( rule__Seminar__Group__4__Impl rule__Seminar__Group__5 )
-            // InternalSeminar.g:340:2: rule__Seminar__Group__4__Impl rule__Seminar__Group__5
+            // InternalSeminar.g:364:1: ( rule__Seminar__Group__4__Impl rule__Seminar__Group__5 )
+            // InternalSeminar.g:365:2: rule__Seminar__Group__4__Impl rule__Seminar__Group__5
             {
             pushFollow(FOLLOW_3);
             rule__Seminar__Group__4__Impl();
@@ -1074,20 +1154,20 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group__4__Impl"
-    // InternalSeminar.g:347:1: rule__Seminar__Group__4__Impl : ( ( rule__Seminar__SupervisesAssignment_4 )* ) ;
+    // InternalSeminar.g:372:1: rule__Seminar__Group__4__Impl : ( ( rule__Seminar__RatingsAssignment_4 )* ) ;
     public final void rule__Seminar__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:351:1: ( ( ( rule__Seminar__SupervisesAssignment_4 )* ) )
-            // InternalSeminar.g:352:1: ( ( rule__Seminar__SupervisesAssignment_4 )* )
+            // InternalSeminar.g:376:1: ( ( ( rule__Seminar__RatingsAssignment_4 )* ) )
+            // InternalSeminar.g:377:1: ( ( rule__Seminar__RatingsAssignment_4 )* )
             {
-            // InternalSeminar.g:352:1: ( ( rule__Seminar__SupervisesAssignment_4 )* )
-            // InternalSeminar.g:353:2: ( rule__Seminar__SupervisesAssignment_4 )*
+            // InternalSeminar.g:377:1: ( ( rule__Seminar__RatingsAssignment_4 )* )
+            // InternalSeminar.g:378:2: ( rule__Seminar__RatingsAssignment_4 )*
             {
-             before(grammarAccess.getSeminarAccess().getSupervisesAssignment_4()); 
-            // InternalSeminar.g:354:2: ( rule__Seminar__SupervisesAssignment_4 )*
+             before(grammarAccess.getSeminarAccess().getRatingsAssignment_4()); 
+            // InternalSeminar.g:379:2: ( rule__Seminar__RatingsAssignment_4 )*
             loop5:
             do {
                 int alt5=2;
@@ -1096,7 +1176,7 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
                 if ( (LA5_0==RULE_ID) ) {
                     int LA5_1 = input.LA(2);
 
-                    if ( (LA5_1==17) ) {
+                    if ( (LA5_1==18) ) {
                         alt5=1;
                     }
 
@@ -1106,10 +1186,10 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
                 switch (alt5) {
             	case 1 :
-            	    // InternalSeminar.g:354:3: rule__Seminar__SupervisesAssignment_4
+            	    // InternalSeminar.g:379:3: rule__Seminar__RatingsAssignment_4
             	    {
             	    pushFollow(FOLLOW_7);
-            	    rule__Seminar__SupervisesAssignment_4();
+            	    rule__Seminar__RatingsAssignment_4();
 
             	    state._fsp--;
 
@@ -1122,7 +1202,7 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getSeminarAccess().getSupervisesAssignment_4()); 
+             after(grammarAccess.getSeminarAccess().getRatingsAssignment_4()); 
 
             }
 
@@ -1145,17 +1225,22 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group__5"
-    // InternalSeminar.g:362:1: rule__Seminar__Group__5 : rule__Seminar__Group__5__Impl ;
+    // InternalSeminar.g:387:1: rule__Seminar__Group__5 : rule__Seminar__Group__5__Impl rule__Seminar__Group__6 ;
     public final void rule__Seminar__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:366:1: ( rule__Seminar__Group__5__Impl )
-            // InternalSeminar.g:367:2: rule__Seminar__Group__5__Impl
+            // InternalSeminar.g:391:1: ( rule__Seminar__Group__5__Impl rule__Seminar__Group__6 )
+            // InternalSeminar.g:392:2: rule__Seminar__Group__5__Impl rule__Seminar__Group__6
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_3);
             rule__Seminar__Group__5__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Seminar__Group__6();
 
             state._fsp--;
 
@@ -1178,36 +1263,42 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group__5__Impl"
-    // InternalSeminar.g:373:1: rule__Seminar__Group__5__Impl : ( ( rule__Seminar__AssignmentsAssignment_5 )* ) ;
+    // InternalSeminar.g:399:1: rule__Seminar__Group__5__Impl : ( ( rule__Seminar__SupervisesAssignment_5 )* ) ;
     public final void rule__Seminar__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:377:1: ( ( ( rule__Seminar__AssignmentsAssignment_5 )* ) )
-            // InternalSeminar.g:378:1: ( ( rule__Seminar__AssignmentsAssignment_5 )* )
+            // InternalSeminar.g:403:1: ( ( ( rule__Seminar__SupervisesAssignment_5 )* ) )
+            // InternalSeminar.g:404:1: ( ( rule__Seminar__SupervisesAssignment_5 )* )
             {
-            // InternalSeminar.g:378:1: ( ( rule__Seminar__AssignmentsAssignment_5 )* )
-            // InternalSeminar.g:379:2: ( rule__Seminar__AssignmentsAssignment_5 )*
+            // InternalSeminar.g:404:1: ( ( rule__Seminar__SupervisesAssignment_5 )* )
+            // InternalSeminar.g:405:2: ( rule__Seminar__SupervisesAssignment_5 )*
             {
-             before(grammarAccess.getSeminarAccess().getAssignmentsAssignment_5()); 
-            // InternalSeminar.g:380:2: ( rule__Seminar__AssignmentsAssignment_5 )*
+             before(grammarAccess.getSeminarAccess().getSupervisesAssignment_5()); 
+            // InternalSeminar.g:406:2: ( rule__Seminar__SupervisesAssignment_5 )*
             loop6:
             do {
                 int alt6=2;
                 int LA6_0 = input.LA(1);
 
                 if ( (LA6_0==RULE_ID) ) {
-                    alt6=1;
+                    int LA6_1 = input.LA(2);
+
+                    if ( (LA6_1==20) ) {
+                        alt6=1;
+                    }
+
+
                 }
 
 
                 switch (alt6) {
             	case 1 :
-            	    // InternalSeminar.g:380:3: rule__Seminar__AssignmentsAssignment_5
+            	    // InternalSeminar.g:406:3: rule__Seminar__SupervisesAssignment_5
             	    {
             	    pushFollow(FOLLOW_7);
-            	    rule__Seminar__AssignmentsAssignment_5();
+            	    rule__Seminar__SupervisesAssignment_5();
 
             	    state._fsp--;
 
@@ -1220,7 +1311,7 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getSeminarAccess().getAssignmentsAssignment_5()); 
+             after(grammarAccess.getSeminarAccess().getSupervisesAssignment_5()); 
 
             }
 
@@ -1242,15 +1333,113 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Seminar__Group__5__Impl"
 
 
+    // $ANTLR start "rule__Seminar__Group__6"
+    // InternalSeminar.g:414:1: rule__Seminar__Group__6 : rule__Seminar__Group__6__Impl ;
+    public final void rule__Seminar__Group__6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:418:1: ( rule__Seminar__Group__6__Impl )
+            // InternalSeminar.g:419:2: rule__Seminar__Group__6__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Seminar__Group__6__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Seminar__Group__6"
+
+
+    // $ANTLR start "rule__Seminar__Group__6__Impl"
+    // InternalSeminar.g:425:1: rule__Seminar__Group__6__Impl : ( ( rule__Seminar__AssignmentsAssignment_6 )* ) ;
+    public final void rule__Seminar__Group__6__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:429:1: ( ( ( rule__Seminar__AssignmentsAssignment_6 )* ) )
+            // InternalSeminar.g:430:1: ( ( rule__Seminar__AssignmentsAssignment_6 )* )
+            {
+            // InternalSeminar.g:430:1: ( ( rule__Seminar__AssignmentsAssignment_6 )* )
+            // InternalSeminar.g:431:2: ( rule__Seminar__AssignmentsAssignment_6 )*
+            {
+             before(grammarAccess.getSeminarAccess().getAssignmentsAssignment_6()); 
+            // InternalSeminar.g:432:2: ( rule__Seminar__AssignmentsAssignment_6 )*
+            loop7:
+            do {
+                int alt7=2;
+                int LA7_0 = input.LA(1);
+
+                if ( (LA7_0==RULE_ID) ) {
+                    alt7=1;
+                }
+
+
+                switch (alt7) {
+            	case 1 :
+            	    // InternalSeminar.g:432:3: rule__Seminar__AssignmentsAssignment_6
+            	    {
+            	    pushFollow(FOLLOW_7);
+            	    rule__Seminar__AssignmentsAssignment_6();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop7;
+                }
+            } while (true);
+
+             after(grammarAccess.getSeminarAccess().getAssignmentsAssignment_6()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Seminar__Group__6__Impl"
+
+
     // $ANTLR start "rule__Seminar__Group_0__0"
-    // InternalSeminar.g:389:1: rule__Seminar__Group_0__0 : rule__Seminar__Group_0__0__Impl rule__Seminar__Group_0__1 ;
+    // InternalSeminar.g:441:1: rule__Seminar__Group_0__0 : rule__Seminar__Group_0__0__Impl rule__Seminar__Group_0__1 ;
     public final void rule__Seminar__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:393:1: ( rule__Seminar__Group_0__0__Impl rule__Seminar__Group_0__1 )
-            // InternalSeminar.g:394:2: rule__Seminar__Group_0__0__Impl rule__Seminar__Group_0__1
+            // InternalSeminar.g:445:1: ( rule__Seminar__Group_0__0__Impl rule__Seminar__Group_0__1 )
+            // InternalSeminar.g:446:2: rule__Seminar__Group_0__0__Impl rule__Seminar__Group_0__1
             {
             pushFollow(FOLLOW_8);
             rule__Seminar__Group_0__0__Impl();
@@ -1281,20 +1470,20 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_0__0__Impl"
-    // InternalSeminar.g:401:1: rule__Seminar__Group_0__0__Impl : ( 'supervisors:' ) ;
+    // InternalSeminar.g:453:1: rule__Seminar__Group_0__0__Impl : ( 'supervisors:' ) ;
     public final void rule__Seminar__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:405:1: ( ( 'supervisors:' ) )
-            // InternalSeminar.g:406:1: ( 'supervisors:' )
+            // InternalSeminar.g:457:1: ( ( 'supervisors:' ) )
+            // InternalSeminar.g:458:1: ( 'supervisors:' )
             {
-            // InternalSeminar.g:406:1: ( 'supervisors:' )
-            // InternalSeminar.g:407:2: 'supervisors:'
+            // InternalSeminar.g:458:1: ( 'supervisors:' )
+            // InternalSeminar.g:459:2: 'supervisors:'
             {
              before(grammarAccess.getSeminarAccess().getSupervisorsKeyword_0_0()); 
-            match(input,11,FOLLOW_2); 
+            match(input,12,FOLLOW_2); 
              after(grammarAccess.getSeminarAccess().getSupervisorsKeyword_0_0()); 
 
             }
@@ -1318,14 +1507,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_0__1"
-    // InternalSeminar.g:416:1: rule__Seminar__Group_0__1 : rule__Seminar__Group_0__1__Impl rule__Seminar__Group_0__2 ;
+    // InternalSeminar.g:468:1: rule__Seminar__Group_0__1 : rule__Seminar__Group_0__1__Impl rule__Seminar__Group_0__2 ;
     public final void rule__Seminar__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:420:1: ( rule__Seminar__Group_0__1__Impl rule__Seminar__Group_0__2 )
-            // InternalSeminar.g:421:2: rule__Seminar__Group_0__1__Impl rule__Seminar__Group_0__2
+            // InternalSeminar.g:472:1: ( rule__Seminar__Group_0__1__Impl rule__Seminar__Group_0__2 )
+            // InternalSeminar.g:473:2: rule__Seminar__Group_0__1__Impl rule__Seminar__Group_0__2
             {
             pushFollow(FOLLOW_8);
             rule__Seminar__Group_0__1__Impl();
@@ -1356,33 +1545,33 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_0__1__Impl"
-    // InternalSeminar.g:428:1: rule__Seminar__Group_0__1__Impl : ( ( rule__Seminar__SupervisorsAssignment_0_1 )* ) ;
+    // InternalSeminar.g:480:1: rule__Seminar__Group_0__1__Impl : ( ( rule__Seminar__SupervisorsAssignment_0_1 )* ) ;
     public final void rule__Seminar__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:432:1: ( ( ( rule__Seminar__SupervisorsAssignment_0_1 )* ) )
-            // InternalSeminar.g:433:1: ( ( rule__Seminar__SupervisorsAssignment_0_1 )* )
+            // InternalSeminar.g:484:1: ( ( ( rule__Seminar__SupervisorsAssignment_0_1 )* ) )
+            // InternalSeminar.g:485:1: ( ( rule__Seminar__SupervisorsAssignment_0_1 )* )
             {
-            // InternalSeminar.g:433:1: ( ( rule__Seminar__SupervisorsAssignment_0_1 )* )
-            // InternalSeminar.g:434:2: ( rule__Seminar__SupervisorsAssignment_0_1 )*
+            // InternalSeminar.g:485:1: ( ( rule__Seminar__SupervisorsAssignment_0_1 )* )
+            // InternalSeminar.g:486:2: ( rule__Seminar__SupervisorsAssignment_0_1 )*
             {
              before(grammarAccess.getSeminarAccess().getSupervisorsAssignment_0_1()); 
-            // InternalSeminar.g:435:2: ( rule__Seminar__SupervisorsAssignment_0_1 )*
-            loop7:
+            // InternalSeminar.g:487:2: ( rule__Seminar__SupervisorsAssignment_0_1 )*
+            loop8:
             do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
+                int alt8=2;
+                int LA8_0 = input.LA(1);
 
-                if ( (LA7_0==RULE_ID) ) {
-                    alt7=1;
+                if ( (LA8_0==RULE_ID) ) {
+                    alt8=1;
                 }
 
 
-                switch (alt7) {
+                switch (alt8) {
             	case 1 :
-            	    // InternalSeminar.g:435:3: rule__Seminar__SupervisorsAssignment_0_1
+            	    // InternalSeminar.g:487:3: rule__Seminar__SupervisorsAssignment_0_1
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__Seminar__SupervisorsAssignment_0_1();
@@ -1394,7 +1583,7 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop7;
+            	    break loop8;
                 }
             } while (true);
 
@@ -1421,14 +1610,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_0__2"
-    // InternalSeminar.g:443:1: rule__Seminar__Group_0__2 : rule__Seminar__Group_0__2__Impl rule__Seminar__Group_0__3 ;
+    // InternalSeminar.g:495:1: rule__Seminar__Group_0__2 : rule__Seminar__Group_0__2__Impl rule__Seminar__Group_0__3 ;
     public final void rule__Seminar__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:447:1: ( rule__Seminar__Group_0__2__Impl rule__Seminar__Group_0__3 )
-            // InternalSeminar.g:448:2: rule__Seminar__Group_0__2__Impl rule__Seminar__Group_0__3
+            // InternalSeminar.g:499:1: ( rule__Seminar__Group_0__2__Impl rule__Seminar__Group_0__3 )
+            // InternalSeminar.g:500:2: rule__Seminar__Group_0__2__Impl rule__Seminar__Group_0__3
             {
             pushFollow(FOLLOW_8);
             rule__Seminar__Group_0__2__Impl();
@@ -1459,33 +1648,33 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_0__2__Impl"
-    // InternalSeminar.g:455:1: rule__Seminar__Group_0__2__Impl : ( ( rule__Seminar__Group_0_2__0 )* ) ;
+    // InternalSeminar.g:507:1: rule__Seminar__Group_0__2__Impl : ( ( rule__Seminar__Group_0_2__0 )* ) ;
     public final void rule__Seminar__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:459:1: ( ( ( rule__Seminar__Group_0_2__0 )* ) )
-            // InternalSeminar.g:460:1: ( ( rule__Seminar__Group_0_2__0 )* )
+            // InternalSeminar.g:511:1: ( ( ( rule__Seminar__Group_0_2__0 )* ) )
+            // InternalSeminar.g:512:1: ( ( rule__Seminar__Group_0_2__0 )* )
             {
-            // InternalSeminar.g:460:1: ( ( rule__Seminar__Group_0_2__0 )* )
-            // InternalSeminar.g:461:2: ( rule__Seminar__Group_0_2__0 )*
+            // InternalSeminar.g:512:1: ( ( rule__Seminar__Group_0_2__0 )* )
+            // InternalSeminar.g:513:2: ( rule__Seminar__Group_0_2__0 )*
             {
              before(grammarAccess.getSeminarAccess().getGroup_0_2()); 
-            // InternalSeminar.g:462:2: ( rule__Seminar__Group_0_2__0 )*
-            loop8:
+            // InternalSeminar.g:514:2: ( rule__Seminar__Group_0_2__0 )*
+            loop9:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA8_0==13) ) {
-                    alt8=1;
+                if ( (LA9_0==14) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt9) {
             	case 1 :
-            	    // InternalSeminar.g:462:3: rule__Seminar__Group_0_2__0
+            	    // InternalSeminar.g:514:3: rule__Seminar__Group_0_2__0
             	    {
             	    pushFollow(FOLLOW_9);
             	    rule__Seminar__Group_0_2__0();
@@ -1497,7 +1686,7 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop8;
+            	    break loop9;
                 }
             } while (true);
 
@@ -1524,14 +1713,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_0__3"
-    // InternalSeminar.g:470:1: rule__Seminar__Group_0__3 : rule__Seminar__Group_0__3__Impl ;
+    // InternalSeminar.g:522:1: rule__Seminar__Group_0__3 : rule__Seminar__Group_0__3__Impl ;
     public final void rule__Seminar__Group_0__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:474:1: ( rule__Seminar__Group_0__3__Impl )
-            // InternalSeminar.g:475:2: rule__Seminar__Group_0__3__Impl
+            // InternalSeminar.g:526:1: ( rule__Seminar__Group_0__3__Impl )
+            // InternalSeminar.g:527:2: rule__Seminar__Group_0__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Seminar__Group_0__3__Impl();
@@ -1557,20 +1746,20 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_0__3__Impl"
-    // InternalSeminar.g:481:1: rule__Seminar__Group_0__3__Impl : ( ';' ) ;
+    // InternalSeminar.g:533:1: rule__Seminar__Group_0__3__Impl : ( ';' ) ;
     public final void rule__Seminar__Group_0__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:485:1: ( ( ';' ) )
-            // InternalSeminar.g:486:1: ( ';' )
+            // InternalSeminar.g:537:1: ( ( ';' ) )
+            // InternalSeminar.g:538:1: ( ';' )
             {
-            // InternalSeminar.g:486:1: ( ';' )
-            // InternalSeminar.g:487:2: ';'
+            // InternalSeminar.g:538:1: ( ';' )
+            // InternalSeminar.g:539:2: ';'
             {
              before(grammarAccess.getSeminarAccess().getSemicolonKeyword_0_3()); 
-            match(input,12,FOLLOW_2); 
+            match(input,13,FOLLOW_2); 
              after(grammarAccess.getSeminarAccess().getSemicolonKeyword_0_3()); 
 
             }
@@ -1594,14 +1783,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_0_2__0"
-    // InternalSeminar.g:497:1: rule__Seminar__Group_0_2__0 : rule__Seminar__Group_0_2__0__Impl rule__Seminar__Group_0_2__1 ;
+    // InternalSeminar.g:549:1: rule__Seminar__Group_0_2__0 : rule__Seminar__Group_0_2__0__Impl rule__Seminar__Group_0_2__1 ;
     public final void rule__Seminar__Group_0_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:501:1: ( rule__Seminar__Group_0_2__0__Impl rule__Seminar__Group_0_2__1 )
-            // InternalSeminar.g:502:2: rule__Seminar__Group_0_2__0__Impl rule__Seminar__Group_0_2__1
+            // InternalSeminar.g:553:1: ( rule__Seminar__Group_0_2__0__Impl rule__Seminar__Group_0_2__1 )
+            // InternalSeminar.g:554:2: rule__Seminar__Group_0_2__0__Impl rule__Seminar__Group_0_2__1
             {
             pushFollow(FOLLOW_10);
             rule__Seminar__Group_0_2__0__Impl();
@@ -1632,26 +1821,26 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_0_2__0__Impl"
-    // InternalSeminar.g:509:1: rule__Seminar__Group_0_2__0__Impl : ( ( ( ',' ) ) ( ( ',' )* ) ) ;
+    // InternalSeminar.g:561:1: rule__Seminar__Group_0_2__0__Impl : ( ( ( ',' ) ) ( ( ',' )* ) ) ;
     public final void rule__Seminar__Group_0_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:513:1: ( ( ( ( ',' ) ) ( ( ',' )* ) ) )
-            // InternalSeminar.g:514:1: ( ( ( ',' ) ) ( ( ',' )* ) )
+            // InternalSeminar.g:565:1: ( ( ( ( ',' ) ) ( ( ',' )* ) ) )
+            // InternalSeminar.g:566:1: ( ( ( ',' ) ) ( ( ',' )* ) )
             {
-            // InternalSeminar.g:514:1: ( ( ( ',' ) ) ( ( ',' )* ) )
-            // InternalSeminar.g:515:2: ( ( ',' ) ) ( ( ',' )* )
+            // InternalSeminar.g:566:1: ( ( ( ',' ) ) ( ( ',' )* ) )
+            // InternalSeminar.g:567:2: ( ( ',' ) ) ( ( ',' )* )
             {
-            // InternalSeminar.g:515:2: ( ( ',' ) )
-            // InternalSeminar.g:516:3: ( ',' )
+            // InternalSeminar.g:567:2: ( ( ',' ) )
+            // InternalSeminar.g:568:3: ( ',' )
             {
              before(grammarAccess.getSeminarAccess().getCommaKeyword_0_2_0()); 
-            // InternalSeminar.g:517:3: ( ',' )
-            // InternalSeminar.g:517:4: ','
+            // InternalSeminar.g:569:3: ( ',' )
+            // InternalSeminar.g:569:4: ','
             {
-            match(input,13,FOLLOW_9); 
+            match(input,14,FOLLOW_9); 
 
             }
 
@@ -1659,32 +1848,32 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // InternalSeminar.g:520:2: ( ( ',' )* )
-            // InternalSeminar.g:521:3: ( ',' )*
+            // InternalSeminar.g:572:2: ( ( ',' )* )
+            // InternalSeminar.g:573:3: ( ',' )*
             {
              before(grammarAccess.getSeminarAccess().getCommaKeyword_0_2_0()); 
-            // InternalSeminar.g:522:3: ( ',' )*
-            loop9:
+            // InternalSeminar.g:574:3: ( ',' )*
+            loop10:
             do {
-                int alt9=2;
-                int LA9_0 = input.LA(1);
+                int alt10=2;
+                int LA10_0 = input.LA(1);
 
-                if ( (LA9_0==13) ) {
-                    alt9=1;
+                if ( (LA10_0==14) ) {
+                    alt10=1;
                 }
 
 
-                switch (alt9) {
+                switch (alt10) {
             	case 1 :
-            	    // InternalSeminar.g:522:4: ','
+            	    // InternalSeminar.g:574:4: ','
             	    {
-            	    match(input,13,FOLLOW_9); 
+            	    match(input,14,FOLLOW_9); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop9;
+            	    break loop10;
                 }
             } while (true);
 
@@ -1714,14 +1903,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_0_2__1"
-    // InternalSeminar.g:531:1: rule__Seminar__Group_0_2__1 : rule__Seminar__Group_0_2__1__Impl ;
+    // InternalSeminar.g:583:1: rule__Seminar__Group_0_2__1 : rule__Seminar__Group_0_2__1__Impl ;
     public final void rule__Seminar__Group_0_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:535:1: ( rule__Seminar__Group_0_2__1__Impl )
-            // InternalSeminar.g:536:2: rule__Seminar__Group_0_2__1__Impl
+            // InternalSeminar.g:587:1: ( rule__Seminar__Group_0_2__1__Impl )
+            // InternalSeminar.g:588:2: rule__Seminar__Group_0_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Seminar__Group_0_2__1__Impl();
@@ -1747,21 +1936,21 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_0_2__1__Impl"
-    // InternalSeminar.g:542:1: rule__Seminar__Group_0_2__1__Impl : ( ( rule__Seminar__SupervisorsAssignment_0_2_1 ) ) ;
+    // InternalSeminar.g:594:1: rule__Seminar__Group_0_2__1__Impl : ( ( rule__Seminar__SupervisorsAssignment_0_2_1 ) ) ;
     public final void rule__Seminar__Group_0_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:546:1: ( ( ( rule__Seminar__SupervisorsAssignment_0_2_1 ) ) )
-            // InternalSeminar.g:547:1: ( ( rule__Seminar__SupervisorsAssignment_0_2_1 ) )
+            // InternalSeminar.g:598:1: ( ( ( rule__Seminar__SupervisorsAssignment_0_2_1 ) ) )
+            // InternalSeminar.g:599:1: ( ( rule__Seminar__SupervisorsAssignment_0_2_1 ) )
             {
-            // InternalSeminar.g:547:1: ( ( rule__Seminar__SupervisorsAssignment_0_2_1 ) )
-            // InternalSeminar.g:548:2: ( rule__Seminar__SupervisorsAssignment_0_2_1 )
+            // InternalSeminar.g:599:1: ( ( rule__Seminar__SupervisorsAssignment_0_2_1 ) )
+            // InternalSeminar.g:600:2: ( rule__Seminar__SupervisorsAssignment_0_2_1 )
             {
              before(grammarAccess.getSeminarAccess().getSupervisorsAssignment_0_2_1()); 
-            // InternalSeminar.g:549:2: ( rule__Seminar__SupervisorsAssignment_0_2_1 )
-            // InternalSeminar.g:549:3: rule__Seminar__SupervisorsAssignment_0_2_1
+            // InternalSeminar.g:601:2: ( rule__Seminar__SupervisorsAssignment_0_2_1 )
+            // InternalSeminar.g:601:3: rule__Seminar__SupervisorsAssignment_0_2_1
             {
             pushFollow(FOLLOW_2);
             rule__Seminar__SupervisorsAssignment_0_2_1();
@@ -1794,14 +1983,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_1__0"
-    // InternalSeminar.g:558:1: rule__Seminar__Group_1__0 : rule__Seminar__Group_1__0__Impl rule__Seminar__Group_1__1 ;
+    // InternalSeminar.g:610:1: rule__Seminar__Group_1__0 : rule__Seminar__Group_1__0__Impl rule__Seminar__Group_1__1 ;
     public final void rule__Seminar__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:562:1: ( rule__Seminar__Group_1__0__Impl rule__Seminar__Group_1__1 )
-            // InternalSeminar.g:563:2: rule__Seminar__Group_1__0__Impl rule__Seminar__Group_1__1
+            // InternalSeminar.g:614:1: ( rule__Seminar__Group_1__0__Impl rule__Seminar__Group_1__1 )
+            // InternalSeminar.g:615:2: rule__Seminar__Group_1__0__Impl rule__Seminar__Group_1__1
             {
             pushFollow(FOLLOW_8);
             rule__Seminar__Group_1__0__Impl();
@@ -1832,20 +2021,20 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_1__0__Impl"
-    // InternalSeminar.g:570:1: rule__Seminar__Group_1__0__Impl : ( 'students:' ) ;
+    // InternalSeminar.g:622:1: rule__Seminar__Group_1__0__Impl : ( 'students:' ) ;
     public final void rule__Seminar__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:574:1: ( ( 'students:' ) )
-            // InternalSeminar.g:575:1: ( 'students:' )
+            // InternalSeminar.g:626:1: ( ( 'students:' ) )
+            // InternalSeminar.g:627:1: ( 'students:' )
             {
-            // InternalSeminar.g:575:1: ( 'students:' )
-            // InternalSeminar.g:576:2: 'students:'
+            // InternalSeminar.g:627:1: ( 'students:' )
+            // InternalSeminar.g:628:2: 'students:'
             {
              before(grammarAccess.getSeminarAccess().getStudentsKeyword_1_0()); 
-            match(input,14,FOLLOW_2); 
+            match(input,15,FOLLOW_2); 
              after(grammarAccess.getSeminarAccess().getStudentsKeyword_1_0()); 
 
             }
@@ -1869,14 +2058,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_1__1"
-    // InternalSeminar.g:585:1: rule__Seminar__Group_1__1 : rule__Seminar__Group_1__1__Impl rule__Seminar__Group_1__2 ;
+    // InternalSeminar.g:637:1: rule__Seminar__Group_1__1 : rule__Seminar__Group_1__1__Impl rule__Seminar__Group_1__2 ;
     public final void rule__Seminar__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:589:1: ( rule__Seminar__Group_1__1__Impl rule__Seminar__Group_1__2 )
-            // InternalSeminar.g:590:2: rule__Seminar__Group_1__1__Impl rule__Seminar__Group_1__2
+            // InternalSeminar.g:641:1: ( rule__Seminar__Group_1__1__Impl rule__Seminar__Group_1__2 )
+            // InternalSeminar.g:642:2: rule__Seminar__Group_1__1__Impl rule__Seminar__Group_1__2
             {
             pushFollow(FOLLOW_8);
             rule__Seminar__Group_1__1__Impl();
@@ -1907,33 +2096,33 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_1__1__Impl"
-    // InternalSeminar.g:597:1: rule__Seminar__Group_1__1__Impl : ( ( rule__Seminar__StudentsAssignment_1_1 )* ) ;
+    // InternalSeminar.g:649:1: rule__Seminar__Group_1__1__Impl : ( ( rule__Seminar__StudentsAssignment_1_1 )* ) ;
     public final void rule__Seminar__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:601:1: ( ( ( rule__Seminar__StudentsAssignment_1_1 )* ) )
-            // InternalSeminar.g:602:1: ( ( rule__Seminar__StudentsAssignment_1_1 )* )
+            // InternalSeminar.g:653:1: ( ( ( rule__Seminar__StudentsAssignment_1_1 )* ) )
+            // InternalSeminar.g:654:1: ( ( rule__Seminar__StudentsAssignment_1_1 )* )
             {
-            // InternalSeminar.g:602:1: ( ( rule__Seminar__StudentsAssignment_1_1 )* )
-            // InternalSeminar.g:603:2: ( rule__Seminar__StudentsAssignment_1_1 )*
+            // InternalSeminar.g:654:1: ( ( rule__Seminar__StudentsAssignment_1_1 )* )
+            // InternalSeminar.g:655:2: ( rule__Seminar__StudentsAssignment_1_1 )*
             {
              before(grammarAccess.getSeminarAccess().getStudentsAssignment_1_1()); 
-            // InternalSeminar.g:604:2: ( rule__Seminar__StudentsAssignment_1_1 )*
-            loop10:
+            // InternalSeminar.g:656:2: ( rule__Seminar__StudentsAssignment_1_1 )*
+            loop11:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-                if ( (LA10_0==RULE_ID) ) {
-                    alt10=1;
+                if ( (LA11_0==RULE_ID) ) {
+                    alt11=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt11) {
             	case 1 :
-            	    // InternalSeminar.g:604:3: rule__Seminar__StudentsAssignment_1_1
+            	    // InternalSeminar.g:656:3: rule__Seminar__StudentsAssignment_1_1
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__Seminar__StudentsAssignment_1_1();
@@ -1945,7 +2134,7 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop10;
+            	    break loop11;
                 }
             } while (true);
 
@@ -1972,14 +2161,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_1__2"
-    // InternalSeminar.g:612:1: rule__Seminar__Group_1__2 : rule__Seminar__Group_1__2__Impl rule__Seminar__Group_1__3 ;
+    // InternalSeminar.g:664:1: rule__Seminar__Group_1__2 : rule__Seminar__Group_1__2__Impl rule__Seminar__Group_1__3 ;
     public final void rule__Seminar__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:616:1: ( rule__Seminar__Group_1__2__Impl rule__Seminar__Group_1__3 )
-            // InternalSeminar.g:617:2: rule__Seminar__Group_1__2__Impl rule__Seminar__Group_1__3
+            // InternalSeminar.g:668:1: ( rule__Seminar__Group_1__2__Impl rule__Seminar__Group_1__3 )
+            // InternalSeminar.g:669:2: rule__Seminar__Group_1__2__Impl rule__Seminar__Group_1__3
             {
             pushFollow(FOLLOW_8);
             rule__Seminar__Group_1__2__Impl();
@@ -2010,33 +2199,33 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_1__2__Impl"
-    // InternalSeminar.g:624:1: rule__Seminar__Group_1__2__Impl : ( ( rule__Seminar__Group_1_2__0 )* ) ;
+    // InternalSeminar.g:676:1: rule__Seminar__Group_1__2__Impl : ( ( rule__Seminar__Group_1_2__0 )* ) ;
     public final void rule__Seminar__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:628:1: ( ( ( rule__Seminar__Group_1_2__0 )* ) )
-            // InternalSeminar.g:629:1: ( ( rule__Seminar__Group_1_2__0 )* )
+            // InternalSeminar.g:680:1: ( ( ( rule__Seminar__Group_1_2__0 )* ) )
+            // InternalSeminar.g:681:1: ( ( rule__Seminar__Group_1_2__0 )* )
             {
-            // InternalSeminar.g:629:1: ( ( rule__Seminar__Group_1_2__0 )* )
-            // InternalSeminar.g:630:2: ( rule__Seminar__Group_1_2__0 )*
+            // InternalSeminar.g:681:1: ( ( rule__Seminar__Group_1_2__0 )* )
+            // InternalSeminar.g:682:2: ( rule__Seminar__Group_1_2__0 )*
             {
              before(grammarAccess.getSeminarAccess().getGroup_1_2()); 
-            // InternalSeminar.g:631:2: ( rule__Seminar__Group_1_2__0 )*
-            loop11:
+            // InternalSeminar.g:683:2: ( rule__Seminar__Group_1_2__0 )*
+            loop12:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt12=2;
+                int LA12_0 = input.LA(1);
 
-                if ( (LA11_0==13) ) {
-                    alt11=1;
+                if ( (LA12_0==14) ) {
+                    alt12=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt12) {
             	case 1 :
-            	    // InternalSeminar.g:631:3: rule__Seminar__Group_1_2__0
+            	    // InternalSeminar.g:683:3: rule__Seminar__Group_1_2__0
             	    {
             	    pushFollow(FOLLOW_9);
             	    rule__Seminar__Group_1_2__0();
@@ -2048,7 +2237,7 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop12;
                 }
             } while (true);
 
@@ -2075,14 +2264,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_1__3"
-    // InternalSeminar.g:639:1: rule__Seminar__Group_1__3 : rule__Seminar__Group_1__3__Impl ;
+    // InternalSeminar.g:691:1: rule__Seminar__Group_1__3 : rule__Seminar__Group_1__3__Impl ;
     public final void rule__Seminar__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:643:1: ( rule__Seminar__Group_1__3__Impl )
-            // InternalSeminar.g:644:2: rule__Seminar__Group_1__3__Impl
+            // InternalSeminar.g:695:1: ( rule__Seminar__Group_1__3__Impl )
+            // InternalSeminar.g:696:2: rule__Seminar__Group_1__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Seminar__Group_1__3__Impl();
@@ -2108,20 +2297,20 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_1__3__Impl"
-    // InternalSeminar.g:650:1: rule__Seminar__Group_1__3__Impl : ( ';' ) ;
+    // InternalSeminar.g:702:1: rule__Seminar__Group_1__3__Impl : ( ';' ) ;
     public final void rule__Seminar__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:654:1: ( ( ';' ) )
-            // InternalSeminar.g:655:1: ( ';' )
+            // InternalSeminar.g:706:1: ( ( ';' ) )
+            // InternalSeminar.g:707:1: ( ';' )
             {
-            // InternalSeminar.g:655:1: ( ';' )
-            // InternalSeminar.g:656:2: ';'
+            // InternalSeminar.g:707:1: ( ';' )
+            // InternalSeminar.g:708:2: ';'
             {
              before(grammarAccess.getSeminarAccess().getSemicolonKeyword_1_3()); 
-            match(input,12,FOLLOW_2); 
+            match(input,13,FOLLOW_2); 
              after(grammarAccess.getSeminarAccess().getSemicolonKeyword_1_3()); 
 
             }
@@ -2145,14 +2334,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_1_2__0"
-    // InternalSeminar.g:666:1: rule__Seminar__Group_1_2__0 : rule__Seminar__Group_1_2__0__Impl rule__Seminar__Group_1_2__1 ;
+    // InternalSeminar.g:718:1: rule__Seminar__Group_1_2__0 : rule__Seminar__Group_1_2__0__Impl rule__Seminar__Group_1_2__1 ;
     public final void rule__Seminar__Group_1_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:670:1: ( rule__Seminar__Group_1_2__0__Impl rule__Seminar__Group_1_2__1 )
-            // InternalSeminar.g:671:2: rule__Seminar__Group_1_2__0__Impl rule__Seminar__Group_1_2__1
+            // InternalSeminar.g:722:1: ( rule__Seminar__Group_1_2__0__Impl rule__Seminar__Group_1_2__1 )
+            // InternalSeminar.g:723:2: rule__Seminar__Group_1_2__0__Impl rule__Seminar__Group_1_2__1
             {
             pushFollow(FOLLOW_10);
             rule__Seminar__Group_1_2__0__Impl();
@@ -2183,26 +2372,26 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_1_2__0__Impl"
-    // InternalSeminar.g:678:1: rule__Seminar__Group_1_2__0__Impl : ( ( ( ',' ) ) ( ( ',' )* ) ) ;
+    // InternalSeminar.g:730:1: rule__Seminar__Group_1_2__0__Impl : ( ( ( ',' ) ) ( ( ',' )* ) ) ;
     public final void rule__Seminar__Group_1_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:682:1: ( ( ( ( ',' ) ) ( ( ',' )* ) ) )
-            // InternalSeminar.g:683:1: ( ( ( ',' ) ) ( ( ',' )* ) )
+            // InternalSeminar.g:734:1: ( ( ( ( ',' ) ) ( ( ',' )* ) ) )
+            // InternalSeminar.g:735:1: ( ( ( ',' ) ) ( ( ',' )* ) )
             {
-            // InternalSeminar.g:683:1: ( ( ( ',' ) ) ( ( ',' )* ) )
-            // InternalSeminar.g:684:2: ( ( ',' ) ) ( ( ',' )* )
+            // InternalSeminar.g:735:1: ( ( ( ',' ) ) ( ( ',' )* ) )
+            // InternalSeminar.g:736:2: ( ( ',' ) ) ( ( ',' )* )
             {
-            // InternalSeminar.g:684:2: ( ( ',' ) )
-            // InternalSeminar.g:685:3: ( ',' )
+            // InternalSeminar.g:736:2: ( ( ',' ) )
+            // InternalSeminar.g:737:3: ( ',' )
             {
              before(grammarAccess.getSeminarAccess().getCommaKeyword_1_2_0()); 
-            // InternalSeminar.g:686:3: ( ',' )
-            // InternalSeminar.g:686:4: ','
+            // InternalSeminar.g:738:3: ( ',' )
+            // InternalSeminar.g:738:4: ','
             {
-            match(input,13,FOLLOW_9); 
+            match(input,14,FOLLOW_9); 
 
             }
 
@@ -2210,32 +2399,32 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // InternalSeminar.g:689:2: ( ( ',' )* )
-            // InternalSeminar.g:690:3: ( ',' )*
+            // InternalSeminar.g:741:2: ( ( ',' )* )
+            // InternalSeminar.g:742:3: ( ',' )*
             {
              before(grammarAccess.getSeminarAccess().getCommaKeyword_1_2_0()); 
-            // InternalSeminar.g:691:3: ( ',' )*
-            loop12:
+            // InternalSeminar.g:743:3: ( ',' )*
+            loop13:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA12_0==13) ) {
-                    alt12=1;
+                if ( (LA13_0==14) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt12) {
+                switch (alt13) {
             	case 1 :
-            	    // InternalSeminar.g:691:4: ','
+            	    // InternalSeminar.g:743:4: ','
             	    {
-            	    match(input,13,FOLLOW_9); 
+            	    match(input,14,FOLLOW_9); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop12;
+            	    break loop13;
                 }
             } while (true);
 
@@ -2265,14 +2454,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_1_2__1"
-    // InternalSeminar.g:700:1: rule__Seminar__Group_1_2__1 : rule__Seminar__Group_1_2__1__Impl ;
+    // InternalSeminar.g:752:1: rule__Seminar__Group_1_2__1 : rule__Seminar__Group_1_2__1__Impl ;
     public final void rule__Seminar__Group_1_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:704:1: ( rule__Seminar__Group_1_2__1__Impl )
-            // InternalSeminar.g:705:2: rule__Seminar__Group_1_2__1__Impl
+            // InternalSeminar.g:756:1: ( rule__Seminar__Group_1_2__1__Impl )
+            // InternalSeminar.g:757:2: rule__Seminar__Group_1_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Seminar__Group_1_2__1__Impl();
@@ -2298,21 +2487,21 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_1_2__1__Impl"
-    // InternalSeminar.g:711:1: rule__Seminar__Group_1_2__1__Impl : ( ( rule__Seminar__StudentsAssignment_1_2_1 ) ) ;
+    // InternalSeminar.g:763:1: rule__Seminar__Group_1_2__1__Impl : ( ( rule__Seminar__StudentsAssignment_1_2_1 ) ) ;
     public final void rule__Seminar__Group_1_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:715:1: ( ( ( rule__Seminar__StudentsAssignment_1_2_1 ) ) )
-            // InternalSeminar.g:716:1: ( ( rule__Seminar__StudentsAssignment_1_2_1 ) )
+            // InternalSeminar.g:767:1: ( ( ( rule__Seminar__StudentsAssignment_1_2_1 ) ) )
+            // InternalSeminar.g:768:1: ( ( rule__Seminar__StudentsAssignment_1_2_1 ) )
             {
-            // InternalSeminar.g:716:1: ( ( rule__Seminar__StudentsAssignment_1_2_1 ) )
-            // InternalSeminar.g:717:2: ( rule__Seminar__StudentsAssignment_1_2_1 )
+            // InternalSeminar.g:768:1: ( ( rule__Seminar__StudentsAssignment_1_2_1 ) )
+            // InternalSeminar.g:769:2: ( rule__Seminar__StudentsAssignment_1_2_1 )
             {
              before(grammarAccess.getSeminarAccess().getStudentsAssignment_1_2_1()); 
-            // InternalSeminar.g:718:2: ( rule__Seminar__StudentsAssignment_1_2_1 )
-            // InternalSeminar.g:718:3: rule__Seminar__StudentsAssignment_1_2_1
+            // InternalSeminar.g:770:2: ( rule__Seminar__StudentsAssignment_1_2_1 )
+            // InternalSeminar.g:770:3: rule__Seminar__StudentsAssignment_1_2_1
             {
             pushFollow(FOLLOW_2);
             rule__Seminar__StudentsAssignment_1_2_1();
@@ -2345,14 +2534,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_2__0"
-    // InternalSeminar.g:727:1: rule__Seminar__Group_2__0 : rule__Seminar__Group_2__0__Impl rule__Seminar__Group_2__1 ;
+    // InternalSeminar.g:779:1: rule__Seminar__Group_2__0 : rule__Seminar__Group_2__0__Impl rule__Seminar__Group_2__1 ;
     public final void rule__Seminar__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:731:1: ( rule__Seminar__Group_2__0__Impl rule__Seminar__Group_2__1 )
-            // InternalSeminar.g:732:2: rule__Seminar__Group_2__0__Impl rule__Seminar__Group_2__1
+            // InternalSeminar.g:783:1: ( rule__Seminar__Group_2__0__Impl rule__Seminar__Group_2__1 )
+            // InternalSeminar.g:784:2: rule__Seminar__Group_2__0__Impl rule__Seminar__Group_2__1
             {
             pushFollow(FOLLOW_8);
             rule__Seminar__Group_2__0__Impl();
@@ -2383,20 +2572,20 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_2__0__Impl"
-    // InternalSeminar.g:739:1: rule__Seminar__Group_2__0__Impl : ( 'topics:' ) ;
+    // InternalSeminar.g:791:1: rule__Seminar__Group_2__0__Impl : ( 'topics:' ) ;
     public final void rule__Seminar__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:743:1: ( ( 'topics:' ) )
-            // InternalSeminar.g:744:1: ( 'topics:' )
+            // InternalSeminar.g:795:1: ( ( 'topics:' ) )
+            // InternalSeminar.g:796:1: ( 'topics:' )
             {
-            // InternalSeminar.g:744:1: ( 'topics:' )
-            // InternalSeminar.g:745:2: 'topics:'
+            // InternalSeminar.g:796:1: ( 'topics:' )
+            // InternalSeminar.g:797:2: 'topics:'
             {
              before(grammarAccess.getSeminarAccess().getTopicsKeyword_2_0()); 
-            match(input,15,FOLLOW_2); 
+            match(input,16,FOLLOW_2); 
              after(grammarAccess.getSeminarAccess().getTopicsKeyword_2_0()); 
 
             }
@@ -2420,14 +2609,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_2__1"
-    // InternalSeminar.g:754:1: rule__Seminar__Group_2__1 : rule__Seminar__Group_2__1__Impl rule__Seminar__Group_2__2 ;
+    // InternalSeminar.g:806:1: rule__Seminar__Group_2__1 : rule__Seminar__Group_2__1__Impl rule__Seminar__Group_2__2 ;
     public final void rule__Seminar__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:758:1: ( rule__Seminar__Group_2__1__Impl rule__Seminar__Group_2__2 )
-            // InternalSeminar.g:759:2: rule__Seminar__Group_2__1__Impl rule__Seminar__Group_2__2
+            // InternalSeminar.g:810:1: ( rule__Seminar__Group_2__1__Impl rule__Seminar__Group_2__2 )
+            // InternalSeminar.g:811:2: rule__Seminar__Group_2__1__Impl rule__Seminar__Group_2__2
             {
             pushFollow(FOLLOW_8);
             rule__Seminar__Group_2__1__Impl();
@@ -2458,33 +2647,33 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_2__1__Impl"
-    // InternalSeminar.g:766:1: rule__Seminar__Group_2__1__Impl : ( ( rule__Seminar__TopicsAssignment_2_1 )* ) ;
+    // InternalSeminar.g:818:1: rule__Seminar__Group_2__1__Impl : ( ( rule__Seminar__TopicsAssignment_2_1 )* ) ;
     public final void rule__Seminar__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:770:1: ( ( ( rule__Seminar__TopicsAssignment_2_1 )* ) )
-            // InternalSeminar.g:771:1: ( ( rule__Seminar__TopicsAssignment_2_1 )* )
+            // InternalSeminar.g:822:1: ( ( ( rule__Seminar__TopicsAssignment_2_1 )* ) )
+            // InternalSeminar.g:823:1: ( ( rule__Seminar__TopicsAssignment_2_1 )* )
             {
-            // InternalSeminar.g:771:1: ( ( rule__Seminar__TopicsAssignment_2_1 )* )
-            // InternalSeminar.g:772:2: ( rule__Seminar__TopicsAssignment_2_1 )*
+            // InternalSeminar.g:823:1: ( ( rule__Seminar__TopicsAssignment_2_1 )* )
+            // InternalSeminar.g:824:2: ( rule__Seminar__TopicsAssignment_2_1 )*
             {
              before(grammarAccess.getSeminarAccess().getTopicsAssignment_2_1()); 
-            // InternalSeminar.g:773:2: ( rule__Seminar__TopicsAssignment_2_1 )*
-            loop13:
+            // InternalSeminar.g:825:2: ( rule__Seminar__TopicsAssignment_2_1 )*
+            loop14:
             do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
+                int alt14=2;
+                int LA14_0 = input.LA(1);
 
-                if ( (LA13_0==RULE_ID) ) {
-                    alt13=1;
+                if ( (LA14_0==RULE_ID) ) {
+                    alt14=1;
                 }
 
 
-                switch (alt13) {
+                switch (alt14) {
             	case 1 :
-            	    // InternalSeminar.g:773:3: rule__Seminar__TopicsAssignment_2_1
+            	    // InternalSeminar.g:825:3: rule__Seminar__TopicsAssignment_2_1
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__Seminar__TopicsAssignment_2_1();
@@ -2496,7 +2685,7 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop13;
+            	    break loop14;
                 }
             } while (true);
 
@@ -2523,14 +2712,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_2__2"
-    // InternalSeminar.g:781:1: rule__Seminar__Group_2__2 : rule__Seminar__Group_2__2__Impl rule__Seminar__Group_2__3 ;
+    // InternalSeminar.g:833:1: rule__Seminar__Group_2__2 : rule__Seminar__Group_2__2__Impl rule__Seminar__Group_2__3 ;
     public final void rule__Seminar__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:785:1: ( rule__Seminar__Group_2__2__Impl rule__Seminar__Group_2__3 )
-            // InternalSeminar.g:786:2: rule__Seminar__Group_2__2__Impl rule__Seminar__Group_2__3
+            // InternalSeminar.g:837:1: ( rule__Seminar__Group_2__2__Impl rule__Seminar__Group_2__3 )
+            // InternalSeminar.g:838:2: rule__Seminar__Group_2__2__Impl rule__Seminar__Group_2__3
             {
             pushFollow(FOLLOW_8);
             rule__Seminar__Group_2__2__Impl();
@@ -2561,33 +2750,33 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_2__2__Impl"
-    // InternalSeminar.g:793:1: rule__Seminar__Group_2__2__Impl : ( ( rule__Seminar__Group_2_2__0 )* ) ;
+    // InternalSeminar.g:845:1: rule__Seminar__Group_2__2__Impl : ( ( rule__Seminar__Group_2_2__0 )* ) ;
     public final void rule__Seminar__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:797:1: ( ( ( rule__Seminar__Group_2_2__0 )* ) )
-            // InternalSeminar.g:798:1: ( ( rule__Seminar__Group_2_2__0 )* )
+            // InternalSeminar.g:849:1: ( ( ( rule__Seminar__Group_2_2__0 )* ) )
+            // InternalSeminar.g:850:1: ( ( rule__Seminar__Group_2_2__0 )* )
             {
-            // InternalSeminar.g:798:1: ( ( rule__Seminar__Group_2_2__0 )* )
-            // InternalSeminar.g:799:2: ( rule__Seminar__Group_2_2__0 )*
+            // InternalSeminar.g:850:1: ( ( rule__Seminar__Group_2_2__0 )* )
+            // InternalSeminar.g:851:2: ( rule__Seminar__Group_2_2__0 )*
             {
              before(grammarAccess.getSeminarAccess().getGroup_2_2()); 
-            // InternalSeminar.g:800:2: ( rule__Seminar__Group_2_2__0 )*
-            loop14:
+            // InternalSeminar.g:852:2: ( rule__Seminar__Group_2_2__0 )*
+            loop15:
             do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
+                int alt15=2;
+                int LA15_0 = input.LA(1);
 
-                if ( (LA14_0==13) ) {
-                    alt14=1;
+                if ( (LA15_0==14) ) {
+                    alt15=1;
                 }
 
 
-                switch (alt14) {
+                switch (alt15) {
             	case 1 :
-            	    // InternalSeminar.g:800:3: rule__Seminar__Group_2_2__0
+            	    // InternalSeminar.g:852:3: rule__Seminar__Group_2_2__0
             	    {
             	    pushFollow(FOLLOW_9);
             	    rule__Seminar__Group_2_2__0();
@@ -2599,7 +2788,7 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop14;
+            	    break loop15;
                 }
             } while (true);
 
@@ -2626,14 +2815,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_2__3"
-    // InternalSeminar.g:808:1: rule__Seminar__Group_2__3 : rule__Seminar__Group_2__3__Impl ;
+    // InternalSeminar.g:860:1: rule__Seminar__Group_2__3 : rule__Seminar__Group_2__3__Impl ;
     public final void rule__Seminar__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:812:1: ( rule__Seminar__Group_2__3__Impl )
-            // InternalSeminar.g:813:2: rule__Seminar__Group_2__3__Impl
+            // InternalSeminar.g:864:1: ( rule__Seminar__Group_2__3__Impl )
+            // InternalSeminar.g:865:2: rule__Seminar__Group_2__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Seminar__Group_2__3__Impl();
@@ -2659,20 +2848,20 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_2__3__Impl"
-    // InternalSeminar.g:819:1: rule__Seminar__Group_2__3__Impl : ( ';' ) ;
+    // InternalSeminar.g:871:1: rule__Seminar__Group_2__3__Impl : ( ';' ) ;
     public final void rule__Seminar__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:823:1: ( ( ';' ) )
-            // InternalSeminar.g:824:1: ( ';' )
+            // InternalSeminar.g:875:1: ( ( ';' ) )
+            // InternalSeminar.g:876:1: ( ';' )
             {
-            // InternalSeminar.g:824:1: ( ';' )
-            // InternalSeminar.g:825:2: ';'
+            // InternalSeminar.g:876:1: ( ';' )
+            // InternalSeminar.g:877:2: ';'
             {
              before(grammarAccess.getSeminarAccess().getSemicolonKeyword_2_3()); 
-            match(input,12,FOLLOW_2); 
+            match(input,13,FOLLOW_2); 
              after(grammarAccess.getSeminarAccess().getSemicolonKeyword_2_3()); 
 
             }
@@ -2696,14 +2885,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_2_2__0"
-    // InternalSeminar.g:835:1: rule__Seminar__Group_2_2__0 : rule__Seminar__Group_2_2__0__Impl rule__Seminar__Group_2_2__1 ;
+    // InternalSeminar.g:887:1: rule__Seminar__Group_2_2__0 : rule__Seminar__Group_2_2__0__Impl rule__Seminar__Group_2_2__1 ;
     public final void rule__Seminar__Group_2_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:839:1: ( rule__Seminar__Group_2_2__0__Impl rule__Seminar__Group_2_2__1 )
-            // InternalSeminar.g:840:2: rule__Seminar__Group_2_2__0__Impl rule__Seminar__Group_2_2__1
+            // InternalSeminar.g:891:1: ( rule__Seminar__Group_2_2__0__Impl rule__Seminar__Group_2_2__1 )
+            // InternalSeminar.g:892:2: rule__Seminar__Group_2_2__0__Impl rule__Seminar__Group_2_2__1
             {
             pushFollow(FOLLOW_10);
             rule__Seminar__Group_2_2__0__Impl();
@@ -2734,26 +2923,26 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_2_2__0__Impl"
-    // InternalSeminar.g:847:1: rule__Seminar__Group_2_2__0__Impl : ( ( ( ',' ) ) ( ( ',' )* ) ) ;
+    // InternalSeminar.g:899:1: rule__Seminar__Group_2_2__0__Impl : ( ( ( ',' ) ) ( ( ',' )* ) ) ;
     public final void rule__Seminar__Group_2_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:851:1: ( ( ( ( ',' ) ) ( ( ',' )* ) ) )
-            // InternalSeminar.g:852:1: ( ( ( ',' ) ) ( ( ',' )* ) )
+            // InternalSeminar.g:903:1: ( ( ( ( ',' ) ) ( ( ',' )* ) ) )
+            // InternalSeminar.g:904:1: ( ( ( ',' ) ) ( ( ',' )* ) )
             {
-            // InternalSeminar.g:852:1: ( ( ( ',' ) ) ( ( ',' )* ) )
-            // InternalSeminar.g:853:2: ( ( ',' ) ) ( ( ',' )* )
+            // InternalSeminar.g:904:1: ( ( ( ',' ) ) ( ( ',' )* ) )
+            // InternalSeminar.g:905:2: ( ( ',' ) ) ( ( ',' )* )
             {
-            // InternalSeminar.g:853:2: ( ( ',' ) )
-            // InternalSeminar.g:854:3: ( ',' )
+            // InternalSeminar.g:905:2: ( ( ',' ) )
+            // InternalSeminar.g:906:3: ( ',' )
             {
              before(grammarAccess.getSeminarAccess().getCommaKeyword_2_2_0()); 
-            // InternalSeminar.g:855:3: ( ',' )
-            // InternalSeminar.g:855:4: ','
+            // InternalSeminar.g:907:3: ( ',' )
+            // InternalSeminar.g:907:4: ','
             {
-            match(input,13,FOLLOW_9); 
+            match(input,14,FOLLOW_9); 
 
             }
 
@@ -2761,32 +2950,32 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // InternalSeminar.g:858:2: ( ( ',' )* )
-            // InternalSeminar.g:859:3: ( ',' )*
+            // InternalSeminar.g:910:2: ( ( ',' )* )
+            // InternalSeminar.g:911:3: ( ',' )*
             {
              before(grammarAccess.getSeminarAccess().getCommaKeyword_2_2_0()); 
-            // InternalSeminar.g:860:3: ( ',' )*
-            loop15:
+            // InternalSeminar.g:912:3: ( ',' )*
+            loop16:
             do {
-                int alt15=2;
-                int LA15_0 = input.LA(1);
+                int alt16=2;
+                int LA16_0 = input.LA(1);
 
-                if ( (LA15_0==13) ) {
-                    alt15=1;
+                if ( (LA16_0==14) ) {
+                    alt16=1;
                 }
 
 
-                switch (alt15) {
+                switch (alt16) {
             	case 1 :
-            	    // InternalSeminar.g:860:4: ','
+            	    // InternalSeminar.g:912:4: ','
             	    {
-            	    match(input,13,FOLLOW_9); 
+            	    match(input,14,FOLLOW_9); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop15;
+            	    break loop16;
                 }
             } while (true);
 
@@ -2816,14 +3005,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_2_2__1"
-    // InternalSeminar.g:869:1: rule__Seminar__Group_2_2__1 : rule__Seminar__Group_2_2__1__Impl ;
+    // InternalSeminar.g:921:1: rule__Seminar__Group_2_2__1 : rule__Seminar__Group_2_2__1__Impl ;
     public final void rule__Seminar__Group_2_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:873:1: ( rule__Seminar__Group_2_2__1__Impl )
-            // InternalSeminar.g:874:2: rule__Seminar__Group_2_2__1__Impl
+            // InternalSeminar.g:925:1: ( rule__Seminar__Group_2_2__1__Impl )
+            // InternalSeminar.g:926:2: rule__Seminar__Group_2_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Seminar__Group_2_2__1__Impl();
@@ -2849,21 +3038,21 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__Group_2_2__1__Impl"
-    // InternalSeminar.g:880:1: rule__Seminar__Group_2_2__1__Impl : ( ( rule__Seminar__TopicsAssignment_2_2_1 ) ) ;
+    // InternalSeminar.g:932:1: rule__Seminar__Group_2_2__1__Impl : ( ( rule__Seminar__TopicsAssignment_2_2_1 ) ) ;
     public final void rule__Seminar__Group_2_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:884:1: ( ( ( rule__Seminar__TopicsAssignment_2_2_1 ) ) )
-            // InternalSeminar.g:885:1: ( ( rule__Seminar__TopicsAssignment_2_2_1 ) )
+            // InternalSeminar.g:936:1: ( ( ( rule__Seminar__TopicsAssignment_2_2_1 ) ) )
+            // InternalSeminar.g:937:1: ( ( rule__Seminar__TopicsAssignment_2_2_1 ) )
             {
-            // InternalSeminar.g:885:1: ( ( rule__Seminar__TopicsAssignment_2_2_1 ) )
-            // InternalSeminar.g:886:2: ( rule__Seminar__TopicsAssignment_2_2_1 )
+            // InternalSeminar.g:937:1: ( ( rule__Seminar__TopicsAssignment_2_2_1 ) )
+            // InternalSeminar.g:938:2: ( rule__Seminar__TopicsAssignment_2_2_1 )
             {
              before(grammarAccess.getSeminarAccess().getTopicsAssignment_2_2_1()); 
-            // InternalSeminar.g:887:2: ( rule__Seminar__TopicsAssignment_2_2_1 )
-            // InternalSeminar.g:887:3: rule__Seminar__TopicsAssignment_2_2_1
+            // InternalSeminar.g:939:2: ( rule__Seminar__TopicsAssignment_2_2_1 )
+            // InternalSeminar.g:939:3: rule__Seminar__TopicsAssignment_2_2_1
             {
             pushFollow(FOLLOW_2);
             rule__Seminar__TopicsAssignment_2_2_1();
@@ -2896,14 +3085,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Preference__Group__0"
-    // InternalSeminar.g:896:1: rule__Preference__Group__0 : rule__Preference__Group__0__Impl rule__Preference__Group__1 ;
+    // InternalSeminar.g:948:1: rule__Preference__Group__0 : rule__Preference__Group__0__Impl rule__Preference__Group__1 ;
     public final void rule__Preference__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:900:1: ( rule__Preference__Group__0__Impl rule__Preference__Group__1 )
-            // InternalSeminar.g:901:2: rule__Preference__Group__0__Impl rule__Preference__Group__1
+            // InternalSeminar.g:952:1: ( rule__Preference__Group__0__Impl rule__Preference__Group__1 )
+            // InternalSeminar.g:953:2: rule__Preference__Group__0__Impl rule__Preference__Group__1
             {
             pushFollow(FOLLOW_11);
             rule__Preference__Group__0__Impl();
@@ -2934,21 +3123,21 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Preference__Group__0__Impl"
-    // InternalSeminar.g:908:1: rule__Preference__Group__0__Impl : ( ( rule__Preference__StudentAssignment_0 ) ) ;
+    // InternalSeminar.g:960:1: rule__Preference__Group__0__Impl : ( ( rule__Preference__StudentAssignment_0 ) ) ;
     public final void rule__Preference__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:912:1: ( ( ( rule__Preference__StudentAssignment_0 ) ) )
-            // InternalSeminar.g:913:1: ( ( rule__Preference__StudentAssignment_0 ) )
+            // InternalSeminar.g:964:1: ( ( ( rule__Preference__StudentAssignment_0 ) ) )
+            // InternalSeminar.g:965:1: ( ( rule__Preference__StudentAssignment_0 ) )
             {
-            // InternalSeminar.g:913:1: ( ( rule__Preference__StudentAssignment_0 ) )
-            // InternalSeminar.g:914:2: ( rule__Preference__StudentAssignment_0 )
+            // InternalSeminar.g:965:1: ( ( rule__Preference__StudentAssignment_0 ) )
+            // InternalSeminar.g:966:2: ( rule__Preference__StudentAssignment_0 )
             {
              before(grammarAccess.getPreferenceAccess().getStudentAssignment_0()); 
-            // InternalSeminar.g:915:2: ( rule__Preference__StudentAssignment_0 )
-            // InternalSeminar.g:915:3: rule__Preference__StudentAssignment_0
+            // InternalSeminar.g:967:2: ( rule__Preference__StudentAssignment_0 )
+            // InternalSeminar.g:967:3: rule__Preference__StudentAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Preference__StudentAssignment_0();
@@ -2981,14 +3170,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Preference__Group__1"
-    // InternalSeminar.g:923:1: rule__Preference__Group__1 : rule__Preference__Group__1__Impl rule__Preference__Group__2 ;
+    // InternalSeminar.g:975:1: rule__Preference__Group__1 : rule__Preference__Group__1__Impl rule__Preference__Group__2 ;
     public final void rule__Preference__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:927:1: ( rule__Preference__Group__1__Impl rule__Preference__Group__2 )
-            // InternalSeminar.g:928:2: rule__Preference__Group__1__Impl rule__Preference__Group__2
+            // InternalSeminar.g:979:1: ( rule__Preference__Group__1__Impl rule__Preference__Group__2 )
+            // InternalSeminar.g:980:2: rule__Preference__Group__1__Impl rule__Preference__Group__2
             {
             pushFollow(FOLLOW_10);
             rule__Preference__Group__1__Impl();
@@ -3019,21 +3208,21 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Preference__Group__1__Impl"
-    // InternalSeminar.g:935:1: rule__Preference__Group__1__Impl : ( 'prefers' ) ;
+    // InternalSeminar.g:987:1: rule__Preference__Group__1__Impl : ( 'likes' ) ;
     public final void rule__Preference__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:939:1: ( ( 'prefers' ) )
-            // InternalSeminar.g:940:1: ( 'prefers' )
+            // InternalSeminar.g:991:1: ( ( 'likes' ) )
+            // InternalSeminar.g:992:1: ( 'likes' )
             {
-            // InternalSeminar.g:940:1: ( 'prefers' )
-            // InternalSeminar.g:941:2: 'prefers'
+            // InternalSeminar.g:992:1: ( 'likes' )
+            // InternalSeminar.g:993:2: 'likes'
             {
-             before(grammarAccess.getPreferenceAccess().getPrefersKeyword_1()); 
-            match(input,16,FOLLOW_2); 
-             after(grammarAccess.getPreferenceAccess().getPrefersKeyword_1()); 
+             before(grammarAccess.getPreferenceAccess().getLikesKeyword_1()); 
+            match(input,17,FOLLOW_2); 
+             after(grammarAccess.getPreferenceAccess().getLikesKeyword_1()); 
 
             }
 
@@ -3056,14 +3245,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Preference__Group__2"
-    // InternalSeminar.g:950:1: rule__Preference__Group__2 : rule__Preference__Group__2__Impl rule__Preference__Group__3 ;
+    // InternalSeminar.g:1002:1: rule__Preference__Group__2 : rule__Preference__Group__2__Impl rule__Preference__Group__3 ;
     public final void rule__Preference__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:954:1: ( rule__Preference__Group__2__Impl rule__Preference__Group__3 )
-            // InternalSeminar.g:955:2: rule__Preference__Group__2__Impl rule__Preference__Group__3
+            // InternalSeminar.g:1006:1: ( rule__Preference__Group__2__Impl rule__Preference__Group__3 )
+            // InternalSeminar.g:1007:2: rule__Preference__Group__2__Impl rule__Preference__Group__3
             {
             pushFollow(FOLLOW_12);
             rule__Preference__Group__2__Impl();
@@ -3094,31 +3283,31 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Preference__Group__2__Impl"
-    // InternalSeminar.g:962:1: rule__Preference__Group__2__Impl : ( ( rule__Preference__TopicAssignment_2 ) ) ;
+    // InternalSeminar.g:1014:1: rule__Preference__Group__2__Impl : ( ( rule__Preference__TopicsAssignment_2 ) ) ;
     public final void rule__Preference__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:966:1: ( ( ( rule__Preference__TopicAssignment_2 ) ) )
-            // InternalSeminar.g:967:1: ( ( rule__Preference__TopicAssignment_2 ) )
+            // InternalSeminar.g:1018:1: ( ( ( rule__Preference__TopicsAssignment_2 ) ) )
+            // InternalSeminar.g:1019:1: ( ( rule__Preference__TopicsAssignment_2 ) )
             {
-            // InternalSeminar.g:967:1: ( ( rule__Preference__TopicAssignment_2 ) )
-            // InternalSeminar.g:968:2: ( rule__Preference__TopicAssignment_2 )
+            // InternalSeminar.g:1019:1: ( ( rule__Preference__TopicsAssignment_2 ) )
+            // InternalSeminar.g:1020:2: ( rule__Preference__TopicsAssignment_2 )
             {
-             before(grammarAccess.getPreferenceAccess().getTopicAssignment_2()); 
-            // InternalSeminar.g:969:2: ( rule__Preference__TopicAssignment_2 )
-            // InternalSeminar.g:969:3: rule__Preference__TopicAssignment_2
+             before(grammarAccess.getPreferenceAccess().getTopicsAssignment_2()); 
+            // InternalSeminar.g:1021:2: ( rule__Preference__TopicsAssignment_2 )
+            // InternalSeminar.g:1021:3: rule__Preference__TopicsAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__Preference__TopicAssignment_2();
+            rule__Preference__TopicsAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPreferenceAccess().getTopicAssignment_2()); 
+             after(grammarAccess.getPreferenceAccess().getTopicsAssignment_2()); 
 
             }
 
@@ -3141,17 +3330,22 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Preference__Group__3"
-    // InternalSeminar.g:977:1: rule__Preference__Group__3 : rule__Preference__Group__3__Impl ;
+    // InternalSeminar.g:1029:1: rule__Preference__Group__3 : rule__Preference__Group__3__Impl rule__Preference__Group__4 ;
     public final void rule__Preference__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:981:1: ( rule__Preference__Group__3__Impl )
-            // InternalSeminar.g:982:2: rule__Preference__Group__3__Impl
+            // InternalSeminar.g:1033:1: ( rule__Preference__Group__3__Impl rule__Preference__Group__4 )
+            // InternalSeminar.g:1034:2: rule__Preference__Group__3__Impl rule__Preference__Group__4
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_12);
             rule__Preference__Group__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Preference__Group__4();
 
             state._fsp--;
 
@@ -3174,21 +3368,49 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Preference__Group__3__Impl"
-    // InternalSeminar.g:988:1: rule__Preference__Group__3__Impl : ( ';' ) ;
+    // InternalSeminar.g:1041:1: rule__Preference__Group__3__Impl : ( ( rule__Preference__Group_3__0 )* ) ;
     public final void rule__Preference__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:992:1: ( ( ';' ) )
-            // InternalSeminar.g:993:1: ( ';' )
+            // InternalSeminar.g:1045:1: ( ( ( rule__Preference__Group_3__0 )* ) )
+            // InternalSeminar.g:1046:1: ( ( rule__Preference__Group_3__0 )* )
             {
-            // InternalSeminar.g:993:1: ( ';' )
-            // InternalSeminar.g:994:2: ';'
+            // InternalSeminar.g:1046:1: ( ( rule__Preference__Group_3__0 )* )
+            // InternalSeminar.g:1047:2: ( rule__Preference__Group_3__0 )*
             {
-             before(grammarAccess.getPreferenceAccess().getSemicolonKeyword_3()); 
-            match(input,12,FOLLOW_2); 
-             after(grammarAccess.getPreferenceAccess().getSemicolonKeyword_3()); 
+             before(grammarAccess.getPreferenceAccess().getGroup_3()); 
+            // InternalSeminar.g:1048:2: ( rule__Preference__Group_3__0 )*
+            loop17:
+            do {
+                int alt17=2;
+                int LA17_0 = input.LA(1);
+
+                if ( (LA17_0==14) ) {
+                    alt17=1;
+                }
+
+
+                switch (alt17) {
+            	case 1 :
+            	    // InternalSeminar.g:1048:3: rule__Preference__Group_3__0
+            	    {
+            	    pushFollow(FOLLOW_9);
+            	    rule__Preference__Group_3__0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop17;
+                }
+            } while (true);
+
+             after(grammarAccess.getPreferenceAccess().getGroup_3()); 
 
             }
 
@@ -3210,17 +3432,762 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Preference__Group__3__Impl"
 
 
+    // $ANTLR start "rule__Preference__Group__4"
+    // InternalSeminar.g:1056:1: rule__Preference__Group__4 : rule__Preference__Group__4__Impl ;
+    public final void rule__Preference__Group__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1060:1: ( rule__Preference__Group__4__Impl )
+            // InternalSeminar.g:1061:2: rule__Preference__Group__4__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Preference__Group__4__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Preference__Group__4"
+
+
+    // $ANTLR start "rule__Preference__Group__4__Impl"
+    // InternalSeminar.g:1067:1: rule__Preference__Group__4__Impl : ( ';' ) ;
+    public final void rule__Preference__Group__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1071:1: ( ( ';' ) )
+            // InternalSeminar.g:1072:1: ( ';' )
+            {
+            // InternalSeminar.g:1072:1: ( ';' )
+            // InternalSeminar.g:1073:2: ';'
+            {
+             before(grammarAccess.getPreferenceAccess().getSemicolonKeyword_4()); 
+            match(input,13,FOLLOW_2); 
+             after(grammarAccess.getPreferenceAccess().getSemicolonKeyword_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Preference__Group__4__Impl"
+
+
+    // $ANTLR start "rule__Preference__Group_3__0"
+    // InternalSeminar.g:1083:1: rule__Preference__Group_3__0 : rule__Preference__Group_3__0__Impl rule__Preference__Group_3__1 ;
+    public final void rule__Preference__Group_3__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1087:1: ( rule__Preference__Group_3__0__Impl rule__Preference__Group_3__1 )
+            // InternalSeminar.g:1088:2: rule__Preference__Group_3__0__Impl rule__Preference__Group_3__1
+            {
+            pushFollow(FOLLOW_10);
+            rule__Preference__Group_3__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Preference__Group_3__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Preference__Group_3__0"
+
+
+    // $ANTLR start "rule__Preference__Group_3__0__Impl"
+    // InternalSeminar.g:1095:1: rule__Preference__Group_3__0__Impl : ( ( ( ',' ) ) ( ( ',' )* ) ) ;
+    public final void rule__Preference__Group_3__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1099:1: ( ( ( ( ',' ) ) ( ( ',' )* ) ) )
+            // InternalSeminar.g:1100:1: ( ( ( ',' ) ) ( ( ',' )* ) )
+            {
+            // InternalSeminar.g:1100:1: ( ( ( ',' ) ) ( ( ',' )* ) )
+            // InternalSeminar.g:1101:2: ( ( ',' ) ) ( ( ',' )* )
+            {
+            // InternalSeminar.g:1101:2: ( ( ',' ) )
+            // InternalSeminar.g:1102:3: ( ',' )
+            {
+             before(grammarAccess.getPreferenceAccess().getCommaKeyword_3_0()); 
+            // InternalSeminar.g:1103:3: ( ',' )
+            // InternalSeminar.g:1103:4: ','
+            {
+            match(input,14,FOLLOW_9); 
+
+            }
+
+             after(grammarAccess.getPreferenceAccess().getCommaKeyword_3_0()); 
+
+            }
+
+            // InternalSeminar.g:1106:2: ( ( ',' )* )
+            // InternalSeminar.g:1107:3: ( ',' )*
+            {
+             before(grammarAccess.getPreferenceAccess().getCommaKeyword_3_0()); 
+            // InternalSeminar.g:1108:3: ( ',' )*
+            loop18:
+            do {
+                int alt18=2;
+                int LA18_0 = input.LA(1);
+
+                if ( (LA18_0==14) ) {
+                    alt18=1;
+                }
+
+
+                switch (alt18) {
+            	case 1 :
+            	    // InternalSeminar.g:1108:4: ','
+            	    {
+            	    match(input,14,FOLLOW_9); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop18;
+                }
+            } while (true);
+
+             after(grammarAccess.getPreferenceAccess().getCommaKeyword_3_0()); 
+
+            }
+
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Preference__Group_3__0__Impl"
+
+
+    // $ANTLR start "rule__Preference__Group_3__1"
+    // InternalSeminar.g:1117:1: rule__Preference__Group_3__1 : rule__Preference__Group_3__1__Impl ;
+    public final void rule__Preference__Group_3__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1121:1: ( rule__Preference__Group_3__1__Impl )
+            // InternalSeminar.g:1122:2: rule__Preference__Group_3__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Preference__Group_3__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Preference__Group_3__1"
+
+
+    // $ANTLR start "rule__Preference__Group_3__1__Impl"
+    // InternalSeminar.g:1128:1: rule__Preference__Group_3__1__Impl : ( ( rule__Preference__TopicsAssignment_3_1 ) ) ;
+    public final void rule__Preference__Group_3__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1132:1: ( ( ( rule__Preference__TopicsAssignment_3_1 ) ) )
+            // InternalSeminar.g:1133:1: ( ( rule__Preference__TopicsAssignment_3_1 ) )
+            {
+            // InternalSeminar.g:1133:1: ( ( rule__Preference__TopicsAssignment_3_1 ) )
+            // InternalSeminar.g:1134:2: ( rule__Preference__TopicsAssignment_3_1 )
+            {
+             before(grammarAccess.getPreferenceAccess().getTopicsAssignment_3_1()); 
+            // InternalSeminar.g:1135:2: ( rule__Preference__TopicsAssignment_3_1 )
+            // InternalSeminar.g:1135:3: rule__Preference__TopicsAssignment_3_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__Preference__TopicsAssignment_3_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPreferenceAccess().getTopicsAssignment_3_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Preference__Group_3__1__Impl"
+
+
+    // $ANTLR start "rule__Rating__Group__0"
+    // InternalSeminar.g:1144:1: rule__Rating__Group__0 : rule__Rating__Group__0__Impl rule__Rating__Group__1 ;
+    public final void rule__Rating__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1148:1: ( rule__Rating__Group__0__Impl rule__Rating__Group__1 )
+            // InternalSeminar.g:1149:2: rule__Rating__Group__0__Impl rule__Rating__Group__1
+            {
+            pushFollow(FOLLOW_13);
+            rule__Rating__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Rating__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rating__Group__0"
+
+
+    // $ANTLR start "rule__Rating__Group__0__Impl"
+    // InternalSeminar.g:1156:1: rule__Rating__Group__0__Impl : ( ( rule__Rating__StudentAssignment_0 ) ) ;
+    public final void rule__Rating__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1160:1: ( ( ( rule__Rating__StudentAssignment_0 ) ) )
+            // InternalSeminar.g:1161:1: ( ( rule__Rating__StudentAssignment_0 ) )
+            {
+            // InternalSeminar.g:1161:1: ( ( rule__Rating__StudentAssignment_0 ) )
+            // InternalSeminar.g:1162:2: ( rule__Rating__StudentAssignment_0 )
+            {
+             before(grammarAccess.getRatingAccess().getStudentAssignment_0()); 
+            // InternalSeminar.g:1163:2: ( rule__Rating__StudentAssignment_0 )
+            // InternalSeminar.g:1163:3: rule__Rating__StudentAssignment_0
+            {
+            pushFollow(FOLLOW_2);
+            rule__Rating__StudentAssignment_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getRatingAccess().getStudentAssignment_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rating__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Rating__Group__1"
+    // InternalSeminar.g:1171:1: rule__Rating__Group__1 : rule__Rating__Group__1__Impl rule__Rating__Group__2 ;
+    public final void rule__Rating__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1175:1: ( rule__Rating__Group__1__Impl rule__Rating__Group__2 )
+            // InternalSeminar.g:1176:2: rule__Rating__Group__1__Impl rule__Rating__Group__2
+            {
+            pushFollow(FOLLOW_10);
+            rule__Rating__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Rating__Group__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rating__Group__1"
+
+
+    // $ANTLR start "rule__Rating__Group__1__Impl"
+    // InternalSeminar.g:1183:1: rule__Rating__Group__1__Impl : ( 'rates' ) ;
+    public final void rule__Rating__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1187:1: ( ( 'rates' ) )
+            // InternalSeminar.g:1188:1: ( 'rates' )
+            {
+            // InternalSeminar.g:1188:1: ( 'rates' )
+            // InternalSeminar.g:1189:2: 'rates'
+            {
+             before(grammarAccess.getRatingAccess().getRatesKeyword_1()); 
+            match(input,18,FOLLOW_2); 
+             after(grammarAccess.getRatingAccess().getRatesKeyword_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rating__Group__1__Impl"
+
+
+    // $ANTLR start "rule__Rating__Group__2"
+    // InternalSeminar.g:1198:1: rule__Rating__Group__2 : rule__Rating__Group__2__Impl rule__Rating__Group__3 ;
+    public final void rule__Rating__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1202:1: ( rule__Rating__Group__2__Impl rule__Rating__Group__3 )
+            // InternalSeminar.g:1203:2: rule__Rating__Group__2__Impl rule__Rating__Group__3
+            {
+            pushFollow(FOLLOW_14);
+            rule__Rating__Group__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Rating__Group__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rating__Group__2"
+
+
+    // $ANTLR start "rule__Rating__Group__2__Impl"
+    // InternalSeminar.g:1210:1: rule__Rating__Group__2__Impl : ( ( rule__Rating__TopicAssignment_2 ) ) ;
+    public final void rule__Rating__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1214:1: ( ( ( rule__Rating__TopicAssignment_2 ) ) )
+            // InternalSeminar.g:1215:1: ( ( rule__Rating__TopicAssignment_2 ) )
+            {
+            // InternalSeminar.g:1215:1: ( ( rule__Rating__TopicAssignment_2 ) )
+            // InternalSeminar.g:1216:2: ( rule__Rating__TopicAssignment_2 )
+            {
+             before(grammarAccess.getRatingAccess().getTopicAssignment_2()); 
+            // InternalSeminar.g:1217:2: ( rule__Rating__TopicAssignment_2 )
+            // InternalSeminar.g:1217:3: rule__Rating__TopicAssignment_2
+            {
+            pushFollow(FOLLOW_2);
+            rule__Rating__TopicAssignment_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getRatingAccess().getTopicAssignment_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rating__Group__2__Impl"
+
+
+    // $ANTLR start "rule__Rating__Group__3"
+    // InternalSeminar.g:1225:1: rule__Rating__Group__3 : rule__Rating__Group__3__Impl rule__Rating__Group__4 ;
+    public final void rule__Rating__Group__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1229:1: ( rule__Rating__Group__3__Impl rule__Rating__Group__4 )
+            // InternalSeminar.g:1230:2: rule__Rating__Group__3__Impl rule__Rating__Group__4
+            {
+            pushFollow(FOLLOW_15);
+            rule__Rating__Group__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Rating__Group__4();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rating__Group__3"
+
+
+    // $ANTLR start "rule__Rating__Group__3__Impl"
+    // InternalSeminar.g:1237:1: rule__Rating__Group__3__Impl : ( 'with' ) ;
+    public final void rule__Rating__Group__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1241:1: ( ( 'with' ) )
+            // InternalSeminar.g:1242:1: ( 'with' )
+            {
+            // InternalSeminar.g:1242:1: ( 'with' )
+            // InternalSeminar.g:1243:2: 'with'
+            {
+             before(grammarAccess.getRatingAccess().getWithKeyword_3()); 
+            match(input,19,FOLLOW_2); 
+             after(grammarAccess.getRatingAccess().getWithKeyword_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rating__Group__3__Impl"
+
+
+    // $ANTLR start "rule__Rating__Group__4"
+    // InternalSeminar.g:1252:1: rule__Rating__Group__4 : rule__Rating__Group__4__Impl rule__Rating__Group__5 ;
+    public final void rule__Rating__Group__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1256:1: ( rule__Rating__Group__4__Impl rule__Rating__Group__5 )
+            // InternalSeminar.g:1257:2: rule__Rating__Group__4__Impl rule__Rating__Group__5
+            {
+            pushFollow(FOLLOW_16);
+            rule__Rating__Group__4__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Rating__Group__5();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rating__Group__4"
+
+
+    // $ANTLR start "rule__Rating__Group__4__Impl"
+    // InternalSeminar.g:1264:1: rule__Rating__Group__4__Impl : ( ( rule__Rating__RatingAssignment_4 ) ) ;
+    public final void rule__Rating__Group__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1268:1: ( ( ( rule__Rating__RatingAssignment_4 ) ) )
+            // InternalSeminar.g:1269:1: ( ( rule__Rating__RatingAssignment_4 ) )
+            {
+            // InternalSeminar.g:1269:1: ( ( rule__Rating__RatingAssignment_4 ) )
+            // InternalSeminar.g:1270:2: ( rule__Rating__RatingAssignment_4 )
+            {
+             before(grammarAccess.getRatingAccess().getRatingAssignment_4()); 
+            // InternalSeminar.g:1271:2: ( rule__Rating__RatingAssignment_4 )
+            // InternalSeminar.g:1271:3: rule__Rating__RatingAssignment_4
+            {
+            pushFollow(FOLLOW_2);
+            rule__Rating__RatingAssignment_4();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getRatingAccess().getRatingAssignment_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rating__Group__4__Impl"
+
+
+    // $ANTLR start "rule__Rating__Group__5"
+    // InternalSeminar.g:1279:1: rule__Rating__Group__5 : rule__Rating__Group__5__Impl ;
+    public final void rule__Rating__Group__5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1283:1: ( rule__Rating__Group__5__Impl )
+            // InternalSeminar.g:1284:2: rule__Rating__Group__5__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Rating__Group__5__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rating__Group__5"
+
+
+    // $ANTLR start "rule__Rating__Group__5__Impl"
+    // InternalSeminar.g:1290:1: rule__Rating__Group__5__Impl : ( ';' ) ;
+    public final void rule__Rating__Group__5__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1294:1: ( ( ';' ) )
+            // InternalSeminar.g:1295:1: ( ';' )
+            {
+            // InternalSeminar.g:1295:1: ( ';' )
+            // InternalSeminar.g:1296:2: ';'
+            {
+             before(grammarAccess.getRatingAccess().getSemicolonKeyword_5()); 
+            match(input,13,FOLLOW_2); 
+             after(grammarAccess.getRatingAccess().getSemicolonKeyword_5()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rating__Group__5__Impl"
+
+
     // $ANTLR start "rule__Supervise__Group__0"
-    // InternalSeminar.g:1004:1: rule__Supervise__Group__0 : rule__Supervise__Group__0__Impl rule__Supervise__Group__1 ;
+    // InternalSeminar.g:1306:1: rule__Supervise__Group__0 : rule__Supervise__Group__0__Impl rule__Supervise__Group__1 ;
     public final void rule__Supervise__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1008:1: ( rule__Supervise__Group__0__Impl rule__Supervise__Group__1 )
-            // InternalSeminar.g:1009:2: rule__Supervise__Group__0__Impl rule__Supervise__Group__1
+            // InternalSeminar.g:1310:1: ( rule__Supervise__Group__0__Impl rule__Supervise__Group__1 )
+            // InternalSeminar.g:1311:2: rule__Supervise__Group__0__Impl rule__Supervise__Group__1
             {
-            pushFollow(FOLLOW_13);
+            pushFollow(FOLLOW_17);
             rule__Supervise__Group__0__Impl();
 
             state._fsp--;
@@ -3249,21 +4216,21 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Supervise__Group__0__Impl"
-    // InternalSeminar.g:1016:1: rule__Supervise__Group__0__Impl : ( ( rule__Supervise__SupervisorAssignment_0 ) ) ;
+    // InternalSeminar.g:1318:1: rule__Supervise__Group__0__Impl : ( ( rule__Supervise__SupervisorAssignment_0 ) ) ;
     public final void rule__Supervise__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1020:1: ( ( ( rule__Supervise__SupervisorAssignment_0 ) ) )
-            // InternalSeminar.g:1021:1: ( ( rule__Supervise__SupervisorAssignment_0 ) )
+            // InternalSeminar.g:1322:1: ( ( ( rule__Supervise__SupervisorAssignment_0 ) ) )
+            // InternalSeminar.g:1323:1: ( ( rule__Supervise__SupervisorAssignment_0 ) )
             {
-            // InternalSeminar.g:1021:1: ( ( rule__Supervise__SupervisorAssignment_0 ) )
-            // InternalSeminar.g:1022:2: ( rule__Supervise__SupervisorAssignment_0 )
+            // InternalSeminar.g:1323:1: ( ( rule__Supervise__SupervisorAssignment_0 ) )
+            // InternalSeminar.g:1324:2: ( rule__Supervise__SupervisorAssignment_0 )
             {
              before(grammarAccess.getSuperviseAccess().getSupervisorAssignment_0()); 
-            // InternalSeminar.g:1023:2: ( rule__Supervise__SupervisorAssignment_0 )
-            // InternalSeminar.g:1023:3: rule__Supervise__SupervisorAssignment_0
+            // InternalSeminar.g:1325:2: ( rule__Supervise__SupervisorAssignment_0 )
+            // InternalSeminar.g:1325:3: rule__Supervise__SupervisorAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Supervise__SupervisorAssignment_0();
@@ -3296,14 +4263,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Supervise__Group__1"
-    // InternalSeminar.g:1031:1: rule__Supervise__Group__1 : rule__Supervise__Group__1__Impl rule__Supervise__Group__2 ;
+    // InternalSeminar.g:1333:1: rule__Supervise__Group__1 : rule__Supervise__Group__1__Impl rule__Supervise__Group__2 ;
     public final void rule__Supervise__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1035:1: ( rule__Supervise__Group__1__Impl rule__Supervise__Group__2 )
-            // InternalSeminar.g:1036:2: rule__Supervise__Group__1__Impl rule__Supervise__Group__2
+            // InternalSeminar.g:1337:1: ( rule__Supervise__Group__1__Impl rule__Supervise__Group__2 )
+            // InternalSeminar.g:1338:2: rule__Supervise__Group__1__Impl rule__Supervise__Group__2
             {
             pushFollow(FOLLOW_10);
             rule__Supervise__Group__1__Impl();
@@ -3334,20 +4301,20 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Supervise__Group__1__Impl"
-    // InternalSeminar.g:1043:1: rule__Supervise__Group__1__Impl : ( 'supervises' ) ;
+    // InternalSeminar.g:1345:1: rule__Supervise__Group__1__Impl : ( 'supervises' ) ;
     public final void rule__Supervise__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1047:1: ( ( 'supervises' ) )
-            // InternalSeminar.g:1048:1: ( 'supervises' )
+            // InternalSeminar.g:1349:1: ( ( 'supervises' ) )
+            // InternalSeminar.g:1350:1: ( 'supervises' )
             {
-            // InternalSeminar.g:1048:1: ( 'supervises' )
-            // InternalSeminar.g:1049:2: 'supervises'
+            // InternalSeminar.g:1350:1: ( 'supervises' )
+            // InternalSeminar.g:1351:2: 'supervises'
             {
              before(grammarAccess.getSuperviseAccess().getSupervisesKeyword_1()); 
-            match(input,17,FOLLOW_2); 
+            match(input,20,FOLLOW_2); 
              after(grammarAccess.getSuperviseAccess().getSupervisesKeyword_1()); 
 
             }
@@ -3371,16 +4338,16 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Supervise__Group__2"
-    // InternalSeminar.g:1058:1: rule__Supervise__Group__2 : rule__Supervise__Group__2__Impl rule__Supervise__Group__3 ;
+    // InternalSeminar.g:1360:1: rule__Supervise__Group__2 : rule__Supervise__Group__2__Impl rule__Supervise__Group__3 ;
     public final void rule__Supervise__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1062:1: ( rule__Supervise__Group__2__Impl rule__Supervise__Group__3 )
-            // InternalSeminar.g:1063:2: rule__Supervise__Group__2__Impl rule__Supervise__Group__3
+            // InternalSeminar.g:1364:1: ( rule__Supervise__Group__2__Impl rule__Supervise__Group__3 )
+            // InternalSeminar.g:1365:2: rule__Supervise__Group__2__Impl rule__Supervise__Group__3
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_16);
             rule__Supervise__Group__2__Impl();
 
             state._fsp--;
@@ -3409,21 +4376,21 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Supervise__Group__2__Impl"
-    // InternalSeminar.g:1070:1: rule__Supervise__Group__2__Impl : ( ( rule__Supervise__TopicAssignment_2 ) ) ;
+    // InternalSeminar.g:1372:1: rule__Supervise__Group__2__Impl : ( ( rule__Supervise__TopicAssignment_2 ) ) ;
     public final void rule__Supervise__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1074:1: ( ( ( rule__Supervise__TopicAssignment_2 ) ) )
-            // InternalSeminar.g:1075:1: ( ( rule__Supervise__TopicAssignment_2 ) )
+            // InternalSeminar.g:1376:1: ( ( ( rule__Supervise__TopicAssignment_2 ) ) )
+            // InternalSeminar.g:1377:1: ( ( rule__Supervise__TopicAssignment_2 ) )
             {
-            // InternalSeminar.g:1075:1: ( ( rule__Supervise__TopicAssignment_2 ) )
-            // InternalSeminar.g:1076:2: ( rule__Supervise__TopicAssignment_2 )
+            // InternalSeminar.g:1377:1: ( ( rule__Supervise__TopicAssignment_2 ) )
+            // InternalSeminar.g:1378:2: ( rule__Supervise__TopicAssignment_2 )
             {
              before(grammarAccess.getSuperviseAccess().getTopicAssignment_2()); 
-            // InternalSeminar.g:1077:2: ( rule__Supervise__TopicAssignment_2 )
-            // InternalSeminar.g:1077:3: rule__Supervise__TopicAssignment_2
+            // InternalSeminar.g:1379:2: ( rule__Supervise__TopicAssignment_2 )
+            // InternalSeminar.g:1379:3: rule__Supervise__TopicAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Supervise__TopicAssignment_2();
@@ -3456,14 +4423,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Supervise__Group__3"
-    // InternalSeminar.g:1085:1: rule__Supervise__Group__3 : rule__Supervise__Group__3__Impl ;
+    // InternalSeminar.g:1387:1: rule__Supervise__Group__3 : rule__Supervise__Group__3__Impl ;
     public final void rule__Supervise__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1089:1: ( rule__Supervise__Group__3__Impl )
-            // InternalSeminar.g:1090:2: rule__Supervise__Group__3__Impl
+            // InternalSeminar.g:1391:1: ( rule__Supervise__Group__3__Impl )
+            // InternalSeminar.g:1392:2: rule__Supervise__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Supervise__Group__3__Impl();
@@ -3489,20 +4456,20 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Supervise__Group__3__Impl"
-    // InternalSeminar.g:1096:1: rule__Supervise__Group__3__Impl : ( ';' ) ;
+    // InternalSeminar.g:1398:1: rule__Supervise__Group__3__Impl : ( ';' ) ;
     public final void rule__Supervise__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1100:1: ( ( ';' ) )
-            // InternalSeminar.g:1101:1: ( ';' )
+            // InternalSeminar.g:1402:1: ( ( ';' ) )
+            // InternalSeminar.g:1403:1: ( ';' )
             {
-            // InternalSeminar.g:1101:1: ( ';' )
-            // InternalSeminar.g:1102:2: ';'
+            // InternalSeminar.g:1403:1: ( ';' )
+            // InternalSeminar.g:1404:2: ';'
             {
              before(grammarAccess.getSuperviseAccess().getSemicolonKeyword_3()); 
-            match(input,12,FOLLOW_2); 
+            match(input,13,FOLLOW_2); 
              after(grammarAccess.getSuperviseAccess().getSemicolonKeyword_3()); 
 
             }
@@ -3526,16 +4493,16 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment__Group__0"
-    // InternalSeminar.g:1112:1: rule__Assignment__Group__0 : rule__Assignment__Group__0__Impl rule__Assignment__Group__1 ;
+    // InternalSeminar.g:1414:1: rule__Assignment__Group__0 : rule__Assignment__Group__0__Impl rule__Assignment__Group__1 ;
     public final void rule__Assignment__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1116:1: ( rule__Assignment__Group__0__Impl rule__Assignment__Group__1 )
-            // InternalSeminar.g:1117:2: rule__Assignment__Group__0__Impl rule__Assignment__Group__1
+            // InternalSeminar.g:1418:1: ( rule__Assignment__Group__0__Impl rule__Assignment__Group__1 )
+            // InternalSeminar.g:1419:2: rule__Assignment__Group__0__Impl rule__Assignment__Group__1
             {
-            pushFollow(FOLLOW_14);
+            pushFollow(FOLLOW_18);
             rule__Assignment__Group__0__Impl();
 
             state._fsp--;
@@ -3564,21 +4531,21 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment__Group__0__Impl"
-    // InternalSeminar.g:1124:1: rule__Assignment__Group__0__Impl : ( ( rule__Assignment__StudentAssignment_0 ) ) ;
+    // InternalSeminar.g:1426:1: rule__Assignment__Group__0__Impl : ( ( rule__Assignment__StudentAssignment_0 ) ) ;
     public final void rule__Assignment__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1128:1: ( ( ( rule__Assignment__StudentAssignment_0 ) ) )
-            // InternalSeminar.g:1129:1: ( ( rule__Assignment__StudentAssignment_0 ) )
+            // InternalSeminar.g:1430:1: ( ( ( rule__Assignment__StudentAssignment_0 ) ) )
+            // InternalSeminar.g:1431:1: ( ( rule__Assignment__StudentAssignment_0 ) )
             {
-            // InternalSeminar.g:1129:1: ( ( rule__Assignment__StudentAssignment_0 ) )
-            // InternalSeminar.g:1130:2: ( rule__Assignment__StudentAssignment_0 )
+            // InternalSeminar.g:1431:1: ( ( rule__Assignment__StudentAssignment_0 ) )
+            // InternalSeminar.g:1432:2: ( rule__Assignment__StudentAssignment_0 )
             {
              before(grammarAccess.getAssignmentAccess().getStudentAssignment_0()); 
-            // InternalSeminar.g:1131:2: ( rule__Assignment__StudentAssignment_0 )
-            // InternalSeminar.g:1131:3: rule__Assignment__StudentAssignment_0
+            // InternalSeminar.g:1433:2: ( rule__Assignment__StudentAssignment_0 )
+            // InternalSeminar.g:1433:3: rule__Assignment__StudentAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Assignment__StudentAssignment_0();
@@ -3611,16 +4578,16 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment__Group__1"
-    // InternalSeminar.g:1139:1: rule__Assignment__Group__1 : rule__Assignment__Group__1__Impl rule__Assignment__Group__2 ;
+    // InternalSeminar.g:1441:1: rule__Assignment__Group__1 : rule__Assignment__Group__1__Impl rule__Assignment__Group__2 ;
     public final void rule__Assignment__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1143:1: ( rule__Assignment__Group__1__Impl rule__Assignment__Group__2 )
-            // InternalSeminar.g:1144:2: rule__Assignment__Group__1__Impl rule__Assignment__Group__2
+            // InternalSeminar.g:1445:1: ( rule__Assignment__Group__1__Impl rule__Assignment__Group__2 )
+            // InternalSeminar.g:1446:2: rule__Assignment__Group__1__Impl rule__Assignment__Group__2
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_19);
             rule__Assignment__Group__1__Impl();
 
             state._fsp--;
@@ -3649,20 +4616,20 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment__Group__1__Impl"
-    // InternalSeminar.g:1151:1: rule__Assignment__Group__1__Impl : ( 'is' ) ;
+    // InternalSeminar.g:1453:1: rule__Assignment__Group__1__Impl : ( 'is' ) ;
     public final void rule__Assignment__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1155:1: ( ( 'is' ) )
-            // InternalSeminar.g:1156:1: ( 'is' )
+            // InternalSeminar.g:1457:1: ( ( 'is' ) )
+            // InternalSeminar.g:1458:1: ( 'is' )
             {
-            // InternalSeminar.g:1156:1: ( 'is' )
-            // InternalSeminar.g:1157:2: 'is'
+            // InternalSeminar.g:1458:1: ( 'is' )
+            // InternalSeminar.g:1459:2: 'is'
             {
              before(grammarAccess.getAssignmentAccess().getIsKeyword_1()); 
-            match(input,18,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getAssignmentAccess().getIsKeyword_1()); 
 
             }
@@ -3686,16 +4653,16 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment__Group__2"
-    // InternalSeminar.g:1166:1: rule__Assignment__Group__2 : rule__Assignment__Group__2__Impl rule__Assignment__Group__3 ;
+    // InternalSeminar.g:1468:1: rule__Assignment__Group__2 : rule__Assignment__Group__2__Impl rule__Assignment__Group__3 ;
     public final void rule__Assignment__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1170:1: ( rule__Assignment__Group__2__Impl rule__Assignment__Group__3 )
-            // InternalSeminar.g:1171:2: rule__Assignment__Group__2__Impl rule__Assignment__Group__3
+            // InternalSeminar.g:1472:1: ( rule__Assignment__Group__2__Impl rule__Assignment__Group__3 )
+            // InternalSeminar.g:1473:2: rule__Assignment__Group__2__Impl rule__Assignment__Group__3
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_20);
             rule__Assignment__Group__2__Impl();
 
             state._fsp--;
@@ -3724,20 +4691,20 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment__Group__2__Impl"
-    // InternalSeminar.g:1178:1: rule__Assignment__Group__2__Impl : ( 'assigned' ) ;
+    // InternalSeminar.g:1480:1: rule__Assignment__Group__2__Impl : ( 'assigned' ) ;
     public final void rule__Assignment__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1182:1: ( ( 'assigned' ) )
-            // InternalSeminar.g:1183:1: ( 'assigned' )
+            // InternalSeminar.g:1484:1: ( ( 'assigned' ) )
+            // InternalSeminar.g:1485:1: ( 'assigned' )
             {
-            // InternalSeminar.g:1183:1: ( 'assigned' )
-            // InternalSeminar.g:1184:2: 'assigned'
+            // InternalSeminar.g:1485:1: ( 'assigned' )
+            // InternalSeminar.g:1486:2: 'assigned'
             {
              before(grammarAccess.getAssignmentAccess().getAssignedKeyword_2()); 
-            match(input,19,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getAssignmentAccess().getAssignedKeyword_2()); 
 
             }
@@ -3761,14 +4728,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment__Group__3"
-    // InternalSeminar.g:1193:1: rule__Assignment__Group__3 : rule__Assignment__Group__3__Impl rule__Assignment__Group__4 ;
+    // InternalSeminar.g:1495:1: rule__Assignment__Group__3 : rule__Assignment__Group__3__Impl rule__Assignment__Group__4 ;
     public final void rule__Assignment__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1197:1: ( rule__Assignment__Group__3__Impl rule__Assignment__Group__4 )
-            // InternalSeminar.g:1198:2: rule__Assignment__Group__3__Impl rule__Assignment__Group__4
+            // InternalSeminar.g:1499:1: ( rule__Assignment__Group__3__Impl rule__Assignment__Group__4 )
+            // InternalSeminar.g:1500:2: rule__Assignment__Group__3__Impl rule__Assignment__Group__4
             {
             pushFollow(FOLLOW_10);
             rule__Assignment__Group__3__Impl();
@@ -3799,20 +4766,20 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment__Group__3__Impl"
-    // InternalSeminar.g:1205:1: rule__Assignment__Group__3__Impl : ( 'to' ) ;
+    // InternalSeminar.g:1507:1: rule__Assignment__Group__3__Impl : ( 'to' ) ;
     public final void rule__Assignment__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1209:1: ( ( 'to' ) )
-            // InternalSeminar.g:1210:1: ( 'to' )
+            // InternalSeminar.g:1511:1: ( ( 'to' ) )
+            // InternalSeminar.g:1512:1: ( 'to' )
             {
-            // InternalSeminar.g:1210:1: ( 'to' )
-            // InternalSeminar.g:1211:2: 'to'
+            // InternalSeminar.g:1512:1: ( 'to' )
+            // InternalSeminar.g:1513:2: 'to'
             {
              before(grammarAccess.getAssignmentAccess().getToKeyword_3()); 
-            match(input,20,FOLLOW_2); 
+            match(input,23,FOLLOW_2); 
              after(grammarAccess.getAssignmentAccess().getToKeyword_3()); 
 
             }
@@ -3836,16 +4803,16 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment__Group__4"
-    // InternalSeminar.g:1220:1: rule__Assignment__Group__4 : rule__Assignment__Group__4__Impl rule__Assignment__Group__5 ;
+    // InternalSeminar.g:1522:1: rule__Assignment__Group__4 : rule__Assignment__Group__4__Impl rule__Assignment__Group__5 ;
     public final void rule__Assignment__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1224:1: ( rule__Assignment__Group__4__Impl rule__Assignment__Group__5 )
-            // InternalSeminar.g:1225:2: rule__Assignment__Group__4__Impl rule__Assignment__Group__5
+            // InternalSeminar.g:1526:1: ( rule__Assignment__Group__4__Impl rule__Assignment__Group__5 )
+            // InternalSeminar.g:1527:2: rule__Assignment__Group__4__Impl rule__Assignment__Group__5
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_16);
             rule__Assignment__Group__4__Impl();
 
             state._fsp--;
@@ -3874,21 +4841,21 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment__Group__4__Impl"
-    // InternalSeminar.g:1232:1: rule__Assignment__Group__4__Impl : ( ( rule__Assignment__TopicAssignment_4 ) ) ;
+    // InternalSeminar.g:1534:1: rule__Assignment__Group__4__Impl : ( ( rule__Assignment__TopicAssignment_4 ) ) ;
     public final void rule__Assignment__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1236:1: ( ( ( rule__Assignment__TopicAssignment_4 ) ) )
-            // InternalSeminar.g:1237:1: ( ( rule__Assignment__TopicAssignment_4 ) )
+            // InternalSeminar.g:1538:1: ( ( ( rule__Assignment__TopicAssignment_4 ) ) )
+            // InternalSeminar.g:1539:1: ( ( rule__Assignment__TopicAssignment_4 ) )
             {
-            // InternalSeminar.g:1237:1: ( ( rule__Assignment__TopicAssignment_4 ) )
-            // InternalSeminar.g:1238:2: ( rule__Assignment__TopicAssignment_4 )
+            // InternalSeminar.g:1539:1: ( ( rule__Assignment__TopicAssignment_4 ) )
+            // InternalSeminar.g:1540:2: ( rule__Assignment__TopicAssignment_4 )
             {
              before(grammarAccess.getAssignmentAccess().getTopicAssignment_4()); 
-            // InternalSeminar.g:1239:2: ( rule__Assignment__TopicAssignment_4 )
-            // InternalSeminar.g:1239:3: rule__Assignment__TopicAssignment_4
+            // InternalSeminar.g:1541:2: ( rule__Assignment__TopicAssignment_4 )
+            // InternalSeminar.g:1541:3: rule__Assignment__TopicAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__Assignment__TopicAssignment_4();
@@ -3921,14 +4888,14 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment__Group__5"
-    // InternalSeminar.g:1247:1: rule__Assignment__Group__5 : rule__Assignment__Group__5__Impl ;
+    // InternalSeminar.g:1549:1: rule__Assignment__Group__5 : rule__Assignment__Group__5__Impl ;
     public final void rule__Assignment__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1251:1: ( rule__Assignment__Group__5__Impl )
-            // InternalSeminar.g:1252:2: rule__Assignment__Group__5__Impl
+            // InternalSeminar.g:1553:1: ( rule__Assignment__Group__5__Impl )
+            // InternalSeminar.g:1554:2: rule__Assignment__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Assignment__Group__5__Impl();
@@ -3954,20 +4921,20 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment__Group__5__Impl"
-    // InternalSeminar.g:1258:1: rule__Assignment__Group__5__Impl : ( ';' ) ;
+    // InternalSeminar.g:1560:1: rule__Assignment__Group__5__Impl : ( ';' ) ;
     public final void rule__Assignment__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1262:1: ( ( ';' ) )
-            // InternalSeminar.g:1263:1: ( ';' )
+            // InternalSeminar.g:1564:1: ( ( ';' ) )
+            // InternalSeminar.g:1565:1: ( ';' )
             {
-            // InternalSeminar.g:1263:1: ( ';' )
-            // InternalSeminar.g:1264:2: ';'
+            // InternalSeminar.g:1565:1: ( ';' )
+            // InternalSeminar.g:1566:2: ';'
             {
              before(grammarAccess.getAssignmentAccess().getSemicolonKeyword_5()); 
-            match(input,12,FOLLOW_2); 
+            match(input,13,FOLLOW_2); 
              after(grammarAccess.getAssignmentAccess().getSemicolonKeyword_5()); 
 
             }
@@ -3991,17 +4958,17 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__SupervisorsAssignment_0_1"
-    // InternalSeminar.g:1274:1: rule__Seminar__SupervisorsAssignment_0_1 : ( ruleSupervisor ) ;
+    // InternalSeminar.g:1576:1: rule__Seminar__SupervisorsAssignment_0_1 : ( ruleSupervisor ) ;
     public final void rule__Seminar__SupervisorsAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1278:1: ( ( ruleSupervisor ) )
-            // InternalSeminar.g:1279:2: ( ruleSupervisor )
+            // InternalSeminar.g:1580:1: ( ( ruleSupervisor ) )
+            // InternalSeminar.g:1581:2: ( ruleSupervisor )
             {
-            // InternalSeminar.g:1279:2: ( ruleSupervisor )
-            // InternalSeminar.g:1280:3: ruleSupervisor
+            // InternalSeminar.g:1581:2: ( ruleSupervisor )
+            // InternalSeminar.g:1582:3: ruleSupervisor
             {
              before(grammarAccess.getSeminarAccess().getSupervisorsSupervisorParserRuleCall_0_1_0()); 
             pushFollow(FOLLOW_2);
@@ -4032,17 +4999,17 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__SupervisorsAssignment_0_2_1"
-    // InternalSeminar.g:1289:1: rule__Seminar__SupervisorsAssignment_0_2_1 : ( ruleSupervisor ) ;
+    // InternalSeminar.g:1591:1: rule__Seminar__SupervisorsAssignment_0_2_1 : ( ruleSupervisor ) ;
     public final void rule__Seminar__SupervisorsAssignment_0_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1293:1: ( ( ruleSupervisor ) )
-            // InternalSeminar.g:1294:2: ( ruleSupervisor )
+            // InternalSeminar.g:1595:1: ( ( ruleSupervisor ) )
+            // InternalSeminar.g:1596:2: ( ruleSupervisor )
             {
-            // InternalSeminar.g:1294:2: ( ruleSupervisor )
-            // InternalSeminar.g:1295:3: ruleSupervisor
+            // InternalSeminar.g:1596:2: ( ruleSupervisor )
+            // InternalSeminar.g:1597:3: ruleSupervisor
             {
              before(grammarAccess.getSeminarAccess().getSupervisorsSupervisorParserRuleCall_0_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -4073,17 +5040,17 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__StudentsAssignment_1_1"
-    // InternalSeminar.g:1304:1: rule__Seminar__StudentsAssignment_1_1 : ( ruleStudent ) ;
+    // InternalSeminar.g:1606:1: rule__Seminar__StudentsAssignment_1_1 : ( ruleStudent ) ;
     public final void rule__Seminar__StudentsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1308:1: ( ( ruleStudent ) )
-            // InternalSeminar.g:1309:2: ( ruleStudent )
+            // InternalSeminar.g:1610:1: ( ( ruleStudent ) )
+            // InternalSeminar.g:1611:2: ( ruleStudent )
             {
-            // InternalSeminar.g:1309:2: ( ruleStudent )
-            // InternalSeminar.g:1310:3: ruleStudent
+            // InternalSeminar.g:1611:2: ( ruleStudent )
+            // InternalSeminar.g:1612:3: ruleStudent
             {
              before(grammarAccess.getSeminarAccess().getStudentsStudentParserRuleCall_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -4114,17 +5081,17 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__StudentsAssignment_1_2_1"
-    // InternalSeminar.g:1319:1: rule__Seminar__StudentsAssignment_1_2_1 : ( ruleStudent ) ;
+    // InternalSeminar.g:1621:1: rule__Seminar__StudentsAssignment_1_2_1 : ( ruleStudent ) ;
     public final void rule__Seminar__StudentsAssignment_1_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1323:1: ( ( ruleStudent ) )
-            // InternalSeminar.g:1324:2: ( ruleStudent )
+            // InternalSeminar.g:1625:1: ( ( ruleStudent ) )
+            // InternalSeminar.g:1626:2: ( ruleStudent )
             {
-            // InternalSeminar.g:1324:2: ( ruleStudent )
-            // InternalSeminar.g:1325:3: ruleStudent
+            // InternalSeminar.g:1626:2: ( ruleStudent )
+            // InternalSeminar.g:1627:3: ruleStudent
             {
              before(grammarAccess.getSeminarAccess().getStudentsStudentParserRuleCall_1_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -4155,17 +5122,17 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__TopicsAssignment_2_1"
-    // InternalSeminar.g:1334:1: rule__Seminar__TopicsAssignment_2_1 : ( ruleTopic ) ;
+    // InternalSeminar.g:1636:1: rule__Seminar__TopicsAssignment_2_1 : ( ruleTopic ) ;
     public final void rule__Seminar__TopicsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1338:1: ( ( ruleTopic ) )
-            // InternalSeminar.g:1339:2: ( ruleTopic )
+            // InternalSeminar.g:1640:1: ( ( ruleTopic ) )
+            // InternalSeminar.g:1641:2: ( ruleTopic )
             {
-            // InternalSeminar.g:1339:2: ( ruleTopic )
-            // InternalSeminar.g:1340:3: ruleTopic
+            // InternalSeminar.g:1641:2: ( ruleTopic )
+            // InternalSeminar.g:1642:3: ruleTopic
             {
              before(grammarAccess.getSeminarAccess().getTopicsTopicParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -4196,17 +5163,17 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__TopicsAssignment_2_2_1"
-    // InternalSeminar.g:1349:1: rule__Seminar__TopicsAssignment_2_2_1 : ( ruleTopic ) ;
+    // InternalSeminar.g:1651:1: rule__Seminar__TopicsAssignment_2_2_1 : ( ruleTopic ) ;
     public final void rule__Seminar__TopicsAssignment_2_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1353:1: ( ( ruleTopic ) )
-            // InternalSeminar.g:1354:2: ( ruleTopic )
+            // InternalSeminar.g:1655:1: ( ( ruleTopic ) )
+            // InternalSeminar.g:1656:2: ( ruleTopic )
             {
-            // InternalSeminar.g:1354:2: ( ruleTopic )
-            // InternalSeminar.g:1355:3: ruleTopic
+            // InternalSeminar.g:1656:2: ( ruleTopic )
+            // InternalSeminar.g:1657:3: ruleTopic
             {
              before(grammarAccess.getSeminarAccess().getTopicsTopicParserRuleCall_2_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -4237,17 +5204,17 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Seminar__PreferencesAssignment_3"
-    // InternalSeminar.g:1364:1: rule__Seminar__PreferencesAssignment_3 : ( rulePreference ) ;
+    // InternalSeminar.g:1666:1: rule__Seminar__PreferencesAssignment_3 : ( rulePreference ) ;
     public final void rule__Seminar__PreferencesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1368:1: ( ( rulePreference ) )
-            // InternalSeminar.g:1369:2: ( rulePreference )
+            // InternalSeminar.g:1670:1: ( ( rulePreference ) )
+            // InternalSeminar.g:1671:2: ( rulePreference )
             {
-            // InternalSeminar.g:1369:2: ( rulePreference )
-            // InternalSeminar.g:1370:3: rulePreference
+            // InternalSeminar.g:1671:2: ( rulePreference )
+            // InternalSeminar.g:1672:3: rulePreference
             {
              before(grammarAccess.getSeminarAccess().getPreferencesPreferenceParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -4277,26 +5244,67 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Seminar__PreferencesAssignment_3"
 
 
-    // $ANTLR start "rule__Seminar__SupervisesAssignment_4"
-    // InternalSeminar.g:1379:1: rule__Seminar__SupervisesAssignment_4 : ( ruleSupervise ) ;
-    public final void rule__Seminar__SupervisesAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__Seminar__RatingsAssignment_4"
+    // InternalSeminar.g:1681:1: rule__Seminar__RatingsAssignment_4 : ( ruleRating ) ;
+    public final void rule__Seminar__RatingsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1383:1: ( ( ruleSupervise ) )
-            // InternalSeminar.g:1384:2: ( ruleSupervise )
+            // InternalSeminar.g:1685:1: ( ( ruleRating ) )
+            // InternalSeminar.g:1686:2: ( ruleRating )
             {
-            // InternalSeminar.g:1384:2: ( ruleSupervise )
-            // InternalSeminar.g:1385:3: ruleSupervise
+            // InternalSeminar.g:1686:2: ( ruleRating )
+            // InternalSeminar.g:1687:3: ruleRating
             {
-             before(grammarAccess.getSeminarAccess().getSupervisesSuperviseParserRuleCall_4_0()); 
+             before(grammarAccess.getSeminarAccess().getRatingsRatingParserRuleCall_4_0()); 
+            pushFollow(FOLLOW_2);
+            ruleRating();
+
+            state._fsp--;
+
+             after(grammarAccess.getSeminarAccess().getRatingsRatingParserRuleCall_4_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Seminar__RatingsAssignment_4"
+
+
+    // $ANTLR start "rule__Seminar__SupervisesAssignment_5"
+    // InternalSeminar.g:1696:1: rule__Seminar__SupervisesAssignment_5 : ( ruleSupervise ) ;
+    public final void rule__Seminar__SupervisesAssignment_5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1700:1: ( ( ruleSupervise ) )
+            // InternalSeminar.g:1701:2: ( ruleSupervise )
+            {
+            // InternalSeminar.g:1701:2: ( ruleSupervise )
+            // InternalSeminar.g:1702:3: ruleSupervise
+            {
+             before(grammarAccess.getSeminarAccess().getSupervisesSuperviseParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
             ruleSupervise();
 
             state._fsp--;
 
-             after(grammarAccess.getSeminarAccess().getSupervisesSuperviseParserRuleCall_4_0()); 
+             after(grammarAccess.getSeminarAccess().getSupervisesSuperviseParserRuleCall_5_0()); 
 
             }
 
@@ -4315,29 +5323,29 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Seminar__SupervisesAssignment_4"
+    // $ANTLR end "rule__Seminar__SupervisesAssignment_5"
 
 
-    // $ANTLR start "rule__Seminar__AssignmentsAssignment_5"
-    // InternalSeminar.g:1394:1: rule__Seminar__AssignmentsAssignment_5 : ( ruleAssignment ) ;
-    public final void rule__Seminar__AssignmentsAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__Seminar__AssignmentsAssignment_6"
+    // InternalSeminar.g:1711:1: rule__Seminar__AssignmentsAssignment_6 : ( ruleAssignment ) ;
+    public final void rule__Seminar__AssignmentsAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1398:1: ( ( ruleAssignment ) )
-            // InternalSeminar.g:1399:2: ( ruleAssignment )
+            // InternalSeminar.g:1715:1: ( ( ruleAssignment ) )
+            // InternalSeminar.g:1716:2: ( ruleAssignment )
             {
-            // InternalSeminar.g:1399:2: ( ruleAssignment )
-            // InternalSeminar.g:1400:3: ruleAssignment
+            // InternalSeminar.g:1716:2: ( ruleAssignment )
+            // InternalSeminar.g:1717:3: ruleAssignment
             {
-             before(grammarAccess.getSeminarAccess().getAssignmentsAssignmentParserRuleCall_5_0()); 
+             before(grammarAccess.getSeminarAccess().getAssignmentsAssignmentParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
             ruleAssignment();
 
             state._fsp--;
 
-             after(grammarAccess.getSeminarAccess().getAssignmentsAssignmentParserRuleCall_5_0()); 
+             after(grammarAccess.getSeminarAccess().getAssignmentsAssignmentParserRuleCall_6_0()); 
 
             }
 
@@ -4356,21 +5364,21 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Seminar__AssignmentsAssignment_5"
+    // $ANTLR end "rule__Seminar__AssignmentsAssignment_6"
 
 
     // $ANTLR start "rule__Supervisor__NameAssignment"
-    // InternalSeminar.g:1409:1: rule__Supervisor__NameAssignment : ( RULE_ID ) ;
+    // InternalSeminar.g:1726:1: rule__Supervisor__NameAssignment : ( RULE_ID ) ;
     public final void rule__Supervisor__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1413:1: ( ( RULE_ID ) )
-            // InternalSeminar.g:1414:2: ( RULE_ID )
+            // InternalSeminar.g:1730:1: ( ( RULE_ID ) )
+            // InternalSeminar.g:1731:2: ( RULE_ID )
             {
-            // InternalSeminar.g:1414:2: ( RULE_ID )
-            // InternalSeminar.g:1415:3: RULE_ID
+            // InternalSeminar.g:1731:2: ( RULE_ID )
+            // InternalSeminar.g:1732:3: RULE_ID
             {
              before(grammarAccess.getSupervisorAccess().getNameIDTerminalRuleCall_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -4397,17 +5405,17 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Student__NameAssignment"
-    // InternalSeminar.g:1424:1: rule__Student__NameAssignment : ( RULE_ID ) ;
+    // InternalSeminar.g:1741:1: rule__Student__NameAssignment : ( RULE_ID ) ;
     public final void rule__Student__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1428:1: ( ( RULE_ID ) )
-            // InternalSeminar.g:1429:2: ( RULE_ID )
+            // InternalSeminar.g:1745:1: ( ( RULE_ID ) )
+            // InternalSeminar.g:1746:2: ( RULE_ID )
             {
-            // InternalSeminar.g:1429:2: ( RULE_ID )
-            // InternalSeminar.g:1430:3: RULE_ID
+            // InternalSeminar.g:1746:2: ( RULE_ID )
+            // InternalSeminar.g:1747:3: RULE_ID
             {
              before(grammarAccess.getStudentAccess().getNameIDTerminalRuleCall_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -4434,17 +5442,17 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Topic__NameAssignment"
-    // InternalSeminar.g:1439:1: rule__Topic__NameAssignment : ( RULE_ID ) ;
+    // InternalSeminar.g:1756:1: rule__Topic__NameAssignment : ( RULE_ID ) ;
     public final void rule__Topic__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1443:1: ( ( RULE_ID ) )
-            // InternalSeminar.g:1444:2: ( RULE_ID )
+            // InternalSeminar.g:1760:1: ( ( RULE_ID ) )
+            // InternalSeminar.g:1761:2: ( RULE_ID )
             {
-            // InternalSeminar.g:1444:2: ( RULE_ID )
-            // InternalSeminar.g:1445:3: RULE_ID
+            // InternalSeminar.g:1761:2: ( RULE_ID )
+            // InternalSeminar.g:1762:3: RULE_ID
             {
              before(grammarAccess.getTopicAccess().getNameIDTerminalRuleCall_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -4471,21 +5479,21 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Preference__StudentAssignment_0"
-    // InternalSeminar.g:1454:1: rule__Preference__StudentAssignment_0 : ( ( RULE_ID ) ) ;
+    // InternalSeminar.g:1771:1: rule__Preference__StudentAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__Preference__StudentAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1458:1: ( ( ( RULE_ID ) ) )
-            // InternalSeminar.g:1459:2: ( ( RULE_ID ) )
+            // InternalSeminar.g:1775:1: ( ( ( RULE_ID ) ) )
+            // InternalSeminar.g:1776:2: ( ( RULE_ID ) )
             {
-            // InternalSeminar.g:1459:2: ( ( RULE_ID ) )
-            // InternalSeminar.g:1460:3: ( RULE_ID )
+            // InternalSeminar.g:1776:2: ( ( RULE_ID ) )
+            // InternalSeminar.g:1777:3: ( RULE_ID )
             {
              before(grammarAccess.getPreferenceAccess().getStudentStudentCrossReference_0_0()); 
-            // InternalSeminar.g:1461:3: ( RULE_ID )
-            // InternalSeminar.g:1462:4: RULE_ID
+            // InternalSeminar.g:1778:3: ( RULE_ID )
+            // InternalSeminar.g:1779:4: RULE_ID
             {
              before(grammarAccess.getPreferenceAccess().getStudentStudentIDTerminalRuleCall_0_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -4515,30 +5523,30 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Preference__StudentAssignment_0"
 
 
-    // $ANTLR start "rule__Preference__TopicAssignment_2"
-    // InternalSeminar.g:1473:1: rule__Preference__TopicAssignment_2 : ( ( RULE_ID ) ) ;
-    public final void rule__Preference__TopicAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Preference__TopicsAssignment_2"
+    // InternalSeminar.g:1790:1: rule__Preference__TopicsAssignment_2 : ( ( RULE_ID ) ) ;
+    public final void rule__Preference__TopicsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1477:1: ( ( ( RULE_ID ) ) )
-            // InternalSeminar.g:1478:2: ( ( RULE_ID ) )
+            // InternalSeminar.g:1794:1: ( ( ( RULE_ID ) ) )
+            // InternalSeminar.g:1795:2: ( ( RULE_ID ) )
             {
-            // InternalSeminar.g:1478:2: ( ( RULE_ID ) )
-            // InternalSeminar.g:1479:3: ( RULE_ID )
+            // InternalSeminar.g:1795:2: ( ( RULE_ID ) )
+            // InternalSeminar.g:1796:3: ( RULE_ID )
             {
-             before(grammarAccess.getPreferenceAccess().getTopicTopicCrossReference_2_0()); 
-            // InternalSeminar.g:1480:3: ( RULE_ID )
-            // InternalSeminar.g:1481:4: RULE_ID
+             before(grammarAccess.getPreferenceAccess().getTopicsTopicCrossReference_2_0()); 
+            // InternalSeminar.g:1797:3: ( RULE_ID )
+            // InternalSeminar.g:1798:4: RULE_ID
             {
-             before(grammarAccess.getPreferenceAccess().getTopicTopicIDTerminalRuleCall_2_0_1()); 
+             before(grammarAccess.getPreferenceAccess().getTopicsTopicIDTerminalRuleCall_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getPreferenceAccess().getTopicTopicIDTerminalRuleCall_2_0_1()); 
+             after(grammarAccess.getPreferenceAccess().getTopicsTopicIDTerminalRuleCall_2_0_1()); 
 
             }
 
-             after(grammarAccess.getPreferenceAccess().getTopicTopicCrossReference_2_0()); 
+             after(grammarAccess.getPreferenceAccess().getTopicsTopicCrossReference_2_0()); 
 
             }
 
@@ -4557,25 +5565,197 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Preference__TopicAssignment_2"
+    // $ANTLR end "rule__Preference__TopicsAssignment_2"
+
+
+    // $ANTLR start "rule__Preference__TopicsAssignment_3_1"
+    // InternalSeminar.g:1809:1: rule__Preference__TopicsAssignment_3_1 : ( ( RULE_ID ) ) ;
+    public final void rule__Preference__TopicsAssignment_3_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1813:1: ( ( ( RULE_ID ) ) )
+            // InternalSeminar.g:1814:2: ( ( RULE_ID ) )
+            {
+            // InternalSeminar.g:1814:2: ( ( RULE_ID ) )
+            // InternalSeminar.g:1815:3: ( RULE_ID )
+            {
+             before(grammarAccess.getPreferenceAccess().getTopicsTopicCrossReference_3_1_0()); 
+            // InternalSeminar.g:1816:3: ( RULE_ID )
+            // InternalSeminar.g:1817:4: RULE_ID
+            {
+             before(grammarAccess.getPreferenceAccess().getTopicsTopicIDTerminalRuleCall_3_1_0_1()); 
+            match(input,RULE_ID,FOLLOW_2); 
+             after(grammarAccess.getPreferenceAccess().getTopicsTopicIDTerminalRuleCall_3_1_0_1()); 
+
+            }
+
+             after(grammarAccess.getPreferenceAccess().getTopicsTopicCrossReference_3_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Preference__TopicsAssignment_3_1"
+
+
+    // $ANTLR start "rule__Rating__StudentAssignment_0"
+    // InternalSeminar.g:1828:1: rule__Rating__StudentAssignment_0 : ( ( RULE_ID ) ) ;
+    public final void rule__Rating__StudentAssignment_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1832:1: ( ( ( RULE_ID ) ) )
+            // InternalSeminar.g:1833:2: ( ( RULE_ID ) )
+            {
+            // InternalSeminar.g:1833:2: ( ( RULE_ID ) )
+            // InternalSeminar.g:1834:3: ( RULE_ID )
+            {
+             before(grammarAccess.getRatingAccess().getStudentStudentCrossReference_0_0()); 
+            // InternalSeminar.g:1835:3: ( RULE_ID )
+            // InternalSeminar.g:1836:4: RULE_ID
+            {
+             before(grammarAccess.getRatingAccess().getStudentStudentIDTerminalRuleCall_0_0_1()); 
+            match(input,RULE_ID,FOLLOW_2); 
+             after(grammarAccess.getRatingAccess().getStudentStudentIDTerminalRuleCall_0_0_1()); 
+
+            }
+
+             after(grammarAccess.getRatingAccess().getStudentStudentCrossReference_0_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rating__StudentAssignment_0"
+
+
+    // $ANTLR start "rule__Rating__TopicAssignment_2"
+    // InternalSeminar.g:1847:1: rule__Rating__TopicAssignment_2 : ( ( RULE_ID ) ) ;
+    public final void rule__Rating__TopicAssignment_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1851:1: ( ( ( RULE_ID ) ) )
+            // InternalSeminar.g:1852:2: ( ( RULE_ID ) )
+            {
+            // InternalSeminar.g:1852:2: ( ( RULE_ID ) )
+            // InternalSeminar.g:1853:3: ( RULE_ID )
+            {
+             before(grammarAccess.getRatingAccess().getTopicTopicCrossReference_2_0()); 
+            // InternalSeminar.g:1854:3: ( RULE_ID )
+            // InternalSeminar.g:1855:4: RULE_ID
+            {
+             before(grammarAccess.getRatingAccess().getTopicTopicIDTerminalRuleCall_2_0_1()); 
+            match(input,RULE_ID,FOLLOW_2); 
+             after(grammarAccess.getRatingAccess().getTopicTopicIDTerminalRuleCall_2_0_1()); 
+
+            }
+
+             after(grammarAccess.getRatingAccess().getTopicTopicCrossReference_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rating__TopicAssignment_2"
+
+
+    // $ANTLR start "rule__Rating__RatingAssignment_4"
+    // InternalSeminar.g:1866:1: rule__Rating__RatingAssignment_4 : ( RULE_REAL ) ;
+    public final void rule__Rating__RatingAssignment_4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSeminar.g:1870:1: ( ( RULE_REAL ) )
+            // InternalSeminar.g:1871:2: ( RULE_REAL )
+            {
+            // InternalSeminar.g:1871:2: ( RULE_REAL )
+            // InternalSeminar.g:1872:3: RULE_REAL
+            {
+             before(grammarAccess.getRatingAccess().getRatingREALTerminalRuleCall_4_0()); 
+            match(input,RULE_REAL,FOLLOW_2); 
+             after(grammarAccess.getRatingAccess().getRatingREALTerminalRuleCall_4_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rating__RatingAssignment_4"
 
 
     // $ANTLR start "rule__Supervise__SupervisorAssignment_0"
-    // InternalSeminar.g:1492:1: rule__Supervise__SupervisorAssignment_0 : ( ( RULE_ID ) ) ;
+    // InternalSeminar.g:1881:1: rule__Supervise__SupervisorAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__Supervise__SupervisorAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1496:1: ( ( ( RULE_ID ) ) )
-            // InternalSeminar.g:1497:2: ( ( RULE_ID ) )
+            // InternalSeminar.g:1885:1: ( ( ( RULE_ID ) ) )
+            // InternalSeminar.g:1886:2: ( ( RULE_ID ) )
             {
-            // InternalSeminar.g:1497:2: ( ( RULE_ID ) )
-            // InternalSeminar.g:1498:3: ( RULE_ID )
+            // InternalSeminar.g:1886:2: ( ( RULE_ID ) )
+            // InternalSeminar.g:1887:3: ( RULE_ID )
             {
              before(grammarAccess.getSuperviseAccess().getSupervisorSupervisorCrossReference_0_0()); 
-            // InternalSeminar.g:1499:3: ( RULE_ID )
-            // InternalSeminar.g:1500:4: RULE_ID
+            // InternalSeminar.g:1888:3: ( RULE_ID )
+            // InternalSeminar.g:1889:4: RULE_ID
             {
              before(grammarAccess.getSuperviseAccess().getSupervisorSupervisorIDTerminalRuleCall_0_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -4606,21 +5786,21 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Supervise__TopicAssignment_2"
-    // InternalSeminar.g:1511:1: rule__Supervise__TopicAssignment_2 : ( ( RULE_ID ) ) ;
+    // InternalSeminar.g:1900:1: rule__Supervise__TopicAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__Supervise__TopicAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1515:1: ( ( ( RULE_ID ) ) )
-            // InternalSeminar.g:1516:2: ( ( RULE_ID ) )
+            // InternalSeminar.g:1904:1: ( ( ( RULE_ID ) ) )
+            // InternalSeminar.g:1905:2: ( ( RULE_ID ) )
             {
-            // InternalSeminar.g:1516:2: ( ( RULE_ID ) )
-            // InternalSeminar.g:1517:3: ( RULE_ID )
+            // InternalSeminar.g:1905:2: ( ( RULE_ID ) )
+            // InternalSeminar.g:1906:3: ( RULE_ID )
             {
              before(grammarAccess.getSuperviseAccess().getTopicTopicCrossReference_2_0()); 
-            // InternalSeminar.g:1518:3: ( RULE_ID )
-            // InternalSeminar.g:1519:4: RULE_ID
+            // InternalSeminar.g:1907:3: ( RULE_ID )
+            // InternalSeminar.g:1908:4: RULE_ID
             {
              before(grammarAccess.getSuperviseAccess().getTopicTopicIDTerminalRuleCall_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -4651,21 +5831,21 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment__StudentAssignment_0"
-    // InternalSeminar.g:1530:1: rule__Assignment__StudentAssignment_0 : ( ( RULE_ID ) ) ;
+    // InternalSeminar.g:1919:1: rule__Assignment__StudentAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__Assignment__StudentAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1534:1: ( ( ( RULE_ID ) ) )
-            // InternalSeminar.g:1535:2: ( ( RULE_ID ) )
+            // InternalSeminar.g:1923:1: ( ( ( RULE_ID ) ) )
+            // InternalSeminar.g:1924:2: ( ( RULE_ID ) )
             {
-            // InternalSeminar.g:1535:2: ( ( RULE_ID ) )
-            // InternalSeminar.g:1536:3: ( RULE_ID )
+            // InternalSeminar.g:1924:2: ( ( RULE_ID ) )
+            // InternalSeminar.g:1925:3: ( RULE_ID )
             {
              before(grammarAccess.getAssignmentAccess().getStudentStudentCrossReference_0_0()); 
-            // InternalSeminar.g:1537:3: ( RULE_ID )
-            // InternalSeminar.g:1538:4: RULE_ID
+            // InternalSeminar.g:1926:3: ( RULE_ID )
+            // InternalSeminar.g:1927:4: RULE_ID
             {
              before(grammarAccess.getAssignmentAccess().getStudentStudentIDTerminalRuleCall_0_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -4696,21 +5876,21 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Assignment__TopicAssignment_4"
-    // InternalSeminar.g:1549:1: rule__Assignment__TopicAssignment_4 : ( ( RULE_ID ) ) ;
+    // InternalSeminar.g:1938:1: rule__Assignment__TopicAssignment_4 : ( ( RULE_ID ) ) ;
     public final void rule__Assignment__TopicAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSeminar.g:1553:1: ( ( ( RULE_ID ) ) )
-            // InternalSeminar.g:1554:2: ( ( RULE_ID ) )
+            // InternalSeminar.g:1942:1: ( ( ( RULE_ID ) ) )
+            // InternalSeminar.g:1943:2: ( ( RULE_ID ) )
             {
-            // InternalSeminar.g:1554:2: ( ( RULE_ID ) )
-            // InternalSeminar.g:1555:3: ( RULE_ID )
+            // InternalSeminar.g:1943:2: ( ( RULE_ID ) )
+            // InternalSeminar.g:1944:3: ( RULE_ID )
             {
              before(grammarAccess.getAssignmentAccess().getTopicTopicCrossReference_4_0()); 
-            // InternalSeminar.g:1556:3: ( RULE_ID )
-            // InternalSeminar.g:1557:4: RULE_ID
+            // InternalSeminar.g:1945:3: ( RULE_ID )
+            // InternalSeminar.g:1946:4: RULE_ID
             {
              before(grammarAccess.getAssignmentAccess().getTopicTopicIDTerminalRuleCall_4_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -4746,19 +5926,23 @@ public class InternalSeminarParser extends AbstractInternalContentAssistParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x000000000000C010L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000018010L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000001002L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000010002L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000003010L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000006010L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000004002L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000006000L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000800000L});
 
 }

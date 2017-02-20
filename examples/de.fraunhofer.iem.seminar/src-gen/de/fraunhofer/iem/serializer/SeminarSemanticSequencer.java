@@ -6,6 +6,7 @@ package de.fraunhofer.iem.serializer;
 import com.google.inject.Inject;
 import de.fraunhofer.iem.seminar.Assignment;
 import de.fraunhofer.iem.seminar.Preference;
+import de.fraunhofer.iem.seminar.Rating;
 import de.fraunhofer.iem.seminar.Seminar;
 import de.fraunhofer.iem.seminar.SeminarPackage;
 import de.fraunhofer.iem.seminar.Student;
@@ -43,6 +44,9 @@ public class SeminarSemanticSequencer extends AbstractDelegatingSemanticSequence
 				return; 
 			case SeminarPackage.PREFERENCE:
 				sequence_Preference(context, (Preference) semanticObject); 
+				return; 
+			case SeminarPackage.RATING:
+				sequence_Rating(context, (Rating) semanticObject); 
 				return; 
 			case SeminarPackage.SEMINAR:
 				sequence_Seminar(context, (Seminar) semanticObject); 
@@ -90,18 +94,33 @@ public class SeminarSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     Preference returns Preference
 	 *
 	 * Constraint:
-	 *     (student=[Student|ID] topic=[Topic|ID])
+	 *     (student=[Student|ID] topics+=[Topic|ID] topics+=[Topic|ID]*)
 	 */
 	protected void sequence_Preference(ISerializationContext context, Preference semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Rating returns Rating
+	 *
+	 * Constraint:
+	 *     (student=[Student|ID] topic=[Topic|ID] rating=REAL)
+	 */
+	protected void sequence_Rating(ISerializationContext context, Rating semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, SeminarPackage.Literals.PREFERENCE__STUDENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SeminarPackage.Literals.PREFERENCE__STUDENT));
-			if (transientValues.isValueTransient(semanticObject, SeminarPackage.Literals.PREFERENCE__TOPIC) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SeminarPackage.Literals.PREFERENCE__TOPIC));
+			if (transientValues.isValueTransient(semanticObject, SeminarPackage.Literals.RATING__STUDENT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SeminarPackage.Literals.RATING__STUDENT));
+			if (transientValues.isValueTransient(semanticObject, SeminarPackage.Literals.RATING__TOPIC) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SeminarPackage.Literals.RATING__TOPIC));
+			if (transientValues.isValueTransient(semanticObject, SeminarPackage.Literals.RATING__RATING) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SeminarPackage.Literals.RATING__RATING));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPreferenceAccess().getStudentStudentIDTerminalRuleCall_0_0_1(), semanticObject.eGet(SeminarPackage.Literals.PREFERENCE__STUDENT, false));
-		feeder.accept(grammarAccess.getPreferenceAccess().getTopicTopicIDTerminalRuleCall_2_0_1(), semanticObject.eGet(SeminarPackage.Literals.PREFERENCE__TOPIC, false));
+		feeder.accept(grammarAccess.getRatingAccess().getStudentStudentIDTerminalRuleCall_0_0_1(), semanticObject.eGet(SeminarPackage.Literals.RATING__STUDENT, false));
+		feeder.accept(grammarAccess.getRatingAccess().getTopicTopicIDTerminalRuleCall_2_0_1(), semanticObject.eGet(SeminarPackage.Literals.RATING__TOPIC, false));
+		feeder.accept(grammarAccess.getRatingAccess().getRatingREALTerminalRuleCall_4_0(), semanticObject.getRating());
 		feeder.finish();
 	}
 	
@@ -118,6 +137,7 @@ public class SeminarSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *         (students+=Student? students+=Student?)* 
 	 *         (topics+=Topic | topics+=Topic)* 
 	 *         preferences+=Preference* 
+	 *         ratings+=Rating* 
 	 *         supervises+=Supervise* 
 	 *         assignments+=Assignment*
 	 *     )

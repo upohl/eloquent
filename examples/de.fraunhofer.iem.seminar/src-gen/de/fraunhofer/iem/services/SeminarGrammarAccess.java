@@ -54,22 +54,25 @@ public class SeminarGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
 		private final Assignment cPreferencesAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cPreferencesPreferenceParserRuleCall_3_0 = (RuleCall)cPreferencesAssignment_3.eContents().get(0);
-		private final Assignment cSupervisesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cSupervisesSuperviseParserRuleCall_4_0 = (RuleCall)cSupervisesAssignment_4.eContents().get(0);
-		private final Assignment cAssignmentsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cAssignmentsAssignmentParserRuleCall_5_0 = (RuleCall)cAssignmentsAssignment_5.eContents().get(0);
+		private final Assignment cRatingsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cRatingsRatingParserRuleCall_4_0 = (RuleCall)cRatingsAssignment_4.eContents().get(0);
+		private final Assignment cSupervisesAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cSupervisesSuperviseParserRuleCall_5_0 = (RuleCall)cSupervisesAssignment_5.eContents().get(0);
+		private final Assignment cAssignmentsAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cAssignmentsAssignmentParserRuleCall_6_0 = (RuleCall)cAssignmentsAssignment_6.eContents().get(0);
 		
 		//Seminar:
 		//	('supervisors:' supervisors+=Supervisor* (','+ supervisors+=Supervisor)* ';')* ('students:' students+=Student* (','+
 		//	students+=Student)* ';')* ('topics:' topics+=Topic* (','+ topics+=Topic)* ';')*
 		//	preferences+=Preference*
+		//	ratings+=Rating*
 		//	supervises+=Supervise*
 		//	assignments+=Assignment*;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//('supervisors:' supervisors+=Supervisor* (','+ supervisors+=Supervisor)* ';')* ('students:' students+=Student* (','+
 		//students+=Student)* ';')* ('topics:' topics+=Topic* (','+ topics+=Topic)* ';')* preferences+=Preference*
-		//supervises+=Supervise* assignments+=Assignment*
+		//ratings+=Rating* supervises+=Supervise* assignments+=Assignment*
 		public Group getGroup() { return cGroup; }
 		
 		//('supervisors:' supervisors+=Supervisor* (','+ supervisors+=Supervisor)* ';')*
@@ -159,17 +162,23 @@ public class SeminarGrammarAccess extends AbstractGrammarElementFinder {
 		//Preference
 		public RuleCall getPreferencesPreferenceParserRuleCall_3_0() { return cPreferencesPreferenceParserRuleCall_3_0; }
 		
+		//ratings+=Rating*
+		public Assignment getRatingsAssignment_4() { return cRatingsAssignment_4; }
+		
+		//Rating
+		public RuleCall getRatingsRatingParserRuleCall_4_0() { return cRatingsRatingParserRuleCall_4_0; }
+		
 		//supervises+=Supervise*
-		public Assignment getSupervisesAssignment_4() { return cSupervisesAssignment_4; }
+		public Assignment getSupervisesAssignment_5() { return cSupervisesAssignment_5; }
 		
 		//Supervise
-		public RuleCall getSupervisesSuperviseParserRuleCall_4_0() { return cSupervisesSuperviseParserRuleCall_4_0; }
+		public RuleCall getSupervisesSuperviseParserRuleCall_5_0() { return cSupervisesSuperviseParserRuleCall_5_0; }
 		
 		//assignments+=Assignment*
-		public Assignment getAssignmentsAssignment_5() { return cAssignmentsAssignment_5; }
+		public Assignment getAssignmentsAssignment_6() { return cAssignmentsAssignment_6; }
 		
 		//Assignment
-		public RuleCall getAssignmentsAssignmentParserRuleCall_5_0() { return cAssignmentsAssignmentParserRuleCall_5_0; }
+		public RuleCall getAssignmentsAssignmentParserRuleCall_6_0() { return cAssignmentsAssignmentParserRuleCall_6_0; }
 	}
 	public class SupervisorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fraunhofer.iem.Seminar.Supervisor");
@@ -222,17 +231,22 @@ public class SeminarGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cStudentAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final CrossReference cStudentStudentCrossReference_0_0 = (CrossReference)cStudentAssignment_0.eContents().get(0);
 		private final RuleCall cStudentStudentIDTerminalRuleCall_0_0_1 = (RuleCall)cStudentStudentCrossReference_0_0.eContents().get(1);
-		private final Keyword cPrefersKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cTopicAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cTopicTopicCrossReference_2_0 = (CrossReference)cTopicAssignment_2.eContents().get(0);
-		private final RuleCall cTopicTopicIDTerminalRuleCall_2_0_1 = (RuleCall)cTopicTopicCrossReference_2_0.eContents().get(1);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cLikesKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTopicsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cTopicsTopicCrossReference_2_0 = (CrossReference)cTopicsAssignment_2.eContents().get(0);
+		private final RuleCall cTopicsTopicIDTerminalRuleCall_2_0_1 = (RuleCall)cTopicsTopicCrossReference_2_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cTopicsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final CrossReference cTopicsTopicCrossReference_3_1_0 = (CrossReference)cTopicsAssignment_3_1.eContents().get(0);
+		private final RuleCall cTopicsTopicIDTerminalRuleCall_3_1_0_1 = (RuleCall)cTopicsTopicCrossReference_3_1_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Preference:
-		//	student=[Student] 'prefers' topic=[Topic] ';';
+		//	student=[Student] 'likes' topics+=[Topic] (','+ topics+=[Topic])* ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//student=[Student] 'prefers' topic=[Topic] ';'
+		//student=[Student] 'likes' topics+=[Topic] (','+ topics+=[Topic])* ';'
 		public Group getGroup() { return cGroup; }
 		
 		//student=[Student]
@@ -244,8 +258,69 @@ public class SeminarGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getStudentStudentIDTerminalRuleCall_0_0_1() { return cStudentStudentIDTerminalRuleCall_0_0_1; }
 		
-		//'prefers'
-		public Keyword getPrefersKeyword_1() { return cPrefersKeyword_1; }
+		//'likes'
+		public Keyword getLikesKeyword_1() { return cLikesKeyword_1; }
+		
+		//topics+=[Topic]
+		public Assignment getTopicsAssignment_2() { return cTopicsAssignment_2; }
+		
+		//[Topic]
+		public CrossReference getTopicsTopicCrossReference_2_0() { return cTopicsTopicCrossReference_2_0; }
+		
+		//ID
+		public RuleCall getTopicsTopicIDTerminalRuleCall_2_0_1() { return cTopicsTopicIDTerminalRuleCall_2_0_1; }
+		
+		//(','+ topics+=[Topic])*
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//','+
+		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
+		
+		//topics+=[Topic]
+		public Assignment getTopicsAssignment_3_1() { return cTopicsAssignment_3_1; }
+		
+		//[Topic]
+		public CrossReference getTopicsTopicCrossReference_3_1_0() { return cTopicsTopicCrossReference_3_1_0; }
+		
+		//ID
+		public RuleCall getTopicsTopicIDTerminalRuleCall_3_1_0_1() { return cTopicsTopicIDTerminalRuleCall_3_1_0_1; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
+	}
+	public class RatingElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fraunhofer.iem.Seminar.Rating");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cStudentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final CrossReference cStudentStudentCrossReference_0_0 = (CrossReference)cStudentAssignment_0.eContents().get(0);
+		private final RuleCall cStudentStudentIDTerminalRuleCall_0_0_1 = (RuleCall)cStudentStudentCrossReference_0_0.eContents().get(1);
+		private final Keyword cRatesKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTopicAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cTopicTopicCrossReference_2_0 = (CrossReference)cTopicAssignment_2.eContents().get(0);
+		private final RuleCall cTopicTopicIDTerminalRuleCall_2_0_1 = (RuleCall)cTopicTopicCrossReference_2_0.eContents().get(1);
+		private final Keyword cWithKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cRatingAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cRatingREALTerminalRuleCall_4_0 = (RuleCall)cRatingAssignment_4.eContents().get(0);
+		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//Rating:
+		//	student=[Student] 'rates' topic=[Topic] 'with' rating=REAL ';';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//student=[Student] 'rates' topic=[Topic] 'with' rating=REAL ';'
+		public Group getGroup() { return cGroup; }
+		
+		//student=[Student]
+		public Assignment getStudentAssignment_0() { return cStudentAssignment_0; }
+		
+		//[Student]
+		public CrossReference getStudentStudentCrossReference_0_0() { return cStudentStudentCrossReference_0_0; }
+		
+		//ID
+		public RuleCall getStudentStudentIDTerminalRuleCall_0_0_1() { return cStudentStudentIDTerminalRuleCall_0_0_1; }
+		
+		//'rates'
+		public Keyword getRatesKeyword_1() { return cRatesKeyword_1; }
 		
 		//topic=[Topic]
 		public Assignment getTopicAssignment_2() { return cTopicAssignment_2; }
@@ -256,8 +331,17 @@ public class SeminarGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getTopicTopicIDTerminalRuleCall_2_0_1() { return cTopicTopicIDTerminalRuleCall_2_0_1; }
 		
+		//'with'
+		public Keyword getWithKeyword_3() { return cWithKeyword_3; }
+		
+		//rating=REAL
+		public Assignment getRatingAssignment_4() { return cRatingAssignment_4; }
+		
+		//REAL
+		public RuleCall getRatingREALTerminalRuleCall_4_0() { return cRatingREALTerminalRuleCall_4_0; }
+		
 		//';'
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 	}
 	public class SuperviseElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fraunhofer.iem.Seminar.Supervise");
@@ -360,6 +444,8 @@ public class SeminarGrammarAccess extends AbstractGrammarElementFinder {
 	private final StudentElements pStudent;
 	private final TopicElements pTopic;
 	private final PreferenceElements pPreference;
+	private final RatingElements pRating;
+	private final TerminalRule tREAL;
 	private final SuperviseElements pSupervise;
 	private final AssignmentElements pAssignment;
 	
@@ -377,6 +463,8 @@ public class SeminarGrammarAccess extends AbstractGrammarElementFinder {
 		this.pStudent = new StudentElements();
 		this.pTopic = new TopicElements();
 		this.pPreference = new PreferenceElements();
+		this.pRating = new RatingElements();
+		this.tREAL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.fraunhofer.iem.Seminar.REAL");
 		this.pSupervise = new SuperviseElements();
 		this.pAssignment = new AssignmentElements();
 	}
@@ -412,6 +500,7 @@ public class SeminarGrammarAccess extends AbstractGrammarElementFinder {
 	//	('supervisors:' supervisors+=Supervisor* (','+ supervisors+=Supervisor)* ';')* ('students:' students+=Student* (','+
 	//	students+=Student)* ';')* ('topics:' topics+=Topic* (','+ topics+=Topic)* ';')*
 	//	preferences+=Preference*
+	//	ratings+=Rating*
 	//	supervises+=Supervise*
 	//	assignments+=Assignment*;
 	public SeminarElements getSeminarAccess() {
@@ -453,13 +542,29 @@ public class SeminarGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Preference:
-	//	student=[Student] 'prefers' topic=[Topic] ';';
+	//	student=[Student] 'likes' topics+=[Topic] (','+ topics+=[Topic])* ';';
 	public PreferenceElements getPreferenceAccess() {
 		return pPreference;
 	}
 	
 	public ParserRule getPreferenceRule() {
 		return getPreferenceAccess().getRule();
+	}
+	
+	//Rating:
+	//	student=[Student] 'rates' topic=[Topic] 'with' rating=REAL ';';
+	public RatingElements getRatingAccess() {
+		return pRating;
+	}
+	
+	public ParserRule getRatingRule() {
+		return getRatingAccess().getRule();
+	}
+	
+	//terminal REAL returns ecore::EDouble:
+	//	'0'..'9' . '0'..'9'+;
+	public TerminalRule getREALRule() {
+		return tREAL;
 	}
 	
 	//Supervise:

@@ -5,6 +5,7 @@ package de.fraunhofer.iem.seminar.impl;
 
 import de.fraunhofer.iem.seminar.Assignment;
 import de.fraunhofer.iem.seminar.Preference;
+import de.fraunhofer.iem.seminar.Rating;
 import de.fraunhofer.iem.seminar.Seminar;
 import de.fraunhofer.iem.seminar.SeminarPackage;
 import de.fraunhofer.iem.seminar.Student;
@@ -38,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.fraunhofer.iem.seminar.impl.SeminarImpl#getStudents <em>Students</em>}</li>
  *   <li>{@link de.fraunhofer.iem.seminar.impl.SeminarImpl#getTopics <em>Topics</em>}</li>
  *   <li>{@link de.fraunhofer.iem.seminar.impl.SeminarImpl#getPreferences <em>Preferences</em>}</li>
+ *   <li>{@link de.fraunhofer.iem.seminar.impl.SeminarImpl#getRatings <em>Ratings</em>}</li>
  *   <li>{@link de.fraunhofer.iem.seminar.impl.SeminarImpl#getSupervises <em>Supervises</em>}</li>
  *   <li>{@link de.fraunhofer.iem.seminar.impl.SeminarImpl#getAssignments <em>Assignments</em>}</li>
  * </ul>
@@ -85,6 +87,16 @@ public class SeminarImpl extends MinimalEObjectImpl.Container implements Seminar
 	 * @ordered
 	 */
   protected EList<Preference> preferences;
+
+  /**
+	 * The cached value of the '{@link #getRatings() <em>Ratings</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getRatings()
+	 * @generated
+	 * @ordered
+	 */
+  protected EList<Rating> ratings;
 
   /**
 	 * The cached value of the '{@link #getSupervises() <em>Supervises</em>}' containment reference list.
@@ -184,6 +196,19 @@ public class SeminarImpl extends MinimalEObjectImpl.Container implements Seminar
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  public EList<Rating> getRatings()
+  {
+		if (ratings == null) {
+			ratings = new EObjectContainmentEList<Rating>(Rating.class, this, SeminarPackage.SEMINAR__RATINGS);
+		}
+		return ratings;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   public EList<Supervise> getSupervises()
   {
 		if (supervises == null) {
@@ -222,6 +247,8 @@ public class SeminarImpl extends MinimalEObjectImpl.Container implements Seminar
 				return ((InternalEList<?>)getTopics()).basicRemove(otherEnd, msgs);
 			case SeminarPackage.SEMINAR__PREFERENCES:
 				return ((InternalEList<?>)getPreferences()).basicRemove(otherEnd, msgs);
+			case SeminarPackage.SEMINAR__RATINGS:
+				return ((InternalEList<?>)getRatings()).basicRemove(otherEnd, msgs);
 			case SeminarPackage.SEMINAR__SUPERVISES:
 				return ((InternalEList<?>)getSupervises()).basicRemove(otherEnd, msgs);
 			case SeminarPackage.SEMINAR__ASSIGNMENTS:
@@ -247,6 +274,8 @@ public class SeminarImpl extends MinimalEObjectImpl.Container implements Seminar
 				return getTopics();
 			case SeminarPackage.SEMINAR__PREFERENCES:
 				return getPreferences();
+			case SeminarPackage.SEMINAR__RATINGS:
+				return getRatings();
 			case SeminarPackage.SEMINAR__SUPERVISES:
 				return getSupervises();
 			case SeminarPackage.SEMINAR__ASSIGNMENTS:
@@ -281,6 +310,10 @@ public class SeminarImpl extends MinimalEObjectImpl.Container implements Seminar
 				getPreferences().clear();
 				getPreferences().addAll((Collection<? extends Preference>)newValue);
 				return;
+			case SeminarPackage.SEMINAR__RATINGS:
+				getRatings().clear();
+				getRatings().addAll((Collection<? extends Rating>)newValue);
+				return;
 			case SeminarPackage.SEMINAR__SUPERVISES:
 				getSupervises().clear();
 				getSupervises().addAll((Collection<? extends Supervise>)newValue);
@@ -314,6 +347,9 @@ public class SeminarImpl extends MinimalEObjectImpl.Container implements Seminar
 			case SeminarPackage.SEMINAR__PREFERENCES:
 				getPreferences().clear();
 				return;
+			case SeminarPackage.SEMINAR__RATINGS:
+				getRatings().clear();
+				return;
 			case SeminarPackage.SEMINAR__SUPERVISES:
 				getSupervises().clear();
 				return;
@@ -341,6 +377,8 @@ public class SeminarImpl extends MinimalEObjectImpl.Container implements Seminar
 				return topics != null && !topics.isEmpty();
 			case SeminarPackage.SEMINAR__PREFERENCES:
 				return preferences != null && !preferences.isEmpty();
+			case SeminarPackage.SEMINAR__RATINGS:
+				return ratings != null && !ratings.isEmpty();
 			case SeminarPackage.SEMINAR__SUPERVISES:
 				return supervises != null && !supervises.isEmpty();
 			case SeminarPackage.SEMINAR__ASSIGNMENTS:

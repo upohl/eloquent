@@ -82,6 +82,7 @@ public class SeminarItemProvider
 			childrenFeatures.add(SeminarPackage.Literals.SEMINAR__STUDENTS);
 			childrenFeatures.add(SeminarPackage.Literals.SEMINAR__TOPICS);
 			childrenFeatures.add(SeminarPackage.Literals.SEMINAR__PREFERENCES);
+			childrenFeatures.add(SeminarPackage.Literals.SEMINAR__RATINGS);
 			childrenFeatures.add(SeminarPackage.Literals.SEMINAR__SUPERVISES);
 			childrenFeatures.add(SeminarPackage.Literals.SEMINAR__ASSIGNMENTS);
 		}
@@ -140,6 +141,7 @@ public class SeminarItemProvider
 			case SeminarPackage.SEMINAR__STUDENTS:
 			case SeminarPackage.SEMINAR__TOPICS:
 			case SeminarPackage.SEMINAR__PREFERENCES:
+			case SeminarPackage.SEMINAR__RATINGS:
 			case SeminarPackage.SEMINAR__SUPERVISES:
 			case SeminarPackage.SEMINAR__ASSIGNMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -178,6 +180,11 @@ public class SeminarItemProvider
 			(createChildParameter
 				(SeminarPackage.Literals.SEMINAR__PREFERENCES,
 				 SeminarFactory.eINSTANCE.createPreference()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SeminarPackage.Literals.SEMINAR__RATINGS,
+				 SeminarFactory.eINSTANCE.createRating()));
 
 		newChildDescriptors.add
 			(createChildParameter

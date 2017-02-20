@@ -69,6 +69,15 @@ public interface SeminarFactory extends EFactory
   Preference createPreference();
 
   /**
+	 * Returns a new object of class '<em>Rating</em>'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rating</em>'.
+	 * @generated
+	 */
+  Rating createRating();
+
+  /**
 	 * Returns a new object of class '<em>Supervise</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

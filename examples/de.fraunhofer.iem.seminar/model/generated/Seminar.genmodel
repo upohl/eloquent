@@ -13,6 +13,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Seminar.ecore#//Seminar/students"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Seminar.ecore#//Seminar/topics"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Seminar.ecore#//Seminar/preferences"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Seminar.ecore#//Seminar/ratings"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Seminar.ecore#//Seminar/supervises"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Seminar.ecore#//Seminar/assignments"/>
     </genClasses>
@@ -27,7 +28,12 @@
     </genClasses>
     <genClasses ecoreClass="Seminar.ecore#//Preference">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Seminar.ecore#//Preference/student"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Seminar.ecore#//Preference/topic"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Seminar.ecore#//Preference/topics"/>
+    </genClasses>
+    <genClasses ecoreClass="Seminar.ecore#//Rating">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Seminar.ecore#//Rating/student"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Seminar.ecore#//Rating/topic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Seminar.ecore#//Rating/rating"/>
     </genClasses>
     <genClasses ecoreClass="Seminar.ecore#//Supervise">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Seminar.ecore#//Supervise/supervisor"/>

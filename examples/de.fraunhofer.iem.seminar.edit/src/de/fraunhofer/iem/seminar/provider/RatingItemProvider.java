@@ -4,6 +4,7 @@
 package de.fraunhofer.iem.seminar.provider;
 
 
+import de.fraunhofer.iem.seminar.Rating;
 import de.fraunhofer.iem.seminar.SeminarPackage;
 
 import java.util.Collection;
@@ -21,15 +22,17 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.fraunhofer.iem.seminar.Preference} object.
+ * This is the item provider adapter for a {@link de.fraunhofer.iem.seminar.Rating} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PreferenceItemProvider 
+public class RatingItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -43,7 +46,7 @@ public class PreferenceItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PreferenceItemProvider(AdapterFactory adapterFactory) {
+	public RatingItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -59,7 +62,8 @@ public class PreferenceItemProvider
 			super.getPropertyDescriptors(object);
 
 			addStudentPropertyDescriptor(object);
-			addTopicsPropertyDescriptor(object);
+			addTopicPropertyDescriptor(object);
+			addRatingPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -75,9 +79,9 @@ public class PreferenceItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Preference_student_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Preference_student_feature", "_UI_Preference_type"),
-				 SeminarPackage.Literals.PREFERENCE__STUDENT,
+				 getString("_UI_Rating_student_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Rating_student_feature", "_UI_Rating_type"),
+				 SeminarPackage.Literals.RATING__STUDENT,
 				 true,
 				 false,
 				 true,
@@ -87,19 +91,19 @@ public class PreferenceItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Topics feature.
+	 * This adds a property descriptor for the Topic feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTopicsPropertyDescriptor(Object object) {
+	protected void addTopicPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Preference_topics_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Preference_topics_feature", "_UI_Preference_type"),
-				 SeminarPackage.Literals.PREFERENCE__TOPICS,
+				 getString("_UI_Rating_topic_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Rating_topic_feature", "_UI_Rating_type"),
+				 SeminarPackage.Literals.RATING__TOPIC,
 				 true,
 				 false,
 				 true,
@@ -109,14 +113,36 @@ public class PreferenceItemProvider
 	}
 
 	/**
-	 * This returns Preference.gif.
+	 * This adds a property descriptor for the Rating feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRatingPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Rating_rating_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Rating_rating_feature", "_UI_Rating_type"),
+				 SeminarPackage.Literals.RATING__RATING,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns Rating.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Preference"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Rating"));
 	}
 
 	/**
@@ -127,7 +153,8 @@ public class PreferenceItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Preference_type");
+		Rating rating = (Rating)object;
+		return getString("_UI_Rating_type") + " " + rating.getRating();
 	}
 	
 
@@ -141,6 +168,12 @@ public class PreferenceItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Rating.class)) {
+			case SeminarPackage.RATING__RATING:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

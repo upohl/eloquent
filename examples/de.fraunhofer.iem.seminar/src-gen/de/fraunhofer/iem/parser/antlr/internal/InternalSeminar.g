@@ -266,9 +266,28 @@ ruleSeminar returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getSeminarAccess().getSupervisesSuperviseParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getSeminarAccess().getRatingsRatingParserRuleCall_4_0());
 				}
-				lv_supervises_16_0=ruleSupervise
+				lv_ratings_16_0=ruleRating
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getSeminarRule());
+					}
+					add(
+						$current,
+						"ratings",
+						lv_ratings_16_0,
+						"de.fraunhofer.iem.Seminar.Rating");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getSeminarAccess().getSupervisesSuperviseParserRuleCall_5_0());
+				}
+				lv_supervises_17_0=ruleSupervise
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getSeminarRule());
@@ -276,7 +295,7 @@ ruleSeminar returns [EObject current=null]
 					add(
 						$current,
 						"supervises",
-						lv_supervises_16_0,
+						lv_supervises_17_0,
 						"de.fraunhofer.iem.Seminar.Supervise");
 					afterParserOrEnumRuleCall();
 				}
@@ -285,9 +304,9 @@ ruleSeminar returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getSeminarAccess().getAssignmentsAssignmentParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getSeminarAccess().getAssignmentsAssignmentParserRuleCall_6_0());
 				}
-				lv_assignments_17_0=ruleAssignment
+				lv_assignments_18_0=ruleAssignment
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getSeminarRule());
@@ -295,7 +314,7 @@ ruleSeminar returns [EObject current=null]
 					add(
 						$current,
 						"assignments",
-						lv_assignments_17_0,
+						lv_assignments_18_0,
 						"de.fraunhofer.iem.Seminar.Assignment");
 					afterParserOrEnumRuleCall();
 				}
@@ -438,9 +457,9 @@ rulePreference returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_1='prefers'
+		otherlv_1='likes'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getPreferenceAccess().getPrefersKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getPreferenceAccess().getLikesKeyword_1());
 		}
 		(
 			(
@@ -451,13 +470,109 @@ rulePreference returns [EObject current=null]
 				}
 				otherlv_2=RULE_ID
 				{
-					newLeafNode(otherlv_2, grammarAccess.getPreferenceAccess().getTopicTopicCrossReference_2_0());
+					newLeafNode(otherlv_2, grammarAccess.getPreferenceAccess().getTopicsTopicCrossReference_2_0());
 				}
 			)
 		)
-		otherlv_3=';'
+		(
+			(
+				otherlv_3=','
+				{
+					newLeafNode(otherlv_3, grammarAccess.getPreferenceAccess().getCommaKeyword_3_0());
+				}
+			)+
+			(
+				(
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getPreferenceRule());
+						}
+					}
+					otherlv_4=RULE_ID
+					{
+						newLeafNode(otherlv_4, grammarAccess.getPreferenceAccess().getTopicsTopicCrossReference_3_1_0());
+					}
+				)
+			)
+		)*
+		otherlv_5=';'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getPreferenceAccess().getSemicolonKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getPreferenceAccess().getSemicolonKeyword_4());
+		}
+	)
+;
+
+// Entry rule entryRuleRating
+entryRuleRating returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getRatingRule()); }
+	iv_ruleRating=ruleRating
+	{ $current=$iv_ruleRating.current; }
+	EOF;
+
+// Rule Rating
+ruleRating returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getRatingRule());
+					}
+				}
+				otherlv_0=RULE_ID
+				{
+					newLeafNode(otherlv_0, grammarAccess.getRatingAccess().getStudentStudentCrossReference_0_0());
+				}
+			)
+		)
+		otherlv_1='rates'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getRatingAccess().getRatesKeyword_1());
+		}
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getRatingRule());
+					}
+				}
+				otherlv_2=RULE_ID
+				{
+					newLeafNode(otherlv_2, grammarAccess.getRatingAccess().getTopicTopicCrossReference_2_0());
+				}
+			)
+		)
+		otherlv_3='with'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getRatingAccess().getWithKeyword_3());
+		}
+		(
+			(
+				lv_rating_4_0=RULE_REAL
+				{
+					newLeafNode(lv_rating_4_0, grammarAccess.getRatingAccess().getRatingREALTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getRatingRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"rating",
+						lv_rating_4_0,
+						"de.fraunhofer.iem.Seminar.REAL");
+				}
+			)
+		)
+		otherlv_5=';'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getRatingAccess().getSemicolonKeyword_5());
 		}
 	)
 ;
@@ -575,6 +690,8 @@ ruleAssignment returns [EObject current=null]
 		}
 	)
 ;
+
+RULE_REAL : '0'..'9' . ('0'..'9')+;
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

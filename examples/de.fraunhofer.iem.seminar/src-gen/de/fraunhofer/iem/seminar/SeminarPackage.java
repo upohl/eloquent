@@ -104,13 +104,22 @@ public interface SeminarPackage extends EPackage
   int SEMINAR__PREFERENCES = 3;
 
   /**
+	 * The feature id for the '<em><b>Ratings</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int SEMINAR__RATINGS = 4;
+
+  /**
 	 * The feature id for the '<em><b>Supervises</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int SEMINAR__SUPERVISES = 4;
+  int SEMINAR__SUPERVISES = 5;
 
   /**
 	 * The feature id for the '<em><b>Assignments</b></em>' containment reference list.
@@ -119,7 +128,7 @@ public interface SeminarPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SEMINAR__ASSIGNMENTS = 5;
+  int SEMINAR__ASSIGNMENTS = 6;
 
   /**
 	 * The number of structural features of the '<em>Seminar</em>' class.
@@ -128,7 +137,7 @@ public interface SeminarPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SEMINAR_FEATURE_COUNT = 6;
+  int SEMINAR_FEATURE_COUNT = 7;
 
   /**
 	 * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.SupervisorImpl <em>Supervisor</em>}' class.
@@ -234,13 +243,13 @@ public interface SeminarPackage extends EPackage
   int PREFERENCE__STUDENT = 0;
 
   /**
-	 * The feature id for the '<em><b>Topic</b></em>' reference.
+	 * The feature id for the '<em><b>Topics</b></em>' reference list.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PREFERENCE__TOPIC = 1;
+  int PREFERENCE__TOPICS = 1;
 
   /**
 	 * The number of structural features of the '<em>Preference</em>' class.
@@ -252,6 +261,52 @@ public interface SeminarPackage extends EPackage
   int PREFERENCE_FEATURE_COUNT = 2;
 
   /**
+	 * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.RatingImpl <em>Rating</em>}' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see de.fraunhofer.iem.seminar.impl.RatingImpl
+	 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getRating()
+	 * @generated
+	 */
+  int RATING = 5;
+
+  /**
+	 * The feature id for the '<em><b>Student</b></em>' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int RATING__STUDENT = 0;
+
+  /**
+	 * The feature id for the '<em><b>Topic</b></em>' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int RATING__TOPIC = 1;
+
+  /**
+	 * The feature id for the '<em><b>Rating</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int RATING__RATING = 2;
+
+  /**
+	 * The number of structural features of the '<em>Rating</em>' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int RATING_FEATURE_COUNT = 3;
+
+  /**
 	 * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.SuperviseImpl <em>Supervise</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -259,7 +314,7 @@ public interface SeminarPackage extends EPackage
 	 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getSupervise()
 	 * @generated
 	 */
-  int SUPERVISE = 5;
+  int SUPERVISE = 6;
 
   /**
 	 * The feature id for the '<em><b>Supervisor</b></em>' reference.
@@ -296,7 +351,7 @@ public interface SeminarPackage extends EPackage
 	 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getAssignment()
 	 * @generated
 	 */
-  int ASSIGNMENT = 6;
+  int ASSIGNMENT = 7;
 
   /**
 	 * The feature id for the '<em><b>Student</b></em>' reference.
@@ -379,6 +434,17 @@ public interface SeminarPackage extends EPackage
 	 * @generated
 	 */
   EReference getSeminar_Preferences();
+
+  /**
+	 * Returns the meta object for the containment reference list '{@link de.fraunhofer.iem.seminar.Seminar#getRatings <em>Ratings</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Ratings</em>'.
+	 * @see de.fraunhofer.iem.seminar.Seminar#getRatings()
+	 * @see #getSeminar()
+	 * @generated
+	 */
+  EReference getSeminar_Ratings();
 
   /**
 	 * Returns the meta object for the containment reference list '{@link de.fraunhofer.iem.seminar.Seminar#getSupervises <em>Supervises</em>}'.
@@ -487,15 +553,58 @@ public interface SeminarPackage extends EPackage
   EReference getPreference_Student();
 
   /**
-	 * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Preference#getTopic <em>Topic</em>}'.
+	 * Returns the meta object for the reference list '{@link de.fraunhofer.iem.seminar.Preference#getTopics <em>Topics</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Topic</em>'.
-	 * @see de.fraunhofer.iem.seminar.Preference#getTopic()
+	 * @return the meta object for the reference list '<em>Topics</em>'.
+	 * @see de.fraunhofer.iem.seminar.Preference#getTopics()
 	 * @see #getPreference()
 	 * @generated
 	 */
-  EReference getPreference_Topic();
+  EReference getPreference_Topics();
+
+  /**
+	 * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Rating <em>Rating</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Rating</em>'.
+	 * @see de.fraunhofer.iem.seminar.Rating
+	 * @generated
+	 */
+  EClass getRating();
+
+  /**
+	 * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Rating#getStudent <em>Student</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Student</em>'.
+	 * @see de.fraunhofer.iem.seminar.Rating#getStudent()
+	 * @see #getRating()
+	 * @generated
+	 */
+  EReference getRating_Student();
+
+  /**
+	 * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Rating#getTopic <em>Topic</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Topic</em>'.
+	 * @see de.fraunhofer.iem.seminar.Rating#getTopic()
+	 * @see #getRating()
+	 * @generated
+	 */
+  EReference getRating_Topic();
+
+  /**
+	 * Returns the meta object for the attribute '{@link de.fraunhofer.iem.seminar.Rating#getRating <em>Rating</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Rating</em>'.
+	 * @see de.fraunhofer.iem.seminar.Rating#getRating()
+	 * @see #getRating()
+	 * @generated
+	 */
+  EAttribute getRating_Rating();
 
   /**
 	 * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Supervise <em>Supervise</em>}'.
@@ -627,6 +736,14 @@ public interface SeminarPackage extends EPackage
     EReference SEMINAR__PREFERENCES = eINSTANCE.getSeminar_Preferences();
 
     /**
+		 * The meta object literal for the '<em><b>Ratings</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference SEMINAR__RATINGS = eINSTANCE.getSeminar_Ratings();
+
+    /**
 		 * The meta object literal for the '<em><b>Supervises</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -715,12 +832,46 @@ public interface SeminarPackage extends EPackage
     EReference PREFERENCE__STUDENT = eINSTANCE.getPreference_Student();
 
     /**
+		 * The meta object literal for the '<em><b>Topics</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference PREFERENCE__TOPICS = eINSTANCE.getPreference_Topics();
+
+    /**
+		 * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.RatingImpl <em>Rating</em>}' class.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @see de.fraunhofer.iem.seminar.impl.RatingImpl
+		 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getRating()
+		 * @generated
+		 */
+    EClass RATING = eINSTANCE.getRating();
+
+    /**
+		 * The meta object literal for the '<em><b>Student</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference RATING__STUDENT = eINSTANCE.getRating_Student();
+
+    /**
 		 * The meta object literal for the '<em><b>Topic</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EReference PREFERENCE__TOPIC = eINSTANCE.getPreference_Topic();
+    EReference RATING__TOPIC = eINSTANCE.getRating_Topic();
+
+    /**
+		 * The meta object literal for the '<em><b>Rating</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute RATING__RATING = eINSTANCE.getRating_Rating();
 
     /**
 		 * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.SuperviseImpl <em>Supervise</em>}' class.

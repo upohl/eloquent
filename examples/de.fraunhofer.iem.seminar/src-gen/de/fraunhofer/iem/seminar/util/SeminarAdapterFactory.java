@@ -92,6 +92,10 @@ public class SeminarAdapterFactory extends AdapterFactoryImpl
 				return createPreferenceAdapter();
 			}
 			@Override
+			public Adapter caseRating(Rating object) {
+				return createRatingAdapter();
+			}
+			@Override
 			public Adapter caseSupervise(Supervise object) {
 				return createSuperviseAdapter();
 			}
@@ -191,6 +195,21 @@ public class SeminarAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
   public Adapter createPreferenceAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link de.fraunhofer.iem.seminar.Rating <em>Rating</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.fraunhofer.iem.seminar.Rating
+	 * @generated
+	 */
+  public Adapter createRatingAdapter()
   {
 		return null;
 	}

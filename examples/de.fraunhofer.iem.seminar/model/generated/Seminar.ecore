@@ -10,6 +10,8 @@
         eType="#//Topic" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="preferences" upperBound="-1"
         eType="#//Preference" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ratings" upperBound="-1"
+        eType="#//Rating" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="supervises" upperBound="-1"
         eType="#//Supervise" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="assignments" upperBound="-1"
@@ -26,7 +28,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Preference">
     <eStructuralFeatures xsi:type="ecore:EReference" name="student" eType="#//Student"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topics" unique="false"
+        upperBound="-1" eType="#//Topic"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rating">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="student" eType="#//Student"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="topic" eType="#//Topic"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rating" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Supervise">
     <eStructuralFeatures xsi:type="ecore:EReference" name="supervisor" eType="#//Supervisor"/>

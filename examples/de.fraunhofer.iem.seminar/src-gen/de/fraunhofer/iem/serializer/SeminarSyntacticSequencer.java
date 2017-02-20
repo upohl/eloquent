@@ -22,6 +22,7 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected SeminarGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_Preference_CommaKeyword_3_0_p;
 	protected AbstractElementAlias match_Seminar_CommaKeyword_0_2_0_p;
 	protected AbstractElementAlias match_Seminar_CommaKeyword_1_2_0_p;
 	protected AbstractElementAlias match_Seminar_CommaKeyword_2_2_0_p;
@@ -39,6 +40,7 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (SeminarGrammarAccess) access;
+		match_Preference_CommaKeyword_3_0_p = new TokenAlias(true, false, grammarAccess.getPreferenceAccess().getCommaKeyword_3_0());
 		match_Seminar_CommaKeyword_0_2_0_p = new TokenAlias(true, false, grammarAccess.getSeminarAccess().getCommaKeyword_0_2_0());
 		match_Seminar_CommaKeyword_1_2_0_p = new TokenAlias(true, false, grammarAccess.getSeminarAccess().getCommaKeyword_1_2_0());
 		match_Seminar_CommaKeyword_2_2_0_p = new TokenAlias(true, false, grammarAccess.getSeminarAccess().getCommaKeyword_2_2_0());
@@ -66,7 +68,9 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Seminar_CommaKeyword_0_2_0_p.equals(syntax))
+			if (match_Preference_CommaKeyword_3_0_p.equals(syntax))
+				emit_Preference_CommaKeyword_3_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Seminar_CommaKeyword_0_2_0_p.equals(syntax))
 				emit_Seminar_CommaKeyword_0_2_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Seminar_CommaKeyword_1_2_0_p.equals(syntax))
 				emit_Seminar_CommaKeyword_1_2_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
@@ -96,6 +100,17 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 		}
 	}
 
+	/**
+	 * Ambiguous syntax:
+	 *     ','+
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     topics+=[Topic|ID] (ambiguity) topics+=[Topic|ID]
+	 */
+	protected void emit_Preference_CommaKeyword_3_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
 	/**
 	 * Ambiguous syntax:
 	 *     ','+
@@ -226,18 +241,21 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) ('supervisors:' ';')* (ambiguity) ('topics:' ';')* (rule start)
 	 *     (rule start) ('supervisors:' ';')* (ambiguity) ('topics:' ';')* assignments+=Assignment
 	 *     (rule start) ('supervisors:' ';')* (ambiguity) ('topics:' ';')* preferences+=Preference
+	 *     (rule start) ('supervisors:' ';')* (ambiguity) ('topics:' ';')* ratings+=Rating
 	 *     (rule start) ('supervisors:' ';')* (ambiguity) ('topics:' ';')* supervises+=Supervise
 	 *     students+=Student ';' (ambiguity) 'topics:' (';' 'topics:')* ','+ topics+=Topic
 	 *     students+=Student ';' (ambiguity) 'topics:' (';' 'topics:')* topics+=Topic
 	 *     students+=Student ';' (ambiguity) ('topics:' ';')* (rule end)
 	 *     students+=Student ';' (ambiguity) ('topics:' ';')* assignments+=Assignment
 	 *     students+=Student ';' (ambiguity) ('topics:' ';')* preferences+=Preference
+	 *     students+=Student ';' (ambiguity) ('topics:' ';')* ratings+=Rating
 	 *     students+=Student ';' (ambiguity) ('topics:' ';')* supervises+=Supervise
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* (ambiguity) 'topics:' (';' 'topics:')* ','+ topics+=Topic
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* (ambiguity) 'topics:' (';' 'topics:')* topics+=Topic
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* (ambiguity) ('topics:' ';')* (rule end)
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* (ambiguity) ('topics:' ';')* assignments+=Assignment
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* (ambiguity) ('topics:' ';')* preferences+=Preference
+	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* (ambiguity) ('topics:' ';')* ratings+=Rating
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* (ambiguity) ('topics:' ';')* supervises+=Supervise
 	 */
 	protected void emit_Seminar___StudentsKeyword_1_0_SemicolonKeyword_1_3__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -256,6 +274,7 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) ('students:' ';')* ('topics:' ';')* (rule start)
 	 *     (rule start) (ambiguity) ('students:' ';')* ('topics:' ';')* assignments+=Assignment
 	 *     (rule start) (ambiguity) ('students:' ';')* ('topics:' ';')* preferences+=Preference
+	 *     (rule start) (ambiguity) ('students:' ';')* ('topics:' ';')* ratings+=Rating
 	 *     (rule start) (ambiguity) ('students:' ';')* ('topics:' ';')* supervises+=Supervise
 	 *     supervisors+=Supervisor ';' (ambiguity) 'students:' (';' 'students:')* ','+ students+=Student
 	 *     supervisors+=Supervisor ';' (ambiguity) 'students:' (';' 'students:')* students+=Student
@@ -264,6 +283,7 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     supervisors+=Supervisor ';' (ambiguity) ('students:' ';')* ('topics:' ';')* (rule end)
 	 *     supervisors+=Supervisor ';' (ambiguity) ('students:' ';')* ('topics:' ';')* assignments+=Assignment
 	 *     supervisors+=Supervisor ';' (ambiguity) ('students:' ';')* ('topics:' ';')* preferences+=Preference
+	 *     supervisors+=Supervisor ';' (ambiguity) ('students:' ';')* ('topics:' ';')* ratings+=Rating
 	 *     supervisors+=Supervisor ';' (ambiguity) ('students:' ';')* ('topics:' ';')* supervises+=Supervise
 	 */
 	protected void emit_Seminar___SupervisorsKeyword_0_0_SemicolonKeyword_0_3__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -278,18 +298,22 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) ('supervisors:' ';')* ('students:' ';')* (ambiguity) (rule start)
 	 *     (rule start) ('supervisors:' ';')* ('students:' ';')* (ambiguity) assignments+=Assignment
 	 *     (rule start) ('supervisors:' ';')* ('students:' ';')* (ambiguity) preferences+=Preference
+	 *     (rule start) ('supervisors:' ';')* ('students:' ';')* (ambiguity) ratings+=Rating
 	 *     (rule start) ('supervisors:' ';')* ('students:' ';')* (ambiguity) supervises+=Supervise
 	 *     students+=Student ';' ('students:' ';')* (ambiguity) (rule end)
 	 *     students+=Student ';' ('students:' ';')* (ambiguity) assignments+=Assignment
 	 *     students+=Student ';' ('students:' ';')* (ambiguity) preferences+=Preference
+	 *     students+=Student ';' ('students:' ';')* (ambiguity) ratings+=Rating
 	 *     students+=Student ';' ('students:' ';')* (ambiguity) supervises+=Supervise
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* ('students:' ';')* (ambiguity) (rule end)
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* ('students:' ';')* (ambiguity) assignments+=Assignment
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* ('students:' ';')* (ambiguity) preferences+=Preference
+	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* ('students:' ';')* (ambiguity) ratings+=Rating
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* ('students:' ';')* (ambiguity) supervises+=Supervise
 	 *     topics+=Topic ';' (ambiguity) (rule end)
 	 *     topics+=Topic ';' (ambiguity) assignments+=Assignment
 	 *     topics+=Topic ';' (ambiguity) preferences+=Preference
+	 *     topics+=Topic ';' (ambiguity) ratings+=Rating
 	 *     topics+=Topic ';' (ambiguity) supervises+=Supervise
 	 */
 	protected void emit_Seminar___TopicsKeyword_2_0_SemicolonKeyword_2_3__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {

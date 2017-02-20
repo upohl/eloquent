@@ -5,6 +5,7 @@ package de.fraunhofer.iem.seminar.impl;
 
 import de.fraunhofer.iem.seminar.Assignment;
 import de.fraunhofer.iem.seminar.Preference;
+import de.fraunhofer.iem.seminar.Rating;
 import de.fraunhofer.iem.seminar.Seminar;
 import de.fraunhofer.iem.seminar.SeminarFactory;
 import de.fraunhofer.iem.seminar.SeminarPackage;
@@ -62,6 +63,13 @@ public class SeminarPackageImpl extends EPackageImpl implements SeminarPackage
 	 * @generated
 	 */
   private EClass preferenceEClass = null;
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  private EClass ratingEClass = null;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -195,7 +203,7 @@ public class SeminarPackageImpl extends EPackageImpl implements SeminarPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getSeminar_Supervises()
+  public EReference getSeminar_Ratings()
   {
 		return (EReference)seminarEClass.getEStructuralFeatures().get(4);
 	}
@@ -205,9 +213,19 @@ public class SeminarPackageImpl extends EPackageImpl implements SeminarPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getSeminar_Assignments()
+  public EReference getSeminar_Supervises()
   {
 		return (EReference)seminarEClass.getEStructuralFeatures().get(5);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getSeminar_Assignments()
+  {
+		return (EReference)seminarEClass.getEStructuralFeatures().get(6);
 	}
 
   /**
@@ -295,9 +313,49 @@ public class SeminarPackageImpl extends EPackageImpl implements SeminarPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getPreference_Topic()
+  public EReference getPreference_Topics()
   {
 		return (EReference)preferenceEClass.getEStructuralFeatures().get(1);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EClass getRating()
+  {
+		return ratingEClass;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getRating_Student()
+  {
+		return (EReference)ratingEClass.getEStructuralFeatures().get(0);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getRating_Topic()
+  {
+		return (EReference)ratingEClass.getEStructuralFeatures().get(1);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EAttribute getRating_Rating()
+  {
+		return (EAttribute)ratingEClass.getEStructuralFeatures().get(2);
 	}
 
   /**
@@ -395,6 +453,7 @@ public class SeminarPackageImpl extends EPackageImpl implements SeminarPackage
 		createEReference(seminarEClass, SEMINAR__STUDENTS);
 		createEReference(seminarEClass, SEMINAR__TOPICS);
 		createEReference(seminarEClass, SEMINAR__PREFERENCES);
+		createEReference(seminarEClass, SEMINAR__RATINGS);
 		createEReference(seminarEClass, SEMINAR__SUPERVISES);
 		createEReference(seminarEClass, SEMINAR__ASSIGNMENTS);
 
@@ -409,7 +468,12 @@ public class SeminarPackageImpl extends EPackageImpl implements SeminarPackage
 
 		preferenceEClass = createEClass(PREFERENCE);
 		createEReference(preferenceEClass, PREFERENCE__STUDENT);
-		createEReference(preferenceEClass, PREFERENCE__TOPIC);
+		createEReference(preferenceEClass, PREFERENCE__TOPICS);
+
+		ratingEClass = createEClass(RATING);
+		createEReference(ratingEClass, RATING__STUDENT);
+		createEReference(ratingEClass, RATING__TOPIC);
+		createEAttribute(ratingEClass, RATING__RATING);
 
 		superviseEClass = createEClass(SUPERVISE);
 		createEReference(superviseEClass, SUPERVISE__SUPERVISOR);
@@ -456,6 +520,7 @@ public class SeminarPackageImpl extends EPackageImpl implements SeminarPackage
 		initEReference(getSeminar_Students(), this.getStudent(), null, "students", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSeminar_Topics(), this.getTopic(), null, "topics", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSeminar_Preferences(), this.getPreference(), null, "preferences", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSeminar_Ratings(), this.getRating(), null, "ratings", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSeminar_Supervises(), this.getSupervise(), null, "supervises", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSeminar_Assignments(), this.getAssignment(), null, "assignments", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -470,7 +535,12 @@ public class SeminarPackageImpl extends EPackageImpl implements SeminarPackage
 
 		initEClass(preferenceEClass, Preference.class, "Preference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPreference_Student(), this.getStudent(), null, "student", null, 0, 1, Preference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPreference_Topic(), this.getTopic(), null, "topic", null, 0, 1, Preference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPreference_Topics(), this.getTopic(), null, "topics", null, 0, -1, Preference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(ratingEClass, Rating.class, "Rating", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRating_Student(), this.getStudent(), null, "student", null, 0, 1, Rating.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRating_Topic(), this.getTopic(), null, "topic", null, 0, 1, Rating.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRating_Rating(), ecorePackage.getEDouble(), "rating", null, 0, 1, Rating.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(superviseEClass, Supervise.class, "Supervise", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSupervise_Supervisor(), this.getSupervisor(), null, "supervisor", null, 0, 1, Supervise.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

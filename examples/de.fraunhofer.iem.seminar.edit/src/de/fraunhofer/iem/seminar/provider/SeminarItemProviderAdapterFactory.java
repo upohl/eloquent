@@ -188,6 +188,29 @@ public class SeminarItemProviderAdapterFactory extends SeminarAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.fraunhofer.iem.seminar.Rating} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RatingItemProvider ratingItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.fraunhofer.iem.seminar.Rating}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRatingAdapter() {
+		if (ratingItemProvider == null) {
+			ratingItemProvider = new RatingItemProvider(this);
+		}
+
+		return ratingItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.fraunhofer.iem.seminar.Supervise} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -337,6 +360,7 @@ public class SeminarItemProviderAdapterFactory extends SeminarAdapterFactory imp
 		if (studentItemProvider != null) studentItemProvider.dispose();
 		if (topicItemProvider != null) topicItemProvider.dispose();
 		if (preferenceItemProvider != null) preferenceItemProvider.dispose();
+		if (ratingItemProvider != null) ratingItemProvider.dispose();
 		if (superviseItemProvider != null) superviseItemProvider.dispose();
 		if (assignmentItemProvider != null) assignmentItemProvider.dispose();
 	}

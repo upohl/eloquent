@@ -8,13 +8,19 @@ import de.fraunhofer.iem.seminar.SeminarPackage;
 import de.fraunhofer.iem.seminar.Student;
 import de.fraunhofer.iem.seminar.Topic;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link de.fraunhofer.iem.seminar.impl.PreferenceImpl#getStudent <em>Student</em>}</li>
- *   <li>{@link de.fraunhofer.iem.seminar.impl.PreferenceImpl#getTopic <em>Topic</em>}</li>
+ *   <li>{@link de.fraunhofer.iem.seminar.impl.PreferenceImpl#getTopics <em>Topics</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,14 +49,14 @@ public class PreferenceImpl extends MinimalEObjectImpl.Container implements Pref
   protected Student student;
 
   /**
-	 * The cached value of the '{@link #getTopic() <em>Topic</em>}' reference.
+	 * The cached value of the '{@link #getTopics() <em>Topics</em>}' reference list.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getTopic()
+	 * @see #getTopics()
 	 * @generated
 	 * @ordered
 	 */
-  protected Topic topic;
+  protected EList<Topic> topics;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -119,40 +125,12 @@ public class PreferenceImpl extends MinimalEObjectImpl.Container implements Pref
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Topic getTopic()
+  public EList<Topic> getTopics()
   {
-		if (topic != null && topic.eIsProxy()) {
-			InternalEObject oldTopic = (InternalEObject)topic;
-			topic = (Topic)eResolveProxy(oldTopic);
-			if (topic != oldTopic) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SeminarPackage.PREFERENCE__TOPIC, oldTopic, topic));
-			}
+		if (topics == null) {
+			topics = new EObjectResolvingEList<Topic>(Topic.class, this, SeminarPackage.PREFERENCE__TOPICS);
 		}
-		return topic;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public Topic basicGetTopic()
-  {
-		return topic;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public void setTopic(Topic newTopic)
-  {
-		Topic oldTopic = topic;
-		topic = newTopic;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SeminarPackage.PREFERENCE__TOPIC, oldTopic, topic));
+		return topics;
 	}
 
   /**
@@ -167,9 +145,8 @@ public class PreferenceImpl extends MinimalEObjectImpl.Container implements Pref
 			case SeminarPackage.PREFERENCE__STUDENT:
 				if (resolve) return getStudent();
 				return basicGetStudent();
-			case SeminarPackage.PREFERENCE__TOPIC:
-				if (resolve) return getTopic();
-				return basicGetTopic();
+			case SeminarPackage.PREFERENCE__TOPICS:
+				return getTopics();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -179,6 +156,7 @@ public class PreferenceImpl extends MinimalEObjectImpl.Container implements Pref
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -186,8 +164,9 @@ public class PreferenceImpl extends MinimalEObjectImpl.Container implements Pref
 			case SeminarPackage.PREFERENCE__STUDENT:
 				setStudent((Student)newValue);
 				return;
-			case SeminarPackage.PREFERENCE__TOPIC:
-				setTopic((Topic)newValue);
+			case SeminarPackage.PREFERENCE__TOPICS:
+				getTopics().clear();
+				getTopics().addAll((Collection<? extends Topic>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -205,8 +184,8 @@ public class PreferenceImpl extends MinimalEObjectImpl.Container implements Pref
 			case SeminarPackage.PREFERENCE__STUDENT:
 				setStudent((Student)null);
 				return;
-			case SeminarPackage.PREFERENCE__TOPIC:
-				setTopic((Topic)null);
+			case SeminarPackage.PREFERENCE__TOPICS:
+				getTopics().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -223,8 +202,8 @@ public class PreferenceImpl extends MinimalEObjectImpl.Container implements Pref
 		switch (featureID) {
 			case SeminarPackage.PREFERENCE__STUDENT:
 				return student != null;
-			case SeminarPackage.PREFERENCE__TOPIC:
-				return topic != null;
+			case SeminarPackage.PREFERENCE__TOPICS:
+				return topics != null && !topics.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
