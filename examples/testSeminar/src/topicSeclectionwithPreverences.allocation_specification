@@ -16,8 +16,24 @@ testSpecificationName {
 		descriptors (first : seminar::Student, second : seminar::Topic);
 		ocl 	
 				self.preferences->collect( a | 
-					Tuple{first=a.student,
-				second=a.topic})->asSet()
+					a.student->product(a.topics))->asSet()
 			;
 	}
+	
+	constraint separateLocation differentTopics
+	{
+		descriptors(first :seminar::Student, second: seminar::Student);
+		ocl
+			self.students->product(self.students)->select(first.name<>second.name);
+	}
+	
+	service topicFavorites{
+		qos ratings{
+			weight ratings;
+			descriptors (first:seminar::Student, topic: seminar::Topic);
+			ocl self.ratings->collect(r | Tuple{first=r.student,ratings=if(r.rating<=3) then r.rating else 3 endif, topic=r.topic})->asSet();
+	}
+	
+	}
+	max measure topicFavorites;
 }

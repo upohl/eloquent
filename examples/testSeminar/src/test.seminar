@@ -1,6 +1,13 @@
 supervisors:Uwe,Stefan;
-students:Mark, Sven;
-topics:test, test2, bla;
-Mark prefers test2;
-Sven prefers bla;
-Uwe supervises test;
+students:Mark, Sven, Marie, Joerg;
+topics:allocation, optimization, security, modeling, modeling2;
+Mark likes security, modeling;
+Sven likes security, modeling2, optimization;
+Joerg likes allocation, modeling;
+Marie likes allocation, security;
+Marie rates allocation with 0.0;
+Joerg rates allocation with 5.0;
+ Joerg is assigned to allocation ; 
+ Marie is assigned to security ;
+  Mark is assigned to modeling ; 
+  Sven is assigned to modeling2 ;
