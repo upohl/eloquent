@@ -1,13 +1,15 @@
+Seminar testMe {
 supervisors:Uwe,Stefan;
 students:Mark, Sven, Marie, Joerg;
 topics:allocation, optimization, security, modeling, modeling2;
-Mark likes security, modeling;
-Sven likes security, modeling2, optimization;
-Joerg likes allocation, modeling;
-Marie likes allocation, security;
-Marie rates allocation with 0.0;
-Joerg rates allocation with 5.0;
- Joerg is assigned to allocation ; 
- Marie is assigned to security ;
-  Mark is assigned to modeling ; 
-  Sven is assigned to modeling2 ;
+Mark wants security, modeling;
+Sven wants security, modeling2, optimization;
+Joerg wants allocation, modeling;
+Marie wants security;
+Marie rates allocation with 5.0;
+Joerg rates allocation with 0.0;
+Joerg is assigned to allocation ;
+Marie is assigned to security ; 
+Mark is assigned to modeling ; 
+Sven is assigned to modeling2 ;
+}
