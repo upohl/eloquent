@@ -55,8 +55,8 @@ class SeminarStorageProvider extends EObjectImpl implements StorageProvider {
   		 val EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(seminar);
 		assignment.student = source
 		assignment.topic = target
-		val Command deleteCommand = DeleteCommand.create(editingDomain,seminar.assignments);
-		editingDomain.getCommandStack().execute(deleteCommand);
+	//	val Command deleteCommand = DeleteCommand.create(editingDomain,seminar.assignments);
+	//	editingDomain.getCommandStack().execute(deleteCommand);
 		
 		val Command addCommand = AddCommand.create(editingDomain, seminar, seminar.assignments ,assignment);
 	//	seminar.assignments.add(assignment)
