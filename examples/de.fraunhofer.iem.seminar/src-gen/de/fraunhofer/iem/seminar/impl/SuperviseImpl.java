@@ -33,200 +33,208 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class SuperviseImpl extends MinimalEObjectImpl.Container implements Supervise
 {
   /**
-	 * The cached value of the '{@link #getSupervisor() <em>Supervisor</em>}' reference.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getSupervisor() <em>Supervisor</em>}' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getSupervisor()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getSupervisor()
+   * @generated
+   * @ordered
+   */
   protected Supervisor supervisor;
 
   /**
-	 * The cached value of the '{@link #getTopic() <em>Topic</em>}' reference.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getTopic() <em>Topic</em>}' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getTopic()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getTopic()
+   * @generated
+   * @ordered
+   */
   protected Topic topic;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected SuperviseImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return SeminarPackage.Literals.SUPERVISE;
-	}
+    return SeminarPackage.Literals.SUPERVISE;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Supervisor getSupervisor()
   {
-		if (supervisor != null && supervisor.eIsProxy()) {
-			InternalEObject oldSupervisor = (InternalEObject)supervisor;
-			supervisor = (Supervisor)eResolveProxy(oldSupervisor);
-			if (supervisor != oldSupervisor) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SeminarPackage.SUPERVISE__SUPERVISOR, oldSupervisor, supervisor));
-			}
-		}
-		return supervisor;
-	}
+    if (supervisor != null && supervisor.eIsProxy())
+    {
+      InternalEObject oldSupervisor = (InternalEObject)supervisor;
+      supervisor = (Supervisor)eResolveProxy(oldSupervisor);
+      if (supervisor != oldSupervisor)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SeminarPackage.SUPERVISE__SUPERVISOR, oldSupervisor, supervisor));
+      }
+    }
+    return supervisor;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Supervisor basicGetSupervisor()
   {
-		return supervisor;
-	}
+    return supervisor;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setSupervisor(Supervisor newSupervisor)
   {
-		Supervisor oldSupervisor = supervisor;
-		supervisor = newSupervisor;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SeminarPackage.SUPERVISE__SUPERVISOR, oldSupervisor, supervisor));
-	}
+    Supervisor oldSupervisor = supervisor;
+    supervisor = newSupervisor;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SeminarPackage.SUPERVISE__SUPERVISOR, oldSupervisor, supervisor));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Topic getTopic()
   {
-		if (topic != null && topic.eIsProxy()) {
-			InternalEObject oldTopic = (InternalEObject)topic;
-			topic = (Topic)eResolveProxy(oldTopic);
-			if (topic != oldTopic) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SeminarPackage.SUPERVISE__TOPIC, oldTopic, topic));
-			}
-		}
-		return topic;
-	}
+    if (topic != null && topic.eIsProxy())
+    {
+      InternalEObject oldTopic = (InternalEObject)topic;
+      topic = (Topic)eResolveProxy(oldTopic);
+      if (topic != oldTopic)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SeminarPackage.SUPERVISE__TOPIC, oldTopic, topic));
+      }
+    }
+    return topic;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Topic basicGetTopic()
   {
-		return topic;
-	}
+    return topic;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setTopic(Topic newTopic)
   {
-		Topic oldTopic = topic;
-		topic = newTopic;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SeminarPackage.SUPERVISE__TOPIC, oldTopic, topic));
-	}
+    Topic oldTopic = topic;
+    topic = newTopic;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SeminarPackage.SUPERVISE__TOPIC, oldTopic, topic));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case SeminarPackage.SUPERVISE__SUPERVISOR:
-				if (resolve) return getSupervisor();
-				return basicGetSupervisor();
-			case SeminarPackage.SUPERVISE__TOPIC:
-				if (resolve) return getTopic();
-				return basicGetTopic();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case SeminarPackage.SUPERVISE__SUPERVISOR:
+        if (resolve) return getSupervisor();
+        return basicGetSupervisor();
+      case SeminarPackage.SUPERVISE__TOPIC:
+        if (resolve) return getTopic();
+        return basicGetTopic();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case SeminarPackage.SUPERVISE__SUPERVISOR:
-				setSupervisor((Supervisor)newValue);
-				return;
-			case SeminarPackage.SUPERVISE__TOPIC:
-				setTopic((Topic)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case SeminarPackage.SUPERVISE__SUPERVISOR:
+        setSupervisor((Supervisor)newValue);
+        return;
+      case SeminarPackage.SUPERVISE__TOPIC:
+        setTopic((Topic)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case SeminarPackage.SUPERVISE__SUPERVISOR:
-				setSupervisor((Supervisor)null);
-				return;
-			case SeminarPackage.SUPERVISE__TOPIC:
-				setTopic((Topic)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case SeminarPackage.SUPERVISE__SUPERVISOR:
+        setSupervisor((Supervisor)null);
+        return;
+      case SeminarPackage.SUPERVISE__TOPIC:
+        setTopic((Topic)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case SeminarPackage.SUPERVISE__SUPERVISOR:
-				return supervisor != null;
-			case SeminarPackage.SUPERVISE__TOPIC:
-				return topic != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case SeminarPackage.SUPERVISE__SUPERVISOR:
+        return supervisor != null;
+      case SeminarPackage.SUPERVISE__TOPIC:
+        return topic != null;
+    }
+    return super.eIsSet(featureID);
+  }
 
 } //SuperviseImpl

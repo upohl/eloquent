@@ -11,7 +11,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
@@ -23,37 +22,35 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected SeminarGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_Preference_CommaKeyword_3_0_p;
-	protected AbstractElementAlias match_Seminar_CommaKeyword_0_2_0_p;
-	protected AbstractElementAlias match_Seminar_CommaKeyword_1_2_0_p;
-	protected AbstractElementAlias match_Seminar_CommaKeyword_2_2_0_p;
-	protected AbstractElementAlias match_Seminar___SemicolonKeyword_0_3_SupervisorsKeyword_0_0__a;
-	protected AbstractElementAlias match_Seminar___SemicolonKeyword_0_3_SupervisorsKeyword_0_0__p;
-	protected AbstractElementAlias match_Seminar___SemicolonKeyword_1_3_StudentsKeyword_1_0__a;
-	protected AbstractElementAlias match_Seminar___SemicolonKeyword_1_3_StudentsKeyword_1_0__p;
-	protected AbstractElementAlias match_Seminar___SemicolonKeyword_2_3_TopicsKeyword_2_0__a;
-	protected AbstractElementAlias match_Seminar___SemicolonKeyword_2_3_TopicsKeyword_2_0__p;
-	protected AbstractElementAlias match_Seminar___StudentsKeyword_1_0_SemicolonKeyword_1_3__a;
-	protected AbstractElementAlias match_Seminar___SupervisorsKeyword_0_0_SemicolonKeyword_0_3__a;
-	protected AbstractElementAlias match_Seminar___TopicsKeyword_2_0_SemicolonKeyword_2_3__a;
-	protected AbstractElementAlias match_Seminar_____TopicsKeyword_2_0_SemicolonKeyword_2_3__p_or_____SupervisorsKeyword_0_0_SemicolonKeyword_0_3__a___StudentsKeyword_1_0_SemicolonKeyword_1_3__p___TopicsKeyword_2_0_SemicolonKeyword_2_3__p___or_____SupervisorsKeyword_0_0_SemicolonKeyword_0_3__a___TopicsKeyword_2_0_SemicolonKeyword_2_3__p____q;
+	protected AbstractElementAlias match_Seminar_CommaKeyword_3_2_0_p;
+	protected AbstractElementAlias match_Seminar_CommaKeyword_4_2_0_p;
+	protected AbstractElementAlias match_Seminar_CommaKeyword_5_2_0_p;
+	protected AbstractElementAlias match_Seminar___SemicolonKeyword_3_3_SupervisorsKeyword_3_0__a;
+	protected AbstractElementAlias match_Seminar___SemicolonKeyword_3_3_SupervisorsKeyword_3_0__p;
+	protected AbstractElementAlias match_Seminar___SemicolonKeyword_4_3_StudentsKeyword_4_0__a;
+	protected AbstractElementAlias match_Seminar___SemicolonKeyword_4_3_StudentsKeyword_4_0__p;
+	protected AbstractElementAlias match_Seminar___SemicolonKeyword_5_3_TopicsKeyword_5_0__a;
+	protected AbstractElementAlias match_Seminar___SemicolonKeyword_5_3_TopicsKeyword_5_0__p;
+	protected AbstractElementAlias match_Seminar___StudentsKeyword_4_0_SemicolonKeyword_4_3__a;
+	protected AbstractElementAlias match_Seminar___SupervisorsKeyword_3_0_SemicolonKeyword_3_3__a;
+	protected AbstractElementAlias match_Seminar___TopicsKeyword_5_0_SemicolonKeyword_5_3__a;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (SeminarGrammarAccess) access;
 		match_Preference_CommaKeyword_3_0_p = new TokenAlias(true, false, grammarAccess.getPreferenceAccess().getCommaKeyword_3_0());
-		match_Seminar_CommaKeyword_0_2_0_p = new TokenAlias(true, false, grammarAccess.getSeminarAccess().getCommaKeyword_0_2_0());
-		match_Seminar_CommaKeyword_1_2_0_p = new TokenAlias(true, false, grammarAccess.getSeminarAccess().getCommaKeyword_1_2_0());
-		match_Seminar_CommaKeyword_2_2_0_p = new TokenAlias(true, false, grammarAccess.getSeminarAccess().getCommaKeyword_2_2_0());
-		match_Seminar___SemicolonKeyword_0_3_SupervisorsKeyword_0_0__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_0_3()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSupervisorsKeyword_0_0()));
-		match_Seminar___SemicolonKeyword_0_3_SupervisorsKeyword_0_0__p = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_0_3()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSupervisorsKeyword_0_0()));
-		match_Seminar___SemicolonKeyword_1_3_StudentsKeyword_1_0__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_1_3()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getStudentsKeyword_1_0()));
-		match_Seminar___SemicolonKeyword_1_3_StudentsKeyword_1_0__p = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_1_3()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getStudentsKeyword_1_0()));
-		match_Seminar___SemicolonKeyword_2_3_TopicsKeyword_2_0__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_2_3()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getTopicsKeyword_2_0()));
-		match_Seminar___SemicolonKeyword_2_3_TopicsKeyword_2_0__p = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_2_3()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getTopicsKeyword_2_0()));
-		match_Seminar___StudentsKeyword_1_0_SemicolonKeyword_1_3__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getStudentsKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_1_3()));
-		match_Seminar___SupervisorsKeyword_0_0_SemicolonKeyword_0_3__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSupervisorsKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_0_3()));
-		match_Seminar___TopicsKeyword_2_0_SemicolonKeyword_2_3__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getTopicsKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_2_3()));
-		match_Seminar_____TopicsKeyword_2_0_SemicolonKeyword_2_3__p_or_____SupervisorsKeyword_0_0_SemicolonKeyword_0_3__a___StudentsKeyword_1_0_SemicolonKeyword_1_3__p___TopicsKeyword_2_0_SemicolonKeyword_2_3__p___or_____SupervisorsKeyword_0_0_SemicolonKeyword_0_3__a___TopicsKeyword_2_0_SemicolonKeyword_2_3__p____q = new AlternativeAlias(false, true, new GroupAlias(false, false, new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSupervisorsKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_0_3())), new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getStudentsKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_1_3())), new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getTopicsKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_2_3()))), new GroupAlias(false, false, new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSupervisorsKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_0_3())), new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getTopicsKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_2_3()))), new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getTopicsKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_2_3())));
+		match_Seminar_CommaKeyword_3_2_0_p = new TokenAlias(true, false, grammarAccess.getSeminarAccess().getCommaKeyword_3_2_0());
+		match_Seminar_CommaKeyword_4_2_0_p = new TokenAlias(true, false, grammarAccess.getSeminarAccess().getCommaKeyword_4_2_0());
+		match_Seminar_CommaKeyword_5_2_0_p = new TokenAlias(true, false, grammarAccess.getSeminarAccess().getCommaKeyword_5_2_0());
+		match_Seminar___SemicolonKeyword_3_3_SupervisorsKeyword_3_0__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_3_3()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSupervisorsKeyword_3_0()));
+		match_Seminar___SemicolonKeyword_3_3_SupervisorsKeyword_3_0__p = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_3_3()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSupervisorsKeyword_3_0()));
+		match_Seminar___SemicolonKeyword_4_3_StudentsKeyword_4_0__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_4_3()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getStudentsKeyword_4_0()));
+		match_Seminar___SemicolonKeyword_4_3_StudentsKeyword_4_0__p = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_4_3()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getStudentsKeyword_4_0()));
+		match_Seminar___SemicolonKeyword_5_3_TopicsKeyword_5_0__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_5_3()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getTopicsKeyword_5_0()));
+		match_Seminar___SemicolonKeyword_5_3_TopicsKeyword_5_0__p = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_5_3()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getTopicsKeyword_5_0()));
+		match_Seminar___StudentsKeyword_4_0_SemicolonKeyword_4_3__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getStudentsKeyword_4_0()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_4_3()));
+		match_Seminar___SupervisorsKeyword_3_0_SemicolonKeyword_3_3__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSupervisorsKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_3_3()));
+		match_Seminar___TopicsKeyword_5_0_SemicolonKeyword_5_3__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getSeminarAccess().getTopicsKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getSeminarAccess().getSemicolonKeyword_5_3()));
 	}
 	
 	@Override
@@ -70,32 +67,30 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
 			if (match_Preference_CommaKeyword_3_0_p.equals(syntax))
 				emit_Preference_CommaKeyword_3_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Seminar_CommaKeyword_0_2_0_p.equals(syntax))
-				emit_Seminar_CommaKeyword_0_2_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Seminar_CommaKeyword_1_2_0_p.equals(syntax))
-				emit_Seminar_CommaKeyword_1_2_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Seminar_CommaKeyword_2_2_0_p.equals(syntax))
-				emit_Seminar_CommaKeyword_2_2_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Seminar___SemicolonKeyword_0_3_SupervisorsKeyword_0_0__a.equals(syntax))
-				emit_Seminar___SemicolonKeyword_0_3_SupervisorsKeyword_0_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Seminar___SemicolonKeyword_0_3_SupervisorsKeyword_0_0__p.equals(syntax))
-				emit_Seminar___SemicolonKeyword_0_3_SupervisorsKeyword_0_0__p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Seminar___SemicolonKeyword_1_3_StudentsKeyword_1_0__a.equals(syntax))
-				emit_Seminar___SemicolonKeyword_1_3_StudentsKeyword_1_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Seminar___SemicolonKeyword_1_3_StudentsKeyword_1_0__p.equals(syntax))
-				emit_Seminar___SemicolonKeyword_1_3_StudentsKeyword_1_0__p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Seminar___SemicolonKeyword_2_3_TopicsKeyword_2_0__a.equals(syntax))
-				emit_Seminar___SemicolonKeyword_2_3_TopicsKeyword_2_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Seminar___SemicolonKeyword_2_3_TopicsKeyword_2_0__p.equals(syntax))
-				emit_Seminar___SemicolonKeyword_2_3_TopicsKeyword_2_0__p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Seminar___StudentsKeyword_1_0_SemicolonKeyword_1_3__a.equals(syntax))
-				emit_Seminar___StudentsKeyword_1_0_SemicolonKeyword_1_3__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Seminar___SupervisorsKeyword_0_0_SemicolonKeyword_0_3__a.equals(syntax))
-				emit_Seminar___SupervisorsKeyword_0_0_SemicolonKeyword_0_3__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Seminar___TopicsKeyword_2_0_SemicolonKeyword_2_3__a.equals(syntax))
-				emit_Seminar___TopicsKeyword_2_0_SemicolonKeyword_2_3__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Seminar_____TopicsKeyword_2_0_SemicolonKeyword_2_3__p_or_____SupervisorsKeyword_0_0_SemicolonKeyword_0_3__a___StudentsKeyword_1_0_SemicolonKeyword_1_3__p___TopicsKeyword_2_0_SemicolonKeyword_2_3__p___or_____SupervisorsKeyword_0_0_SemicolonKeyword_0_3__a___TopicsKeyword_2_0_SemicolonKeyword_2_3__p____q.equals(syntax))
-				emit_Seminar_____TopicsKeyword_2_0_SemicolonKeyword_2_3__p_or_____SupervisorsKeyword_0_0_SemicolonKeyword_0_3__a___StudentsKeyword_1_0_SemicolonKeyword_1_3__p___TopicsKeyword_2_0_SemicolonKeyword_2_3__p___or_____SupervisorsKeyword_0_0_SemicolonKeyword_0_3__a___TopicsKeyword_2_0_SemicolonKeyword_2_3__p____q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Seminar_CommaKeyword_3_2_0_p.equals(syntax))
+				emit_Seminar_CommaKeyword_3_2_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Seminar_CommaKeyword_4_2_0_p.equals(syntax))
+				emit_Seminar_CommaKeyword_4_2_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Seminar_CommaKeyword_5_2_0_p.equals(syntax))
+				emit_Seminar_CommaKeyword_5_2_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Seminar___SemicolonKeyword_3_3_SupervisorsKeyword_3_0__a.equals(syntax))
+				emit_Seminar___SemicolonKeyword_3_3_SupervisorsKeyword_3_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Seminar___SemicolonKeyword_3_3_SupervisorsKeyword_3_0__p.equals(syntax))
+				emit_Seminar___SemicolonKeyword_3_3_SupervisorsKeyword_3_0__p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Seminar___SemicolonKeyword_4_3_StudentsKeyword_4_0__a.equals(syntax))
+				emit_Seminar___SemicolonKeyword_4_3_StudentsKeyword_4_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Seminar___SemicolonKeyword_4_3_StudentsKeyword_4_0__p.equals(syntax))
+				emit_Seminar___SemicolonKeyword_4_3_StudentsKeyword_4_0__p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Seminar___SemicolonKeyword_5_3_TopicsKeyword_5_0__a.equals(syntax))
+				emit_Seminar___SemicolonKeyword_5_3_TopicsKeyword_5_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Seminar___SemicolonKeyword_5_3_TopicsKeyword_5_0__p.equals(syntax))
+				emit_Seminar___SemicolonKeyword_5_3_TopicsKeyword_5_0__p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Seminar___StudentsKeyword_4_0_SemicolonKeyword_4_3__a.equals(syntax))
+				emit_Seminar___StudentsKeyword_4_0_SemicolonKeyword_4_3__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Seminar___SupervisorsKeyword_3_0_SemicolonKeyword_3_3__a.equals(syntax))
+				emit_Seminar___SupervisorsKeyword_3_0_SemicolonKeyword_3_3__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Seminar___TopicsKeyword_5_0_SemicolonKeyword_5_3__a.equals(syntax))
+				emit_Seminar___TopicsKeyword_5_0_SemicolonKeyword_5_3__a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -116,10 +111,10 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) 'supervisors:' (';' 'supervisors:')* (ambiguity) supervisors+=Supervisor
+	 *     name=ID '{' 'supervisors:' (';' 'supervisors:')* (ambiguity) supervisors+=Supervisor
 	 *     supervisors+=Supervisor (';' 'supervisors:')* (ambiguity) supervisors+=Supervisor
 	 */
-	protected void emit_Seminar_CommaKeyword_0_2_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Seminar_CommaKeyword_3_2_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -128,11 +123,11 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ('supervisors:' ';')* 'students:' (';' 'students:')* (ambiguity) students+=Student
+	 *     name=ID '{' ('supervisors:' ';')* 'students:' (';' 'students:')* (ambiguity) students+=Student
 	 *     students+=Student (';' 'students:')* (ambiguity) students+=Student
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* 'students:' (';' 'students:')* (ambiguity) students+=Student
 	 */
-	protected void emit_Seminar_CommaKeyword_1_2_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Seminar_CommaKeyword_4_2_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -141,12 +136,12 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ('supervisors:' ';')* ('students:' ';')* 'topics:' (';' 'topics:')* (ambiguity) topics+=Topic
+	 *     name=ID '{' ('supervisors:' ';')* ('students:' ';')* 'topics:' (';' 'topics:')* (ambiguity) topics+=Topic
 	 *     students+=Student ';' ('students:' ';')* 'topics:' (';' 'topics:')* (ambiguity) topics+=Topic
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* ('students:' ';')* 'topics:' (';' 'topics:')* (ambiguity) topics+=Topic
 	 *     topics+=Topic (';' 'topics:')* (ambiguity) topics+=Topic
 	 */
-	protected void emit_Seminar_CommaKeyword_2_2_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Seminar_CommaKeyword_5_2_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -155,12 +150,12 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (';' 'supervisors:')*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) 'supervisors:' (ambiguity) ','+ supervisors+=Supervisor
-	 *     (rule start) 'supervisors:' (ambiguity) supervisors+=Supervisor
+	 *     name=ID '{' 'supervisors:' (ambiguity) ','+ supervisors+=Supervisor
+	 *     name=ID '{' 'supervisors:' (ambiguity) supervisors+=Supervisor
 	 *     supervisors+=Supervisor (ambiguity) ','+ supervisors+=Supervisor
 	 *     supervisors+=Supervisor (ambiguity) supervisors+=Supervisor
 	 */
-	protected void emit_Seminar___SemicolonKeyword_0_3_SupervisorsKeyword_0_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Seminar___SemicolonKeyword_3_3_SupervisorsKeyword_3_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -171,7 +166,7 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * This ambiguous syntax occurs at:
 	 *     supervisors+=Supervisor (ambiguity) supervisors+=Supervisor
 	 */
-	protected void emit_Seminar___SemicolonKeyword_0_3_SupervisorsKeyword_0_0__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Seminar___SemicolonKeyword_3_3_SupervisorsKeyword_3_0__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -180,14 +175,14 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (';' 'students:')*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ('supervisors:' ';')* 'students:' (ambiguity) ','+ students+=Student
-	 *     (rule start) ('supervisors:' ';')* 'students:' (ambiguity) students+=Student
+	 *     name=ID '{' ('supervisors:' ';')* 'students:' (ambiguity) ','+ students+=Student
+	 *     name=ID '{' ('supervisors:' ';')* 'students:' (ambiguity) students+=Student
 	 *     students+=Student (ambiguity) ','+ students+=Student
 	 *     students+=Student (ambiguity) students+=Student
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* 'students:' (ambiguity) ','+ students+=Student
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* 'students:' (ambiguity) students+=Student
 	 */
-	protected void emit_Seminar___SemicolonKeyword_1_3_StudentsKeyword_1_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Seminar___SemicolonKeyword_4_3_StudentsKeyword_4_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -198,7 +193,7 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * This ambiguous syntax occurs at:
 	 *     students+=Student (ambiguity) students+=Student
 	 */
-	protected void emit_Seminar___SemicolonKeyword_1_3_StudentsKeyword_1_0__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Seminar___SemicolonKeyword_4_3_StudentsKeyword_4_0__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -207,8 +202,8 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (';' 'topics:')*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ('supervisors:' ';')* ('students:' ';')* 'topics:' (ambiguity) ','+ topics+=Topic
-	 *     (rule start) ('supervisors:' ';')* ('students:' ';')* 'topics:' (ambiguity) topics+=Topic
+	 *     name=ID '{' ('supervisors:' ';')* ('students:' ';')* 'topics:' (ambiguity) ','+ topics+=Topic
+	 *     name=ID '{' ('supervisors:' ';')* ('students:' ';')* 'topics:' (ambiguity) topics+=Topic
 	 *     students+=Student ';' ('students:' ';')* 'topics:' (ambiguity) ','+ topics+=Topic
 	 *     students+=Student ';' ('students:' ';')* 'topics:' (ambiguity) topics+=Topic
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* ('students:' ';')* 'topics:' (ambiguity) ','+ topics+=Topic
@@ -216,7 +211,7 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     topics+=Topic (ambiguity) ','+ topics+=Topic
 	 *     topics+=Topic (ambiguity) topics+=Topic
 	 */
-	protected void emit_Seminar___SemicolonKeyword_2_3_TopicsKeyword_2_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Seminar___SemicolonKeyword_5_3_TopicsKeyword_5_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -227,7 +222,7 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * This ambiguous syntax occurs at:
 	 *     topics+=Topic (ambiguity) topics+=Topic
 	 */
-	protected void emit_Seminar___SemicolonKeyword_2_3_TopicsKeyword_2_0__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Seminar___SemicolonKeyword_5_3_TopicsKeyword_5_0__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -236,29 +231,29 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('students:' ';')*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ('supervisors:' ';')* (ambiguity) 'topics:' (';' 'topics:')* ','+ topics+=Topic
-	 *     (rule start) ('supervisors:' ';')* (ambiguity) 'topics:' (';' 'topics:')* topics+=Topic
-	 *     (rule start) ('supervisors:' ';')* (ambiguity) ('topics:' ';')* (rule start)
-	 *     (rule start) ('supervisors:' ';')* (ambiguity) ('topics:' ';')* assignments+=Assignment
-	 *     (rule start) ('supervisors:' ';')* (ambiguity) ('topics:' ';')* preferences+=Preference
-	 *     (rule start) ('supervisors:' ';')* (ambiguity) ('topics:' ';')* ratings+=Rating
-	 *     (rule start) ('supervisors:' ';')* (ambiguity) ('topics:' ';')* supervises+=Supervise
+	 *     name=ID '{' ('supervisors:' ';')* (ambiguity) 'topics:' (';' 'topics:')* ','+ topics+=Topic
+	 *     name=ID '{' ('supervisors:' ';')* (ambiguity) 'topics:' (';' 'topics:')* topics+=Topic
+	 *     name=ID '{' ('supervisors:' ';')* (ambiguity) ('topics:' ';')* '}' (rule end)
+	 *     name=ID '{' ('supervisors:' ';')* (ambiguity) ('topics:' ';')* assignments+=Assignment
+	 *     name=ID '{' ('supervisors:' ';')* (ambiguity) ('topics:' ';')* preferences+=Preference
+	 *     name=ID '{' ('supervisors:' ';')* (ambiguity) ('topics:' ';')* ratings+=Rating
+	 *     name=ID '{' ('supervisors:' ';')* (ambiguity) ('topics:' ';')* supervises+=Supervise
 	 *     students+=Student ';' (ambiguity) 'topics:' (';' 'topics:')* ','+ topics+=Topic
 	 *     students+=Student ';' (ambiguity) 'topics:' (';' 'topics:')* topics+=Topic
-	 *     students+=Student ';' (ambiguity) ('topics:' ';')* (rule end)
+	 *     students+=Student ';' (ambiguity) ('topics:' ';')* '}' (rule end)
 	 *     students+=Student ';' (ambiguity) ('topics:' ';')* assignments+=Assignment
 	 *     students+=Student ';' (ambiguity) ('topics:' ';')* preferences+=Preference
 	 *     students+=Student ';' (ambiguity) ('topics:' ';')* ratings+=Rating
 	 *     students+=Student ';' (ambiguity) ('topics:' ';')* supervises+=Supervise
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* (ambiguity) 'topics:' (';' 'topics:')* ','+ topics+=Topic
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* (ambiguity) 'topics:' (';' 'topics:')* topics+=Topic
-	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* (ambiguity) ('topics:' ';')* (rule end)
+	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* (ambiguity) ('topics:' ';')* '}' (rule end)
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* (ambiguity) ('topics:' ';')* assignments+=Assignment
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* (ambiguity) ('topics:' ';')* preferences+=Preference
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* (ambiguity) ('topics:' ';')* ratings+=Rating
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* (ambiguity) ('topics:' ';')* supervises+=Supervise
 	 */
-	protected void emit_Seminar___StudentsKeyword_1_0_SemicolonKeyword_1_3__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Seminar___StudentsKeyword_4_0_SemicolonKeyword_4_3__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -267,26 +262,26 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('supervisors:' ';')*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) 'students:' (';' 'students:')* ','+ students+=Student
-	 *     (rule start) (ambiguity) 'students:' (';' 'students:')* students+=Student
-	 *     (rule start) (ambiguity) ('students:' ';')* 'topics:' (';' 'topics:')* ','+ topics+=Topic
-	 *     (rule start) (ambiguity) ('students:' ';')* 'topics:' (';' 'topics:')* topics+=Topic
-	 *     (rule start) (ambiguity) ('students:' ';')* ('topics:' ';')* (rule start)
-	 *     (rule start) (ambiguity) ('students:' ';')* ('topics:' ';')* assignments+=Assignment
-	 *     (rule start) (ambiguity) ('students:' ';')* ('topics:' ';')* preferences+=Preference
-	 *     (rule start) (ambiguity) ('students:' ';')* ('topics:' ';')* ratings+=Rating
-	 *     (rule start) (ambiguity) ('students:' ';')* ('topics:' ';')* supervises+=Supervise
+	 *     name=ID '{' (ambiguity) 'students:' (';' 'students:')* ','+ students+=Student
+	 *     name=ID '{' (ambiguity) 'students:' (';' 'students:')* students+=Student
+	 *     name=ID '{' (ambiguity) ('students:' ';')* 'topics:' (';' 'topics:')* ','+ topics+=Topic
+	 *     name=ID '{' (ambiguity) ('students:' ';')* 'topics:' (';' 'topics:')* topics+=Topic
+	 *     name=ID '{' (ambiguity) ('students:' ';')* ('topics:' ';')* '}' (rule end)
+	 *     name=ID '{' (ambiguity) ('students:' ';')* ('topics:' ';')* assignments+=Assignment
+	 *     name=ID '{' (ambiguity) ('students:' ';')* ('topics:' ';')* preferences+=Preference
+	 *     name=ID '{' (ambiguity) ('students:' ';')* ('topics:' ';')* ratings+=Rating
+	 *     name=ID '{' (ambiguity) ('students:' ';')* ('topics:' ';')* supervises+=Supervise
 	 *     supervisors+=Supervisor ';' (ambiguity) 'students:' (';' 'students:')* ','+ students+=Student
 	 *     supervisors+=Supervisor ';' (ambiguity) 'students:' (';' 'students:')* students+=Student
 	 *     supervisors+=Supervisor ';' (ambiguity) ('students:' ';')* 'topics:' (';' 'topics:')* ','+ topics+=Topic
 	 *     supervisors+=Supervisor ';' (ambiguity) ('students:' ';')* 'topics:' (';' 'topics:')* topics+=Topic
-	 *     supervisors+=Supervisor ';' (ambiguity) ('students:' ';')* ('topics:' ';')* (rule end)
+	 *     supervisors+=Supervisor ';' (ambiguity) ('students:' ';')* ('topics:' ';')* '}' (rule end)
 	 *     supervisors+=Supervisor ';' (ambiguity) ('students:' ';')* ('topics:' ';')* assignments+=Assignment
 	 *     supervisors+=Supervisor ';' (ambiguity) ('students:' ';')* ('topics:' ';')* preferences+=Preference
 	 *     supervisors+=Supervisor ';' (ambiguity) ('students:' ';')* ('topics:' ';')* ratings+=Rating
 	 *     supervisors+=Supervisor ';' (ambiguity) ('students:' ';')* ('topics:' ';')* supervises+=Supervise
 	 */
-	protected void emit_Seminar___SupervisorsKeyword_0_0_SemicolonKeyword_0_3__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Seminar___SupervisorsKeyword_3_0_SemicolonKeyword_3_3__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -295,39 +290,28 @@ public class SeminarSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('topics:' ';')*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) ('supervisors:' ';')* ('students:' ';')* (ambiguity) (rule start)
-	 *     (rule start) ('supervisors:' ';')* ('students:' ';')* (ambiguity) assignments+=Assignment
-	 *     (rule start) ('supervisors:' ';')* ('students:' ';')* (ambiguity) preferences+=Preference
-	 *     (rule start) ('supervisors:' ';')* ('students:' ';')* (ambiguity) ratings+=Rating
-	 *     (rule start) ('supervisors:' ';')* ('students:' ';')* (ambiguity) supervises+=Supervise
-	 *     students+=Student ';' ('students:' ';')* (ambiguity) (rule end)
+	 *     name=ID '{' ('supervisors:' ';')* ('students:' ';')* (ambiguity) '}' (rule end)
+	 *     name=ID '{' ('supervisors:' ';')* ('students:' ';')* (ambiguity) assignments+=Assignment
+	 *     name=ID '{' ('supervisors:' ';')* ('students:' ';')* (ambiguity) preferences+=Preference
+	 *     name=ID '{' ('supervisors:' ';')* ('students:' ';')* (ambiguity) ratings+=Rating
+	 *     name=ID '{' ('supervisors:' ';')* ('students:' ';')* (ambiguity) supervises+=Supervise
+	 *     students+=Student ';' ('students:' ';')* (ambiguity) '}' (rule end)
 	 *     students+=Student ';' ('students:' ';')* (ambiguity) assignments+=Assignment
 	 *     students+=Student ';' ('students:' ';')* (ambiguity) preferences+=Preference
 	 *     students+=Student ';' ('students:' ';')* (ambiguity) ratings+=Rating
 	 *     students+=Student ';' ('students:' ';')* (ambiguity) supervises+=Supervise
-	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* ('students:' ';')* (ambiguity) (rule end)
+	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* ('students:' ';')* (ambiguity) '}' (rule end)
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* ('students:' ';')* (ambiguity) assignments+=Assignment
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* ('students:' ';')* (ambiguity) preferences+=Preference
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* ('students:' ';')* (ambiguity) ratings+=Rating
 	 *     supervisors+=Supervisor ';' ('supervisors:' ';')* ('students:' ';')* (ambiguity) supervises+=Supervise
-	 *     topics+=Topic ';' (ambiguity) (rule end)
+	 *     topics+=Topic ';' (ambiguity) '}' (rule end)
 	 *     topics+=Topic ';' (ambiguity) assignments+=Assignment
 	 *     topics+=Topic ';' (ambiguity) preferences+=Preference
 	 *     topics+=Topic ';' (ambiguity) ratings+=Rating
 	 *     topics+=Topic ';' (ambiguity) supervises+=Supervise
 	 */
-	protected void emit_Seminar___TopicsKeyword_2_0_SemicolonKeyword_2_3__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     (('topics:' ';')+ | (('supervisors:' ';')* ('students:' ';')+ ('topics:' ';')+) | (('supervisors:' ';')* ('topics:' ';')+))?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 */
-	protected void emit_Seminar_____TopicsKeyword_2_0_SemicolonKeyword_2_3__p_or_____SupervisorsKeyword_0_0_SemicolonKeyword_0_3__a___StudentsKeyword_1_0_SemicolonKeyword_1_3__p___TopicsKeyword_2_0_SemicolonKeyword_2_3__p___or_____SupervisorsKeyword_0_0_SemicolonKeyword_0_3__a___TopicsKeyword_2_0_SemicolonKeyword_2_3__p____q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Seminar___TopicsKeyword_5_0_SemicolonKeyword_5_3__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

@@ -26,81 +26,81 @@ import org.eclipse.emf.ecore.EObject;
 public interface Rating extends EObject
 {
   /**
-	 * Returns the value of the '<em><b>Student</b></em>' reference.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Student</b></em>' reference.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Student</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Student</em>' reference.
-	 * @see #setStudent(Student)
-	 * @see de.fraunhofer.iem.seminar.SeminarPackage#getRating_Student()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Student</em>' reference.
+   * @see #setStudent(Student)
+   * @see de.fraunhofer.iem.seminar.SeminarPackage#getRating_Student()
+   * @model
+   * @generated
+   */
   Student getStudent();
 
   /**
-	 * Sets the value of the '{@link de.fraunhofer.iem.seminar.Rating#getStudent <em>Student</em>}' reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link de.fraunhofer.iem.seminar.Rating#getStudent <em>Student</em>}' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Student</em>' reference.
-	 * @see #getStudent()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Student</em>' reference.
+   * @see #getStudent()
+   * @generated
+   */
   void setStudent(Student value);
 
   /**
-	 * Returns the value of the '<em><b>Topic</b></em>' reference.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Topic</b></em>' reference.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Topic</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Topic</em>' reference.
-	 * @see #setTopic(Topic)
-	 * @see de.fraunhofer.iem.seminar.SeminarPackage#getRating_Topic()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Topic</em>' reference.
+   * @see #setTopic(Topic)
+   * @see de.fraunhofer.iem.seminar.SeminarPackage#getRating_Topic()
+   * @model
+   * @generated
+   */
   Topic getTopic();
 
   /**
-	 * Sets the value of the '{@link de.fraunhofer.iem.seminar.Rating#getTopic <em>Topic</em>}' reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link de.fraunhofer.iem.seminar.Rating#getTopic <em>Topic</em>}' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Topic</em>' reference.
-	 * @see #getTopic()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Topic</em>' reference.
+   * @see #getTopic()
+   * @generated
+   */
   void setTopic(Topic value);
 
   /**
-	 * Returns the value of the '<em><b>Rating</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Rating</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Rating</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rating</em>' attribute.
-	 * @see #setRating(double)
-	 * @see de.fraunhofer.iem.seminar.SeminarPackage#getRating_Rating()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Rating</em>' attribute.
+   * @see #setRating(double)
+   * @see de.fraunhofer.iem.seminar.SeminarPackage#getRating_Rating()
+   * @model
+   * @generated
+   */
   double getRating();
 
   /**
-	 * Sets the value of the '{@link de.fraunhofer.iem.seminar.Rating#getRating <em>Rating</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link de.fraunhofer.iem.seminar.Rating#getRating <em>Rating</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rating</em>' attribute.
-	 * @see #getRating()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Rating</em>' attribute.
+   * @see #getRating()
+   * @generated
+   */
   void setRating(double value);
 
 } // Rating

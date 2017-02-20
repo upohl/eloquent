@@ -16,92 +16,92 @@ import org.eclipse.emf.ecore.EFactory;
 public interface SeminarFactory extends EFactory
 {
   /**
-	 * The singleton instance of the factory.
-	 * <!-- begin-user-doc -->
+   * The singleton instance of the factory.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   SeminarFactory eINSTANCE = de.fraunhofer.iem.seminar.impl.SeminarFactoryImpl.init();
 
   /**
-	 * Returns a new object of class '<em>Seminar</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns a new object of class '<em>Seminar</em>'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Seminar</em>'.
-	 * @generated
-	 */
+   * @return a new object of class '<em>Seminar</em>'.
+   * @generated
+   */
   Seminar createSeminar();
 
   /**
-	 * Returns a new object of class '<em>Supervisor</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns a new object of class '<em>Supervisor</em>'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Supervisor</em>'.
-	 * @generated
-	 */
+   * @return a new object of class '<em>Supervisor</em>'.
+   * @generated
+   */
   Supervisor createSupervisor();
 
   /**
-	 * Returns a new object of class '<em>Student</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns a new object of class '<em>Student</em>'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Student</em>'.
-	 * @generated
-	 */
+   * @return a new object of class '<em>Student</em>'.
+   * @generated
+   */
   Student createStudent();
 
   /**
-	 * Returns a new object of class '<em>Topic</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns a new object of class '<em>Topic</em>'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Topic</em>'.
-	 * @generated
-	 */
+   * @return a new object of class '<em>Topic</em>'.
+   * @generated
+   */
   Topic createTopic();
 
   /**
-	 * Returns a new object of class '<em>Preference</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns a new object of class '<em>Preference</em>'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Preference</em>'.
-	 * @generated
-	 */
+   * @return a new object of class '<em>Preference</em>'.
+   * @generated
+   */
   Preference createPreference();
 
   /**
-	 * Returns a new object of class '<em>Rating</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns a new object of class '<em>Rating</em>'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Rating</em>'.
-	 * @generated
-	 */
+   * @return a new object of class '<em>Rating</em>'.
+   * @generated
+   */
   Rating createRating();
 
   /**
-	 * Returns a new object of class '<em>Supervise</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns a new object of class '<em>Supervise</em>'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Supervise</em>'.
-	 * @generated
-	 */
+   * @return a new object of class '<em>Supervise</em>'.
+   * @generated
+   */
   Supervise createSupervise();
 
   /**
-	 * Returns a new object of class '<em>Assignment</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns a new object of class '<em>Assignment</em>'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Assignment</em>'.
-	 * @generated
-	 */
+   * @return a new object of class '<em>Assignment</em>'.
+   * @generated
+   */
   Assignment createAssignment();
 
   /**
-	 * Returns the package supported by this factory.
-	 * <!-- begin-user-doc -->
+   * Returns the package supported by this factory.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
-	 */
+   * @return the package supported by this factory.
+   * @generated
+   */
   SeminarPackage getSeminarPackage();
 
 } //SeminarFactory

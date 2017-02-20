@@ -76,17 +76,43 @@ ruleSeminar returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		otherlv_0='Seminar'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getSeminarAccess().getSeminarKeyword_0());
+		}
 		(
-			otherlv_0='supervisors:'
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getSeminarAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getSeminarRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		otherlv_2='{'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getSeminarAccess().getLeftCurlyBracketKeyword_2());
+		}
+		(
+			otherlv_3='supervisors:'
 			{
-				newLeafNode(otherlv_0, grammarAccess.getSeminarAccess().getSupervisorsKeyword_0_0());
+				newLeafNode(otherlv_3, grammarAccess.getSeminarAccess().getSupervisorsKeyword_3_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getSeminarAccess().getSupervisorsSupervisorParserRuleCall_0_1_0());
+						newCompositeNode(grammarAccess.getSeminarAccess().getSupervisorsSupervisorParserRuleCall_3_1_0());
 					}
-					lv_supervisors_1_0=ruleSupervisor
+					lv_supervisors_4_0=ruleSupervisor
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getSeminarRule());
@@ -94,7 +120,7 @@ ruleSeminar returns [EObject current=null]
 						add(
 							$current,
 							"supervisors",
-							lv_supervisors_1_0,
+							lv_supervisors_4_0,
 							"de.fraunhofer.iem.Seminar.Supervisor");
 						afterParserOrEnumRuleCall();
 					}
@@ -102,17 +128,17 @@ ruleSeminar returns [EObject current=null]
 			)*
 			(
 				(
-					otherlv_2=','
+					otherlv_5=','
 					{
-						newLeafNode(otherlv_2, grammarAccess.getSeminarAccess().getCommaKeyword_0_2_0());
+						newLeafNode(otherlv_5, grammarAccess.getSeminarAccess().getCommaKeyword_3_2_0());
 					}
 				)+
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getSeminarAccess().getSupervisorsSupervisorParserRuleCall_0_2_1_0());
+							newCompositeNode(grammarAccess.getSeminarAccess().getSupervisorsSupervisorParserRuleCall_3_2_1_0());
 						}
-						lv_supervisors_3_0=ruleSupervisor
+						lv_supervisors_6_0=ruleSupervisor
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getSeminarRule());
@@ -120,29 +146,29 @@ ruleSeminar returns [EObject current=null]
 							add(
 								$current,
 								"supervisors",
-								lv_supervisors_3_0,
+								lv_supervisors_6_0,
 								"de.fraunhofer.iem.Seminar.Supervisor");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-			otherlv_4=';'
+			otherlv_7=';'
 			{
-				newLeafNode(otherlv_4, grammarAccess.getSeminarAccess().getSemicolonKeyword_0_3());
+				newLeafNode(otherlv_7, grammarAccess.getSeminarAccess().getSemicolonKeyword_3_3());
 			}
 		)*
 		(
-			otherlv_5='students:'
+			otherlv_8='students:'
 			{
-				newLeafNode(otherlv_5, grammarAccess.getSeminarAccess().getStudentsKeyword_1_0());
+				newLeafNode(otherlv_8, grammarAccess.getSeminarAccess().getStudentsKeyword_4_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getSeminarAccess().getStudentsStudentParserRuleCall_1_1_0());
+						newCompositeNode(grammarAccess.getSeminarAccess().getStudentsStudentParserRuleCall_4_1_0());
 					}
-					lv_students_6_0=ruleStudent
+					lv_students_9_0=ruleStudent
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getSeminarRule());
@@ -150,7 +176,7 @@ ruleSeminar returns [EObject current=null]
 						add(
 							$current,
 							"students",
-							lv_students_6_0,
+							lv_students_9_0,
 							"de.fraunhofer.iem.Seminar.Student");
 						afterParserOrEnumRuleCall();
 					}
@@ -158,17 +184,17 @@ ruleSeminar returns [EObject current=null]
 			)*
 			(
 				(
-					otherlv_7=','
+					otherlv_10=','
 					{
-						newLeafNode(otherlv_7, grammarAccess.getSeminarAccess().getCommaKeyword_1_2_0());
+						newLeafNode(otherlv_10, grammarAccess.getSeminarAccess().getCommaKeyword_4_2_0());
 					}
 				)+
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getSeminarAccess().getStudentsStudentParserRuleCall_1_2_1_0());
+							newCompositeNode(grammarAccess.getSeminarAccess().getStudentsStudentParserRuleCall_4_2_1_0());
 						}
-						lv_students_8_0=ruleStudent
+						lv_students_11_0=ruleStudent
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getSeminarRule());
@@ -176,29 +202,29 @@ ruleSeminar returns [EObject current=null]
 							add(
 								$current,
 								"students",
-								lv_students_8_0,
+								lv_students_11_0,
 								"de.fraunhofer.iem.Seminar.Student");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-			otherlv_9=';'
+			otherlv_12=';'
 			{
-				newLeafNode(otherlv_9, grammarAccess.getSeminarAccess().getSemicolonKeyword_1_3());
+				newLeafNode(otherlv_12, grammarAccess.getSeminarAccess().getSemicolonKeyword_4_3());
 			}
 		)*
 		(
-			otherlv_10='topics:'
+			otherlv_13='topics:'
 			{
-				newLeafNode(otherlv_10, grammarAccess.getSeminarAccess().getTopicsKeyword_2_0());
+				newLeafNode(otherlv_13, grammarAccess.getSeminarAccess().getTopicsKeyword_5_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getSeminarAccess().getTopicsTopicParserRuleCall_2_1_0());
+						newCompositeNode(grammarAccess.getSeminarAccess().getTopicsTopicParserRuleCall_5_1_0());
 					}
-					lv_topics_11_0=ruleTopic
+					lv_topics_14_0=ruleTopic
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getSeminarRule());
@@ -206,7 +232,7 @@ ruleSeminar returns [EObject current=null]
 						add(
 							$current,
 							"topics",
-							lv_topics_11_0,
+							lv_topics_14_0,
 							"de.fraunhofer.iem.Seminar.Topic");
 						afterParserOrEnumRuleCall();
 					}
@@ -214,17 +240,17 @@ ruleSeminar returns [EObject current=null]
 			)*
 			(
 				(
-					otherlv_12=','
+					otherlv_15=','
 					{
-						newLeafNode(otherlv_12, grammarAccess.getSeminarAccess().getCommaKeyword_2_2_0());
+						newLeafNode(otherlv_15, grammarAccess.getSeminarAccess().getCommaKeyword_5_2_0());
 					}
 				)+
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getSeminarAccess().getTopicsTopicParserRuleCall_2_2_1_0());
+							newCompositeNode(grammarAccess.getSeminarAccess().getTopicsTopicParserRuleCall_5_2_1_0());
 						}
-						lv_topics_13_0=ruleTopic
+						lv_topics_16_0=ruleTopic
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getSeminarRule());
@@ -232,24 +258,24 @@ ruleSeminar returns [EObject current=null]
 							add(
 								$current,
 								"topics",
-								lv_topics_13_0,
+								lv_topics_16_0,
 								"de.fraunhofer.iem.Seminar.Topic");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-			otherlv_14=';'
+			otherlv_17=';'
 			{
-				newLeafNode(otherlv_14, grammarAccess.getSeminarAccess().getSemicolonKeyword_2_3());
+				newLeafNode(otherlv_17, grammarAccess.getSeminarAccess().getSemicolonKeyword_5_3());
 			}
 		)*
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getSeminarAccess().getPreferencesPreferenceParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getSeminarAccess().getPreferencesPreferenceParserRuleCall_6_0());
 				}
-				lv_preferences_15_0=rulePreference
+				lv_preferences_18_0=rulePreference
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getSeminarRule());
@@ -257,7 +283,7 @@ ruleSeminar returns [EObject current=null]
 					add(
 						$current,
 						"preferences",
-						lv_preferences_15_0,
+						lv_preferences_18_0,
 						"de.fraunhofer.iem.Seminar.Preference");
 					afterParserOrEnumRuleCall();
 				}
@@ -266,9 +292,9 @@ ruleSeminar returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getSeminarAccess().getRatingsRatingParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getSeminarAccess().getRatingsRatingParserRuleCall_7_0());
 				}
-				lv_ratings_16_0=ruleRating
+				lv_ratings_19_0=ruleRating
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getSeminarRule());
@@ -276,7 +302,7 @@ ruleSeminar returns [EObject current=null]
 					add(
 						$current,
 						"ratings",
-						lv_ratings_16_0,
+						lv_ratings_19_0,
 						"de.fraunhofer.iem.Seminar.Rating");
 					afterParserOrEnumRuleCall();
 				}
@@ -285,9 +311,9 @@ ruleSeminar returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getSeminarAccess().getSupervisesSuperviseParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getSeminarAccess().getSupervisesSuperviseParserRuleCall_8_0());
 				}
-				lv_supervises_17_0=ruleSupervise
+				lv_supervises_20_0=ruleSupervise
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getSeminarRule());
@@ -295,7 +321,7 @@ ruleSeminar returns [EObject current=null]
 					add(
 						$current,
 						"supervises",
-						lv_supervises_17_0,
+						lv_supervises_20_0,
 						"de.fraunhofer.iem.Seminar.Supervise");
 					afterParserOrEnumRuleCall();
 				}
@@ -304,9 +330,9 @@ ruleSeminar returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getSeminarAccess().getAssignmentsAssignmentParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getSeminarAccess().getAssignmentsAssignmentParserRuleCall_9_0());
 				}
-				lv_assignments_18_0=ruleAssignment
+				lv_assignments_21_0=ruleAssignment
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getSeminarRule());
@@ -314,12 +340,16 @@ ruleSeminar returns [EObject current=null]
 					add(
 						$current,
 						"assignments",
-						lv_assignments_18_0,
+						lv_assignments_21_0,
 						"de.fraunhofer.iem.Seminar.Assignment");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
+		otherlv_22='}'
+		{
+			newLeafNode(otherlv_22, grammarAccess.getSeminarAccess().getRightCurlyBracketKeyword_10());
+		}
 	)
 ;
 
@@ -457,9 +487,9 @@ rulePreference returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_1='likes'
+		otherlv_1='wants'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getPreferenceAccess().getLikesKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getPreferenceAccess().getWantsKeyword_1());
 		}
 		(
 			(

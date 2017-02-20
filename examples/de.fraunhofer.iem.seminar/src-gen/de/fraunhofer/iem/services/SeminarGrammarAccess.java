@@ -25,160 +25,182 @@ public class SeminarGrammarAccess extends AbstractGrammarElementFinder {
 	public class SeminarElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fraunhofer.iem.Seminar.Seminar");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
-		private final Keyword cSupervisorsKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Assignment cSupervisorsAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cSupervisorsSupervisorParserRuleCall_0_1_0 = (RuleCall)cSupervisorsAssignment_0_1.eContents().get(0);
-		private final Group cGroup_0_2 = (Group)cGroup_0.eContents().get(2);
-		private final Keyword cCommaKeyword_0_2_0 = (Keyword)cGroup_0_2.eContents().get(0);
-		private final Assignment cSupervisorsAssignment_0_2_1 = (Assignment)cGroup_0_2.eContents().get(1);
-		private final RuleCall cSupervisorsSupervisorParserRuleCall_0_2_1_0 = (RuleCall)cSupervisorsAssignment_0_2_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_0_3 = (Keyword)cGroup_0.eContents().get(3);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cStudentsKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cStudentsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cStudentsStudentParserRuleCall_1_1_0 = (RuleCall)cStudentsAssignment_1_1.eContents().get(0);
-		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
-		private final Keyword cCommaKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
-		private final Assignment cStudentsAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
-		private final RuleCall cStudentsStudentParserRuleCall_1_2_1_0 = (RuleCall)cStudentsAssignment_1_2_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cTopicsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cTopicsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cTopicsTopicParserRuleCall_2_1_0 = (RuleCall)cTopicsAssignment_2_1.eContents().get(0);
-		private final Group cGroup_2_2 = (Group)cGroup_2.eContents().get(2);
-		private final Keyword cCommaKeyword_2_2_0 = (Keyword)cGroup_2_2.eContents().get(0);
-		private final Assignment cTopicsAssignment_2_2_1 = (Assignment)cGroup_2_2.eContents().get(1);
-		private final RuleCall cTopicsTopicParserRuleCall_2_2_1_0 = (RuleCall)cTopicsAssignment_2_2_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
-		private final Assignment cPreferencesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cPreferencesPreferenceParserRuleCall_3_0 = (RuleCall)cPreferencesAssignment_3.eContents().get(0);
-		private final Assignment cRatingsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cRatingsRatingParserRuleCall_4_0 = (RuleCall)cRatingsAssignment_4.eContents().get(0);
-		private final Assignment cSupervisesAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cSupervisesSuperviseParserRuleCall_5_0 = (RuleCall)cSupervisesAssignment_5.eContents().get(0);
-		private final Assignment cAssignmentsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cAssignmentsAssignmentParserRuleCall_6_0 = (RuleCall)cAssignmentsAssignment_6.eContents().get(0);
+		private final Keyword cSeminarKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cSupervisorsKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cSupervisorsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cSupervisorsSupervisorParserRuleCall_3_1_0 = (RuleCall)cSupervisorsAssignment_3_1.eContents().get(0);
+		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
+		private final Keyword cCommaKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
+		private final Assignment cSupervisorsAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
+		private final RuleCall cSupervisorsSupervisorParserRuleCall_3_2_1_0 = (RuleCall)cSupervisorsAssignment_3_2_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cStudentsKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cStudentsAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cStudentsStudentParserRuleCall_4_1_0 = (RuleCall)cStudentsAssignment_4_1.eContents().get(0);
+		private final Group cGroup_4_2 = (Group)cGroup_4.eContents().get(2);
+		private final Keyword cCommaKeyword_4_2_0 = (Keyword)cGroup_4_2.eContents().get(0);
+		private final Assignment cStudentsAssignment_4_2_1 = (Assignment)cGroup_4_2.eContents().get(1);
+		private final RuleCall cStudentsStudentParserRuleCall_4_2_1_0 = (RuleCall)cStudentsAssignment_4_2_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_4_3 = (Keyword)cGroup_4.eContents().get(3);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cTopicsKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cTopicsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cTopicsTopicParserRuleCall_5_1_0 = (RuleCall)cTopicsAssignment_5_1.eContents().get(0);
+		private final Group cGroup_5_2 = (Group)cGroup_5.eContents().get(2);
+		private final Keyword cCommaKeyword_5_2_0 = (Keyword)cGroup_5_2.eContents().get(0);
+		private final Assignment cTopicsAssignment_5_2_1 = (Assignment)cGroup_5_2.eContents().get(1);
+		private final RuleCall cTopicsTopicParserRuleCall_5_2_1_0 = (RuleCall)cTopicsAssignment_5_2_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_5_3 = (Keyword)cGroup_5.eContents().get(3);
+		private final Assignment cPreferencesAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cPreferencesPreferenceParserRuleCall_6_0 = (RuleCall)cPreferencesAssignment_6.eContents().get(0);
+		private final Assignment cRatingsAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cRatingsRatingParserRuleCall_7_0 = (RuleCall)cRatingsAssignment_7.eContents().get(0);
+		private final Assignment cSupervisesAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cSupervisesSuperviseParserRuleCall_8_0 = (RuleCall)cSupervisesAssignment_8.eContents().get(0);
+		private final Assignment cAssignmentsAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cAssignmentsAssignmentParserRuleCall_9_0 = (RuleCall)cAssignmentsAssignment_9.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//Seminar:
-		//	('supervisors:' supervisors+=Supervisor* (','+ supervisors+=Supervisor)* ';')* ('students:' students+=Student* (','+
-		//	students+=Student)* ';')* ('topics:' topics+=Topic* (','+ topics+=Topic)* ';')*
+		//	'Seminar' name=ID
+		//	'{' ('supervisors:' supervisors+=Supervisor* (','+ supervisors+=Supervisor)* ';')* ('students:' students+=Student*
+		//	(','+ students+=Student)* ';')* ('topics:' topics+=Topic* (','+ topics+=Topic)* ';')*
 		//	preferences+=Preference*
 		//	ratings+=Rating*
 		//	supervises+=Supervise*
-		//	assignments+=Assignment*;
+		//	assignments+=Assignment*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//('supervisors:' supervisors+=Supervisor* (','+ supervisors+=Supervisor)* ';')* ('students:' students+=Student* (','+
-		//students+=Student)* ';')* ('topics:' topics+=Topic* (','+ topics+=Topic)* ';')* preferences+=Preference*
-		//ratings+=Rating* supervises+=Supervise* assignments+=Assignment*
+		//'Seminar' name=ID '{' ('supervisors:' supervisors+=Supervisor* (','+ supervisors+=Supervisor)* ';')* ('students:'
+		//students+=Student* (','+ students+=Student)* ';')* ('topics:' topics+=Topic* (','+ topics+=Topic)* ';')*
+		//preferences+=Preference* ratings+=Rating* supervises+=Supervise* assignments+=Assignment* '}'
 		public Group getGroup() { return cGroup; }
 		
+		//'Seminar'
+		public Keyword getSeminarKeyword_0() { return cSeminarKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
 		//('supervisors:' supervisors+=Supervisor* (','+ supervisors+=Supervisor)* ';')*
-		public Group getGroup_0() { return cGroup_0; }
+		public Group getGroup_3() { return cGroup_3; }
 		
 		//'supervisors:'
-		public Keyword getSupervisorsKeyword_0_0() { return cSupervisorsKeyword_0_0; }
+		public Keyword getSupervisorsKeyword_3_0() { return cSupervisorsKeyword_3_0; }
 		
 		//supervisors+=Supervisor*
-		public Assignment getSupervisorsAssignment_0_1() { return cSupervisorsAssignment_0_1; }
+		public Assignment getSupervisorsAssignment_3_1() { return cSupervisorsAssignment_3_1; }
 		
 		//Supervisor
-		public RuleCall getSupervisorsSupervisorParserRuleCall_0_1_0() { return cSupervisorsSupervisorParserRuleCall_0_1_0; }
+		public RuleCall getSupervisorsSupervisorParserRuleCall_3_1_0() { return cSupervisorsSupervisorParserRuleCall_3_1_0; }
 		
 		//(','+ supervisors+=Supervisor)*
-		public Group getGroup_0_2() { return cGroup_0_2; }
+		public Group getGroup_3_2() { return cGroup_3_2; }
 		
 		//','+
-		public Keyword getCommaKeyword_0_2_0() { return cCommaKeyword_0_2_0; }
+		public Keyword getCommaKeyword_3_2_0() { return cCommaKeyword_3_2_0; }
 		
 		//supervisors+=Supervisor
-		public Assignment getSupervisorsAssignment_0_2_1() { return cSupervisorsAssignment_0_2_1; }
+		public Assignment getSupervisorsAssignment_3_2_1() { return cSupervisorsAssignment_3_2_1; }
 		
 		//Supervisor
-		public RuleCall getSupervisorsSupervisorParserRuleCall_0_2_1_0() { return cSupervisorsSupervisorParserRuleCall_0_2_1_0; }
+		public RuleCall getSupervisorsSupervisorParserRuleCall_3_2_1_0() { return cSupervisorsSupervisorParserRuleCall_3_2_1_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_0_3() { return cSemicolonKeyword_0_3; }
+		public Keyword getSemicolonKeyword_3_3() { return cSemicolonKeyword_3_3; }
 		
 		//('students:' students+=Student* (','+ students+=Student)* ';')*
-		public Group getGroup_1() { return cGroup_1; }
+		public Group getGroup_4() { return cGroup_4; }
 		
 		//'students:'
-		public Keyword getStudentsKeyword_1_0() { return cStudentsKeyword_1_0; }
+		public Keyword getStudentsKeyword_4_0() { return cStudentsKeyword_4_0; }
 		
 		//students+=Student*
-		public Assignment getStudentsAssignment_1_1() { return cStudentsAssignment_1_1; }
+		public Assignment getStudentsAssignment_4_1() { return cStudentsAssignment_4_1; }
 		
 		//Student
-		public RuleCall getStudentsStudentParserRuleCall_1_1_0() { return cStudentsStudentParserRuleCall_1_1_0; }
+		public RuleCall getStudentsStudentParserRuleCall_4_1_0() { return cStudentsStudentParserRuleCall_4_1_0; }
 		
 		//(','+ students+=Student)*
-		public Group getGroup_1_2() { return cGroup_1_2; }
+		public Group getGroup_4_2() { return cGroup_4_2; }
 		
 		//','+
-		public Keyword getCommaKeyword_1_2_0() { return cCommaKeyword_1_2_0; }
+		public Keyword getCommaKeyword_4_2_0() { return cCommaKeyword_4_2_0; }
 		
 		//students+=Student
-		public Assignment getStudentsAssignment_1_2_1() { return cStudentsAssignment_1_2_1; }
+		public Assignment getStudentsAssignment_4_2_1() { return cStudentsAssignment_4_2_1; }
 		
 		//Student
-		public RuleCall getStudentsStudentParserRuleCall_1_2_1_0() { return cStudentsStudentParserRuleCall_1_2_1_0; }
+		public RuleCall getStudentsStudentParserRuleCall_4_2_1_0() { return cStudentsStudentParserRuleCall_4_2_1_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_1_3() { return cSemicolonKeyword_1_3; }
+		public Keyword getSemicolonKeyword_4_3() { return cSemicolonKeyword_4_3; }
 		
 		//('topics:' topics+=Topic* (','+ topics+=Topic)* ';')*
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_5() { return cGroup_5; }
 		
 		//'topics:'
-		public Keyword getTopicsKeyword_2_0() { return cTopicsKeyword_2_0; }
+		public Keyword getTopicsKeyword_5_0() { return cTopicsKeyword_5_0; }
 		
 		//topics+=Topic*
-		public Assignment getTopicsAssignment_2_1() { return cTopicsAssignment_2_1; }
+		public Assignment getTopicsAssignment_5_1() { return cTopicsAssignment_5_1; }
 		
 		//Topic
-		public RuleCall getTopicsTopicParserRuleCall_2_1_0() { return cTopicsTopicParserRuleCall_2_1_0; }
+		public RuleCall getTopicsTopicParserRuleCall_5_1_0() { return cTopicsTopicParserRuleCall_5_1_0; }
 		
 		//(','+ topics+=Topic)*
-		public Group getGroup_2_2() { return cGroup_2_2; }
+		public Group getGroup_5_2() { return cGroup_5_2; }
 		
 		//','+
-		public Keyword getCommaKeyword_2_2_0() { return cCommaKeyword_2_2_0; }
+		public Keyword getCommaKeyword_5_2_0() { return cCommaKeyword_5_2_0; }
 		
 		//topics+=Topic
-		public Assignment getTopicsAssignment_2_2_1() { return cTopicsAssignment_2_2_1; }
+		public Assignment getTopicsAssignment_5_2_1() { return cTopicsAssignment_5_2_1; }
 		
 		//Topic
-		public RuleCall getTopicsTopicParserRuleCall_2_2_1_0() { return cTopicsTopicParserRuleCall_2_2_1_0; }
+		public RuleCall getTopicsTopicParserRuleCall_5_2_1_0() { return cTopicsTopicParserRuleCall_5_2_1_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_2_3() { return cSemicolonKeyword_2_3; }
+		public Keyword getSemicolonKeyword_5_3() { return cSemicolonKeyword_5_3; }
 		
 		//preferences+=Preference*
-		public Assignment getPreferencesAssignment_3() { return cPreferencesAssignment_3; }
+		public Assignment getPreferencesAssignment_6() { return cPreferencesAssignment_6; }
 		
 		//Preference
-		public RuleCall getPreferencesPreferenceParserRuleCall_3_0() { return cPreferencesPreferenceParserRuleCall_3_0; }
+		public RuleCall getPreferencesPreferenceParserRuleCall_6_0() { return cPreferencesPreferenceParserRuleCall_6_0; }
 		
 		//ratings+=Rating*
-		public Assignment getRatingsAssignment_4() { return cRatingsAssignment_4; }
+		public Assignment getRatingsAssignment_7() { return cRatingsAssignment_7; }
 		
 		//Rating
-		public RuleCall getRatingsRatingParserRuleCall_4_0() { return cRatingsRatingParserRuleCall_4_0; }
+		public RuleCall getRatingsRatingParserRuleCall_7_0() { return cRatingsRatingParserRuleCall_7_0; }
 		
 		//supervises+=Supervise*
-		public Assignment getSupervisesAssignment_5() { return cSupervisesAssignment_5; }
+		public Assignment getSupervisesAssignment_8() { return cSupervisesAssignment_8; }
 		
 		//Supervise
-		public RuleCall getSupervisesSuperviseParserRuleCall_5_0() { return cSupervisesSuperviseParserRuleCall_5_0; }
+		public RuleCall getSupervisesSuperviseParserRuleCall_8_0() { return cSupervisesSuperviseParserRuleCall_8_0; }
 		
 		//assignments+=Assignment*
-		public Assignment getAssignmentsAssignment_6() { return cAssignmentsAssignment_6; }
+		public Assignment getAssignmentsAssignment_9() { return cAssignmentsAssignment_9; }
 		
 		//Assignment
-		public RuleCall getAssignmentsAssignmentParserRuleCall_6_0() { return cAssignmentsAssignmentParserRuleCall_6_0; }
+		public RuleCall getAssignmentsAssignmentParserRuleCall_9_0() { return cAssignmentsAssignmentParserRuleCall_9_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 	public class SupervisorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fraunhofer.iem.Seminar.Supervisor");
@@ -231,7 +253,7 @@ public class SeminarGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cStudentAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final CrossReference cStudentStudentCrossReference_0_0 = (CrossReference)cStudentAssignment_0.eContents().get(0);
 		private final RuleCall cStudentStudentIDTerminalRuleCall_0_0_1 = (RuleCall)cStudentStudentCrossReference_0_0.eContents().get(1);
-		private final Keyword cLikesKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cWantsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cTopicsAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final CrossReference cTopicsTopicCrossReference_2_0 = (CrossReference)cTopicsAssignment_2.eContents().get(0);
 		private final RuleCall cTopicsTopicIDTerminalRuleCall_2_0_1 = (RuleCall)cTopicsTopicCrossReference_2_0.eContents().get(1);
@@ -243,10 +265,10 @@ public class SeminarGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Preference:
-		//	student=[Student] 'likes' topics+=[Topic] (','+ topics+=[Topic])* ';';
+		//	student=[Student] 'wants' topics+=[Topic] (','+ topics+=[Topic])* ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//student=[Student] 'likes' topics+=[Topic] (','+ topics+=[Topic])* ';'
+		//student=[Student] 'wants' topics+=[Topic] (','+ topics+=[Topic])* ';'
 		public Group getGroup() { return cGroup; }
 		
 		//student=[Student]
@@ -258,8 +280,8 @@ public class SeminarGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getStudentStudentIDTerminalRuleCall_0_0_1() { return cStudentStudentIDTerminalRuleCall_0_0_1; }
 		
-		//'likes'
-		public Keyword getLikesKeyword_1() { return cLikesKeyword_1; }
+		//'wants'
+		public Keyword getWantsKeyword_1() { return cWantsKeyword_1; }
 		
 		//topics+=[Topic]
 		public Assignment getTopicsAssignment_2() { return cTopicsAssignment_2; }
@@ -497,12 +519,14 @@ public class SeminarGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Seminar:
-	//	('supervisors:' supervisors+=Supervisor* (','+ supervisors+=Supervisor)* ';')* ('students:' students+=Student* (','+
-	//	students+=Student)* ';')* ('topics:' topics+=Topic* (','+ topics+=Topic)* ';')*
+	//	'Seminar' name=ID
+	//	'{' ('supervisors:' supervisors+=Supervisor* (','+ supervisors+=Supervisor)* ';')* ('students:' students+=Student*
+	//	(','+ students+=Student)* ';')* ('topics:' topics+=Topic* (','+ topics+=Topic)* ';')*
 	//	preferences+=Preference*
 	//	ratings+=Rating*
 	//	supervises+=Supervise*
-	//	assignments+=Assignment*;
+	//	assignments+=Assignment*
+	//	'}';
 	public SeminarElements getSeminarAccess() {
 		return pSeminar;
 	}
@@ -542,7 +566,7 @@ public class SeminarGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Preference:
-	//	student=[Student] 'likes' topics+=[Topic] (','+ topics+=[Topic])* ';';
+	//	student=[Student] 'wants' topics+=[Topic] (','+ topics+=[Topic])* ';';
 	public PreferenceElements getPreferenceAccess() {
 		return pPreference;
 	}

@@ -26,661 +26,681 @@ import org.eclipse.emf.ecore.EReference;
 public interface SeminarPackage extends EPackage
 {
   /**
-	 * The package name.
-	 * <!-- begin-user-doc -->
+   * The package name.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   String eNAME = "seminar";
 
   /**
-	 * The package namespace URI.
-	 * <!-- begin-user-doc -->
+   * The package namespace URI.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   String eNS_URI = "http://www.fraunhofer.de/iem/Seminar";
 
   /**
-	 * The package namespace name.
-	 * <!-- begin-user-doc -->
+   * The package namespace name.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   String eNS_PREFIX = "seminar";
 
   /**
-	 * The singleton instance of the package.
-	 * <!-- begin-user-doc -->
+   * The singleton instance of the package.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   SeminarPackage eINSTANCE = de.fraunhofer.iem.seminar.impl.SeminarPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.SeminarImpl <em>Seminar</em>}' class.
-	 * <!-- begin-user-doc -->
+   * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.SeminarImpl <em>Seminar</em>}' class.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see de.fraunhofer.iem.seminar.impl.SeminarImpl
-	 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getSeminar()
-	 * @generated
-	 */
+   * @see de.fraunhofer.iem.seminar.impl.SeminarImpl
+   * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getSeminar()
+   * @generated
+   */
   int SEMINAR = 0;
 
   /**
-	 * The feature id for the '<em><b>Supervisors</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int SEMINAR__SUPERVISORS = 0;
+   * @generated
+   * @ordered
+   */
+  int SEMINAR__NAME = 0;
 
   /**
-	 * The feature id for the '<em><b>Students</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Supervisors</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int SEMINAR__STUDENTS = 1;
+   * @generated
+   * @ordered
+   */
+  int SEMINAR__SUPERVISORS = 1;
 
   /**
-	 * The feature id for the '<em><b>Topics</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Students</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int SEMINAR__TOPICS = 2;
+   * @generated
+   * @ordered
+   */
+  int SEMINAR__STUDENTS = 2;
 
   /**
-	 * The feature id for the '<em><b>Preferences</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Topics</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int SEMINAR__PREFERENCES = 3;
+   * @generated
+   * @ordered
+   */
+  int SEMINAR__TOPICS = 3;
 
   /**
-	 * The feature id for the '<em><b>Ratings</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Preferences</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int SEMINAR__RATINGS = 4;
+   * @generated
+   * @ordered
+   */
+  int SEMINAR__PREFERENCES = 4;
 
   /**
-	 * The feature id for the '<em><b>Supervises</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Ratings</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int SEMINAR__SUPERVISES = 5;
+   * @generated
+   * @ordered
+   */
+  int SEMINAR__RATINGS = 5;
 
   /**
-	 * The feature id for the '<em><b>Assignments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Supervises</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int SEMINAR__ASSIGNMENTS = 6;
+   * @generated
+   * @ordered
+   */
+  int SEMINAR__SUPERVISES = 6;
 
   /**
-	 * The number of structural features of the '<em>Seminar</em>' class.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Assignments</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int SEMINAR_FEATURE_COUNT = 7;
+   * @generated
+   * @ordered
+   */
+  int SEMINAR__ASSIGNMENTS = 7;
 
   /**
-	 * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.SupervisorImpl <em>Supervisor</em>}' class.
-	 * <!-- begin-user-doc -->
+   * The number of structural features of the '<em>Seminar</em>' class.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see de.fraunhofer.iem.seminar.impl.SupervisorImpl
-	 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getSupervisor()
-	 * @generated
-	 */
+   * @generated
+   * @ordered
+   */
+  int SEMINAR_FEATURE_COUNT = 8;
+
+  /**
+   * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.SupervisorImpl <em>Supervisor</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.fraunhofer.iem.seminar.impl.SupervisorImpl
+   * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getSupervisor()
+   * @generated
+   */
   int SUPERVISOR = 1;
 
   /**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int SUPERVISOR__NAME = 0;
 
   /**
-	 * The number of structural features of the '<em>Supervisor</em>' class.
-	 * <!-- begin-user-doc -->
+   * The number of structural features of the '<em>Supervisor</em>' class.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int SUPERVISOR_FEATURE_COUNT = 1;
 
   /**
-	 * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.StudentImpl <em>Student</em>}' class.
-	 * <!-- begin-user-doc -->
+   * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.StudentImpl <em>Student</em>}' class.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see de.fraunhofer.iem.seminar.impl.StudentImpl
-	 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getStudent()
-	 * @generated
-	 */
+   * @see de.fraunhofer.iem.seminar.impl.StudentImpl
+   * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getStudent()
+   * @generated
+   */
   int STUDENT = 2;
 
   /**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int STUDENT__NAME = 0;
 
   /**
-	 * The number of structural features of the '<em>Student</em>' class.
-	 * <!-- begin-user-doc -->
+   * The number of structural features of the '<em>Student</em>' class.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int STUDENT_FEATURE_COUNT = 1;
 
   /**
-	 * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.TopicImpl <em>Topic</em>}' class.
-	 * <!-- begin-user-doc -->
+   * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.TopicImpl <em>Topic</em>}' class.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see de.fraunhofer.iem.seminar.impl.TopicImpl
-	 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getTopic()
-	 * @generated
-	 */
+   * @see de.fraunhofer.iem.seminar.impl.TopicImpl
+   * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getTopic()
+   * @generated
+   */
   int TOPIC = 3;
 
   /**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int TOPIC__NAME = 0;
 
   /**
-	 * The number of structural features of the '<em>Topic</em>' class.
-	 * <!-- begin-user-doc -->
+   * The number of structural features of the '<em>Topic</em>' class.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int TOPIC_FEATURE_COUNT = 1;
 
   /**
-	 * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.PreferenceImpl <em>Preference</em>}' class.
-	 * <!-- begin-user-doc -->
+   * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.PreferenceImpl <em>Preference</em>}' class.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see de.fraunhofer.iem.seminar.impl.PreferenceImpl
-	 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getPreference()
-	 * @generated
-	 */
+   * @see de.fraunhofer.iem.seminar.impl.PreferenceImpl
+   * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getPreference()
+   * @generated
+   */
   int PREFERENCE = 4;
 
   /**
-	 * The feature id for the '<em><b>Student</b></em>' reference.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Student</b></em>' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int PREFERENCE__STUDENT = 0;
 
   /**
-	 * The feature id for the '<em><b>Topics</b></em>' reference list.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Topics</b></em>' reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int PREFERENCE__TOPICS = 1;
 
   /**
-	 * The number of structural features of the '<em>Preference</em>' class.
-	 * <!-- begin-user-doc -->
+   * The number of structural features of the '<em>Preference</em>' class.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int PREFERENCE_FEATURE_COUNT = 2;
 
   /**
-	 * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.RatingImpl <em>Rating</em>}' class.
-	 * <!-- begin-user-doc -->
+   * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.RatingImpl <em>Rating</em>}' class.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see de.fraunhofer.iem.seminar.impl.RatingImpl
-	 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getRating()
-	 * @generated
-	 */
+   * @see de.fraunhofer.iem.seminar.impl.RatingImpl
+   * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getRating()
+   * @generated
+   */
   int RATING = 5;
 
   /**
-	 * The feature id for the '<em><b>Student</b></em>' reference.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Student</b></em>' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int RATING__STUDENT = 0;
 
   /**
-	 * The feature id for the '<em><b>Topic</b></em>' reference.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Topic</b></em>' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int RATING__TOPIC = 1;
 
   /**
-	 * The feature id for the '<em><b>Rating</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Rating</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int RATING__RATING = 2;
 
   /**
-	 * The number of structural features of the '<em>Rating</em>' class.
-	 * <!-- begin-user-doc -->
+   * The number of structural features of the '<em>Rating</em>' class.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int RATING_FEATURE_COUNT = 3;
 
   /**
-	 * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.SuperviseImpl <em>Supervise</em>}' class.
-	 * <!-- begin-user-doc -->
+   * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.SuperviseImpl <em>Supervise</em>}' class.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see de.fraunhofer.iem.seminar.impl.SuperviseImpl
-	 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getSupervise()
-	 * @generated
-	 */
+   * @see de.fraunhofer.iem.seminar.impl.SuperviseImpl
+   * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getSupervise()
+   * @generated
+   */
   int SUPERVISE = 6;
 
   /**
-	 * The feature id for the '<em><b>Supervisor</b></em>' reference.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Supervisor</b></em>' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int SUPERVISE__SUPERVISOR = 0;
 
   /**
-	 * The feature id for the '<em><b>Topic</b></em>' reference.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Topic</b></em>' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int SUPERVISE__TOPIC = 1;
 
   /**
-	 * The number of structural features of the '<em>Supervise</em>' class.
-	 * <!-- begin-user-doc -->
+   * The number of structural features of the '<em>Supervise</em>' class.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int SUPERVISE_FEATURE_COUNT = 2;
 
   /**
-	 * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.AssignmentImpl <em>Assignment</em>}' class.
-	 * <!-- begin-user-doc -->
+   * The meta object id for the '{@link de.fraunhofer.iem.seminar.impl.AssignmentImpl <em>Assignment</em>}' class.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see de.fraunhofer.iem.seminar.impl.AssignmentImpl
-	 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getAssignment()
-	 * @generated
-	 */
+   * @see de.fraunhofer.iem.seminar.impl.AssignmentImpl
+   * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getAssignment()
+   * @generated
+   */
   int ASSIGNMENT = 7;
 
   /**
-	 * The feature id for the '<em><b>Student</b></em>' reference.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Student</b></em>' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int ASSIGNMENT__STUDENT = 0;
 
   /**
-	 * The feature id for the '<em><b>Topic</b></em>' reference.
-	 * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Topic</b></em>' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int ASSIGNMENT__TOPIC = 1;
 
   /**
-	 * The number of structural features of the '<em>Assignment</em>' class.
-	 * <!-- begin-user-doc -->
+   * The number of structural features of the '<em>Assignment</em>' class.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * @generated
+   * @ordered
+   */
   int ASSIGNMENT_FEATURE_COUNT = 2;
 
 
   /**
-	 * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Seminar <em>Seminar</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Seminar <em>Seminar</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Seminar</em>'.
-	 * @see de.fraunhofer.iem.seminar.Seminar
-	 * @generated
-	 */
+   * @return the meta object for class '<em>Seminar</em>'.
+   * @see de.fraunhofer.iem.seminar.Seminar
+   * @generated
+   */
   EClass getSeminar();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link de.fraunhofer.iem.seminar.Seminar#getSupervisors <em>Supervisors</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '{@link de.fraunhofer.iem.seminar.Seminar#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Supervisors</em>'.
-	 * @see de.fraunhofer.iem.seminar.Seminar#getSupervisors()
-	 * @see #getSeminar()
-	 * @generated
-	 */
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see de.fraunhofer.iem.seminar.Seminar#getName()
+   * @see #getSeminar()
+   * @generated
+   */
+  EAttribute getSeminar_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link de.fraunhofer.iem.seminar.Seminar#getSupervisors <em>Supervisors</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Supervisors</em>'.
+   * @see de.fraunhofer.iem.seminar.Seminar#getSupervisors()
+   * @see #getSeminar()
+   * @generated
+   */
   EReference getSeminar_Supervisors();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link de.fraunhofer.iem.seminar.Seminar#getStudents <em>Students</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the containment reference list '{@link de.fraunhofer.iem.seminar.Seminar#getStudents <em>Students</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Students</em>'.
-	 * @see de.fraunhofer.iem.seminar.Seminar#getStudents()
-	 * @see #getSeminar()
-	 * @generated
-	 */
+   * @return the meta object for the containment reference list '<em>Students</em>'.
+   * @see de.fraunhofer.iem.seminar.Seminar#getStudents()
+   * @see #getSeminar()
+   * @generated
+   */
   EReference getSeminar_Students();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link de.fraunhofer.iem.seminar.Seminar#getTopics <em>Topics</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the containment reference list '{@link de.fraunhofer.iem.seminar.Seminar#getTopics <em>Topics</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Topics</em>'.
-	 * @see de.fraunhofer.iem.seminar.Seminar#getTopics()
-	 * @see #getSeminar()
-	 * @generated
-	 */
+   * @return the meta object for the containment reference list '<em>Topics</em>'.
+   * @see de.fraunhofer.iem.seminar.Seminar#getTopics()
+   * @see #getSeminar()
+   * @generated
+   */
   EReference getSeminar_Topics();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link de.fraunhofer.iem.seminar.Seminar#getPreferences <em>Preferences</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the containment reference list '{@link de.fraunhofer.iem.seminar.Seminar#getPreferences <em>Preferences</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Preferences</em>'.
-	 * @see de.fraunhofer.iem.seminar.Seminar#getPreferences()
-	 * @see #getSeminar()
-	 * @generated
-	 */
+   * @return the meta object for the containment reference list '<em>Preferences</em>'.
+   * @see de.fraunhofer.iem.seminar.Seminar#getPreferences()
+   * @see #getSeminar()
+   * @generated
+   */
   EReference getSeminar_Preferences();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link de.fraunhofer.iem.seminar.Seminar#getRatings <em>Ratings</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the containment reference list '{@link de.fraunhofer.iem.seminar.Seminar#getRatings <em>Ratings</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Ratings</em>'.
-	 * @see de.fraunhofer.iem.seminar.Seminar#getRatings()
-	 * @see #getSeminar()
-	 * @generated
-	 */
+   * @return the meta object for the containment reference list '<em>Ratings</em>'.
+   * @see de.fraunhofer.iem.seminar.Seminar#getRatings()
+   * @see #getSeminar()
+   * @generated
+   */
   EReference getSeminar_Ratings();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link de.fraunhofer.iem.seminar.Seminar#getSupervises <em>Supervises</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the containment reference list '{@link de.fraunhofer.iem.seminar.Seminar#getSupervises <em>Supervises</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Supervises</em>'.
-	 * @see de.fraunhofer.iem.seminar.Seminar#getSupervises()
-	 * @see #getSeminar()
-	 * @generated
-	 */
+   * @return the meta object for the containment reference list '<em>Supervises</em>'.
+   * @see de.fraunhofer.iem.seminar.Seminar#getSupervises()
+   * @see #getSeminar()
+   * @generated
+   */
   EReference getSeminar_Supervises();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link de.fraunhofer.iem.seminar.Seminar#getAssignments <em>Assignments</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the containment reference list '{@link de.fraunhofer.iem.seminar.Seminar#getAssignments <em>Assignments</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Assignments</em>'.
-	 * @see de.fraunhofer.iem.seminar.Seminar#getAssignments()
-	 * @see #getSeminar()
-	 * @generated
-	 */
+   * @return the meta object for the containment reference list '<em>Assignments</em>'.
+   * @see de.fraunhofer.iem.seminar.Seminar#getAssignments()
+   * @see #getSeminar()
+   * @generated
+   */
   EReference getSeminar_Assignments();
 
   /**
-	 * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Supervisor <em>Supervisor</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Supervisor <em>Supervisor</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Supervisor</em>'.
-	 * @see de.fraunhofer.iem.seminar.Supervisor
-	 * @generated
-	 */
+   * @return the meta object for class '<em>Supervisor</em>'.
+   * @see de.fraunhofer.iem.seminar.Supervisor
+   * @generated
+   */
   EClass getSupervisor();
 
   /**
-	 * Returns the meta object for the attribute '{@link de.fraunhofer.iem.seminar.Supervisor#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '{@link de.fraunhofer.iem.seminar.Supervisor#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see de.fraunhofer.iem.seminar.Supervisor#getName()
-	 * @see #getSupervisor()
-	 * @generated
-	 */
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see de.fraunhofer.iem.seminar.Supervisor#getName()
+   * @see #getSupervisor()
+   * @generated
+   */
   EAttribute getSupervisor_Name();
 
   /**
-	 * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Student <em>Student</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Student <em>Student</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Student</em>'.
-	 * @see de.fraunhofer.iem.seminar.Student
-	 * @generated
-	 */
+   * @return the meta object for class '<em>Student</em>'.
+   * @see de.fraunhofer.iem.seminar.Student
+   * @generated
+   */
   EClass getStudent();
 
   /**
-	 * Returns the meta object for the attribute '{@link de.fraunhofer.iem.seminar.Student#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '{@link de.fraunhofer.iem.seminar.Student#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see de.fraunhofer.iem.seminar.Student#getName()
-	 * @see #getStudent()
-	 * @generated
-	 */
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see de.fraunhofer.iem.seminar.Student#getName()
+   * @see #getStudent()
+   * @generated
+   */
   EAttribute getStudent_Name();
 
   /**
-	 * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Topic <em>Topic</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Topic <em>Topic</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Topic</em>'.
-	 * @see de.fraunhofer.iem.seminar.Topic
-	 * @generated
-	 */
+   * @return the meta object for class '<em>Topic</em>'.
+   * @see de.fraunhofer.iem.seminar.Topic
+   * @generated
+   */
   EClass getTopic();
 
   /**
-	 * Returns the meta object for the attribute '{@link de.fraunhofer.iem.seminar.Topic#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '{@link de.fraunhofer.iem.seminar.Topic#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see de.fraunhofer.iem.seminar.Topic#getName()
-	 * @see #getTopic()
-	 * @generated
-	 */
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see de.fraunhofer.iem.seminar.Topic#getName()
+   * @see #getTopic()
+   * @generated
+   */
   EAttribute getTopic_Name();
 
   /**
-	 * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Preference <em>Preference</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Preference <em>Preference</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Preference</em>'.
-	 * @see de.fraunhofer.iem.seminar.Preference
-	 * @generated
-	 */
+   * @return the meta object for class '<em>Preference</em>'.
+   * @see de.fraunhofer.iem.seminar.Preference
+   * @generated
+   */
   EClass getPreference();
 
   /**
-	 * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Preference#getStudent <em>Student</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Preference#getStudent <em>Student</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Student</em>'.
-	 * @see de.fraunhofer.iem.seminar.Preference#getStudent()
-	 * @see #getPreference()
-	 * @generated
-	 */
+   * @return the meta object for the reference '<em>Student</em>'.
+   * @see de.fraunhofer.iem.seminar.Preference#getStudent()
+   * @see #getPreference()
+   * @generated
+   */
   EReference getPreference_Student();
 
   /**
-	 * Returns the meta object for the reference list '{@link de.fraunhofer.iem.seminar.Preference#getTopics <em>Topics</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the reference list '{@link de.fraunhofer.iem.seminar.Preference#getTopics <em>Topics</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Topics</em>'.
-	 * @see de.fraunhofer.iem.seminar.Preference#getTopics()
-	 * @see #getPreference()
-	 * @generated
-	 */
+   * @return the meta object for the reference list '<em>Topics</em>'.
+   * @see de.fraunhofer.iem.seminar.Preference#getTopics()
+   * @see #getPreference()
+   * @generated
+   */
   EReference getPreference_Topics();
 
   /**
-	 * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Rating <em>Rating</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Rating <em>Rating</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Rating</em>'.
-	 * @see de.fraunhofer.iem.seminar.Rating
-	 * @generated
-	 */
+   * @return the meta object for class '<em>Rating</em>'.
+   * @see de.fraunhofer.iem.seminar.Rating
+   * @generated
+   */
   EClass getRating();
 
   /**
-	 * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Rating#getStudent <em>Student</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Rating#getStudent <em>Student</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Student</em>'.
-	 * @see de.fraunhofer.iem.seminar.Rating#getStudent()
-	 * @see #getRating()
-	 * @generated
-	 */
+   * @return the meta object for the reference '<em>Student</em>'.
+   * @see de.fraunhofer.iem.seminar.Rating#getStudent()
+   * @see #getRating()
+   * @generated
+   */
   EReference getRating_Student();
 
   /**
-	 * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Rating#getTopic <em>Topic</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Rating#getTopic <em>Topic</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Topic</em>'.
-	 * @see de.fraunhofer.iem.seminar.Rating#getTopic()
-	 * @see #getRating()
-	 * @generated
-	 */
+   * @return the meta object for the reference '<em>Topic</em>'.
+   * @see de.fraunhofer.iem.seminar.Rating#getTopic()
+   * @see #getRating()
+   * @generated
+   */
   EReference getRating_Topic();
 
   /**
-	 * Returns the meta object for the attribute '{@link de.fraunhofer.iem.seminar.Rating#getRating <em>Rating</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '{@link de.fraunhofer.iem.seminar.Rating#getRating <em>Rating</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Rating</em>'.
-	 * @see de.fraunhofer.iem.seminar.Rating#getRating()
-	 * @see #getRating()
-	 * @generated
-	 */
+   * @return the meta object for the attribute '<em>Rating</em>'.
+   * @see de.fraunhofer.iem.seminar.Rating#getRating()
+   * @see #getRating()
+   * @generated
+   */
   EAttribute getRating_Rating();
 
   /**
-	 * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Supervise <em>Supervise</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Supervise <em>Supervise</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Supervise</em>'.
-	 * @see de.fraunhofer.iem.seminar.Supervise
-	 * @generated
-	 */
+   * @return the meta object for class '<em>Supervise</em>'.
+   * @see de.fraunhofer.iem.seminar.Supervise
+   * @generated
+   */
   EClass getSupervise();
 
   /**
-	 * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Supervise#getSupervisor <em>Supervisor</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Supervise#getSupervisor <em>Supervisor</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Supervisor</em>'.
-	 * @see de.fraunhofer.iem.seminar.Supervise#getSupervisor()
-	 * @see #getSupervise()
-	 * @generated
-	 */
+   * @return the meta object for the reference '<em>Supervisor</em>'.
+   * @see de.fraunhofer.iem.seminar.Supervise#getSupervisor()
+   * @see #getSupervise()
+   * @generated
+   */
   EReference getSupervise_Supervisor();
 
   /**
-	 * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Supervise#getTopic <em>Topic</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Supervise#getTopic <em>Topic</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Topic</em>'.
-	 * @see de.fraunhofer.iem.seminar.Supervise#getTopic()
-	 * @see #getSupervise()
-	 * @generated
-	 */
+   * @return the meta object for the reference '<em>Topic</em>'.
+   * @see de.fraunhofer.iem.seminar.Supervise#getTopic()
+   * @see #getSupervise()
+   * @generated
+   */
   EReference getSupervise_Topic();
 
   /**
-	 * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Assignment <em>Assignment</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for class '{@link de.fraunhofer.iem.seminar.Assignment <em>Assignment</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Assignment</em>'.
-	 * @see de.fraunhofer.iem.seminar.Assignment
-	 * @generated
-	 */
+   * @return the meta object for class '<em>Assignment</em>'.
+   * @see de.fraunhofer.iem.seminar.Assignment
+   * @generated
+   */
   EClass getAssignment();
 
   /**
-	 * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Assignment#getStudent <em>Student</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Assignment#getStudent <em>Student</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Student</em>'.
-	 * @see de.fraunhofer.iem.seminar.Assignment#getStudent()
-	 * @see #getAssignment()
-	 * @generated
-	 */
+   * @return the meta object for the reference '<em>Student</em>'.
+   * @see de.fraunhofer.iem.seminar.Assignment#getStudent()
+   * @see #getAssignment()
+   * @generated
+   */
   EReference getAssignment_Student();
 
   /**
-	 * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Assignment#getTopic <em>Topic</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the meta object for the reference '{@link de.fraunhofer.iem.seminar.Assignment#getTopic <em>Topic</em>}'.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Topic</em>'.
-	 * @see de.fraunhofer.iem.seminar.Assignment#getTopic()
-	 * @see #getAssignment()
-	 * @generated
-	 */
+   * @return the meta object for the reference '<em>Topic</em>'.
+   * @see de.fraunhofer.iem.seminar.Assignment#getTopic()
+   * @see #getAssignment()
+   * @generated
+   */
   EReference getAssignment_Topic();
 
   /**
-	 * Returns the factory that creates the instances of the model.
-	 * <!-- begin-user-doc -->
+   * Returns the factory that creates the instances of the model.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the factory that creates the instances of the model.
-	 * @generated
-	 */
+   * @return the factory that creates the instances of the model.
+   * @generated
+   */
   SeminarFactory getSeminarFactory();
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * Defines literals for the meta objects that represent
    * <ul>
    *   <li>each class,</li>
@@ -689,240 +709,248 @@ public interface SeminarPackage extends EPackage
    *   <li>and each data type</li>
    * </ul>
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.SeminarImpl <em>Seminar</em>}' class.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.SeminarImpl <em>Seminar</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see de.fraunhofer.iem.seminar.impl.SeminarImpl
-		 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getSeminar()
-		 * @generated
-		 */
+     * @see de.fraunhofer.iem.seminar.impl.SeminarImpl
+     * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getSeminar()
+     * @generated
+     */
     EClass SEMINAR = eINSTANCE.getSeminar();
 
     /**
-		 * The meta object literal for the '<em><b>Supervisors</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
+    EAttribute SEMINAR__NAME = eINSTANCE.getSeminar_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Supervisors</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     EReference SEMINAR__SUPERVISORS = eINSTANCE.getSeminar_Supervisors();
 
     /**
-		 * The meta object literal for the '<em><b>Students</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Students</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EReference SEMINAR__STUDENTS = eINSTANCE.getSeminar_Students();
 
     /**
-		 * The meta object literal for the '<em><b>Topics</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Topics</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EReference SEMINAR__TOPICS = eINSTANCE.getSeminar_Topics();
 
     /**
-		 * The meta object literal for the '<em><b>Preferences</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Preferences</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EReference SEMINAR__PREFERENCES = eINSTANCE.getSeminar_Preferences();
 
     /**
-		 * The meta object literal for the '<em><b>Ratings</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Ratings</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EReference SEMINAR__RATINGS = eINSTANCE.getSeminar_Ratings();
 
     /**
-		 * The meta object literal for the '<em><b>Supervises</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Supervises</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EReference SEMINAR__SUPERVISES = eINSTANCE.getSeminar_Supervises();
 
     /**
-		 * The meta object literal for the '<em><b>Assignments</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Assignments</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EReference SEMINAR__ASSIGNMENTS = eINSTANCE.getSeminar_Assignments();
 
     /**
-		 * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.SupervisorImpl <em>Supervisor</em>}' class.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.SupervisorImpl <em>Supervisor</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see de.fraunhofer.iem.seminar.impl.SupervisorImpl
-		 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getSupervisor()
-		 * @generated
-		 */
+     * @see de.fraunhofer.iem.seminar.impl.SupervisorImpl
+     * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getSupervisor()
+     * @generated
+     */
     EClass SUPERVISOR = eINSTANCE.getSupervisor();
 
     /**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EAttribute SUPERVISOR__NAME = eINSTANCE.getSupervisor_Name();
 
     /**
-		 * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.StudentImpl <em>Student</em>}' class.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.StudentImpl <em>Student</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see de.fraunhofer.iem.seminar.impl.StudentImpl
-		 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getStudent()
-		 * @generated
-		 */
+     * @see de.fraunhofer.iem.seminar.impl.StudentImpl
+     * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getStudent()
+     * @generated
+     */
     EClass STUDENT = eINSTANCE.getStudent();
 
     /**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EAttribute STUDENT__NAME = eINSTANCE.getStudent_Name();
 
     /**
-		 * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.TopicImpl <em>Topic</em>}' class.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.TopicImpl <em>Topic</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see de.fraunhofer.iem.seminar.impl.TopicImpl
-		 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getTopic()
-		 * @generated
-		 */
+     * @see de.fraunhofer.iem.seminar.impl.TopicImpl
+     * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getTopic()
+     * @generated
+     */
     EClass TOPIC = eINSTANCE.getTopic();
 
     /**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EAttribute TOPIC__NAME = eINSTANCE.getTopic_Name();
 
     /**
-		 * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.PreferenceImpl <em>Preference</em>}' class.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.PreferenceImpl <em>Preference</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see de.fraunhofer.iem.seminar.impl.PreferenceImpl
-		 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getPreference()
-		 * @generated
-		 */
+     * @see de.fraunhofer.iem.seminar.impl.PreferenceImpl
+     * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getPreference()
+     * @generated
+     */
     EClass PREFERENCE = eINSTANCE.getPreference();
 
     /**
-		 * The meta object literal for the '<em><b>Student</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Student</b></em>' reference feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EReference PREFERENCE__STUDENT = eINSTANCE.getPreference_Student();
 
     /**
-		 * The meta object literal for the '<em><b>Topics</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Topics</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EReference PREFERENCE__TOPICS = eINSTANCE.getPreference_Topics();
 
     /**
-		 * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.RatingImpl <em>Rating</em>}' class.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.RatingImpl <em>Rating</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see de.fraunhofer.iem.seminar.impl.RatingImpl
-		 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getRating()
-		 * @generated
-		 */
+     * @see de.fraunhofer.iem.seminar.impl.RatingImpl
+     * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getRating()
+     * @generated
+     */
     EClass RATING = eINSTANCE.getRating();
 
     /**
-		 * The meta object literal for the '<em><b>Student</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Student</b></em>' reference feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EReference RATING__STUDENT = eINSTANCE.getRating_Student();
 
     /**
-		 * The meta object literal for the '<em><b>Topic</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Topic</b></em>' reference feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EReference RATING__TOPIC = eINSTANCE.getRating_Topic();
 
     /**
-		 * The meta object literal for the '<em><b>Rating</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Rating</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EAttribute RATING__RATING = eINSTANCE.getRating_Rating();
 
     /**
-		 * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.SuperviseImpl <em>Supervise</em>}' class.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.SuperviseImpl <em>Supervise</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see de.fraunhofer.iem.seminar.impl.SuperviseImpl
-		 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getSupervise()
-		 * @generated
-		 */
+     * @see de.fraunhofer.iem.seminar.impl.SuperviseImpl
+     * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getSupervise()
+     * @generated
+     */
     EClass SUPERVISE = eINSTANCE.getSupervise();
 
     /**
-		 * The meta object literal for the '<em><b>Supervisor</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Supervisor</b></em>' reference feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EReference SUPERVISE__SUPERVISOR = eINSTANCE.getSupervise_Supervisor();
 
     /**
-		 * The meta object literal for the '<em><b>Topic</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Topic</b></em>' reference feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EReference SUPERVISE__TOPIC = eINSTANCE.getSupervise_Topic();
 
     /**
-		 * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.AssignmentImpl <em>Assignment</em>}' class.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link de.fraunhofer.iem.seminar.impl.AssignmentImpl <em>Assignment</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see de.fraunhofer.iem.seminar.impl.AssignmentImpl
-		 * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getAssignment()
-		 * @generated
-		 */
+     * @see de.fraunhofer.iem.seminar.impl.AssignmentImpl
+     * @see de.fraunhofer.iem.seminar.impl.SeminarPackageImpl#getAssignment()
+     * @generated
+     */
     EClass ASSIGNMENT = eINSTANCE.getAssignment();
 
     /**
-		 * The meta object literal for the '<em><b>Student</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Student</b></em>' reference feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EReference ASSIGNMENT__STUDENT = eINSTANCE.getAssignment_Student();
 
     /**
-		 * The meta object literal for the '<em><b>Topic</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Topic</b></em>' reference feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @generated
-		 */
+     * @generated
+     */
     EReference ASSIGNMENT__TOPIC = eINSTANCE.getAssignment_Topic();
 
   }

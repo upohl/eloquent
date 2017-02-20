@@ -30,528 +30,540 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 public class SeminarPackageImpl extends EPackageImpl implements SeminarPackage
 {
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   private EClass seminarEClass = null;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   private EClass supervisorEClass = null;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   private EClass studentEClass = null;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   private EClass topicEClass = null;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   private EClass preferenceEClass = null;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   private EClass ratingEClass = null;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   private EClass superviseEClass = null;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   private EClass assignmentEClass = null;
 
   /**
-	 * Creates an instance of the model <b>Package</b>, registered with
-	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
-	 * package URI value.
-	 * <p>Note: the correct way to create the package is via the static
-	 * factory method {@link #init init()}, which also performs
-	 * initialization of the package, or returns the registered package,
-	 * if one already exists.
-	 * <!-- begin-user-doc -->
+   * Creates an instance of the model <b>Package</b>, registered with
+   * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+   * package URI value.
+   * <p>Note: the correct way to create the package is via the static
+   * factory method {@link #init init()}, which also performs
+   * initialization of the package, or returns the registered package,
+   * if one already exists.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see de.fraunhofer.iem.seminar.SeminarPackage#eNS_URI
-	 * @see #init()
-	 * @generated
-	 */
+   * @see org.eclipse.emf.ecore.EPackage.Registry
+   * @see de.fraunhofer.iem.seminar.SeminarPackage#eNS_URI
+   * @see #init()
+   * @generated
+   */
   private SeminarPackageImpl()
   {
-		super(eNS_URI, SeminarFactory.eINSTANCE);
-	}
+    super(eNS_URI, SeminarFactory.eINSTANCE);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   private static boolean isInited = false;
 
   /**
-	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
-	 * <p>This method is used to initialize {@link SeminarPackage#eINSTANCE} when that field is accessed.
-	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
-	 * <!-- begin-user-doc -->
+   * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+   * 
+   * <p>This method is used to initialize {@link SeminarPackage#eINSTANCE} when that field is accessed.
+   * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #eNS_URI
-	 * @see #createPackageContents()
-	 * @see #initializePackageContents()
-	 * @generated
-	 */
+   * @see #eNS_URI
+   * @see #createPackageContents()
+   * @see #initializePackageContents()
+   * @generated
+   */
   public static SeminarPackage init()
   {
-		if (isInited) return (SeminarPackage)EPackage.Registry.INSTANCE.getEPackage(SeminarPackage.eNS_URI);
+    if (isInited) return (SeminarPackage)EPackage.Registry.INSTANCE.getEPackage(SeminarPackage.eNS_URI);
 
-		// Obtain or create and register package
-		SeminarPackageImpl theSeminarPackage = (SeminarPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof SeminarPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new SeminarPackageImpl());
+    // Obtain or create and register package
+    SeminarPackageImpl theSeminarPackage = (SeminarPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof SeminarPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new SeminarPackageImpl());
 
-		isInited = true;
+    isInited = true;
 
-		// Create package meta-data objects
-		theSeminarPackage.createPackageContents();
+    // Create package meta-data objects
+    theSeminarPackage.createPackageContents();
 
-		// Initialize created meta-data
-		theSeminarPackage.initializePackageContents();
+    // Initialize created meta-data
+    theSeminarPackage.initializePackageContents();
 
-		// Mark meta-data to indicate it can't be changed
-		theSeminarPackage.freeze();
+    // Mark meta-data to indicate it can't be changed
+    theSeminarPackage.freeze();
 
   
-		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(SeminarPackage.eNS_URI, theSeminarPackage);
-		return theSeminarPackage;
-	}
+    // Update the registry and return the package
+    EPackage.Registry.INSTANCE.put(SeminarPackage.eNS_URI, theSeminarPackage);
+    return theSeminarPackage;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EClass getSeminar()
   {
-		return seminarEClass;
-	}
+    return seminarEClass;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
+  public EAttribute getSeminar_Name()
+  {
+    return (EAttribute)seminarEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getSeminar_Supervisors()
   {
-		return (EReference)seminarEClass.getEStructuralFeatures().get(0);
-	}
+    return (EReference)seminarEClass.getEStructuralFeatures().get(1);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EReference getSeminar_Students()
   {
-		return (EReference)seminarEClass.getEStructuralFeatures().get(1);
-	}
+    return (EReference)seminarEClass.getEStructuralFeatures().get(2);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EReference getSeminar_Topics()
   {
-		return (EReference)seminarEClass.getEStructuralFeatures().get(2);
-	}
+    return (EReference)seminarEClass.getEStructuralFeatures().get(3);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EReference getSeminar_Preferences()
   {
-		return (EReference)seminarEClass.getEStructuralFeatures().get(3);
-	}
+    return (EReference)seminarEClass.getEStructuralFeatures().get(4);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EReference getSeminar_Ratings()
   {
-		return (EReference)seminarEClass.getEStructuralFeatures().get(4);
-	}
+    return (EReference)seminarEClass.getEStructuralFeatures().get(5);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EReference getSeminar_Supervises()
   {
-		return (EReference)seminarEClass.getEStructuralFeatures().get(5);
-	}
+    return (EReference)seminarEClass.getEStructuralFeatures().get(6);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EReference getSeminar_Assignments()
   {
-		return (EReference)seminarEClass.getEStructuralFeatures().get(6);
-	}
+    return (EReference)seminarEClass.getEStructuralFeatures().get(7);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EClass getSupervisor()
   {
-		return supervisorEClass;
-	}
+    return supervisorEClass;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EAttribute getSupervisor_Name()
   {
-		return (EAttribute)supervisorEClass.getEStructuralFeatures().get(0);
-	}
+    return (EAttribute)supervisorEClass.getEStructuralFeatures().get(0);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EClass getStudent()
   {
-		return studentEClass;
-	}
+    return studentEClass;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EAttribute getStudent_Name()
   {
-		return (EAttribute)studentEClass.getEStructuralFeatures().get(0);
-	}
+    return (EAttribute)studentEClass.getEStructuralFeatures().get(0);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EClass getTopic()
   {
-		return topicEClass;
-	}
+    return topicEClass;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EAttribute getTopic_Name()
   {
-		return (EAttribute)topicEClass.getEStructuralFeatures().get(0);
-	}
+    return (EAttribute)topicEClass.getEStructuralFeatures().get(0);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EClass getPreference()
   {
-		return preferenceEClass;
-	}
+    return preferenceEClass;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EReference getPreference_Student()
   {
-		return (EReference)preferenceEClass.getEStructuralFeatures().get(0);
-	}
+    return (EReference)preferenceEClass.getEStructuralFeatures().get(0);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EReference getPreference_Topics()
   {
-		return (EReference)preferenceEClass.getEStructuralFeatures().get(1);
-	}
+    return (EReference)preferenceEClass.getEStructuralFeatures().get(1);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EClass getRating()
   {
-		return ratingEClass;
-	}
+    return ratingEClass;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EReference getRating_Student()
   {
-		return (EReference)ratingEClass.getEStructuralFeatures().get(0);
-	}
+    return (EReference)ratingEClass.getEStructuralFeatures().get(0);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EReference getRating_Topic()
   {
-		return (EReference)ratingEClass.getEStructuralFeatures().get(1);
-	}
+    return (EReference)ratingEClass.getEStructuralFeatures().get(1);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EAttribute getRating_Rating()
   {
-		return (EAttribute)ratingEClass.getEStructuralFeatures().get(2);
-	}
+    return (EAttribute)ratingEClass.getEStructuralFeatures().get(2);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EClass getSupervise()
   {
-		return superviseEClass;
-	}
+    return superviseEClass;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EReference getSupervise_Supervisor()
   {
-		return (EReference)superviseEClass.getEStructuralFeatures().get(0);
-	}
+    return (EReference)superviseEClass.getEStructuralFeatures().get(0);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EReference getSupervise_Topic()
   {
-		return (EReference)superviseEClass.getEStructuralFeatures().get(1);
-	}
+    return (EReference)superviseEClass.getEStructuralFeatures().get(1);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EClass getAssignment()
   {
-		return assignmentEClass;
-	}
+    return assignmentEClass;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EReference getAssignment_Student()
   {
-		return (EReference)assignmentEClass.getEStructuralFeatures().get(0);
-	}
+    return (EReference)assignmentEClass.getEStructuralFeatures().get(0);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EReference getAssignment_Topic()
   {
-		return (EReference)assignmentEClass.getEStructuralFeatures().get(1);
-	}
+    return (EReference)assignmentEClass.getEStructuralFeatures().get(1);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public SeminarFactory getSeminarFactory()
   {
-		return (SeminarFactory)getEFactoryInstance();
-	}
+    return (SeminarFactory)getEFactoryInstance();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   private boolean isCreated = false;
 
   /**
-	 * Creates the meta-model objects for the package.  This method is
-	 * guarded to have no affect on any invocation but its first.
-	 * <!-- begin-user-doc -->
+   * Creates the meta-model objects for the package.  This method is
+   * guarded to have no affect on any invocation but its first.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void createPackageContents()
   {
-		if (isCreated) return;
-		isCreated = true;
+    if (isCreated) return;
+    isCreated = true;
 
-		// Create classes and their features
-		seminarEClass = createEClass(SEMINAR);
-		createEReference(seminarEClass, SEMINAR__SUPERVISORS);
-		createEReference(seminarEClass, SEMINAR__STUDENTS);
-		createEReference(seminarEClass, SEMINAR__TOPICS);
-		createEReference(seminarEClass, SEMINAR__PREFERENCES);
-		createEReference(seminarEClass, SEMINAR__RATINGS);
-		createEReference(seminarEClass, SEMINAR__SUPERVISES);
-		createEReference(seminarEClass, SEMINAR__ASSIGNMENTS);
+    // Create classes and their features
+    seminarEClass = createEClass(SEMINAR);
+    createEAttribute(seminarEClass, SEMINAR__NAME);
+    createEReference(seminarEClass, SEMINAR__SUPERVISORS);
+    createEReference(seminarEClass, SEMINAR__STUDENTS);
+    createEReference(seminarEClass, SEMINAR__TOPICS);
+    createEReference(seminarEClass, SEMINAR__PREFERENCES);
+    createEReference(seminarEClass, SEMINAR__RATINGS);
+    createEReference(seminarEClass, SEMINAR__SUPERVISES);
+    createEReference(seminarEClass, SEMINAR__ASSIGNMENTS);
 
-		supervisorEClass = createEClass(SUPERVISOR);
-		createEAttribute(supervisorEClass, SUPERVISOR__NAME);
+    supervisorEClass = createEClass(SUPERVISOR);
+    createEAttribute(supervisorEClass, SUPERVISOR__NAME);
 
-		studentEClass = createEClass(STUDENT);
-		createEAttribute(studentEClass, STUDENT__NAME);
+    studentEClass = createEClass(STUDENT);
+    createEAttribute(studentEClass, STUDENT__NAME);
 
-		topicEClass = createEClass(TOPIC);
-		createEAttribute(topicEClass, TOPIC__NAME);
+    topicEClass = createEClass(TOPIC);
+    createEAttribute(topicEClass, TOPIC__NAME);
 
-		preferenceEClass = createEClass(PREFERENCE);
-		createEReference(preferenceEClass, PREFERENCE__STUDENT);
-		createEReference(preferenceEClass, PREFERENCE__TOPICS);
+    preferenceEClass = createEClass(PREFERENCE);
+    createEReference(preferenceEClass, PREFERENCE__STUDENT);
+    createEReference(preferenceEClass, PREFERENCE__TOPICS);
 
-		ratingEClass = createEClass(RATING);
-		createEReference(ratingEClass, RATING__STUDENT);
-		createEReference(ratingEClass, RATING__TOPIC);
-		createEAttribute(ratingEClass, RATING__RATING);
+    ratingEClass = createEClass(RATING);
+    createEReference(ratingEClass, RATING__STUDENT);
+    createEReference(ratingEClass, RATING__TOPIC);
+    createEAttribute(ratingEClass, RATING__RATING);
 
-		superviseEClass = createEClass(SUPERVISE);
-		createEReference(superviseEClass, SUPERVISE__SUPERVISOR);
-		createEReference(superviseEClass, SUPERVISE__TOPIC);
+    superviseEClass = createEClass(SUPERVISE);
+    createEReference(superviseEClass, SUPERVISE__SUPERVISOR);
+    createEReference(superviseEClass, SUPERVISE__TOPIC);
 
-		assignmentEClass = createEClass(ASSIGNMENT);
-		createEReference(assignmentEClass, ASSIGNMENT__STUDENT);
-		createEReference(assignmentEClass, ASSIGNMENT__TOPIC);
-	}
+    assignmentEClass = createEClass(ASSIGNMENT);
+    createEReference(assignmentEClass, ASSIGNMENT__STUDENT);
+    createEReference(assignmentEClass, ASSIGNMENT__TOPIC);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   private boolean isInitialized = false;
 
   /**
-	 * Complete the initialization of the package and its meta-model.  This
-	 * method is guarded to have no affect on any invocation but its first.
-	 * <!-- begin-user-doc -->
+   * Complete the initialization of the package and its meta-model.  This
+   * method is guarded to have no affect on any invocation but its first.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void initializePackageContents()
   {
-		if (isInitialized) return;
-		isInitialized = true;
+    if (isInitialized) return;
+    isInitialized = true;
 
-		// Initialize package
-		setName(eNAME);
-		setNsPrefix(eNS_PREFIX);
-		setNsURI(eNS_URI);
+    // Initialize package
+    setName(eNAME);
+    setNsPrefix(eNS_PREFIX);
+    setNsURI(eNS_URI);
 
-		// Create type parameters
+    // Create type parameters
 
-		// Set bounds for type parameters
+    // Set bounds for type parameters
 
-		// Add supertypes to classes
+    // Add supertypes to classes
 
-		// Initialize classes and features; add operations and parameters
-		initEClass(seminarEClass, Seminar.class, "Seminar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSeminar_Supervisors(), this.getSupervisor(), null, "supervisors", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSeminar_Students(), this.getStudent(), null, "students", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSeminar_Topics(), this.getTopic(), null, "topics", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSeminar_Preferences(), this.getPreference(), null, "preferences", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSeminar_Ratings(), this.getRating(), null, "ratings", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSeminar_Supervises(), this.getSupervise(), null, "supervises", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSeminar_Assignments(), this.getAssignment(), null, "assignments", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    // Initialize classes and features; add operations and parameters
+    initEClass(seminarEClass, Seminar.class, "Seminar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSeminar_Name(), ecorePackage.getEString(), "name", null, 0, 1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSeminar_Supervisors(), this.getSupervisor(), null, "supervisors", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSeminar_Students(), this.getStudent(), null, "students", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSeminar_Topics(), this.getTopic(), null, "topics", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSeminar_Preferences(), this.getPreference(), null, "preferences", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSeminar_Ratings(), this.getRating(), null, "ratings", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSeminar_Supervises(), this.getSupervise(), null, "supervises", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSeminar_Assignments(), this.getAssignment(), null, "assignments", null, 0, -1, Seminar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(supervisorEClass, Supervisor.class, "Supervisor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSupervisor_Name(), ecorePackage.getEString(), "name", null, 0, 1, Supervisor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(supervisorEClass, Supervisor.class, "Supervisor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSupervisor_Name(), ecorePackage.getEString(), "name", null, 0, 1, Supervisor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(studentEClass, Student.class, "Student", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getStudent_Name(), ecorePackage.getEString(), "name", null, 0, 1, Student.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(studentEClass, Student.class, "Student", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getStudent_Name(), ecorePackage.getEString(), "name", null, 0, 1, Student.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(topicEClass, Topic.class, "Topic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTopic_Name(), ecorePackage.getEString(), "name", null, 0, 1, Topic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(topicEClass, Topic.class, "Topic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTopic_Name(), ecorePackage.getEString(), "name", null, 0, 1, Topic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(preferenceEClass, Preference.class, "Preference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPreference_Student(), this.getStudent(), null, "student", null, 0, 1, Preference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPreference_Topics(), this.getTopic(), null, "topics", null, 0, -1, Preference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(preferenceEClass, Preference.class, "Preference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getPreference_Student(), this.getStudent(), null, "student", null, 0, 1, Preference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPreference_Topics(), this.getTopic(), null, "topics", null, 0, -1, Preference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(ratingEClass, Rating.class, "Rating", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRating_Student(), this.getStudent(), null, "student", null, 0, 1, Rating.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRating_Topic(), this.getTopic(), null, "topic", null, 0, 1, Rating.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRating_Rating(), ecorePackage.getEDouble(), "rating", null, 0, 1, Rating.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(ratingEClass, Rating.class, "Rating", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRating_Student(), this.getStudent(), null, "student", null, 0, 1, Rating.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRating_Topic(), this.getTopic(), null, "topic", null, 0, 1, Rating.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRating_Rating(), ecorePackage.getEDouble(), "rating", null, 0, 1, Rating.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(superviseEClass, Supervise.class, "Supervise", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSupervise_Supervisor(), this.getSupervisor(), null, "supervisor", null, 0, 1, Supervise.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSupervise_Topic(), this.getTopic(), null, "topic", null, 0, 1, Supervise.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(superviseEClass, Supervise.class, "Supervise", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSupervise_Supervisor(), this.getSupervisor(), null, "supervisor", null, 0, 1, Supervise.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSupervise_Topic(), this.getTopic(), null, "topic", null, 0, 1, Supervise.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(assignmentEClass, Assignment.class, "Assignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAssignment_Student(), this.getStudent(), null, "student", null, 0, 1, Assignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAssignment_Topic(), this.getTopic(), null, "topic", null, 0, 1, Assignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(assignmentEClass, Assignment.class, "Assignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAssignment_Student(), this.getStudent(), null, "student", null, 0, 1, Assignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAssignment_Topic(), this.getTopic(), null, "topic", null, 0, 1, Assignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		// Create resource
-		createResource(eNS_URI);
-	}
+    // Create resource
+    createResource(eNS_URI);
+  }
 
 } //SeminarPackageImpl

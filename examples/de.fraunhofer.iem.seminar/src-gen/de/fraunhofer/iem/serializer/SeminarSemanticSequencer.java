@@ -131,11 +131,12 @@ public class SeminarSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *
 	 * Constraint:
 	 *     (
-	 *         supervisors+=Supervisor? 
-	 *         (supervisors+=Supervisor? supervisors+=Supervisor?)* 
+	 *         name=ID 
+	 *         (supervisors+=Supervisor | supervisors+=Supervisor)* 
 	 *         students+=Student? 
 	 *         (students+=Student? students+=Student?)* 
-	 *         (topics+=Topic | topics+=Topic)* 
+	 *         topics+=Topic? 
+	 *         (topics+=Topic? topics+=Topic?)* 
 	 *         preferences+=Preference* 
 	 *         ratings+=Rating* 
 	 *         supervises+=Supervise* 
