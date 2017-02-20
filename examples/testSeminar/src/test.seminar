@@ -1,0 +1,6 @@
+supervisors:Uwe,Stefan;
+students:Mark, Sven;
+topics:test, test2, bla;
+Mark prefers test2;
+Sven prefers bla;
+Uwe supervises test;

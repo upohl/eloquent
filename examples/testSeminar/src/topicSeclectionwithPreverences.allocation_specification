@@ -1,0 +1,23 @@
+testSpecificationName {
+
+	nameProvider 'org.muml.psm.allocation.language.xtext.provider.SeminarNameProvider';
+	storageProvider 'org.muml.psm.allocation.language.xtext.provider.SeminarStorageProvider';
+	oclContext seminar::Seminar;
+	import 'http://www.fraunhofer.de/iem/Seminar'
+	relation {
+		descriptors (first : seminar::Student, second : seminar::Topic);
+		lower 1;
+		upper 1;
+		ocl self.students->product(self.topics);
+	}
+	
+	constraint requiredLocation considerStudentsPreverences 
+	{
+		descriptors (first : seminar::Student, second : seminar::Topic);
+		ocl 	
+				self.preferences->collect( a | 
+					Tuple{first=a.student,
+				second=a.topic})->asSet()
+			;
+	}
+}
