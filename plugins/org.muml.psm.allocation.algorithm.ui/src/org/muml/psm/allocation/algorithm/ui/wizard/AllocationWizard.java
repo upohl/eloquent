@@ -333,7 +333,7 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
 				@Override
 				public String wizardPageGetSourceFileExtension() {
 					// XXX: fix export wizard code for this
-					return null;
+					return "*";
 				}
 
 				@Override
