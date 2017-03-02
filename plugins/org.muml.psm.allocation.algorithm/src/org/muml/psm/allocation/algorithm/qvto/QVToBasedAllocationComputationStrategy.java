@@ -18,9 +18,6 @@ public class QVToBasedAllocationComputationStrategy<V> implements
 	
 	private final String transformationURI;
 	
-	private static final String unexpectedResultSize =
-			"Expected exactly one transformation result";
-	
 	protected QVToBasedAllocationComputationStrategy(String transformationURI) {
 		this.transformationURI = transformationURI;
 	}
@@ -42,9 +39,8 @@ public class QVToBasedAllocationComputationStrategy<V> implements
 		ExecutionDiagnostic executionDiagnostic =
 				runner.runTransformation(progressMonitor);
 		BasicDiagnostic rootDiagnostic = createDiagnostic(executionDiagnostic);
-		checkResult(rootDiagnostic, runner);
 		EObject result = null;
-		if (rootDiagnostic.getSeverity() == Diagnostic.OK) {
+		if (runner.getOutExtent().getContents().size() == 1) {
 			result = runner.getOutExtent()
 					.getContents().get(0);
 		}
@@ -72,21 +68,6 @@ public class QVToBasedAllocationComputationStrategy<V> implements
 	
 	private static BasicDiagnostic createDiagnostic(int severity, @Nullable String message) {
 		return new BasicDiagnostic(severity, null, 0, null, null);
-	}
-	
-	/**
-	 * Checks the result of the QVTo transformation. All problems are
-	 * added to the passed rootDiagnostic.
-	 * 
-	 * @param rootDiagnostic	the root diagnostic
-	 * @param runner			the qvto transformation runner
-	 */
-	private static void checkResult(@NonNull BasicDiagnostic rootDiagnostic,
-			@NonNull QVToSingleOutExtentTransformationRunner runner) {
-		if (runner.getOutExtent().getContents().size() != 1) {
-			rootDiagnostic.add(
-					createDiagnostic(Diagnostic.ERROR, unexpectedResultSize));
-		}
 	}
 
 }
