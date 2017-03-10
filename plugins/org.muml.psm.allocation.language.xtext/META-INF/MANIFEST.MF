@@ -28,7 +28,7 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.jdt.launching;bundle-version="3.8.100",
  org.eclipse.debug.core;bundle-version="3.10.100",
  org.muml.psm;bundle-version="1.0.0",
- de.fraunhofer.iem.seminar;bundle-version="1.0.0"
+ org.eclipse.pde.core;bundle-version="3.11.0"
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

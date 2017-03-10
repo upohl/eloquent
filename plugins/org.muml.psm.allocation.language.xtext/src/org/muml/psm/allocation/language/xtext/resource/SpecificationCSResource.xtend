@@ -40,7 +40,7 @@ class SpecificationCSResource extends CompleteOCLCSResource {
 			} else if (uri.isPlatformPlugin) {
 				val Bundle bundle = Platform.getBundle(uri.segment(1))
 				if (bundle != null) {
-					classLoader = new BundleClassLoader(bundle)
+					classLoader = new BundleClassLoader(bundle, this.class.classLoader)
 					//println("bundle found: " + bundle.symbolicName)
 				}
 			}

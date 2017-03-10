@@ -14,7 +14,8 @@ class BundleClassLoader extends ClassLoader {
 	private static final String bundleNull = "bundle must not be null"
 	private Bundle bundle
 	
-	new(Bundle bundle) {
+	new(Bundle bundle, ClassLoader parent) {
+		super(parent)
 		if (bundle == null) {
 			throw new IllegalArgumentException(bundleNull)
 		}
