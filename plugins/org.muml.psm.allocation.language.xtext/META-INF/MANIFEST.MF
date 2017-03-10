@@ -15,10 +15,8 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.xtext.util,
  org.antlr.runtime,
  org.eclipse.xtext.common.types,
- org.muml.pim,
  org.eclipse.jdt.annotation;bundle-version="2.0.100",
  org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional,
- org.muml.pm.hardware;bundle-version="1.0.0",
  org.eclipse.xtext.xbase.lib,
  org.eclipse.ocl.xtext.essentialocl;bundle-version="1.0.0",
  org.eclipse.ocl.xtext.completeocl;bundle-version="1.0.0",
@@ -27,8 +25,8 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.emf.ecore;bundle-version="2.12.0",
  org.eclipse.jdt.launching;bundle-version="3.8.100",
  org.eclipse.debug.core;bundle-version="3.10.100",
- org.muml.psm;bundle-version="1.0.0",
- org.eclipse.pde.core;bundle-version="3.11.0"
+ org.eclipse.pde.core;bundle-version="3.11.0",
+ org.muml.psm;bundle-version="1.0.0"
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

@@ -10,7 +10,7 @@ Require-Bundle: org.eclipse.m2m.qvt.oml;bundle-version="3.4.0",
  org.muml.psm.allocation.ilp.lpsolve.xtext;bundle-version="1.0.0",
  org.muml.psm.allocation.algorithm;bundle-version="1.0.0",
  org.eclipse.jdt.annotation;bundle-version="2.0.100",
- org.muml.psm;bundle-version="0.4.0",
  org.muml.psm.allocation.algorithm.ilp;bundle-version="1.0.0",
- org.eclipse.core.runtime;bundle-version="3.11.1"
+ org.eclipse.core.runtime;bundle-version="3.11.1",
+ org.muml.core.common;bundle-version="1.0.0"
 Export-Package: org.muml.psm.allocation.algorithm.ilp.lpsolve
