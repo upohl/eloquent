@@ -5,8 +5,8 @@ import org.muml.pim.instance.ComponentInstanceConfiguration;
 import org.muml.pm.hardware.hwplatforminstance.HWPlatformInstanceConfiguration;
 import org.muml.psm.allocation.algorithm.qvto.QVToTransformationRunner;
 import org.muml.psm.allocation.algorithm.tests.qvto.QVToTransformationSingleOutExtentTest;
-import org.muml.psm.allocation.language.oclcontext.OCLContext;
-import org.muml.psm.allocation.language.oclcontext.OclcontextFactory;
+import org.muml.psm.allocation.context.muml.oclcontext.OCLContext;
+import org.muml.psm.allocation.context.muml.oclcontext.OclcontextFactory;
 
 /**
  * Base class for MUML specific tests.
