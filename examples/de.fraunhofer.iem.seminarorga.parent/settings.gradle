@@ -1,0 +1,3 @@
+include 'de.fraunhofer.iem.seminarorga'
+include 'de.fraunhofer.iem.seminarorga.ide'
+include 'de.fraunhofer.iem.seminarorga.web'
