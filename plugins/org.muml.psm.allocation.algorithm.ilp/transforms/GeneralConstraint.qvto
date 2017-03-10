@@ -1,5 +1,4 @@
 import Expressions;
-import HWUtil;
 import OCLEvaluator;
 import TupleAccessor;
 import VariableHelper;
