@@ -1,4 +1,4 @@
-package org.muml.psm.allocation.language.xtext.provider
+package de.fraunhofer.iem.provider
 
 import de.fraunhofer.iem.seminar.Assignment
 import de.fraunhofer.iem.seminar.Seminar
