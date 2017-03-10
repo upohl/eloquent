@@ -11,7 +11,6 @@ import VariableHelper;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype allocationSpecificationCS uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
-modeltype oclcontext uses oclcontext('http://www.muml.org/psm/allocation/language/oclcontext/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
 modeltype ecore uses ecore('http://www.eclipse.org/emf/2002/Ecore');
 
