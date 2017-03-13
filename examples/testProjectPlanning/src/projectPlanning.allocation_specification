@@ -1,0 +1,64 @@
+testSpecificationName2 {
+	include 'helper.ocl'
+	nameProvider 'de.fraunhofer.iem.provider.ProjectPlanningNameProvider';
+	storageProvider 'de.fraunhofer.iem.provider.ProjectPlanningStorageProvider';
+	oclContext projectPlanning::ProjectPlan;
+	import 'http://www.fraunhofer.de/iem/ProjectPlanning'
+	relation {
+		descriptors (first : projectPlanning::Project, second : projectPlanning::Employee);
+		lower 1;
+		upper 1;
+		ocl self.projects->product(self.employees);
+	}
+	
+	
+	
+	constraint requiredLocation considerAllEmployeesCapabilties 
+	{
+	descriptors (first : projectPlanning::Project, second :  projectPlanning::Employee);
+		ocl 
+		self.projects->product(self.employees)
+		->select(first.requiresCapabilities->asSet()->forAll(capability| second.hasCapabilities->asSet()->includes(capability)))
+		;
+	}
+	
+	
+--		constraint requiredLocation considerAtleastOneEmployeesCapabilty 
+--	{
+--	descriptors (first : projectPlanning::Project, second :  projectPlanning::Employee);
+--		ocl 
+		--employee must fulfill at least one required capabilty	
+--			self.projects->product(self.employees)
+--		->select(second.hasCapabilities.name->intersection(first.requiresCapabilities.name)->notEmpty())->asSet();
+	
+--	}
+	
+	constraint requiredResource considerEmployeesResources
+	{
+		weight  projectResources ;
+		bound employeeResources ;
+		descriptors (project : projectPlanning::Project, employee :  projectPlanning::Employee);
+		ocl self.maxResourceConsumption();
+	}
+
+	
+	service capabiltiesFavorites{
+		qos ratings{
+			weight ratings;
+			descriptors (first:projectPlanning::Project, second: projectPlanning::Employee);
+			ocl 
+			let employees : Set(projectPlanning::Employee) = self.employees->asSet()
+			in
+			self.projects->product(employees)->collect(t |
+				Tuple{
+					first=t.first,
+					second=t.second,
+					ratings= let collect = t.first.requiresCapabilities->asSet()->intersection(t.second.ratings.capability->asSet())->asSet() in t.second.ratings->iterate(rating; s : Integer = 0| if collect->includes(rating.capability) then s + rating.rating else s  endif)
+				}
+			)->asSet();
+	}
+	}
+	
+max measure capabiltiesFavorites;		
+}
+

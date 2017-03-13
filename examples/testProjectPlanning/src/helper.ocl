@@ -1,0 +1,34 @@
+import 'http://www.fraunhofer.de/iem/ProjectPlanning'
+
+
+context projectPlanning::ProjectPlan
+
+	def: maxResourceConsumption() : Set(
+			Tuple(
+				projectResources : Set(
+						Tuple(
+							project : projectPlanning::Project,
+							employee : projectPlanning::Employee,
+							projectResources : Real							
+						)
+				),
+				employeeResources : Real
+			)
+		)
+			=
+			let projects : Set(projectPlanning::Project) = self.projects->asSet()
+			in
+			self.employees->collect(employee |
+				Tuple{
+					employeeResources = employee.hasResource ,
+					projectResources = projects->product(employee->asSet())->collect(t |
+						Tuple {
+							project = t.first,
+							employee = t.second,
+							projectResources = t.first.requiresResources
+						}
+					)->asSet()
+				}
+			)->asSet()
+	
+

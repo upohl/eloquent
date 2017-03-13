@@ -1,0 +1,37 @@
+capabilities: RequirmentEngineering, FuSi, UML, SystemsEngineering, Modeling, Security, C, Java, ConditionMonitoring;
+employees:  
+Uwe:
+	hasResources:3 
+	hasCapabilities: Modeling, UML, Java, C, UML, SystemsEngineering;
+Joerg: 
+	hasResources:2  
+	hasCapabilities:  RequirmentEngineering, SystemsEngineering, UML  
+	ratesCapabilities: UML=3,RequirmentEngineering=1,SystemsEngineering=2;
+Markus: 
+	hasResources:1  
+	hasCapabilities: RequirmentEngineering, UML, FuSi  
+	ratesCapabilities: UML=4,RequirmentEngineering=1,FuSi=2;
+Stefan: 
+	hasResources:4 
+	hasCapabilities: ConditionMonitoring, Java, Security 
+	ratesCapabilities: Security=5,ConditionMonitoring=1,Java=2;
+Sven: 
+	hasResources:3  
+	hasCapabilities: Security
+	ratesCapabilities: Security=3;
+Faruk:
+	hasResources:3
+	hasCapabilities: ConditionMonitoring, Java 
+	ratesCapabilities: ConditionMonitoring=3, Java=1;
+projects: 
+Dibold: 
+	requiresResources:3  
+	requiresCapabilities: ConditionMonitoring, Java;
+Daimler: 
+	requiresResources:1 
+	requiresCapabilities: UML, SystemsEngineering;
+JanzTec:
+	requiresResources:1 
+	requiresCapabilities: Security;
+
+Daimler is assigned to Joerg ; Dibold is assigned to Faruk ; JanzTec is assigned to Stefan ;
