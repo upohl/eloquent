@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="projectPlanning" nsURI="http://www.fraunhofer.de/iem/ProjectPlanning"
+    nsPrefix="projectPlanning">
+  <eClassifiers xsi:type="ecore:EClass" name="ProjectPlan">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capabilities" upperBound="-1"
+        eType="#//Capability" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="employees" upperBound="-1"
+        eType="#//Employee" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projects" upperBound="-1"
+        eType="#//Project" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ratings" upperBound="-1"
+        eType="#//Rating" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assignments" upperBound="-1"
+        eType="#//Assignment" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Project">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiresResources" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiresCapabilities" unique="false"
+        upperBound="-1" eType="#//Capability"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Employee">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasResource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasCapabilities" unique="false"
+        upperBound="-1" eType="#//Capability"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ratings" upperBound="-1"
+        eType="#//Rating" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Capability">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rating">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capability" eType="#//Capability"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rating" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Assignment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="project" eType="#//Project"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="employee" eType="#//Employee"/>
+  </eClassifiers>
+</ecore:EPackage>

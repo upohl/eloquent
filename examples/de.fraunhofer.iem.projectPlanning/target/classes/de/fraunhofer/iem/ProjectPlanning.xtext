@@ -1,0 +1,43 @@
+grammar de.fraunhofer.iem.ProjectPlanning with org.eclipse.xtext.common.Terminals
+
+generate projectPlanning "http://www.fraunhofer.de/iem/ProjectPlanning"
+
+ProjectPlan:
+	('capabilities:'capabilities+=Capability*(','+ capabilities+=Capability)*';')
+	('employees:'employees+=Employee*(','+ employees+=Employee)*)
+	('projects:'projects+=Project*(','+ projects+=Project)*)
+
+	ratings+=Rating*
+	assignments+=Assignment*
+	;
+	
+	
+Project:
+	name=ID':'
+	('requiresResources:' requiresResources=INT)	
+	('requiresCapabilities:' requiresCapabilities+=[Capability]*(','+ requiresCapabilities+=[Capability])*)?';'
+	
+	
+;
+Employee:
+	name=ID':'
+	('hasResources:' hasResource=INT)
+	('hasCapabilities:' hasCapabilities+=[Capability]*(','+ hasCapabilities+=[Capability])*)?
+	('ratesCapabilities:' (ratings+=Rating)*(','+ ratings+=Rating)*)?';'
+;
+
+Capability:
+	name=ID
+;
+
+
+Rating:
+	  capability=[Capability] '=' rating=INT
+;
+
+
+Assignment:
+	 project=[Project] 'is' 'assigned' 'to' employee=[Employee]';'
+;
+	
+	
