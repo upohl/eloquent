@@ -32,13 +32,6 @@
             genModel="model/LanguageSpecificationCS.genmodel"/>
    </extension>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated OCLContext -->
-      <package
-            uri="http://www.muml.org/psm/allocation/language/oclcontext/1.0.0"
-            class="org.muml.psm.allocation.language.oclcontext.OclcontextPackage"
-            genModel="model/OCLContext.genmodel"/>
-   </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated LanguageSpecificationAS -->

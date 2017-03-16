@@ -13,6 +13,7 @@ package	org.muml.psm.allocation.language.cs.util;
 import org.eclipse.jdt.annotation.NonNull;
 
 /**
+ * @noimplement This interface is not intended to be implemented by clients.
  */
 public interface LanguageSpecificationCSVisitor<R> extends org.eclipse.ocl.xtext.completeoclcs.util.CompleteOCLCSVisitor<R>
 {

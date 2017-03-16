@@ -26,6 +26,6 @@ Workflow {
 	}
 	component = URIAwareGenerateModel {
 		resourceSet = resourceSet
-		genModel = "platform:/resource/org.muml.psm.allocation.language/model/OCLContext.genmodel"
+		genModel = "platform:/resource/org.muml.psm.allocation.context.muml/model/OCLContext.genmodel"
 	}
 }

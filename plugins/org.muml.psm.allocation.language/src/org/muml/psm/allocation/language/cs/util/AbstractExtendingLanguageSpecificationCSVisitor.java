@@ -25,12 +25,12 @@ public abstract class AbstractExtendingLanguageSpecificationCSVisitor<R, C>
 {
 	/**
 	 * Initializes me with an initial value for my result.
-	 * 
+	 *
 	 * @param context my initial result value
 	 */
 	protected AbstractExtendingLanguageSpecificationCSVisitor(C context) {
 		super(context);
-	}	
+	}
 
 	@Override
 	public R visitBoundCS(org.muml.psm.allocation.language.cs.@NonNull BoundCS object) {

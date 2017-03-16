@@ -1,9 +1,9 @@
 testSpecificationName {
 
-	nameProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLNameProvider';
-	storageProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLStorageProvider';
+	nameProvider 'org.muml.psm.allocation.context.muml.provider.MUMLNameProvider';
+	storageProvider 'org.muml.psm.allocation.context.muml.provider.MUMLStorageProvider';
 	oclContext oclcontext::OCLContext;
-	import 'http://www.muml.org/psm/allocation/language/oclcontext/1.0.0'
+	import 'http://www.muml.org/psm/allocation/context/muml/oclcontext/1.0.0'
 	
 	relation alloc {
 		descriptors (first : pim::instance::ComponentInstance, second : hardware::hwresourceinstance::ResourceInstance);
