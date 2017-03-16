@@ -2,12 +2,4 @@
 <?eclipse version="3.4"?>
 <plugin>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated extension -->
-      <package
-            uri="http://www.muml.org/psm/allocation/algorithm/ilp/tests/extension/1.0.0"
-            class="org.muml.psm.allocation.algorithm.ilp.tests.extension.ExtensionPackage"
-            genModel="fixtures/metamodelImport/model/extension.genmodel"/>
-   </extension>
-
 </plugin>

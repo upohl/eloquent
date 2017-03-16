@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<allocation:SystemAllocation
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:allocation="http://www.muml.org/psm/allocation/1.0.0">
-  <cic href="../models/simple.fujaba#_bwQB8PZaEeOJBJMtyzAqyw"/>
-  <hpic href="../models/simple.fujaba#_sItMMDFNEeWcy9nhHDkKYg"/>
-</allocation:SystemAllocation>

@@ -7,9 +7,6 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: org.muml.psm.allocation.algorithm.ilp.tests.extension,
- org.muml.psm.allocation.algorithm.ilp.tests.extension.impl,
- org.muml.psm.allocation.algorithm.ilp.tests.extension.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;bundle-version="2.10.1";visibility:=reexport,
  org.muml.core;bundle-version="1.0.0";visibility:=reexport,
