@@ -7,7 +7,7 @@
 			class="de.fraunhofer.iem.ui.ProjectPlanningExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
 			contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
 			default="true"
-			extensions="project"
+			extensions="projectplan"
 			id="de.fraunhofer.iem.ProjectPlanning"
 			name="ProjectPlanning Editor">
 		</editor>
@@ -209,13 +209,13 @@
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
 			class="de.fraunhofer.iem.ui.ProjectPlanningExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
-			type="project">
+			type="projectplan">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
 		<resourceServiceProvider
 			class="de.fraunhofer.iem.ui.ProjectPlanningExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
-			uriExtension="project">
+			uriExtension="projectplan">
 		</resourceServiceProvider>
 	</extension>
 	<!-- marker definitions for de.fraunhofer.iem.ProjectPlanning -->
@@ -243,7 +243,7 @@
 	<extension point="org.eclipse.xtext.builder.participant">
 		<participant
 			class="de.fraunhofer.iem.ui.ProjectPlanningExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
-			fileExtensions="project"/>
+			fileExtensions="projectplan"/>
 	</extension>
 	<extension point="org.eclipse.ui.preferencePages">
 		<page
@@ -386,24 +386,24 @@
 	<extension point="org.eclipse.compare.contentViewers">
 		<viewer id="de.fraunhofer.iem.ProjectPlanning.compare.contentViewers"
 			class="de.fraunhofer.iem.ui.ProjectPlanningExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-			extensions="project">
+			extensions="projectplan">
 		</viewer>
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
 		<viewer id="de.fraunhofer.iem.ProjectPlanning.compare.contentMergeViewers"
 			class="de.fraunhofer.iem.ui.ProjectPlanningExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-			extensions="project" label="ProjectPlanning Compare">
+			extensions="projectplan" label="ProjectPlanning Compare">
 		</viewer>
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
 		<provider id="de.fraunhofer.iem.ProjectPlanning.editors.documentProviders"
 			class="de.fraunhofer.iem.ui.ProjectPlanningExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
-			extensions="project">
+			extensions="projectplan">
 		</provider>
 	</extension>
 	<extension point="org.eclipse.team.core.fileTypes">
 		<fileTypes
-			extension="project"
+			extension="projectplan"
 			type="text">
 		</fileTypes>
 	</extension>
