@@ -14,7 +14,7 @@ import org.eclipse.ocl.pivot.internal.utilities.PivotUtilInternal
 import org.eclipse.ocl.pivot.values.TemplateParameterSubstitutions
 import org.muml.psm.allocation.language.^as.Bound
 import org.muml.psm.allocation.language.^as.CoherenceConstraint
-import org.muml.psm.allocation.language.^as.EvaluatableElement
+import org.muml.psm.allocation.language.^as.EvaluableElement
 import org.muml.psm.allocation.language.^as.LocationConstraint
 import org.muml.psm.allocation.language.^as.QoSDimension
 import org.muml.psm.allocation.language.^as.Relation
@@ -193,7 +193,7 @@ class TypesUtil {
 	
 	// for convenience:
 	
-	static def dispatch createType(EvaluatableElement element) {
+	static def dispatch createType(EvaluableElement element) {
 		throw new IllegalArgumentException("unexpected element: " + element)
 	}
 	

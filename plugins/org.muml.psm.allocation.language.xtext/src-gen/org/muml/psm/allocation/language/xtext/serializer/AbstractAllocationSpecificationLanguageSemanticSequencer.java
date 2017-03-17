@@ -557,8 +557,8 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 */
 	protected void sequence_LowerBound(ISerializationContext context, BoundCS semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.EVALUABLE_ELEMENT_CS__EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.EVALUABLE_ELEMENT_CS__EXPRESSION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getLowerBoundAccess().getExpressionModelParserRuleCall_1_0(), semanticObject.getExpression());
@@ -627,8 +627,8 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BaseCSPackage.Literals.NAMED_ELEMENT_CS__NAME));
 			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.QO_SDIMENSION_CS__TUPLE_DESCRIPTOR) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.QO_SDIMENSION_CS__TUPLE_DESCRIPTOR));
-			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.EVALUABLE_ELEMENT_CS__EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.EVALUABLE_ELEMENT_CS__EXPRESSION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getQosDimensionAccess().getNameIDParserRuleCall_1_0(), semanticObject.getName());
@@ -779,8 +779,8 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 */
 	protected void sequence_UpperBound(ISerializationContext context, BoundCS semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.EVALUABLE_ELEMENT_CS__EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.EVALUABLE_ELEMENT_CS__EXPRESSION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getUpperBoundAccess().getExpressionModelParserRuleCall_1_0(), semanticObject.getExpression());

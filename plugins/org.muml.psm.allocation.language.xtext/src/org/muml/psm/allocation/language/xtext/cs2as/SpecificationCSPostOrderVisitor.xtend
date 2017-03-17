@@ -10,10 +10,10 @@ import org.eclipse.ocl.xtext.base.cs2as.Continuation
 import org.eclipse.ocl.xtext.base.cs2as.Dependency
 import org.eclipse.ocl.xtext.base.cs2as.SingleContinuation
 import org.muml.psm.allocation.language.cs.ConstraintCS
-import org.muml.psm.allocation.language.cs.EvaluatableElementCS
+import org.muml.psm.allocation.language.cs.EvaluableElementCS
 import org.muml.psm.allocation.language.cs.QoSDimensionCS
-import org.muml.psm.allocation.language.xtext.visitor.LanguageSpecificationCSPostOrderVisitor
 import org.muml.psm.allocation.language.cs.RelationCS
+import org.muml.psm.allocation.language.xtext.visitor.LanguageSpecificationCSPostOrderVisitor
 
 class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVisitor {
 	
@@ -21,10 +21,10 @@ class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVi
 		super(context)
 	}
 	
-	protected static class PreContextCSCompletion extends SingleContinuation<EvaluatableElementCS> {
+	protected static class PreContextCSCompletion extends SingleContinuation<EvaluableElementCS> {
 		private static final String MISSING_ContextCSCompletion = "Expected an instance of type ContextCSCompletion in %s"
 		
-		new(CS2ASConversion context, EvaluatableElementCS csElement) {
+		new(CS2ASConversion context, EvaluableElementCS csElement) {
 			super(context, null, null, csElement, Collections.<Dependency>emptyList)
 		}
 
@@ -54,13 +54,13 @@ class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVi
 		}
 	}
 	
-	override public Continuation<?> visitEvaluatableElementCS(/*@NonNull*/ EvaluatableElementCS csElement) {
+	override public Continuation<?> visitEvaluableElementCS(/*@NonNull*/ EvaluableElementCS csElement) {
 		new PreContextCSCompletion(context, csElement)
 	}
 	
 	override public Continuation<?> visitRelationCS(/*@NonNull*/ RelationCS csElement) {
 		super.visitRelationCS(csElement)
-		visitEvaluatableElementCS(csElement)
+		visitEvaluableElementCS(csElement)
 	}
 	
 	override public Continuation<?> visitConstraintCS(/*@NonNull*/ ConstraintCS csElement) {
@@ -69,14 +69,14 @@ class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVi
 		super.visitConstraintCS(csElement)
 		// no idea why xtend insists on this explicit type cast
 		// (even if we omit it, the generated java code is correct)
-		visitEvaluatableElementCS(csElement as EvaluatableElementCS)		
+		visitEvaluableElementCS(csElement as EvaluableElementCS)		
 	}
 	
 	override public Continuation<?> visitQoSDimensionCS(/*@NonNull*/ QoSDimensionCS csElement) {
 		// this should not return a Continuation (it should
 		// end up with a call to visitNamedElement)
 		super.visitQoSDimensionCS(csElement)
-		visitEvaluatableElementCS(csElement as EvaluatableElementCS)
+		visitEvaluableElementCS(csElement as EvaluableElementCS)
 	}
 	
 }

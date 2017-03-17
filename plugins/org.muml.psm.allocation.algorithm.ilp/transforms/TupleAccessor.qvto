@@ -9,21 +9,21 @@ library TupleAccessor;
 
 helper OclAny::asTupleValueSequence() : Sequence(TupleValue) {
 	log("asTupleValueSequence called for: " + self.toString());
-	var evaluatableElement : EvaluatableElement := self.resolveone(EvaluatableElement);
-	log(evaluatableElement.toString());
-	assert fatal (not evaluatableElement.oclIsUndefined()) with log("no OCLEvaluator::createTrace call?");
+	var evaluableElement : EvaluableElement := self.resolveone(EvaluableElement);
+	log(evaluableElement.toString());
+	assert fatal (not evaluableElement.oclIsUndefined()) with log("no OCLEvaluator::createTrace call?");
 	var res : Sequence(TupleValue) := convertToTupleValueSequence(self);
-	evaluatableElement.createTrace(res);
+	evaluableElement.createTrace(res);
 	return res;
 }
 
--- we need to associate each tuple value with the evaluatable element
-helper EvaluatableElement::createTrace(tupleValues : Sequence(TupleValue)) {
+-- we need to associate each tuple value with the evaluable element
+helper EvaluableElement::createTrace(tupleValues : Sequence(TupleValue)) {
 	createTrace(self, tupleValues);
 }
 
 -- here we do the same, but also each "inner" tuple value is associated
--- with the evaluatable element
+-- with the evaluable element
 helper ResourceConstraint::createTrace(tupleValues : Sequence(TupleValue)) {
 	-- do this first, otherwise the tv.getSequence call below fails
 	-- (which is, of course, expected)
@@ -34,35 +34,35 @@ helper ResourceConstraint::createTrace(tupleValues : Sequence(TupleValue)) {
 		)->collect(oclAsType(TupleValue)));
 }
 
--- associate each tuple value in tupleValues with the passed evaluatableElement
-helper createTrace(evaluatableElement : EvaluatableElement, tupleValues : Sequence(TupleValue)) {
-	tupleValues->map OCLEvaluator::createTrace(evaluatableElement);
+-- associate each tuple value in tupleValues with the passed evaluableElement
+helper createTrace(evaluableElement : EvaluableElement, tupleValues : Sequence(TupleValue)) {
+	tupleValues->map OCLEvaluator::createTrace(evaluableElement);
 }
 
 helper TupleValue::get(namedPart : String) : OclAny {
 	//log("resolve call: ");res.
 	log("TupleValue::get called");
-	var evaluatableElement : EvaluatableElement := self.resolveone(EvaluatableElement);
+	var evaluableElement : EvaluableElement := self.resolveone(EvaluableElement);
 	//log(source.toString());
-	return getPart(self, namedPart, evaluatableElement);
+	return getPart(self, namedPart, evaluableElement);
 }
 
 helper TupleValue::getSequence(namedPart : String) : Sequence(TupleValue) {
-	var evaluatableElement : EvaluatableElement := self.resolveone(EvaluatableElement);
-	return getSequencePart(self, namedPart, evaluatableElement);
+	var evaluableElement : EvaluableElement := self.resolveone(EvaluableElement);
+	return getSequencePart(self, namedPart, evaluableElement);
 }
 
 query TupleValue::toSequence() : Sequence(OclAny) {
-	// it might be possible that evaluatableElement is not the
-	// evaluatableElement we expect: evaluatableElement might
+	// it might be possible that evaluableElement is not the
+	// evaluableElement we expect: evaluableElement might
 	// be a previously transformed constraint. This is no problem,
 	// because the toSequence call will return the _expected_ sequence.
 	// Alternatively, we can fix this be doing an resolve(...)->last() or
 	// ->first() (to be investigated) to get the "correct"/expected constraint
 	// (implicit assumption: the tuple value is only accessed during the transformation
 	// of the constraint)
-	var evaluatableElement : EvaluatableElement := self.resolveone(EvaluatableElement);
-	return evaluatableElement.toSequence(self);
+	var evaluableElement : EvaluableElement := self.resolveone(EvaluableElement);
+	return evaluableElement.toSequence(self);
 }
 
 query Relation::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
@@ -91,7 +91,7 @@ query LocationConstraint::toSequence(tupleValue : TupleValue) : Sequence(OclAny)
 // Note: it is not possible to generalize the next two queries into
 // WeightingComponentResourceTupleElement::toSequence, because WeightingComponentResourceTupleElement
 // is just a "secondary" superclass in ResourceConstraint' and QoSDimensionConstraint'
-// inheritance hierarchy. As a consequence the "catch-call" EvaluatableElement::toSequence
+// inheritance hierarchy. As a consequence the "catch-call" EvaluableElement::toSequence
 // query is called and the transformation fails. XXX: how does qvto's "linearization" algo work?
 query ResourceConstraint::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
 	// unfortunately we cannot check if tupleValue corresponds to an "inner" tuple
@@ -104,7 +104,7 @@ query QoSDimension::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
 	return self.tupleDescriptor.toSequence(tupleValue);
 }
 
-query EvaluatableElement::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
+query EvaluableElement::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
 	// should not happen
 	assert fatal (false) with log("add element specific ::toSequence mapping for " + self.toString());
 	return null;

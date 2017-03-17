@@ -12,7 +12,7 @@ import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal;
 import org.eclipse.ocl.pivot.internal.utilities.OCLInternal;
 import org.eclipse.ocl.pivot.internal.utilities.PivotUtilInternal;
 import org.eclipse.ocl.pivot.utilities.EnvironmentFactory;
-import org.muml.psm.allocation.language.as.EvaluatableElement;
+import org.muml.psm.allocation.language.as.EvaluableElement;
 
 public class OCLEvaluator {
 	
@@ -56,7 +56,7 @@ public class OCLEvaluator {
 	}
 	
 	@Operation(kind=Kind.QUERY)
-	public static Object evaluateEvaluatableElement(@Nullable EvaluatableElement evaluatableElement, @Nullable Object contextObject) {
+	public static Object evaluateEvaluableElement(@Nullable EvaluableElement evaluatableElement, @Nullable Object contextObject) {
 		if (evaluatableElement == null) {
 			throw new IllegalArgumentException(
 					String.format(nullArgument, "evaluatableElement"));

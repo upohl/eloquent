@@ -28,8 +28,8 @@ import org.eclipse.xtext.Constants
 import org.eclipse.xtext.resource.EObjectAtOffsetHelper
 import org.eclipse.xtext.ui.editor.XtextEditor
 import org.muml.psm.allocation.algorithm.ocl.OCLEvaluator
-import org.muml.psm.allocation.language.^as.EvaluatableElement
-import org.muml.psm.allocation.language.cs.EvaluatableElementCS
+import org.muml.psm.allocation.language.^as.EvaluableElement
+import org.muml.psm.allocation.language.cs.EvaluableElementCS
 import org.muml.psm.allocation.language.xtext.typing.TypesUtil
 
 class AllocationSpecificationLanguageEvaluationView extends ViewPart implements ISelectionListener {
@@ -74,7 +74,7 @@ class AllocationSpecificationLanguageEvaluationView extends ViewPart implements 
 			// see http://www.eclipse.org/community/eclipse_newsletter/2014/august/article4.php
 			evaluatableElementFragmentURI = editor.document.readOnly [ resource |
 				var model = eObjectAtOffsetHelper.resolveContainedElementAt(resource, textSel.offset)
-				while (!(model instanceof EvaluatableElementCS) && model != null) {
+				while (!(model instanceof EvaluableElementCS) && model != null) {
 					model = model.eContainer
 				}
 				if (model != null) {
@@ -88,14 +88,14 @@ class AllocationSpecificationLanguageEvaluationView extends ViewPart implements 
 	private def getEvaluatableElementCS(Resource resource) {
 		if (evaluatableElementFragmentURI != null && editor != null) {
 			resource.getEObject(evaluatableElementFragmentURI)
-		} as EvaluatableElementCS
+		} as EvaluableElementCS
 	}
 		
 	def evaluate() {
 		val StringBuilder builder = new StringBuilder
 		if (editor != null) {
 			val result = editor.document.readOnly [ resource |
-				val element = PivotUtil.getPivot(typeof(EvaluatableElement), resource.getEvaluatableElementCS);				
+				val element = PivotUtil.getPivot(typeof(EvaluableElement), resource.getEvaluatableElementCS);				
 				if (element != null && oclContext != null) {
 					builder.append("Evaluating: " + element.getName + "\n")
 					builder.append("Expected type: " + TypesUtil.createType(element))
@@ -124,7 +124,7 @@ class AllocationSpecificationLanguageEvaluationView extends ViewPart implements 
 		resultTextViewer.document.set(builder.toString)
 	}
 	
-	private def getName(EvaluatableElement element) {
+	private def getName(EvaluableElement element) {
 		if (element instanceof NamedElement) {
 			(element as NamedElement).name
 		} else {

@@ -7,16 +7,16 @@ library OCLEvaluator;
 //blackbox query evaluate(oclExpression : Context, contextObject : OclAny) : OclAny;
 //blackbox query evaluateLocationConstraint(oclExpression : Context, contextObject : OclAny) : OrderedSet(TupleValue);
 
-helper EvaluatableElement::evaluateOCL(contextObject : OclAny) : OclAny {
-	var res : OclAny := evaluateEvaluatableElement(self, contextObject);
+helper EvaluableElement::evaluateOCL(contextObject : OclAny) : OclAny {
+	var res : OclAny := evaluateEvaluableElement(self, contextObject);
 	log("evaluateOCL");
 	res.map createTrace(self);
 	return res;
 }
 
-mapping OclAny::createTrace(evaluatableElement : EvaluatableElement) : EvaluatableElement {
+mapping OclAny::createTrace(evaluableElement : EvaluableElement) : EvaluableElement {
 	init {
-		result := evaluatableElement;
+		result := evaluableElement;
 		log("createTrace called");
 	}
 }

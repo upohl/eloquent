@@ -17,7 +17,7 @@ import org.eclipse.ocl.pivot.values.CollectionValue;
 import org.eclipse.ocl.pivot.values.SetValue;
 import org.eclipse.ocl.pivot.values.TupleValue;
 import org.muml.psm.allocation.language.as.CoherenceConstraint;
-import org.muml.psm.allocation.language.as.EvaluatableElement;
+import org.muml.psm.allocation.language.as.EvaluableElement;
 import org.muml.psm.allocation.language.as.LocationConstraint;
 import org.muml.psm.allocation.language.as.QoSDimension;
 import org.muml.psm.allocation.language.as.Relation;
@@ -29,7 +29,7 @@ public class TupleAccessor {
 	private static final String unexpectedObject = "unexpected object %s";
 	private static final String noTupleValue = "object %s is not a TupleValue instance";
 	
-	private static Object getPart(TupleValue tupleValue, String namedPart, EvaluatableElement elementCS,
+	private static Object getPart(TupleValue tupleValue, String namedPart, EvaluableElement elementCS,
 			TupleType tupleType, boolean unboxValue) {
 		//TupleType tupleType = TypesUtil.createLocationConstraintTupleType(locationConstraintCS);
 		TuplePartId partId = tupleType.getTupleTypeId().getPartId(namedPart);
@@ -84,7 +84,7 @@ public class TupleAccessor {
 			throw new IllegalArgumentException(
 					String.format(unexpectedObject, object));
 		}
-		return getPart(tupleValue, namedPart, (EvaluatableElement) object, tupleType, unboxValue);
+		return getPart(tupleValue, namedPart, (EvaluableElement) object, tupleType, unboxValue);
 	}
 	
 	@Operation(kind=Kind.QUERY)

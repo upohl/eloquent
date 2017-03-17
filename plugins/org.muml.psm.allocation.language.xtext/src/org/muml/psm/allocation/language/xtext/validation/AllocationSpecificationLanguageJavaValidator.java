@@ -8,12 +8,12 @@ import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal;
 import org.eclipse.ocl.pivot.utilities.PivotUtil;
 import org.eclipse.ocl.xtext.essentialoclcs.ContextCS;
 import org.eclipse.xtext.validation.Check;
-import org.muml.psm.allocation.language.as.EvaluatableElement;
+import org.muml.psm.allocation.language.as.EvaluableElement;
 import org.muml.psm.allocation.language.cs.BoundCS;
 import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.CoherenceConstraintCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
-import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
+import org.muml.psm.allocation.language.cs.EvaluableElementCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
 import org.muml.psm.allocation.language.cs.RelationCS;
@@ -99,8 +99,8 @@ public class AllocationSpecificationLanguageJavaValidator extends org.muml.psm.a
 		checkTypes(qosDimensionCS);
 	}
 	
-	private void checkTypes(EvaluatableElementCS elementCS) {
-		EvaluatableElement element = PivotUtil.getPivot(EvaluatableElement.class, elementCS);
+	private void checkTypes(EvaluableElementCS elementCS) {
+		EvaluableElement element = PivotUtil.getPivot(EvaluableElement.class, elementCS);
 		if (element == null) {
 			// this is no "error(...)" but an exceptional situation
 			throw new IllegalStateException(String.format(noPivotElement,
@@ -112,7 +112,7 @@ public class AllocationSpecificationLanguageJavaValidator extends org.muml.psm.a
 		boolean conformsTo = TypesUtil.conformsTo(envFactory, actualType, expectedType);
 		if (!conformsTo) {
 			error(String.format(typeMismatch, expectedType, actualType),
-					CsPackage.Literals.EVALUATABLE_ELEMENT_CS__EXPRESSION);
+					CsPackage.Literals.EVALUABLE_ELEMENT_CS__EXPRESSION);
 		}
 	}
 	
