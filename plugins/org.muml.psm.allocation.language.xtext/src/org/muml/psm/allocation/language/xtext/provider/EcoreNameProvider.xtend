@@ -11,6 +11,7 @@ import org.muml.psm.allocation.language.^as.NameProvider
  */
 class EcoreNameProvider extends EObjectImpl implements NameProvider {
 	private static final String unexpectedArgument = "Expected EObject or subtype (got: %s)"
+	private static final String prefix = "x"
 	private Map<Object, String> elementToNameMap
 	
 	new() {
@@ -31,9 +32,10 @@ class EcoreNameProvider extends EObjectImpl implements NameProvider {
 		name = EcoreUtil.getID(element as EObject)
 		// we could speed this lookup up by maintaining an additional
 		// HashSet...
-		while (elementToNameMap.containsValue(name)) {
+		while (elementToNameMap.containsValue(name) || name == null) {
 			name = EcoreUtil.generateUUID
 		}
+		name = prefix + name
 		elementToNameMap.put(element, name)
 		name
 	}
