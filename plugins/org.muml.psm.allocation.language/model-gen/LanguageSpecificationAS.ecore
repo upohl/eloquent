@@ -110,7 +110,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CoherenceConstraint" eSuperTypes="#//Constraint">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This class either represents a SAME_LOCATION or DIFFERENT_LOCATION&#xA;constraint. A constraint of the type SAME_LOCATION specifies that a set of&#xA;component instances have to be allocated to the same hardware resource&#xA;instance. The DIFFERENT_LOCATION type constraint is the opposite&#xA;of the SAME_LOCATION type."/>
+      <details key="documentation" value="This class either represents a COLLOCATION or SEPARATE_LOCATION&#xA;constraint. A constraint of the type COLLOCATION specifies that two&#xA;&quot;source&quot; elements should be related to the same &quot;target&quot; element.&#xA;A constraint of the type DIFFERENT_LOCATION is the opposite&#xA;of the COLLOCATION type (two &quot;source&quot; elements should be related&#xA;to distinct &quot;target&quot; elements)."/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="exactlyOnePair"/>

@@ -9,11 +9,12 @@ package org.muml.psm.allocation.language.as;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This class either represents a SAME_LOCATION or DIFFERENT_LOCATION
- * constraint. A constraint of the type SAME_LOCATION specifies that a set of
- * component instances have to be allocated to the same hardware resource
- * instance. The DIFFERENT_LOCATION type constraint is the opposite
- * of the SAME_LOCATION type.
+ * This class either represents a COLLOCATION or SEPARATE_LOCATION
+ * constraint. A constraint of the type COLLOCATION specifies that two
+ * "source" elements should be related to the same "target" element.
+ * A constraint of the type DIFFERENT_LOCATION is the opposite
+ * of the COLLOCATION type (two "source" elements should be related
+ * to distinct "target" elements).
  * <!-- end-model-doc -->
  *
  * <p>
