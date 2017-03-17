@@ -26,15 +26,15 @@ Specification returns cs::SpecificationCS:
 ;
 
 NameProviderImplementationClass returns cs::JavaImplementationProviderCS:
-	'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING] ';'
+	'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING]
 ;
 
 StorageProviderImplementationClass returns cs::JavaImplementationProviderCS:
-	'storageProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING] ';'
+	'storageProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING]
 ;
 
 OCLContext returns cs::OCLContextCS:
-	'oclContext' ownedType=TypedRefCS ';'
+	'oclContext' ownedType=TypedRefCS
 ;
 
 Service returns cs::ServiceCS:

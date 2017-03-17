@@ -442,11 +442,7 @@ ruleNameProviderImplementationClass returns [EObject current=null]
 	}
 
 )
-)	otherlv_2=';' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getNameProviderImplementationClassAccess().getSemicolonKeyword_2());
-    }
-)
+))
 ;
 
 
@@ -487,11 +483,7 @@ ruleStorageProviderImplementationClass returns [EObject current=null]
 	}
 
 )
-)	otherlv_2=';' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getStorageProviderImplementationClassAccess().getSemicolonKeyword_2());
-    }
-)
+))
 ;
 
 
@@ -534,11 +526,7 @@ ruleOCLContext returns [EObject current=null]
 	    }
 
 )
-)	otherlv_2=';' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getOCLContextAccess().getSemicolonKeyword_2());
-    }
-)
+))
 ;
 
 

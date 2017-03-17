@@ -171,13 +171,12 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Assignment cImplementationAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final CrossReference cImplementationJavaClassCSCrossReference_1_0 = (CrossReference)cImplementationAssignment_1.eContents().get(0);
 		private final RuleCall cImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1 = (RuleCall)cImplementationJavaClassCSCrossReference_1_0.eContents().get(1);
-		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//NameProviderImplementationClass cs::JavaImplementationProviderCS:
-		//	'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING] ';'
+		//	'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING]
 		@Override public ParserRule getRule() { return rule; }
 
-		//'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING] ';'
+		//'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING]
 		public Group getGroup() { return cGroup; }
 
 		//'nameProvider'
@@ -191,9 +190,6 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 		//SINGLE_QUOTED_STRING
 		public RuleCall getImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1() { return cImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1; }
-
-		//';'
-		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
 	public class StorageProviderImplementationClassElements extends AbstractParserRuleElementFinder {
@@ -203,13 +199,12 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Assignment cImplementationAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final CrossReference cImplementationJavaClassCSCrossReference_1_0 = (CrossReference)cImplementationAssignment_1.eContents().get(0);
 		private final RuleCall cImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1 = (RuleCall)cImplementationJavaClassCSCrossReference_1_0.eContents().get(1);
-		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//StorageProviderImplementationClass cs::JavaImplementationProviderCS:
-		//	'storageProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING] ';'
+		//	'storageProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING]
 		@Override public ParserRule getRule() { return rule; }
 
-		//'storageProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING] ';'
+		//'storageProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING]
 		public Group getGroup() { return cGroup; }
 
 		//'storageProvider'
@@ -223,9 +218,6 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 		//SINGLE_QUOTED_STRING
 		public RuleCall getImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1() { return cImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1; }
-
-		//';'
-		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
 	public class OCLContextElements extends AbstractParserRuleElementFinder {
@@ -234,13 +226,12 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Keyword cOclContextKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cOwnedTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cOwnedTypeTypedRefCSParserRuleCall_1_0 = (RuleCall)cOwnedTypeAssignment_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//OCLContext cs::OCLContextCS:
-		//	'oclContext' ownedType=TypedRefCS ';'
+		//	'oclContext' ownedType=TypedRefCS
 		@Override public ParserRule getRule() { return rule; }
 
-		//'oclContext' ownedType=TypedRefCS ';'
+		//'oclContext' ownedType=TypedRefCS
 		public Group getGroup() { return cGroup; }
 
 		//'oclContext'
@@ -251,9 +242,6 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 		//TypedRefCS
 		public RuleCall getOwnedTypeTypedRefCSParserRuleCall_1_0() { return cOwnedTypeTypedRefCSParserRuleCall_1_0; }
-
-		//';'
-		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
 	public class ServiceElements extends AbstractParserRuleElementFinder {
@@ -1217,7 +1205,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//NameProviderImplementationClass cs::JavaImplementationProviderCS:
-	//	'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING] ';'
+	//	'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING]
 	public NameProviderImplementationClassElements getNameProviderImplementationClassAccess() {
 		return pNameProviderImplementationClass;
 	}
@@ -1227,7 +1215,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//StorageProviderImplementationClass cs::JavaImplementationProviderCS:
-	//	'storageProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING] ';'
+	//	'storageProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING]
 	public StorageProviderImplementationClassElements getStorageProviderImplementationClassAccess() {
 		return pStorageProviderImplementationClass;
 	}
@@ -1237,7 +1225,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//OCLContext cs::OCLContextCS:
-	//	'oclContext' ownedType=TypedRefCS ';'
+	//	'oclContext' ownedType=TypedRefCS
 	public OCLContextElements getOCLContextAccess() {
 		return pOCLContext;
 	}

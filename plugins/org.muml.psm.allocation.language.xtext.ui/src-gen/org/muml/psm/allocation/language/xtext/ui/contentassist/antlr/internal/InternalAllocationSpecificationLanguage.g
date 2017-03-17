@@ -5207,7 +5207,6 @@ rule__NameProviderImplementationClass__Group__1
     }
 :
 	rule__NameProviderImplementationClass__Group__1__Impl
-	rule__NameProviderImplementationClass__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -5228,38 +5227,6 @@ rule__NameProviderImplementationClass__Group__1__Impl
 finally {
 	restoreStackSize(stackSize);
 }
-
-
-rule__NameProviderImplementationClass__Group__2
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__NameProviderImplementationClass__Group__2__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__NameProviderImplementationClass__Group__2__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getNameProviderImplementationClassAccess().getSemicolonKeyword_2()); }
-
-	';' 
-
-{ after(grammarAccess.getNameProviderImplementationClassAccess().getSemicolonKeyword_2()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
 
 
 
@@ -5303,7 +5270,6 @@ rule__StorageProviderImplementationClass__Group__1
     }
 :
 	rule__StorageProviderImplementationClass__Group__1__Impl
-	rule__StorageProviderImplementationClass__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -5324,38 +5290,6 @@ rule__StorageProviderImplementationClass__Group__1__Impl
 finally {
 	restoreStackSize(stackSize);
 }
-
-
-rule__StorageProviderImplementationClass__Group__2
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__StorageProviderImplementationClass__Group__2__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__StorageProviderImplementationClass__Group__2__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getStorageProviderImplementationClassAccess().getSemicolonKeyword_2()); }
-
-	';' 
-
-{ after(grammarAccess.getStorageProviderImplementationClassAccess().getSemicolonKeyword_2()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
 
 
 
@@ -5399,7 +5333,6 @@ rule__OCLContext__Group__1
     }
 :
 	rule__OCLContext__Group__1__Impl
-	rule__OCLContext__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -5420,38 +5353,6 @@ rule__OCLContext__Group__1__Impl
 finally {
 	restoreStackSize(stackSize);
 }
-
-
-rule__OCLContext__Group__2
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__OCLContext__Group__2__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__OCLContext__Group__2__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getOCLContextAccess().getSemicolonKeyword_2()); }
-
-	';' 
-
-{ after(grammarAccess.getOCLContextAccess().getSemicolonKeyword_2()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
 
 
 
