@@ -96,8 +96,8 @@ public class AsValidator extends EObjectValidator {
 				return validateBound((Bound)value, diagnostics, context);
 			case AsPackage.CONSTRAINT:
 				return validateConstraint((Constraint)value, diagnostics, context);
-			case AsPackage.LOCATION_CONSTRAINT:
-				return validateLocationConstraint((LocationConstraint)value, diagnostics, context);
+			case AsPackage.COHERENCE_CONSTRAINT:
+				return validateCoherenceConstraint((CoherenceConstraint)value, diagnostics, context);
 			case AsPackage.RESOURCE_CONSTRAINT:
 				return validateResourceConstraint((ResourceConstraint)value, diagnostics, context);
 			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT:
@@ -126,8 +126,8 @@ public class AsValidator extends EObjectValidator {
 				return validateStorageProvider((StorageProvider)value, diagnostics, context);
 			case AsPackage.OCL_CONTEXT:
 				return validateOCLContext((OCLContext)value, diagnostics, context);
-			case AsPackage.LOCATION_CONSTRAINT_TYPES:
-				return validateLocationConstraintTypes((LocationConstraintTypes)value, diagnostics, context);
+			case AsPackage.COHERENCE_CONSTRAINT_TYPE:
+				return validateCoherenceConstraintType((CoherenceConstraintType)value, diagnostics, context);
 			case AsPackage.GOAL:
 				return validateGoal((Goal)value, diagnostics, context);
 			default:
@@ -224,44 +224,44 @@ public class AsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateLocationConstraint(LocationConstraint locationConstraint, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(locationConstraint, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(locationConstraint, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(locationConstraint, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(locationConstraint, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(locationConstraint, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(locationConstraint, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(locationConstraint, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(locationConstraint, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(locationConstraint, diagnostics, context);
-		if (result || diagnostics != null) result &= validateLocationConstraint_exactlyOnePair(locationConstraint, diagnostics, context);
+	public boolean validateCoherenceConstraint(CoherenceConstraint coherenceConstraint, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(coherenceConstraint, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(coherenceConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(coherenceConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(coherenceConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(coherenceConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(coherenceConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(coherenceConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(coherenceConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(coherenceConstraint, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCoherenceConstraint_exactlyOnePair(coherenceConstraint, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * The cached validation expression for the exactlyOnePair constraint of '<em>Location Constraint</em>'.
+	 * The cached validation expression for the exactlyOnePair constraint of '<em>Coherence Constraint</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String LOCATION_CONSTRAINT__EXACTLY_ONE_PAIR__EEXPRESSION = "self.tupleDescriptor.typedPairs->size() = 1";
+	protected static final String COHERENCE_CONSTRAINT__EXACTLY_ONE_PAIR__EEXPRESSION = "self.tupleDescriptor.typedPairs->size() = 1";
 
 	/**
-	 * Validates the exactlyOnePair constraint of '<em>Location Constraint</em>'.
+	 * Validates the exactlyOnePair constraint of '<em>Coherence Constraint</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateLocationConstraint_exactlyOnePair(LocationConstraint locationConstraint, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateCoherenceConstraint_exactlyOnePair(CoherenceConstraint coherenceConstraint, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
-				(AsPackage.Literals.LOCATION_CONSTRAINT,
-				 locationConstraint,
+				(AsPackage.Literals.COHERENCE_CONSTRAINT,
+				 coherenceConstraint,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "exactlyOnePair",
-				 LOCATION_CONSTRAINT__EXACTLY_ONE_PAIR__EEXPRESSION,
+				 COHERENCE_CONSTRAINT__EXACTLY_ONE_PAIR__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
@@ -398,7 +398,7 @@ public class AsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateLocationConstraintTypes(LocationConstraintTypes locationConstraintTypes, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateCoherenceConstraintType(CoherenceConstraintType coherenceConstraintType, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

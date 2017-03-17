@@ -101,14 +101,14 @@
       <details key="documentation" value="Abstract base class for constraints."/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="LocationConstraintTypes">
+  <eClassifiers xsi:type="ecore:EEnum" name="CoherenceConstraintType">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This enumeration defines all location constraints."/>
     </eAnnotations>
-    <eLiterals name="SAME_LOCATION" literal="SAME_LOCATION"/>
-    <eLiterals name="DIFFERENT_LOCATION" value="1" literal="DIFFERENT_LOCATION"/>
+    <eLiterals name="COLLOCATION" literal="COLLOCATION"/>
+    <eLiterals name="SEPARATE_LOCATION" value="1" literal="SEPARATE_LOCATION"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LocationConstraint" eSuperTypes="#//Constraint">
+  <eClassifiers xsi:type="ecore:EClass" name="CoherenceConstraint" eSuperTypes="#//Constraint">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class either represents a SAME_LOCATION or DIFFERENT_LOCATION&#xA;constraint. A constraint of the type SAME_LOCATION specifies that a set of&#xA;component instances have to be allocated to the same hardware resource&#xA;instance. The DIFFERENT_LOCATION type constraint is the opposite&#xA;of the SAME_LOCATION type."/>
     </eAnnotations>
@@ -123,7 +123,7 @@
         <details key="documentation" value="A set of location tuple descriptors."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//LocationConstraintTypes">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//CoherenceConstraintType">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Represents the type of the location constraint."/>
       </eAnnotations>

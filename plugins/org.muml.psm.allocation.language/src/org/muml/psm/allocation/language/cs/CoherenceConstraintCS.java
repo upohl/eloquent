@@ -5,7 +5,7 @@ package org.muml.psm.allocation.language.cs;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Location Constraint CS</b></em>'.
+ * A representation of the model object '<em><b>Coherence Constraint CS</b></em>'.
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
@@ -20,16 +20,16 @@ package org.muml.psm.allocation.language.cs;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.muml.psm.allocation.language.cs.LocationConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}</li>
- *   <li>{@link org.muml.psm.allocation.language.cs.LocationConstraintCS#getType <em>Type</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.CoherenceConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.CoherenceConstraintCS#getType <em>Type</em>}</li>
  * </ul>
  *
- * @see org.muml.psm.allocation.language.cs.CsPackage#getLocationConstraintCS()
+ * @see org.muml.psm.allocation.language.cs.CsPackage#getCoherenceConstraintCS()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='exactlyOnePair'"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot exactlyOnePair='self.tupleDescriptor.typedPairs->size() = 1'"
  * @generated
  */
-public interface LocationConstraintCS extends ConstraintCS {
+public interface CoherenceConstraintCS extends ConstraintCS {
 	/**
 	 * Returns the value of the '<em><b>Tuple Descriptor</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -39,14 +39,14 @@ public interface LocationConstraintCS extends ConstraintCS {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tuple Descriptor</em>' containment reference.
 	 * @see #setTupleDescriptor(TupleDescriptorCS)
-	 * @see org.muml.psm.allocation.language.cs.CsPackage#getLocationConstraintCS_TupleDescriptor()
+	 * @see org.muml.psm.allocation.language.cs.CsPackage#getCoherenceConstraintCS_TupleDescriptor()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	TupleDescriptorCS getTupleDescriptor();
 
 	/**
-	 * Sets the value of the '{@link org.muml.psm.allocation.language.cs.LocationConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}' containment reference.
+	 * Sets the value of the '{@link org.muml.psm.allocation.language.cs.CoherenceConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tuple Descriptor</em>' containment reference.
@@ -57,30 +57,30 @@ public interface LocationConstraintCS extends ConstraintCS {
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.muml.psm.allocation.language.cs.LocationConstraintTypes}.
+	 * The literals are from the enumeration {@link org.muml.psm.allocation.language.cs.CoherenceConstraintType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Represents the type of the location constraint.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see org.muml.psm.allocation.language.cs.LocationConstraintTypes
-	 * @see #setType(LocationConstraintTypes)
-	 * @see org.muml.psm.allocation.language.cs.CsPackage#getLocationConstraintCS_Type()
+	 * @see org.muml.psm.allocation.language.cs.CoherenceConstraintType
+	 * @see #setType(CoherenceConstraintType)
+	 * @see org.muml.psm.allocation.language.cs.CsPackage#getCoherenceConstraintCS_Type()
 	 * @model required="true"
 	 * @generated
 	 */
-	LocationConstraintTypes getType();
+	CoherenceConstraintType getType();
 
 	/**
-	 * Sets the value of the '{@link org.muml.psm.allocation.language.cs.LocationConstraintCS#getType <em>Type</em>}' attribute.
+	 * Sets the value of the '{@link org.muml.psm.allocation.language.cs.CoherenceConstraintCS#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see org.muml.psm.allocation.language.cs.LocationConstraintTypes
+	 * @see org.muml.psm.allocation.language.cs.CoherenceConstraintType
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(LocationConstraintTypes value);
+	void setType(CoherenceConstraintType value);
 
-} // LocationConstraintCS
+} // CoherenceConstraintCS

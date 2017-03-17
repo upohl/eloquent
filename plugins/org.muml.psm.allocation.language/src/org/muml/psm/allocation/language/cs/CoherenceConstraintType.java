@@ -1,6 +1,6 @@
 /**
  */
-package org.muml.psm.allocation.language.as;
+package org.muml.psm.allocation.language.cs;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -10,98 +10,98 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Location Constraint Types</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Coherence Constraint Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * <!-- begin-model-doc -->
  * This enumeration defines all location constraints.
  * <!-- end-model-doc -->
- * @see org.muml.psm.allocation.language.as.AsPackage#getLocationConstraintTypes()
+ * @see org.muml.psm.allocation.language.cs.CsPackage#getCoherenceConstraintType()
  * @model
  * @generated
  */
-public enum LocationConstraintTypes implements Enumerator {
+public enum CoherenceConstraintType implements Enumerator {
 	/**
-	 * The '<em><b>SAME LOCATION</b></em>' literal object.
+	 * The '<em><b>COLLOCATION</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SAME_LOCATION_VALUE
+	 * @see #COLLOCATION_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	SAME_LOCATION(0, "SAME_LOCATION", "SAME_LOCATION"),
+	COLLOCATION(0, "COLLOCATION", "COLLOCATION"),
 
 	/**
-	 * The '<em><b>DIFFERENT LOCATION</b></em>' literal object.
+	 * The '<em><b>SEPARATE LOCATION</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #DIFFERENT_LOCATION_VALUE
+	 * @see #SEPARATE_LOCATION_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	DIFFERENT_LOCATION(1, "DIFFERENT_LOCATION", "DIFFERENT_LOCATION");
+	SEPARATE_LOCATION(1, "SEPARATE_LOCATION", "SEPARATE_LOCATION");
 
 	/**
-	 * The '<em><b>SAME LOCATION</b></em>' literal value.
+	 * The '<em><b>COLLOCATION</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>SAME LOCATION</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>COLLOCATION</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #SAME_LOCATION
+	 * @see #COLLOCATION
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SAME_LOCATION_VALUE = 0;
+	public static final int COLLOCATION_VALUE = 0;
 
 	/**
-	 * The '<em><b>DIFFERENT LOCATION</b></em>' literal value.
+	 * The '<em><b>SEPARATE LOCATION</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>DIFFERENT LOCATION</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>SEPARATE LOCATION</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #DIFFERENT_LOCATION
+	 * @see #SEPARATE_LOCATION
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DIFFERENT_LOCATION_VALUE = 1;
+	public static final int SEPARATE_LOCATION_VALUE = 1;
 
 	/**
-	 * An array of all the '<em><b>Location Constraint Types</b></em>' enumerators.
+	 * An array of all the '<em><b>Coherence Constraint Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final LocationConstraintTypes[] VALUES_ARRAY =
-		new LocationConstraintTypes[] {
-			SAME_LOCATION,
-			DIFFERENT_LOCATION,
+	private static final CoherenceConstraintType[] VALUES_ARRAY =
+		new CoherenceConstraintType[] {
+			COLLOCATION,
+			SEPARATE_LOCATION,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Location Constraint Types</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Coherence Constraint Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<LocationConstraintTypes> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<CoherenceConstraintType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Location Constraint Types</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Coherence Constraint Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static LocationConstraintTypes get(String literal) {
+	public static CoherenceConstraintType get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			LocationConstraintTypes result = VALUES_ARRAY[i];
+			CoherenceConstraintType result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -110,16 +110,16 @@ public enum LocationConstraintTypes implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Location Constraint Types</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Coherence Constraint Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static LocationConstraintTypes getByName(String name) {
+	public static CoherenceConstraintType getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			LocationConstraintTypes result = VALUES_ARRAY[i];
+			CoherenceConstraintType result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -128,17 +128,17 @@ public enum LocationConstraintTypes implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Location Constraint Types</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Coherence Constraint Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static LocationConstraintTypes get(int value) {
+	public static CoherenceConstraintType get(int value) {
 		switch (value) {
-			case SAME_LOCATION_VALUE: return SAME_LOCATION;
-			case DIFFERENT_LOCATION_VALUE: return DIFFERENT_LOCATION;
+			case COLLOCATION_VALUE: return COLLOCATION;
+			case SEPARATE_LOCATION_VALUE: return SEPARATE_LOCATION;
 		}
 		return null;
 	}
@@ -170,7 +170,7 @@ public enum LocationConstraintTypes implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private LocationConstraintTypes(int value, String name, String literal) {
+	private CoherenceConstraintType(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -214,4 +214,4 @@ public enum LocationConstraintTypes implements Enumerator {
 		return literal;
 	}
 	
-} //LocationConstraintTypes
+} //CoherenceConstraintType

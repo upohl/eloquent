@@ -24,14 +24,14 @@ import org.eclipse.ocl.xtext.oclstdlibcs.OCLstdlibCSPackage;
 
 import org.muml.psm.allocation.language.cs.BoundCS;
 import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
+import org.muml.psm.allocation.language.cs.CoherenceConstraintCS;
+import org.muml.psm.allocation.language.cs.CoherenceConstraintType;
 import org.muml.psm.allocation.language.cs.ConstraintCS;
 import org.muml.psm.allocation.language.cs.CsFactory;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
 import org.muml.psm.allocation.language.cs.Goal;
 import org.muml.psm.allocation.language.cs.JavaImplementationProviderCS;
-import org.muml.psm.allocation.language.cs.LocationConstraintCS;
-import org.muml.psm.allocation.language.cs.LocationConstraintTypes;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
 import org.muml.psm.allocation.language.cs.NameProviderCS;
 import org.muml.psm.allocation.language.cs.OCLContextCS;
@@ -96,7 +96,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass locationConstraintCSEClass = null;
+	private EClass coherenceConstraintCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -201,7 +201,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum locationConstraintTypesEEnum = null;
+	private EEnum coherenceConstraintTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -461,8 +461,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLocationConstraintCS() {
-		return locationConstraintCSEClass;
+	public EClass getCoherenceConstraintCS() {
+		return coherenceConstraintCSEClass;
 	}
 
 	/**
@@ -470,8 +470,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLocationConstraintCS_TupleDescriptor() {
-		return (EReference)locationConstraintCSEClass.getEStructuralFeatures().get(0);
+	public EReference getCoherenceConstraintCS_TupleDescriptor() {
+		return (EReference)coherenceConstraintCSEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -479,8 +479,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLocationConstraintCS_Type() {
-		return (EAttribute)locationConstraintCSEClass.getEStructuralFeatures().get(1);
+	public EAttribute getCoherenceConstraintCS_Type() {
+		return (EAttribute)coherenceConstraintCSEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -704,8 +704,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getLocationConstraintTypes() {
-		return locationConstraintTypesEEnum;
+	public EEnum getCoherenceConstraintType() {
+		return coherenceConstraintTypeEEnum;
 	}
 
 	/**
@@ -769,9 +769,9 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		constraintCSEClass = createEClass(CONSTRAINT_CS);
 
-		locationConstraintCSEClass = createEClass(LOCATION_CONSTRAINT_CS);
-		createEReference(locationConstraintCSEClass, LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR);
-		createEAttribute(locationConstraintCSEClass, LOCATION_CONSTRAINT_CS__TYPE);
+		coherenceConstraintCSEClass = createEClass(COHERENCE_CONSTRAINT_CS);
+		createEReference(coherenceConstraintCSEClass, COHERENCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR);
+		createEAttribute(coherenceConstraintCSEClass, COHERENCE_CONSTRAINT_CS__TYPE);
 
 		resourceConstraintCSEClass = createEClass(RESOURCE_CONSTRAINT_CS);
 		createEReference(resourceConstraintCSEClass, RESOURCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR);
@@ -812,7 +812,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		oclContextCSEClass = createEClass(OCL_CONTEXT_CS);
 
 		// Create enums
-		locationConstraintTypesEEnum = createEEnum(LOCATION_CONSTRAINT_TYPES);
+		coherenceConstraintTypeEEnum = createEEnum(COHERENCE_CONSTRAINT_TYPE);
 		goalEEnum = createEEnum(GOAL);
 	}
 
@@ -858,7 +858,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		boundCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
 		constraintCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
 		constraintCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
-		locationConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
+		coherenceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		resourceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		requiredHardwareResourceInstanceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		tupleDescriptorCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
@@ -899,9 +899,9 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		initEClass(constraintCSEClass, ConstraintCS.class, "ConstraintCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(locationConstraintCSEClass, LocationConstraintCS.class, "LocationConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLocationConstraintCS_TupleDescriptor(), this.getTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, LocationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLocationConstraintCS_Type(), this.getLocationConstraintTypes(), "type", null, 1, 1, LocationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(coherenceConstraintCSEClass, CoherenceConstraintCS.class, "CoherenceConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCoherenceConstraintCS_TupleDescriptor(), this.getTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, CoherenceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCoherenceConstraintCS_Type(), this.getCoherenceConstraintType(), "type", null, 1, 1, CoherenceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceConstraintCSEClass, ResourceConstraintCS.class, "ResourceConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResourceConstraintCS_TupleDescriptor(), this.getBoundWeightTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, ResourceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -954,9 +954,9 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEClass(oclContextCSEClass, OCLContextCS.class, "OCLContextCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
-		initEEnum(locationConstraintTypesEEnum, LocationConstraintTypes.class, "LocationConstraintTypes");
-		addEEnumLiteral(locationConstraintTypesEEnum, LocationConstraintTypes.SAME_LOCATION);
-		addEEnumLiteral(locationConstraintTypesEEnum, LocationConstraintTypes.DIFFERENT_LOCATION);
+		initEEnum(coherenceConstraintTypeEEnum, CoherenceConstraintType.class, "CoherenceConstraintType");
+		addEEnumLiteral(coherenceConstraintTypeEEnum, CoherenceConstraintType.COLLOCATION);
+		addEEnumLiteral(coherenceConstraintTypeEEnum, CoherenceConstraintType.SEPARATE_LOCATION);
 
 		initEEnum(goalEEnum, Goal.class, "Goal");
 		addEEnumLiteral(goalEEnum, Goal.MAX);
@@ -995,7 +995,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 			 "constraints", "exactlyOnePair"
 		   });	
 		addAnnotation
-		  (locationConstraintCSEClass, 
+		  (coherenceConstraintCSEClass, 
 		   source, 
 		   new String[] {
 			 "constraints", "exactlyOnePair"
@@ -1017,7 +1017,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
 		   });	
 		addAnnotation
-		  (locationConstraintCSEClass, 
+		  (coherenceConstraintCSEClass, 
 		   source, 
 		   new String[] {
 			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"

@@ -60,7 +60,7 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 			case CsPackage.SPECIFICATION_CS: return createSpecificationCS();
 			case CsPackage.RELATION_CS: return createRelationCS();
 			case CsPackage.BOUND_CS: return createBoundCS();
-			case CsPackage.LOCATION_CONSTRAINT_CS: return createLocationConstraintCS();
+			case CsPackage.COHERENCE_CONSTRAINT_CS: return createCoherenceConstraintCS();
 			case CsPackage.RESOURCE_CONSTRAINT_CS: return createResourceConstraintCS();
 			case CsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS: return createRequiredHardwareResourceInstanceConstraintCS();
 			case CsPackage.TUPLE_DESCRIPTOR_CS: return createTupleDescriptorCS();
@@ -86,8 +86,8 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case CsPackage.LOCATION_CONSTRAINT_TYPES:
-				return createLocationConstraintTypesFromString(eDataType, initialValue);
+			case CsPackage.COHERENCE_CONSTRAINT_TYPE:
+				return createCoherenceConstraintTypeFromString(eDataType, initialValue);
 			case CsPackage.GOAL:
 				return createGoalFromString(eDataType, initialValue);
 			default:
@@ -103,8 +103,8 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case CsPackage.LOCATION_CONSTRAINT_TYPES:
-				return convertLocationConstraintTypesToString(eDataType, instanceValue);
+			case CsPackage.COHERENCE_CONSTRAINT_TYPE:
+				return convertCoherenceConstraintTypeToString(eDataType, instanceValue);
 			case CsPackage.GOAL:
 				return convertGoalToString(eDataType, instanceValue);
 			default:
@@ -147,9 +147,9 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocationConstraintCS createLocationConstraintCS() {
-		LocationConstraintCSImpl locationConstraintCS = new LocationConstraintCSImpl();
-		return locationConstraintCS;
+	public CoherenceConstraintCS createCoherenceConstraintCS() {
+		CoherenceConstraintCSImpl coherenceConstraintCS = new CoherenceConstraintCSImpl();
+		return coherenceConstraintCS;
 	}
 
 	/**
@@ -277,8 +277,8 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocationConstraintTypes createLocationConstraintTypesFromString(EDataType eDataType, String initialValue) {
-		LocationConstraintTypes result = LocationConstraintTypes.get(initialValue);
+	public CoherenceConstraintType createCoherenceConstraintTypeFromString(EDataType eDataType, String initialValue) {
+		CoherenceConstraintType result = CoherenceConstraintType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -288,7 +288,7 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertLocationConstraintTypesToString(EDataType eDataType, Object instanceValue) {
+	public String convertCoherenceConstraintTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

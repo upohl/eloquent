@@ -271,7 +271,7 @@
   </eClassifiers>
   <eClassifiers
       xsi:type="ecore:EEnum"
-      name="LocationConstraintTypes">
+      name="CoherenceConstraintType">
     <eAnnotations
         source="http://www.eclipse.org/emf/2002/GenModel">
       <details
@@ -279,14 +279,14 @@
           value="This enumeration defines all location constraints."/>
     </eAnnotations>
     <eLiterals
-        name="SAME_LOCATION"/>
+        name="COLLOCATION"/>
     <eLiterals
-        name="DIFFERENT_LOCATION"
+        name="SEPARATE_LOCATION"
         value="1"/>
   </eClassifiers>
   <eClassifiers
       xsi:type="ecore:EClass"
-      name="LocationConstraintCS"
+      name="CoherenceConstraintCS"
       eSuperTypes="#//ConstraintCS">
     <eAnnotations
         source="http://www.eclipse.org/emf/2002/GenModel">
@@ -323,7 +323,7 @@
         xsi:type="ecore:EAttribute"
         name="type"
         lowerBound="1"
-        eType="#//LocationConstraintTypes">
+        eType="#//CoherenceConstraintType">
       <eAnnotations
           source="http://www.eclipse.org/emf/2002/GenModel">
         <details

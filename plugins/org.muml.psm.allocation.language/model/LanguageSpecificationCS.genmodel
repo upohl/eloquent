@@ -16,9 +16,9 @@
   <foreignModel>LanguageSpecificationCS.ecore</foreignModel>
   <genPackages prefix="Cs" basePackage="org.muml.psm.allocation.language" disposableProviderFactory="true"
       ecorePackage="LanguageSpecificationCS.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="LanguageSpecificationCS.ecore#//LocationConstraintTypes">
-      <genEnumLiterals ecoreEnumLiteral="LanguageSpecificationCS.ecore#//LocationConstraintTypes/SAME_LOCATION"/>
-      <genEnumLiterals ecoreEnumLiteral="LanguageSpecificationCS.ecore#//LocationConstraintTypes/DIFFERENT_LOCATION"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="LanguageSpecificationCS.ecore#//CoherenceConstraintType">
+      <genEnumLiterals ecoreEnumLiteral="LanguageSpecificationCS.ecore#//CoherenceConstraintType/COLLOCATION"/>
+      <genEnumLiterals ecoreEnumLiteral="LanguageSpecificationCS.ecore#//CoherenceConstraintType/SEPARATE_LOCATION"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="LanguageSpecificationCS.ecore#//Goal">
       <genEnumLiterals ecoreEnumLiteral="LanguageSpecificationCS.ecore#//Goal/MAX"/>
@@ -46,9 +46,9 @@
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationCS.ecore#//BoundCS"/>
     <genClasses image="false" ecoreClass="LanguageSpecificationCS.ecore#//ConstraintCS"/>
-    <genClasses ecoreClass="LanguageSpecificationCS.ecore#//LocationConstraintCS">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//LocationConstraintCS/tupleDescriptor"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationCS.ecore#//LocationConstraintCS/type"/>
+    <genClasses ecoreClass="LanguageSpecificationCS.ecore#//CoherenceConstraintCS">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//CoherenceConstraintCS/tupleDescriptor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationCS.ecore#//CoherenceConstraintCS/type"/>
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationCS.ecore#//ResourceConstraintCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//ResourceConstraintCS/tupleDescriptor"/>

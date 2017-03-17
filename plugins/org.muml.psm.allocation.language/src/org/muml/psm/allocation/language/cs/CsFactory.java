@@ -49,13 +49,13 @@ public interface CsFactory extends EFactory {
 	BoundCS createBoundCS();
 
 	/**
-	 * Returns a new object of class '<em>Location Constraint CS</em>'.
+	 * Returns a new object of class '<em>Coherence Constraint CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Location Constraint CS</em>'.
+	 * @return a new object of class '<em>Coherence Constraint CS</em>'.
 	 * @generated
 	 */
-	LocationConstraintCS createLocationConstraintCS();
+	CoherenceConstraintCS createCoherenceConstraintCS();
 
 	/**
 	 * Returns a new object of class '<em>Resource Constraint CS</em>'.

@@ -18,12 +18,12 @@ import org.muml.psm.allocation.language.as.AsFactory;
 import org.muml.psm.allocation.language.as.AsPackage;
 import org.muml.psm.allocation.language.as.Bound;
 import org.muml.psm.allocation.language.as.BoundWeightTupleDescriptor;
+import org.muml.psm.allocation.language.as.CoherenceConstraint;
+import org.muml.psm.allocation.language.as.CoherenceConstraintType;
 import org.muml.psm.allocation.language.as.Constraint;
 import org.muml.psm.allocation.language.as.EvaluatableElement;
 import org.muml.psm.allocation.language.as.Goal;
 import org.muml.psm.allocation.language.as.JavaImplementationProvider;
-import org.muml.psm.allocation.language.as.LocationConstraint;
-import org.muml.psm.allocation.language.as.LocationConstraintTypes;
 import org.muml.psm.allocation.language.as.MeasureFunction;
 import org.muml.psm.allocation.language.as.NameProvider;
 import org.muml.psm.allocation.language.as.OCLContext;
@@ -88,7 +88,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass locationConstraintEClass = null;
+	private EClass coherenceConstraintEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -193,7 +193,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum locationConstraintTypesEEnum = null;
+	private EEnum coherenceConstraintTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -434,8 +434,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLocationConstraint() {
-		return locationConstraintEClass;
+	public EClass getCoherenceConstraint() {
+		return coherenceConstraintEClass;
 	}
 
 	/**
@@ -443,8 +443,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLocationConstraint_TupleDescriptor() {
-		return (EReference)locationConstraintEClass.getEStructuralFeatures().get(0);
+	public EReference getCoherenceConstraint_TupleDescriptor() {
+		return (EReference)coherenceConstraintEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -452,8 +452,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLocationConstraint_Type() {
-		return (EAttribute)locationConstraintEClass.getEStructuralFeatures().get(1);
+	public EAttribute getCoherenceConstraint_Type() {
+		return (EAttribute)coherenceConstraintEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -677,8 +677,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getLocationConstraintTypes() {
-		return locationConstraintTypesEEnum;
+	public EEnum getCoherenceConstraintType() {
+		return coherenceConstraintTypeEEnum;
 	}
 
 	/**
@@ -740,9 +740,9 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		constraintEClass = createEClass(CONSTRAINT);
 
-		locationConstraintEClass = createEClass(LOCATION_CONSTRAINT);
-		createEReference(locationConstraintEClass, LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR);
-		createEAttribute(locationConstraintEClass, LOCATION_CONSTRAINT__TYPE);
+		coherenceConstraintEClass = createEClass(COHERENCE_CONSTRAINT);
+		createEReference(coherenceConstraintEClass, COHERENCE_CONSTRAINT__TUPLE_DESCRIPTOR);
+		createEAttribute(coherenceConstraintEClass, COHERENCE_CONSTRAINT__TYPE);
 
 		resourceConstraintEClass = createEClass(RESOURCE_CONSTRAINT);
 		createEReference(resourceConstraintEClass, RESOURCE_CONSTRAINT__TUPLE_DESCRIPTOR);
@@ -783,7 +783,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		oclContextEClass = createEClass(OCL_CONTEXT);
 
 		// Create enums
-		locationConstraintTypesEEnum = createEEnum(LOCATION_CONSTRAINT_TYPES);
+		coherenceConstraintTypeEEnum = createEEnum(COHERENCE_CONSTRAINT_TYPE);
 		goalEEnum = createEEnum(GOAL);
 	}
 
@@ -825,7 +825,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		boundEClass.getESuperTypes().add(this.getEvaluatableElement());
 		constraintEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
 		constraintEClass.getESuperTypes().add(this.getEvaluatableElement());
-		locationConstraintEClass.getESuperTypes().add(this.getConstraint());
+		coherenceConstraintEClass.getESuperTypes().add(this.getConstraint());
 		resourceConstraintEClass.getESuperTypes().add(this.getConstraint());
 		requiredHardwareResourceInstanceConstraintEClass.getESuperTypes().add(this.getConstraint());
 		tupleDescriptorEClass.getESuperTypes().add(thePivotPackage.getElement());
@@ -863,9 +863,9 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		initEClass(constraintEClass, Constraint.class, "Constraint", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(locationConstraintEClass, LocationConstraint.class, "LocationConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLocationConstraint_TupleDescriptor(), this.getTupleDescriptor(), null, "tupleDescriptor", null, 1, 1, LocationConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLocationConstraint_Type(), this.getLocationConstraintTypes(), "type", null, 0, 1, LocationConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(coherenceConstraintEClass, CoherenceConstraint.class, "CoherenceConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCoherenceConstraint_TupleDescriptor(), this.getTupleDescriptor(), null, "tupleDescriptor", null, 1, 1, CoherenceConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCoherenceConstraint_Type(), this.getCoherenceConstraintType(), "type", null, 0, 1, CoherenceConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceConstraintEClass, ResourceConstraint.class, "ResourceConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResourceConstraint_TupleDescriptor(), this.getBoundWeightTupleDescriptor(), null, "tupleDescriptor", null, 1, 1, ResourceConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -918,9 +918,9 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		initEClass(oclContextEClass, OCLContext.class, "OCLContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
-		initEEnum(locationConstraintTypesEEnum, LocationConstraintTypes.class, "LocationConstraintTypes");
-		addEEnumLiteral(locationConstraintTypesEEnum, LocationConstraintTypes.SAME_LOCATION);
-		addEEnumLiteral(locationConstraintTypesEEnum, LocationConstraintTypes.DIFFERENT_LOCATION);
+		initEEnum(coherenceConstraintTypeEEnum, CoherenceConstraintType.class, "CoherenceConstraintType");
+		addEEnumLiteral(coherenceConstraintTypeEEnum, CoherenceConstraintType.COLLOCATION);
+		addEEnumLiteral(coherenceConstraintTypeEEnum, CoherenceConstraintType.SEPARATE_LOCATION);
 
 		initEEnum(goalEEnum, Goal.class, "Goal");
 		addEEnumLiteral(goalEEnum, Goal.MAX);
@@ -959,7 +959,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 			 "constraints", "exactlyOnePair"
 		   });	
 		addAnnotation
-		  (locationConstraintEClass, 
+		  (coherenceConstraintEClass, 
 		   source, 
 		   new String[] {
 			 "constraints", "exactlyOnePair"
@@ -981,7 +981,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
 		   });	
 		addAnnotation
-		  (locationConstraintEClass, 
+		  (coherenceConstraintEClass, 
 		   source, 
 		   new String[] {
 			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"

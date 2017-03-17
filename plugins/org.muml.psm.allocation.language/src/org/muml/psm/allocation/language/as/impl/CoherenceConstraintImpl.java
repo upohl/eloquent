@@ -11,25 +11,25 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.muml.psm.allocation.language.as.AsPackage;
-import org.muml.psm.allocation.language.as.LocationConstraint;
-import org.muml.psm.allocation.language.as.LocationConstraintTypes;
+import org.muml.psm.allocation.language.as.CoherenceConstraint;
+import org.muml.psm.allocation.language.as.CoherenceConstraintType;
 import org.muml.psm.allocation.language.as.TupleDescriptor;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Location Constraint</b></em>'.
+ * An implementation of the model object '<em><b>Coherence Constraint</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.muml.psm.allocation.language.as.impl.LocationConstraintImpl#getTupleDescriptor <em>Tuple Descriptor</em>}</li>
- *   <li>{@link org.muml.psm.allocation.language.as.impl.LocationConstraintImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.as.impl.CoherenceConstraintImpl#getTupleDescriptor <em>Tuple Descriptor</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.as.impl.CoherenceConstraintImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class LocationConstraintImpl extends ConstraintImpl implements LocationConstraint {
+public class CoherenceConstraintImpl extends ConstraintImpl implements CoherenceConstraint {
 	/**
 	 * The cached value of the '{@link #getTupleDescriptor() <em>Tuple Descriptor</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -48,7 +48,7 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	 * @generated
 	 * @ordered
 	 */
-	protected static final LocationConstraintTypes TYPE_EDEFAULT = LocationConstraintTypes.SAME_LOCATION;
+	protected static final CoherenceConstraintType TYPE_EDEFAULT = CoherenceConstraintType.COLLOCATION;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -58,14 +58,14 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	 * @generated
 	 * @ordered
 	 */
-	protected LocationConstraintTypes type = TYPE_EDEFAULT;
+	protected CoherenceConstraintType type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LocationConstraintImpl() {
+	protected CoherenceConstraintImpl() {
 		super();
 	}
 
@@ -76,7 +76,7 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return AsPackage.Literals.LOCATION_CONSTRAINT;
+		return AsPackage.Literals.COHERENCE_CONSTRAINT;
 	}
 
 	/**
@@ -97,7 +97,7 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 		TupleDescriptor oldTupleDescriptor = tupleDescriptor;
 		tupleDescriptor = newTupleDescriptor;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR, oldTupleDescriptor, newTupleDescriptor);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AsPackage.COHERENCE_CONSTRAINT__TUPLE_DESCRIPTOR, oldTupleDescriptor, newTupleDescriptor);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -112,14 +112,14 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 		if (newTupleDescriptor != tupleDescriptor) {
 			NotificationChain msgs = null;
 			if (tupleDescriptor != null)
-				msgs = ((InternalEObject)tupleDescriptor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR, null, msgs);
+				msgs = ((InternalEObject)tupleDescriptor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AsPackage.COHERENCE_CONSTRAINT__TUPLE_DESCRIPTOR, null, msgs);
 			if (newTupleDescriptor != null)
-				msgs = ((InternalEObject)newTupleDescriptor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR, null, msgs);
+				msgs = ((InternalEObject)newTupleDescriptor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AsPackage.COHERENCE_CONSTRAINT__TUPLE_DESCRIPTOR, null, msgs);
 			msgs = basicSetTupleDescriptor(newTupleDescriptor, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR, newTupleDescriptor, newTupleDescriptor));
+			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.COHERENCE_CONSTRAINT__TUPLE_DESCRIPTOR, newTupleDescriptor, newTupleDescriptor));
 	}
 
 	/**
@@ -127,7 +127,7 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocationConstraintTypes getType() {
+	public CoherenceConstraintType getType() {
 		return type;
 	}
 
@@ -136,11 +136,11 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(LocationConstraintTypes newType) {
-		LocationConstraintTypes oldType = type;
+	public void setType(CoherenceConstraintType newType) {
+		CoherenceConstraintType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.LOCATION_CONSTRAINT__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.COHERENCE_CONSTRAINT__TYPE, oldType, type));
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
+			case AsPackage.COHERENCE_CONSTRAINT__TUPLE_DESCRIPTOR:
 				return basicSetTupleDescriptor(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -165,9 +165,9 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
+			case AsPackage.COHERENCE_CONSTRAINT__TUPLE_DESCRIPTOR:
 				return getTupleDescriptor();
-			case AsPackage.LOCATION_CONSTRAINT__TYPE:
+			case AsPackage.COHERENCE_CONSTRAINT__TYPE:
 				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -181,11 +181,11 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
+			case AsPackage.COHERENCE_CONSTRAINT__TUPLE_DESCRIPTOR:
 				setTupleDescriptor((TupleDescriptor)newValue);
 				return;
-			case AsPackage.LOCATION_CONSTRAINT__TYPE:
-				setType((LocationConstraintTypes)newValue);
+			case AsPackage.COHERENCE_CONSTRAINT__TYPE:
+				setType((CoherenceConstraintType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -199,10 +199,10 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
+			case AsPackage.COHERENCE_CONSTRAINT__TUPLE_DESCRIPTOR:
 				setTupleDescriptor((TupleDescriptor)null);
 				return;
-			case AsPackage.LOCATION_CONSTRAINT__TYPE:
+			case AsPackage.COHERENCE_CONSTRAINT__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
 		}
@@ -217,9 +217,9 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
+			case AsPackage.COHERENCE_CONSTRAINT__TUPLE_DESCRIPTOR:
 				return tupleDescriptor != null;
-			case AsPackage.LOCATION_CONSTRAINT__TYPE:
+			case AsPackage.COHERENCE_CONSTRAINT__TYPE:
 				return type != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -242,4 +242,4 @@ public class LocationConstraintImpl extends ConstraintImpl implements LocationCo
 	}
 
 
-} //LocationConstraintImpl
+} //CoherenceConstraintImpl

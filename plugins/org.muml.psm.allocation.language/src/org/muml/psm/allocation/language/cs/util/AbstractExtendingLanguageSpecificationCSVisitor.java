@@ -43,6 +43,11 @@ public abstract class AbstractExtendingLanguageSpecificationCSVisitor<R, C>
 	}
 
 	@Override
+	public R visitCoherenceConstraintCS(org.muml.psm.allocation.language.cs.@NonNull CoherenceConstraintCS object) {
+		return visitConstraintCS(object);
+	}
+
+	@Override
 	public R visitConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ConstraintCS object) {
 		return visitNamedElementCS(object);
 	}
@@ -55,11 +60,6 @@ public abstract class AbstractExtendingLanguageSpecificationCSVisitor<R, C>
 	@Override
 	public R visitJavaImplementationProviderCS(org.muml.psm.allocation.language.cs.@NonNull JavaImplementationProviderCS object) {
 		return visitModelElementCS(object);
-	}
-
-	@Override
-	public R visitLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull LocationConstraintCS object) {
-		return visitConstraintCS(object);
 	}
 
 	@Override

@@ -152,18 +152,18 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CsPackage.LOCATION_CONSTRAINT_CS: {
-				LocationConstraintCS locationConstraintCS = (LocationConstraintCS)theEObject;
-				T result = caseLocationConstraintCS(locationConstraintCS);
-				if (result == null) result = caseConstraintCS(locationConstraintCS);
-				if (result == null) result = caseNamedElementCS(locationConstraintCS);
-				if (result == null) result = caseEvaluatableElementCS(locationConstraintCS);
-				if (result == null) result = caseModelElementCS(locationConstraintCS);
-				if (result == null) result = caseNameable(locationConstraintCS);
-				if (result == null) result = casePivotableElementCS(locationConstraintCS);
-				if (result == null) result = caseElementCS(locationConstraintCS);
-				if (result == null) result = casePivotable(locationConstraintCS);
-				if (result == null) result = caseVisitableCS(locationConstraintCS);
+			case CsPackage.COHERENCE_CONSTRAINT_CS: {
+				CoherenceConstraintCS coherenceConstraintCS = (CoherenceConstraintCS)theEObject;
+				T result = caseCoherenceConstraintCS(coherenceConstraintCS);
+				if (result == null) result = caseConstraintCS(coherenceConstraintCS);
+				if (result == null) result = caseNamedElementCS(coherenceConstraintCS);
+				if (result == null) result = caseEvaluatableElementCS(coherenceConstraintCS);
+				if (result == null) result = caseModelElementCS(coherenceConstraintCS);
+				if (result == null) result = caseNameable(coherenceConstraintCS);
+				if (result == null) result = casePivotableElementCS(coherenceConstraintCS);
+				if (result == null) result = caseElementCS(coherenceConstraintCS);
+				if (result == null) result = casePivotable(coherenceConstraintCS);
+				if (result == null) result = caseVisitableCS(coherenceConstraintCS);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -414,17 +414,17 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Location Constraint CS</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Coherence Constraint CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Location Constraint CS</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Coherence Constraint CS</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLocationConstraintCS(LocationConstraintCS object) {
+	public T caseCoherenceConstraintCS(CoherenceConstraintCS object) {
 		return null;
 	}
 

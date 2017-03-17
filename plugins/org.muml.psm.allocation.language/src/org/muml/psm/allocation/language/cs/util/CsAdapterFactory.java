@@ -107,8 +107,8 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 				return createConstraintCSAdapter();
 			}
 			@Override
-			public Adapter caseLocationConstraintCS(LocationConstraintCS object) {
-				return createLocationConstraintCSAdapter();
+			public Adapter caseCoherenceConstraintCS(CoherenceConstraintCS object) {
+				return createCoherenceConstraintCSAdapter();
 			}
 			@Override
 			public Adapter caseResourceConstraintCS(ResourceConstraintCS object) {
@@ -305,16 +305,16 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.LocationConstraintCS <em>Location Constraint CS</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.CoherenceConstraintCS <em>Coherence Constraint CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.cs.LocationConstraintCS
+	 * @see org.muml.psm.allocation.language.cs.CoherenceConstraintCS
 	 * @generated
 	 */
-	public Adapter createLocationConstraintCSAdapter() {
+	public Adapter createCoherenceConstraintCSAdapter() {
 		return null;
 	}
 

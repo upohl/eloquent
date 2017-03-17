@@ -30,10 +30,6 @@ public interface TypedPair extends Element {
 	/**
 	 * Returns the value of the '<em><b>First</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>First</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The named part that is defined by this typed pair represents the "source".
@@ -59,10 +55,6 @@ public interface TypedPair extends Element {
 	/**
 	 * Returns the value of the '<em><b>Second</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Second</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The named part that is defined by this typed pair represents the "target".

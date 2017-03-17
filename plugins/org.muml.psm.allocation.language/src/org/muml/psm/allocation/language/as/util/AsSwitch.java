@@ -129,15 +129,15 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case AsPackage.LOCATION_CONSTRAINT: {
-				LocationConstraint locationConstraint = (LocationConstraint)theEObject;
-				T result = caseLocationConstraint(locationConstraint);
-				if (result == null) result = caseConstraint(locationConstraint);
-				if (result == null) result = caseNamedElement(locationConstraint);
-				if (result == null) result = caseEvaluatableElement(locationConstraint);
-				if (result == null) result = caseElement(locationConstraint);
-				if (result == null) result = caseNameable(locationConstraint);
-				if (result == null) result = caseVisitable(locationConstraint);
+			case AsPackage.COHERENCE_CONSTRAINT: {
+				CoherenceConstraint coherenceConstraint = (CoherenceConstraint)theEObject;
+				T result = caseCoherenceConstraint(coherenceConstraint);
+				if (result == null) result = caseConstraint(coherenceConstraint);
+				if (result == null) result = caseNamedElement(coherenceConstraint);
+				if (result == null) result = caseEvaluatableElement(coherenceConstraint);
+				if (result == null) result = caseElement(coherenceConstraint);
+				if (result == null) result = caseNameable(coherenceConstraint);
+				if (result == null) result = caseVisitable(coherenceConstraint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -351,17 +351,17 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Location Constraint</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Coherence Constraint</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Location Constraint</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Coherence Constraint</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLocationConstraint(LocationConstraint object) {
+	public T caseCoherenceConstraint(CoherenceConstraint object) {
 		return null;
 	}
 

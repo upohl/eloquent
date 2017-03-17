@@ -14,28 +14,28 @@ import org.eclipse.jdt.annotation.NonNull;
 
 import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
 
+import org.muml.psm.allocation.language.cs.CoherenceConstraintCS;
+import org.muml.psm.allocation.language.cs.CoherenceConstraintType;
 import org.muml.psm.allocation.language.cs.CsPackage;
-import org.muml.psm.allocation.language.cs.LocationConstraintCS;
-import org.muml.psm.allocation.language.cs.LocationConstraintTypes;
 import org.muml.psm.allocation.language.cs.TupleDescriptorCS;
 
 import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Location Constraint CS</b></em>'.
+ * An implementation of the model object '<em><b>Coherence Constraint CS</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.muml.psm.allocation.language.cs.impl.LocationConstraintCSImpl#getTupleDescriptor <em>Tuple Descriptor</em>}</li>
- *   <li>{@link org.muml.psm.allocation.language.cs.impl.LocationConstraintCSImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.impl.CoherenceConstraintCSImpl#getTupleDescriptor <em>Tuple Descriptor</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.impl.CoherenceConstraintCSImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class LocationConstraintCSImpl extends ConstraintCSImpl implements LocationConstraintCS {
+public class CoherenceConstraintCSImpl extends ConstraintCSImpl implements CoherenceConstraintCS {
 	/**
 	 * The cached value of the '{@link #getTupleDescriptor() <em>Tuple Descriptor</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	 * @generated
 	 * @ordered
 	 */
-	protected static final LocationConstraintTypes TYPE_EDEFAULT = LocationConstraintTypes.SAME_LOCATION;
+	protected static final CoherenceConstraintType TYPE_EDEFAULT = CoherenceConstraintType.COLLOCATION;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -64,14 +64,14 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	 * @generated
 	 * @ordered
 	 */
-	protected LocationConstraintTypes type = TYPE_EDEFAULT;
+	protected CoherenceConstraintType type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LocationConstraintCSImpl() {
+	protected CoherenceConstraintCSImpl() {
 		super();
 	}
 
@@ -82,7 +82,7 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CsPackage.Literals.LOCATION_CONSTRAINT_CS;
+		return CsPackage.Literals.COHERENCE_CONSTRAINT_CS;
 	}
 
 	/**
@@ -103,7 +103,7 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 		TupleDescriptorCS oldTupleDescriptor = tupleDescriptor;
 		tupleDescriptor = newTupleDescriptor;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR, oldTupleDescriptor, newTupleDescriptor);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.COHERENCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR, oldTupleDescriptor, newTupleDescriptor);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -118,14 +118,14 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 		if (newTupleDescriptor != tupleDescriptor) {
 			NotificationChain msgs = null;
 			if (tupleDescriptor != null)
-				msgs = ((InternalEObject)tupleDescriptor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR, null, msgs);
+				msgs = ((InternalEObject)tupleDescriptor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CsPackage.COHERENCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR, null, msgs);
 			if (newTupleDescriptor != null)
-				msgs = ((InternalEObject)newTupleDescriptor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR, null, msgs);
+				msgs = ((InternalEObject)newTupleDescriptor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CsPackage.COHERENCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR, null, msgs);
 			msgs = basicSetTupleDescriptor(newTupleDescriptor, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR, newTupleDescriptor, newTupleDescriptor));
+			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.COHERENCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR, newTupleDescriptor, newTupleDescriptor));
 	}
 
 	/**
@@ -133,7 +133,7 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocationConstraintTypes getType() {
+	public CoherenceConstraintType getType() {
 		return type;
 	}
 
@@ -142,11 +142,11 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(LocationConstraintTypes newType) {
-		LocationConstraintTypes oldType = type;
+	public void setType(CoherenceConstraintType newType) {
+		CoherenceConstraintType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.LOCATION_CONSTRAINT_CS__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.COHERENCE_CONSTRAINT_CS__TYPE, oldType, type));
 	}
 
 	/**
@@ -166,7 +166,7 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
+			case CsPackage.COHERENCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
 				return basicSetTupleDescriptor(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -180,9 +180,9 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
+			case CsPackage.COHERENCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
 				return getTupleDescriptor();
-			case CsPackage.LOCATION_CONSTRAINT_CS__TYPE:
+			case CsPackage.COHERENCE_CONSTRAINT_CS__TYPE:
 				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -196,11 +196,11 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
+			case CsPackage.COHERENCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
 				setTupleDescriptor((TupleDescriptorCS)newValue);
 				return;
-			case CsPackage.LOCATION_CONSTRAINT_CS__TYPE:
-				setType((LocationConstraintTypes)newValue);
+			case CsPackage.COHERENCE_CONSTRAINT_CS__TYPE:
+				setType((CoherenceConstraintType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -214,10 +214,10 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
+			case CsPackage.COHERENCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
 				setTupleDescriptor((TupleDescriptorCS)null);
 				return;
-			case CsPackage.LOCATION_CONSTRAINT_CS__TYPE:
+			case CsPackage.COHERENCE_CONSTRAINT_CS__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
 		}
@@ -232,9 +232,9 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CsPackage.LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
+			case CsPackage.COHERENCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR:
 				return tupleDescriptor != null;
-			case CsPackage.LOCATION_CONSTRAINT_CS__TYPE:
+			case CsPackage.COHERENCE_CONSTRAINT_CS__TYPE:
 				return type != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -247,7 +247,7 @@ public class LocationConstraintCSImpl extends ConstraintCSImpl implements Locati
 	@SuppressWarnings("unchecked")
 	@Override
 	public <R> R accept(@NonNull BaseCSVisitor<R> visitor) {
-		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitLocationConstraintCS(this);
+		return (R) ((LanguageSpecificationCSVisitor<?>)visitor).visitCoherenceConstraintCS(this);
 	}
 
-} //LocationConstraintCSImpl
+} //CoherenceConstraintCSImpl

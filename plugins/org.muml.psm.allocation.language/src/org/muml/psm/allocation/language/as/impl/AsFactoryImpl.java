@@ -60,7 +60,7 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 			case AsPackage.SPECIFICATION: return createSpecification();
 			case AsPackage.RELATION: return createRelation();
 			case AsPackage.BOUND: return createBound();
-			case AsPackage.LOCATION_CONSTRAINT: return createLocationConstraint();
+			case AsPackage.COHERENCE_CONSTRAINT: return createCoherenceConstraint();
 			case AsPackage.RESOURCE_CONSTRAINT: return createResourceConstraint();
 			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT: return createRequiredHardwareResourceInstanceConstraint();
 			case AsPackage.TUPLE_DESCRIPTOR: return createTupleDescriptor();
@@ -86,8 +86,8 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case AsPackage.LOCATION_CONSTRAINT_TYPES:
-				return createLocationConstraintTypesFromString(eDataType, initialValue);
+			case AsPackage.COHERENCE_CONSTRAINT_TYPE:
+				return createCoherenceConstraintTypeFromString(eDataType, initialValue);
 			case AsPackage.GOAL:
 				return createGoalFromString(eDataType, initialValue);
 			default:
@@ -103,8 +103,8 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case AsPackage.LOCATION_CONSTRAINT_TYPES:
-				return convertLocationConstraintTypesToString(eDataType, instanceValue);
+			case AsPackage.COHERENCE_CONSTRAINT_TYPE:
+				return convertCoherenceConstraintTypeToString(eDataType, instanceValue);
 			case AsPackage.GOAL:
 				return convertGoalToString(eDataType, instanceValue);
 			default:
@@ -147,9 +147,9 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocationConstraint createLocationConstraint() {
-		LocationConstraintImpl locationConstraint = new LocationConstraintImpl();
-		return locationConstraint;
+	public CoherenceConstraint createCoherenceConstraint() {
+		CoherenceConstraintImpl coherenceConstraint = new CoherenceConstraintImpl();
+		return coherenceConstraint;
 	}
 
 	/**
@@ -277,8 +277,8 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocationConstraintTypes createLocationConstraintTypesFromString(EDataType eDataType, String initialValue) {
-		LocationConstraintTypes result = LocationConstraintTypes.get(initialValue);
+	public CoherenceConstraintType createCoherenceConstraintTypeFromString(EDataType eDataType, String initialValue) {
+		CoherenceConstraintType result = CoherenceConstraintType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -288,7 +288,7 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertLocationConstraintTypesToString(EDataType eDataType, Object instanceValue) {
+	public String convertCoherenceConstraintTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

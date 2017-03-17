@@ -537,14 +537,14 @@ public interface AsPackage extends EPackage {
 	int CONSTRAINT_FEATURE_COUNT = PivotPackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.LocationConstraintImpl <em>Location Constraint</em>}' class.
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.CoherenceConstraintImpl <em>Coherence Constraint</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.as.impl.LocationConstraintImpl
-	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getLocationConstraint()
+	 * @see org.muml.psm.allocation.language.as.impl.CoherenceConstraintImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getCoherenceConstraint()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT = 5;
+	int COHERENCE_CONSTRAINT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -553,7 +553,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT__ANNOTATING_COMMENTS = CONSTRAINT__ANNOTATING_COMMENTS;
+	int COHERENCE_CONSTRAINT__ANNOTATING_COMMENTS = CONSTRAINT__ANNOTATING_COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
@@ -562,7 +562,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT__OWNED_ANNOTATIONS = CONSTRAINT__OWNED_ANNOTATIONS;
+	int COHERENCE_CONSTRAINT__OWNED_ANNOTATIONS = CONSTRAINT__OWNED_ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
@@ -571,7 +571,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT__OWNED_COMMENTS = CONSTRAINT__OWNED_COMMENTS;
+	int COHERENCE_CONSTRAINT__OWNED_COMMENTS = CONSTRAINT__OWNED_COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
@@ -580,7 +580,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT__OWNED_EXTENSIONS = CONSTRAINT__OWNED_EXTENSIONS;
+	int COHERENCE_CONSTRAINT__OWNED_EXTENSIONS = CONSTRAINT__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -589,7 +589,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT__NAME = CONSTRAINT__NAME;
+	int COHERENCE_CONSTRAINT__NAME = CONSTRAINT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -598,7 +598,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT__EXPRESSION = CONSTRAINT__EXPRESSION;
+	int COHERENCE_CONSTRAINT__EXPRESSION = CONSTRAINT__EXPRESSION;
 
 	/**
 	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
@@ -607,7 +607,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR = CONSTRAINT_FEATURE_COUNT + 0;
+	int COHERENCE_CONSTRAINT__TUPLE_DESCRIPTOR = CONSTRAINT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -616,16 +616,16 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT__TYPE = CONSTRAINT_FEATURE_COUNT + 1;
+	int COHERENCE_CONSTRAINT__TYPE = CONSTRAINT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Location Constraint</em>' class.
+	 * The number of structural features of the '<em>Coherence Constraint</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT_FEATURE_COUNT = CONSTRAINT_FEATURE_COUNT + 2;
+	int COHERENCE_CONSTRAINT_FEATURE_COUNT = CONSTRAINT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.ResourceConstraintImpl <em>Resource Constraint</em>}' class.
@@ -1578,14 +1578,14 @@ public interface AsPackage extends EPackage {
 	int OCL_CONTEXT_FEATURE_COUNT = PivotPackage.TYPED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.CoherenceConstraintType <em>Coherence Constraint Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.as.LocationConstraintTypes
-	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getLocationConstraintTypes()
+	 * @see org.muml.psm.allocation.language.as.CoherenceConstraintType
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getCoherenceConstraintType()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_TYPES = 20;
+	int COHERENCE_CONSTRAINT_TYPE = 20;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.Goal <em>Goal</em>}' enum.
@@ -1781,36 +1781,36 @@ public interface AsPackage extends EPackage {
 	EClass getConstraint();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.LocationConstraint <em>Location Constraint</em>}'.
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.CoherenceConstraint <em>Coherence Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Location Constraint</em>'.
-	 * @see org.muml.psm.allocation.language.as.LocationConstraint
+	 * @return the meta object for class '<em>Coherence Constraint</em>'.
+	 * @see org.muml.psm.allocation.language.as.CoherenceConstraint
 	 * @generated
 	 */
-	EClass getLocationConstraint();
+	EClass getCoherenceConstraint();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.LocationConstraint#getTupleDescriptor <em>Tuple Descriptor</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.CoherenceConstraint#getTupleDescriptor <em>Tuple Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
-	 * @see org.muml.psm.allocation.language.as.LocationConstraint#getTupleDescriptor()
-	 * @see #getLocationConstraint()
+	 * @see org.muml.psm.allocation.language.as.CoherenceConstraint#getTupleDescriptor()
+	 * @see #getCoherenceConstraint()
 	 * @generated
 	 */
-	EReference getLocationConstraint_TupleDescriptor();
+	EReference getCoherenceConstraint_TupleDescriptor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.as.LocationConstraint#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.as.CoherenceConstraint#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see org.muml.psm.allocation.language.as.LocationConstraint#getType()
-	 * @see #getLocationConstraint()
+	 * @see org.muml.psm.allocation.language.as.CoherenceConstraint#getType()
+	 * @see #getCoherenceConstraint()
 	 * @generated
 	 */
-	EAttribute getLocationConstraint_Type();
+	EAttribute getCoherenceConstraint_Type();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.ResourceConstraint <em>Resource Constraint</em>}'.
@@ -2063,14 +2063,14 @@ public interface AsPackage extends EPackage {
 	EClass getOCLContext();
 
 	/**
-	 * Returns the meta object for enum '{@link org.muml.psm.allocation.language.as.LocationConstraintTypes <em>Location Constraint Types</em>}'.
+	 * Returns the meta object for enum '{@link org.muml.psm.allocation.language.as.CoherenceConstraintType <em>Coherence Constraint Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Location Constraint Types</em>'.
-	 * @see org.muml.psm.allocation.language.as.LocationConstraintTypes
+	 * @return the meta object for enum '<em>Coherence Constraint Type</em>'.
+	 * @see org.muml.psm.allocation.language.as.CoherenceConstraintType
 	 * @generated
 	 */
-	EEnum getLocationConstraintTypes();
+	EEnum getCoherenceConstraintType();
 
 	/**
 	 * Returns the meta object for enum '{@link org.muml.psm.allocation.language.as.Goal <em>Goal</em>}'.
@@ -2251,14 +2251,14 @@ public interface AsPackage extends EPackage {
 		EClass CONSTRAINT = eINSTANCE.getConstraint();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.LocationConstraintImpl <em>Location Constraint</em>}' class.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.CoherenceConstraintImpl <em>Coherence Constraint</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.as.impl.LocationConstraintImpl
-		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getLocationConstraint()
+		 * @see org.muml.psm.allocation.language.as.impl.CoherenceConstraintImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getCoherenceConstraint()
 		 * @generated
 		 */
-		EClass LOCATION_CONSTRAINT = eINSTANCE.getLocationConstraint();
+		EClass COHERENCE_CONSTRAINT = eINSTANCE.getCoherenceConstraint();
 
 		/**
 		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
@@ -2266,7 +2266,7 @@ public interface AsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR = eINSTANCE.getLocationConstraint_TupleDescriptor();
+		EReference COHERENCE_CONSTRAINT__TUPLE_DESCRIPTOR = eINSTANCE.getCoherenceConstraint_TupleDescriptor();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -2274,7 +2274,7 @@ public interface AsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOCATION_CONSTRAINT__TYPE = eINSTANCE.getLocationConstraint_Type();
+		EAttribute COHERENCE_CONSTRAINT__TYPE = eINSTANCE.getCoherenceConstraint_Type();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.ResourceConstraintImpl <em>Resource Constraint</em>}' class.
@@ -2497,14 +2497,14 @@ public interface AsPackage extends EPackage {
 		EClass OCL_CONTEXT = eINSTANCE.getOCLContext();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.CoherenceConstraintType <em>Coherence Constraint Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.as.LocationConstraintTypes
-		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getLocationConstraintTypes()
+		 * @see org.muml.psm.allocation.language.as.CoherenceConstraintType
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getCoherenceConstraintType()
 		 * @generated
 		 */
-		EEnum LOCATION_CONSTRAINT_TYPES = eINSTANCE.getLocationConstraintTypes();
+		EEnum COHERENCE_CONSTRAINT_TYPE = eINSTANCE.getCoherenceConstraintType();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.Goal <em>Goal</em>}' enum.

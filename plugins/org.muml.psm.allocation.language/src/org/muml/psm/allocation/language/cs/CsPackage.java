@@ -593,14 +593,14 @@ public interface CsPackage extends EPackage {
 	int CONSTRAINT_CS_FEATURE_COUNT = BaseCSPackage.NAMED_ELEMENT_CS_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.LocationConstraintCSImpl <em>Location Constraint CS</em>}' class.
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.CoherenceConstraintCSImpl <em>Coherence Constraint CS</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.cs.impl.LocationConstraintCSImpl
-	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getLocationConstraintCS()
+	 * @see org.muml.psm.allocation.language.cs.impl.CoherenceConstraintCSImpl
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getCoherenceConstraintCS()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_CS = 5;
+	int COHERENCE_CONSTRAINT_CS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -609,7 +609,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT_CS__CSI = CONSTRAINT_CS__CSI;
+	int COHERENCE_CONSTRAINT_CS__CSI = CONSTRAINT_CS__CSI;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -618,7 +618,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT_CS__PARENT = CONSTRAINT_CS__PARENT;
+	int COHERENCE_CONSTRAINT_CS__PARENT = CONSTRAINT_CS__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Pivot</b></em>' reference.
@@ -627,7 +627,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT_CS__PIVOT = CONSTRAINT_CS__PIVOT;
+	int COHERENCE_CONSTRAINT_CS__PIVOT = CONSTRAINT_CS__PIVOT;
 
 	/**
 	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
@@ -636,7 +636,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT_CS__ORIGINAL_XMI_ID = CONSTRAINT_CS__ORIGINAL_XMI_ID;
+	int COHERENCE_CONSTRAINT_CS__ORIGINAL_XMI_ID = CONSTRAINT_CS__ORIGINAL_XMI_ID;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
@@ -645,7 +645,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT_CS__OWNED_ANNOTATIONS = CONSTRAINT_CS__OWNED_ANNOTATIONS;
+	int COHERENCE_CONSTRAINT_CS__OWNED_ANNOTATIONS = CONSTRAINT_CS__OWNED_ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -654,7 +654,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT_CS__NAME = CONSTRAINT_CS__NAME;
+	int COHERENCE_CONSTRAINT_CS__NAME = CONSTRAINT_CS__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -663,7 +663,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT_CS__EXPRESSION = CONSTRAINT_CS__EXPRESSION;
+	int COHERENCE_CONSTRAINT_CS__EXPRESSION = CONSTRAINT_CS__EXPRESSION;
 
 	/**
 	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
@@ -672,7 +672,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR = CONSTRAINT_CS_FEATURE_COUNT + 0;
+	int COHERENCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR = CONSTRAINT_CS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -681,16 +681,16 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT_CS__TYPE = CONSTRAINT_CS_FEATURE_COUNT + 1;
+	int COHERENCE_CONSTRAINT_CS__TYPE = CONSTRAINT_CS_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Location Constraint CS</em>' class.
+	 * The number of structural features of the '<em>Coherence Constraint CS</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_CONSTRAINT_CS_FEATURE_COUNT = CONSTRAINT_CS_FEATURE_COUNT + 2;
+	int COHERENCE_CONSTRAINT_CS_FEATURE_COUNT = CONSTRAINT_CS_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.ResourceConstraintCSImpl <em>Resource Constraint CS</em>}' class.
@@ -1760,14 +1760,14 @@ public interface CsPackage extends EPackage {
 	int OCL_CONTEXT_CS_FEATURE_COUNT = BaseCSPackage.TYPED_ELEMENT_CS_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.CoherenceConstraintType <em>Coherence Constraint Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.cs.LocationConstraintTypes
-	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getLocationConstraintTypes()
+	 * @see org.muml.psm.allocation.language.cs.CoherenceConstraintType
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getCoherenceConstraintType()
 	 * @generated
 	 */
-	int LOCATION_CONSTRAINT_TYPES = 20;
+	int COHERENCE_CONSTRAINT_TYPE = 20;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.Goal <em>Goal</em>}' enum.
@@ -1985,36 +1985,36 @@ public interface CsPackage extends EPackage {
 	EClass getConstraintCS();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.LocationConstraintCS <em>Location Constraint CS</em>}'.
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.CoherenceConstraintCS <em>Coherence Constraint CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Location Constraint CS</em>'.
-	 * @see org.muml.psm.allocation.language.cs.LocationConstraintCS
+	 * @return the meta object for class '<em>Coherence Constraint CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.CoherenceConstraintCS
 	 * @generated
 	 */
-	EClass getLocationConstraintCS();
+	EClass getCoherenceConstraintCS();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.LocationConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.CoherenceConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
-	 * @see org.muml.psm.allocation.language.cs.LocationConstraintCS#getTupleDescriptor()
-	 * @see #getLocationConstraintCS()
+	 * @see org.muml.psm.allocation.language.cs.CoherenceConstraintCS#getTupleDescriptor()
+	 * @see #getCoherenceConstraintCS()
 	 * @generated
 	 */
-	EReference getLocationConstraintCS_TupleDescriptor();
+	EReference getCoherenceConstraintCS_TupleDescriptor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.cs.LocationConstraintCS#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.cs.CoherenceConstraintCS#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see org.muml.psm.allocation.language.cs.LocationConstraintCS#getType()
-	 * @see #getLocationConstraintCS()
+	 * @see org.muml.psm.allocation.language.cs.CoherenceConstraintCS#getType()
+	 * @see #getCoherenceConstraintCS()
 	 * @generated
 	 */
-	EAttribute getLocationConstraintCS_Type();
+	EAttribute getCoherenceConstraintCS_Type();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.ResourceConstraintCS <em>Resource Constraint CS</em>}'.
@@ -2267,14 +2267,14 @@ public interface CsPackage extends EPackage {
 	EClass getOCLContextCS();
 
 	/**
-	 * Returns the meta object for enum '{@link org.muml.psm.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}'.
+	 * Returns the meta object for enum '{@link org.muml.psm.allocation.language.cs.CoherenceConstraintType <em>Coherence Constraint Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Location Constraint Types</em>'.
-	 * @see org.muml.psm.allocation.language.cs.LocationConstraintTypes
+	 * @return the meta object for enum '<em>Coherence Constraint Type</em>'.
+	 * @see org.muml.psm.allocation.language.cs.CoherenceConstraintType
 	 * @generated
 	 */
-	EEnum getLocationConstraintTypes();
+	EEnum getCoherenceConstraintType();
 
 	/**
 	 * Returns the meta object for enum '{@link org.muml.psm.allocation.language.cs.Goal <em>Goal</em>}'.
@@ -2471,14 +2471,14 @@ public interface CsPackage extends EPackage {
 		EClass CONSTRAINT_CS = eINSTANCE.getConstraintCS();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.LocationConstraintCSImpl <em>Location Constraint CS</em>}' class.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.CoherenceConstraintCSImpl <em>Coherence Constraint CS</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.cs.impl.LocationConstraintCSImpl
-		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getLocationConstraintCS()
+		 * @see org.muml.psm.allocation.language.cs.impl.CoherenceConstraintCSImpl
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getCoherenceConstraintCS()
 		 * @generated
 		 */
-		EClass LOCATION_CONSTRAINT_CS = eINSTANCE.getLocationConstraintCS();
+		EClass COHERENCE_CONSTRAINT_CS = eINSTANCE.getCoherenceConstraintCS();
 
 		/**
 		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
@@ -2486,7 +2486,7 @@ public interface CsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR = eINSTANCE.getLocationConstraintCS_TupleDescriptor();
+		EReference COHERENCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR = eINSTANCE.getCoherenceConstraintCS_TupleDescriptor();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -2494,7 +2494,7 @@ public interface CsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOCATION_CONSTRAINT_CS__TYPE = eINSTANCE.getLocationConstraintCS_Type();
+		EAttribute COHERENCE_CONSTRAINT_CS__TYPE = eINSTANCE.getCoherenceConstraintCS_Type();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.ResourceConstraintCSImpl <em>Resource Constraint CS</em>}' class.
@@ -2717,14 +2717,14 @@ public interface CsPackage extends EPackage {
 		EClass OCL_CONTEXT_CS = eINSTANCE.getOCLContextCS();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.LocationConstraintTypes <em>Location Constraint Types</em>}' enum.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.CoherenceConstraintType <em>Coherence Constraint Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.cs.LocationConstraintTypes
-		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getLocationConstraintTypes()
+		 * @see org.muml.psm.allocation.language.cs.CoherenceConstraintType
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getCoherenceConstraintType()
 		 * @generated
 		 */
-		EEnum LOCATION_CONSTRAINT_TYPES = eINSTANCE.getLocationConstraintTypes();
+		EEnum COHERENCE_CONSTRAINT_TYPE = eINSTANCE.getCoherenceConstraintType();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.Goal <em>Goal</em>}' enum.

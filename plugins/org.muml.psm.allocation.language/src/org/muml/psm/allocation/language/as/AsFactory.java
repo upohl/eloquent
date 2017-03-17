@@ -49,13 +49,13 @@ public interface AsFactory extends EFactory {
 	Bound createBound();
 
 	/**
-	 * Returns a new object of class '<em>Location Constraint</em>'.
+	 * Returns a new object of class '<em>Coherence Constraint</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Location Constraint</em>'.
+	 * @return a new object of class '<em>Coherence Constraint</em>'.
 	 * @generated
 	 */
-	LocationConstraint createLocationConstraint();
+	CoherenceConstraint createCoherenceConstraint();
 
 	/**
 	 * Returns a new object of class '<em>Resource Constraint</em>'.

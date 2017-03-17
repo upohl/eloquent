@@ -47,6 +47,11 @@ public abstract class AbstractCsPostOrderVisitor
 	}
 
 	@Override
+	public @Nullable Continuation<?> visitCoherenceConstraintCS(org.muml.psm.allocation.language.cs.@NonNull CoherenceConstraintCS csElement) {
+		return visitConstraintCS(csElement);
+	}
+
+	@Override
 	public @Nullable Continuation<?> visitConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ConstraintCS csElement) {
 		return visitNamedElementCS(csElement);
 	}
@@ -59,11 +64,6 @@ public abstract class AbstractCsPostOrderVisitor
 	@Override
 	public @Nullable Continuation<?> visitJavaImplementationProviderCS(org.muml.psm.allocation.language.cs.@NonNull JavaImplementationProviderCS csElement) {
 		return visitModelElementCS(csElement);
-	}
-
-	@Override
-	public @Nullable Continuation<?> visitLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull LocationConstraintCS csElement) {
-		return visitConstraintCS(csElement);
 	}
 
 	@Override
