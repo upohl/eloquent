@@ -12,7 +12,7 @@
       </command>
       <command
             categoryId="org.muml"
-            defaultHandler="org.muml.psm.allocation.algorithm.ui.CreateASLFileHandler"
+            defaultHandler="org.muml.psm.allocation.algorithm.ui.GenericCreateASLFileHandler"
             id="org.muml.psm.allocation.algorithm.ui.CreateASLFileCommand"
             name="Create Allocation Constraint and Optimization Specification">
       </command>
@@ -21,53 +21,27 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="popup:org.muml">
-         <command
-               commandId="org.muml.psm.allocation.algorithm.ui.OpenAllocationWizardCommand"
-               label="Plan System Allocation"
-               style="push">
-            <visibleWhen
-                  checkEnabled="false">
-               <or>
-                  <reference
-                        definitionId="org.muml.expression.mumlfile">
-                  </reference>
-                  <iterate
-                        ifEmpty="false"
-                        operator="and">
-                     <adapt
-                           type="org.eclipse.core.resources.IResource">
-                        <test
-                              property="org.eclipse.core.resources.name"
-                              value="*.allocation_specification">
-                        </test>
-                     </adapt>
-                  </iterate>
-               </or>
-            </visibleWhen>
-         </command>
-      </menuContribution>
-      <menuContribution
-            allPopups="false"
-            locationURI="popup:org.muml">
-         <command
-               commandId="org.muml.psm.allocation.algorithm.ui.CreateASLFileCommand"
-               label="Create Allocation Constraint and Optimization Specification"
-               style="push">
-            <visibleWhen
-                  checkEnabled="false">
-               <reference
-                     definitionId="org.muml.expression.mumlfile">
-               </reference>
-            </visibleWhen>
-         </command>
-      </menuContribution>
-      <menuContribution
-            allPopups="false"
-            locationURI="popup:org.eclipse.ui.navigator.ProjectExplorer#PopupMenu??after=additions">
+            locationURI="popup:org.eclipse.ui.navigator.ProjectExplorer#PopupMenu?after=additions">
          <command
                commandId="org.muml.psm.allocation.algorithm.ui.OpenAllocationWizardCommand"
                label="Compute Allocation"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <iterate>
+                  <adapt
+                        type="org.eclipse.core.resources.IFile">
+                  </adapt>
+               </iterate>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.navigator.ProjectExplorer#PopupMenu?after=additions">
+         <command
+               commandId="org.muml.psm.allocation.algorithm.ui.CreateASLFileCommand"
+               label="Create ASL Specification"
                style="push">
             <visibleWhen
                   checkEnabled="false">
@@ -89,11 +63,4 @@
             name="Allocation Planning Wizard">
       </wizard>
    </extension>
-   <extension
-         point="org.muml.psm.allocation.algorithm.ui.oclContextSelectionProvider">
-      <oclContextSelectionProvider
-            class="org.muml.psm.allocation.algorithm.ui.wizard.MUMLOCLContextSelectionProvider">
-      </oclContextSelectionProvider>
-   </extension>
-
 </plugin>

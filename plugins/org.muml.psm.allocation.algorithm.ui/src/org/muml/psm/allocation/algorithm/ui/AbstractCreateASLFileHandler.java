@@ -19,32 +19,13 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
 
-public class CreateASLFileHandler extends AbstractHandler {
-	private static final String illegal_template =
+public abstract class AbstractCreateASLFileHandler extends AbstractHandler {
+	private static final String fileExtension = "allocation_specification";
+	private static final String illegalTemplate =
 			"template does not conform to the grammar";
-	private static final String file_extension = "allocation_specification";
-	// what a mess...
-	private static final String template =
-			new StringBuilder()
-				.append("%s {\n")
-				.append("\timport 'http://www.muml.org/psm/allocation/language/oclcontext/1.0.0'\n")
-				.append("\tinclude 'platform:/plugin/org.muml.psm.allocation.language.xtext/operations/OCLContext.ocl'\n")
-				.append("\n")
-				.append("\toclContext oclcontext::OCLContext;\n")
-				.append("\n")
-				.append("\tnameProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLNameProvider';\n")
-				.append("\tstorageProvider 'org.muml.psm.allocation.language.xtext.provider.MUMLStorageProvider';\n")
-				.append("\n")
-				.append("\trelation allocate {\n")
-				.append("\t\tdescriptors (first : pim::instance::ComponentInstance, second : hardware::hwresourceinstance::ResourceInstance);\n")
-				.append("\t\tlower 1;\n")
-				.append("\t\tupper 1;\n")
-				.append("\t\tocl self.getAllSWInstances()->product(\n")
-				.append("\t\t\tself.getAllStructuredHWInstances()\n")
-				.append("\t\t);\n")
-				.append("\t}\n")
-				.append("}").toString();
-
+	
+	protected abstract String getTemplate(String name);
+	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		ISelection selection = HandlerUtil.getCurrentSelection(event);
@@ -59,9 +40,9 @@ public class CreateASLFileHandler extends AbstractHandler {
 		return null;
 	}
 	
-	private static void createASLFile(IFile file) {
+	protected void createASLFile(IFile file) {
 		ResourceSet resSet = new ResourceSetImpl();
-		IPath path = getNonexistentPath(file.getFullPath(), file_extension);
+		IPath path = getNonexistentPath(file.getFullPath(), fileExtension);
 		// hrm what about illegal names?
 		String name = path.removeFileExtension().lastSegment();
 		// XXX: hrm is path.toString already encoded?
@@ -69,11 +50,11 @@ public class CreateASLFileHandler extends AbstractHandler {
 				URI.createPlatformResourceURI(path.toString(), true));
 		try {
 			InputStream in = new URIConverter.ReadableInputStream(
-					String.format(template, name), "UTF-8");
+					getTemplate(name), "UTF-8");
 			resource.load(in, null);
 			// check for errors (e.g. if we changed the grammar...)
 			if (!resource.getErrors().isEmpty()) {
-				throw new IllegalStateException(illegal_template);
+				throw new IllegalStateException(illegalTemplate);
 			}
 			resource.save(null);
 		} catch (IOException e) {
@@ -97,5 +78,4 @@ public class CreateASLFileHandler extends AbstractHandler {
 		} while (root.exists(path));
 		return path;
 	}
-
 }
