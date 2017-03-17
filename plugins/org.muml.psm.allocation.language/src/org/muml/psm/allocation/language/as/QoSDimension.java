@@ -26,7 +26,7 @@ import org.eclipse.ocl.pivot.NamedElement;
  * @model
  * @generated
  */
-public interface QoSDimension extends NamedElement, EvaluatableElement {
+public interface QoSDimension extends NamedElement, EvaluableElement {
 	/**
 	 * Returns the value of the '<em><b>Tuple Descriptor</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

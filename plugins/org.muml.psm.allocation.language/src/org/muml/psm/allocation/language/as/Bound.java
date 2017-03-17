@@ -18,5 +18,5 @@ package org.muml.psm.allocation.language.as;
  * @model
  * @generated
  */
-public interface Bound extends EvaluatableElement {
+public interface Bound extends EvaluableElement {
 } // Bound

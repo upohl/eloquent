@@ -18,5 +18,5 @@ package org.muml.psm.allocation.language.cs;
  * @model
  * @generated
  */
-public interface BoundCS extends EvaluatableElementCS {
+public interface BoundCS extends EvaluableElementCS {
 } // BoundCS

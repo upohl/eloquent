@@ -84,8 +84,8 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 				return createSpecificationAdapter();
 			}
 			@Override
-			public Adapter caseEvaluatableElement(EvaluatableElement object) {
-				return createEvaluatableElementAdapter();
+			public Adapter caseEvaluableElement(EvaluableElement object) {
+				return createEvaluableElementAdapter();
 			}
 			@Override
 			public Adapter caseRelation(Relation object) {
@@ -222,16 +222,16 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.EvaluatableElement <em>Evaluatable Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.EvaluableElement <em>Evaluable Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.as.EvaluatableElement
+	 * @see org.muml.psm.allocation.language.as.EvaluableElement
 	 * @generated
 	 */
-	public Adapter createEvaluatableElementAdapter() {
+	public Adapter createEvaluableElementAdapter() {
 		return null;
 	}
 

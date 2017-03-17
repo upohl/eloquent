@@ -49,8 +49,8 @@ public abstract class AbstractDelegatingLanguageSpecificationCSVisitor<R, C, @No
 	}
 
 	@Override
-	public R visitEvaluatableElementCS(org.muml.psm.allocation.language.cs.@NonNull EvaluatableElementCS object) {
-		return delegate.visitEvaluatableElementCS(object);
+	public R visitEvaluableElementCS(org.muml.psm.allocation.language.cs.@NonNull EvaluableElementCS object) {
+		return delegate.visitEvaluableElementCS(object);
 	}
 
 	@Override

@@ -7,11 +7,11 @@ import org.eclipse.ocl.pivot.ExpressionInOCL;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Evaluatable Element</b></em>'.
+ * A representation of the model object '<em><b>Evaluable Element</b></em>'.
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This class represents an abstract, evaluatable domain element, that is an
+ * This class represents an abstract, evaluable domain element, that is an
  * element for which an OCL expression can be specified.
  * <!-- end-model-doc -->
  *
@@ -19,14 +19,14 @@ import org.eclipse.ocl.pivot.ExpressionInOCL;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.muml.psm.allocation.language.as.EvaluatableElement#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.as.EvaluableElement#getExpression <em>Expression</em>}</li>
  * </ul>
  *
- * @see org.muml.psm.allocation.language.as.AsPackage#getEvaluatableElement()
+ * @see org.muml.psm.allocation.language.as.AsPackage#getEvaluableElement()
  * @model abstract="true"
  * @generated
  */
-public interface EvaluatableElement extends Element {
+public interface EvaluableElement extends Element {
 	/**
 	 * Returns the value of the '<em><b>Expression</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -36,14 +36,14 @@ public interface EvaluatableElement extends Element {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Expression</em>' containment reference.
 	 * @see #setExpression(ExpressionInOCL)
-	 * @see org.muml.psm.allocation.language.as.AsPackage#getEvaluatableElement_Expression()
+	 * @see org.muml.psm.allocation.language.as.AsPackage#getEvaluableElement_Expression()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	ExpressionInOCL getExpression();
 
 	/**
-	 * Sets the value of the '{@link org.muml.psm.allocation.language.as.EvaluatableElement#getExpression <em>Expression</em>}' containment reference.
+	 * Sets the value of the '{@link org.muml.psm.allocation.language.as.EvaluableElement#getExpression <em>Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Expression</em>' containment reference.
@@ -52,4 +52,4 @@ public interface EvaluatableElement extends Element {
 	 */
 	void setExpression(ExpressionInOCL value);
 
-} // EvaluatableElement
+} // EvaluableElement

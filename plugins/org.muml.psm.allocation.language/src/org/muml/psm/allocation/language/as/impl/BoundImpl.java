@@ -14,7 +14,7 @@ import org.muml.psm.allocation.language.as.Bound;
  *
  * @generated
  */
-public class BoundImpl extends EvaluatableElementImpl implements Bound {
+public class BoundImpl extends EvaluableElementImpl implements Bound {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

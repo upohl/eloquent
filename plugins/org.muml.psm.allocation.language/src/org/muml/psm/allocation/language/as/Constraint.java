@@ -18,5 +18,5 @@ import org.eclipse.ocl.pivot.NamedElement;
  * @model abstract="true"
  * @generated
  */
-public interface Constraint extends NamedElement, EvaluatableElement {
+public interface Constraint extends NamedElement, EvaluableElement {
 } // Constraint

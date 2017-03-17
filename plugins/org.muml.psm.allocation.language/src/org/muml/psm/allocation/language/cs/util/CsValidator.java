@@ -89,8 +89,8 @@ public class CsValidator extends EObjectValidator {
 		switch (classifierID) {
 			case CsPackage.SPECIFICATION_CS:
 				return validateSpecificationCS((SpecificationCS)value, diagnostics, context);
-			case CsPackage.EVALUATABLE_ELEMENT_CS:
-				return validateEvaluatableElementCS((EvaluatableElementCS)value, diagnostics, context);
+			case CsPackage.EVALUABLE_ELEMENT_CS:
+				return validateEvaluableElementCS((EvaluableElementCS)value, diagnostics, context);
 			case CsPackage.RELATION_CS:
 				return validateRelationCS((RelationCS)value, diagnostics, context);
 			case CsPackage.BOUND_CS:
@@ -150,8 +150,8 @@ public class CsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateEvaluatableElementCS(EvaluatableElementCS evaluatableElementCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(evaluatableElementCS, diagnostics, context);
+	public boolean validateEvaluableElementCS(EvaluableElementCS evaluableElementCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(evaluableElementCS, diagnostics, context);
 	}
 
 	/**

@@ -54,9 +54,9 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EvaluatableElement" abstract="true" eSuperTypes="../../org.eclipse.ocl.pivot/model/Pivot.ecore#T-pivot-Element">
+  <eClassifiers xsi:type="ecore:EClass" name="EvaluableElement" abstract="true" eSuperTypes="../../org.eclipse.ocl.pivot/model/Pivot.ecore#T-pivot-Element">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This class represents an abstract, evaluatable domain element, that is an&#xA;element for which an OCL expression can be specified."/>
+      <details key="documentation" value="This class represents an abstract, evaluable domain element, that is an&#xA;element for which an OCL expression can be specified."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1" eType="ecore:EClass ../../org.eclipse.ocl.pivot/model/Pivot.ecore#T-pivot-ExpressionInOCL"
         containment="true">
@@ -65,7 +65,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Relation" eSuperTypes="../../org.eclipse.ocl.pivot/model/Pivot.ecore#T-pivot-NamedElement #//EvaluatableElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Relation" eSuperTypes="../../org.eclipse.ocl.pivot/model/Pivot.ecore#T-pivot-NamedElement #//EvaluableElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class represents a relation. A relation is used to relate source objects&#xA;to at least lowerBound many and at most upperBound many target objects.&#xA;&#xA;XXX: in some sense RelationCS is also a constraint - should we inherit from&#xA;ConstraintCS?"/>
     </eAnnotations>
@@ -91,12 +91,12 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Bound" eSuperTypes="#//EvaluatableElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Bound" eSuperTypes="#//EvaluableElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class represents a bound. Usually, the ocl expression evaluates to&#xA;an Integer."/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Constraint" abstract="true" eSuperTypes="../../org.eclipse.ocl.pivot/model/Pivot.ecore#T-pivot-NamedElement #//EvaluatableElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Constraint" abstract="true" eSuperTypes="../../org.eclipse.ocl.pivot/model/Pivot.ecore#T-pivot-NamedElement #//EvaluableElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Abstract base class for constraints."/>
     </eAnnotations>
@@ -214,7 +214,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QoSDimension" eSuperTypes="../../org.eclipse.ocl.pivot/model/Pivot.ecore#T-pivot-NamedElement #//EvaluatableElement">
+  <eClassifiers xsi:type="ecore:EClass" name="QoSDimension" eSuperTypes="../../org.eclipse.ocl.pivot/model/Pivot.ecore#T-pivot-NamedElement #//EvaluableElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class represents a quality of service dimension. The metric of the&#xA;quality of service dimension is specified via the inherited &quot;expression&quot;&#xA;reference"/>
     </eAnnotations>

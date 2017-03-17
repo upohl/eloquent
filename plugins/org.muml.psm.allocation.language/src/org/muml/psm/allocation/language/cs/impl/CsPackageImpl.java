@@ -29,7 +29,7 @@ import org.muml.psm.allocation.language.cs.CoherenceConstraintType;
 import org.muml.psm.allocation.language.cs.ConstraintCS;
 import org.muml.psm.allocation.language.cs.CsFactory;
 import org.muml.psm.allocation.language.cs.CsPackage;
-import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
+import org.muml.psm.allocation.language.cs.EvaluableElementCS;
 import org.muml.psm.allocation.language.cs.Goal;
 import org.muml.psm.allocation.language.cs.JavaImplementationProviderCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintCS;
@@ -68,7 +68,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass evaluatableElementCSEClass = null;
+	private EClass evaluableElementCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -389,8 +389,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEvaluatableElementCS() {
-		return evaluatableElementCSEClass;
+	public EClass getEvaluableElementCS() {
+		return evaluableElementCSEClass;
 	}
 
 	/**
@@ -398,8 +398,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEvaluatableElementCS_Expression() {
-		return (EReference)evaluatableElementCSEClass.getEStructuralFeatures().get(0);
+	public EReference getEvaluableElementCS_Expression() {
+		return (EReference)evaluableElementCSEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -757,8 +757,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		createEReference(specificationCSEClass, SPECIFICATION_CS__STORAGE_PROVIDER);
 		createEReference(specificationCSEClass, SPECIFICATION_CS__OCL_CONTEXT);
 
-		evaluatableElementCSEClass = createEClass(EVALUATABLE_ELEMENT_CS);
-		createEReference(evaluatableElementCSEClass, EVALUATABLE_ELEMENT_CS__EXPRESSION);
+		evaluableElementCSEClass = createEClass(EVALUABLE_ELEMENT_CS);
+		createEReference(evaluableElementCSEClass, EVALUABLE_ELEMENT_CS__EXPRESSION);
 
 		relationCSEClass = createEClass(RELATION_CS);
 		createEReference(relationCSEClass, RELATION_CS__TUPLE_DESCRIPTOR);
@@ -852,12 +852,12 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		// Add supertypes to classes
 		specificationCSEClass.getESuperTypes().add(theCompleteOCLCSPackage.getCompleteOCLDocumentCS());
-		evaluatableElementCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
+		evaluableElementCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
 		relationCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
-		relationCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
-		boundCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
+		relationCSEClass.getESuperTypes().add(this.getEvaluableElementCS());
+		boundCSEClass.getESuperTypes().add(this.getEvaluableElementCS());
 		constraintCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
-		constraintCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
+		constraintCSEClass.getESuperTypes().add(this.getEvaluableElementCS());
 		coherenceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		resourceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		locationConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
@@ -869,7 +869,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		measureFunctionCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
 		serviceCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
 		qoSDimensionCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
-		qoSDimensionCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
+		qoSDimensionCSEClass.getESuperTypes().add(this.getEvaluableElementCS());
 		javaImplementationProviderCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
 		javaImplementationProviderCSEClass.getESuperTypes().add(theOCLstdlibCSPackage.getJavaImplementationCS());
 		oclContextCSEClass.getESuperTypes().add(theBaseCSPackage.getTypedElementCS());
@@ -887,8 +887,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEReference(getSpecificationCS_StorageProvider(), this.getStorageProviderCS(), null, "storageProvider", null, 0, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecificationCS_OclContext(), this.getOCLContextCS(), null, "oclContext", null, 1, 1, SpecificationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(evaluatableElementCSEClass, EvaluatableElementCS.class, "EvaluatableElementCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEvaluatableElementCS_Expression(), theEssentialOCLCSPackage.getContextCS(), null, "expression", null, 1, 1, EvaluatableElementCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(evaluableElementCSEClass, EvaluableElementCS.class, "EvaluableElementCS", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEvaluableElementCS_Expression(), theEssentialOCLCSPackage.getContextCS(), null, "expression", null, 1, 1, EvaluableElementCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(relationCSEClass, RelationCS.class, "RelationCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRelationCS_TupleDescriptor(), this.getTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, RelationCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

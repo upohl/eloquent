@@ -91,8 +91,8 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 				return createSpecificationCSAdapter();
 			}
 			@Override
-			public Adapter caseEvaluatableElementCS(EvaluatableElementCS object) {
-				return createEvaluatableElementCSAdapter();
+			public Adapter caseEvaluableElementCS(EvaluableElementCS object) {
+				return createEvaluableElementCSAdapter();
 			}
 			@Override
 			public Adapter caseRelationCS(RelationCS object) {
@@ -249,16 +249,16 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.EvaluatableElementCS <em>Evaluatable Element CS</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.EvaluableElementCS <em>Evaluable Element CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.cs.EvaluatableElementCS
+	 * @see org.muml.psm.allocation.language.cs.EvaluableElementCS
 	 * @generated
 	 */
-	public Adapter createEvaluatableElementCSAdapter() {
+	public Adapter createEvaluableElementCSAdapter() {
 		return null;
 	}
 

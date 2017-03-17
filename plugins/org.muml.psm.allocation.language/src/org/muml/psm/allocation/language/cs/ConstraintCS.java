@@ -18,5 +18,5 @@ import org.eclipse.ocl.xtext.basecs.NamedElementCS;
  * @model abstract="true"
  * @generated
  */
-public interface ConstraintCS extends NamedElementCS, EvaluatableElementCS {
+public interface ConstraintCS extends NamedElementCS, EvaluableElementCS {
 } // ConstraintCS

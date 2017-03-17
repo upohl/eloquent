@@ -26,7 +26,7 @@ import org.eclipse.ocl.xtext.basecs.NamedElementCS;
  * @model
  * @generated
  */
-public interface QoSDimensionCS extends NamedElementCS, EvaluatableElementCS {
+public interface QoSDimensionCS extends NamedElementCS, EvaluableElementCS {
 	/**
 	 * Returns the value of the '<em><b>Tuple Descriptor</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

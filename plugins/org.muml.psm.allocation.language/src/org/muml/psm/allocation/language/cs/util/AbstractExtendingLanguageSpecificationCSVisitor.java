@@ -34,7 +34,7 @@ public abstract class AbstractExtendingLanguageSpecificationCSVisitor<R, C>
 
 	@Override
 	public R visitBoundCS(org.muml.psm.allocation.language.cs.@NonNull BoundCS object) {
-		return visitEvaluatableElementCS(object);
+		return visitEvaluableElementCS(object);
 	}
 
 	@Override
@@ -53,7 +53,7 @@ public abstract class AbstractExtendingLanguageSpecificationCSVisitor<R, C>
 	}
 
 	@Override
-	public R visitEvaluatableElementCS(org.muml.psm.allocation.language.cs.@NonNull EvaluatableElementCS object) {
+	public R visitEvaluableElementCS(org.muml.psm.allocation.language.cs.@NonNull EvaluableElementCS object) {
 		return visitModelElementCS(object);
 	}
 

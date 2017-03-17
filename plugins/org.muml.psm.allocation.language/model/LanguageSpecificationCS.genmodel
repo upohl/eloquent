@@ -36,8 +36,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/storageProvider"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//SpecificationCS/oclContext"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="LanguageSpecificationCS.ecore#//EvaluatableElementCS">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//EvaluatableElementCS/expression"/>
+    <genClasses image="false" ecoreClass="LanguageSpecificationCS.ecore#//EvaluableElementCS">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//EvaluableElementCS/expression"/>
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationCS.ecore#//RelationCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//RelationCS/tupleDescriptor"/>

@@ -53,7 +53,7 @@ public abstract class AbstractNullLanguageSpecificationCSVisitor<@Nullable R, C>
 	}
 
 	@Override
-	public R visitEvaluatableElementCS(org.muml.psm.allocation.language.cs.@NonNull EvaluatableElementCS object) {
+	public R visitEvaluableElementCS(org.muml.psm.allocation.language.cs.@NonNull EvaluableElementCS object) {
 		return null;
 	}
 

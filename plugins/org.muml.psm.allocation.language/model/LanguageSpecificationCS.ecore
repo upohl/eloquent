@@ -161,14 +161,14 @@
   </eClassifiers>
   <eClassifiers
       xsi:type="ecore:EClass"
-      name="EvaluatableElementCS"
+      name="EvaluableElementCS"
       abstract="true"
       eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
     <eAnnotations
         source="http://www.eclipse.org/emf/2002/GenModel">
       <details
           key="documentation"
-          value="This class represents an abstract, evaluatable domain element, that is an&#xA;element for which an OCL expression can be specified."/>
+          value="This class represents an abstract, evaluable domain element, that is an&#xA;element for which an OCL expression can be specified."/>
     </eAnnotations>
     <eStructuralFeatures
         xsi:type="ecore:EReference"
@@ -187,7 +187,7 @@
   <eClassifiers
       xsi:type="ecore:EClass"
       name="RelationCS"
-      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS #//EvaluatableElementCS">
+      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS #//EvaluableElementCS">
     <eAnnotations
         source="http://www.eclipse.org/emf/2002/GenModel">
       <details
@@ -249,7 +249,7 @@
   <eClassifiers
       xsi:type="ecore:EClass"
       name="BoundCS"
-      eSuperTypes="#//EvaluatableElementCS">
+      eSuperTypes="#//EvaluableElementCS">
     <eAnnotations
         source="http://www.eclipse.org/emf/2002/GenModel">
       <details
@@ -261,7 +261,7 @@
       xsi:type="ecore:EClass"
       name="ConstraintCS"
       abstract="true"
-      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS #//EvaluatableElementCS">
+      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS #//EvaluableElementCS">
     <eAnnotations
         source="http://www.eclipse.org/emf/2002/GenModel">
       <details
@@ -543,7 +543,7 @@
   <eClassifiers
       xsi:type="ecore:EClass"
       name="QoSDimensionCS"
-      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS #//EvaluatableElementCS">
+      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS #//EvaluableElementCS">
     <eAnnotations
         source="http://www.eclipse.org/emf/2002/GenModel">
       <details

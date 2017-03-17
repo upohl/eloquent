@@ -20,7 +20,7 @@ import org.eclipse.ocl.xtext.essentialoclcs.ContextCS;
 
 import org.muml.psm.allocation.language.cs.BoundCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
-import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
+import org.muml.psm.allocation.language.cs.EvaluableElementCS;
 import org.muml.psm.allocation.language.cs.RelationCS;
 import org.muml.psm.allocation.language.cs.TupleDescriptorCS;
 
@@ -389,9 +389,9 @@ public class RelationCSImpl extends NamedElementCSImpl implements RelationCS {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == EvaluatableElementCS.class) {
+		if (baseClass == EvaluableElementCS.class) {
 			switch (derivedFeatureID) {
-				case CsPackage.RELATION_CS__EXPRESSION: return CsPackage.EVALUATABLE_ELEMENT_CS__EXPRESSION;
+				case CsPackage.RELATION_CS__EXPRESSION: return CsPackage.EVALUABLE_ELEMENT_CS__EXPRESSION;
 				default: return -1;
 			}
 		}
@@ -405,9 +405,9 @@ public class RelationCSImpl extends NamedElementCSImpl implements RelationCS {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == EvaluatableElementCS.class) {
+		if (baseClass == EvaluableElementCS.class) {
 			switch (baseFeatureID) {
-				case CsPackage.EVALUATABLE_ELEMENT_CS__EXPRESSION: return CsPackage.RELATION_CS__EXPRESSION;
+				case CsPackage.EVALUABLE_ELEMENT_CS__EXPRESSION: return CsPackage.RELATION_CS__EXPRESSION;
 				default: return -1;
 			}
 		}

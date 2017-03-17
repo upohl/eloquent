@@ -19,7 +19,7 @@ import org.eclipse.ocl.xtext.basecs.util.BaseCSVisitor;
 import org.eclipse.ocl.xtext.essentialoclcs.ContextCS;
 
 import org.muml.psm.allocation.language.cs.CsPackage;
-import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
+import org.muml.psm.allocation.language.cs.EvaluableElementCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
 import org.muml.psm.allocation.language.cs.WeightTupleDescriptorCS;
 
@@ -256,9 +256,9 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == EvaluatableElementCS.class) {
+		if (baseClass == EvaluableElementCS.class) {
 			switch (derivedFeatureID) {
-				case CsPackage.QO_SDIMENSION_CS__EXPRESSION: return CsPackage.EVALUATABLE_ELEMENT_CS__EXPRESSION;
+				case CsPackage.QO_SDIMENSION_CS__EXPRESSION: return CsPackage.EVALUABLE_ELEMENT_CS__EXPRESSION;
 				default: return -1;
 			}
 		}
@@ -272,9 +272,9 @@ public class QoSDimensionCSImpl extends NamedElementCSImpl implements QoSDimensi
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == EvaluatableElementCS.class) {
+		if (baseClass == EvaluableElementCS.class) {
 			switch (baseFeatureID) {
-				case CsPackage.EVALUATABLE_ELEMENT_CS__EXPRESSION: return CsPackage.QO_SDIMENSION_CS__EXPRESSION;
+				case CsPackage.EVALUABLE_ELEMENT_CS__EXPRESSION: return CsPackage.QO_SDIMENSION_CS__EXPRESSION;
 				default: return -1;
 			}
 		}

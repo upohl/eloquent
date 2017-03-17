@@ -10,28 +10,27 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.ocl.xtext.basecs.impl.NamedElementCSImpl;
+import org.eclipse.ocl.xtext.basecs.impl.ModelElementCSImpl;
 
 import org.eclipse.ocl.xtext.essentialoclcs.ContextCS;
 
-import org.muml.psm.allocation.language.cs.ConstraintCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.EvaluableElementCS;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Constraint CS</b></em>'.
+ * An implementation of the model object '<em><b>Evaluable Element CS</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.muml.psm.allocation.language.cs.impl.ConstraintCSImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.cs.impl.EvaluableElementCSImpl#getExpression <em>Expression</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class ConstraintCSImpl extends NamedElementCSImpl implements ConstraintCS {
+public abstract class EvaluableElementCSImpl extends ModelElementCSImpl implements EvaluableElementCS {
 	/**
 	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -47,7 +46,7 @@ public abstract class ConstraintCSImpl extends NamedElementCSImpl implements Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConstraintCSImpl() {
+	protected EvaluableElementCSImpl() {
 		super();
 	}
 
@@ -58,7 +57,7 @@ public abstract class ConstraintCSImpl extends NamedElementCSImpl implements Con
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CsPackage.Literals.CONSTRAINT_CS;
+		return CsPackage.Literals.EVALUABLE_ELEMENT_CS;
 	}
 
 	/**
@@ -79,7 +78,7 @@ public abstract class ConstraintCSImpl extends NamedElementCSImpl implements Con
 		ContextCS oldExpression = expression;
 		expression = newExpression;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.CONSTRAINT_CS__EXPRESSION, oldExpression, newExpression);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CsPackage.EVALUABLE_ELEMENT_CS__EXPRESSION, oldExpression, newExpression);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -94,14 +93,14 @@ public abstract class ConstraintCSImpl extends NamedElementCSImpl implements Con
 		if (newExpression != expression) {
 			NotificationChain msgs = null;
 			if (expression != null)
-				msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CsPackage.CONSTRAINT_CS__EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CsPackage.EVALUABLE_ELEMENT_CS__EXPRESSION, null, msgs);
 			if (newExpression != null)
-				msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CsPackage.CONSTRAINT_CS__EXPRESSION, null, msgs);
+				msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CsPackage.EVALUABLE_ELEMENT_CS__EXPRESSION, null, msgs);
 			msgs = basicSetExpression(newExpression, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.CONSTRAINT_CS__EXPRESSION, newExpression, newExpression));
+			eNotify(new ENotificationImpl(this, Notification.SET, CsPackage.EVALUABLE_ELEMENT_CS__EXPRESSION, newExpression, newExpression));
 	}
 
 	/**
@@ -112,7 +111,7 @@ public abstract class ConstraintCSImpl extends NamedElementCSImpl implements Con
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CsPackage.CONSTRAINT_CS__EXPRESSION:
+			case CsPackage.EVALUABLE_ELEMENT_CS__EXPRESSION:
 				return basicSetExpression(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -126,7 +125,7 @@ public abstract class ConstraintCSImpl extends NamedElementCSImpl implements Con
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CsPackage.CONSTRAINT_CS__EXPRESSION:
+			case CsPackage.EVALUABLE_ELEMENT_CS__EXPRESSION:
 				return getExpression();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -140,7 +139,7 @@ public abstract class ConstraintCSImpl extends NamedElementCSImpl implements Con
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CsPackage.CONSTRAINT_CS__EXPRESSION:
+			case CsPackage.EVALUABLE_ELEMENT_CS__EXPRESSION:
 				setExpression((ContextCS)newValue);
 				return;
 		}
@@ -155,7 +154,7 @@ public abstract class ConstraintCSImpl extends NamedElementCSImpl implements Con
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CsPackage.CONSTRAINT_CS__EXPRESSION:
+			case CsPackage.EVALUABLE_ELEMENT_CS__EXPRESSION:
 				setExpression((ContextCS)null);
 				return;
 		}
@@ -170,43 +169,11 @@ public abstract class ConstraintCSImpl extends NamedElementCSImpl implements Con
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CsPackage.CONSTRAINT_CS__EXPRESSION:
+			case CsPackage.EVALUABLE_ELEMENT_CS__EXPRESSION:
 				return expression != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == EvaluableElementCS.class) {
-			switch (derivedFeatureID) {
-				case CsPackage.CONSTRAINT_CS__EXPRESSION: return CsPackage.EVALUABLE_ELEMENT_CS__EXPRESSION;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == EvaluableElementCS.class) {
-			switch (baseFeatureID) {
-				case CsPackage.EVALUABLE_ELEMENT_CS__EXPRESSION: return CsPackage.CONSTRAINT_CS__EXPRESSION;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-
-} //ConstraintCSImpl
+} //EvaluableElementCSImpl

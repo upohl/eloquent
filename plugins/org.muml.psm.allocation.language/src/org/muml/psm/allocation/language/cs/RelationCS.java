@@ -31,7 +31,7 @@ import org.eclipse.ocl.xtext.basecs.NamedElementCS;
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot exactlyOnePair='self.tupleDescriptor.typedPairs->size() = 1'"
  * @generated
  */
-public interface RelationCS extends NamedElementCS, EvaluatableElementCS {
+public interface RelationCS extends NamedElementCS, EvaluableElementCS {
 	/**
 	 * Returns the value of the '<em><b>Tuple Descriptor</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

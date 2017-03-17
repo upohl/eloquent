@@ -15,7 +15,7 @@ import org.eclipse.ocl.pivot.ExpressionInOCL;
 import org.eclipse.ocl.pivot.internal.NamedElementImpl;
 
 import org.muml.psm.allocation.language.as.AsPackage;
-import org.muml.psm.allocation.language.as.EvaluatableElement;
+import org.muml.psm.allocation.language.as.EvaluableElement;
 import org.muml.psm.allocation.language.as.QoSDimension;
 import org.muml.psm.allocation.language.as.WeightTupleDescriptor;
 
@@ -250,9 +250,9 @@ public class QoSDimensionImpl extends NamedElementImpl implements QoSDimension {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == EvaluatableElement.class) {
+		if (baseClass == EvaluableElement.class) {
 			switch (derivedFeatureID) {
-				case AsPackage.QO_SDIMENSION__EXPRESSION: return AsPackage.EVALUATABLE_ELEMENT__EXPRESSION;
+				case AsPackage.QO_SDIMENSION__EXPRESSION: return AsPackage.EVALUABLE_ELEMENT__EXPRESSION;
 				default: return -1;
 			}
 		}
@@ -266,9 +266,9 @@ public class QoSDimensionImpl extends NamedElementImpl implements QoSDimension {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == EvaluatableElement.class) {
+		if (baseClass == EvaluableElement.class) {
 			switch (baseFeatureID) {
-				case AsPackage.EVALUATABLE_ELEMENT__EXPRESSION: return AsPackage.QO_SDIMENSION__EXPRESSION;
+				case AsPackage.EVALUABLE_ELEMENT__EXPRESSION: return AsPackage.QO_SDIMENSION__EXPRESSION;
 				default: return -1;
 			}
 		}

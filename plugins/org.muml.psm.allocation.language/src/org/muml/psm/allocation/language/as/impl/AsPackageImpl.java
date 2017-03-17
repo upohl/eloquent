@@ -21,7 +21,7 @@ import org.muml.psm.allocation.language.as.BoundWeightTupleDescriptor;
 import org.muml.psm.allocation.language.as.CoherenceConstraint;
 import org.muml.psm.allocation.language.as.CoherenceConstraintType;
 import org.muml.psm.allocation.language.as.Constraint;
-import org.muml.psm.allocation.language.as.EvaluatableElement;
+import org.muml.psm.allocation.language.as.EvaluableElement;
 import org.muml.psm.allocation.language.as.Goal;
 import org.muml.psm.allocation.language.as.JavaImplementationProvider;
 import org.muml.psm.allocation.language.as.LocationConstraint;
@@ -60,7 +60,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass evaluatableElementEClass = null;
+	private EClass evaluableElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -362,8 +362,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEvaluatableElement() {
-		return evaluatableElementEClass;
+	public EClass getEvaluableElement() {
+		return evaluableElementEClass;
 	}
 
 	/**
@@ -371,8 +371,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEvaluatableElement_Expression() {
-		return (EReference)evaluatableElementEClass.getEStructuralFeatures().get(0);
+	public EReference getEvaluableElement_Expression() {
+		return (EReference)evaluableElementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -728,8 +728,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		createEReference(specificationEClass, SPECIFICATION__STORAGE_PROVIDER);
 		createEReference(specificationEClass, SPECIFICATION__OCL_CONTEXT);
 
-		evaluatableElementEClass = createEClass(EVALUATABLE_ELEMENT);
-		createEReference(evaluatableElementEClass, EVALUATABLE_ELEMENT__EXPRESSION);
+		evaluableElementEClass = createEClass(EVALUABLE_ELEMENT);
+		createEReference(evaluableElementEClass, EVALUABLE_ELEMENT__EXPRESSION);
 
 		relationEClass = createEClass(RELATION);
 		createEReference(relationEClass, RELATION__TUPLE_DESCRIPTOR);
@@ -819,12 +819,12 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		// Add supertypes to classes
 		specificationEClass.getESuperTypes().add(thePivotPackage.getModel());
-		evaluatableElementEClass.getESuperTypes().add(thePivotPackage.getElement());
+		evaluableElementEClass.getESuperTypes().add(thePivotPackage.getElement());
 		relationEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
-		relationEClass.getESuperTypes().add(this.getEvaluatableElement());
-		boundEClass.getESuperTypes().add(this.getEvaluatableElement());
+		relationEClass.getESuperTypes().add(this.getEvaluableElement());
+		boundEClass.getESuperTypes().add(this.getEvaluableElement());
 		constraintEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
-		constraintEClass.getESuperTypes().add(this.getEvaluatableElement());
+		constraintEClass.getESuperTypes().add(this.getEvaluableElement());
 		coherenceConstraintEClass.getESuperTypes().add(this.getConstraint());
 		resourceConstraintEClass.getESuperTypes().add(this.getConstraint());
 		locationConstraintEClass.getESuperTypes().add(this.getConstraint());
@@ -836,7 +836,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		measureFunctionEClass.getESuperTypes().add(thePivotPackage.getElement());
 		serviceEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
 		qoSDimensionEClass.getESuperTypes().add(thePivotPackage.getNamedElement());
-		qoSDimensionEClass.getESuperTypes().add(this.getEvaluatableElement());
+		qoSDimensionEClass.getESuperTypes().add(this.getEvaluableElement());
 		javaImplementationProviderEClass.getESuperTypes().add(thePivotPackage.getElement());
 		oclContextEClass.getESuperTypes().add(thePivotPackage.getTypedElement());
 
@@ -851,8 +851,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		initEReference(getSpecification_StorageProvider(), this.getStorageProvider(), null, "storageProvider", null, 0, 1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecification_OclContext(), this.getOCLContext(), null, "oclContext", null, 1, 1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(evaluatableElementEClass, EvaluatableElement.class, "EvaluatableElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEvaluatableElement_Expression(), thePivotPackage.getExpressionInOCL(), null, "expression", null, 1, 1, EvaluatableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(evaluableElementEClass, EvaluableElement.class, "EvaluableElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEvaluableElement_Expression(), thePivotPackage.getExpressionInOCL(), null, "expression", null, 1, 1, EvaluableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(relationEClass, Relation.class, "Relation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRelation_TupleDescriptor(), this.getTupleDescriptor(), null, "tupleDescriptor", null, 1, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -256,14 +256,14 @@ public interface CsPackage extends EPackage {
 	int SPECIFICATION_CS_FEATURE_COUNT = CompleteOCLCSPackage.COMPLETE_OCL_DOCUMENT_CS_FEATURE_COUNT + 10;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.EvaluatableElementCSImpl <em>Evaluatable Element CS</em>}' class.
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.EvaluableElementCSImpl <em>Evaluable Element CS</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.cs.impl.EvaluatableElementCSImpl
-	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getEvaluatableElementCS()
+	 * @see org.muml.psm.allocation.language.cs.impl.EvaluableElementCSImpl
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getEvaluableElementCS()
 	 * @generated
 	 */
-	int EVALUATABLE_ELEMENT_CS = 1;
+	int EVALUABLE_ELEMENT_CS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -272,7 +272,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATABLE_ELEMENT_CS__CSI = BaseCSPackage.MODEL_ELEMENT_CS__CSI;
+	int EVALUABLE_ELEMENT_CS__CSI = BaseCSPackage.MODEL_ELEMENT_CS__CSI;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -281,7 +281,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATABLE_ELEMENT_CS__PARENT = BaseCSPackage.MODEL_ELEMENT_CS__PARENT;
+	int EVALUABLE_ELEMENT_CS__PARENT = BaseCSPackage.MODEL_ELEMENT_CS__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Pivot</b></em>' reference.
@@ -290,7 +290,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATABLE_ELEMENT_CS__PIVOT = BaseCSPackage.MODEL_ELEMENT_CS__PIVOT;
+	int EVALUABLE_ELEMENT_CS__PIVOT = BaseCSPackage.MODEL_ELEMENT_CS__PIVOT;
 
 	/**
 	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
@@ -299,7 +299,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATABLE_ELEMENT_CS__ORIGINAL_XMI_ID = BaseCSPackage.MODEL_ELEMENT_CS__ORIGINAL_XMI_ID;
+	int EVALUABLE_ELEMENT_CS__ORIGINAL_XMI_ID = BaseCSPackage.MODEL_ELEMENT_CS__ORIGINAL_XMI_ID;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
@@ -308,7 +308,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATABLE_ELEMENT_CS__OWNED_ANNOTATIONS = BaseCSPackage.MODEL_ELEMENT_CS__OWNED_ANNOTATIONS;
+	int EVALUABLE_ELEMENT_CS__OWNED_ANNOTATIONS = BaseCSPackage.MODEL_ELEMENT_CS__OWNED_ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -317,16 +317,16 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATABLE_ELEMENT_CS__EXPRESSION = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 0;
+	int EVALUABLE_ELEMENT_CS__EXPRESSION = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Evaluatable Element CS</em>' class.
+	 * The number of structural features of the '<em>Evaluable Element CS</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATABLE_ELEMENT_CS_FEATURE_COUNT = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 1;
+	int EVALUABLE_ELEMENT_CS_FEATURE_COUNT = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.RelationCSImpl <em>Relation CS</em>}' class.
@@ -454,7 +454,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOUND_CS__CSI = EVALUATABLE_ELEMENT_CS__CSI;
+	int BOUND_CS__CSI = EVALUABLE_ELEMENT_CS__CSI;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -463,7 +463,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOUND_CS__PARENT = EVALUATABLE_ELEMENT_CS__PARENT;
+	int BOUND_CS__PARENT = EVALUABLE_ELEMENT_CS__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Pivot</b></em>' reference.
@@ -472,7 +472,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOUND_CS__PIVOT = EVALUATABLE_ELEMENT_CS__PIVOT;
+	int BOUND_CS__PIVOT = EVALUABLE_ELEMENT_CS__PIVOT;
 
 	/**
 	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
@@ -481,7 +481,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOUND_CS__ORIGINAL_XMI_ID = EVALUATABLE_ELEMENT_CS__ORIGINAL_XMI_ID;
+	int BOUND_CS__ORIGINAL_XMI_ID = EVALUABLE_ELEMENT_CS__ORIGINAL_XMI_ID;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
@@ -490,7 +490,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOUND_CS__OWNED_ANNOTATIONS = EVALUATABLE_ELEMENT_CS__OWNED_ANNOTATIONS;
+	int BOUND_CS__OWNED_ANNOTATIONS = EVALUABLE_ELEMENT_CS__OWNED_ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -499,7 +499,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOUND_CS__EXPRESSION = EVALUATABLE_ELEMENT_CS__EXPRESSION;
+	int BOUND_CS__EXPRESSION = EVALUABLE_ELEMENT_CS__EXPRESSION;
 
 	/**
 	 * The number of structural features of the '<em>Bound CS</em>' class.
@@ -508,7 +508,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOUND_CS_FEATURE_COUNT = EVALUATABLE_ELEMENT_CS_FEATURE_COUNT + 0;
+	int BOUND_CS_FEATURE_COUNT = EVALUABLE_ELEMENT_CS_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.ConstraintCSImpl <em>Constraint CS</em>}' class.
@@ -1901,25 +1901,25 @@ public interface CsPackage extends EPackage {
 	EReference getSpecificationCS_OclContext();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.EvaluatableElementCS <em>Evaluatable Element CS</em>}'.
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.EvaluableElementCS <em>Evaluable Element CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Evaluatable Element CS</em>'.
-	 * @see org.muml.psm.allocation.language.cs.EvaluatableElementCS
+	 * @return the meta object for class '<em>Evaluable Element CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.EvaluableElementCS
 	 * @generated
 	 */
-	EClass getEvaluatableElementCS();
+	EClass getEvaluableElementCS();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.EvaluatableElementCS#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.EvaluableElementCS#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.muml.psm.allocation.language.cs.EvaluatableElementCS#getExpression()
-	 * @see #getEvaluatableElementCS()
+	 * @see org.muml.psm.allocation.language.cs.EvaluableElementCS#getExpression()
+	 * @see #getEvaluableElementCS()
 	 * @generated
 	 */
-	EReference getEvaluatableElementCS_Expression();
+	EReference getEvaluableElementCS_Expression();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.RelationCS <em>Relation CS</em>}'.
@@ -2399,14 +2399,14 @@ public interface CsPackage extends EPackage {
 		EReference SPECIFICATION_CS__OCL_CONTEXT = eINSTANCE.getSpecificationCS_OclContext();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.EvaluatableElementCSImpl <em>Evaluatable Element CS</em>}' class.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.EvaluableElementCSImpl <em>Evaluable Element CS</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.cs.impl.EvaluatableElementCSImpl
-		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getEvaluatableElementCS()
+		 * @see org.muml.psm.allocation.language.cs.impl.EvaluableElementCSImpl
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getEvaluableElementCS()
 		 * @generated
 		 */
-		EClass EVALUATABLE_ELEMENT_CS = eINSTANCE.getEvaluatableElementCS();
+		EClass EVALUABLE_ELEMENT_CS = eINSTANCE.getEvaluableElementCS();
 
 		/**
 		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
@@ -2414,7 +2414,7 @@ public interface CsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EVALUATABLE_ELEMENT_CS__EXPRESSION = eINSTANCE.getEvaluatableElementCS_Expression();
+		EReference EVALUABLE_ELEMENT_CS__EXPRESSION = eINSTANCE.getEvaluableElementCS_Expression();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.RelationCSImpl <em>Relation CS</em>}' class.

@@ -38,7 +38,7 @@ public abstract class AbstractCsPreOrderVisitor
 
 	@Override
 	public @Nullable Continuation<?> visitBoundCS(org.muml.psm.allocation.language.cs.@NonNull BoundCS csElement) {
-		return visitEvaluatableElementCS(csElement);
+		return visitEvaluableElementCS(csElement);
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public abstract class AbstractCsPreOrderVisitor
 	}
 
 	@Override
-	public @Nullable Continuation<?> visitEvaluatableElementCS(org.muml.psm.allocation.language.cs.@NonNull EvaluatableElementCS csElement) {
+	public @Nullable Continuation<?> visitEvaluableElementCS(org.muml.psm.allocation.language.cs.@NonNull EvaluableElementCS csElement) {
 		return visitModelElementCS(csElement);
 	}
 

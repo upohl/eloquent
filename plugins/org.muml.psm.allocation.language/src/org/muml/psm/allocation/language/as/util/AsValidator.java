@@ -88,8 +88,8 @@ public class AsValidator extends EObjectValidator {
 		switch (classifierID) {
 			case AsPackage.SPECIFICATION:
 				return validateSpecification((Specification)value, diagnostics, context);
-			case AsPackage.EVALUATABLE_ELEMENT:
-				return validateEvaluatableElement((EvaluatableElement)value, diagnostics, context);
+			case AsPackage.EVALUABLE_ELEMENT:
+				return validateEvaluableElement((EvaluableElement)value, diagnostics, context);
 			case AsPackage.RELATION:
 				return validateRelation((Relation)value, diagnostics, context);
 			case AsPackage.BOUND:
@@ -149,8 +149,8 @@ public class AsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateEvaluatableElement(EvaluatableElement evaluatableElement, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(evaluatableElement, diagnostics, context);
+	public boolean validateEvaluableElement(EvaluableElement evaluableElement, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(evaluableElement, diagnostics, context);
 	}
 
 	/**

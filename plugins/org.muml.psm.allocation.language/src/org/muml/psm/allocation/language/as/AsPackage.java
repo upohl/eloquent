@@ -236,14 +236,14 @@ public interface AsPackage extends EPackage {
 	int SPECIFICATION_FEATURE_COUNT = PivotPackage.MODEL_FEATURE_COUNT + 8;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.EvaluatableElementImpl <em>Evaluatable Element</em>}' class.
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.EvaluableElementImpl <em>Evaluable Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.as.impl.EvaluatableElementImpl
-	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getEvaluatableElement()
+	 * @see org.muml.psm.allocation.language.as.impl.EvaluableElementImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getEvaluableElement()
 	 * @generated
 	 */
-	int EVALUATABLE_ELEMENT = 1;
+	int EVALUABLE_ELEMENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -252,7 +252,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATABLE_ELEMENT__ANNOTATING_COMMENTS = PivotPackage.ELEMENT__ANNOTATING_COMMENTS;
+	int EVALUABLE_ELEMENT__ANNOTATING_COMMENTS = PivotPackage.ELEMENT__ANNOTATING_COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
@@ -261,7 +261,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATABLE_ELEMENT__OWNED_ANNOTATIONS = PivotPackage.ELEMENT__OWNED_ANNOTATIONS;
+	int EVALUABLE_ELEMENT__OWNED_ANNOTATIONS = PivotPackage.ELEMENT__OWNED_ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
@@ -270,7 +270,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATABLE_ELEMENT__OWNED_COMMENTS = PivotPackage.ELEMENT__OWNED_COMMENTS;
+	int EVALUABLE_ELEMENT__OWNED_COMMENTS = PivotPackage.ELEMENT__OWNED_COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
@@ -279,7 +279,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATABLE_ELEMENT__OWNED_EXTENSIONS = PivotPackage.ELEMENT__OWNED_EXTENSIONS;
+	int EVALUABLE_ELEMENT__OWNED_EXTENSIONS = PivotPackage.ELEMENT__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -288,16 +288,16 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATABLE_ELEMENT__EXPRESSION = PivotPackage.ELEMENT_FEATURE_COUNT + 0;
+	int EVALUABLE_ELEMENT__EXPRESSION = PivotPackage.ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Evaluatable Element</em>' class.
+	 * The number of structural features of the '<em>Evaluable Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVALUATABLE_ELEMENT_FEATURE_COUNT = PivotPackage.ELEMENT_FEATURE_COUNT + 1;
+	int EVALUABLE_ELEMENT_FEATURE_COUNT = PivotPackage.ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.RelationImpl <em>Relation</em>}' class.
@@ -416,7 +416,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOUND__ANNOTATING_COMMENTS = EVALUATABLE_ELEMENT__ANNOTATING_COMMENTS;
+	int BOUND__ANNOTATING_COMMENTS = EVALUABLE_ELEMENT__ANNOTATING_COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
@@ -425,7 +425,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOUND__OWNED_ANNOTATIONS = EVALUATABLE_ELEMENT__OWNED_ANNOTATIONS;
+	int BOUND__OWNED_ANNOTATIONS = EVALUABLE_ELEMENT__OWNED_ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
@@ -434,7 +434,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOUND__OWNED_COMMENTS = EVALUATABLE_ELEMENT__OWNED_COMMENTS;
+	int BOUND__OWNED_COMMENTS = EVALUABLE_ELEMENT__OWNED_COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
@@ -443,7 +443,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOUND__OWNED_EXTENSIONS = EVALUATABLE_ELEMENT__OWNED_EXTENSIONS;
+	int BOUND__OWNED_EXTENSIONS = EVALUABLE_ELEMENT__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -452,7 +452,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOUND__EXPRESSION = EVALUATABLE_ELEMENT__EXPRESSION;
+	int BOUND__EXPRESSION = EVALUABLE_ELEMENT__EXPRESSION;
 
 	/**
 	 * The number of structural features of the '<em>Bound</em>' class.
@@ -461,7 +461,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOUND_FEATURE_COUNT = EVALUATABLE_ELEMENT_FEATURE_COUNT + 0;
+	int BOUND_FEATURE_COUNT = EVALUABLE_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.ConstraintImpl <em>Constraint</em>}' class.
@@ -1697,25 +1697,25 @@ public interface AsPackage extends EPackage {
 	EReference getSpecification_OclContext();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.EvaluatableElement <em>Evaluatable Element</em>}'.
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.EvaluableElement <em>Evaluable Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Evaluatable Element</em>'.
-	 * @see org.muml.psm.allocation.language.as.EvaluatableElement
+	 * @return the meta object for class '<em>Evaluable Element</em>'.
+	 * @see org.muml.psm.allocation.language.as.EvaluableElement
 	 * @generated
 	 */
-	EClass getEvaluatableElement();
+	EClass getEvaluableElement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.EvaluatableElement#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.EvaluableElement#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Expression</em>'.
-	 * @see org.muml.psm.allocation.language.as.EvaluatableElement#getExpression()
-	 * @see #getEvaluatableElement()
+	 * @see org.muml.psm.allocation.language.as.EvaluableElement#getExpression()
+	 * @see #getEvaluableElement()
 	 * @generated
 	 */
-	EReference getEvaluatableElement_Expression();
+	EReference getEvaluableElement_Expression();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.Relation <em>Relation</em>}'.
@@ -2179,14 +2179,14 @@ public interface AsPackage extends EPackage {
 		EReference SPECIFICATION__OCL_CONTEXT = eINSTANCE.getSpecification_OclContext();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.EvaluatableElementImpl <em>Evaluatable Element</em>}' class.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.EvaluableElementImpl <em>Evaluable Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.as.impl.EvaluatableElementImpl
-		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getEvaluatableElement()
+		 * @see org.muml.psm.allocation.language.as.impl.EvaluableElementImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getEvaluableElement()
 		 * @generated
 		 */
-		EClass EVALUATABLE_ELEMENT = eINSTANCE.getEvaluatableElement();
+		EClass EVALUABLE_ELEMENT = eINSTANCE.getEvaluableElement();
 
 		/**
 		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
@@ -2194,7 +2194,7 @@ public interface AsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EVALUATABLE_ELEMENT__EXPRESSION = eINSTANCE.getEvaluatableElement_Expression();
+		EReference EVALUABLE_ELEMENT__EXPRESSION = eINSTANCE.getEvaluableElement_Expression();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.RelationImpl <em>Relation</em>}' class.

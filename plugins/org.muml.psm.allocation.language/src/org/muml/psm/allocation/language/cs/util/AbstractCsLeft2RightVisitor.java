@@ -38,7 +38,7 @@ public abstract class AbstractCsLeft2RightVisitor
 
 	@Override
 	public @Nullable Element visitBoundCS(org.muml.psm.allocation.language.cs.@NonNull BoundCS csElement) {
-		return visitEvaluatableElementCS(csElement);
+		return visitEvaluableElementCS(csElement);
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public abstract class AbstractCsLeft2RightVisitor
 	}
 
 	@Override
-	public @Nullable Element visitEvaluatableElementCS(org.muml.psm.allocation.language.cs.@NonNull EvaluatableElementCS csElement) {
+	public @Nullable Element visitEvaluableElementCS(org.muml.psm.allocation.language.cs.@NonNull EvaluableElementCS csElement) {
 		return visitModelElementCS(csElement);
 	}
 

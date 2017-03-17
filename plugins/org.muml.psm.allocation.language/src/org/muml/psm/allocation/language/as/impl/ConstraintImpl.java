@@ -16,7 +16,7 @@ import org.eclipse.ocl.pivot.internal.NamedElementImpl;
 
 import org.muml.psm.allocation.language.as.AsPackage;
 import org.muml.psm.allocation.language.as.Constraint;
-import org.muml.psm.allocation.language.as.EvaluatableElement;
+import org.muml.psm.allocation.language.as.EvaluableElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -183,9 +183,9 @@ public abstract class ConstraintImpl extends NamedElementImpl implements Constra
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == EvaluatableElement.class) {
+		if (baseClass == EvaluableElement.class) {
 			switch (derivedFeatureID) {
-				case AsPackage.CONSTRAINT__EXPRESSION: return AsPackage.EVALUATABLE_ELEMENT__EXPRESSION;
+				case AsPackage.CONSTRAINT__EXPRESSION: return AsPackage.EVALUABLE_ELEMENT__EXPRESSION;
 				default: return -1;
 			}
 		}
@@ -199,9 +199,9 @@ public abstract class ConstraintImpl extends NamedElementImpl implements Constra
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == EvaluatableElement.class) {
+		if (baseClass == EvaluableElement.class) {
 			switch (baseFeatureID) {
-				case AsPackage.EVALUATABLE_ELEMENT__EXPRESSION: return AsPackage.CONSTRAINT__EXPRESSION;
+				case AsPackage.EVALUABLE_ELEMENT__EXPRESSION: return AsPackage.CONSTRAINT__EXPRESSION;
 				default: return -1;
 			}
 		}

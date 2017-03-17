@@ -20,7 +20,7 @@ import org.muml.psm.allocation.language.cs.util.LanguageSpecificationCSVisitor;
  *
  * @generated
  */
-public class BoundCSImpl extends EvaluatableElementCSImpl implements BoundCS {
+public class BoundCSImpl extends EvaluableElementCSImpl implements BoundCS {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
