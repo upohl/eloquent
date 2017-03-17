@@ -1462,23 +1462,23 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     // $ANTLR end "ruleConstraint"
 
 
-    // $ANTLR start "entryRuleLocationConstraint"
-    // InternalAllocationSpecificationLanguage.g:481:1: entryRuleLocationConstraint : ruleLocationConstraint EOF ;
-    public final void entryRuleLocationConstraint() throws RecognitionException {
+    // $ANTLR start "entryRuleCoherenceConstraint"
+    // InternalAllocationSpecificationLanguage.g:481:1: entryRuleCoherenceConstraint : ruleCoherenceConstraint EOF ;
+    public final void entryRuleCoherenceConstraint() throws RecognitionException {
         try {
-            // InternalAllocationSpecificationLanguage.g:482:1: ( ruleLocationConstraint EOF )
-            // InternalAllocationSpecificationLanguage.g:483:1: ruleLocationConstraint EOF
+            // InternalAllocationSpecificationLanguage.g:482:1: ( ruleCoherenceConstraint EOF )
+            // InternalAllocationSpecificationLanguage.g:483:1: ruleCoherenceConstraint EOF
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationConstraintRule()); 
+               before(grammarAccess.getCoherenceConstraintRule()); 
             }
             pushFollow(FollowSets000.FOLLOW_1);
-            ruleLocationConstraint();
+            ruleCoherenceConstraint();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationConstraintRule()); 
+               after(grammarAccess.getCoherenceConstraintRule()); 
             }
             match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -1493,30 +1493,30 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "entryRuleLocationConstraint"
+    // $ANTLR end "entryRuleCoherenceConstraint"
 
 
-    // $ANTLR start "ruleLocationConstraint"
-    // InternalAllocationSpecificationLanguage.g:490:1: ruleLocationConstraint : ( ( rule__LocationConstraint__Group__0 ) ) ;
-    public final void ruleLocationConstraint() throws RecognitionException {
+    // $ANTLR start "ruleCoherenceConstraint"
+    // InternalAllocationSpecificationLanguage.g:490:1: ruleCoherenceConstraint : ( ( rule__CoherenceConstraint__Group__0 ) ) ;
+    public final void ruleCoherenceConstraint() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalAllocationSpecificationLanguage.g:494:2: ( ( ( rule__LocationConstraint__Group__0 ) ) )
-            // InternalAllocationSpecificationLanguage.g:495:1: ( ( rule__LocationConstraint__Group__0 ) )
+            // InternalAllocationSpecificationLanguage.g:494:2: ( ( ( rule__CoherenceConstraint__Group__0 ) ) )
+            // InternalAllocationSpecificationLanguage.g:495:1: ( ( rule__CoherenceConstraint__Group__0 ) )
             {
-            // InternalAllocationSpecificationLanguage.g:495:1: ( ( rule__LocationConstraint__Group__0 ) )
-            // InternalAllocationSpecificationLanguage.g:496:1: ( rule__LocationConstraint__Group__0 )
+            // InternalAllocationSpecificationLanguage.g:495:1: ( ( rule__CoherenceConstraint__Group__0 ) )
+            // InternalAllocationSpecificationLanguage.g:496:1: ( rule__CoherenceConstraint__Group__0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationConstraintAccess().getGroup()); 
+               before(grammarAccess.getCoherenceConstraintAccess().getGroup()); 
             }
-            // InternalAllocationSpecificationLanguage.g:497:1: ( rule__LocationConstraint__Group__0 )
-            // InternalAllocationSpecificationLanguage.g:497:2: rule__LocationConstraint__Group__0
+            // InternalAllocationSpecificationLanguage.g:497:1: ( rule__CoherenceConstraint__Group__0 )
+            // InternalAllocationSpecificationLanguage.g:497:2: rule__CoherenceConstraint__Group__0
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__LocationConstraint__Group__0();
+            rule__CoherenceConstraint__Group__0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -1524,7 +1524,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationConstraintAccess().getGroup()); 
+               after(grammarAccess.getCoherenceConstraintAccess().getGroup()); 
             }
 
             }
@@ -1544,7 +1544,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "ruleLocationConstraint"
+    // $ANTLR end "ruleCoherenceConstraint"
 
 
     // $ANTLR start "entryRuleResourceConstraint"
@@ -10109,27 +10109,27 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     // $ANTLR end "ruleURI"
 
 
-    // $ANTLR start "ruleLocationConstraintType"
-    // InternalAllocationSpecificationLanguage.g:3349:1: ruleLocationConstraintType : ( ( rule__LocationConstraintType__Alternatives ) ) ;
-    public final void ruleLocationConstraintType() throws RecognitionException {
+    // $ANTLR start "ruleCoherenceConstraintType"
+    // InternalAllocationSpecificationLanguage.g:3349:1: ruleCoherenceConstraintType : ( ( rule__CoherenceConstraintType__Alternatives ) ) ;
+    public final void ruleCoherenceConstraintType() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalAllocationSpecificationLanguage.g:3353:1: ( ( ( rule__LocationConstraintType__Alternatives ) ) )
-            // InternalAllocationSpecificationLanguage.g:3354:1: ( ( rule__LocationConstraintType__Alternatives ) )
+            // InternalAllocationSpecificationLanguage.g:3353:1: ( ( ( rule__CoherenceConstraintType__Alternatives ) ) )
+            // InternalAllocationSpecificationLanguage.g:3354:1: ( ( rule__CoherenceConstraintType__Alternatives ) )
             {
-            // InternalAllocationSpecificationLanguage.g:3354:1: ( ( rule__LocationConstraintType__Alternatives ) )
-            // InternalAllocationSpecificationLanguage.g:3355:1: ( rule__LocationConstraintType__Alternatives )
+            // InternalAllocationSpecificationLanguage.g:3354:1: ( ( rule__CoherenceConstraintType__Alternatives ) )
+            // InternalAllocationSpecificationLanguage.g:3355:1: ( rule__CoherenceConstraintType__Alternatives )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationConstraintTypeAccess().getAlternatives()); 
+               before(grammarAccess.getCoherenceConstraintTypeAccess().getAlternatives()); 
             }
-            // InternalAllocationSpecificationLanguage.g:3356:1: ( rule__LocationConstraintType__Alternatives )
-            // InternalAllocationSpecificationLanguage.g:3356:2: rule__LocationConstraintType__Alternatives
+            // InternalAllocationSpecificationLanguage.g:3356:1: ( rule__CoherenceConstraintType__Alternatives )
+            // InternalAllocationSpecificationLanguage.g:3356:2: rule__CoherenceConstraintType__Alternatives
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__LocationConstraintType__Alternatives();
+            rule__CoherenceConstraintType__Alternatives();
 
             state._fsp--;
             if (state.failed) return ;
@@ -10137,7 +10137,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationConstraintTypeAccess().getAlternatives()); 
+               after(grammarAccess.getCoherenceConstraintTypeAccess().getAlternatives()); 
             }
 
             }
@@ -10157,7 +10157,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "ruleLocationConstraintType"
+    // $ANTLR end "ruleCoherenceConstraintType"
 
 
     // $ANTLR start "ruleGoal"
@@ -10420,13 +10420,13 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "rule__Constraint__Alternatives_1"
-    // InternalAllocationSpecificationLanguage.g:3426:1: rule__Constraint__Alternatives_1 : ( ( ruleLocationConstraint ) | ( ruleResourceConstraint ) | ( ruleRequiredHardwareResourceInstanceConstraint ) );
+    // InternalAllocationSpecificationLanguage.g:3426:1: rule__Constraint__Alternatives_1 : ( ( ruleCoherenceConstraint ) | ( ruleResourceConstraint ) | ( ruleRequiredHardwareResourceInstanceConstraint ) );
     public final void rule__Constraint__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalAllocationSpecificationLanguage.g:3430:1: ( ( ruleLocationConstraint ) | ( ruleResourceConstraint ) | ( ruleRequiredHardwareResourceInstanceConstraint ) )
+            // InternalAllocationSpecificationLanguage.g:3430:1: ( ( ruleCoherenceConstraint ) | ( ruleResourceConstraint ) | ( ruleRequiredHardwareResourceInstanceConstraint ) )
             int alt3=3;
             switch ( input.LA(1) ) {
             case 64:
@@ -10459,21 +10459,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             switch (alt3) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:3431:1: ( ruleLocationConstraint )
+                    // InternalAllocationSpecificationLanguage.g:3431:1: ( ruleCoherenceConstraint )
                     {
-                    // InternalAllocationSpecificationLanguage.g:3431:1: ( ruleLocationConstraint )
-                    // InternalAllocationSpecificationLanguage.g:3432:1: ruleLocationConstraint
+                    // InternalAllocationSpecificationLanguage.g:3431:1: ( ruleCoherenceConstraint )
+                    // InternalAllocationSpecificationLanguage.g:3432:1: ruleCoherenceConstraint
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getConstraintAccess().getLocationConstraintParserRuleCall_1_0()); 
+                       before(grammarAccess.getConstraintAccess().getCoherenceConstraintParserRuleCall_1_0()); 
                     }
                     pushFollow(FollowSets000.FOLLOW_2);
-                    ruleLocationConstraint();
+                    ruleCoherenceConstraint();
 
                     state._fsp--;
                     if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getConstraintAccess().getLocationConstraintParserRuleCall_1_0()); 
+                       after(grammarAccess.getConstraintAccess().getCoherenceConstraintParserRuleCall_1_0()); 
                     }
 
                     }
@@ -16111,9 +16111,9 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     // $ANTLR end "rule__UPPER__Alternatives"
 
 
-    // $ANTLR start "rule__LocationConstraintType__Alternatives"
-    // InternalAllocationSpecificationLanguage.g:4826:1: rule__LocationConstraintType__Alternatives : ( ( ( 'sameLocation' ) ) | ( ( 'collocation' ) ) | ( ( 'differentLocation' ) ) | ( ( 'separateLocation' ) ) );
-    public final void rule__LocationConstraintType__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraintType__Alternatives"
+    // InternalAllocationSpecificationLanguage.g:4826:1: rule__CoherenceConstraintType__Alternatives : ( ( ( 'sameLocation' ) ) | ( ( 'collocation' ) ) | ( ( 'differentLocation' ) ) | ( ( 'separateLocation' ) ) );
+    public final void rule__CoherenceConstraintType__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -16157,7 +16157,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     // InternalAllocationSpecificationLanguage.g:4832:1: ( 'sameLocation' )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getLocationConstraintTypeAccess().getSAME_LOCATIONEnumLiteralDeclaration_0()); 
+                       before(grammarAccess.getCoherenceConstraintTypeAccess().getCOLLOCATIONEnumLiteralDeclaration_0()); 
                     }
                     // InternalAllocationSpecificationLanguage.g:4833:1: ( 'sameLocation' )
                     // InternalAllocationSpecificationLanguage.g:4833:3: 'sameLocation'
@@ -16167,7 +16167,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getLocationConstraintTypeAccess().getSAME_LOCATIONEnumLiteralDeclaration_0()); 
+                       after(grammarAccess.getCoherenceConstraintTypeAccess().getCOLLOCATIONEnumLiteralDeclaration_0()); 
                     }
 
                     }
@@ -16182,7 +16182,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     // InternalAllocationSpecificationLanguage.g:4839:1: ( 'collocation' )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getLocationConstraintTypeAccess().getSAME_LOCATIONEnumLiteralDeclaration_1()); 
+                       before(grammarAccess.getCoherenceConstraintTypeAccess().getCOLLOCATIONEnumLiteralDeclaration_1()); 
                     }
                     // InternalAllocationSpecificationLanguage.g:4840:1: ( 'collocation' )
                     // InternalAllocationSpecificationLanguage.g:4840:3: 'collocation'
@@ -16192,7 +16192,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getLocationConstraintTypeAccess().getSAME_LOCATIONEnumLiteralDeclaration_1()); 
+                       after(grammarAccess.getCoherenceConstraintTypeAccess().getCOLLOCATIONEnumLiteralDeclaration_1()); 
                     }
 
                     }
@@ -16207,7 +16207,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     // InternalAllocationSpecificationLanguage.g:4846:1: ( 'differentLocation' )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_2()); 
+                       before(grammarAccess.getCoherenceConstraintTypeAccess().getSEPARATE_LOCATIONEnumLiteralDeclaration_2()); 
                     }
                     // InternalAllocationSpecificationLanguage.g:4847:1: ( 'differentLocation' )
                     // InternalAllocationSpecificationLanguage.g:4847:3: 'differentLocation'
@@ -16217,7 +16217,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_2()); 
+                       after(grammarAccess.getCoherenceConstraintTypeAccess().getSEPARATE_LOCATIONEnumLiteralDeclaration_2()); 
                     }
 
                     }
@@ -16232,7 +16232,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     // InternalAllocationSpecificationLanguage.g:4853:1: ( 'separateLocation' )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_3()); 
+                       before(grammarAccess.getCoherenceConstraintTypeAccess().getSEPARATE_LOCATIONEnumLiteralDeclaration_3()); 
                     }
                     // InternalAllocationSpecificationLanguage.g:4854:1: ( 'separateLocation' )
                     // InternalAllocationSpecificationLanguage.g:4854:3: 'separateLocation'
@@ -16242,7 +16242,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_3()); 
+                       after(grammarAccess.getCoherenceConstraintTypeAccess().getSEPARATE_LOCATIONEnumLiteralDeclaration_3()); 
                     }
 
                     }
@@ -16264,7 +16264,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraintType__Alternatives"
+    // $ANTLR end "rule__CoherenceConstraintType__Alternatives"
 
 
     // $ANTLR start "rule__Goal__Alternatives"
@@ -23392,23 +23392,23 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     // $ANTLR end "rule__Constraint__Group__1__Impl"
 
 
-    // $ANTLR start "rule__LocationConstraint__Group__0"
-    // InternalAllocationSpecificationLanguage.g:7567:1: rule__LocationConstraint__Group__0 : rule__LocationConstraint__Group__0__Impl rule__LocationConstraint__Group__1 ;
-    public final void rule__LocationConstraint__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__Group__0"
+    // InternalAllocationSpecificationLanguage.g:7567:1: rule__CoherenceConstraint__Group__0 : rule__CoherenceConstraint__Group__0__Impl rule__CoherenceConstraint__Group__1 ;
+    public final void rule__CoherenceConstraint__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7571:1: ( rule__LocationConstraint__Group__0__Impl rule__LocationConstraint__Group__1 )
-            // InternalAllocationSpecificationLanguage.g:7572:2: rule__LocationConstraint__Group__0__Impl rule__LocationConstraint__Group__1
+            // InternalAllocationSpecificationLanguage.g:7571:1: ( rule__CoherenceConstraint__Group__0__Impl rule__CoherenceConstraint__Group__1 )
+            // InternalAllocationSpecificationLanguage.g:7572:2: rule__CoherenceConstraint__Group__0__Impl rule__CoherenceConstraint__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_15);
-            rule__LocationConstraint__Group__0__Impl();
+            rule__CoherenceConstraint__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__LocationConstraint__Group__1();
+            rule__CoherenceConstraint__Group__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -23427,30 +23427,30 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__Group__0"
+    // $ANTLR end "rule__CoherenceConstraint__Group__0"
 
 
-    // $ANTLR start "rule__LocationConstraint__Group__0__Impl"
-    // InternalAllocationSpecificationLanguage.g:7579:1: rule__LocationConstraint__Group__0__Impl : ( ( rule__LocationConstraint__TypeAssignment_0 ) ) ;
-    public final void rule__LocationConstraint__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__Group__0__Impl"
+    // InternalAllocationSpecificationLanguage.g:7579:1: rule__CoherenceConstraint__Group__0__Impl : ( ( rule__CoherenceConstraint__TypeAssignment_0 ) ) ;
+    public final void rule__CoherenceConstraint__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7583:1: ( ( ( rule__LocationConstraint__TypeAssignment_0 ) ) )
-            // InternalAllocationSpecificationLanguage.g:7584:1: ( ( rule__LocationConstraint__TypeAssignment_0 ) )
+            // InternalAllocationSpecificationLanguage.g:7583:1: ( ( ( rule__CoherenceConstraint__TypeAssignment_0 ) ) )
+            // InternalAllocationSpecificationLanguage.g:7584:1: ( ( rule__CoherenceConstraint__TypeAssignment_0 ) )
             {
-            // InternalAllocationSpecificationLanguage.g:7584:1: ( ( rule__LocationConstraint__TypeAssignment_0 ) )
-            // InternalAllocationSpecificationLanguage.g:7585:1: ( rule__LocationConstraint__TypeAssignment_0 )
+            // InternalAllocationSpecificationLanguage.g:7584:1: ( ( rule__CoherenceConstraint__TypeAssignment_0 ) )
+            // InternalAllocationSpecificationLanguage.g:7585:1: ( rule__CoherenceConstraint__TypeAssignment_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationConstraintAccess().getTypeAssignment_0()); 
+               before(grammarAccess.getCoherenceConstraintAccess().getTypeAssignment_0()); 
             }
-            // InternalAllocationSpecificationLanguage.g:7586:1: ( rule__LocationConstraint__TypeAssignment_0 )
-            // InternalAllocationSpecificationLanguage.g:7586:2: rule__LocationConstraint__TypeAssignment_0
+            // InternalAllocationSpecificationLanguage.g:7586:1: ( rule__CoherenceConstraint__TypeAssignment_0 )
+            // InternalAllocationSpecificationLanguage.g:7586:2: rule__CoherenceConstraint__TypeAssignment_0
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__LocationConstraint__TypeAssignment_0();
+            rule__CoherenceConstraint__TypeAssignment_0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -23458,7 +23458,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationConstraintAccess().getTypeAssignment_0()); 
+               after(grammarAccess.getCoherenceConstraintAccess().getTypeAssignment_0()); 
             }
 
             }
@@ -23478,26 +23478,26 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__Group__0__Impl"
+    // $ANTLR end "rule__CoherenceConstraint__Group__0__Impl"
 
 
-    // $ANTLR start "rule__LocationConstraint__Group__1"
-    // InternalAllocationSpecificationLanguage.g:7596:1: rule__LocationConstraint__Group__1 : rule__LocationConstraint__Group__1__Impl rule__LocationConstraint__Group__2 ;
-    public final void rule__LocationConstraint__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__Group__1"
+    // InternalAllocationSpecificationLanguage.g:7596:1: rule__CoherenceConstraint__Group__1 : rule__CoherenceConstraint__Group__1__Impl rule__CoherenceConstraint__Group__2 ;
+    public final void rule__CoherenceConstraint__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7600:1: ( rule__LocationConstraint__Group__1__Impl rule__LocationConstraint__Group__2 )
-            // InternalAllocationSpecificationLanguage.g:7601:2: rule__LocationConstraint__Group__1__Impl rule__LocationConstraint__Group__2
+            // InternalAllocationSpecificationLanguage.g:7600:1: ( rule__CoherenceConstraint__Group__1__Impl rule__CoherenceConstraint__Group__2 )
+            // InternalAllocationSpecificationLanguage.g:7601:2: rule__CoherenceConstraint__Group__1__Impl rule__CoherenceConstraint__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_15);
-            rule__LocationConstraint__Group__1__Impl();
+            rule__CoherenceConstraint__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__LocationConstraint__Group__2();
+            rule__CoherenceConstraint__Group__2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -23516,26 +23516,26 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__Group__1"
+    // $ANTLR end "rule__CoherenceConstraint__Group__1"
 
 
-    // $ANTLR start "rule__LocationConstraint__Group__1__Impl"
-    // InternalAllocationSpecificationLanguage.g:7608:1: rule__LocationConstraint__Group__1__Impl : ( ( rule__LocationConstraint__NameAssignment_1 )? ) ;
-    public final void rule__LocationConstraint__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__Group__1__Impl"
+    // InternalAllocationSpecificationLanguage.g:7608:1: rule__CoherenceConstraint__Group__1__Impl : ( ( rule__CoherenceConstraint__NameAssignment_1 )? ) ;
+    public final void rule__CoherenceConstraint__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7612:1: ( ( ( rule__LocationConstraint__NameAssignment_1 )? ) )
-            // InternalAllocationSpecificationLanguage.g:7613:1: ( ( rule__LocationConstraint__NameAssignment_1 )? )
+            // InternalAllocationSpecificationLanguage.g:7612:1: ( ( ( rule__CoherenceConstraint__NameAssignment_1 )? ) )
+            // InternalAllocationSpecificationLanguage.g:7613:1: ( ( rule__CoherenceConstraint__NameAssignment_1 )? )
             {
-            // InternalAllocationSpecificationLanguage.g:7613:1: ( ( rule__LocationConstraint__NameAssignment_1 )? )
-            // InternalAllocationSpecificationLanguage.g:7614:1: ( rule__LocationConstraint__NameAssignment_1 )?
+            // InternalAllocationSpecificationLanguage.g:7613:1: ( ( rule__CoherenceConstraint__NameAssignment_1 )? )
+            // InternalAllocationSpecificationLanguage.g:7614:1: ( rule__CoherenceConstraint__NameAssignment_1 )?
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationConstraintAccess().getNameAssignment_1()); 
+               before(grammarAccess.getCoherenceConstraintAccess().getNameAssignment_1()); 
             }
-            // InternalAllocationSpecificationLanguage.g:7615:1: ( rule__LocationConstraint__NameAssignment_1 )?
+            // InternalAllocationSpecificationLanguage.g:7615:1: ( rule__CoherenceConstraint__NameAssignment_1 )?
             int alt57=2;
             int LA57_0 = input.LA(1);
 
@@ -23544,10 +23544,10 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             }
             switch (alt57) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:7615:2: rule__LocationConstraint__NameAssignment_1
+                    // InternalAllocationSpecificationLanguage.g:7615:2: rule__CoherenceConstraint__NameAssignment_1
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
-                    rule__LocationConstraint__NameAssignment_1();
+                    rule__CoherenceConstraint__NameAssignment_1();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -23558,7 +23558,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationConstraintAccess().getNameAssignment_1()); 
+               after(grammarAccess.getCoherenceConstraintAccess().getNameAssignment_1()); 
             }
 
             }
@@ -23578,26 +23578,26 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__Group__1__Impl"
+    // $ANTLR end "rule__CoherenceConstraint__Group__1__Impl"
 
 
-    // $ANTLR start "rule__LocationConstraint__Group__2"
-    // InternalAllocationSpecificationLanguage.g:7625:1: rule__LocationConstraint__Group__2 : rule__LocationConstraint__Group__2__Impl rule__LocationConstraint__Group__3 ;
-    public final void rule__LocationConstraint__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__Group__2"
+    // InternalAllocationSpecificationLanguage.g:7625:1: rule__CoherenceConstraint__Group__2 : rule__CoherenceConstraint__Group__2__Impl rule__CoherenceConstraint__Group__3 ;
+    public final void rule__CoherenceConstraint__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7629:1: ( rule__LocationConstraint__Group__2__Impl rule__LocationConstraint__Group__3 )
-            // InternalAllocationSpecificationLanguage.g:7630:2: rule__LocationConstraint__Group__2__Impl rule__LocationConstraint__Group__3
+            // InternalAllocationSpecificationLanguage.g:7629:1: ( rule__CoherenceConstraint__Group__2__Impl rule__CoherenceConstraint__Group__3 )
+            // InternalAllocationSpecificationLanguage.g:7630:2: rule__CoherenceConstraint__Group__2__Impl rule__CoherenceConstraint__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_16);
-            rule__LocationConstraint__Group__2__Impl();
+            rule__CoherenceConstraint__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__LocationConstraint__Group__3();
+            rule__CoherenceConstraint__Group__3();
 
             state._fsp--;
             if (state.failed) return ;
@@ -23616,12 +23616,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__Group__2"
+    // $ANTLR end "rule__CoherenceConstraint__Group__2"
 
 
-    // $ANTLR start "rule__LocationConstraint__Group__2__Impl"
-    // InternalAllocationSpecificationLanguage.g:7637:1: rule__LocationConstraint__Group__2__Impl : ( '{' ) ;
-    public final void rule__LocationConstraint__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__Group__2__Impl"
+    // InternalAllocationSpecificationLanguage.g:7637:1: rule__CoherenceConstraint__Group__2__Impl : ( '{' ) ;
+    public final void rule__CoherenceConstraint__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -23633,11 +23633,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // InternalAllocationSpecificationLanguage.g:7643:1: '{'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationConstraintAccess().getLeftCurlyBracketKeyword_2()); 
+               before(grammarAccess.getCoherenceConstraintAccess().getLeftCurlyBracketKeyword_2()); 
             }
             match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationConstraintAccess().getLeftCurlyBracketKeyword_2()); 
+               after(grammarAccess.getCoherenceConstraintAccess().getLeftCurlyBracketKeyword_2()); 
             }
 
             }
@@ -23657,26 +23657,26 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__Group__2__Impl"
+    // $ANTLR end "rule__CoherenceConstraint__Group__2__Impl"
 
 
-    // $ANTLR start "rule__LocationConstraint__Group__3"
-    // InternalAllocationSpecificationLanguage.g:7656:1: rule__LocationConstraint__Group__3 : rule__LocationConstraint__Group__3__Impl rule__LocationConstraint__Group__4 ;
-    public final void rule__LocationConstraint__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__Group__3"
+    // InternalAllocationSpecificationLanguage.g:7656:1: rule__CoherenceConstraint__Group__3 : rule__CoherenceConstraint__Group__3__Impl rule__CoherenceConstraint__Group__4 ;
+    public final void rule__CoherenceConstraint__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7660:1: ( rule__LocationConstraint__Group__3__Impl rule__LocationConstraint__Group__4 )
-            // InternalAllocationSpecificationLanguage.g:7661:2: rule__LocationConstraint__Group__3__Impl rule__LocationConstraint__Group__4
+            // InternalAllocationSpecificationLanguage.g:7660:1: ( rule__CoherenceConstraint__Group__3__Impl rule__CoherenceConstraint__Group__4 )
+            // InternalAllocationSpecificationLanguage.g:7661:2: rule__CoherenceConstraint__Group__3__Impl rule__CoherenceConstraint__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_19);
-            rule__LocationConstraint__Group__3__Impl();
+            rule__CoherenceConstraint__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__LocationConstraint__Group__4();
+            rule__CoherenceConstraint__Group__4();
 
             state._fsp--;
             if (state.failed) return ;
@@ -23695,30 +23695,30 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__Group__3"
+    // $ANTLR end "rule__CoherenceConstraint__Group__3"
 
 
-    // $ANTLR start "rule__LocationConstraint__Group__3__Impl"
-    // InternalAllocationSpecificationLanguage.g:7668:1: rule__LocationConstraint__Group__3__Impl : ( ( rule__LocationConstraint__TupleDescriptorAssignment_3 ) ) ;
-    public final void rule__LocationConstraint__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__Group__3__Impl"
+    // InternalAllocationSpecificationLanguage.g:7668:1: rule__CoherenceConstraint__Group__3__Impl : ( ( rule__CoherenceConstraint__TupleDescriptorAssignment_3 ) ) ;
+    public final void rule__CoherenceConstraint__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7672:1: ( ( ( rule__LocationConstraint__TupleDescriptorAssignment_3 ) ) )
-            // InternalAllocationSpecificationLanguage.g:7673:1: ( ( rule__LocationConstraint__TupleDescriptorAssignment_3 ) )
+            // InternalAllocationSpecificationLanguage.g:7672:1: ( ( ( rule__CoherenceConstraint__TupleDescriptorAssignment_3 ) ) )
+            // InternalAllocationSpecificationLanguage.g:7673:1: ( ( rule__CoherenceConstraint__TupleDescriptorAssignment_3 ) )
             {
-            // InternalAllocationSpecificationLanguage.g:7673:1: ( ( rule__LocationConstraint__TupleDescriptorAssignment_3 ) )
-            // InternalAllocationSpecificationLanguage.g:7674:1: ( rule__LocationConstraint__TupleDescriptorAssignment_3 )
+            // InternalAllocationSpecificationLanguage.g:7673:1: ( ( rule__CoherenceConstraint__TupleDescriptorAssignment_3 ) )
+            // InternalAllocationSpecificationLanguage.g:7674:1: ( rule__CoherenceConstraint__TupleDescriptorAssignment_3 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationConstraintAccess().getTupleDescriptorAssignment_3()); 
+               before(grammarAccess.getCoherenceConstraintAccess().getTupleDescriptorAssignment_3()); 
             }
-            // InternalAllocationSpecificationLanguage.g:7675:1: ( rule__LocationConstraint__TupleDescriptorAssignment_3 )
-            // InternalAllocationSpecificationLanguage.g:7675:2: rule__LocationConstraint__TupleDescriptorAssignment_3
+            // InternalAllocationSpecificationLanguage.g:7675:1: ( rule__CoherenceConstraint__TupleDescriptorAssignment_3 )
+            // InternalAllocationSpecificationLanguage.g:7675:2: rule__CoherenceConstraint__TupleDescriptorAssignment_3
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__LocationConstraint__TupleDescriptorAssignment_3();
+            rule__CoherenceConstraint__TupleDescriptorAssignment_3();
 
             state._fsp--;
             if (state.failed) return ;
@@ -23726,7 +23726,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationConstraintAccess().getTupleDescriptorAssignment_3()); 
+               after(grammarAccess.getCoherenceConstraintAccess().getTupleDescriptorAssignment_3()); 
             }
 
             }
@@ -23746,26 +23746,26 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__Group__3__Impl"
+    // $ANTLR end "rule__CoherenceConstraint__Group__3__Impl"
 
 
-    // $ANTLR start "rule__LocationConstraint__Group__4"
-    // InternalAllocationSpecificationLanguage.g:7685:1: rule__LocationConstraint__Group__4 : rule__LocationConstraint__Group__4__Impl rule__LocationConstraint__Group__5 ;
-    public final void rule__LocationConstraint__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__Group__4"
+    // InternalAllocationSpecificationLanguage.g:7685:1: rule__CoherenceConstraint__Group__4 : rule__CoherenceConstraint__Group__4__Impl rule__CoherenceConstraint__Group__5 ;
+    public final void rule__CoherenceConstraint__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7689:1: ( rule__LocationConstraint__Group__4__Impl rule__LocationConstraint__Group__5 )
-            // InternalAllocationSpecificationLanguage.g:7690:2: rule__LocationConstraint__Group__4__Impl rule__LocationConstraint__Group__5
+            // InternalAllocationSpecificationLanguage.g:7689:1: ( rule__CoherenceConstraint__Group__4__Impl rule__CoherenceConstraint__Group__5 )
+            // InternalAllocationSpecificationLanguage.g:7690:2: rule__CoherenceConstraint__Group__4__Impl rule__CoherenceConstraint__Group__5
             {
             pushFollow(FollowSets000.FOLLOW_20);
-            rule__LocationConstraint__Group__4__Impl();
+            rule__CoherenceConstraint__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__LocationConstraint__Group__5();
+            rule__CoherenceConstraint__Group__5();
 
             state._fsp--;
             if (state.failed) return ;
@@ -23784,12 +23784,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__Group__4"
+    // $ANTLR end "rule__CoherenceConstraint__Group__4"
 
 
-    // $ANTLR start "rule__LocationConstraint__Group__4__Impl"
-    // InternalAllocationSpecificationLanguage.g:7697:1: rule__LocationConstraint__Group__4__Impl : ( 'ocl' ) ;
-    public final void rule__LocationConstraint__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__Group__4__Impl"
+    // InternalAllocationSpecificationLanguage.g:7697:1: rule__CoherenceConstraint__Group__4__Impl : ( 'ocl' ) ;
+    public final void rule__CoherenceConstraint__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -23801,11 +23801,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // InternalAllocationSpecificationLanguage.g:7703:1: 'ocl'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationConstraintAccess().getOclKeyword_4()); 
+               before(grammarAccess.getCoherenceConstraintAccess().getOclKeyword_4()); 
             }
             match(input,78,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationConstraintAccess().getOclKeyword_4()); 
+               after(grammarAccess.getCoherenceConstraintAccess().getOclKeyword_4()); 
             }
 
             }
@@ -23825,26 +23825,26 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__Group__4__Impl"
+    // $ANTLR end "rule__CoherenceConstraint__Group__4__Impl"
 
 
-    // $ANTLR start "rule__LocationConstraint__Group__5"
-    // InternalAllocationSpecificationLanguage.g:7716:1: rule__LocationConstraint__Group__5 : rule__LocationConstraint__Group__5__Impl rule__LocationConstraint__Group__6 ;
-    public final void rule__LocationConstraint__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__Group__5"
+    // InternalAllocationSpecificationLanguage.g:7716:1: rule__CoherenceConstraint__Group__5 : rule__CoherenceConstraint__Group__5__Impl rule__CoherenceConstraint__Group__6 ;
+    public final void rule__CoherenceConstraint__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7720:1: ( rule__LocationConstraint__Group__5__Impl rule__LocationConstraint__Group__6 )
-            // InternalAllocationSpecificationLanguage.g:7721:2: rule__LocationConstraint__Group__5__Impl rule__LocationConstraint__Group__6
+            // InternalAllocationSpecificationLanguage.g:7720:1: ( rule__CoherenceConstraint__Group__5__Impl rule__CoherenceConstraint__Group__6 )
+            // InternalAllocationSpecificationLanguage.g:7721:2: rule__CoherenceConstraint__Group__5__Impl rule__CoherenceConstraint__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_11);
-            rule__LocationConstraint__Group__5__Impl();
+            rule__CoherenceConstraint__Group__5__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__LocationConstraint__Group__6();
+            rule__CoherenceConstraint__Group__6();
 
             state._fsp--;
             if (state.failed) return ;
@@ -23863,30 +23863,30 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__Group__5"
+    // $ANTLR end "rule__CoherenceConstraint__Group__5"
 
 
-    // $ANTLR start "rule__LocationConstraint__Group__5__Impl"
-    // InternalAllocationSpecificationLanguage.g:7728:1: rule__LocationConstraint__Group__5__Impl : ( ( rule__LocationConstraint__ExpressionAssignment_5 ) ) ;
-    public final void rule__LocationConstraint__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__Group__5__Impl"
+    // InternalAllocationSpecificationLanguage.g:7728:1: rule__CoherenceConstraint__Group__5__Impl : ( ( rule__CoherenceConstraint__ExpressionAssignment_5 ) ) ;
+    public final void rule__CoherenceConstraint__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7732:1: ( ( ( rule__LocationConstraint__ExpressionAssignment_5 ) ) )
-            // InternalAllocationSpecificationLanguage.g:7733:1: ( ( rule__LocationConstraint__ExpressionAssignment_5 ) )
+            // InternalAllocationSpecificationLanguage.g:7732:1: ( ( ( rule__CoherenceConstraint__ExpressionAssignment_5 ) ) )
+            // InternalAllocationSpecificationLanguage.g:7733:1: ( ( rule__CoherenceConstraint__ExpressionAssignment_5 ) )
             {
-            // InternalAllocationSpecificationLanguage.g:7733:1: ( ( rule__LocationConstraint__ExpressionAssignment_5 ) )
-            // InternalAllocationSpecificationLanguage.g:7734:1: ( rule__LocationConstraint__ExpressionAssignment_5 )
+            // InternalAllocationSpecificationLanguage.g:7733:1: ( ( rule__CoherenceConstraint__ExpressionAssignment_5 ) )
+            // InternalAllocationSpecificationLanguage.g:7734:1: ( rule__CoherenceConstraint__ExpressionAssignment_5 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationConstraintAccess().getExpressionAssignment_5()); 
+               before(grammarAccess.getCoherenceConstraintAccess().getExpressionAssignment_5()); 
             }
-            // InternalAllocationSpecificationLanguage.g:7735:1: ( rule__LocationConstraint__ExpressionAssignment_5 )
-            // InternalAllocationSpecificationLanguage.g:7735:2: rule__LocationConstraint__ExpressionAssignment_5
+            // InternalAllocationSpecificationLanguage.g:7735:1: ( rule__CoherenceConstraint__ExpressionAssignment_5 )
+            // InternalAllocationSpecificationLanguage.g:7735:2: rule__CoherenceConstraint__ExpressionAssignment_5
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__LocationConstraint__ExpressionAssignment_5();
+            rule__CoherenceConstraint__ExpressionAssignment_5();
 
             state._fsp--;
             if (state.failed) return ;
@@ -23894,7 +23894,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationConstraintAccess().getExpressionAssignment_5()); 
+               after(grammarAccess.getCoherenceConstraintAccess().getExpressionAssignment_5()); 
             }
 
             }
@@ -23914,26 +23914,26 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__Group__5__Impl"
+    // $ANTLR end "rule__CoherenceConstraint__Group__5__Impl"
 
 
-    // $ANTLR start "rule__LocationConstraint__Group__6"
-    // InternalAllocationSpecificationLanguage.g:7745:1: rule__LocationConstraint__Group__6 : rule__LocationConstraint__Group__6__Impl rule__LocationConstraint__Group__7 ;
-    public final void rule__LocationConstraint__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__Group__6"
+    // InternalAllocationSpecificationLanguage.g:7745:1: rule__CoherenceConstraint__Group__6 : rule__CoherenceConstraint__Group__6__Impl rule__CoherenceConstraint__Group__7 ;
+    public final void rule__CoherenceConstraint__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7749:1: ( rule__LocationConstraint__Group__6__Impl rule__LocationConstraint__Group__7 )
-            // InternalAllocationSpecificationLanguage.g:7750:2: rule__LocationConstraint__Group__6__Impl rule__LocationConstraint__Group__7
+            // InternalAllocationSpecificationLanguage.g:7749:1: ( rule__CoherenceConstraint__Group__6__Impl rule__CoherenceConstraint__Group__7 )
+            // InternalAllocationSpecificationLanguage.g:7750:2: rule__CoherenceConstraint__Group__6__Impl rule__CoherenceConstraint__Group__7
             {
             pushFollow(FollowSets000.FOLLOW_21);
-            rule__LocationConstraint__Group__6__Impl();
+            rule__CoherenceConstraint__Group__6__Impl();
 
             state._fsp--;
             if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__LocationConstraint__Group__7();
+            rule__CoherenceConstraint__Group__7();
 
             state._fsp--;
             if (state.failed) return ;
@@ -23952,12 +23952,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__Group__6"
+    // $ANTLR end "rule__CoherenceConstraint__Group__6"
 
 
-    // $ANTLR start "rule__LocationConstraint__Group__6__Impl"
-    // InternalAllocationSpecificationLanguage.g:7757:1: rule__LocationConstraint__Group__6__Impl : ( ';' ) ;
-    public final void rule__LocationConstraint__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__Group__6__Impl"
+    // InternalAllocationSpecificationLanguage.g:7757:1: rule__CoherenceConstraint__Group__6__Impl : ( ';' ) ;
+    public final void rule__CoherenceConstraint__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -23969,11 +23969,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // InternalAllocationSpecificationLanguage.g:7763:1: ';'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_6()); 
+               before(grammarAccess.getCoherenceConstraintAccess().getSemicolonKeyword_6()); 
             }
             match(input,73,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_6()); 
+               after(grammarAccess.getCoherenceConstraintAccess().getSemicolonKeyword_6()); 
             }
 
             }
@@ -23993,21 +23993,21 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__Group__6__Impl"
+    // $ANTLR end "rule__CoherenceConstraint__Group__6__Impl"
 
 
-    // $ANTLR start "rule__LocationConstraint__Group__7"
-    // InternalAllocationSpecificationLanguage.g:7776:1: rule__LocationConstraint__Group__7 : rule__LocationConstraint__Group__7__Impl ;
-    public final void rule__LocationConstraint__Group__7() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__Group__7"
+    // InternalAllocationSpecificationLanguage.g:7776:1: rule__CoherenceConstraint__Group__7 : rule__CoherenceConstraint__Group__7__Impl ;
+    public final void rule__CoherenceConstraint__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalAllocationSpecificationLanguage.g:7780:1: ( rule__LocationConstraint__Group__7__Impl )
-            // InternalAllocationSpecificationLanguage.g:7781:2: rule__LocationConstraint__Group__7__Impl
+            // InternalAllocationSpecificationLanguage.g:7780:1: ( rule__CoherenceConstraint__Group__7__Impl )
+            // InternalAllocationSpecificationLanguage.g:7781:2: rule__CoherenceConstraint__Group__7__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__LocationConstraint__Group__7__Impl();
+            rule__CoherenceConstraint__Group__7__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -24026,12 +24026,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__Group__7"
+    // $ANTLR end "rule__CoherenceConstraint__Group__7"
 
 
-    // $ANTLR start "rule__LocationConstraint__Group__7__Impl"
-    // InternalAllocationSpecificationLanguage.g:7787:1: rule__LocationConstraint__Group__7__Impl : ( '}' ) ;
-    public final void rule__LocationConstraint__Group__7__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__Group__7__Impl"
+    // InternalAllocationSpecificationLanguage.g:7787:1: rule__CoherenceConstraint__Group__7__Impl : ( '}' ) ;
+    public final void rule__CoherenceConstraint__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -24043,11 +24043,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // InternalAllocationSpecificationLanguage.g:7793:1: '}'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_7()); 
+               before(grammarAccess.getCoherenceConstraintAccess().getRightCurlyBracketKeyword_7()); 
             }
             match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_7()); 
+               after(grammarAccess.getCoherenceConstraintAccess().getRightCurlyBracketKeyword_7()); 
             }
 
             }
@@ -24067,7 +24067,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__Group__7__Impl"
+    // $ANTLR end "rule__CoherenceConstraint__Group__7__Impl"
 
 
     // $ANTLR start "rule__ResourceConstraint__Group__0"
@@ -59265,29 +59265,29 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     // $ANTLR end "rule__BoundWeightTupleDescriptor__TypedPairsAssignment_8_1"
 
 
-    // $ANTLR start "rule__LocationConstraint__TypeAssignment_0"
-    // InternalAllocationSpecificationLanguage.g:20526:1: rule__LocationConstraint__TypeAssignment_0 : ( ruleLocationConstraintType ) ;
-    public final void rule__LocationConstraint__TypeAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__TypeAssignment_0"
+    // InternalAllocationSpecificationLanguage.g:20526:1: rule__CoherenceConstraint__TypeAssignment_0 : ( ruleCoherenceConstraintType ) ;
+    public final void rule__CoherenceConstraint__TypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalAllocationSpecificationLanguage.g:20530:1: ( ( ruleLocationConstraintType ) )
-            // InternalAllocationSpecificationLanguage.g:20531:1: ( ruleLocationConstraintType )
+            // InternalAllocationSpecificationLanguage.g:20530:1: ( ( ruleCoherenceConstraintType ) )
+            // InternalAllocationSpecificationLanguage.g:20531:1: ( ruleCoherenceConstraintType )
             {
-            // InternalAllocationSpecificationLanguage.g:20531:1: ( ruleLocationConstraintType )
-            // InternalAllocationSpecificationLanguage.g:20532:1: ruleLocationConstraintType
+            // InternalAllocationSpecificationLanguage.g:20531:1: ( ruleCoherenceConstraintType )
+            // InternalAllocationSpecificationLanguage.g:20532:1: ruleCoherenceConstraintType
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationConstraintAccess().getTypeLocationConstraintTypeEnumRuleCall_0_0()); 
+               before(grammarAccess.getCoherenceConstraintAccess().getTypeCoherenceConstraintTypeEnumRuleCall_0_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
-            ruleLocationConstraintType();
+            ruleCoherenceConstraintType();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationConstraintAccess().getTypeLocationConstraintTypeEnumRuleCall_0_0()); 
+               after(grammarAccess.getCoherenceConstraintAccess().getTypeCoherenceConstraintTypeEnumRuleCall_0_0()); 
             }
 
             }
@@ -59307,12 +59307,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__TypeAssignment_0"
+    // $ANTLR end "rule__CoherenceConstraint__TypeAssignment_0"
 
 
-    // $ANTLR start "rule__LocationConstraint__NameAssignment_1"
-    // InternalAllocationSpecificationLanguage.g:20541:1: rule__LocationConstraint__NameAssignment_1 : ( ruleID ) ;
-    public final void rule__LocationConstraint__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__NameAssignment_1"
+    // InternalAllocationSpecificationLanguage.g:20541:1: rule__CoherenceConstraint__NameAssignment_1 : ( ruleID ) ;
+    public final void rule__CoherenceConstraint__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -59324,7 +59324,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // InternalAllocationSpecificationLanguage.g:20547:1: ruleID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationConstraintAccess().getNameIDParserRuleCall_1_0()); 
+               before(grammarAccess.getCoherenceConstraintAccess().getNameIDParserRuleCall_1_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleID();
@@ -59332,7 +59332,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationConstraintAccess().getNameIDParserRuleCall_1_0()); 
+               after(grammarAccess.getCoherenceConstraintAccess().getNameIDParserRuleCall_1_0()); 
             }
 
             }
@@ -59352,12 +59352,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__NameAssignment_1"
+    // $ANTLR end "rule__CoherenceConstraint__NameAssignment_1"
 
 
-    // $ANTLR start "rule__LocationConstraint__TupleDescriptorAssignment_3"
-    // InternalAllocationSpecificationLanguage.g:20556:1: rule__LocationConstraint__TupleDescriptorAssignment_3 : ( ruleTupleDescriptor ) ;
-    public final void rule__LocationConstraint__TupleDescriptorAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__TupleDescriptorAssignment_3"
+    // InternalAllocationSpecificationLanguage.g:20556:1: rule__CoherenceConstraint__TupleDescriptorAssignment_3 : ( ruleTupleDescriptor ) ;
+    public final void rule__CoherenceConstraint__TupleDescriptorAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -59369,7 +59369,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // InternalAllocationSpecificationLanguage.g:20562:1: ruleTupleDescriptor
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); 
+               before(grammarAccess.getCoherenceConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleTupleDescriptor();
@@ -59377,7 +59377,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); 
+               after(grammarAccess.getCoherenceConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); 
             }
 
             }
@@ -59397,12 +59397,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__TupleDescriptorAssignment_3"
+    // $ANTLR end "rule__CoherenceConstraint__TupleDescriptorAssignment_3"
 
 
-    // $ANTLR start "rule__LocationConstraint__ExpressionAssignment_5"
-    // InternalAllocationSpecificationLanguage.g:20571:1: rule__LocationConstraint__ExpressionAssignment_5 : ( ruleModel ) ;
-    public final void rule__LocationConstraint__ExpressionAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__CoherenceConstraint__ExpressionAssignment_5"
+    // InternalAllocationSpecificationLanguage.g:20571:1: rule__CoherenceConstraint__ExpressionAssignment_5 : ( ruleModel ) ;
+    public final void rule__CoherenceConstraint__ExpressionAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -59414,7 +59414,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             // InternalAllocationSpecificationLanguage.g:20577:1: ruleModel
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_5_0()); 
+               before(grammarAccess.getCoherenceConstraintAccess().getExpressionModelParserRuleCall_5_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleModel();
@@ -59422,7 +59422,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_5_0()); 
+               after(grammarAccess.getCoherenceConstraintAccess().getExpressionModelParserRuleCall_5_0()); 
             }
 
             }
@@ -59442,7 +59442,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return ;
     }
-    // $ANTLR end "rule__LocationConstraint__ExpressionAssignment_5"
+    // $ANTLR end "rule__CoherenceConstraint__ExpressionAssignment_5"
 
 
     // $ANTLR start "rule__ResourceConstraint__NameAssignment_1"

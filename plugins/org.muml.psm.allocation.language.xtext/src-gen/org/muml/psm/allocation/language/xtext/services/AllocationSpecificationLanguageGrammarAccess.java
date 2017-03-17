@@ -751,25 +751,25 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cConstraintKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
-		private final RuleCall cLocationConstraintParserRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
+		private final RuleCall cCoherenceConstraintParserRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
 		private final RuleCall cResourceConstraintParserRuleCall_1_1 = (RuleCall)cAlternatives_1.eContents().get(1);
 		private final RuleCall cRequiredHardwareResourceInstanceConstraintParserRuleCall_1_2 = (RuleCall)cAlternatives_1.eContents().get(2);
 		
 		//Constraint cs::ConstraintCS:
-		//	'constraint' (LocationConstraint | ResourceConstraint | RequiredHardwareResourceInstanceConstraint)
+		//	'constraint' (CoherenceConstraint | ResourceConstraint | RequiredHardwareResourceInstanceConstraint)
 		@Override public ParserRule getRule() { return rule; }
 
-		//'constraint' (LocationConstraint | ResourceConstraint | RequiredHardwareResourceInstanceConstraint)
+		//'constraint' (CoherenceConstraint | ResourceConstraint | RequiredHardwareResourceInstanceConstraint)
 		public Group getGroup() { return cGroup; }
 
 		//'constraint'
 		public Keyword getConstraintKeyword_0() { return cConstraintKeyword_0; }
 
-		//(LocationConstraint | ResourceConstraint | RequiredHardwareResourceInstanceConstraint)
+		//(CoherenceConstraint | ResourceConstraint | RequiredHardwareResourceInstanceConstraint)
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
-		//LocationConstraint
-		public RuleCall getLocationConstraintParserRuleCall_1_0() { return cLocationConstraintParserRuleCall_1_0; }
+		//CoherenceConstraint
+		public RuleCall getCoherenceConstraintParserRuleCall_1_0() { return cCoherenceConstraintParserRuleCall_1_0; }
 
 		//ResourceConstraint
 		public RuleCall getResourceConstraintParserRuleCall_1_1() { return cResourceConstraintParserRuleCall_1_1; }
@@ -778,11 +778,11 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		public RuleCall getRequiredHardwareResourceInstanceConstraintParserRuleCall_1_2() { return cRequiredHardwareResourceInstanceConstraintParserRuleCall_1_2; }
 	}
 
-	public class LocationConstraintElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.LocationConstraint");
+	public class CoherenceConstraintElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.CoherenceConstraint");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cTypeLocationConstraintTypeEnumRuleCall_0_0 = (RuleCall)cTypeAssignment_0.eContents().get(0);
+		private final RuleCall cTypeCoherenceConstraintTypeEnumRuleCall_0_0 = (RuleCall)cTypeAssignment_0.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
@@ -794,21 +794,21 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//LocationConstraint cs::LocationConstraintCS:
-		//	type=LocationConstraintType name=ID? '{'
+		//CoherenceConstraint cs::CoherenceConstraintCS:
+		//	type=CoherenceConstraintType name=ID? '{'
 		//	tupleDescriptor=TupleDescriptor
 		//	'ocl' expression=Model ';'
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 
-		//type=LocationConstraintType name=ID? '{' tupleDescriptor=TupleDescriptor 'ocl' expression=Model ';' '}'
+		//type=CoherenceConstraintType name=ID? '{' tupleDescriptor=TupleDescriptor 'ocl' expression=Model ';' '}'
 		public Group getGroup() { return cGroup; }
 
-		//type=LocationConstraintType
+		//type=CoherenceConstraintType
 		public Assignment getTypeAssignment_0() { return cTypeAssignment_0; }
 
-		//LocationConstraintType
-		public RuleCall getTypeLocationConstraintTypeEnumRuleCall_0_0() { return cTypeLocationConstraintTypeEnumRuleCall_0_0; }
+		//CoherenceConstraintType
+		public RuleCall getTypeCoherenceConstraintTypeEnumRuleCall_0_0() { return cTypeCoherenceConstraintTypeEnumRuleCall_0_0; }
 
 		//name=ID?
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -1029,50 +1029,50 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 	
 	
-	public class LocationConstraintTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.LocationConstraintType");
+	public class CoherenceConstraintTypeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.CoherenceConstraintType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cSAME_LOCATIONEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cSAME_LOCATIONSameLocationKeyword_0_0 = (Keyword)cSAME_LOCATIONEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cSAME_LOCATIONEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cSAME_LOCATIONCollocationKeyword_1_0 = (Keyword)cSAME_LOCATIONEnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cDIFFERENT_LOCATIONEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cDIFFERENT_LOCATIONDifferentLocationKeyword_2_0 = (Keyword)cDIFFERENT_LOCATIONEnumLiteralDeclaration_2.eContents().get(0);
-		private final EnumLiteralDeclaration cDIFFERENT_LOCATIONEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
-		private final Keyword cDIFFERENT_LOCATIONSeparateLocationKeyword_3_0 = (Keyword)cDIFFERENT_LOCATIONEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cCOLLOCATIONEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cCOLLOCATIONSameLocationKeyword_0_0 = (Keyword)cCOLLOCATIONEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cCOLLOCATIONEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cCOLLOCATIONCollocationKeyword_1_0 = (Keyword)cCOLLOCATIONEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cSEPARATE_LOCATIONEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cSEPARATE_LOCATIONDifferentLocationKeyword_2_0 = (Keyword)cSEPARATE_LOCATIONEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cSEPARATE_LOCATIONEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cSEPARATE_LOCATIONSeparateLocationKeyword_3_0 = (Keyword)cSEPARATE_LOCATIONEnumLiteralDeclaration_3.eContents().get(0);
 		
-		//enum LocationConstraintType returns cs::LocationConstraintTypes:
-		//	SAME_LOCATION='sameLocation' | SAME_LOCATION='collocation'
-		//	| DIFFERENT_LOCATION='differentLocation' | DIFFERENT_LOCATION='separateLocation';
+		//enum CoherenceConstraintType returns cs::CoherenceConstraintType:
+		//	COLLOCATION='sameLocation' | COLLOCATION='collocation'
+		//	| SEPARATE_LOCATION='differentLocation' | SEPARATE_LOCATION='separateLocation';
 		public EnumRule getRule() { return rule; }
 
-		//SAME_LOCATION='sameLocation' | SAME_LOCATION='collocation' | DIFFERENT_LOCATION='differentLocation' |
-		//DIFFERENT_LOCATION='separateLocation'
+		//COLLOCATION='sameLocation' | COLLOCATION='collocation' | SEPARATE_LOCATION='differentLocation' |
+		//SEPARATE_LOCATION='separateLocation'
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//SAME_LOCATION='sameLocation'
-		public EnumLiteralDeclaration getSAME_LOCATIONEnumLiteralDeclaration_0() { return cSAME_LOCATIONEnumLiteralDeclaration_0; }
+		//COLLOCATION='sameLocation'
+		public EnumLiteralDeclaration getCOLLOCATIONEnumLiteralDeclaration_0() { return cCOLLOCATIONEnumLiteralDeclaration_0; }
 
 		//'sameLocation'
-		public Keyword getSAME_LOCATIONSameLocationKeyword_0_0() { return cSAME_LOCATIONSameLocationKeyword_0_0; }
+		public Keyword getCOLLOCATIONSameLocationKeyword_0_0() { return cCOLLOCATIONSameLocationKeyword_0_0; }
 
-		//SAME_LOCATION='collocation'
-		public EnumLiteralDeclaration getSAME_LOCATIONEnumLiteralDeclaration_1() { return cSAME_LOCATIONEnumLiteralDeclaration_1; }
+		//COLLOCATION='collocation'
+		public EnumLiteralDeclaration getCOLLOCATIONEnumLiteralDeclaration_1() { return cCOLLOCATIONEnumLiteralDeclaration_1; }
 
 		//'collocation'
-		public Keyword getSAME_LOCATIONCollocationKeyword_1_0() { return cSAME_LOCATIONCollocationKeyword_1_0; }
+		public Keyword getCOLLOCATIONCollocationKeyword_1_0() { return cCOLLOCATIONCollocationKeyword_1_0; }
 
-		//DIFFERENT_LOCATION='differentLocation'
-		public EnumLiteralDeclaration getDIFFERENT_LOCATIONEnumLiteralDeclaration_2() { return cDIFFERENT_LOCATIONEnumLiteralDeclaration_2; }
+		//SEPARATE_LOCATION='differentLocation'
+		public EnumLiteralDeclaration getSEPARATE_LOCATIONEnumLiteralDeclaration_2() { return cSEPARATE_LOCATIONEnumLiteralDeclaration_2; }
 
 		//'differentLocation'
-		public Keyword getDIFFERENT_LOCATIONDifferentLocationKeyword_2_0() { return cDIFFERENT_LOCATIONDifferentLocationKeyword_2_0; }
+		public Keyword getSEPARATE_LOCATIONDifferentLocationKeyword_2_0() { return cSEPARATE_LOCATIONDifferentLocationKeyword_2_0; }
 
-		//DIFFERENT_LOCATION='separateLocation'
-		public EnumLiteralDeclaration getDIFFERENT_LOCATIONEnumLiteralDeclaration_3() { return cDIFFERENT_LOCATIONEnumLiteralDeclaration_3; }
+		//SEPARATE_LOCATION='separateLocation'
+		public EnumLiteralDeclaration getSEPARATE_LOCATIONEnumLiteralDeclaration_3() { return cSEPARATE_LOCATIONEnumLiteralDeclaration_3; }
 
 		//'separateLocation'
-		public Keyword getDIFFERENT_LOCATIONSeparateLocationKeyword_3_0() { return cDIFFERENT_LOCATIONSeparateLocationKeyword_3_0; }
+		public Keyword getSEPARATE_LOCATIONSeparateLocationKeyword_3_0() { return cSEPARATE_LOCATIONSeparateLocationKeyword_3_0; }
 	}
 
 	public class GoalElements extends AbstractEnumRuleElementFinder {
@@ -1118,10 +1118,10 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	private final WeightTupleDescriptorElements pWeightTupleDescriptor;
 	private final BoundWeightTupleDescriptorElements pBoundWeightTupleDescriptor;
 	private final ConstraintElements pConstraint;
-	private final LocationConstraintElements pLocationConstraint;
+	private final CoherenceConstraintElements pCoherenceConstraint;
 	private final ResourceConstraintElements pResourceConstraint;
 	private final RequiredHardwareResourceInstanceConstraintElements pRequiredHardwareResourceInstanceConstraint;
-	private final LocationConstraintTypeElements eLocationConstraintType;
+	private final CoherenceConstraintTypeElements eCoherenceConstraintType;
 	private final MeasureFunctionElements pMeasureFunction;
 	private final GoalElements eGoal;
 	
@@ -1157,10 +1157,10 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		this.pWeightTupleDescriptor = new WeightTupleDescriptorElements();
 		this.pBoundWeightTupleDescriptor = new BoundWeightTupleDescriptorElements();
 		this.pConstraint = new ConstraintElements();
-		this.pLocationConstraint = new LocationConstraintElements();
+		this.pCoherenceConstraint = new CoherenceConstraintElements();
 		this.pResourceConstraint = new ResourceConstraintElements();
 		this.pRequiredHardwareResourceInstanceConstraint = new RequiredHardwareResourceInstanceConstraintElements();
-		this.eLocationConstraintType = new LocationConstraintTypeElements();
+		this.eCoherenceConstraintType = new CoherenceConstraintTypeElements();
 		this.pMeasureFunction = new MeasureFunctionElements();
 		this.eGoal = new GoalElements();
 	}
@@ -1360,7 +1360,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//Constraint cs::ConstraintCS:
-	//	'constraint' (LocationConstraint | ResourceConstraint | RequiredHardwareResourceInstanceConstraint)
+	//	'constraint' (CoherenceConstraint | ResourceConstraint | RequiredHardwareResourceInstanceConstraint)
 	public ConstraintElements getConstraintAccess() {
 		return pConstraint;
 	}
@@ -1369,17 +1369,17 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getConstraintAccess().getRule();
 	}
 
-	//LocationConstraint cs::LocationConstraintCS:
-	//	type=LocationConstraintType name=ID? '{'
+	//CoherenceConstraint cs::CoherenceConstraintCS:
+	//	type=CoherenceConstraintType name=ID? '{'
 	//	tupleDescriptor=TupleDescriptor
 	//	'ocl' expression=Model ';'
 	//	'}'
-	public LocationConstraintElements getLocationConstraintAccess() {
-		return pLocationConstraint;
+	public CoherenceConstraintElements getCoherenceConstraintAccess() {
+		return pCoherenceConstraint;
 	}
 	
-	public ParserRule getLocationConstraintRule() {
-		return getLocationConstraintAccess().getRule();
+	public ParserRule getCoherenceConstraintRule() {
+		return getCoherenceConstraintAccess().getRule();
 	}
 
 	//ResourceConstraint cs::ResourceConstraintCS:
@@ -1408,15 +1408,15 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getRequiredHardwareResourceInstanceConstraintAccess().getRule();
 	}
 
-	//enum LocationConstraintType returns cs::LocationConstraintTypes:
-	//	SAME_LOCATION='sameLocation' | SAME_LOCATION='collocation'
-	//	| DIFFERENT_LOCATION='differentLocation' | DIFFERENT_LOCATION='separateLocation';
-	public LocationConstraintTypeElements getLocationConstraintTypeAccess() {
-		return eLocationConstraintType;
+	//enum CoherenceConstraintType returns cs::CoherenceConstraintType:
+	//	COLLOCATION='sameLocation' | COLLOCATION='collocation'
+	//	| SEPARATE_LOCATION='differentLocation' | SEPARATE_LOCATION='separateLocation';
+	public CoherenceConstraintTypeElements getCoherenceConstraintTypeAccess() {
+		return eCoherenceConstraintType;
 	}
 	
-	public EnumRule getLocationConstraintTypeRule() {
-		return getLocationConstraintTypeAccess().getRule();
+	public EnumRule getCoherenceConstraintTypeRule() {
+		return getCoherenceConstraintTypeAccess().getRule();
 	}
 
 	//MeasureFunction cs::MeasureFunctionCS:

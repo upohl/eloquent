@@ -1372,11 +1372,11 @@ ruleConstraint returns [EObject current=null]
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getConstraintAccess().getLocationConstraintParserRuleCall_1_0()); 
+        newCompositeNode(grammarAccess.getConstraintAccess().getCoherenceConstraintParserRuleCall_1_0()); 
     }
-    this_LocationConstraint_1=ruleLocationConstraint
+    this_CoherenceConstraint_1=ruleCoherenceConstraint
     { 
-        $current = $this_LocationConstraint_1.current; 
+        $current = $this_CoherenceConstraint_1.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1412,34 +1412,34 @@ ruleConstraint returns [EObject current=null]
 
 
 
-// Entry rule entryRuleLocationConstraint
-entryRuleLocationConstraint returns [EObject current=null] 
+// Entry rule entryRuleCoherenceConstraint
+entryRuleCoherenceConstraint returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getLocationConstraintRule()); }
-	 iv_ruleLocationConstraint=ruleLocationConstraint 
-	 { $current=$iv_ruleLocationConstraint.current; } 
+	{ newCompositeNode(grammarAccess.getCoherenceConstraintRule()); }
+	 iv_ruleCoherenceConstraint=ruleCoherenceConstraint 
+	 { $current=$iv_ruleCoherenceConstraint.current; } 
 	 EOF 
 ;
 
-// Rule LocationConstraint
-ruleLocationConstraint returns [EObject current=null] 
+// Rule CoherenceConstraint
+ruleCoherenceConstraint returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
 ((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getTypeLocationConstraintTypeEnumRuleCall_0_0()); 
+	        newCompositeNode(grammarAccess.getCoherenceConstraintAccess().getTypeCoherenceConstraintTypeEnumRuleCall_0_0()); 
 	    }
-		lv_type_0_0=ruleLocationConstraintType		{
+		lv_type_0_0=ruleCoherenceConstraintType		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLocationConstraintRule());
+	            $current = createModelElementForParent(grammarAccess.getCoherenceConstraintRule());
 	        }
        		set(
        			$current, 
        			"type",
         		lv_type_0_0, 
-        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.LocationConstraintType");
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.CoherenceConstraintType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1447,11 +1447,11 @@ ruleLocationConstraint returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getNameIDParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getCoherenceConstraintAccess().getNameIDParserRuleCall_1_0()); 
 	    }
 		lv_name_1_0=ruleID		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLocationConstraintRule());
+	            $current = createModelElementForParent(grammarAccess.getCoherenceConstraintRule());
 	        }
        		set(
        			$current, 
@@ -1464,16 +1464,16 @@ ruleLocationConstraint returns [EObject current=null]
 )
 )?	otherlv_2='{' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getLocationConstraintAccess().getLeftCurlyBracketKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getCoherenceConstraintAccess().getLeftCurlyBracketKeyword_2());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getCoherenceConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); 
 	    }
 		lv_tupleDescriptor_3_0=ruleTupleDescriptor		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLocationConstraintRule());
+	            $current = createModelElementForParent(grammarAccess.getCoherenceConstraintRule());
 	        }
        		set(
        			$current, 
@@ -1486,16 +1486,16 @@ ruleLocationConstraint returns [EObject current=null]
 )
 )	otherlv_4='ocl' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getLocationConstraintAccess().getOclKeyword_4());
+    	newLeafNode(otherlv_4, grammarAccess.getCoherenceConstraintAccess().getOclKeyword_4());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getCoherenceConstraintAccess().getExpressionModelParserRuleCall_5_0()); 
 	    }
 		lv_expression_5_0=ruleModel		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLocationConstraintRule());
+	            $current = createModelElementForParent(grammarAccess.getCoherenceConstraintRule());
 	        }
        		set(
        			$current, 
@@ -1508,11 +1508,11 @@ ruleLocationConstraint returns [EObject current=null]
 )
 )	otherlv_6=';' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_6());
+    	newLeafNode(otherlv_6, grammarAccess.getCoherenceConstraintAccess().getSemicolonKeyword_6());
     }
 	otherlv_7='}' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_7());
+    	newLeafNode(otherlv_7, grammarAccess.getCoherenceConstraintAccess().getRightCurlyBracketKeyword_7());
     }
 )
 ;
@@ -8644,32 +8644,32 @@ ruleURI returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 
 
 
-// Rule LocationConstraintType
-ruleLocationConstraintType returns [Enumerator current=null] 
+// Rule CoherenceConstraintType
+ruleCoherenceConstraintType returns [Enumerator current=null] 
     @init { enterRule(); }
     @after { leaveRule(); }:
 ((	enumLiteral_0='sameLocation' 
 	{
-        $current = grammarAccess.getLocationConstraintTypeAccess().getSAME_LOCATIONEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_0, grammarAccess.getLocationConstraintTypeAccess().getSAME_LOCATIONEnumLiteralDeclaration_0()); 
+        $current = grammarAccess.getCoherenceConstraintTypeAccess().getCOLLOCATIONEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getCoherenceConstraintTypeAccess().getCOLLOCATIONEnumLiteralDeclaration_0()); 
     }
 )
     |(	enumLiteral_1='collocation' 
 	{
-        $current = grammarAccess.getLocationConstraintTypeAccess().getSAME_LOCATIONEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_1, grammarAccess.getLocationConstraintTypeAccess().getSAME_LOCATIONEnumLiteralDeclaration_1()); 
+        $current = grammarAccess.getCoherenceConstraintTypeAccess().getCOLLOCATIONEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getCoherenceConstraintTypeAccess().getCOLLOCATIONEnumLiteralDeclaration_1()); 
     }
 )
     |(	enumLiteral_2='differentLocation' 
 	{
-        $current = grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_2, grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_2()); 
+        $current = grammarAccess.getCoherenceConstraintTypeAccess().getSEPARATE_LOCATIONEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getCoherenceConstraintTypeAccess().getSEPARATE_LOCATIONEnumLiteralDeclaration_2()); 
     }
 )
     |(	enumLiteral_3='separateLocation' 
 	{
-        $current = grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_3, grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_3()); 
+        $current = grammarAccess.getCoherenceConstraintTypeAccess().getSEPARATE_LOCATIONEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_3, grammarAccess.getCoherenceConstraintTypeAccess().getSEPARATE_LOCATIONEnumLiteralDeclaration_3()); 
     }
 ));
 

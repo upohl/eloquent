@@ -80,9 +80,9 @@ import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.muml.psm.allocation.language.cs.BoundCS;
 import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
+import org.muml.psm.allocation.language.cs.CoherenceConstraintCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.JavaImplementationProviderCS;
-import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
 import org.muml.psm.allocation.language.cs.OCLContextCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
@@ -274,6 +274,9 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 			case CsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS:
 				sequence_BoundWeightTupleDescriptor(context, (BoundWeightTupleDescriptorCS) semanticObject); 
 				return; 
+			case CsPackage.COHERENCE_CONSTRAINT_CS:
+				sequence_CoherenceConstraint(context, (CoherenceConstraintCS) semanticObject); 
+				return; 
 			case CsPackage.JAVA_IMPLEMENTATION_PROVIDER_CS:
 				if (rule == grammarAccess.getNameProviderImplementationClassRule()) {
 					sequence_NameProviderImplementationClass(context, (JavaImplementationProviderCS) semanticObject); 
@@ -284,9 +287,6 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 					return; 
 				}
 				else break;
-			case CsPackage.LOCATION_CONSTRAINT_CS:
-				sequence_LocationConstraint(context, (LocationConstraintCS) semanticObject); 
-				return; 
 			case CsPackage.MEASURE_FUNCTION_CS:
 				sequence_MeasureFunction(context, (MeasureFunctionCS) semanticObject); 
 				return; 
@@ -524,13 +524,13 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	
 	/**
 	 * Contexts:
-	 *     Constraint returns LocationConstraintCS
-	 *     LocationConstraint returns LocationConstraintCS
+	 *     Constraint returns CoherenceConstraintCS
+	 *     CoherenceConstraint returns CoherenceConstraintCS
 	 *
 	 * Constraint:
-	 *     (type=LocationConstraintType name=ID? tupleDescriptor=TupleDescriptor expression=Model)
+	 *     (type=CoherenceConstraintType name=ID? tupleDescriptor=TupleDescriptor expression=Model)
 	 */
-	protected void sequence_LocationConstraint(ISerializationContext context, LocationConstraintCS semanticObject) {
+	protected void sequence_CoherenceConstraint(ISerializationContext context, CoherenceConstraintCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

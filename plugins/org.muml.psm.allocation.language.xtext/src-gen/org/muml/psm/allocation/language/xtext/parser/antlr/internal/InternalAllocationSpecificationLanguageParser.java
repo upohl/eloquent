@@ -3543,12 +3543,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
 
     // $ANTLR start "ruleConstraint"
-    // InternalAllocationSpecificationLanguage.g:1362:1: ruleConstraint returns [EObject current=null] : (otherlv_0= 'constraint' (this_LocationConstraint_1= ruleLocationConstraint | this_ResourceConstraint_2= ruleResourceConstraint | this_RequiredHardwareResourceInstanceConstraint_3= ruleRequiredHardwareResourceInstanceConstraint ) ) ;
+    // InternalAllocationSpecificationLanguage.g:1362:1: ruleConstraint returns [EObject current=null] : (otherlv_0= 'constraint' (this_CoherenceConstraint_1= ruleCoherenceConstraint | this_ResourceConstraint_2= ruleResourceConstraint | this_RequiredHardwareResourceInstanceConstraint_3= ruleRequiredHardwareResourceInstanceConstraint ) ) ;
     public final EObject ruleConstraint() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        EObject this_LocationConstraint_1 = null;
+        EObject this_CoherenceConstraint_1 = null;
 
         EObject this_ResourceConstraint_2 = null;
 
@@ -3558,11 +3558,11 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:1365:28: ( (otherlv_0= 'constraint' (this_LocationConstraint_1= ruleLocationConstraint | this_ResourceConstraint_2= ruleResourceConstraint | this_RequiredHardwareResourceInstanceConstraint_3= ruleRequiredHardwareResourceInstanceConstraint ) ) )
-            // InternalAllocationSpecificationLanguage.g:1366:1: (otherlv_0= 'constraint' (this_LocationConstraint_1= ruleLocationConstraint | this_ResourceConstraint_2= ruleResourceConstraint | this_RequiredHardwareResourceInstanceConstraint_3= ruleRequiredHardwareResourceInstanceConstraint ) )
+            // InternalAllocationSpecificationLanguage.g:1365:28: ( (otherlv_0= 'constraint' (this_CoherenceConstraint_1= ruleCoherenceConstraint | this_ResourceConstraint_2= ruleResourceConstraint | this_RequiredHardwareResourceInstanceConstraint_3= ruleRequiredHardwareResourceInstanceConstraint ) ) )
+            // InternalAllocationSpecificationLanguage.g:1366:1: (otherlv_0= 'constraint' (this_CoherenceConstraint_1= ruleCoherenceConstraint | this_ResourceConstraint_2= ruleResourceConstraint | this_RequiredHardwareResourceInstanceConstraint_3= ruleRequiredHardwareResourceInstanceConstraint ) )
             {
-            // InternalAllocationSpecificationLanguage.g:1366:1: (otherlv_0= 'constraint' (this_LocationConstraint_1= ruleLocationConstraint | this_ResourceConstraint_2= ruleResourceConstraint | this_RequiredHardwareResourceInstanceConstraint_3= ruleRequiredHardwareResourceInstanceConstraint ) )
-            // InternalAllocationSpecificationLanguage.g:1366:3: otherlv_0= 'constraint' (this_LocationConstraint_1= ruleLocationConstraint | this_ResourceConstraint_2= ruleResourceConstraint | this_RequiredHardwareResourceInstanceConstraint_3= ruleRequiredHardwareResourceInstanceConstraint )
+            // InternalAllocationSpecificationLanguage.g:1366:1: (otherlv_0= 'constraint' (this_CoherenceConstraint_1= ruleCoherenceConstraint | this_ResourceConstraint_2= ruleResourceConstraint | this_RequiredHardwareResourceInstanceConstraint_3= ruleRequiredHardwareResourceInstanceConstraint ) )
+            // InternalAllocationSpecificationLanguage.g:1366:3: otherlv_0= 'constraint' (this_CoherenceConstraint_1= ruleCoherenceConstraint | this_ResourceConstraint_2= ruleResourceConstraint | this_RequiredHardwareResourceInstanceConstraint_3= ruleRequiredHardwareResourceInstanceConstraint )
             {
             otherlv_0=(Token)match(input,36,FollowSets000.FOLLOW_27); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3570,7 +3570,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                   	newLeafNode(otherlv_0, grammarAccess.getConstraintAccess().getConstraintKeyword_0());
                   
             }
-            // InternalAllocationSpecificationLanguage.g:1370:1: (this_LocationConstraint_1= ruleLocationConstraint | this_ResourceConstraint_2= ruleResourceConstraint | this_RequiredHardwareResourceInstanceConstraint_3= ruleRequiredHardwareResourceInstanceConstraint )
+            // InternalAllocationSpecificationLanguage.g:1370:1: (this_CoherenceConstraint_1= ruleCoherenceConstraint | this_ResourceConstraint_2= ruleResourceConstraint | this_RequiredHardwareResourceInstanceConstraint_3= ruleRequiredHardwareResourceInstanceConstraint )
             int alt10=3;
             switch ( input.LA(1) ) {
             case 121:
@@ -3603,7 +3603,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
 
             switch (alt10) {
                 case 1 :
-                    // InternalAllocationSpecificationLanguage.g:1371:2: this_LocationConstraint_1= ruleLocationConstraint
+                    // InternalAllocationSpecificationLanguage.g:1371:2: this_CoherenceConstraint_1= ruleCoherenceConstraint
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -3612,17 +3612,17 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     }
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getConstraintAccess().getLocationConstraintParserRuleCall_1_0()); 
+                              newCompositeNode(grammarAccess.getConstraintAccess().getCoherenceConstraintParserRuleCall_1_0()); 
                           
                     }
                     pushFollow(FollowSets000.FOLLOW_2);
-                    this_LocationConstraint_1=ruleLocationConstraint();
+                    this_CoherenceConstraint_1=ruleCoherenceConstraint();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
                        
-                              current = this_LocationConstraint_1; 
+                              current = this_CoherenceConstraint_1; 
                               afterParserOrEnumRuleCall();
                           
                     }
@@ -3708,28 +3708,28 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     // $ANTLR end "ruleConstraint"
 
 
-    // $ANTLR start "entryRuleLocationConstraint"
-    // InternalAllocationSpecificationLanguage.g:1416:1: entryRuleLocationConstraint returns [EObject current=null] : iv_ruleLocationConstraint= ruleLocationConstraint EOF ;
-    public final EObject entryRuleLocationConstraint() throws RecognitionException {
+    // $ANTLR start "entryRuleCoherenceConstraint"
+    // InternalAllocationSpecificationLanguage.g:1416:1: entryRuleCoherenceConstraint returns [EObject current=null] : iv_ruleCoherenceConstraint= ruleCoherenceConstraint EOF ;
+    public final EObject entryRuleCoherenceConstraint() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleLocationConstraint = null;
+        EObject iv_ruleCoherenceConstraint = null;
 
 
         try {
-            // InternalAllocationSpecificationLanguage.g:1417:2: (iv_ruleLocationConstraint= ruleLocationConstraint EOF )
-            // InternalAllocationSpecificationLanguage.g:1418:2: iv_ruleLocationConstraint= ruleLocationConstraint EOF
+            // InternalAllocationSpecificationLanguage.g:1417:2: (iv_ruleCoherenceConstraint= ruleCoherenceConstraint EOF )
+            // InternalAllocationSpecificationLanguage.g:1418:2: iv_ruleCoherenceConstraint= ruleCoherenceConstraint EOF
             {
             if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getLocationConstraintRule()); 
+               newCompositeNode(grammarAccess.getCoherenceConstraintRule()); 
             }
             pushFollow(FollowSets000.FOLLOW_1);
-            iv_ruleLocationConstraint=ruleLocationConstraint();
+            iv_ruleCoherenceConstraint=ruleCoherenceConstraint();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleLocationConstraint; 
+               current =iv_ruleCoherenceConstraint; 
             }
             match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return current;
 
@@ -3745,12 +3745,12 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return current;
     }
-    // $ANTLR end "entryRuleLocationConstraint"
+    // $ANTLR end "entryRuleCoherenceConstraint"
 
 
-    // $ANTLR start "ruleLocationConstraint"
-    // InternalAllocationSpecificationLanguage.g:1425:1: ruleLocationConstraint returns [EObject current=null] : ( ( (lv_type_0_0= ruleLocationConstraintType ) ) ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' ( (lv_tupleDescriptor_3_0= ruleTupleDescriptor ) ) otherlv_4= 'ocl' ( (lv_expression_5_0= ruleModel ) ) otherlv_6= ';' otherlv_7= '}' ) ;
-    public final EObject ruleLocationConstraint() throws RecognitionException {
+    // $ANTLR start "ruleCoherenceConstraint"
+    // InternalAllocationSpecificationLanguage.g:1425:1: ruleCoherenceConstraint returns [EObject current=null] : ( ( (lv_type_0_0= ruleCoherenceConstraintType ) ) ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' ( (lv_tupleDescriptor_3_0= ruleTupleDescriptor ) ) otherlv_4= 'ocl' ( (lv_expression_5_0= ruleModel ) ) otherlv_6= ';' otherlv_7= '}' ) ;
+    public final EObject ruleCoherenceConstraint() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_2=null;
@@ -3769,38 +3769,38 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
          enterRule(); 
             
         try {
-            // InternalAllocationSpecificationLanguage.g:1428:28: ( ( ( (lv_type_0_0= ruleLocationConstraintType ) ) ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' ( (lv_tupleDescriptor_3_0= ruleTupleDescriptor ) ) otherlv_4= 'ocl' ( (lv_expression_5_0= ruleModel ) ) otherlv_6= ';' otherlv_7= '}' ) )
-            // InternalAllocationSpecificationLanguage.g:1429:1: ( ( (lv_type_0_0= ruleLocationConstraintType ) ) ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' ( (lv_tupleDescriptor_3_0= ruleTupleDescriptor ) ) otherlv_4= 'ocl' ( (lv_expression_5_0= ruleModel ) ) otherlv_6= ';' otherlv_7= '}' )
+            // InternalAllocationSpecificationLanguage.g:1428:28: ( ( ( (lv_type_0_0= ruleCoherenceConstraintType ) ) ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' ( (lv_tupleDescriptor_3_0= ruleTupleDescriptor ) ) otherlv_4= 'ocl' ( (lv_expression_5_0= ruleModel ) ) otherlv_6= ';' otherlv_7= '}' ) )
+            // InternalAllocationSpecificationLanguage.g:1429:1: ( ( (lv_type_0_0= ruleCoherenceConstraintType ) ) ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' ( (lv_tupleDescriptor_3_0= ruleTupleDescriptor ) ) otherlv_4= 'ocl' ( (lv_expression_5_0= ruleModel ) ) otherlv_6= ';' otherlv_7= '}' )
             {
-            // InternalAllocationSpecificationLanguage.g:1429:1: ( ( (lv_type_0_0= ruleLocationConstraintType ) ) ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' ( (lv_tupleDescriptor_3_0= ruleTupleDescriptor ) ) otherlv_4= 'ocl' ( (lv_expression_5_0= ruleModel ) ) otherlv_6= ';' otherlv_7= '}' )
-            // InternalAllocationSpecificationLanguage.g:1429:2: ( (lv_type_0_0= ruleLocationConstraintType ) ) ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' ( (lv_tupleDescriptor_3_0= ruleTupleDescriptor ) ) otherlv_4= 'ocl' ( (lv_expression_5_0= ruleModel ) ) otherlv_6= ';' otherlv_7= '}'
+            // InternalAllocationSpecificationLanguage.g:1429:1: ( ( (lv_type_0_0= ruleCoherenceConstraintType ) ) ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' ( (lv_tupleDescriptor_3_0= ruleTupleDescriptor ) ) otherlv_4= 'ocl' ( (lv_expression_5_0= ruleModel ) ) otherlv_6= ';' otherlv_7= '}' )
+            // InternalAllocationSpecificationLanguage.g:1429:2: ( (lv_type_0_0= ruleCoherenceConstraintType ) ) ( (lv_name_1_0= ruleID ) )? otherlv_2= '{' ( (lv_tupleDescriptor_3_0= ruleTupleDescriptor ) ) otherlv_4= 'ocl' ( (lv_expression_5_0= ruleModel ) ) otherlv_6= ';' otherlv_7= '}'
             {
-            // InternalAllocationSpecificationLanguage.g:1429:2: ( (lv_type_0_0= ruleLocationConstraintType ) )
-            // InternalAllocationSpecificationLanguage.g:1430:1: (lv_type_0_0= ruleLocationConstraintType )
+            // InternalAllocationSpecificationLanguage.g:1429:2: ( (lv_type_0_0= ruleCoherenceConstraintType ) )
+            // InternalAllocationSpecificationLanguage.g:1430:1: (lv_type_0_0= ruleCoherenceConstraintType )
             {
-            // InternalAllocationSpecificationLanguage.g:1430:1: (lv_type_0_0= ruleLocationConstraintType )
-            // InternalAllocationSpecificationLanguage.g:1431:3: lv_type_0_0= ruleLocationConstraintType
+            // InternalAllocationSpecificationLanguage.g:1430:1: (lv_type_0_0= ruleCoherenceConstraintType )
+            // InternalAllocationSpecificationLanguage.g:1431:3: lv_type_0_0= ruleCoherenceConstraintType
             {
             if ( state.backtracking==0 ) {
                
-              	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getTypeLocationConstraintTypeEnumRuleCall_0_0()); 
+              	        newCompositeNode(grammarAccess.getCoherenceConstraintAccess().getTypeCoherenceConstraintTypeEnumRuleCall_0_0()); 
               	    
             }
             pushFollow(FollowSets000.FOLLOW_14);
-            lv_type_0_0=ruleLocationConstraintType();
+            lv_type_0_0=ruleCoherenceConstraintType();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getLocationConstraintRule());
+              	            current = createModelElementForParent(grammarAccess.getCoherenceConstraintRule());
               	        }
                      		set(
                      			current, 
                      			"type",
                       		lv_type_0_0, 
-                      		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.LocationConstraintType");
+                      		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.CoherenceConstraintType");
               	        afterParserOrEnumRuleCall();
               	    
             }
@@ -3826,7 +3826,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getNameIDParserRuleCall_1_0()); 
+                      	        newCompositeNode(grammarAccess.getCoherenceConstraintAccess().getNameIDParserRuleCall_1_0()); 
                       	    
                     }
                     pushFollow(FollowSets000.FOLLOW_3);
@@ -3837,7 +3837,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     if ( state.backtracking==0 ) {
 
                       	        if (current==null) {
-                      	            current = createModelElementForParent(grammarAccess.getLocationConstraintRule());
+                      	            current = createModelElementForParent(grammarAccess.getCoherenceConstraintRule());
                       	        }
                              		set(
                              			current, 
@@ -3859,7 +3859,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             otherlv_2=(Token)match(input,17,FollowSets000.FOLLOW_15); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-                  	newLeafNode(otherlv_2, grammarAccess.getLocationConstraintAccess().getLeftCurlyBracketKeyword_2());
+                  	newLeafNode(otherlv_2, grammarAccess.getCoherenceConstraintAccess().getLeftCurlyBracketKeyword_2());
                   
             }
             // InternalAllocationSpecificationLanguage.g:1469:1: ( (lv_tupleDescriptor_3_0= ruleTupleDescriptor ) )
@@ -3870,7 +3870,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             {
             if ( state.backtracking==0 ) {
                
-              	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); 
+              	        newCompositeNode(grammarAccess.getCoherenceConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); 
               	    
             }
             pushFollow(FollowSets000.FOLLOW_18);
@@ -3881,7 +3881,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
 
               	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getLocationConstraintRule());
+              	            current = createModelElementForParent(grammarAccess.getCoherenceConstraintRule());
               	        }
                      		set(
                      			current, 
@@ -3900,7 +3900,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             otherlv_4=(Token)match(input,25,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-                  	newLeafNode(otherlv_4, grammarAccess.getLocationConstraintAccess().getOclKeyword_4());
+                  	newLeafNode(otherlv_4, grammarAccess.getCoherenceConstraintAccess().getOclKeyword_4());
                   
             }
             // InternalAllocationSpecificationLanguage.g:1491:1: ( (lv_expression_5_0= ruleModel ) )
@@ -3911,7 +3911,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             {
             if ( state.backtracking==0 ) {
                
-              	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_5_0()); 
+              	        newCompositeNode(grammarAccess.getCoherenceConstraintAccess().getExpressionModelParserRuleCall_5_0()); 
               	    
             }
             pushFollow(FollowSets000.FOLLOW_10);
@@ -3922,7 +3922,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             if ( state.backtracking==0 ) {
 
               	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getLocationConstraintRule());
+              	            current = createModelElementForParent(grammarAccess.getCoherenceConstraintRule());
               	        }
                      		set(
                      			current, 
@@ -3941,13 +3941,13 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
             otherlv_6=(Token)match(input,20,FollowSets000.FOLLOW_8); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-                  	newLeafNode(otherlv_6, grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_6());
+                  	newLeafNode(otherlv_6, grammarAccess.getCoherenceConstraintAccess().getSemicolonKeyword_6());
                   
             }
             otherlv_7=(Token)match(input,18,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-                  	newLeafNode(otherlv_7, grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_7());
+                  	newLeafNode(otherlv_7, grammarAccess.getCoherenceConstraintAccess().getRightCurlyBracketKeyword_7());
                   
             }
 
@@ -3969,7 +3969,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return current;
     }
-    // $ANTLR end "ruleLocationConstraint"
+    // $ANTLR end "ruleCoherenceConstraint"
 
 
     // $ANTLR start "entryRuleResourceConstraint"
@@ -24932,9 +24932,9 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
     // $ANTLR end "ruleURI"
 
 
-    // $ANTLR start "ruleLocationConstraintType"
-    // InternalAllocationSpecificationLanguage.g:8648:1: ruleLocationConstraintType returns [Enumerator current=null] : ( (enumLiteral_0= 'sameLocation' ) | (enumLiteral_1= 'collocation' ) | (enumLiteral_2= 'differentLocation' ) | (enumLiteral_3= 'separateLocation' ) ) ;
-    public final Enumerator ruleLocationConstraintType() throws RecognitionException {
+    // $ANTLR start "ruleCoherenceConstraintType"
+    // InternalAllocationSpecificationLanguage.g:8648:1: ruleCoherenceConstraintType returns [Enumerator current=null] : ( (enumLiteral_0= 'sameLocation' ) | (enumLiteral_1= 'collocation' ) | (enumLiteral_2= 'differentLocation' ) | (enumLiteral_3= 'separateLocation' ) ) ;
+    public final Enumerator ruleCoherenceConstraintType() throws RecognitionException {
         Enumerator current = null;
 
         Token enumLiteral_0=null;
@@ -24988,8 +24988,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     enumLiteral_0=(Token)match(input,121,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current = grammarAccess.getLocationConstraintTypeAccess().getSAME_LOCATIONEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-                              newLeafNode(enumLiteral_0, grammarAccess.getLocationConstraintTypeAccess().getSAME_LOCATIONEnumLiteralDeclaration_0()); 
+                              current = grammarAccess.getCoherenceConstraintTypeAccess().getCOLLOCATIONEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+                              newLeafNode(enumLiteral_0, grammarAccess.getCoherenceConstraintTypeAccess().getCOLLOCATIONEnumLiteralDeclaration_0()); 
                           
                     }
 
@@ -25007,8 +25007,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     enumLiteral_1=(Token)match(input,122,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current = grammarAccess.getLocationConstraintTypeAccess().getSAME_LOCATIONEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                              newLeafNode(enumLiteral_1, grammarAccess.getLocationConstraintTypeAccess().getSAME_LOCATIONEnumLiteralDeclaration_1()); 
+                              current = grammarAccess.getCoherenceConstraintTypeAccess().getCOLLOCATIONEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+                              newLeafNode(enumLiteral_1, grammarAccess.getCoherenceConstraintTypeAccess().getCOLLOCATIONEnumLiteralDeclaration_1()); 
                           
                     }
 
@@ -25026,8 +25026,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     enumLiteral_2=(Token)match(input,123,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current = grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-                              newLeafNode(enumLiteral_2, grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_2()); 
+                              current = grammarAccess.getCoherenceConstraintTypeAccess().getSEPARATE_LOCATIONEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                              newLeafNode(enumLiteral_2, grammarAccess.getCoherenceConstraintTypeAccess().getSEPARATE_LOCATIONEnumLiteralDeclaration_2()); 
                           
                     }
 
@@ -25045,8 +25045,8 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
                     enumLiteral_3=(Token)match(input,124,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                              current = grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-                              newLeafNode(enumLiteral_3, grammarAccess.getLocationConstraintTypeAccess().getDIFFERENT_LOCATIONEnumLiteralDeclaration_3()); 
+                              current = grammarAccess.getCoherenceConstraintTypeAccess().getSEPARATE_LOCATIONEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+                              newLeafNode(enumLiteral_3, grammarAccess.getCoherenceConstraintTypeAccess().getSEPARATE_LOCATIONEnumLiteralDeclaration_3()); 
                           
                     }
 
@@ -25074,7 +25074,7 @@ public class InternalAllocationSpecificationLanguageParser extends AbstractInter
         }
         return current;
     }
-    // $ANTLR end "ruleLocationConstraintType"
+    // $ANTLR end "ruleCoherenceConstraintType"
 
 
     // $ANTLR start "ruleGoal"

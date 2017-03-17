@@ -85,16 +85,16 @@ public class LanguageSpecificationCSContainmentVisitor extends org.muml.psm.allo
 		return null;
 	}
 	@Override
-	public @Nullable Continuation<?> visitLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull LocationConstraintCS csElement) {
-		org.muml.psm.allocation.language.as.LocationConstraint pivotElement = PivotUtil.getPivot(org.muml.psm.allocation.language.as.LocationConstraint.class, csElement);
+	public @Nullable Continuation<?> visitCoherenceConstraintCS(org.muml.psm.allocation.language.cs.@NonNull CoherenceConstraintCS csElement) {
+		org.muml.psm.allocation.language.as.CoherenceConstraint pivotElement = PivotUtil.getPivot(org.muml.psm.allocation.language.as.CoherenceConstraint.class, csElement);
 		if (pivotElement == null) {
-			pivotElement = refreshNamedElement(org.muml.psm.allocation.language.as.LocationConstraint.class, org.muml.psm.allocation.language.as.AsPackage.Literals.LOCATION_CONSTRAINT, csElement);
+			pivotElement = refreshNamedElement(org.muml.psm.allocation.language.as.CoherenceConstraint.class, org.muml.psm.allocation.language.as.AsPackage.Literals.COHERENCE_CONSTRAINT, csElement);
 		}
 		pivotElement.setTupleDescriptor(
 			PivotUtil.getPivot(org.muml.psm.allocation.language.as.TupleDescriptor.class, csElement.getTupleDescriptor())
 		);
 		pivotElement.setType(
-			org.muml.psm.allocation.language.as.LocationConstraintTypes.get(csElement.getType().getValue())
+			org.muml.psm.allocation.language.as.CoherenceConstraintType.get(csElement.getType().getValue())
 		);
 		return visitConstraintCS(csElement);
 	}

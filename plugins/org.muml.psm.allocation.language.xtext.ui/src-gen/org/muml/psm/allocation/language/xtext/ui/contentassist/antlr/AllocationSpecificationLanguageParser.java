@@ -85,7 +85,7 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getTypeRefCSAccess().getAlternatives(), "rule__TypeRefCS__Alternatives");
 					put(grammarAccess.getIDAccess().getAlternatives(), "rule__ID__Alternatives");
 					put(grammarAccess.getUPPERAccess().getAlternatives(), "rule__UPPER__Alternatives");
-					put(grammarAccess.getLocationConstraintTypeAccess().getAlternatives(), "rule__LocationConstraintType__Alternatives");
+					put(grammarAccess.getCoherenceConstraintTypeAccess().getAlternatives(), "rule__CoherenceConstraintType__Alternatives");
 					put(grammarAccess.getGoalAccess().getAlternatives(), "rule__Goal__Alternatives");
 					put(grammarAccess.getSpecificationAccess().getGroup(), "rule__Specification__Group__0");
 					put(grammarAccess.getSpecificationAccess().getGroup_5(), "rule__Specification__Group_5__0");
@@ -106,7 +106,7 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getBoundWeightTupleDescriptorAccess().getGroup(), "rule__BoundWeightTupleDescriptor__Group__0");
 					put(grammarAccess.getBoundWeightTupleDescriptorAccess().getGroup_8(), "rule__BoundWeightTupleDescriptor__Group_8__0");
 					put(grammarAccess.getConstraintAccess().getGroup(), "rule__Constraint__Group__0");
-					put(grammarAccess.getLocationConstraintAccess().getGroup(), "rule__LocationConstraint__Group__0");
+					put(grammarAccess.getCoherenceConstraintAccess().getGroup(), "rule__CoherenceConstraint__Group__0");
 					put(grammarAccess.getResourceConstraintAccess().getGroup(), "rule__ResourceConstraint__Group__0");
 					put(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getGroup(), "rule__RequiredHardwareResourceInstanceConstraint__Group__0");
 					put(grammarAccess.getMeasureFunctionAccess().getGroup(), "rule__MeasureFunction__Group__0");
@@ -274,10 +274,10 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getBoundWeightTupleDescriptorAccess().getBoundAssignment_4(), "rule__BoundWeightTupleDescriptor__BoundAssignment_4");
 					put(grammarAccess.getBoundWeightTupleDescriptorAccess().getTypedPairsAssignment_7(), "rule__BoundWeightTupleDescriptor__TypedPairsAssignment_7");
 					put(grammarAccess.getBoundWeightTupleDescriptorAccess().getTypedPairsAssignment_8_1(), "rule__BoundWeightTupleDescriptor__TypedPairsAssignment_8_1");
-					put(grammarAccess.getLocationConstraintAccess().getTypeAssignment_0(), "rule__LocationConstraint__TypeAssignment_0");
-					put(grammarAccess.getLocationConstraintAccess().getNameAssignment_1(), "rule__LocationConstraint__NameAssignment_1");
-					put(grammarAccess.getLocationConstraintAccess().getTupleDescriptorAssignment_3(), "rule__LocationConstraint__TupleDescriptorAssignment_3");
-					put(grammarAccess.getLocationConstraintAccess().getExpressionAssignment_5(), "rule__LocationConstraint__ExpressionAssignment_5");
+					put(grammarAccess.getCoherenceConstraintAccess().getTypeAssignment_0(), "rule__CoherenceConstraint__TypeAssignment_0");
+					put(grammarAccess.getCoherenceConstraintAccess().getNameAssignment_1(), "rule__CoherenceConstraint__NameAssignment_1");
+					put(grammarAccess.getCoherenceConstraintAccess().getTupleDescriptorAssignment_3(), "rule__CoherenceConstraint__TupleDescriptorAssignment_3");
+					put(grammarAccess.getCoherenceConstraintAccess().getExpressionAssignment_5(), "rule__CoherenceConstraint__ExpressionAssignment_5");
 					put(grammarAccess.getResourceConstraintAccess().getNameAssignment_1(), "rule__ResourceConstraint__NameAssignment_1");
 					put(grammarAccess.getResourceConstraintAccess().getTupleDescriptorAssignment_3(), "rule__ResourceConstraint__TupleDescriptorAssignment_3");
 					put(grammarAccess.getResourceConstraintAccess().getExpressionAssignment_5(), "rule__ResourceConstraint__ExpressionAssignment_5");

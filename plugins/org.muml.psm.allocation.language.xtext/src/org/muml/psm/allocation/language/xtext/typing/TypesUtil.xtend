@@ -13,8 +13,8 @@ import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal
 import org.eclipse.ocl.pivot.internal.utilities.PivotUtilInternal
 import org.eclipse.ocl.pivot.values.TemplateParameterSubstitutions
 import org.muml.psm.allocation.language.^as.Bound
+import org.muml.psm.allocation.language.^as.CoherenceConstraint
 import org.muml.psm.allocation.language.^as.EvaluatableElement
-import org.muml.psm.allocation.language.^as.LocationConstraint
 import org.muml.psm.allocation.language.^as.QoSDimension
 import org.muml.psm.allocation.language.^as.Relation
 import org.muml.psm.allocation.language.^as.RequiredHardwareResourceInstanceConstraint
@@ -101,18 +101,18 @@ class TypesUtil {
 	// location constraint
 	
 	/*@NonNull*/
-	static def TupleType createLocationConstraintTupleType(EnvironmentFactoryInternal envFactory,
-		LocationConstraint constraint
+	static def TupleType createCoherenceConstraintTupleType(EnvironmentFactoryInternal envFactory,
+		CoherenceConstraint constraint
 	) {
 		val Map<String, Type> namedParts = convertToNamedParts(constraint.tupleDescriptor.typedPairs)
 		createTupleType(envFactory, namedParts)
 	}
 		
 	/*@NonNull*/
-	static def Type createLocationConstraintType(LocationConstraint constraint) {
+	static def Type createCoherenceConstraintType(CoherenceConstraint constraint) {
 		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraint)
 		createSetType(envFactory,
-			createLocationConstraintTupleType(envFactory, constraint)
+			createCoherenceConstraintTupleType(envFactory, constraint)
 		)
 	}
 	
@@ -205,8 +205,8 @@ class TypesUtil {
 		createBoundType(bound)
 	}
 	
-	static def dispatch createType(LocationConstraint constraint) {
-		createLocationConstraintType(constraint)
+	static def dispatch createType(CoherenceConstraint constraint) {
+		createCoherenceConstraintType(constraint)
 	}
 	
 	static def dispatch createType(RequiredHardwareResourceInstanceConstraint constraint) {

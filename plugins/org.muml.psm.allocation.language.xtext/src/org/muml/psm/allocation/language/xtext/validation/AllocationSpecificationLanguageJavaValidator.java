@@ -11,9 +11,9 @@ import org.eclipse.xtext.validation.Check;
 import org.muml.psm.allocation.language.as.EvaluatableElement;
 import org.muml.psm.allocation.language.cs.BoundCS;
 import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
+import org.muml.psm.allocation.language.cs.CoherenceConstraintCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
-import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
 import org.muml.psm.allocation.language.cs.RelationCS;
 import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
@@ -55,7 +55,7 @@ public class AllocationSpecificationLanguageJavaValidator extends org.muml.psm.a
 	}
 
 	@Check
-	public void checkLocationConstraintCS(LocationConstraintCS constraintCS) {
+	public void checkCoherenceConstraintCS(CoherenceConstraintCS constraintCS) {
 		TupleDescriptorCS tupleDescriptorCS = constraintCS.getTupleDescriptor();
 		ContextCS oclExpression = constraintCS.getExpression();
 		if (tupleDescriptorCS == null || oclExpression == null) {

@@ -91,11 +91,11 @@ BoundWeightTupleDescriptor returns cs::BoundWeightTupleDescriptorCS:
 ;
 
 Constraint returns cs::ConstraintCS:
-	'constraint' (LocationConstraint | ResourceConstraint | RequiredHardwareResourceInstanceConstraint)
+	'constraint' (CoherenceConstraint | ResourceConstraint | RequiredHardwareResourceInstanceConstraint)
 ;
 
-LocationConstraint returns cs::LocationConstraintCS:
-	type=LocationConstraintType (name=ID)? '{'
+CoherenceConstraint returns cs::CoherenceConstraintCS:
+	type=CoherenceConstraintType (name=ID)? '{'
 		tupleDescriptor=TupleDescriptor
 		'ocl' expression=Model ';'
 	'}'
@@ -115,9 +115,9 @@ RequiredHardwareResourceInstanceConstraint returns cs::RequiredHardwareResourceI
 	'}'
 ;
 
-enum LocationConstraintType returns cs::LocationConstraintTypes:
-	SAME_LOCATION='sameLocation' | SAME_LOCATION='collocation'
-		| DIFFERENT_LOCATION='differentLocation' | DIFFERENT_LOCATION='separateLocation'
+enum CoherenceConstraintType returns cs::CoherenceConstraintType:
+	COLLOCATION='sameLocation' | COLLOCATION='collocation'
+		| SEPARATE_LOCATION='differentLocation' | SEPARATE_LOCATION='separateLocation'
 ;
 
 MeasureFunction returns cs::MeasureFunctionCS:
