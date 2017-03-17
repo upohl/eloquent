@@ -51,8 +51,8 @@
             id="TupleAccessor">
       </transformation>
       <transformation
-            file="transforms/LocationConstraint.qvto"
-            id="LocationConstraint">
+            file="transforms/CoherenceConstraint.qvto"
+            id="CoherenceConstraint">
       </transformation>
       <transformation
             file="transforms/Util.qvto"

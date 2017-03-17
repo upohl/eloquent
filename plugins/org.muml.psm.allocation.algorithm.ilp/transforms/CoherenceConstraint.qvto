@@ -15,7 +15,7 @@ library CoherenceConstraintLib;
 helper Specification::createCoherenceConstraints(inout ilp : IntegerLinearProgram,
 	oclContext : OclAny) {
 	self.getCollocationConstraints()->createConstraint(self, ilp, oclContext);
-	self.getDifferentLocationConstraints()->createConstraint(self, ilp, oclContext);
+	self.getSeparateLocationConstraints()->createConstraint(self, ilp, oclContext);
 }
 
 helper CoherenceConstraint::createConstraint(specification : Specification,
@@ -146,7 +146,7 @@ query Specification::getCollocationConstraints() : OrderedSet(CoherenceConstrain
 	return self.getCoherenceConstraints(CoherenceConstraintType::COLLOCATION);
 }
 
-query Specification::getDifferentLocationConstraints() : OrderedSet(CoherenceConstraint) {
+query Specification::getSeparateLocationConstraints() : OrderedSet(CoherenceConstraint) {
 	return self.getCoherenceConstraints(CoherenceConstraintType::SEPARATE_LOCATION);
 }
 
