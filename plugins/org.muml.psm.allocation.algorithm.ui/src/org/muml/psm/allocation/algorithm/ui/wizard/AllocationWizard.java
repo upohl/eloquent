@@ -40,8 +40,6 @@ import org.muml.core.export.operation.IFujabaExportOperation;
 import org.muml.core.export.pages.AbstractFujabaExportSourcePage;
 import org.muml.core.export.pages.ElementSelectionMode;
 import org.muml.core.export.wizard.AbstractFujabaExportWizard;
-import org.muml.pim.PimPackage;
-import org.muml.pm.hardware.HardwarePackage;
 import org.muml.psm.allocation.algorithm.main.AllocationComputationStrategyExtension;
 import org.muml.psm.allocation.algorithm.main.AllocationComputationStrategyExtension.AllocationComputationStrategyDescription;
 import org.muml.psm.allocation.algorithm.main.IAllocationComputationStrategy;
@@ -59,13 +57,6 @@ public class AllocationWizard extends AbstractFujabaExportWizard {
 	public void init(IWorkbench workbench, IStructuredSelection currentSelection) {
 		super.init(workbench, currentSelection);
 		setWindowTitle(title);
-		// explicitly setup these packages otherwise the qvto compilation
-		// fails (mars) - might be related to the qvto commit
-		// de499dbfbd960a63f62c4938d9dc71172e075120
-		// (actually, this belongs to the QVToTransformationRunner class,
-		// but I want keep that class clean)
-		PimPackage.eINSTANCE.eClass();
-		HardwarePackage.eINSTANCE.eClass();
 		oclContextSelectionProvider = ExtensionUtil.getOCLContextSelectionProvider(currentSelection);
 		if (oclContextSelectionProvider == null) {
 			oclContextSelectionProvider = new DefaultOCLContextSelectionProvider();
