@@ -710,14 +710,14 @@ public interface AsPackage extends EPackage {
 	int RESOURCE_CONSTRAINT_FEATURE_COUNT = CONSTRAINT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.RequiredHardwareResourceInstanceConstraintImpl <em>Required Hardware Resource Instance Constraint</em>}' class.
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.LocationConstraintImpl <em>Location Constraint</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.as.impl.RequiredHardwareResourceInstanceConstraintImpl
-	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getRequiredHardwareResourceInstanceConstraint()
+	 * @see org.muml.psm.allocation.language.as.impl.LocationConstraintImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getLocationConstraint()
 	 * @generated
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT = 7;
+	int LOCATION_CONSTRAINT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -726,7 +726,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__ANNOTATING_COMMENTS = CONSTRAINT__ANNOTATING_COMMENTS;
+	int LOCATION_CONSTRAINT__ANNOTATING_COMMENTS = CONSTRAINT__ANNOTATING_COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
@@ -735,7 +735,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__OWNED_ANNOTATIONS = CONSTRAINT__OWNED_ANNOTATIONS;
+	int LOCATION_CONSTRAINT__OWNED_ANNOTATIONS = CONSTRAINT__OWNED_ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
@@ -744,7 +744,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__OWNED_COMMENTS = CONSTRAINT__OWNED_COMMENTS;
+	int LOCATION_CONSTRAINT__OWNED_COMMENTS = CONSTRAINT__OWNED_COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
@@ -753,7 +753,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__OWNED_EXTENSIONS = CONSTRAINT__OWNED_EXTENSIONS;
+	int LOCATION_CONSTRAINT__OWNED_EXTENSIONS = CONSTRAINT__OWNED_EXTENSIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -762,7 +762,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__NAME = CONSTRAINT__NAME;
+	int LOCATION_CONSTRAINT__NAME = CONSTRAINT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -771,7 +771,7 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__EXPRESSION = CONSTRAINT__EXPRESSION;
+	int LOCATION_CONSTRAINT__EXPRESSION = CONSTRAINT__EXPRESSION;
 
 	/**
 	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
@@ -780,16 +780,16 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR = CONSTRAINT_FEATURE_COUNT + 0;
+	int LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR = CONSTRAINT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Required Hardware Resource Instance Constraint</em>' class.
+	 * The number of structural features of the '<em>Location Constraint</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_FEATURE_COUNT = CONSTRAINT_FEATURE_COUNT + 1;
+	int LOCATION_CONSTRAINT_FEATURE_COUNT = CONSTRAINT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.TupleDescriptorImpl <em>Tuple Descriptor</em>}' class.
@@ -1834,25 +1834,25 @@ public interface AsPackage extends EPackage {
 	EReference getResourceConstraint_TupleDescriptor();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint <em>Required Hardware Resource Instance Constraint</em>}'.
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.LocationConstraint <em>Location Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Required Hardware Resource Instance Constraint</em>'.
-	 * @see org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint
+	 * @return the meta object for class '<em>Location Constraint</em>'.
+	 * @see org.muml.psm.allocation.language.as.LocationConstraint
 	 * @generated
 	 */
-	EClass getRequiredHardwareResourceInstanceConstraint();
+	EClass getLocationConstraint();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint#getTupleDescriptor <em>Tuple Descriptor</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.LocationConstraint#getTupleDescriptor <em>Tuple Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
-	 * @see org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint#getTupleDescriptor()
-	 * @see #getRequiredHardwareResourceInstanceConstraint()
+	 * @see org.muml.psm.allocation.language.as.LocationConstraint#getTupleDescriptor()
+	 * @see #getLocationConstraint()
 	 * @generated
 	 */
-	EReference getRequiredHardwareResourceInstanceConstraint_TupleDescriptor();
+	EReference getLocationConstraint_TupleDescriptor();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.TupleDescriptor <em>Tuple Descriptor</em>}'.
@@ -2295,14 +2295,14 @@ public interface AsPackage extends EPackage {
 		EReference RESOURCE_CONSTRAINT__TUPLE_DESCRIPTOR = eINSTANCE.getResourceConstraint_TupleDescriptor();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.RequiredHardwareResourceInstanceConstraintImpl <em>Required Hardware Resource Instance Constraint</em>}' class.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.LocationConstraintImpl <em>Location Constraint</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.as.impl.RequiredHardwareResourceInstanceConstraintImpl
-		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getRequiredHardwareResourceInstanceConstraint()
+		 * @see org.muml.psm.allocation.language.as.impl.LocationConstraintImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getLocationConstraint()
 		 * @generated
 		 */
-		EClass REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT = eINSTANCE.getRequiredHardwareResourceInstanceConstraint();
+		EClass LOCATION_CONSTRAINT = eINSTANCE.getLocationConstraint();
 
 		/**
 		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
@@ -2310,7 +2310,7 @@ public interface AsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR = eINSTANCE.getRequiredHardwareResourceInstanceConstraint_TupleDescriptor();
+		EReference LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR = eINSTANCE.getLocationConstraint_TupleDescriptor();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.TupleDescriptorImpl <em>Tuple Descriptor</em>}' class.

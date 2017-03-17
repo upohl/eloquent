@@ -101,8 +101,8 @@ public class CsValidator extends EObjectValidator {
 				return validateCoherenceConstraintCS((CoherenceConstraintCS)value, diagnostics, context);
 			case CsPackage.RESOURCE_CONSTRAINT_CS:
 				return validateResourceConstraintCS((ResourceConstraintCS)value, diagnostics, context);
-			case CsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS:
-				return validateRequiredHardwareResourceInstanceConstraintCS((RequiredHardwareResourceInstanceConstraintCS)value, diagnostics, context);
+			case CsPackage.LOCATION_CONSTRAINT_CS:
+				return validateLocationConstraintCS((LocationConstraintCS)value, diagnostics, context);
 			case CsPackage.TUPLE_DESCRIPTOR_CS:
 				return validateTupleDescriptorCS((TupleDescriptorCS)value, diagnostics, context);
 			case CsPackage.WEIGHT_TUPLE_DESCRIPTOR_CS:
@@ -282,8 +282,8 @@ public class CsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateRequiredHardwareResourceInstanceConstraintCS(RequiredHardwareResourceInstanceConstraintCS requiredHardwareResourceInstanceConstraintCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(requiredHardwareResourceInstanceConstraintCS, diagnostics, context);
+	public boolean validateLocationConstraintCS(LocationConstraintCS locationConstraintCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(locationConstraintCS, diagnostics, context);
 	}
 
 	/**

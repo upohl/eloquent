@@ -67,13 +67,13 @@ public interface CsFactory extends EFactory {
 	ResourceConstraintCS createResourceConstraintCS();
 
 	/**
-	 * Returns a new object of class '<em>Required Hardware Resource Instance Constraint CS</em>'.
+	 * Returns a new object of class '<em>Location Constraint CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Required Hardware Resource Instance Constraint CS</em>'.
+	 * @return a new object of class '<em>Location Constraint CS</em>'.
 	 * @generated
 	 */
-	RequiredHardwareResourceInstanceConstraintCS createRequiredHardwareResourceInstanceConstraintCS();
+	LocationConstraintCS createLocationConstraintCS();
 
 	/**
 	 * Returns a new object of class '<em>Tuple Descriptor CS</em>'.

@@ -15,9 +15,9 @@ import org.eclipse.ocl.pivot.values.TemplateParameterSubstitutions
 import org.muml.psm.allocation.language.^as.Bound
 import org.muml.psm.allocation.language.^as.CoherenceConstraint
 import org.muml.psm.allocation.language.^as.EvaluatableElement
+import org.muml.psm.allocation.language.^as.LocationConstraint
 import org.muml.psm.allocation.language.^as.QoSDimension
 import org.muml.psm.allocation.language.^as.Relation
-import org.muml.psm.allocation.language.^as.RequiredHardwareResourceInstanceConstraint
 import org.muml.psm.allocation.language.^as.ResourceConstraint
 import org.muml.psm.allocation.language.^as.TypedPair
 import org.muml.psm.allocation.language.^as.WeightTupleDescriptor
@@ -117,19 +117,19 @@ class TypesUtil {
 	}
 	
 	/*@NonNull*/
-	static def TupleType createReqHWResInstanceConstraintTupleType(EnvironmentFactoryInternal envFactory,
-		RequiredHardwareResourceInstanceConstraint constraint
+	static def TupleType createLocationConstraintTupleType(EnvironmentFactoryInternal envFactory,
+		LocationConstraint constraint
 	) {
 		val Map<String, Type> namedParts = convertToNamedParts(constraint.tupleDescriptor.typedPairs)
 		createTupleType(envFactory, namedParts)
 	}
 	
 	/*@NonNull*/
-	static def Type createReqHWResInstanceConstraintType(RequiredHardwareResourceInstanceConstraint constraint) {
+	static def Type createLocationConstraintType(LocationConstraint constraint) {
 		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraint)
 		
 		createSetType(envFactory,
-			createReqHWResInstanceConstraintTupleType(envFactory, constraint)
+			createLocationConstraintTupleType(envFactory, constraint)
 		)
 	}
 	
@@ -209,8 +209,8 @@ class TypesUtil {
 		createCoherenceConstraintType(constraint)
 	}
 	
-	static def dispatch createType(RequiredHardwareResourceInstanceConstraint constraint) {
-		createReqHWResInstanceConstraintType(constraint)
+	static def dispatch createType(LocationConstraint constraint) {
+		createLocationConstraintType(constraint)
 	}
 	
 	static def dispatch createType(ResourceConstraint constraint) {

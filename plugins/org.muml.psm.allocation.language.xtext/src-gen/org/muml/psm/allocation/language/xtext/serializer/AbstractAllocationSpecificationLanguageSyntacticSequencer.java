@@ -25,9 +25,9 @@ public abstract class AbstractAllocationSpecificationLanguageSyntacticSequencer 
 	protected AbstractElementAlias match_DefOperationCS_UnrestrictedNameParserRuleCall_2_q;
 	protected AbstractElementAlias match_DefPropertyCS_UnrestrictedNameParserRuleCall_2_q;
 	protected AbstractElementAlias match_ImportCS_ImportKeyword_0_0_or_IncludeKeyword_0_1_or_LibraryKeyword_0_2;
+	protected AbstractElementAlias match_LocationConstraint_RequiredHardwareResourceInstanceKeyword_0_0_or_RequiredLocationKeyword_0_1;
 	protected AbstractElementAlias match_MultiplicityCS_VerticalLineQuestionMarkKeyword_2_0_q;
 	protected AbstractElementAlias match_OperationContextDeclCS_UnrestrictedNameParserRuleCall_8_2_1_q;
-	protected AbstractElementAlias match_RequiredHardwareResourceInstanceConstraint_RequiredHardwareResourceInstanceKeyword_0_0_or_RequiredLocationKeyword_0_1;
 	protected AbstractElementAlias match_ResourceConstraint_RequiredResourceKeyword_0_1_or_ResourceKeyword_0_0;
 	protected AbstractElementAlias match_TupleTypeCS___LeftParenthesisKeyword_1_0_RightParenthesisKeyword_1_2__q;
 	
@@ -37,9 +37,9 @@ public abstract class AbstractAllocationSpecificationLanguageSyntacticSequencer 
 		match_DefOperationCS_UnrestrictedNameParserRuleCall_2_q = new TokenAlias(false, true, grammarAccess.getDefOperationCSAccess().getUnrestrictedNameParserRuleCall_2());
 		match_DefPropertyCS_UnrestrictedNameParserRuleCall_2_q = new TokenAlias(false, true, grammarAccess.getDefPropertyCSAccess().getUnrestrictedNameParserRuleCall_2());
 		match_ImportCS_ImportKeyword_0_0_or_IncludeKeyword_0_1_or_LibraryKeyword_0_2 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getImportCSAccess().getImportKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getImportCSAccess().getIncludeKeyword_0_1()), new TokenAlias(false, false, grammarAccess.getImportCSAccess().getLibraryKeyword_0_2()));
+		match_LocationConstraint_RequiredHardwareResourceInstanceKeyword_0_0_or_RequiredLocationKeyword_0_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getLocationConstraintAccess().getRequiredHardwareResourceInstanceKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getLocationConstraintAccess().getRequiredLocationKeyword_0_1()));
 		match_MultiplicityCS_VerticalLineQuestionMarkKeyword_2_0_q = new TokenAlias(false, true, grammarAccess.getMultiplicityCSAccess().getVerticalLineQuestionMarkKeyword_2_0());
 		match_OperationContextDeclCS_UnrestrictedNameParserRuleCall_8_2_1_q = new TokenAlias(false, true, grammarAccess.getOperationContextDeclCSAccess().getUnrestrictedNameParserRuleCall_8_2_1());
-		match_RequiredHardwareResourceInstanceConstraint_RequiredHardwareResourceInstanceKeyword_0_0_or_RequiredLocationKeyword_0_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRequiredHardwareResourceInstanceKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRequiredLocationKeyword_0_1()));
 		match_ResourceConstraint_RequiredResourceKeyword_0_1_or_ResourceKeyword_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getResourceConstraintAccess().getRequiredResourceKeyword_0_1()), new TokenAlias(false, false, grammarAccess.getResourceConstraintAccess().getResourceKeyword_0_0()));
 		match_TupleTypeCS___LeftParenthesisKeyword_1_0_RightParenthesisKeyword_1_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTupleTypeCSAccess().getLeftParenthesisKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getTupleTypeCSAccess().getRightParenthesisKeyword_1_2()));
 	}
@@ -77,12 +77,12 @@ public abstract class AbstractAllocationSpecificationLanguageSyntacticSequencer 
 				emit_DefPropertyCS_UnrestrictedNameParserRuleCall_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_ImportCS_ImportKeyword_0_0_or_IncludeKeyword_0_1_or_LibraryKeyword_0_2.equals(syntax))
 				emit_ImportCS_ImportKeyword_0_0_or_IncludeKeyword_0_1_or_LibraryKeyword_0_2(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_LocationConstraint_RequiredHardwareResourceInstanceKeyword_0_0_or_RequiredLocationKeyword_0_1.equals(syntax))
+				emit_LocationConstraint_RequiredHardwareResourceInstanceKeyword_0_0_or_RequiredLocationKeyword_0_1(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_MultiplicityCS_VerticalLineQuestionMarkKeyword_2_0_q.equals(syntax))
 				emit_MultiplicityCS_VerticalLineQuestionMarkKeyword_2_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_OperationContextDeclCS_UnrestrictedNameParserRuleCall_8_2_1_q.equals(syntax))
 				emit_OperationContextDeclCS_UnrestrictedNameParserRuleCall_8_2_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_RequiredHardwareResourceInstanceConstraint_RequiredHardwareResourceInstanceKeyword_0_0_or_RequiredLocationKeyword_0_1.equals(syntax))
-				emit_RequiredHardwareResourceInstanceConstraint_RequiredHardwareResourceInstanceKeyword_0_0_or_RequiredLocationKeyword_0_1(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_ResourceConstraint_RequiredResourceKeyword_0_1_or_ResourceKeyword_0_0.equals(syntax))
 				emit_ResourceConstraint_RequiredResourceKeyword_0_1_or_ResourceKeyword_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_TupleTypeCS___LeftParenthesisKeyword_1_0_RightParenthesisKeyword_1_2__q.equals(syntax))
@@ -131,6 +131,20 @@ public abstract class AbstractAllocationSpecificationLanguageSyntacticSequencer 
 	
 	/**
 	 * Ambiguous syntax:
+	 *     'requiredHardwareResourceInstance' | 'requiredLocation'
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) 'constraint' (ambiguity) '{' tupleDescriptor=TupleDescriptor
+	 *     (rule start) 'constraint' (ambiguity) name=ID
+	 *     (rule start) (ambiguity) '{' tupleDescriptor=TupleDescriptor
+	 *     (rule start) (ambiguity) name=ID
+	 */
+	protected void emit_LocationConstraint_RequiredHardwareResourceInstanceKeyword_0_0_or_RequiredLocationKeyword_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
 	 *     '|?'?
 	 *
 	 * This ambiguous syntax occurs at:
@@ -157,20 +171,6 @@ public abstract class AbstractAllocationSpecificationLanguageSyntacticSequencer 
 	 *     ownedType=TypeExpCS 'body' (ambiguity) ':' ownedBodies+=SpecificationCS
 	 */
 	protected void emit_OperationContextDeclCS_UnrestrictedNameParserRuleCall_8_2_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     'requiredHardwareResourceInstance' | 'requiredLocation'
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) 'constraint' (ambiguity) '{' tupleDescriptor=TupleDescriptor
-	 *     (rule start) 'constraint' (ambiguity) name=ID
-	 *     (rule start) (ambiguity) '{' tupleDescriptor=TupleDescriptor
-	 *     (rule start) (ambiguity) name=ID
-	 */
-	protected void emit_RequiredHardwareResourceInstanceConstraint_RequiredHardwareResourceInstanceKeyword_0_0_or_RequiredLocationKeyword_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

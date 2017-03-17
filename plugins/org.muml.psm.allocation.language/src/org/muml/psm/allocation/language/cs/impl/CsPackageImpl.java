@@ -32,12 +32,12 @@ import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
 import org.muml.psm.allocation.language.cs.Goal;
 import org.muml.psm.allocation.language.cs.JavaImplementationProviderCS;
+import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
 import org.muml.psm.allocation.language.cs.NameProviderCS;
 import org.muml.psm.allocation.language.cs.OCLContextCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
 import org.muml.psm.allocation.language.cs.RelationCS;
-import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
 import org.muml.psm.allocation.language.cs.ServiceCS;
 import org.muml.psm.allocation.language.cs.SpecificationCS;
@@ -110,7 +110,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass requiredHardwareResourceInstanceConstraintCSEClass = null;
+	private EClass locationConstraintCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -506,8 +506,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRequiredHardwareResourceInstanceConstraintCS() {
-		return requiredHardwareResourceInstanceConstraintCSEClass;
+	public EClass getLocationConstraintCS() {
+		return locationConstraintCSEClass;
 	}
 
 	/**
@@ -515,8 +515,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRequiredHardwareResourceInstanceConstraintCS_TupleDescriptor() {
-		return (EReference)requiredHardwareResourceInstanceConstraintCSEClass.getEStructuralFeatures().get(0);
+	public EReference getLocationConstraintCS_TupleDescriptor() {
+		return (EReference)locationConstraintCSEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -776,8 +776,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		resourceConstraintCSEClass = createEClass(RESOURCE_CONSTRAINT_CS);
 		createEReference(resourceConstraintCSEClass, RESOURCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR);
 
-		requiredHardwareResourceInstanceConstraintCSEClass = createEClass(REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS);
-		createEReference(requiredHardwareResourceInstanceConstraintCSEClass, REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR);
+		locationConstraintCSEClass = createEClass(LOCATION_CONSTRAINT_CS);
+		createEReference(locationConstraintCSEClass, LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR);
 
 		tupleDescriptorCSEClass = createEClass(TUPLE_DESCRIPTOR_CS);
 		createEReference(tupleDescriptorCSEClass, TUPLE_DESCRIPTOR_CS__TYPED_PAIRS);
@@ -860,7 +860,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		constraintCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());
 		coherenceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		resourceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
-		requiredHardwareResourceInstanceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
+		locationConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		tupleDescriptorCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
 		weightTupleDescriptorCSEClass.getESuperTypes().add(this.getTupleDescriptorCS());
 		boundWeightTupleDescriptorCSEClass.getESuperTypes().add(this.getWeightTupleDescriptorCS());
@@ -906,8 +906,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEClass(resourceConstraintCSEClass, ResourceConstraintCS.class, "ResourceConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResourceConstraintCS_TupleDescriptor(), this.getBoundWeightTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, ResourceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(requiredHardwareResourceInstanceConstraintCSEClass, RequiredHardwareResourceInstanceConstraintCS.class, "RequiredHardwareResourceInstanceConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRequiredHardwareResourceInstanceConstraintCS_TupleDescriptor(), this.getTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, RequiredHardwareResourceInstanceConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(locationConstraintCSEClass, LocationConstraintCS.class, "LocationConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLocationConstraintCS_TupleDescriptor(), this.getTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, LocationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tupleDescriptorCSEClass, TupleDescriptorCS.class, "TupleDescriptorCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTupleDescriptorCS_TypedPairs(), this.getTypedPairCS(), null, "typedPairs", null, 1, -1, TupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

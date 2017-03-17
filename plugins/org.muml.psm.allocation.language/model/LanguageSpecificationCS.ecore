@@ -358,13 +358,13 @@
   </eClassifiers>
   <eClassifiers
       xsi:type="ecore:EClass"
-      name="RequiredHardwareResourceInstanceConstraintCS"
+      name="LocationConstraintCS"
       eSuperTypes="#//ConstraintCS">
     <eAnnotations
         source="http://www.eclipse.org/emf/2002/GenModel">
       <details
           key="documentation"
-          value="This class represents a &quot;required hardware resource instance&quot; constraint&#xA;which can be used to limit the number of potential hardware resource&#xA;instances for a specific component instance."/>
+          value="XXX: no adjusted semantics definition."/>
     </eAnnotations>
     <eStructuralFeatures
         xsi:type="ecore:EReference"

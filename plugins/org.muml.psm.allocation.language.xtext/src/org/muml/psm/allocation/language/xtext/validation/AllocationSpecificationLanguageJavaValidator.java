@@ -14,9 +14,9 @@ import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.CoherenceConstraintCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.EvaluatableElementCS;
+import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
 import org.muml.psm.allocation.language.cs.RelationCS;
-import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
 import org.muml.psm.allocation.language.cs.TupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.WeightTupleDescriptorCS;
@@ -66,7 +66,7 @@ public class AllocationSpecificationLanguageJavaValidator extends org.muml.psm.a
 	}
 	
 	@Check
-	public void checkRequiredHardwareResourceInstanceConstraintCS(RequiredHardwareResourceInstanceConstraintCS constraintCS) {
+	public void checkLocationConstraintCS(LocationConstraintCS constraintCS) {
 		TupleDescriptorCS tupleDescriptorCS = constraintCS.getTupleDescriptor();
 		ContextCS oclExpression = constraintCS.getExpression();
 		if (tupleDescriptorCS == null || oclExpression == null) {

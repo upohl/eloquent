@@ -153,15 +153,15 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT: {
-				RequiredHardwareResourceInstanceConstraint requiredHardwareResourceInstanceConstraint = (RequiredHardwareResourceInstanceConstraint)theEObject;
-				T result = caseRequiredHardwareResourceInstanceConstraint(requiredHardwareResourceInstanceConstraint);
-				if (result == null) result = caseConstraint(requiredHardwareResourceInstanceConstraint);
-				if (result == null) result = caseNamedElement(requiredHardwareResourceInstanceConstraint);
-				if (result == null) result = caseEvaluatableElement(requiredHardwareResourceInstanceConstraint);
-				if (result == null) result = caseElement(requiredHardwareResourceInstanceConstraint);
-				if (result == null) result = caseNameable(requiredHardwareResourceInstanceConstraint);
-				if (result == null) result = caseVisitable(requiredHardwareResourceInstanceConstraint);
+			case AsPackage.LOCATION_CONSTRAINT: {
+				LocationConstraint locationConstraint = (LocationConstraint)theEObject;
+				T result = caseLocationConstraint(locationConstraint);
+				if (result == null) result = caseConstraint(locationConstraint);
+				if (result == null) result = caseNamedElement(locationConstraint);
+				if (result == null) result = caseEvaluatableElement(locationConstraint);
+				if (result == null) result = caseElement(locationConstraint);
+				if (result == null) result = caseNameable(locationConstraint);
+				if (result == null) result = caseVisitable(locationConstraint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -381,17 +381,17 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Required Hardware Resource Instance Constraint</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Location Constraint</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Required Hardware Resource Instance Constraint</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Location Constraint</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRequiredHardwareResourceInstanceConstraint(RequiredHardwareResourceInstanceConstraint object) {
+	public T caseLocationConstraint(LocationConstraint object) {
 		return null;
 	}
 

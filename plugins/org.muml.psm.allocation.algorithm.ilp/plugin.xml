@@ -87,8 +87,8 @@
             id="OCLEvaluator">
       </transformation>
       <transformation
-            file="transforms/RequiredHardwareResourceInstanceConstraint.qvto"
-            id="RequiredHardwareResourceInstanceConstraint">
+            file="transforms/LocationConstraint.qvto"
+            id="LocationConstraint">
       </transformation>
       <transformation
             file="transforms/SolverConstants.qvto"

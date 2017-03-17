@@ -110,10 +110,10 @@ public class LanguageSpecificationCSContainmentVisitor extends org.muml.psm.allo
 		return visitConstraintCS(csElement);
 	}
 	@Override
-	public @Nullable Continuation<?> visitRequiredHardwareResourceInstanceConstraintCS(org.muml.psm.allocation.language.cs.@NonNull RequiredHardwareResourceInstanceConstraintCS csElement) {
-		org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint pivotElement = PivotUtil.getPivot(org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint.class, csElement);
+	public @Nullable Continuation<?> visitLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull LocationConstraintCS csElement) {
+		org.muml.psm.allocation.language.as.LocationConstraint pivotElement = PivotUtil.getPivot(org.muml.psm.allocation.language.as.LocationConstraint.class, csElement);
 		if (pivotElement == null) {
-			pivotElement = refreshNamedElement(org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint.class, org.muml.psm.allocation.language.as.AsPackage.Literals.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT, csElement);
+			pivotElement = refreshNamedElement(org.muml.psm.allocation.language.as.LocationConstraint.class, org.muml.psm.allocation.language.as.AsPackage.Literals.LOCATION_CONSTRAINT, csElement);
 		}
 		pivotElement.setTupleDescriptor(
 			PivotUtil.getPivot(org.muml.psm.allocation.language.as.TupleDescriptor.class, csElement.getTupleDescriptor())

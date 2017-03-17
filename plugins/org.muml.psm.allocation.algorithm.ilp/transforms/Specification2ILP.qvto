@@ -2,7 +2,7 @@ import InputHelper;
 import Expressions;
 import GeneralConstraint;
 import CoherenceConstraint;
-import RequiredHardwareResourceInstanceConstraint;
+import LocationConstraint;
 import ResourceConstraint;
 import ObjectiveFunction;
 import Util;
@@ -32,7 +32,7 @@ main() {
 	endTime := getCurrentTime();
 	log("Time for create CoherenceConstraints:"+((endTime-startTime)/1000).toString()+" seconds");
 	startTime := getCurrentTime();
-	specification.createHWResInstanceConstraints(ilp, oclContext);
+	specification.createLocationConstraints(ilp, oclContext);
 	endTime := getCurrentTime();
 	log("Time for create required Location constraints:"+((endTime-startTime)/1000).toString()+" seconds");
 	startTime := getCurrentTime();

@@ -11,23 +11,23 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.muml.psm.allocation.language.as.AsPackage;
-import org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint;
+import org.muml.psm.allocation.language.as.LocationConstraint;
 import org.muml.psm.allocation.language.as.TupleDescriptor;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Required Hardware Resource Instance Constraint</b></em>'.
+ * An implementation of the model object '<em><b>Location Constraint</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.muml.psm.allocation.language.as.impl.RequiredHardwareResourceInstanceConstraintImpl#getTupleDescriptor <em>Tuple Descriptor</em>}</li>
+ *   <li>{@link org.muml.psm.allocation.language.as.impl.LocationConstraintImpl#getTupleDescriptor <em>Tuple Descriptor</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintImpl implements RequiredHardwareResourceInstanceConstraint {
+public class LocationConstraintImpl extends ConstraintImpl implements LocationConstraint {
 	/**
 	 * The cached value of the '{@link #getTupleDescriptor() <em>Tuple Descriptor</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -43,7 +43,7 @@ public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RequiredHardwareResourceInstanceConstraintImpl() {
+	protected LocationConstraintImpl() {
 		super();
 	}
 
@@ -54,7 +54,7 @@ public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintIm
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return AsPackage.Literals.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT;
+		return AsPackage.Literals.LOCATION_CONSTRAINT;
 	}
 
 	/**
@@ -75,7 +75,7 @@ public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintIm
 		TupleDescriptor oldTupleDescriptor = tupleDescriptor;
 		tupleDescriptor = newTupleDescriptor;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR, oldTupleDescriptor, newTupleDescriptor);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR, oldTupleDescriptor, newTupleDescriptor);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -90,14 +90,14 @@ public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintIm
 		if (newTupleDescriptor != tupleDescriptor) {
 			NotificationChain msgs = null;
 			if (tupleDescriptor != null)
-				msgs = ((InternalEObject)tupleDescriptor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR, null, msgs);
+				msgs = ((InternalEObject)tupleDescriptor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR, null, msgs);
 			if (newTupleDescriptor != null)
-				msgs = ((InternalEObject)newTupleDescriptor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR, null, msgs);
+				msgs = ((InternalEObject)newTupleDescriptor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR, null, msgs);
 			msgs = basicSetTupleDescriptor(newTupleDescriptor, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR, newTupleDescriptor, newTupleDescriptor));
+			eNotify(new ENotificationImpl(this, Notification.SET, AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR, newTupleDescriptor, newTupleDescriptor));
 	}
 
 	/**
@@ -108,7 +108,7 @@ public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintIm
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR:
+			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
 				return basicSetTupleDescriptor(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -122,7 +122,7 @@ public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintIm
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR:
+			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
 				return getTupleDescriptor();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -136,7 +136,7 @@ public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintIm
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR:
+			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
 				setTupleDescriptor((TupleDescriptor)newValue);
 				return;
 		}
@@ -151,7 +151,7 @@ public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintIm
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR:
+			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
 				setTupleDescriptor((TupleDescriptor)null);
 				return;
 		}
@@ -166,11 +166,11 @@ public class RequiredHardwareResourceInstanceConstraintImpl extends ConstraintIm
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR:
+			case AsPackage.LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR:
 				return tupleDescriptor != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
 
-} //RequiredHardwareResourceInstanceConstraintImpl
+} //LocationConstraintImpl

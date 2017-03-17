@@ -63,6 +63,11 @@ public abstract class AbstractNullLanguageSpecificationCSVisitor<@Nullable R, C>
 	}
 
 	@Override
+	public R visitLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull LocationConstraintCS object) {
+		return null;
+	}
+
+	@Override
 	public R visitMeasureFunctionCS(org.muml.psm.allocation.language.cs.@NonNull MeasureFunctionCS object) {
 		return null;
 	}
@@ -79,11 +84,6 @@ public abstract class AbstractNullLanguageSpecificationCSVisitor<@Nullable R, C>
 
 	@Override
 	public R visitRelationCS(org.muml.psm.allocation.language.cs.@NonNull RelationCS object) {
-		return null;
-	}
-
-	@Override
-	public R visitRequiredHardwareResourceInstanceConstraintCS(org.muml.psm.allocation.language.cs.@NonNull RequiredHardwareResourceInstanceConstraintCS object) {
 		return null;
 	}
 

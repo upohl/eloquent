@@ -83,11 +83,11 @@ import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.CoherenceConstraintCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.JavaImplementationProviderCS;
+import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
 import org.muml.psm.allocation.language.cs.OCLContextCS;
 import org.muml.psm.allocation.language.cs.QoSDimensionCS;
 import org.muml.psm.allocation.language.cs.RelationCS;
-import org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS;
 import org.muml.psm.allocation.language.cs.ResourceConstraintCS;
 import org.muml.psm.allocation.language.cs.ServiceCS;
 import org.muml.psm.allocation.language.cs.SpecificationCS;
@@ -287,6 +287,9 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 					return; 
 				}
 				else break;
+			case CsPackage.LOCATION_CONSTRAINT_CS:
+				sequence_LocationConstraint(context, (LocationConstraintCS) semanticObject); 
+				return; 
 			case CsPackage.MEASURE_FUNCTION_CS:
 				sequence_MeasureFunction(context, (MeasureFunctionCS) semanticObject); 
 				return; 
@@ -298,9 +301,6 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				return; 
 			case CsPackage.RELATION_CS:
 				sequence_Relation(context, (RelationCS) semanticObject); 
-				return; 
-			case CsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS:
-				sequence_RequiredHardwareResourceInstanceConstraint(context, (RequiredHardwareResourceInstanceConstraintCS) semanticObject); 
 				return; 
 			case CsPackage.RESOURCE_CONSTRAINT_CS:
 				sequence_ResourceConstraint(context, (ResourceConstraintCS) semanticObject); 
@@ -537,6 +537,19 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	
 	/**
 	 * Contexts:
+	 *     Constraint returns LocationConstraintCS
+	 *     LocationConstraint returns LocationConstraintCS
+	 *
+	 * Constraint:
+	 *     (name=ID? tupleDescriptor=TupleDescriptor expression=Model)
+	 */
+	protected void sequence_LocationConstraint(ISerializationContext context, LocationConstraintCS semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     LowerBound returns BoundCS
 	 *
 	 * Constraint:
@@ -633,19 +646,6 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 *     (name=ID? tupleDescriptor=TupleDescriptor lowerBound=LowerBound upperBound=UpperBound expression=Model)
 	 */
 	protected void sequence_Relation(ISerializationContext context, RelationCS semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Constraint returns RequiredHardwareResourceInstanceConstraintCS
-	 *     RequiredHardwareResourceInstanceConstraint returns RequiredHardwareResourceInstanceConstraintCS
-	 *
-	 * Constraint:
-	 *     (name=ID? tupleDescriptor=TupleDescriptor expression=Model)
-	 */
-	protected void sequence_RequiredHardwareResourceInstanceConstraint(ISerializationContext context, RequiredHardwareResourceInstanceConstraintCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

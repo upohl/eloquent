@@ -533,25 +533,25 @@ finally {
 
 
 
-// Entry rule entryRuleRequiredHardwareResourceInstanceConstraint
-entryRuleRequiredHardwareResourceInstanceConstraint 
+// Entry rule entryRuleLocationConstraint
+entryRuleLocationConstraint 
 :
-{ before(grammarAccess.getRequiredHardwareResourceInstanceConstraintRule()); }
-	 ruleRequiredHardwareResourceInstanceConstraint
-{ after(grammarAccess.getRequiredHardwareResourceInstanceConstraintRule()); } 
+{ before(grammarAccess.getLocationConstraintRule()); }
+	 ruleLocationConstraint
+{ after(grammarAccess.getLocationConstraintRule()); } 
 	 EOF 
 ;
 
-// Rule RequiredHardwareResourceInstanceConstraint
-ruleRequiredHardwareResourceInstanceConstraint
+// Rule LocationConstraint
+ruleLocationConstraint
     @init {
 		int stackSize = keepStackSize();
     }
 	:
 (
-{ before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getGroup()); }
-(rule__RequiredHardwareResourceInstanceConstraint__Group__0)
-{ after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getGroup()); }
+{ before(grammarAccess.getLocationConstraintAccess().getGroup()); }
+(rule__LocationConstraint__Group__0)
+{ after(grammarAccess.getLocationConstraintAccess().getGroup()); }
 )
 
 ;
@@ -3441,9 +3441,9 @@ rule__Constraint__Alternatives_1
 )
 
     |(
-{ before(grammarAccess.getConstraintAccess().getRequiredHardwareResourceInstanceConstraintParserRuleCall_1_2()); }
-	ruleRequiredHardwareResourceInstanceConstraint
-{ after(grammarAccess.getConstraintAccess().getRequiredHardwareResourceInstanceConstraintParserRuleCall_1_2()); }
+{ before(grammarAccess.getConstraintAccess().getLocationConstraintParserRuleCall_1_2()); }
+	ruleLocationConstraint
+{ after(grammarAccess.getConstraintAccess().getLocationConstraintParserRuleCall_1_2()); }
 )
 
 ;
@@ -3477,25 +3477,25 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__RequiredHardwareResourceInstanceConstraint__Alternatives_0
+rule__LocationConstraint__Alternatives_0
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRequiredHardwareResourceInstanceKeyword_0_0()); }
+{ before(grammarAccess.getLocationConstraintAccess().getRequiredHardwareResourceInstanceKeyword_0_0()); }
 
 	'requiredHardwareResourceInstance' 
 
-{ after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRequiredHardwareResourceInstanceKeyword_0_0()); }
+{ after(grammarAccess.getLocationConstraintAccess().getRequiredHardwareResourceInstanceKeyword_0_0()); }
 )
 
     |(
-{ before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRequiredLocationKeyword_0_1()); }
+{ before(grammarAccess.getLocationConstraintAccess().getRequiredLocationKeyword_0_1()); }
 
 	'requiredLocation' 
 
-{ after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRequiredLocationKeyword_0_1()); }
+{ after(grammarAccess.getLocationConstraintAccess().getRequiredLocationKeyword_0_1()); }
 )
 
 ;
@@ -8074,27 +8074,27 @@ finally {
 
 
 
-rule__RequiredHardwareResourceInstanceConstraint__Group__0
+rule__LocationConstraint__Group__0
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__RequiredHardwareResourceInstanceConstraint__Group__0__Impl
-	rule__RequiredHardwareResourceInstanceConstraint__Group__1
+	rule__LocationConstraint__Group__0__Impl
+	rule__LocationConstraint__Group__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__RequiredHardwareResourceInstanceConstraint__Group__0__Impl
+rule__LocationConstraint__Group__0__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getAlternatives_0()); }
-(rule__RequiredHardwareResourceInstanceConstraint__Alternatives_0)
-{ after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getAlternatives_0()); }
+{ before(grammarAccess.getLocationConstraintAccess().getAlternatives_0()); }
+(rule__LocationConstraint__Alternatives_0)
+{ after(grammarAccess.getLocationConstraintAccess().getAlternatives_0()); }
 )
 
 ;
@@ -8103,27 +8103,27 @@ finally {
 }
 
 
-rule__RequiredHardwareResourceInstanceConstraint__Group__1
+rule__LocationConstraint__Group__1
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__RequiredHardwareResourceInstanceConstraint__Group__1__Impl
-	rule__RequiredHardwareResourceInstanceConstraint__Group__2
+	rule__LocationConstraint__Group__1__Impl
+	rule__LocationConstraint__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__RequiredHardwareResourceInstanceConstraint__Group__1__Impl
+rule__LocationConstraint__Group__1__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getNameAssignment_1()); }
-(rule__RequiredHardwareResourceInstanceConstraint__NameAssignment_1)?
-{ after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getNameAssignment_1()); }
+{ before(grammarAccess.getLocationConstraintAccess().getNameAssignment_1()); }
+(rule__LocationConstraint__NameAssignment_1)?
+{ after(grammarAccess.getLocationConstraintAccess().getNameAssignment_1()); }
 )
 
 ;
@@ -8132,29 +8132,29 @@ finally {
 }
 
 
-rule__RequiredHardwareResourceInstanceConstraint__Group__2
+rule__LocationConstraint__Group__2
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__RequiredHardwareResourceInstanceConstraint__Group__2__Impl
-	rule__RequiredHardwareResourceInstanceConstraint__Group__3
+	rule__LocationConstraint__Group__2__Impl
+	rule__LocationConstraint__Group__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__RequiredHardwareResourceInstanceConstraint__Group__2__Impl
+rule__LocationConstraint__Group__2__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getLeftCurlyBracketKeyword_2()); }
+{ before(grammarAccess.getLocationConstraintAccess().getLeftCurlyBracketKeyword_2()); }
 
 	'{' 
 
-{ after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getLeftCurlyBracketKeyword_2()); }
+{ after(grammarAccess.getLocationConstraintAccess().getLeftCurlyBracketKeyword_2()); }
 )
 
 ;
@@ -8163,27 +8163,27 @@ finally {
 }
 
 
-rule__RequiredHardwareResourceInstanceConstraint__Group__3
+rule__LocationConstraint__Group__3
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__RequiredHardwareResourceInstanceConstraint__Group__3__Impl
-	rule__RequiredHardwareResourceInstanceConstraint__Group__4
+	rule__LocationConstraint__Group__3__Impl
+	rule__LocationConstraint__Group__4
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__RequiredHardwareResourceInstanceConstraint__Group__3__Impl
+rule__LocationConstraint__Group__3__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getTupleDescriptorAssignment_3()); }
-(rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorAssignment_3)
-{ after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getTupleDescriptorAssignment_3()); }
+{ before(grammarAccess.getLocationConstraintAccess().getTupleDescriptorAssignment_3()); }
+(rule__LocationConstraint__TupleDescriptorAssignment_3)
+{ after(grammarAccess.getLocationConstraintAccess().getTupleDescriptorAssignment_3()); }
 )
 
 ;
@@ -8192,29 +8192,29 @@ finally {
 }
 
 
-rule__RequiredHardwareResourceInstanceConstraint__Group__4
+rule__LocationConstraint__Group__4
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__RequiredHardwareResourceInstanceConstraint__Group__4__Impl
-	rule__RequiredHardwareResourceInstanceConstraint__Group__5
+	rule__LocationConstraint__Group__4__Impl
+	rule__LocationConstraint__Group__5
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__RequiredHardwareResourceInstanceConstraint__Group__4__Impl
+rule__LocationConstraint__Group__4__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getOclKeyword_4()); }
+{ before(grammarAccess.getLocationConstraintAccess().getOclKeyword_4()); }
 
 	'ocl' 
 
-{ after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getOclKeyword_4()); }
+{ after(grammarAccess.getLocationConstraintAccess().getOclKeyword_4()); }
 )
 
 ;
@@ -8223,27 +8223,27 @@ finally {
 }
 
 
-rule__RequiredHardwareResourceInstanceConstraint__Group__5
+rule__LocationConstraint__Group__5
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__RequiredHardwareResourceInstanceConstraint__Group__5__Impl
-	rule__RequiredHardwareResourceInstanceConstraint__Group__6
+	rule__LocationConstraint__Group__5__Impl
+	rule__LocationConstraint__Group__6
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__RequiredHardwareResourceInstanceConstraint__Group__5__Impl
+rule__LocationConstraint__Group__5__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getExpressionAssignment_5()); }
-(rule__RequiredHardwareResourceInstanceConstraint__ExpressionAssignment_5)
-{ after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getExpressionAssignment_5()); }
+{ before(grammarAccess.getLocationConstraintAccess().getExpressionAssignment_5()); }
+(rule__LocationConstraint__ExpressionAssignment_5)
+{ after(grammarAccess.getLocationConstraintAccess().getExpressionAssignment_5()); }
 )
 
 ;
@@ -8252,29 +8252,29 @@ finally {
 }
 
 
-rule__RequiredHardwareResourceInstanceConstraint__Group__6
+rule__LocationConstraint__Group__6
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__RequiredHardwareResourceInstanceConstraint__Group__6__Impl
-	rule__RequiredHardwareResourceInstanceConstraint__Group__7
+	rule__LocationConstraint__Group__6__Impl
+	rule__LocationConstraint__Group__7
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__RequiredHardwareResourceInstanceConstraint__Group__6__Impl
+rule__LocationConstraint__Group__6__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getSemicolonKeyword_6()); }
+{ before(grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_6()); }
 
 	';' 
 
-{ after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getSemicolonKeyword_6()); }
+{ after(grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_6()); }
 )
 
 ;
@@ -8283,28 +8283,28 @@ finally {
 }
 
 
-rule__RequiredHardwareResourceInstanceConstraint__Group__7
+rule__LocationConstraint__Group__7
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__RequiredHardwareResourceInstanceConstraint__Group__7__Impl
+	rule__LocationConstraint__Group__7__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__RequiredHardwareResourceInstanceConstraint__Group__7__Impl
+rule__LocationConstraint__Group__7__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRightCurlyBracketKeyword_7()); }
+{ before(grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_7()); }
 
 	'}' 
 
-{ after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRightCurlyBracketKeyword_7()); }
+{ after(grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_7()); }
 )
 
 ;
@@ -20628,14 +20628,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__RequiredHardwareResourceInstanceConstraint__NameAssignment_1
+rule__LocationConstraint__NameAssignment_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getNameIDParserRuleCall_1_0()); }
-	ruleID{ after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getNameIDParserRuleCall_1_0()); }
+{ before(grammarAccess.getLocationConstraintAccess().getNameIDParserRuleCall_1_0()); }
+	ruleID{ after(grammarAccess.getLocationConstraintAccess().getNameIDParserRuleCall_1_0()); }
 )
 
 ;
@@ -20643,14 +20643,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorAssignment_3
+rule__LocationConstraint__TupleDescriptorAssignment_3
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); }
-	ruleTupleDescriptor{ after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); }
+{ before(grammarAccess.getLocationConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); }
+	ruleTupleDescriptor{ after(grammarAccess.getLocationConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); }
 )
 
 ;
@@ -20658,14 +20658,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__RequiredHardwareResourceInstanceConstraint__ExpressionAssignment_5
+rule__LocationConstraint__ExpressionAssignment_5
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getExpressionModelParserRuleCall_5_0()); }
-	ruleModel{ after(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getExpressionModelParserRuleCall_5_0()); }
+{ before(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_5_0()); }
+	ruleModel{ after(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_5_0()); }
 )
 
 ;

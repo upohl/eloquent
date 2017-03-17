@@ -18,9 +18,9 @@ import org.eclipse.ocl.pivot.values.SetValue;
 import org.eclipse.ocl.pivot.values.TupleValue;
 import org.muml.psm.allocation.language.as.CoherenceConstraint;
 import org.muml.psm.allocation.language.as.EvaluatableElement;
+import org.muml.psm.allocation.language.as.LocationConstraint;
 import org.muml.psm.allocation.language.as.QoSDimension;
 import org.muml.psm.allocation.language.as.Relation;
-import org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint;
 import org.muml.psm.allocation.language.as.ResourceConstraint;
 import org.muml.psm.allocation.language.xtext.typing.TypesUtil;
 
@@ -69,8 +69,8 @@ public class TupleAccessor {
 			tupleType = TypesUtil.createRelationTupleType(envFactory, (Relation) object);
 		} else if (object instanceof CoherenceConstraint) {
 			tupleType = TypesUtil.createCoherenceConstraintTupleType(envFactory, (CoherenceConstraint) object);
-		} else if (object instanceof RequiredHardwareResourceInstanceConstraint) {
-			tupleType = TypesUtil.createReqHWResInstanceConstraintTupleType(envFactory, (RequiredHardwareResourceInstanceConstraint) object);
+		} else if (object instanceof LocationConstraint) {
+			tupleType = TypesUtil.createLocationConstraintTupleType(envFactory, (LocationConstraint) object);
 		} else if (object instanceof ResourceConstraint) {
 			// outer tuple type has exactly 2 parts
 			if (tupleValue.getTypeId().getPartIds().length == 2) {

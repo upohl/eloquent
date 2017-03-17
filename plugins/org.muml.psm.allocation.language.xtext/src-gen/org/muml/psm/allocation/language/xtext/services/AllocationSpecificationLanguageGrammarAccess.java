@@ -753,19 +753,19 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
 		private final RuleCall cCoherenceConstraintParserRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
 		private final RuleCall cResourceConstraintParserRuleCall_1_1 = (RuleCall)cAlternatives_1.eContents().get(1);
-		private final RuleCall cRequiredHardwareResourceInstanceConstraintParserRuleCall_1_2 = (RuleCall)cAlternatives_1.eContents().get(2);
+		private final RuleCall cLocationConstraintParserRuleCall_1_2 = (RuleCall)cAlternatives_1.eContents().get(2);
 		
 		//Constraint cs::ConstraintCS:
-		//	'constraint' (CoherenceConstraint | ResourceConstraint | RequiredHardwareResourceInstanceConstraint)
+		//	'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint)
 		@Override public ParserRule getRule() { return rule; }
 
-		//'constraint' (CoherenceConstraint | ResourceConstraint | RequiredHardwareResourceInstanceConstraint)
+		//'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint)
 		public Group getGroup() { return cGroup; }
 
 		//'constraint'
 		public Keyword getConstraintKeyword_0() { return cConstraintKeyword_0; }
 
-		//(CoherenceConstraint | ResourceConstraint | RequiredHardwareResourceInstanceConstraint)
+		//(CoherenceConstraint | ResourceConstraint | LocationConstraint)
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//CoherenceConstraint
@@ -774,8 +774,8 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//ResourceConstraint
 		public RuleCall getResourceConstraintParserRuleCall_1_1() { return cResourceConstraintParserRuleCall_1_1; }
 
-		//RequiredHardwareResourceInstanceConstraint
-		public RuleCall getRequiredHardwareResourceInstanceConstraintParserRuleCall_1_2() { return cRequiredHardwareResourceInstanceConstraintParserRuleCall_1_2; }
+		//LocationConstraint
+		public RuleCall getLocationConstraintParserRuleCall_1_2() { return cLocationConstraintParserRuleCall_1_2; }
 	}
 
 	public class CoherenceConstraintElements extends AbstractParserRuleElementFinder {
@@ -908,8 +908,8 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
-	public class RequiredHardwareResourceInstanceConstraintElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.RequiredHardwareResourceInstanceConstraint");
+	public class LocationConstraintElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.LocationConstraint");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
 		private final Keyword cRequiredHardwareResourceInstanceKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
@@ -925,7 +925,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//RequiredHardwareResourceInstanceConstraint cs::RequiredHardwareResourceInstanceConstraintCS:
+		//LocationConstraint cs::LocationConstraintCS:
 		//	('requiredHardwareResourceInstance' | 'requiredLocation') name=ID? '{'
 		//	tupleDescriptor=TupleDescriptor
 		//	'ocl' expression=Model ';'
@@ -1120,7 +1120,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	private final ConstraintElements pConstraint;
 	private final CoherenceConstraintElements pCoherenceConstraint;
 	private final ResourceConstraintElements pResourceConstraint;
-	private final RequiredHardwareResourceInstanceConstraintElements pRequiredHardwareResourceInstanceConstraint;
+	private final LocationConstraintElements pLocationConstraint;
 	private final CoherenceConstraintTypeElements eCoherenceConstraintType;
 	private final MeasureFunctionElements pMeasureFunction;
 	private final GoalElements eGoal;
@@ -1159,7 +1159,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		this.pConstraint = new ConstraintElements();
 		this.pCoherenceConstraint = new CoherenceConstraintElements();
 		this.pResourceConstraint = new ResourceConstraintElements();
-		this.pRequiredHardwareResourceInstanceConstraint = new RequiredHardwareResourceInstanceConstraintElements();
+		this.pLocationConstraint = new LocationConstraintElements();
 		this.eCoherenceConstraintType = new CoherenceConstraintTypeElements();
 		this.pMeasureFunction = new MeasureFunctionElements();
 		this.eGoal = new GoalElements();
@@ -1360,7 +1360,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//Constraint cs::ConstraintCS:
-	//	'constraint' (CoherenceConstraint | ResourceConstraint | RequiredHardwareResourceInstanceConstraint)
+	//	'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint)
 	public ConstraintElements getConstraintAccess() {
 		return pConstraint;
 	}
@@ -1395,17 +1395,17 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getResourceConstraintAccess().getRule();
 	}
 
-	//RequiredHardwareResourceInstanceConstraint cs::RequiredHardwareResourceInstanceConstraintCS:
+	//LocationConstraint cs::LocationConstraintCS:
 	//	('requiredHardwareResourceInstance' | 'requiredLocation') name=ID? '{'
 	//	tupleDescriptor=TupleDescriptor
 	//	'ocl' expression=Model ';'
 	//	'}'
-	public RequiredHardwareResourceInstanceConstraintElements getRequiredHardwareResourceInstanceConstraintAccess() {
-		return pRequiredHardwareResourceInstanceConstraint;
+	public LocationConstraintElements getLocationConstraintAccess() {
+		return pLocationConstraint;
 	}
 	
-	public ParserRule getRequiredHardwareResourceInstanceConstraintRule() {
-		return getRequiredHardwareResourceInstanceConstraintAccess().getRule();
+	public ParserRule getLocationConstraintRule() {
+		return getLocationConstraintAccess().getRule();
 	}
 
 	//enum CoherenceConstraintType returns cs::CoherenceConstraintType:

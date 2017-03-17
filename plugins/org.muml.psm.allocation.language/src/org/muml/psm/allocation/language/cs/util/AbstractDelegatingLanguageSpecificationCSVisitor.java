@@ -59,6 +59,11 @@ public abstract class AbstractDelegatingLanguageSpecificationCSVisitor<R, C, @No
 	}
 
 	@Override
+	public R visitLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull LocationConstraintCS object) {
+		return delegate.visitLocationConstraintCS(object);
+	}
+
+	@Override
 	public R visitMeasureFunctionCS(org.muml.psm.allocation.language.cs.@NonNull MeasureFunctionCS object) {
 		return delegate.visitMeasureFunctionCS(object);
 	}
@@ -76,11 +81,6 @@ public abstract class AbstractDelegatingLanguageSpecificationCSVisitor<R, C, @No
 	@Override
 	public R visitRelationCS(org.muml.psm.allocation.language.cs.@NonNull RelationCS object) {
 		return delegate.visitRelationCS(object);
-	}
-
-	@Override
-	public R visitRequiredHardwareResourceInstanceConstraintCS(org.muml.psm.allocation.language.cs.@NonNull RequiredHardwareResourceInstanceConstraintCS object) {
-		return delegate.visitRequiredHardwareResourceInstanceConstraintCS(object);
 	}
 
 	@Override

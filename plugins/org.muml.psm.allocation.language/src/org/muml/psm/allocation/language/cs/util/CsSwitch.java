@@ -182,18 +182,18 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS: {
-				RequiredHardwareResourceInstanceConstraintCS requiredHardwareResourceInstanceConstraintCS = (RequiredHardwareResourceInstanceConstraintCS)theEObject;
-				T result = caseRequiredHardwareResourceInstanceConstraintCS(requiredHardwareResourceInstanceConstraintCS);
-				if (result == null) result = caseConstraintCS(requiredHardwareResourceInstanceConstraintCS);
-				if (result == null) result = caseNamedElementCS(requiredHardwareResourceInstanceConstraintCS);
-				if (result == null) result = caseEvaluatableElementCS(requiredHardwareResourceInstanceConstraintCS);
-				if (result == null) result = caseModelElementCS(requiredHardwareResourceInstanceConstraintCS);
-				if (result == null) result = caseNameable(requiredHardwareResourceInstanceConstraintCS);
-				if (result == null) result = casePivotableElementCS(requiredHardwareResourceInstanceConstraintCS);
-				if (result == null) result = caseElementCS(requiredHardwareResourceInstanceConstraintCS);
-				if (result == null) result = casePivotable(requiredHardwareResourceInstanceConstraintCS);
-				if (result == null) result = caseVisitableCS(requiredHardwareResourceInstanceConstraintCS);
+			case CsPackage.LOCATION_CONSTRAINT_CS: {
+				LocationConstraintCS locationConstraintCS = (LocationConstraintCS)theEObject;
+				T result = caseLocationConstraintCS(locationConstraintCS);
+				if (result == null) result = caseConstraintCS(locationConstraintCS);
+				if (result == null) result = caseNamedElementCS(locationConstraintCS);
+				if (result == null) result = caseEvaluatableElementCS(locationConstraintCS);
+				if (result == null) result = caseModelElementCS(locationConstraintCS);
+				if (result == null) result = caseNameable(locationConstraintCS);
+				if (result == null) result = casePivotableElementCS(locationConstraintCS);
+				if (result == null) result = caseElementCS(locationConstraintCS);
+				if (result == null) result = casePivotable(locationConstraintCS);
+				if (result == null) result = caseVisitableCS(locationConstraintCS);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -444,17 +444,17 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Required Hardware Resource Instance Constraint CS</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Location Constraint CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Required Hardware Resource Instance Constraint CS</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Location Constraint CS</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRequiredHardwareResourceInstanceConstraintCS(RequiredHardwareResourceInstanceConstraintCS object) {
+	public T caseLocationConstraintCS(LocationConstraintCS object) {
 		return null;
 	}
 

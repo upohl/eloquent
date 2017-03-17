@@ -24,12 +24,12 @@ import org.muml.psm.allocation.language.as.Constraint;
 import org.muml.psm.allocation.language.as.EvaluatableElement;
 import org.muml.psm.allocation.language.as.Goal;
 import org.muml.psm.allocation.language.as.JavaImplementationProvider;
+import org.muml.psm.allocation.language.as.LocationConstraint;
 import org.muml.psm.allocation.language.as.MeasureFunction;
 import org.muml.psm.allocation.language.as.NameProvider;
 import org.muml.psm.allocation.language.as.OCLContext;
 import org.muml.psm.allocation.language.as.QoSDimension;
 import org.muml.psm.allocation.language.as.Relation;
-import org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint;
 import org.muml.psm.allocation.language.as.ResourceConstraint;
 import org.muml.psm.allocation.language.as.Service;
 import org.muml.psm.allocation.language.as.Specification;
@@ -102,7 +102,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass requiredHardwareResourceInstanceConstraintEClass = null;
+	private EClass locationConstraintEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -479,8 +479,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRequiredHardwareResourceInstanceConstraint() {
-		return requiredHardwareResourceInstanceConstraintEClass;
+	public EClass getLocationConstraint() {
+		return locationConstraintEClass;
 	}
 
 	/**
@@ -488,8 +488,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRequiredHardwareResourceInstanceConstraint_TupleDescriptor() {
-		return (EReference)requiredHardwareResourceInstanceConstraintEClass.getEStructuralFeatures().get(0);
+	public EReference getLocationConstraint_TupleDescriptor() {
+		return (EReference)locationConstraintEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -747,8 +747,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		resourceConstraintEClass = createEClass(RESOURCE_CONSTRAINT);
 		createEReference(resourceConstraintEClass, RESOURCE_CONSTRAINT__TUPLE_DESCRIPTOR);
 
-		requiredHardwareResourceInstanceConstraintEClass = createEClass(REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT);
-		createEReference(requiredHardwareResourceInstanceConstraintEClass, REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT__TUPLE_DESCRIPTOR);
+		locationConstraintEClass = createEClass(LOCATION_CONSTRAINT);
+		createEReference(locationConstraintEClass, LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR);
 
 		tupleDescriptorEClass = createEClass(TUPLE_DESCRIPTOR);
 		createEReference(tupleDescriptorEClass, TUPLE_DESCRIPTOR__TYPED_PAIRS);
@@ -827,7 +827,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		constraintEClass.getESuperTypes().add(this.getEvaluatableElement());
 		coherenceConstraintEClass.getESuperTypes().add(this.getConstraint());
 		resourceConstraintEClass.getESuperTypes().add(this.getConstraint());
-		requiredHardwareResourceInstanceConstraintEClass.getESuperTypes().add(this.getConstraint());
+		locationConstraintEClass.getESuperTypes().add(this.getConstraint());
 		tupleDescriptorEClass.getESuperTypes().add(thePivotPackage.getElement());
 		weightTupleDescriptorEClass.getESuperTypes().add(this.getTupleDescriptor());
 		boundWeightTupleDescriptorEClass.getESuperTypes().add(this.getWeightTupleDescriptor());
@@ -870,8 +870,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		initEClass(resourceConstraintEClass, ResourceConstraint.class, "ResourceConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResourceConstraint_TupleDescriptor(), this.getBoundWeightTupleDescriptor(), null, "tupleDescriptor", null, 1, 1, ResourceConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(requiredHardwareResourceInstanceConstraintEClass, RequiredHardwareResourceInstanceConstraint.class, "RequiredHardwareResourceInstanceConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRequiredHardwareResourceInstanceConstraint_TupleDescriptor(), this.getTupleDescriptor(), null, "tupleDescriptor", null, 1, 1, RequiredHardwareResourceInstanceConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(locationConstraintEClass, LocationConstraint.class, "LocationConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLocationConstraint_TupleDescriptor(), this.getTupleDescriptor(), null, "tupleDescriptor", null, 1, 1, LocationConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tupleDescriptorEClass, TupleDescriptor.class, "TupleDescriptor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTupleDescriptor_TypedPairs(), this.getTypedPair(), null, "typedPairs", null, 1, -1, TupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -108,8 +108,8 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 				return createResourceConstraintAdapter();
 			}
 			@Override
-			public Adapter caseRequiredHardwareResourceInstanceConstraint(RequiredHardwareResourceInstanceConstraint object) {
-				return createRequiredHardwareResourceInstanceConstraintAdapter();
+			public Adapter caseLocationConstraint(LocationConstraint object) {
+				return createLocationConstraintAdapter();
 			}
 			@Override
 			public Adapter caseTupleDescriptor(TupleDescriptor object) {
@@ -306,16 +306,16 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint <em>Required Hardware Resource Instance Constraint</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.LocationConstraint <em>Location Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.muml.psm.allocation.language.as.RequiredHardwareResourceInstanceConstraint
+	 * @see org.muml.psm.allocation.language.as.LocationConstraint
 	 * @generated
 	 */
-	public Adapter createRequiredHardwareResourceInstanceConstraintAdapter() {
+	public Adapter createLocationConstraintAdapter() {
 		return null;
 	}
 

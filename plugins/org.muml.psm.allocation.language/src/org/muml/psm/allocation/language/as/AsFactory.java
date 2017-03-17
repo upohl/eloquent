@@ -67,13 +67,13 @@ public interface AsFactory extends EFactory {
 	ResourceConstraint createResourceConstraint();
 
 	/**
-	 * Returns a new object of class '<em>Required Hardware Resource Instance Constraint</em>'.
+	 * Returns a new object of class '<em>Location Constraint</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Required Hardware Resource Instance Constraint</em>'.
+	 * @return a new object of class '<em>Location Constraint</em>'.
 	 * @generated
 	 */
-	RequiredHardwareResourceInstanceConstraint createRequiredHardwareResourceInstanceConstraint();
+	LocationConstraint createLocationConstraint();
 
 	/**
 	 * Returns a new object of class '<em>Tuple Descriptor</em>'.

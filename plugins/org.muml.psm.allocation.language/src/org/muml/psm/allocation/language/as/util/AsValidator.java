@@ -100,8 +100,8 @@ public class AsValidator extends EObjectValidator {
 				return validateCoherenceConstraint((CoherenceConstraint)value, diagnostics, context);
 			case AsPackage.RESOURCE_CONSTRAINT:
 				return validateResourceConstraint((ResourceConstraint)value, diagnostics, context);
-			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT:
-				return validateRequiredHardwareResourceInstanceConstraint((RequiredHardwareResourceInstanceConstraint)value, diagnostics, context);
+			case AsPackage.LOCATION_CONSTRAINT:
+				return validateLocationConstraint((LocationConstraint)value, diagnostics, context);
 			case AsPackage.TUPLE_DESCRIPTOR:
 				return validateTupleDescriptor((TupleDescriptor)value, diagnostics, context);
 			case AsPackage.WEIGHT_TUPLE_DESCRIPTOR:
@@ -281,8 +281,8 @@ public class AsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateRequiredHardwareResourceInstanceConstraint(RequiredHardwareResourceInstanceConstraint requiredHardwareResourceInstanceConstraint, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(requiredHardwareResourceInstanceConstraint, diagnostics, context);
+	public boolean validateLocationConstraint(LocationConstraint locationConstraint, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(locationConstraint, diagnostics, context);
 	}
 
 	/**

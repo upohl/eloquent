@@ -84,7 +84,7 @@ query TupleDescriptor::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
 	);
 }
 
-query RequiredHardwareResourceInstanceConstraint::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
+query LocationConstraint::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
 	return self.tupleDescriptor.toSequence(tupleValue);
 }
 

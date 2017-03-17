@@ -62,7 +62,7 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 			case AsPackage.BOUND: return createBound();
 			case AsPackage.COHERENCE_CONSTRAINT: return createCoherenceConstraint();
 			case AsPackage.RESOURCE_CONSTRAINT: return createResourceConstraint();
-			case AsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT: return createRequiredHardwareResourceInstanceConstraint();
+			case AsPackage.LOCATION_CONSTRAINT: return createLocationConstraint();
 			case AsPackage.TUPLE_DESCRIPTOR: return createTupleDescriptor();
 			case AsPackage.WEIGHT_TUPLE_DESCRIPTOR: return createWeightTupleDescriptor();
 			case AsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR: return createBoundWeightTupleDescriptor();
@@ -167,9 +167,9 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RequiredHardwareResourceInstanceConstraint createRequiredHardwareResourceInstanceConstraint() {
-		RequiredHardwareResourceInstanceConstraintImpl requiredHardwareResourceInstanceConstraint = new RequiredHardwareResourceInstanceConstraintImpl();
-		return requiredHardwareResourceInstanceConstraint;
+	public LocationConstraint createLocationConstraint() {
+		LocationConstraintImpl locationConstraint = new LocationConstraintImpl();
+		return locationConstraint;
 	}
 
 	/**

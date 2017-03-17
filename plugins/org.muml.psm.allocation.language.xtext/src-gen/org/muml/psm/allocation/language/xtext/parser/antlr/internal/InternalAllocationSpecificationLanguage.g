@@ -1398,11 +1398,11 @@ ruleConstraint returns [EObject current=null]
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getConstraintAccess().getRequiredHardwareResourceInstanceConstraintParserRuleCall_1_2()); 
+        newCompositeNode(grammarAccess.getConstraintAccess().getLocationConstraintParserRuleCall_1_2()); 
     }
-    this_RequiredHardwareResourceInstanceConstraint_3=ruleRequiredHardwareResourceInstanceConstraint
+    this_LocationConstraint_3=ruleLocationConstraint
     { 
-        $current = $this_RequiredHardwareResourceInstanceConstraint_3.current; 
+        $current = $this_LocationConstraint_3.current; 
         afterParserOrEnumRuleCall();
     }
 ))
@@ -1621,37 +1621,37 @@ ruleResourceConstraint returns [EObject current=null]
 
 
 
-// Entry rule entryRuleRequiredHardwareResourceInstanceConstraint
-entryRuleRequiredHardwareResourceInstanceConstraint returns [EObject current=null] 
+// Entry rule entryRuleLocationConstraint
+entryRuleLocationConstraint returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getRequiredHardwareResourceInstanceConstraintRule()); }
-	 iv_ruleRequiredHardwareResourceInstanceConstraint=ruleRequiredHardwareResourceInstanceConstraint 
-	 { $current=$iv_ruleRequiredHardwareResourceInstanceConstraint.current; } 
+	{ newCompositeNode(grammarAccess.getLocationConstraintRule()); }
+	 iv_ruleLocationConstraint=ruleLocationConstraint 
+	 { $current=$iv_ruleLocationConstraint.current; } 
 	 EOF 
 ;
 
-// Rule RequiredHardwareResourceInstanceConstraint
-ruleRequiredHardwareResourceInstanceConstraint returns [EObject current=null] 
+// Rule LocationConstraint
+ruleLocationConstraint returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
 ((	otherlv_0='requiredHardwareResourceInstance' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRequiredHardwareResourceInstanceKeyword_0_0());
+    	newLeafNode(otherlv_0, grammarAccess.getLocationConstraintAccess().getRequiredHardwareResourceInstanceKeyword_0_0());
     }
 
     |	otherlv_1='requiredLocation' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRequiredLocationKeyword_0_1());
+    	newLeafNode(otherlv_1, grammarAccess.getLocationConstraintAccess().getRequiredLocationKeyword_0_1());
     }
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getNameIDParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getNameIDParserRuleCall_1_0()); 
 	    }
 		lv_name_2_0=ruleID		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getRequiredHardwareResourceInstanceConstraintRule());
+	            $current = createModelElementForParent(grammarAccess.getLocationConstraintRule());
 	        }
        		set(
        			$current, 
@@ -1664,16 +1664,16 @@ ruleRequiredHardwareResourceInstanceConstraint returns [EObject current=null]
 )
 )?	otherlv_3='{' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getLeftCurlyBracketKeyword_2());
+    	newLeafNode(otherlv_3, grammarAccess.getLocationConstraintAccess().getLeftCurlyBracketKeyword_2());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); 
 	    }
 		lv_tupleDescriptor_4_0=ruleTupleDescriptor		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getRequiredHardwareResourceInstanceConstraintRule());
+	            $current = createModelElementForParent(grammarAccess.getLocationConstraintRule());
 	        }
        		set(
        			$current, 
@@ -1686,16 +1686,16 @@ ruleRequiredHardwareResourceInstanceConstraint returns [EObject current=null]
 )
 )	otherlv_5='ocl' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getOclKeyword_4());
+    	newLeafNode(otherlv_5, grammarAccess.getLocationConstraintAccess().getOclKeyword_4());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getExpressionModelParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_5_0()); 
 	    }
 		lv_expression_6_0=ruleModel		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getRequiredHardwareResourceInstanceConstraintRule());
+	            $current = createModelElementForParent(grammarAccess.getLocationConstraintRule());
 	        }
        		set(
        			$current, 
@@ -1708,11 +1708,11 @@ ruleRequiredHardwareResourceInstanceConstraint returns [EObject current=null]
 )
 )	otherlv_7=';' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getSemicolonKeyword_6());
+    	newLeafNode(otherlv_7, grammarAccess.getLocationConstraintAccess().getSemicolonKeyword_6());
     }
 	otherlv_8='}' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getRightCurlyBracketKeyword_7());
+    	newLeafNode(otherlv_8, grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_7());
     }
 )
 ;

@@ -53,8 +53,8 @@
     <genClasses ecoreClass="LanguageSpecificationCS.ecore#//ResourceConstraintCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//ResourceConstraintCS/tupleDescriptor"/>
     </genClasses>
-    <genClasses ecoreClass="LanguageSpecificationCS.ecore#//RequiredHardwareResourceInstanceConstraintCS">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//RequiredHardwareResourceInstanceConstraintCS/tupleDescriptor"/>
+    <genClasses ecoreClass="LanguageSpecificationCS.ecore#//LocationConstraintCS">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//LocationConstraintCS/tupleDescriptor"/>
     </genClasses>
     <genClasses image="false" ecoreClass="LanguageSpecificationCS.ecore#//TupleDescriptorCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//TupleDescriptorCS/typedPairs"/>

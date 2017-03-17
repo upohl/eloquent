@@ -15,17 +15,17 @@ modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 -- 		instead of "= 1" equations (needs to be discussed)
 
 
-library RequiredHardwareResourceInstanceConstraintLib;
+library LocationConstraintLib;
 
 // the implementation of the differentLocation constraint differs from the approach,
 // which was described in my thesis
 
-helper Specification::createHWResInstanceConstraints(inout ilp : IntegerLinearProgram,
+helper Specification::createLocationConstraints(inout ilp : IntegerLinearProgram,
 	oclContext : OclAny) {
-	self.getHWResInstanceConstraints()->createHwResInstanceConstraint(ilp, oclContext);
+	self.getLocationConstraints()->createLocationConstraint(ilp, oclContext);
 }
 
-helper RequiredHardwareResourceInstanceConstraint::createHwResInstanceConstraint(inout ilp : IntegerLinearProgram,
+helper LocationConstraint::createLocationConstraint(inout ilp : IntegerLinearProgram,
 	oclContext : OclAny) {
 	log("SORT");
 	var sequences : Sequence(Sequence(OclAny)) := self.evaluateOCL(oclContext)
@@ -76,8 +76,8 @@ query Sequence(OclAny)::getAssociatedSequences(sequence : Sequence(Sequence(OclA
 }
 
 helper Sequence(Sequence(OclAny))::createConstraintExpression(inout ilp : IntegerLinearProgram,
-	constraint : RequiredHardwareResourceInstanceConstraint) {
-	log("createHWRESConstraintExpression");
+	constraint : LocationConstraint) {
+	log("createLocationConstraintExpression");
 	self->print();
 	var comment : String := if constraint.name <> '' then constraint.name else null endif;
 	ilp.constraints += self->createAdditionConstraintExpression(
@@ -86,9 +86,9 @@ helper Sequence(Sequence(OclAny))::createConstraintExpression(inout ilp : Intege
 	log("createHWRESConstraintExpression");
 }
 
-query Specification::getHWResInstanceConstraints() : OrderedSet(RequiredHardwareResourceInstanceConstraint) {
+query Specification::getLocationConstraints() : OrderedSet(LocationConstraint) {
 	return self.constraints
-		->select(oclIsKindOf(RequiredHardwareResourceInstanceConstraint))
-		->collect(oclAsType(RequiredHardwareResourceInstanceConstraint))
+		->select(oclIsKindOf(LocationConstraint))
+		->collect(oclAsType(LocationConstraint))
 		->asOrderedSet();
 }

@@ -91,7 +91,7 @@ BoundWeightTupleDescriptor returns cs::BoundWeightTupleDescriptorCS:
 ;
 
 Constraint returns cs::ConstraintCS:
-	'constraint' (CoherenceConstraint | ResourceConstraint | RequiredHardwareResourceInstanceConstraint)
+	'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint)
 ;
 
 CoherenceConstraint returns cs::CoherenceConstraintCS:
@@ -108,7 +108,7 @@ ResourceConstraint returns cs::ResourceConstraintCS:
 	'}'
 ;
 
-RequiredHardwareResourceInstanceConstraint returns cs::RequiredHardwareResourceInstanceConstraintCS:
+LocationConstraint returns cs::LocationConstraintCS:
 	('requiredHardwareResourceInstance' | 'requiredLocation') (name=ID)? '{'
 		tupleDescriptor=TupleDescriptor
 		'ocl' expression=Model';'

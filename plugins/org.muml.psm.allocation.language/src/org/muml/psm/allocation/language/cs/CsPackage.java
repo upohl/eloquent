@@ -784,14 +784,14 @@ public interface CsPackage extends EPackage {
 	int RESOURCE_CONSTRAINT_CS_FEATURE_COUNT = CONSTRAINT_CS_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.RequiredHardwareResourceInstanceConstraintCSImpl <em>Required Hardware Resource Instance Constraint CS</em>}' class.
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.LocationConstraintCSImpl <em>Location Constraint CS</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.language.cs.impl.RequiredHardwareResourceInstanceConstraintCSImpl
-	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getRequiredHardwareResourceInstanceConstraintCS()
+	 * @see org.muml.psm.allocation.language.cs.impl.LocationConstraintCSImpl
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getLocationConstraintCS()
 	 * @generated
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS = 7;
+	int LOCATION_CONSTRAINT_CS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -800,7 +800,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__CSI = CONSTRAINT_CS__CSI;
+	int LOCATION_CONSTRAINT_CS__CSI = CONSTRAINT_CS__CSI;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -809,7 +809,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__PARENT = CONSTRAINT_CS__PARENT;
+	int LOCATION_CONSTRAINT_CS__PARENT = CONSTRAINT_CS__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Pivot</b></em>' reference.
@@ -818,7 +818,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__PIVOT = CONSTRAINT_CS__PIVOT;
+	int LOCATION_CONSTRAINT_CS__PIVOT = CONSTRAINT_CS__PIVOT;
 
 	/**
 	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
@@ -827,7 +827,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__ORIGINAL_XMI_ID = CONSTRAINT_CS__ORIGINAL_XMI_ID;
+	int LOCATION_CONSTRAINT_CS__ORIGINAL_XMI_ID = CONSTRAINT_CS__ORIGINAL_XMI_ID;
 
 	/**
 	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
@@ -836,7 +836,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__OWNED_ANNOTATIONS = CONSTRAINT_CS__OWNED_ANNOTATIONS;
+	int LOCATION_CONSTRAINT_CS__OWNED_ANNOTATIONS = CONSTRAINT_CS__OWNED_ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -845,7 +845,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__NAME = CONSTRAINT_CS__NAME;
+	int LOCATION_CONSTRAINT_CS__NAME = CONSTRAINT_CS__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -854,7 +854,7 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__EXPRESSION = CONSTRAINT_CS__EXPRESSION;
+	int LOCATION_CONSTRAINT_CS__EXPRESSION = CONSTRAINT_CS__EXPRESSION;
 
 	/**
 	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
@@ -863,16 +863,16 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR = CONSTRAINT_CS_FEATURE_COUNT + 0;
+	int LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR = CONSTRAINT_CS_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Required Hardware Resource Instance Constraint CS</em>' class.
+	 * The number of structural features of the '<em>Location Constraint CS</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS_FEATURE_COUNT = CONSTRAINT_CS_FEATURE_COUNT + 1;
+	int LOCATION_CONSTRAINT_CS_FEATURE_COUNT = CONSTRAINT_CS_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.TupleDescriptorCSImpl <em>Tuple Descriptor CS</em>}' class.
@@ -2038,25 +2038,25 @@ public interface CsPackage extends EPackage {
 	EReference getResourceConstraintCS_TupleDescriptor();
 
 	/**
-	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS <em>Required Hardware Resource Instance Constraint CS</em>}'.
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.LocationConstraintCS <em>Location Constraint CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Required Hardware Resource Instance Constraint CS</em>'.
-	 * @see org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS
+	 * @return the meta object for class '<em>Location Constraint CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.LocationConstraintCS
 	 * @generated
 	 */
-	EClass getRequiredHardwareResourceInstanceConstraintCS();
+	EClass getLocationConstraintCS();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.LocationConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
-	 * @see org.muml.psm.allocation.language.cs.RequiredHardwareResourceInstanceConstraintCS#getTupleDescriptor()
-	 * @see #getRequiredHardwareResourceInstanceConstraintCS()
+	 * @see org.muml.psm.allocation.language.cs.LocationConstraintCS#getTupleDescriptor()
+	 * @see #getLocationConstraintCS()
 	 * @generated
 	 */
-	EReference getRequiredHardwareResourceInstanceConstraintCS_TupleDescriptor();
+	EReference getLocationConstraintCS_TupleDescriptor();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.TupleDescriptorCS <em>Tuple Descriptor CS</em>}'.
@@ -2515,14 +2515,14 @@ public interface CsPackage extends EPackage {
 		EReference RESOURCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR = eINSTANCE.getResourceConstraintCS_TupleDescriptor();
 
 		/**
-		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.RequiredHardwareResourceInstanceConstraintCSImpl <em>Required Hardware Resource Instance Constraint CS</em>}' class.
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.LocationConstraintCSImpl <em>Location Constraint CS</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.muml.psm.allocation.language.cs.impl.RequiredHardwareResourceInstanceConstraintCSImpl
-		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getRequiredHardwareResourceInstanceConstraintCS()
+		 * @see org.muml.psm.allocation.language.cs.impl.LocationConstraintCSImpl
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getLocationConstraintCS()
 		 * @generated
 		 */
-		EClass REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS = eINSTANCE.getRequiredHardwareResourceInstanceConstraintCS();
+		EClass LOCATION_CONSTRAINT_CS = eINSTANCE.getLocationConstraintCS();
 
 		/**
 		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
@@ -2530,7 +2530,7 @@ public interface CsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS__TUPLE_DESCRIPTOR = eINSTANCE.getRequiredHardwareResourceInstanceConstraintCS_TupleDescriptor();
+		EReference LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR = eINSTANCE.getLocationConstraintCS_TupleDescriptor();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.TupleDescriptorCSImpl <em>Tuple Descriptor CS</em>}' class.

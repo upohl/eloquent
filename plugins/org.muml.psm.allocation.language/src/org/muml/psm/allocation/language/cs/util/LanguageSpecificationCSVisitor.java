@@ -23,11 +23,11 @@ public interface LanguageSpecificationCSVisitor<R> extends org.eclipse.ocl.xtext
 	R visitConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ConstraintCS object);
 	R visitEvaluatableElementCS(org.muml.psm.allocation.language.cs.@NonNull EvaluatableElementCS object);
 	R visitJavaImplementationProviderCS(org.muml.psm.allocation.language.cs.@NonNull JavaImplementationProviderCS object);
+	R visitLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull LocationConstraintCS object);
 	R visitMeasureFunctionCS(org.muml.psm.allocation.language.cs.@NonNull MeasureFunctionCS object);
 	R visitOCLContextCS(org.muml.psm.allocation.language.cs.@NonNull OCLContextCS object);
 	R visitQoSDimensionCS(org.muml.psm.allocation.language.cs.@NonNull QoSDimensionCS object);
 	R visitRelationCS(org.muml.psm.allocation.language.cs.@NonNull RelationCS object);
-	R visitRequiredHardwareResourceInstanceConstraintCS(org.muml.psm.allocation.language.cs.@NonNull RequiredHardwareResourceInstanceConstraintCS object);
 	R visitResourceConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ResourceConstraintCS object);
 	R visitServiceCS(org.muml.psm.allocation.language.cs.@NonNull ServiceCS object);
 	R visitSpecificationCS(org.muml.psm.allocation.language.cs.@NonNull SpecificationCS object);

@@ -62,7 +62,7 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 			case CsPackage.BOUND_CS: return createBoundCS();
 			case CsPackage.COHERENCE_CONSTRAINT_CS: return createCoherenceConstraintCS();
 			case CsPackage.RESOURCE_CONSTRAINT_CS: return createResourceConstraintCS();
-			case CsPackage.REQUIRED_HARDWARE_RESOURCE_INSTANCE_CONSTRAINT_CS: return createRequiredHardwareResourceInstanceConstraintCS();
+			case CsPackage.LOCATION_CONSTRAINT_CS: return createLocationConstraintCS();
 			case CsPackage.TUPLE_DESCRIPTOR_CS: return createTupleDescriptorCS();
 			case CsPackage.WEIGHT_TUPLE_DESCRIPTOR_CS: return createWeightTupleDescriptorCS();
 			case CsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS: return createBoundWeightTupleDescriptorCS();
@@ -167,9 +167,9 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RequiredHardwareResourceInstanceConstraintCS createRequiredHardwareResourceInstanceConstraintCS() {
-		RequiredHardwareResourceInstanceConstraintCSImpl requiredHardwareResourceInstanceConstraintCS = new RequiredHardwareResourceInstanceConstraintCSImpl();
-		return requiredHardwareResourceInstanceConstraintCS;
+	public LocationConstraintCS createLocationConstraintCS() {
+		LocationConstraintCSImpl locationConstraintCS = new LocationConstraintCSImpl();
+		return locationConstraintCS;
 	}
 
 	/**

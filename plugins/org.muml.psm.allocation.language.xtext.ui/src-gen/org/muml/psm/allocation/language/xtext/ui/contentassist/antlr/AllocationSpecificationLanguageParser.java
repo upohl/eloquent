@@ -40,7 +40,7 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getSpecificationAccess().getAlternatives_4(), "rule__Specification__Alternatives_4");
 					put(grammarAccess.getConstraintAccess().getAlternatives_1(), "rule__Constraint__Alternatives_1");
 					put(grammarAccess.getResourceConstraintAccess().getAlternatives_0(), "rule__ResourceConstraint__Alternatives_0");
-					put(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getAlternatives_0(), "rule__RequiredHardwareResourceInstanceConstraint__Alternatives_0");
+					put(grammarAccess.getLocationConstraintAccess().getAlternatives_0(), "rule__LocationConstraint__Alternatives_0");
 					put(grammarAccess.getCompleteOCLDocumentCSAccess().getAlternatives_1(), "rule__CompleteOCLDocumentCS__Alternatives_1");
 					put(grammarAccess.getCompleteOCLNavigationOperatorNameAccess().getAlternatives(), "rule__CompleteOCLNavigationOperatorName__Alternatives");
 					put(grammarAccess.getClassifierContextDeclCSAccess().getAlternatives_4(), "rule__ClassifierContextDeclCS__Alternatives_4");
@@ -108,7 +108,7 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getConstraintAccess().getGroup(), "rule__Constraint__Group__0");
 					put(grammarAccess.getCoherenceConstraintAccess().getGroup(), "rule__CoherenceConstraint__Group__0");
 					put(grammarAccess.getResourceConstraintAccess().getGroup(), "rule__ResourceConstraint__Group__0");
-					put(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getGroup(), "rule__RequiredHardwareResourceInstanceConstraint__Group__0");
+					put(grammarAccess.getLocationConstraintAccess().getGroup(), "rule__LocationConstraint__Group__0");
 					put(grammarAccess.getMeasureFunctionAccess().getGroup(), "rule__MeasureFunction__Group__0");
 					put(grammarAccess.getMeasureFunctionAccess().getGroup_2(), "rule__MeasureFunction__Group_2__0");
 					put(grammarAccess.getCompleteOCLDocumentCSAccess().getGroup(), "rule__CompleteOCLDocumentCS__Group__0");
@@ -281,9 +281,9 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getResourceConstraintAccess().getNameAssignment_1(), "rule__ResourceConstraint__NameAssignment_1");
 					put(grammarAccess.getResourceConstraintAccess().getTupleDescriptorAssignment_3(), "rule__ResourceConstraint__TupleDescriptorAssignment_3");
 					put(grammarAccess.getResourceConstraintAccess().getExpressionAssignment_5(), "rule__ResourceConstraint__ExpressionAssignment_5");
-					put(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getNameAssignment_1(), "rule__RequiredHardwareResourceInstanceConstraint__NameAssignment_1");
-					put(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getTupleDescriptorAssignment_3(), "rule__RequiredHardwareResourceInstanceConstraint__TupleDescriptorAssignment_3");
-					put(grammarAccess.getRequiredHardwareResourceInstanceConstraintAccess().getExpressionAssignment_5(), "rule__RequiredHardwareResourceInstanceConstraint__ExpressionAssignment_5");
+					put(grammarAccess.getLocationConstraintAccess().getNameAssignment_1(), "rule__LocationConstraint__NameAssignment_1");
+					put(grammarAccess.getLocationConstraintAccess().getTupleDescriptorAssignment_3(), "rule__LocationConstraint__TupleDescriptorAssignment_3");
+					put(grammarAccess.getLocationConstraintAccess().getExpressionAssignment_5(), "rule__LocationConstraint__ExpressionAssignment_5");
 					put(grammarAccess.getMeasureFunctionAccess().getServicesAssignment_1(), "rule__MeasureFunction__ServicesAssignment_1");
 					put(grammarAccess.getMeasureFunctionAccess().getServicesAssignment_2_1(), "rule__MeasureFunction__ServicesAssignment_2_1");
 					put(grammarAccess.getCompleteOCLDocumentCSAccess().getOwnedImportsAssignment_0(), "rule__CompleteOCLDocumentCS__OwnedImportsAssignment_0");

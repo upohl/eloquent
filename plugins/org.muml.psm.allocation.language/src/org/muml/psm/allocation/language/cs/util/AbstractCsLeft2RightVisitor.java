@@ -67,6 +67,11 @@ public abstract class AbstractCsLeft2RightVisitor
 	}
 
 	@Override
+	public @Nullable Element visitLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull LocationConstraintCS csElement) {
+		return visitConstraintCS(csElement);
+	}
+
+	@Override
 	public @Nullable Element visitMeasureFunctionCS(org.muml.psm.allocation.language.cs.@NonNull MeasureFunctionCS csElement) {
 		return visitModelElementCS(csElement);
 	}
@@ -84,11 +89,6 @@ public abstract class AbstractCsLeft2RightVisitor
 	@Override
 	public @Nullable Element visitRelationCS(org.muml.psm.allocation.language.cs.@NonNull RelationCS csElement) {
 		return visitNamedElementCS(csElement);
-	}
-
-	@Override
-	public @Nullable Element visitRequiredHardwareResourceInstanceConstraintCS(org.muml.psm.allocation.language.cs.@NonNull RequiredHardwareResourceInstanceConstraintCS csElement) {
-		return visitConstraintCS(csElement);
 	}
 
 	@Override

@@ -40,8 +40,8 @@
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//ResourceConstraint">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//ResourceConstraint/tupleDescriptor"/>
     </genClasses>
-    <genClasses ecoreClass="LanguageSpecificationAS.ecore#//RequiredHardwareResourceInstanceConstraint">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//RequiredHardwareResourceInstanceConstraint/tupleDescriptor"/>
+    <genClasses ecoreClass="LanguageSpecificationAS.ecore#//LocationConstraint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//LocationConstraint/tupleDescriptor"/>
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//TupleDescriptor">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//TupleDescriptor/typedPairs"/>
