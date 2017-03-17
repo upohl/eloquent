@@ -8,7 +8,6 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.junit;bundle-version="4.11.0",
  org.eclipse.core.runtime,
  org.eclipse.emf.ecore;bundle-version="2.10.0";visibility:=reexport,
- org.muml.core;visibility:=reexport,
  org.eclipse.xtend.lib;bundle-version="2.6.0",
  org.eclipse.m2m.qvt.oml;bundle-version="3.4.0",
  org.eclipse.emf.compare;bundle-version="3.1.0",
