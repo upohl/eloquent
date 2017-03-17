@@ -70,7 +70,7 @@ query Relation::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
 	return self.tupleDescriptor.toSequence(tupleValue);
 }
 
-query LocationConstraint::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
+query CoherenceConstraint::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
 	// there should be exactly one typedPair
 	return self.tupleDescriptor.toSequence(tupleValue); 
 }
