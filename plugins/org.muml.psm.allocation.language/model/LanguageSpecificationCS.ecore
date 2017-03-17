@@ -10,7 +10,7 @@
     <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="SpecificationCS" eSuperTypes="../../org.eclipse.ocl.xtext.completeocl/model/CompleteOCLCS.ecore#//CompleteOCLDocumentCS ../../org.muml.core/model/core.ecore#//ExtendableElement">
+  <eClassifiers xsi:type="ecore:EClass" name="SpecificationCS" eSuperTypes="../../org.eclipse.ocl.xtext.completeocl/model/CompleteOCLCS.ecore#//CompleteOCLDocumentCS">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class represents the complete allocation specification."/>
     </eAnnotations>

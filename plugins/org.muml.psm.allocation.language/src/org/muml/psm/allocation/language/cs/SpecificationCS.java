@@ -6,8 +6,6 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLDocumentCS;
 
-import org.muml.core.ExtendableElement;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Specification CS</b></em>'.
@@ -37,7 +35,7 @@ import org.muml.core.ExtendableElement;
  * @model
  * @generated
  */
-public interface SpecificationCS extends CompleteOCLDocumentCS, ExtendableElement {
+public interface SpecificationCS extends CompleteOCLDocumentCS {
 	/**
 	 * Returns the value of the '<em><b>Relations</b></em>' containment reference list.
 	 * The list contents are of type {@link org.muml.psm.allocation.language.cs.RelationCS}.

@@ -22,8 +22,6 @@ import org.eclipse.ocl.xtext.essentialoclcs.EssentialOCLCSPackage;
 
 import org.eclipse.ocl.xtext.oclstdlibcs.OCLstdlibCSPackage;
 
-import org.muml.core.CorePackage;
-
 import org.muml.psm.allocation.language.cs.BoundCS;
 import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.ConstraintCS;
@@ -261,7 +259,6 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		// Initialize simple dependencies
 		CompleteOCLCSPackage.eINSTANCE.eClass();
-		CorePackage.eINSTANCE.eClass();
 		OCLstdlibCSPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -844,7 +841,6 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		// Obtain other dependent packages
 		CompleteOCLCSPackage theCompleteOCLCSPackage = (CompleteOCLCSPackage)EPackage.Registry.INSTANCE.getEPackage(CompleteOCLCSPackage.eNS_URI);
-		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
 		BaseCSPackage theBaseCSPackage = (BaseCSPackage)EPackage.Registry.INSTANCE.getEPackage(BaseCSPackage.eNS_URI);
 		EssentialOCLCSPackage theEssentialOCLCSPackage = (EssentialOCLCSPackage)EPackage.Registry.INSTANCE.getEPackage(EssentialOCLCSPackage.eNS_URI);
 		OCLstdlibCSPackage theOCLstdlibCSPackage = (OCLstdlibCSPackage)EPackage.Registry.INSTANCE.getEPackage(OCLstdlibCSPackage.eNS_URI);
@@ -856,7 +852,6 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		// Add supertypes to classes
 		specificationCSEClass.getESuperTypes().add(theCompleteOCLCSPackage.getCompleteOCLDocumentCS());
-		specificationCSEClass.getESuperTypes().add(theCorePackage.getExtendableElement());
 		evaluatableElementCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
 		relationCSEClass.getESuperTypes().add(theBaseCSPackage.getNamedElementCS());
 		relationCSEClass.getESuperTypes().add(this.getEvaluatableElementCS());

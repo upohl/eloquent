@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.muml.psm.allocation.language/src" modelPluginID="org.muml.psm.allocation.language"
     modelName="LanguageSpecificationCS" rootExtendsInterface="" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     rootImplementsInterface="" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
-    copyrightFields="false" usedGenPackages="../../org.eclipse.ocl.xtext.base/model/BaseCS.genmodel#//basecs ../../org.eclipse.ocl.xtext.completeocl/model/CompleteOCLCS.genmodel#//completeoclcs ../../org.muml.core/model/core.genmodel#//core ../../org.eclipse.ocl.xtext.essentialocl/model/EssentialOCLCS.genmodel#//essentialoclcs ../../org.eclipse.ocl.xtext.oclstdlib/model/OCLstdlibCS.genmodel#//oclstdlibcs ../../org.eclipse.ocl.pivot/model/Pivot.genmodel#//pivot"
+    copyrightFields="false" usedGenPackages="../../org.eclipse.ocl.xtext.base/model/BaseCS.genmodel#//basecs ../../org.eclipse.ocl.xtext.completeocl/model/CompleteOCLCS.genmodel#//completeoclcs ../../org.eclipse.ocl.xtext.essentialocl/model/EssentialOCLCS.genmodel#//essentialoclcs ../../org.eclipse.ocl.xtext.oclstdlib/model/OCLstdlibCS.genmodel#//oclstdlibcs ../../org.eclipse.ocl.pivot/model/Pivot.genmodel#//pivot"
     importOrganizing="true">
   <genAnnotations source="http://www.eclipse.org/OCL/GenModel">
     <details key="Use Null Annotations" value="true"/>

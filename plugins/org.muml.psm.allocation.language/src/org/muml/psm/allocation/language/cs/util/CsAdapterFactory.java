@@ -28,8 +28,6 @@ import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLDocumentCS;
 
 import org.eclipse.ocl.xtext.oclstdlibcs.JavaImplementationCS;
 
-import org.muml.core.ExtendableElement;
-
 import org.muml.psm.allocation.language.cs.*;
 
 /**
@@ -207,10 +205,6 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseCompleteOCLDocumentCS(CompleteOCLDocumentCS object) {
 				return createCompleteOCLDocumentCSAdapter();
-			}
-			@Override
-			public Adapter caseExtendableElement(ExtendableElement object) {
-				return createExtendableElementAdapter();
 			}
 			@Override
 			public Adapter caseTypedElementCS(TypedElementCS object) {
@@ -657,20 +651,6 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCompleteOCLDocumentCSAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.core.ExtendableElement <em>Extendable Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.muml.core.ExtendableElement
-	 * @generated
-	 */
-	public Adapter createExtendableElementAdapter() {
 		return null;
 	}
 

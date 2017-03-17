@@ -26,8 +26,6 @@ import org.eclipse.ocl.xtext.completeoclcs.CompleteOCLDocumentCS;
 
 import org.eclipse.ocl.xtext.oclstdlibcs.JavaImplementationCS;
 
-import org.muml.core.ExtendableElement;
-
 import org.muml.psm.allocation.language.cs.*;
 
 /**
@@ -91,7 +89,6 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 				SpecificationCS specificationCS = (SpecificationCS)theEObject;
 				T result = caseSpecificationCS(specificationCS);
 				if (result == null) result = caseCompleteOCLDocumentCS(specificationCS);
-				if (result == null) result = caseExtendableElement(specificationCS);
 				if (result == null) result = caseNamespaceCS(specificationCS);
 				if (result == null) result = caseRootCS(specificationCS);
 				if (result == null) result = caseNamedElementCS(specificationCS);
@@ -788,21 +785,6 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCompleteOCLDocumentCS(CompleteOCLDocumentCS object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Extendable Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Extendable Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseExtendableElement(ExtendableElement object) {
 		return null;
 	}
 
