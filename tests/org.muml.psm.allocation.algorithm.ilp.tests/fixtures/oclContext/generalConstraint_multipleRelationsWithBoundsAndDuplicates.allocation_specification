@@ -1,8 +1,8 @@
 test {
-	nameProvider  'org.muml.psm.allocation.algorithm.ilp.tests.EcoreNameProvider';
-	storageProvider 'org.muml.psm.allocation.algorithm.ilp.tests.EcoreStorageProvider' ;
+	nameProvider  'org.muml.psm.allocation.algorithm.ilp.tests.EcoreNameProvider'
+	storageProvider 'org.muml.psm.allocation.algorithm.ilp.tests.EcoreStorageProvider' 
 	
-	oclContext ecore::EPackage;
+	oclContext ecore::EPackage
 	
 	import 'http://www.eclipse.org/emf/2002/Ecore'
 		
