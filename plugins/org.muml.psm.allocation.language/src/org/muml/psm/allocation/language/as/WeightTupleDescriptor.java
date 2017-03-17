@@ -8,6 +8,11 @@ package org.muml.psm.allocation.language.as;
  * A representation of the model object '<em><b>Weight Tuple Descriptor</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * A WeightTupleDescriptor defines the expected tuple type of a
+ * QoSDimension's ocl expression.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

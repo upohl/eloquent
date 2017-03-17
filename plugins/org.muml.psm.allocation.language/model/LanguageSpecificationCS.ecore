@@ -1,274 +1,659 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cs" nsURI="http://www.muml.org/psm/allocation/language/cs/1.0.0"
+<ecore:EPackage
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    name="cs"
+    nsURI="http://www.muml.org/psm/allocation/language/cs/1.0.0"
     nsPrefix="cs">
-  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-    <details key="documentation" value="This package describes the abstract syntax of the&#xA;allocation specification language."/>
+  <eAnnotations
+      source="http://www.eclipse.org/emf/2002/GenModel">
+    <details
+        key="documentation"
+        value="This package describes the abstract syntax of the&#xA;allocation specification language."/>
   </eAnnotations>
-  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
-    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
-    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  <eAnnotations
+      source="http://www.eclipse.org/emf/2002/Ecore">
+    <details
+        key="invocationDelegates"
+        value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details
+        key="settingDelegates"
+        value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details
+        key="validationDelegates"
+        value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="SpecificationCS" eSuperTypes="../../org.eclipse.ocl.xtext.completeocl/model/CompleteOCLCS.ecore#//CompleteOCLDocumentCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This class represents the complete allocation specification."/>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="SpecificationCS"
+      eSuperTypes="../../org.eclipse.ocl.xtext.completeocl/model/CompleteOCLCS.ecore#//CompleteOCLDocumentCS">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="This class represents the complete allocation specification."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relations" upperBound="-1"
-        eType="#//RelationCS" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Contains a set of relations."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
-        eType="#//ServiceCS" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Contains a set of services."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="constraints" upperBound="-1"
-        eType="#//ConstraintCS" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Contains a set of constraints."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="measure" eType="#//MeasureFunctionCS"
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="relations"
+        upperBound="-1"
+        eType="#//RelationCS"
         containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Contains the specification of the measure function."/>
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Contains a set of relations."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="goal" eType="#//Goal">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Represents the optimization goal."/>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="services"
+        upperBound="-1"
+        eType="#//ServiceCS"
+        containment="true">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Contains a set of services."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nameProviderImplementationClass"
-        lowerBound="1" eType="#//JavaImplementationProviderCS" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Contains a JavaImplementationProviderCS. This containment won't be&#xA;part of the AS meta model."/>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="constraints"
+        upperBound="-1"
+        eType="#//ConstraintCS"
+        containment="true">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Contains a set of constraints."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nameProvider" eType="#//NameProviderCS">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="This reference is not used in the CS model. It is only needed in order to&#xA;automatically create a corresponding reference in the AS meta model."/>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="measure"
+        eType="#//MeasureFunctionCS"
+        containment="true">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Contains the specification of the measure function."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="storageProviderImplementationClass"
-        lowerBound="1" eType="#//JavaImplementationProviderCS" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Contains a JavaImplementationProviderCS. This containment won't be&#xA;part of the AS meta model."/>
+    <eStructuralFeatures
+        xsi:type="ecore:EAttribute"
+        name="goal"
+        eType="#//Goal">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Represents the optimization goal."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="storageProvider" eType="#//StorageProviderCS">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="This reference is not used in the CS model. It is only needed in order to&#xA;automatically create a corresponding reference in the AS meta model."/>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="nameProviderImplementationClass"
+        lowerBound="1"
+        eType="#//JavaImplementationProviderCS"
+        containment="true">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Contains a JavaImplementationProviderCS. This containment won't be&#xA;part of the AS meta model."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="oclContext" lowerBound="1"
-        eType="#//OCLContextCS" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Contains/Refers to the OCLContextCS/OCLContext element (for the&#xA;details see OCLContextCS/OCLContext)."/>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="nameProvider"
+        eType="#//NameProviderCS">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="This reference is not used in the CS model. It is only needed in order to&#xA;automatically create a corresponding reference in the AS meta model."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="storageProviderImplementationClass"
+        lowerBound="1"
+        eType="#//JavaImplementationProviderCS"
+        containment="true">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Contains a JavaImplementationProviderCS. This containment won't be&#xA;part of the AS meta model."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="storageProvider"
+        eType="#//StorageProviderCS">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="This reference is not used in the CS model. It is only needed in order to&#xA;automatically create a corresponding reference in the AS meta model."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="oclContext"
+        lowerBound="1"
+        eType="#//OCLContextCS"
+        containment="true">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Contains/Refers to the OCLContextCS/OCLContext element (for the&#xA;details see OCLContextCS/OCLContext)."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EvaluatableElementCS" abstract="true"
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="EvaluatableElementCS"
+      abstract="true"
       eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This class represents an abstract, evaluatable domain element, that is an&#xA;element for which an OCL expression can be specified."/>
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="This class represents an abstract, evaluatable domain element, that is an&#xA;element for which an OCL expression can be specified."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="expression"
+        lowerBound="1"
         eType="ecore:EClass ../../org.eclipse.ocl.xtext.essentialocl/model/EssentialOCLCS.ecore#//ContextCS"
         containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Represents the concrete syntax of an OCL expression."/>
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Represents the concrete syntax of an OCL expression."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RelationCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS #//EvaluatableElementCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This class represents a relation. A relation is used to relate source objects&#xA;to at least lowerBound many and at most upperBound many target objects.&#xA;&#xA;XXX: in some sense RelationCS is also a constraint - should we inherit from&#xA;ConstraintCS?"/>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="RelationCS"
+      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS #//EvaluatableElementCS">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="This class represents a relation. A relation is used to relate source objects&#xA;to at least lowerBound many and at most upperBound many target objects.&#xA;&#xA;XXX: in some sense RelationCS is also a constraint - should we inherit from&#xA;ConstraintCS?"/>
     </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="exactlyOnePair"/>
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/Ecore">
+      <details
+          key="constraints"
+          value="exactlyOnePair"/>
     </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="exactlyOnePair" value="self.tupleDescriptor.typedPairs->size() = 1"/>
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details
+          key="exactlyOnePair"
+          value="self.tupleDescriptor.typedPairs->size() = 1"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tupleDescriptor" lowerBound="1"
-        eType="#//TupleDescriptorCS" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A tuple descriptor."/>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="tupleDescriptor"
+        lowerBound="1"
+        eType="#//TupleDescriptorCS"
+        containment="true">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="A tuple descriptor."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lowerBound" lowerBound="1"
-        eType="#//BoundCS" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A lower bound (see documentation of the RelationCS class)."/>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="lowerBound"
+        lowerBound="1"
+        eType="#//BoundCS"
+        containment="true">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="A lower bound (see documentation of the RelationCS class)."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="upperBound" lowerBound="1"
-        eType="#//BoundCS" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="An upper bound (see documentation of the RelationCS class)."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BoundCS" eSuperTypes="#//EvaluatableElementCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This class represents a bound. Usually, the ocl expression evaluates to&#xA;an Integer."/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConstraintCS" abstract="true" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS #//EvaluatableElementCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Abstract base class for constraints."/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="LocationConstraintTypes">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This enumeration defines all location constraints."/>
-    </eAnnotations>
-    <eLiterals name="SAME_LOCATION"/>
-    <eLiterals name="DIFFERENT_LOCATION" value="1"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LocationConstraintCS" eSuperTypes="#//ConstraintCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This class either represents a SAME_LOCATION or DIFFERENT_LOCATION&#xA;constraint. A constraint of the type SAME_LOCATION specifies that a set of&#xA;component instances have to be allocated to the same hardware resource&#xA;instance. The DIFFERENT_LOCATION type constraint is the opposite&#xA;of the SAME_LOCATION type."/>
-    </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="exactlyOnePair"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="exactlyOnePair" value="self.tupleDescriptor.typedPairs->size() = 1"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tupleDescriptor" lowerBound="1"
-        eType="#//TupleDescriptorCS" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A set of location tuple descriptors."/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//LocationConstraintTypes">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Represents the type of the location constraint."/>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="upperBound"
+        lowerBound="1"
+        eType="#//BoundCS"
+        containment="true">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="An upper bound (see documentation of the RelationCS class)."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResourceConstraintCS" eSuperTypes="#//ConstraintCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This class represents a &quot;resource&quot; constraint, which can be used&#xA;to specify resource limits (like the maximum amount of available memory)&#xA;for a hardware resource instance."/>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="BoundCS"
+      eSuperTypes="#//EvaluatableElementCS">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="This class represents a bound. Usually, the ocl expression evaluates to&#xA;an Integer."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tupleDescriptor" lowerBound="1"
-        eType="#//BoundWeightTupleDescriptorCS" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Represents the tuple descriptor for the right-hand side of the inequality."/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RequiredHardwareResourceInstanceConstraintCS"
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="ConstraintCS"
+      abstract="true"
+      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS #//EvaluatableElementCS">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="Abstract base class for constraints."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers
+      xsi:type="ecore:EEnum"
+      name="LocationConstraintTypes">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="This enumeration defines all location constraints."/>
+    </eAnnotations>
+    <eLiterals
+        name="SAME_LOCATION"/>
+    <eLiterals
+        name="DIFFERENT_LOCATION"
+        value="1"/>
+  </eClassifiers>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="LocationConstraintCS"
       eSuperTypes="#//ConstraintCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This class represents a &quot;required hardware resource instance&quot; constraint&#xA;which can be used to limit the number of potential hardware resource&#xA;instances for a specific component instance."/>
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="This class either represents a SAME_LOCATION or DIFFERENT_LOCATION&#xA;constraint. A constraint of the type SAME_LOCATION specifies that a set of&#xA;component instances have to be allocated to the same hardware resource&#xA;instance. The DIFFERENT_LOCATION type constraint is the opposite&#xA;of the SAME_LOCATION type."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tupleDescriptor" lowerBound="1"
-        eType="#//TupleDescriptorCS" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A set of component resource tuple descriptors."/>
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/Ecore">
+      <details
+          key="constraints"
+          value="exactlyOnePair"/>
+    </eAnnotations>
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details
+          key="exactlyOnePair"
+          value="self.tupleDescriptor.typedPairs->size() = 1"/>
+    </eAnnotations>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="tupleDescriptor"
+        lowerBound="1"
+        eType="#//TupleDescriptorCS"
+        containment="true">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="A set of location tuple descriptors."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures
+        xsi:type="ecore:EAttribute"
+        name="type"
+        lowerBound="1"
+        eType="#//LocationConstraintTypes">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Represents the type of the location constraint."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TupleDescriptorCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="typedPairs" lowerBound="1"
-        upperBound="-1" eType="#//TypedPairCS" containment="true"/>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="ResourceConstraintCS"
+      eSuperTypes="#//ConstraintCS">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="This class represents a &quot;resource&quot; constraint, which can be used&#xA;to specify resource limits (like the maximum amount of available memory)&#xA;for a hardware resource instance."/>
+    </eAnnotations>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="tupleDescriptor"
+        lowerBound="1"
+        eType="#//BoundWeightTupleDescriptorCS"
+        containment="true">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Represents the tuple descriptor for the right-hand side of the inequality."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WeightTupleDescriptorCS" eSuperTypes="#//TupleDescriptorCS">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weight" lowerBound="1"
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="RequiredHardwareResourceInstanceConstraintCS"
+      eSuperTypes="#//ConstraintCS">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="This class represents a &quot;required hardware resource instance&quot; constraint&#xA;which can be used to limit the number of potential hardware resource&#xA;instances for a specific component instance."/>
+    </eAnnotations>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="tupleDescriptor"
+        lowerBound="1"
+        eType="#//TupleDescriptorCS"
+        containment="true">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="A set of component resource tuple descriptors."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="TupleDescriptorCS"
+      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="A TupleDescriptor is used to define an expected tuple type. It consists&#xA;of at least one typed pair. A typed pair describes the source-target&#xA;relationship of two distinct named parts that belong to the same tuple&#xA;type."/>
+    </eAnnotations>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="typedPairs"
+        lowerBound="1"
+        upperBound="-1"
+        eType="#//TypedPairCS"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="WeightTupleDescriptorCS"
+      eSuperTypes="#//TupleDescriptorCS">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="A WeightTupleDescriptor defines the expected tuple type of a&#xA;QoSDimension's ocl expression."/>
+    </eAnnotations>
+    <eStructuralFeatures
+        xsi:type="ecore:EAttribute"
+        name="weight"
+        lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BoundWeightTupleDescriptorCS" eSuperTypes="#//WeightTupleDescriptorCS">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bound" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TypedNamedPartCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//TypedElementCS"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TypedPairCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="first" lowerBound="1" eType="#//TypedNamedPartCS"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="second" lowerBound="1"
-        eType="#//TypedNamedPartCS" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MeasureFunctionCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This class represents the measure function."/>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="BoundWeightTupleDescriptorCS"
+      eSuperTypes="#//WeightTupleDescriptorCS">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="A BoundWeightTupleDescriptor defines the expected tuple type of a&#xA;ResourceConstraint's ocl expression."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
+    <eStructuralFeatures
+        xsi:type="ecore:EAttribute"
+        name="bound"
+        lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="TypedNamedPartCS"
+      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//TypedElementCS">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="This class corresponds to a named part of an OCL tuple."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="TypedPairCS"
+      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="This class defines the source-target relationship of two distinct&#xA;named parts that belong to the same tuple type."/>
+    </eAnnotations>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="first"
+        lowerBound="1"
+        eType="#//TypedNamedPartCS"
+        containment="true">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="The named part that is defined by this typed pair represents the &quot;source&quot;."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="second"
+        lowerBound="1"
+        eType="#//TypedNamedPartCS"
+        containment="true">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="The named part that is defined by this typed pair represents the &quot;target&quot;."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="MeasureFunctionCS"
+      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="This class represents the measure function."/>
+    </eAnnotations>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="services"
+        upperBound="-1"
         eType="#//ServiceCS">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Set of services which are used as summands in the measure function."/>
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Set of services which are used as summands in the measure function."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Goal">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Declares possible values for an optimzation goal."/>
+  <eClassifiers
+      xsi:type="ecore:EEnum"
+      name="Goal">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="Declares possible values for an optimzation goal."/>
     </eAnnotations>
-    <eLiterals name="MAX"/>
-    <eLiterals name="MIN" value="1"/>
+    <eLiterals
+        name="MAX"/>
+    <eLiterals
+        name="MIN"
+        value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ServiceCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This class represents a service. A service represents a particular function&#xA;of the system."/>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="ServiceCS"
+      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="This class represents a service. A service represents a particular function&#xA;of the system."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dimensions" upperBound="-1"
-        eType="#//QoSDimensionCS" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="This containment contains all quality of service dimensions which&#xA;belong to this service."/>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="dimensions"
+        upperBound="-1"
+        eType="#//QoSDimensionCS"
+        containment="true">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="This containment contains all quality of service dimensions which&#xA;belong to this service."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QoSDimensionCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS #//EvaluatableElementCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="This class represents a quality of service dimension. The metric of the&#xA;quality of service dimension is specified via the inherited &quot;expression&quot;&#xA;reference"/>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="QoSDimensionCS"
+      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//NamedElementCS #//EvaluatableElementCS">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="This class represents a quality of service dimension. The metric of the&#xA;quality of service dimension is specified via the inherited &quot;expression&quot;&#xA;reference"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tupleDescriptor" lowerBound="1"
-        eType="#//WeightTupleDescriptorCS" containment="true"/>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="tupleDescriptor"
+        lowerBound="1"
+        eType="#//WeightTupleDescriptorCS"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JavaImplementationProviderCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS ../../org.eclipse.ocl.xtext.oclstdlib/model/OCLstdlibCS.ecore#//JavaImplementationCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="The sole purpose of this class is to make oclstdlibcs::JavaImplementationCS&#xA;&quot;concrete&quot;. In order to make the visitor framework happy, we also inherit from&#xA;ModelElementCS.&#xA;The corresponding class in the AS meta model is unused."/>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="JavaImplementationProviderCS"
+      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS ../../org.eclipse.ocl.xtext.oclstdlib/model/OCLstdlibCS.ecore#//JavaImplementationCS">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="The sole purpose of this class is to make oclstdlibcs::JavaImplementationCS&#xA;&quot;concrete&quot;. In order to make the visitor framework happy, we also inherit from&#xA;ModelElementCS.&#xA;The corresponding class in the AS meta model is unused."/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NameProviderCS" abstract="true" interface="true">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="A NameProvider is used to compute a (unique) name for a given model element.&#xA;That is, there exists a bijection between the set of names returned by a NameProvider&#xA;instance and the set of objects that were passed to this NameProvider instance's&#xA;getName method."/>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="NameProviderCS"
+      abstract="true"
+      interface="true">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="A NameProvider is used to compute a (unique) name for a given model element.&#xA;That is, there exists a bijection between the set of names returned by a NameProvider&#xA;instance and the set of objects that were passed to this NameProvider instance's&#xA;getName method."/>
     </eAnnotations>
-    <eOperations name="getName" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eParameters name="element" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object"/>
+    <eOperations
+        name="getName"
+        lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eParameters
+          name="element"
+          lowerBound="1"
+          eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object"/>
     </eOperations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StorageProviderCS" abstract="true" interface="true">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="A StorageProvider is used to store relations between model objects."/>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="StorageProviderCS"
+      abstract="true"
+      interface="true">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="A StorageProvider is used to store relations between model objects."/>
     </eAnnotations>
-    <eOperations name="initialize" lowerBound="1">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="This method can be used to initialize the StorageProvider. This method&#xA;is called only once. It is called before any call to the &quot;store&quot; method is&#xA;made. The context parameter is the context object that is passed to&#xA;the qvto transformation."/>
+    <eOperations
+        name="initialize"
+        lowerBound="1">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="This method can be used to initialize the StorageProvider. This method&#xA;is called only once. It is called before any call to the &quot;store&quot; method is&#xA;made. The context parameter is the context object that is passed to&#xA;the qvto transformation."/>
       </eAnnotations>
-      <eParameters name="context" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object"/>
+      <eParameters
+          name="context"
+          lowerBound="1"
+          eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object"/>
     </eOperations>
-    <eOperations name="store" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Store the relation between the object &quot;source&quot; and the object &quot;target&quot;.&#xA;This method might return an arbitrary object or null. If it returns an object,&#xA;it is passed to a qvto transformation - so it should implement the EObject&#xA;interface."/>
+    <eOperations
+        name="store"
+        lowerBound="1"
+        eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Store the relation between the object &quot;source&quot; and the object &quot;target&quot;.&#xA;This method might return an arbitrary object or null. If it returns an object,&#xA;it is passed to a qvto transformation - so it should implement the EObject&#xA;interface."/>
       </eAnnotations>
-      <eParameters name="source" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object"/>
-      <eParameters name="target" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object"/>
+      <eParameters
+          name="source"
+          lowerBound="1"
+          eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object"/>
+      <eParameters
+          name="target"
+          lowerBound="1"
+          eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object"/>
     </eOperations>
-    <eOperations name="noRelationFound" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Called if no relation could be found that satisfies all constraints. Can&#xA;be used to return, for instance, an empty SystemAllocation object or null.&#xA;Note: maybe we will remove this method again (for now, we just introduced&#xA;it to pass the existing testcases (in particular&#xA;algorithmMain/nonexistenAllocation.allocation_specification))."/>
+    <eOperations
+        name="noRelationFound"
+        lowerBound="1"
+        eType="ecore:EDataType ../../org.eclipse.ocl.pivot/model/Pivot.ecore#//Object">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/GenModel">
+        <details
+            key="documentation"
+            value="Called if no relation could be found that satisfies all constraints. Can&#xA;be used to return, for instance, an empty SystemAllocation object or null.&#xA;Note: maybe we will remove this method again (for now, we just introduced&#xA;it to pass the existing testcases (in particular&#xA;algorithmMain/nonexistenAllocation.allocation_specification))."/>
       </eAnnotations>
     </eOperations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OCLContextCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//TypedElementCS">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="An OCLContext is a typed element whose type is used as the type of&#xA;an ocl expression's &quot;self&quot; variable (if the ocl expression is &quot;owned&quot; by a&#xA;constraint or qos dimension)."/>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="OCLContextCS"
+      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//TypedElementCS">
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/GenModel">
+      <details
+          key="documentation"
+          value="An OCLContext is a typed element whose type is used as the type of&#xA;an ocl expression's &quot;self&quot; variable (if the ocl expression is &quot;owned&quot; by a&#xA;constraint or qos dimension)."/>
     </eAnnotations>
   </eClassifiers>
 </ecore:EPackage>

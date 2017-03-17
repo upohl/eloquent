@@ -9,6 +9,11 @@ import org.eclipse.ocl.pivot.Element;
  * A representation of the model object '<em><b>Typed Pair</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * This class defines the source-target relationship of two distinct
+ * named parts that belong to the same tuple type.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -30,6 +35,9 @@ public interface TypedPair extends Element {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The named part that is defined by this typed pair represents the "source".
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>First</em>' containment reference.
 	 * @see #setFirst(TypedNamedPart)
 	 * @see org.muml.psm.allocation.language.as.AsPackage#getTypedPair_First()
@@ -56,6 +64,9 @@ public interface TypedPair extends Element {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The named part that is defined by this typed pair represents the "target".
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Second</em>' containment reference.
 	 * @see #setSecond(TypedNamedPart)
 	 * @see org.muml.psm.allocation.language.as.AsPackage#getTypedPair_Second()

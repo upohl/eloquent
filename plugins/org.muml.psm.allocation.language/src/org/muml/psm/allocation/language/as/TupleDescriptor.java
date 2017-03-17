@@ -11,6 +11,13 @@ import org.eclipse.ocl.pivot.Element;
  * A representation of the model object '<em><b>Tuple Descriptor</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * A TupleDescriptor is used to define an expected tuple type. It consists
+ * of at least one typed pair. A typed pair describes the source-target
+ * relationship of two distinct named parts that belong to the same tuple
+ * type.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

@@ -8,6 +8,11 @@ package org.muml.psm.allocation.language.as;
  * A representation of the model object '<em><b>Bound Weight Tuple Descriptor</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * A BoundWeightTupleDescriptor defines the expected tuple type of a
+ * ResourceConstraint's ocl expression.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
