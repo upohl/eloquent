@@ -27,5 +27,6 @@ Export-Package: de.fraunhofer.iem,
  de.fraunhofer.iem.seminarOrga.util,
  de.fraunhofer.iem.serializer,
  de.fraunhofer.iem.services,
- de.fraunhofer.iem.validation
+ de.fraunhofer.iem.validation,
+ de.fraunhofer.iem.formatting2
 Import-Package: org.apache.log4j
