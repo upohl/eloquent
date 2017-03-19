@@ -16,15 +16,17 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.emf.common,
  org.muml.psm.allocation.language;bundle-version="0.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: de.fraunhofer.iem.parser.antlr,
- de.fraunhofer.iem.projectPlanning.impl,
- de.fraunhofer.iem.serializer,
- de.fraunhofer.iem.projectPlanning,
- de.fraunhofer.iem.parser.antlr.internal,
- de.fraunhofer.iem.scoping,
- de.fraunhofer.iem.services,
- de.fraunhofer.iem.projectPlanning.util,
- de.fraunhofer.iem.validation,
+Export-Package: de.fraunhofer.iem,
+ de.fraunhofer.iem.formatting2,
  de.fraunhofer.iem.generator,
- de.fraunhofer.iem
+ de.fraunhofer.iem.parser.antlr,
+ de.fraunhofer.iem.parser.antlr.internal,
+ de.fraunhofer.iem.projectPlanning,
+ de.fraunhofer.iem.projectPlanning.impl,
+ de.fraunhofer.iem.projectPlanning.util,
+ de.fraunhofer.iem.provider,
+ de.fraunhofer.iem.scoping,
+ de.fraunhofer.iem.serializer,
+ de.fraunhofer.iem.services,
+ de.fraunhofer.iem.validation
 Import-Package: org.apache.log4j
