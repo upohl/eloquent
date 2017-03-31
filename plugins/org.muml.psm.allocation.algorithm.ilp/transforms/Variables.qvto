@@ -3,6 +3,7 @@ import Util;
 import VariableHelper;
 
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
+modeltype expressions uses core::expressions('http://www.muml.org/core/expressions/1.0.0');
 modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
 
 library Variables;
@@ -12,44 +13,31 @@ helper Sequence(OclAny)::createHelperVariablesAndConstraints(inout ilp : Integer
 	if (not variable.oclIsUndefined()) then {
 		return variable;
 	} endif;
-	-- indicates a specification error
-	assert fatal (self->size() > 2) with
-		log("sequence elements were never related to each other");
-	var left : Sequence(OclAny) := self->subSequence(1, self->size() - 2);
-	var right : Sequence(OclAny) := self->subSequence(3, self->size());
-	var leftVariable : Variable := left->createHelperVariablesAndConstraints(ilp);
-	var rightVariable : Variable := right->createHelperVariablesAndConstraints(ilp);
 	variable := self->map createBinaryVariable();
 	ilp.variables += variable;
-	createHelperVariableConstraints(ilp, leftVariable, rightVariable, variable);
+	var sequences : Sequence(Sequence(OclAny)) := self->getSequences();
+	sequences->forEach(seq) {
+		var seqVariable : Variable := seq->getVariable();
+		assert fatal (not variable.oclIsUndefined()) with
+			log("no variable for sequence found");
+		ilp.constraints += new ConstraintExpression(new VariableExpression(variable),
+			new VariableExpression(seqVariable), ComparingOperator::LESS_OR_EQUAL,
+			null);
+	};
+	var lhs : Expression := sequences->createAdditionExpression();
+	var rhs : Expression := new ArithmeticExpression(
+		new LiteralExpression((sequences->size() - 1).toString()),
+		new VariableExpression(variable), ArithmeticOperator::PLUS);
+	ilp.constraints += new ConstraintExpression(lhs, rhs,
+		ComparingOperator::LESS_OR_EQUAL, null);
 	return variable;
 }
 
-helper createHelperVariableConstraints(inout ilp : IntegerLinearProgram, leftVariable : Variable,
-	rightVariable : Variable, variable : Variable) {
-	ilp.constraints += createHelperVariableConstraint(leftVariable, variable);
-	ilp.constraints += createHelperVariableConstraint(rightVariable, variable);
-	ilp.constraints += createHelperVariableConstraint(leftVariable, rightVariable, variable);
-}
-
-helper createHelperVariableConstraint(reducedVariable : Variable, variable : Variable) : ConstraintExpression {
-	return new ConstraintExpression(new VariableExpression(variable),
-		new VariableExpression(reducedVariable), ComparingOperator::LESS_OR_EQUAL, null);
-}
-
-helper createHelperVariableConstraint(leftVariable : Variable,
-	rightVariable : Variable, variable : Variable) : ConstraintExpression {
-	return new ConstraintExpression(
-		new ArithmeticExpression(
-			new VariableExpression(leftVariable),
-			new VariableExpression(rightVariable),
-			ArithmeticOperator::PLUS
-		),
-		new ArithmeticExpression(
-			new LiteralExpression('1'),
-			new VariableExpression(variable),
-			ArithmeticOperator::PLUS
-		), ComparingOperator::LESS_OR_EQUAL, null
+query Sequence(OclAny)::getSequences() : Sequence(Sequence(OclAny)) {
+	assert fatal (self->size() > 2 and self->size().mod(2) = 0) with
+		log("illegal sequence");
+	return getOddNumbers(1, self->size())->collectNested(i |
+		Sequence { self->at(i), self->at(i + 1) }
 	);
 }
 

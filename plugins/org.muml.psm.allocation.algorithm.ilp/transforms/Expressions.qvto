@@ -36,8 +36,7 @@ constructor ConstraintExpression::ConstraintExpression(lhs : Expression, rhs : E
 	} endif;
 }
 
-helper Sequence(Sequence(OclAny))::createAdditionConstraintExpression(op : ComparingOperator, lit : String, comment : String)
-	: ConstraintExpression {
+helper Sequence(Sequence(OclAny))::createAdditionExpression() : Expression {
 	var lhs : Expression := null;
 	self->reverse()->forEach(seq) {
 		var variableExpression : VariableExpression := new VariableExpression(seq->getVariable()); 
@@ -47,6 +46,13 @@ helper Sequence(Sequence(OclAny))::createAdditionConstraintExpression(op : Compa
 			lhs := new ArithmeticExpression(variableExpression, lhs, ArithmeticOperator::PLUS)
 		endif;
 	};
+	return lhs;
+}
+
+helper Sequence(Sequence(OclAny))::createAdditionConstraintExpression(op : ComparingOperator, lit : String, comment : String)
+	: ConstraintExpression {
+	-- no forEach here (we want to call the "real" operation)
+	var lhs : Expression := self->createAdditionExpression();
 	return new ConstraintExpression(lhs, new LiteralExpression(lit),
 		op, comment);
 }
