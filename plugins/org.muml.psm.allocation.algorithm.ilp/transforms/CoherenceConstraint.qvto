@@ -54,7 +54,7 @@ helper Sequence(OclAny)::createHelperVariables(specification : Specification,
 	assert fatal (commonRelations->notEmpty()) with
 		log("no common relations found");
 	commonRelations->forEach(seq) {
-		seq->createHelperVariablesAndConstraints(ilp);
+		seq->createHelperVariableAndConstraints(ilp);
 	}
 }
 

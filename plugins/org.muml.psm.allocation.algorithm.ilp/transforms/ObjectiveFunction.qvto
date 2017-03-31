@@ -33,7 +33,7 @@ helper Specification::createAdditionExpression(inout ilp : IntegerLinearProgram,
 		sequence->collectNested(tv : TupleValue |
 			tv.toSequence()->sortComponentResourceSequence()
 		)->forEach(seq) {
-			seq->createHelperVariablesAndConstraints(ilp);
+			seq->createHelperVariableAndConstraints(ilp);
 		};
 		expression := sequence->createWeightingComponentResourceTuplesAdditionExpression(qosDimension.tupleDescriptor, expression);
 	};

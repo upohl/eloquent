@@ -34,7 +34,7 @@ helper LocationConstraint::createLocationConstraint(inout ilp : IntegerLinearPro
 		->sortComponentResourceSequences(); 
 	log("SORT");
 	sequences->forEach(seq) {
-		seq->createHelperVariablesAndConstraints(ilp);
+		seq->createHelperVariableAndConstraints(ilp);
 	};
 	while (sequences->notEmpty()) {
 		var cur : Sequence(OclAny) := sequences->first();

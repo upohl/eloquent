@@ -56,7 +56,7 @@ helper TupleValue::createResourceConstraint(inout ilp : IntegerLinearProgram, co
 	sequence->collectNested(tv : TupleValue |
 		tv.toSequence()->sortComponentResourceSequence() // sort the sequence
 	)->forEach(seq) {
-		seq->createHelperVariablesAndConstraints(ilp);
+		seq->createHelperVariableAndConstraints(ilp);
 	};
 	sequence->createResourceConstraintExpression(ilp, constraint, self.getRhsValue(constraint));
 }

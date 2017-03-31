@@ -8,7 +8,7 @@ modeltype common uses core::expressions::common('http://www.muml.org/core/expres
 
 library Variables;
 
-helper Sequence(OclAny)::createHelperVariablesAndConstraints(inout ilp : IntegerLinearProgram) : Variable {
+helper Sequence(OclAny)::createHelperVariableAndConstraints(inout ilp : IntegerLinearProgram) : Variable {
 	var variable : Variable := self->getVariable();
 	if (not variable.oclIsUndefined()) then {
 		return variable;
