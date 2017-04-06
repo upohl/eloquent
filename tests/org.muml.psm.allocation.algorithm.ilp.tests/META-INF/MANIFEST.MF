@@ -4,12 +4,12 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.muml.psm.allocation.algorithm.ilp.tests;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Vendor: %providerName
+Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, Paderborn University, and Fraunhofer Research Institution for Mechatronic Systems Design IEM, Germany
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;bundle-version="2.10.1";visibility:=reexport,
- org.muml.core;bundle-version="1.0.0";visibility:=reexport,
+ org.muml.core;visibility:=reexport,
  org.junit;bundle-version="4.11.0",
  org.eclipse.xtext.xbase.lib;bundle-version="2.7.2",
  org.muml.psm.allocation.algorithm.tests;bundle-version="1.0.0",

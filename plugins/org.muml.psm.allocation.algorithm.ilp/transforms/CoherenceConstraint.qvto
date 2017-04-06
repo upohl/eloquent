@@ -14,8 +14,16 @@ library CoherenceConstraintLib;
 
 helper Specification::createCoherenceConstraints(inout ilp : IntegerLinearProgram,
 	oclContext : OclAny) {
+	var startTime : Integer;
+	var endTime : Integer;
+	startTime := getCurrentTime();
 	self.getCollocationConstraints()->createConstraint(self, ilp, oclContext);
+	endTime := getCurrentTime();
+	log("Time for create CollocationConstraints:"+((endTime-startTime)/1000).toString()+" seconds");
+	startTime := getCurrentTime();
 	self.getSeparateLocationConstraints()->createConstraint(self, ilp, oclContext);
+	endTime := getCurrentTime();
+	log("Time for create SeparateLocationConstraints:"+((endTime-startTime)/1000).toString()+" seconds");
 }
 
 helper CoherenceConstraint::createConstraint(specification : Specification,

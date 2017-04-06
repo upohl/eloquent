@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<templates>
+<template autoinsert="true" context="org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.Constraint" deleted="false" description="new Collocation Constraint" enabled="true" id="org.muml.psm.allocation.language.ui.templates.collocation" name="collocation">constraint collocation myName {&#13;
+	descriptors(first,second);&#13;
+	ocl Tuple{first=self.getSWInstance('name'),&#13;
+		second=self.getSWInstance('name')&#13;
+	}.oclAsSet();&#13;
+}</template>
+<template autoinsert="true" context="org.eclipse.ocl.xtext.completeocl.CompleteOCL.ImportCS" deleted="false" id="org.muml.psm.allocation.language.ui.templates.include" description="add standard include" enabled="true" name="include">include 'platform:/plugin/org.muml.psm.allocation.language.xtext/operations/OCLContext.ocl'</template>
+<template autoinsert="true" context="org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.Constraint" deleted="false" id="org.muml.psm.allocation.language.ui.templates.requiredLocation" description="new requiredLocation Constraint" enabled="true" name="requiredLocation">constraint requiredLocation requiredLocationConstraintName {&#13;
+		descriptors (first, second);&#13;
+		ocl	self.allocateEmbeddedToPlatformInstance('StructuredComponentName', 'PlatformName')&#13;
+		;&#13;
+}</template>
+<template autoinsert="true" context="org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.Constraint"  id="org.muml.psm.allocation.language.ui.templates.requiredResource" deleted="false" description="new requiredResource Constraint" enabled="true" name="requiredResource">constraint requiredResource maxMemoryConsumption {&#13;
+		lhs requiredMemory;&#13;
+		rhs maxMemory;&#13;
+		descriptors (componentInstance, resourceInstance);&#13;
+		ocl	self.maxMemoryConsumption();&#13;
+	}</template>
+<template autoinsert="true" context="org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.Constraint" deleted="false" id="org.muml.psm.allocation.language.ui.templates.separateLocation" description="new separateLocation Constraint" enabled="true" name="separateLocation">constraint separateLocation myName {&#13;
+	descriptors(first,second);&#13;
+	ocl Tuple{first=self.getSWInstance('name'),&#13;
+		second=self.getSWInstance('name')&#13;
+	}.oclAsSet();&#13;
+}</template></templates>

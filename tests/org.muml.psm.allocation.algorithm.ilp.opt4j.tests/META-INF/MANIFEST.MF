@@ -5,9 +5,9 @@ Bundle-SymbolicName: org.muml.psm.allocation.algorithm.ilp.opt4j.tests
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: org.junit;bundle-version="4.11.0",
- org.muml.psm.allocation.ilp;bundle-version="0.1.0",
- org.muml.psm.allocation.algorithm;bundle-version="1.0.0",
- org.muml.psm.allocation.algorithm.ilp.opt4j;bundle-version="1.0.0",
+ org.muml.psm.allocation.ilp,
+ org.muml.psm.allocation.algorithm,
+ org.muml.psm.allocation.algorithm.ilp.opt4j,
  org.eclipse.xtend.lib;bundle-version="2.7.2",
  org.muml.psm.allocation.algorithm.tests;bundle-version="1.0.0",
  org.muml.external.opt4j;bundle-version="3.1.3",

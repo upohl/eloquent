@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.muml.psm.allocation.language.xtext.ui
-Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, University of Paderborn, Germany
+Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, Paderborn University, and Fraunhofer Research Institution for Mechatronic Systems Design IEM, Germany
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: org.muml.psm.allocation.language.xtext.ui;singleton:=true
 Bundle-ActivationPolicy: lazy

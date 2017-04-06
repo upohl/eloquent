@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import org.eclipse.core.runtime.Status;
+import org.eclipse.emf.common.util.BasicMonitor;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation.Kind;
 import org.eclipse.m2m.qvt.oml.util.Dictionary;
@@ -27,13 +29,13 @@ public class LPSolve {
 	}
 	
 	private static int run(String ilpString, Dictionary<String, Integer> solution) {
-		long startTime1 = System.currentTimeMillis();
 		ProcessBuilder pb = new ProcessBuilder(CMD);
 		int ret = -1;
 		try {
 			/*FileWriter fw = new FileWriter("/home/marcus/run.lp");
 			fw.write(ilpString);
 			fw.close();*/
+			long startTime1 = System.currentTimeMillis();
 			Process process = pb.start();
 			process.getOutputStream().write(ilpString.getBytes());
 			process.getOutputStream().close();
@@ -42,9 +44,17 @@ public class LPSolve {
 			
 
 			System.out.println("lp_solve: " + ret);
-			long endTime1 = System.currentTimeMillis();
+			Double finalTime = Double.valueOf(Double.valueOf(System.currentTimeMillis() - startTime1)
+					.doubleValue() / 1000d);
+		//	long endTime1 = System.currentTimeMillis();
             
-			System.out.println("Runtime solving: " + (endTime1-startTime1) + " milli seconds");
+		//	System.out.println("Runtime solving: " + (endTime1-startTime1) + " milli seconds");
+			
+
+			Status logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,"Time for solving the ILP: "+finalTime+" seconds");
+			// writes log into the .log file within the .metadata folder of the workspace
+			Activator.getDefault().getLog().log(logTransformationTime);
+			
 		} catch (IOException e) {
 			throw new IllegalStateException(e);
 		} catch (InterruptedException e) {

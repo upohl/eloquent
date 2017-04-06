@@ -12,7 +12,7 @@ Require-Bundle: org.eclipse.ocl.pivot;bundle-version="1.0.0",
  org.apache.log4j;bundle-version="1.2.15",
  org.eclipse.xtext.xbase.lib;bundle-version="2.6.0",
  org.eclipse.xtext.generator;bundle-version="2.6.0",
- org.muml.psm.allocation.language.xtext;bundle-version="1.0.0",
+ org.muml.psm.allocation.language.xtext,
  org.eclipse.xtext.ui;bundle-version="2.6.0",
  org.muml.psm.allocation.ilp.lpsolve.xtext;bundle-version="1.0.0",
  org.muml.psm.allocation.context.muml;bundle-version="1.0.0"

@@ -1,15 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<feature
-      id="org.muml.psm.sdk.feature"
-      label="%featureName"
-      version="0.4.0.qualifier"
-      provider-name="%providerName">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><feature id="org.muml.psm.sdk.feature" label="%featureName" provider-name="%providerName" version="1.0.0.qualifier">
 
    <description url="www.muml.org">
       %description
    </description>
 
-   <copyright>
+   <copyright url="%copyrightURL">
       %copyright
    </copyright>
 
@@ -17,13 +12,9 @@
       %license
    </license>
 
-   <includes
-         id="org.muml.psm.feature"
-         version="0.0.0"/>
+   <includes id="org.muml.psm.feature" version="0.0.0"/>
 
-   <includes
-         id="org.muml.psm.source.feature"
-         version="0.0.0"/>
+   <includes id="org.muml.psm.source.feature" version="0.0.0"/>
 
    <requires>
       <import feature="org.muml.core.sdk.feature" version="0.5.0.qualifier"/>

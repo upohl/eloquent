@@ -21,5 +21,5 @@ Bundle-ActivationPolicy: lazy
 Export-Package: org.muml.psm.allocation.algorithm.tests,
  org.muml.psm.allocation.algorithm.tests.qvto,
  org.muml.psm.allocation.algorithm.tests.util
-Bundle-Vendor: %providerName
+Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, Paderborn University, and Fraunhofer Research Institution for Mechatronic Systems Design IEM, Germany
 Bundle-Localization: plugin
