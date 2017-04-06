@@ -45,7 +45,7 @@
 				<artifactId>tycho-surefire-plugin</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-					<testClass>org.muml.psm.allocation.algorithm.ilp.tests.Specification2ILPTestSuite</testClass>
+					<testClass>org.muml.psm.allocation.algorithm.ilp.tests.AllTestsSuite</testClass>
 					<product>org.eclipse.platform.ide</product>
 				</configuration>
 			</plugin>
