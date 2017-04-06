@@ -60,13 +60,14 @@ public class CreateAllocationOperation<T> extends AbstractFujabaExportOperation 
 		}
 		if (!progress.isCanceled()) {
 			progress.subTask(postProcessTaskName);
-			postProcess(algorithm);
+			postProcess(algorithm, diagnostic);
 			progress.worked(10);
 		}
 		return progress.isCanceled() ? Status.CANCEL_STATUS : Status.OK_STATUS;
 	}
 	
-	protected void postProcess(@NonNull AllocationAlgorithm<T> algorithm) {
+	protected void postProcess(@NonNull AllocationAlgorithm<T> algorithm,
+			@NonNull Diagnostic diagnostic) {
 		// can be overridden in a subclass
 	}
 

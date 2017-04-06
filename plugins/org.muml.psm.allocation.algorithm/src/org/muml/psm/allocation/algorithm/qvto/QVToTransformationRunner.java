@@ -1,12 +1,12 @@
 package org.muml.psm.allocation.algorithm.qvto;
 
-import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.core.runtime.Status;
+import org.eclipse.emf.common.util.BasicDiagnostic;
+import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -22,12 +22,12 @@ import org.eclipse.m2m.qvt.oml.ExecutionDiagnostic;
 import org.eclipse.m2m.qvt.oml.ModelExtent;
 import org.eclipse.m2m.qvt.oml.TransformationExecutor;
 import org.eclipse.m2m.qvt.oml.util.StringBufferLog;
-import org.eclipse.m2m.qvt.oml.util.WriterLog;
-import org.muml.psm.allocation.algorithm.Activator;
 
 
 public class QVToTransformationRunner {
 	private static final String RESOURCE_ERRORS = "The resource %s has errors: %s";
+	public static final String LOG_SOURCE =
+			"org.muml.psm.allocation.algorithm.qvto.QVToTransformationRunner";
 	
 	private URI transformationURI;
 	private Map<String, Object> configurationPropertyMap;
@@ -82,80 +82,14 @@ public class QVToTransformationRunner {
 	}
 	
 	public ExecutionDiagnostic runTransformation(@Nullable IProgressMonitor progressMonitor) {
-	//	long startTime = System.currentTimeMillis();
 		TransformationExecutor executor = new TransformationExecutor(
 				transformationURI);
 		ExecutionContext context = createExecutionContext(progressMonitor);
 		ExecutionDiagnostic execDiag = executor.execute(context, createModelExtents());
-	//	long endTime = System.currentTimeMillis();
-     //   double runtime =  (double)(endTime-startTime)/1000;
-	//	System.out.println("Runtime: " + runtime + " seconds");
-		String tempString = log.getContents();
-		int startIndex = tempString.indexOf("Time for create GeneralConstraints:");
-		int endIndex = tempString.indexOf("seconds", startIndex);
-		tempString = tempString.substring(startIndex, endIndex);
-		Status logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,tempString+" seconds");
-		// writes log into the .log file within the .metadata folder of the workspace
-		Activator.getDefault().getLog().log(logTransformationTime);
-		
-		
-		tempString = log.getContents();
-		startIndex = tempString.indexOf("Time for create CollocationConstraints:");
-		endIndex = tempString.indexOf("seconds", startIndex);
-		if(startIndex != -1 && endIndex != -1)
-		{
-			tempString = tempString.substring(startIndex, endIndex);
-			logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,tempString+" seconds");
-			// writes log into the .log file within the .metadata folder of the workspace
-			Activator.getDefault().getLog().log(logTransformationTime);
-		}
-		
-		tempString = log.getContents();
-		startIndex = tempString.indexOf("Time for create SeparateLocationConstraints:");
-		endIndex = tempString.indexOf("seconds", startIndex);
-		if(startIndex != -1 && endIndex != -1)
-		{
-			tempString = tempString.substring(startIndex, endIndex);
-			logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,tempString+" seconds");
-			// writes log into the .log file within the .metadata folder of the workspace
-			Activator.getDefault().getLog().log(logTransformationTime);
-		}
-		
-		tempString = log.getContents();
-		startIndex = tempString.indexOf("Time for create RequiredLocationConstraints:");
-		endIndex = tempString.indexOf("seconds", startIndex);
-		if(startIndex != -1 && endIndex != -1)
-		{
-			tempString = tempString.substring(startIndex, endIndex);
-			logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,tempString+" seconds");
-			// writes log into the .log file within the .metadata folder of the workspace
-			Activator.getDefault().getLog().log(logTransformationTime);
-		}
-		
-		tempString = log.getContents();
-		startIndex = tempString.indexOf("Time for create RequiredResourceConstraints:");
-		endIndex = tempString.indexOf("seconds", startIndex);
-		if(startIndex != -1 && endIndex != -1)
-		{
-			tempString = tempString.substring(startIndex, endIndex);
-			logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,tempString+" seconds");
-			// writes log into the .log file within the .metadata folder of the workspace
-			Activator.getDefault().getLog().log(logTransformationTime);
-		}
-		
-		tempString = log.getContents();
-		startIndex = tempString.indexOf("Time for create ObjectiveFunctions:");
-		endIndex = tempString.indexOf("seconds", startIndex);
-		if(startIndex != -1 && endIndex != -1)
-		{
-			tempString = tempString.substring(startIndex, endIndex);
-			logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,tempString+" seconds");
-			// writes log into the .log file within the .metadata folder of the workspace
-			Activator.getDefault().getLog().log(logTransformationTime);
-		}
-		
-		
-		
+		// hack for time "measurements"
+		Diagnostic logDiagnostic = new BasicDiagnostic(LOG_SOURCE, Diagnostic.OK,
+				log.getContents(), null);
+		execDiag.add(logDiagnostic);
 		return execDiag;
 	}
 	
