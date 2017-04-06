@@ -37,7 +37,6 @@
                 </execution>
             </executions>
       </plugin>
-      <!-- disabled tests for now (there are currently no tests)
       <plugin>
             <groupId>org.eclipse.tycho</groupId>
             <artifactId>tycho-surefire-plugin</artifactId>
@@ -46,7 +45,7 @@
                 <testClass>org.muml.psm.allocation.algorithm.ilp.lpsolve.tests.AllTestsSuite</testClass>
                 <product>org.eclipse.platform.ide</product>
             </configuration>
-    </plugin>-->
+    </plugin>
   </plugins>
 </build>
 </project>
