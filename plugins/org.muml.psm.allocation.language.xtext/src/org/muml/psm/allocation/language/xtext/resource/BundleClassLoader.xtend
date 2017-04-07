@@ -16,8 +16,6 @@ class BundleClassLoader extends ClassLoader {
 	
 	new(Bundle bundle, ClassLoader parent) {
 		super(parent)
-		println("### BundleClassLoader ###")
-		println("symbolicName: " + bundle.symbolicName)
 		if (bundle == null) {
 			throw new IllegalArgumentException(bundleNull)
 		}

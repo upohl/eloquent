@@ -5,7 +5,6 @@ import java.net.URL
 import java.net.URLClassLoader
 import java.util.Enumeration
 import java.util.HashSet
-import org.eclipse.core.resources.IProject
 import org.eclipse.core.runtime.Platform
 import org.eclipse.jdt.core.IJavaProject
 import org.eclipse.jdt.launching.IRuntimeClasspathEntry
@@ -33,8 +32,6 @@ class JavaProjectClassLoader extends ClassLoader {
 	private ClassLoader delegate
 	
 	public new(IJavaProject javaProject, ClassLoader parent) {
-		println("### JavaProjectClassLoader ###")
-		println("name: " + javaProject.project.name)
 		if (javaProject == null) {
 			throw new IllegalArgumentException(projectNull)
 		}
