@@ -18,9 +18,9 @@
       <genEnumLiterals ecoreEnumLiteral="ilp.ecore#//ObjectiveGoal/MAX"/>
     </genEnums>
     <genClasses ecoreClass="ilp.ecore#//IntegerLinearProgram">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ilp.ecore#//IntegerLinearProgram/variables"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ilp.ecore#//IntegerLinearProgram/constraints"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ilp.ecore#//IntegerLinearProgram/objectiveFunction"/>
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference ilp.ecore#//IntegerLinearProgram/variables"/>
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference ilp.ecore#//IntegerLinearProgram/constraints"/>
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference ilp.ecore#//IntegerLinearProgram/objectiveFunction"/>
     </genClasses>
     <genClasses ecoreClass="ilp.ecore#//Variable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ilp.ecore#//Variable/dataType"/>
