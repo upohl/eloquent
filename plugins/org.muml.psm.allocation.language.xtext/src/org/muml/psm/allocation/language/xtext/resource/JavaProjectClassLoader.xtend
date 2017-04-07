@@ -33,6 +33,8 @@ class JavaProjectClassLoader extends ClassLoader {
 	private ClassLoader delegate
 	
 	public new(IJavaProject javaProject, ClassLoader parent) {
+		println("### JavaProjectClassLoader ###")
+		println("name: " + javaProject.project.name)
 		if (javaProject == null) {
 			throw new IllegalArgumentException(projectNull)
 		}
