@@ -31,7 +31,7 @@
     </genClasses>
     <genClasses ecoreClass="ilp.ecore#//ObjectiveFunctionExpression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ilp.ecore#//ObjectiveFunctionExpression/goal"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ilp.ecore#//ObjectiveFunctionExpression/objectiveFunction"/>
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference ilp.ecore#//ObjectiveFunctionExpression/objectiveFunction"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

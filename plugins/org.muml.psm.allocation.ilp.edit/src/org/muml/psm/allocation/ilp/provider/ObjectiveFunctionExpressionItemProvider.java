@@ -63,6 +63,7 @@ public class ObjectiveFunctionExpressionItemProvider
 			super.getPropertyDescriptors(object);
 
 			addGoalPropertyDescriptor(object);
+			addObjectiveFunctionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -85,6 +86,28 @@ public class ObjectiveFunctionExpressionItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Objective Function feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addObjectiveFunctionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ObjectiveFunctionExpression_objectiveFunction_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ObjectiveFunctionExpression_objectiveFunction_feature", "_UI_ObjectiveFunctionExpression_type"),
+				 IlpPackage.Literals.OBJECTIVE_FUNCTION_EXPRESSION__OBJECTIVE_FUNCTION,
+				 true,
+				 false,
+				 false,
+				 null,
 				 null,
 				 null));
 	}
