@@ -69,5 +69,6 @@
    <plugin download-size="0" id="org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit" install-size="0" unpack="false" version="0.0.0"/>
 
    <plugin download-size="0" id="org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit.properties" install-size="0" unpack="false" version="0.0.0"/>
+   <plugin download-size="0" id="org.muml.psm.allocation.context.muml" install-size="0" unpack="false" version="0.0.0"/>
 
 </feature>
