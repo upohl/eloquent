@@ -2,7 +2,6 @@ package org.muml.psm.allocation.ilp.lpsolve.xtext.resource
 
 import com.google.inject.Injector
 import org.eclipse.emf.ecore.EObject
-import org.muml.core.common.xtext.AbstractLanguageResource
 import org.muml.psm.allocation.ilp.IntegerLinearProgram
 import org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolveStandaloneSetup
 
