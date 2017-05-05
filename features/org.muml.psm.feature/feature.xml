@@ -17,6 +17,11 @@
       %license
    </license>
 
+   <url>
+      <discovery label="MechatronicUML" url="http://muml-build.cs.upb.de/job/ELOQUENT-Maven/lastSuccessfulBuild/artifact/org.muml.psm.repository/target/repository/"/>
+      <discovery label="OCL" url="http://download.eclipse.org/modeling/mdt/ocl/updates/interim/6.3.0"/>
+   </url>
+
    <requires>
       <import plugin="org.muml.core.export" version="0.4.0" match="greaterOrEqual"/>
       <import plugin="org.muml.core.common" version="1.0.0" match="greaterOrEqual"/>
