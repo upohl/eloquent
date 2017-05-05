@@ -4,12 +4,12 @@
 PSM MUML
 -->
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>org.muml.psm.repository</artifactId>
+	<artifactId>org.muml.eloquent.repository</artifactId>
 	<packaging>eclipse-repository</packaging>
 	  <parent>
-    <groupId>org.muml.psm</groupId>
-    <artifactId>PlatformSpecificModeling</artifactId>
+    <groupId>org.muml.eloquent</groupId>
+    <artifactId>Eloquent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <groupId>org.muml.psm</groupId>
+  <groupId>org.muml.eloquent</groupId>
 </project>
