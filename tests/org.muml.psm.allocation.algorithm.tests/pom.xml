@@ -4,11 +4,11 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.muml.psm</groupId>
-		<artifactId>PlatformSpecificModeling</artifactId>
+		<groupId>org.muml.eloquent</groupId>
+		<artifactId>Eloquent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<groupId>org.muml.psm</groupId>
+	<groupId>org.muml.eloquent</groupId>
 	<artifactId>org.muml.psm.allocation.algorithm.tests</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>eclipse-test-plugin</packaging>
