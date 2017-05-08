@@ -60,13 +60,19 @@ helper createAllocation(ilpModel : IntegerLinearProgram) {
 	var oclContext : OclAny := getOclContextIn()
 		.getOclContext();
 	specification.storageProvider.initialize(oclContext);
+	var startTime : Integer;
+	var endTime : Integer;
+	startTime := getCurrentTime();
 	var todo : OrderedSet(Variable) := solution->keys()
 		->select(k | solution->get(k) = 1)
 		->sortedBy(name)->asOrderedSet();
 	if (todo->isEmpty()) {
 		specification.storageProvider.noRelationFound().map addToOutExtent();
 	};
+
 	todo->addRelation(specification);
+	endTime := getCurrentTime();
+	log("Time for create allocation model:"+((endTime-startTime)/1000).toString()+" seconds");		
 }
 
 helper solveILP(ilpModel : IntegerLinearProgram, solution : Dict(Variable, Integer)) : Integer {
