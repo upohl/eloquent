@@ -18,7 +18,14 @@ public class LPSolve {
 	private static final String UNEXP_LINE = "unexpected variable line: %s";
 	
 	private static String serialize(IntegerLinearProgram ilp) {
-		return new LPSolveResource().serializeEObject(ilp, null);
+		long startTime1 = System.currentTimeMillis();
+		String ser = new LPSolveResource().serializeEObject(ilp, null);
+		Double finalTime = Double.valueOf(Double.valueOf(System.currentTimeMillis() - startTime1)
+				.doubleValue() / 1000d);
+		Status logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,"Time for serialize the ILP as LPSolveInput: "+finalTime+" seconds");
+		// writes log into the .log file within the .metadata folder of the workspace
+		Activator.getDefault().getLog().log(logTransformationTime);
+		return ser;
 	}
 	
 	@Operation(kind=Kind.QUERY)
