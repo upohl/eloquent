@@ -1,6 +1,7 @@
 package org.muml.psm.allocation.algorithm.ilp.lpsolve;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -30,10 +31,10 @@ public class LPSolve {
 	
 	@Operation(kind=Kind.QUERY)
 	public static int solve(IntegerLinearProgram ilp, Dictionary<String, Integer> solution) {
-		return run(serialize(ilp), solution);
+		return run(ilp, solution);
 	}
 	
-	private static int run(String ilpString, Dictionary<String, Integer> solution) {
+	private static int run(IntegerLinearProgram ilp, Dictionary<String, Integer> solution) {
 		ProcessBuilder pb = new ProcessBuilder(CMD);
 		int ret = -1;
 		try {
@@ -42,7 +43,15 @@ public class LPSolve {
 			fw.close();*/
 			long startTime1 = System.currentTimeMillis();
 			Process process = pb.start();
-			process.getOutputStream().write(ilpString.getBytes());
+			/* alternative code for measuring...
+			ByteArrayOutputStream out = new ByteArrayOutputStream();
+			// serialize start...
+			new LPSolveM2T().serialize(ilp, out);
+			// serialize end...
+			process.getOutputStream().write(out.toByteArray());
+			 * end alternative code (when using this comment out the following new LPSolveM2T()... line
+			 */
+			new LPSolveM2T().serialize(ilp, process.getOutputStream());
 			process.getOutputStream().close();
 			parseOutput(process.getInputStream(), solution);
 			ret = process.waitFor();
