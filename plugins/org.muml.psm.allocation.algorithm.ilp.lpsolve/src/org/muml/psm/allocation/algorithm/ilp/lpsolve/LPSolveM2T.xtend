@@ -16,6 +16,7 @@ import org.muml.psm.allocation.ilp.ObjectiveFunctionExpression
 import org.muml.psm.allocation.ilp.ObjectiveGoal
 import org.muml.psm.allocation.ilp.Variable
 import org.muml.psm.allocation.ilp.VariableExpression
+import org.eclipse.core.runtime.Status
 
 class LPSolveM2T {
 	private static final String illegalExpression = "unexpected Expression: %s"
@@ -23,12 +24,22 @@ class LPSolveM2T {
 	
 	private OutputStream out
 	
+	private long startTime1;
+	private Double finalTime;
+	private Status logTransformationTime;
+	
+	def public Double getFinalTime()
+	{
+		finalTime
+	}
+	
 	def protected void emit(String data) {
 		print(data)
 		out.write(data.bytes)
 	}
 	
 	def serialize(IntegerLinearProgram ilp, OutputStream os) {
+		startTime1 = System.currentTimeMillis();
 		out = new BufferedOutputStream(os)
 		if (ilp.objectiveFunction != null) {
 			emitObjectiveFunction(ilp.objectiveFunction)
@@ -41,7 +52,15 @@ class LPSolveM2T {
 		}
 		// we explicitly do not call close, because this would also close
 		// the underlying stream (which would be OK in our case but...)
+		finalTime = Double.valueOf(Double.valueOf(System.currentTimeMillis() - startTime1)
+					.doubleValue() / 1000d);
+			
+			logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,"Time for serialize the ILP as LPSolveInput: "+finalTime+" seconds")
+			// writes log into the .log file within the .metadata folder of the workspace
+			Activator.getDefault().getLog().log(logTransformationTime)
+		
 		out.flush
+		
 	}
 	
 	def protected emitObjectiveFunction(ObjectiveFunctionExpression objectiveFunctionExpression) {

@@ -41,7 +41,6 @@ public class LPSolve {
 			/*FileWriter fw = new FileWriter("/home/marcus/run.lp");
 			fw.write(ilpString);
 			fw.close();*/
-			long startTime1 = System.currentTimeMillis();
 			Process process = pb.start();
 			/* alternative code for measuring...
 			ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -51,14 +50,16 @@ public class LPSolve {
 			process.getOutputStream().write(out.toByteArray());
 			 * end alternative code (when using this comment out the following new LPSolveM2T()... line
 			 */
-			new LPSolveM2T().serialize(ilp, process.getOutputStream());
+			LPSolveM2T lpsolveM2T = new LPSolveM2T();
+			long startTime1 = System.currentTimeMillis();
+			lpsolveM2T.serialize(ilp, process.getOutputStream());
 			process.getOutputStream().close();
 			parseOutput(process.getInputStream(), solution);
 			ret = process.waitFor();
 			System.out.println("lp_solve: " + ret);
 			// time measuring...
-			Double finalTime = Double.valueOf(Double.valueOf(System.currentTimeMillis() - startTime1)
-					.doubleValue() / 1000d);
+			Double finalTime = ((Double.valueOf(Double.valueOf(System.currentTimeMillis() - startTime1)
+					.doubleValue())-lpsolveM2T.getFinalTime()) / 1000d);
 			Status logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,"Time for solving the ILP: "+finalTime+" seconds");
 			// writes log into the .log file within the .metadata folder of the workspace
 			Activator.getDefault().getLog().log(logTransformationTime);
