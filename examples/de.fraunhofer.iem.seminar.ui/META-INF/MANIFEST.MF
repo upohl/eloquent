@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: de.fraunhofer.iem.seminar.ui
-Bundle-Vendor: My Company
+Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, Paderborn University, and Fraunhofer Research Institution for Mechatronic Systems Design IEM, Germany
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: de.fraunhofer.iem.seminar.ui; singleton:=true
 Bundle-ActivationPolicy: lazy

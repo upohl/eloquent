@@ -1,23 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<feature id="de.fraunhofer.iem.seminar.feature"
-	label="Seminar Feature "
-	version="1.0.0.qualifier">
-	<plugin
-			id="de.fraunhofer.iem.seminar"
-			download-size="0"
-			install-size="0"
-			version="0.0.0"
-			unpack="false"/>
-	<plugin
-			id="de.fraunhofer.iem.seminar.ide"
-			download-size="0"
-			install-size="0"
-			version="0.0.0"
-			unpack="false"/>
-	<plugin
-			id="de.fraunhofer.iem.seminar.ui"
-			download-size="0"
-			install-size="0"
-			version="0.0.0"
-			unpack="false"/>
-</feature>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><feature id="de.fraunhofer.iem.seminar.feature" label="Seminar Feature " provider-name="%providerName" version="1.0.0.qualifier">
+	<plugin download-size="0" id="de.fraunhofer.iem.seminar" install-size="0" unpack="false" version="0.0.0"/>
+	<plugin download-size="0" id="de.fraunhofer.iem.seminar.ide" install-size="0" unpack="false" version="0.0.0"/>
+	<plugin download-size="0" id="de.fraunhofer.iem.seminar.ui" install-size="0" unpack="false" version="0.0.0"/>
+<license url="%licenseURL">
+      %license
+   </license><copyright url="%copyrightURL">
+      %copyright
+   </copyright></feature>

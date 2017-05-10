@@ -5,7 +5,7 @@ Bundle-SymbolicName: de.fraunhofer.iem.seminar.edit;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: de.fraunhofer.iem.seminar.provider.SeminarEditPlugin$Implementation
-Bundle-Vendor: %providerName
+Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, Paderborn University, and Fraunhofer Research Institution for Mechatronic Systems Design IEM, Germany
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: de.fraunhofer.iem.seminar.provider

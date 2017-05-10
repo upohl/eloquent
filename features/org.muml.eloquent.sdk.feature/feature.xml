@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<feature
-      id="org.muml.eloquent.sdk.feature"
-      label="%featureName"
-      version="1.0.0.qualifier"
-      provider-name="%providerName">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><feature id="org.muml.eloquent.sdk.feature" label="%featureName" provider-name="%providerName" version="1.0.0.qualifier">
 
    <description url="www.muml.org">
       %description
@@ -17,13 +12,9 @@
       %license
    </license>
 
-   <includes
-         id="org.muml.eloquent.source.feature"
-         version="0.0.0"/>
+   <includes id="org.muml.eloquent.source.feature" version="0.0.0"/>
 
-   <includes
-         id="org.muml.eloquent.feature"
-         version="0.0.0"/>
+   <includes id="org.muml.eloquent.feature" version="0.0.0"/>
 
    <requires>
       <import feature="org.muml.core.sdk.feature" version="0.5.0.qualifier"/>
