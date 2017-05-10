@@ -2,8 +2,10 @@
 	<plugin download-size="0" id="de.fraunhofer.iem.projectPlanning" install-size="0" unpack="false" version="0.0.0"/>
 	<plugin download-size="0" id="de.fraunhofer.iem.projectPlanning.ide" install-size="0" unpack="false" version="0.0.0"/>
 	<plugin download-size="0" id="de.fraunhofer.iem.projectPlanning.ui" install-size="0" unpack="false" version="0.0.0"/>
-<license url="%licenseURL">
+	<license url="%licenseURL">
       %license
-   </license><copyright url="%copyrightURL">
+   </license>
+	<copyright url="%copyrightURL">
       %copyright
-   </copyright></feature>
+   </copyright>
+</feature>
