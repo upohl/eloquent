@@ -1,7 +1,10 @@
 package org.muml.psm.allocation.algorithm.ilp.lpsolve
 
 import java.io.BufferedOutputStream
+import java.io.File
+import java.io.FileOutputStream
 import java.io.OutputStream
+import org.eclipse.core.runtime.Status
 import org.muml.core.CorePackage
 import org.muml.core.expressions.Expression
 import org.muml.core.expressions.common.ArithmeticExpression
@@ -16,13 +19,14 @@ import org.muml.psm.allocation.ilp.ObjectiveFunctionExpression
 import org.muml.psm.allocation.ilp.ObjectiveGoal
 import org.muml.psm.allocation.ilp.Variable
 import org.muml.psm.allocation.ilp.VariableExpression
-import org.eclipse.core.runtime.Status
 
 class LPSolveM2T {
 	private static final String illegalExpression = "unexpected Expression: %s"
 	private static final String illegalILPDataType = "unexpected ILP Data Type: %s"
 	
 	private OutputStream out
+	private OutputStream fileOut
+	public File myFile
 	
 	private long startTime1;
 	private Double finalTime;
@@ -35,12 +39,15 @@ class LPSolveM2T {
 	
 	def protected void emit(String data) {
 		print(data)
-		out.write(data.bytes)
+	//	out.write(data.bytes)
+		fileOut.write(data.bytes)
 	}
 	
-	def serialize(IntegerLinearProgram ilp, OutputStream os) {
-		startTime1 = System.currentTimeMillis();
-		out = new BufferedOutputStream(os)
+	def serialize(IntegerLinearProgram ilp, String path) {
+		
+	//	out = new BufferedOutputStream(os)
+
+		fileOut = new BufferedOutputStream(new FileOutputStream(myFile = new File(path+"\\ilp2.lp")))
 		if (ilp.objectiveFunction != null) {
 			emitObjectiveFunction(ilp.objectiveFunction)
 		}
@@ -52,14 +59,11 @@ class LPSolveM2T {
 		}
 		// we explicitly do not call close, because this would also close
 		// the underlying stream (which would be OK in our case but...)
-		finalTime = Double.valueOf(Double.valueOf(System.currentTimeMillis() - startTime1)
-					.doubleValue() / 1000d);
-			
-			logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,"Time for serialize the ILP as LPSolveInput: "+finalTime+" seconds")
-			// writes log into the .log file within the .metadata folder of the workspace
-			Activator.getDefault().getLog().log(logTransformationTime)
+
 		
-		out.flush
+	//	out.flush
+		fileOut.flush
+	//	fileOut.close
 		
 	}
 	
