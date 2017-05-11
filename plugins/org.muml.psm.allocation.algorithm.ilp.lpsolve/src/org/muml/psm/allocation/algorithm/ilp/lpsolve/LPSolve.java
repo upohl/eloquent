@@ -10,12 +10,19 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation.Kind;
 import org.eclipse.m2m.qvt.oml.util.Dictionary;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.MessageBox;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.ui.PlatformUI;
 import org.muml.psm.allocation.ilp.IntegerLinearProgram;
 import org.muml.psm.allocation.ilp.lpsolve.xtext.resource.LPSolveResource;
 
 public class LPSolve {
-	private static final String[] CMD = new String[] {"lp_solve", "-lp"};
+	private static final int timeout=60;
+	private static final String[] CMD = new String[] {"lp_solve", "-lp -time -timeout "+timeout};
 	private static final String VAR_SECTION = "Actual values of the variables:";
+	private static final String TIMEOUT = "Timeout";
+	private static final String INFEASIBLE = "This problem is infeasible";
 	private static final String UNEXP_LINE = "unexpected variable line: %s";
 	
 	private static String serialize(IntegerLinearProgram ilp) {
@@ -50,19 +57,12 @@ public class LPSolve {
 			process.getOutputStream().write(out.toByteArray());
 			 * end alternative code (when using this comment out the following new LPSolveM2T()... line
 			 */
-			LPSolveM2T lpsolveM2T = new LPSolveM2T();
-			long startTime1 = System.currentTimeMillis();
-			lpsolveM2T.serialize(ilp, process.getOutputStream());
+			new LPSolveM2T().serialize(ilp, process.getOutputStream());
 			process.getOutputStream().close();
 			parseOutput(process.getInputStream(), solution);
 			ret = process.waitFor();
 			System.out.println("lp_solve: " + ret);
-			// time measuring...
-			Double finalTime = ((Double.valueOf(Double.valueOf(System.currentTimeMillis() - startTime1)
-					.doubleValue())-lpsolveM2T.getFinalTime()) / 1000d);
-			Status logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,"Time for solving the ILP: "+finalTime+" seconds");
-			// writes log into the .log file within the .metadata folder of the workspace
-			Activator.getDefault().getLog().log(logTransformationTime);
+		
 			
 		} catch (IOException e) {
 			throw new IllegalStateException(e);
@@ -74,9 +74,45 @@ public class LPSolve {
 	
 	private static void parseOutput(InputStream in, Dictionary<String, Integer> solution) {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+		Status logTransformationTime;
 		try {
 			boolean variableSection = false;
 			String line = reader.readLine();
+					
+			//Parse the CPU time for solving
+			while(line != null)
+			{
+				if(line.startsWith("CPU Time for solving:"))
+				{	logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,"Time for solving the ILP: "+line.substring(line.indexOf(":")));
+					Activator.getDefault().getLog().log(logTransformationTime);
+				}
+				
+				if(line.startsWith(TIMEOUT))
+				{	
+					Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
+					MessageBox dialog =
+						    new MessageBox(shell, SWT.ICON_QUESTION | SWT.OK);
+						dialog.setText("LP Solve did not find a solution within "+timeout+" seconds");
+						// open dialog and await user selection
+						dialog.open();
+						break;
+				}
+				if(line.startsWith(INFEASIBLE))
+				{
+					Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
+					MessageBox dialog =
+						    new MessageBox(shell, SWT.ICON_QUESTION | SWT.OK);
+						dialog.setText("This problem is infeasible");
+						// open dialog and await user selection
+						dialog.open();
+						
+						break;
+				}
+				line = reader.readLine();
+			}
+			
+			line = reader.readLine();
+			//Parse the results
 			while (line != null) {
 				if (variableSection) {
 					parseLine(line, solution);
