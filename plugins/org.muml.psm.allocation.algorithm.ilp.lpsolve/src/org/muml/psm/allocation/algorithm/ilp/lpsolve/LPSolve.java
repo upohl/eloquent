@@ -11,6 +11,7 @@ import org.eclipse.m2m.qvt.oml.blackbox.java.Operation;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation.Kind;
 import org.eclipse.m2m.qvt.oml.util.Dictionary;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PlatformUI;
@@ -18,8 +19,8 @@ import org.muml.psm.allocation.ilp.IntegerLinearProgram;
 import org.muml.psm.allocation.ilp.lpsolve.xtext.resource.LPSolveResource;
 
 public class LPSolve {
-	private static final int timeout=60;
-	private static final String[] CMD = new String[] {"lp_solve", "-lp -time -timeout "+timeout};
+	private static final String timeout="60";
+	private static final String[] CMD = new String[] {"lp_solve", "-lp", "-time", "-timeout", timeout};
 	private static final String VAR_SECTION = "Actual values of the variables:";
 	private static final String TIMEOUT = "Timeout";
 	private static final String INFEASIBLE = "This problem is infeasible";
@@ -89,24 +90,15 @@ public class LPSolve {
 				
 				if(line.startsWith(TIMEOUT))
 				{	
-					Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
-					MessageBox dialog =
-						    new MessageBox(shell, SWT.ICON_QUESTION | SWT.OK);
-						dialog.setText("LP Solve did not find a solution within "+timeout+" seconds");
-						// open dialog and await user selection
-						dialog.open();
-						break;
+					logTransformationTime = new Status(Status.WARNING,Activator.PLUGIN_ID,"LP Solve did not find a solution within "+timeout+" seconds");
+					Activator.getDefault().getLog().log(logTransformationTime);
+					break;
 				}
 				if(line.startsWith(INFEASIBLE))
 				{
-					Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
-					MessageBox dialog =
-						    new MessageBox(shell, SWT.ICON_QUESTION | SWT.OK);
-						dialog.setText("This problem is infeasible");
-						// open dialog and await user selection
-						dialog.open();
-						
-						break;
+					logTransformationTime = new Status(Status.WARNING,Activator.PLUGIN_ID,"This problem is infeasible");
+					Activator.getDefault().getLog().log(logTransformationTime);
+					break;
 				}
 				line = reader.readLine();
 			}
