@@ -22,6 +22,8 @@ public class LPSolve {
 	private static final String TIMEOUT = "Timeout";
 	private static final String INFEASIBLE = "This problem is infeasible";
 	private static final String UNEXP_LINE = "unexpected variable line: %s";
+	private static final String CPUTIME = "CPU Time for solving:";
+	private static final String LPSOLVETIMEOUT = "LP Solve did not find a solution within ";
 	
 	private static String serialize(IntegerLinearProgram ilp) {
 		long startTime1 = System.currentTimeMillis();
@@ -80,18 +82,13 @@ public class LPSolve {
 			// writes log into the .log file within the .metadata folder of the workspace
 			Activator.getDefault().getLog().log(logTransformationTime);
 			
-			ProcessBuilder pb = new ProcessBuilder("lp_solve", "-lp", "-timeout", timeout, "\""+ lpsolve.myFile.getAbsolutePath()+"\"");
+			ProcessBuilder pb = new ProcessBuilder("lp_solve", "-lp","-time", "-timeout", timeout, "\""+ lpsolve.myFile.getAbsolutePath()+"\"");
 			Process process = pb.start();
-			startTime1 = System.currentTimeMillis();
-
+		
 		//	process.getOutputStream().close();
 			
-			parseOutput(process.getInputStream(), solution);
+			parseOutput(process.getInputStream(), process.getErrorStream(),  solution);
 			ret = process.waitFor();
-			finalTime = Double.valueOf(Double.valueOf(System.currentTimeMillis() - startTime1)
-					.doubleValue() / 1000d);
-			logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,"Time for solving the ILP: "+finalTime+" seconds");
-			Activator.getDefault().getLog().log(logTransformationTime);
 			System.out.println("lp_solve: " + ret);
 		
 			
@@ -103,7 +100,7 @@ public class LPSolve {
 		return ret;
 	}
 	
-	private static void parseOutput(InputStream in, Dictionary<String, Integer> solution) {
+	private static void parseOutput(InputStream in, InputStream err, Dictionary<String, Integer> solution) {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 		
 
@@ -112,11 +109,12 @@ public class LPSolve {
 		try {
 			boolean variableSection = false;
 			String line = reader.readLine();
-					
+
+
 			//Parse the CPU time for solving
 			while(line != null)
 			{
-
+		
 				if(line.startsWith(VAR_SECTION))
 				{
 					variableSection = true;
@@ -124,13 +122,13 @@ public class LPSolve {
 				}
 				if(line.startsWith(TIMEOUT))
 				{	
-					logTransformationTime = new Status(Status.WARNING,Activator.PLUGIN_ID,"LP Solve did not find a solution within "+timeout+" seconds");
+					logTransformationTime = new Status(Status.WARNING,Activator.PLUGIN_ID,LPSOLVETIMEOUT+timeout+" seconds");
 					Activator.getDefault().getLog().log(logTransformationTime);
 					break;
 				}
 				if(line.startsWith(INFEASIBLE))
 				{
-					logTransformationTime = new Status(Status.WARNING,Activator.PLUGIN_ID,"This problem is infeasible");
+					logTransformationTime = new Status(Status.WARNING,Activator.PLUGIN_ID,INFEASIBLE);
 					Activator.getDefault().getLog().log(logTransformationTime);
 					break;
 				}
@@ -148,7 +146,26 @@ public class LPSolve {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
+		
+		try{
+			BufferedReader errReader = new BufferedReader(new InputStreamReader(err));
+			String errLine = errReader.readLine();
+			while(errLine!=null)
+			{
+				if(errLine.startsWith(CPUTIME))
+				{
+					logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,CPUTIME+errLine.substring(errLine.indexOf(":")+1));
+					Activator.getDefault().getLog().log(logTransformationTime);
+					break;
+				}
+				errLine= errReader.readLine();
+			}
+		}
+		 catch (IOException e) {
+				e.printStackTrace();
+				}
+		}	
+	
 	
 	private static void parseLine(String line,  Dictionary<String, Integer> map) {
 		String[] split = line.split("\\s+");
