@@ -1,4 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><feature id="org.muml.eloquent.feature" label="%featureName" provider-name="%providerName" version="1.0.0.qualifier">
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.muml.eloquent.feature"
+      label="%featureName"
+      version="1.0.0.qualifier"
+      provider-name="%providerName">
 
    <description url="www.muml.org">
       %description
@@ -18,21 +23,21 @@
    </url>
 
    <requires>
-      <import match="greaterOrEqual" plugin="org.muml.core.export" version="0.4.0"/>
-      <import match="greaterOrEqual" plugin="org.muml.core.common" version="1.0.0"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.jface" version="3.10.0"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.ui" version="3.106.0"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.ui.ide" version="3.10.0"/>
+      <import plugin="org.muml.core.export" version="0.4.0" match="greaterOrEqual"/>
+      <import plugin="org.muml.core.common" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jface" version="3.10.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui" version="3.106.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.ide" version="3.10.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui.forms"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.core.resources" version="3.9.0"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.m2m.qvt.oml" version="3.4.0"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.jdt.annotation" version="2.0.100"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.ocl.xtext.completeocl" version="1.0.0"/>
+      <import plugin="org.eclipse.core.resources" version="3.9.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2m.qvt.oml" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jdt.annotation" version="2.0.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ocl.xtext.completeocl" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.muml.ape.runtime"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.emf.transaction" version="1.9.0"/>
+      <import plugin="org.eclipse.emf.transaction" version="1.9.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.common"/>
       <import plugin="org.eclipse.core.runtime"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.xtend.lib" version="2.10.0"/>
+      <import plugin="org.eclipse.xtend.lib" version="2.10.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.ecore"/>
       <import plugin="org.muml.core"/>
       <import plugin="org.eclipse.emf.edit"/>
@@ -45,8 +50,8 @@
       <import plugin="org.eclipse.xtext.xbase.lib"/>
       <import plugin="org.apache.log4j"/>
       <import plugin="org.eclipse.xtext.ui"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.ui.editors" version="3.5.0"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.ui.ide" version="3.5.0"/>
+      <import plugin="org.eclipse.ui.editors" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.ide" version="3.5.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.xtext.ui.shared"/>
       <import plugin="org.eclipse.xtext.builder"/>
       <import plugin="org.eclipse.xtext.common.types.ui"/>
@@ -55,53 +60,135 @@
       <import plugin="org.eclipse.ocl.xtext.base"/>
       <import plugin="org.eclipse.ocl.xtext.essentialocl"/>
       <import plugin="org.eclipse.ocl.pivot"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.ocl.xtext.completeocl" version="1.1.0"/>
+      <import plugin="org.eclipse.ocl.xtext.completeocl" version="1.1.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ocl.xtext.oclstdlib"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.ocl.xtext.essentialocl" version="1.0.0"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.emf.ecore" version="2.12.0"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.jdt.launching" version="3.8.100"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.debug.core" version="3.10.100"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.pde.core" version="3.11.0"/>
+      <import plugin="org.eclipse.ocl.xtext.essentialocl" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.ecore" version="2.12.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jdt.launching" version="3.8.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.debug.core" version="3.10.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.pde.core" version="3.11.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.jdt.core"/>
-      <import match="greaterOrEqual" plugin="org.muml.core.export" version="0.5.0"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.ocl.xtext.completeocl.ui" version="1.0.0"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.core.runtime" version="3.11.1"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.ui" version="3.108.0"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.ocl.pivot" version="1.0.0"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.m2m.qvt.oml.runtime" version="3.4.0"/>
-      <import match="greaterOrEqual" plugin="org.eclipse.xtend.lib" version="2.7.2"/>
+      <import plugin="org.muml.core.export" version="0.5.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ocl.xtext.completeocl.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.11.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui" version="3.108.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ocl.pivot" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.m2m.qvt.oml.runtime" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtend.lib" version="2.7.2" match="greaterOrEqual"/>
       <import plugin="org.muml.external.opt4j"/>
       <import plugin="org.muml.external.guice"/>
    </requires>
 
-   <plugin download-size="0" id="org.muml.psm.allocation.algorithm.ui" install-size="0" unpack="false" version="0.0.0"/>
+   <plugin
+         id="org.muml.psm.allocation.algorithm.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" id="org.muml.psm.allocation.ilp" install-size="0" unpack="false" version="0.0.0"/>
+   <plugin
+         id="org.muml.psm.allocation.ilp"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" id="org.muml.psm.allocation.ilp.edit" install-size="0" unpack="false" version="0.0.0"/>
+   <plugin
+         id="org.muml.psm.allocation.ilp.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" id="org.muml.psm.allocation.ilp.lpsolve.xtext" install-size="0" unpack="false" version="0.0.0"/>
+   <plugin
+         id="org.muml.psm.allocation.ilp.lpsolve.xtext"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" id="org.muml.psm.allocation.ilp.lpsolve.xtext.ui" install-size="0" unpack="false" version="0.0.0"/>
+   <plugin
+         id="org.muml.psm.allocation.ilp.lpsolve.xtext.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" id="org.muml.psm.allocation.language" install-size="0" unpack="false" version="0.0.0"/>
+   <plugin
+         id="org.muml.psm.allocation.language"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" id="org.muml.psm.allocation.language.xtext" install-size="0" unpack="false" version="0.0.0"/>
+   <plugin
+         id="org.muml.psm.allocation.language.xtext"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" id="org.muml.psm.allocation.language.xtext.ui" install-size="0" unpack="false" version="0.0.0"/>
+   <plugin
+         id="org.muml.psm.allocation.language.xtext.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" id="org.muml.psm.allocation.algorithm.ilp.lpsolve" install-size="0" unpack="false" version="0.0.0"/>
+   <plugin
+         id="org.muml.psm.allocation.algorithm.ilp.lpsolve"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" id="org.muml.psm.allocation.algorithm" install-size="0" unpack="false" version="0.0.0"/>
+   <plugin
+         id="org.muml.psm.allocation.algorithm"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" id="org.muml.psm.allocation.algorithm.ilp" install-size="0" unpack="false" version="0.0.0"/>
+   <plugin
+         id="org.muml.psm.allocation.algorithm.ilp"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" id="org.muml.psm.allocation.algorithm.ilp.opt4j" install-size="0" unpack="false" version="0.0.0"/>
+   <plugin
+         id="org.muml.psm.allocation.algorithm.ilp.opt4j"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" id="org.muml.psm.allocation.algorithm.ilp.opt4j.config" install-size="0" unpack="false" version="0.0.0"/>
+   <plugin
+         id="org.muml.psm.allocation.algorithm.ilp.opt4j.config"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" id="org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit" install-size="0" unpack="false" version="0.0.0"/>
+   <plugin
+         id="org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
-   <plugin download-size="0" id="org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit.properties" install-size="0" unpack="false" version="0.0.0"/>
+   <plugin
+         id="org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit.properties"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.muml.psm.allocation.algorithm.ilp.scip"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>
