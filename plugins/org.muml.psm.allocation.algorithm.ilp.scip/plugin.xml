@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.m2m.qvt.oml.javaBlackboxUnits">
+      <unit
+            name="SCIPBlackboxUnit"
+            namespace="org.muml.psm.allocation.algorithm.ilp.scip">
+         <library
+               class="org.muml.psm.allocation.algorithm.ilp.scip.SCIP"
+               name="SCIPBlackbox">
+            <metamodel
+                  nsURI="http://www.muml.org/psm/allocation/ilp/1.0.0">
+            </metamodel>
+         </library>
+      </unit>
+   </extension>
+   <extension
+         point="org.muml.psm.allocation.algorithm.strategy">
+      <strategy
+            class="org.muml.psm.allocation.algorithm.ilp.scip.SCIPAllocationComputationStrategy"
+            description="ILP-based allocation computation strategy (using scip)"
+            name="SCIP Allocation Computation Strategy">
+      </strategy>
+   </extension>
+
+</plugin>

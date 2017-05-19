@@ -1,0 +1,27 @@
+import AbstractILPBasedAlgorithm;
+import SCIP;
+
+modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
+modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
+modeltype ecore uses ecore('http://www.eclipse.org/emf/2002/Ecore');
+
+transformation LPSolveBasedAlgorithm(in specification : allocationSpecification,
+	in oclContextIn : ecore,
+	out ecoreOut : ecore)
+	extends AbstractILPBasedAlgorithm;
+
+main() {
+	computeAllocation();
+}
+
+query getAllocationSpecificationIn() : allocationSpecification {
+	return specification;
+}
+
+query getOclContextIn() : ecore {
+	return oclContextIn;
+}
+
+helper solveILP(ilpModel : IntegerLinearProgram, solution : Dict(Variable, Integer)) : Integer {
+	return scip(ilpModel, solution);
+}

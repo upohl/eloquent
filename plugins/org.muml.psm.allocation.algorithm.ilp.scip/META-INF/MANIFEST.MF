@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Eloquent SCIP Solver
+Bundle-SymbolicName: org.muml.psm.allocation.algorithm.ilp.scip;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, Paderborn University, and Fraunhofer Research Institution for Mechatronic Systems Design IEM, Germany
+Require-Bundle: org.eclipse.xtend.lib;bundle-version="2.10.0",
+ org.eclipse.m2m.qvt.oml;bundle-version="3.4.0",
+ org.muml.psm.allocation.ilp,
+ org.muml.psm.allocation.ilp.lpsolve.xtext,
+ org.muml.psm.allocation.algorithm,
+ org.eclipse.jdt.annotation;bundle-version="2.0.100",
+ org.muml.psm.allocation.algorithm.ilp;bundle-version="1.0.0",
+ org.eclipse.core.runtime;bundle-version="3.11.1",
+ org.muml.core.common;bundle-version="1.0.0",
+ org.eclipse.ui;bundle-version="3.108.0",
+ org.eclipse.xtext,
+ org.eclipse.core.resources;bundle-version="3.11.1"
+Export-Package: org.muml.psm.allocation.algorithm.ilp.scip
+Bundle-Activator: org.muml.psm.allocation.algorithm.ilp.scip.Activator
+Bundle-ActivationPolicy: lazy
