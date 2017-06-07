@@ -30,7 +30,6 @@ public class Opt4JAllocationComputationStrategy extends
 			configuration = ConfigFactory.eINSTANCE
 					.createOpt4jConfiguration();
 		}
-		System.out.println(configuration);
 		return configuration;
 	}
 	
