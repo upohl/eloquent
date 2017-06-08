@@ -3,6 +3,7 @@
 package org.muml.psm.allocation.ilp;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -33,10 +34,6 @@ public interface IntegerLinearProgram extends EObject {
 	 * Returns the value of the '<em><b>Variables</b></em>' containment reference list.
 	 * The list contents are of type {@link org.muml.psm.allocation.ilp.Variable}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Variables</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The variables that are used in this Integer Linear Program.
@@ -52,10 +49,6 @@ public interface IntegerLinearProgram extends EObject {
 	 * Returns the value of the '<em><b>Constraints</b></em>' containment reference list.
 	 * The list contents are of type {@link org.muml.psm.allocation.ilp.ConstraintExpression}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Constraints</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The constraints expressions for this Integer Linear Program
@@ -70,10 +63,6 @@ public interface IntegerLinearProgram extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Objective Function</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Objective Function</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The objective funtion to which is to be minimized or maximized of this Integer Linear Program.

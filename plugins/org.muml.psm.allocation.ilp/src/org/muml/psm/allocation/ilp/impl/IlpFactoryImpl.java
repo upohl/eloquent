@@ -6,17 +6,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.muml.psm.allocation.ilp.ConstraintExpression;
-import org.muml.psm.allocation.ilp.ILPDataType;
-import org.muml.psm.allocation.ilp.IlpFactory;
-import org.muml.psm.allocation.ilp.IlpPackage;
-import org.muml.psm.allocation.ilp.IntegerLinearProgram;
-import org.muml.psm.allocation.ilp.ObjectiveFunctionExpression;
-import org.muml.psm.allocation.ilp.ObjectiveGoal;
-import org.muml.psm.allocation.ilp.Variable;
-import org.muml.psm.allocation.ilp.VariableExpression;
+
+import org.muml.psm.allocation.ilp.*;
 
 /**
  * <!-- begin-user-doc -->

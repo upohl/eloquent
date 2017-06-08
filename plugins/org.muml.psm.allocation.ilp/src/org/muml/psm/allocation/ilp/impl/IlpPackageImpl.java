@@ -8,10 +8,15 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import org.muml.core.CorePackage;
+
 import org.muml.core.expressions.ExpressionsPackage;
+
 import org.muml.core.expressions.common.CommonExpressionsPackage;
+
 import org.muml.psm.allocation.ilp.ConstraintExpression;
 import org.muml.psm.allocation.ilp.ILPDataType;
 import org.muml.psm.allocation.ilp.IlpFactory;
@@ -21,6 +26,7 @@ import org.muml.psm.allocation.ilp.ObjectiveFunctionExpression;
 import org.muml.psm.allocation.ilp.ObjectiveGoal;
 import org.muml.psm.allocation.ilp.Variable;
 import org.muml.psm.allocation.ilp.VariableExpression;
+
 import org.muml.psm.allocation.ilp.util.IlpValidator;
 
 /**
@@ -211,6 +217,15 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getVariable_Name() {
+		return (EAttribute)variableEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getConstraintExpression() {
 		return constraintExpressionEClass;
 	}
@@ -313,6 +328,7 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 
 		variableEClass = createEClass(VARIABLE);
 		createEAttribute(variableEClass, VARIABLE__DATA_TYPE);
+		createEAttribute(variableEClass, VARIABLE__NAME);
 
 		constraintExpressionEClass = createEClass(CONSTRAINT_EXPRESSION);
 
@@ -352,7 +368,6 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
 		CommonExpressionsPackage theCommonExpressionsPackage = (CommonExpressionsPackage)EPackage.Registry.INSTANCE.getEPackage(CommonExpressionsPackage.eNS_URI);
 		ExpressionsPackage theExpressionsPackage = (ExpressionsPackage)EPackage.Registry.INSTANCE.getEPackage(ExpressionsPackage.eNS_URI);
 
@@ -361,7 +376,6 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		variableEClass.getESuperTypes().add(theCorePackage.getNamedElement());
 		constraintExpressionEClass.getESuperTypes().add(theCommonExpressionsPackage.getComparisonExpression());
 		variableExpressionEClass.getESuperTypes().add(theExpressionsPackage.getExpression());
 
@@ -373,6 +387,7 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVariable_DataType(), this.getILPDataType(), "dataType", null, 1, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 1, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constraintExpressionEClass, ConstraintExpression.class, "ConstraintExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

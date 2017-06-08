@@ -4,19 +4,18 @@ package org.muml.psm.allocation.ilp.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.util.Switch;
+
 import org.muml.core.CommentableElement;
 import org.muml.core.ExtendableElement;
-import org.muml.core.NamedElement;
+
 import org.muml.core.expressions.Expression;
+
 import org.muml.core.expressions.common.BinaryExpression;
 import org.muml.core.expressions.common.ComparisonExpression;
-import org.muml.psm.allocation.ilp.ConstraintExpression;
-import org.muml.psm.allocation.ilp.IlpPackage;
-import org.muml.psm.allocation.ilp.IntegerLinearProgram;
-import org.muml.psm.allocation.ilp.ObjectiveFunctionExpression;
-import org.muml.psm.allocation.ilp.Variable;
-import org.muml.psm.allocation.ilp.VariableExpression;
+
+import org.muml.psm.allocation.ilp.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -84,8 +83,6 @@ public class IlpSwitch<T> extends Switch<T> {
 			case IlpPackage.VARIABLE: {
 				Variable variable = (Variable)theEObject;
 				T result = caseVariable(variable);
-				if (result == null) result = caseNamedElement(variable);
-				if (result == null) result = caseExtendableElement(variable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -206,21 +203,6 @@ public class IlpSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseExtendableElement(ExtendableElement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNamedElement(NamedElement object) {
 		return null;
 	}
 

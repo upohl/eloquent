@@ -3,7 +3,9 @@
 package org.muml.psm.allocation.ilp.impl;
 
 import org.eclipse.emf.ecore.EClass;
+
 import org.muml.core.expressions.common.impl.ComparisonExpressionImpl;
+
 import org.muml.psm.allocation.ilp.ConstraintExpression;
 import org.muml.psm.allocation.ilp.IlpPackage;
 

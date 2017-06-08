@@ -7,16 +7,12 @@ import java.util.Map;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.util.EObjectValidator;
-import org.muml.psm.allocation.ilp.ConstraintExpression;
-import org.muml.psm.allocation.ilp.ILPDataType;
-import org.muml.psm.allocation.ilp.IlpPackage;
-import org.muml.psm.allocation.ilp.IntegerLinearProgram;
-import org.muml.psm.allocation.ilp.ObjectiveFunctionExpression;
-import org.muml.psm.allocation.ilp.ObjectiveGoal;
-import org.muml.psm.allocation.ilp.Variable;
-import org.muml.psm.allocation.ilp.VariableExpression;
+
+import org.muml.psm.allocation.ilp.*;
 
 /**
  * <!-- begin-user-doc -->

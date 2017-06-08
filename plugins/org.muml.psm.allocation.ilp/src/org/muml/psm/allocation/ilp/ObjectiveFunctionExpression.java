@@ -3,6 +3,7 @@
 package org.muml.psm.allocation.ilp;
 
 import org.eclipse.emf.ecore.EObject;
+
 import org.muml.core.expressions.Expression;
 
 /**
@@ -33,10 +34,6 @@ public interface ObjectiveFunctionExpression extends EObject {
 	 * The default value is <code>"MAX"</code>.
 	 * The literals are from the enumeration {@link org.muml.psm.allocation.ilp.ObjectiveGoal}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Goal</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Determines whether the objective function shall be minimized or maximized.
