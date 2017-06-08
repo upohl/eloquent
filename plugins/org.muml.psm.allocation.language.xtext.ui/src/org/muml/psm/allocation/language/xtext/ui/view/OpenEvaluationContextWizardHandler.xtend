@@ -7,6 +7,7 @@ import org.eclipse.jface.wizard.WizardDialog
 import org.eclipse.swt.widgets.Shell
 import org.eclipse.ui.IWorkbench
 import org.eclipse.ui.handlers.HandlerUtil
+import org.eclipse.jface.window.Window
 
 class OpenEvaluationContextWizardHandler extends BaseHandler {
 	
@@ -14,19 +15,20 @@ class OpenEvaluationContextWizardHandler extends BaseHandler {
 		val IWorkbench workbench = HandlerUtil.getActiveWorkbenchWindow(event)
 				.workbench
 		val Shell shell = HandlerUtil.getActiveShell(event)
-		val wizard = new EvaluationContextWizard()
 		val selection = HandlerUtil.getCurrentSelection(event)
 		val ssel = if (selection instanceof StructuredSelection) {
 			selection as StructuredSelection
 		} else {
 			StructuredSelection.EMPTY
 		}
-		wizard.init(workbench, ssel)
+		val wizard = new EvaluationContextWizard(workbench, ssel)
 		val WizardDialog wizardDialog = new WizardDialog(shell, wizard)
-		wizardDialog.open
-		val view = HandlerUtil.getActiveWorkbenchWindow(event).activePage.showView(viewID)
-			 as AllocationSpecificationLanguageEvaluationView
-		view.oclContext = wizard.oclContext
+		val int ret = wizardDialog.open
+		if (ret != Window.CANCEL) {
+			val view = HandlerUtil.getActiveWorkbenchWindow(event).activePage.showView(viewID)
+				 as AllocationSpecificationLanguageEvaluationView
+			view.oclContext = wizard.oclContext
+		}
 	}
 	
 }

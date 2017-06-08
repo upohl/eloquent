@@ -1,59 +1,41 @@
 package org.muml.psm.allocation.language.xtext.ui.view
 
-import java.lang.reflect.InvocationTargetException
-import org.eclipse.core.runtime.IProgressMonitor
-import org.eclipse.core.runtime.Status
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.jface.viewers.IStructuredSelection
+import org.eclipse.jface.wizard.Wizard
 import org.eclipse.ui.IWorkbench
-import org.muml.core.export.operation.IFujabaExportOperation
-import org.muml.core.export.wizard.AbstractFujabaExportWizard
-import org.muml.psm.allocation.algorithm.ui.wizard.AllocationWizard.DefaultOCLContextSelectionProvider
+import org.muml.psm.allocation.algorithm.ui.wizard.AbstractAllocationWizard.DefaultAllocationWizardPageProvider
 import org.muml.psm.allocation.algorithm.ui.wizard.ExtensionUtil
-import org.muml.psm.allocation.algorithm.ui.wizard.IOCLContextSelectionProvider
-import org.muml.psm.allocation.algorithm.ui.wizard.IOCLContextSelectionProvider.PageContext
+import org.muml.psm.allocation.algorithm.ui.wizard.IAllocationWizardPageProvider
+import org.muml.psm.allocation.algorithm.ui.wizard.PageContext
 
-class EvaluationContextWizard extends AbstractFujabaExportWizard {
+class EvaluationContextWizard extends Wizard {
+	private static final String illegalOclContext = "oclContext must not be null"
 	
 	private EObject oclContext
-	private IOCLContextSelectionProvider oclContextSelectionProvider
+	private IAllocationWizardPageProvider allocationWizardPageProvider
 	
-	override init(IWorkbench workbench, IStructuredSelection currentSelection) {
-		super.init(workbench, currentSelection)
-		oclContextSelectionProvider = ExtensionUtil.getOCLContextSelectionProvider(
-			currentSelection
-		) ?: new DefaultOCLContextSelectionProvider()
-	}
-	
-	override wizardCreateExportOperation() {
-		oclContext = oclContextSelectionProvider.OCLContext		
-		new IFujabaExportOperation() {
-			
-			override getStatus() {
-				Status.OK_STATUS
-			}
-			
-			override run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
-			}
-			
-		}
-	}
-	
-	override addPages() {
-		oclContextSelectionProvider.getWizardPages(
-			PageContext.AllocationView, toolkit,
-			getResourceSet(), initialSelection
+	new(IWorkbench workbench, IStructuredSelection selection) {
+		allocationWizardPageProvider = ExtensionUtil.getWizardPageProvider(
+			selection
+		) ?: new DefaultAllocationWizardPageProvider()
+		allocationWizardPageProvider.providePages(PageContext.AllocationView,
+			workbench, selection
 		).forEach[page |
 			addPage(page)
 		]
 	}
-	
-	override wizardGetId() {
-		"org.muml.psm.allocation.language.ui.view.EvaluationContextWizard"
+		
+	def getOclContext() {
+		if (oclContext == null) {
+			throw new IllegalStateException(illegalOclContext)
+		}
+		oclContext
 	}
 	
-	def getOclContext() {
-		oclContext
+	override performFinish() {
+		oclContext = allocationWizardPageProvider.OCLContext
+		true
 	}
 	
 }

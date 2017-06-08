@@ -3,7 +3,7 @@
 <schema targetNamespace="org.muml.psm.allocation.algorithm.ui" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="org.muml.psm.allocation.algorithm.ui" id="org.muml.psm.allocation.algorithm.ui.oclContextSelectionProvider" name="OCLContextSelectionProvider"/>
+         <meta.schema plugin="org.muml.psm.allocation.algorithm.ui" id="org.muml.psm.allocation.algorithm.ui.wizardPageProvider" name="Allocation Wizard Page Provider"/>
       </appinfo>
       <documentation>
          [Enter description of this extension point.]
@@ -18,7 +18,7 @@
       </annotation>
       <complexType>
          <choice minOccurs="0" maxOccurs="unbounded">
-            <element ref="oclContextSelectionProvider"/>
+            <element ref="wizardPageProvider"/>
          </choice>
          <attribute name="point" type="string" use="required">
             <annotation>
@@ -47,15 +47,15 @@
       </complexType>
    </element>
 
-   <element name="oclContextSelectionProvider">
+   <element name="wizardPageProvider">
       <complexType>
          <attribute name="class" type="string">
             <annotation>
                <documentation>
-                  A class the implements the IOCLContextSelectionProvider interface.
+                  A class that implements the IAllocationWizardPageProvider interface.
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":org.muml.psm.allocation.algorithm.ui.wizard.IOCLContextSelectionProvider"/>
+                  <meta.attribute kind="java" basedOn=":org.muml.psm.allocation.algorithm.ui.wizard.IAllocationWizardPageProvider"/>
                </appinfo>
             </annotation>
          </attribute>

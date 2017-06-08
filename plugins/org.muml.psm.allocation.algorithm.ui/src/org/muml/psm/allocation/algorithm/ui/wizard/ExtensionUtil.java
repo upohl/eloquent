@@ -7,9 +7,9 @@ import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jface.viewers.IStructuredSelection;
 
 public class ExtensionUtil {
-	private static final String oclContextSelectionProviderExtensionPointId =
-			"org.muml.psm.allocation.algorithm.ui.oclContextSelectionProvider";
-	private static final String oclContextSelectionProviderPropertyName =
+	private static final String wizardPageProvider =
+			"org.muml.psm.allocation.algorithm.ui.wizardPageProvider";
+	private static final String classPropertyName =
 			"class";
 	private static final String unexpectedExecutableExtension =
 			"Unexpected executable extension: %s (expected %s)";
@@ -34,13 +34,13 @@ public class ExtensionUtil {
 		return clazz.cast(object);
 	}
 	
-	public static IOCLContextSelectionProvider getOCLContextSelectionProvider(IStructuredSelection ssel) {
-		for (IConfigurationElement element : getConfigurationElements(oclContextSelectionProviderExtensionPointId)) {
-			IOCLContextSelectionProvider oclContextSelectionProvider = createExecutableExtension(element,
-					oclContextSelectionProviderPropertyName,
-					IOCLContextSelectionProvider.class);
-			if (oclContextSelectionProvider.isProviderFor(ssel)) {
-				return oclContextSelectionProvider;
+	public static IAllocationWizardPageProvider getWizardPageProvider(IStructuredSelection ssel) {
+		for (IConfigurationElement element : getConfigurationElements(wizardPageProvider)) {
+			IAllocationWizardPageProvider wizardPageProvider = createExecutableExtension(element,
+					classPropertyName,
+					IAllocationWizardPageProvider.class);
+			if (wizardPageProvider.isProviderFor(ssel)) {
+				return wizardPageProvider;
 			}
 		}
 		return null;

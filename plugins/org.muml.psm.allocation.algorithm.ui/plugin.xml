@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-   <extension-point id="org.muml.psm.allocation.algorithm.ui.oclContextSelectionProvider" name="OCLContextSelectionProvider" schema="schema/org.muml.psm.allocation.algorithm.ui.oclContextSelectionProvider.exsd"/>
+   <extension-point id="org.muml.psm.allocation.algorithm.ui.wizardPageProvider" name="Allocation Wizard Page Provider" schema="schema/org.muml.psm.allocation.algorithm.ui.wizardPageProvider.exsd"/>
    <extension
          point="org.eclipse.ui.commands">
       <command
@@ -57,9 +57,8 @@
    <extension
          point="org.eclipse.ui.exportWizards">
       <wizard
-            category="org.muml.core.export"
-            class="org.muml.psm.allocation.algorithm.ui.wizard.AllocationWizard"
-            id="org.muml.psm.allocation.algorithm.ui.wizard.AllocationWizard"
+            class="org.muml.psm.allocation.algorithm.ui.wizard.AllocationComputationWizard"
+            id="org.muml.psm.allocation.algorithm.ui.wizard.AllocationComputationWizard"
             name="Allocation Planning Wizard">
       </wizard>
    </extension>

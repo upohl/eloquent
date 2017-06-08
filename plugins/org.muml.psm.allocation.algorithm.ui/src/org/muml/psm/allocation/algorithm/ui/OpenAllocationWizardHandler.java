@@ -8,9 +8,10 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IWorkbench;
-import org.eclipse.ui.IWorkbenchWizard;
 import org.eclipse.ui.handlers.HandlerUtil;
-import org.muml.psm.allocation.algorithm.ui.wizard.AllocationWizard;
+import org.muml.psm.allocation.algorithm.ui.wizard.AbstractAllocationWizard;
+import org.muml.psm.allocation.algorithm.ui.wizard.AllocationComputationWizard;
+import org.muml.psm.allocation.algorithm.ui.wizard.PageContext;
 
 public class OpenAllocationWizardHandler extends AbstractHandler {
 
@@ -22,7 +23,8 @@ public class OpenAllocationWizardHandler extends AbstractHandler {
 		ISelection selection = HandlerUtil.getCurrentSelection(event);
 		IStructuredSelection structuredSelection = selection instanceof IStructuredSelection ? (IStructuredSelection) selection
 				: null;
-		IWorkbenchWizard allocationWizard = new AllocationWizard();
+		//IWorkbenchWizard allocationWizard = new AllocationWizard();
+		AbstractAllocationWizard allocationWizard = new AllocationComputationWizard(PageContext.AllocationComputation);
 		allocationWizard.init(workbench, structuredSelection);
 		WizardDialog wizardDialog = new WizardDialog(shell, allocationWizard);
 		wizardDialog.open();
