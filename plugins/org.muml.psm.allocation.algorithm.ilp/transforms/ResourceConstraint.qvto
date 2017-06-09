@@ -6,7 +6,6 @@ import Variables;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
-modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
 library ResourceConstraintLib;
@@ -72,7 +71,7 @@ helper Sequence(TupleValue)::createResourceConstraintExpression(inout ilp : Inte
 	ilp.constraints += new ConstraintExpression(
 		self->createWeightingComponentResourceTuplesAdditionExpression(constraint.tupleDescriptor, null),
 		new LiteralExpression(rhsValue),
-		ComparingOperator::LESS_OR_EQUAL, comment);
+		Operator::LESS_THAN_OR_EQUAL_TO, comment);
 }
 
 query TupleValue::getRhsValue(constraint : ResourceConstraint) : String {

@@ -3,8 +3,6 @@ import Util;
 import VariableHelper;
 
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
-modeltype expressions uses core::expressions('http://www.muml.org/core/expressions/1.0.0');
-modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
 
 library Variables;
 
@@ -21,15 +19,15 @@ helper Sequence(OclAny)::createHelperVariableAndConstraints(inout ilp : IntegerL
 		assert fatal (not variable.oclIsUndefined()) with
 			log("no variable for sequence found");
 		ilp.constraints += new ConstraintExpression(new VariableExpression(variable),
-			new VariableExpression(seqVariable), ComparingOperator::LESS_OR_EQUAL,
+			new VariableExpression(seqVariable), Operator::LESS_THAN_OR_EQUAL_TO,
 			null);
 	};
 	var lhs : Expression := sequences->createAdditionExpression();
 	var rhs : Expression := new ArithmeticExpression(
 		new LiteralExpression((sequences->size() - 1).toString()),
-		new VariableExpression(variable), ArithmeticOperator::PLUS);
+		new VariableExpression(variable), Operator::PLUS);
 	ilp.constraints += new ConstraintExpression(lhs, rhs,
-		ComparingOperator::LESS_OR_EQUAL, null);
+		Operator::LESS_THAN_OR_EQUAL_TO, null);
 	return variable;
 }
 

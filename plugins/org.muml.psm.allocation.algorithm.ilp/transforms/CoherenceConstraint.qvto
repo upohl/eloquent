@@ -6,7 +6,6 @@ import Variables;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
-modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
 
@@ -141,10 +140,10 @@ helper Sequence(Sequence(OclAny))::createConstraintExpression(coherenceConstrain
 	endif;
 	comment := comment
 		+ Sequence{self->at(1)->at(1), self->at(1)->at(3)}->getVariableName();
-	var op : ComparingOperator := ComparingOperator::GREATER_OR_EQUAL;
+	var op : Operator := Operator::GREATER_THAN_OR_EQUAL_TO;
 	var lit : String := '1';
 	if (coherenceConstraint.type = CoherenceConstraintType::SEPARATE_LOCATION) then {
-		op := ComparingOperator::EQUAL;
+		op := Operator::EQUAL_TO;
 		lit := '0';
 	} endif;
 	return self->createAdditionConstraintExpression(op, lit, comment);

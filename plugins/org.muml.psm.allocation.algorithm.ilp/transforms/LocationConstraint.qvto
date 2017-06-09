@@ -8,7 +8,6 @@ import VariableHelper;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
-modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
 -- XXX: we probably need a semantics change here generate ">= 1" inequalities
@@ -81,7 +80,7 @@ helper Sequence(Sequence(OclAny))::createConstraintExpression(inout ilp : Intege
 	self->print();
 	var comment : String := if constraint.name <> '' then constraint.name else null endif;
 	ilp.constraints += self->createAdditionConstraintExpression(
-		ComparingOperator::EQUAL,'1', comment
+		Operator::EQUAL_TO,'1', comment
 	);
 	log("createHWRESConstraintExpression");
 }

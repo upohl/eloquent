@@ -4,8 +4,6 @@ import Sort;
 import TupleAccessor;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
-modeltype expressions uses core::expressions('http://www.muml.org/core/expressions/1.0.0');
-modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
@@ -20,14 +18,14 @@ constructor VariableExpression::VariableExpression(variable : Variable) {
 }
 
 constructor ArithmeticExpression::ArithmeticExpression(lhs : Expression, rhs : Expression,
-	operator : ArithmeticOperator) {
+	operator : Operator) {
 	leftExpression := lhs;
 	rightExpression := rhs;
 	result.operator := operator;
 }
 
 constructor ConstraintExpression::ConstraintExpression(lhs : Expression, rhs : Expression,
-	operator : ComparingOperator, comment : String) {
+	operator : Operator, comment : String) {
 	leftExpression := lhs;
 	rightExpression := rhs;
 	result.operator := operator;
@@ -43,13 +41,13 @@ helper Sequence(Sequence(OclAny))::createAdditionExpression() : Expression {
 		if (lhs.oclIsUndefined()) then
 			lhs := variableExpression
 		else
-			lhs := new ArithmeticExpression(variableExpression, lhs, ArithmeticOperator::PLUS)
+			lhs := new ArithmeticExpression(variableExpression, lhs, Operator::PLUS)
 		endif;
 	};
 	return lhs;
 }
 
-helper Sequence(Sequence(OclAny))::createAdditionConstraintExpression(op : ComparingOperator, lit : String, comment : String)
+helper Sequence(Sequence(OclAny))::createAdditionConstraintExpression(op : Operator, lit : String, comment : String)
 	: ConstraintExpression {
 	-- no forEach here (we want to call the "real" operation)
 	var lhs : Expression := self->createAdditionExpression();
@@ -63,12 +61,12 @@ helper Sequence(TupleValue)::createWeightingComponentResourceTuplesAdditionExpre
 		var tmp : Expression := new ArithmeticExpression(
 			new LiteralExpression(tv.getWeighting(tupleDescriptor)), // getWeighting is imported via the Sort lib
 			new VariableExpression(tv.toSequence()->sortComponentResourceSequence()->getVariable()),
-			ArithmeticOperator::TIMES
+			Operator::TIMES
 		);
 		if (expr.oclIsUndefined()) then
 			expr := tmp
 		else
-			expr := new ArithmeticExpression(tmp, expr, ArithmeticOperator::PLUS)
+			expr := new ArithmeticExpression(tmp, expr, Operator::PLUS)
 		endif;
 	};
 	return expr;

@@ -7,7 +7,6 @@ import Util;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
 modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
-modeltype common uses core::expressions::common('http://www.muml.org/core/expressions/common/1.0.0');
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
 library GeneralConstraint;
@@ -78,19 +77,19 @@ helper Sequence(Sequence(OclAny))::createAdditionConstraintExpressions(lower : I
 	if (lower = upper) {
 		return Sequence {
 			self->createAdditionConstraintExpression(
-				ComparingOperator::EQUAL, lower.toString(), comment
+				Operator::EQUAL_TO, lower.toString(), comment
 			)
 		};
 	} endif;
 	return self->createAdditionConstraintExpression(
-		ComparingOperator::GREATER_OR_EQUAL, lower.toString(), comment
+		Operator::GREATER_THAN_OR_EQUAL_TO, lower.toString(), comment
 	)->asSequence()->union(
 		if (upper = -1) then
 			-- -1 means "unbounded" => no constraint for the upper bound
 			Sequence{}
 		else
 			self->createAdditionConstraintExpression(
-				ComparingOperator::LESS_OR_EQUAL, upper.toString(), comment
+				Operator::LESS_THAN_OR_EQUAL_TO, upper.toString(), comment
 			)->asSequence()
 		endif
 	);

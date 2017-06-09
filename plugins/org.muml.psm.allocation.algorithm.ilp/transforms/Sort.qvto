@@ -2,7 +2,6 @@ import VariableHelper;
 import TupleAccessor;
 
 modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
-modeltype core uses core('http://www.muml.org/core/1.0.0');
 modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
 library Sort;
