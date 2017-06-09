@@ -1,10 +1,7 @@
 package org.muml.psm.allocation.algorithm.ilp.lpsolve
 
 import java.io.BufferedOutputStream
-import java.io.File
-import java.io.FileOutputStream
 import java.io.OutputStream
-import org.eclipse.core.runtime.Status
 import org.muml.psm.allocation.ilp.ArithmeticExpression
 import org.muml.psm.allocation.ilp.ConstraintExpression
 import org.muml.psm.allocation.ilp.Expression
@@ -23,29 +20,14 @@ class LPSolveM2T {
 	private static final String illegalILPDataType = "unexpected ILP Data Type: %s"
 	
 	private OutputStream out
-	private OutputStream fileOut
-	public File myFile
-	
-	private long startTime1;
-	private Double finalTime;
-	private Status logTransformationTime;
-	
-	def public Double getFinalTime()
-	{
-		finalTime
-	}
 	
 	def protected void emit(String data) {
 		print(data)
-	//	out.write(data.bytes)
-		fileOut.write(data.bytes)
+		out.write(data.bytes)
 	}
 	
-	def serialize(IntegerLinearProgram ilp, String path) {
-		
-	//	out = new BufferedOutputStream(os)
-
-		fileOut = new BufferedOutputStream(new FileOutputStream(myFile = new File(path+"\\ilp2.lp")))
+	def serialize(IntegerLinearProgram ilp, OutputStream os) {
+		out = new BufferedOutputStream(os)
 		if (ilp.objectiveFunction != null) {
 			emitObjectiveFunction(ilp.objectiveFunction)
 		}
@@ -57,12 +39,7 @@ class LPSolveM2T {
 		}
 		// we explicitly do not call close, because this would also close
 		// the underlying stream (which would be OK in our case but...)
-
-		
-	//	out.flush
-		fileOut.flush
-	//	fileOut.close
-		
+		out.flush
 	}
 	
 	def protected emitObjectiveFunction(ObjectiveFunctionExpression objectiveFunctionExpression) {
