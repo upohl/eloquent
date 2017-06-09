@@ -14,13 +14,11 @@ import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
-import org.muml.core.CorePackage;
-import org.muml.core.expressions.common.ArithmeticExpression;
-import org.muml.core.expressions.common.CommonExpressionsPackage;
-import org.muml.core.expressions.common.LiteralExpression;
+import org.muml.psm.allocation.ilp.ArithmeticExpression;
 import org.muml.psm.allocation.ilp.ConstraintExpression;
 import org.muml.psm.allocation.ilp.IlpPackage;
 import org.muml.psm.allocation.ilp.IntegerLinearProgram;
+import org.muml.psm.allocation.ilp.LiteralExpression;
 import org.muml.psm.allocation.ilp.ObjectiveFunctionExpression;
 import org.muml.psm.allocation.ilp.Variable;
 import org.muml.psm.allocation.ilp.VariableExpression;
@@ -38,9 +36,9 @@ public abstract class AbstractLPSolveSemanticSequencer extends AbstractDelegatin
 		ParserRule rule = context.getParserRule();
 		Action action = context.getAssignedAction();
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
-		if (epackage == CommonExpressionsPackage.eINSTANCE)
+		if (epackage == IlpPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case CommonExpressionsPackage.ARITHMETIC_EXPRESSION:
+			case IlpPackage.ARITHMETIC_EXPRESSION:
 				if (rule == grammarAccess.getLinearExpressionRule()
 						|| rule == grammarAccess.getSimpleLinearExpressionRule()
 						|| rule == grammarAccess.getAdditionExpressionRule()) {
@@ -53,17 +51,14 @@ public abstract class AbstractLPSolveSemanticSequencer extends AbstractDelegatin
 					return; 
 				}
 				else break;
-			case CommonExpressionsPackage.LITERAL_EXPRESSION:
-				sequence_NumberLiteralExpression(context, (LiteralExpression) semanticObject); 
-				return; 
-			}
-		else if (epackage == IlpPackage.eINSTANCE)
-			switch (semanticObject.eClass().getClassifierID()) {
 			case IlpPackage.CONSTRAINT_EXPRESSION:
 				sequence_ConstraintExpression(context, (ConstraintExpression) semanticObject); 
 				return; 
 			case IlpPackage.INTEGER_LINEAR_PROGRAM:
 				sequence_IntegerLinearProgram(context, (IntegerLinearProgram) semanticObject); 
+				return; 
+			case IlpPackage.LITERAL_EXPRESSION:
+				sequence_NumberLiteralExpression(context, (LiteralExpression) semanticObject); 
 				return; 
 			case IlpPackage.OBJECTIVE_FUNCTION_EXPRESSION:
 				sequence_ObjectiveFunctionExpression(context, (ObjectiveFunctionExpression) semanticObject); 
@@ -101,7 +96,7 @@ public abstract class AbstractLPSolveSemanticSequencer extends AbstractDelegatin
 	 *     ConstraintExpression returns ConstraintExpression
 	 *
 	 * Constraint:
-	 *     (comment=VariableID? leftExpression=SimpleLinearExpression operator=ComparingOperator rightExpression=SimpleLinearExpression)
+	 *     (comment=VariableID? leftExpression=SimpleLinearExpression operator=RelationalOperator rightExpression=SimpleLinearExpression)
 	 */
 	protected void sequence_ConstraintExpression(ISerializationContext context, ConstraintExpression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -130,12 +125,12 @@ public abstract class AbstractLPSolveSemanticSequencer extends AbstractDelegatin
 	 */
 	protected void sequence_MultiplicationExpression(ISerializationContext context, ArithmeticExpression semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, CommonExpressionsPackage.Literals.BINARY_EXPRESSION__LEFT_EXPRESSION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CommonExpressionsPackage.Literals.BINARY_EXPRESSION__LEFT_EXPRESSION));
-			if (transientValues.isValueTransient(semanticObject, CommonExpressionsPackage.Literals.ARITHMETIC_EXPRESSION__OPERATOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CommonExpressionsPackage.Literals.ARITHMETIC_EXPRESSION__OPERATOR));
-			if (transientValues.isValueTransient(semanticObject, CommonExpressionsPackage.Literals.BINARY_EXPRESSION__RIGHT_EXPRESSION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CommonExpressionsPackage.Literals.BINARY_EXPRESSION__RIGHT_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, IlpPackage.Literals.BINARY_EXPRESSION__LEFT_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, IlpPackage.Literals.BINARY_EXPRESSION__LEFT_EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, IlpPackage.Literals.BINARY_EXPRESSION__OPERATOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, IlpPackage.Literals.BINARY_EXPRESSION__OPERATOR));
+			if (transientValues.isValueTransient(semanticObject, IlpPackage.Literals.BINARY_EXPRESSION__RIGHT_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, IlpPackage.Literals.BINARY_EXPRESSION__RIGHT_EXPRESSION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getMultiplicationExpressionAccess().getArithmeticExpressionLeftExpressionAction_1_0(), semanticObject.getLeftExpression());
@@ -161,8 +156,8 @@ public abstract class AbstractLPSolveSemanticSequencer extends AbstractDelegatin
 	 */
 	protected void sequence_NumberLiteralExpression(ISerializationContext context, LiteralExpression semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, CommonExpressionsPackage.Literals.LITERAL_EXPRESSION__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CommonExpressionsPackage.Literals.LITERAL_EXPRESSION__VALUE));
+			if (transientValues.isValueTransient(semanticObject, IlpPackage.Literals.LITERAL_EXPRESSION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, IlpPackage.Literals.LITERAL_EXPRESSION__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getNumberLiteralExpressionAccess().getValueNumberParserRuleCall_0(), semanticObject.getValue());
@@ -227,8 +222,8 @@ public abstract class AbstractLPSolveSemanticSequencer extends AbstractDelegatin
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, IlpPackage.Literals.VARIABLE__DATA_TYPE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, IlpPackage.Literals.VARIABLE__DATA_TYPE));
-			if (transientValues.isValueTransient(semanticObject, CorePackage.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CorePackage.Literals.NAMED_ELEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, IlpPackage.Literals.VARIABLE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, IlpPackage.Literals.VARIABLE__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getVariableAccess().getDataTypeILPDataTypeEnumRuleCall_0_0(), semanticObject.getDataType());

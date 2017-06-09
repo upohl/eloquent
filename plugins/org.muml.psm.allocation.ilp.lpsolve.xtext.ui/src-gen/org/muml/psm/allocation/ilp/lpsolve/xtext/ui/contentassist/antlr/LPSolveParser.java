@@ -43,7 +43,7 @@ public class LPSolveParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOperandAccess().getAlternatives(), "rule__Operand__Alternatives");
 					put(grammarAccess.getNumberAccess().getAlternatives_1(), "rule__Number__Alternatives_1");
 					put(grammarAccess.getObjectiveGoalAccess().getAlternatives(), "rule__ObjectiveGoal__Alternatives");
-					put(grammarAccess.getComparingOperatorAccess().getAlternatives(), "rule__ComparingOperator__Alternatives");
+					put(grammarAccess.getRelationalOperatorAccess().getAlternatives(), "rule__RelationalOperator__Alternatives");
 					put(grammarAccess.getILPDataTypeAccess().getAlternatives(), "rule__ILPDataType__Alternatives");
 					put(grammarAccess.getAdditionOperatorAccess().getAlternatives(), "rule__AdditionOperator__Alternatives");
 					put(grammarAccess.getIntegerLinearProgramAccess().getGroup(), "rule__IntegerLinearProgram__Group__0");

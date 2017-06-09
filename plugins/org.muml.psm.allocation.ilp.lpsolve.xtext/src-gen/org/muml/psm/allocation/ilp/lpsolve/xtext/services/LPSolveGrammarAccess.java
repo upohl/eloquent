@@ -28,7 +28,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cVariablesAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cVariablesVariableParserRuleCall_2_0 = (RuleCall)cVariablesAssignment_2.eContents().get(0);
 		
-		////import "platform:/resource/org.muml.core/model/core.ecore#//expressions/common" as common
+		////import "platform:/resource/org.muml.core/model/core.ecore#//expressions" as expressions
 		//IntegerLinearProgram ilp::IntegerLinearProgram:
 		//	objectiveFunction=ObjectiveFunctionExpression
 		//	constraints+=ConstraintExpression*
@@ -131,17 +131,17 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cLeftExpressionAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cLeftExpressionSimpleLinearExpressionParserRuleCall_1_0 = (RuleCall)cLeftExpressionAssignment_1.eContents().get(0);
 		private final Assignment cOperatorAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cOperatorComparingOperatorEnumRuleCall_2_0 = (RuleCall)cOperatorAssignment_2.eContents().get(0);
+		private final RuleCall cOperatorRelationalOperatorEnumRuleCall_2_0 = (RuleCall)cOperatorAssignment_2.eContents().get(0);
 		private final Assignment cRightExpressionAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cRightExpressionSimpleLinearExpressionParserRuleCall_3_0 = (RuleCall)cRightExpressionAssignment_3.eContents().get(0);
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//ConstraintExpression ilp::ConstraintExpression:
-		//	(comment=VariableID ':')? leftExpression=SimpleLinearExpression operator=ComparingOperator
+		//	(comment=VariableID ':')? leftExpression=SimpleLinearExpression operator=RelationalOperator
 		//	rightExpression=SimpleLinearExpression ';'
 		@Override public ParserRule getRule() { return rule; }
 
-		//(comment=VariableID ':')? leftExpression=SimpleLinearExpression operator=ComparingOperator
+		//(comment=VariableID ':')? leftExpression=SimpleLinearExpression operator=RelationalOperator
 		//rightExpression=SimpleLinearExpression ';'
 		public Group getGroup() { return cGroup; }
 
@@ -163,11 +163,11 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		//SimpleLinearExpression
 		public RuleCall getLeftExpressionSimpleLinearExpressionParserRuleCall_1_0() { return cLeftExpressionSimpleLinearExpressionParserRuleCall_1_0; }
 
-		//operator=ComparingOperator
+		//operator=RelationalOperator
 		public Assignment getOperatorAssignment_2() { return cOperatorAssignment_2; }
 
-		//ComparingOperator
-		public RuleCall getOperatorComparingOperatorEnumRuleCall_2_0() { return cOperatorComparingOperatorEnumRuleCall_2_0; }
+		//RelationalOperator
+		public RuleCall getOperatorRelationalOperatorEnumRuleCall_2_0() { return cOperatorRelationalOperatorEnumRuleCall_2_0; }
 
 		//rightExpression=SimpleLinearExpression
 		public Assignment getRightExpressionAssignment_3() { return cRightExpressionAssignment_3; }
@@ -259,7 +259,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.LinearExpression");
 		private final RuleCall cSimpleLinearExpressionParserRuleCall = (RuleCall)rule.eContents().get(1);
 		
-		//LinearExpression expressions::Expression:
+		//LinearExpression ilp::Expression:
 		//	SimpleLinearExpression
 		@Override public ParserRule getRule() { return rule; }
 
@@ -272,7 +272,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.SimpleLinearExpression");
 		private final RuleCall cAdditionExpressionParserRuleCall = (RuleCall)rule.eContents().get(1);
 		
-		//SimpleLinearExpression expressions::Expression:
+		//SimpleLinearExpression ilp::Expression:
 		//	AdditionExpression
 		@Override public ParserRule getRule() { return rule; }
 
@@ -291,22 +291,22 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRightExpressionAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cRightExpressionLinearExpressionParserRuleCall_1_2_0 = (RuleCall)cRightExpressionAssignment_1_2.eContents().get(0);
 		
-		//AdditionExpression expressions::Expression:
-		//	MultiplicationExpression ({common::ArithmeticExpression.leftExpression=current} operator=AdditionOperator
+		//AdditionExpression ilp::Expression:
+		//	MultiplicationExpression ({ilp::ArithmeticExpression.leftExpression=current} operator=AdditionOperator
 		//	rightExpression=LinearExpression)?
 		@Override public ParserRule getRule() { return rule; }
 
-		//MultiplicationExpression ({common::ArithmeticExpression.leftExpression=current} operator=AdditionOperator
+		//MultiplicationExpression ({ilp::ArithmeticExpression.leftExpression=current} operator=AdditionOperator
 		//rightExpression=LinearExpression)?
 		public Group getGroup() { return cGroup; }
 
 		//MultiplicationExpression
 		public RuleCall getMultiplicationExpressionParserRuleCall_0() { return cMultiplicationExpressionParserRuleCall_0; }
 
-		//({common::ArithmeticExpression.leftExpression=current} operator=AdditionOperator rightExpression=LinearExpression)?
+		//({ilp::ArithmeticExpression.leftExpression=current} operator=AdditionOperator rightExpression=LinearExpression)?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//{common::ArithmeticExpression.leftExpression=current}
+		//{ilp::ArithmeticExpression.leftExpression=current}
 		public Action getArithmeticExpressionLeftExpressionAction_1_0() { return cArithmeticExpressionLeftExpressionAction_1_0; }
 
 		//operator=AdditionOperator
@@ -335,21 +335,20 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// XXX: here we also allow non-linear expressions, but we do not care,
 		//// because this grammar is just for internal use (test fixture specification)
-		//MultiplicationExpression expressions::Expression:
-		//	Operand ({common::ArithmeticExpression.leftExpression=current} operator=MultiplicationOperator
-		//	rightExpression=Operand)?
+		//MultiplicationExpression ilp::Expression:
+		//	Operand ({ilp::ArithmeticExpression.leftExpression=current} operator=MultiplicationOperator rightExpression=Operand)?
 		@Override public ParserRule getRule() { return rule; }
 
-		//Operand ({common::ArithmeticExpression.leftExpression=current} operator=MultiplicationOperator rightExpression=Operand)?
+		//Operand ({ilp::ArithmeticExpression.leftExpression=current} operator=MultiplicationOperator rightExpression=Operand)?
 		public Group getGroup() { return cGroup; }
 
 		//Operand
 		public RuleCall getOperandParserRuleCall_0() { return cOperandParserRuleCall_0; }
 
-		//({common::ArithmeticExpression.leftExpression=current} operator=MultiplicationOperator rightExpression=Operand)?
+		//({ilp::ArithmeticExpression.leftExpression=current} operator=MultiplicationOperator rightExpression=Operand)?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//{common::ArithmeticExpression.leftExpression=current}
+		//{ilp::ArithmeticExpression.leftExpression=current}
 		public Action getArithmeticExpressionLeftExpressionAction_1_0() { return cArithmeticExpressionLeftExpressionAction_1_0; }
 
 		//operator=MultiplicationOperator
@@ -371,7 +370,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNumberLiteralExpressionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cVariableExpressionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//Operand expressions::Expression:
+		//Operand ilp::Expression:
 		//	NumberLiteralExpression | VariableExpression
 		@Override public ParserRule getRule() { return rule; }
 
@@ -390,7 +389,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cValueNumberParserRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
 		
-		//NumberLiteralExpression common::LiteralExpression:
+		//NumberLiteralExpression ilp::LiteralExpression:
 		//	value=Number
 		@Override public ParserRule getRule() { return rule; }
 
@@ -502,56 +501,40 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getMAXMaxKeyword_1_0() { return cMAXMaxKeyword_1_0; }
 	}
 
-	public class ComparingOperatorElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.ComparingOperator");
+	public class RelationalOperatorElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.RelationalOperator");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cEQUALEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cEQUALEqualsSignKeyword_0_0 = (Keyword)cEQUALEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cGREATEREnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cGREATERGreaterThanSignKeyword_1_0 = (Keyword)cGREATEREnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cGREATER_OR_EQUALEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cGREATER_OR_EQUALGreaterThanSignEqualsSignKeyword_2_0 = (Keyword)cGREATER_OR_EQUALEnumLiteralDeclaration_2.eContents().get(0);
-		private final EnumLiteralDeclaration cLESSEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
-		private final Keyword cLESSLessThanSignKeyword_3_0 = (Keyword)cLESSEnumLiteralDeclaration_3.eContents().get(0);
-		private final EnumLiteralDeclaration cLESS_OR_EQUALEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
-		private final Keyword cLESS_OR_EQUALLessThanSignEqualsSignKeyword_4_0 = (Keyword)cLESS_OR_EQUALEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cLESS_THAN_OR_EQUAL_TOEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cLESS_THAN_OR_EQUAL_TOLessThanSignEqualsSignKeyword_0_0 = (Keyword)cLESS_THAN_OR_EQUAL_TOEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cGREATER_THAN_OR_EQUAL_TOEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cGREATER_THAN_OR_EQUAL_TOGreaterThanSignEqualsSignKeyword_1_0 = (Keyword)cGREATER_THAN_OR_EQUAL_TOEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cEQUAL_TOEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cEQUAL_TOEqualsSignKeyword_2_0 = (Keyword)cEQUAL_TOEnumLiteralDeclaration_2.eContents().get(0);
 		
-		//enum ComparingOperator returns common::ComparingOperator:
-		//	EQUAL='=' | GREATER='>' | GREATER_OR_EQUAL='>=' | LESS='<' | LESS_OR_EQUAL='<=';
+		//enum RelationalOperator returns ilp::Operator:
+		//	LESS_THAN_OR_EQUAL_TO='<=' | GREATER_THAN_OR_EQUAL_TO='>=' | EQUAL_TO='=';
 		public EnumRule getRule() { return rule; }
 
-		//EQUAL='=' | GREATER='>' | GREATER_OR_EQUAL='>=' | LESS='<' | LESS_OR_EQUAL='<='
+		//LESS_THAN_OR_EQUAL_TO='<=' | GREATER_THAN_OR_EQUAL_TO='>=' | EQUAL_TO='='
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//EQUAL='='
-		public EnumLiteralDeclaration getEQUALEnumLiteralDeclaration_0() { return cEQUALEnumLiteralDeclaration_0; }
-
-		//'='
-		public Keyword getEQUALEqualsSignKeyword_0_0() { return cEQUALEqualsSignKeyword_0_0; }
-
-		//GREATER='>'
-		public EnumLiteralDeclaration getGREATEREnumLiteralDeclaration_1() { return cGREATEREnumLiteralDeclaration_1; }
-
-		//'>'
-		public Keyword getGREATERGreaterThanSignKeyword_1_0() { return cGREATERGreaterThanSignKeyword_1_0; }
-
-		//GREATER_OR_EQUAL='>='
-		public EnumLiteralDeclaration getGREATER_OR_EQUALEnumLiteralDeclaration_2() { return cGREATER_OR_EQUALEnumLiteralDeclaration_2; }
-
-		//'>='
-		public Keyword getGREATER_OR_EQUALGreaterThanSignEqualsSignKeyword_2_0() { return cGREATER_OR_EQUALGreaterThanSignEqualsSignKeyword_2_0; }
-
-		//LESS='<'
-		public EnumLiteralDeclaration getLESSEnumLiteralDeclaration_3() { return cLESSEnumLiteralDeclaration_3; }
-
-		//'<'
-		public Keyword getLESSLessThanSignKeyword_3_0() { return cLESSLessThanSignKeyword_3_0; }
-
-		//LESS_OR_EQUAL='<='
-		public EnumLiteralDeclaration getLESS_OR_EQUALEnumLiteralDeclaration_4() { return cLESS_OR_EQUALEnumLiteralDeclaration_4; }
+		//LESS_THAN_OR_EQUAL_TO='<='
+		public EnumLiteralDeclaration getLESS_THAN_OR_EQUAL_TOEnumLiteralDeclaration_0() { return cLESS_THAN_OR_EQUAL_TOEnumLiteralDeclaration_0; }
 
 		//'<='
-		public Keyword getLESS_OR_EQUALLessThanSignEqualsSignKeyword_4_0() { return cLESS_OR_EQUALLessThanSignEqualsSignKeyword_4_0; }
+		public Keyword getLESS_THAN_OR_EQUAL_TOLessThanSignEqualsSignKeyword_0_0() { return cLESS_THAN_OR_EQUAL_TOLessThanSignEqualsSignKeyword_0_0; }
+
+		//GREATER_THAN_OR_EQUAL_TO='>='
+		public EnumLiteralDeclaration getGREATER_THAN_OR_EQUAL_TOEnumLiteralDeclaration_1() { return cGREATER_THAN_OR_EQUAL_TOEnumLiteralDeclaration_1; }
+
+		//'>='
+		public Keyword getGREATER_THAN_OR_EQUAL_TOGreaterThanSignEqualsSignKeyword_1_0() { return cGREATER_THAN_OR_EQUAL_TOGreaterThanSignEqualsSignKeyword_1_0; }
+
+		//EQUAL_TO='='
+		public EnumLiteralDeclaration getEQUAL_TOEnumLiteralDeclaration_2() { return cEQUAL_TOEnumLiteralDeclaration_2; }
+
+		//'='
+		public Keyword getEQUAL_TOEqualsSignKeyword_2_0() { return cEQUAL_TOEqualsSignKeyword_2_0; }
 	}
 
 	public class ILPDataTypeElements extends AbstractEnumRuleElementFinder {
@@ -598,7 +581,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cMINUSEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cMINUSHyphenMinusKeyword_1_0 = (Keyword)cMINUSEnumLiteralDeclaration_1.eContents().get(0);
 		
-		//enum AdditionOperator returns common::ArithmeticOperator:
+		//enum AdditionOperator returns ilp::Operator:
 		//	PLUS='+' | MINUS='-';
 		public EnumRule getRule() { return rule; }
 
@@ -623,7 +606,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cTIMESEnumLiteralDeclaration = (EnumLiteralDeclaration)rule.eContents().get(1);
 		private final Keyword cTIMESAsteriskKeyword_0 = (Keyword)cTIMESEnumLiteralDeclaration.eContents().get(0);
 		
-		//enum MultiplicationOperator returns common::ArithmeticOperator:
+		//enum MultiplicationOperator returns ilp::Operator:
 		//	TIMES='*';
 		public EnumRule getRule() { return rule; }
 
@@ -638,7 +621,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 	private final ObjectiveFunctionExpressionElements pObjectiveFunctionExpression;
 	private final ObjectiveGoalElements eObjectiveGoal;
 	private final ConstraintExpressionElements pConstraintExpression;
-	private final ComparingOperatorElements eComparingOperator;
+	private final RelationalOperatorElements eRelationalOperator;
 	private final VariableElements pVariable;
 	private final VariableIDElements pVariableID;
 	private final ILPDataTypeElements eILPDataType;
@@ -667,7 +650,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		this.pObjectiveFunctionExpression = new ObjectiveFunctionExpressionElements();
 		this.eObjectiveGoal = new ObjectiveGoalElements();
 		this.pConstraintExpression = new ConstraintExpressionElements();
-		this.eComparingOperator = new ComparingOperatorElements();
+		this.eRelationalOperator = new RelationalOperatorElements();
 		this.pVariable = new VariableElements();
 		this.pVariableID = new VariableIDElements();
 		this.eILPDataType = new ILPDataTypeElements();
@@ -711,7 +694,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	////import "platform:/resource/org.muml.core/model/core.ecore#//expressions/common" as common
+	////import "platform:/resource/org.muml.core/model/core.ecore#//expressions" as expressions
 	//IntegerLinearProgram ilp::IntegerLinearProgram:
 	//	objectiveFunction=ObjectiveFunctionExpression
 	//	constraints+=ConstraintExpression*
@@ -745,7 +728,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ConstraintExpression ilp::ConstraintExpression:
-	//	(comment=VariableID ':')? leftExpression=SimpleLinearExpression operator=ComparingOperator
+	//	(comment=VariableID ':')? leftExpression=SimpleLinearExpression operator=RelationalOperator
 	//	rightExpression=SimpleLinearExpression ';'
 	public ConstraintExpressionElements getConstraintExpressionAccess() {
 		return pConstraintExpression;
@@ -755,14 +738,14 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		return getConstraintExpressionAccess().getRule();
 	}
 
-	//enum ComparingOperator returns common::ComparingOperator:
-	//	EQUAL='=' | GREATER='>' | GREATER_OR_EQUAL='>=' | LESS='<' | LESS_OR_EQUAL='<=';
-	public ComparingOperatorElements getComparingOperatorAccess() {
-		return eComparingOperator;
+	//enum RelationalOperator returns ilp::Operator:
+	//	LESS_THAN_OR_EQUAL_TO='<=' | GREATER_THAN_OR_EQUAL_TO='>=' | EQUAL_TO='=';
+	public RelationalOperatorElements getRelationalOperatorAccess() {
+		return eRelationalOperator;
 	}
 	
-	public EnumRule getComparingOperatorRule() {
-		return getComparingOperatorAccess().getRule();
+	public EnumRule getRelationalOperatorRule() {
+		return getRelationalOperatorAccess().getRule();
 	}
 
 	//Variable ilp::Variable:
@@ -795,7 +778,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		return getILPDataTypeAccess().getRule();
 	}
 
-	//LinearExpression expressions::Expression:
+	//LinearExpression ilp::Expression:
 	//	SimpleLinearExpression
 	public LinearExpressionElements getLinearExpressionAccess() {
 		return pLinearExpression;
@@ -805,7 +788,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		return getLinearExpressionAccess().getRule();
 	}
 
-	//SimpleLinearExpression expressions::Expression:
+	//SimpleLinearExpression ilp::Expression:
 	//	AdditionExpression
 	public SimpleLinearExpressionElements getSimpleLinearExpressionAccess() {
 		return pSimpleLinearExpression;
@@ -815,7 +798,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		return getSimpleLinearExpressionAccess().getRule();
 	}
 
-	//enum AdditionOperator returns common::ArithmeticOperator:
+	//enum AdditionOperator returns ilp::Operator:
 	//	PLUS='+' | MINUS='-';
 	public AdditionOperatorElements getAdditionOperatorAccess() {
 		return eAdditionOperator;
@@ -825,8 +808,8 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		return getAdditionOperatorAccess().getRule();
 	}
 
-	//AdditionExpression expressions::Expression:
-	//	MultiplicationExpression ({common::ArithmeticExpression.leftExpression=current} operator=AdditionOperator
+	//AdditionExpression ilp::Expression:
+	//	MultiplicationExpression ({ilp::ArithmeticExpression.leftExpression=current} operator=AdditionOperator
 	//	rightExpression=LinearExpression)?
 	public AdditionExpressionElements getAdditionExpressionAccess() {
 		return pAdditionExpression;
@@ -838,9 +821,8 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// XXX: here we also allow non-linear expressions, but we do not care,
 	//// because this grammar is just for internal use (test fixture specification)
-	//MultiplicationExpression expressions::Expression:
-	//	Operand ({common::ArithmeticExpression.leftExpression=current} operator=MultiplicationOperator
-	//	rightExpression=Operand)?
+	//MultiplicationExpression ilp::Expression:
+	//	Operand ({ilp::ArithmeticExpression.leftExpression=current} operator=MultiplicationOperator rightExpression=Operand)?
 	public MultiplicationExpressionElements getMultiplicationExpressionAccess() {
 		return pMultiplicationExpression;
 	}
@@ -849,7 +831,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		return getMultiplicationExpressionAccess().getRule();
 	}
 
-	//enum MultiplicationOperator returns common::ArithmeticOperator:
+	//enum MultiplicationOperator returns ilp::Operator:
 	//	TIMES='*';
 	public MultiplicationOperatorElements getMultiplicationOperatorAccess() {
 		return eMultiplicationOperator;
@@ -859,7 +841,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		return getMultiplicationOperatorAccess().getRule();
 	}
 
-	//Operand expressions::Expression:
+	//Operand ilp::Expression:
 	//	NumberLiteralExpression | VariableExpression
 	public OperandElements getOperandAccess() {
 		return pOperand;
@@ -869,7 +851,7 @@ public class LPSolveGrammarAccess extends AbstractGrammarElementFinder {
 		return getOperandAccess().getRule();
 	}
 
-	//NumberLiteralExpression common::LiteralExpression:
+	//NumberLiteralExpression ilp::LiteralExpression:
 	//	value=Number
 	public NumberLiteralExpressionElements getNumberLiteralExpressionAccess() {
 		return pNumberLiteralExpression;

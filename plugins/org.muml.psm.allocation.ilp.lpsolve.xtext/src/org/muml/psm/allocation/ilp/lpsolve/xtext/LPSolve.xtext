@@ -4,11 +4,7 @@ grammar org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve with org.eclipse.xtext
 import "http://www.muml.org/psm/allocation/ilp/1.0.0" as ilp
 //import "platform:/resource/org.muml.psm.allocation.ilp/model/ilp.ecore#/ilp" as ilp
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
-import "http://www.muml.org/core/1.0.0" as core
-import "http://www.muml.org/core/expressions/1.0.0" as expressions
 //import "platform:/resource/org.muml.core/model/core.ecore#//expressions" as expressions
-import "http://www.muml.org/core/expressions/common/1.0.0" as common
-//import "platform:/resource/org.muml.core/model/core.ecore#//expressions/common" as common
 
 IntegerLinearProgram returns ilp::IntegerLinearProgram:
 	objectiveFunction=ObjectiveFunctionExpression
@@ -28,11 +24,11 @@ enum ObjectiveGoal returns ilp::ObjectiveGoal:
 
 ConstraintExpression returns ilp::ConstraintExpression:
 	// the comment represents an optional name of a restriction
-	(comment=VariableID ':')? leftExpression=SimpleLinearExpression operator=ComparingOperator rightExpression=SimpleLinearExpression';'
+	(comment=VariableID ':')? leftExpression=SimpleLinearExpression operator=RelationalOperator rightExpression=SimpleLinearExpression';'
 ;
 
-enum ComparingOperator returns common::ComparingOperator:
-	EQUAL='=' | GREATER='>' | GREATER_OR_EQUAL='>=' | LESS='<' | LESS_OR_EQUAL='<='
+enum RelationalOperator returns ilp::Operator:
+	LESS_THAN_OR_EQUAL_TO='<=' | GREATER_THAN_OR_EQUAL_TO='>=' | EQUAL_TO='='
 ;
 
 Variable returns ilp::Variable:
@@ -47,42 +43,42 @@ enum ILPDataType returns ilp::ILPDataType:
 	BINARY = 'bin' | INTEGER = 'int' | REAL = 'real'
 ;
 
-LinearExpression returns expressions::Expression:
+LinearExpression returns ilp::Expression:
 	// if you need a more sophisticated expression grammar override this rule
 	SimpleLinearExpression
 ;
 
-SimpleLinearExpression returns expressions::Expression:
+SimpleLinearExpression returns ilp::Expression:
 	AdditionExpression
 ;
 
-enum AdditionOperator returns common::ArithmeticOperator:
+enum AdditionOperator returns ilp::Operator:
 	PLUS='+' | MINUS='-'
 ;
 
-AdditionExpression returns expressions::Expression:
+AdditionExpression returns ilp::Expression:
 	MultiplicationExpression (
-		{common::ArithmeticExpression.leftExpression = current} operator=AdditionOperator rightExpression=LinearExpression
+		{ilp::ArithmeticExpression.leftExpression = current} operator=AdditionOperator rightExpression=LinearExpression
 	)?
 ;
 
 // XXX: here we also allow non-linear expressions, but we do not care,
 // because this grammar is just for internal use (test fixture specification)
-MultiplicationExpression returns expressions::Expression:
+MultiplicationExpression returns ilp::Expression:
 	Operand (
-		{common::ArithmeticExpression.leftExpression = current} operator=MultiplicationOperator rightExpression=Operand
+		{ilp::ArithmeticExpression.leftExpression = current} operator=MultiplicationOperator rightExpression=Operand
 	)?
 ;
 
-enum MultiplicationOperator returns common::ArithmeticOperator:
+enum MultiplicationOperator returns ilp::Operator:
 	TIMES='*'
 ;
 
-Operand returns expressions::Expression:
+Operand returns ilp::Expression:
 	NumberLiteralExpression | VariableExpression
 ;
 
-NumberLiteralExpression returns common::LiteralExpression:
+NumberLiteralExpression returns ilp::LiteralExpression:
 	value=Number
 ;
 

@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalLPSolveParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'min'", "'max'", "':'", "';'", "'.'", "'-'", "'='", "'>'", "'>='", "'<'", "'<='", "'bin'", "'int'", "'real'", "'+'", "'*'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'min'", "'max'", "':'", "';'", "'.'", "'-'", "'<='", "'>='", "'='", "'bin'", "'int'", "'real'", "'+'", "'*'"
     };
     public static final int RULE_STRING=6;
     public static final int RULE_SL_COMMENT=8;
@@ -39,13 +39,11 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
     public static final int RULE_ID=4;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
-    public static final int T__26=26;
     public static final int RULE_INT=5;
     public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
     public static final int T__23=23;
     public static final int T__24=24;
-    public static final int T__25=25;
     public static final int T__20=20;
     public static final int T__21=21;
 
@@ -230,7 +228,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( ((LA2_0>=22 && LA2_0<=24)) ) {
+                if ( ((LA2_0>=20 && LA2_0<=22)) ) {
                     alt2=1;
                 }
 
@@ -613,7 +611,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConstraintExpression"
-    // InternalLPSolve.g:235:1: ruleConstraintExpression returns [EObject current=null] : ( ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleComparingOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';' ) ;
+    // InternalLPSolve.g:235:1: ruleConstraintExpression returns [EObject current=null] : ( ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleRelationalOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';' ) ;
     public final EObject ruleConstraintExpression() throws RecognitionException {
         EObject current = null;
 
@@ -631,11 +629,11 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalLPSolve.g:238:28: ( ( ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleComparingOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';' ) )
-            // InternalLPSolve.g:239:1: ( ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleComparingOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';' )
+            // InternalLPSolve.g:238:28: ( ( ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleRelationalOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';' ) )
+            // InternalLPSolve.g:239:1: ( ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleRelationalOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';' )
             {
-            // InternalLPSolve.g:239:1: ( ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleComparingOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';' )
-            // InternalLPSolve.g:239:2: ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleComparingOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';'
+            // InternalLPSolve.g:239:1: ( ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleRelationalOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';' )
+            // InternalLPSolve.g:239:2: ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )? ( (lv_leftExpression_2_0= ruleSimpleLinearExpression ) ) ( (lv_operator_3_0= ruleRelationalOperator ) ) ( (lv_rightExpression_4_0= ruleSimpleLinearExpression ) ) otherlv_5= ';'
             {
             // InternalLPSolve.g:239:2: ( ( (lv_comment_0_0= ruleVariableID ) ) otherlv_1= ':' )?
             int alt5=2;
@@ -716,17 +714,17 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalLPSolve.g:279:2: ( (lv_operator_3_0= ruleComparingOperator ) )
-            // InternalLPSolve.g:280:1: (lv_operator_3_0= ruleComparingOperator )
+            // InternalLPSolve.g:279:2: ( (lv_operator_3_0= ruleRelationalOperator ) )
+            // InternalLPSolve.g:280:1: (lv_operator_3_0= ruleRelationalOperator )
             {
-            // InternalLPSolve.g:280:1: (lv_operator_3_0= ruleComparingOperator )
-            // InternalLPSolve.g:281:3: lv_operator_3_0= ruleComparingOperator
+            // InternalLPSolve.g:280:1: (lv_operator_3_0= ruleRelationalOperator )
+            // InternalLPSolve.g:281:3: lv_operator_3_0= ruleRelationalOperator
             {
              
-            	        newCompositeNode(grammarAccess.getConstraintExpressionAccess().getOperatorComparingOperatorEnumRuleCall_2_0()); 
+            	        newCompositeNode(grammarAccess.getConstraintExpressionAccess().getOperatorRelationalOperatorEnumRuleCall_2_0()); 
             	    
             pushFollow(FollowSets000.FOLLOW_7);
-            lv_operator_3_0=ruleComparingOperator();
+            lv_operator_3_0=ruleRelationalOperator();
 
             state._fsp--;
 
@@ -738,7 +736,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"operator",
                     		lv_operator_3_0, 
-                    		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.ComparingOperator");
+                    		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.RelationalOperator");
             	        afterParserOrEnumRuleCall();
             	    
 
@@ -1363,7 +1361,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( (LA9_0==16||LA9_0==25) ) {
+            if ( (LA9_0==16||LA9_0==23) ) {
                 alt9=1;
             }
             switch (alt9) {
@@ -1542,7 +1540,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==26) ) {
+            if ( (LA10_0==24) ) {
                 alt10=1;
             }
             switch (alt10) {
@@ -1955,7 +1953,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             if ( (LA13_0==RULE_INT) ) {
                 int LA13_1 = input.LA(2);
 
-                if ( (LA13_1==EOF||LA13_1==14||(LA13_1>=16 && LA13_1<=21)||(LA13_1>=25 && LA13_1<=26)) ) {
+                if ( (LA13_1==EOF||LA13_1==14||(LA13_1>=16 && LA13_1<=19)||(LA13_1>=23 && LA13_1<=24)) ) {
                     alt13=2;
                 }
                 else if ( (LA13_1==15) ) {
@@ -2300,24 +2298,22 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleObjectiveGoal"
 
 
-    // $ANTLR start "ruleComparingOperator"
-    // InternalLPSolve.g:869:1: ruleComparingOperator returns [Enumerator current=null] : ( (enumLiteral_0= '=' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '<=' ) ) ;
-    public final Enumerator ruleComparingOperator() throws RecognitionException {
+    // $ANTLR start "ruleRelationalOperator"
+    // InternalLPSolve.g:869:1: ruleRelationalOperator returns [Enumerator current=null] : ( (enumLiteral_0= '<=' ) | (enumLiteral_1= '>=' ) | (enumLiteral_2= '=' ) ) ;
+    public final Enumerator ruleRelationalOperator() throws RecognitionException {
         Enumerator current = null;
 
         Token enumLiteral_0=null;
         Token enumLiteral_1=null;
         Token enumLiteral_2=null;
-        Token enumLiteral_3=null;
-        Token enumLiteral_4=null;
 
          enterRule(); 
         try {
-            // InternalLPSolve.g:871:28: ( ( (enumLiteral_0= '=' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '<=' ) ) )
-            // InternalLPSolve.g:872:1: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '<=' ) )
+            // InternalLPSolve.g:871:28: ( ( (enumLiteral_0= '<=' ) | (enumLiteral_1= '>=' ) | (enumLiteral_2= '=' ) ) )
+            // InternalLPSolve.g:872:1: ( (enumLiteral_0= '<=' ) | (enumLiteral_1= '>=' ) | (enumLiteral_2= '=' ) )
             {
-            // InternalLPSolve.g:872:1: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '>' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '<' ) | (enumLiteral_4= '<=' ) )
-            int alt15=5;
+            // InternalLPSolve.g:872:1: ( (enumLiteral_0= '<=' ) | (enumLiteral_1= '>=' ) | (enumLiteral_2= '=' ) )
+            int alt15=3;
             switch ( input.LA(1) ) {
             case 17:
                 {
@@ -2334,16 +2330,6 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                 alt15=3;
                 }
                 break;
-            case 20:
-                {
-                alt15=4;
-                }
-                break;
-            case 21:
-                {
-                alt15=5;
-                }
-                break;
             default:
                 NoViableAltException nvae =
                     new NoViableAltException("", 15, 0, input);
@@ -2353,15 +2339,15 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
             switch (alt15) {
                 case 1 :
-                    // InternalLPSolve.g:872:2: (enumLiteral_0= '=' )
+                    // InternalLPSolve.g:872:2: (enumLiteral_0= '<=' )
                     {
-                    // InternalLPSolve.g:872:2: (enumLiteral_0= '=' )
-                    // InternalLPSolve.g:872:4: enumLiteral_0= '='
+                    // InternalLPSolve.g:872:2: (enumLiteral_0= '<=' )
+                    // InternalLPSolve.g:872:4: enumLiteral_0= '<='
                     {
                     enumLiteral_0=(Token)match(input,17,FollowSets000.FOLLOW_2); 
 
-                            current = grammarAccess.getComparingOperatorAccess().getEQUALEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_0, grammarAccess.getComparingOperatorAccess().getEQUALEnumLiteralDeclaration_0()); 
+                            current = grammarAccess.getRelationalOperatorAccess().getLESS_THAN_OR_EQUAL_TOEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_0, grammarAccess.getRelationalOperatorAccess().getLESS_THAN_OR_EQUAL_TOEnumLiteralDeclaration_0()); 
                         
 
                     }
@@ -2370,15 +2356,15 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalLPSolve.g:878:6: (enumLiteral_1= '>' )
+                    // InternalLPSolve.g:878:6: (enumLiteral_1= '>=' )
                     {
-                    // InternalLPSolve.g:878:6: (enumLiteral_1= '>' )
-                    // InternalLPSolve.g:878:8: enumLiteral_1= '>'
+                    // InternalLPSolve.g:878:6: (enumLiteral_1= '>=' )
+                    // InternalLPSolve.g:878:8: enumLiteral_1= '>='
                     {
                     enumLiteral_1=(Token)match(input,18,FollowSets000.FOLLOW_2); 
 
-                            current = grammarAccess.getComparingOperatorAccess().getGREATEREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_1, grammarAccess.getComparingOperatorAccess().getGREATEREnumLiteralDeclaration_1()); 
+                            current = grammarAccess.getRelationalOperatorAccess().getGREATER_THAN_OR_EQUAL_TOEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_1, grammarAccess.getRelationalOperatorAccess().getGREATER_THAN_OR_EQUAL_TOEnumLiteralDeclaration_1()); 
                         
 
                     }
@@ -2387,49 +2373,15 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalLPSolve.g:884:6: (enumLiteral_2= '>=' )
+                    // InternalLPSolve.g:884:6: (enumLiteral_2= '=' )
                     {
-                    // InternalLPSolve.g:884:6: (enumLiteral_2= '>=' )
-                    // InternalLPSolve.g:884:8: enumLiteral_2= '>='
+                    // InternalLPSolve.g:884:6: (enumLiteral_2= '=' )
+                    // InternalLPSolve.g:884:8: enumLiteral_2= '='
                     {
                     enumLiteral_2=(Token)match(input,19,FollowSets000.FOLLOW_2); 
 
-                            current = grammarAccess.getComparingOperatorAccess().getGREATER_OR_EQUALEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_2, grammarAccess.getComparingOperatorAccess().getGREATER_OR_EQUALEnumLiteralDeclaration_2()); 
-                        
-
-                    }
-
-
-                    }
-                    break;
-                case 4 :
-                    // InternalLPSolve.g:890:6: (enumLiteral_3= '<' )
-                    {
-                    // InternalLPSolve.g:890:6: (enumLiteral_3= '<' )
-                    // InternalLPSolve.g:890:8: enumLiteral_3= '<'
-                    {
-                    enumLiteral_3=(Token)match(input,20,FollowSets000.FOLLOW_2); 
-
-                            current = grammarAccess.getComparingOperatorAccess().getLESSEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_3, grammarAccess.getComparingOperatorAccess().getLESSEnumLiteralDeclaration_3()); 
-                        
-
-                    }
-
-
-                    }
-                    break;
-                case 5 :
-                    // InternalLPSolve.g:896:6: (enumLiteral_4= '<=' )
-                    {
-                    // InternalLPSolve.g:896:6: (enumLiteral_4= '<=' )
-                    // InternalLPSolve.g:896:8: enumLiteral_4= '<='
-                    {
-                    enumLiteral_4=(Token)match(input,21,FollowSets000.FOLLOW_2); 
-
-                            current = grammarAccess.getComparingOperatorAccess().getLESS_OR_EQUALEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_4, grammarAccess.getComparingOperatorAccess().getLESS_OR_EQUALEnumLiteralDeclaration_4()); 
+                            current = grammarAccess.getRelationalOperatorAccess().getEQUAL_TOEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_2, grammarAccess.getRelationalOperatorAccess().getEQUAL_TOEnumLiteralDeclaration_2()); 
                         
 
                     }
@@ -2454,11 +2406,11 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleComparingOperator"
+    // $ANTLR end "ruleRelationalOperator"
 
 
     // $ANTLR start "ruleILPDataType"
-    // InternalLPSolve.g:906:1: ruleILPDataType returns [Enumerator current=null] : ( (enumLiteral_0= 'bin' ) | (enumLiteral_1= 'int' ) | (enumLiteral_2= 'real' ) ) ;
+    // InternalLPSolve.g:894:1: ruleILPDataType returns [Enumerator current=null] : ( (enumLiteral_0= 'bin' ) | (enumLiteral_1= 'int' ) | (enumLiteral_2= 'real' ) ) ;
     public final Enumerator ruleILPDataType() throws RecognitionException {
         Enumerator current = null;
 
@@ -2468,23 +2420,23 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // InternalLPSolve.g:908:28: ( ( (enumLiteral_0= 'bin' ) | (enumLiteral_1= 'int' ) | (enumLiteral_2= 'real' ) ) )
-            // InternalLPSolve.g:909:1: ( (enumLiteral_0= 'bin' ) | (enumLiteral_1= 'int' ) | (enumLiteral_2= 'real' ) )
+            // InternalLPSolve.g:896:28: ( ( (enumLiteral_0= 'bin' ) | (enumLiteral_1= 'int' ) | (enumLiteral_2= 'real' ) ) )
+            // InternalLPSolve.g:897:1: ( (enumLiteral_0= 'bin' ) | (enumLiteral_1= 'int' ) | (enumLiteral_2= 'real' ) )
             {
-            // InternalLPSolve.g:909:1: ( (enumLiteral_0= 'bin' ) | (enumLiteral_1= 'int' ) | (enumLiteral_2= 'real' ) )
+            // InternalLPSolve.g:897:1: ( (enumLiteral_0= 'bin' ) | (enumLiteral_1= 'int' ) | (enumLiteral_2= 'real' ) )
             int alt16=3;
             switch ( input.LA(1) ) {
-            case 22:
+            case 20:
                 {
                 alt16=1;
                 }
                 break;
-            case 23:
+            case 21:
                 {
                 alt16=2;
                 }
                 break;
-            case 24:
+            case 22:
                 {
                 alt16=3;
                 }
@@ -2498,12 +2450,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
             switch (alt16) {
                 case 1 :
-                    // InternalLPSolve.g:909:2: (enumLiteral_0= 'bin' )
+                    // InternalLPSolve.g:897:2: (enumLiteral_0= 'bin' )
                     {
-                    // InternalLPSolve.g:909:2: (enumLiteral_0= 'bin' )
-                    // InternalLPSolve.g:909:4: enumLiteral_0= 'bin'
+                    // InternalLPSolve.g:897:2: (enumLiteral_0= 'bin' )
+                    // InternalLPSolve.g:897:4: enumLiteral_0= 'bin'
                     {
-                    enumLiteral_0=(Token)match(input,22,FollowSets000.FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,20,FollowSets000.FOLLOW_2); 
 
                             current = grammarAccess.getILPDataTypeAccess().getBINARYEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getILPDataTypeAccess().getBINARYEnumLiteralDeclaration_0()); 
@@ -2515,12 +2467,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalLPSolve.g:915:6: (enumLiteral_1= 'int' )
+                    // InternalLPSolve.g:903:6: (enumLiteral_1= 'int' )
                     {
-                    // InternalLPSolve.g:915:6: (enumLiteral_1= 'int' )
-                    // InternalLPSolve.g:915:8: enumLiteral_1= 'int'
+                    // InternalLPSolve.g:903:6: (enumLiteral_1= 'int' )
+                    // InternalLPSolve.g:903:8: enumLiteral_1= 'int'
                     {
-                    enumLiteral_1=(Token)match(input,23,FollowSets000.FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,21,FollowSets000.FOLLOW_2); 
 
                             current = grammarAccess.getILPDataTypeAccess().getINTEGEREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getILPDataTypeAccess().getINTEGEREnumLiteralDeclaration_1()); 
@@ -2532,12 +2484,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalLPSolve.g:921:6: (enumLiteral_2= 'real' )
+                    // InternalLPSolve.g:909:6: (enumLiteral_2= 'real' )
                     {
-                    // InternalLPSolve.g:921:6: (enumLiteral_2= 'real' )
-                    // InternalLPSolve.g:921:8: enumLiteral_2= 'real'
+                    // InternalLPSolve.g:909:6: (enumLiteral_2= 'real' )
+                    // InternalLPSolve.g:909:8: enumLiteral_2= 'real'
                     {
-                    enumLiteral_2=(Token)match(input,24,FollowSets000.FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,22,FollowSets000.FOLLOW_2); 
 
                             current = grammarAccess.getILPDataTypeAccess().getREALEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getILPDataTypeAccess().getREALEnumLiteralDeclaration_2()); 
@@ -2569,7 +2521,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAdditionOperator"
-    // InternalLPSolve.g:931:1: ruleAdditionOperator returns [Enumerator current=null] : ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) ;
+    // InternalLPSolve.g:919:1: ruleAdditionOperator returns [Enumerator current=null] : ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) ;
     public final Enumerator ruleAdditionOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -2578,14 +2530,14 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // InternalLPSolve.g:933:28: ( ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) )
-            // InternalLPSolve.g:934:1: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
+            // InternalLPSolve.g:921:28: ( ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) )
+            // InternalLPSolve.g:922:1: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
             {
-            // InternalLPSolve.g:934:1: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
+            // InternalLPSolve.g:922:1: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
             int alt17=2;
             int LA17_0 = input.LA(1);
 
-            if ( (LA17_0==25) ) {
+            if ( (LA17_0==23) ) {
                 alt17=1;
             }
             else if ( (LA17_0==16) ) {
@@ -2599,12 +2551,12 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
             }
             switch (alt17) {
                 case 1 :
-                    // InternalLPSolve.g:934:2: (enumLiteral_0= '+' )
+                    // InternalLPSolve.g:922:2: (enumLiteral_0= '+' )
                     {
-                    // InternalLPSolve.g:934:2: (enumLiteral_0= '+' )
-                    // InternalLPSolve.g:934:4: enumLiteral_0= '+'
+                    // InternalLPSolve.g:922:2: (enumLiteral_0= '+' )
+                    // InternalLPSolve.g:922:4: enumLiteral_0= '+'
                     {
-                    enumLiteral_0=(Token)match(input,25,FollowSets000.FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,23,FollowSets000.FOLLOW_2); 
 
                             current = grammarAccess.getAdditionOperatorAccess().getPLUSEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getAdditionOperatorAccess().getPLUSEnumLiteralDeclaration_0()); 
@@ -2616,10 +2568,10 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalLPSolve.g:940:6: (enumLiteral_1= '-' )
+                    // InternalLPSolve.g:928:6: (enumLiteral_1= '-' )
                     {
-                    // InternalLPSolve.g:940:6: (enumLiteral_1= '-' )
-                    // InternalLPSolve.g:940:8: enumLiteral_1= '-'
+                    // InternalLPSolve.g:928:6: (enumLiteral_1= '-' )
+                    // InternalLPSolve.g:928:8: enumLiteral_1= '-'
                     {
                     enumLiteral_1=(Token)match(input,16,FollowSets000.FOLLOW_2); 
 
@@ -2653,7 +2605,7 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMultiplicationOperator"
-    // InternalLPSolve.g:950:1: ruleMultiplicationOperator returns [Enumerator current=null] : (enumLiteral_0= '*' ) ;
+    // InternalLPSolve.g:938:1: ruleMultiplicationOperator returns [Enumerator current=null] : (enumLiteral_0= '*' ) ;
     public final Enumerator ruleMultiplicationOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -2661,13 +2613,13 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // InternalLPSolve.g:952:28: ( (enumLiteral_0= '*' ) )
-            // InternalLPSolve.g:953:1: (enumLiteral_0= '*' )
+            // InternalLPSolve.g:940:28: ( (enumLiteral_0= '*' ) )
+            // InternalLPSolve.g:941:1: (enumLiteral_0= '*' )
             {
-            // InternalLPSolve.g:953:1: (enumLiteral_0= '*' )
-            // InternalLPSolve.g:953:3: enumLiteral_0= '*'
+            // InternalLPSolve.g:941:1: (enumLiteral_0= '*' )
+            // InternalLPSolve.g:941:3: enumLiteral_0= '*'
             {
-            enumLiteral_0=(Token)match(input,26,FollowSets000.FOLLOW_2); 
+            enumLiteral_0=(Token)match(input,24,FollowSets000.FOLLOW_2); 
 
                     current = grammarAccess.getMultiplicationOperatorAccess().getTIMESEnumLiteralDeclaration().getEnumLiteral().getInstance();
                     newLeafNode(enumLiteral_0, grammarAccess.getMultiplicationOperatorAccess().getTIMESEnumLiteralDeclaration()); 
@@ -2697,18 +2649,18 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
     protected DFA5 dfa5 = new DFA5(this);
     static final String dfa_1s = "\10\uffff";
     static final String dfa_2s = "\1\4\1\15\1\uffff\1\4\1\uffff\1\15\1\4\1\15";
-    static final String dfa_3s = "\1\20\1\32\1\uffff\1\5\1\uffff\3\32";
+    static final String dfa_3s = "\1\20\1\30\1\uffff\1\5\1\uffff\3\30";
     static final String dfa_4s = "\2\uffff\1\2\1\uffff\1\1\3\uffff";
     static final String dfa_5s = "\10\uffff}>";
     static final String[] dfa_6s = {
             "\1\1\1\2\12\uffff\1\2",
-            "\1\4\1\uffff\1\3\6\2\3\uffff\2\2",
+            "\1\4\1\uffff\1\3\4\2\3\uffff\2\2",
             "",
             "\1\5\1\6",
             "",
-            "\1\4\1\uffff\1\3\6\2\3\uffff\2\2",
-            "\1\7\10\uffff\1\4\1\uffff\1\3\6\2\3\uffff\2\2",
-            "\1\4\1\uffff\1\3\6\2\3\uffff\2\2"
+            "\1\4\1\uffff\1\3\4\2\3\uffff\2\2",
+            "\1\7\10\uffff\1\4\1\uffff\1\3\4\2\3\uffff\2\2",
+            "\1\4\1\uffff\1\3\4\2\3\uffff\2\2"
     };
 
     static final short[] dfa_1 = DFA.unpackEncodedString(dfa_1s);
@@ -2741,18 +2693,18 @@ public class InternalLPSolveParser extends AbstractInternalAntlrParser {
     private static class FollowSets000 {
         public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000001C10032L});
-        public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000001C00002L});
+        public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000710032L});
+        public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000700002L});
         public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000002000L});
         public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000004000L});
         public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000010030L});
-        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x00000000003E0000L});
+        public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x00000000000E0000L});
         public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000008002L});
         public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000008012L});
-        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000002010002L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000004000002L});
+        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000810002L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000001000002L});
         public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000020L});
         public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000008000L});
     }

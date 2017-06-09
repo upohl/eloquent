@@ -279,9 +279,9 @@ ruleConstraintExpression returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getConstraintExpressionAccess().getOperatorComparingOperatorEnumRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getConstraintExpressionAccess().getOperatorRelationalOperatorEnumRuleCall_2_0()); 
 	    }
-		lv_operator_3_0=ruleComparingOperator		{
+		lv_operator_3_0=ruleRelationalOperator		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getConstraintExpressionRule());
 	        }
@@ -289,7 +289,7 @@ ruleConstraintExpression returns [EObject current=null]
        			$current, 
        			"operator",
         		lv_operator_3_0, 
-        		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.ComparingOperator");
+        		"org.muml.psm.allocation.ilp.lpsolve.xtext.LPSolve.RelationalOperator");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -865,38 +865,26 @@ ruleObjectiveGoal returns [Enumerator current=null]
 
 
 
-// Rule ComparingOperator
-ruleComparingOperator returns [Enumerator current=null] 
+// Rule RelationalOperator
+ruleRelationalOperator returns [Enumerator current=null] 
     @init { enterRule(); }
     @after { leaveRule(); }:
-((	enumLiteral_0='=' 
+((	enumLiteral_0='<=' 
 	{
-        $current = grammarAccess.getComparingOperatorAccess().getEQUALEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_0, grammarAccess.getComparingOperatorAccess().getEQUALEnumLiteralDeclaration_0()); 
+        $current = grammarAccess.getRelationalOperatorAccess().getLESS_THAN_OR_EQUAL_TOEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getRelationalOperatorAccess().getLESS_THAN_OR_EQUAL_TOEnumLiteralDeclaration_0()); 
     }
 )
-    |(	enumLiteral_1='>' 
+    |(	enumLiteral_1='>=' 
 	{
-        $current = grammarAccess.getComparingOperatorAccess().getGREATEREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_1, grammarAccess.getComparingOperatorAccess().getGREATEREnumLiteralDeclaration_1()); 
+        $current = grammarAccess.getRelationalOperatorAccess().getGREATER_THAN_OR_EQUAL_TOEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getRelationalOperatorAccess().getGREATER_THAN_OR_EQUAL_TOEnumLiteralDeclaration_1()); 
     }
 )
-    |(	enumLiteral_2='>=' 
+    |(	enumLiteral_2='=' 
 	{
-        $current = grammarAccess.getComparingOperatorAccess().getGREATER_OR_EQUALEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_2, grammarAccess.getComparingOperatorAccess().getGREATER_OR_EQUALEnumLiteralDeclaration_2()); 
-    }
-)
-    |(	enumLiteral_3='<' 
-	{
-        $current = grammarAccess.getComparingOperatorAccess().getLESSEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_3, grammarAccess.getComparingOperatorAccess().getLESSEnumLiteralDeclaration_3()); 
-    }
-)
-    |(	enumLiteral_4='<=' 
-	{
-        $current = grammarAccess.getComparingOperatorAccess().getLESS_OR_EQUALEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_4, grammarAccess.getComparingOperatorAccess().getLESS_OR_EQUALEnumLiteralDeclaration_4()); 
+        $current = grammarAccess.getRelationalOperatorAccess().getEQUAL_TOEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getRelationalOperatorAccess().getEQUAL_TOEnumLiteralDeclaration_2()); 
     }
 ));
 
