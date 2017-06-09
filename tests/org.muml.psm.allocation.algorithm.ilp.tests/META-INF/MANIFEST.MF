@@ -9,7 +9,6 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;bundle-version="2.10.1";visibility:=reexport,
- org.muml.core;visibility:=reexport,
  org.junit;bundle-version="4.11.0",
  org.eclipse.xtext.xbase.lib;bundle-version="2.7.2",
  org.muml.psm.allocation.algorithm.tests;bundle-version="1.0.0",
