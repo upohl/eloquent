@@ -9,26 +9,24 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
-import org.muml.psm.allocation.ilp.IlpPackage;
-import org.muml.psm.allocation.ilp.VariableExpression;
+import org.muml.psm.allocation.ilp.ArithmeticExpression;
 
 /**
- * This is the item provider adapter for a {@link org.muml.psm.allocation.ilp.VariableExpression} object.
+ * This is the item provider adapter for a {@link org.muml.psm.allocation.ilp.ArithmeticExpression} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class VariableExpressionItemProvider extends ExpressionItemProvider {
+public class ArithmeticExpressionItemProvider extends BinaryExpressionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VariableExpressionItemProvider(AdapterFactory adapterFactory) {
+	public ArithmeticExpressionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -43,42 +41,19 @@ public class VariableExpressionItemProvider extends ExpressionItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addVariablePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Variable feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addVariablePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_VariableExpression_variable_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_VariableExpression_variable_feature", "_UI_VariableExpression_type"),
-				 IlpPackage.Literals.VARIABLE_EXPRESSION__VARIABLE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This returns VariableExpression.gif.
+	 * This returns ArithmeticExpression.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/VariableExpression"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ArithmeticExpression"));
 	}
 
 	/**
@@ -89,10 +64,10 @@ public class VariableExpressionItemProvider extends ExpressionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((VariableExpression)object).getComment();
+		String label = ((ArithmeticExpression)object).getComment();
 		return label == null || label.length() == 0 ?
-			getString("_UI_VariableExpression_type") :
-			getString("_UI_VariableExpression_type") + " " + label;
+			getString("_UI_ArithmeticExpression_type") :
+			getString("_UI_ArithmeticExpression_type") + " " + label;
 	}
 	
 

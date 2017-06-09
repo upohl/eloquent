@@ -40,6 +40,15 @@ public interface IlpFactory extends EFactory {
 	Variable createVariable();
 
 	/**
+	 * Returns a new object of class '<em>Literal Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Literal Expression</em>'.
+	 * @generated
+	 */
+	LiteralExpression createLiteralExpression();
+
+	/**
 	 * Returns a new object of class '<em>Constraint Expression</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,6 +56,15 @@ public interface IlpFactory extends EFactory {
 	 * @generated
 	 */
 	ConstraintExpression createConstraintExpression();
+
+	/**
+	 * Returns a new object of class '<em>Arithmetic Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Arithmetic Expression</em>'.
+	 * @generated
+	 */
+	ArithmeticExpression createArithmeticExpression();
 
 	/**
 	 * Returns a new object of class '<em>Variable Expression</em>'.

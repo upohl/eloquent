@@ -3,8 +3,8 @@
 package org.muml.psm.allocation.ilp.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
+
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.muml.core.provider.CoreEditPlugin;
 
 /**
  * This is the central singleton for the Ilp edit plugin.
@@ -38,7 +38,6 @@ public final class IlpEditPlugin extends EMFPlugin {
 	public IlpEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     CoreEditPlugin.INSTANCE,
 		   });
 	}
 

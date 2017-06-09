@@ -59,7 +59,9 @@ public class IlpFactoryImpl extends EFactoryImpl implements IlpFactory {
 		switch (eClass.getClassifierID()) {
 			case IlpPackage.INTEGER_LINEAR_PROGRAM: return createIntegerLinearProgram();
 			case IlpPackage.VARIABLE: return createVariable();
+			case IlpPackage.LITERAL_EXPRESSION: return createLiteralExpression();
 			case IlpPackage.CONSTRAINT_EXPRESSION: return createConstraintExpression();
+			case IlpPackage.ARITHMETIC_EXPRESSION: return createArithmeticExpression();
 			case IlpPackage.VARIABLE_EXPRESSION: return createVariableExpression();
 			case IlpPackage.OBJECTIVE_FUNCTION_EXPRESSION: return createObjectiveFunctionExpression();
 			default:
@@ -77,6 +79,8 @@ public class IlpFactoryImpl extends EFactoryImpl implements IlpFactory {
 		switch (eDataType.getClassifierID()) {
 			case IlpPackage.ILP_DATA_TYPE:
 				return createILPDataTypeFromString(eDataType, initialValue);
+			case IlpPackage.OPERATOR:
+				return createOperatorFromString(eDataType, initialValue);
 			case IlpPackage.OBJECTIVE_GOAL:
 				return createObjectiveGoalFromString(eDataType, initialValue);
 			default:
@@ -94,6 +98,8 @@ public class IlpFactoryImpl extends EFactoryImpl implements IlpFactory {
 		switch (eDataType.getClassifierID()) {
 			case IlpPackage.ILP_DATA_TYPE:
 				return convertILPDataTypeToString(eDataType, instanceValue);
+			case IlpPackage.OPERATOR:
+				return convertOperatorToString(eDataType, instanceValue);
 			case IlpPackage.OBJECTIVE_GOAL:
 				return convertObjectiveGoalToString(eDataType, instanceValue);
 			default:
@@ -126,9 +132,29 @@ public class IlpFactoryImpl extends EFactoryImpl implements IlpFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public LiteralExpression createLiteralExpression() {
+		LiteralExpressionImpl literalExpression = new LiteralExpressionImpl();
+		return literalExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ConstraintExpression createConstraintExpression() {
 		ConstraintExpressionImpl constraintExpression = new ConstraintExpressionImpl();
 		return constraintExpression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ArithmeticExpression createArithmeticExpression() {
+		ArithmeticExpressionImpl arithmeticExpression = new ArithmeticExpressionImpl();
+		return arithmeticExpression;
 	}
 
 	/**
@@ -168,6 +194,26 @@ public class IlpFactoryImpl extends EFactoryImpl implements IlpFactory {
 	 * @generated
 	 */
 	public String convertILPDataTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Operator createOperatorFromString(EDataType eDataType, String initialValue) {
+		Operator result = Operator.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertOperatorToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

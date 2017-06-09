@@ -4,8 +4,6 @@ package org.muml.psm.allocation.ilp;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.muml.core.expressions.Expression;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Objective Function Expression</b></em>'.

@@ -8,6 +8,7 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
@@ -19,6 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+
 import org.muml.psm.allocation.ilp.util.IlpAdapterFactory;
 
 /**
@@ -116,6 +118,29 @@ public class IlpItemProviderAdapterFactory extends IlpAdapterFactory implements 
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.psm.allocation.ilp.LiteralExpression} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LiteralExpressionItemProvider literalExpressionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.psm.allocation.ilp.LiteralExpression}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLiteralExpressionAdapter() {
+		if (literalExpressionItemProvider == null) {
+			literalExpressionItemProvider = new LiteralExpressionItemProvider(this);
+		}
+
+		return literalExpressionItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.muml.psm.allocation.ilp.ConstraintExpression} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -136,6 +161,29 @@ public class IlpItemProviderAdapterFactory extends IlpAdapterFactory implements 
 		}
 
 		return constraintExpressionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.psm.allocation.ilp.ArithmeticExpression} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ArithmeticExpressionItemProvider arithmeticExpressionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.psm.allocation.ilp.ArithmeticExpression}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createArithmeticExpressionAdapter() {
+		if (arithmeticExpressionItemProvider == null) {
+			arithmeticExpressionItemProvider = new ArithmeticExpressionItemProvider(this);
+		}
+
+		return arithmeticExpressionItemProvider;
 	}
 
 	/**
@@ -285,7 +333,9 @@ public class IlpItemProviderAdapterFactory extends IlpAdapterFactory implements 
 	public void dispose() {
 		if (integerLinearProgramItemProvider != null) integerLinearProgramItemProvider.dispose();
 		if (variableItemProvider != null) variableItemProvider.dispose();
+		if (literalExpressionItemProvider != null) literalExpressionItemProvider.dispose();
 		if (constraintExpressionItemProvider != null) constraintExpressionItemProvider.dispose();
+		if (arithmeticExpressionItemProvider != null) arithmeticExpressionItemProvider.dispose();
 		if (variableExpressionItemProvider != null) variableExpressionItemProvider.dispose();
 		if (objectiveFunctionExpressionItemProvider != null) objectiveFunctionExpressionItemProvider.dispose();
 	}

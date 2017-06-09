@@ -2,7 +2,6 @@
  */
 package org.muml.psm.allocation.ilp;
 
-import org.muml.core.expressions.Expression;
 
 /**
  * <!-- begin-user-doc -->

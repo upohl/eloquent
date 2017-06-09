@@ -8,10 +8,6 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
-import org.muml.core.expressions.ExpressionsPackage;
-
-import org.muml.core.expressions.common.CommonExpressionsPackage;
-
 /**
  * <!-- begin-user-doc -->
  * The <b>Package</b> for the model.
@@ -167,23 +163,14 @@ public interface IlpPackage extends EPackage {
 	int VARIABLE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.muml.psm.allocation.ilp.impl.ConstraintExpressionImpl <em>Constraint Expression</em>}' class.
+	 * The meta object id for the '{@link org.muml.psm.allocation.ilp.impl.ExpressionImpl <em>Expression</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.muml.psm.allocation.ilp.impl.ConstraintExpressionImpl
-	 * @see org.muml.psm.allocation.ilp.impl.IlpPackageImpl#getConstraintExpression()
+	 * @see org.muml.psm.allocation.ilp.impl.ExpressionImpl
+	 * @see org.muml.psm.allocation.ilp.impl.IlpPackageImpl#getExpression()
 	 * @generated
 	 */
-	int CONSTRAINT_EXPRESSION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION__EXTENSIONS = CommonExpressionsPackage.COMPARISON_EXPRESSION__EXTENSIONS;
+	int EXPRESSION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Comment</b></em>' attribute.
@@ -192,7 +179,90 @@ public interface IlpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT_EXPRESSION__COMMENT = CommonExpressionsPackage.COMPARISON_EXPRESSION__COMMENT;
+	int EXPRESSION__COMMENT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.ilp.impl.LiteralExpressionImpl <em>Literal Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.ilp.impl.LiteralExpressionImpl
+	 * @see org.muml.psm.allocation.ilp.impl.IlpPackageImpl#getLiteralExpression()
+	 * @generated
+	 */
+	int LITERAL_EXPRESSION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Comment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_EXPRESSION__COMMENT = EXPRESSION__COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_EXPRESSION__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Literal Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Literal Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_EXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.ilp.impl.BinaryExpressionImpl <em>Binary Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.ilp.impl.BinaryExpressionImpl
+	 * @see org.muml.psm.allocation.ilp.impl.IlpPackageImpl#getBinaryExpression()
+	 * @generated
+	 */
+	int BINARY_EXPRESSION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Comment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINARY_EXPRESSION__COMMENT = EXPRESSION__COMMENT;
 
 	/**
 	 * The feature id for the '<em><b>Left Expression</b></em>' containment reference.
@@ -201,7 +271,7 @@ public interface IlpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT_EXPRESSION__LEFT_EXPRESSION = CommonExpressionsPackage.COMPARISON_EXPRESSION__LEFT_EXPRESSION;
+	int BINARY_EXPRESSION__LEFT_EXPRESSION = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Right Expression</b></em>' containment reference.
@@ -210,7 +280,7 @@ public interface IlpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT_EXPRESSION__RIGHT_EXPRESSION = CommonExpressionsPackage.COMPARISON_EXPRESSION__RIGHT_EXPRESSION;
+	int BINARY_EXPRESSION__RIGHT_EXPRESSION = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Operator</b></em>' attribute.
@@ -219,7 +289,71 @@ public interface IlpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT_EXPRESSION__OPERATOR = CommonExpressionsPackage.COMPARISON_EXPRESSION__OPERATOR;
+	int BINARY_EXPRESSION__OPERATOR = EXPRESSION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Binary Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINARY_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Binary Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINARY_EXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.ilp.impl.ConstraintExpressionImpl <em>Constraint Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.ilp.impl.ConstraintExpressionImpl
+	 * @see org.muml.psm.allocation.ilp.impl.IlpPackageImpl#getConstraintExpression()
+	 * @generated
+	 */
+	int CONSTRAINT_EXPRESSION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Comment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT_EXPRESSION__COMMENT = BINARY_EXPRESSION__COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Left Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT_EXPRESSION__LEFT_EXPRESSION = BINARY_EXPRESSION__LEFT_EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Right Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT_EXPRESSION__RIGHT_EXPRESSION = BINARY_EXPRESSION__RIGHT_EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Operator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT_EXPRESSION__OPERATOR = BINARY_EXPRESSION__OPERATOR;
 
 	/**
 	 * The number of structural features of the '<em>Constraint Expression</em>' class.
@@ -228,151 +362,7 @@ public interface IlpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT_EXPRESSION_FEATURE_COUNT = CommonExpressionsPackage.COMPARISON_EXPRESSION_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>EClass</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION___ECLASS = CommonExpressionsPackage.COMPARISON_EXPRESSION___ECLASS;
-
-	/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION___EIS_PROXY = CommonExpressionsPackage.COMPARISON_EXPRESSION___EIS_PROXY;
-
-	/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION___ERESOURCE = CommonExpressionsPackage.COMPARISON_EXPRESSION___ERESOURCE;
-
-	/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION___ECONTAINER = CommonExpressionsPackage.COMPARISON_EXPRESSION___ECONTAINER;
-
-	/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION___ECONTAINING_FEATURE = CommonExpressionsPackage.COMPARISON_EXPRESSION___ECONTAINING_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION___ECONTAINMENT_FEATURE = CommonExpressionsPackage.COMPARISON_EXPRESSION___ECONTAINMENT_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION___ECONTENTS = CommonExpressionsPackage.COMPARISON_EXPRESSION___ECONTENTS;
-
-	/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION___EALL_CONTENTS = CommonExpressionsPackage.COMPARISON_EXPRESSION___EALL_CONTENTS;
-
-	/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION___ECROSS_REFERENCES = CommonExpressionsPackage.COMPARISON_EXPRESSION___ECROSS_REFERENCES;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION___EGET__ESTRUCTURALFEATURE = CommonExpressionsPackage.COMPARISON_EXPRESSION___EGET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION___EGET__ESTRUCTURALFEATURE_BOOLEAN = CommonExpressionsPackage.COMPARISON_EXPRESSION___EGET__ESTRUCTURALFEATURE_BOOLEAN;
-
-	/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION___ESET__ESTRUCTURALFEATURE_OBJECT = CommonExpressionsPackage.COMPARISON_EXPRESSION___ESET__ESTRUCTURALFEATURE_OBJECT;
-
-	/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION___EIS_SET__ESTRUCTURALFEATURE = CommonExpressionsPackage.COMPARISON_EXPRESSION___EIS_SET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION___EUNSET__ESTRUCTURALFEATURE = CommonExpressionsPackage.COMPARISON_EXPRESSION___EUNSET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION___EINVOKE__EOPERATION_ELIST = CommonExpressionsPackage.COMPARISON_EXPRESSION___EINVOKE__EOPERATION_ELIST;
-
-	/**
-	 * The operation id for the '<em>Get Extension</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_EXPRESSION___GET_EXTENSION__ECLASS = CommonExpressionsPackage.COMPARISON_EXPRESSION___GET_EXTENSION__ECLASS;
+	int CONSTRAINT_EXPRESSION_FEATURE_COUNT = BINARY_EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Constraint Expression</em>' class.
@@ -381,7 +371,71 @@ public interface IlpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT_EXPRESSION_OPERATION_COUNT = CommonExpressionsPackage.COMPARISON_EXPRESSION_OPERATION_COUNT + 0;
+	int CONSTRAINT_EXPRESSION_OPERATION_COUNT = BINARY_EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.ilp.impl.ArithmeticExpressionImpl <em>Arithmetic Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.ilp.impl.ArithmeticExpressionImpl
+	 * @see org.muml.psm.allocation.ilp.impl.IlpPackageImpl#getArithmeticExpression()
+	 * @generated
+	 */
+	int ARITHMETIC_EXPRESSION = 6;
+
+	/**
+	 * The feature id for the '<em><b>Comment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_EXPRESSION__COMMENT = BINARY_EXPRESSION__COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Left Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_EXPRESSION__LEFT_EXPRESSION = BINARY_EXPRESSION__LEFT_EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Right Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_EXPRESSION__RIGHT_EXPRESSION = BINARY_EXPRESSION__RIGHT_EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Operator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_EXPRESSION__OPERATOR = BINARY_EXPRESSION__OPERATOR;
+
+	/**
+	 * The number of structural features of the '<em>Arithmetic Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_EXPRESSION_FEATURE_COUNT = BINARY_EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Arithmetic Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_EXPRESSION_OPERATION_COUNT = BINARY_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.ilp.impl.VariableExpressionImpl <em>Variable Expression</em>}' class.
@@ -391,16 +445,7 @@ public interface IlpPackage extends EPackage {
 	 * @see org.muml.psm.allocation.ilp.impl.IlpPackageImpl#getVariableExpression()
 	 * @generated
 	 */
-	int VARIABLE_EXPRESSION = 3;
-
-	/**
-	 * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION__EXTENSIONS = ExpressionsPackage.EXPRESSION__EXTENSIONS;
+	int VARIABLE_EXPRESSION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Comment</b></em>' attribute.
@@ -409,7 +454,7 @@ public interface IlpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_EXPRESSION__COMMENT = ExpressionsPackage.EXPRESSION__COMMENT;
+	int VARIABLE_EXPRESSION__COMMENT = EXPRESSION__COMMENT;
 
 	/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -418,7 +463,7 @@ public interface IlpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_EXPRESSION__VARIABLE = ExpressionsPackage.EXPRESSION_FEATURE_COUNT + 0;
+	int VARIABLE_EXPRESSION__VARIABLE = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Variable Expression</em>' class.
@@ -427,151 +472,7 @@ public interface IlpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_EXPRESSION_FEATURE_COUNT = ExpressionsPackage.EXPRESSION_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>EClass</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION___ECLASS = ExpressionsPackage.EXPRESSION___ECLASS;
-
-	/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION___EIS_PROXY = ExpressionsPackage.EXPRESSION___EIS_PROXY;
-
-	/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION___ERESOURCE = ExpressionsPackage.EXPRESSION___ERESOURCE;
-
-	/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION___ECONTAINER = ExpressionsPackage.EXPRESSION___ECONTAINER;
-
-	/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION___ECONTAINING_FEATURE = ExpressionsPackage.EXPRESSION___ECONTAINING_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION___ECONTAINMENT_FEATURE = ExpressionsPackage.EXPRESSION___ECONTAINMENT_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION___ECONTENTS = ExpressionsPackage.EXPRESSION___ECONTENTS;
-
-	/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION___EALL_CONTENTS = ExpressionsPackage.EXPRESSION___EALL_CONTENTS;
-
-	/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION___ECROSS_REFERENCES = ExpressionsPackage.EXPRESSION___ECROSS_REFERENCES;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION___EGET__ESTRUCTURALFEATURE = ExpressionsPackage.EXPRESSION___EGET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION___EGET__ESTRUCTURALFEATURE_BOOLEAN = ExpressionsPackage.EXPRESSION___EGET__ESTRUCTURALFEATURE_BOOLEAN;
-
-	/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION___ESET__ESTRUCTURALFEATURE_OBJECT = ExpressionsPackage.EXPRESSION___ESET__ESTRUCTURALFEATURE_OBJECT;
-
-	/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION___EIS_SET__ESTRUCTURALFEATURE = ExpressionsPackage.EXPRESSION___EIS_SET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION___EUNSET__ESTRUCTURALFEATURE = ExpressionsPackage.EXPRESSION___EUNSET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION___EINVOKE__EOPERATION_ELIST = ExpressionsPackage.EXPRESSION___EINVOKE__EOPERATION_ELIST;
-
-	/**
-	 * The operation id for the '<em>Get Extension</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXPRESSION___GET_EXTENSION__ECLASS = ExpressionsPackage.EXPRESSION___GET_EXTENSION__ECLASS;
+	int VARIABLE_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Variable Expression</em>' class.
@@ -580,7 +481,7 @@ public interface IlpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_EXPRESSION_OPERATION_COUNT = ExpressionsPackage.EXPRESSION_OPERATION_COUNT + 0;
+	int VARIABLE_EXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.ilp.impl.ObjectiveFunctionExpressionImpl <em>Objective Function Expression</em>}' class.
@@ -590,7 +491,7 @@ public interface IlpPackage extends EPackage {
 	 * @see org.muml.psm.allocation.ilp.impl.IlpPackageImpl#getObjectiveFunctionExpression()
 	 * @generated
 	 */
-	int OBJECTIVE_FUNCTION_EXPRESSION = 4;
+	int OBJECTIVE_FUNCTION_EXPRESSION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Goal</b></em>' attribute.
@@ -636,7 +537,17 @@ public interface IlpPackage extends EPackage {
 	 * @see org.muml.psm.allocation.ilp.impl.IlpPackageImpl#getILPDataType()
 	 * @generated
 	 */
-	int ILP_DATA_TYPE = 5;
+	int ILP_DATA_TYPE = 9;
+
+	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.ilp.Operator <em>Operator</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.ilp.Operator
+	 * @see org.muml.psm.allocation.ilp.impl.IlpPackageImpl#getOperator()
+	 * @generated
+	 */
+	int OPERATOR = 10;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.ilp.ObjectiveGoal <em>Objective Goal</em>}' enum.
@@ -646,7 +557,7 @@ public interface IlpPackage extends EPackage {
 	 * @see org.muml.psm.allocation.ilp.impl.IlpPackageImpl#getObjectiveGoal()
 	 * @generated
 	 */
-	int OBJECTIVE_GOAL = 6;
+	int OBJECTIVE_GOAL = 11;
 
 
 	/**
@@ -725,6 +636,91 @@ public interface IlpPackage extends EPackage {
 	EAttribute getVariable_Name();
 
 	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.ilp.Expression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Expression</em>'.
+	 * @see org.muml.psm.allocation.ilp.Expression
+	 * @generated
+	 */
+	EClass getExpression();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.ilp.Expression#getComment <em>Comment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Comment</em>'.
+	 * @see org.muml.psm.allocation.ilp.Expression#getComment()
+	 * @see #getExpression()
+	 * @generated
+	 */
+	EAttribute getExpression_Comment();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.ilp.LiteralExpression <em>Literal Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Literal Expression</em>'.
+	 * @see org.muml.psm.allocation.ilp.LiteralExpression
+	 * @generated
+	 */
+	EClass getLiteralExpression();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.ilp.LiteralExpression#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.muml.psm.allocation.ilp.LiteralExpression#getValue()
+	 * @see #getLiteralExpression()
+	 * @generated
+	 */
+	EAttribute getLiteralExpression_Value();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.ilp.BinaryExpression <em>Binary Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Binary Expression</em>'.
+	 * @see org.muml.psm.allocation.ilp.BinaryExpression
+	 * @generated
+	 */
+	EClass getBinaryExpression();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.ilp.BinaryExpression#getLeftExpression <em>Left Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Left Expression</em>'.
+	 * @see org.muml.psm.allocation.ilp.BinaryExpression#getLeftExpression()
+	 * @see #getBinaryExpression()
+	 * @generated
+	 */
+	EReference getBinaryExpression_LeftExpression();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.ilp.BinaryExpression#getRightExpression <em>Right Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Right Expression</em>'.
+	 * @see org.muml.psm.allocation.ilp.BinaryExpression#getRightExpression()
+	 * @see #getBinaryExpression()
+	 * @generated
+	 */
+	EReference getBinaryExpression_RightExpression();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.ilp.BinaryExpression#getOperator <em>Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Operator</em>'.
+	 * @see org.muml.psm.allocation.ilp.BinaryExpression#getOperator()
+	 * @see #getBinaryExpression()
+	 * @generated
+	 */
+	EAttribute getBinaryExpression_Operator();
+
+	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.ilp.ConstraintExpression <em>Constraint Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -733,6 +729,16 @@ public interface IlpPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getConstraintExpression();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.ilp.ArithmeticExpression <em>Arithmetic Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Arithmetic Expression</em>'.
+	 * @see org.muml.psm.allocation.ilp.ArithmeticExpression
+	 * @generated
+	 */
+	EClass getArithmeticExpression();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.ilp.VariableExpression <em>Variable Expression</em>}'.
@@ -796,6 +802,16 @@ public interface IlpPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getILPDataType();
+
+	/**
+	 * Returns the meta object for enum '{@link org.muml.psm.allocation.ilp.Operator <em>Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Operator</em>'.
+	 * @see org.muml.psm.allocation.ilp.Operator
+	 * @generated
+	 */
+	EEnum getOperator();
 
 	/**
 	 * Returns the meta object for enum '{@link org.muml.psm.allocation.ilp.ObjectiveGoal <em>Objective Goal</em>}'.
@@ -891,6 +907,76 @@ public interface IlpPackage extends EPackage {
 		EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
 
 		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.ilp.impl.ExpressionImpl <em>Expression</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.ilp.impl.ExpressionImpl
+		 * @see org.muml.psm.allocation.ilp.impl.IlpPackageImpl#getExpression()
+		 * @generated
+		 */
+		EClass EXPRESSION = eINSTANCE.getExpression();
+
+		/**
+		 * The meta object literal for the '<em><b>Comment</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXPRESSION__COMMENT = eINSTANCE.getExpression_Comment();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.ilp.impl.LiteralExpressionImpl <em>Literal Expression</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.ilp.impl.LiteralExpressionImpl
+		 * @see org.muml.psm.allocation.ilp.impl.IlpPackageImpl#getLiteralExpression()
+		 * @generated
+		 */
+		EClass LITERAL_EXPRESSION = eINSTANCE.getLiteralExpression();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LITERAL_EXPRESSION__VALUE = eINSTANCE.getLiteralExpression_Value();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.ilp.impl.BinaryExpressionImpl <em>Binary Expression</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.ilp.impl.BinaryExpressionImpl
+		 * @see org.muml.psm.allocation.ilp.impl.IlpPackageImpl#getBinaryExpression()
+		 * @generated
+		 */
+		EClass BINARY_EXPRESSION = eINSTANCE.getBinaryExpression();
+
+		/**
+		 * The meta object literal for the '<em><b>Left Expression</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BINARY_EXPRESSION__LEFT_EXPRESSION = eINSTANCE.getBinaryExpression_LeftExpression();
+
+		/**
+		 * The meta object literal for the '<em><b>Right Expression</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BINARY_EXPRESSION__RIGHT_EXPRESSION = eINSTANCE.getBinaryExpression_RightExpression();
+
+		/**
+		 * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BINARY_EXPRESSION__OPERATOR = eINSTANCE.getBinaryExpression_Operator();
+
+		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.ilp.impl.ConstraintExpressionImpl <em>Constraint Expression</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -899,6 +985,16 @@ public interface IlpPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONSTRAINT_EXPRESSION = eINSTANCE.getConstraintExpression();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.ilp.impl.ArithmeticExpressionImpl <em>Arithmetic Expression</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.ilp.impl.ArithmeticExpressionImpl
+		 * @see org.muml.psm.allocation.ilp.impl.IlpPackageImpl#getArithmeticExpression()
+		 * @generated
+		 */
+		EClass ARITHMETIC_EXPRESSION = eINSTANCE.getArithmeticExpression();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.ilp.impl.VariableExpressionImpl <em>Variable Expression</em>}' class.
@@ -953,6 +1049,16 @@ public interface IlpPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ILP_DATA_TYPE = eINSTANCE.getILPDataType();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.ilp.Operator <em>Operator</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.ilp.Operator
+		 * @see org.muml.psm.allocation.ilp.impl.IlpPackageImpl#getOperator()
+		 * @generated
+		 */
+		EEnum OPERATOR = eINSTANCE.getOperator();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.ilp.ObjectiveGoal <em>Objective Goal</em>}' enum.

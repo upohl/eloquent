@@ -90,14 +90,24 @@ public class IlpValidator extends EObjectValidator {
 				return validateIntegerLinearProgram((IntegerLinearProgram)value, diagnostics, context);
 			case IlpPackage.VARIABLE:
 				return validateVariable((Variable)value, diagnostics, context);
+			case IlpPackage.EXPRESSION:
+				return validateExpression((Expression)value, diagnostics, context);
+			case IlpPackage.LITERAL_EXPRESSION:
+				return validateLiteralExpression((LiteralExpression)value, diagnostics, context);
+			case IlpPackage.BINARY_EXPRESSION:
+				return validateBinaryExpression((BinaryExpression)value, diagnostics, context);
 			case IlpPackage.CONSTRAINT_EXPRESSION:
 				return validateConstraintExpression((ConstraintExpression)value, diagnostics, context);
+			case IlpPackage.ARITHMETIC_EXPRESSION:
+				return validateArithmeticExpression((ArithmeticExpression)value, diagnostics, context);
 			case IlpPackage.VARIABLE_EXPRESSION:
 				return validateVariableExpression((VariableExpression)value, diagnostics, context);
 			case IlpPackage.OBJECTIVE_FUNCTION_EXPRESSION:
 				return validateObjectiveFunctionExpression((ObjectiveFunctionExpression)value, diagnostics, context);
 			case IlpPackage.ILP_DATA_TYPE:
 				return validateILPDataType((ILPDataType)value, diagnostics, context);
+			case IlpPackage.OPERATOR:
+				return validateOperator((Operator)value, diagnostics, context);
 			case IlpPackage.OBJECTIVE_GOAL:
 				return validateObjectiveGoal((ObjectiveGoal)value, diagnostics, context);
 			default:
@@ -128,6 +138,33 @@ public class IlpValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateExpression(Expression expression, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(expression, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateLiteralExpression(LiteralExpression literalExpression, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(literalExpression, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBinaryExpression(BinaryExpression binaryExpression, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(binaryExpression, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateConstraintExpression(ConstraintExpression constraintExpression, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		if (!validate_NoCircularContainment(constraintExpression, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms(constraintExpression, diagnostics, context);
@@ -148,8 +185,8 @@ public class IlpValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String CONSTRAINT_EXPRESSION__VALID_OPERATOR__EEXPRESSION = "-- Invalid comparison operator (allowed <, <=, =, >=, >)\n" +
-		"Set{core::expressions::common::ComparingOperator::LESS, core::expressions::common::ComparingOperator::LESS_OR_EQUAL, core::expressions::common::ComparingOperator::EQUAL, core::expressions::common::ComparingOperator::GREATER_OR_EQUAL, core::expressions::common::ComparingOperator::GREATER}->includes(operator)";
+	protected static final String CONSTRAINT_EXPRESSION__VALID_OPERATOR__EEXPRESSION = "-- Invalid comparison operator (allowed <=, =, >=)\n" +
+		"Set{Operator::LESS_THAN_OR_EQUAL_TO, Operator::GREATER_THAN_OR_EQUAL_TO, Operator::EQUAL_TO}->includes(operator)";
 
 	/**
 	 * Validates the ValidOperator constraint of '<em>Constraint Expression</em>'.
@@ -167,6 +204,55 @@ public class IlpValidator extends EObjectValidator {
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
 				 "ValidOperator",
 				 CONSTRAINT_EXPRESSION__VALID_OPERATOR__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateArithmeticExpression(ArithmeticExpression arithmeticExpression, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(arithmeticExpression, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(arithmeticExpression, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(arithmeticExpression, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(arithmeticExpression, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(arithmeticExpression, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(arithmeticExpression, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(arithmeticExpression, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(arithmeticExpression, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(arithmeticExpression, diagnostics, context);
+		if (result || diagnostics != null) result &= validateArithmeticExpression_ValidOperator(arithmeticExpression, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the ValidOperator constraint of '<em>Arithmetic Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String ARITHMETIC_EXPRESSION__VALID_OPERATOR__EEXPRESSION = "-- Invalid arithmetic operator (allowed +, -, *)\n" +
+		"Set{Operator::PLUS, Operator::MINUS, Operator::TIMES}->includes(operator)";
+
+	/**
+	 * Validates the ValidOperator constraint of '<em>Arithmetic Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateArithmeticExpression_ValidOperator(ArithmeticExpression arithmeticExpression, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(IlpPackage.Literals.ARITHMETIC_EXPRESSION,
+				 arithmeticExpression,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
+				 "ValidOperator",
+				 ARITHMETIC_EXPRESSION__VALID_OPERATOR__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
@@ -196,6 +282,15 @@ public class IlpValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateILPDataType(ILPDataType ilpDataType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateOperator(Operator operator, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

@@ -22,16 +22,16 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.muml.psm.allocation.ilp.Expression;
 import org.muml.psm.allocation.ilp.IlpPackage;
-import org.muml.psm.allocation.ilp.Variable;
 
 /**
- * This is the item provider adapter for a {@link org.muml.psm.allocation.ilp.Variable} object.
+ * This is the item provider adapter for a {@link org.muml.psm.allocation.ilp.Expression} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class VariableItemProvider 
+public class ExpressionItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -45,7 +45,7 @@ public class VariableItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VariableItemProvider(AdapterFactory adapterFactory) {
+	public ExpressionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -60,65 +60,31 @@ public class VariableItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDataTypePropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
+			addCommentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Data Type feature.
+	 * This adds a property descriptor for the Comment feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDataTypePropertyDescriptor(Object object) {
+	protected void addCommentPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Variable_dataType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Variable_dataType_feature", "_UI_Variable_type"),
-				 IlpPackage.Literals.VARIABLE__DATA_TYPE,
+				 getString("_UI_Expression_comment_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Expression_comment_feature", "_UI_Expression_type"),
+				 IlpPackage.Literals.EXPRESSION__COMMENT,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Variable_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Variable_name_feature", "_UI_Variable_type"),
-				 IlpPackage.Literals.VARIABLE__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This returns Variable.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Variable"));
 	}
 
 	/**
@@ -129,10 +95,10 @@ public class VariableItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Variable)object).getName();
+		String label = ((Expression)object).getComment();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Variable_type") :
-			getString("_UI_Variable_type") + " " + label;
+			getString("_UI_Expression_type") :
+			getString("_UI_Expression_type") + " " + label;
 	}
 	
 
@@ -147,9 +113,8 @@ public class VariableItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Variable.class)) {
-			case IlpPackage.VARIABLE__DATA_TYPE:
-			case IlpPackage.VARIABLE__NAME:
+		switch (notification.getFeatureID(Expression.class)) {
+			case IlpPackage.EXPRESSION__COMMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

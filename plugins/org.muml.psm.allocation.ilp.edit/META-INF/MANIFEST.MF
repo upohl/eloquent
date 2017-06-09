@@ -5,15 +5,17 @@ Bundle-SymbolicName: org.muml.psm.allocation.ilp.edit;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.muml.psm.allocation.ilp.provider.IlpEditPlugin$Implementation
-Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, Paderborn University, and Fraunhofer Research Institution for Mechatronic Systems Design IEM, Germany
+Bundle-Vendor: Software Engineering Group,
+ Heinz Nixdorf Institute,
+ Paderborn University,
+ and Fraunhofer Research Institution for Mechatronic Systems Design IEM,
+ Germany
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.muml.psm.allocation.ilp.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.muml.psm.allocation.ilp;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
- org.muml.core;visibility:=reexport,
- org.muml.core.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

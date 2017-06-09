@@ -11,19 +11,18 @@ import org.eclipse.emf.ecore.EValidator;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.muml.core.CorePackage;
-
-import org.muml.core.expressions.ExpressionsPackage;
-
-import org.muml.core.expressions.common.CommonExpressionsPackage;
-
+import org.muml.psm.allocation.ilp.ArithmeticExpression;
+import org.muml.psm.allocation.ilp.BinaryExpression;
 import org.muml.psm.allocation.ilp.ConstraintExpression;
+import org.muml.psm.allocation.ilp.Expression;
 import org.muml.psm.allocation.ilp.ILPDataType;
 import org.muml.psm.allocation.ilp.IlpFactory;
 import org.muml.psm.allocation.ilp.IlpPackage;
 import org.muml.psm.allocation.ilp.IntegerLinearProgram;
+import org.muml.psm.allocation.ilp.LiteralExpression;
 import org.muml.psm.allocation.ilp.ObjectiveFunctionExpression;
 import org.muml.psm.allocation.ilp.ObjectiveGoal;
+import org.muml.psm.allocation.ilp.Operator;
 import org.muml.psm.allocation.ilp.Variable;
 import org.muml.psm.allocation.ilp.VariableExpression;
 
@@ -55,7 +54,35 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass expressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass literalExpressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass binaryExpressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass constraintExpressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arithmeticExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -77,6 +104,13 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 	 * @generated
 	 */
 	private EEnum ilpDataTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum operatorEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -130,9 +164,6 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 		IlpPackageImpl theIlpPackage = (IlpPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof IlpPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new IlpPackageImpl());
 
 		isInited = true;
-
-		// Initialize simple dependencies
-		CorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theIlpPackage.createPackageContents();
@@ -226,8 +257,89 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getExpression() {
+		return expressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExpression_Comment() {
+		return (EAttribute)expressionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLiteralExpression() {
+		return literalExpressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLiteralExpression_Value() {
+		return (EAttribute)literalExpressionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBinaryExpression() {
+		return binaryExpressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBinaryExpression_LeftExpression() {
+		return (EReference)binaryExpressionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBinaryExpression_RightExpression() {
+		return (EReference)binaryExpressionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBinaryExpression_Operator() {
+		return (EAttribute)binaryExpressionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getConstraintExpression() {
 		return constraintExpressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getArithmeticExpression() {
+		return arithmeticExpressionEClass;
 	}
 
 	/**
@@ -289,6 +401,15 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getOperator() {
+		return operatorEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getObjectiveGoal() {
 		return objectiveGoalEEnum;
 	}
@@ -330,7 +451,20 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 		createEAttribute(variableEClass, VARIABLE__DATA_TYPE);
 		createEAttribute(variableEClass, VARIABLE__NAME);
 
+		expressionEClass = createEClass(EXPRESSION);
+		createEAttribute(expressionEClass, EXPRESSION__COMMENT);
+
+		literalExpressionEClass = createEClass(LITERAL_EXPRESSION);
+		createEAttribute(literalExpressionEClass, LITERAL_EXPRESSION__VALUE);
+
+		binaryExpressionEClass = createEClass(BINARY_EXPRESSION);
+		createEReference(binaryExpressionEClass, BINARY_EXPRESSION__LEFT_EXPRESSION);
+		createEReference(binaryExpressionEClass, BINARY_EXPRESSION__RIGHT_EXPRESSION);
+		createEAttribute(binaryExpressionEClass, BINARY_EXPRESSION__OPERATOR);
+
 		constraintExpressionEClass = createEClass(CONSTRAINT_EXPRESSION);
+
+		arithmeticExpressionEClass = createEClass(ARITHMETIC_EXPRESSION);
 
 		variableExpressionEClass = createEClass(VARIABLE_EXPRESSION);
 		createEReference(variableExpressionEClass, VARIABLE_EXPRESSION__VARIABLE);
@@ -341,6 +475,7 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 
 		// Create enums
 		ilpDataTypeEEnum = createEEnum(ILP_DATA_TYPE);
+		operatorEEnum = createEEnum(OPERATOR);
 		objectiveGoalEEnum = createEEnum(OBJECTIVE_GOAL);
 	}
 
@@ -367,17 +502,16 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
-		// Obtain other dependent packages
-		CommonExpressionsPackage theCommonExpressionsPackage = (CommonExpressionsPackage)EPackage.Registry.INSTANCE.getEPackage(CommonExpressionsPackage.eNS_URI);
-		ExpressionsPackage theExpressionsPackage = (ExpressionsPackage)EPackage.Registry.INSTANCE.getEPackage(ExpressionsPackage.eNS_URI);
-
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		constraintExpressionEClass.getESuperTypes().add(theCommonExpressionsPackage.getComparisonExpression());
-		variableExpressionEClass.getESuperTypes().add(theExpressionsPackage.getExpression());
+		literalExpressionEClass.getESuperTypes().add(this.getExpression());
+		binaryExpressionEClass.getESuperTypes().add(this.getExpression());
+		constraintExpressionEClass.getESuperTypes().add(this.getBinaryExpression());
+		arithmeticExpressionEClass.getESuperTypes().add(this.getBinaryExpression());
+		variableExpressionEClass.getESuperTypes().add(this.getExpression());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(integerLinearProgramEClass, IntegerLinearProgram.class, "IntegerLinearProgram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -389,20 +523,41 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 		initEAttribute(getVariable_DataType(), this.getILPDataType(), "dataType", null, 1, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 1, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(expressionEClass, Expression.class, "Expression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExpression_Comment(), ecorePackage.getEString(), "comment", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(literalExpressionEClass, LiteralExpression.class, "LiteralExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLiteralExpression_Value(), ecorePackage.getEString(), "value", null, 1, 1, LiteralExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(binaryExpressionEClass, BinaryExpression.class, "BinaryExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBinaryExpression_LeftExpression(), this.getExpression(), null, "leftExpression", null, 1, 1, BinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBinaryExpression_RightExpression(), this.getExpression(), null, "rightExpression", null, 1, 1, BinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBinaryExpression_Operator(), this.getOperator(), "operator", null, 1, 1, BinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(constraintExpressionEClass, ConstraintExpression.class, "ConstraintExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(arithmeticExpressionEClass, ArithmeticExpression.class, "ArithmeticExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(variableExpressionEClass, VariableExpression.class, "VariableExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariableExpression_Variable(), this.getVariable(), null, "variable", null, 1, 1, VariableExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(objectiveFunctionExpressionEClass, ObjectiveFunctionExpression.class, "ObjectiveFunctionExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getObjectiveFunctionExpression_Goal(), this.getObjectiveGoal(), "goal", "MAX", 1, 1, ObjectiveFunctionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getObjectiveFunctionExpression_ObjectiveFunction(), theExpressionsPackage.getExpression(), null, "objectiveFunction", null, 1, 1, ObjectiveFunctionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getObjectiveFunctionExpression_ObjectiveFunction(), this.getExpression(), null, "objectiveFunction", null, 1, 1, ObjectiveFunctionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(ilpDataTypeEEnum, ILPDataType.class, "ILPDataType");
 		addEEnumLiteral(ilpDataTypeEEnum, ILPDataType.BINARY);
 		addEEnumLiteral(ilpDataTypeEEnum, ILPDataType.INTEGER);
 		addEEnumLiteral(ilpDataTypeEEnum, ILPDataType.REAL);
+
+		initEEnum(operatorEEnum, Operator.class, "Operator");
+		addEEnumLiteral(operatorEEnum, Operator.PLUS);
+		addEEnumLiteral(operatorEEnum, Operator.MINUS);
+		addEEnumLiteral(operatorEEnum, Operator.TIMES);
+		addEEnumLiteral(operatorEEnum, Operator.LESS_THAN_OR_EQUAL_TO);
+		addEEnumLiteral(operatorEEnum, Operator.GREATER_THAN_OR_EQUAL_TO);
+		addEEnumLiteral(operatorEEnum, Operator.EQUAL_TO);
 
 		initEEnum(objectiveGoalEEnum, ObjectiveGoal.class, "ObjectiveGoal");
 		addEEnumLiteral(objectiveGoalEEnum, ObjectiveGoal.MIN);
@@ -439,6 +594,12 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 		   source, 
 		   new String[] {
 			 "constraints", "ValidOperator"
+		   });	
+		addAnnotation
+		  (arithmeticExpressionEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "ValidOperator"
 		   });
 	}
 
@@ -454,7 +615,13 @@ public class IlpPackageImpl extends EPackageImpl implements IlpPackage {
 		  (constraintExpressionEClass, 
 		   source, 
 		   new String[] {
-			 "ValidOperator", "-- Invalid comparison operator (allowed <, <=, =, >=, >)\nSet{core::expressions::common::ComparingOperator::LESS, core::expressions::common::ComparingOperator::LESS_OR_EQUAL, core::expressions::common::ComparingOperator::EQUAL, core::expressions::common::ComparingOperator::GREATER_OR_EQUAL, core::expressions::common::ComparingOperator::GREATER}->includes(operator)"
+			 "ValidOperator", "-- Invalid comparison operator (allowed <=, =, >=)\nSet{Operator::LESS_THAN_OR_EQUAL_TO, Operator::GREATER_THAN_OR_EQUAL_TO, Operator::EQUAL_TO}->includes(operator)"
+		   });	
+		addAnnotation
+		  (arithmeticExpressionEClass, 
+		   source, 
+		   new String[] {
+			 "ValidOperator", "-- Invalid arithmetic operator (allowed +, -, *)\nSet{Operator::PLUS, Operator::MINUS, Operator::TIMES}->includes(operator)"
 		   });
 	}
 

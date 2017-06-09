@@ -9,8 +9,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.muml.core.expressions.impl.ExpressionImpl;
-
 import org.muml.psm.allocation.ilp.IlpPackage;
 import org.muml.psm.allocation.ilp.Variable;
 import org.muml.psm.allocation.ilp.VariableExpression;

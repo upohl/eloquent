@@ -32,7 +32,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="../../org.muml.core/model/core.ecore#//NamedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Variable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class represents a variable, which is used in an Integer Linear Program."/>
     </eAnnotations>
@@ -40,6 +40,11 @@
         eType="#//ILPDataType">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Determines the data type of the variable."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The name of the variable."/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -51,7 +56,61 @@
     <eLiterals name="INTEGER" value="1"/>
     <eLiterals name="REAL" value="2" literal="REAL"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConstraintExpression" eSuperTypes="../../org.muml.core/model/core.ecore#//expressions/common/ComparisonExpression">
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Abstract base class for all expressions."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An optional description of the expression."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LiteralExpression" eSuperTypes="#//Expression">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Represents a (number) literal like &quot;42&quot;, &quot;-5&quot;, &quot;2.71&quot;."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The literal's value."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Operator">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="An enumeration containing the supported arithmetic and relational operators."/>
+    </eAnnotations>
+    <eLiterals name="PLUS"/>
+    <eLiterals name="MINUS" value="1"/>
+    <eLiterals name="TIMES" value="2"/>
+    <eLiterals name="LESS_THAN_OR_EQUAL_TO" value="3"/>
+    <eLiterals name="GREATER_THAN_OR_EQUAL_TO" value="4"/>
+    <eLiterals name="EQUAL_TO" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BinaryExpression" abstract="true" eSuperTypes="#//Expression">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A binary expression consists of a leftExpression and a rightExpression&#xA;that are combined by the operator. For now, this is an abstract class."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftExpression" lowerBound="1"
+        eType="#//Expression" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The left-hand side expression (in the &quot;usual&quot; infix notation)."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightExpression" lowerBound="1"
+        eType="#//Expression" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The right-hand side expression (in the &quot;usual&quot; infix notation)."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" lowerBound="1"
+        eType="#//Operator">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The operator that combines the leftExpression and the rightExpression."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstraintExpression" eSuperTypes="#//BinaryExpression">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class represents a constraint of the Integer Linear Program."/>
     </eAnnotations>
@@ -59,10 +118,21 @@
       <details key="constraints" value="ValidOperator"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details key="ValidOperator" value="-- Invalid comparison operator (allowed &lt;, &lt;=, =, >=, >)&#xA;Set{core::expressions::common::ComparingOperator::LESS, core::expressions::common::ComparingOperator::LESS_OR_EQUAL, core::expressions::common::ComparingOperator::EQUAL, core::expressions::common::ComparingOperator::GREATER_OR_EQUAL, core::expressions::common::ComparingOperator::GREATER}->includes(operator)"/>
+      <details key="ValidOperator" value="-- Invalid comparison operator (allowed &lt;=, =, >=)&#xA;Set{Operator::LESS_THAN_OR_EQUAL_TO, Operator::GREATER_THAN_OR_EQUAL_TO, Operator::EQUAL_TO}->includes(operator)"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VariableExpression" eSuperTypes="../../org.muml.core/model/core.ecore#//expressions/Expression">
+  <eClassifiers xsi:type="ecore:EClass" name="ArithmeticExpression" eSuperTypes="#//BinaryExpression">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This class represents an arithmetic expression. That is, the leftExpression&#xA;and rightExpression can be combined by an arithmetic operator (for&#xA;instance, + (PLUS), - (MINUS), and, * (TIMES))."/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="ValidOperator"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="ValidOperator" value="-- Invalid arithmetic operator (allowed +, -, *)&#xA;Set{Operator::PLUS, Operator::MINUS, Operator::TIMES}->includes(operator)"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableExpression" eSuperTypes="#//Expression">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="This class references a variable, which is used in a ConstraintExpression or&#xA;ObjectiveFunctionExpression."/>
     </eAnnotations>
@@ -84,8 +154,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="objectiveFunction" lowerBound="1"
-        eType="ecore:EClass ../../org.muml.core/model/core.ecore#//expressions/Expression"
-        containment="true"/>
+        eType="#//Expression" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ObjectiveGoal">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

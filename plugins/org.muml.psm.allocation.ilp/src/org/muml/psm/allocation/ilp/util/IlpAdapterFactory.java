@@ -9,14 +9,6 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.muml.core.CommentableElement;
-import org.muml.core.ExtendableElement;
-
-import org.muml.core.expressions.Expression;
-
-import org.muml.core.expressions.common.BinaryExpression;
-import org.muml.core.expressions.common.ComparisonExpression;
-
 import org.muml.psm.allocation.ilp.*;
 
 /**
@@ -84,8 +76,24 @@ public class IlpAdapterFactory extends AdapterFactoryImpl {
 				return createVariableAdapter();
 			}
 			@Override
+			public Adapter caseExpression(Expression object) {
+				return createExpressionAdapter();
+			}
+			@Override
+			public Adapter caseLiteralExpression(LiteralExpression object) {
+				return createLiteralExpressionAdapter();
+			}
+			@Override
+			public Adapter caseBinaryExpression(BinaryExpression object) {
+				return createBinaryExpressionAdapter();
+			}
+			@Override
 			public Adapter caseConstraintExpression(ConstraintExpression object) {
 				return createConstraintExpressionAdapter();
+			}
+			@Override
+			public Adapter caseArithmeticExpression(ArithmeticExpression object) {
+				return createArithmeticExpressionAdapter();
 			}
 			@Override
 			public Adapter caseVariableExpression(VariableExpression object) {
@@ -94,26 +102,6 @@ public class IlpAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseObjectiveFunctionExpression(ObjectiveFunctionExpression object) {
 				return createObjectiveFunctionExpressionAdapter();
-			}
-			@Override
-			public Adapter caseExtendableElement(ExtendableElement object) {
-				return createExtendableElementAdapter();
-			}
-			@Override
-			public Adapter caseCommentableElement(CommentableElement object) {
-				return createCommentableElementAdapter();
-			}
-			@Override
-			public Adapter caseExpression(Expression object) {
-				return createExpressionAdapter();
-			}
-			@Override
-			public Adapter caseBinaryExpression(BinaryExpression object) {
-				return createBinaryExpressionAdapter();
-			}
-			@Override
-			public Adapter caseComparisonExpression(ComparisonExpression object) {
-				return createComparisonExpressionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -164,6 +152,48 @@ public class IlpAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.ilp.Expression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.ilp.Expression
+	 * @generated
+	 */
+	public Adapter createExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.ilp.LiteralExpression <em>Literal Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.ilp.LiteralExpression
+	 * @generated
+	 */
+	public Adapter createLiteralExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.ilp.BinaryExpression <em>Binary Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.ilp.BinaryExpression
+	 * @generated
+	 */
+	public Adapter createBinaryExpressionAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.ilp.ConstraintExpression <em>Constraint Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -174,6 +204,20 @@ public class IlpAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createConstraintExpressionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.ilp.ArithmeticExpression <em>Arithmetic Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.ilp.ArithmeticExpression
+	 * @generated
+	 */
+	public Adapter createArithmeticExpressionAdapter() {
 		return null;
 	}
 
@@ -202,76 +246,6 @@ public class IlpAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createObjectiveFunctionExpressionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.core.ExtendableElement <em>Extendable Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.muml.core.ExtendableElement
-	 * @generated
-	 */
-	public Adapter createExtendableElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.core.CommentableElement <em>Commentable Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.muml.core.CommentableElement
-	 * @generated
-	 */
-	public Adapter createCommentableElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.core.expressions.Expression <em>Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.muml.core.expressions.Expression
-	 * @generated
-	 */
-	public Adapter createExpressionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.core.expressions.common.BinaryExpression <em>Binary Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.muml.core.expressions.common.BinaryExpression
-	 * @generated
-	 */
-	public Adapter createBinaryExpressionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.muml.core.expressions.common.ComparisonExpression <em>Comparison Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.muml.core.expressions.common.ComparisonExpression
-	 * @generated
-	 */
-	public Adapter createComparisonExpressionAdapter() {
 		return null;
 	}
 

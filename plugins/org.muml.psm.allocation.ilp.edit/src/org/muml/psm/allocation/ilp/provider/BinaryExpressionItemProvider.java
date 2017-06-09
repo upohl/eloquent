@@ -9,47 +9,31 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.muml.psm.allocation.ilp.BinaryExpression;
 import org.muml.psm.allocation.ilp.IlpFactory;
 import org.muml.psm.allocation.ilp.IlpPackage;
-import org.muml.psm.allocation.ilp.ObjectiveFunctionExpression;
-import org.muml.psm.allocation.ilp.ObjectiveGoal;
 
 /**
- * This is the item provider adapter for a {@link org.muml.psm.allocation.ilp.ObjectiveFunctionExpression} object.
+ * This is the item provider adapter for a {@link org.muml.psm.allocation.ilp.BinaryExpression} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ObjectiveFunctionExpressionItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+public class BinaryExpressionItemProvider extends ExpressionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ObjectiveFunctionExpressionItemProvider(AdapterFactory adapterFactory) {
+	public BinaryExpressionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -64,52 +48,52 @@ public class ObjectiveFunctionExpressionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addGoalPropertyDescriptor(object);
-			addObjectiveFunctionPropertyDescriptor(object);
+			addRightExpressionPropertyDescriptor(object);
+			addOperatorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Goal feature.
+	 * This adds a property descriptor for the Right Expression feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addGoalPropertyDescriptor(Object object) {
+	protected void addRightExpressionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ObjectiveFunctionExpression_goal_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ObjectiveFunctionExpression_goal_feature", "_UI_ObjectiveFunctionExpression_type"),
-				 IlpPackage.Literals.OBJECTIVE_FUNCTION_EXPRESSION__GOAL,
+				 getString("_UI_BinaryExpression_rightExpression_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BinaryExpression_rightExpression_feature", "_UI_BinaryExpression_type"),
+				 IlpPackage.Literals.BINARY_EXPRESSION__RIGHT_EXPRESSION,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Objective Function feature.
+	 * This adds a property descriptor for the Operator feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addObjectiveFunctionPropertyDescriptor(Object object) {
+	protected void addOperatorPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ObjectiveFunctionExpression_objectiveFunction_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ObjectiveFunctionExpression_objectiveFunction_feature", "_UI_ObjectiveFunctionExpression_type"),
-				 IlpPackage.Literals.OBJECTIVE_FUNCTION_EXPRESSION__OBJECTIVE_FUNCTION,
+				 getString("_UI_BinaryExpression_operator_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BinaryExpression_operator_feature", "_UI_BinaryExpression_type"),
+				 IlpPackage.Literals.BINARY_EXPRESSION__OPERATOR,
 				 true,
 				 false,
 				 false,
-				 null,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -126,7 +110,7 @@ public class ObjectiveFunctionExpressionItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(IlpPackage.Literals.OBJECTIVE_FUNCTION_EXPRESSION__OBJECTIVE_FUNCTION);
+			childrenFeatures.add(IlpPackage.Literals.BINARY_EXPRESSION__LEFT_EXPRESSION);
 		}
 		return childrenFeatures;
 	}
@@ -145,14 +129,14 @@ public class ObjectiveFunctionExpressionItemProvider
 	}
 
 	/**
-	 * This returns ObjectiveFunctionExpression.gif.
+	 * This returns BinaryExpression.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ObjectiveFunctionExpression"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/BinaryExpression"));
 	}
 
 	/**
@@ -163,11 +147,10 @@ public class ObjectiveFunctionExpressionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		ObjectiveGoal labelValue = ((ObjectiveFunctionExpression)object).getGoal();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((BinaryExpression)object).getComment();
 		return label == null || label.length() == 0 ?
-			getString("_UI_ObjectiveFunctionExpression_type") :
-			getString("_UI_ObjectiveFunctionExpression_type") + " " + label;
+			getString("_UI_BinaryExpression_type") :
+			getString("_UI_BinaryExpression_type") + " " + label;
 	}
 	
 
@@ -182,11 +165,11 @@ public class ObjectiveFunctionExpressionItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ObjectiveFunctionExpression.class)) {
-			case IlpPackage.OBJECTIVE_FUNCTION_EXPRESSION__GOAL:
+		switch (notification.getFeatureID(BinaryExpression.class)) {
+			case IlpPackage.BINARY_EXPRESSION__OPERATOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case IlpPackage.OBJECTIVE_FUNCTION_EXPRESSION__OBJECTIVE_FUNCTION:
+			case IlpPackage.BINARY_EXPRESSION__LEFT_EXPRESSION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -206,34 +189,23 @@ public class ObjectiveFunctionExpressionItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IlpPackage.Literals.OBJECTIVE_FUNCTION_EXPRESSION__OBJECTIVE_FUNCTION,
+				(IlpPackage.Literals.BINARY_EXPRESSION__LEFT_EXPRESSION,
 				 IlpFactory.eINSTANCE.createLiteralExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IlpPackage.Literals.OBJECTIVE_FUNCTION_EXPRESSION__OBJECTIVE_FUNCTION,
+				(IlpPackage.Literals.BINARY_EXPRESSION__LEFT_EXPRESSION,
 				 IlpFactory.eINSTANCE.createConstraintExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IlpPackage.Literals.OBJECTIVE_FUNCTION_EXPRESSION__OBJECTIVE_FUNCTION,
+				(IlpPackage.Literals.BINARY_EXPRESSION__LEFT_EXPRESSION,
 				 IlpFactory.eINSTANCE.createArithmeticExpression()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IlpPackage.Literals.OBJECTIVE_FUNCTION_EXPRESSION__OBJECTIVE_FUNCTION,
+				(IlpPackage.Literals.BINARY_EXPRESSION__LEFT_EXPRESSION,
 				 IlpFactory.eINSTANCE.createVariableExpression()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return IlpEditPlugin.INSTANCE;
 	}
 
 }

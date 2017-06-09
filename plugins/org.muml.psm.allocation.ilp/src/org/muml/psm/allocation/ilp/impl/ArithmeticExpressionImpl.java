@@ -4,23 +4,23 @@ package org.muml.psm.allocation.ilp.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.muml.psm.allocation.ilp.ConstraintExpression;
+import org.muml.psm.allocation.ilp.ArithmeticExpression;
 import org.muml.psm.allocation.ilp.IlpPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Constraint Expression</b></em>'.
+ * An implementation of the model object '<em><b>Arithmetic Expression</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class ConstraintExpressionImpl extends BinaryExpressionImpl implements ConstraintExpression {
+public class ArithmeticExpressionImpl extends BinaryExpressionImpl implements ArithmeticExpression {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConstraintExpressionImpl() {
+	protected ArithmeticExpressionImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class ConstraintExpressionImpl extends BinaryExpressionImpl implements Co
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return IlpPackage.Literals.CONSTRAINT_EXPRESSION;
+		return IlpPackage.Literals.ARITHMETIC_EXPRESSION;
 	}
 
-} //ConstraintExpressionImpl
+} //ArithmeticExpressionImpl

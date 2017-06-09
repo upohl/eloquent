@@ -3,8 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.muml.psm.allocation.ilp/src" modelPluginID="org.muml.psm.allocation.ilp"
     modelName="Ilp" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
-    usedGenPackages="../../org.muml.core/model/core.genmodel#//core" operationReflection="true"
-    importOrganizing="true">
+    operationReflection="true" importOrganizing="true">
   <foreignModel>ilp.ecore</foreignModel>
   <genPackages prefix="Ilp" basePackage="org.muml.psm.allocation" disposableProviderFactory="true"
       ecorePackage="ilp.ecore#/">
@@ -12,6 +11,14 @@
       <genEnumLiterals ecoreEnumLiteral="ilp.ecore#//ILPDataType/BINARY"/>
       <genEnumLiterals ecoreEnumLiteral="ilp.ecore#//ILPDataType/INTEGER"/>
       <genEnumLiterals ecoreEnumLiteral="ilp.ecore#//ILPDataType/REAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ilp.ecore#//Operator">
+      <genEnumLiterals ecoreEnumLiteral="ilp.ecore#//Operator/PLUS"/>
+      <genEnumLiterals ecoreEnumLiteral="ilp.ecore#//Operator/MINUS"/>
+      <genEnumLiterals ecoreEnumLiteral="ilp.ecore#//Operator/TIMES"/>
+      <genEnumLiterals ecoreEnumLiteral="ilp.ecore#//Operator/LESS_THAN_OR_EQUAL_TO"/>
+      <genEnumLiterals ecoreEnumLiteral="ilp.ecore#//Operator/GREATER_THAN_OR_EQUAL_TO"/>
+      <genEnumLiterals ecoreEnumLiteral="ilp.ecore#//Operator/EQUAL_TO"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="ilp.ecore#//ObjectiveGoal">
       <genEnumLiterals ecoreEnumLiteral="ilp.ecore#//ObjectiveGoal/MIN"/>
@@ -24,8 +31,21 @@
     </genClasses>
     <genClasses ecoreClass="ilp.ecore#//Variable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ilp.ecore#//Variable/dataType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ilp.ecore#//Variable/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ilp.ecore#//Expression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ilp.ecore#//Expression/comment"/>
+    </genClasses>
+    <genClasses ecoreClass="ilp.ecore#//LiteralExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ilp.ecore#//LiteralExpression/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ilp.ecore#//BinaryExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ilp.ecore#//BinaryExpression/leftExpression"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ilp.ecore#//BinaryExpression/rightExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ilp.ecore#//BinaryExpression/operator"/>
     </genClasses>
     <genClasses ecoreClass="ilp.ecore#//ConstraintExpression"/>
+    <genClasses ecoreClass="ilp.ecore#//ArithmeticExpression"/>
     <genClasses ecoreClass="ilp.ecore#//VariableExpression">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ilp.ecore#//VariableExpression/variable"/>
     </genClasses>
