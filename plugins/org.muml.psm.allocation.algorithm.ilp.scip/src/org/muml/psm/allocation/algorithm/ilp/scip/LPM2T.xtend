@@ -5,18 +5,16 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream
 import org.eclipse.core.runtime.Status
-import org.muml.core.CorePackage
-import org.muml.core.expressions.Expression
-import org.muml.core.expressions.common.ArithmeticExpression
-import org.muml.core.expressions.common.ArithmeticOperator
-import org.muml.core.expressions.common.ComparingOperator
-import org.muml.core.expressions.common.ComparisonExpression
-import org.muml.core.expressions.common.LiteralExpression
+import org.muml.psm.allocation.ilp.ArithmeticExpression
 import org.muml.psm.allocation.ilp.ConstraintExpression
+import org.muml.psm.allocation.ilp.Expression
 import org.muml.psm.allocation.ilp.ILPDataType
+import org.muml.psm.allocation.ilp.IlpPackage
 import org.muml.psm.allocation.ilp.IntegerLinearProgram
+import org.muml.psm.allocation.ilp.LiteralExpression
 import org.muml.psm.allocation.ilp.ObjectiveFunctionExpression
 import org.muml.psm.allocation.ilp.ObjectiveGoal
+import org.muml.psm.allocation.ilp.Operator
 import org.muml.psm.allocation.ilp.Variable
 import org.muml.psm.allocation.ilp.VariableExpression
 
@@ -96,11 +94,11 @@ class LPM2T {
 	def dispatch protected void emitExpression(ArithmeticExpression expression) {
 		emitExpression(expression.leftExpression)
 		// syntactic sugar: use switch...
-		if (expression.operator == ArithmeticOperator.PLUS) {
+		if (expression.operator == Operator.PLUS) {
 			emit(' + ')
-		} else if (expression.operator == ArithmeticOperator.MINUS) {
+		} else if (expression.operator == Operator.MINUS) {
 			emit(' - ')
-		} else if (expression.operator == ArithmeticOperator.TIMES) {
+		} else if (expression.operator == Operator.TIMES) {
 			emit('*')
 		} else {
 			bail(expression)
@@ -116,8 +114,8 @@ class LPM2T {
 		emit(expression.variable.name)
 	}
 	
-	def dispatch protected void emitExpression(ComparisonExpression expression) {
-		if (expression.comment != CorePackage.Literals.COMMENTABLE_ELEMENT__COMMENT.defaultValue
+	def dispatch protected void emitExpression(ConstraintExpression expression) {
+		if (expression.comment != IlpPackage.Literals.EXPRESSION__COMMENT.defaultValue
 			&& expression.comment != null && !"".equals(expression.comment)
 		) {
 			emit(expression.comment)
@@ -125,11 +123,11 @@ class LPM2T {
 		}
 		emitExpression(expression.leftExpression)
 		// syntactic sugar: use switch...
-		if (expression.operator == ComparingOperator.LESS_OR_EQUAL) {
+		if (expression.operator == Operator.LESS_THAN_OR_EQUAL_TO) {
 			emit(' <= ')
-		} else if (expression.operator == ComparingOperator.GREATER_OR_EQUAL) {
+		} else if (expression.operator == Operator.GREATER_THAN_OR_EQUAL_TO) {
 			emit(' >= ')
-		} else if (expression.operator == ComparingOperator.EQUAL) {
+		} else if (expression.operator == Operator.EQUAL_TO) {
 			emit(' = ')
 		} else {
 			bail(expression)
