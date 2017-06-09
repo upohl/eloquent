@@ -3,10 +3,10 @@ package org.muml.psm.allocation.algorithm.ilp.opt4j;
 import java.util.Map;
 
 import org.eclipse.jdt.annotation.NonNull;
-import org.muml.core.expressions.Expression;
-import org.muml.core.expressions.common.CommonExpressionsFactory;
-import org.muml.core.expressions.common.LiteralExpression;
 import org.muml.psm.allocation.algorithm.ilp.opt4j.evaluation.ObjectiveFunctionExpressionEvaluator;
+import org.muml.psm.allocation.ilp.Expression;
+import org.muml.psm.allocation.ilp.IlpFactory;
+import org.muml.psm.allocation.ilp.LiteralExpression;
 import org.muml.psm.allocation.ilp.ObjectiveGoal;
 import org.opt4j.core.Objective;
 import org.opt4j.core.Objectives;
@@ -48,7 +48,7 @@ public class SingleObjectiveFunctionEvaluator extends AbstractObjectiveFunctionE
 		Expression expression = getProblem().getILP()
 				.getObjectiveFunction().getObjectiveFunction();
 		if (expression == null) {
-			LiteralExpression lit = CommonExpressionsFactory
+			LiteralExpression lit = IlpFactory
 					.eINSTANCE.createLiteralExpression();
 			lit.setValue("1");
 			expression = lit;

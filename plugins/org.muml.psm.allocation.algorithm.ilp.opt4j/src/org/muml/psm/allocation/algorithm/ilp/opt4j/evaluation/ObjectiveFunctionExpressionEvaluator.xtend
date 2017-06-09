@@ -1,10 +1,10 @@
 package org.muml.psm.allocation.algorithm.ilp.opt4j.evaluation
 
 import java.util.Map
-import org.muml.core.expressions.Expression
-import org.muml.core.expressions.common.ArithmeticExpression
-import org.muml.core.expressions.common.ArithmeticOperator
-import org.muml.core.expressions.common.LiteralExpression
+import org.muml.psm.allocation.ilp.ArithmeticExpression
+import org.muml.psm.allocation.ilp.Expression
+import org.muml.psm.allocation.ilp.LiteralExpression
+import org.muml.psm.allocation.ilp.Operator
 import org.muml.psm.allocation.ilp.Variable
 import org.muml.psm.allocation.ilp.VariableExpression
 
@@ -46,8 +46,8 @@ class ObjectiveFunctionExpressionEvaluator {
 		val left = evaluate(expression.leftExpression)
 		val right = evaluate(expression.rightExpression)
 		return switch (expression.operator) {
-			case ArithmeticOperator.PLUS: left + right
-			case ArithmeticOperator.TIMES: left * right
+			case Operator.PLUS: left + right
+			case Operator.TIMES: left * right
 			default: throw new IllegalArgumentException("unexpected operator " + expression.operator)
 		}
 	}

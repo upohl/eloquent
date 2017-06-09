@@ -3,13 +3,12 @@ package org.muml.psm.allocation.algorithm.ilp.opt4j.ilp2sat
 import java.util.List
 import java.util.Stack
 import org.eclipse.emf.ecore.EObject
-import org.muml.core.expressions.Expression
-import org.muml.core.expressions.common.ArithmeticExpression
-import org.muml.core.expressions.common.ArithmeticOperator
-import org.muml.core.expressions.common.ComparingOperator
-import org.muml.core.expressions.common.LiteralExpression
+import org.muml.psm.allocation.ilp.ArithmeticExpression
 import org.muml.psm.allocation.ilp.ConstraintExpression
+import org.muml.psm.allocation.ilp.Expression
 import org.muml.psm.allocation.ilp.IntegerLinearProgram
+import org.muml.psm.allocation.ilp.LiteralExpression
+import org.muml.psm.allocation.ilp.Operator
 import org.muml.psm.allocation.ilp.VariableExpression
 import org.opt4j.satdecoding.Constraint
 import org.opt4j.satdecoding.Literal
@@ -90,9 +89,9 @@ class ILP2SAT implements IVisitor {
 		constraintList.add(0, new Constraint)
 		var Constraint.Operator op = null
 		switch (expression.operator) {
-			case ComparingOperator.EQUAL: op = Constraint.Operator.EQ
-			case ComparingOperator.LESS_OR_EQUAL: op = Constraint.Operator.LE
-			case ComparingOperator.GREATER_OR_EQUAL: op = Constraint.Operator.GE
+			case Operator.EQUAL_TO: op = Constraint.Operator.EQ
+			case Operator.LESS_THAN_OR_EQUAL_TO: op = Constraint.Operator.LE
+			case Operator.GREATER_THAN_OR_EQUAL_TO: op = Constraint.Operator.GE
 			default: throw new IllegalArgumentException("unsupported operator: " + expression.operator)
 		}
 		constraintList.head.operator = op
@@ -103,9 +102,9 @@ class ILP2SAT implements IVisitor {
 		expectOrNull(typeof(Expression))
 		val top = stack.peek
 		if (top instanceof ArithmeticExpression) {			
-			expectOperator(ArithmeticOperator.TIMES, ArithmeticOperator.PLUS)
+			expectOperator(Operator.TIMES, Operator.PLUS)
 			val operator = (stack.peek as ArithmeticExpression).operator
-			if (operator == ArithmeticOperator.PLUS) {
+			if (operator == Operator.PLUS) {
 				accumulateRHS(Double.parseDouble(expression.value))
 				reduce
 			} else {
@@ -114,7 +113,7 @@ class ILP2SAT implements IVisitor {
 		} else if (top instanceof VariableExpression) {
 			stack.pop
 			// we could support other operators as well
-			expectOperator(ArithmeticOperator.TIMES)
+			expectOperator(Operator.TIMES)
 			stack.pop
 			addLiteral(top, expression)
 			reduce
@@ -143,14 +142,14 @@ class ILP2SAT implements IVisitor {
 		val top = stack.peek
 		if (top instanceof LiteralExpression) {
 			stack.pop
-			expectOperator(ArithmeticOperator.TIMES)
+			expectOperator(Operator.TIMES)
 			stack.pop
 			addLiteral(expression, top)
 			reduce
 		} else if (top instanceof ArithmeticExpression) {
-			expectOperator(ArithmeticOperator.PLUS, ArithmeticOperator.TIMES)
+			expectOperator(Operator.PLUS, Operator.TIMES)
 			val operator = (stack.peek as ArithmeticExpression).operator
-			if (operator == ArithmeticOperator.PLUS) {
+			if (operator == Operator.PLUS) {
 				addLiteral(expression, "1")
 				reduce
 			} else {
@@ -175,8 +174,8 @@ class ILP2SAT implements IVisitor {
 		if (top instanceof ArithmeticExpression) {
 			// just a sanity check
 			val arith = top as ArithmeticExpression
-			if (arith.operator == ArithmeticOperator.TIMES
-					&& expression.operator == ArithmeticOperator.PLUS) {
+			if (arith.operator == Operator.TIMES
+					&& expression.operator == Operator.PLUS) {
 				throw new IllegalStateException("do the math on your own! (distributivity law)")
 			}
 		}
@@ -221,11 +220,11 @@ class ILP2SAT implements IVisitor {
 		throw new IllegalStateException(msg)
 	}
 	
-	private def void expectOperator(ArithmeticOperator... operators) {
+	private def void expectOperator(Operator... operators) {
 		expect(typeof(ArithmeticExpression))
 		val arith = stack.peek as ArithmeticExpression
 		var found = false
-		for (ArithmeticOperator operator : operators) {
+		for (Operator operator : operators) {
 			found = arith.operator == operator || found
 		}
 		if (!found) {
