@@ -13,16 +13,16 @@ Workflow {
 				baseName = "de.fraunhofer.iem.projectPlanning"
 				rootPath = rootPath
 				runtimeTest = {
-					enabled = true
+					enabled = false
 				}
 				eclipsePlugin = {
 					enabled = true
 				}
 				eclipsePluginTest = {
-					enabled = true
+					enabled = false
 				}
 				web = {
-					enabled = true
+					enabled = false
 				}
 				createEclipseMetaData = true
 			}

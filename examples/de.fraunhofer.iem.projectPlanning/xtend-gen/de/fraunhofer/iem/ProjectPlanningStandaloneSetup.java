@@ -11,6 +11,7 @@ import de.fraunhofer.iem.ProjectPlanningStandaloneSetupGenerated;
 @SuppressWarnings("all")
 public class ProjectPlanningStandaloneSetup extends ProjectPlanningStandaloneSetupGenerated {
   public static void doSetup() {
-    new ProjectPlanningStandaloneSetup().createInjectorAndDoEMFRegistration();
+    ProjectPlanningStandaloneSetup _projectPlanningStandaloneSetup = new ProjectPlanningStandaloneSetup();
+    _projectPlanningStandaloneSetup.createInjectorAndDoEMFRegistration();
   }
 }

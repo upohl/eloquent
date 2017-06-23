@@ -5,6 +5,7 @@ import de.fraunhofer.iem.projectPlanning.Project;
 import java.util.Arrays;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.muml.psm.allocation.language.as.NameProvider;
 
@@ -20,7 +21,8 @@ public class ProjectPlanningNameProvider extends EObjectImpl implements NameProv
   public String getName(final Object element) {
     String _xblockexpression = null;
     {
-      EcoreUtil.resolveAll(((EObject) element).eResource());
+      Resource _eResource = ((EObject) element).eResource();
+      EcoreUtil.resolveAll(_eResource);
       _xblockexpression = this.getNameFor(element);
     }
     return _xblockexpression;

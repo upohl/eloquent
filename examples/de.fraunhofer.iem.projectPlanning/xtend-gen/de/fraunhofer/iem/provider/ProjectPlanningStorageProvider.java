@@ -6,8 +6,12 @@ import de.fraunhofer.iem.projectPlanning.Project;
 import de.fraunhofer.iem.projectPlanning.ProjectPlan;
 import de.fraunhofer.iem.projectPlanning.ProjectPlanningFactory;
 import java.util.Arrays;
+import java.util.HashMap;
 import org.eclipse.emf.common.command.Command;
+import org.eclipse.emf.common.command.CommandStack;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.DeleteCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
@@ -36,8 +40,10 @@ public class ProjectPlanningStorageProvider extends EObjectImpl implements Stora
     }
     this.projectPlan = ((ProjectPlan) context);
     final EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(this.projectPlan);
-    final Command deleteCommand = DeleteCommand.create(editingDomain, this.projectPlan.getAssignments());
-    editingDomain.getCommandStack().execute(deleteCommand);
+    EList<Assignment> _assignments = this.projectPlan.getAssignments();
+    final Command deleteCommand = DeleteCommand.create(editingDomain, _assignments);
+    CommandStack _commandStack = editingDomain.getCommandStack();
+    _commandStack.execute(deleteCommand);
     this.projectPlan = ((ProjectPlan) this.projectPlan);
   }
   
@@ -59,9 +65,13 @@ public class ProjectPlanningStorageProvider extends EObjectImpl implements Stora
         final EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(this.projectPlan);
         assignment.setEmployee(target);
         assignment.setProject(source);
-        final Command addCommand = AddCommand.create(editingDomain, this.projectPlan, this.projectPlan.getAssignments(), assignment);
-        editingDomain.getCommandStack().execute(addCommand);
-        this.projectPlan.eResource().save(CollectionLiterals.<Object, Object>newHashMap());
+        EList<Assignment> _assignments = this.projectPlan.getAssignments();
+        final Command addCommand = AddCommand.create(editingDomain, this.projectPlan, _assignments, assignment);
+        CommandStack _commandStack = editingDomain.getCommandStack();
+        _commandStack.execute(addCommand);
+        Resource _eResource = this.projectPlan.eResource();
+        HashMap<Object, Object> _newHashMap = CollectionLiterals.<Object, Object>newHashMap();
+        _eResource.save(_newHashMap);
         _xblockexpression = this.projectPlan;
       }
       return _xblockexpression;

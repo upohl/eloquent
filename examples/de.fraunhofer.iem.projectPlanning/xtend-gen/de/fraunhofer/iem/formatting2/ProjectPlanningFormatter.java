@@ -17,6 +17,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.formatting2.AbstractFormatter2;
 import org.eclipse.xtext.formatting2.IFormattableDocument;
 import org.eclipse.xtext.formatting2.IHiddenRegionFormatter;
+import org.eclipse.xtext.formatting2.regionaccess.ISemanticRegion;
+import org.eclipse.xtext.formatting2.regionaccess.ISemanticRegionsFinder;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.xbase.lib.Extension;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
@@ -48,25 +50,33 @@ public class ProjectPlanningFormatter extends AbstractFormatter2 {
     for (final Assignment assignment : _assignments) {
       document.<Assignment>format(assignment);
     }
+    ISemanticRegionsFinder _regionFor = this.textRegionExtensions.regionFor(projectPlan);
+    ISemanticRegion _keyword = _regionFor.keyword("capabilities:");
     final Procedure1<IHiddenRegionFormatter> _function = (IHiddenRegionFormatter it) -> {
       it.newLine();
     };
-    document.append(this.textRegionExtensions.regionFor(projectPlan).keyword("capabilities:"), _function);
+    document.append(_keyword, _function);
+    ISemanticRegionsFinder _regionFor_1 = this.textRegionExtensions.regionFor(projectPlan);
+    ISemanticRegion _keyword_1 = _regionFor_1.keyword("employees:");
     final Procedure1<IHiddenRegionFormatter> _function_1 = (IHiddenRegionFormatter it) -> {
       it.newLine();
     };
-    document.append(this.textRegionExtensions.regionFor(projectPlan).keyword("employees:"), _function_1);
+    document.append(_keyword_1, _function_1);
+    ISemanticRegionsFinder _regionFor_2 = this.textRegionExtensions.regionFor(projectPlan);
+    ISemanticRegion _keyword_2 = _regionFor_2.keyword("projects:");
     final Procedure1<IHiddenRegionFormatter> _function_2 = (IHiddenRegionFormatter it) -> {
       it.newLine();
     };
-    document.append(this.textRegionExtensions.regionFor(projectPlan).keyword("projects:"), _function_2);
+    document.append(_keyword_2, _function_2);
   }
   
   protected void _format(final Assignment assignment, @Extension final IFormattableDocument document) {
+    ISemanticRegionsFinder _regionFor = this.textRegionExtensions.regionFor(assignment);
+    ISemanticRegion _keyword = _regionFor.keyword(";");
     final Procedure1<IHiddenRegionFormatter> _function = (IHiddenRegionFormatter it) -> {
       it.newLine();
     };
-    document.append(this.textRegionExtensions.regionFor(assignment).keyword(";"), _function);
+    document.append(_keyword, _function);
   }
   
   protected void _format(final Project project, @Extension final IFormattableDocument document) {
@@ -74,22 +84,30 @@ public class ProjectPlanningFormatter extends AbstractFormatter2 {
       it.indent();
     };
     document.<Project>interior(project, _function);
+    ISemanticRegionsFinder _regionFor = this.textRegionExtensions.regionFor(project);
+    ISemanticRegion _keyword = _regionFor.keyword(":");
     final Procedure1<IHiddenRegionFormatter> _function_1 = (IHiddenRegionFormatter it) -> {
       it.newLine();
     };
-    document.append(this.textRegionExtensions.regionFor(project).keyword(":"), _function_1);
+    document.append(_keyword, _function_1);
+    ISemanticRegionsFinder _regionFor_1 = this.textRegionExtensions.regionFor(project);
+    ISemanticRegion _keyword_1 = _regionFor_1.keyword(";");
     final Procedure1<IHiddenRegionFormatter> _function_2 = (IHiddenRegionFormatter it) -> {
       it.newLine();
     };
-    document.append(this.textRegionExtensions.regionFor(project).keyword(";"), _function_2);
+    document.append(_keyword_1, _function_2);
+    ISemanticRegionsFinder _regionFor_2 = this.textRegionExtensions.regionFor(project);
+    ISemanticRegion _keyword_2 = _regionFor_2.keyword("requiresResources:");
     final Procedure1<IHiddenRegionFormatter> _function_3 = (IHiddenRegionFormatter it) -> {
       it.newLine();
     };
-    document.prepend(this.textRegionExtensions.regionFor(project).keyword("requiresResources:"), _function_3);
+    document.prepend(_keyword_2, _function_3);
+    ISemanticRegionsFinder _regionFor_3 = this.textRegionExtensions.regionFor(project);
+    ISemanticRegion _keyword_3 = _regionFor_3.keyword("requiresCapabilities:");
     final Procedure1<IHiddenRegionFormatter> _function_4 = (IHiddenRegionFormatter it) -> {
       it.newLine();
     };
-    document.prepend(this.textRegionExtensions.regionFor(project).keyword("requiresCapabilities:"), _function_4);
+    document.prepend(_keyword_3, _function_4);
   }
   
   protected void _format(final Employee employee, @Extension final IFormattableDocument document) {
@@ -101,33 +119,45 @@ public class ProjectPlanningFormatter extends AbstractFormatter2 {
       it.indent();
     };
     document.<Employee>interior(employee, _function);
+    ISemanticRegionsFinder _regionFor = this.textRegionExtensions.regionFor(employee);
+    ISemanticRegion _keyword = _regionFor.keyword(":");
     final Procedure1<IHiddenRegionFormatter> _function_1 = (IHiddenRegionFormatter it) -> {
       it.newLine();
     };
-    document.append(this.textRegionExtensions.regionFor(employee).keyword(":"), _function_1);
+    document.append(_keyword, _function_1);
+    ISemanticRegionsFinder _regionFor_1 = this.textRegionExtensions.regionFor(employee);
+    ISemanticRegion _keyword_1 = _regionFor_1.keyword(";");
     final Procedure1<IHiddenRegionFormatter> _function_2 = (IHiddenRegionFormatter it) -> {
       it.newLine();
     };
-    document.append(this.textRegionExtensions.regionFor(employee).keyword(";"), _function_2);
+    document.append(_keyword_1, _function_2);
+    ISemanticRegionsFinder _regionFor_2 = this.textRegionExtensions.regionFor(employee);
+    ISemanticRegion _keyword_2 = _regionFor_2.keyword("ratesCapabilities:");
     final Procedure1<IHiddenRegionFormatter> _function_3 = (IHiddenRegionFormatter it) -> {
       it.newLine();
     };
-    document.prepend(this.textRegionExtensions.regionFor(employee).keyword("ratesCapabilities:"), _function_3);
+    document.prepend(_keyword_2, _function_3);
+    ISemanticRegionsFinder _regionFor_3 = this.textRegionExtensions.regionFor(employee);
+    ISemanticRegion _keyword_3 = _regionFor_3.keyword("hasCapabilities:");
     final Procedure1<IHiddenRegionFormatter> _function_4 = (IHiddenRegionFormatter it) -> {
       it.newLine();
     };
-    document.prepend(this.textRegionExtensions.regionFor(employee).keyword("hasCapabilities:"), _function_4);
+    document.prepend(_keyword_3, _function_4);
+    ISemanticRegionsFinder _regionFor_4 = this.textRegionExtensions.regionFor(employee);
+    ISemanticRegion _keyword_4 = _regionFor_4.keyword("hasResources:");
     final Procedure1<IHiddenRegionFormatter> _function_5 = (IHiddenRegionFormatter it) -> {
       it.newLine();
     };
-    document.prepend(this.textRegionExtensions.regionFor(employee).keyword("hasResources:"), _function_5);
+    document.prepend(_keyword_4, _function_5);
   }
   
   protected void _format(final Rating rating, @Extension final IFormattableDocument document) {
+    ISemanticRegionsFinder _regionFor = this.textRegionExtensions.regionFor(rating);
+    ISemanticRegion _keyword = _regionFor.keyword(";");
     final Procedure1<IHiddenRegionFormatter> _function = (IHiddenRegionFormatter it) -> {
       it.newLine();
     };
-    document.append(this.textRegionExtensions.regionFor(rating).keyword(";"), _function);
+    document.append(_keyword, _function);
   }
   
   protected void _format(final Capability capability, @Extension final IFormattableDocument document) {
