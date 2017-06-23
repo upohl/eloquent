@@ -50,6 +50,11 @@
     <module>plugins/org.muml.psm.allocation.language.xtext.ui</module>
     <module>features/org.muml.eloquent.feature</module>
     <module>plugins/org.muml.eloquent.repository</module>
+    <!-- projectPlanning example -->
+    <module>examples/de.fraunhofer.iem.projectPlanning</module>
+    <module>examples/de.fraunhofer.iem.projectPlanning.ide</module>
+    <module>examples/de.fraunhofer.iem.projectPlanning.ui</module>
+    <module>features/de.fraunhofer.iem.projectPlanning.feature</module>
   </modules>
   
   <build>
