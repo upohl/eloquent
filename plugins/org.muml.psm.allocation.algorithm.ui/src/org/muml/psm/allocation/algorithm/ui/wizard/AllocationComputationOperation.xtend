@@ -40,7 +40,6 @@ class AllocationComputationOperation<T> implements IAllocationComputationOperati
 		if (diagnostic.severity != Diagnostic.OK) {
 			return diagnostic
 		}
-		Thread.sleep(5000)
 		if (!monitor.isCanceled()) {
 			monitor.subTask(postProcessTaskName);
 			postProcess(algorithm, diagnostic);
