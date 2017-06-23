@@ -5,20 +5,13 @@ import de.fraunhofer.iem.seminar.Seminar
 import de.fraunhofer.iem.seminar.SeminarFactory
 import de.fraunhofer.iem.seminar.Student
 import de.fraunhofer.iem.seminar.Topic
+import org.eclipse.emf.common.command.Command
 import org.eclipse.emf.ecore.impl.EObjectImpl
+import org.eclipse.emf.edit.command.AddCommand
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain
 import org.eclipse.emf.edit.domain.EditingDomain
+import org.eclipse.emf.workspace.WorkspaceEditingDomainFactory
 import org.muml.psm.allocation.language.^as.StorageProvider
-import org.eclipse.emf.common.command.Command
-import org.eclipse.emf.edit.command.AddCommand
-import java.util.HashMap
-import org.eclipse.xtext.resource.XtextResource
-import java.io.FileOutputStream
-import org.eclipse.xtext.serializer.impl.Serializer
-import com.google.inject.Guice
-import de.fraunhofer.iem.SeminarRuntimeModule
-import de.fraunhofer.iem.seminar.SeminarPackage
-import org.eclipse.emf.edit.command.DeleteCommand
 
 /**
  * MUML-specific StorageProvider. Currently, only ComponentInstances
@@ -30,6 +23,7 @@ class SeminarStorageProvider extends EObjectImpl implements StorageProvider {
 	private static final String illegalPair = "Unable to store relation: %s to %s"
 	
 	protected Seminar seminar
+	protected EditingDomain editingDomain
 		 
 	override void initialize(Object context) {
 		if (!(context instanceof Seminar)) {
@@ -37,6 +31,8 @@ class SeminarStorageProvider extends EObjectImpl implements StorageProvider {
 				String.format(illegalContext, context)
 			)
 		}
+		editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(seminar)
+			?: WorkspaceEditingDomainFactory.INSTANCE.createEditingDomain
 		seminar = context as Seminar
 	}
 	
@@ -52,7 +48,6 @@ class SeminarStorageProvider extends EObjectImpl implements StorageProvider {
 	
 	def dispatch Seminar storePair(Student source, Topic target) {
 		val Assignment assignment = SeminarFactory.eINSTANCE.createAssignment()
-  		 val EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(seminar);
 		assignment.student = source
 		assignment.topic = target
 	//	val Command deleteCommand = DeleteCommand.create(editingDomain,seminar.assignments);

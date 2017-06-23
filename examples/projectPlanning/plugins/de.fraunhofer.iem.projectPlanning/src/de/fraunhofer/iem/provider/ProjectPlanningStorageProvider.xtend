@@ -11,6 +11,7 @@ import org.eclipse.emf.edit.command.AddCommand
 import org.eclipse.emf.edit.command.DeleteCommand
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain
 import org.eclipse.emf.edit.domain.EditingDomain
+import org.eclipse.emf.workspace.WorkspaceEditingDomainFactory
 import org.muml.psm.allocation.language.^as.StorageProvider
 
 /**
@@ -23,6 +24,7 @@ class ProjectPlanningStorageProvider extends EObjectImpl implements StorageProvi
 	private static final String illegalPair = "Unable to store relation: %s to %s"
 	
 	protected ProjectPlan projectPlan
+	protected EditingDomain editingDomain
 		 
 	override void initialize(Object context) {
 		if (!(context instanceof ProjectPlan)) {
@@ -31,8 +33,8 @@ class ProjectPlanningStorageProvider extends EObjectImpl implements StorageProvi
 			)
 		}
 		projectPlan = context as ProjectPlan
-
-		 val EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(projectPlan);
+		editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(projectPlan)
+			?: WorkspaceEditingDomainFactory.INSTANCE.createEditingDomain
 		val Command deleteCommand = DeleteCommand.create(editingDomain,projectPlan.assignments);
  		editingDomain.getCommandStack().execute(deleteCommand);
  		projectPlan  = projectPlan as ProjectPlan
@@ -50,7 +52,6 @@ class ProjectPlanningStorageProvider extends EObjectImpl implements StorageProvi
 	
 	def dispatch ProjectPlan storePair(Project source, Employee target) {
 		val Assignment assignment = ProjectPlanningFactory.eINSTANCE.createAssignment()
-  		 val EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(projectPlan);
 		assignment.employee = target
 		assignment.project = source
 	//	val Command deleteCommand = DeleteCommand.create(editingDomain,seminar.assignments);
