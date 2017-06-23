@@ -26,45 +26,30 @@
 		
   
   <modules>
-    <module>mm/org.muml.psm.allocation.language</module>  
-  <!--<module>org.muml.psm</module>-->
-    <module>org.muml.psm.allocation.algorithm</module>
-    <module>org.muml.psm.allocation.algorithm.ilp</module>
-    <module>org.muml.psm.allocation.algorithm.ilp.lpsolve</module>
-    <module>org.muml.psm.allocation.algorithm.ilp.scip</module>
-    <!--<module>org.muml.psm.allocation.algorithm.ilp.lpsolve.tests</module>-->
+    <module>plugins/org.muml.psm.allocation.language</module>  
+    <module>plugins/org.muml.psm.allocation.algorithm</module>
+    <module>plugins/org.muml.psm.allocation.algorithm.ilp</module>
+    <module>plugins/org.muml.psm.allocation.algorithm.ilp.lpsolve</module>
+    <module>plugins/org.muml.psm.allocation.algorithm.ilp.scip</module>
+    <!-- no opt4j for now
     <module>org.muml.psm.allocation.algorithm.ilp.opt4j</module>
     <module>org.muml.psm.allocation.algorithm.ilp.opt4j.config</module>
     <module>org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit</module>
     <module>org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit.properties</module>
-    <module>org.muml.psm.allocation.algorithm.ilp.opt4j.tests</module>
-    <module>org.muml.psm.allocation.algorithm.ilp.tests</module>
-    <module>org.muml.psm.allocation.algorithm.tests</module>
-    <module>org.muml.psm.allocation.algorithm.ui</module>
-    <module>org.muml.psm.allocation.devel</module>
-    <module>org.muml.psm.allocation.ilp</module>
-    <module>org.muml.psm.allocation.ilp.edit</module>
-    <module>org.muml.psm.allocation.ilp.lpsolve.xtext</module>
-    <module>org.muml.psm.allocation.ilp.lpsolve.xtext.tests</module>
-    <module>org.muml.psm.allocation.ilp.lpsolve.xtext.ui</module>
-    <module>org.muml.psm.allocation.ilp.tests</module>
-    <module>org.muml.psm.allocation.language.xtext</module>
-    <module>org.muml.psm.allocation.language.xtext.tests</module>
-    <module>org.muml.psm.allocation.language.xtext.ui</module>
-    <module>org.muml.psm.allocation.context.muml</module>
-    <module>org.muml.psm.allocation.context.muml.tests</module>
-    <module>org.muml.psm.api.apimappinglanguage.xtext</module>
-    <module>org.muml.psm.api.apimappinglanguage.xtext.ui</module>
-    <module>org.muml.psm.api.transformation.blackbox</module>
-    <!--<module>org.muml.psm.buckminster</module>-->
-      <!--<module>org.muml.psm.edit</module>-->
-      <!--<module>org.muml.psm.edit.properties</module>-->
-    <module>org.muml.eloquent.feature</module>
-    <module>org.muml.psm.allocation.context.muml.feature</module>
- <!--   <module>org.muml.eloquent.sdk.feature</module> -->
-    <!--  <module>org.muml.psm.tests</module>-->
-    <!-- <module>org.muml.psm.transformation</module>-->
-    <module>org.muml.eloquent.repository</module>
+    <module>org.muml.psm.allocation.algorithm.ilp.opt4j.tests</module>-->
+    <module>tests/org.muml.psm.allocation.algorithm.ilp.tests</module>
+    <module>tests/org.muml.psm.allocation.algorithm.tests</module>
+    <module>plugins/org.muml.psm.allocation.algorithm.ui</module>
+    <module>plugins/org.muml.psm.allocation.ilp</module>
+    <module>plugins/org.muml.psm.allocation.ilp.edit</module>
+    <module>plugins/org.muml.psm.allocation.ilp.lpsolve.xtext</module>
+    <module>tests/org.muml.psm.allocation.ilp.lpsolve.xtext.tests</module>
+    <module>plugins/org.muml.psm.allocation.ilp.lpsolve.xtext.ui</module>
+    <module>plugins/org.muml.psm.allocation.language.xtext</module>
+    <module>tests/org.muml.psm.allocation.language.xtext.tests</module>
+    <module>plugins/org.muml.psm.allocation.language.xtext.ui</module>
+    <module>features/org.muml.eloquent.feature</module>
+    <module>plugins/org.muml.eloquent.repository</module>
   </modules>
   
   <build>
@@ -234,63 +219,10 @@
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/eclipse/updates/4.6</url>
 		</repository>
-        <!-- hmm this pulls in xtend2 2.11(?), which results in
-             xtend2 runtime errors (when trying to execute the code with
-             xtend2 2.10 (which is shipped with neon3))
-        <repository>
-            <id>xtext</id>
-            <layout>p2</layout>
-            <url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases</url>
-        </repository>-->
-		<repository>
-			<id>emf</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/technology/epp/packages/neon</url>
-		</repository>
-		<repository>
-			<id>gmf-tooling</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases/</url>
-		</repository>
         <repository>
             <id>ocl-oxygen-int</id>
             <layout>p2</layout>
             <url>http://download.eclipse.org/modeling/mdt/ocl/updates/interim/6.3.0</url>
         </repository>
-		<repository>
-			<id>ImplicitCopy</id>
-			<layout>p2</layout>
-			<url>${repobase}/ImplicitCopy-Maven/${repopath}org.muml.implicitcopy.repository/target/repository</url>
-		</repository>
-		<repository>
-			<id>ModelMigration</id>
-			<layout>p2</layout>
-			<url>${repobase}/ModelMigration-Maven/${repopath}org.muml.emm.repository/target/repository</url>
-		</repository>
-		<repository>
-			<id>APE</id>
-			<layout>p2</layout>
-			<url>${repobase}/APE-Maven/${repopath}org.muml.ape.repository/target/repository</url>
-		</repository>
-        <repository>
-			<id>Core</id>
-			<layout>p2</layout>
-			<url>${repobase}/Core-Maven/${repopath}org.muml.core.repository/target/repository</url>
-		</repository>
-		<repository>
-			<id>PIM</id>
-			<layout>p2</layout>
-			<url>${repobase}/PlatformIndependentModeling-Maven/${repopath}org.muml.pim.repository/target/repository</url>
-		</repository>
-		<repository>
-			<id>PM</id>
-			<layout>p2</layout>
-			<url>${repobase}/PlatformModeling-Maven/${repopath}org.muml.pm.repository/target/repository</url>
-		</repository>
-		<repository>
-			<id>ExternalDependencies</id>
-			<layout>p2</layout>
-			<url>${repobase}/ExternalDependencies-Maven/${repopath}org.muml.external.repository/target/repository</url>
-		</repository>
-	</repositories>
+  </repositories>
 </project>
