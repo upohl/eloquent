@@ -3,11 +3,9 @@
  */
 package de.fraunhofer.iem.ide;
 
-import de.fraunhofer.iem.ide.AbstractSeminarIdeModule;
-
 /**
  * Use this class to register ide components.
  */
 @SuppressWarnings("all")
-public class SeminarIdeModule extends AbstractSeminarIdeModule {
+public class SeminarIdeModule /* implements AbstractSeminarIdeModule  */{
 }

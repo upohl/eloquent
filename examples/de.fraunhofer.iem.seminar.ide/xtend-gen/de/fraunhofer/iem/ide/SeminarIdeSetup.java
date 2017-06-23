@@ -3,12 +3,8 @@
  */
 package de.fraunhofer.iem.ide;
 
-import com.google.inject.Guice;
 import com.google.inject.Injector;
-import de.fraunhofer.iem.SeminarRuntimeModule;
 import de.fraunhofer.iem.SeminarStandaloneSetup;
-import de.fraunhofer.iem.ide.SeminarIdeModule;
-import org.eclipse.xtext.util.Modules2;
 
 /**
  * Initialization support for running Xtext languages as language servers.
@@ -17,8 +13,7 @@ import org.eclipse.xtext.util.Modules2;
 public class SeminarIdeSetup extends SeminarStandaloneSetup {
   @Override
   public Injector createInjector() {
-    SeminarRuntimeModule _seminarRuntimeModule = new SeminarRuntimeModule();
-    SeminarIdeModule _seminarIdeModule = new SeminarIdeModule();
-    return Guice.createInjector(Modules2.mixin(_seminarRuntimeModule, _seminarIdeModule));
+    throw new Error("Unresolved compilation problems:"
+      + "\nType mismatch: cannot convert from SeminarIdeModule to Module");
   }
 }
