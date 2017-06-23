@@ -23,8 +23,6 @@
    </url>
 
    <requires>
-      <import plugin="org.muml.core.export" version="0.4.0" match="greaterOrEqual"/>
-      <import plugin="org.muml.core.common" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.jface" version="3.10.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui" version="3.106.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui.ide" version="3.10.0" match="greaterOrEqual"/>
@@ -33,15 +31,13 @@
       <import plugin="org.eclipse.m2m.qvt.oml" version="3.4.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.jdt.annotation" version="2.0.100" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ocl.xtext.completeocl" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.muml.ape.runtime"/>
       <import plugin="org.eclipse.emf.transaction" version="1.9.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.common"/>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.xtend.lib" version="2.10.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.ecore.editor" version="2.12.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.ecore"/>
-      <import plugin="org.muml.core"/>
       <import plugin="org.eclipse.emf.edit"/>
-      <import plugin="org.muml.core.edit"/>
       <import plugin="org.eclipse.emf.ecore.edit"/>
       <import plugin="org.eclipse.xtext"/>
       <import plugin="org.eclipse.xtext.util"/>
@@ -68,15 +64,12 @@
       <import plugin="org.eclipse.debug.core" version="3.10.100" match="greaterOrEqual"/>
       <import plugin="org.eclipse.pde.core" version="3.11.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.jdt.core"/>
-      <import plugin="org.muml.core.export" version="0.5.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ocl.xtext.completeocl.ui" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.runtime" version="3.11.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui" version="3.108.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ocl.pivot" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.m2m.qvt.oml.runtime" version="3.4.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.xtend.lib" version="2.7.2" match="greaterOrEqual"/>
-      <import plugin="org.muml.external.opt4j"/>
-      <import plugin="org.muml.external.guice"/>
+      <import plugin="org.eclipse.core.resources" version="3.11.1" match="greaterOrEqual"/>
    </requires>
 
    <plugin
@@ -151,34 +144,6 @@
 
    <plugin
          id="org.muml.psm.allocation.algorithm.ilp"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.muml.psm.allocation.algorithm.ilp.opt4j"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.muml.psm.allocation.algorithm.ilp.opt4j.config"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit.properties"
          download-size="0"
          install-size="0"
          version="0.0.0"
