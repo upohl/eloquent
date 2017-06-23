@@ -3,12 +3,8 @@
  */
 package de.fraunhofer.iem.ide;
 
-import com.google.inject.Guice;
 import com.google.inject.Injector;
-import de.fraunhofer.iem.ProjectPlanningRuntimeModule;
 import de.fraunhofer.iem.ProjectPlanningStandaloneSetup;
-import de.fraunhofer.iem.ide.ProjectPlanningIdeModule;
-import org.eclipse.xtext.util.Modules2;
 
 /**
  * Initialization support for running Xtext languages as language servers.
@@ -17,8 +13,7 @@ import org.eclipse.xtext.util.Modules2;
 public class ProjectPlanningIdeSetup extends ProjectPlanningStandaloneSetup {
   @Override
   public Injector createInjector() {
-    ProjectPlanningRuntimeModule _projectPlanningRuntimeModule = new ProjectPlanningRuntimeModule();
-    ProjectPlanningIdeModule _projectPlanningIdeModule = new ProjectPlanningIdeModule();
-    return Guice.createInjector(Modules2.mixin(_projectPlanningRuntimeModule, _projectPlanningIdeModule));
+    throw new Error("Unresolved compilation problems:"
+      + "\nType mismatch: cannot convert from ProjectPlanningIdeModule to Module");
   }
 }

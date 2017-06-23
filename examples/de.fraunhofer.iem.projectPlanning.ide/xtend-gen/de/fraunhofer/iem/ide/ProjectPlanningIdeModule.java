@@ -3,11 +3,9 @@
  */
 package de.fraunhofer.iem.ide;
 
-import de.fraunhofer.iem.ide.AbstractProjectPlanningIdeModule;
-
 /**
  * Use this class to register ide components.
  */
 @SuppressWarnings("all")
-public class ProjectPlanningIdeModule extends AbstractProjectPlanningIdeModule {
+public class ProjectPlanningIdeModule /* implements AbstractProjectPlanningIdeModule  */{
 }
