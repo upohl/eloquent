@@ -33,5 +33,6 @@ Daimler:
 JanzTec:
 	requiresResources:1 
 	requiresCapabilities: Security;
-
-Daimler is assigned to Joerg ; Dibold is assigned to Faruk ; JanzTec is assigned to Stefan ;
+Daimler is assigned to Joerg ;
+Dibold is assigned to Faruk ;
+JanzTec is assigned to Stefan ;

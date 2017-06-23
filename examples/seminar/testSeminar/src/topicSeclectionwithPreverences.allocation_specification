@@ -1,8 +1,8 @@
 testSpecificationName {
 
-	nameProvider 'org.muml.psm.allocation.language.xtext.provider.SeminarNameProvider';
-	storageProvider 'org.muml.psm.allocation.language.xtext.provider.SeminarStorageProvider';
-	oclContext seminar::Seminar;
+	nameProvider 'de.fraunhofer.iem.provider.SeminarNameProvider'
+	storageProvider 'de.fraunhofer.iem.provider.SeminarStorageProvider'
+	oclContext seminar::Seminar
 	import 'http://www.fraunhofer.de/iem/Seminar'
 	relation {
 		descriptors (first : seminar::Student, second : seminar::Topic);
@@ -22,8 +22,9 @@ testSpecificationName {
 	
 	constraint separateLocation differentTopics
 	{
-		descriptors(first :seminar::Student, second: seminar::Student);
+		descriptors(first :seminar::Student, second: seminar::Student);	
 		ocl
+		let myset : Set(Tuple(first :seminar::Student, second: seminar::Student)) = self.students->product(self.students)->select(first.name<>second.name) in
 			self.students->product(self.students)->select(first.name<>second.name);
 	}
 	

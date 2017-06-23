@@ -1,17 +1,21 @@
 testSpecificationName2 {
+	
 	include 'helper.ocl'
-	nameProvider 'de.fraunhofer.iem.provider.ProjectPlanningNameProvider';
-	storageProvider 'de.fraunhofer.iem.provider.ProjectPlanningStorageProvider';
-	oclContext projectPlanning::ProjectPlan;
-	import 'http://www.fraunhofer.de/iem/ProjectPlanning'
-	relation {
-		descriptors (first : projectPlanning::Project, second : projectPlanning::Employee);
-		lower 1;
-		upper 1;
-		ocl self.projects->product(self.employees);
-	}
 	
+	nameProvider 'de.fraunhofer.iem.provider.ProjectPlanningNameProvider'
 	
+	storageProvider 'de.fraunhofer.iem.provider.ProjectPlanningStorageProvider'
+	
+	oclContext projectPlanning::ProjectPlan
+	
+relation{
+	descriptors(first:projectPlanning::Project,second:projectPlanning::Employee
+	);
+	lower 1;
+	upper 1;
+	ocl self.projects->product(self.employees);
+}
+
 	
 	constraint requiredLocation considerAllEmployeesCapabilties 
 	{
