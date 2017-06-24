@@ -51,7 +51,6 @@ class ProjectPlanningStorageProvider extends EObjectImpl implements StorageProvi
 	}
 	
 	def dispatch ProjectPlan storePair(Project source, Employee target) {
-		println("storePair: " + source.name + " -> " + target.name)
 		val Assignment assignment = ProjectPlanningFactory.eINSTANCE.createAssignment()
 		assignment.employee = target
 		assignment.project = source
@@ -64,7 +63,6 @@ class ProjectPlanningStorageProvider extends EObjectImpl implements StorageProvi
 	//	val serializer = Guice.createInjector(new SeminarRuntimeModule()).getInstance(Serializer);
 	// val String dsl = serializer.serialize(seminar);
 		projectPlan.eResource.save(newHashMap())
-		println("after save")
 		projectPlan
 	}
 	
