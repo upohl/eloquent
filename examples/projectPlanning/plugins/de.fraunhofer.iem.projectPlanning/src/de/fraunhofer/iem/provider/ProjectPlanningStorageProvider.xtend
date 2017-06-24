@@ -52,7 +52,6 @@ class ProjectPlanningStorageProvider extends EObjectImpl implements StorageProvi
 	
 	def dispatch ProjectPlan storePair(Project source, Employee target) {
 		println("storePair: " + source.name + " -> " + target.name)
-		println("editingDomain: " + AdapterFactoryEditingDomain.getEditingDomainFor(projectPlan))
 		val Assignment assignment = ProjectPlanningFactory.eINSTANCE.createAssignment()
 		assignment.employee = target
 		assignment.project = source
