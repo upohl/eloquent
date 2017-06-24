@@ -52,11 +52,13 @@
     <module>plugins/org.muml.eloquent.repository</module>
     <!-- projectPlanning example -->
     <module>examples/projectPlanning/plugins/de.fraunhofer.iem.projectPlanning</module>
+    <module>examples/projectPlanning/plugins/de.fraunhofer.iem.projectPlanning.edit</module>
     <module>examples/projectPlanning/plugins/de.fraunhofer.iem.projectPlanning.ide</module>
     <module>examples/projectPlanning/plugins/de.fraunhofer.iem.projectPlanning.ui</module>
     <module>features/de.fraunhofer.iem.projectPlanning.feature</module>
     <!-- seminar example -->
     <module>examples/seminar/plugins/de.fraunhofer.iem.seminar</module>
+    <module>examples/seminar/plugins/de.fraunhofer.iem.seminar.edit</module>
     <module>examples/seminar/plugins/de.fraunhofer.iem.seminar.ide</module>
     <module>examples/seminar/plugins/de.fraunhofer.iem.seminar.ui</module>
     <module>features/de.fraunhofer.iem.seminar.feature</module>
