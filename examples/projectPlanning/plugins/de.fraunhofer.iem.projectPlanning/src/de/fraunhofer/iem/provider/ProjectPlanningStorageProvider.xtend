@@ -66,7 +66,6 @@ class ProjectPlanningStorageProvider extends EObjectImpl implements StorageProvi
 	// val String dsl = serializer.serialize(seminar);
 		projectPlan.eResource.save(newHashMap())
 		println("after save")
-		println(projectPlan.assignments)
 		projectPlan
 	}
 	
