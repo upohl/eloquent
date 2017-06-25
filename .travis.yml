@@ -5,7 +5,7 @@ jdk:
 
 deploy:
   provider: script
-  script: "mvn test -B"
+  script: "mvn package -B"
 
   
   
