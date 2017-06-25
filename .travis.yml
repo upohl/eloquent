@@ -1,0 +1,17 @@
+language: java
+sudo: false
+jdk:
+  - oraclejdk8
+
+deploy:
+  provider: script
+  script: "mvn test -B"
+
+  
+  
+notifications:
+  email:
+    recipients:
+    - upohl@upb.de
+    on_success: change
+    on_failure: always
