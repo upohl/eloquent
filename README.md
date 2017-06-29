@@ -7,7 +7,7 @@
 ## Eloquent Update Site:
 * https://muml-build.cs.upb.de/job/ELOQUENT-Github-Test/lastSuccessfulBuild/artifact/plugins/org.muml.eloquent.repository/target/repository
 
-## Installing the tools for Eloquent ==
+## Installing the tools for Eloquent 
 
 Eloquent is a plug-in for Eclipse Neon.3 and Oxgen. We develop and test it under Eclipse installations for Windows 7, 10 and Linux;
 
