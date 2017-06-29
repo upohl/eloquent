@@ -24,15 +24,13 @@ Faruk:
 	hasCapabilities: ConditionMonitoring, Java 
 	ratesCapabilities: ConditionMonitoring=3, Java=1;
 projects: 
-Dibold: 
+ProjectA: 
 	requiresResources:3  
 	requiresCapabilities: ConditionMonitoring, Java;
-Daimler: 
+ProjectB: 
 	requiresResources:1 
 	requiresCapabilities: UML, SystemsEngineering;
-JanzTec:
+ProjectC:
 	requiresResources:1 
 	requiresCapabilities: Security;
-Daimler is assigned to Joerg ;
-Dibold is assigned to Faruk ;
-JanzTec is assigned to Stefan ;
+
