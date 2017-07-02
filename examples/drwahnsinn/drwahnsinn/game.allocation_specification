@@ -1,0 +1,261 @@
+drwahnsinn {
+	import 'http://www.muml.org/eloquent/example/drwahnsinn'
+
+	oclContext drwahnsinn::DrWahnsinnGame
+
+	nameProvider 'org.muml.eloquent.example.drwahnsinn.provider.DrWahnsinnNameProvider'
+	storageProvider 'org.muml.eloquent.example.drwahnsinn.provider.DrWahnsinnStorageProvider'
+	
+	relation relate3x2x2 {
+		descriptors (first : drwahnsinn::Tile, second : drwahnsinn::Position);
+		lower 12;
+		upper 12;
+		ocl
+			self.getTiles(TileType::TYPE_3x2x2)->product(
+				self.getAllPositions(TileType::TYPE_3x2x2)->flatten()
+			)
+		;
+	}
+	
+	relation relate4x2x1 {
+		descriptors (first : drwahnsinn::Tile, second : drwahnsinn::Position);
+		lower 8;
+		upper 8;
+		ocl
+			self.getTiles(TileType::TYPE_4x2x1)->product(
+				self.getAllPositions(TileType::TYPE_4x2x1)->flatten()
+			)
+		;
+	}
+	
+	relation relate1x1x1 {
+		descriptors (first : drwahnsinn::Tile, second : drwahnsinn::Position);
+		lower 1;
+		upper 1;
+		ocl
+			self.getTiles(TileType::TYPE_1x1x1)->product(
+				self.getAllPositions(TileType::TYPE_1x1x1)->flatten()
+			)
+		;
+	}
+	
+	constraint resource atMostOneTile {
+		weight num;
+		bound atMostOne;
+		descriptors (tile : drwahnsinn::Tile, position : drwahnsinn::Position);
+		ocl
+			self.getAllPositions(TileType::TYPE_3x2x2)->union(
+				self.getAllPositions(TileType::TYPE_4x2x1)->union(
+					self.getAllPositions(TileType::TYPE_1x1x1)
+				)
+			)->flatten()->collect(pos |
+				Tuple {
+					atMostOne = 1,
+					num = self.getTiles(TileType::TYPE_3x2x2)->union(
+						self.getTiles(TileType::TYPE_4x2x1)->union(
+							self.getTiles(TileType::TYPE_1x1x1)
+						)
+					)->collect(t |
+						Tuple {
+							tile = t,
+							position = pos,
+							num = 1
+						}
+					)->asSet()
+				}
+			)->asSet()
+		;
+	}
+	
+	constraint requiredLocation rq3x2x2 {
+        descriptors (t1 : drwahnsinn::Tile, p1 : drwahnsinn::Position),
+            (t2 : drwahnsinn::Tile, p2 : drwahnsinn::Position),
+            (t3 : drwahnsinn::Tile, p3 : drwahnsinn::Position),
+            (t4 : drwahnsinn::Tile, p4 : drwahnsinn::Position),
+            (t5 : drwahnsinn::Tile, p5 : drwahnsinn::Position),
+            (t6 : drwahnsinn::Tile, p6 : drwahnsinn::Position),
+            (t7 : drwahnsinn::Tile, p7 : drwahnsinn::Position),
+            (t8 : drwahnsinn::Tile, p8 : drwahnsinn::Position),
+            (t9 : drwahnsinn::Tile, p9 : drwahnsinn::Position),
+            (t10 : drwahnsinn::Tile, p10 : drwahnsinn::Position),
+            (t11 : drwahnsinn::Tile, p11 : drwahnsinn::Position),
+            (t12 : drwahnsinn::Tile, p12 : drwahnsinn::Position);
+        ocl
+           self.getTiles(TileType::TYPE_3x2x2)->collect(tile |
+                self.getAllPositions(TileType::TYPE_3x2x2)->collect(seq |
+                    Tuple {
+                        t1 = tile,
+                        p1 = seq->at(1),
+                        t2 = tile,
+                        p2 = seq->at(2),
+                        t3 = tile,
+                        p3 = seq->at(3),
+                        t4 = tile,
+                        p4 = seq->at(4),
+                        t5 = tile,
+                        p5 = seq->at(5),
+                        t6 = tile,
+                        p6 = seq->at(6),
+                        t7 = tile,
+                        p7 = seq->at(7),
+                        t8 = tile,
+                        p8 = seq->at(8),
+                        t9 = tile,
+                        p9 = seq->at(9),
+                        t10 = tile,
+                        p10 = seq->at(10),
+                        t11 = tile,
+                        p11 = seq->at(11),
+                        t12 = tile,
+                        p12 = seq->at(12)
+                    }
+                )
+            )->asSet()
+        ;
+    }
+    
+    constraint requiredLocation rq4x2x1 {
+        descriptors (t1 : drwahnsinn::Tile, p1 : drwahnsinn::Position),
+            (t2 : drwahnsinn::Tile, p2 : drwahnsinn::Position),
+            (t3 : drwahnsinn::Tile, p3 : drwahnsinn::Position),
+            (t4 : drwahnsinn::Tile, p4 : drwahnsinn::Position),
+            (t5 : drwahnsinn::Tile, p5 : drwahnsinn::Position),
+            (t6 : drwahnsinn::Tile, p6 : drwahnsinn::Position),
+            (t7 : drwahnsinn::Tile, p7 : drwahnsinn::Position),
+            (t8 : drwahnsinn::Tile, p8 : drwahnsinn::Position);
+        ocl
+           self.getTiles(TileType::TYPE_4x2x1)->collect(tile |
+                self.getAllPositions(TileType::TYPE_4x2x1)->collect(seq |
+                    Tuple {
+                        t1 = tile,
+                        p1 = seq->at(1),
+                        t2 = tile,
+                        p2 = seq->at(2),
+                        t3 = tile,
+                        p3 = seq->at(3),
+                        t4 = tile,
+                        p4 = seq->at(4),
+                        t5 = tile,
+                        p5 = seq->at(5),
+                        t6 = tile,
+                        p6 = seq->at(6),
+                        t7 = tile,
+                        p7 = seq->at(7),
+                        t8 = tile,
+                        p8 = seq->at(8)
+                    }
+                )
+            )->asSet()
+        ;
+    }
+    
+    constraint requiredLocation rq1x1x1 {
+        descriptors (t1 : drwahnsinn::Tile, p1 : drwahnsinn::Position);
+        ocl
+           self.getTiles(TileType::TYPE_1x1x1)->collect(tile |
+                self.getAllPositions(TileType::TYPE_1x1x1)->collect(seq |
+                    Tuple {
+                        t1 = tile,
+                        p1 = seq->at(1)
+                    }
+                )
+            )->asSet()
+        ;
+    }
+	
+	context drwahnsinn::DrWahnsinnGame
+		def: getTiles(tileType : TileType) : OrderedSet(Tile) =
+			self.tiles->select(type = tileType)
+			
+		def: getBound() : Integer = 5
+			
+		def: getAllPositions(tileType : TileType) : OrderedSet(Sequence(Position))
+			=
+			self.positions->iterate(pos : Position; acc : OrderedSet(Sequence(Position)) = OrderedSet{} |
+				acc->union(
+					self.getPositions(pos, tileType)
+				)->asOrderedSet()
+			)->select(seq | seq->size() > 0)
+			
+		def: getPositions(source : Position, tileType : TileType) : OrderedSet(Sequence(Position))
+			=
+			if tileType = TileType::TYPE_3x2x2 then
+				self.getContiguous(source, 3, 2, 2)
+			else if tileType = TileType::TYPE_4x2x1 then
+				self.getContiguous(source, 4, 2, 1)
+			else
+				-- avoid unnecessary computation
+				OrderedSet{
+					Sequence {
+						source
+					}
+				}
+			endif
+			endif
+			
+		def: getContiguous(source : Position, length : Integer, width : Integer, height : Integer) : OrderedSet(Sequence(Position))
+			=
+			Sequence {
+				self.getBlock(source, length, width, height)
+			}->union(
+				Sequence {
+					self.getBlock(source, width, length, height)
+				}
+			)->union(
+				Sequence {
+					self.getBlock(source, length, height, width)
+				}
+			)->union(
+				Sequence {
+					self.getBlock(source, height, length, width)
+				}
+			)->union(
+				Sequence {
+					self.getBlock(source, width, height, length)
+				}
+			)->union(
+				Sequence {
+					self.getBlock(source, height, width, length)
+				}
+			)->asOrderedSet()
+						
+		def: getBlock(source : Position, length : Integer, width : Integer, height : Integer) : Sequence(Position)
+			=
+			if source.x + length - 1 < getBound()
+				and source.y + width - 1 < getBound()
+				and source.z + height - 1 < getBound() then
+				Sequence {0 .. (height - 1)}->collect(z |
+					Sequence {0 .. (width - 1)}->collect(y |
+						Sequence {0 .. (length - 1)}->collect(x |
+							self.getPosition(source.x + x, source.y + y, source.z + z)
+						)
+					)
+				)
+			else
+				Sequence {}
+			endif
+			
+		def: getPosition(x : Integer, y : Integer, z : Integer) : Position
+			=
+			self.positions->at(
+				(x + 1) + (y * getBound()) + (z * getBound() * getBound())
+			)
+			
+	-- just for debugging purposes (will be removed later)
+	context drwahnsinn::Position
+		def: print() : String
+			=
+			self.x.toString() + 'x' + self.y.toString() + 'x' + self.z.toString()
+			
+		-- just meant to reverse the print() result (yes... the
+		-- straightforward way would have been to easy...)
+		def: rprint() : String
+			=
+			let s : String = self.print()
+			in
+			Sequence{1 .. s.size()}
+				->iterate(i : Integer; acc : String = '' |
+					acc + s.at(s.size() - i + 1)
+				)
+				
+}

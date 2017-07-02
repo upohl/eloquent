@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="ASCII"?>
+<drwahnsinn:RelationCollection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:drwahnsinn="http://www.muml.org/eloquent/example/drwahnsinn">
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.3"/>
+    <positions href="game.drwahnsinn#//@positions.53"/>
+    <positions href="game.drwahnsinn#//@positions.78"/>
+    <positions href="game.drwahnsinn#//@positions.58"/>
+    <positions href="game.drwahnsinn#//@positions.83"/>
+    <positions href="game.drwahnsinn#//@positions.63"/>
+    <positions href="game.drwahnsinn#//@positions.88"/>
+    <positions href="game.drwahnsinn#//@positions.54"/>
+    <positions href="game.drwahnsinn#//@positions.79"/>
+    <positions href="game.drwahnsinn#//@positions.59"/>
+    <positions href="game.drwahnsinn#//@positions.84"/>
+    <positions href="game.drwahnsinn#//@positions.64"/>
+    <positions href="game.drwahnsinn#//@positions.89"/>
+  </tileRelations>
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.7"/>
+    <positions href="game.drwahnsinn#//@positions.95"/>
+    <positions href="game.drwahnsinn#//@positions.120"/>
+    <positions href="game.drwahnsinn#//@positions.96"/>
+    <positions href="game.drwahnsinn#//@positions.121"/>
+    <positions href="game.drwahnsinn#//@positions.97"/>
+    <positions href="game.drwahnsinn#//@positions.122"/>
+    <positions href="game.drwahnsinn#//@positions.98"/>
+    <positions href="game.drwahnsinn#//@positions.123"/>
+  </tileRelations>
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.9"/>
+    <positions href="game.drwahnsinn#//@positions.25"/>
+    <positions href="game.drwahnsinn#//@positions.50"/>
+    <positions href="game.drwahnsinn#//@positions.75"/>
+    <positions href="game.drwahnsinn#//@positions.100"/>
+    <positions href="game.drwahnsinn#//@positions.30"/>
+    <positions href="game.drwahnsinn#//@positions.55"/>
+    <positions href="game.drwahnsinn#//@positions.80"/>
+    <positions href="game.drwahnsinn#//@positions.105"/>
+  </tileRelations>
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.13"/>
+    <positions href="game.drwahnsinn#//@positions.31"/>
+  </tileRelations>
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.14"/>
+    <positions href="game.drwahnsinn#//@positions.93"/>
+  </tileRelations>
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.12"/>
+    <positions href="game.drwahnsinn#//@positions.62"/>
+  </tileRelations>
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.15"/>
+    <positions href="game.drwahnsinn#//@positions.124"/>
+  </tileRelations>
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.16"/>
+    <positions href="game.drwahnsinn#//@positions.0"/>
+  </tileRelations>
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.5"/>
+    <positions href="game.drwahnsinn#//@positions.51"/>
+    <positions href="game.drwahnsinn#//@positions.76"/>
+    <positions href="game.drwahnsinn#//@positions.101"/>
+    <positions href="game.drwahnsinn#//@positions.56"/>
+    <positions href="game.drwahnsinn#//@positions.81"/>
+    <positions href="game.drwahnsinn#//@positions.106"/>
+    <positions href="game.drwahnsinn#//@positions.52"/>
+    <positions href="game.drwahnsinn#//@positions.77"/>
+    <positions href="game.drwahnsinn#//@positions.102"/>
+    <positions href="game.drwahnsinn#//@positions.57"/>
+    <positions href="game.drwahnsinn#//@positions.82"/>
+    <positions href="game.drwahnsinn#//@positions.107"/>
+  </tileRelations>
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.1"/>
+    <positions href="game.drwahnsinn#//@positions.7"/>
+    <positions href="game.drwahnsinn#//@positions.32"/>
+    <positions href="game.drwahnsinn#//@positions.12"/>
+    <positions href="game.drwahnsinn#//@positions.37"/>
+    <positions href="game.drwahnsinn#//@positions.8"/>
+    <positions href="game.drwahnsinn#//@positions.33"/>
+    <positions href="game.drwahnsinn#//@positions.13"/>
+    <positions href="game.drwahnsinn#//@positions.38"/>
+    <positions href="game.drwahnsinn#//@positions.9"/>
+    <positions href="game.drwahnsinn#//@positions.34"/>
+    <positions href="game.drwahnsinn#//@positions.14"/>
+    <positions href="game.drwahnsinn#//@positions.39"/>
+  </tileRelations>
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.0"/>
+    <positions href="game.drwahnsinn#//@positions.17"/>
+    <positions href="game.drwahnsinn#//@positions.42"/>
+    <positions href="game.drwahnsinn#//@positions.67"/>
+    <positions href="game.drwahnsinn#//@positions.22"/>
+    <positions href="game.drwahnsinn#//@positions.47"/>
+    <positions href="game.drwahnsinn#//@positions.72"/>
+    <positions href="game.drwahnsinn#//@positions.18"/>
+    <positions href="game.drwahnsinn#//@positions.43"/>
+    <positions href="game.drwahnsinn#//@positions.68"/>
+    <positions href="game.drwahnsinn#//@positions.23"/>
+    <positions href="game.drwahnsinn#//@positions.48"/>
+    <positions href="game.drwahnsinn#//@positions.73"/>
+  </tileRelations>
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.4"/>
+    <positions href="game.drwahnsinn#//@positions.85"/>
+    <positions href="game.drwahnsinn#//@positions.110"/>
+    <positions href="game.drwahnsinn#//@positions.90"/>
+    <positions href="game.drwahnsinn#//@positions.115"/>
+    <positions href="game.drwahnsinn#//@positions.86"/>
+    <positions href="game.drwahnsinn#//@positions.111"/>
+    <positions href="game.drwahnsinn#//@positions.91"/>
+    <positions href="game.drwahnsinn#//@positions.116"/>
+    <positions href="game.drwahnsinn#//@positions.87"/>
+    <positions href="game.drwahnsinn#//@positions.112"/>
+    <positions href="game.drwahnsinn#//@positions.92"/>
+    <positions href="game.drwahnsinn#//@positions.117"/>
+  </tileRelations>
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.2"/>
+    <positions href="game.drwahnsinn#//@positions.35"/>
+    <positions href="game.drwahnsinn#//@positions.60"/>
+    <positions href="game.drwahnsinn#//@positions.40"/>
+    <positions href="game.drwahnsinn#//@positions.65"/>
+    <positions href="game.drwahnsinn#//@positions.45"/>
+    <positions href="game.drwahnsinn#//@positions.70"/>
+    <positions href="game.drwahnsinn#//@positions.36"/>
+    <positions href="game.drwahnsinn#//@positions.61"/>
+    <positions href="game.drwahnsinn#//@positions.41"/>
+    <positions href="game.drwahnsinn#//@positions.66"/>
+    <positions href="game.drwahnsinn#//@positions.46"/>
+    <positions href="game.drwahnsinn#//@positions.71"/>
+  </tileRelations>
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.10"/>
+    <positions href="game.drwahnsinn#//@positions.103"/>
+    <positions href="game.drwahnsinn#//@positions.108"/>
+    <positions href="game.drwahnsinn#//@positions.113"/>
+    <positions href="game.drwahnsinn#//@positions.118"/>
+    <positions href="game.drwahnsinn#//@positions.104"/>
+    <positions href="game.drwahnsinn#//@positions.109"/>
+    <positions href="game.drwahnsinn#//@positions.114"/>
+    <positions href="game.drwahnsinn#//@positions.119"/>
+  </tileRelations>
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.8"/>
+    <positions href="game.drwahnsinn#//@positions.19"/>
+    <positions href="game.drwahnsinn#//@positions.44"/>
+    <positions href="game.drwahnsinn#//@positions.69"/>
+    <positions href="game.drwahnsinn#//@positions.94"/>
+    <positions href="game.drwahnsinn#//@positions.24"/>
+    <positions href="game.drwahnsinn#//@positions.49"/>
+    <positions href="game.drwahnsinn#//@positions.74"/>
+    <positions href="game.drwahnsinn#//@positions.99"/>
+  </tileRelations>
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.11"/>
+    <positions href="game.drwahnsinn#//@positions.5"/>
+    <positions href="game.drwahnsinn#//@positions.10"/>
+    <positions href="game.drwahnsinn#//@positions.15"/>
+    <positions href="game.drwahnsinn#//@positions.20"/>
+    <positions href="game.drwahnsinn#//@positions.6"/>
+    <positions href="game.drwahnsinn#//@positions.11"/>
+    <positions href="game.drwahnsinn#//@positions.16"/>
+    <positions href="game.drwahnsinn#//@positions.21"/>
+  </tileRelations>
+  <tileRelations>
+    <tile href="game.drwahnsinn#//@tiles.6"/>
+    <positions href="game.drwahnsinn#//@positions.1"/>
+    <positions href="game.drwahnsinn#//@positions.26"/>
+    <positions href="game.drwahnsinn#//@positions.2"/>
+    <positions href="game.drwahnsinn#//@positions.27"/>
+    <positions href="game.drwahnsinn#//@positions.3"/>
+    <positions href="game.drwahnsinn#//@positions.28"/>
+    <positions href="game.drwahnsinn#//@positions.4"/>
+    <positions href="game.drwahnsinn#//@positions.29"/>
+  </tileRelations>
+  <game href="game.drwahnsinn#/"/>
+</drwahnsinn:RelationCollection>

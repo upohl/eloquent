@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drwahnsinn:DrWahnsinnGame xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:drwahnsinn="http://www.muml.org/eloquent/example/drwahnsinn">
+  <positions/>
+  <positions x="1"/>
+  <positions x="2"/>
+  <positions x="3"/>
+  <positions x="4"/>
+  <positions y="1"/>
+  <positions x="1" y="1"/>
+  <positions x="2" y="1"/>
+  <positions x="3" y="1"/>
+  <positions x="4" y="1"/>
+  <positions y="2"/>
+  <positions x="1" y="2"/>
+  <positions x="2" y="2"/>
+  <positions x="3" y="2"/>
+  <positions x="4" y="2"/>
+  <positions y="3"/>
+  <positions x="1" y="3"/>
+  <positions x="2" y="3"/>
+  <positions x="3" y="3"/>
+  <positions x="4" y="3"/>
+  <positions y="4"/>
+  <positions x="1" y="4"/>
+  <positions x="2" y="4"/>
+  <positions x="3" y="4"/>
+  <positions x="4" y="4"/>
+  <positions z="1"/>
+  <positions x="1" z="1"/>
+  <positions x="2" z="1"/>
+  <positions x="3" z="1"/>
+  <positions x="4" z="1"/>
+  <positions y="1" z="1"/>
+  <positions x="1" y="1" z="1"/>
+  <positions x="2" y="1" z="1"/>
+  <positions x="3" y="1" z="1"/>
+  <positions x="4" y="1" z="1"/>
+  <positions y="2" z="1"/>
+  <positions x="1" y="2" z="1"/>
+  <positions x="2" y="2" z="1"/>
+  <positions x="3" y="2" z="1"/>
+  <positions x="4" y="2" z="1"/>
+  <positions y="3" z="1"/>
+  <positions x="1" y="3" z="1"/>
+  <positions x="2" y="3" z="1"/>
+  <positions x="3" y="3" z="1"/>
+  <positions x="4" y="3" z="1"/>
+  <positions y="4" z="1"/>
+  <positions x="1" y="4" z="1"/>
+  <positions x="2" y="4" z="1"/>
+  <positions x="3" y="4" z="1"/>
+  <positions x="4" y="4" z="1"/>
+  <positions z="2"/>
+  <positions x="1" z="2"/>
+  <positions x="2" z="2"/>
+  <positions x="3" z="2"/>
+  <positions x="4" z="2"/>
+  <positions y="1" z="2"/>
+  <positions x="1" y="1" z="2"/>
+  <positions x="2" y="1" z="2"/>
+  <positions x="3" y="1" z="2"/>
+  <positions x="4" y="1" z="2"/>
+  <positions y="2" z="2"/>
+  <positions x="1" y="2" z="2"/>
+  <positions x="2" y="2" z="2"/>
+  <positions x="3" y="2" z="2"/>
+  <positions x="4" y="2" z="2"/>
+  <positions y="3" z="2"/>
+  <positions x="1" y="3" z="2"/>
+  <positions x="2" y="3" z="2"/>
+  <positions x="3" y="3" z="2"/>
+  <positions x="4" y="3" z="2"/>
+  <positions y="4" z="2"/>
+  <positions x="1" y="4" z="2"/>
+  <positions x="2" y="4" z="2"/>
+  <positions x="3" y="4" z="2"/>
+  <positions x="4" y="4" z="2"/>
+  <positions z="3"/>
+  <positions x="1" z="3"/>
+  <positions x="2" z="3"/>
+  <positions x="3" z="3"/>
+  <positions x="4" z="3"/>
+  <positions y="1" z="3"/>
+  <positions x="1" y="1" z="3"/>
+  <positions x="2" y="1" z="3"/>
+  <positions x="3" y="1" z="3"/>
+  <positions x="4" y="1" z="3"/>
+  <positions y="2" z="3"/>
+  <positions x="1" y="2" z="3"/>
+  <positions x="2" y="2" z="3"/>
+  <positions x="3" y="2" z="3"/>
+  <positions x="4" y="2" z="3"/>
+  <positions y="3" z="3"/>
+  <positions x="1" y="3" z="3"/>
+  <positions x="2" y="3" z="3"/>
+  <positions x="3" y="3" z="3"/>
+  <positions x="4" y="3" z="3"/>
+  <positions y="4" z="3"/>
+  <positions x="1" y="4" z="3"/>
+  <positions x="2" y="4" z="3"/>
+  <positions x="3" y="4" z="3"/>
+  <positions x="4" y="4" z="3"/>
+  <positions z="4"/>
+  <positions x="1" z="4"/>
+  <positions x="2" z="4"/>
+  <positions x="3" z="4"/>
+  <positions x="4" z="4"/>
+  <positions y="1" z="4"/>
+  <positions x="1" y="1" z="4"/>
+  <positions x="2" y="1" z="4"/>
+  <positions x="3" y="1" z="4"/>
+  <positions x="4" y="1" z="4"/>
+  <positions y="2" z="4"/>
+  <positions x="1" y="2" z="4"/>
+  <positions x="2" y="2" z="4"/>
+  <positions x="3" y="2" z="4"/>
+  <positions x="4" y="2" z="4"/>
+  <positions y="3" z="4"/>
+  <positions x="1" y="3" z="4"/>
+  <positions x="2" y="3" z="4"/>
+  <positions x="3" y="3" z="4"/>
+  <positions x="4" y="3" z="4"/>
+  <positions y="4" z="4"/>
+  <positions x="1" y="4" z="4"/>
+  <positions x="2" y="4" z="4"/>
+  <positions x="3" y="4" z="4"/>
+  <positions x="4" y="4" z="4"/>
+  <tiles/>
+  <tiles/>
+  <tiles/>
+  <tiles/>
+  <tiles/>
+  <tiles/>
+  <tiles type="TYPE_4x2x1"/>
+  <tiles type="TYPE_4x2x1"/>
+  <tiles type="TYPE_4x2x1"/>
+  <tiles type="TYPE_4x2x1"/>
+  <tiles type="TYPE_4x2x1"/>
+  <tiles type="TYPE_4x2x1"/>
+  <tiles type="TYPE_1x1x1"/>
+  <tiles type="TYPE_1x1x1"/>
+  <tiles type="TYPE_1x1x1"/>
+  <tiles type="TYPE_1x1x1"/>
+  <tiles type="TYPE_1x1x1"/>
+</drwahnsinn:DrWahnsinnGame>

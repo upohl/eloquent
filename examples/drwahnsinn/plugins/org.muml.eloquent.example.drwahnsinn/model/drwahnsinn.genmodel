@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.muml.eloquent.example.drwahnsinn/src" modelPluginID="org.muml.eloquent.example.drwahnsinn"
+    modelName="Drwahnsinn" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>drwahnsinn.ecore</foreignModel>
+  <genPackages prefix="Drwahnsinn" basePackage="org.muml.eloquent.example" disposableProviderFactory="true"
+      ecorePackage="drwahnsinn.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="drwahnsinn.ecore#//TileType">
+      <genEnumLiterals ecoreEnumLiteral="drwahnsinn.ecore#//TileType/TYPE_3x2x2"/>
+      <genEnumLiterals ecoreEnumLiteral="drwahnsinn.ecore#//TileType/TYPE_4x2x1"/>
+      <genEnumLiterals ecoreEnumLiteral="drwahnsinn.ecore#//TileType/TYPE_1x1x1"/>
+    </genEnums>
+    <genClasses ecoreClass="drwahnsinn.ecore#//DrWahnsinnGame">
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference drwahnsinn.ecore#//DrWahnsinnGame/positions"/>
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference drwahnsinn.ecore#//DrWahnsinnGame/tiles"/>
+    </genClasses>
+    <genClasses ecoreClass="drwahnsinn.ecore#//Position">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute drwahnsinn.ecore#//Position/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute drwahnsinn.ecore#//Position/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute drwahnsinn.ecore#//Position/z"/>
+    </genClasses>
+    <genClasses ecoreClass="drwahnsinn.ecore#//Tile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute drwahnsinn.ecore#//Tile/type"/>
+    </genClasses>
+    <genClasses ecoreClass="drwahnsinn.ecore#//RelationCollection">
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference drwahnsinn.ecore#//RelationCollection/tileRelations"/>
+      <genFeatures createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference drwahnsinn.ecore#//RelationCollection/game"/>
+    </genClasses>
+    <genClasses ecoreClass="drwahnsinn.ecore#//TileRelation">
+      <genFeatures createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference drwahnsinn.ecore#//TileRelation/tile"/>
+      <genFeatures children="true" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference drwahnsinn.ecore#//TileRelation/positions"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

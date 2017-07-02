@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ui
+Bundle-SymbolicName: org.muml.eloquent.example.drwahnsinn.ui;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.12.0",
+ org.eclipse.core.commands;bundle-version="3.8.1",
+ org.eclipse.core.resources;bundle-version="3.11.1",
+ org.eclipse.ui;bundle-version="3.108.1",
+ org.muml.eloquent.example.drwahnsinn;bundle-version="0.1.0"
+Export-Package: org.muml.eloquent.example.drwahnsinn.ui
+Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, Paderborn University, and Fraunhofer Research Institution for Mechatronic Systems Design IEM, Germany

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="drwahnsinn" nsURI="http://www.muml.org/eloquent/example/drwahnsinn"
+    nsPrefix="drwahnsinn">
+  <eClassifiers xsi:type="ecore:EClass" name="DrWahnsinnGame">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="positions" upperBound="-1"
+        eType="#//Position" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tiles" upperBound="-1"
+        eType="#//Tile" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Position">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tile">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//TileType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TileType">
+    <eLiterals name="TYPE_3x2x2"/>
+    <eLiterals name="TYPE_4x2x1" value="1"/>
+    <eLiterals name="TYPE_1x1x1" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RelationCollection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tileRelations" lowerBound="1"
+        upperBound="-1" eType="#//TileRelation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="game" lowerBound="1" eType="#//DrWahnsinnGame"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TileRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tile" lowerBound="1" eType="#//Tile"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="positions" lowerBound="1"
+        upperBound="-1" eType="#//Position"/>
+  </eClassifiers>
+</ecore:EPackage>
