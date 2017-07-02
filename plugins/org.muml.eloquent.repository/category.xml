@@ -9,6 +9,9 @@
    <feature url="features/de.fraunhofer.iem.seminar.feature_1.0.0.qualifier.jar" id="de.fraunhofer.iem.seminar.feature" version="1.0.0.qualifier">
       <category name="org.muml.eloquent.repository.category"/>
    </feature>
+   <feature url="features/org.muml.eloquent.example.drwahnsinn.feature_1.0.0.qualifier.jar" id="org.muml.eloquent.example.drwahnsinn.feature" version="1.0.0.qualifier">
+      <category name="org.muml.eloquent.repository.category"/>
+   </feature>
   <feature url="features/org.muml.eloquent.feature_1.0.0.qualifier-source-feature.jar" id="org.muml.eloquent.feature.source" version="1.0.0.qualifier">
       <category name="org.muml.eloquent.repository.category"/>
    </feature>
