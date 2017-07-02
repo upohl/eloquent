@@ -62,6 +62,11 @@
     <module>examples/seminar/plugins/de.fraunhofer.iem.seminar.ide</module>
     <module>examples/seminar/plugins/de.fraunhofer.iem.seminar.ui</module>
     <module>features/de.fraunhofer.iem.seminar.feature</module>
+    <!-- drwahnsinn example -->
+    <module>examples/drwahnsinn/plugins/org.muml.eloquent.example.drwahnsinn</module>
+    <module>examples/drwahnsinn/plugins/org.muml.eloquent.example.drwahnsinn.edit</module>
+    <module>examples/drwahnsinn/plugins/org.muml.eloquent.example.drwahnsinn.ui</module>
+    <module>features/org.muml.eloquent.example.drwahnsinn.feature</module>
   </modules>
   
   <build>
