@@ -17,10 +17,6 @@
       %license
    </license>
 
-   <includes
-         id="org.muml.eloquent.feature"
-         version="0.0.0"/>
-
    <requires>
       <import plugin="org.eclipse.emf.ecore"/>
       <import plugin="org.eclipse.emf.edit"/>
@@ -28,6 +24,7 @@
       <import plugin="org.eclipse.core.commands" version="3.8.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.resources" version="3.11.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui" version="3.108.1" match="greaterOrEqual"/>
+      <import feature="org.eclipse.fx.runtime.min.feature" version="2.4.0.201605100504"/>
    </requires>
 
    <plugin
