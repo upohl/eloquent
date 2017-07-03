@@ -243,11 +243,6 @@
   </profiles>
   
   <repositories>
-              <repository>
-			<id>eclipse-neon</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/releases/neon</url>
-        </repository>
             <repository>
 			<id>eclipse-oxygen</id>
 			<layout>p2</layout>
@@ -256,7 +251,7 @@
 		<repository>
 			<id>eclipse-updates</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/eclipse/updates/4.6</url>
+			<url>http://download.eclipse.org/eclipse/updates/4.7</url>
 		</repository>
     </repositories>
 </project>
