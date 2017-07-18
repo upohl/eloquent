@@ -243,11 +243,11 @@
   </profiles>
   
   <repositories>
-            <repository>
+                 <repository>
 			<id>eclipse-oxygen</id>
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/releases/oxygen</url>
-        </repository>
+                 </repository>
 		<repository>
 			<id>eclipse-updates</id>
 			<layout>p2</layout>
