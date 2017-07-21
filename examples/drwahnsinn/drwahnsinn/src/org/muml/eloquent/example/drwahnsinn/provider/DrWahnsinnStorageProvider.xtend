@@ -19,7 +19,7 @@ class DrWahnsinnStorageProvider extends EObjectImpl implements StorageProvider {
 	private final Resource resource = createResource
 	
 	def private static createResource() {
-		val URI uri = URI.createURI("platform:/resource/drwahnsinn.test/result.game")
+		val URI uri = URI.createURI("platform:/resource/drwahnsinn/game.drwahnsinn_solution")
 		val ResourceSet resSet = new ResourceSetImpl()
 		resSet.createResource(uri)
 	}
