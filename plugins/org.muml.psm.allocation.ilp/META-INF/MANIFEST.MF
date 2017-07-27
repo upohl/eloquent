@@ -13,7 +13,9 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.muml.psm.allocation.ilp,
  org.muml.psm.allocation.ilp.impl,
+ org.muml.psm.allocation.ilp.m2t,
  org.muml.psm.allocation.ilp.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.10.0"
 Bundle-ActivationPolicy: lazy
