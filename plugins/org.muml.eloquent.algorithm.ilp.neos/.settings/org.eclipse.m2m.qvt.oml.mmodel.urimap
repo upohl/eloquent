@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uriMap:MappingContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uriMap="http:///www.eclipse.org/m2m/qvt/oml/MModelUriMap/1.0.0">
+  <mapping sourceURI="http://www.muml.org/psm/allocation/language/cs/1.0.0" targetURI="platform:/resource/org.muml.psm.allocation.language/model/LanguageSpecificationCS.ecore"/>
+  <mapping sourceURI="http://www.muml.org/psm/allocation/ilp/1.0.0" targetURI="platform:/resource/org.muml.psm.allocation.ilp/model/ilp.ecore"/>
+  <mapping sourceURI="http://www.muml.org/eloquent/algorithm/ilp/neos/cplex/config/1.0.0" targetURI="platform:/resource/org.muml.eloquent.algorithm.ilp.neos/model/cplex.ecore"/>
+</uriMap:MappingContainer>

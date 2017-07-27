@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cplex -->
+      <package
+            uri="http://www.muml.org/eloquent/algorithm/ilp/neos/cplex/config/1.0.0"
+            class="org.muml.eloquent.algorithm.ilp.neos.cplex.config.ConfigPackage"
+            genModel="model/cplex.genmodel"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.m2m.qvt.oml.javaBlackboxUnits">
+      <unit
+            name="CPLEXBlackboxUnit"
+            namespace="org.muml.eloquent.algorithm.ilp.neos.cplex">
+         <library
+               class="org.muml.eloquent.algorithm.ilp.neos.cplex.CPLEXBlackbox"
+               name="CPLEXBlackbox">
+            <metamodel
+                  nsURI="http://www.muml.org/psm/allocation/ilp/1.0.0">
+            </metamodel>
+            <metamodel
+                  nsURI="http://www.muml.org/eloquent/algorithm/ilp/neos/cplex/config/1.0.0">
+            </metamodel>
+         </library>
+      </unit>
+   </extension>
+   <extension
+         point="org.muml.psm.allocation.algorithm.strategy">
+      <strategy
+            class="org.muml.eloquent.algorithm.ilp.neos.cplex.CPLEXAllocationComputationStrategy"
+            description="CPLEX + NEOS Server based allocation computation strategy (see their terms of use)"
+            name="CPLEX Allocation Computation Strategy">
+      </strategy>
+   </extension>
+
+</plugin>

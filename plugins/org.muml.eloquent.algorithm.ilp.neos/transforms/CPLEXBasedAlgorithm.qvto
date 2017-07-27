@@ -1,0 +1,38 @@
+import AbstractILPBasedAlgorithm;
+import CPLEX;
+
+modeltype allocationSpecification uses cs('http://www.muml.org/psm/allocation/language/cs/1.0.0');
+modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
+modeltype cplexconfig uses config('http://www.muml.org/eloquent/algorithm/ilp/neos/cplex/config/1.0.0');
+modeltype ecore uses ecore('http://www.eclipse.org/emf/2002/Ecore');
+
+transformation CPLEXBasedAlgorithm(in specification : allocationSpecification,
+	in oclContextIn : ecore,
+	out ecoreOut : ecore)
+	extends AbstractILPBasedAlgorithm;
+
+main() {
+	computeAllocation();
+	ecoreOut.removeOrphans();
+}
+
+helper ecore::removeOrphans() {
+	// remove CPLEXConfiguration object from the out extent...
+	self.objects()->select(
+		oclIsKindOf(CPLEXConfiguration)
+	)->forEach(elm) {
+		self.removeElement(elm);
+	};
+}
+
+query getAllocationSpecificationIn() : allocationSpecification {
+	return specification;
+}
+
+query getOclContextIn() : ecore {
+	return oclContextIn;
+}
+
+helper solveILP(ilpModel : IntegerLinearProgram, solution : Dict(Variable, Integer)) : Integer {
+	return cplexSolve(ilpModel, solution);
+}
