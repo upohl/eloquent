@@ -9,7 +9,7 @@
 
 ## Installing the tools for Eloquent 
 
-Eloquent is a plug-in for Eclipse Neon.3 and Oxgen. We develop and test it under Eclipse installations for Windows 7, 10 and Linux;
+Eloquent is a plug-in for Eclipse Neon.3 and Oxygen. We develop and test it under Eclipse installations for Windows 7, 10 and Linux;
 
 ### Java 
 * For installing Eloquent, you need a Java Runtime Environment (JRE) or Java Development Kit (JDK) on your machine. We recommend using the latest version of Java 8 provided by Oracle.
