@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EcorePackage
 import org.eclipse.jface.layout.GridLayoutFactory
 import org.eclipse.jface.wizard.WizardPage
 import org.eclipse.swt.SWT
+import org.eclipse.swt.events.ModifyListener
 import org.eclipse.swt.events.SelectionAdapter
 import org.eclipse.swt.events.SelectionEvent
 import org.eclipse.swt.layout.GridLayout
@@ -14,6 +15,8 @@ import org.eclipse.swt.widgets.Composite
 import org.eclipse.swt.widgets.Control
 import org.eclipse.swt.widgets.Label
 import org.eclipse.swt.widgets.Spinner
+import org.eclipse.swt.widgets.Text
+import org.eclipse.swt.events.ModifyEvent
 
 class AllocationComputationStrategyConfigurationWizardPage extends WizardPage {
 	private static final String pageName = "Strategy Configuration"
@@ -68,6 +71,7 @@ class AllocationComputationStrategyConfigurationWizardPage extends WizardPage {
 		switch (attribute.EAttributeType) {
 			case EcorePackage.eINSTANCE.EInt: createEIntControl(attribute, composite)
 			case EcorePackage.eINSTANCE.EBoolean: createEBooleanControl(attribute, composite)
+			case EcorePackage.eINSTANCE.EString: createEStringControl(attribute, composite)
 			default: throw new IllegalArgumentException(String.format(unsupportedEAttributeType, attribute))
 		}
 	}
@@ -90,6 +94,16 @@ class AllocationComputationStrategyConfigurationWizardPage extends WizardPage {
 		button.addSelectionListener(new SelectionAdapter() {
 			override widgetSelected(SelectionEvent e) {
 				configuration.eSet(attribute, button.selection)
+			}
+		})
+	}
+	
+	def protected createEStringControl(EAttribute attribute, Composite parent) {
+		val Text text = new Text(parent, SWT.SINGLE)
+		text.text = (configuration.eGet(attribute) ?: "") as String
+		text.addModifyListener(new ModifyListener() {
+			override modifyText(ModifyEvent e) {
+				configuration.eSet(attribute, text.text)
 			}
 		})
 	}
