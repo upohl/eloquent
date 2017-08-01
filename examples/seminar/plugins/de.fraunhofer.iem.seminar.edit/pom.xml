@@ -6,6 +6,7 @@
     <groupId>org.muml.eloquent</groupId>
     <artifactId>Eloquent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+	<relativePath>../../../pom.xml</relativePath>    
   </parent>
   <groupId>org.muml.eloquent</groupId>
   <artifactId>de.fraunhofer.iem.seminar.edit</artifactId>

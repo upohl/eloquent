@@ -5,6 +5,7 @@
 		<groupId>de.fraunhofer.iem.seminarorga</groupId>
 		<artifactId>de.fraunhofer.iem.seminarorga.parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../../pom.xml</relativePath>    
 	</parent>
 	<artifactId>de.fraunhofer.iem.seminarorga.feature</artifactId>
 	<packaging>eclipse-feature</packaging>
