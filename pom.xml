@@ -201,54 +201,31 @@
     </pluginManagement>
   </build>
   
-    <profiles>
+ <profiles>
         <profile>
-          <id>Local</id> <!-- local build, uses local maven repositories -->
-          <activation>
-            <property>
-              <name>env</name>
-              <value>local</value>
-            </property>
-          </activation>
-          <properties>
-            <repobase>file:///${userpath}</repobase>
-            <repopath></repopath>
-          </properties>
-        </profile>
-        <profile>
-          <id>Jenkins</id> <!-- Jenkins build, only works on Jenkins file system -->
-          <activation>
-            <property>
-              <name>env</name>
-              <value>!local</value>
-            </property>
-          </activation>
-          <properties>
-            <repobase>file:///data/jenkins/jobs</repobase>
-            <repopath>lastSuccessful/archive/</repopath>
-          </properties>
-        </profile>
-        <profile>
-          <id>localJenkins</id> <!-- build this locally, but download other projects from Jenkins-->
+          <id>localJenkins</id> 
           <activation>
             <property>
               <name>env</name>
               <value>localJenkins</value>
             </property>
           </activation>
-          <properties>
-            <repobase>http://muml-build.cs.upb.de/job</repobase>
-            <repopath>lastSuccessfulBuild/artifact/</repopath>
-          </properties>
+		  <repositories>	
+			  <repository>
+				<id>UpdateSite</id>
+				<layout>p2</layout>
+				<url>https://muml-build.cs.upb.de/job/UpdateSite-Maven/lastSuccessfulBuild/artifact/org.muml.releng.site.repository/target/repository</url>
+			</repository>
+		</repositories>		  
         </profile>
   </profiles>
   
   <repositories>
-                 <repository>
+         <repository>
 			<id>eclipse-oxygen</id>
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/releases/oxygen</url>
-                 </repository>
+         </repository>
 		<repository>
 			<id>eclipse-updates</id>
 			<layout>p2</layout>
