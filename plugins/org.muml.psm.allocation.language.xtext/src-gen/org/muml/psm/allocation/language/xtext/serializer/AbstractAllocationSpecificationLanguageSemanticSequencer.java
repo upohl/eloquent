@@ -591,7 +591,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OCLstdlibCSPackage.Literals.JAVA_IMPLEMENTATION_CS__IMPLEMENTATION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getNameProviderImplementationClassAccess().getImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1(), semanticObject.getImplementation());
+		feeder.accept(grammarAccess.getNameProviderImplementationClassAccess().getImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1(), semanticObject.eGet(OCLstdlibCSPackage.Literals.JAVA_IMPLEMENTATION_CS__IMPLEMENTATION, false));
 		feeder.finish();
 	}
 	
@@ -711,7 +711,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, OCLstdlibCSPackage.Literals.JAVA_IMPLEMENTATION_CS__IMPLEMENTATION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getStorageProviderImplementationClassAccess().getImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1(), semanticObject.getImplementation());
+		feeder.accept(grammarAccess.getStorageProviderImplementationClassAccess().getImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1(), semanticObject.eGet(OCLstdlibCSPackage.Literals.JAVA_IMPLEMENTATION_CS__IMPLEMENTATION, false));
 		feeder.finish();
 	}
 	

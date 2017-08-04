@@ -258,8 +258,11 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
+		BaseCSPackage.eINSTANCE.eClass();
 		CompleteOCLCSPackage.eINSTANCE.eClass();
+		EssentialOCLCSPackage.eINSTANCE.eClass();
 		OCLstdlibCSPackage.eINSTANCE.eClass();
+		PivotPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theCsPackage.createPackageContents();

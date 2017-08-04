@@ -61,7 +61,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//	& oclContext=OCLContext) (ownedImports+=ImportCS
 		//	| ownedContexts+=ClassifierContextDeclCS
 		//	| relations+=Relation | services+=Service | constraints+=Constraint)* (goal=Goal measure=MeasureFunction)?
-		//	'}'
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
 		//{cs::SpecificationCS} name=ID '{' (ownedImports+=ImportCS* &
@@ -83,8 +83,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//(ownedImports+=ImportCS* & nameProviderImplementationClass=NameProviderImplementationClass &
-		//storageProviderImplementationClass=StorageProviderImplementationClass & oclContext=OCLContext)
+		//// preamble
+		//ownedImports+=ImportCS* & nameProviderImplementationClass=NameProviderImplementationClass &
+		//storageProviderImplementationClass=StorageProviderImplementationClass & oclContext=OCLContext
 		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
 
 		//ownedImports+=ImportCS*
@@ -173,7 +174,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final RuleCall cImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1 = (RuleCall)cImplementationJavaClassCSCrossReference_1_0.eContents().get(1);
 		
 		//NameProviderImplementationClass cs::JavaImplementationProviderCS:
-		//	'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING]
+		//	'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING];
 		@Override public ParserRule getRule() { return rule; }
 
 		//'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING]
@@ -201,7 +202,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final RuleCall cImplementationJavaClassCSSINGLE_QUOTED_STRINGTerminalRuleCall_1_0_1 = (RuleCall)cImplementationJavaClassCSCrossReference_1_0.eContents().get(1);
 		
 		//StorageProviderImplementationClass cs::JavaImplementationProviderCS:
-		//	'storageProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING]
+		//	'storageProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING];
 		@Override public ParserRule getRule() { return rule; }
 
 		//'storageProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING]
@@ -228,7 +229,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final RuleCall cOwnedTypeTypedRefCSParserRuleCall_1_0 = (RuleCall)cOwnedTypeAssignment_1.eContents().get(0);
 		
 		//OCLContext cs::OCLContextCS:
-		//	'oclContext' ownedType=TypedRefCS
+		//	'oclContext' ownedType=TypedRefCS;
 		@Override public ParserRule getRule() { return rule; }
 
 		//'oclContext' ownedType=TypedRefCS
@@ -258,7 +259,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//Service cs::ServiceCS:
 		//	'service' name=ID '{'
 		//	dimensions+=QosDimension*
-		//	'}'
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
 		//'service' name=ID '{' dimensions+=QosDimension* '}'
@@ -311,7 +312,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//	lowerBound=LowerBound
 		//	upperBound=UpperBound
 		//	'ocl' expression=Model ';'
-		//	'}'
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
 		//'relation' name=ID? '{' tupleDescriptor=TupleDescriptor lowerBound=LowerBound upperBound=UpperBound 'ocl'
@@ -373,7 +374,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//LowerBound cs::BoundCS:
-		//	'lower' expression=Model ';'
+		//	'lower' expression=Model ';';
 		@Override public ParserRule getRule() { return rule; }
 
 		//'lower' expression=Model ';'
@@ -401,7 +402,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//UpperBound cs::BoundCS:
-		//	'upper' expression=Model ';'
+		//	'upper' expression=Model ';';
 		@Override public ParserRule getRule() { return rule; }
 
 		//'upper' expression=Model ';'
@@ -439,7 +440,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//	'qos' name=ID '{'
 		//	tupleDescriptor=WeightTupleDescriptor
 		//	'ocl' expression=Model ';'
-		//	'}'
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
 		//'qos' name=ID '{' tupleDescriptor=WeightTupleDescriptor 'ocl' expression=Model ';' '}'
@@ -491,7 +492,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//TypedPair cs::TypedPairCS:
-		//	'(' first=TypedNamedPart ',' second=TypedNamedPart ')'
+		//	'(' first=TypedNamedPart ',' second=TypedNamedPart ')';
 		@Override public ParserRule getRule() { return rule; }
 
 		//'(' first=TypedNamedPart ',' second=TypedNamedPart ')'
@@ -529,7 +530,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final RuleCall cOwnedTypeTypedRefCSParserRuleCall_2_0 = (RuleCall)cOwnedTypeAssignment_2.eContents().get(0);
 		
 		//TypedNamedPart cs::TypedNamedPartCS:
-		//	name=ID ':' ownedType=TypedRefCS
+		//	name=ID ':' ownedType=TypedRefCS;
 		@Override public ParserRule getRule() { return rule; }
 
 		//name=ID ':' ownedType=TypedRefCS
@@ -564,7 +565,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//TupleDescriptor cs::TupleDescriptorCS:
-		//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+		//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';';
 		@Override public ParserRule getRule() { return rule; }
 
 		//'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
@@ -613,7 +614,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		
 		//WeightTupleDescriptor cs::WeightTupleDescriptorCS:
 		//	'weight' weight=ID ';'
-		//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+		//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';';
 		@Override public ParserRule getRule() { return rule; }
 
 		//'weight' weight=ID ';' 'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
@@ -679,7 +680,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//BoundWeightTupleDescriptor cs::BoundWeightTupleDescriptorCS:
 		//	'weight' weight=ID ';'
 		//	'bound' bound=ID ';'
-		//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+		//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';';
 		@Override public ParserRule getRule() { return rule; }
 
 		//'weight' weight=ID ';' 'bound' bound=ID ';' 'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
@@ -744,7 +745,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final RuleCall cLocationConstraintParserRuleCall_1_2 = (RuleCall)cAlternatives_1.eContents().get(2);
 		
 		//Constraint cs::ConstraintCS:
-		//	'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint)
+		//	'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint);
 		@Override public ParserRule getRule() { return rule; }
 
 		//'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint)
@@ -753,7 +754,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//'constraint'
 		public Keyword getConstraintKeyword_0() { return cConstraintKeyword_0; }
 
-		//(CoherenceConstraint | ResourceConstraint | LocationConstraint)
+		//CoherenceConstraint | ResourceConstraint | LocationConstraint
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//CoherenceConstraint
@@ -786,7 +787,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//	type=CoherenceConstraintType name=ID? '{'
 		//	tupleDescriptor=TupleDescriptor
 		//	'ocl' expression=Model ';'
-		//	'}'
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
 		//type=CoherenceConstraintType name=ID? '{' tupleDescriptor=TupleDescriptor 'ocl' expression=Model ';' '}'
@@ -850,13 +851,13 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//	('resource' | 'requiredResource') name=ID? '{'
 		//	tupleDescriptor=BoundWeightTupleDescriptor
 		//	'ocl' expression=Model ';'
-		//	'}'
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
 		//('resource' | 'requiredResource') name=ID? '{' tupleDescriptor=BoundWeightTupleDescriptor 'ocl' expression=Model ';' '}'
 		public Group getGroup() { return cGroup; }
 
-		//('resource' | 'requiredResource')
+		//'resource' | 'requiredResource'
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
 		//'resource'
@@ -917,14 +918,14 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//	('requiredHardwareResourceInstance' | 'requiredLocation') name=ID? '{'
 		//	tupleDescriptor=TupleDescriptor
 		//	'ocl' expression=Model ';'
-		//	'}'
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
 		//('requiredHardwareResourceInstance' | 'requiredLocation') name=ID? '{' tupleDescriptor=TupleDescriptor 'ocl'
 		//expression=Model ';' '}'
 		public Group getGroup() { return cGroup; }
 
-		//('requiredHardwareResourceInstance' | 'requiredLocation')
+		//'requiredHardwareResourceInstance' | 'requiredLocation'
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
 		//'requiredHardwareResourceInstance'
@@ -979,7 +980,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//MeasureFunction cs::MeasureFunctionCS:
-		//	'measure' services+=[cs::ServiceCS] ('+' services+=[cs::ServiceCS])* ';'
+		//	'measure' services+=[cs::ServiceCS] ('+' services+=[cs::ServiceCS])* ';';
 		@Override public ParserRule getRule() { return rule; }
 
 		//'measure' services+=[cs::ServiceCS] ('+' services+=[cs::ServiceCS])* ';'
@@ -1195,7 +1196,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//	& oclContext=OCLContext) (ownedImports+=ImportCS
 	//	| ownedContexts+=ClassifierContextDeclCS
 	//	| relations+=Relation | services+=Service | constraints+=Constraint)* (goal=Goal measure=MeasureFunction)?
-	//	'}'
+	//	'}';
 	public SpecificationElements getSpecificationAccess() {
 		return pSpecification;
 	}
@@ -1205,7 +1206,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//NameProviderImplementationClass cs::JavaImplementationProviderCS:
-	//	'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING]
+	//	'nameProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING];
 	public NameProviderImplementationClassElements getNameProviderImplementationClassAccess() {
 		return pNameProviderImplementationClass;
 	}
@@ -1215,7 +1216,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//StorageProviderImplementationClass cs::JavaImplementationProviderCS:
-	//	'storageProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING]
+	//	'storageProvider' implementation=[oclstdlib::JavaClassCS|SINGLE_QUOTED_STRING];
 	public StorageProviderImplementationClassElements getStorageProviderImplementationClassAccess() {
 		return pStorageProviderImplementationClass;
 	}
@@ -1225,7 +1226,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//OCLContext cs::OCLContextCS:
-	//	'oclContext' ownedType=TypedRefCS
+	//	'oclContext' ownedType=TypedRefCS;
 	public OCLContextElements getOCLContextAccess() {
 		return pOCLContext;
 	}
@@ -1237,7 +1238,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//Service cs::ServiceCS:
 	//	'service' name=ID '{'
 	//	dimensions+=QosDimension*
-	//	'}'
+	//	'}';
 	public ServiceElements getServiceAccess() {
 		return pService;
 	}
@@ -1252,7 +1253,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//	lowerBound=LowerBound
 	//	upperBound=UpperBound
 	//	'ocl' expression=Model ';'
-	//	'}'
+	//	'}';
 	public RelationElements getRelationAccess() {
 		return pRelation;
 	}
@@ -1262,7 +1263,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//LowerBound cs::BoundCS:
-	//	'lower' expression=Model ';'
+	//	'lower' expression=Model ';';
 	public LowerBoundElements getLowerBoundAccess() {
 		return pLowerBound;
 	}
@@ -1272,7 +1273,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//UpperBound cs::BoundCS:
-	//	'upper' expression=Model ';'
+	//	'upper' expression=Model ';';
 	public UpperBoundElements getUpperBoundAccess() {
 		return pUpperBound;
 	}
@@ -1285,7 +1286,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//	'qos' name=ID '{'
 	//	tupleDescriptor=WeightTupleDescriptor
 	//	'ocl' expression=Model ';'
-	//	'}'
+	//	'}';
 	public QosDimensionElements getQosDimensionAccess() {
 		return pQosDimension;
 	}
@@ -1295,7 +1296,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//TypedPair cs::TypedPairCS:
-	//	'(' first=TypedNamedPart ',' second=TypedNamedPart ')'
+	//	'(' first=TypedNamedPart ',' second=TypedNamedPart ')';
 	public TypedPairElements getTypedPairAccess() {
 		return pTypedPair;
 	}
@@ -1305,7 +1306,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//TypedNamedPart cs::TypedNamedPartCS:
-	//	name=ID ':' ownedType=TypedRefCS
+	//	name=ID ':' ownedType=TypedRefCS;
 	public TypedNamedPartElements getTypedNamedPartAccess() {
 		return pTypedNamedPart;
 	}
@@ -1315,7 +1316,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//TupleDescriptor cs::TupleDescriptorCS:
-	//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+	//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';';
 	public TupleDescriptorElements getTupleDescriptorAccess() {
 		return pTupleDescriptor;
 	}
@@ -1326,7 +1327,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 	//WeightTupleDescriptor cs::WeightTupleDescriptorCS:
 	//	'weight' weight=ID ';'
-	//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+	//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';';
 	public WeightTupleDescriptorElements getWeightTupleDescriptorAccess() {
 		return pWeightTupleDescriptor;
 	}
@@ -1338,7 +1339,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//BoundWeightTupleDescriptor cs::BoundWeightTupleDescriptorCS:
 	//	'weight' weight=ID ';'
 	//	'bound' bound=ID ';'
-	//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+	//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';';
 	public BoundWeightTupleDescriptorElements getBoundWeightTupleDescriptorAccess() {
 		return pBoundWeightTupleDescriptor;
 	}
@@ -1348,7 +1349,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//Constraint cs::ConstraintCS:
-	//	'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint)
+	//	'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint);
 	public ConstraintElements getConstraintAccess() {
 		return pConstraint;
 	}
@@ -1361,7 +1362,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//	type=CoherenceConstraintType name=ID? '{'
 	//	tupleDescriptor=TupleDescriptor
 	//	'ocl' expression=Model ';'
-	//	'}'
+	//	'}';
 	public CoherenceConstraintElements getCoherenceConstraintAccess() {
 		return pCoherenceConstraint;
 	}
@@ -1374,7 +1375,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//	('resource' | 'requiredResource') name=ID? '{'
 	//	tupleDescriptor=BoundWeightTupleDescriptor
 	//	'ocl' expression=Model ';'
-	//	'}'
+	//	'}';
 	public ResourceConstraintElements getResourceConstraintAccess() {
 		return pResourceConstraint;
 	}
@@ -1387,7 +1388,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//	('requiredHardwareResourceInstance' | 'requiredLocation') name=ID? '{'
 	//	tupleDescriptor=TupleDescriptor
 	//	'ocl' expression=Model ';'
-	//	'}'
+	//	'}';
 	public LocationConstraintElements getLocationConstraintAccess() {
 		return pLocationConstraint;
 	}
@@ -1408,7 +1409,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//MeasureFunction cs::MeasureFunctionCS:
-	//	'measure' services+=[cs::ServiceCS] ('+' services+=[cs::ServiceCS])* ';'
+	//	'measure' services+=[cs::ServiceCS] ('+' services+=[cs::ServiceCS])* ';';
 	public MeasureFunctionElements getMeasureFunctionAccess() {
 		return pMeasureFunction;
 	}
@@ -1427,14 +1428,14 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getGoalAccess().getRule();
 	}
 
-	/// *
+	///*
 	// * A Complete OCL document comprises
 	// * bullet[model imports for referenced and complemented models]
 	// * bullet[includes for additional Complete OCL documents]
 	// * bullet[libraries to augment or override the OCL Standard Library]
 	// * bullet[package declarations for package-grouped declarations]
 	// * bullet[context declarations for independent declarations]
-	// * / CompleteOCLDocumentCS:
+	// */ CompleteOCLDocumentCS:
 	//	ownedImports+=ImportCS* (ownedPackages+=PackageDeclarationCS | ownedContexts+=ContextDeclCS)*;
 	public CompleteOCLGrammarAccess.CompleteOCLDocumentCSElements getCompleteOCLDocumentCSAccess() {
 		return gaCompleteOCL.getCompleteOCLDocumentCSAccess();
@@ -1472,7 +1473,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getClassifierContextDeclCSAccess().getRule();
 	}
 
-	/// *
+	///*
 	// * A Constraint such as 
 	// * 
 	// * oclText[IsNull('should be null') : self = null]
@@ -1480,8 +1481,8 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	// * comprises at least the OCL specification of the constraint. The constraint may
 	// * additionally have a name which may be followed by a parenthesized expression defining an OCL
 	// * expression to be evaluated to provide an error message.
-	// * / ConstraintCS base::ConstraintCS:
-	//	(name=UnrestrictedName ('(' ownedMessageSpecification=SpecificationCS ')')?)? ':' ownedSpecification=SpecificationCS
+	// */ ConstraintCS base::ConstraintCS:
+	//	(name=UnrestrictedName ('(' ownedMessageSpecification=SpecificationCS ')')?)? ':' ownedSpecification=SpecificationCS;
 	public CompleteOCLGrammarAccess.ConstraintCSElements getConstraintCSAccess() {
 		return gaCompleteOCL.getConstraintCSAccess();
 	}
@@ -1490,9 +1491,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getConstraintCSAccess().getRule();
 	}
 
-	/// *
+	///*
 	// * A Context declaration can be a Classifier, Operation of Property Context declaration.
-	// * / ContextDeclCS:
+	// */ ContextDeclCS:
 	//	PropertyContextDeclCS
 	//	| ClassifierContextDeclCS
 	//	| OperationContextDeclCS;
@@ -1504,9 +1505,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getContextDeclCSAccess().getRule();
 	}
 
-	/// *
+	///*
 	// * A definition can be an, Operation or Property definition.
-	// * / DefCS:
+	// */ DefCS:
 	//	DefOperationCS | DefPropertyCS;
 	public CompleteOCLGrammarAccess.DefCSElements getDefCSAccess() {
 		return gaCompleteOCL.getDefCSAccess();
@@ -1516,7 +1517,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getDefCSAccess().getRule();
 	}
 
-	/// *
+	///*
 	// * An operation definition provides an additional operation for its classifier context.
 	// * 
 	// * oclText[static def redundantName: isEven(i : Integer) : Boolean = i mod 2 = 0]
@@ -1525,7 +1526,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	// * The operation may have parameters and may be declared static in which case there is no oclText[self].
 	// * 
 	// * For compatibility with invariants the definition may have a name that is never used.
-	// * / DefOperationCS:
+	// */ DefOperationCS:
 	//	isStatic?='static'? 'def' UnrestrictedName? ':' ownedSignature=TemplateSignatureCS?
 	//	name=UnrestrictedName '(' (ownedParameters+=DefParameterCS (',' ownedParameters+=DefParameterCS)*)? ')' ':'
 	//	ownedType=TypeExpCS?
@@ -1539,7 +1540,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//DefParameterCS base::ParameterCS:
-	//	name=UnrestrictedName ':' ownedType=TypeExpCS
+	//	name=UnrestrictedName ':' ownedType=TypeExpCS;
 	public CompleteOCLGrammarAccess.DefParameterCSElements getDefParameterCSAccess() {
 		return gaCompleteOCL.getDefParameterCSAccess();
 	}
@@ -1548,7 +1549,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getDefParameterCSAccess().getRule();
 	}
 
-	/// *
+	///*
 	// * A property definition provides an additional property for its classifier context.
 	// * 
 	// * oclText[static def redundantName: upperCaseName : Boolean = name.toUpperCase()]
@@ -1557,7 +1558,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	// * The property may be declared static in which case there is no oclText[self].
 	// * 
 	// * For compatibility with invariants the definition may have a name that is never used.
-	// * / DefPropertyCS:
+	// */ DefPropertyCS:
 	//	isStatic?='static'? 'def' UnrestrictedName? ':' name=UnrestrictedName ':' ownedType=TypeExpCS
 	//	'=' ownedSpecification=SpecificationCS;
 	public CompleteOCLGrammarAccess.DefPropertyCSElements getDefPropertyCSAccess() {
@@ -1569,7 +1570,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//ImportCS base::ImportCS:
-	//	('import' | 'include' | 'library') (name=Identifier ':')? ownedPathName=URIPathNameCS isAll?='::*'?
+	//	('import' | 'include' | 'library') (name=Identifier ':')? ownedPathName=URIPathNameCS isAll?='::*'?;
 	public CompleteOCLGrammarAccess.ImportCSElements getImportCSAccess() {
 		return gaCompleteOCL.getImportCSAccess();
 	}
@@ -1578,7 +1579,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getImportCSAccess().getRule();
 	}
 
-	/// *
+	///*
 	// * An operation context declaration complements an existing operation with additional details.
 	// * 
 	// * oclText[context (T) Stack::pop() : T]
@@ -1593,7 +1594,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	// * and/or postconditions. It may also be followed by a body expression that defines the evaluation. 
 	// * 
 	// * For compatibility with invariants the body expression may have a name that is never used.
-	// * / OperationContextDeclCS:
+	// */ OperationContextDeclCS:
 	//	'context' ownedSignature=TemplateSignatureCS? ownedPathName=PathNameCS
 	//	'(' (ownedParameters+=ParameterCS (',' ownedParameters+=ParameterCS)*)? ')' ':' ownedType=TypeExpCS? ('pre'
 	//	ownedPreconditions+=ConstraintCS | 'post' ownedPostconditions+=ConstraintCS | 'body' UnrestrictedName? ':'
@@ -1617,7 +1618,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//ParameterCS base::ParameterCS:
-	//	(name=UnrestrictedName ':')? ownedType=TypeExpCS
+	//	(name=UnrestrictedName ':')? ownedType=TypeExpCS;
 	public CompleteOCLGrammarAccess.ParameterCSElements getParameterCSAccess() {
 		return gaCompleteOCL.getParameterCSAccess();
 	}
@@ -1626,7 +1627,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getParameterCSAccess().getRule();
 	}
 
-	/// *
+	///*
 	// * A property context declaration complements an existing property with additional details.
 	// * 
 	// * oclText[context (T) Stack::isEmpty : Boolean]
@@ -1646,7 +1647,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	// * 
 	// * For a derived property, an init expression defines the evaluation of the property, which
 	// * may vary from access to access even for read-only properties. 
-	// * / PropertyContextDeclCS:
+	// */ PropertyContextDeclCS:
 	//	'context' ownedPathName=PathNameCS ':' ownedType=TypeExpCS ('derive' ownedDerivedInvariants+=ConstraintCS | 'init' ':'
 	//	ownedDefaultExpressions+=SpecificationCS)*;
 	public CompleteOCLGrammarAccess.PropertyContextDeclCSElements getPropertyContextDeclCSAccess() {
@@ -1658,7 +1659,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//SpecificationCS essentialocl::ExpSpecificationCS:
-	//	ownedExpression=ExpCS | exprString=UNQUOTED_STRING
+	//	ownedExpression=ExpCS | exprString=UNQUOTED_STRING;
 	public CompleteOCLGrammarAccess.SpecificationCSElements getSpecificationCSAccess() {
 		return gaCompleteOCL.getSpecificationCSAccess();
 	}
@@ -1672,7 +1673,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	////---------------------------------------------------------------------------------
 	//TemplateSignatureCS base::TemplateSignatureCS:
 	//	'(' ownedParameters+=TypeParameterCS (',' ownedParameters+=TypeParameterCS)* ')' | '<'
-	//	ownedParameters+=TypeParameterCS (',' ownedParameters+=TypeParameterCS)* '>'
+	//	ownedParameters+=TypeParameterCS (',' ownedParameters+=TypeParameterCS)* '>';
 	public CompleteOCLGrammarAccess.TemplateSignatureCSElements getTemplateSignatureCSAccess() {
 		return gaCompleteOCL.getTemplateSignatureCSAccess();
 	}
@@ -1682,7 +1683,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//TypedRefCS base::TypedRefCS:
-	//	TypeLiteralCS | TypedTypeRefCS
+	//	TypeLiteralCS | TypedTypeRefCS;
 	public CompleteOCLGrammarAccess.TypedRefCSElements getTypedRefCSAccess() {
 		return gaCompleteOCL.getTypedRefCSAccess();
 	}
@@ -1720,7 +1721,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	////	EssentialOCL overrides
 	////---------------------------------------------------------------------------------
 	//NavigatingArgExpCS essentialocl::ExpCS:
-	//	{OCLMessageArgCS} '?' | ExpCS
+	//	{OCLMessageArgCS} '?' | ExpCS;
 	public CompleteOCLGrammarAccess.NavigatingArgExpCSElements getNavigatingArgExpCSAccess() {
 		return gaCompleteOCL.getNavigatingArgExpCSAccess();
 	}
@@ -1760,7 +1761,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 	////generate essentialOCLCST "http://www.eclipse.org/ocl/3.0.0/EssentialOCLCST"
 	//Model ContextCS:
-	//	ownedExpression=ExpCS
+	//	ownedExpression=ExpCS;
 	public EssentialOCLGrammarAccess.ModelElements getModelAccess() {
 		return gaEssentialOCL.getModelAccess();
 	}
@@ -1769,7 +1770,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getModelAccess().getRule();
 	}
 
-	/// ** <<<This is a join point for derived grammars - replace with a more disciplined grammar extensibility>>> * /
+	///** <<<This is a join point for derived grammars - replace with a more disciplined grammar extensibility>>> */
 	//EssentialOCLReservedKeyword:
 	//	'and'
 	//	| 'else'
@@ -1790,7 +1791,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getEssentialOCLReservedKeywordAccess().getRule();
 	}
 
-	/// ** <<<This is a join point for derived grammars - replace with a more disciplined grammar extensibility>>> * /
+	///** <<<This is a join point for derived grammars - replace with a more disciplined grammar extensibility>>> */
 	//EssentialOCLUnaryOperatorName:
 	//	'-' | 'not';
 	public EssentialOCLGrammarAccess.EssentialOCLUnaryOperatorNameElements getEssentialOCLUnaryOperatorNameAccess() {
@@ -1801,7 +1802,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getEssentialOCLUnaryOperatorNameAccess().getRule();
 	}
 
-	/// ** <<<This is a join point for derived grammars - replace with a more disciplined grammar extensibility>>> * /
+	///** <<<This is a join point for derived grammars - replace with a more disciplined grammar extensibility>>> */
 	//EssentialOCLInfixOperatorName:
 	//	'*' | '/' | '+' | '-' | '>' | '<' | '>=' | '<=' | '=' | '<>' | 'and' | 'or' | 'xor' | 'implies';
 	public EssentialOCLGrammarAccess.EssentialOCLInfixOperatorNameElements getEssentialOCLInfixOperatorNameAccess() {
@@ -1812,7 +1813,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getEssentialOCLInfixOperatorNameAccess().getRule();
 	}
 
-	/// ** <<<This is a join point for derived grammars - replace with a more disciplined grammar extensibility>>> * /
+	///** <<<This is a join point for derived grammars - replace with a more disciplined grammar extensibility>>> */
 	//EssentialOCLNavigationOperatorName:
 	//	'.' | '->' | '?.' | '?->';
 	public EssentialOCLGrammarAccess.EssentialOCLNavigationOperatorNameElements getEssentialOCLNavigationOperatorNameAccess() {
@@ -1856,7 +1857,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	////---------------------------------------------------------------------
 	////  Names
 	////---------------------------------------------------------------------
-	/// ** <<<This is a join point for derived grammars - replace with a more disciplined grammar extensibility>>> * /
+	///** <<<This is a join point for derived grammars - replace with a more disciplined grammar extensibility>>> */
 	//EssentialOCLUnrestrictedName:
 	//	Identifier;
 	public EssentialOCLGrammarAccess.EssentialOCLUnrestrictedNameElements getEssentialOCLUnrestrictedNameAccess() {
@@ -1867,7 +1868,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getEssentialOCLUnrestrictedNameAccess().getRule();
 	}
 
-	/// ** <<<This is a join point for derived grammars - replace with a more disciplined grammar extensibility>>> * /
+	///** <<<This is a join point for derived grammars - replace with a more disciplined grammar extensibility>>> */
 	//EssentialOCLUnreservedName:
 	//	super::UnrestrictedName
 	//	| CollectionTypeIdentifier
@@ -1893,7 +1894,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//URIPathNameCS base::PathNameCS:
-	//	ownedPathElements+=URIFirstPathElementCS ('::' ownedPathElements+=NextPathElementCS)*
+	//	ownedPathElements+=URIFirstPathElementCS ('::' ownedPathElements+=NextPathElementCS)*;
 	public EssentialOCLGrammarAccess.URIPathNameCSElements getURIPathNameCSAccess() {
 		return gaEssentialOCL.getURIPathNameCSAccess();
 	}
@@ -1904,7 +1905,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 	//URIFirstPathElementCS base::PathElementCS:
 	//	referredElement=[pivot::NamedElement|super::UnrestrictedName] | {base::PathElementWithURICS}
-	//	referredElement=[pivot::Namespace|URI]
+	//	referredElement=[pivot::Namespace|URI];
 	public EssentialOCLGrammarAccess.URIFirstPathElementCSElements getURIFirstPathElementCSAccess() {
 		return gaEssentialOCL.getURIFirstPathElementCSAccess();
 	}
@@ -1914,7 +1915,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//PrimitiveTypeCS base::PrimitiveTypeRefCS:
-	//	name=super::PrimitiveTypeIdentifier
+	//	name=super::PrimitiveTypeIdentifier;
 	public EssentialOCLGrammarAccess.PrimitiveTypeCSElements getPrimitiveTypeCSAccess() {
 		return gaEssentialOCL.getPrimitiveTypeCSAccess();
 	}
@@ -1959,7 +1960,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//TupleTypeCS base::TupleTypeCS:
-	//	name='Tuple' ('(' (ownedParts+=TuplePartCS (',' ownedParts+=TuplePartCS)*)? ')')?
+	//	name='Tuple' ('(' (ownedParts+=TuplePartCS (',' ownedParts+=TuplePartCS)*)? ')')?;
 	public EssentialOCLGrammarAccess.TupleTypeCSElements getTupleTypeCSAccess() {
 		return gaEssentialOCL.getTupleTypeCSAccess();
 	}
@@ -1969,7 +1970,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//TuplePartCS base::TuplePartCS:
-	//	name=super::UnrestrictedName ':' ownedType=TypeExpCS
+	//	name=super::UnrestrictedName ':' ownedType=TypeExpCS;
 	public EssentialOCLGrammarAccess.TuplePartCSElements getTuplePartCSAccess() {
 		return gaEssentialOCL.getTuplePartCSAccess();
 	}
@@ -2166,7 +2167,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//	PrimitiveTypeCS
 	//	| CollectionTypeCS
 	//	| MapTypeCS
-	//	| TupleTypeCS
+	//	| TupleTypeCS;
 	public EssentialOCLGrammarAccess.TypeLiteralCSElements getTypeLiteralCSAccess() {
 		return gaEssentialOCL.getTypeLiteralCSAccess();
 	}
@@ -2176,7 +2177,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//TypeLiteralWithMultiplicityCS base::TypedRefCS:
-	//	TypeLiteralCS ownedMultiplicity=MultiplicityCS?
+	//	TypeLiteralCS ownedMultiplicity=MultiplicityCS?;
 	public EssentialOCLGrammarAccess.TypeLiteralWithMultiplicityCSElements getTypeLiteralWithMultiplicityCSAccess() {
 		return gaEssentialOCL.getTypeLiteralWithMultiplicityCSAccess();
 	}
@@ -2206,7 +2207,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//TypeExpWithoutMultiplicityCS base::TypedRefCS:
-	//	TypeNameExpCS | TypeLiteralCS | CollectionPatternCS
+	//	TypeNameExpCS | TypeLiteralCS | CollectionPatternCS;
 	public EssentialOCLGrammarAccess.TypeExpWithoutMultiplicityCSElements getTypeExpWithoutMultiplicityCSAccess() {
 		return gaEssentialOCL.getTypeExpWithoutMultiplicityCSAccess();
 	}
@@ -2216,7 +2217,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//TypeExpCS base::TypedRefCS:
-	//	TypeExpWithoutMultiplicityCS ownedMultiplicity=MultiplicityCS?
+	//	TypeExpWithoutMultiplicityCS ownedMultiplicity=MultiplicityCS?;
 	public EssentialOCLGrammarAccess.TypeExpCSElements getTypeExpCSAccess() {
 		return gaEssentialOCL.getTypeExpCSAccess();
 	}
@@ -2233,8 +2234,8 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	////   a = 64 / 16 / let b : Integer in 8 / let c : Integer in 4 
 	//// is
 	////   a = (64 / 16) / (let b : Integer in 8 / (let c : Integer in 4 ))
-	/// * An expression elaborates a prefixed expression with zero or more binary operator and expression suffixes.
-	// * An optionally prefixed let expression is permitted except when suffixed with further expressions.* / ExpCS:
+	///* An expression elaborates a prefixed expression with zero or more binary operator and expression suffixes.
+	// * An optionally prefixed let expression is permitted except when suffixed with further expressions.*/ ExpCS:
 	//	PrefixedPrimaryExpCS ({InfixExpCS.ownedLeft=current} name=BinaryOperatorName ownedRight=ExpCS)? | PrefixedLetExpCS;
 	public EssentialOCLGrammarAccess.ExpCSElements getExpCSAccess() {
 		return gaEssentialOCL.getExpCSAccess();
@@ -2244,9 +2245,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getExpCSAccess().getRule();
 	}
 
-	/// * A prefixed let expression elaborates a let expression with zero or more unary prefix operators. * / PrefixedLetExpCS
+	///* A prefixed let expression elaborates a let expression with zero or more unary prefix operators. */ PrefixedLetExpCS
 	//ExpCS:
-	//	{PrefixExpCS} name=UnaryOperatorName ownedRight=PrefixedLetExpCS | LetExpCS
+	//	{PrefixExpCS} name=UnaryOperatorName ownedRight=PrefixedLetExpCS | LetExpCS;
 	public EssentialOCLGrammarAccess.PrefixedLetExpCSElements getPrefixedLetExpCSAccess() {
 		return gaEssentialOCL.getPrefixedLetExpCSAccess();
 	}
@@ -2255,9 +2256,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getPrefixedLetExpCSAccess().getRule();
 	}
 
-	/// * A prefixed primary expression elaborates a primary expression with zero or more unary prefix operators. * /
+	///* A prefixed primary expression elaborates a primary expression with zero or more unary prefix operators. */
 	//PrefixedPrimaryExpCS ExpCS:
-	//	{PrefixExpCS} name=UnaryOperatorName ownedRight=PrefixedPrimaryExpCS | PrimaryExpCS
+	//	{PrefixExpCS} name=UnaryOperatorName ownedRight=PrefixedPrimaryExpCS | PrimaryExpCS;
 	public EssentialOCLGrammarAccess.PrefixedPrimaryExpCSElements getPrefixedPrimaryExpCSAccess() {
 		return gaEssentialOCL.getPrefixedPrimaryExpCSAccess();
 	}
@@ -2266,7 +2267,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getPrefixedPrimaryExpCSAccess().getRule();
 	}
 
-	/// * A primary expression identifies the basic expressions from which more complex expressions may be constructed. * /
+	///* A primary expression identifies the basic expressions from which more complex expressions may be constructed. */
 	//PrimaryExpCS ExpCS:
 	//	NestedExpCS
 	//	| IfExpCS
@@ -2277,7 +2278,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//	| CollectionLiteralExpCS
 	//	| LambdaLiteralExpCS
 	//	| TypeLiteralExpCS
-	//	| NameExpCS
+	//	| NameExpCS;
 	public EssentialOCLGrammarAccess.PrimaryExpCSElements getPrimaryExpCSAccess() {
 		return gaEssentialOCL.getPrimaryExpCSAccess();
 	}
@@ -2286,8 +2287,8 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getPrimaryExpCSAccess().getRule();
 	}
 
-	/// * A name expression is a generalised rule for expressions that start with a name and which may be followed by square, round or
-	// * curly bracket clauses and optionally an @pre as well.* / NameExpCS:
+	///* A name expression is a generalised rule for expressions that start with a name and which may be followed by square, round or
+	// * curly bracket clauses and optionally an @pre as well.*/ NameExpCS:
 	//	ownedPathName=PathNameCS ownedSquareBracketedClauses+=SquareBracketedClauseCS*
 	//	ownedRoundBracketedClause=RoundBracketedClauseCS? ownedCurlyBracketedClause=CurlyBracketedClauseCS? (isPre?='@'
 	//	'pre')?;
@@ -2299,7 +2300,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getNameExpCSAccess().getRule();
 	}
 
-	/// * A curly bracket clause is a generalized rule for the literal arguments of collections, maps, tuples and shadows.* /
+	///* A curly bracket clause is a generalized rule for the literal arguments of collections, maps, tuples and shadows.*/
 	//CurlyBracketedClauseCS:
 	//	{CurlyBracketedClauseCS} '{' (ownedParts+=ShadowPartCS (',' ownedParts+=ShadowPartCS)*)? '}';
 	public EssentialOCLGrammarAccess.CurlyBracketedClauseCSElements getCurlyBracketedClauseCSAccess() {
@@ -2310,7 +2311,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getCurlyBracketedClauseCSAccess().getRule();
 	}
 
-	/// * A curly bracket clause is a generalized rule for template specialisations and operations arguments.* /
+	///* A curly bracket clause is a generalized rule for template specialisations and operations arguments.*/
 	//RoundBracketedClauseCS:
 	//	{RoundBracketedClauseCS} '(' (ownedArguments+=NavigatingArgCS ownedArguments+=NavigatingCommaArgCS*
 	//	(ownedArguments+=NavigatingSemiArgCS ownedArguments+=NavigatingCommaArgCS*)? (ownedArguments+=NavigatingBarArgCS
@@ -2323,7 +2324,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getRoundBracketedClauseCSAccess().getRule();
 	}
 
-	/// * A square bracket clause is a generalized rule for association class qualifiers and roles.* / SquareBracketedClauseCS:
+	///* A square bracket clause is a generalized rule for association class qualifiers and roles.*/ SquareBracketedClauseCS:
 	//	'[' ownedTerms+=ExpCS (',' ownedTerms+=ExpCS)* ']';
 	public EssentialOCLGrammarAccess.SquareBracketedClauseCSElements getSquareBracketedClauseCSAccess() {
 		return gaEssentialOCL.getSquareBracketedClauseCSAccess();
@@ -2333,8 +2334,8 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getSquareBracketedClauseCSAccess().getRule();
 	}
 
-	/// * A navigating argument is a generalized rule for the first argument in a round bracket clause. This is typically the first operation
-	// * parameter or an iterator. * / NavigatingArgCS:
+	///* A navigating argument is a generalized rule for the first argument in a round bracket clause. This is typically the first operation
+	// * parameter or an iterator. */ NavigatingArgCS:
 	//	ownedNameExpression=super::NavigatingArgExpCS (':' ownedType=TypeExpCS ('=' ownedInitExpression=ExpCS)? | 'in'
 	//	ownedInitExpression=ExpCS)? | ':' ownedType=TypeExpCS;
 	public EssentialOCLGrammarAccess.NavigatingArgCSElements getNavigatingArgCSAccess() {
@@ -2346,9 +2347,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//// Type-less init is an illegal infix expression
-	/// * A navigating bar argument is a generalized rule for a bar-prefixed argument in a round bracket clause. This is typically the body of an iteration. * /
+	///* A navigating bar argument is a generalized rule for a bar-prefixed argument in a round bracket clause. This is typically the body of an iteration. */
 	//NavigatingBarArgCS NavigatingArgCS:
-	//	prefix='|' ownedNameExpression=super::NavigatingArgExpCS (':' ownedType=TypeExpCS ('=' ownedInitExpression=ExpCS)?)?
+	//	prefix='|' ownedNameExpression=super::NavigatingArgExpCS (':' ownedType=TypeExpCS ('=' ownedInitExpression=ExpCS)?)?;
 	public EssentialOCLGrammarAccess.NavigatingBarArgCSElements getNavigatingBarArgCSAccess() {
 		return gaEssentialOCL.getNavigatingBarArgCSAccess();
 	}
@@ -2358,10 +2359,10 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//// Type-less init is an illegal infix expression
-	/// * A navigating comma argument is a generalized rule for non-first argument in a round bracket clause. These are typically non-first operation
-	// * parameters or a second iterator. * / NavigatingCommaArgCS NavigatingArgCS:
+	///* A navigating comma argument is a generalized rule for non-first argument in a round bracket clause. These are typically non-first operation
+	// * parameters or a second iterator. */ NavigatingCommaArgCS NavigatingArgCS:
 	//	prefix=',' ownedNameExpression=super::NavigatingArgExpCS (':' ownedType=TypeExpCS ('=' ownedInitExpression=ExpCS)? |
-	//	'in' ownedInitExpression=ExpCS)?
+	//	'in' ownedInitExpression=ExpCS)?;
 	public EssentialOCLGrammarAccess.NavigatingCommaArgCSElements getNavigatingCommaArgCSAccess() {
 		return gaEssentialOCL.getNavigatingCommaArgCSAccess();
 	}
@@ -2371,9 +2372,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//// Type-less init is an illegal infix expression
-	/// * A navigating semi argument is a generalized rule for a semicolon prefixed argument in a round bracket clause. This is typically an iterate accumulator. * /
+	///* A navigating semi argument is a generalized rule for a semicolon prefixed argument in a round bracket clause. This is typically an iterate accumulator. */
 	//NavigatingSemiArgCS NavigatingArgCS:
-	//	prefix=';' ownedNameExpression=super::NavigatingArgExpCS (':' ownedType=TypeExpCS ('=' ownedInitExpression=ExpCS)?)?
+	//	prefix=';' ownedNameExpression=super::NavigatingArgExpCS (':' ownedType=TypeExpCS ('=' ownedInitExpression=ExpCS)?)?;
 	public EssentialOCLGrammarAccess.NavigatingSemiArgCSElements getNavigatingSemiArgCSAccess() {
 		return gaEssentialOCL.getNavigatingSemiArgCSAccess();
 	}
@@ -2403,7 +2404,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	////;
 	//ElseIfThenExpCS IfThenExpCS:
 	//	'elseif' ownedCondition=ExpCS
-	//	'then' ownedThenExpression=ExpCS
+	//	'then' ownedThenExpression=ExpCS;
 	public EssentialOCLGrammarAccess.ElseIfThenExpCSElements getElseIfThenExpCSAccess() {
 		return gaEssentialOCL.getElseIfThenExpCSAccess();
 	}
@@ -2495,7 +2496,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//FirstPathElementCS PathElementCS:
-	//	referredElement=[pivot::NamedElement|super::UnrestrictedName]
+	//	referredElement=[pivot::NamedElement|super::UnrestrictedName];
 	public BaseGrammarAccess.FirstPathElementCSElements getFirstPathElementCSAccess() {
 		return gaBase.getFirstPathElementCSAccess();
 	}
@@ -2505,7 +2506,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//NextPathElementCS PathElementCS:
-	//	referredElement=[pivot::NamedElement|super::UnreservedName]
+	//	referredElement=[pivot::NamedElement|super::UnreservedName];
 	public BaseGrammarAccess.NextPathElementCSElements getNextPathElementCSAccess() {
 		return gaBase.getNextPathElementCSAccess();
 	}
@@ -2595,9 +2596,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getIdentifierAccess().getRule();
 	}
 
-	/// * A lowerbounded integer is used to define the lowerbound of a collection multiplicity. The value may not be the unlimited value. * /
+	///* A lowerbounded integer is used to define the lowerbound of a collection multiplicity. The value may not be the unlimited value. */
 	//LOWER ecore::EInt:
-	//	INT
+	//	INT;
 	public BaseGrammarAccess.LOWERElements getLOWERAccess() {
 		return gaBase.getLOWERAccess();
 	}
@@ -2606,12 +2607,12 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getLOWERAccess().getRule();
 	}
 
-	/// * A number may be an integer or floating point value. The declaration here appears to be that for just an integer. This is to avoid
+	///* A number may be an integer or floating point value. The declaration here appears to be that for just an integer. This is to avoid
 	// * lookahead conflicts in simple lexers between a dot within a floating point number and the dot-dot in a CollectionLiteralPartCS. A
 	// * practical implementation should give high priority to a successful parse of INT ('.' INT)? (('e' | 'E') ('+' | '-')? INT)? than
 	// * to the unsuccessful partial parse of INT '..'. The type of the INT terminal is String to allow the floating point syntax to be used.
-	// * / NUMBER_LITERAL BigNumber:
-	//	INT
+	// */ NUMBER_LITERAL BigNumber:
+	//	INT;
 	public BaseGrammarAccess.NUMBER_LITERALElements getNUMBER_LITERALAccess() {
 		return gaBase.getNUMBER_LITERALAccess();
 	}
@@ -2631,9 +2632,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getStringLiteralAccess().getRule();
 	}
 
-	/// * An upperbounded integer is used to define the upperbound of a collection multiplicity. The value may be the unlimited value. * /
+	///* An upperbounded integer is used to define the upperbound of a collection multiplicity. The value may be the unlimited value. */
 	//UPPER ecore::EInt:
-	//	INT | '*'
+	//	INT | '*';
 	public BaseGrammarAccess.UPPERElements getUPPERAccess() {
 		return gaBase.getUPPERAccess();
 	}
@@ -2701,7 +2702,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	} 
 
 	//terminal ML_COMMENT:
-	//	'/ *'->'* /';
+	//	'/*'->'*/';
 	public TerminalRule getML_COMMENTRule() {
 		return gaBase.getML_COMMENTRule();
 	} 

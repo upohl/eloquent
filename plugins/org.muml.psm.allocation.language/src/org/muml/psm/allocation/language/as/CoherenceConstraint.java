@@ -27,7 +27,7 @@ package org.muml.psm.allocation.language.as;
  *
  * @see org.muml.psm.allocation.language.as.AsPackage#getCoherenceConstraint()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='exactlyOnePair'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot exactlyOnePair='self.tupleDescriptor.typedPairs->size() = 1'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot exactlyOnePair='self.tupleDescriptor.typedPairs-&gt;size() = 1'"
  * @generated
  */
 public interface CoherenceConstraint extends Constraint {
