@@ -24,8 +24,4 @@ Workflow {
 		baseProjectName = "org.eclipse.ocl.xtext.base"
 		baseGenModelFile = "model/BaseCS.genmodel"
 	}
-	component = URIAwareGenerateModel {
-		resourceSet = resourceSet
-		genModel = "platform:/resource/org.muml.psm.allocation.context.muml/model/OCLContext.genmodel"
-	}
 }
