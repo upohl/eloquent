@@ -13,6 +13,7 @@ var grammarURI = "classpath:/org/muml/psm/allocation/language/xtext/AllocationSp
 var fileExtensions = "allocation_specification"
 var projectName = "org.muml.psm.allocation.language.xtext"
 var runtimeProject = "../${projectName}"
+var testsProject = "../../tests/${projectName}.tests"
 var generateXtendStub = true
 
 Workflow {
@@ -44,7 +45,7 @@ Workflow {
 	component = Generator {
 		pathRtProject = runtimeProject
 		pathUiProject = "${runtimeProject}.ui"
-		pathTestProject = "${runtimeProject}.tests"
+		pathTestProject = "${testsProject}"
 		projectNameRt = projectName
 		projectNameUi = "${projectName}.ui"
 		language = auto-inject {
