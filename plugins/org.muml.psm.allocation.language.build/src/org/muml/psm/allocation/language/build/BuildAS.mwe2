@@ -1,6 +1,6 @@
 module BuildAS
 
-import org.eclipse.ocl.examples.build.utilities.GenModelSetup
+import org.eclipse.ocl.examples.build.utilities.EcoreGenModelSetup
 import org.eclipse.ocl.examples.build.utilities.UMLGenModelSetup
 import org.eclipse.emf.mwe.utils.StandaloneSetup
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
@@ -12,7 +12,7 @@ Workflow {
     	platformUri = ".."
     	scanClassPath = true
     }
-    bean = GenModelSetup { resourceSet = resourceSet }
+    bean = EcoreGenModelSetup { resourceSet = resourceSet }
     bean = UMLGenModelSetup { resourceSet = resourceSet }
     bean = PivotModelSetup { resourceSet = resourceSet }
 	component = @GenerateLanguageSpecificationAS {
