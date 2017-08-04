@@ -1,5 +1,6 @@
 package org.muml.psm.allocation.algorithm.ilp.tests;
 
+import org.eclipse.emf.common.EMFPlugin;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
@@ -14,7 +15,9 @@ import org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguageSta
 public class AllTestsSuite {
 	@BeforeClass
 	public static void setup() {
-		LPSolveStandaloneSetup.doSetup();
-		AllocationSpecificationLanguageStandaloneSetup.doSetup();
+		if (!EMFPlugin.IS_ECLIPSE_RUNNING) {
+			LPSolveStandaloneSetup.doSetup();
+			AllocationSpecificationLanguageStandaloneSetup.doSetup();
+		}
 	}
 }
