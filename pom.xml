@@ -32,12 +32,14 @@
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.lpsolve</module>
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.scip</module>
     <module>plugins/org.muml.eloquent.algorithm.ilp.neos</module>
-    <!-- no opt4j for now
-    <module>org.muml.psm.allocation.algorithm.ilp.opt4j</module>
-    <module>org.muml.psm.allocation.algorithm.ilp.opt4j.config</module>
-    <module>org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit</module>
-    <module>org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit.properties</module>
-    <module>org.muml.psm.allocation.algorithm.ilp.opt4j.tests</module>-->
+    <!-- opt4j beginn-->
+    <module>plugins/org.muml.psm.allocation.algorithm.ilp.opt4j</module>
+    <module>plugins/org.muml.psm.allocation.algorithm.ilp.opt4j.config</module>
+    <module>plugins/org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit</module>
+    <module>plugins/org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit.properties</module>
+    <module>tests/org.muml.psm.allocation.algorithm.ilp.opt4j.tests</module>
+    <module>features/org.muml.eloquent.adapter.opt4j.feature</module>
+    <!-- opt4j end-->
     <module>tests/org.muml.psm.allocation.algorithm.ilp.tests</module>
     <module>tests/org.muml.psm.allocation.algorithm.tests</module>
     <module>plugins/org.muml.psm.allocation.algorithm.ui</module>

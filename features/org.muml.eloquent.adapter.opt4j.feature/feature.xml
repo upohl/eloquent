@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.muml.eloquent.adapter.opt4j.feature"
+      label="%featureName"
+      version="1.0.0.qualifier"
+      provider-name="%providerName">
+
+   <description url="www.muml.org">
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <discovery label="MechatronicUML" url="http://muml-build.cs.upb.de/job/UpdateSite-Maven/lastSuccessfulBuild/artifact/org.muml.releng.site.repository/target/repository/"/>
+      <discovery label="OCL" url="http://download.eclipse.org/modeling/mdt/ocl/updates/interim/6.3.0"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.m2m.qvt.oml" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jdt.annotation" version="2.0.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.11.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.muml.psm.allocation.ilp"/>
+      <import plugin="org.eclipse.xtend.lib" version="2.7.2" match="greaterOrEqual"/>
+      <import plugin="org.muml.psm.allocation.algorithm"/>
+      <import plugin="org.muml.external.opt4j"/>
+      <import plugin="org.muml.external.guice"/>
+      <import plugin="org.muml.psm.allocation.algorithm.ilp" version="1.0.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.muml.psm.allocation.algorithm.ilp.opt4j"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.muml.psm.allocation.algorithm.ilp.opt4j.config"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
