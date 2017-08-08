@@ -2,7 +2,7 @@
 <B>E</B>clipse <B>L</B>inear <B>O</B>ptimization, <B>Que</B>ry, '<B>n</B>' <B>T</B>ransformation
 
 ## Dependency Update Site for Neon.3:
-* http://download.eclipse.org/modeling/mdt/ocl/updates/interim/6.3.0
+* http://download.eclipse.org/modeling/mdt/ocl/updates/interim/
 
 ## Eloquent Update Site:
 * https://muml-build.cs.upb.de/job/ELOQUENT-Github/lastSuccessfulBuild/artifact/plugins/org.muml.eloquent.repository/target/repository
@@ -38,7 +38,7 @@ and unzip the contents of the zip-file into a folder of your choice.
 and unzip the contents of the zip-file into a folder of your choice. 
 
 1. In Eclipse, choose Help -> Install New Software from the menu. Make sure to enable the option "Contact all update sites during install to find required software".
-1. (only for Neon.3 User) click "Add..." and enter the following information in the dialog: Name = OCL, Location = [http://download.eclipse.org/modeling/mdt/ocl/updates/interim/6.3.0]
+1. (only for Neon.3 User) click "Add..." and enter the following information in the dialog: Name = OCL, Location = [http://download.eclipse.org/modeling/mdt/ocl/updates/interim/]
 1. click "Add..." and enter the following information in the dialog: Name = Eloquent, Location = [https://muml-build.cs.upb.de/job/ELOQUENT-Github/lastSuccessfulBuild/artifact/plugins/org.muml.eloquent.repository/target/repository]
 1. After the list of features has been updated, choose at least "MechatronicUML ELOQUENT" from the "ELOQUENT" category.
 1. Click "Next" to accept the features to be installed.

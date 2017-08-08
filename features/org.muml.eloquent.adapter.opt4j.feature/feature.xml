@@ -19,7 +19,7 @@
 
    <url>
       <discovery label="MechatronicUML" url="http://muml-build.cs.upb.de/job/UpdateSite-Maven/lastSuccessfulBuild/artifact/org.muml.releng.site.repository/target/repository/"/>
-      <discovery label="OCL" url="http://download.eclipse.org/modeling/mdt/ocl/updates/interim/6.3.0"/>
+      <discovery label="OCL" url="http://download.eclipse.org/modeling/mdt/ocl/updates/interim/"/>
    </url>
 
    <requires>
