@@ -36,7 +36,7 @@
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.opt4j</module>
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.opt4j.config</module>
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit</module>
-    <module>plugins/org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit.properties</module>
+    <!--<module>plugins/org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit.properties</module>-->
     <module>tests/org.muml.psm.allocation.algorithm.ilp.opt4j.tests</module>
     <module>features/org.muml.eloquent.adapter.opt4j.feature</module>
     <!-- opt4j end-->
