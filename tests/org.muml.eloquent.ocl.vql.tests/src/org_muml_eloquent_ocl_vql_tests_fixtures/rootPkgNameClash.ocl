@@ -1,0 +1,25 @@
+import 'http://www.eclipse.org/emf/2002/Ecore'
+include 'file1.vql'
+include 'file2.vql'
+
+-- the two includes result in a name clash for a root complete package
+-- hence the two root complete packages can only be accessed via their
+-- nsuri (for details see
+-- org.eclipse.ocl.pivot.internal.complete.AbstractCompletePackages.didAdd(CompletePackage)).
+-- More precisely, for instance, org_muml_eloquent_ocl_vql_tests_fixtures::File1.allClasses()
+-- is not supposed to work
+
+context ecore::EPackage
+	inv allClassesCall('call allClasses from file1.vql'):
+		let allClasses : Set(Tuple(cls : ecore::EClass))
+		=
+		_'platform:/resource/org.muml.eloquent.ocl.vql.tests/src/org_muml_eloquent_ocl_vql_tests_fixtures/file1.vql'::File1.allClasses()
+		in
+		allClasses->size() = 7
+		
+	inv allPackagesCall('call allPackages from file2.vql'):
+		let allPkgs : Set(Tuple(pkg : ecore::EPackage))
+		=
+		_'platform:/resource/org.muml.eloquent.ocl.vql.tests/src/org_muml_eloquent_ocl_vql_tests_fixtures/file2.vql'::File2.allPackages()
+		in
+		allPkgs->size() = 4

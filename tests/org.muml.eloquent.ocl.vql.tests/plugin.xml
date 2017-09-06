@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><plugin>
+  <extension id="org.muml.eloquent.ocl.vql.tests.fixtures.Other" point="org.eclipse.viatra.query.runtime.queryspecification">
+    <group group="org.eclipse.viatra.query.runtime.extensibility.SingletonExtensionFactory:org.muml.eloquent.ocl.vql.tests.fixtures.Other" id="org.muml.eloquent.ocl.vql.tests.fixtures.Other">
+      <query-specification fqn="org.muml.eloquent.ocl.vql.tests.fixtures.allAbstractClasses"/>
+    </group>
+  </extension>
+  <extension id="org.muml.eloquent.ocl.vql.tests.fixtures.Test" point="org.eclipse.viatra.query.runtime.queryspecification">
+    <group group="org.eclipse.viatra.query.runtime.extensibility.SingletonExtensionFactory:org.muml.eloquent.ocl.vql.tests.fixtures.Test" id="org.muml.eloquent.ocl.vql.tests.fixtures.Test">
+      <query-specification fqn="org.muml.eloquent.ocl.vql.tests.fixtures.allPackages"/>
+      <query-specification fqn="org.muml.eloquent.ocl.vql.tests.fixtures.PKG2Name"/>
+      <query-specification fqn="org.muml.eloquent.ocl.vql.tests.fixtures.allClasses"/>
+      <query-specification fqn="org.muml.eloquent.ocl.vql.tests.fixtures.classesWithData"/>
+      <query-specification fqn="org.muml.eloquent.ocl.vql.tests.fixtures.packagesWithData"/>
+    </group>
+  </extension>
+  <extension id="org.muml.eloquent.ocl.vql.tests.fixtures.sub.Other" point="org.eclipse.viatra.query.runtime.queryspecification">
+    <group group="org.eclipse.viatra.query.runtime.extensibility.SingletonExtensionFactory:org.muml.eloquent.ocl.vql.tests.fixtures.sub.Other" id="org.muml.eloquent.ocl.vql.tests.fixtures.sub.Other">
+      <query-specification fqn="org.muml.eloquent.ocl.vql.tests.fixtures.sub.allConcreteClasses"/>
+    </group>
+  </extension>
+  <extension id="org_muml_eloquent_ocl_vql_tests_fixtures.File1" point="org.eclipse.viatra.query.runtime.queryspecification">
+    <group group="org.eclipse.viatra.query.runtime.extensibility.SingletonExtensionFactory:org_muml_eloquent_ocl_vql_tests_fixtures.File1" id="org_muml_eloquent_ocl_vql_tests_fixtures.File1">
+      <query-specification fqn="org_muml_eloquent_ocl_vql_tests_fixtures.allClasses"/>
+    </group>
+  </extension>
+  <extension id="org_muml_eloquent_ocl_vql_tests_fixtures.File2" point="org.eclipse.viatra.query.runtime.queryspecification">
+    <group group="org.eclipse.viatra.query.runtime.extensibility.SingletonExtensionFactory:org_muml_eloquent_ocl_vql_tests_fixtures.File2" id="org_muml_eloquent_ocl_vql_tests_fixtures.File2">
+      <query-specification fqn="org_muml_eloquent_ocl_vql_tests_fixtures.allPackages"/>
+    </group>
+  </extension>
+</plugin>

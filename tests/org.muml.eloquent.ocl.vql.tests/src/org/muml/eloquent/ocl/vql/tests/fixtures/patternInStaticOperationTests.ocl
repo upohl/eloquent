@@ -1,0 +1,18 @@
+import 'http://www.eclipse.org/emf/2002/Ecore'
+include 'test.vql'
+
+context ecore::EPackage
+	inv allClassesInRootContext('allClasses() in root context'):
+		ecore::EClass::getAllClasses()->size() = 7
+		
+	inv allClassesInSubContext('allClasses() in sub context'):
+		self.eSubpackages->at(1).getAllClasses()->size() = 4
+	
+	def: getAllClasses() : Set(Tuple(cls : ecore::EClass))
+		=
+		ecore::EClass::getAllClasses()
+	
+context ecore::EClass
+	static def: getAllClasses() : Set(Tuple(cls : ecore::EClass))
+		=
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allClasses()

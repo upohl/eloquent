@@ -1,0 +1,7 @@
+package org_muml_eloquent_ocl_vql_tests_fixtures
+
+import "http://www.eclipse.org/emf/2002/Ecore"
+
+pattern allClasses(cls : EClass) {
+	EClass(cls);
+}

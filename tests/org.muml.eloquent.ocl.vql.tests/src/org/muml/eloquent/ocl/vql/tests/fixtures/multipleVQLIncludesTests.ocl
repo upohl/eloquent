@@ -1,0 +1,17 @@
+import 'http://www.eclipse.org/emf/2002/Ecore'
+include 'test.vql'
+-- FIXME: this results in an AssertionError in
+--		  org.eclipse.ocl.pivot.internal.CompletePackageImpl.assertSamePackage(Package)
+--		  (outer else branch)
+--include 'other.vql'
+include 'sub/other.vql'
+
+context ecore::EPackage
+	inv patternFromFileTest('invoke a pattern from file test.vql'):
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allPackages()->size() = 4
+		
+	--inv patternFromFileOther('invoke a pattern from file other.vql'):
+	--	org::muml::eloquent::ocl::vql::tests::fixtures::Other.allAbstractClasses()->size() = 2
+		
+	inv patternFromFileSubOther('invoke a pattern from file sub/other.vql'):
+		org::muml::eloquent::ocl::vql::tests::fixtures::sub::Other.allConcreteClasses()-> size() = 5

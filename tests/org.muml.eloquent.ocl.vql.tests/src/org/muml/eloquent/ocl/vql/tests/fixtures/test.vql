@@ -1,0 +1,26 @@
+package org.muml.eloquent.ocl.vql.tests.fixtures
+
+import "http://www.eclipse.org/emf/2002/Ecore"
+
+pattern allPackages(pkg : EPackage) {
+	EPackage(pkg);
+}
+
+pattern PKG2Name(pkg : EPackage, name : java String) {
+	EPackage.name(pkg, name);
+}
+
+pattern allClasses(cls : EClass) {
+	EClass(cls);
+}
+
+pattern classesWithData(name : java String, isAbstract : java Boolean, cls : EClass) {
+	EClass.name(cls, name);
+	EClass.abstract(cls, isAbstract);
+}
+
+pattern packagesWithData(name : EString, pkg : EPackage, cls : EClass) {
+	EPackage.name(pkg, name);
+	EPackage.eClassifiers(pkg, cls);
+	find allClasses(cls);
+}

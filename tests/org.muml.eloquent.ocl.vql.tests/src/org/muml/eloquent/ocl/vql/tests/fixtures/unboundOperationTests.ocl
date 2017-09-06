@@ -1,0 +1,52 @@
+import 'http://www.eclipse.org/emf/2002/Ecore'
+include 'test.vql'
+
+context ecore::EPackage
+	inv allPackagesRootContext('allPackages in the root context'):
+		let allPkgs : Set(Tuple(pkg : ecore::EPackage))
+		=
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allPackages()
+		in
+		allPkgs->size() = 4 and allPkgs->exists(t | t.pkg.name = 'root')
+			and allPkgs->exists(t | t.pkg.name = 'sub')
+			and allPkgs->exists(t | t.pkg.name = 'sub2')
+			and allPkgs->exists(t | t.pkg.name = 'subsub')
+				
+	inv allPackagesInNestedLet('find root context object in nested let'):
+		let sub : ecore::EPackage = self.eSubpackages->at(1)
+		in
+		let allPkgs : Set(Tuple(pkg : ecore::EPackage))
+		=
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allPackages()
+		in 
+		allPkgs->size() = 4 and allPkgs->exists(t | t.pkg.name = 'root')
+			and allPkgs->exists(t | t.pkg.name = 'sub')
+			and allPkgs->exists(t | t.pkg.name = 'sub2')
+			and allPkgs->exists(t | t.pkg.name = 'subsub')
+				
+	inv allPackagesInPackageContext('execute pattern in sub context'):
+		let sub : ecore::EPackage = self.eSubpackages->at(1)
+		in
+		let allPkgs : Set(Tuple(pkg : ecore::EPackage))
+		=
+		sub.allPackagesInPackageContext()
+		in
+		allPkgs->size() = 2 and allPkgs->exists(t | t.pkg.name = 'sub')
+			and allPkgs->exists(t | t.pkg.name = 'subsub')
+			
+	inv operationResultCaching('Cache considers context object'):
+		let sub : ecore::EPackage = self.eSubpackages->at(1)
+		in
+		let sub2 : ecore::EPackage = self.eSubpackages->at(2)
+		in
+		sub.allClassesInPackageContext() <> sub2.allClassesInPackageContext()
+		
+				
+	def: allPackagesInPackageContext() : Set(Tuple(pkg : ecore::EPackage))
+		=
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allPackages()
+		
+	def: allClassesInPackageContext() : Set(Tuple(cls : ecore::EClass))
+		=
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allClasses()
+		
