@@ -73,6 +73,9 @@
       <import plugin="org.apache.xmlrpc" version="3.0.0" match="greaterOrEqual"/>
       <import plugin="org.apache.ws.commons.util" version="1.0.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.m2m.qvt.oml" version="3.6.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.viatra.query.patternlanguage.emf" version="1.6.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.xbase" version="2.12.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.viatra.query.runtime" version="1.6.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
@@ -161,6 +164,13 @@
 
    <plugin
          id="org.muml.eloquent.algorithm.ilp.neos"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.muml.eloquent.ocl.vql"
          download-size="0"
          install-size="0"
          version="0.0.0"
