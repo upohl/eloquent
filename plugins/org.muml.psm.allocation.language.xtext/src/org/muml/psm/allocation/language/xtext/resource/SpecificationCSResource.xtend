@@ -11,12 +11,12 @@ import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal
 import org.eclipse.ocl.pivot.resource.ASResource
 import org.eclipse.ocl.xtext.base.cs2as.CS2AS
 import org.eclipse.ocl.xtext.base.scoping.AbstractJavaClassScope
-import org.eclipse.ocl.xtext.completeocl.utilities.CompleteOCLCSResource
 import org.eclipse.ocl.xtext.oclstdlib.scoping.JavaClassScope
+import org.muml.eloquent.ocl.vql.VQLAwareOCLResource
 import org.muml.psm.allocation.language.xtext.cs2as.SpecificationCS2Pivot
 import org.osgi.framework.Bundle
 
-class SpecificationCSResource extends CompleteOCLCSResource {
+class SpecificationCSResource extends VQLAwareOCLResource {
 		
 	/*@NonNull*/ override CS2AS createCS2AS(/*@NonNull*/ EnvironmentFactoryInternal environmentFactory,
 		/*@NonNull*/ ASResource asResource) {
