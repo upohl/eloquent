@@ -53,6 +53,9 @@
     <module>plugins/org.muml.psm.allocation.language.xtext.ui</module>
     <module>features/org.muml.eloquent.feature</module>
     <module>plugins/org.muml.eloquent.repository</module>
+    <!-- module vql plugins -->
+    <module>plugins/org.muml.eloquent.ocl.vql</module>
+    <module>tests/org.muml.eloquent.ocl.vql.tests</module>
     <!-- projectPlanning example -->
     <module>examples/projectPlanning/plugins/de.fraunhofer.iem.projectPlanning</module>
     <module>examples/projectPlanning/plugins/de.fraunhofer.iem.projectPlanning.edit</module>
