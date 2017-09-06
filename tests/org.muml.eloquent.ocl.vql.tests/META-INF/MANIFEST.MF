@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.muml.eloquent.ocl.vql.tests
 Bundle-SymbolicName: org.muml.eloquent.ocl.vql.tests;singleton:=true
-Bundle-Version: 0.0.1.qualifier
+Bundle-Version: 1.0.0.qualifier
 Export-Package: org.muml.eloquent.ocl.vql.tests.fixtures,
   org.muml.eloquent.ocl.vql.tests.fixtures.sub,
   org.muml.eloquent.ocl.vql.tests.fixtures.sub.util,
