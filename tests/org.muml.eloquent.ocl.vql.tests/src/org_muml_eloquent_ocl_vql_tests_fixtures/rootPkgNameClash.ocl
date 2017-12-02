@@ -13,13 +13,13 @@ context ecore::EPackage
 	inv allClassesCall('call allClasses from file1.vql'):
 		let allClasses : Set(Tuple(cls : ecore::EClass))
 		=
-		_'platform:/resource/org.muml.eloquent.ocl.vql.tests/src/org_muml_eloquent_ocl_vql_tests_fixtures/file1.vql'::File1.allClasses()
+		_'platform:/resource/org.muml.eloquent.ocl.vql.tests/src/org_muml_eloquent_ocl_vql_tests_fixtures/file1.vql'::File1.allClasses(self)
 		in
 		allClasses->size() = 7
 		
 	inv allPackagesCall('call allPackages from file2.vql'):
 		let allPkgs : Set(Tuple(pkg : ecore::EPackage))
 		=
-		_'platform:/resource/org.muml.eloquent.ocl.vql.tests/src/org_muml_eloquent_ocl_vql_tests_fixtures/file2.vql'::File2.allPackages()
+		_'platform:/resource/org.muml.eloquent.ocl.vql.tests/src/org_muml_eloquent_ocl_vql_tests_fixtures/file2.vql'::File2.allPackages(self)
 		in
 		allPkgs->size() = 4

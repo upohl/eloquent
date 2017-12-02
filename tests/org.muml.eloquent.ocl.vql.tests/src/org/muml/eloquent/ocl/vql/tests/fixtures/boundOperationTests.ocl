@@ -3,14 +3,14 @@ include 'test.vql'
 
 context ecore::EPackage
 	inv primitiveParameters('operation with primitive parameters (no let)'):
-		org::muml::eloquent::ocl::vql::tests::fixtures::Test.PKG2Name()->collect(t |
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.PKG2Name(self)->collect(t |
 			t.name
 		) = Bag {'root', 'sub', 'sub2', 'subsub'}
 		
 	inv partialExactMatch('perform a partial match (one result)'):
 		let matches : Set(Tuple(pkg : ecore::EPackage, name : String))
 		=
-		org::muml::eloquent::ocl::vql::tests::fixtures::Test.PKG2Name(null, 'sub2')
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.PKG2Name(self, null, 'sub2')
 		in
 		let sub2 : ecore::EPackage = self.eSubpackages->at(2)
 		in
@@ -20,7 +20,7 @@ context ecore::EPackage
 	inv partialMultipleMatches('perform a partial match (multiple results)'):
 		let matches : Set(Tuple(name : String, isAbstract : Boolean, cls : EClass))
 		=
-		org::muml::eloquent::ocl::vql::tests::fixtures::Test.classesWithData('E', null, null)
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.classesWithData(self, 'E', null, null)
 		in
 		matches->size() = 2
 			and matches->collect(t | t.cls.name)->asSet() = Set {'E'}
@@ -28,34 +28,34 @@ context ecore::EPackage
 	inv matchWithFalse('pass false instead of null for a boolean parameter'):
 		let matches : Set(Tuple(name : String, isAbstract : Boolean, cls : EClass))
 		=
-		org::muml::eloquent::ocl::vql::tests::fixtures::Test.classesWithData(null, false, null)
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.classesWithData(self, null, false, null)
 		in
 		matches->size() = 5
 		
 	inv bindMultipleParameters('bind multiple match parameters'):
 		let matches : Set(Tuple(name : String, isAbstract : Boolean, cls : EClass))
 		=
-		org::muml::eloquent::ocl::vql::tests::fixtures::Test.classesWithData('E', false, null)
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.classesWithData(self, 'E', false, null)
 		in
 		matches->size() = 2
 		
 	inv bindMultipleParametersEmptyMatch('empty match results in an empty set'):
 		let matches : Set(Tuple(name : String, isAbstract : Boolean, cls : EClass))
 		=
-		org::muml::eloquent::ocl::vql::tests::fixtures::Test.classesWithData('E', true, null)
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.classesWithData(self, 'E', true, null)
 		in
 		matches->size() = 0
 		
 	inv nullIsNotFalse('null is not false'):
-		org::muml::eloquent::ocl::vql::tests::fixtures::Test.classesWithData(null, null, null)
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.classesWithData(self, null, null, null)
 		<>
-		org::muml::eloquent::ocl::vql::tests::fixtures::Test.classesWithData(null, false, null)		
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.classesWithData(self, null, false, null)		
 		
 	inv bindNonPrimitiveType('bind a parameter that has no primitive type'):
 		let matches : Set(Tuple(name : EString, pkg : EPackage, cls : EClass))
 		=
-		org::muml::eloquent::ocl::vql::tests::fixtures::Test.packagesWithData(null,
-			self.eSubpackages->at(1), null)
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.packagesWithData(self,
+			null, self.eSubpackages->at(1), null)
 		in
 		matches->size() = 2 and matches->forAll(t | t.name = 'sub')
 		

@@ -5,19 +5,22 @@ context ecore::EPackage
 	inv allPackagesRootContext('allPackages in the root context'):
 		let allPkgs : Set(Tuple(pkg : ecore::EPackage))
 		=
-		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allPackages()
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allPackages(self)
 		in
 		allPkgs->size() = 4 and allPkgs->exists(t | t.pkg.name = 'root')
 			and allPkgs->exists(t | t.pkg.name = 'sub')
 			and allPkgs->exists(t | t.pkg.name = 'sub2')
 			and allPkgs->exists(t | t.pkg.name = 'subsub')
 				
+	-- this test is kind of obsolete, since we explicitly specify
+	-- the context object (however, it does not harm, of course)
+	-- (actually, this test was testing a detail of the "old" implementation)
 	inv allPackagesInNestedLet('find root context object in nested let'):
 		let sub : ecore::EPackage = self.eSubpackages->at(1)
 		in
 		let allPkgs : Set(Tuple(pkg : ecore::EPackage))
 		=
-		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allPackages()
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allPackages(self)
 		in 
 		allPkgs->size() = 4 and allPkgs->exists(t | t.pkg.name = 'root')
 			and allPkgs->exists(t | t.pkg.name = 'sub')
@@ -44,9 +47,9 @@ context ecore::EPackage
 				
 	def: allPackagesInPackageContext() : Set(Tuple(pkg : ecore::EPackage))
 		=
-		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allPackages()
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allPackages(self)
 		
 	def: allClassesInPackageContext() : Set(Tuple(cls : ecore::EClass))
 		=
-		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allClasses()
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allClasses(self)
 		

@@ -15,4 +15,4 @@ context ecore::EPackage
 context ecore::EClass
 	static def: getAllClasses() : Set(Tuple(cls : ecore::EClass))
 		=
-		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allClasses()
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allClasses(self)
