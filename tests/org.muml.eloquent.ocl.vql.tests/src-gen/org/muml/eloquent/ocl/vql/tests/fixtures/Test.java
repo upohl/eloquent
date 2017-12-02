@@ -9,11 +9,13 @@ import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
 import org.muml.eloquent.ocl.vql.tests.fixtures.AllClassesMatcher;
 import org.muml.eloquent.ocl.vql.tests.fixtures.AllPackagesMatcher;
 import org.muml.eloquent.ocl.vql.tests.fixtures.ClassesWithDataMatcher;
+import org.muml.eloquent.ocl.vql.tests.fixtures.ContextObjectParameterNameClashMatcher;
 import org.muml.eloquent.ocl.vql.tests.fixtures.PKG2NameMatcher;
 import org.muml.eloquent.ocl.vql.tests.fixtures.PackagesWithDataMatcher;
 import org.muml.eloquent.ocl.vql.tests.fixtures.util.AllClassesQuerySpecification;
 import org.muml.eloquent.ocl.vql.tests.fixtures.util.AllPackagesQuerySpecification;
 import org.muml.eloquent.ocl.vql.tests.fixtures.util.ClassesWithDataQuerySpecification;
+import org.muml.eloquent.ocl.vql.tests.fixtures.util.ContextObjectParameterNameClashQuerySpecification;
 import org.muml.eloquent.ocl.vql.tests.fixtures.util.PKG2NameQuerySpecification;
 import org.muml.eloquent.ocl.vql.tests.fixtures.util.PackagesWithDataQuerySpecification;
 
@@ -30,6 +32,7 @@ import org.muml.eloquent.ocl.vql.tests.fixtures.util.PackagesWithDataQuerySpecif
  * <li>allClasses</li>
  * <li>classesWithData</li>
  * <li>packagesWithData</li>
+ * <li>contextObjectParameterNameClash</li>
  * </ul>
  * 
  * @see IPatternGroup
@@ -59,6 +62,7 @@ public final class Test extends BaseGeneratedPatternGroup {
     querySpecifications.add(AllClassesQuerySpecification.instance());
     querySpecifications.add(ClassesWithDataQuerySpecification.instance());
     querySpecifications.add(PackagesWithDataQuerySpecification.instance());
+    querySpecifications.add(ContextObjectParameterNameClashQuerySpecification.instance());
   }
   
   public AllPackagesQuerySpecification getAllPackages() throws ViatraQueryException {
@@ -99,5 +103,13 @@ public final class Test extends BaseGeneratedPatternGroup {
   
   public PackagesWithDataMatcher getPackagesWithData(final ViatraQueryEngine engine) throws ViatraQueryException {
     return PackagesWithDataMatcher.on(engine);
+  }
+  
+  public ContextObjectParameterNameClashQuerySpecification getContextObjectParameterNameClash() throws ViatraQueryException {
+    return ContextObjectParameterNameClashQuerySpecification.instance();
+  }
+  
+  public ContextObjectParameterNameClashMatcher getContextObjectParameterNameClash(final ViatraQueryEngine engine) throws ViatraQueryException {
+    return ContextObjectParameterNameClashMatcher.on(engine);
   }
 }

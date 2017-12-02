@@ -24,3 +24,14 @@ pattern packagesWithData(name : EString, pkg : EPackage, cls : EClass) {
 	EPackage.eClassifiers(pkg, cls);
 	find allClasses(cls);
 }
+
+pattern contextObjectParameterNameClash(contextObject : EPackage,
+	contextObjectX : EPackage, pkg : EPackage, contextObjectXX : EPackage,
+	contextObjectXXX : EPackage
+) {
+	EPackage.name(contextObject, "sub");
+	contextObject == contextObjectX;
+	contextObject == pkg;
+	contextObject == contextObjectXX;
+	contextObject == contextObjectXXX;
+}

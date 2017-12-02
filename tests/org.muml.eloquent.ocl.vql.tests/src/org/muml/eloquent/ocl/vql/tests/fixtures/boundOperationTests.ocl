@@ -59,3 +59,26 @@ context ecore::EPackage
 		in
 		matches->size() = 2 and matches->forAll(t | t.name = 'sub')
 		
+	inv bindContextObjectParameterNameClash('name clash for the context object parameter (bound parameters)'):
+		let clashResult : Set(
+			Tuple(
+				contextObject : ecore::EPackage, contextObjectX : ecore::EPackage,
+				pkg : ecore::EPackage, contextObjectXX : ecore::EPackage,
+				contextObjectXXX : ecore::EPackage
+			)
+		)
+		=
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.contextObjectParameterNameClash(
+			self, null, null, null, null, null
+		)
+		in
+		let sub : ecore::EPackage
+		=
+		self.eSubpackages->at(1)
+		in
+		clashResult = Set{
+			Tuple{
+				contextObject = sub, contextObjectX = sub, pkg = sub,
+				contextObjectXX = sub, contextObjectXXX = sub
+			}
+		}

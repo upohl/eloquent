@@ -43,7 +43,55 @@ context ecore::EPackage
 		let sub2 : ecore::EPackage = self.eSubpackages->at(2)
 		in
 		sub.allClassesInPackageContext() <> sub2.allClassesInPackageContext()
+				
+	inv allPackagesExplicitContext('context object is considered in "root" context'):
+		self.eSubpackages->at(1).allPackagesInPackageContext()
+		=
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allPackages(
+			self.eSubpackages->at(1)
+		)
 		
+	inv allPackagesInDifferentContexts('use different context objects'):
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allPackages(
+			self.eSubpackages->at(1)
+		)
+		<>
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allPackages(
+			self.eSubpackages->at(2)
+		)
+		
+	inv allClassesWithExplicitContext('operation parameter is used as the context object'):
+		self.allClassesWithExplicitContext(self)->size() = 7
+		and
+		self.allClassesWithExplicitContext(
+			self.eSubpackages->at(1)
+		)->size() = 4
+		and
+		self.allClassesWithExplicitContext(
+			self.eSubpackages->at(1).eClassifiers->at(1)
+		)->size() = 1
+		
+	inv contextObjectParameterNameClash('name clash for the context object parameter'):
+		let clashResult : Set(
+			Tuple(
+				contextObject : ecore::EPackage, contextObjectX : ecore::EPackage,
+				pkg : ecore::EPackage, contextObjectXX : ecore::EPackage,
+				contextObjectXXX : ecore::EPackage
+			)
+		)
+		=
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.contextObjectParameterNameClash(self)
+		in
+		let sub : ecore::EPackage
+		=
+		self.eSubpackages->at(1)
+		in
+		clashResult = Set{
+			Tuple{
+				contextObject = sub, contextObjectX = sub, pkg = sub,
+				contextObjectXX = sub, contextObjectXXX = sub
+			}
+		}
 				
 	def: allPackagesInPackageContext() : Set(Tuple(pkg : ecore::EPackage))
 		=
@@ -53,3 +101,6 @@ context ecore::EPackage
 		=
 		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allClasses(self)
 		
+	def: allClassesWithExplicitContext(contextObject : OclAny) : Set(Tuple(cls : ecore::EClass))
+		=
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allClasses(contextObject)
