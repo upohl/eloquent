@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.Resource.Diagnostic;
 import org.eclipse.emf.ecore.xmi.XMIException;
 import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.ocl.pivot.AnyType;
 import org.eclipse.ocl.pivot.CollectionType;
 import org.eclipse.ocl.pivot.Model;
 import org.eclipse.ocl.pivot.PrimitiveType;
@@ -95,6 +96,10 @@ public class VQL2AS extends AbstractConversion {
 	public @NonNull PrimitiveType getPrimitiveType(@NonNull Class<?> javaClass) {
 		PrimitiveType type = getStandardLibrary().getBehavioralClass(javaClass);
 		return ClassUtil.nonNull(type);
+	}
+	
+	public @NonNull AnyType getAnyType() {
+		return getStandardLibrary().getOclAnyType();
 	}
 	
 	public @NonNull TupleType getTupleType(@NonNull String name,

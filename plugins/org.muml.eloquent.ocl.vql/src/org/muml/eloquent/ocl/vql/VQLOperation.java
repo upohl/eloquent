@@ -12,15 +12,11 @@ import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
-import org.eclipse.ocl.pivot.ExpressionInOCL;
-import org.eclipse.ocl.pivot.NamedElement;
 import org.eclipse.ocl.pivot.Operation;
 import org.eclipse.ocl.pivot.OperationCallExp;
 import org.eclipse.ocl.pivot.SetType;
 import org.eclipse.ocl.pivot.TupleType;
 import org.eclipse.ocl.pivot.TypedElement;
-import org.eclipse.ocl.pivot.Variable;
-import org.eclipse.ocl.pivot.evaluation.EvaluationEnvironment.EvaluationEnvironmentExtension;
 import org.eclipse.ocl.pivot.evaluation.Executor;
 import org.eclipse.ocl.pivot.ids.TuplePartId;
 import org.eclipse.ocl.pivot.ids.TupleTypeId;
@@ -52,38 +48,17 @@ public class VQLOperation extends AbstractOperation {
 	}
 	
 	@Override
-	public @Nullable Object evaluate(@NonNull Executor executor,
-			@NonNull TypedElement caller,
-			@Nullable Object @NonNull [] sourceAndArgumentValues) {
-		/*
-		 * Take the contextObject into account when determining whether
-		 * a cached result operation call result can be used or not.
-		 */
-		Object contextObject = getContextObject(executor);
-		if (contextObject == null) {
-			return null;
-		}
-		Object[] args = new Object[sourceAndArgumentValues.length + 1];
-		args[0] = contextObject;
-		System.arraycopy(sourceAndArgumentValues, 0, args, 1,
-				sourceAndArgumentValues.length);
-		return super.evaluate(executor, caller, args);
-	}
-	
-	@Override
 	public @Nullable Object basicEvaluate(@NonNull Executor executor,
 			@NonNull TypedElement caller,
 			@Nullable Object @NonNull [] sourceAndArgumentValues) {
-		Operation operation = ((OperationCallExp) caller)
-				.getReferredOperation();
-		Object contextObject = getContextObject(executor);
+		if (sourceAndArgumentValues.length < 2) {
+			// should never happen...
+			return null;
+		}
+		Object contextObject = sourceAndArgumentValues[1];
 		if (contextObject == null || !(contextObject instanceof EObject)) {
 			// cannot do much without a context object (null yields to
 			// oclInvalid)
-			return null;
-		}
-		if (sourceAndArgumentValues.length < 2) {
-			// should never happen...
 			return null;
 		}
 		int numArgs = sourceAndArgumentValues.length - 2;
@@ -91,30 +66,9 @@ public class VQLOperation extends AbstractOperation {
 		System.arraycopy(sourceAndArgumentValues, 2, args, 0, numArgs);
 		Collection<? extends IPatternMatch> matchResults = performMatch((EObject) contextObject,
 				executor, args);
+		Operation operation = ((OperationCallExp) caller)
+				.getReferredOperation();
 		return createResultSet(operation, matchResults);
-	}
-	
-	protected @Nullable Object getContextObject(@NonNull Executor executor) {
-		EvaluationEnvironmentExtension evaluationEnvironment = (EvaluationEnvironmentExtension) executor
-				.getEvaluationEnvironment();
-		NamedElement executableObject;
-		do {
-			executableObject = evaluationEnvironment.getExecutableObject();
-			if (executableObject instanceof ExpressionInOCL) {
-				break;
-			}
-			evaluationEnvironment = evaluationEnvironment
-					.getParentEvaluationEnvironment();
-		} while (evaluationEnvironment != null);
-		if (evaluationEnvironment == null) {
-			return null;
-		}
-		Variable contextVariable = ((ExpressionInOCL) executableObject)
-				.getOwnedContext();
-		if (contextVariable == null) {
-			return null;
-		}
-		return evaluationEnvironment.getValueOf(contextVariable);
 	}
 	
 	protected @NonNull IQuerySpecification<ViatraQueryMatcher<IPatternMatch>> loadQuerySpecification(@NonNull Executor executor) {

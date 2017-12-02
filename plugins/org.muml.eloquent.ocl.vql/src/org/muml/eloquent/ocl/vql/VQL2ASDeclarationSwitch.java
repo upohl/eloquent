@@ -86,11 +86,32 @@ public class VQL2ASDeclarationSwitch extends EMFPatternLanguageSwitch<Object> {
 			return operation;
 		}
 		
+		protected void addContextParameter(@NonNull Operation operation) {
+			String parameterName = "contextObject";
+			boolean uniqueName = false;
+			while (!uniqueName) {
+				uniqueName = true;
+				for (org.eclipse.ocl.pivot.Parameter parameter : operation
+						.getOwnedParameters()) {
+					if (parameterName.equals(parameter.getName())) {
+						parameterName += "X";
+						uniqueName = false;
+						break;
+					}
+				}
+			}
+			org.eclipse.ocl.pivot.Parameter parameter =
+					PivotUtil.createParameter(parameterName,
+							converter.getAnyType(), true);
+			operation.getOwnedParameters().add(0, parameter);
+		}
+		
 		@Override
 		public List<Operation> casePattern(Pattern pattern) {
 			// bound/unbound refers to the binding of parameters
 			String matcherClassName = getFullyQualifiedMatcherClassName(pattern);
 			Operation unboundOperation = createOperation(pattern);
+			addContextParameter(unboundOperation);
 			VQLOperation implementation = new VQLOperation(matcherClassName);
 			unboundOperation.setImplementation(implementation);
 			List<Operation> resultList = new ArrayList<Operation>();
@@ -102,6 +123,7 @@ public class VQL2ASDeclarationSwitch extends EMFPatternLanguageSwitch<Object> {
 				parameterToTuplePart = false;
 				doSwitchAll(boundOperation.getOwnedParameters(),
 						pattern.getParameters());
+				addContextParameter(boundOperation);
 				resultList.add(boundOperation);
 			}
 			return resultList;
