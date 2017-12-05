@@ -92,6 +92,16 @@ context ecore::EPackage
 				contextObjectXX = sub, contextObjectXXX = sub
 			}
 		}
+		
+	inv illegalContextObject('an illegal context object yields to invalid'):
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allPackages(null)
+			->oclIsInvalid()
+		and
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allPackages(42)
+			->oclIsInvalid()
+		and
+		org::muml::eloquent::ocl::vql::tests::fixtures::Test.allPackages('foobar')
+			->oclIsInvalid()
 				
 	def: allPackagesInPackageContext() : Set(Tuple(pkg : ecore::EPackage))
 		=
