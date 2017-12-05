@@ -23,6 +23,7 @@ import org.eclipse.ocl.pivot.ids.TupleTypeId;
 import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal;
 import org.eclipse.ocl.pivot.library.AbstractOperation;
 import org.eclipse.ocl.pivot.utilities.ClassUtil;
+import org.eclipse.ocl.pivot.values.InvalidValueException;
 import org.eclipse.ocl.pivot.values.SetValue;
 import org.eclipse.ocl.pivot.values.TupleValue;
 import org.eclipse.viatra.query.runtime.api.IPatternMatch;
@@ -33,6 +34,11 @@ import org.eclipse.viatra.query.runtime.emf.EMFScope;
 import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
 
 public class VQLOperation extends AbstractOperation {
+	
+	private static final String unexpectedNumberOfArguments =
+			"Expected at least two arguments (got: %d)";
+	private static final String invalidContextObject =
+			"contextObject has to be a non-null EObject (got: {0})";
 	
 	private String matcherClassFQN;
 	
@@ -53,13 +59,15 @@ public class VQLOperation extends AbstractOperation {
 			@Nullable Object @NonNull [] sourceAndArgumentValues) {
 		if (sourceAndArgumentValues.length < 2) {
 			// should never happen...
-			return null;
+			throw new IllegalStateException(
+					String.format(unexpectedNumberOfArguments,
+							sourceAndArgumentValues.length));
 		}
 		Object contextObject = sourceAndArgumentValues[1];
 		if (contextObject == null || !(contextObject instanceof EObject)) {
-			// cannot do much without a context object (null yields to
-			// oclInvalid)
-			return null;
+			// cannot do much without a context object
+			throw new InvalidValueException(invalidContextObject,
+					contextObject);
 		}
 		int numArgs = sourceAndArgumentValues.length - 2;
 		Object[] args = new Object[numArgs];
