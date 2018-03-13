@@ -4,49 +4,43 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation.Kind;
-import org.eclipse.ocl.pivot.TupleType;
 import org.eclipse.ocl.pivot.ids.IdResolver;
 import org.eclipse.ocl.pivot.ids.TuplePartId;
-import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal;
 import org.eclipse.ocl.pivot.values.CollectionValue;
 import org.eclipse.ocl.pivot.values.SetValue;
 import org.eclipse.ocl.pivot.values.TupleValue;
-import org.muml.psm.allocation.language.as.CoherenceConstraint;
 import org.muml.psm.allocation.language.as.EvaluableElement;
-import org.muml.psm.allocation.language.as.LocationConstraint;
-import org.muml.psm.allocation.language.as.QoSDimension;
-import org.muml.psm.allocation.language.as.Relation;
-import org.muml.psm.allocation.language.as.ResourceConstraint;
 import org.muml.psm.allocation.language.xtext.typing.TypesUtil;
 
 public class TupleAccessor {
-	private static final String invalidPart = "Type %s has no part named %s";
+	private static final String invalidPart = "TupleTypeId %s has no part named %s";
 	private static final String unexpectedObject = "unexpected object %s";
 	private static final String noTupleValue = "object %s is not a TupleValue instance";
 	
-	private static Object getPart(TupleValue tupleValue, String namedPart, EvaluableElement elementCS,
-			TupleType tupleType, boolean unboxValue) {
-		//TupleType tupleType = TypesUtil.createLocationConstraintTupleType(locationConstraintCS);
-		TuplePartId partId = tupleType.getTupleTypeId().getPartId(namedPart);
+	private static Object getPart(TupleValue tupleValue, String namedPart,
+			Object element, boolean unboxValue) {
+		if (!(element instanceof EvaluableElement)) {
+			throw new IllegalArgumentException(
+					String.format(unexpectedObject, element));
+		}
+		TuplePartId partId = tupleValue.getTypeId().getPartId(namedPart);
 		if (partId == null) {
 			throw new IllegalArgumentException(
-					String.format(invalidPart, tupleType, namedPart));
+					String.format(invalidPart, tupleValue.getTypeId(),
+							namedPart));
 		}
 		Object partValue = tupleValue.getValue(partId);
 		if (!unboxValue) {
 			return partValue;
 		}
-		IdResolver idResolver = TypesUtil.getEnvironmentFactory(elementCS)
+		IdResolver idResolver = TypesUtil.getEnvironmentFactory((EvaluableElement) element)
 				.getIdResolver();
 		Object unboxedValue = idResolver.unboxedValueOf(partValue);
 		System.out.println("accessed: " + unboxedValue);
-		// this is type safe as long as the locationConstraintCS is valid
-		//return (NamedElement) unboxedValue;
 		if (unboxedValue instanceof BigDecimal) {
 			// XXX: qvto cannot convert a java.math.BigDecimal to "Real"
 			// thus, we have to convert it to a double (maybe its somehow
@@ -59,32 +53,6 @@ public class TupleAccessor {
 	@Operation(kind=Kind.QUERY)
 	public static Object getPart(TupleValue tupleValue, String namedPart, Object object) {
 		return getPart(tupleValue, namedPart, object, true);
-	}
-	
-	private static Object getPart(TupleValue tupleValue, String namedPart, Object object, boolean unboxValue) {
-		// XXX: get rid of this EObject cast again
-		EnvironmentFactoryInternal envFactory = TypesUtil.getEnvironmentFactory((EObject) object);
-		TupleType tupleType = null;
-		if (object instanceof Relation) {
-			tupleType = TypesUtil.createRelationTupleType(envFactory, (Relation) object);
-		} else if (object instanceof CoherenceConstraint) {
-			tupleType = TypesUtil.createCoherenceConstraintTupleType(envFactory, (CoherenceConstraint) object);
-		} else if (object instanceof LocationConstraint) {
-			tupleType = TypesUtil.createLocationConstraintTupleType(envFactory, (LocationConstraint) object);
-		} else if (object instanceof ResourceConstraint) {
-			// outer tuple type has exactly 2 parts
-			if (tupleValue.getTypeId().getPartIds().length == 2) {
-				tupleType = TypesUtil.createResourceConstraintOuterTupleType(envFactory, (ResourceConstraint) object);
-			} else {
-				tupleType = TypesUtil.createResourceConstraintInnerTupleType(envFactory, (ResourceConstraint) object);
-			}
-		} else if (object instanceof QoSDimension) {
-			tupleType = TypesUtil.createQoSDimensionTupleType(envFactory, (QoSDimension) object);
-		} else {
-			throw new IllegalArgumentException(
-					String.format(unexpectedObject, object));
-		}
-		return getPart(tupleValue, namedPart, (EvaluableElement) object, tupleType, unboxValue);
 	}
 	
 	@Operation(kind=Kind.QUERY)
