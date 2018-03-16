@@ -49,19 +49,52 @@ public class QVToTransformationTest {
 		}
 	}
 	
+	public static class ExpectedTransformationStatus {
+		private int code;
+		private String message;
+		
+		public ExpectedTransformationStatus(int code, String message) {
+			this.code = code;
+			this.message = message;
+		}
+		
+		public ExpectedTransformationStatus(int code) {
+			this(code, null);
+		}
+		
+		public ExpectedTransformationStatus() {
+			this(ExecutionDiagnostic.OK);
+		}
+		
+		public int getCode() {
+			return code;
+		}
+		
+		public String getMessage() {
+			return message;
+		}
+	}
+	
 	private static final String PARAM_MISM =
 			"number of transformation parameters and inParamsAndExpOuts differ";
 	private static final String INOUT_UNSUP =
 			"inout parameters are currently not supported";
+	private static final String ERROR_EXPOUT =
+			"an error is expected => expected out parameters have to be null";
 	
 	protected QVToTransformationRunner runner;
 	protected List<ExpectedOutput> expectedList;
+	protected ExpectedTransformationStatus expectedTransformationStatus;
 	
 	/**
 	 * Creates a new QVToTransformationTest instance.
 	 * 
 	 * @param transformationURI			the uri to the transformation file
 	 * @param configurationPropertyMap	the transformation properties
+	 * @param expTransformationStatus   the expected transformation status. If a non-successful
+	 * 									transformation run is expected, then for every
+	 * 									out parameter, null has to be specified in
+	 * 									inParamsAndExpOuts.
 	 * @param inParamsAndExpOuts		array, whose elements are of type EObject or String,
 	 * 									that represents the tranformation's in parameters
 	 * 									or an expected out parameter. If the i-th transformation
@@ -76,12 +109,25 @@ public class QVToTransformationTest {
 	 */
 	public QVToTransformationTest(String transformationURI,
 			Map<String, Object> configurationPropertyMap,
+			ExpectedTransformationStatus expTransformationStatus,
 			Object... inParamsAndExpOuts) {
+		expectedTransformationStatus = expTransformationStatus;
 		expectedList = new ArrayList<ExpectedOutput>();
 		IModelExtentProvider[] modelExtentProviders = createModelExtentProviders(transformationURI,
 				inParamsAndExpOuts);
 		this.runner = new QVToTransformationRunner(transformationURI,
 				configurationPropertyMap, modelExtentProviders);
+	}
+	
+	/* 
+	 * Just for convenience (see above for the description)
+	 */
+	public QVToTransformationTest(String transformationURI,
+			Map<String, Object> configurationPropertyMap,
+			Object... inParamsAndExpOuts) {
+		this(transformationURI, configurationPropertyMap,
+				new ExpectedTransformationStatus(),
+				inParamsAndExpOuts);
 	}
 	
 	protected IModelExtentProvider[] createModelExtentProviders(String transformationURI,
@@ -105,6 +151,9 @@ public class QVToTransformationTest {
 									(EObject) item));
 				}
 			} else if (parameter.getDirectionKind() == TransformationParameter.DirectionKind.OUT) {
+				if (isErrorExpected() && item != null) {
+					throw new IllegalArgumentException(ERROR_EXPOUT);
+				}
 				if (item instanceof String) {
 					expectedList.add(new ExpectedOutput((String) item));
 				} else if (item instanceof EObject) {
@@ -131,11 +180,18 @@ public class QVToTransformationTest {
 	@Test
 	public void test() {
 		checkTransformationRun(runner.runTransformation());
-		checkTransformationResult();
+		if (!isErrorExpected()) {
+			checkTransformationResult();
+		}
 	}
 	
 	protected void checkTransformationRun(ExecutionDiagnostic result) {
-		Assert.assertEquals(Diagnostic.OK, result.getCode());
+		Assert.assertEquals(expectedTransformationStatus.getCode(),
+				result.getCode());
+		if (expectedTransformationStatus.getMessage() != null) {
+			Assert.assertEquals(expectedTransformationStatus.getMessage(),
+					result.getMessage());
+		}
 	}
 	
 	protected void checkTransformationResult() {
@@ -147,6 +203,10 @@ public class QVToTransformationTest {
 			ModelTestUtil.assertModelEquals(expectedList.get(i).getData(),
 					transformationResultList.get(0));
 		}
+	}
+	
+	protected boolean isErrorExpected() {
+		return expectedTransformationStatus.getCode() != ExecutionDiagnostic.OK;
 	}
 	
 	/*

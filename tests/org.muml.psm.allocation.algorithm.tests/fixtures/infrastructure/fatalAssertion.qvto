@@ -1,0 +1,8 @@
+modeltype ecore uses ecore ('http://www.eclipse.org/emf/2002/Ecore');
+
+transformation test(in source : ecore, out output : ecore);
+
+main() {
+	assert (false) with log("logged, but not fatal");
+	assert fatal (false) with log("Oh my! Something went terribly wrong");
+}
