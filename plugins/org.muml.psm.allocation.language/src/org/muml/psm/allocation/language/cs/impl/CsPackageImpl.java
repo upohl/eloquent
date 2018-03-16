@@ -254,7 +254,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 *
+	 * 
 	 * <p>This method is used to initialize {@link CsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -268,8 +268,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		if (isInited) return (CsPackage)EPackage.Registry.INSTANCE.getEPackage(CsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Object registeredCsPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-		CsPackageImpl theCsPackage = registeredCsPackage instanceof CsPackageImpl ? (CsPackageImpl)registeredCsPackage : new CsPackageImpl();
+		Object ePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		CsPackageImpl theCsPackage = (CsPackageImpl)(ePackage instanceof CsPackageImpl ? ePackage : new CsPackageImpl());
 
 		isInited = true;
 
@@ -288,7 +288,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
-			(theCsPackage,
+			(theCsPackage, 
 			 new EValidator.Descriptor() {
 				 public EValidator getEValidator() {
 					 return CsValidator.INSTANCE;
@@ -298,6 +298,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		// Mark meta-data to indicate it can't be changed
 		theCsPackage.freeze();
 
+  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(CsPackage.eNS_URI, theCsPackage);
 		return theCsPackage;
@@ -1080,26 +1081,26 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * @generated
 	 */
 	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";
+		String source = "http://www.eclipse.org/emf/2002/Ecore";	
 		addAnnotation
-		  (this,
-		   source,
+		  (this, 
+		   source, 
 		   new String[] {
-			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
-		   });
+			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+		   });	
 		addAnnotation
-		  (relationCSEClass,
-		   source,
+		  (relationCSEClass, 
+		   source, 
 		   new String[] {
-			   "constraints", "exactlyOnePair"
-		   });
+			 "constraints", "exactlyOnePair"
+		   });	
 		addAnnotation
-		  (coherenceConstraintCSEClass,
-		   source,
+		  (coherenceConstraintCSEClass, 
+		   source, 
 		   new String[] {
-			   "constraints", "exactlyOnePair"
+			 "constraints", "exactlyOnePair"
 		   });
 	}
 
@@ -1110,18 +1111,18 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * @generated
 	 */
 	protected void createPivotAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
 		addAnnotation
-		  (relationCSEClass,
-		   source,
+		  (relationCSEClass, 
+		   source, 
 		   new String[] {
-			   "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
-		   });
+			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
+		   });	
 		addAnnotation
-		  (coherenceConstraintCSEClass,
-		   source,
+		  (coherenceConstraintCSEClass, 
+		   source, 
 		   new String[] {
-			   "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
+			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
 		   });
 	}
 

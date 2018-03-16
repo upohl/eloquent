@@ -246,7 +246,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 *
+	 * 
 	 * <p>This method is used to initialize {@link AsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -260,8 +260,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		if (isInited) return (AsPackage)EPackage.Registry.INSTANCE.getEPackage(AsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Object registeredAsPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-		AsPackageImpl theAsPackage = registeredAsPackage instanceof AsPackageImpl ? (AsPackageImpl)registeredAsPackage : new AsPackageImpl();
+		Object ePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		AsPackageImpl theAsPackage = (AsPackageImpl)(ePackage instanceof AsPackageImpl ? ePackage : new AsPackageImpl());
 
 		isInited = true;
 
@@ -276,7 +276,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
-			(theAsPackage,
+			(theAsPackage, 
 			 new EValidator.Descriptor() {
 				 public EValidator getEValidator() {
 					 return AsValidator.INSTANCE;
@@ -286,6 +286,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		// Mark meta-data to indicate it can't be changed
 		theAsPackage.freeze();
 
+  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(AsPackage.eNS_URI, theAsPackage);
 		return theAsPackage;
@@ -1041,26 +1042,26 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * @generated
 	 */
 	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";
+		String source = "http://www.eclipse.org/emf/2002/Ecore";	
 		addAnnotation
-		  (this,
-		   source,
+		  (this, 
+		   source, 
 		   new String[] {
-			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
-		   });
+			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+		   });	
 		addAnnotation
-		  (relationEClass,
-		   source,
+		  (relationEClass, 
+		   source, 
 		   new String[] {
-			   "constraints", "exactlyOnePair"
-		   });
+			 "constraints", "exactlyOnePair"
+		   });	
 		addAnnotation
-		  (coherenceConstraintEClass,
-		   source,
+		  (coherenceConstraintEClass, 
+		   source, 
 		   new String[] {
-			   "constraints", "exactlyOnePair"
+			 "constraints", "exactlyOnePair"
 		   });
 	}
 
@@ -1071,18 +1072,18 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * @generated
 	 */
 	protected void createPivotAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
 		addAnnotation
-		  (relationEClass,
-		   source,
+		  (relationEClass, 
+		   source, 
 		   new String[] {
-			   "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
-		   });
+			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
+		   });	
 		addAnnotation
-		  (coherenceConstraintEClass,
-		   source,
+		  (coherenceConstraintEClass, 
+		   source, 
 		   new String[] {
-			   "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
+			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
 		   });
 	}
 

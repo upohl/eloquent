@@ -155,15 +155,6 @@ public interface AsPackage extends EPackage {
 	int SPECIFICATION__OWNED_PACKAGES = PivotPackage.MODEL__OWNED_PACKAGES;
 
 	/**
-	 * The feature id for the '<em><b>Xmiid Version</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__XMIID_VERSION = PivotPackage.MODEL__XMIID_VERSION;
-
-	/**
 	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
