@@ -34,6 +34,15 @@ helper ResourceConstraint::createTrace(tupleValues : Sequence(TupleValue)) {
 		)->collect(oclAsType(TupleValue)));
 }
 
+helper ImplicationConstraint::createTrace(tupleValues : Sequence(TupleValue)) {
+	createTrace(self, tupleValues);
+	createTrace(self,
+		tupleValues->collect(tv : TupleValue | 
+			tv.getSequence(self.tupleDescriptor.premise)
+				->union(tv.getSequence(self.tupleDescriptor.conclusion))
+		))
+}
+
 -- associate each tuple value in tupleValues with the passed evaluableElement
 helper createTrace(evaluableElement : EvaluableElement, tupleValues : Sequence(TupleValue)) {
 	tupleValues->map OCLEvaluator::createTrace(evaluableElement);
@@ -86,6 +95,19 @@ query TupleDescriptor::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
 
 query LocationConstraint::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
 	return self.tupleDescriptor.toSequence(tupleValue);
+}
+
+query ImplicationConstraint::toSequence(tupleValue : TupleValue) : Sequence(Sequence(Sequence(OclAny))) {
+	return Sequence {
+		tupleValue.getSequence(self.tupleDescriptor.premise)
+			->collectNested(tv : TupleValue |
+				self.tupleDescriptor.premiseTupleDescriptor.toSequence(tv)
+			),
+		tupleValue.getSequence(self.tupleDescriptor.conclusion)
+			->collectNested(tv: TupleValue |
+				self.tupleDescriptor.conclusionTupleDescriptor.toSequence(tv)
+			)
+	};
 }
 
 // Note: it is not possible to generalize the next two queries into

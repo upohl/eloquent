@@ -1,0 +1,87 @@
+import Expressions;
+import OCLEvaluator;
+import TupleAccessor;
+import Sort;
+import Variables;
+import VariableHelper;
+
+modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
+modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
+modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
+
+library ImplicationConstraintLib;
+
+helper Specification::createImplicationConstraints(inout ilp : IntegerLinearProgram,
+	oclContext : OclAny) {
+	self.getImplicationConstraints()->createImplicationConstraint(ilp,
+		oclContext);
+}
+
+helper ImplicationConstraint::createImplicationConstraint(inout ilp : IntegerLinearProgram,
+	oclContext : OclAny) {
+	var comment : String := if self.name <> '' then self.name else null endif;
+	self.evaluateOCL(oclContext).asTupleValueSequence()->collectNested(tv : TupleValue |
+		let seq : Sequence(Sequence(Sequence(OclAny)))
+		=
+		tv.toSequence()->oclAsType(Sequence(Sequence(OclAny)))
+		in
+		Sequence {
+			seq->at(1)->sortInnerSequence(),
+			seq->at(2)->sortInnerSequence()
+		}
+	)->sortOuterSequence()->forEach(seq) {
+		seq->createImplicationConstraintExpression(ilp, comment);
+	};
+}
+
+helper Sequence(Sequence(Sequence(OclAny)))::createImplicationConstraintExpression(inout ilp : IntegerLinearProgram,
+	comment : String) {
+	var premiseSequence : Sequence(Sequence(OclAny)) := self->at(1);
+	var conclusionSequence : Sequence(Sequence(OclAny)) := self->at(2);
+	if (premiseSequence->isEmpty()) {
+		return;
+	} endif;
+	-- makes no sense (and probably an error => fail early)
+	assert fatal (conclusionSequence->notEmpty()) with log('empty conclusion');
+	premiseSequence->union(conclusionSequence)->forEach(seq) {
+		seq->createHelperVariableAndConstraints(ilp);
+	};
+	var premiseExpression : Expression := premiseSequence->createAdditionExpression();
+	var conclusionExpression : Expression := new ArithmeticExpression(
+		new LiteralExpression((premiseSequence->size() - 1).toString()),
+		conclusionSequence->createAdditionExpression(),
+		Operator::PLUS);
+	ilp.constraints += new ConstraintExpression(premiseExpression,
+		conclusionExpression, Operator::LESS_THAN_OR_EQUAL_TO, comment);
+}
+
+query Sequence(Sequence(OclAny))::sortInnerSequence() : Sequence(Sequence(OclAny)) {
+	return self->collectNested(seq : Sequence(OclAny) |
+		seq->sortComponentResourceSequence() -- reorders the "inner sequence" seq
+	)->sortedBy(seq : Sequence(OclAny) |
+		seq->getVariableName() -- sort the "outer sequence"
+	);
+}
+
+query Sequence(Sequence(Sequence(Sequence(OclAny))))::sortOuterSequence() : Sequence(Sequence(Sequence(Sequence(OclAny)))) {
+	return self->sortedBy(seq : Sequence(Sequence(Sequence(OclAny))) |
+		seq->at(1)->getSequenceId()
+			+ ILLEGAL_VARIABLE_CHARS()->at(1)
+			+ ILLEGAL_VARIABLE_CHARS()->at(1) -- two delimiters are needed
+			+ seq->at(2)->getSequenceId()
+	);
+}
+
+query Sequence(Sequence(OclAny))::getSequenceId() : String {
+	return ILLEGAL_VARIABLE_CHARS()->at(1).join(
+		self->collect(seq : Sequence(OclAny) |
+			seq->getVariableName()
+		)
+	)
+}
+
+query Specification::getImplicationConstraints() : Sequence(ImplicationConstraint) {
+	return self.constraints->select(
+		oclIsKindOf(ImplicationConstraint)
+	)->collect(oclAsType(ImplicationConstraint));
+}
