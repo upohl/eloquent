@@ -63,9 +63,11 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 			case AsPackage.COHERENCE_CONSTRAINT: return createCoherenceConstraint();
 			case AsPackage.RESOURCE_CONSTRAINT: return createResourceConstraint();
 			case AsPackage.LOCATION_CONSTRAINT: return createLocationConstraint();
+			case AsPackage.IMPLICATION_CONSTRAINT: return createImplicationConstraint();
 			case AsPackage.TUPLE_DESCRIPTOR: return createTupleDescriptor();
 			case AsPackage.WEIGHT_TUPLE_DESCRIPTOR: return createWeightTupleDescriptor();
 			case AsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR: return createBoundWeightTupleDescriptor();
+			case AsPackage.IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR: return createImplicationConstraintTupleDescriptor();
 			case AsPackage.TYPED_NAMED_PART: return createTypedNamedPart();
 			case AsPackage.TYPED_PAIR: return createTypedPair();
 			case AsPackage.MEASURE_FUNCTION: return createMeasureFunction();
@@ -177,6 +179,16 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ImplicationConstraint createImplicationConstraint() {
+		ImplicationConstraintImpl implicationConstraint = new ImplicationConstraintImpl();
+		return implicationConstraint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TupleDescriptor createTupleDescriptor() {
 		TupleDescriptorImpl tupleDescriptor = new TupleDescriptorImpl();
 		return tupleDescriptor;
@@ -200,6 +212,16 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	public BoundWeightTupleDescriptor createBoundWeightTupleDescriptor() {
 		BoundWeightTupleDescriptorImpl boundWeightTupleDescriptor = new BoundWeightTupleDescriptorImpl();
 		return boundWeightTupleDescriptor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImplicationConstraintTupleDescriptor createImplicationConstraintTupleDescriptor() {
+		ImplicationConstraintTupleDescriptorImpl implicationConstraintTupleDescriptor = new ImplicationConstraintTupleDescriptorImpl();
+		return implicationConstraintTupleDescriptor;
 	}
 
 	/**

@@ -62,6 +62,16 @@ public abstract class AbstractCsContainmentVisitor
 	}
 
 	@Override
+	public @Nullable Continuation<?> visitImplicationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ImplicationConstraintCS csElement) {
+		return visitConstraintCS(csElement);
+	}
+
+	@Override
+	public @Nullable Continuation<?> visitImplicationConstraintTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull ImplicationConstraintTupleDescriptorCS csElement) {
+		return visitModelElementCS(csElement);
+	}
+
+	@Override
 	public @Nullable Continuation<?> visitJavaImplementationProviderCS(org.muml.psm.allocation.language.cs.@NonNull JavaImplementationProviderCS csElement) {
 		return visitModelElementCS(csElement);
 	}

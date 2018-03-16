@@ -31,6 +31,8 @@ import org.muml.psm.allocation.language.cs.CsFactory;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.EvaluableElementCS;
 import org.muml.psm.allocation.language.cs.Goal;
+import org.muml.psm.allocation.language.cs.ImplicationConstraintCS;
+import org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.JavaImplementationProviderCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
@@ -117,6 +119,13 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass implicationConstraintCSEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass tupleDescriptorCSEClass = null;
 
 	/**
@@ -132,6 +141,13 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * @generated
 	 */
 	private EClass boundWeightTupleDescriptorCSEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass implicationConstraintTupleDescriptorCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -238,7 +254,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link CsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -252,8 +268,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		if (isInited) return (CsPackage)EPackage.Registry.INSTANCE.getEPackage(CsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Object ePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-		CsPackageImpl theCsPackage = (CsPackageImpl)(ePackage instanceof CsPackageImpl ? ePackage : new CsPackageImpl());
+		Object registeredCsPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		CsPackageImpl theCsPackage = registeredCsPackage instanceof CsPackageImpl ? (CsPackageImpl)registeredCsPackage : new CsPackageImpl();
 
 		isInited = true;
 
@@ -272,7 +288,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
-			(theCsPackage, 
+			(theCsPackage,
 			 new EValidator.Descriptor() {
 				 public EValidator getEValidator() {
 					 return CsValidator.INSTANCE;
@@ -282,7 +298,6 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		// Mark meta-data to indicate it can't be changed
 		theCsPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(CsPackage.eNS_URI, theCsPackage);
 		return theCsPackage;
@@ -527,6 +542,24 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getImplicationConstraintCS() {
+		return implicationConstraintCSEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getImplicationConstraintCS_TupleDescriptor() {
+		return (EReference)implicationConstraintCSEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTupleDescriptorCS() {
 		return tupleDescriptorCSEClass;
 	}
@@ -574,6 +607,51 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 */
 	public EAttribute getBoundWeightTupleDescriptorCS_Bound() {
 		return (EAttribute)boundWeightTupleDescriptorCSEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getImplicationConstraintTupleDescriptorCS() {
+		return implicationConstraintTupleDescriptorCSEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getImplicationConstraintTupleDescriptorCS_Premise() {
+		return (EAttribute)implicationConstraintTupleDescriptorCSEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getImplicationConstraintTupleDescriptorCS_PremiseTupleDescriptor() {
+		return (EReference)implicationConstraintTupleDescriptorCSEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getImplicationConstraintTupleDescriptorCS_Conclusion() {
+		return (EAttribute)implicationConstraintTupleDescriptorCSEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getImplicationConstraintTupleDescriptorCS_ConclusionTupleDescriptor() {
+		return (EReference)implicationConstraintTupleDescriptorCSEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -782,6 +860,9 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		locationConstraintCSEClass = createEClass(LOCATION_CONSTRAINT_CS);
 		createEReference(locationConstraintCSEClass, LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR);
 
+		implicationConstraintCSEClass = createEClass(IMPLICATION_CONSTRAINT_CS);
+		createEReference(implicationConstraintCSEClass, IMPLICATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR);
+
 		tupleDescriptorCSEClass = createEClass(TUPLE_DESCRIPTOR_CS);
 		createEReference(tupleDescriptorCSEClass, TUPLE_DESCRIPTOR_CS__TYPED_PAIRS);
 
@@ -790,6 +871,12 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		boundWeightTupleDescriptorCSEClass = createEClass(BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS);
 		createEAttribute(boundWeightTupleDescriptorCSEClass, BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__BOUND);
+
+		implicationConstraintTupleDescriptorCSEClass = createEClass(IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS);
+		createEAttribute(implicationConstraintTupleDescriptorCSEClass, IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__PREMISE);
+		createEReference(implicationConstraintTupleDescriptorCSEClass, IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__PREMISE_TUPLE_DESCRIPTOR);
+		createEAttribute(implicationConstraintTupleDescriptorCSEClass, IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__CONCLUSION);
+		createEReference(implicationConstraintTupleDescriptorCSEClass, IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__CONCLUSION_TUPLE_DESCRIPTOR);
 
 		typedNamedPartCSEClass = createEClass(TYPED_NAMED_PART_CS);
 
@@ -864,9 +951,11 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		coherenceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		resourceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		locationConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
+		implicationConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		tupleDescriptorCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
 		weightTupleDescriptorCSEClass.getESuperTypes().add(this.getTupleDescriptorCS());
 		boundWeightTupleDescriptorCSEClass.getESuperTypes().add(this.getWeightTupleDescriptorCS());
+		implicationConstraintTupleDescriptorCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
 		typedNamedPartCSEClass.getESuperTypes().add(theBaseCSPackage.getTypedElementCS());
 		typedPairCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
 		measureFunctionCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
@@ -912,6 +1001,9 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEClass(locationConstraintCSEClass, LocationConstraintCS.class, "LocationConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLocationConstraintCS_TupleDescriptor(), this.getTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, LocationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(implicationConstraintCSEClass, ImplicationConstraintCS.class, "ImplicationConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getImplicationConstraintCS_TupleDescriptor(), this.getImplicationConstraintTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, ImplicationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(tupleDescriptorCSEClass, TupleDescriptorCS.class, "TupleDescriptorCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTupleDescriptorCS_TypedPairs(), this.getTypedPairCS(), null, "typedPairs", null, 1, -1, TupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -920,6 +1012,12 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		initEClass(boundWeightTupleDescriptorCSEClass, BoundWeightTupleDescriptorCS.class, "BoundWeightTupleDescriptorCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBoundWeightTupleDescriptorCS_Bound(), ecorePackage.getEString(), "bound", null, 1, 1, BoundWeightTupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(implicationConstraintTupleDescriptorCSEClass, ImplicationConstraintTupleDescriptorCS.class, "ImplicationConstraintTupleDescriptorCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getImplicationConstraintTupleDescriptorCS_Premise(), ecorePackage.getEString(), "premise", null, 1, 1, ImplicationConstraintTupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getImplicationConstraintTupleDescriptorCS_PremiseTupleDescriptor(), this.getTupleDescriptorCS(), null, "premiseTupleDescriptor", null, 1, 1, ImplicationConstraintTupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImplicationConstraintTupleDescriptorCS_Conclusion(), ecorePackage.getEString(), "conclusion", null, 1, 1, ImplicationConstraintTupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getImplicationConstraintTupleDescriptorCS_ConclusionTupleDescriptor(), this.getTupleDescriptorCS(), null, "conclusionTupleDescriptor", null, 1, 1, ImplicationConstraintTupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(typedNamedPartCSEClass, TypedNamedPartCS.class, "TypedNamedPartCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -982,26 +1080,26 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * @generated
 	 */
 	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
-			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
-		   });	
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+		   });
 		addAnnotation
-		  (relationCSEClass, 
-		   source, 
+		  (relationCSEClass,
+		   source,
 		   new String[] {
-			 "constraints", "exactlyOnePair"
-		   });	
+			   "constraints", "exactlyOnePair"
+		   });
 		addAnnotation
-		  (coherenceConstraintCSEClass, 
-		   source, 
+		  (coherenceConstraintCSEClass,
+		   source,
 		   new String[] {
-			 "constraints", "exactlyOnePair"
+			   "constraints", "exactlyOnePair"
 		   });
 	}
 
@@ -1012,18 +1110,18 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * @generated
 	 */
 	protected void createPivotAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
 		addAnnotation
-		  (relationCSEClass, 
-		   source, 
+		  (relationCSEClass,
+		   source,
 		   new String[] {
-			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
-		   });	
+			   "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
+		   });
 		addAnnotation
-		  (coherenceConstraintCSEClass, 
-		   source, 
+		  (coherenceConstraintCSEClass,
+		   source,
 		   new String[] {
-			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
+			   "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
 		   });
 	}
 

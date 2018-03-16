@@ -155,6 +155,15 @@ public interface AsPackage extends EPackage {
 	int SPECIFICATION__OWNED_PACKAGES = PivotPackage.MODEL__OWNED_PACKAGES;
 
 	/**
+	 * The feature id for the '<em><b>Xmiid Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__XMIID_VERSION = PivotPackage.MODEL__XMIID_VERSION;
+
+	/**
 	 * The feature id for the '<em><b>Relations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -792,6 +801,88 @@ public interface AsPackage extends EPackage {
 	int LOCATION_CONSTRAINT_FEATURE_COUNT = CONSTRAINT_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.ImplicationConstraintImpl <em>Implication Constraint</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.as.impl.ImplicationConstraintImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getImplicationConstraint()
+	 * @generated
+	 */
+	int IMPLICATION_CONSTRAINT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT__ANNOTATING_COMMENTS = CONSTRAINT__ANNOTATING_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT__OWNED_ANNOTATIONS = CONSTRAINT__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT__OWNED_COMMENTS = CONSTRAINT__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT__OWNED_EXTENSIONS = CONSTRAINT__OWNED_EXTENSIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT__NAME = CONSTRAINT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT__EXPRESSION = CONSTRAINT__EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT__TUPLE_DESCRIPTOR = CONSTRAINT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Implication Constraint</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_FEATURE_COUNT = CONSTRAINT_FEATURE_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.TupleDescriptorImpl <em>Tuple Descriptor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -799,7 +890,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getTupleDescriptor()
 	 * @generated
 	 */
-	int TUPLE_DESCRIPTOR = 8;
+	int TUPLE_DESCRIPTOR = 9;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -863,7 +954,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getWeightTupleDescriptor()
 	 * @generated
 	 */
-	int WEIGHT_TUPLE_DESCRIPTOR = 9;
+	int WEIGHT_TUPLE_DESCRIPTOR = 10;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -936,7 +1027,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getBoundWeightTupleDescriptor()
 	 * @generated
 	 */
-	int BOUND_WEIGHT_TUPLE_DESCRIPTOR = 10;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR = 11;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1011,6 +1102,97 @@ public interface AsPackage extends EPackage {
 	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_FEATURE_COUNT = WEIGHT_TUPLE_DESCRIPTOR_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.ImplicationConstraintTupleDescriptorImpl <em>Implication Constraint Tuple Descriptor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.as.impl.ImplicationConstraintTupleDescriptorImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getImplicationConstraintTupleDescriptor()
+	 * @generated
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR = 12;
+
+	/**
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR__ANNOTATING_COMMENTS = PivotPackage.ELEMENT__ANNOTATING_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR__OWNED_ANNOTATIONS = PivotPackage.ELEMENT__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR__OWNED_COMMENTS = PivotPackage.ELEMENT__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR__OWNED_EXTENSIONS = PivotPackage.ELEMENT__OWNED_EXTENSIONS;
+
+	/**
+	 * The feature id for the '<em><b>Premise</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR__PREMISE = PivotPackage.ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Premise Tuple Descriptor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR__PREMISE_TUPLE_DESCRIPTOR = PivotPackage.ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Conclusion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR__CONCLUSION = PivotPackage.ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Conclusion Tuple Descriptor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR__CONCLUSION_TUPLE_DESCRIPTOR = PivotPackage.ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Implication Constraint Tuple Descriptor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_FEATURE_COUNT = PivotPackage.ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.TypedNamedPartImpl <em>Typed Named Part</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1018,7 +1200,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getTypedNamedPart()
 	 * @generated
 	 */
-	int TYPED_NAMED_PART = 11;
+	int TYPED_NAMED_PART = 13;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1109,7 +1291,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getTypedPair()
 	 * @generated
 	 */
-	int TYPED_PAIR = 12;
+	int TYPED_PAIR = 14;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1182,7 +1364,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getMeasureFunction()
 	 * @generated
 	 */
-	int MEASURE_FUNCTION = 13;
+	int MEASURE_FUNCTION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1246,7 +1428,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getService()
 	 * @generated
 	 */
-	int SERVICE = 14;
+	int SERVICE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1319,7 +1501,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getQoSDimension()
 	 * @generated
 	 */
-	int QO_SDIMENSION = 15;
+	int QO_SDIMENSION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1401,7 +1583,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getJavaImplementationProvider()
 	 * @generated
 	 */
-	int JAVA_IMPLEMENTATION_PROVIDER = 16;
+	int JAVA_IMPLEMENTATION_PROVIDER = 18;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1456,7 +1638,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getNameProvider()
 	 * @generated
 	 */
-	int NAME_PROVIDER = 17;
+	int NAME_PROVIDER = 19;
 
 	/**
 	 * The number of structural features of the '<em>Name Provider</em>' class.
@@ -1475,7 +1657,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getStorageProvider()
 	 * @generated
 	 */
-	int STORAGE_PROVIDER = 18;
+	int STORAGE_PROVIDER = 20;
 
 	/**
 	 * The number of structural features of the '<em>Storage Provider</em>' class.
@@ -1494,7 +1676,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getOCLContext()
 	 * @generated
 	 */
-	int OCL_CONTEXT = 19;
+	int OCL_CONTEXT = 21;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1585,7 +1767,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getCoherenceConstraintType()
 	 * @generated
 	 */
-	int COHERENCE_CONSTRAINT_TYPE = 20;
+	int COHERENCE_CONSTRAINT_TYPE = 22;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.Goal <em>Goal</em>}' enum.
@@ -1595,7 +1777,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getGoal()
 	 * @generated
 	 */
-	int GOAL = 21;
+	int GOAL = 23;
 
 
 	/**
@@ -1855,6 +2037,27 @@ public interface AsPackage extends EPackage {
 	EReference getLocationConstraint_TupleDescriptor();
 
 	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.ImplicationConstraint <em>Implication Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Implication Constraint</em>'.
+	 * @see org.muml.psm.allocation.language.as.ImplicationConstraint
+	 * @generated
+	 */
+	EClass getImplicationConstraint();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.ImplicationConstraint#getTupleDescriptor <em>Tuple Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.as.ImplicationConstraint#getTupleDescriptor()
+	 * @see #getImplicationConstraint()
+	 * @generated
+	 */
+	EReference getImplicationConstraint_TupleDescriptor();
+
+	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.TupleDescriptor <em>Tuple Descriptor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1916,6 +2119,60 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBoundWeightTupleDescriptor_Bound();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.ImplicationConstraintTupleDescriptor <em>Implication Constraint Tuple Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Implication Constraint Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.as.ImplicationConstraintTupleDescriptor
+	 * @generated
+	 */
+	EClass getImplicationConstraintTupleDescriptor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.as.ImplicationConstraintTupleDescriptor#getPremise <em>Premise</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Premise</em>'.
+	 * @see org.muml.psm.allocation.language.as.ImplicationConstraintTupleDescriptor#getPremise()
+	 * @see #getImplicationConstraintTupleDescriptor()
+	 * @generated
+	 */
+	EAttribute getImplicationConstraintTupleDescriptor_Premise();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.ImplicationConstraintTupleDescriptor#getPremiseTupleDescriptor <em>Premise Tuple Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Premise Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.as.ImplicationConstraintTupleDescriptor#getPremiseTupleDescriptor()
+	 * @see #getImplicationConstraintTupleDescriptor()
+	 * @generated
+	 */
+	EReference getImplicationConstraintTupleDescriptor_PremiseTupleDescriptor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.as.ImplicationConstraintTupleDescriptor#getConclusion <em>Conclusion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Conclusion</em>'.
+	 * @see org.muml.psm.allocation.language.as.ImplicationConstraintTupleDescriptor#getConclusion()
+	 * @see #getImplicationConstraintTupleDescriptor()
+	 * @generated
+	 */
+	EAttribute getImplicationConstraintTupleDescriptor_Conclusion();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.ImplicationConstraintTupleDescriptor#getConclusionTupleDescriptor <em>Conclusion Tuple Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Conclusion Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.as.ImplicationConstraintTupleDescriptor#getConclusionTupleDescriptor()
+	 * @see #getImplicationConstraintTupleDescriptor()
+	 * @generated
+	 */
+	EReference getImplicationConstraintTupleDescriptor_ConclusionTupleDescriptor();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.TypedNamedPart <em>Typed Named Part</em>}'.
@@ -2313,6 +2570,24 @@ public interface AsPackage extends EPackage {
 		EReference LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR = eINSTANCE.getLocationConstraint_TupleDescriptor();
 
 		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.ImplicationConstraintImpl <em>Implication Constraint</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.as.impl.ImplicationConstraintImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getImplicationConstraint()
+		 * @generated
+		 */
+		EClass IMPLICATION_CONSTRAINT = eINSTANCE.getImplicationConstraint();
+
+		/**
+		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IMPLICATION_CONSTRAINT__TUPLE_DESCRIPTOR = eINSTANCE.getImplicationConstraint_TupleDescriptor();
+
+		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.TupleDescriptorImpl <em>Tuple Descriptor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2365,6 +2640,48 @@ public interface AsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BOUND_WEIGHT_TUPLE_DESCRIPTOR__BOUND = eINSTANCE.getBoundWeightTupleDescriptor_Bound();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.ImplicationConstraintTupleDescriptorImpl <em>Implication Constraint Tuple Descriptor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.as.impl.ImplicationConstraintTupleDescriptorImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getImplicationConstraintTupleDescriptor()
+		 * @generated
+		 */
+		EClass IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR = eINSTANCE.getImplicationConstraintTupleDescriptor();
+
+		/**
+		 * The meta object literal for the '<em><b>Premise</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR__PREMISE = eINSTANCE.getImplicationConstraintTupleDescriptor_Premise();
+
+		/**
+		 * The meta object literal for the '<em><b>Premise Tuple Descriptor</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR__PREMISE_TUPLE_DESCRIPTOR = eINSTANCE.getImplicationConstraintTupleDescriptor_PremiseTupleDescriptor();
+
+		/**
+		 * The meta object literal for the '<em><b>Conclusion</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR__CONCLUSION = eINSTANCE.getImplicationConstraintTupleDescriptor_Conclusion();
+
+		/**
+		 * The meta object literal for the '<em><b>Conclusion Tuple Descriptor</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR__CONCLUSION_TUPLE_DESCRIPTOR = eINSTANCE.getImplicationConstraintTupleDescriptor_ConclusionTupleDescriptor();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.TypedNamedPartImpl <em>Typed Named Part</em>}' class.

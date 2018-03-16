@@ -875,6 +875,97 @@ public interface CsPackage extends EPackage {
 	int LOCATION_CONSTRAINT_CS_FEATURE_COUNT = CONSTRAINT_CS_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.ImplicationConstraintCSImpl <em>Implication Constraint CS</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.cs.impl.ImplicationConstraintCSImpl
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getImplicationConstraintCS()
+	 * @generated
+	 */
+	int IMPLICATION_CONSTRAINT_CS = 8;
+
+	/**
+	 * The feature id for the '<em><b>Csi</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_CS__CSI = CONSTRAINT_CS__CSI;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_CS__PARENT = CONSTRAINT_CS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Pivot</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_CS__PIVOT = CONSTRAINT_CS__PIVOT;
+
+	/**
+	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_CS__ORIGINAL_XMI_ID = CONSTRAINT_CS__ORIGINAL_XMI_ID;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_CS__OWNED_ANNOTATIONS = CONSTRAINT_CS__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_CS__NAME = CONSTRAINT_CS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_CS__EXPRESSION = CONSTRAINT_CS__EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR = CONSTRAINT_CS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Implication Constraint CS</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_CS_FEATURE_COUNT = CONSTRAINT_CS_FEATURE_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.TupleDescriptorCSImpl <em>Tuple Descriptor CS</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -882,7 +973,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getTupleDescriptorCS()
 	 * @generated
 	 */
-	int TUPLE_DESCRIPTOR_CS = 8;
+	int TUPLE_DESCRIPTOR_CS = 9;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -955,7 +1046,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getWeightTupleDescriptorCS()
 	 * @generated
 	 */
-	int WEIGHT_TUPLE_DESCRIPTOR_CS = 9;
+	int WEIGHT_TUPLE_DESCRIPTOR_CS = 10;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1037,7 +1128,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getBoundWeightTupleDescriptorCS()
 	 * @generated
 	 */
-	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS = 10;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS = 11;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1121,6 +1212,106 @@ public interface CsPackage extends EPackage {
 	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT = WEIGHT_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.ImplicationConstraintTupleDescriptorCSImpl <em>Implication Constraint Tuple Descriptor CS</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.cs.impl.ImplicationConstraintTupleDescriptorCSImpl
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getImplicationConstraintTupleDescriptorCS()
+	 * @generated
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS = 12;
+
+	/**
+	 * The feature id for the '<em><b>Csi</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__CSI = BaseCSPackage.MODEL_ELEMENT_CS__CSI;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__PARENT = BaseCSPackage.MODEL_ELEMENT_CS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Pivot</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__PIVOT = BaseCSPackage.MODEL_ELEMENT_CS__PIVOT;
+
+	/**
+	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__ORIGINAL_XMI_ID = BaseCSPackage.MODEL_ELEMENT_CS__ORIGINAL_XMI_ID;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__OWNED_ANNOTATIONS = BaseCSPackage.MODEL_ELEMENT_CS__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Premise</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__PREMISE = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Premise Tuple Descriptor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__PREMISE_TUPLE_DESCRIPTOR = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Conclusion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__CONCLUSION = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Conclusion Tuple Descriptor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__CONCLUSION_TUPLE_DESCRIPTOR = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Implication Constraint Tuple Descriptor CS</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS_FEATURE_COUNT = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 4;
+
+	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.TypedNamedPartCSImpl <em>Typed Named Part CS</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1128,7 +1319,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getTypedNamedPartCS()
 	 * @generated
 	 */
-	int TYPED_NAMED_PART_CS = 11;
+	int TYPED_NAMED_PART_CS = 13;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1228,7 +1419,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getTypedPairCS()
 	 * @generated
 	 */
-	int TYPED_PAIR_CS = 12;
+	int TYPED_PAIR_CS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1310,7 +1501,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getMeasureFunctionCS()
 	 * @generated
 	 */
-	int MEASURE_FUNCTION_CS = 13;
+	int MEASURE_FUNCTION_CS = 15;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1383,7 +1574,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getServiceCS()
 	 * @generated
 	 */
-	int SERVICE_CS = 14;
+	int SERVICE_CS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1465,7 +1656,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getQoSDimensionCS()
 	 * @generated
 	 */
-	int QO_SDIMENSION_CS = 15;
+	int QO_SDIMENSION_CS = 17;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1556,7 +1747,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getJavaImplementationProviderCS()
 	 * @generated
 	 */
-	int JAVA_IMPLEMENTATION_PROVIDER_CS = 16;
+	int JAVA_IMPLEMENTATION_PROVIDER_CS = 18;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1629,7 +1820,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getNameProviderCS()
 	 * @generated
 	 */
-	int NAME_PROVIDER_CS = 17;
+	int NAME_PROVIDER_CS = 19;
 
 	/**
 	 * The number of structural features of the '<em>Name Provider CS</em>' class.
@@ -1648,7 +1839,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getStorageProviderCS()
 	 * @generated
 	 */
-	int STORAGE_PROVIDER_CS = 18;
+	int STORAGE_PROVIDER_CS = 20;
 
 	/**
 	 * The number of structural features of the '<em>Storage Provider CS</em>' class.
@@ -1667,7 +1858,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getOCLContextCS()
 	 * @generated
 	 */
-	int OCL_CONTEXT_CS = 19;
+	int OCL_CONTEXT_CS = 21;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1767,7 +1958,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getCoherenceConstraintType()
 	 * @generated
 	 */
-	int COHERENCE_CONSTRAINT_TYPE = 20;
+	int COHERENCE_CONSTRAINT_TYPE = 22;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.Goal <em>Goal</em>}' enum.
@@ -1777,7 +1968,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getGoal()
 	 * @generated
 	 */
-	int GOAL = 21;
+	int GOAL = 23;
 
 
 	/**
@@ -2059,6 +2250,27 @@ public interface CsPackage extends EPackage {
 	EReference getLocationConstraintCS_TupleDescriptor();
 
 	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.ImplicationConstraintCS <em>Implication Constraint CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Implication Constraint CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.ImplicationConstraintCS
+	 * @generated
+	 */
+	EClass getImplicationConstraintCS();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.ImplicationConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.cs.ImplicationConstraintCS#getTupleDescriptor()
+	 * @see #getImplicationConstraintCS()
+	 * @generated
+	 */
+	EReference getImplicationConstraintCS_TupleDescriptor();
+
+	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.TupleDescriptorCS <em>Tuple Descriptor CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2120,6 +2332,60 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBoundWeightTupleDescriptorCS_Bound();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS <em>Implication Constraint Tuple Descriptor CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Implication Constraint Tuple Descriptor CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS
+	 * @generated
+	 */
+	EClass getImplicationConstraintTupleDescriptorCS();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS#getPremise <em>Premise</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Premise</em>'.
+	 * @see org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS#getPremise()
+	 * @see #getImplicationConstraintTupleDescriptorCS()
+	 * @generated
+	 */
+	EAttribute getImplicationConstraintTupleDescriptorCS_Premise();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS#getPremiseTupleDescriptor <em>Premise Tuple Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Premise Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS#getPremiseTupleDescriptor()
+	 * @see #getImplicationConstraintTupleDescriptorCS()
+	 * @generated
+	 */
+	EReference getImplicationConstraintTupleDescriptorCS_PremiseTupleDescriptor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS#getConclusion <em>Conclusion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Conclusion</em>'.
+	 * @see org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS#getConclusion()
+	 * @see #getImplicationConstraintTupleDescriptorCS()
+	 * @generated
+	 */
+	EAttribute getImplicationConstraintTupleDescriptorCS_Conclusion();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS#getConclusionTupleDescriptor <em>Conclusion Tuple Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Conclusion Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS#getConclusionTupleDescriptor()
+	 * @see #getImplicationConstraintTupleDescriptorCS()
+	 * @generated
+	 */
+	EReference getImplicationConstraintTupleDescriptorCS_ConclusionTupleDescriptor();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.TypedNamedPartCS <em>Typed Named Part CS</em>}'.
@@ -2533,6 +2799,24 @@ public interface CsPackage extends EPackage {
 		EReference LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR = eINSTANCE.getLocationConstraintCS_TupleDescriptor();
 
 		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.ImplicationConstraintCSImpl <em>Implication Constraint CS</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.cs.impl.ImplicationConstraintCSImpl
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getImplicationConstraintCS()
+		 * @generated
+		 */
+		EClass IMPLICATION_CONSTRAINT_CS = eINSTANCE.getImplicationConstraintCS();
+
+		/**
+		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IMPLICATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR = eINSTANCE.getImplicationConstraintCS_TupleDescriptor();
+
+		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.TupleDescriptorCSImpl <em>Tuple Descriptor CS</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2585,6 +2869,48 @@ public interface CsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__BOUND = eINSTANCE.getBoundWeightTupleDescriptorCS_Bound();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.ImplicationConstraintTupleDescriptorCSImpl <em>Implication Constraint Tuple Descriptor CS</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.cs.impl.ImplicationConstraintTupleDescriptorCSImpl
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getImplicationConstraintTupleDescriptorCS()
+		 * @generated
+		 */
+		EClass IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS = eINSTANCE.getImplicationConstraintTupleDescriptorCS();
+
+		/**
+		 * The meta object literal for the '<em><b>Premise</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__PREMISE = eINSTANCE.getImplicationConstraintTupleDescriptorCS_Premise();
+
+		/**
+		 * The meta object literal for the '<em><b>Premise Tuple Descriptor</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__PREMISE_TUPLE_DESCRIPTOR = eINSTANCE.getImplicationConstraintTupleDescriptorCS_PremiseTupleDescriptor();
+
+		/**
+		 * The meta object literal for the '<em><b>Conclusion</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__CONCLUSION = eINSTANCE.getImplicationConstraintTupleDescriptorCS_Conclusion();
+
+		/**
+		 * The meta object literal for the '<em><b>Conclusion Tuple Descriptor</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__CONCLUSION_TUPLE_DESCRIPTOR = eINSTANCE.getImplicationConstraintTupleDescriptorCS_ConclusionTupleDescriptor();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.TypedNamedPartCSImpl <em>Typed Named Part CS</em>}' class.

@@ -76,6 +76,15 @@ public interface CsFactory extends EFactory {
 	LocationConstraintCS createLocationConstraintCS();
 
 	/**
+	 * Returns a new object of class '<em>Implication Constraint CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Implication Constraint CS</em>'.
+	 * @generated
+	 */
+	ImplicationConstraintCS createImplicationConstraintCS();
+
+	/**
 	 * Returns a new object of class '<em>Tuple Descriptor CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -101,6 +110,15 @@ public interface CsFactory extends EFactory {
 	 * @generated
 	 */
 	BoundWeightTupleDescriptorCS createBoundWeightTupleDescriptorCS();
+
+	/**
+	 * Returns a new object of class '<em>Implication Constraint Tuple Descriptor CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Implication Constraint Tuple Descriptor CS</em>'.
+	 * @generated
+	 */
+	ImplicationConstraintTupleDescriptorCS createImplicationConstraintTupleDescriptorCS();
 
 	/**
 	 * Returns a new object of class '<em>Typed Named Part CS</em>'.

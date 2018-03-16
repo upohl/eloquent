@@ -175,6 +175,17 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImplicationConstraintCS" eSuperTypes="#//ConstraintCS">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="An ImplicationConstraint can be used to model implications. For instance,&#xA;it can be used to model the following relationship:&#xA;&#xA;&quot;If A is related to B and Z1 is related to Z2, then (B is related to C and&#xA;E is related to G) or (B is related to D and F is related to H)&quot;.&#xA;&#xA;That is, if all &quot;relations&quot; of the premise set hold, then at least one&#xA;&quot;relation&quot; of the conclusion set holds (in the previous example, the&#xA;premise set consists of the tuples (A, B), (Z1, Z2) and the conclusion set&#xA;consists of the tuples (B, C, E, G), (B, D, F, H)) (implicit assumption:&#xA;all objects have the &quot;correct&quot; types (which a described by the tuple&#xA;descriptor))."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tupleDescriptor" lowerBound="1"
+        eType="#//ImplicationConstraintTupleDescriptorCS" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Tuple descriptor that describes the implication constraint's tuple type."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TupleDescriptorCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A TupleDescriptor is used to define an expected tuple type. It consists&#xA;of at least one typed pair. A typed pair describes the source-target&#xA;relationship of two distinct named parts that belong to the same tuple&#xA;type."/>
@@ -194,6 +205,36 @@
       <details key="documentation" value="A BoundWeightTupleDescriptor defines the expected tuple type of a&#xA;ResourceConstraint's ocl expression."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bound" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImplicationConstraintTupleDescriptorCS"
+      eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="An ImplicationConstraintTupleDescriptorCS is used to describe the following&#xA;OCL tuple type:&#xA;&#xA;Tuple(&#xA;&#x9;premise : Tuple(premiseTupleDescriptor),&#xA;&#x9;conclusion : Tuple(conclusionTupleDescriptor)&#xA;)&#xA;&#xA;where Tuple(xxxTupleDescriptor) represents the Tuple type that is&#xA;described by the xxxTupleDescriptor. Moreover, premise and conclusion&#xA;refer to the IDs that are represented by the premise and conclusion attributes."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="premise" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The name of the named part that represents the premise set."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="premiseTupleDescriptor"
+        lowerBound="1" eType="#//TupleDescriptorCS" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Tuple descriptor that describes the tuple type of the premise set."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conclusion" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The name of the named part that represents the conclusion set."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conclusionTupleDescriptor"
+        lowerBound="1" eType="#//TupleDescriptorCS" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Tuple descriptor that describes the tuple type of the conclusion set."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TypedNamedPartCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//TypedElementCS">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

@@ -56,6 +56,9 @@
     <genClasses ecoreClass="LanguageSpecificationCS.ecore#//LocationConstraintCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//LocationConstraintCS/tupleDescriptor"/>
     </genClasses>
+    <genClasses ecoreClass="LanguageSpecificationCS.ecore#//ImplicationConstraintCS">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//ImplicationConstraintCS/tupleDescriptor"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="LanguageSpecificationCS.ecore#//TupleDescriptorCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//TupleDescriptorCS/typedPairs"/>
     </genClasses>
@@ -64,6 +67,12 @@
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationCS.ecore#//BoundWeightTupleDescriptorCS">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationCS.ecore#//BoundWeightTupleDescriptorCS/bound"/>
+    </genClasses>
+    <genClasses ecoreClass="LanguageSpecificationCS.ecore#//ImplicationConstraintTupleDescriptorCS">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationCS.ecore#//ImplicationConstraintTupleDescriptorCS/premise"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//ImplicationConstraintTupleDescriptorCS/premiseTupleDescriptor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationCS.ecore#//ImplicationConstraintTupleDescriptorCS/conclusion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//ImplicationConstraintTupleDescriptorCS/conclusionTupleDescriptor"/>
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationCS.ecore#//TypedNamedPartCS"/>
     <genClasses ecoreClass="LanguageSpecificationCS.ecore#//TypedPairCS">

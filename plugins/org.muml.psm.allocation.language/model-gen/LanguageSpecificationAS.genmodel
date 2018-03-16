@@ -43,6 +43,9 @@
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//LocationConstraint">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//LocationConstraint/tupleDescriptor"/>
     </genClasses>
+    <genClasses ecoreClass="LanguageSpecificationAS.ecore#//ImplicationConstraint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//ImplicationConstraint/tupleDescriptor"/>
+    </genClasses>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//TupleDescriptor">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//TupleDescriptor/typedPairs"/>
     </genClasses>
@@ -51,6 +54,12 @@
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//BoundWeightTupleDescriptor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationAS.ecore#//BoundWeightTupleDescriptor/bound"/>
+    </genClasses>
+    <genClasses ecoreClass="LanguageSpecificationAS.ecore#//ImplicationConstraintTupleDescriptor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationAS.ecore#//ImplicationConstraintTupleDescriptor/premise"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//ImplicationConstraintTupleDescriptor/premiseTupleDescriptor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationAS.ecore#//ImplicationConstraintTupleDescriptor/conclusion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//ImplicationConstraintTupleDescriptor/conclusionTupleDescriptor"/>
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//TypedNamedPart"/>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//TypedPair">

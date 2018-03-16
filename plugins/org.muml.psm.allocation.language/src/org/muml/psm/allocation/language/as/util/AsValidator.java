@@ -102,12 +102,16 @@ public class AsValidator extends EObjectValidator {
 				return validateResourceConstraint((ResourceConstraint)value, diagnostics, context);
 			case AsPackage.LOCATION_CONSTRAINT:
 				return validateLocationConstraint((LocationConstraint)value, diagnostics, context);
+			case AsPackage.IMPLICATION_CONSTRAINT:
+				return validateImplicationConstraint((ImplicationConstraint)value, diagnostics, context);
 			case AsPackage.TUPLE_DESCRIPTOR:
 				return validateTupleDescriptor((TupleDescriptor)value, diagnostics, context);
 			case AsPackage.WEIGHT_TUPLE_DESCRIPTOR:
 				return validateWeightTupleDescriptor((WeightTupleDescriptor)value, diagnostics, context);
 			case AsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR:
 				return validateBoundWeightTupleDescriptor((BoundWeightTupleDescriptor)value, diagnostics, context);
+			case AsPackage.IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR:
+				return validateImplicationConstraintTupleDescriptor((ImplicationConstraintTupleDescriptor)value, diagnostics, context);
 			case AsPackage.TYPED_NAMED_PART:
 				return validateTypedNamedPart((TypedNamedPart)value, diagnostics, context);
 			case AsPackage.TYPED_PAIR:
@@ -290,6 +294,15 @@ public class AsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateImplicationConstraint(ImplicationConstraint implicationConstraint, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(implicationConstraint, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateTupleDescriptor(TupleDescriptor tupleDescriptor, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(tupleDescriptor, diagnostics, context);
 	}
@@ -310,6 +323,15 @@ public class AsValidator extends EObjectValidator {
 	 */
 	public boolean validateBoundWeightTupleDescriptor(BoundWeightTupleDescriptor boundWeightTupleDescriptor, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(boundWeightTupleDescriptor, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateImplicationConstraintTupleDescriptor(ImplicationConstraintTupleDescriptor implicationConstraintTupleDescriptor, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(implicationConstraintTupleDescriptor, diagnostics, context);
 	}
 
 	/**

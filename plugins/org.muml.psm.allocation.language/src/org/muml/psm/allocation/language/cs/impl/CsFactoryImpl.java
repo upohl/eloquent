@@ -63,9 +63,11 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 			case CsPackage.COHERENCE_CONSTRAINT_CS: return createCoherenceConstraintCS();
 			case CsPackage.RESOURCE_CONSTRAINT_CS: return createResourceConstraintCS();
 			case CsPackage.LOCATION_CONSTRAINT_CS: return createLocationConstraintCS();
+			case CsPackage.IMPLICATION_CONSTRAINT_CS: return createImplicationConstraintCS();
 			case CsPackage.TUPLE_DESCRIPTOR_CS: return createTupleDescriptorCS();
 			case CsPackage.WEIGHT_TUPLE_DESCRIPTOR_CS: return createWeightTupleDescriptorCS();
 			case CsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS: return createBoundWeightTupleDescriptorCS();
+			case CsPackage.IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS: return createImplicationConstraintTupleDescriptorCS();
 			case CsPackage.TYPED_NAMED_PART_CS: return createTypedNamedPartCS();
 			case CsPackage.TYPED_PAIR_CS: return createTypedPairCS();
 			case CsPackage.MEASURE_FUNCTION_CS: return createMeasureFunctionCS();
@@ -177,6 +179,16 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ImplicationConstraintCS createImplicationConstraintCS() {
+		ImplicationConstraintCSImpl implicationConstraintCS = new ImplicationConstraintCSImpl();
+		return implicationConstraintCS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TupleDescriptorCS createTupleDescriptorCS() {
 		TupleDescriptorCSImpl tupleDescriptorCS = new TupleDescriptorCSImpl();
 		return tupleDescriptorCS;
@@ -200,6 +212,16 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	public BoundWeightTupleDescriptorCS createBoundWeightTupleDescriptorCS() {
 		BoundWeightTupleDescriptorCSImpl boundWeightTupleDescriptorCS = new BoundWeightTupleDescriptorCSImpl();
 		return boundWeightTupleDescriptorCS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImplicationConstraintTupleDescriptorCS createImplicationConstraintTupleDescriptorCS() {
+		ImplicationConstraintTupleDescriptorCSImpl implicationConstraintTupleDescriptorCS = new ImplicationConstraintTupleDescriptorCSImpl();
+		return implicationConstraintTupleDescriptorCS;
 	}
 
 	/**

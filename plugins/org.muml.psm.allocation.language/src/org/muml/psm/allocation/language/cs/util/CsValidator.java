@@ -103,12 +103,16 @@ public class CsValidator extends EObjectValidator {
 				return validateResourceConstraintCS((ResourceConstraintCS)value, diagnostics, context);
 			case CsPackage.LOCATION_CONSTRAINT_CS:
 				return validateLocationConstraintCS((LocationConstraintCS)value, diagnostics, context);
+			case CsPackage.IMPLICATION_CONSTRAINT_CS:
+				return validateImplicationConstraintCS((ImplicationConstraintCS)value, diagnostics, context);
 			case CsPackage.TUPLE_DESCRIPTOR_CS:
 				return validateTupleDescriptorCS((TupleDescriptorCS)value, diagnostics, context);
 			case CsPackage.WEIGHT_TUPLE_DESCRIPTOR_CS:
 				return validateWeightTupleDescriptorCS((WeightTupleDescriptorCS)value, diagnostics, context);
 			case CsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS:
 				return validateBoundWeightTupleDescriptorCS((BoundWeightTupleDescriptorCS)value, diagnostics, context);
+			case CsPackage.IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS:
+				return validateImplicationConstraintTupleDescriptorCS((ImplicationConstraintTupleDescriptorCS)value, diagnostics, context);
 			case CsPackage.TYPED_NAMED_PART_CS:
 				return validateTypedNamedPartCS((TypedNamedPartCS)value, diagnostics, context);
 			case CsPackage.TYPED_PAIR_CS:
@@ -291,6 +295,15 @@ public class CsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateImplicationConstraintCS(ImplicationConstraintCS implicationConstraintCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(implicationConstraintCS, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateTupleDescriptorCS(TupleDescriptorCS tupleDescriptorCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(tupleDescriptorCS, diagnostics, context);
 	}
@@ -311,6 +324,15 @@ public class CsValidator extends EObjectValidator {
 	 */
 	public boolean validateBoundWeightTupleDescriptorCS(BoundWeightTupleDescriptorCS boundWeightTupleDescriptorCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(boundWeightTupleDescriptorCS, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateImplicationConstraintTupleDescriptorCS(ImplicationConstraintTupleDescriptorCS implicationConstraintTupleDescriptorCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(implicationConstraintTupleDescriptorCS, diagnostics, context);
 	}
 
 	/**

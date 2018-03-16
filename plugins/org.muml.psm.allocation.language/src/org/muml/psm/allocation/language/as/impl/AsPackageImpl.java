@@ -23,6 +23,8 @@ import org.muml.psm.allocation.language.as.CoherenceConstraintType;
 import org.muml.psm.allocation.language.as.Constraint;
 import org.muml.psm.allocation.language.as.EvaluableElement;
 import org.muml.psm.allocation.language.as.Goal;
+import org.muml.psm.allocation.language.as.ImplicationConstraint;
+import org.muml.psm.allocation.language.as.ImplicationConstraintTupleDescriptor;
 import org.muml.psm.allocation.language.as.JavaImplementationProvider;
 import org.muml.psm.allocation.language.as.LocationConstraint;
 import org.muml.psm.allocation.language.as.MeasureFunction;
@@ -109,6 +111,13 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass implicationConstraintEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass tupleDescriptorEClass = null;
 
 	/**
@@ -124,6 +133,13 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * @generated
 	 */
 	private EClass boundWeightTupleDescriptorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass implicationConstraintTupleDescriptorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -230,7 +246,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link AsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -244,8 +260,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		if (isInited) return (AsPackage)EPackage.Registry.INSTANCE.getEPackage(AsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Object ePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-		AsPackageImpl theAsPackage = (AsPackageImpl)(ePackage instanceof AsPackageImpl ? ePackage : new AsPackageImpl());
+		Object registeredAsPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		AsPackageImpl theAsPackage = registeredAsPackage instanceof AsPackageImpl ? (AsPackageImpl)registeredAsPackage : new AsPackageImpl();
 
 		isInited = true;
 
@@ -260,7 +276,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
-			(theAsPackage, 
+			(theAsPackage,
 			 new EValidator.Descriptor() {
 				 public EValidator getEValidator() {
 					 return AsValidator.INSTANCE;
@@ -270,7 +286,6 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		// Mark meta-data to indicate it can't be changed
 		theAsPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(AsPackage.eNS_URI, theAsPackage);
 		return theAsPackage;
@@ -497,6 +512,24 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getImplicationConstraint() {
+		return implicationConstraintEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getImplicationConstraint_TupleDescriptor() {
+		return (EReference)implicationConstraintEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTupleDescriptor() {
 		return tupleDescriptorEClass;
 	}
@@ -544,6 +577,51 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 */
 	public EAttribute getBoundWeightTupleDescriptor_Bound() {
 		return (EAttribute)boundWeightTupleDescriptorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getImplicationConstraintTupleDescriptor() {
+		return implicationConstraintTupleDescriptorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getImplicationConstraintTupleDescriptor_Premise() {
+		return (EAttribute)implicationConstraintTupleDescriptorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getImplicationConstraintTupleDescriptor_PremiseTupleDescriptor() {
+		return (EReference)implicationConstraintTupleDescriptorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getImplicationConstraintTupleDescriptor_Conclusion() {
+		return (EAttribute)implicationConstraintTupleDescriptorEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getImplicationConstraintTupleDescriptor_ConclusionTupleDescriptor() {
+		return (EReference)implicationConstraintTupleDescriptorEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -750,6 +828,9 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		locationConstraintEClass = createEClass(LOCATION_CONSTRAINT);
 		createEReference(locationConstraintEClass, LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR);
 
+		implicationConstraintEClass = createEClass(IMPLICATION_CONSTRAINT);
+		createEReference(implicationConstraintEClass, IMPLICATION_CONSTRAINT__TUPLE_DESCRIPTOR);
+
 		tupleDescriptorEClass = createEClass(TUPLE_DESCRIPTOR);
 		createEReference(tupleDescriptorEClass, TUPLE_DESCRIPTOR__TYPED_PAIRS);
 
@@ -758,6 +839,12 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		boundWeightTupleDescriptorEClass = createEClass(BOUND_WEIGHT_TUPLE_DESCRIPTOR);
 		createEAttribute(boundWeightTupleDescriptorEClass, BOUND_WEIGHT_TUPLE_DESCRIPTOR__BOUND);
+
+		implicationConstraintTupleDescriptorEClass = createEClass(IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR);
+		createEAttribute(implicationConstraintTupleDescriptorEClass, IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR__PREMISE);
+		createEReference(implicationConstraintTupleDescriptorEClass, IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR__PREMISE_TUPLE_DESCRIPTOR);
+		createEAttribute(implicationConstraintTupleDescriptorEClass, IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR__CONCLUSION);
+		createEReference(implicationConstraintTupleDescriptorEClass, IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR__CONCLUSION_TUPLE_DESCRIPTOR);
 
 		typedNamedPartEClass = createEClass(TYPED_NAMED_PART);
 
@@ -828,9 +915,11 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		coherenceConstraintEClass.getESuperTypes().add(this.getConstraint());
 		resourceConstraintEClass.getESuperTypes().add(this.getConstraint());
 		locationConstraintEClass.getESuperTypes().add(this.getConstraint());
+		implicationConstraintEClass.getESuperTypes().add(this.getConstraint());
 		tupleDescriptorEClass.getESuperTypes().add(thePivotPackage.getElement());
 		weightTupleDescriptorEClass.getESuperTypes().add(this.getTupleDescriptor());
 		boundWeightTupleDescriptorEClass.getESuperTypes().add(this.getWeightTupleDescriptor());
+		implicationConstraintTupleDescriptorEClass.getESuperTypes().add(thePivotPackage.getElement());
 		typedNamedPartEClass.getESuperTypes().add(thePivotPackage.getTypedElement());
 		typedPairEClass.getESuperTypes().add(thePivotPackage.getElement());
 		measureFunctionEClass.getESuperTypes().add(thePivotPackage.getElement());
@@ -873,6 +962,9 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		initEClass(locationConstraintEClass, LocationConstraint.class, "LocationConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLocationConstraint_TupleDescriptor(), this.getTupleDescriptor(), null, "tupleDescriptor", null, 1, 1, LocationConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(implicationConstraintEClass, ImplicationConstraint.class, "ImplicationConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getImplicationConstraint_TupleDescriptor(), this.getImplicationConstraintTupleDescriptor(), null, "tupleDescriptor", null, 1, 1, ImplicationConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(tupleDescriptorEClass, TupleDescriptor.class, "TupleDescriptor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTupleDescriptor_TypedPairs(), this.getTypedPair(), null, "typedPairs", null, 1, -1, TupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -881,6 +973,12 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		initEClass(boundWeightTupleDescriptorEClass, BoundWeightTupleDescriptor.class, "BoundWeightTupleDescriptor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBoundWeightTupleDescriptor_Bound(), ecorePackage.getEString(), "bound", null, 0, 1, BoundWeightTupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(implicationConstraintTupleDescriptorEClass, ImplicationConstraintTupleDescriptor.class, "ImplicationConstraintTupleDescriptor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getImplicationConstraintTupleDescriptor_Premise(), ecorePackage.getEString(), "premise", null, 0, 1, ImplicationConstraintTupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getImplicationConstraintTupleDescriptor_PremiseTupleDescriptor(), this.getTupleDescriptor(), null, "premiseTupleDescriptor", null, 1, 1, ImplicationConstraintTupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImplicationConstraintTupleDescriptor_Conclusion(), ecorePackage.getEString(), "conclusion", null, 0, 1, ImplicationConstraintTupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getImplicationConstraintTupleDescriptor_ConclusionTupleDescriptor(), this.getTupleDescriptor(), null, "conclusionTupleDescriptor", null, 1, 1, ImplicationConstraintTupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(typedNamedPartEClass, TypedNamedPart.class, "TypedNamedPart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -943,26 +1041,26 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * @generated
 	 */
 	protected void createEcoreAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
-			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
-		   });	
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+		   });
 		addAnnotation
-		  (relationEClass, 
-		   source, 
+		  (relationEClass,
+		   source,
 		   new String[] {
-			 "constraints", "exactlyOnePair"
-		   });	
+			   "constraints", "exactlyOnePair"
+		   });
 		addAnnotation
-		  (coherenceConstraintEClass, 
-		   source, 
+		  (coherenceConstraintEClass,
+		   source,
 		   new String[] {
-			 "constraints", "exactlyOnePair"
+			   "constraints", "exactlyOnePair"
 		   });
 	}
 
@@ -973,18 +1071,18 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * @generated
 	 */
 	protected void createPivotAnnotations() {
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
 		addAnnotation
-		  (relationEClass, 
-		   source, 
+		  (relationEClass,
+		   source,
 		   new String[] {
-			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
-		   });	
+			   "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
+		   });
 		addAnnotation
-		  (coherenceConstraintEClass, 
-		   source, 
+		  (coherenceConstraintEClass,
+		   source,
 		   new String[] {
-			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
+			   "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
 		   });
 	}
 

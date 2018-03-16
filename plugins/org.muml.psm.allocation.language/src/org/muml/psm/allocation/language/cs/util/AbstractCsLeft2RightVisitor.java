@@ -62,6 +62,16 @@ public abstract class AbstractCsLeft2RightVisitor
 	}
 
 	@Override
+	public @Nullable Element visitImplicationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ImplicationConstraintCS csElement) {
+		return visitConstraintCS(csElement);
+	}
+
+	@Override
+	public @Nullable Element visitImplicationConstraintTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull ImplicationConstraintTupleDescriptorCS csElement) {
+		return visitModelElementCS(csElement);
+	}
+
+	@Override
 	public @Nullable Element visitJavaImplementationProviderCS(org.muml.psm.allocation.language.cs.@NonNull JavaImplementationProviderCS csElement) {
 		return visitModelElementCS(csElement);
 	}

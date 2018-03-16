@@ -197,6 +197,21 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CsPackage.IMPLICATION_CONSTRAINT_CS: {
+				ImplicationConstraintCS implicationConstraintCS = (ImplicationConstraintCS)theEObject;
+				T result = caseImplicationConstraintCS(implicationConstraintCS);
+				if (result == null) result = caseConstraintCS(implicationConstraintCS);
+				if (result == null) result = caseNamedElementCS(implicationConstraintCS);
+				if (result == null) result = caseEvaluableElementCS(implicationConstraintCS);
+				if (result == null) result = caseModelElementCS(implicationConstraintCS);
+				if (result == null) result = caseNameable(implicationConstraintCS);
+				if (result == null) result = casePivotableElementCS(implicationConstraintCS);
+				if (result == null) result = caseElementCS(implicationConstraintCS);
+				if (result == null) result = casePivotable(implicationConstraintCS);
+				if (result == null) result = caseVisitableCS(implicationConstraintCS);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case CsPackage.TUPLE_DESCRIPTOR_CS: {
 				TupleDescriptorCS tupleDescriptorCS = (TupleDescriptorCS)theEObject;
 				T result = caseTupleDescriptorCS(tupleDescriptorCS);
@@ -230,6 +245,17 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = caseElementCS(boundWeightTupleDescriptorCS);
 				if (result == null) result = casePivotable(boundWeightTupleDescriptorCS);
 				if (result == null) result = caseVisitableCS(boundWeightTupleDescriptorCS);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CsPackage.IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS: {
+				ImplicationConstraintTupleDescriptorCS implicationConstraintTupleDescriptorCS = (ImplicationConstraintTupleDescriptorCS)theEObject;
+				T result = caseImplicationConstraintTupleDescriptorCS(implicationConstraintTupleDescriptorCS);
+				if (result == null) result = caseModelElementCS(implicationConstraintTupleDescriptorCS);
+				if (result == null) result = casePivotableElementCS(implicationConstraintTupleDescriptorCS);
+				if (result == null) result = caseElementCS(implicationConstraintTupleDescriptorCS);
+				if (result == null) result = casePivotable(implicationConstraintTupleDescriptorCS);
+				if (result == null) result = caseVisitableCS(implicationConstraintTupleDescriptorCS);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -459,6 +485,21 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Implication Constraint CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Implication Constraint CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImplicationConstraintCS(ImplicationConstraintCS object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Tuple Descriptor CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -500,6 +541,21 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseBoundWeightTupleDescriptorCS(BoundWeightTupleDescriptorCS object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Implication Constraint Tuple Descriptor CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Implication Constraint Tuple Descriptor CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImplicationConstraintTupleDescriptorCS(ImplicationConstraintTupleDescriptorCS object) {
 		return null;
 	}
 

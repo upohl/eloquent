@@ -76,6 +76,15 @@ public interface AsFactory extends EFactory {
 	LocationConstraint createLocationConstraint();
 
 	/**
+	 * Returns a new object of class '<em>Implication Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Implication Constraint</em>'.
+	 * @generated
+	 */
+	ImplicationConstraint createImplicationConstraint();
+
+	/**
 	 * Returns a new object of class '<em>Tuple Descriptor</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -101,6 +110,15 @@ public interface AsFactory extends EFactory {
 	 * @generated
 	 */
 	BoundWeightTupleDescriptor createBoundWeightTupleDescriptor();
+
+	/**
+	 * Returns a new object of class '<em>Implication Constraint Tuple Descriptor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Implication Constraint Tuple Descriptor</em>'.
+	 * @generated
+	 */
+	ImplicationConstraintTupleDescriptor createImplicationConstraintTupleDescriptor();
 
 	/**
 	 * Returns a new object of class '<em>Typed Named Part</em>'.

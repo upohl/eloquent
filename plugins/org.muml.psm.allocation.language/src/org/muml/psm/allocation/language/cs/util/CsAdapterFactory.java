@@ -119,6 +119,10 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 				return createLocationConstraintCSAdapter();
 			}
 			@Override
+			public Adapter caseImplicationConstraintCS(ImplicationConstraintCS object) {
+				return createImplicationConstraintCSAdapter();
+			}
+			@Override
 			public Adapter caseTupleDescriptorCS(TupleDescriptorCS object) {
 				return createTupleDescriptorCSAdapter();
 			}
@@ -129,6 +133,10 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseBoundWeightTupleDescriptorCS(BoundWeightTupleDescriptorCS object) {
 				return createBoundWeightTupleDescriptorCSAdapter();
+			}
+			@Override
+			public Adapter caseImplicationConstraintTupleDescriptorCS(ImplicationConstraintTupleDescriptorCS object) {
+				return createImplicationConstraintTupleDescriptorCSAdapter();
 			}
 			@Override
 			public Adapter caseTypedNamedPartCS(TypedNamedPartCS object) {
@@ -347,6 +355,20 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.ImplicationConstraintCS <em>Implication Constraint CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.cs.ImplicationConstraintCS
+	 * @generated
+	 */
+	public Adapter createImplicationConstraintCSAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.TupleDescriptorCS <em>Tuple Descriptor CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -385,6 +407,20 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBoundWeightTupleDescriptorCSAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS <em>Implication Constraint Tuple Descriptor CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS
+	 * @generated
+	 */
+	public Adapter createImplicationConstraintTupleDescriptorCSAdapter() {
 		return null;
 	}
 

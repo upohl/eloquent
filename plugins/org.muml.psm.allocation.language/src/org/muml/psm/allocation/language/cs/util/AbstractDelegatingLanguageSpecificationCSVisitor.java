@@ -54,6 +54,16 @@ public abstract class AbstractDelegatingLanguageSpecificationCSVisitor<R, C, @No
 	}
 
 	@Override
+	public R visitImplicationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ImplicationConstraintCS object) {
+		return delegate.visitImplicationConstraintCS(object);
+	}
+
+	@Override
+	public R visitImplicationConstraintTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull ImplicationConstraintTupleDescriptorCS object) {
+		return delegate.visitImplicationConstraintTupleDescriptorCS(object);
+	}
+
+	@Override
 	public R visitJavaImplementationProviderCS(org.muml.psm.allocation.language.cs.@NonNull JavaImplementationProviderCS object) {
 		return delegate.visitJavaImplementationProviderCS(object);
 	}

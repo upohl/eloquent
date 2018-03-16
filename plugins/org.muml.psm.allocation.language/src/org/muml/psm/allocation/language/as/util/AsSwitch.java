@@ -165,6 +165,18 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AsPackage.IMPLICATION_CONSTRAINT: {
+				ImplicationConstraint implicationConstraint = (ImplicationConstraint)theEObject;
+				T result = caseImplicationConstraint(implicationConstraint);
+				if (result == null) result = caseConstraint(implicationConstraint);
+				if (result == null) result = caseNamedElement(implicationConstraint);
+				if (result == null) result = caseEvaluableElement(implicationConstraint);
+				if (result == null) result = caseElement(implicationConstraint);
+				if (result == null) result = caseNameable(implicationConstraint);
+				if (result == null) result = caseVisitable(implicationConstraint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case AsPackage.TUPLE_DESCRIPTOR: {
 				TupleDescriptor tupleDescriptor = (TupleDescriptor)theEObject;
 				T result = caseTupleDescriptor(tupleDescriptor);
@@ -189,6 +201,14 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = caseTupleDescriptor(boundWeightTupleDescriptor);
 				if (result == null) result = caseElement(boundWeightTupleDescriptor);
 				if (result == null) result = caseVisitable(boundWeightTupleDescriptor);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AsPackage.IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR: {
+				ImplicationConstraintTupleDescriptor implicationConstraintTupleDescriptor = (ImplicationConstraintTupleDescriptor)theEObject;
+				T result = caseImplicationConstraintTupleDescriptor(implicationConstraintTupleDescriptor);
+				if (result == null) result = caseElement(implicationConstraintTupleDescriptor);
+				if (result == null) result = caseVisitable(implicationConstraintTupleDescriptor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -396,6 +416,21 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Implication Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Implication Constraint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImplicationConstraint(ImplicationConstraint object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Tuple Descriptor</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -437,6 +472,21 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseBoundWeightTupleDescriptor(BoundWeightTupleDescriptor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Implication Constraint Tuple Descriptor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Implication Constraint Tuple Descriptor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImplicationConstraintTupleDescriptor(ImplicationConstraintTupleDescriptor object) {
 		return null;
 	}
 
