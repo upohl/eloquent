@@ -1,0 +1,76 @@
+test {
+	nameProvider  'org.muml.psm.allocation.algorithm.ilp.tests.EcoreNameProvider'
+	storageProvider 'org.muml.psm.allocation.algorithm.ilp.tests.EcoreStorageProvider' 
+	
+	oclContext ecore::EPackage
+	
+	import 'http://www.eclipse.org/emf/2002/Ecore'
+	
+	relation atLeastOne {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 1;
+		upper -1;
+		ocl self.eSubpackages->at(1).eClassifiers->product(
+			self.eSubpackages->at(3).eSubpackages
+		);
+	}
+	
+	-- relate each ic.sub3.eSubpackages package to at least one ic.sub2.eClassifiers class
+	relation atLeastOnePkg {
+		descriptors (first : ecore::EPackage, second : ecore::EClassifier);
+		lower 1;
+		upper -1;
+		ocl self.eSubpackages->at(3).eSubpackages->product(
+			self.eSubpackages->at(2).eClassifiers
+		);
+	}
+	
+	-- If ic.sub1.A1 is related to ic.sub3.p1, then
+	-- (
+	--  (ic.sub3.p2 is related to ic.sub2.B2 and ic.sub1.A2 is related to ic.sub3.p2)
+	--  or
+	--  (ic.sub3.p3 is related to ic.sub2.B3 and ic.sub1.A3 is related to ic.sub3.p3)
+	--  or
+	--  (ic.sub3.p3 is related to ic.sub2.B3 and ic.sub1.A3 is related to ic.sub3.p1)
+	-- )
+	constraint implication twoTypedPairs {
+		premise myPremise;
+		premise descriptors (cls : ecore::EClassifier, pkg : ecore::EPackage);
+		conclusion myConclusion;
+		conclusion descriptors (pkgRel2 : ecore::EPackage, clsRel2 : ecore::EClassifier),
+			(clsRel1 : ecore::EClassifier, pkgRel1 : ecore::EPackage);
+		ocl Set {
+			Tuple {
+				-- premise
+				myPremise = Set {
+					Tuple {
+						cls = self.eSubpackages->at(1).eClassifiers->at(1),
+						pkg = self.eSubpackages->at(3).eSubpackages->at(1)
+					}
+				},
+				-- conclusion
+				myConclusion = Set {
+					Tuple {
+						pkgRel2 = self.eSubpackages->at(3).eSubpackages->at(2),
+						clsRel2 = self.eSubpackages->at(2).eClassifiers->at(2),
+						clsRel1 = self.eSubpackages->at(1).eClassifiers->at(2),
+						pkgRel1 = self.eSubpackages->at(3).eSubpackages->at(2)
+					},
+					Tuple {
+						pkgRel2 = self.eSubpackages->at(3).eSubpackages->at(3),
+						clsRel2 = self.eSubpackages->at(2).eClassifiers->at(3),
+						clsRel1 = self.eSubpackages->at(1).eClassifiers->at(3),
+						pkgRel1 = self.eSubpackages->at(3).eSubpackages->at(3)
+					},
+					Tuple {
+						pkgRel2 = self.eSubpackages->at(3).eSubpackages->at(3),
+						clsRel2 = self.eSubpackages->at(2).eClassifiers->at(3),
+						clsRel1 = self.eSubpackages->at(1).eClassifiers->at(3),
+						pkgRel1 = self.eSubpackages->at(3).eSubpackages->at(1)
+					}
+				}
+			}
+		};
+	}
+		
+}

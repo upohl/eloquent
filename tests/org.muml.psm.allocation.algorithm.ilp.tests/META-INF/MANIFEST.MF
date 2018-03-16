@@ -16,5 +16,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.muml.psm.allocation.language.xtext;bundle-version="1.0.0",
  org.muml.psm.allocation.ilp.lpsolve.xtext;bundle-version="1.0.0",
  org.muml.psm.allocation.language;bundle-version="0.1.0",
- org.muml.psm.allocation.algorithm
+ org.muml.psm.allocation.algorithm,
+ org.eclipse.m2m.qvt.oml;bundle-version="3.7.0"
 Bundle-ActivationPolicy: lazy
