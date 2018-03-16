@@ -15,6 +15,7 @@ import org.eclipse.ocl.pivot.values.TemplateParameterSubstitutions
 import org.muml.psm.allocation.language.^as.Bound
 import org.muml.psm.allocation.language.^as.CoherenceConstraint
 import org.muml.psm.allocation.language.^as.EvaluableElement
+import org.muml.psm.allocation.language.^as.ImplicationConstraint
 import org.muml.psm.allocation.language.^as.LocationConstraint
 import org.muml.psm.allocation.language.^as.QoSDimension
 import org.muml.psm.allocation.language.^as.Relation
@@ -175,6 +176,30 @@ class TypesUtil {
 		)
 	}
 	
+	// implication constraint
+		
+	/*@NonNull*/
+	static def Type createImplicationConstraintType(ImplicationConstraint constraint) {
+		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraint)
+		val tupleDescriptor = constraint.tupleDescriptor
+		val premiseTupleType = createTupleType(envFactory,
+			convertToNamedParts(tupleDescriptor.premiseTupleDescriptor.typedPairs)
+		)
+		val premiseSetType = createSetType(envFactory, premiseTupleType)
+		val conclusionTupleType = createTupleType(envFactory,
+			convertToNamedParts(tupleDescriptor.conclusionTupleDescriptor.typedPairs)
+		)
+		val conclusionSetType = createSetType(envFactory, conclusionTupleType)
+		createSetType(envFactory,
+			createTupleType(envFactory,
+				#{
+					tupleDescriptor.premise -> premiseSetType,
+					tupleDescriptor.conclusion -> conclusionSetType
+				}
+			)
+		)
+	}
+	
 	// QoS dimension
 	/*@NonNull*/
 	static def TupleType createQoSDimensionTupleType(EnvironmentFactoryInternal envFactory,
@@ -215,6 +240,10 @@ class TypesUtil {
 	
 	static def dispatch createType(ResourceConstraint constraint) {
 		createResourceConstraintType(constraint)
+	}
+	
+	static def dispatch createType(ImplicationConstraint constraint) {
+		createImplicationConstraintType(constraint)
 	}
 	
 	static def dispatch createType(QoSDimension qosDimension) {
