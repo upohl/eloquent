@@ -27,11 +27,11 @@ class SpecificationCSResource extends VQLAwareOCLResource {
 		val CS2AS cs2as = super.getCS2AS()
 		val AbstractJavaClassScope classScope = AbstractJavaClassScope.findAdapter(this)
 		val URI uri = getURI()
-		if (classScope == null && uri != null) {
+		if (classScope === null && uri !== null) {
 			var ClassLoader classLoader = null 
 			if (uri.isPlatformResource) {
 				val IJavaProject javaProject = getJavaProject(uri.segment(1))
-				if (javaProject != null) {
+				if (javaProject !== null) {
 					classLoader = new JavaProjectClassLoader(javaProject,
 						this.class.classLoader
 					)
@@ -39,12 +39,12 @@ class SpecificationCSResource extends VQLAwareOCLResource {
 				}
 			} else if (uri.isPlatformPlugin) {
 				val Bundle bundle = Platform.getBundle(uri.segment(1))
-				if (bundle != null) {
+				if (bundle !== null) {
 					classLoader = new BundleClassLoader(bundle, this.class.classLoader)
 					//println("bundle found: " + bundle.symbolicName)
 				}
 			}
-			if (classLoader != null) {
+			if (classLoader !== null) {
 				JavaClassScope.getAdapter(this, classLoader)
 				cs2as.getMetamodelManager().addClassLoader(classLoader)	
 			}
@@ -56,7 +56,7 @@ class SpecificationCSResource extends VQLAwareOCLResource {
 		val IProject project = ResourcesPlugin.workspace.root.projects.findFirst[project |
 			project.name.equals(name)
 		]
-		if (project != null && JavaProject.hasJavaNature(project)) {
+		if (project !== null && JavaProject.hasJavaNature(project)) {
 			return JavaCore.create(project)
 		}
 		null

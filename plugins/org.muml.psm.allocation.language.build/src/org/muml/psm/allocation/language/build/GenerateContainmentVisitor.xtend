@@ -74,13 +74,13 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 	
 	override checkConfiguration(Issues issues) {
 		super.checkConfiguration(issues)
-		if (csGenModelURI == null) {
+		if (csGenModelURI === null) {
 			issues.addError("csGenModelURI must not be null")
 		}
-		if (asGenModelURI == null) {
+		if (asGenModelURI === null) {
 			issues.addError("asGenModelURI must not be null")
 		}
-		if (resourceSet == null) {
+		if (resourceSet === null) {
 			issues.addError("resourceSet must not be null")
 		}
 	}
@@ -146,17 +146,17 @@ class GenerateContainmentVisitor extends GenerateVisitor {
 	}
 	
 	def private boolean secondarySuperCallAllowed(EClass eClass, EClass superClass) {
-		eClass.primarySuperClass != superClass && eClass.sameResource(superClass)
+		eClass.primarySuperClass !== superClass && eClass.sameResource(superClass)
 	} 
 	
 	def private boolean primarySuperCallAllowed(EClass eClass) {
 		val EClass primarySuperClass = eClass.getPrimarySuperClass
-		primarySuperClass != null
+		primarySuperClass !== null
 			&& (eClass.sameResource(primarySuperClass) || primarySuperCallWhitelist.contains(eClass.name))
 	}
 	
 	def private boolean sameResource(EClass first, EClass second) {
-		first.eResource == second.eResource
+		first.eResource === second.eResource
 	} 
 	
 	def private EClass getPrimarySuperClass(EClass eClass) {

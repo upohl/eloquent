@@ -38,7 +38,7 @@ class AllocationSpecificationLanguageScopeProvider extends CompleteOCLScopeProvi
 	override IScope getScope(EObject context, EReference reference) {
 		if (context instanceof MeasureFunctionCS) {
 			polymorphicGetScope(context, reference)
-		} else if (reference.EReferenceType == OCLstdlibCSPackage.Literals.JAVA_CLASS_CS) {
+		} else if (reference.EReferenceType === OCLstdlibCSPackage.Literals.JAVA_CLASS_CS) {
 			getJavaClassScope(context, reference)
 		} else {
 			super.getScope(context, reference)	
@@ -49,9 +49,9 @@ class AllocationSpecificationLanguageScopeProvider extends CompleteOCLScopeProvi
 	// because getScope is overridden by a superclass
 	def protected IScope polymorphicGetScope(EObject context, EReference reference) {
 		var IScope scope = polymorphicFindScopeForReferenceName(context, reference)
-		if (scope == null) {
+		if (scope === null) {
 			scope = polymorphicFindScopeForClassName(context, reference)
-			if (scope == null) {
+			if (scope === null) {
 				scope = delegateGetScope(context, reference)
 			}
 		}
@@ -64,16 +64,16 @@ class AllocationSpecificationLanguageScopeProvider extends CompleteOCLScopeProvi
 		val Resource csResource = context.eResource
 		if (csResource instanceof BaseCSResource) {
 			var AbstractJavaClassScope adapter = JavaClassScope.findAdapter(csResource as BaseCSResource)
-			if (adapter == null) {
+			if (adapter === null) {
 				var EnvironmentFactoryAdapter environmentFactoryAdapter = EnvironmentFactoryAdapter.find(csResource)
-				if (environmentFactoryAdapter == null) {
+				if (environmentFactoryAdapter === null) {
 					val ResourceSet csResourceSet = csResource.resourceSet
-					if (csResourceSet != null) {
+					if (csResourceSet !== null) {
 						environmentFactoryAdapter = EnvironmentFactoryAdapter.find(csResourceSet)
 					}
 				}
 				var List<ClassLoader> classLoaders = Collections.emptyList()
-				if (environmentFactoryAdapter != null) {
+				if (environmentFactoryAdapter !== null) {
 					classLoaders = environmentFactoryAdapter.metamodelManager.implementationManager.classLoaders
 				}
 				adapter = JavaClassScope.getAdapter(csResource as BaseCSResource, classLoaders)

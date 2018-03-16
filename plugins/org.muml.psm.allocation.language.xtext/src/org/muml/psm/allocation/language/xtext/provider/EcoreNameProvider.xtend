@@ -25,14 +25,14 @@ class EcoreNameProvider extends EObjectImpl implements NameProvider {
 			)
 		}
 		var String name = elementToNameMap.get(element)
-		if (name != null) {
+		if (name !== null) {
 			return name
 		}
 		// XXX: we should sanitize "name"...
 		name = EcoreUtil.getID(element as EObject)
 		// we could speed this lookup up by maintaining an additional
 		// HashSet...
-		while (elementToNameMap.containsValue(name) || name == null) {
+		while (elementToNameMap.containsValue(name) || name === null) {
 			name = EcoreUtil.generateUUID
 		}
 		name = prefix + name

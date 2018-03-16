@@ -36,7 +36,7 @@ class EcoreNameProvider extends EObjectImpl implements NameProvider {
 			}
 			builder.insert(0, (object as ENamedElement).name)
 			object = object.eContainer
-		} while (object != null)
+		} while (object !== null)
 		builder.toString
 	}
 	

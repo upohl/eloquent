@@ -16,7 +16,7 @@ class BundleClassLoader extends ClassLoader {
 	
 	new(Bundle bundle, ClassLoader parent) {
 		super(parent)
-		if (bundle == null) {
+		if (bundle === null) {
 			throw new IllegalArgumentException(bundleNull)
 		}
 		this.bundle = bundle

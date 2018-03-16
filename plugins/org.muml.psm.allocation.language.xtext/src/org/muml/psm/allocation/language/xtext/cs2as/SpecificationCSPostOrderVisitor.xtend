@@ -42,7 +42,7 @@ class SpecificationCSPostOrderVisitor extends LanguageSpecificationCSPostOrderVi
 		
 		override public void addTo(/*@NonNull*/ List<BasicContinuation<?>> simpleContinuations) {
 			val BasicContinuation<?> elm = simpleContinuations.findFirst[it instanceof ContextCSCompletion]
-			if (elm == null) {
+			if (elm === null) {
 				// should never happen, because visitContextCS is supposed to return
 				// a ContextCSCompletion in this situation
 				throw new IllegalStateException(

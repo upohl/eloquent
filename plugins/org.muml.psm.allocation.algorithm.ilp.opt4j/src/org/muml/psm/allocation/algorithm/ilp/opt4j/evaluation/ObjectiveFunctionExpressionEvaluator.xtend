@@ -19,7 +19,7 @@ class ObjectiveFunctionExpressionEvaluator {
 		
 		def double lookup(Variable variable) {
 			val Boolean value = allocation.get(variable.name)
-			if (value == null) {
+			if (value === null) {
 				throw new IllegalArgumentException("env has no variable: " + variable.name)
 			}
 			if (value) 1 else 0

@@ -18,10 +18,10 @@ class LPSolveM2T extends AbstractILPM2T {
 	}
 	
 	override protected emitObjectiveFunction(ObjectiveFunctionExpression objectiveFunctionExpression) {
-		if (objectiveFunctionExpression == null) {
+		if (objectiveFunctionExpression === null) {
 			return
 		}
-		if (objectiveFunctionExpression.goal == ObjectiveGoal.MAX) {
+		if (objectiveFunctionExpression.goal === ObjectiveGoal.MAX) {
 			emit('max: ')
 		} else {
 			emit('min: ')
@@ -31,8 +31,8 @@ class LPSolveM2T extends AbstractILPM2T {
 	}
 	
 	override protected emitConstraintExpression(ConstraintExpression expression) {
-		if (expression.comment != IlpPackage.Literals.EXPRESSION__COMMENT.defaultValue
-			&& expression.comment != null && !"".equals(expression.comment)
+		if (expression.comment !== IlpPackage.Literals.EXPRESSION__COMMENT.defaultValue
+			&& expression.comment !== null && !"".equals(expression.comment)
 		) {
 			emit(expression.comment)
 			emit(': ')

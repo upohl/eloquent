@@ -32,10 +32,10 @@ class JavaProjectClassLoader extends ClassLoader {
 	private ClassLoader delegate
 	
 	public new(IJavaProject javaProject, ClassLoader parent) {
-		if (javaProject == null) {
+		if (javaProject === null) {
 			throw new IllegalArgumentException(projectNull)
 		}
-		if (parent == null) {
+		if (parent === null) {
 			throw new IllegalArgumentException(parentNull)
 		}
 		this.javaProject = javaProject
@@ -80,7 +80,7 @@ class JavaProjectClassLoader extends ClassLoader {
 	
 	protected def ClassLoader createPackageClassLoader(ClassLoader parent) {
 		val IPluginModelBase pluginModelBase = PluginRegistry.findModel(javaProject.project)
-		if (pluginModelBase == null) {
+		if (pluginModelBase === null) {
 			// no plugin project or malformed manifest/whatever
 			return parent
 		}
@@ -99,7 +99,7 @@ class JavaProjectClassLoader extends ClassLoader {
 				val Bundle[] bundles = Platform.getBundles(exporter.symbolicName,
 					exporter.version.toString
 				)
-				if (bundles != null) {
+				if (bundles !== null) {
 					// hmm which bundle should we take? Take the last one, because it
 					// has the lowest version
 					val Bundle bundle = bundles.get(bundles.size - 1)
@@ -118,8 +118,8 @@ class JavaProjectClassLoader extends ClassLoader {
 		).map[entry |
 			JavaRuntime.resolveRuntimeClasspathEntry(entry, javaProject).toList
 		].flatten.toSet.filter[resolvedEntry |
-			resolvedEntry.classpathProperty == IRuntimeClasspathEntry.USER_CLASSES
-				&& resolvedEntry.location != null
+			resolvedEntry.classpathProperty === IRuntimeClasspathEntry.USER_CLASSES
+				&& resolvedEntry.location !== null
 		].map[resolvedEntry |
 			val File file = new File(resolvedEntry.location)
 			var location = "file://" + resolvedEntry.location

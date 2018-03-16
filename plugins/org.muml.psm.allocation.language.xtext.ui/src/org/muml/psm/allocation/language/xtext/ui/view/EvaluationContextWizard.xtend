@@ -27,7 +27,7 @@ class EvaluationContextWizard extends Wizard {
 	}
 		
 	def getOclContext() {
-		if (oclContext == null) {
+		if (oclContext === null) {
 			throw new IllegalStateException(illegalOclContext)
 		}
 		oclContext

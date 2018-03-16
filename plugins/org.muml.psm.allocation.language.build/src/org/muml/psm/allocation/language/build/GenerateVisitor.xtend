@@ -50,16 +50,16 @@ class GenerateVisitor extends AbstractWorkflowComponent {
 	}
 	
 	override checkConfiguration(Issues issues) {
-		if (className == null) {
+		if (className === null) {
 			issues.addError("className must not be null")
 		}
-		if (fqBaseClassName == null) {
+		if (fqBaseClassName === null) {
 			issues.addError("baseClassName must not be null")
 		}
-		if (packageName == null) {
+		if (packageName === null) {
 			issues.addError("packageName must not be null")
 		}
-		if (filename == null) {
+		if (filename === null) {
 			issues.addError("filename must not be null")
 		}
 	}
@@ -98,7 +98,7 @@ class GenerateVisitor extends AbstractWorkflowComponent {
 		
 		// generated code: do NOT edit (file is overwritten on regeneration)
 		
-		public class «className»«IF fqBaseClassName != null» extends «fqBaseClassName»«ENDIF» {
+		public class «className»«IF fqBaseClassName !== null» extends «fqBaseClassName»«ENDIF» {
 			«generateConstructor»
 			
 			«generateMethods»

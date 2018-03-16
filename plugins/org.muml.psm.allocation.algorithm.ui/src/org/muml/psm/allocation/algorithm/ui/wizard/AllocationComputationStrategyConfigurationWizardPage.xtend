@@ -36,7 +36,7 @@ class AllocationComputationStrategyConfigurationWizardPage extends WizardPage {
 	}
 	
 	def setConfiguration(EObject configuration) {
-		if (this.configuration == configuration) {
+		if (this.configuration === configuration) {
 			return
 		}
 		this.configuration = configuration

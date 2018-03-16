@@ -48,9 +48,9 @@ class ILP2SAT implements IVisitor {
 		var canReduce = true
 		while (canReduce && !stack.empty()) {
 			val top = stack.pop
-			illegalStack(top == null, top)
+			illegalStack(top === null, top)
 			notEmpty
-			if (stack.peek == null) {
+			if (stack.peek === null) {
 				stack.pop
 				expect(typeof(ArithmeticExpression))
 				stack.pop
@@ -68,9 +68,9 @@ class ILP2SAT implements IVisitor {
 	}
 	
 	private def void postProcess() {
-		if (state == State.CONSTRAINT_LHS) {
+		if (state === State.CONSTRAINT_LHS) {
 			state = State.CONSTRAINT_RHS
-		} else if (state == State.CONSTRAINT_RHS) {
+		} else if (state === State.CONSTRAINT_RHS) {
 			state = null
 			constraintList.head.rhs = accRHS as int
 			accRHS = 0
@@ -104,7 +104,7 @@ class ILP2SAT implements IVisitor {
 		if (top instanceof ArithmeticExpression) {			
 			expectOperator(Operator.TIMES, Operator.PLUS)
 			val operator = (stack.peek as ArithmeticExpression).operator
-			if (operator == Operator.PLUS) {
+			if (operator === Operator.PLUS) {
 				accumulateRHS(Double.parseDouble(expression.value))
 				reduce
 			} else {
@@ -120,7 +120,7 @@ class ILP2SAT implements IVisitor {
 		} else if (top instanceof ConstraintExpression) {
 			accumulateRHS(Double.parseDouble(expression.value))
 			reduce
-		} else if (top == null) { 
+		} else if (top === null) { 
 			accumulateRHS(Double.parseDouble(expression.value))
 			reduce
 		} else {
@@ -129,7 +129,7 @@ class ILP2SAT implements IVisitor {
 	}
 	
 	private def void accumulateRHS(double value) {
-		if (state == State.CONSTRAINT_LHS) {
+		if (state === State.CONSTRAINT_LHS) {
 			accRHS += -1 * value 
 		} else {
 			accRHS += value
@@ -149,7 +149,7 @@ class ILP2SAT implements IVisitor {
 		} else if (top instanceof ArithmeticExpression) {
 			expectOperator(Operator.PLUS, Operator.TIMES)
 			val operator = (stack.peek as ArithmeticExpression).operator
-			if (operator == Operator.PLUS) {
+			if (operator === Operator.PLUS) {
 				addLiteral(expression, "1")
 				reduce
 			} else {
@@ -159,7 +159,7 @@ class ILP2SAT implements IVisitor {
 			addLiteral(expression, "1")
 			reduce
 			// XXX: reduce?
-		} else if (top == null) {
+		} else if (top === null) {
 			addLiteral(expression, "1")
 			reduce
 		} else {
@@ -174,8 +174,8 @@ class ILP2SAT implements IVisitor {
 		if (top instanceof ArithmeticExpression) {
 			// just a sanity check
 			val arith = top as ArithmeticExpression
-			if (arith.operator == Operator.TIMES
-					&& expression.operator == Operator.PLUS) {
+			if (arith.operator === Operator.TIMES
+					&& expression.operator === Operator.PLUS) {
 				throw new IllegalStateException("do the math on your own! (distributivity law)")
 			}
 		}
@@ -199,7 +199,7 @@ class ILP2SAT implements IVisitor {
 	}
 	
 	private def void expectOrNull(Class<?> clazz) {
-		if (!stack.empty() && stack.peek == null) {
+		if (!stack.empty() && stack.peek === null) {
 			return
 		}
 		expect(clazz)
@@ -225,7 +225,7 @@ class ILP2SAT implements IVisitor {
 		val arith = stack.peek as ArithmeticExpression
 		var found = false
 		for (Operator operator : operators) {
-			found = arith.operator == operator || found
+			found = arith.operator === operator || found
 		}
 		if (!found) {
 			illegalStack
@@ -243,7 +243,7 @@ class ILP2SAT implements IVisitor {
 			throw new IllegalArgumentException("floating point coefficient is not supported")
 		}
 		var coeff = value.intValue
-		if (state == State.CONSTRAINT_RHS) {
+		if (state === State.CONSTRAINT_RHS) {
 			coeff *= -1
 		}
 		val literal = new Literal(variableExpression.variable, true)

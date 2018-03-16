@@ -32,7 +32,7 @@ public abstract class AbstractLazyObjectProvider<T> extends EObjectImpl {
 	}
 	
 	protected def T getObject() {
-		if (object == null) {
+		if (object === null) {
 			object = loadImplementation()
 		}
 		object
@@ -44,14 +44,14 @@ public abstract class AbstractLazyObjectProvider<T> extends EObjectImpl {
 	protected def Class<? extends T> loadClass() {
 		var Class<?> clazz
 		for (ClassLoader classLoader : classLoaders) {
-			if (clazz == null) {
+			if (clazz === null) {
 				try {
 					clazz = classLoader.loadClass(className)
 				} catch (ClassNotFoundException cnfe) {
 				}
 			}
 		}
-		if (clazz == null) {
+		if (clazz === null) {
 			throw new IllegalStateException(
 				String.format(classNotFoundError, className)
 			)
@@ -73,7 +73,7 @@ public abstract class AbstractLazyObjectProvider<T> extends EObjectImpl {
 		} catch (IllegalAccessException e) {
 		} catch (ClassCastException cce) {
 		}
-		if (instance == null) {
+		if (instance === null) {
 			throw new IllegalStateException(
 				String.format(newInstanceError, className)
 			)

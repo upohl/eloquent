@@ -55,7 +55,7 @@ class DrWahnsinnStorageProvider extends EObjectImpl implements StorageProvider {
 	
 	def TileRelation getOrCreateTileRelation(Tile tile) {
 		for (TileRelation tileRelation : collection.tileRelations) {
-			if (tileRelation.tile == tile) {
+			if (tileRelation.tile === tile) {
 				return tileRelation
 			}
 		}

@@ -25,7 +25,7 @@ class DrWahnsinnNameProvider extends EObjectImpl implements NameProvider {
 	
 	def dispatch String getNameFor(Tile tile) {
 		var name = tile2NameMap.get(tile)
-		if (name == null) {
+		if (name === null) {
 			name = '''tile«tieBreaker»_«tile.type»'''
 			tile2NameMap.put(tile, name)
 			tieBreaker++;

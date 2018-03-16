@@ -86,7 +86,7 @@ class AllocationComputationSourceWizardPage extends WizardPage {
 	override createControl(Composite parent) {
 		val Composite composite = new Composite(parent, SWT.NONE)
 		setControl(composite)
-		if (pageContext == PageContext.AllocationComputation) {
+		if (pageContext === PageContext.AllocationComputation) {
 			createSelectASLFileButton(composite)
 		}
 		val Button oclContextFileButton = createSelectOCLContextFileButton(composite)
@@ -101,11 +101,11 @@ class AllocationComputationSourceWizardPage extends WizardPage {
 	
 	def protected updatePageCompletion() {
 		noError
-		if (pageContext == PageContext.AllocationComputation) {
-			pageComplete = oclContext != null && specificationCS != null
+		if (pageContext === PageContext.AllocationComputation) {
+			pageComplete = oclContext !== null && specificationCS !== null
 			return
 		}
-		pageComplete = oclContext != null
+		pageComplete = oclContext !== null
 	}
 	
 	def protected error(String errorMessage) {
@@ -147,7 +147,7 @@ class AllocationComputationSourceWizardPage extends WizardPage {
 				val FileExtensionBasedResourceListSelectionDialog dialog = new FileExtensionBasedResourceListSelectionDialog(
 					getShell(), fileExtension
 				)
-				if (dialog.open == Dialog.OK) {
+				if (dialog.open === Dialog.OK) {
 					val IFile file = dialog.result.get(0) as IFile
 					try {
 						callback.apply(ModelLoader.loadFile(file))

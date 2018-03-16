@@ -53,7 +53,7 @@ class TypesUtil {
 	/*@NonNull*/
 	static def EnvironmentFactoryInternal getEnvironmentFactory(EObject object) {
 		val EnvironmentFactoryInternal envFactory = PivotUtilInternal.findEnvironmentFactory(object)
-		if (envFactory == null) {
+		if (envFactory === null) {
 			throw new IllegalStateException(String.format(missingEnvFac, object))
 		}
 		envFactory

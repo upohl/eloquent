@@ -71,13 +71,13 @@ class AllocationComputationStrategyWizardPage extends WizardPage {
 	}
 	
 	def IAllocationComputationStrategy<?, ?> getAllocationComputationStrategy() {
-		if (strategyDescription == null) {
+		if (strategyDescription === null) {
 			// this should never happen (except there were no
 			// strategies registered)
 			throw new IllegalStateException(noStrategyDescription)
 		}
 		var IAllocationComputationStrategy<?, ?> strategy = strategyCache.get(strategyDescription)
-		if (strategy == null) {
+		if (strategy === null) {
 			strategy = strategyDescription.allocationComputationStrategy
 			strategyCache.put(strategyDescription, strategy)
 		}
@@ -96,7 +96,7 @@ class AllocationComputationStrategyWizardPage extends WizardPage {
 		super.setVisible(visible)
 		if (visible) {
 			listViewer.setInput(descriptions)
-			if (descriptions.length > 0 && structuredSelection == null) {
+			if (descriptions.length > 0 && structuredSelection === null) {
 				structuredSelection = new StructuredSelection(descriptions.get(0))
 			}
 			listViewer.setSelection(structuredSelection, true)
