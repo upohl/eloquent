@@ -449,6 +449,34 @@ finally {
 
 
 
+// Entry rule entryRuleImplicationConstraintTupleDescriptor
+entryRuleImplicationConstraintTupleDescriptor 
+:
+{ before(grammarAccess.getImplicationConstraintTupleDescriptorRule()); }
+	 ruleImplicationConstraintTupleDescriptor
+{ after(grammarAccess.getImplicationConstraintTupleDescriptorRule()); } 
+	 EOF 
+;
+
+// Rule ImplicationConstraintTupleDescriptor
+ruleImplicationConstraintTupleDescriptor
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getGroup()); }
+(rule__ImplicationConstraintTupleDescriptor__Group__0)
+{ after(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getGroup()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
 // Entry rule entryRuleConstraint
 entryRuleConstraint 
 :
@@ -552,6 +580,34 @@ ruleLocationConstraint
 { before(grammarAccess.getLocationConstraintAccess().getGroup()); }
 (rule__LocationConstraint__Group__0)
 { after(grammarAccess.getLocationConstraintAccess().getGroup()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+// Entry rule entryRuleImplicationConstraint
+entryRuleImplicationConstraint 
+:
+{ before(grammarAccess.getImplicationConstraintRule()); }
+	 ruleImplicationConstraint
+{ after(grammarAccess.getImplicationConstraintRule()); } 
+	 EOF 
+;
+
+// Rule ImplicationConstraint
+ruleImplicationConstraint
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getImplicationConstraintAccess().getGroup()); }
+(rule__ImplicationConstraint__Group__0)
+{ after(grammarAccess.getImplicationConstraintAccess().getGroup()); }
 )
 
 ;
@@ -3444,6 +3500,12 @@ rule__Constraint__Alternatives_1
 { before(grammarAccess.getConstraintAccess().getLocationConstraintParserRuleCall_1_2()); }
 	ruleLocationConstraint
 { after(grammarAccess.getConstraintAccess().getLocationConstraintParserRuleCall_1_2()); }
+)
+
+    |(
+{ before(grammarAccess.getConstraintAccess().getImplicationConstraintParserRuleCall_1_3()); }
+	ruleImplicationConstraint
+{ after(grammarAccess.getConstraintAccess().getImplicationConstraintParserRuleCall_1_3()); }
 )
 
 ;
@@ -7402,6 +7464,327 @@ finally {
 
 
 
+rule__ImplicationConstraintTupleDescriptor__Group__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraintTupleDescriptor__Group__0__Impl
+	rule__ImplicationConstraintTupleDescriptor__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraintTupleDescriptor__Group__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseKeyword_0()); }
+
+	'premise' 
+
+{ after(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseKeyword_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ImplicationConstraintTupleDescriptor__Group__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraintTupleDescriptor__Group__1__Impl
+	rule__ImplicationConstraintTupleDescriptor__Group__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraintTupleDescriptor__Group__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseAssignment_1()); }
+(rule__ImplicationConstraintTupleDescriptor__PremiseAssignment_1)
+{ after(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseAssignment_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ImplicationConstraintTupleDescriptor__Group__2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraintTupleDescriptor__Group__2__Impl
+	rule__ImplicationConstraintTupleDescriptor__Group__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraintTupleDescriptor__Group__2__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getSemicolonKeyword_2()); }
+
+	';' 
+
+{ after(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getSemicolonKeyword_2()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ImplicationConstraintTupleDescriptor__Group__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraintTupleDescriptor__Group__3__Impl
+	rule__ImplicationConstraintTupleDescriptor__Group__4
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraintTupleDescriptor__Group__3__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseKeyword_3()); }
+
+	'premise' 
+
+{ after(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseKeyword_3()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ImplicationConstraintTupleDescriptor__Group__4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraintTupleDescriptor__Group__4__Impl
+	rule__ImplicationConstraintTupleDescriptor__Group__5
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraintTupleDescriptor__Group__4__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseTupleDescriptorAssignment_4()); }
+(rule__ImplicationConstraintTupleDescriptor__PremiseTupleDescriptorAssignment_4)
+{ after(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseTupleDescriptorAssignment_4()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ImplicationConstraintTupleDescriptor__Group__5
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraintTupleDescriptor__Group__5__Impl
+	rule__ImplicationConstraintTupleDescriptor__Group__6
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraintTupleDescriptor__Group__5__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionKeyword_5()); }
+
+	'conclusion' 
+
+{ after(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionKeyword_5()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ImplicationConstraintTupleDescriptor__Group__6
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraintTupleDescriptor__Group__6__Impl
+	rule__ImplicationConstraintTupleDescriptor__Group__7
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraintTupleDescriptor__Group__6__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionAssignment_6()); }
+(rule__ImplicationConstraintTupleDescriptor__ConclusionAssignment_6)
+{ after(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionAssignment_6()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ImplicationConstraintTupleDescriptor__Group__7
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraintTupleDescriptor__Group__7__Impl
+	rule__ImplicationConstraintTupleDescriptor__Group__8
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraintTupleDescriptor__Group__7__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getSemicolonKeyword_7()); }
+
+	';' 
+
+{ after(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getSemicolonKeyword_7()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ImplicationConstraintTupleDescriptor__Group__8
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraintTupleDescriptor__Group__8__Impl
+	rule__ImplicationConstraintTupleDescriptor__Group__9
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraintTupleDescriptor__Group__8__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionKeyword_8()); }
+
+	'conclusion' 
+
+{ after(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionKeyword_8()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ImplicationConstraintTupleDescriptor__Group__9
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraintTupleDescriptor__Group__9__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraintTupleDescriptor__Group__9__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionTupleDescriptorAssignment_9()); }
+(rule__ImplicationConstraintTupleDescriptor__ConclusionTupleDescriptorAssignment_9)
+{ after(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionTupleDescriptorAssignment_9()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 rule__Constraint__Group__0
     @init {
 		int stackSize = keepStackSize();
@@ -8206,6 +8589,263 @@ rule__LocationConstraint__Group__7__Impl
 	'}' 
 
 { after(grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_7()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rule__ImplicationConstraint__Group__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraint__Group__0__Impl
+	rule__ImplicationConstraint__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraint__Group__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintAccess().getImplicationKeyword_0()); }
+
+	'implication' 
+
+{ after(grammarAccess.getImplicationConstraintAccess().getImplicationKeyword_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ImplicationConstraint__Group__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraint__Group__1__Impl
+	rule__ImplicationConstraint__Group__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraint__Group__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintAccess().getNameAssignment_1()); }
+(rule__ImplicationConstraint__NameAssignment_1)?
+{ after(grammarAccess.getImplicationConstraintAccess().getNameAssignment_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ImplicationConstraint__Group__2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraint__Group__2__Impl
+	rule__ImplicationConstraint__Group__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraint__Group__2__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintAccess().getLeftCurlyBracketKeyword_2()); }
+
+	'{' 
+
+{ after(grammarAccess.getImplicationConstraintAccess().getLeftCurlyBracketKeyword_2()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ImplicationConstraint__Group__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraint__Group__3__Impl
+	rule__ImplicationConstraint__Group__4
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraint__Group__3__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintAccess().getTupleDescriptorAssignment_3()); }
+(rule__ImplicationConstraint__TupleDescriptorAssignment_3)
+{ after(grammarAccess.getImplicationConstraintAccess().getTupleDescriptorAssignment_3()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ImplicationConstraint__Group__4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraint__Group__4__Impl
+	rule__ImplicationConstraint__Group__5
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraint__Group__4__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintAccess().getOclKeyword_4()); }
+
+	'ocl' 
+
+{ after(grammarAccess.getImplicationConstraintAccess().getOclKeyword_4()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ImplicationConstraint__Group__5
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraint__Group__5__Impl
+	rule__ImplicationConstraint__Group__6
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraint__Group__5__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintAccess().getExpressionAssignment_5()); }
+(rule__ImplicationConstraint__ExpressionAssignment_5)
+{ after(grammarAccess.getImplicationConstraintAccess().getExpressionAssignment_5()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ImplicationConstraint__Group__6
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraint__Group__6__Impl
+	rule__ImplicationConstraint__Group__7
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraint__Group__6__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintAccess().getSemicolonKeyword_6()); }
+
+	';' 
+
+{ after(grammarAccess.getImplicationConstraintAccess().getSemicolonKeyword_6()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ImplicationConstraint__Group__7
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ImplicationConstraint__Group__7__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraint__Group__7__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintAccess().getRightCurlyBracketKeyword_7()); }
+
+	'}' 
+
+{ after(grammarAccess.getImplicationConstraintAccess().getRightCurlyBracketKeyword_7()); }
 )
 
 ;
@@ -20424,6 +21064,66 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__ImplicationConstraintTupleDescriptor__PremiseAssignment_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseIDParserRuleCall_1_0()); }
+	ruleID{ after(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseIDParserRuleCall_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraintTupleDescriptor__PremiseTupleDescriptorAssignment_4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseTupleDescriptorTupleDescriptorParserRuleCall_4_0()); }
+	ruleTupleDescriptor{ after(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseTupleDescriptorTupleDescriptorParserRuleCall_4_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraintTupleDescriptor__ConclusionAssignment_6
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionIDParserRuleCall_6_0()); }
+	ruleID{ after(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionIDParserRuleCall_6_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraintTupleDescriptor__ConclusionTupleDescriptorAssignment_9
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionTupleDescriptorTupleDescriptorParserRuleCall_9_0()); }
+	ruleTupleDescriptor{ after(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionTupleDescriptorTupleDescriptorParserRuleCall_9_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__CoherenceConstraint__TypeAssignment_0
     @init {
 		int stackSize = keepStackSize();
@@ -20567,6 +21267,51 @@ rule__LocationConstraint__ExpressionAssignment_5
 (
 { before(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_5_0()); }
 	ruleModel{ after(grammarAccess.getLocationConstraintAccess().getExpressionModelParserRuleCall_5_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraint__NameAssignment_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintAccess().getNameIDParserRuleCall_1_0()); }
+	ruleID{ after(grammarAccess.getImplicationConstraintAccess().getNameIDParserRuleCall_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraint__TupleDescriptorAssignment_3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintAccess().getTupleDescriptorImplicationConstraintTupleDescriptorParserRuleCall_3_0()); }
+	ruleImplicationConstraintTupleDescriptor{ after(grammarAccess.getImplicationConstraintAccess().getTupleDescriptorImplicationConstraintTupleDescriptorParserRuleCall_3_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ImplicationConstraint__ExpressionAssignment_5
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getImplicationConstraintAccess().getExpressionModelParserRuleCall_5_0()); }
+	ruleModel{ after(grammarAccess.getImplicationConstraintAccess().getExpressionModelParserRuleCall_5_0()); }
 )
 
 ;

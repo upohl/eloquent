@@ -735,6 +735,78 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 	}
 
+	public class ImplicationConstraintTupleDescriptorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.ImplicationConstraintTupleDescriptor");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cPremiseKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cPremiseAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cPremiseIDParserRuleCall_1_0 = (RuleCall)cPremiseAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cPremiseKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cPremiseTupleDescriptorAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cPremiseTupleDescriptorTupleDescriptorParserRuleCall_4_0 = (RuleCall)cPremiseTupleDescriptorAssignment_4.eContents().get(0);
+		private final Keyword cConclusionKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cConclusionAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cConclusionIDParserRuleCall_6_0 = (RuleCall)cConclusionAssignment_6.eContents().get(0);
+		private final Keyword cSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cConclusionKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cConclusionTupleDescriptorAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cConclusionTupleDescriptorTupleDescriptorParserRuleCall_9_0 = (RuleCall)cConclusionTupleDescriptorAssignment_9.eContents().get(0);
+		
+		//ImplicationConstraintTupleDescriptor cs::ImplicationConstraintTupleDescriptorCS:
+		//	'premise' premise=ID ';'
+		//	'premise' premiseTupleDescriptor=TupleDescriptor
+		//	'conclusion' conclusion=ID ';'
+		//	'conclusion' conclusionTupleDescriptor=TupleDescriptor;
+		@Override public ParserRule getRule() { return rule; }
+
+		//'premise' premise=ID ';' 'premise' premiseTupleDescriptor=TupleDescriptor 'conclusion' conclusion=ID ';' 'conclusion'
+		//conclusionTupleDescriptor=TupleDescriptor
+		public Group getGroup() { return cGroup; }
+
+		//'premise'
+		public Keyword getPremiseKeyword_0() { return cPremiseKeyword_0; }
+
+		//premise=ID
+		public Assignment getPremiseAssignment_1() { return cPremiseAssignment_1; }
+
+		//ID
+		public RuleCall getPremiseIDParserRuleCall_1_0() { return cPremiseIDParserRuleCall_1_0; }
+
+		//';'
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+
+		//'premise'
+		public Keyword getPremiseKeyword_3() { return cPremiseKeyword_3; }
+
+		//premiseTupleDescriptor=TupleDescriptor
+		public Assignment getPremiseTupleDescriptorAssignment_4() { return cPremiseTupleDescriptorAssignment_4; }
+
+		//TupleDescriptor
+		public RuleCall getPremiseTupleDescriptorTupleDescriptorParserRuleCall_4_0() { return cPremiseTupleDescriptorTupleDescriptorParserRuleCall_4_0; }
+
+		//'conclusion'
+		public Keyword getConclusionKeyword_5() { return cConclusionKeyword_5; }
+
+		//conclusion=ID
+		public Assignment getConclusionAssignment_6() { return cConclusionAssignment_6; }
+
+		//ID
+		public RuleCall getConclusionIDParserRuleCall_6_0() { return cConclusionIDParserRuleCall_6_0; }
+
+		//';'
+		public Keyword getSemicolonKeyword_7() { return cSemicolonKeyword_7; }
+
+		//'conclusion'
+		public Keyword getConclusionKeyword_8() { return cConclusionKeyword_8; }
+
+		//conclusionTupleDescriptor=TupleDescriptor
+		public Assignment getConclusionTupleDescriptorAssignment_9() { return cConclusionTupleDescriptorAssignment_9; }
+
+		//TupleDescriptor
+		public RuleCall getConclusionTupleDescriptorTupleDescriptorParserRuleCall_9_0() { return cConclusionTupleDescriptorTupleDescriptorParserRuleCall_9_0; }
+	}
+
 	public class ConstraintElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.Constraint");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -743,18 +815,20 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final RuleCall cCoherenceConstraintParserRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
 		private final RuleCall cResourceConstraintParserRuleCall_1_1 = (RuleCall)cAlternatives_1.eContents().get(1);
 		private final RuleCall cLocationConstraintParserRuleCall_1_2 = (RuleCall)cAlternatives_1.eContents().get(2);
+		private final RuleCall cImplicationConstraintParserRuleCall_1_3 = (RuleCall)cAlternatives_1.eContents().get(3);
 		
 		//Constraint cs::ConstraintCS:
-		//	'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint);
+		//	'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint
+		//	| ImplicationConstraint);
 		@Override public ParserRule getRule() { return rule; }
 
-		//'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint)
+		//'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint | ImplicationConstraint)
 		public Group getGroup() { return cGroup; }
 
 		//'constraint'
 		public Keyword getConstraintKeyword_0() { return cConstraintKeyword_0; }
 
-		//CoherenceConstraint | ResourceConstraint | LocationConstraint
+		//CoherenceConstraint | ResourceConstraint | LocationConstraint | ImplicationConstraint
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//CoherenceConstraint
@@ -765,6 +839,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 		//LocationConstraint
 		public RuleCall getLocationConstraintParserRuleCall_1_2() { return cLocationConstraintParserRuleCall_1_2; }
+
+		//ImplicationConstraint
+		public RuleCall getImplicationConstraintParserRuleCall_1_3() { return cImplicationConstraintParserRuleCall_1_3; }
 	}
 
 	public class CoherenceConstraintElements extends AbstractParserRuleElementFinder {
@@ -965,6 +1042,65 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
+	public class ImplicationConstraintElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.ImplicationConstraint");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cImplicationKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTupleDescriptorAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTupleDescriptorImplicationConstraintTupleDescriptorParserRuleCall_3_0 = (RuleCall)cTupleDescriptorAssignment_3.eContents().get(0);
+		private final Keyword cOclKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cExpressionAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cExpressionModelParserRuleCall_5_0 = (RuleCall)cExpressionAssignment_5.eContents().get(0);
+		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		
+		//ImplicationConstraint cs::ImplicationConstraintCS:
+		//	'implication' name=ID? '{'
+		//	tupleDescriptor=ImplicationConstraintTupleDescriptor
+		//	'ocl' expression=Model ';'
+		//	'}';
+		@Override public ParserRule getRule() { return rule; }
+
+		//'implication' name=ID? '{' tupleDescriptor=ImplicationConstraintTupleDescriptor 'ocl' expression=Model ';' '}'
+		public Group getGroup() { return cGroup; }
+
+		//'implication'
+		public Keyword getImplicationKeyword_0() { return cImplicationKeyword_0; }
+
+		//name=ID?
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDParserRuleCall_1_0() { return cNameIDParserRuleCall_1_0; }
+
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//tupleDescriptor=ImplicationConstraintTupleDescriptor
+		public Assignment getTupleDescriptorAssignment_3() { return cTupleDescriptorAssignment_3; }
+
+		//ImplicationConstraintTupleDescriptor
+		public RuleCall getTupleDescriptorImplicationConstraintTupleDescriptorParserRuleCall_3_0() { return cTupleDescriptorImplicationConstraintTupleDescriptorParserRuleCall_3_0; }
+
+		//'ocl'
+		public Keyword getOclKeyword_4() { return cOclKeyword_4; }
+
+		//expression=Model
+		public Assignment getExpressionAssignment_5() { return cExpressionAssignment_5; }
+
+		//Model
+		public RuleCall getExpressionModelParserRuleCall_5_0() { return cExpressionModelParserRuleCall_5_0; }
+
+		//';'
+		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
+
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+	}
+
 	public class MeasureFunctionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.MeasureFunction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1106,10 +1242,12 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	private final TupleDescriptorElements pTupleDescriptor;
 	private final WeightTupleDescriptorElements pWeightTupleDescriptor;
 	private final BoundWeightTupleDescriptorElements pBoundWeightTupleDescriptor;
+	private final ImplicationConstraintTupleDescriptorElements pImplicationConstraintTupleDescriptor;
 	private final ConstraintElements pConstraint;
 	private final CoherenceConstraintElements pCoherenceConstraint;
 	private final ResourceConstraintElements pResourceConstraint;
 	private final LocationConstraintElements pLocationConstraint;
+	private final ImplicationConstraintElements pImplicationConstraint;
 	private final CoherenceConstraintTypeElements eCoherenceConstraintType;
 	private final MeasureFunctionElements pMeasureFunction;
 	private final GoalElements eGoal;
@@ -1145,10 +1283,12 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		this.pTupleDescriptor = new TupleDescriptorElements();
 		this.pWeightTupleDescriptor = new WeightTupleDescriptorElements();
 		this.pBoundWeightTupleDescriptor = new BoundWeightTupleDescriptorElements();
+		this.pImplicationConstraintTupleDescriptor = new ImplicationConstraintTupleDescriptorElements();
 		this.pConstraint = new ConstraintElements();
 		this.pCoherenceConstraint = new CoherenceConstraintElements();
 		this.pResourceConstraint = new ResourceConstraintElements();
 		this.pLocationConstraint = new LocationConstraintElements();
+		this.pImplicationConstraint = new ImplicationConstraintElements();
 		this.eCoherenceConstraintType = new CoherenceConstraintTypeElements();
 		this.pMeasureFunction = new MeasureFunctionElements();
 		this.eGoal = new GoalElements();
@@ -1348,8 +1488,22 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		return getBoundWeightTupleDescriptorAccess().getRule();
 	}
 
+	//ImplicationConstraintTupleDescriptor cs::ImplicationConstraintTupleDescriptorCS:
+	//	'premise' premise=ID ';'
+	//	'premise' premiseTupleDescriptor=TupleDescriptor
+	//	'conclusion' conclusion=ID ';'
+	//	'conclusion' conclusionTupleDescriptor=TupleDescriptor;
+	public ImplicationConstraintTupleDescriptorElements getImplicationConstraintTupleDescriptorAccess() {
+		return pImplicationConstraintTupleDescriptor;
+	}
+	
+	public ParserRule getImplicationConstraintTupleDescriptorRule() {
+		return getImplicationConstraintTupleDescriptorAccess().getRule();
+	}
+
 	//Constraint cs::ConstraintCS:
-	//	'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint);
+	//	'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint
+	//	| ImplicationConstraint);
 	public ConstraintElements getConstraintAccess() {
 		return pConstraint;
 	}
@@ -1395,6 +1549,19 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	
 	public ParserRule getLocationConstraintRule() {
 		return getLocationConstraintAccess().getRule();
+	}
+
+	//ImplicationConstraint cs::ImplicationConstraintCS:
+	//	'implication' name=ID? '{'
+	//	tupleDescriptor=ImplicationConstraintTupleDescriptor
+	//	'ocl' expression=Model ';'
+	//	'}';
+	public ImplicationConstraintElements getImplicationConstraintAccess() {
+		return pImplicationConstraint;
+	}
+	
+	public ParserRule getImplicationConstraintRule() {
+		return getImplicationConstraintAccess().getRule();
 	}
 
 	//enum CoherenceConstraintType returns cs::CoherenceConstraintType:

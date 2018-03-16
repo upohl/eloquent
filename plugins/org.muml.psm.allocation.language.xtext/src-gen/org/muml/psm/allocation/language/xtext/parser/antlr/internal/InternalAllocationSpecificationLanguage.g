@@ -1337,6 +1337,123 @@ ruleBoundWeightTupleDescriptor returns [EObject current=null]
 
 
 
+// Entry rule entryRuleImplicationConstraintTupleDescriptor
+entryRuleImplicationConstraintTupleDescriptor returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getImplicationConstraintTupleDescriptorRule()); }
+	 iv_ruleImplicationConstraintTupleDescriptor=ruleImplicationConstraintTupleDescriptor 
+	 { $current=$iv_ruleImplicationConstraintTupleDescriptor.current; } 
+	 EOF 
+;
+
+// Rule ImplicationConstraintTupleDescriptor
+ruleImplicationConstraintTupleDescriptor returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='premise' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseIDParserRuleCall_1_0()); 
+	    }
+		lv_premise_1_0=ruleID		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getImplicationConstraintTupleDescriptorRule());
+	        }
+       		set(
+       			$current, 
+       			"premise",
+        		lv_premise_1_0, 
+        		"org.eclipse.ocl.xtext.base.Base.ID");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_2=';' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getImplicationConstraintTupleDescriptorAccess().getSemicolonKeyword_2());
+    }
+	otherlv_3='premise' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseKeyword_3());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseTupleDescriptorTupleDescriptorParserRuleCall_4_0()); 
+	    }
+		lv_premiseTupleDescriptor_4_0=ruleTupleDescriptor		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getImplicationConstraintTupleDescriptorRule());
+	        }
+       		set(
+       			$current, 
+       			"premiseTupleDescriptor",
+        		lv_premiseTupleDescriptor_4_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TupleDescriptor");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_5='conclusion' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionKeyword_5());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionIDParserRuleCall_6_0()); 
+	    }
+		lv_conclusion_6_0=ruleID		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getImplicationConstraintTupleDescriptorRule());
+	        }
+       		set(
+       			$current, 
+       			"conclusion",
+        		lv_conclusion_6_0, 
+        		"org.eclipse.ocl.xtext.base.Base.ID");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_7=';' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getImplicationConstraintTupleDescriptorAccess().getSemicolonKeyword_7());
+    }
+	otherlv_8='conclusion' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionKeyword_8());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionTupleDescriptorTupleDescriptorParserRuleCall_9_0()); 
+	    }
+		lv_conclusionTupleDescriptor_9_0=ruleTupleDescriptor		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getImplicationConstraintTupleDescriptorRule());
+	        }
+       		set(
+       			$current, 
+       			"conclusionTupleDescriptor",
+        		lv_conclusionTupleDescriptor_9_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TupleDescriptor");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
+;
+
+
+
+
+
 // Entry rule entryRuleConstraint
 entryRuleConstraint returns [EObject current=null] 
 	:
@@ -1391,6 +1508,19 @@ ruleConstraint returns [EObject current=null]
     this_LocationConstraint_3=ruleLocationConstraint
     { 
         $current = $this_LocationConstraint_3.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+	{ 
+	  /* */ 
+	}
+    { 
+        newCompositeNode(grammarAccess.getConstraintAccess().getImplicationConstraintParserRuleCall_1_3()); 
+    }
+    this_ImplicationConstraint_4=ruleImplicationConstraint
+    { 
+        $current = $this_ImplicationConstraint_4.current; 
         afterParserOrEnumRuleCall();
     }
 ))
@@ -1701,6 +1831,101 @@ ruleLocationConstraint returns [EObject current=null]
 	otherlv_8='}' 
     {
     	newLeafNode(otherlv_8, grammarAccess.getLocationConstraintAccess().getRightCurlyBracketKeyword_7());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleImplicationConstraint
+entryRuleImplicationConstraint returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getImplicationConstraintRule()); }
+	 iv_ruleImplicationConstraint=ruleImplicationConstraint 
+	 { $current=$iv_ruleImplicationConstraint.current; } 
+	 EOF 
+;
+
+// Rule ImplicationConstraint
+ruleImplicationConstraint returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='implication' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getImplicationConstraintAccess().getImplicationKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getImplicationConstraintAccess().getNameIDParserRuleCall_1_0()); 
+	    }
+		lv_name_1_0=ruleID		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getImplicationConstraintRule());
+	        }
+       		set(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"org.eclipse.ocl.xtext.base.Base.ID");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)?	otherlv_2='{' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getImplicationConstraintAccess().getLeftCurlyBracketKeyword_2());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getImplicationConstraintAccess().getTupleDescriptorImplicationConstraintTupleDescriptorParserRuleCall_3_0()); 
+	    }
+		lv_tupleDescriptor_3_0=ruleImplicationConstraintTupleDescriptor		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getImplicationConstraintRule());
+	        }
+       		set(
+       			$current, 
+       			"tupleDescriptor",
+        		lv_tupleDescriptor_3_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.ImplicationConstraintTupleDescriptor");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_4='ocl' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getImplicationConstraintAccess().getOclKeyword_4());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getImplicationConstraintAccess().getExpressionModelParserRuleCall_5_0()); 
+	    }
+		lv_expression_5_0=ruleModel		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getImplicationConstraintRule());
+	        }
+       		set(
+       			$current, 
+       			"expression",
+        		lv_expression_5_0, 
+        		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.Model");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_6=';' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getImplicationConstraintAccess().getSemicolonKeyword_6());
+    }
+	otherlv_7='}' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getImplicationConstraintAccess().getRightCurlyBracketKeyword_7());
     }
 )
 ;

@@ -90,8 +90,17 @@ BoundWeightTupleDescriptor returns cs::BoundWeightTupleDescriptorCS:
 	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
 ;
 
+ImplicationConstraintTupleDescriptor returns cs::ImplicationConstraintTupleDescriptorCS:
+	'premise' premise=ID ';'
+	'premise' premiseTupleDescriptor=TupleDescriptor
+	'conclusion' conclusion=ID ';'
+	'conclusion' conclusionTupleDescriptor=TupleDescriptor	
+;
+
 Constraint returns cs::ConstraintCS:
-	'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint)
+	'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint
+		| ImplicationConstraint
+	)
 ;
 
 CoherenceConstraint returns cs::CoherenceConstraintCS:
@@ -111,6 +120,13 @@ ResourceConstraint returns cs::ResourceConstraintCS:
 LocationConstraint returns cs::LocationConstraintCS:
 	('requiredHardwareResourceInstance' | 'requiredLocation') (name=ID)? '{'
 		tupleDescriptor=TupleDescriptor
+		'ocl' expression=Model';'
+	'}'
+;
+
+ImplicationConstraint returns cs::ImplicationConstraintCS:
+	'implication' (name=ID)? '{'
+		tupleDescriptor=ImplicationConstraintTupleDescriptor
 		'ocl' expression=Model';'
 	'}'
 ;

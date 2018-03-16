@@ -82,6 +82,8 @@ import org.muml.psm.allocation.language.cs.BoundCS;
 import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.CoherenceConstraintCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
+import org.muml.psm.allocation.language.cs.ImplicationConstraintCS;
+import org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.JavaImplementationProviderCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintCS;
 import org.muml.psm.allocation.language.cs.MeasureFunctionCS;
@@ -276,6 +278,12 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				return; 
 			case CsPackage.COHERENCE_CONSTRAINT_CS:
 				sequence_CoherenceConstraint(context, (CoherenceConstraintCS) semanticObject); 
+				return; 
+			case CsPackage.IMPLICATION_CONSTRAINT_CS:
+				sequence_ImplicationConstraint(context, (ImplicationConstraintCS) semanticObject); 
+				return; 
+			case CsPackage.IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS:
+				sequence_ImplicationConstraintTupleDescriptor(context, (ImplicationConstraintTupleDescriptorCS) semanticObject); 
 				return; 
 			case CsPackage.JAVA_IMPLEMENTATION_PROVIDER_CS:
 				if (rule == grammarAccess.getNameProviderImplementationClassRule()) {
@@ -531,6 +539,46 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 *     (type=CoherenceConstraintType name=ID? tupleDescriptor=TupleDescriptor expression=Model)
 	 */
 	protected void sequence_CoherenceConstraint(ISerializationContext context, CoherenceConstraintCS semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ImplicationConstraintTupleDescriptor returns ImplicationConstraintTupleDescriptorCS
+	 *
+	 * Constraint:
+	 *     (premise=ID premiseTupleDescriptor=TupleDescriptor conclusion=ID conclusionTupleDescriptor=TupleDescriptor)
+	 */
+	protected void sequence_ImplicationConstraintTupleDescriptor(ISerializationContext context, ImplicationConstraintTupleDescriptorCS semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__PREMISE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__PREMISE));
+			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__PREMISE_TUPLE_DESCRIPTOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__PREMISE_TUPLE_DESCRIPTOR));
+			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__CONCLUSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__CONCLUSION));
+			if (transientValues.isValueTransient(semanticObject, CsPackage.Literals.IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__CONCLUSION_TUPLE_DESCRIPTOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CsPackage.Literals.IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS__CONCLUSION_TUPLE_DESCRIPTOR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseIDParserRuleCall_1_0(), semanticObject.getPremise());
+		feeder.accept(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getPremiseTupleDescriptorTupleDescriptorParserRuleCall_4_0(), semanticObject.getPremiseTupleDescriptor());
+		feeder.accept(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionIDParserRuleCall_6_0(), semanticObject.getConclusion());
+		feeder.accept(grammarAccess.getImplicationConstraintTupleDescriptorAccess().getConclusionTupleDescriptorTupleDescriptorParserRuleCall_9_0(), semanticObject.getConclusionTupleDescriptor());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Constraint returns ImplicationConstraintCS
+	 *     ImplicationConstraint returns ImplicationConstraintCS
+	 *
+	 * Constraint:
+	 *     (name=ID? tupleDescriptor=ImplicationConstraintTupleDescriptor expression=Model)
+	 */
+	protected void sequence_ImplicationConstraint(ISerializationContext context, ImplicationConstraintCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

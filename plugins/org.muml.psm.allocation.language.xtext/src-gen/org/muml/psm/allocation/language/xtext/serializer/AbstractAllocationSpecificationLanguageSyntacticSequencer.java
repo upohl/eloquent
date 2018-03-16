@@ -131,7 +131,7 @@ public abstract class AbstractAllocationSpecificationLanguageSyntacticSequencer 
 	
 	/**
 	 * Ambiguous syntax:
-	 *     'requiredLocation' | 'requiredHardwareResourceInstance'
+	 *     'requiredHardwareResourceInstance' | 'requiredLocation'
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) 'constraint' (ambiguity) '{' tupleDescriptor=TupleDescriptor
@@ -176,7 +176,7 @@ public abstract class AbstractAllocationSpecificationLanguageSyntacticSequencer 
 	
 	/**
 	 * Ambiguous syntax:
-	 *     'requiredResource' | 'resource'
+	 *     'resource' | 'requiredResource'
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) 'constraint' (ambiguity) '{' tupleDescriptor=BoundWeightTupleDescriptor

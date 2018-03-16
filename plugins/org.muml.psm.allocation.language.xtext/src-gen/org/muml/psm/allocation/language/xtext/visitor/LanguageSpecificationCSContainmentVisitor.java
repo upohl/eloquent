@@ -121,6 +121,17 @@ public class LanguageSpecificationCSContainmentVisitor extends org.muml.psm.allo
 		return visitConstraintCS(csElement);
 	}
 	@Override
+	public @Nullable Continuation<?> visitImplicationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ImplicationConstraintCS csElement) {
+		org.muml.psm.allocation.language.as.ImplicationConstraint pivotElement = PivotUtil.getPivot(org.muml.psm.allocation.language.as.ImplicationConstraint.class, csElement);
+		if (pivotElement == null) {
+			pivotElement = refreshNamedElement(org.muml.psm.allocation.language.as.ImplicationConstraint.class, org.muml.psm.allocation.language.as.AsPackage.Literals.IMPLICATION_CONSTRAINT, csElement);
+		}
+		pivotElement.setTupleDescriptor(
+			PivotUtil.getPivot(org.muml.psm.allocation.language.as.ImplicationConstraintTupleDescriptor.class, csElement.getTupleDescriptor())
+		);
+		return visitConstraintCS(csElement);
+	}
+	@Override
 	public @Nullable Continuation<?> visitTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull TupleDescriptorCS csElement) {
 		org.muml.psm.allocation.language.as.TupleDescriptor pivotElement = PivotUtil.getPivot(org.muml.psm.allocation.language.as.TupleDescriptor.class, csElement);
 		if (pivotElement == null) {
@@ -154,6 +165,26 @@ public class LanguageSpecificationCSContainmentVisitor extends org.muml.psm.allo
 			csElement.getBound()
 		);
 		return visitWeightTupleDescriptorCS(csElement);
+	}
+	@Override
+	public @Nullable Continuation<?> visitImplicationConstraintTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull ImplicationConstraintTupleDescriptorCS csElement) {
+		org.muml.psm.allocation.language.as.ImplicationConstraintTupleDescriptor pivotElement = PivotUtil.getPivot(org.muml.psm.allocation.language.as.ImplicationConstraintTupleDescriptor.class, csElement);
+		if (pivotElement == null) {
+			pivotElement = context.refreshModelElement(org.muml.psm.allocation.language.as.ImplicationConstraintTupleDescriptor.class, org.muml.psm.allocation.language.as.AsPackage.Literals.IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR, csElement);
+		}
+		pivotElement.setPremise(
+			csElement.getPremise()
+		);
+		pivotElement.setPremiseTupleDescriptor(
+			PivotUtil.getPivot(org.muml.psm.allocation.language.as.TupleDescriptor.class, csElement.getPremiseTupleDescriptor())
+		);
+		pivotElement.setConclusion(
+			csElement.getConclusion()
+		);
+		pivotElement.setConclusionTupleDescriptor(
+			PivotUtil.getPivot(org.muml.psm.allocation.language.as.TupleDescriptor.class, csElement.getConclusionTupleDescriptor())
+		);
+		return null;
 	}
 	@Override
 	public @Nullable Continuation<?> visitTypedNamedPartCS(org.muml.psm.allocation.language.cs.@NonNull TypedNamedPartCS csElement) {
