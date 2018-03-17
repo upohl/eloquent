@@ -93,8 +93,10 @@ public class AllocationSpecificationLanguageJavaValidator extends org.muml.psm.a
 	@Check
 	public void checkImplicationConstraintCS(ImplicationConstraintCS constraintCS) {
 		ImplicationConstraintTupleDescriptorCS tupleDescriptor = constraintCS.getTupleDescriptor();
+		ContextCS oclExpression = constraintCS.getExpression();
 		if (tupleDescriptor == null || tupleDescriptor.getPremise() == null
-				|| tupleDescriptor.getConclusion() == null) {
+				|| tupleDescriptor.getConclusion() == null
+				|| oclExpression == null) {
 			return;
 		}
 		checkTypes(constraintCS);
