@@ -966,6 +966,97 @@ public interface CsPackage extends EPackage {
 	int IMPLICATION_CONSTRAINT_CS_FEATURE_COUNT = CONSTRAINT_CS_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.ForbiddenLocationConstraintCSImpl <em>Forbidden Location Constraint CS</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.cs.impl.ForbiddenLocationConstraintCSImpl
+	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getForbiddenLocationConstraintCS()
+	 * @generated
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT_CS = 9;
+
+	/**
+	 * The feature id for the '<em><b>Csi</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT_CS__CSI = CONSTRAINT_CS__CSI;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT_CS__PARENT = CONSTRAINT_CS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Pivot</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT_CS__PIVOT = CONSTRAINT_CS__PIVOT;
+
+	/**
+	 * The feature id for the '<em><b>Original Xmi Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT_CS__ORIGINAL_XMI_ID = CONSTRAINT_CS__ORIGINAL_XMI_ID;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT_CS__OWNED_ANNOTATIONS = CONSTRAINT_CS__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT_CS__NAME = CONSTRAINT_CS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT_CS__EXPRESSION = CONSTRAINT_CS__EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR = CONSTRAINT_CS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Forbidden Location Constraint CS</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT_CS_FEATURE_COUNT = CONSTRAINT_CS_FEATURE_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.TupleDescriptorCSImpl <em>Tuple Descriptor CS</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -973,7 +1064,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getTupleDescriptorCS()
 	 * @generated
 	 */
-	int TUPLE_DESCRIPTOR_CS = 9;
+	int TUPLE_DESCRIPTOR_CS = 10;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1046,7 +1137,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getWeightTupleDescriptorCS()
 	 * @generated
 	 */
-	int WEIGHT_TUPLE_DESCRIPTOR_CS = 10;
+	int WEIGHT_TUPLE_DESCRIPTOR_CS = 11;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1128,7 +1219,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getBoundWeightTupleDescriptorCS()
 	 * @generated
 	 */
-	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS = 11;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS = 12;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1219,7 +1310,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getImplicationConstraintTupleDescriptorCS()
 	 * @generated
 	 */
-	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS = 12;
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR_CS = 13;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1319,7 +1410,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getTypedNamedPartCS()
 	 * @generated
 	 */
-	int TYPED_NAMED_PART_CS = 13;
+	int TYPED_NAMED_PART_CS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1419,7 +1510,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getTypedPairCS()
 	 * @generated
 	 */
-	int TYPED_PAIR_CS = 14;
+	int TYPED_PAIR_CS = 15;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1501,7 +1592,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getMeasureFunctionCS()
 	 * @generated
 	 */
-	int MEASURE_FUNCTION_CS = 15;
+	int MEASURE_FUNCTION_CS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1574,7 +1665,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getServiceCS()
 	 * @generated
 	 */
-	int SERVICE_CS = 16;
+	int SERVICE_CS = 17;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1656,7 +1747,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getQoSDimensionCS()
 	 * @generated
 	 */
-	int QO_SDIMENSION_CS = 17;
+	int QO_SDIMENSION_CS = 18;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1747,7 +1838,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getJavaImplementationProviderCS()
 	 * @generated
 	 */
-	int JAVA_IMPLEMENTATION_PROVIDER_CS = 18;
+	int JAVA_IMPLEMENTATION_PROVIDER_CS = 19;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1820,7 +1911,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getNameProviderCS()
 	 * @generated
 	 */
-	int NAME_PROVIDER_CS = 19;
+	int NAME_PROVIDER_CS = 20;
 
 	/**
 	 * The number of structural features of the '<em>Name Provider CS</em>' class.
@@ -1839,7 +1930,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getStorageProviderCS()
 	 * @generated
 	 */
-	int STORAGE_PROVIDER_CS = 20;
+	int STORAGE_PROVIDER_CS = 21;
 
 	/**
 	 * The number of structural features of the '<em>Storage Provider CS</em>' class.
@@ -1858,7 +1949,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getOCLContextCS()
 	 * @generated
 	 */
-	int OCL_CONTEXT_CS = 21;
+	int OCL_CONTEXT_CS = 22;
 
 	/**
 	 * The feature id for the '<em><b>Csi</b></em>' attribute.
@@ -1958,7 +2049,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getCoherenceConstraintType()
 	 * @generated
 	 */
-	int COHERENCE_CONSTRAINT_TYPE = 22;
+	int COHERENCE_CONSTRAINT_TYPE = 23;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.Goal <em>Goal</em>}' enum.
@@ -1968,7 +2059,7 @@ public interface CsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getGoal()
 	 * @generated
 	 */
-	int GOAL = 23;
+	int GOAL = 24;
 
 
 	/**
@@ -2269,6 +2360,27 @@ public interface CsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getImplicationConstraintCS_TupleDescriptor();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.ForbiddenLocationConstraintCS <em>Forbidden Location Constraint CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Forbidden Location Constraint CS</em>'.
+	 * @see org.muml.psm.allocation.language.cs.ForbiddenLocationConstraintCS
+	 * @generated
+	 */
+	EClass getForbiddenLocationConstraintCS();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.cs.ForbiddenLocationConstraintCS#getTupleDescriptor <em>Tuple Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.cs.ForbiddenLocationConstraintCS#getTupleDescriptor()
+	 * @see #getForbiddenLocationConstraintCS()
+	 * @generated
+	 */
+	EReference getForbiddenLocationConstraintCS_TupleDescriptor();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.TupleDescriptorCS <em>Tuple Descriptor CS</em>}'.
@@ -2815,6 +2927,24 @@ public interface CsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference IMPLICATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR = eINSTANCE.getImplicationConstraintCS_TupleDescriptor();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.ForbiddenLocationConstraintCSImpl <em>Forbidden Location Constraint CS</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.cs.impl.ForbiddenLocationConstraintCSImpl
+		 * @see org.muml.psm.allocation.language.cs.impl.CsPackageImpl#getForbiddenLocationConstraintCS()
+		 * @generated
+		 */
+		EClass FORBIDDEN_LOCATION_CONSTRAINT_CS = eINSTANCE.getForbiddenLocationConstraintCS();
+
+		/**
+		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FORBIDDEN_LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR = eINSTANCE.getForbiddenLocationConstraintCS_TupleDescriptor();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.TupleDescriptorCSImpl <em>Tuple Descriptor CS</em>}' class.

@@ -186,6 +186,17 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ForbiddenLocationConstraintCS" eSuperTypes="#//ConstraintCS">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A ForbiddenLocationConstraintCS is used to specify that certain location&#xA;combinations are not allowed. For instance, it can be used to express that&#xA;&#xA;&quot;A cannot be related to B while C is related to D and vice-versa. Moreover,&#xA;A cannot be related to X while F is related to D and vice-versa.&quot;"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tupleDescriptor" lowerBound="1"
+        eType="#//TupleDescriptorCS" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Tuple descriptor that describes the forbidden location constraint's tuple&#xA;type."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TupleDescriptorCS" eSuperTypes="../../org.eclipse.ocl.xtext.base/model/BaseCS.ecore#//ModelElementCS">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A TupleDescriptor is used to define an expected tuple type. It consists&#xA;of at least one typed pair. A typed pair describes the source-target&#xA;relationship of two distinct named parts that belong to the same tuple&#xA;type."/>

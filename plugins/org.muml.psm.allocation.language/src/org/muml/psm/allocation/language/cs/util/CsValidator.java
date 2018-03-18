@@ -105,6 +105,8 @@ public class CsValidator extends EObjectValidator {
 				return validateLocationConstraintCS((LocationConstraintCS)value, diagnostics, context);
 			case CsPackage.IMPLICATION_CONSTRAINT_CS:
 				return validateImplicationConstraintCS((ImplicationConstraintCS)value, diagnostics, context);
+			case CsPackage.FORBIDDEN_LOCATION_CONSTRAINT_CS:
+				return validateForbiddenLocationConstraintCS((ForbiddenLocationConstraintCS)value, diagnostics, context);
 			case CsPackage.TUPLE_DESCRIPTOR_CS:
 				return validateTupleDescriptorCS((TupleDescriptorCS)value, diagnostics, context);
 			case CsPackage.WEIGHT_TUPLE_DESCRIPTOR_CS:
@@ -297,6 +299,15 @@ public class CsValidator extends EObjectValidator {
 	 */
 	public boolean validateImplicationConstraintCS(ImplicationConstraintCS implicationConstraintCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(implicationConstraintCS, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateForbiddenLocationConstraintCS(ForbiddenLocationConstraintCS forbiddenLocationConstraintCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(forbiddenLocationConstraintCS, diagnostics, context);
 	}
 
 	/**

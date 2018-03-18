@@ -62,6 +62,11 @@ public abstract class AbstractCsLeft2RightVisitor
 	}
 
 	@Override
+	public @Nullable Element visitForbiddenLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ForbiddenLocationConstraintCS csElement) {
+		return visitConstraintCS(csElement);
+	}
+
+	@Override
 	public @Nullable Element visitImplicationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ImplicationConstraintCS csElement) {
 		return visitConstraintCS(csElement);
 	}

@@ -116,6 +116,10 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 				return createImplicationConstraintAdapter();
 			}
 			@Override
+			public Adapter caseForbiddenLocationConstraint(ForbiddenLocationConstraint object) {
+				return createForbiddenLocationConstraintAdapter();
+			}
+			@Override
 			public Adapter caseTupleDescriptor(TupleDescriptor object) {
 				return createTupleDescriptorAdapter();
 			}
@@ -338,6 +342,20 @@ public class AsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createImplicationConstraintAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.as.ForbiddenLocationConstraint <em>Forbidden Location Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.as.ForbiddenLocationConstraint
+	 * @generated
+	 */
+	public Adapter createForbiddenLocationConstraintAdapter() {
 		return null;
 	}
 

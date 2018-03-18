@@ -177,6 +177,18 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AsPackage.FORBIDDEN_LOCATION_CONSTRAINT: {
+				ForbiddenLocationConstraint forbiddenLocationConstraint = (ForbiddenLocationConstraint)theEObject;
+				T result = caseForbiddenLocationConstraint(forbiddenLocationConstraint);
+				if (result == null) result = caseConstraint(forbiddenLocationConstraint);
+				if (result == null) result = caseNamedElement(forbiddenLocationConstraint);
+				if (result == null) result = caseEvaluableElement(forbiddenLocationConstraint);
+				if (result == null) result = caseElement(forbiddenLocationConstraint);
+				if (result == null) result = caseNameable(forbiddenLocationConstraint);
+				if (result == null) result = caseVisitable(forbiddenLocationConstraint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case AsPackage.TUPLE_DESCRIPTOR: {
 				TupleDescriptor tupleDescriptor = (TupleDescriptor)theEObject;
 				T result = caseTupleDescriptor(tupleDescriptor);
@@ -427,6 +439,21 @@ public class AsSwitch<@Nullable T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseImplicationConstraint(ImplicationConstraint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Forbidden Location Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Forbidden Location Constraint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseForbiddenLocationConstraint(ForbiddenLocationConstraint object) {
 		return null;
 	}
 

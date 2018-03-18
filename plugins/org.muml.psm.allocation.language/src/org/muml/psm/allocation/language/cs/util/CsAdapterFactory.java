@@ -123,6 +123,10 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 				return createImplicationConstraintCSAdapter();
 			}
 			@Override
+			public Adapter caseForbiddenLocationConstraintCS(ForbiddenLocationConstraintCS object) {
+				return createForbiddenLocationConstraintCSAdapter();
+			}
+			@Override
 			public Adapter caseTupleDescriptorCS(TupleDescriptorCS object) {
 				return createTupleDescriptorCSAdapter();
 			}
@@ -365,6 +369,20 @@ public class CsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createImplicationConstraintCSAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.language.cs.ForbiddenLocationConstraintCS <em>Forbidden Location Constraint CS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.language.cs.ForbiddenLocationConstraintCS
+	 * @generated
+	 */
+	public Adapter createForbiddenLocationConstraintCSAdapter() {
 		return null;
 	}
 

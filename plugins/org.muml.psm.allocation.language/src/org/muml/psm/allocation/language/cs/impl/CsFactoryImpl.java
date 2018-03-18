@@ -64,6 +64,7 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 			case CsPackage.RESOURCE_CONSTRAINT_CS: return createResourceConstraintCS();
 			case CsPackage.LOCATION_CONSTRAINT_CS: return createLocationConstraintCS();
 			case CsPackage.IMPLICATION_CONSTRAINT_CS: return createImplicationConstraintCS();
+			case CsPackage.FORBIDDEN_LOCATION_CONSTRAINT_CS: return createForbiddenLocationConstraintCS();
 			case CsPackage.TUPLE_DESCRIPTOR_CS: return createTupleDescriptorCS();
 			case CsPackage.WEIGHT_TUPLE_DESCRIPTOR_CS: return createWeightTupleDescriptorCS();
 			case CsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS: return createBoundWeightTupleDescriptorCS();
@@ -182,6 +183,16 @@ public class CsFactoryImpl extends EFactoryImpl implements CsFactory {
 	public ImplicationConstraintCS createImplicationConstraintCS() {
 		ImplicationConstraintCSImpl implicationConstraintCS = new ImplicationConstraintCSImpl();
 		return implicationConstraintCS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ForbiddenLocationConstraintCS createForbiddenLocationConstraintCS() {
+		ForbiddenLocationConstraintCSImpl forbiddenLocationConstraintCS = new ForbiddenLocationConstraintCSImpl();
+		return forbiddenLocationConstraintCS;
 	}
 
 	/**

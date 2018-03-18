@@ -874,6 +874,88 @@ public interface AsPackage extends EPackage {
 	int IMPLICATION_CONSTRAINT_FEATURE_COUNT = CONSTRAINT_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.ForbiddenLocationConstraintImpl <em>Forbidden Location Constraint</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.language.as.impl.ForbiddenLocationConstraintImpl
+	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getForbiddenLocationConstraint()
+	 * @generated
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT = 9;
+
+	/**
+	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT__ANNOTATING_COMMENTS = CONSTRAINT__ANNOTATING_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT__OWNED_ANNOTATIONS = CONSTRAINT__OWNED_ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT__OWNED_COMMENTS = CONSTRAINT__OWNED_COMMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT__OWNED_EXTENSIONS = CONSTRAINT__OWNED_EXTENSIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT__NAME = CONSTRAINT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT__EXPRESSION = CONSTRAINT__EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Tuple Descriptor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR = CONSTRAINT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Forbidden Location Constraint</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORBIDDEN_LOCATION_CONSTRAINT_FEATURE_COUNT = CONSTRAINT_FEATURE_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.impl.TupleDescriptorImpl <em>Tuple Descriptor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -881,7 +963,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getTupleDescriptor()
 	 * @generated
 	 */
-	int TUPLE_DESCRIPTOR = 9;
+	int TUPLE_DESCRIPTOR = 10;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -945,7 +1027,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getWeightTupleDescriptor()
 	 * @generated
 	 */
-	int WEIGHT_TUPLE_DESCRIPTOR = 10;
+	int WEIGHT_TUPLE_DESCRIPTOR = 11;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1018,7 +1100,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getBoundWeightTupleDescriptor()
 	 * @generated
 	 */
-	int BOUND_WEIGHT_TUPLE_DESCRIPTOR = 11;
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR = 12;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1100,7 +1182,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getImplicationConstraintTupleDescriptor()
 	 * @generated
 	 */
-	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR = 12;
+	int IMPLICATION_CONSTRAINT_TUPLE_DESCRIPTOR = 13;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1191,7 +1273,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getTypedNamedPart()
 	 * @generated
 	 */
-	int TYPED_NAMED_PART = 13;
+	int TYPED_NAMED_PART = 14;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1282,7 +1364,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getTypedPair()
 	 * @generated
 	 */
-	int TYPED_PAIR = 14;
+	int TYPED_PAIR = 15;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1355,7 +1437,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getMeasureFunction()
 	 * @generated
 	 */
-	int MEASURE_FUNCTION = 15;
+	int MEASURE_FUNCTION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1419,7 +1501,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getService()
 	 * @generated
 	 */
-	int SERVICE = 16;
+	int SERVICE = 17;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1492,7 +1574,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getQoSDimension()
 	 * @generated
 	 */
-	int QO_SDIMENSION = 17;
+	int QO_SDIMENSION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1574,7 +1656,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getJavaImplementationProvider()
 	 * @generated
 	 */
-	int JAVA_IMPLEMENTATION_PROVIDER = 18;
+	int JAVA_IMPLEMENTATION_PROVIDER = 19;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1629,7 +1711,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getNameProvider()
 	 * @generated
 	 */
-	int NAME_PROVIDER = 19;
+	int NAME_PROVIDER = 20;
 
 	/**
 	 * The number of structural features of the '<em>Name Provider</em>' class.
@@ -1648,7 +1730,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getStorageProvider()
 	 * @generated
 	 */
-	int STORAGE_PROVIDER = 20;
+	int STORAGE_PROVIDER = 21;
 
 	/**
 	 * The number of structural features of the '<em>Storage Provider</em>' class.
@@ -1667,7 +1749,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getOCLContext()
 	 * @generated
 	 */
-	int OCL_CONTEXT = 21;
+	int OCL_CONTEXT = 22;
 
 	/**
 	 * The feature id for the '<em><b>Annotating Comments</b></em>' reference list.
@@ -1758,7 +1840,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getCoherenceConstraintType()
 	 * @generated
 	 */
-	int COHERENCE_CONSTRAINT_TYPE = 22;
+	int COHERENCE_CONSTRAINT_TYPE = 23;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.as.Goal <em>Goal</em>}' enum.
@@ -1768,7 +1850,7 @@ public interface AsPackage extends EPackage {
 	 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getGoal()
 	 * @generated
 	 */
-	int GOAL = 23;
+	int GOAL = 24;
 
 
 	/**
@@ -2047,6 +2129,27 @@ public interface AsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getImplicationConstraint_TupleDescriptor();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.ForbiddenLocationConstraint <em>Forbidden Location Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Forbidden Location Constraint</em>'.
+	 * @see org.muml.psm.allocation.language.as.ForbiddenLocationConstraint
+	 * @generated
+	 */
+	EClass getForbiddenLocationConstraint();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.muml.psm.allocation.language.as.ForbiddenLocationConstraint#getTupleDescriptor <em>Tuple Descriptor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tuple Descriptor</em>'.
+	 * @see org.muml.psm.allocation.language.as.ForbiddenLocationConstraint#getTupleDescriptor()
+	 * @see #getForbiddenLocationConstraint()
+	 * @generated
+	 */
+	EReference getForbiddenLocationConstraint_TupleDescriptor();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.as.TupleDescriptor <em>Tuple Descriptor</em>}'.
@@ -2577,6 +2680,24 @@ public interface AsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference IMPLICATION_CONSTRAINT__TUPLE_DESCRIPTOR = eINSTANCE.getImplicationConstraint_TupleDescriptor();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.ForbiddenLocationConstraintImpl <em>Forbidden Location Constraint</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.language.as.impl.ForbiddenLocationConstraintImpl
+		 * @see org.muml.psm.allocation.language.as.impl.AsPackageImpl#getForbiddenLocationConstraint()
+		 * @generated
+		 */
+		EClass FORBIDDEN_LOCATION_CONSTRAINT = eINSTANCE.getForbiddenLocationConstraint();
+
+		/**
+		 * The meta object literal for the '<em><b>Tuple Descriptor</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FORBIDDEN_LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR = eINSTANCE.getForbiddenLocationConstraint_TupleDescriptor();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.as.impl.TupleDescriptorImpl <em>Tuple Descriptor</em>}' class.

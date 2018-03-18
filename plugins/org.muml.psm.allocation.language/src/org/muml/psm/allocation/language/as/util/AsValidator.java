@@ -104,6 +104,8 @@ public class AsValidator extends EObjectValidator {
 				return validateLocationConstraint((LocationConstraint)value, diagnostics, context);
 			case AsPackage.IMPLICATION_CONSTRAINT:
 				return validateImplicationConstraint((ImplicationConstraint)value, diagnostics, context);
+			case AsPackage.FORBIDDEN_LOCATION_CONSTRAINT:
+				return validateForbiddenLocationConstraint((ForbiddenLocationConstraint)value, diagnostics, context);
 			case AsPackage.TUPLE_DESCRIPTOR:
 				return validateTupleDescriptor((TupleDescriptor)value, diagnostics, context);
 			case AsPackage.WEIGHT_TUPLE_DESCRIPTOR:
@@ -296,6 +298,15 @@ public class AsValidator extends EObjectValidator {
 	 */
 	public boolean validateImplicationConstraint(ImplicationConstraint implicationConstraint, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(implicationConstraint, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateForbiddenLocationConstraint(ForbiddenLocationConstraint forbiddenLocationConstraint, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(forbiddenLocationConstraint, diagnostics, context);
 	}
 
 	/**

@@ -22,6 +22,7 @@ import org.muml.psm.allocation.language.as.CoherenceConstraint;
 import org.muml.psm.allocation.language.as.CoherenceConstraintType;
 import org.muml.psm.allocation.language.as.Constraint;
 import org.muml.psm.allocation.language.as.EvaluableElement;
+import org.muml.psm.allocation.language.as.ForbiddenLocationConstraint;
 import org.muml.psm.allocation.language.as.Goal;
 import org.muml.psm.allocation.language.as.ImplicationConstraint;
 import org.muml.psm.allocation.language.as.ImplicationConstraintTupleDescriptor;
@@ -112,6 +113,13 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * @generated
 	 */
 	private EClass implicationConstraintEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass forbiddenLocationConstraintEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -531,6 +539,24 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getForbiddenLocationConstraint() {
+		return forbiddenLocationConstraintEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getForbiddenLocationConstraint_TupleDescriptor() {
+		return (EReference)forbiddenLocationConstraintEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTupleDescriptor() {
 		return tupleDescriptorEClass;
 	}
@@ -832,6 +858,9 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		implicationConstraintEClass = createEClass(IMPLICATION_CONSTRAINT);
 		createEReference(implicationConstraintEClass, IMPLICATION_CONSTRAINT__TUPLE_DESCRIPTOR);
 
+		forbiddenLocationConstraintEClass = createEClass(FORBIDDEN_LOCATION_CONSTRAINT);
+		createEReference(forbiddenLocationConstraintEClass, FORBIDDEN_LOCATION_CONSTRAINT__TUPLE_DESCRIPTOR);
+
 		tupleDescriptorEClass = createEClass(TUPLE_DESCRIPTOR);
 		createEReference(tupleDescriptorEClass, TUPLE_DESCRIPTOR__TYPED_PAIRS);
 
@@ -917,6 +946,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		resourceConstraintEClass.getESuperTypes().add(this.getConstraint());
 		locationConstraintEClass.getESuperTypes().add(this.getConstraint());
 		implicationConstraintEClass.getESuperTypes().add(this.getConstraint());
+		forbiddenLocationConstraintEClass.getESuperTypes().add(this.getConstraint());
 		tupleDescriptorEClass.getESuperTypes().add(thePivotPackage.getElement());
 		weightTupleDescriptorEClass.getESuperTypes().add(this.getTupleDescriptor());
 		boundWeightTupleDescriptorEClass.getESuperTypes().add(this.getWeightTupleDescriptor());
@@ -965,6 +995,9 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		initEClass(implicationConstraintEClass, ImplicationConstraint.class, "ImplicationConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImplicationConstraint_TupleDescriptor(), this.getImplicationConstraintTupleDescriptor(), null, "tupleDescriptor", null, 1, 1, ImplicationConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(forbiddenLocationConstraintEClass, ForbiddenLocationConstraint.class, "ForbiddenLocationConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getForbiddenLocationConstraint_TupleDescriptor(), this.getTupleDescriptor(), null, "tupleDescriptor", null, 1, 1, ForbiddenLocationConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tupleDescriptorEClass, TupleDescriptor.class, "TupleDescriptor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTupleDescriptor_TypedPairs(), this.getTypedPair(), null, "typedPairs", null, 1, -1, TupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

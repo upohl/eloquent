@@ -30,6 +30,7 @@ import org.muml.psm.allocation.language.cs.ConstraintCS;
 import org.muml.psm.allocation.language.cs.CsFactory;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.EvaluableElementCS;
+import org.muml.psm.allocation.language.cs.ForbiddenLocationConstraintCS;
 import org.muml.psm.allocation.language.cs.Goal;
 import org.muml.psm.allocation.language.cs.ImplicationConstraintCS;
 import org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS;
@@ -120,6 +121,13 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * @generated
 	 */
 	private EClass implicationConstraintCSEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass forbiddenLocationConstraintCSEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -561,6 +569,24 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getForbiddenLocationConstraintCS() {
+		return forbiddenLocationConstraintCSEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getForbiddenLocationConstraintCS_TupleDescriptor() {
+		return (EReference)forbiddenLocationConstraintCSEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTupleDescriptorCS() {
 		return tupleDescriptorCSEClass;
 	}
@@ -864,6 +890,9 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		implicationConstraintCSEClass = createEClass(IMPLICATION_CONSTRAINT_CS);
 		createEReference(implicationConstraintCSEClass, IMPLICATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR);
 
+		forbiddenLocationConstraintCSEClass = createEClass(FORBIDDEN_LOCATION_CONSTRAINT_CS);
+		createEReference(forbiddenLocationConstraintCSEClass, FORBIDDEN_LOCATION_CONSTRAINT_CS__TUPLE_DESCRIPTOR);
+
 		tupleDescriptorCSEClass = createEClass(TUPLE_DESCRIPTOR_CS);
 		createEReference(tupleDescriptorCSEClass, TUPLE_DESCRIPTOR_CS__TYPED_PAIRS);
 
@@ -953,6 +982,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		resourceConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		locationConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		implicationConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
+		forbiddenLocationConstraintCSEClass.getESuperTypes().add(this.getConstraintCS());
 		tupleDescriptorCSEClass.getESuperTypes().add(theBaseCSPackage.getModelElementCS());
 		weightTupleDescriptorCSEClass.getESuperTypes().add(this.getTupleDescriptorCS());
 		boundWeightTupleDescriptorCSEClass.getESuperTypes().add(this.getWeightTupleDescriptorCS());
@@ -1004,6 +1034,9 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		initEClass(implicationConstraintCSEClass, ImplicationConstraintCS.class, "ImplicationConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImplicationConstraintCS_TupleDescriptor(), this.getImplicationConstraintTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, ImplicationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(forbiddenLocationConstraintCSEClass, ForbiddenLocationConstraintCS.class, "ForbiddenLocationConstraintCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getForbiddenLocationConstraintCS_TupleDescriptor(), this.getTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, ForbiddenLocationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tupleDescriptorCSEClass, TupleDescriptorCS.class, "TupleDescriptorCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTupleDescriptorCS_TypedPairs(), this.getTypedPairCS(), null, "typedPairs", null, 1, -1, TupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

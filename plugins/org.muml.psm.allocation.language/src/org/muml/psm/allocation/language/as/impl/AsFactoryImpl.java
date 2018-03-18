@@ -64,6 +64,7 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 			case AsPackage.RESOURCE_CONSTRAINT: return createResourceConstraint();
 			case AsPackage.LOCATION_CONSTRAINT: return createLocationConstraint();
 			case AsPackage.IMPLICATION_CONSTRAINT: return createImplicationConstraint();
+			case AsPackage.FORBIDDEN_LOCATION_CONSTRAINT: return createForbiddenLocationConstraint();
 			case AsPackage.TUPLE_DESCRIPTOR: return createTupleDescriptor();
 			case AsPackage.WEIGHT_TUPLE_DESCRIPTOR: return createWeightTupleDescriptor();
 			case AsPackage.BOUND_WEIGHT_TUPLE_DESCRIPTOR: return createBoundWeightTupleDescriptor();
@@ -182,6 +183,16 @@ public class AsFactoryImpl extends EFactoryImpl implements AsFactory {
 	public ImplicationConstraint createImplicationConstraint() {
 		ImplicationConstraintImpl implicationConstraint = new ImplicationConstraintImpl();
 		return implicationConstraint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ForbiddenLocationConstraint createForbiddenLocationConstraint() {
+		ForbiddenLocationConstraintImpl forbiddenLocationConstraint = new ForbiddenLocationConstraintImpl();
+		return forbiddenLocationConstraint;
 	}
 
 	/**

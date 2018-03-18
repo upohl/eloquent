@@ -85,6 +85,15 @@ public interface CsFactory extends EFactory {
 	ImplicationConstraintCS createImplicationConstraintCS();
 
 	/**
+	 * Returns a new object of class '<em>Forbidden Location Constraint CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Forbidden Location Constraint CS</em>'.
+	 * @generated
+	 */
+	ForbiddenLocationConstraintCS createForbiddenLocationConstraintCS();
+
+	/**
 	 * Returns a new object of class '<em>Tuple Descriptor CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

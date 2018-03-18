@@ -59,6 +59,9 @@
     <genClasses ecoreClass="LanguageSpecificationCS.ecore#//ImplicationConstraintCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//ImplicationConstraintCS/tupleDescriptor"/>
     </genClasses>
+    <genClasses ecoreClass="LanguageSpecificationCS.ecore#//ForbiddenLocationConstraintCS">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//ForbiddenLocationConstraintCS/tupleDescriptor"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="LanguageSpecificationCS.ecore#//TupleDescriptorCS">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationCS.ecore#//TupleDescriptorCS/typedPairs"/>
     </genClasses>

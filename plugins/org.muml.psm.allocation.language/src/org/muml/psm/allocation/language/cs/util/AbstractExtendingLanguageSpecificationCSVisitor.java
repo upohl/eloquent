@@ -58,6 +58,11 @@ public abstract class AbstractExtendingLanguageSpecificationCSVisitor<R, C>
 	}
 
 	@Override
+	public R visitForbiddenLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ForbiddenLocationConstraintCS object) {
+		return visitConstraintCS(object);
+	}
+
+	@Override
 	public R visitImplicationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ImplicationConstraintCS object) {
 		return visitConstraintCS(object);
 	}

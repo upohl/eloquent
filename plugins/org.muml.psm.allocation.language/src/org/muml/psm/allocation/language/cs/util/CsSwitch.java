@@ -212,6 +212,21 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CsPackage.FORBIDDEN_LOCATION_CONSTRAINT_CS: {
+				ForbiddenLocationConstraintCS forbiddenLocationConstraintCS = (ForbiddenLocationConstraintCS)theEObject;
+				T result = caseForbiddenLocationConstraintCS(forbiddenLocationConstraintCS);
+				if (result == null) result = caseConstraintCS(forbiddenLocationConstraintCS);
+				if (result == null) result = caseNamedElementCS(forbiddenLocationConstraintCS);
+				if (result == null) result = caseEvaluableElementCS(forbiddenLocationConstraintCS);
+				if (result == null) result = caseModelElementCS(forbiddenLocationConstraintCS);
+				if (result == null) result = caseNameable(forbiddenLocationConstraintCS);
+				if (result == null) result = casePivotableElementCS(forbiddenLocationConstraintCS);
+				if (result == null) result = caseElementCS(forbiddenLocationConstraintCS);
+				if (result == null) result = casePivotable(forbiddenLocationConstraintCS);
+				if (result == null) result = caseVisitableCS(forbiddenLocationConstraintCS);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case CsPackage.TUPLE_DESCRIPTOR_CS: {
 				TupleDescriptorCS tupleDescriptorCS = (TupleDescriptorCS)theEObject;
 				T result = caseTupleDescriptorCS(tupleDescriptorCS);
@@ -496,6 +511,21 @@ public class CsSwitch<@Nullable T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseImplicationConstraintCS(ImplicationConstraintCS object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Forbidden Location Constraint CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Forbidden Location Constraint CS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseForbiddenLocationConstraintCS(ForbiddenLocationConstraintCS object) {
 		return null;
 	}
 

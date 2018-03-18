@@ -62,6 +62,11 @@ public abstract class AbstractCsPostOrderVisitor
 	}
 
 	@Override
+	public @Nullable Continuation<?> visitForbiddenLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ForbiddenLocationConstraintCS csElement) {
+		return visitConstraintCS(csElement);
+	}
+
+	@Override
 	public @Nullable Continuation<?> visitImplicationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ImplicationConstraintCS csElement) {
 		return visitConstraintCS(csElement);
 	}
