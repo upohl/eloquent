@@ -10,7 +10,8 @@ import org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguageSta
 @RunWith(Suite.class)
 @SuiteClasses({
 	OclContext2ILPTest.class,
-	ImplicationConstraint2ILPTest.class
+	ImplicationConstraint2ILPTest.class,
+	ForbiddenLocationConstraint2ILPTest.class
 })
 public class AllTestsSuite {
 	@BeforeClass

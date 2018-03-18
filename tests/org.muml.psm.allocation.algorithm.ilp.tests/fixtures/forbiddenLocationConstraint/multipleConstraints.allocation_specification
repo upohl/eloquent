@@ -1,0 +1,120 @@
+test {
+	nameProvider  'org.muml.psm.allocation.algorithm.ilp.tests.EcoreNameProvider'
+	storageProvider 'org.muml.psm.allocation.algorithm.ilp.tests.EcoreStorageProvider' 
+	
+	oclContext ecore::EPackage
+	
+	import 'http://www.eclipse.org/emf/2002/Ecore'
+	
+	relation atLeastOne {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 1;
+		upper -1;
+		ocl self.eSubpackages->at(1).eClassifiers->product(
+			self.eSubpackages->at(3).eSubpackages
+		);
+	}
+	
+	-- relate each ic.sub3.eSubpackages package to at least one ic.sub2.eClassifiers class
+	relation atLeastOnePkg {
+		descriptors (first : ecore::EPackage, second : ecore::EClassifier);
+		lower 1;
+		upper -1;
+		ocl self.eSubpackages->at(3).eSubpackages->product(
+			self.eSubpackages->at(2).eClassifiers
+		);
+	}
+	
+	-- relate ic.sub2.eClassifiers to ic.sub1.eClassifiers
+	relation cl2cls {
+		descriptors (first : ecore::EClassifier, second : ecore::EClassifier);
+		lower 0;
+		upper -1;
+		ocl self.eSubpackages->at(2).eClassifiers->product(
+			self.eSubpackages->at(1).eClassifiers
+		);	
+	}
+	
+	-- taken from multipleDescriptorsAndOrder.allocation_specification
+	constraint forbiddenLocation c1 {
+		descriptors (clsR1 : ecore::EClassifier, pkgR1 : ecore::EPackage),
+			(pkgR2 : ecore::EPackage, clsR2 : ecore::EClassifier),
+			(clsS1R3 : ecore::EClassifier, clsT1R3 : ecore::EClassifier),
+			(clsS2R3 : ecore::EClassifier, clsT2R3 : ecore::EClassifier);
+		ocl Set {
+			-- after reordering, this is the second tuple
+			Tuple {
+				clsR1 = self.eSubpackages->at(1).eClassifiers->at(2),
+				pkgR1 = self.eSubpackages->at(3).eSubpackages->at(2),
+				pkgR2 = self.eSubpackages->at(3).eSubpackages->at(3),
+				clsR2 = self.eSubpackages->at(2).eClassifiers->at(3),
+				clsS1R3 = self.eSubpackages->at(2).eClassifiers->at(2),
+				clsT1R3 = self.eSubpackages->at(1).eClassifiers->at(2),
+				clsS2R3 = self.eSubpackages->at(2).eClassifiers->at(3),
+				clsT2R3 = self.eSubpackages->at(1).eClassifiers->at(3)
+			},
+			-- after reordering, this is the first tuple
+			Tuple {
+				clsR1 = self.eSubpackages->at(1).eClassifiers->at(1),
+				pkgR1 = self.eSubpackages->at(3).eSubpackages->at(1),
+				pkgR2 = self.eSubpackages->at(3).eSubpackages->at(2),
+				clsR2 = self.eSubpackages->at(2).eClassifiers->at(2),
+				clsS1R3 = self.eSubpackages->at(2).eClassifiers->at(1),
+				clsT1R3 = self.eSubpackages->at(1).eClassifiers->at(1),
+				clsS2R3 = self.eSubpackages->at(2).eClassifiers->at(2),
+				clsT2R3 = self.eSubpackages->at(1).eClassifiers->at(2)
+			},
+			-- this remains the last tuple
+			Tuple {
+				clsR1 = self.eSubpackages->at(1).eClassifiers->at(3),
+				pkgR1 = self.eSubpackages->at(3).eSubpackages->at(1),
+				pkgR2 = self.eSubpackages->at(3).eSubpackages->at(1),
+				clsR2 = self.eSubpackages->at(2).eClassifiers->at(3),
+				-- changed the "order" of the last 4 namaed parts
+				-- (actually, there is no "order")
+				clsS2R3 = self.eSubpackages->at(2).eClassifiers->at(3),
+				clsT2R3 = self.eSubpackages->at(1).eClassifiers->at(3),
+				clsS1R3 = self.eSubpackages->at(2).eClassifiers->at(1),
+				clsT1R3 = self.eSubpackages->at(1).eClassifiers->at(3)
+			}
+		};
+	}
+	
+	constraint forbiddenLocation c2 {
+		descriptors (cls1 : ecore::EClassifier, cls2 : ecore::EClassifier);
+		ocl Set {
+			Tuple {
+				cls1 = self.eSubpackages->at(2).eClassifiers->at(1),
+				cls2 = self.eSubpackages->at(1).eClassifiers->at(2)
+			},
+			Tuple {
+				cls1 = self.eSubpackages->at(2).eClassifiers->at(2),
+				cls2 = self.eSubpackages->at(1).eClassifiers->at(3)
+			}
+		};
+	}
+	
+	constraint forbiddenLocation c3 {
+		descriptors (clsR1 : ecore::EClassifier, pkgR1 : ecore::EPackage),
+			(pkgR2 : ecore::EPackage, clsR2 : ecore::EClassifier),
+			(clsS1R3 : ecore::EClassifier, clsT1R3 : ecore::EClassifier);
+		ocl Set {
+			Tuple {
+				clsR1 = self.eSubpackages->at(1).eClassifiers->at(2),
+				pkgR1 = self.eSubpackages->at(3).eSubpackages->at(2),
+				pkgR2 = self.eSubpackages->at(3).eSubpackages->at(3),
+				clsR2 = self.eSubpackages->at(2).eClassifiers->at(3),
+				clsS1R3 = self.eSubpackages->at(2).eClassifiers->at(1),
+				clsT1R3 = self.eSubpackages->at(1).eClassifiers->at(1)
+			},
+			Tuple {
+				clsR1 = self.eSubpackages->at(1).eClassifiers->at(3),
+				pkgR1 = self.eSubpackages->at(3).eSubpackages->at(3),
+				pkgR2 = self.eSubpackages->at(3).eSubpackages->at(1),
+				clsR2 = self.eSubpackages->at(2).eClassifiers->at(1),
+				clsS1R3 = self.eSubpackages->at(2).eClassifiers->at(2),
+				clsT1R3 = self.eSubpackages->at(1).eClassifiers->at(2)
+			}
+		};
+	}
+}

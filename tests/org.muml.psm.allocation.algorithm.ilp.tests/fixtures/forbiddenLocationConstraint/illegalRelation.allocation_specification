@@ -1,0 +1,29 @@
+test {
+	nameProvider  'org.muml.psm.allocation.algorithm.ilp.tests.EcoreNameProvider'
+	storageProvider 'org.muml.psm.allocation.algorithm.ilp.tests.EcoreStorageProvider' 
+	
+	oclContext ecore::EPackage
+	
+	import 'http://www.eclipse.org/emf/2002/Ecore'
+	
+	relation atLeastOne {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 1;
+		upper -1;
+		ocl self.eSubpackages->at(1).eClassifiers->product(
+			self.eSubpackages->at(3).eSubpackages
+		);
+	}
+	
+	-- we try to forbid a relation that does _not_ exist
+	-- (in this case, the transformation is supposed to error out)
+	constraint forbiddenLocation illegalRelation {
+		descriptors (cls1 : ecore::EClassifier, cls2 : ecore::EClassifier);
+		ocl Set {
+			Tuple {
+				cls1 = self.eSubpackages->at(1).eClassifiers->at(1),
+				cls2 = self.eSubpackages->at(2).eClassifiers->at(1)
+			}
+		};
+	}
+}
