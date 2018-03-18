@@ -82,6 +82,7 @@ import org.muml.psm.allocation.language.cs.BoundCS;
 import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.CoherenceConstraintCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
+import org.muml.psm.allocation.language.cs.ForbiddenLocationConstraintCS;
 import org.muml.psm.allocation.language.cs.ImplicationConstraintCS;
 import org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.JavaImplementationProviderCS;
@@ -278,6 +279,9 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 				return; 
 			case CsPackage.COHERENCE_CONSTRAINT_CS:
 				sequence_CoherenceConstraint(context, (CoherenceConstraintCS) semanticObject); 
+				return; 
+			case CsPackage.FORBIDDEN_LOCATION_CONSTRAINT_CS:
+				sequence_ForbiddenLocationConstraint(context, (ForbiddenLocationConstraintCS) semanticObject); 
 				return; 
 			case CsPackage.IMPLICATION_CONSTRAINT_CS:
 				sequence_ImplicationConstraint(context, (ImplicationConstraintCS) semanticObject); 
@@ -539,6 +543,19 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 *     (type=CoherenceConstraintType name=ID? tupleDescriptor=TupleDescriptor expression=Model)
 	 */
 	protected void sequence_CoherenceConstraint(ISerializationContext context, CoherenceConstraintCS semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Constraint returns ForbiddenLocationConstraintCS
+	 *     ForbiddenLocationConstraint returns ForbiddenLocationConstraintCS
+	 *
+	 * Constraint:
+	 *     (name=ID? tupleDescriptor=TupleDescriptor expression=Model)
+	 */
+	protected void sequence_ForbiddenLocationConstraint(ISerializationContext context, ForbiddenLocationConstraintCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

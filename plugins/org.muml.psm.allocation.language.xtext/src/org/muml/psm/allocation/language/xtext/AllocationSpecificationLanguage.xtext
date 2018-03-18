@@ -99,7 +99,7 @@ ImplicationConstraintTupleDescriptor returns cs::ImplicationConstraintTupleDescr
 
 Constraint returns cs::ConstraintCS:
 	'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint
-		| ImplicationConstraint
+		| ImplicationConstraint | ForbiddenLocationConstraint
 	)
 ;
 
@@ -127,6 +127,13 @@ LocationConstraint returns cs::LocationConstraintCS:
 ImplicationConstraint returns cs::ImplicationConstraintCS:
 	'implication' (name=ID)? '{'
 		tupleDescriptor=ImplicationConstraintTupleDescriptor
+		'ocl' expression=Model';'
+	'}'
+;
+
+ForbiddenLocationConstraint returns cs::ForbiddenLocationConstraintCS:
+	'forbiddenLocation' (name=ID)? '{'
+		tupleDescriptor=TupleDescriptor
 		'ocl' expression=Model';'
 	'}'
 ;

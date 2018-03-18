@@ -111,6 +111,7 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getResourceConstraintAccess().getGroup(), "rule__ResourceConstraint__Group__0");
 					put(grammarAccess.getLocationConstraintAccess().getGroup(), "rule__LocationConstraint__Group__0");
 					put(grammarAccess.getImplicationConstraintAccess().getGroup(), "rule__ImplicationConstraint__Group__0");
+					put(grammarAccess.getForbiddenLocationConstraintAccess().getGroup(), "rule__ForbiddenLocationConstraint__Group__0");
 					put(grammarAccess.getMeasureFunctionAccess().getGroup(), "rule__MeasureFunction__Group__0");
 					put(grammarAccess.getMeasureFunctionAccess().getGroup_2(), "rule__MeasureFunction__Group_2__0");
 					put(grammarAccess.getCompleteOCLDocumentCSAccess().getGroup(), "rule__CompleteOCLDocumentCS__Group__0");
@@ -293,6 +294,9 @@ public class AllocationSpecificationLanguageParser extends AbstractContentAssist
 					put(grammarAccess.getImplicationConstraintAccess().getNameAssignment_1(), "rule__ImplicationConstraint__NameAssignment_1");
 					put(grammarAccess.getImplicationConstraintAccess().getTupleDescriptorAssignment_3(), "rule__ImplicationConstraint__TupleDescriptorAssignment_3");
 					put(grammarAccess.getImplicationConstraintAccess().getExpressionAssignment_5(), "rule__ImplicationConstraint__ExpressionAssignment_5");
+					put(grammarAccess.getForbiddenLocationConstraintAccess().getNameAssignment_1(), "rule__ForbiddenLocationConstraint__NameAssignment_1");
+					put(grammarAccess.getForbiddenLocationConstraintAccess().getTupleDescriptorAssignment_3(), "rule__ForbiddenLocationConstraint__TupleDescriptorAssignment_3");
+					put(grammarAccess.getForbiddenLocationConstraintAccess().getExpressionAssignment_5(), "rule__ForbiddenLocationConstraint__ExpressionAssignment_5");
 					put(grammarAccess.getMeasureFunctionAccess().getServicesAssignment_1(), "rule__MeasureFunction__ServicesAssignment_1");
 					put(grammarAccess.getMeasureFunctionAccess().getServicesAssignment_2_1(), "rule__MeasureFunction__ServicesAssignment_2_1");
 					put(grammarAccess.getCompleteOCLDocumentCSAccess().getOwnedImportsAssignment_0(), "rule__CompleteOCLDocumentCS__OwnedImportsAssignment_0");

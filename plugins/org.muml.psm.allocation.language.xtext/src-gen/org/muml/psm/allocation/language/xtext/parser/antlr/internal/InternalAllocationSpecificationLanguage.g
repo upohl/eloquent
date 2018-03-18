@@ -1523,6 +1523,19 @@ ruleConstraint returns [EObject current=null]
         $current = $this_ImplicationConstraint_4.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+	{ 
+	  /* */ 
+	}
+    { 
+        newCompositeNode(grammarAccess.getConstraintAccess().getForbiddenLocationConstraintParserRuleCall_1_4()); 
+    }
+    this_ForbiddenLocationConstraint_5=ruleForbiddenLocationConstraint
+    { 
+        $current = $this_ForbiddenLocationConstraint_5.current; 
+        afterParserOrEnumRuleCall();
+    }
 ))
 ;
 
@@ -1926,6 +1939,101 @@ ruleImplicationConstraint returns [EObject current=null]
 	otherlv_7='}' 
     {
     	newLeafNode(otherlv_7, grammarAccess.getImplicationConstraintAccess().getRightCurlyBracketKeyword_7());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleForbiddenLocationConstraint
+entryRuleForbiddenLocationConstraint returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getForbiddenLocationConstraintRule()); }
+	 iv_ruleForbiddenLocationConstraint=ruleForbiddenLocationConstraint 
+	 { $current=$iv_ruleForbiddenLocationConstraint.current; } 
+	 EOF 
+;
+
+// Rule ForbiddenLocationConstraint
+ruleForbiddenLocationConstraint returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='forbiddenLocation' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getForbiddenLocationConstraintAccess().getForbiddenLocationKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getForbiddenLocationConstraintAccess().getNameIDParserRuleCall_1_0()); 
+	    }
+		lv_name_1_0=ruleID		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getForbiddenLocationConstraintRule());
+	        }
+       		set(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"org.eclipse.ocl.xtext.base.Base.ID");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)?	otherlv_2='{' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getForbiddenLocationConstraintAccess().getLeftCurlyBracketKeyword_2());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getForbiddenLocationConstraintAccess().getTupleDescriptorTupleDescriptorParserRuleCall_3_0()); 
+	    }
+		lv_tupleDescriptor_3_0=ruleTupleDescriptor		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getForbiddenLocationConstraintRule());
+	        }
+       		set(
+       			$current, 
+       			"tupleDescriptor",
+        		lv_tupleDescriptor_3_0, 
+        		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TupleDescriptor");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_4='ocl' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getForbiddenLocationConstraintAccess().getOclKeyword_4());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getForbiddenLocationConstraintAccess().getExpressionModelParserRuleCall_5_0()); 
+	    }
+		lv_expression_5_0=ruleModel		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getForbiddenLocationConstraintRule());
+	        }
+       		set(
+       			$current, 
+       			"expression",
+        		lv_expression_5_0, 
+        		"org.eclipse.ocl.xtext.essentialocl.EssentialOCL.Model");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_6=';' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getForbiddenLocationConstraintAccess().getSemicolonKeyword_6());
+    }
+	otherlv_7='}' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getForbiddenLocationConstraintAccess().getRightCurlyBracketKeyword_7());
     }
 )
 ;

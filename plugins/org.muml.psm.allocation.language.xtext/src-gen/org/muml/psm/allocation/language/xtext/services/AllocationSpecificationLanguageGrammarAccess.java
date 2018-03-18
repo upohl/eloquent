@@ -816,19 +816,21 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final RuleCall cResourceConstraintParserRuleCall_1_1 = (RuleCall)cAlternatives_1.eContents().get(1);
 		private final RuleCall cLocationConstraintParserRuleCall_1_2 = (RuleCall)cAlternatives_1.eContents().get(2);
 		private final RuleCall cImplicationConstraintParserRuleCall_1_3 = (RuleCall)cAlternatives_1.eContents().get(3);
+		private final RuleCall cForbiddenLocationConstraintParserRuleCall_1_4 = (RuleCall)cAlternatives_1.eContents().get(4);
 		
 		//Constraint cs::ConstraintCS:
 		//	'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint
-		//	| ImplicationConstraint);
+		//	| ImplicationConstraint | ForbiddenLocationConstraint);
 		@Override public ParserRule getRule() { return rule; }
 
-		//'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint | ImplicationConstraint)
+		//'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint | ImplicationConstraint |
+		//ForbiddenLocationConstraint)
 		public Group getGroup() { return cGroup; }
 
 		//'constraint'
 		public Keyword getConstraintKeyword_0() { return cConstraintKeyword_0; }
 
-		//CoherenceConstraint | ResourceConstraint | LocationConstraint | ImplicationConstraint
+		//CoherenceConstraint | ResourceConstraint | LocationConstraint | ImplicationConstraint | ForbiddenLocationConstraint
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//CoherenceConstraint
@@ -842,6 +844,9 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 		//ImplicationConstraint
 		public RuleCall getImplicationConstraintParserRuleCall_1_3() { return cImplicationConstraintParserRuleCall_1_3; }
+
+		//ForbiddenLocationConstraint
+		public RuleCall getForbiddenLocationConstraintParserRuleCall_1_4() { return cForbiddenLocationConstraintParserRuleCall_1_4; }
 	}
 
 	public class CoherenceConstraintElements extends AbstractParserRuleElementFinder {
@@ -1101,6 +1106,65 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
+	public class ForbiddenLocationConstraintElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.ForbiddenLocationConstraint");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cForbiddenLocationKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTupleDescriptorAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTupleDescriptorTupleDescriptorParserRuleCall_3_0 = (RuleCall)cTupleDescriptorAssignment_3.eContents().get(0);
+		private final Keyword cOclKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cExpressionAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cExpressionModelParserRuleCall_5_0 = (RuleCall)cExpressionAssignment_5.eContents().get(0);
+		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		
+		//ForbiddenLocationConstraint cs::ForbiddenLocationConstraintCS:
+		//	'forbiddenLocation' name=ID? '{'
+		//	tupleDescriptor=TupleDescriptor
+		//	'ocl' expression=Model ';'
+		//	'}';
+		@Override public ParserRule getRule() { return rule; }
+
+		//'forbiddenLocation' name=ID? '{' tupleDescriptor=TupleDescriptor 'ocl' expression=Model ';' '}'
+		public Group getGroup() { return cGroup; }
+
+		//'forbiddenLocation'
+		public Keyword getForbiddenLocationKeyword_0() { return cForbiddenLocationKeyword_0; }
+
+		//name=ID?
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDParserRuleCall_1_0() { return cNameIDParserRuleCall_1_0; }
+
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//tupleDescriptor=TupleDescriptor
+		public Assignment getTupleDescriptorAssignment_3() { return cTupleDescriptorAssignment_3; }
+
+		//TupleDescriptor
+		public RuleCall getTupleDescriptorTupleDescriptorParserRuleCall_3_0() { return cTupleDescriptorTupleDescriptorParserRuleCall_3_0; }
+
+		//'ocl'
+		public Keyword getOclKeyword_4() { return cOclKeyword_4; }
+
+		//expression=Model
+		public Assignment getExpressionAssignment_5() { return cExpressionAssignment_5; }
+
+		//Model
+		public RuleCall getExpressionModelParserRuleCall_5_0() { return cExpressionModelParserRuleCall_5_0; }
+
+		//';'
+		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
+
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+	}
+
 	public class MeasureFunctionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.MeasureFunction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1248,6 +1312,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	private final ResourceConstraintElements pResourceConstraint;
 	private final LocationConstraintElements pLocationConstraint;
 	private final ImplicationConstraintElements pImplicationConstraint;
+	private final ForbiddenLocationConstraintElements pForbiddenLocationConstraint;
 	private final CoherenceConstraintTypeElements eCoherenceConstraintType;
 	private final MeasureFunctionElements pMeasureFunction;
 	private final GoalElements eGoal;
@@ -1289,6 +1354,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		this.pResourceConstraint = new ResourceConstraintElements();
 		this.pLocationConstraint = new LocationConstraintElements();
 		this.pImplicationConstraint = new ImplicationConstraintElements();
+		this.pForbiddenLocationConstraint = new ForbiddenLocationConstraintElements();
 		this.eCoherenceConstraintType = new CoherenceConstraintTypeElements();
 		this.pMeasureFunction = new MeasureFunctionElements();
 		this.eGoal = new GoalElements();
@@ -1503,7 +1569,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 	//Constraint cs::ConstraintCS:
 	//	'constraint' (CoherenceConstraint | ResourceConstraint | LocationConstraint
-	//	| ImplicationConstraint);
+	//	| ImplicationConstraint | ForbiddenLocationConstraint);
 	public ConstraintElements getConstraintAccess() {
 		return pConstraint;
 	}
@@ -1562,6 +1628,19 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	
 	public ParserRule getImplicationConstraintRule() {
 		return getImplicationConstraintAccess().getRule();
+	}
+
+	//ForbiddenLocationConstraint cs::ForbiddenLocationConstraintCS:
+	//	'forbiddenLocation' name=ID? '{'
+	//	tupleDescriptor=TupleDescriptor
+	//	'ocl' expression=Model ';'
+	//	'}';
+	public ForbiddenLocationConstraintElements getForbiddenLocationConstraintAccess() {
+		return pForbiddenLocationConstraint;
+	}
+	
+	public ParserRule getForbiddenLocationConstraintRule() {
+		return getForbiddenLocationConstraintAccess().getRule();
 	}
 
 	//enum CoherenceConstraintType returns cs::CoherenceConstraintType:

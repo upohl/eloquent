@@ -132,6 +132,17 @@ public class LanguageSpecificationCSContainmentVisitor extends org.muml.psm.allo
 		return visitConstraintCS(csElement);
 	}
 	@Override
+	public @Nullable Continuation<?> visitForbiddenLocationConstraintCS(org.muml.psm.allocation.language.cs.@NonNull ForbiddenLocationConstraintCS csElement) {
+		org.muml.psm.allocation.language.as.ForbiddenLocationConstraint pivotElement = PivotUtil.getPivot(org.muml.psm.allocation.language.as.ForbiddenLocationConstraint.class, csElement);
+		if (pivotElement == null) {
+			pivotElement = refreshNamedElement(org.muml.psm.allocation.language.as.ForbiddenLocationConstraint.class, org.muml.psm.allocation.language.as.AsPackage.Literals.FORBIDDEN_LOCATION_CONSTRAINT, csElement);
+		}
+		pivotElement.setTupleDescriptor(
+			PivotUtil.getPivot(org.muml.psm.allocation.language.as.TupleDescriptor.class, csElement.getTupleDescriptor())
+		);
+		return visitConstraintCS(csElement);
+	}
+	@Override
 	public @Nullable Continuation<?> visitTupleDescriptorCS(org.muml.psm.allocation.language.cs.@NonNull TupleDescriptorCS csElement) {
 		org.muml.psm.allocation.language.as.TupleDescriptor pivotElement = PivotUtil.getPivot(org.muml.psm.allocation.language.as.TupleDescriptor.class, csElement);
 		if (pivotElement == null) {
