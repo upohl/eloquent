@@ -1,0 +1,47 @@
+import Expressions;
+import OCLEvaluator;
+import TupleAccessor;
+import Sort;
+import Variables;
+import VariableHelper;
+
+modeltype allocationSpecification uses as('http://www.muml.org/psm/allocation/language/as/1.0.0');
+modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
+modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
+
+library ForbiddenLocationConstraintLib;
+
+helper Specification::createForbiddenLocationConstraints(inout ilp : IntegerLinearProgram,
+	oclContext : OclAny) {
+	self.getForbiddenLocationConstraints()->createForbiddenLocationConstraint(ilp,
+		oclContext);
+}
+
+helper ForbiddenLocationConstraint::createForbiddenLocationConstraint(inout ilp : IntegerLinearProgram,
+	oclContext : OclAny) {
+	var comment : String := if self.name <> '' then self.name else null endif;
+	self.evaluateOCL(oclContext).asTupleValueSequence()->collectNested(tv : TupleValue |
+		tv.toSequence()->sortComponentResourceSequence()
+	)->sortedBy(seq |
+		seq->getVariableName()
+	)->createForbiddenLocationConstraintExpression(ilp, comment);
+}
+
+helper Sequence(Sequence(OclAny))::createForbiddenLocationConstraintExpression(inout ilp : IntegerLinearProgram,
+	comment : String) {
+	if (self->isEmpty()) {
+		return;
+	} endif;
+	self->forEach(seq) {
+		seq->createHelperVariableAndConstraints(ilp);
+	};
+	ilp.constraints += new ConstraintExpression(self->createAdditionExpression(),
+		new LiteralExpression('0'),
+		Operator::EQUAL_TO, comment);
+}
+
+query Specification::getForbiddenLocationConstraints() : Sequence(ForbiddenLocationConstraint) {
+	return self.constraints->select(
+		oclIsKindOf(ForbiddenLocationConstraint)
+	)->collect(oclAsType(ForbiddenLocationConstraint));
+}

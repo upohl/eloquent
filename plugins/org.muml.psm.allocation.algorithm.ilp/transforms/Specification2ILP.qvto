@@ -5,6 +5,7 @@ import CoherenceConstraint;
 import LocationConstraint;
 import ResourceConstraint;
 import ImplicationConstraint;
+import ForbiddenLocationConstraint;
 import ObjectiveFunction;
 import Util;
 import Variables;
@@ -41,6 +42,7 @@ main() {
 	endTime := getCurrentTime();
 	log("Time for create RequiredResourceConstraints:"+((endTime-startTime)/1000).toString()+" seconds");
 	specification.createImplicationConstraints(ilp, oclContext);
+	specification.createForbiddenLocationConstraints(ilp, oclContext);
 	startTime := getCurrentTime();
 	specification.createObjectiveFunction(ilp, oclContext);
 	endTime := getCurrentTime();

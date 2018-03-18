@@ -110,6 +110,10 @@ query ImplicationConstraint::toSequence(tupleValue : TupleValue) : Sequence(Sequ
 	};
 }
 
+query ForbiddenLocationConstraint::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
+	return self.tupleDescriptor.toSequence(tupleValue);
+}
+
 // Note: it is not possible to generalize the next two queries into
 // WeightingComponentResourceTupleElement::toSequence, because WeightingComponentResourceTupleElement
 // is just a "secondary" superclass in ResourceConstraint' and QoSDimensionConstraint'
