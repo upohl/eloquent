@@ -52,10 +52,19 @@ public class QVToTransformationTest {
 	public static class ExpectedTransformationStatus {
 		private int code;
 		private String message;
+		private boolean isRegexMatch;
 		
-		public ExpectedTransformationStatus(int code, String message) {
+		private static final String regexNoMatch = "%s does not match %s";
+		
+		public ExpectedTransformationStatus(int code, String message,
+				boolean isRegexMatch) {
 			this.code = code;
 			this.message = message;
+			this.isRegexMatch = isRegexMatch;
+		}
+		
+		public ExpectedTransformationStatus(int code, String message) {
+			this(code, message, false);
 		}
 		
 		public ExpectedTransformationStatus(int code) {
@@ -72,6 +81,28 @@ public class QVToTransformationTest {
 		
 		public String getMessage() {
 			return message;
+		}
+		
+		public void assertExpects(ExecutionDiagnostic result) {
+			Assert.assertEquals(getCode(), result.getCode());
+			if (getMessage() != null) {
+				Assert.assertNotNull(result.getMessage());
+				if (isRegexMatch) {
+					String errorMessage = String.format(regexNoMatch,
+							getMessage(), result.getMessage());
+					Assert.assertTrue(errorMessage,
+							result.getMessage().matches(getMessage()));
+				} else {
+					/*
+					 *  naively transforming getMessage() to
+					 *  ^getMessage()$ and simply performing a
+					 *  regex match does not work in general, because
+					 *  getMessage() can contain unescaped regex operators
+					 *  => use assertEquals(...)
+					 */
+					Assert.assertEquals(getMessage(), result.getMessage());
+				}
+			}
 		}
 	}
 	
@@ -186,12 +217,7 @@ public class QVToTransformationTest {
 	}
 	
 	protected void checkTransformationRun(ExecutionDiagnostic result) {
-		Assert.assertEquals(expectedTransformationStatus.getCode(),
-				result.getCode());
-		if (expectedTransformationStatus.getMessage() != null) {
-			Assert.assertEquals(expectedTransformationStatus.getMessage(),
-					result.getMessage());
-		}
+		expectedTransformationStatus.assertExpects(result);
 	}
 	
 	protected void checkTransformationResult() {

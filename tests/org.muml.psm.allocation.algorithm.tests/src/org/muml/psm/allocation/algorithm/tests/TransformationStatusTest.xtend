@@ -31,6 +31,12 @@ class TransformationStatusTest extends QVToTransformationSingleOutExtentTest {
 				"Oh my! Something went terribly wrong"),
 			  null,
 			  uriPrefix + "fatalAssertion.qvto",
+			  uriPrefix + "My.ecore"],
+			// same as above, but this time we match a regex
+			#[new ExpectedTransformationStatus(ExecutionDiagnostic.FATAL_ASSERTION,
+				"^Oh my! .* wrong$", true),
+			  null,
+			  uriPrefix + "fatalAssertion.qvto",
 			  uriPrefix + "My.ecore"]
 		]
 	}
