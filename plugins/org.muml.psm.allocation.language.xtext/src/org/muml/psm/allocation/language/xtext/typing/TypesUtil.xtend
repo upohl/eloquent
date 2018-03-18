@@ -15,6 +15,7 @@ import org.eclipse.ocl.pivot.values.TemplateParameterSubstitutions
 import org.muml.psm.allocation.language.^as.Bound
 import org.muml.psm.allocation.language.^as.CoherenceConstraint
 import org.muml.psm.allocation.language.^as.EvaluableElement
+import org.muml.psm.allocation.language.^as.ForbiddenLocationConstraint
 import org.muml.psm.allocation.language.^as.ImplicationConstraint
 import org.muml.psm.allocation.language.^as.LocationConstraint
 import org.muml.psm.allocation.language.^as.QoSDimension
@@ -200,6 +201,17 @@ class TypesUtil {
 		)
 	}
 	
+	// forbiddenLocation constraint
+	/*@NonNull*/
+	static def Type createForbiddenLocationConstraintType(ForbiddenLocationConstraint constraint) {
+		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraint)
+		createSetType(envFactory,
+			createTupleType(envFactory,
+				convertToNamedParts(constraint.tupleDescriptor.typedPairs)
+			)
+		)
+	}
+	
 	// QoS dimension
 	/*@NonNull*/
 	static def TupleType createQoSDimensionTupleType(EnvironmentFactoryInternal envFactory,
@@ -244,6 +256,10 @@ class TypesUtil {
 	
 	static def dispatch createType(ImplicationConstraint constraint) {
 		createImplicationConstraintType(constraint)
+	}
+	
+	static def dispatch createType(ForbiddenLocationConstraint constraint) {
+		createForbiddenLocationConstraintType(constraint)
 	}
 	
 	static def dispatch createType(QoSDimension qosDimension) {
