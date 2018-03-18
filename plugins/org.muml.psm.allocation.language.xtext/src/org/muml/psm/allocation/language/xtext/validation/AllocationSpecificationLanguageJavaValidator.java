@@ -14,6 +14,7 @@ import org.muml.psm.allocation.language.cs.BoundWeightTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.CoherenceConstraintCS;
 import org.muml.psm.allocation.language.cs.CsPackage;
 import org.muml.psm.allocation.language.cs.EvaluableElementCS;
+import org.muml.psm.allocation.language.cs.ForbiddenLocationConstraintCS;
 import org.muml.psm.allocation.language.cs.ImplicationConstraintCS;
 import org.muml.psm.allocation.language.cs.ImplicationConstraintTupleDescriptorCS;
 import org.muml.psm.allocation.language.cs.LocationConstraintCS;
@@ -97,6 +98,16 @@ public class AllocationSpecificationLanguageJavaValidator extends org.muml.psm.a
 		if (tupleDescriptor == null || tupleDescriptor.getPremise() == null
 				|| tupleDescriptor.getConclusion() == null
 				|| oclExpression == null) {
+			return;
+		}
+		checkTypes(constraintCS);
+	}
+	
+	@Check
+	public void checkForbiddenLocationConstraintCS(ForbiddenLocationConstraintCS constraintCS) {
+		TupleDescriptorCS tupleDescriptor = constraintCS.getTupleDescriptor();
+		ContextCS oclExpression = constraintCS.getExpression();
+		if (tupleDescriptor == null || oclExpression == null) {
 			return;
 		}
 		checkTypes(constraintCS);
