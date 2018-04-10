@@ -80,7 +80,7 @@ helper Sequence(Sequence(OclAny))::createConstraintExpression(inout ilp : Intege
 	self->print();
 	var comment : String := if constraint.name <> '' then constraint.name else null endif;
 	ilp.constraints += self->createAdditionConstraintExpression(
-		Operator::EQUAL_TO,'1', comment
+		Operator::EQUAL_TO, '1', comment
 	);
 	log("createHWRESConstraintExpression");
 }
