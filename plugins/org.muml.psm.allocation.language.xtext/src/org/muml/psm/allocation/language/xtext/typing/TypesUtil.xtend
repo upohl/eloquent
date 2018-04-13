@@ -11,6 +11,8 @@ import org.eclipse.ocl.pivot.ids.IdResolver
 import org.eclipse.ocl.pivot.internal.manager.TupleTypeManager
 import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal
 import org.eclipse.ocl.pivot.internal.utilities.PivotUtilInternal
+import org.eclipse.ocl.pivot.utilities.ValueUtil
+import org.eclipse.ocl.pivot.values.IntegerValue
 import org.eclipse.ocl.pivot.values.TemplateParameterSubstitutions
 import org.muml.psm.allocation.language.^as.Bound
 import org.muml.psm.allocation.language.^as.CoherenceConstraint
@@ -21,12 +23,14 @@ import org.muml.psm.allocation.language.^as.LocationConstraint
 import org.muml.psm.allocation.language.^as.QoSDimension
 import org.muml.psm.allocation.language.^as.Relation
 import org.muml.psm.allocation.language.^as.ResourceConstraint
+import org.muml.psm.allocation.language.^as.TupleDescriptor
 import org.muml.psm.allocation.language.^as.TypedPair
 import org.muml.psm.allocation.language.^as.WeightTupleDescriptor
 
 class TypesUtil {
 	private static final String missingEnvFac = "An EnvironmentFactory should be associated with %s"
 	private static final String tupleName = "Tuple"
+	private static final IntegerValue twoValue = ValueUtil.integerValueOf(2)
 	
 	/* will removed */
 	/*@NonNull*/
@@ -45,10 +49,19 @@ class TypesUtil {
 	static def Type getRealType(EnvironmentFactoryInternal envFactory) {
 		envFactory.standardLibrary.realType
 	}
+	
+	/*@NonNull*/
+	static def Type getOclAnyType(EnvironmentFactoryInternal envFactory) {
+		envFactory.standardLibrary.oclAnyType
+	}
 		
 	/*@NonNull*/
 	static def CollectionType createSetType(EnvironmentFactoryInternal envFactory, Type type) {
 		envFactory.completeEnvironment.getSetType(type, false, null, null)
+	}
+	
+	static def CollectionType createSequenceType(EnvironmentFactoryInternal envFactory, Type type) {
+		envFactory.completeEnvironment.getSequenceType(type, false, twoValue, null)
 	}
 	
 	/*@NonNull*/
@@ -65,12 +78,28 @@ class TypesUtil {
 			expectedType, TemplateParameterSubstitutions.EMPTY)
 	}
 	
+	static def Map<String, Type> convertToNamedParts(TupleDescriptor tupleDescriptor, EnvironmentFactoryInternal envFactory) {
+		if (tupleDescriptor.sequencePart !== null && !tupleDescriptor.sequencePart.equals("")) {
+			convertToNamedSequencePart(tupleDescriptor.sequencePart, envFactory)
+		} else {
+			convertToNamedParts(tupleDescriptor.typedPairs)
+		}
+	}
+	
 	static def Map<String, Type> convertToNamedParts(List<TypedPair> typedPairs) {
 		val namedParts = <String, Type>newHashMap()
 		typedPairs.forEach[typedPair |
 			namedParts.put(typedPair.first.name, typedPair.first.type)
 			namedParts.put(typedPair.second.name, typedPair.second.type)
 		]
+		namedParts
+	}
+	
+	static def Map<String, Type> convertToNamedSequencePart(String partName, EnvironmentFactoryInternal envFactory) {
+		val namedParts = <String, Type>newHashMap()
+		namedParts.put(partName, createSequenceType(envFactory,
+			getOclAnyType(envFactory)
+		))
 		namedParts
 	}
 		
@@ -82,7 +111,7 @@ class TypesUtil {
 	static def TupleType createRelationTupleType(EnvironmentFactoryInternal envFactory,
 		Relation relation
 	) {
-		val Map<String, Type> namedParts = convertToNamedParts(relation.tupleDescriptor.typedPairs)
+		val Map<String, Type> namedParts = convertToNamedParts(relation.tupleDescriptor, envFactory)
 		createTupleType(envFactory, namedParts)
 	}
 	
@@ -106,7 +135,7 @@ class TypesUtil {
 	static def TupleType createCoherenceConstraintTupleType(EnvironmentFactoryInternal envFactory,
 		CoherenceConstraint constraint
 	) {
-		val Map<String, Type> namedParts = convertToNamedParts(constraint.tupleDescriptor.typedPairs)
+		val Map<String, Type> namedParts = convertToNamedParts(constraint.tupleDescriptor, envFactory)
 		createTupleType(envFactory, namedParts)
 	}
 		
@@ -122,7 +151,7 @@ class TypesUtil {
 	static def TupleType createLocationConstraintTupleType(EnvironmentFactoryInternal envFactory,
 		LocationConstraint constraint
 	) {
-		val Map<String, Type> namedParts = convertToNamedParts(constraint.tupleDescriptor.typedPairs)
+		val Map<String, Type> namedParts = convertToNamedParts(constraint.tupleDescriptor, envFactory)
 		createTupleType(envFactory, namedParts)
 	}
 	
@@ -141,7 +170,7 @@ class TypesUtil {
 	static def TupleType createWeightTupleDescriptorTupleType(EnvironmentFactoryInternal envFactory,
 		WeightTupleDescriptor tupleDescriptor
 	) {
-		val Map<String, Type> namedParts = convertToNamedParts(tupleDescriptor.typedPairs)
+		val Map<String, Type> namedParts = convertToNamedParts(tupleDescriptor, envFactory)
 		namedParts.put(tupleDescriptor.weight, getRealType(envFactory))
 		createTupleType(envFactory, namedParts)
 	}
@@ -184,11 +213,11 @@ class TypesUtil {
 		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraint)
 		val tupleDescriptor = constraint.tupleDescriptor
 		val premiseTupleType = createTupleType(envFactory,
-			convertToNamedParts(tupleDescriptor.premiseTupleDescriptor.typedPairs)
+			convertToNamedParts(tupleDescriptor.premiseTupleDescriptor, envFactory)
 		)
 		val premiseSetType = createSetType(envFactory, premiseTupleType)
 		val conclusionTupleType = createTupleType(envFactory,
-			convertToNamedParts(tupleDescriptor.conclusionTupleDescriptor.typedPairs)
+			convertToNamedParts(tupleDescriptor.conclusionTupleDescriptor, envFactory)
 		)
 		val conclusionSetType = createSetType(envFactory, conclusionTupleType)
 		createSetType(envFactory,
@@ -207,7 +236,7 @@ class TypesUtil {
 		val EnvironmentFactoryInternal envFactory = getEnvironmentFactory(constraint)
 		createSetType(envFactory,
 			createTupleType(envFactory,
-				convertToNamedParts(constraint.tupleDescriptor.typedPairs)
+				convertToNamedParts(constraint.tupleDescriptor, envFactory)
 			)
 		)
 	}
