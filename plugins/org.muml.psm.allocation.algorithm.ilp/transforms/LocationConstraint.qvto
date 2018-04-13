@@ -12,12 +12,10 @@ modeltype values uses values('http://www.eclipse.org/ocl/2015/Values');
 
 -- XXX: we probably need a semantics change here generate ">= 1" inequalities
 -- 		instead of "= 1" equations (needs to be discussed)
+--		Since we now have relations, we need this even more!
 
 
 library LocationConstraintLib;
-
-// the implementation of the differentLocation constraint differs from the approach,
-// which was described in my thesis
 
 helper Specification::createLocationConstraints(inout ilp : IntegerLinearProgram,
 	oclContext : OclAny) {
@@ -39,7 +37,7 @@ helper LocationConstraint::createLocationConstraint(inout ilp : IntegerLinearPro
 			// since createConstraintExpression generates an equality ("= 1"),
 			// we must get rid of duplicates (hence, we do the
 			// -> OrderedSet -> Sequence conversion)
-			// (actually, todo could be an OrderedSet(Sequence(NamedElement)),
+			// (actually, todo could be an OrderedSet(Sequence(OclAny)),
 			// but the other helpers/queries expect a Sequence...)
 			var todo : Sequence(Sequence(OclAny)) := cur->getAssociatedSequences(sequences)
 				->asOrderedSet()->asSequence();
@@ -67,14 +65,6 @@ query Sequence(Sequence(OclAny))::groupBySizeAndSort() : Sequence(Sequence(Seque
 	)
 }
 
-/*query TupleValue::toSequences() : Sequence(Sequence(NamedElement)) {
-	return let sequence : Sequence(NamedElement) = self.toSequence()
-	in
-	let indexes : OrderedSet(Integer) = getOddNumbers(1, sequence->size())
-	in
-	indexes->collectNested(i | sequence->subSequence(i, i + 1));
-}*/
-
 query Sequence(OclAny)::getAssociatedSequences(sequence : Sequence(Sequence(OclAny)))
 	: Sequence(Sequence(OclAny)) {
 	return sequence->select(seq |
@@ -88,13 +78,10 @@ query Sequence(OclAny)::getAssociatedSequences(sequence : Sequence(Sequence(OclA
 
 helper Sequence(Sequence(OclAny))::createConstraintExpression(inout ilp : IntegerLinearProgram,
 	constraint : LocationConstraint) {
-	log("createLocationConstraintExpression");
-	self->print();
 	var comment : String := if constraint.name <> '' then constraint.name else null endif;
 	ilp.constraints += self->createAdditionConstraintExpression(
 		Operator::EQUAL_TO, '1', comment
 	);
-	log("createHWRESConstraintExpression");
 }
 
 query Specification::getLocationConstraints() : OrderedSet(LocationConstraint) {
