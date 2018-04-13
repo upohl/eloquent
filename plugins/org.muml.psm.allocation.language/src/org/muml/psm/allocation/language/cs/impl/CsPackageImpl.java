@@ -605,6 +605,15 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTupleDescriptorCS_SequencePart() {
+		return (EAttribute)tupleDescriptorCSEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getWeightTupleDescriptorCS() {
 		return weightTupleDescriptorCSEClass;
 	}
@@ -895,6 +904,7 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 
 		tupleDescriptorCSEClass = createEClass(TUPLE_DESCRIPTOR_CS);
 		createEReference(tupleDescriptorCSEClass, TUPLE_DESCRIPTOR_CS__TYPED_PAIRS);
+		createEAttribute(tupleDescriptorCSEClass, TUPLE_DESCRIPTOR_CS__SEQUENCE_PART);
 
 		weightTupleDescriptorCSEClass = createEClass(WEIGHT_TUPLE_DESCRIPTOR_CS);
 		createEAttribute(weightTupleDescriptorCSEClass, WEIGHT_TUPLE_DESCRIPTOR_CS__WEIGHT);
@@ -1039,7 +1049,8 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		initEReference(getForbiddenLocationConstraintCS_TupleDescriptor(), this.getTupleDescriptorCS(), null, "tupleDescriptor", null, 1, 1, ForbiddenLocationConstraintCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tupleDescriptorCSEClass, TupleDescriptorCS.class, "TupleDescriptorCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTupleDescriptorCS_TypedPairs(), this.getTypedPairCS(), null, "typedPairs", null, 1, -1, TupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTupleDescriptorCS_TypedPairs(), this.getTypedPairCS(), null, "typedPairs", null, 0, -1, TupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTupleDescriptorCS_SequencePart(), ecorePackage.getEString(), "sequencePart", null, 0, 1, TupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(weightTupleDescriptorCSEClass, WeightTupleDescriptorCS.class, "WeightTupleDescriptorCS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getWeightTupleDescriptorCS_Weight(), ecorePackage.getEString(), "weight", null, 1, 1, WeightTupleDescriptorCS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1127,13 +1138,19 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		  (relationCSEClass, 
 		   source, 
 		   new String[] {
-			 "constraints", "exactlyOnePair"
+			 "constraints", "exactlyOnePairOrSequencePart"
 		   });	
 		addAnnotation
 		  (coherenceConstraintCSEClass, 
 		   source, 
 		   new String[] {
 			 "constraints", "exactlyOnePair"
+		   });	
+		addAnnotation
+		  (tupleDescriptorCSEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "typedPairsOrSequencePart"
 		   });
 	}
 
@@ -1149,13 +1166,19 @@ public class CsPackageImpl extends EPackageImpl implements CsPackage {
 		  (relationCSEClass, 
 		   source, 
 		   new String[] {
-			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
+			 "exactlyOnePairOrSequencePart", "self.tupleDescriptor.typedPairs->size() = 1\nor\n(\n\tnot self.tupleDescriptor.sequencePart.oclIsUndefined()\n\tand\n\tself.tupleDescriptor.sequencePart <> \'\'\n)"
 		   });	
 		addAnnotation
 		  (coherenceConstraintCSEClass, 
 		   source, 
 		   new String[] {
 			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
+		   });	
+		addAnnotation
+		  (tupleDescriptorCSEClass, 
+		   source, 
+		   new String[] {
+			 "typedPairsOrSequencePart", "let sequencePart : Boolean = not self.sequencePart.oclIsUndefined() and self.sequencePart <> \'\'\nin\nsequencePart implies self.typedPairs->isEmpty()\nand\nself.typedPairs->notEmpty() implies not sequencePart\nand\n(sequencePart or self.typedPairs->notEmpty())"
 		   });
 	}
 

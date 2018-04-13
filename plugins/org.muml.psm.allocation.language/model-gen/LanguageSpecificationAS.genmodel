@@ -51,6 +51,7 @@
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//TupleDescriptor">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference LanguageSpecificationAS.ecore#//TupleDescriptor/typedPairs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationAS.ecore#//TupleDescriptor/sequencePart"/>
     </genClasses>
     <genClasses ecoreClass="LanguageSpecificationAS.ecore#//WeightTupleDescriptor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute LanguageSpecificationAS.ecore#//WeightTupleDescriptor/weight"/>

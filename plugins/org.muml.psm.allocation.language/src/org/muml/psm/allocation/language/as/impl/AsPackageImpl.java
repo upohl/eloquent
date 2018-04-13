@@ -575,6 +575,15 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTupleDescriptor_SequencePart() {
+		return (EAttribute)tupleDescriptorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getWeightTupleDescriptor() {
 		return weightTupleDescriptorEClass;
 	}
@@ -863,6 +872,7 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 
 		tupleDescriptorEClass = createEClass(TUPLE_DESCRIPTOR);
 		createEReference(tupleDescriptorEClass, TUPLE_DESCRIPTOR__TYPED_PAIRS);
+		createEAttribute(tupleDescriptorEClass, TUPLE_DESCRIPTOR__SEQUENCE_PART);
 
 		weightTupleDescriptorEClass = createEClass(WEIGHT_TUPLE_DESCRIPTOR);
 		createEAttribute(weightTupleDescriptorEClass, WEIGHT_TUPLE_DESCRIPTOR__WEIGHT);
@@ -1000,7 +1010,8 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		initEReference(getForbiddenLocationConstraint_TupleDescriptor(), this.getTupleDescriptor(), null, "tupleDescriptor", null, 1, 1, ForbiddenLocationConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tupleDescriptorEClass, TupleDescriptor.class, "TupleDescriptor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTupleDescriptor_TypedPairs(), this.getTypedPair(), null, "typedPairs", null, 1, -1, TupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTupleDescriptor_TypedPairs(), this.getTypedPair(), null, "typedPairs", null, 0, -1, TupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTupleDescriptor_SequencePart(), ecorePackage.getEString(), "sequencePart", null, 0, 1, TupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(weightTupleDescriptorEClass, WeightTupleDescriptor.class, "WeightTupleDescriptor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getWeightTupleDescriptor_Weight(), ecorePackage.getEString(), "weight", null, 0, 1, WeightTupleDescriptor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1088,13 +1099,19 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		  (relationEClass, 
 		   source, 
 		   new String[] {
-			 "constraints", "exactlyOnePair"
+			 "constraints", "exactlyOnePairOrSequencePart"
 		   });	
 		addAnnotation
 		  (coherenceConstraintEClass, 
 		   source, 
 		   new String[] {
 			 "constraints", "exactlyOnePair"
+		   });	
+		addAnnotation
+		  (tupleDescriptorEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "typedPairsOrSequencePart"
 		   });
 	}
 
@@ -1110,13 +1127,19 @@ public class AsPackageImpl extends EPackageImpl implements AsPackage {
 		  (relationEClass, 
 		   source, 
 		   new String[] {
-			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
+			 "exactlyOnePairOrSequencePart", "self.tupleDescriptor.typedPairs->size() = 1\nor\n(\n\tnot self.tupleDescriptor.sequencePart.oclIsUndefined()\n\tand\n\tself.tupleDescriptor.sequencePart <> \'\'\n)"
 		   });	
 		addAnnotation
 		  (coherenceConstraintEClass, 
 		   source, 
 		   new String[] {
 			 "exactlyOnePair", "self.tupleDescriptor.typedPairs->size() = 1"
+		   });	
+		addAnnotation
+		  (tupleDescriptorEClass, 
+		   source, 
+		   new String[] {
+			 "typedPairsOrSequencePart", "let sequencePart : Boolean = not self.sequencePart.oclIsUndefined() and self.sequencePart <> \'\'\nin\nsequencePart implies self.typedPairs->isEmpty()\nand\nself.typedPairs->notEmpty() implies not sequencePart\nand\n(sequencePart or self.typedPairs->notEmpty())"
 		   });
 	}
 

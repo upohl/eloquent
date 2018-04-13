@@ -175,25 +175,31 @@ public class CsValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(relationCS, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(relationCS, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(relationCS, diagnostics, context);
-		if (result || diagnostics != null) result &= validateRelationCS_exactlyOnePair(relationCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validateRelationCS_exactlyOnePairOrSequencePart(relationCS, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * The cached validation expression for the exactlyOnePair constraint of '<em>Relation CS</em>'.
+	 * The cached validation expression for the exactlyOnePairOrSequencePart constraint of '<em>Relation CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String RELATION_CS__EXACTLY_ONE_PAIR__EEXPRESSION = "self.tupleDescriptor.typedPairs->size() = 1";
+	protected static final String RELATION_CS__EXACTLY_ONE_PAIR_OR_SEQUENCE_PART__EEXPRESSION = "self.tupleDescriptor.typedPairs->size() = 1\n" +
+		"or\n" +
+		"(\n" +
+		"\tnot self.tupleDescriptor.sequencePart.oclIsUndefined()\n" +
+		"\tand\n" +
+		"\tself.tupleDescriptor.sequencePart <> ''\n" +
+		")";
 
 	/**
-	 * Validates the exactlyOnePair constraint of '<em>Relation CS</em>'.
+	 * Validates the exactlyOnePairOrSequencePart constraint of '<em>Relation CS</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateRelationCS_exactlyOnePair(RelationCS relationCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateRelationCS_exactlyOnePairOrSequencePart(RelationCS relationCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
 				(CsPackage.Literals.RELATION_CS,
@@ -201,8 +207,8 @@ public class CsValidator extends EObjectValidator {
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-				 "exactlyOnePair",
-				 RELATION_CS__EXACTLY_ONE_PAIR__EEXPRESSION,
+				 "exactlyOnePairOrSequencePart",
+				 RELATION_CS__EXACTLY_ONE_PAIR_OR_SEQUENCE_PART__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
@@ -316,7 +322,52 @@ public class CsValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTupleDescriptorCS(TupleDescriptorCS tupleDescriptorCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tupleDescriptorCS, diagnostics, context);
+		if (!validate_NoCircularContainment(tupleDescriptorCS, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTupleDescriptorCS_typedPairsOrSequencePart(tupleDescriptorCS, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the typedPairsOrSequencePart constraint of '<em>Tuple Descriptor CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String TUPLE_DESCRIPTOR_CS__TYPED_PAIRS_OR_SEQUENCE_PART__EEXPRESSION = "let sequencePart : Boolean = not self.sequencePart.oclIsUndefined() and self.sequencePart <> ''\n" +
+		"in\n" +
+		"sequencePart implies self.typedPairs->isEmpty()\n" +
+		"and\n" +
+		"self.typedPairs->notEmpty() implies not sequencePart\n" +
+		"and\n" +
+		"(sequencePart or self.typedPairs->notEmpty())";
+
+	/**
+	 * Validates the typedPairsOrSequencePart constraint of '<em>Tuple Descriptor CS</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTupleDescriptorCS_typedPairsOrSequencePart(TupleDescriptorCS tupleDescriptorCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(CsPackage.Literals.TUPLE_DESCRIPTOR_CS,
+				 tupleDescriptorCS,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "typedPairsOrSequencePart",
+				 TUPLE_DESCRIPTOR_CS__TYPED_PAIRS_OR_SEQUENCE_PART__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**
@@ -325,7 +376,17 @@ public class CsValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateWeightTupleDescriptorCS(WeightTupleDescriptorCS weightTupleDescriptorCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(weightTupleDescriptorCS, diagnostics, context);
+		if (!validate_NoCircularContainment(weightTupleDescriptorCS, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(weightTupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(weightTupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(weightTupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(weightTupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(weightTupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(weightTupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(weightTupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(weightTupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTupleDescriptorCS_typedPairsOrSequencePart(weightTupleDescriptorCS, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -334,7 +395,17 @@ public class CsValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateBoundWeightTupleDescriptorCS(BoundWeightTupleDescriptorCS boundWeightTupleDescriptorCS, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(boundWeightTupleDescriptorCS, diagnostics, context);
+		if (!validate_NoCircularContainment(boundWeightTupleDescriptorCS, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(boundWeightTupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(boundWeightTupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(boundWeightTupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(boundWeightTupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(boundWeightTupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(boundWeightTupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(boundWeightTupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(boundWeightTupleDescriptorCS, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTupleDescriptorCS_typedPairsOrSequencePart(boundWeightTupleDescriptorCS, diagnostics, context);
+		return result;
 	}
 
 	/**

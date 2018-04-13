@@ -1121,13 +1121,22 @@ public interface CsPackage extends EPackage {
 	int TUPLE_DESCRIPTOR_CS__TYPED_PAIRS = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Sequence Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TUPLE_DESCRIPTOR_CS__SEQUENCE_PART = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Tuple Descriptor CS</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TUPLE_DESCRIPTOR_CS_FEATURE_COUNT = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 1;
+	int TUPLE_DESCRIPTOR_CS_FEATURE_COUNT = BaseCSPackage.MODEL_ELEMENT_CS_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.muml.psm.allocation.language.cs.impl.WeightTupleDescriptorCSImpl <em>Weight Tuple Descriptor CS</em>}' class.
@@ -1192,6 +1201,15 @@ public interface CsPackage extends EPackage {
 	 * @ordered
 	 */
 	int WEIGHT_TUPLE_DESCRIPTOR_CS__TYPED_PAIRS = TUPLE_DESCRIPTOR_CS__TYPED_PAIRS;
+
+	/**
+	 * The feature id for the '<em><b>Sequence Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEIGHT_TUPLE_DESCRIPTOR_CS__SEQUENCE_PART = TUPLE_DESCRIPTOR_CS__SEQUENCE_PART;
 
 	/**
 	 * The feature id for the '<em><b>Weight</b></em>' attribute.
@@ -1274,6 +1292,15 @@ public interface CsPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__TYPED_PAIRS = WEIGHT_TUPLE_DESCRIPTOR_CS__TYPED_PAIRS;
+
+	/**
+	 * The feature id for the '<em><b>Sequence Part</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUND_WEIGHT_TUPLE_DESCRIPTOR_CS__SEQUENCE_PART = WEIGHT_TUPLE_DESCRIPTOR_CS__SEQUENCE_PART;
 
 	/**
 	 * The feature id for the '<em><b>Weight</b></em>' attribute.
@@ -2404,6 +2431,17 @@ public interface CsPackage extends EPackage {
 	EReference getTupleDescriptorCS_TypedPairs();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.language.cs.TupleDescriptorCS#getSequencePart <em>Sequence Part</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Sequence Part</em>'.
+	 * @see org.muml.psm.allocation.language.cs.TupleDescriptorCS#getSequencePart()
+	 * @see #getTupleDescriptorCS()
+	 * @generated
+	 */
+	EAttribute getTupleDescriptorCS_SequencePart();
+
+	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.language.cs.WeightTupleDescriptorCS <em>Weight Tuple Descriptor CS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2963,6 +3001,14 @@ public interface CsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TUPLE_DESCRIPTOR_CS__TYPED_PAIRS = eINSTANCE.getTupleDescriptorCS_TypedPairs();
+
+		/**
+		 * The meta object literal for the '<em><b>Sequence Part</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TUPLE_DESCRIPTOR_CS__SEQUENCE_PART = eINSTANCE.getTupleDescriptorCS_SequencePart();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.psm.allocation.language.cs.impl.WeightTupleDescriptorCSImpl <em>Weight Tuple Descriptor CS</em>}' class.

@@ -174,25 +174,31 @@ public class AsValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(relation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(relation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(relation, diagnostics, context);
-		if (result || diagnostics != null) result &= validateRelation_exactlyOnePair(relation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateRelation_exactlyOnePairOrSequencePart(relation, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * The cached validation expression for the exactlyOnePair constraint of '<em>Relation</em>'.
+	 * The cached validation expression for the exactlyOnePairOrSequencePart constraint of '<em>Relation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String RELATION__EXACTLY_ONE_PAIR__EEXPRESSION = "self.tupleDescriptor.typedPairs->size() = 1";
+	protected static final String RELATION__EXACTLY_ONE_PAIR_OR_SEQUENCE_PART__EEXPRESSION = "self.tupleDescriptor.typedPairs->size() = 1\n" +
+		"or\n" +
+		"(\n" +
+		"\tnot self.tupleDescriptor.sequencePart.oclIsUndefined()\n" +
+		"\tand\n" +
+		"\tself.tupleDescriptor.sequencePart <> ''\n" +
+		")";
 
 	/**
-	 * Validates the exactlyOnePair constraint of '<em>Relation</em>'.
+	 * Validates the exactlyOnePairOrSequencePart constraint of '<em>Relation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateRelation_exactlyOnePair(Relation relation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateRelation_exactlyOnePairOrSequencePart(Relation relation, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return
 			validate
 				(AsPackage.Literals.RELATION,
@@ -200,8 +206,8 @@ public class AsValidator extends EObjectValidator {
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-				 "exactlyOnePair",
-				 RELATION__EXACTLY_ONE_PAIR__EEXPRESSION,
+				 "exactlyOnePairOrSequencePart",
+				 RELATION__EXACTLY_ONE_PAIR_OR_SEQUENCE_PART__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
@@ -315,7 +321,52 @@ public class AsValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateTupleDescriptor(TupleDescriptor tupleDescriptor, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(tupleDescriptor, diagnostics, context);
+		if (!validate_NoCircularContainment(tupleDescriptor, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(tupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(tupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(tupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(tupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(tupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(tupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(tupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(tupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTupleDescriptor_typedPairsOrSequencePart(tupleDescriptor, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the typedPairsOrSequencePart constraint of '<em>Tuple Descriptor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String TUPLE_DESCRIPTOR__TYPED_PAIRS_OR_SEQUENCE_PART__EEXPRESSION = "let sequencePart : Boolean = not self.sequencePart.oclIsUndefined() and self.sequencePart <> ''\n" +
+		"in\n" +
+		"sequencePart implies self.typedPairs->isEmpty()\n" +
+		"and\n" +
+		"self.typedPairs->notEmpty() implies not sequencePart\n" +
+		"and\n" +
+		"(sequencePart or self.typedPairs->notEmpty())";
+
+	/**
+	 * Validates the typedPairsOrSequencePart constraint of '<em>Tuple Descriptor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTupleDescriptor_typedPairsOrSequencePart(TupleDescriptor tupleDescriptor, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(AsPackage.Literals.TUPLE_DESCRIPTOR,
+				 tupleDescriptor,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "typedPairsOrSequencePart",
+				 TUPLE_DESCRIPTOR__TYPED_PAIRS_OR_SEQUENCE_PART__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**
@@ -324,7 +375,17 @@ public class AsValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateWeightTupleDescriptor(WeightTupleDescriptor weightTupleDescriptor, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(weightTupleDescriptor, diagnostics, context);
+		if (!validate_NoCircularContainment(weightTupleDescriptor, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(weightTupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(weightTupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(weightTupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(weightTupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(weightTupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(weightTupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(weightTupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(weightTupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTupleDescriptor_typedPairsOrSequencePart(weightTupleDescriptor, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -333,7 +394,17 @@ public class AsValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateBoundWeightTupleDescriptor(BoundWeightTupleDescriptor boundWeightTupleDescriptor, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(boundWeightTupleDescriptor, diagnostics, context);
+		if (!validate_NoCircularContainment(boundWeightTupleDescriptor, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(boundWeightTupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(boundWeightTupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(boundWeightTupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(boundWeightTupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(boundWeightTupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(boundWeightTupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(boundWeightTupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(boundWeightTupleDescriptor, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTupleDescriptor_typedPairsOrSequencePart(boundWeightTupleDescriptor, diagnostics, context);
+		return result;
 	}
 
 	/**

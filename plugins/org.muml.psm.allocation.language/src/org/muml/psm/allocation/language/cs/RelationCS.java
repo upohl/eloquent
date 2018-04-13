@@ -27,8 +27,8 @@ import org.eclipse.ocl.xtext.basecs.NamedElementCS;
  * </ul>
  *
  * @see org.muml.psm.allocation.language.cs.CsPackage#getRelationCS()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='exactlyOnePair'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot exactlyOnePair='self.tupleDescriptor.typedPairs-&gt;size() = 1'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='exactlyOnePairOrSequencePart'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot exactlyOnePairOrSequencePart='self.tupleDescriptor.typedPairs-&gt;size() = 1\nor\n(\n\tnot self.tupleDescriptor.sequencePart.oclIsUndefined()\n\tand\n\tself.tupleDescriptor.sequencePart &lt;&gt; \'\'\n)'"
  * @generated
  */
 public interface RelationCS extends NamedElementCS, EvaluableElementCS {
