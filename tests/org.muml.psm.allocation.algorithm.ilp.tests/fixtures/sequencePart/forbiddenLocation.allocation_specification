@@ -1,0 +1,127 @@
+test {
+	nameProvider  'org.muml.psm.allocation.algorithm.ilp.tests.EcoreNameProvider'
+	storageProvider 'org.muml.psm.allocation.algorithm.ilp.tests.EcoreStorageProvider' 
+	
+	oclContext ecore::EPackage
+	
+	import 'http://www.eclipse.org/emf/2002/Ecore'
+	
+	relation atLeastOne {
+		descriptors (first : ecore::EClassifier, second : ecore::EPackage);
+		lower 1;
+		upper -1;
+		ocl self.eSubpackages->at(1).eClassifiers->product(
+			self.eSubpackages->at(3).eSubpackages
+		);
+	}
+	
+	-- relate each ic.sub3.eSubpackages package to at least one ic.sub2.eClassifiers class
+	relation atLeastOnePkg {
+		descriptors (first : ecore::EPackage, second : ecore::EClassifier);
+		lower 1;
+		upper -1;
+		ocl self.eSubpackages->at(3).eSubpackages->product(
+			self.eSubpackages->at(2).eClassifiers
+		);
+	}
+	
+	-- relate ic.sub2.eClassifiers to ic.sub1.eClassifiers
+	relation cl2cls {
+		descriptors (first : ecore::EClassifier, second : ecore::EClassifier);
+		lower 0;
+		upper -1;
+		ocl self.eSubpackages->at(2).eClassifiers->product(
+			self.eSubpackages->at(1).eClassifiers
+		);	
+	}
+	
+	-- taken from multipleDescriptorsAndOrder.allocation_specification
+	constraint forbiddenLocation c1 {
+		descriptors seq;
+		ocl Set {
+			-- after reordering, this is the second tuple
+			Tuple {
+				seq = Sequence {
+					self.eSubpackages->at(1).eClassifiers->at(2),
+					self.eSubpackages->at(3).eSubpackages->at(2),
+					self.eSubpackages->at(3).eSubpackages->at(3),
+					self.eSubpackages->at(2).eClassifiers->at(3),
+					self.eSubpackages->at(2).eClassifiers->at(2),
+					self.eSubpackages->at(1).eClassifiers->at(2),
+					self.eSubpackages->at(2).eClassifiers->at(3),
+					self.eSubpackages->at(1).eClassifiers->at(3)
+				}
+			},
+			-- after reordering, this is the first tuple
+			Tuple {
+				seq = Sequence {
+					self.eSubpackages->at(1).eClassifiers->at(1),
+					self.eSubpackages->at(3).eSubpackages->at(1),
+					self.eSubpackages->at(3).eSubpackages->at(2),
+					self.eSubpackages->at(2).eClassifiers->at(2),
+					self.eSubpackages->at(2).eClassifiers->at(1),
+					self.eSubpackages->at(1).eClassifiers->at(1),
+					self.eSubpackages->at(2).eClassifiers->at(2),
+					self.eSubpackages->at(1).eClassifiers->at(2)
+				}
+			},
+			-- this remains the last tuple
+			Tuple {
+				seq = Sequence {
+					self.eSubpackages->at(1).eClassifiers->at(3),
+					self.eSubpackages->at(3).eSubpackages->at(1),
+					self.eSubpackages->at(3).eSubpackages->at(1),
+					self.eSubpackages->at(2).eClassifiers->at(3),
+					self.eSubpackages->at(2).eClassifiers->at(3),
+					self.eSubpackages->at(1).eClassifiers->at(3),
+					self.eSubpackages->at(2).eClassifiers->at(1),
+					self.eSubpackages->at(1).eClassifiers->at(3)
+				}
+			}
+		};
+	}
+	
+	constraint forbiddenLocation c2 {
+		descriptors foobar;
+		ocl Set {
+			Tuple {
+				foobar = Sequence {
+					self.eSubpackages->at(2).eClassifiers->at(1),
+					self.eSubpackages->at(1).eClassifiers->at(2)
+				}
+			},
+			Tuple {
+				foobar = Sequence {
+					self.eSubpackages->at(2).eClassifiers->at(2),
+					self.eSubpackages->at(1).eClassifiers->at(3)
+				}
+			}
+		};
+	}
+	
+	constraint forbiddenLocation c3 {
+		descriptors x;
+		ocl Set {
+			Tuple {
+				x = Sequence {
+					self.eSubpackages->at(1).eClassifiers->at(2),
+					self.eSubpackages->at(3).eSubpackages->at(2),
+					self.eSubpackages->at(3).eSubpackages->at(3),
+					self.eSubpackages->at(2).eClassifiers->at(3),
+					self.eSubpackages->at(2).eClassifiers->at(1),
+					self.eSubpackages->at(1).eClassifiers->at(1)
+				}
+			},
+			Tuple {
+				x = Sequence {
+					self.eSubpackages->at(1).eClassifiers->at(3),
+					self.eSubpackages->at(3).eSubpackages->at(3),
+					self.eSubpackages->at(3).eSubpackages->at(1),
+					self.eSubpackages->at(2).eClassifiers->at(1),
+					self.eSubpackages->at(2).eClassifiers->at(2),
+					self.eSubpackages->at(1).eClassifiers->at(2)
+				}
+			}
+		};
+	}
+}
