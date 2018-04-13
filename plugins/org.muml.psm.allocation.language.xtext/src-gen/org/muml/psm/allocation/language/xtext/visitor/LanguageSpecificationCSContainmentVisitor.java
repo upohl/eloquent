@@ -153,6 +153,9 @@ public class LanguageSpecificationCSContainmentVisitor extends org.muml.psm.allo
 				PivotUtil.getPivot(org.muml.psm.allocation.language.as.TypedPair.class, it)
 			);
 		}
+		pivotElement.setSequencePart(
+			csElement.getSequencePart()
+		);
 		return null;
 	}
 	@Override

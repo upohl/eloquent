@@ -556,44 +556,60 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TupleDescriptor");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDescriptorsKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cTypedPairsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTypedPairsTypedPairParserRuleCall_1_0 = (RuleCall)cTypedPairsAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cTypedPairsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cTypedPairsTypedPairParserRuleCall_2_1_0 = (RuleCall)cTypedPairsAssignment_2_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Assignment cSequencePartAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
+		private final RuleCall cSequencePartIDParserRuleCall_1_0_0 = (RuleCall)cSequencePartAssignment_1_0.eContents().get(0);
+		private final Group cGroup_1_1 = (Group)cAlternatives_1.eContents().get(1);
+		private final Assignment cTypedPairsAssignment_1_1_0 = (Assignment)cGroup_1_1.eContents().get(0);
+		private final RuleCall cTypedPairsTypedPairParserRuleCall_1_1_0_0 = (RuleCall)cTypedPairsAssignment_1_1_0.eContents().get(0);
+		private final Group cGroup_1_1_1 = (Group)cGroup_1_1.eContents().get(1);
+		private final Keyword cCommaKeyword_1_1_1_0 = (Keyword)cGroup_1_1_1.eContents().get(0);
+		private final Assignment cTypedPairsAssignment_1_1_1_1 = (Assignment)cGroup_1_1_1.eContents().get(1);
+		private final RuleCall cTypedPairsTypedPairParserRuleCall_1_1_1_1_0 = (RuleCall)cTypedPairsAssignment_1_1_1_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//TupleDescriptor cs::TupleDescriptorCS:
-		//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';';
+		//	'descriptors' (sequencePart=ID | typedPairs+=TypedPair (',' typedPairs+=TypedPair)*) ';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+		//'descriptors' (sequencePart=ID | typedPairs+=TypedPair (',' typedPairs+=TypedPair)*) ';'
 		public Group getGroup() { return cGroup; }
 
 		//'descriptors'
 		public Keyword getDescriptorsKeyword_0() { return cDescriptorsKeyword_0; }
 
+		//sequencePart=ID | typedPairs+=TypedPair (',' typedPairs+=TypedPair)*
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
+
+		//sequencePart=ID
+		public Assignment getSequencePartAssignment_1_0() { return cSequencePartAssignment_1_0; }
+
+		//ID
+		public RuleCall getSequencePartIDParserRuleCall_1_0_0() { return cSequencePartIDParserRuleCall_1_0_0; }
+
+		//typedPairs+=TypedPair (',' typedPairs+=TypedPair)*
+		public Group getGroup_1_1() { return cGroup_1_1; }
+
 		//typedPairs+=TypedPair
-		public Assignment getTypedPairsAssignment_1() { return cTypedPairsAssignment_1; }
+		public Assignment getTypedPairsAssignment_1_1_0() { return cTypedPairsAssignment_1_1_0; }
 
 		//TypedPair
-		public RuleCall getTypedPairsTypedPairParserRuleCall_1_0() { return cTypedPairsTypedPairParserRuleCall_1_0; }
+		public RuleCall getTypedPairsTypedPairParserRuleCall_1_1_0_0() { return cTypedPairsTypedPairParserRuleCall_1_1_0_0; }
 
 		//(',' typedPairs+=TypedPair)*
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_1_1_1() { return cGroup_1_1_1; }
 
 		//','
-		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+		public Keyword getCommaKeyword_1_1_1_0() { return cCommaKeyword_1_1_1_0; }
 
 		//typedPairs+=TypedPair
-		public Assignment getTypedPairsAssignment_2_1() { return cTypedPairsAssignment_2_1; }
+		public Assignment getTypedPairsAssignment_1_1_1_1() { return cTypedPairsAssignment_1_1_1_1; }
 
 		//TypedPair
-		public RuleCall getTypedPairsTypedPairParserRuleCall_2_1_0() { return cTypedPairsTypedPairParserRuleCall_2_1_0; }
+		public RuleCall getTypedPairsTypedPairParserRuleCall_1_1_1_1_0() { return cTypedPairsTypedPairParserRuleCall_1_1_1_1_0; }
 
 		//';'
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
 	public class WeightTupleDescriptorElements extends AbstractParserRuleElementFinder {
@@ -604,20 +620,24 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final RuleCall cWeightIDParserRuleCall_1_0 = (RuleCall)cWeightAssignment_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cDescriptorsKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cTypedPairsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cTypedPairsTypedPairParserRuleCall_4_0 = (RuleCall)cTypedPairsAssignment_4.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cCommaKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cTypedPairsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cTypedPairsTypedPairParserRuleCall_5_1_0 = (RuleCall)cTypedPairsAssignment_5_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Alternatives cAlternatives_4 = (Alternatives)cGroup.eContents().get(4);
+		private final Assignment cSequencePartAssignment_4_0 = (Assignment)cAlternatives_4.eContents().get(0);
+		private final RuleCall cSequencePartIDParserRuleCall_4_0_0 = (RuleCall)cSequencePartAssignment_4_0.eContents().get(0);
+		private final Group cGroup_4_1 = (Group)cAlternatives_4.eContents().get(1);
+		private final Assignment cTypedPairsAssignment_4_1_0 = (Assignment)cGroup_4_1.eContents().get(0);
+		private final RuleCall cTypedPairsTypedPairParserRuleCall_4_1_0_0 = (RuleCall)cTypedPairsAssignment_4_1_0.eContents().get(0);
+		private final Group cGroup_4_1_1 = (Group)cGroup_4_1.eContents().get(1);
+		private final Keyword cCommaKeyword_4_1_1_0 = (Keyword)cGroup_4_1_1.eContents().get(0);
+		private final Assignment cTypedPairsAssignment_4_1_1_1 = (Assignment)cGroup_4_1_1.eContents().get(1);
+		private final RuleCall cTypedPairsTypedPairParserRuleCall_4_1_1_1_0 = (RuleCall)cTypedPairsAssignment_4_1_1_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//WeightTupleDescriptor cs::WeightTupleDescriptorCS:
 		//	'weight' weight=ID ';'
-		//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';';
+		//	'descriptors' (sequencePart=ID | typedPairs+=TypedPair (',' typedPairs+=TypedPair)*) ';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//'weight' weight=ID ';' 'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+		//'weight' weight=ID ';' 'descriptors' (sequencePart=ID | typedPairs+=TypedPair (',' typedPairs+=TypedPair)*) ';'
 		public Group getGroup() { return cGroup; }
 
 		//'weight'
@@ -635,26 +655,38 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//'descriptors'
 		public Keyword getDescriptorsKeyword_3() { return cDescriptorsKeyword_3; }
 
+		//sequencePart=ID | typedPairs+=TypedPair (',' typedPairs+=TypedPair)*
+		public Alternatives getAlternatives_4() { return cAlternatives_4; }
+
+		//sequencePart=ID
+		public Assignment getSequencePartAssignment_4_0() { return cSequencePartAssignment_4_0; }
+
+		//ID
+		public RuleCall getSequencePartIDParserRuleCall_4_0_0() { return cSequencePartIDParserRuleCall_4_0_0; }
+
+		//typedPairs+=TypedPair (',' typedPairs+=TypedPair)*
+		public Group getGroup_4_1() { return cGroup_4_1; }
+
 		//typedPairs+=TypedPair
-		public Assignment getTypedPairsAssignment_4() { return cTypedPairsAssignment_4; }
+		public Assignment getTypedPairsAssignment_4_1_0() { return cTypedPairsAssignment_4_1_0; }
 
 		//TypedPair
-		public RuleCall getTypedPairsTypedPairParserRuleCall_4_0() { return cTypedPairsTypedPairParserRuleCall_4_0; }
+		public RuleCall getTypedPairsTypedPairParserRuleCall_4_1_0_0() { return cTypedPairsTypedPairParserRuleCall_4_1_0_0; }
 
 		//(',' typedPairs+=TypedPair)*
-		public Group getGroup_5() { return cGroup_5; }
+		public Group getGroup_4_1_1() { return cGroup_4_1_1; }
 
 		//','
-		public Keyword getCommaKeyword_5_0() { return cCommaKeyword_5_0; }
+		public Keyword getCommaKeyword_4_1_1_0() { return cCommaKeyword_4_1_1_0; }
 
 		//typedPairs+=TypedPair
-		public Assignment getTypedPairsAssignment_5_1() { return cTypedPairsAssignment_5_1; }
+		public Assignment getTypedPairsAssignment_4_1_1_1() { return cTypedPairsAssignment_4_1_1_1; }
 
 		//TypedPair
-		public RuleCall getTypedPairsTypedPairParserRuleCall_5_1_0() { return cTypedPairsTypedPairParserRuleCall_5_1_0; }
+		public RuleCall getTypedPairsTypedPairParserRuleCall_4_1_1_1_0() { return cTypedPairsTypedPairParserRuleCall_4_1_1_1_0; }
 
 		//';'
-		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
+		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 	}
 
 	public class BoundWeightTupleDescriptorElements extends AbstractParserRuleElementFinder {
@@ -669,21 +701,26 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		private final RuleCall cBoundIDParserRuleCall_4_0 = (RuleCall)cBoundAssignment_4.eContents().get(0);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Keyword cDescriptorsKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Assignment cTypedPairsAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cTypedPairsTypedPairParserRuleCall_7_0 = (RuleCall)cTypedPairsAssignment_7.eContents().get(0);
-		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
-		private final Keyword cCommaKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
-		private final Assignment cTypedPairsAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
-		private final RuleCall cTypedPairsTypedPairParserRuleCall_8_1_0 = (RuleCall)cTypedPairsAssignment_8_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Alternatives cAlternatives_7 = (Alternatives)cGroup.eContents().get(7);
+		private final Assignment cSequencePartAssignment_7_0 = (Assignment)cAlternatives_7.eContents().get(0);
+		private final RuleCall cSequencePartIDParserRuleCall_7_0_0 = (RuleCall)cSequencePartAssignment_7_0.eContents().get(0);
+		private final Group cGroup_7_1 = (Group)cAlternatives_7.eContents().get(1);
+		private final Assignment cTypedPairsAssignment_7_1_0 = (Assignment)cGroup_7_1.eContents().get(0);
+		private final RuleCall cTypedPairsTypedPairParserRuleCall_7_1_0_0 = (RuleCall)cTypedPairsAssignment_7_1_0.eContents().get(0);
+		private final Group cGroup_7_1_1 = (Group)cGroup_7_1.eContents().get(1);
+		private final Keyword cCommaKeyword_7_1_1_0 = (Keyword)cGroup_7_1_1.eContents().get(0);
+		private final Assignment cTypedPairsAssignment_7_1_1_1 = (Assignment)cGroup_7_1_1.eContents().get(1);
+		private final RuleCall cTypedPairsTypedPairParserRuleCall_7_1_1_1_0 = (RuleCall)cTypedPairsAssignment_7_1_1_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//BoundWeightTupleDescriptor cs::BoundWeightTupleDescriptorCS:
 		//	'weight' weight=ID ';'
 		//	'bound' bound=ID ';'
-		//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';';
+		//	'descriptors' (sequencePart=ID | typedPairs+=TypedPair (',' typedPairs+=TypedPair)*) ';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//'weight' weight=ID ';' 'bound' bound=ID ';' 'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+		//'weight' weight=ID ';' 'bound' bound=ID ';' 'descriptors' (sequencePart=ID | typedPairs+=TypedPair (','
+		//typedPairs+=TypedPair)*) ';'
 		public Group getGroup() { return cGroup; }
 
 		//'weight'
@@ -713,26 +750,38 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 		//'descriptors'
 		public Keyword getDescriptorsKeyword_6() { return cDescriptorsKeyword_6; }
 
+		//sequencePart=ID | typedPairs+=TypedPair (',' typedPairs+=TypedPair)*
+		public Alternatives getAlternatives_7() { return cAlternatives_7; }
+
+		//sequencePart=ID
+		public Assignment getSequencePartAssignment_7_0() { return cSequencePartAssignment_7_0; }
+
+		//ID
+		public RuleCall getSequencePartIDParserRuleCall_7_0_0() { return cSequencePartIDParserRuleCall_7_0_0; }
+
+		//typedPairs+=TypedPair (',' typedPairs+=TypedPair)*
+		public Group getGroup_7_1() { return cGroup_7_1; }
+
 		//typedPairs+=TypedPair
-		public Assignment getTypedPairsAssignment_7() { return cTypedPairsAssignment_7; }
+		public Assignment getTypedPairsAssignment_7_1_0() { return cTypedPairsAssignment_7_1_0; }
 
 		//TypedPair
-		public RuleCall getTypedPairsTypedPairParserRuleCall_7_0() { return cTypedPairsTypedPairParserRuleCall_7_0; }
+		public RuleCall getTypedPairsTypedPairParserRuleCall_7_1_0_0() { return cTypedPairsTypedPairParserRuleCall_7_1_0_0; }
 
 		//(',' typedPairs+=TypedPair)*
-		public Group getGroup_8() { return cGroup_8; }
+		public Group getGroup_7_1_1() { return cGroup_7_1_1; }
 
 		//','
-		public Keyword getCommaKeyword_8_0() { return cCommaKeyword_8_0; }
+		public Keyword getCommaKeyword_7_1_1_0() { return cCommaKeyword_7_1_1_0; }
 
 		//typedPairs+=TypedPair
-		public Assignment getTypedPairsAssignment_8_1() { return cTypedPairsAssignment_8_1; }
+		public Assignment getTypedPairsAssignment_7_1_1_1() { return cTypedPairsAssignment_7_1_1_1; }
 
 		//TypedPair
-		public RuleCall getTypedPairsTypedPairParserRuleCall_8_1_0() { return cTypedPairsTypedPairParserRuleCall_8_1_0; }
+		public RuleCall getTypedPairsTypedPairParserRuleCall_7_1_1_1_0() { return cTypedPairsTypedPairParserRuleCall_7_1_1_1_0; }
 
 		//';'
-		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
+		public Keyword getSemicolonKeyword_8() { return cSemicolonKeyword_8; }
 	}
 
 	public class ImplicationConstraintTupleDescriptorElements extends AbstractParserRuleElementFinder {
@@ -1522,7 +1571,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	}
 
 	//TupleDescriptor cs::TupleDescriptorCS:
-	//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';';
+	//	'descriptors' (sequencePart=ID | typedPairs+=TypedPair (',' typedPairs+=TypedPair)*) ';';
 	public TupleDescriptorElements getTupleDescriptorAccess() {
 		return pTupleDescriptor;
 	}
@@ -1533,7 +1582,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 
 	//WeightTupleDescriptor cs::WeightTupleDescriptorCS:
 	//	'weight' weight=ID ';'
-	//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';';
+	//	'descriptors' (sequencePart=ID | typedPairs+=TypedPair (',' typedPairs+=TypedPair)*) ';';
 	public WeightTupleDescriptorElements getWeightTupleDescriptorAccess() {
 		return pWeightTupleDescriptor;
 	}
@@ -1545,7 +1594,7 @@ public class AllocationSpecificationLanguageGrammarAccess extends AbstractGramma
 	//BoundWeightTupleDescriptor cs::BoundWeightTupleDescriptorCS:
 	//	'weight' weight=ID ';'
 	//	'bound' bound=ID ';'
-	//	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';';
+	//	'descriptors' (sequencePart=ID | typedPairs+=TypedPair (',' typedPairs+=TypedPair)*) ';';
 	public BoundWeightTupleDescriptorElements getBoundWeightTupleDescriptorAccess() {
 		return pBoundWeightTupleDescriptor;
 	}

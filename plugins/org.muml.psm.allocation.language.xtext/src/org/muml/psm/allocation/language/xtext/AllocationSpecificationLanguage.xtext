@@ -76,18 +76,18 @@ TypedNamedPart returns cs::TypedNamedPartCS:
 ;
 
 TupleDescriptor returns cs::TupleDescriptorCS:
-	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+	'descriptors' (sequencePart=ID | (typedPairs+=TypedPair (',' typedPairs+=TypedPair)*)) ';'
 ;
 
 WeightTupleDescriptor returns cs::WeightTupleDescriptorCS:
 	'weight' weight=ID ';'
-	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+	'descriptors' (sequencePart=ID | (typedPairs+=TypedPair (',' typedPairs+=TypedPair)*)) ';'
 ;
 
 BoundWeightTupleDescriptor returns cs::BoundWeightTupleDescriptorCS:
 	'weight' weight=ID ';'
 	'bound' bound=ID ';'
-	'descriptors' typedPairs+=TypedPair (',' typedPairs+=TypedPair)* ';'
+	'descriptors' (sequencePart=ID | (typedPairs+=TypedPair (',' typedPairs+=TypedPair)*)) ';'
 ;
 
 ImplicationConstraintTupleDescriptor returns cs::ImplicationConstraintTupleDescriptorCS:

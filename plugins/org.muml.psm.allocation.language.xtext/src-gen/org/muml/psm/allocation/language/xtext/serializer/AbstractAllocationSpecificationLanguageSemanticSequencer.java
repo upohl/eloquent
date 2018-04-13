@@ -527,7 +527,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 *     BoundWeightTupleDescriptor returns BoundWeightTupleDescriptorCS
 	 *
 	 * Constraint:
-	 *     (weight=ID bound=ID typedPairs+=TypedPair typedPairs+=TypedPair*)
+	 *     (weight=ID bound=ID (sequencePart=ID | (typedPairs+=TypedPair typedPairs+=TypedPair*)))
 	 */
 	protected void sequence_BoundWeightTupleDescriptor(ISerializationContext context, BoundWeightTupleDescriptorCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -786,7 +786,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 *     TupleDescriptor returns TupleDescriptorCS
 	 *
 	 * Constraint:
-	 *     (typedPairs+=TypedPair typedPairs+=TypedPair*)
+	 *     (sequencePart=ID | (typedPairs+=TypedPair typedPairs+=TypedPair*))
 	 */
 	protected void sequence_TupleDescriptor(ISerializationContext context, TupleDescriptorCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -858,7 +858,7 @@ public abstract class AbstractAllocationSpecificationLanguageSemanticSequencer e
 	 *     WeightTupleDescriptor returns WeightTupleDescriptorCS
 	 *
 	 * Constraint:
-	 *     (weight=ID typedPairs+=TypedPair typedPairs+=TypedPair*)
+	 *     (weight=ID (sequencePart=ID | (typedPairs+=TypedPair typedPairs+=TypedPair*)))
 	 */
 	protected void sequence_WeightTupleDescriptor(ISerializationContext context, WeightTupleDescriptorCS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

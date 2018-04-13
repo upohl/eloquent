@@ -1070,49 +1070,68 @@ ruleTupleDescriptor returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getTupleDescriptorAccess().getDescriptorsKeyword_0());
     }
-(
+((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getTupleDescriptorAccess().getSequencePartIDParserRuleCall_1_0_0()); 
 	    }
-		lv_typedPairs_1_0=ruleTypedPair		{
+		lv_sequencePart_1_0=ruleID		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTupleDescriptorRule());
+	        }
+       		set(
+       			$current, 
+       			"sequencePart",
+        		lv_sequencePart_1_0, 
+        		"org.eclipse.ocl.xtext.base.Base.ID");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)
+    |((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_1_1_0_0()); 
+	    }
+		lv_typedPairs_2_0=ruleTypedPair		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTupleDescriptorRule());
 	        }
        		add(
        			$current, 
        			"typedPairs",
-        		lv_typedPairs_1_0, 
+        		lv_typedPairs_2_0, 
         		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TypedPair");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_2=',' 
+)(	otherlv_3=',' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getTupleDescriptorAccess().getCommaKeyword_2_0());
+    	newLeafNode(otherlv_3, grammarAccess.getTupleDescriptorAccess().getCommaKeyword_1_1_1_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_2_1_0()); 
+	        newCompositeNode(grammarAccess.getTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_1_1_1_1_0()); 
 	    }
-		lv_typedPairs_3_0=ruleTypedPair		{
+		lv_typedPairs_4_0=ruleTypedPair		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTupleDescriptorRule());
 	        }
        		add(
        			$current, 
        			"typedPairs",
-        		lv_typedPairs_3_0, 
+        		lv_typedPairs_4_0, 
         		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TypedPair");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*	otherlv_4=';' 
+))*))	otherlv_5=';' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getTupleDescriptorAccess().getSemicolonKeyword_3());
+    	newLeafNode(otherlv_5, grammarAccess.getTupleDescriptorAccess().getSemicolonKeyword_2());
     }
 )
 ;
@@ -1165,49 +1184,68 @@ ruleWeightTupleDescriptor returns [EObject current=null]
     {
     	newLeafNode(otherlv_3, grammarAccess.getWeightTupleDescriptorAccess().getDescriptorsKeyword_3());
     }
-(
+((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getWeightTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getWeightTupleDescriptorAccess().getSequencePartIDParserRuleCall_4_0_0()); 
 	    }
-		lv_typedPairs_4_0=ruleTypedPair		{
+		lv_sequencePart_4_0=ruleID		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getWeightTupleDescriptorRule());
+	        }
+       		set(
+       			$current, 
+       			"sequencePart",
+        		lv_sequencePart_4_0, 
+        		"org.eclipse.ocl.xtext.base.Base.ID");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)
+    |((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getWeightTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_4_1_0_0()); 
+	    }
+		lv_typedPairs_5_0=ruleTypedPair		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getWeightTupleDescriptorRule());
 	        }
        		add(
        			$current, 
        			"typedPairs",
-        		lv_typedPairs_4_0, 
+        		lv_typedPairs_5_0, 
         		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TypedPair");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_5=',' 
+)(	otherlv_6=',' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getWeightTupleDescriptorAccess().getCommaKeyword_5_0());
+    	newLeafNode(otherlv_6, grammarAccess.getWeightTupleDescriptorAccess().getCommaKeyword_4_1_1_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getWeightTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_5_1_0()); 
+	        newCompositeNode(grammarAccess.getWeightTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_4_1_1_1_0()); 
 	    }
-		lv_typedPairs_6_0=ruleTypedPair		{
+		lv_typedPairs_7_0=ruleTypedPair		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getWeightTupleDescriptorRule());
 	        }
        		add(
        			$current, 
        			"typedPairs",
-        		lv_typedPairs_6_0, 
+        		lv_typedPairs_7_0, 
         		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TypedPair");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*	otherlv_7=';' 
+))*))	otherlv_8=';' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getWeightTupleDescriptorAccess().getSemicolonKeyword_6());
+    	newLeafNode(otherlv_8, grammarAccess.getWeightTupleDescriptorAccess().getSemicolonKeyword_5());
     }
 )
 ;
@@ -1286,49 +1324,68 @@ ruleBoundWeightTupleDescriptor returns [EObject current=null]
     {
     	newLeafNode(otherlv_6, grammarAccess.getBoundWeightTupleDescriptorAccess().getDescriptorsKeyword_6());
     }
-(
+((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getBoundWeightTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_7_0()); 
+	        newCompositeNode(grammarAccess.getBoundWeightTupleDescriptorAccess().getSequencePartIDParserRuleCall_7_0_0()); 
 	    }
-		lv_typedPairs_7_0=ruleTypedPair		{
+		lv_sequencePart_7_0=ruleID		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getBoundWeightTupleDescriptorRule());
+	        }
+       		set(
+       			$current, 
+       			"sequencePart",
+        		lv_sequencePart_7_0, 
+        		"org.eclipse.ocl.xtext.base.Base.ID");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)
+    |((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getBoundWeightTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_7_1_0_0()); 
+	    }
+		lv_typedPairs_8_0=ruleTypedPair		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getBoundWeightTupleDescriptorRule());
 	        }
        		add(
        			$current, 
        			"typedPairs",
-        		lv_typedPairs_7_0, 
+        		lv_typedPairs_8_0, 
         		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TypedPair");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_8=',' 
+)(	otherlv_9=',' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getBoundWeightTupleDescriptorAccess().getCommaKeyword_8_0());
+    	newLeafNode(otherlv_9, grammarAccess.getBoundWeightTupleDescriptorAccess().getCommaKeyword_7_1_1_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getBoundWeightTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_8_1_0()); 
+	        newCompositeNode(grammarAccess.getBoundWeightTupleDescriptorAccess().getTypedPairsTypedPairParserRuleCall_7_1_1_1_0()); 
 	    }
-		lv_typedPairs_9_0=ruleTypedPair		{
+		lv_typedPairs_10_0=ruleTypedPair		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getBoundWeightTupleDescriptorRule());
 	        }
        		add(
        			$current, 
        			"typedPairs",
-        		lv_typedPairs_9_0, 
+        		lv_typedPairs_10_0, 
         		"org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguage.TypedPair");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*	otherlv_10=';' 
+))*))	otherlv_11=';' 
     {
-    	newLeafNode(otherlv_10, grammarAccess.getBoundWeightTupleDescriptorAccess().getSemicolonKeyword_9());
+    	newLeafNode(otherlv_11, grammarAccess.getBoundWeightTupleDescriptorAccess().getSemicolonKeyword_8());
     }
 )
 ;

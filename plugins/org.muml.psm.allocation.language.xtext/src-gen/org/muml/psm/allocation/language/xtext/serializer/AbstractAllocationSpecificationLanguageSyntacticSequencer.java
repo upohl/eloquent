@@ -176,7 +176,7 @@ public abstract class AbstractAllocationSpecificationLanguageSyntacticSequencer 
 	
 	/**
 	 * Ambiguous syntax:
-	 *     'resource' | 'requiredResource'
+	 *     'requiredResource' | 'resource'
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) 'constraint' (ambiguity) '{' tupleDescriptor=BoundWeightTupleDescriptor
