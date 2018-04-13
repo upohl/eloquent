@@ -85,12 +85,17 @@ query CoherenceConstraint::toSequence(tupleValue : TupleValue) : Sequence(OclAny
 }
 
 query TupleDescriptor::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {
-	return self.typedPairs->collect(typedPair : TypedPair |
-		Sequence{
-			tupleValue.get(typedPair.first.name),
-			tupleValue.get(typedPair.second.name)
-		}
-	);
+	return
+		if self.typedPairs->notEmpty() then
+			self.typedPairs->collect(typedPair : TypedPair |
+				Sequence{
+					tupleValue.get(typedPair.first.name),
+					tupleValue.get(typedPair.second.name)
+				}
+			)
+		else
+			tupleValue.get(self.sequencePart).oclAsType(Sequence(OclAny))
+		endif;
 }
 
 query LocationConstraint::toSequence(tupleValue : TupleValue) : Sequence(OclAny) {

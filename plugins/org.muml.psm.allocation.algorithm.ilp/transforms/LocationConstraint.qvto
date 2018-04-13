@@ -26,26 +26,26 @@ helper Specification::createLocationConstraints(inout ilp : IntegerLinearProgram
 
 helper LocationConstraint::createLocationConstraint(inout ilp : IntegerLinearProgram,
 	oclContext : OclAny) {
-	log("SORT");
-	var sequences : Sequence(Sequence(OclAny)) := self.evaluateOCL(oclContext)
+	var groupedSequences : Sequence(Sequence(Sequence(OclAny))) := self.evaluateOCL(oclContext)
 		.asTupleValueSequence()
 		->collectNested(toSequence())
-		->sortComponentResourceSequences(); 
-	log("SORT");
-	sequences->forEach(seq) {
-		seq->createHelperVariableAndConstraints(ilp);
-	};
-	while (sequences->notEmpty()) {
-		var cur : Sequence(OclAny) := sequences->first();
-		// since createConstraintExpression generates an equality ("= 1"),
-		// we must get rid of duplicates (hence, we do the
-		// -> OrderedSet -> Sequence conversion)
-		// (actually, todo could be an OrderedSet(Sequence(NamedElement)),
-		// but the other helpers/queries expect a Sequence...)
-		var todo : Sequence(Sequence(OclAny)) := cur->getAssociatedSequences(sequences)
-			->asOrderedSet()->asSequence();
-		sequences := sequences->reject(seq | todo->includes(seq));
-		todo->createConstraintExpression(ilp, self)
+		->groupBySizeAndSort(); 
+	groupedSequences->forEach(sequences) {
+		sequences->forEach(seq) {
+			seq->createHelperVariableAndConstraints(ilp);
+		};
+		while (sequences->notEmpty()) {
+			var cur : Sequence(OclAny) := sequences->first();
+			// since createConstraintExpression generates an equality ("= 1"),
+			// we must get rid of duplicates (hence, we do the
+			// -> OrderedSet -> Sequence conversion)
+			// (actually, todo could be an OrderedSet(Sequence(NamedElement)),
+			// but the other helpers/queries expect a Sequence...)
+			var todo : Sequence(Sequence(OclAny)) := cur->getAssociatedSequences(sequences)
+				->asOrderedSet()->asSequence();
+			sequences := sequences->reject(seq | todo->includes(seq));
+			todo->createConstraintExpression(ilp, self)
+		};
 	};
 }
 
@@ -53,6 +53,18 @@ query Sequence(Sequence(OclAny))::sortComponentResourceSequences() : Sequence(Se
 	return self->collectNested(seq |
 		seq->sortComponentResourceSequence()
 	)->sortedBy(seq | seq->getVariableName());
+}
+
+query Sequence(Sequence(OclAny))::groupBySizeAndSort() : Sequence(Sequence(Sequence(OclAny))) {
+	return self->collect(seq |
+		seq->size()
+	)->asSet()->sortedBy(seqSize : Integer |
+		seqSize
+	)->collectNested(seqSize : Integer |
+		self->select(seq |
+			seq->size() = seqSize
+		)->sortComponentResourceSequences()
+	)
 }
 
 /*query TupleValue::toSequences() : Sequence(Sequence(NamedElement)) {
