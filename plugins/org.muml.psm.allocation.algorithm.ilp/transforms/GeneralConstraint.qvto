@@ -1,3 +1,4 @@
+import CollectionSync;
 import Expressions;
 import OCLEvaluator;
 import TupleAccessor;
@@ -40,19 +41,21 @@ helper Relation::createConstraint(inout ilp : IntegerLinearProgram, oclContext :
 	)->asOrderedSet()->sortedBy(
 		getVariableName()
 	);
+	var constraintList : List(ConstraintExpression) := ilp.constraints->wrap();
 	sources->forEach(source) {
-		ilp.constraints += source.getRelations(relation)
+		constraintList += source.getRelations(relation)
 			->createAdditionConstraintExpressions(lower, upper, self.name);
 	};
 }
 
 helper Sequence(Sequence(OclAny))::createVariables(inout ilp : IntegerLinearProgram) {
+	var variableList : List(Variable) := ilp.variables->wrap();
 	self->select(seq : Sequence(OclAny) |
 		seq->getVariable().oclIsUndefined()
 	)->sortedBy(seq : Sequence(OclAny) |
 		seq->getVariableName()
 	)->forEach(seq) {
-		ilp.variables += seq->map createBinaryVariable()
+		variableList += seq->map createBinaryVariable()
 	};
 }
 

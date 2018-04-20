@@ -1,0 +1,70 @@
+modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
+modeltype ecore uses ecore('http://www.eclipse.org/emf/2002/Ecore');
+
+library ListSync;
+
+property collection2Idx : Dict(OclAny, Integer) = Dict {};
+property gIndex : Integer = 0;
+
+helper computeIdx(obj : OclAny) : Integer {
+	var idx : Integer := collection2Idx->defaultget(obj, -1);
+	if (idx = -1) {
+		gIndex := gIndex + 1;
+		idx := gIndex;
+		collection2Idx->put(obj, idx)
+	} endif;
+	return idx;
+}
+
+helper sync(collection : OclAny, context : OclAny, featureName : String) {
+	log("###");
+	log("SYNC");
+	assert fatal (context.oclIsKindOf(EObject))
+		with log (context.toString() + " is no EObject");  -- so hacky...
+	var eObject : EObject := context.oclAsType(EObject);
+	log("feature: " + featureName);
+	var eFeature : EStructuralFeature := eObject.eClass().eAllStructuralFeatures->any(feature |
+		feature.name = featureName
+	);
+	assert fatal (not eFeature.oclIsUndefined())
+		with log ("feature not present: " + featureName);
+	eObject.eSet(eFeature, collection);
+	log("SYNC done");
+	log("###");
+}
+
+// currently unused, but might be handy in the future
+// (all the "computeIdx" dances are only needed for the unwrap...)
+helper Collection(OclAny)::unwrap() {
+	assert fatal (collection2Idx->hasKey(self))
+		with log ("the collection was never wrapped");
+		collection2Idx->put(self, -1);
+}
+
+helper OrderedSet(Variable)::wrap() : List(Variable) {
+	var idx : Integer := computeIdx(self);
+	// workaround for https://bugs.eclipse.org/bugs/show_bug.cgi?id=533871
+	map getOrCreateVariableList(self, idx);
+	return map getOrCreateVariableList(self, idx);
+}
+
+helper OrderedSet(Variable)::sync(ilp : IntegerLinearProgram) {
+	sync(self->wrap(), ilp, "variables");
+}
+
+mapping getOrCreateVariableList(obj : OclAny, idx : Integer) : List(Variable) {
+}
+
+helper OrderedSet(ConstraintExpression)::wrap() : List(ConstraintExpression) {
+	var idx : Integer := computeIdx(self);
+	// workaround for https://bugs.eclipse.org/bugs/show_bug.cgi?id=533871
+	map getOrCreateConstraintExpressionList(self, idx);
+	return map getOrCreateConstraintExpressionList(self, idx);
+}
+
+helper OrderedSet(ConstraintExpression)::sync(ilp : IntegerLinearProgram) {
+	sync(self->wrap(), ilp, "constraints");
+}
+
+mapping getOrCreateConstraintExpressionList(obj : OclAny, idx : Integer) : List(ConstraintExpression) {
+}

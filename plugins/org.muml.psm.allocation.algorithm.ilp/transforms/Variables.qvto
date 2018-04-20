@@ -1,3 +1,4 @@
+import CollectionSync;
 import Expressions;
 import Util;
 import VariableHelper;
@@ -12,13 +13,15 @@ helper Sequence(OclAny)::createHelperVariableAndConstraints(inout ilp : IntegerL
 		return variable;
 	} endif;
 	variable := self->map createBinaryVariable();
-	ilp.variables += variable;
+	var variableList : List(Variable) := ilp.variables->wrap();
+	var constraintList : List(ConstraintExpression) := ilp.constraints->wrap();
+	variableList += variable;
 	var sequences : Sequence(Sequence(OclAny)) := self->getSequences();
 	sequences->forEach(seq) {
 		var seqVariable : Variable := seq->getVariable();
 		assert fatal (not variable.oclIsUndefined()) with
 			log("no variable for sequence found");
-		ilp.constraints += new ConstraintExpression(new VariableExpression(variable),
+		constraintList += new ConstraintExpression(new VariableExpression(variable),
 			new VariableExpression(seqVariable), Operator::LESS_THAN_OR_EQUAL_TO,
 			null);
 	};
@@ -26,7 +29,7 @@ helper Sequence(OclAny)::createHelperVariableAndConstraints(inout ilp : IntegerL
 	var rhs : Expression := new ArithmeticExpression(
 		new LiteralExpression((sequences->size() - 1).toString()),
 		new VariableExpression(variable), Operator::PLUS);
-	ilp.constraints += new ConstraintExpression(lhs, rhs,
+	constraintList += new ConstraintExpression(lhs, rhs,
 		Operator::LESS_THAN_OR_EQUAL_TO, null);
 	return variable;
 }

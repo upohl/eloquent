@@ -1,3 +1,4 @@
+import CollectionSync;
 import Expressions;
 import OCLEvaluator;
 import TupleAccessor;
@@ -45,8 +46,9 @@ helper CoherenceConstraint::createConstraint(specification : Specification,
 		seq->createHelperVariables(specification, ilp, oclContext);
 	};
 	-- then, all constraints (just for "readability" of the ilp)
+	var constraintList : List(ConstraintExpression) := ilp.constraints->wrap();
 	sequences->forEach(seq) {
-		ilp.constraints += seq->getCommonRelations(specification.relations,
+		constraintList += seq->getCommonRelations(specification.relations,
 			oclContext)->createConstraintExpression(self);
 	}
 }

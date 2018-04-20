@@ -1,3 +1,4 @@
+import CollectionSync;
 import InputHelper;
 import Expressions;
 import GeneralConstraint;
@@ -47,4 +48,7 @@ main() {
 	specification.createObjectiveFunction(ilp, oclContext);
 	endTime := getCurrentTime();
 	log("Time for create ObjectiveFunctions:"+((endTime-startTime)/1000).toString()+" seconds");
+	log("XXX: no sync time included");
+	ilp.variables->sync(ilp);
+	ilp.constraints->sync(ilp);
 }

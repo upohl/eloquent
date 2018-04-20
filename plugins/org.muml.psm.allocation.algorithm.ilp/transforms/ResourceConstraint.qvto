@@ -1,3 +1,4 @@
+import CollectionSync;
 import Expressions;
 import OCLEvaluator;
 import TupleAccessor;
@@ -68,7 +69,8 @@ query TupleValue::getSortedInnerResultSequence(constraint : ResourceConstraint) 
 helper Sequence(TupleValue)::createResourceConstraintExpression(inout ilp : IntegerLinearProgram,
 	constraint : ResourceConstraint, rhsValue : String) {
 	var comment : String := if constraint.name <> '' then constraint.name else constraint.repr() endif;
-	ilp.constraints += new ConstraintExpression(
+	var constraintList : List(ConstraintExpression) := ilp.constraints->wrap();
+	constraintList += new ConstraintExpression(
 		self->createWeightingComponentResourceTuplesAdditionExpression(constraint.tupleDescriptor, null),
 		new LiteralExpression(rhsValue),
 		Operator::LESS_THAN_OR_EQUAL_TO, comment);

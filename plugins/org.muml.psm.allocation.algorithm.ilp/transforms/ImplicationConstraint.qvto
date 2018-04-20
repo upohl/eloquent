@@ -1,3 +1,4 @@
+import CollectionSync;
 import Expressions;
 import OCLEvaluator;
 import TupleAccessor;
@@ -51,7 +52,8 @@ helper Sequence(Sequence(Sequence(OclAny)))::createImplicationConstraintExpressi
 		new LiteralExpression((premiseSequence->size() - 1).toString()),
 		conclusionSequence->createAdditionExpression(),
 		Operator::PLUS);
-	ilp.constraints += new ConstraintExpression(premiseExpression,
+	var constraintList : List(ConstraintExpression) := ilp.constraints->wrap();
+	constraintList += new ConstraintExpression(premiseExpression,
 		conclusionExpression, Operator::LESS_THAN_OR_EQUAL_TO, comment);
 }
 

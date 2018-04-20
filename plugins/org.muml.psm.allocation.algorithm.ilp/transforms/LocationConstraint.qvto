@@ -1,3 +1,4 @@
+import CollectionSync;
 import Expressions;
 import OCLEvaluator;
 import TupleAccessor;
@@ -79,7 +80,8 @@ query Sequence(OclAny)::getAssociatedSequences(sequence : Sequence(Sequence(OclA
 helper Sequence(Sequence(OclAny))::createConstraintExpression(inout ilp : IntegerLinearProgram,
 	constraint : LocationConstraint) {
 	var comment : String := if constraint.name <> '' then constraint.name else null endif;
-	ilp.constraints += self->createAdditionConstraintExpression(
+	var constraintList : List(ConstraintExpression) := ilp.constraints->wrap();
+	constraintList += self->createAdditionConstraintExpression(
 		Operator::EQUAL_TO, '1', comment
 	);
 }

@@ -1,3 +1,4 @@
+import CollectionSync;
 import Expressions;
 import OCLEvaluator;
 import TupleAccessor;
@@ -35,7 +36,8 @@ helper Sequence(Sequence(OclAny))::createForbiddenLocationConstraintExpression(i
 	self->forEach(seq) {
 		seq->createHelperVariableAndConstraints(ilp);
 	};
-	ilp.constraints += new ConstraintExpression(self->createAdditionExpression(),
+	var constraintList : List(ConstraintExpression) := ilp.constraints->wrap();
+	constraintList += new ConstraintExpression(self->createAdditionExpression(),
 		new LiteralExpression('0'),
 		Operator::EQUAL_TO, comment);
 }
