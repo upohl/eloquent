@@ -4,8 +4,8 @@
    <extension
          point="org.eclipse.m2m.qvt.oml.javaBlackboxUnits">
       <unit
-            name="SCIPBlackboxUnit"
-            namespace="org.muml.psm.allocation.algorithm.ilp.scip">
+            name="ExportBlackboxUnit"
+            namespace="org.muml.psm.allocation.algorithm.ilp.export">
          <library
                class="org.muml.psm.allocation.algorithm.ilp.export.Export"
                name="SCIPBlackbox">
@@ -19,8 +19,8 @@
          point="org.muml.psm.allocation.algorithm.strategy">
       <strategy
             class="org.muml.psm.allocation.algorithm.ilp.scip.SCIPAllocationComputationStrategy"
-            description="ILP-based allocation computation strategy (using scip)"
-            name="SCIP Allocation Computation Strategy">
+            description="ILP-based allocation model generation"
+            name="Export  Allocation Problem Model">
       </strategy>
    </extension>
 
