@@ -17,7 +17,7 @@ import org.eclipse.m2m.qvt.oml.util.Dictionary;
 import org.muml.psm.allocation.ilp.IntegerLinearProgram;
 
 public class SCIP {
-	private static final long timeout=180;
+	private static final long timeout=10;
 	private static final String VAR_SECTION = "objective value:";
 	private static final String TIMEOUT = "Timeout";
 	private static final String INFEASIBLE = "SCIP Status        : problem is solved [infeasible]";
