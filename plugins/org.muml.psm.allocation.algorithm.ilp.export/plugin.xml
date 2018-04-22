@@ -18,7 +18,7 @@
    <extension
          point="org.muml.psm.allocation.algorithm.strategy">
       <strategy
-            class="org.muml.psm.allocation.algorithm.ilp.scip.SCIPAllocationComputationStrategy"
+            class="org.muml.psm.allocation.algorithm.ilp.export.SCIPAllocationComputationStrategy"
             description="ILP-based allocation model generation"
             name="Export  Allocation Problem Model">
       </strategy>
