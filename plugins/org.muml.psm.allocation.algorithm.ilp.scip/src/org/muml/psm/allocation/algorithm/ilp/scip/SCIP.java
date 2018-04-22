@@ -84,11 +84,10 @@ public class SCIP {
 			//ProcessBuilder pb = new ProcessBuilder("\"D:\\Program Files\\SCIP\\scip.exe\"", "-f",mpsFileName);
 			Process process = pb.start();
 			
-			
+			parseOutput(process.getInputStream(), process.getErrorStream(),  solution);						
 		//	process.getOutputStream().close();
 			if(process.waitFor(timeout, TimeUnit.SECONDS)==true)
 			{
-				parseOutput(process.getInputStream(), process.getErrorStream(),  solution);			
 				ret = 0;
 				}
 			else

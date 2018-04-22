@@ -8,7 +8,7 @@
             namespace="org.muml.psm.allocation.algorithm.ilp.export">
          <library
                class="org.muml.psm.allocation.algorithm.ilp.export.Export"
-               name="SCIPBlackbox">
+               name="Export">
             <metamodel
                   nsURI="http://www.muml.org/psm/allocation/ilp/1.0.0">
             </metamodel>
