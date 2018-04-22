@@ -87,9 +87,9 @@ public class SCIP {
 			
 		//	process.getOutputStream().close();
 			
-			parseOutput(process.getInputStream(), process.getErrorStream(),  solution);
 			if(process.waitFor(timeout, TimeUnit.SECONDS)==true)
 			{
+				parseOutput(process.getInputStream(), process.getErrorStream(),  solution);
 				ret = 0;
 				}
 			else
