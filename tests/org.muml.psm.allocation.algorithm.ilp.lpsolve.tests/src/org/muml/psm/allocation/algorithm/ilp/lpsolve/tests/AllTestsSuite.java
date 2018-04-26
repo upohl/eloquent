@@ -6,7 +6,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({
-	
+	LPSolveM2TTest.class
 })
 public class AllTestsSuite {
 
