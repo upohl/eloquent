@@ -3,7 +3,7 @@ package org.muml.psm.allocation.ilp.m2t
 import java.io.BufferedOutputStream
 import java.io.OutputStream
 import java.util.List
-import org.muml.psm.allocation.ilp.ArithmeticExpression
+import org.muml.psm.allocation.ilp.BinaryExpression
 import org.muml.psm.allocation.ilp.ConstraintExpression
 import org.muml.psm.allocation.ilp.Expression
 import org.muml.psm.allocation.ilp.ILPDataType
@@ -15,7 +15,7 @@ import org.muml.psm.allocation.ilp.Variable
 import org.muml.psm.allocation.ilp.VariableExpression
 
 abstract class AbstractILPM2T {
-	private static final String illegalExpression = "unexpected Expression: %s"
+	private static final String illegalObject = "unexpected Object: %s"
 	private static final String illegalILPDataType = "unexpected ILP Data Type: %s"
 	private static final String illegalOperator = "unexpected Operator: %s"
 	
@@ -54,9 +54,71 @@ abstract class AbstractILPM2T {
 	
 	def protected abstract void emitObjectiveFunction(ObjectiveFunctionExpression objectiveFunctionExpression)
 	
-	def protected void bail(Expression expression) {
+	def protected void emitExpression(Expression expression) {
+		val List<Object> todo = newArrayList()
+		todo.add(expression)
+		while (!todo.empty) {
+			val Object current = todo.remove(todo.size - 1) 
+			if (isLeaf(current)) {
+				emitLeaf(current)
+			} else if (current instanceof BinaryExpression) {
+				todo.addAll(getChildren(current as BinaryExpression))
+			} else {
+				bail(current)
+			}
+		}
+	}
+	
+	def dispatch protected void emitLeaf(Object object) {
+		bail(object)
+	}
+	
+	def dispatch protected void emitLeaf(VariableExpression variableExpression) {
+		emit(getVariableName(variableExpression.variable))
+	}
+	
+	def dispatch protected void emitLeaf(LiteralExpression literalExpression) {
+		emit(literalExpression.value)
+	}
+	
+	def dispatch protected void emitLeaf(Operator operator) {
+		val String opString = switch (operator) {
+			case PLUS: ' + '
+			case MINUS: ' - '
+			case TIMES: '*'
+			case EQUAL_TO: ' = '
+			case LESS_THAN_OR_EQUAL_TO: ' <= '
+			case GREATER_THAN_OR_EQUAL_TO: ' >= '
+		}
+		if (opString === null) {
+			bail(operator)
+		}
+		emit(opString)
+	}
+	
+	def protected abstract void emitVariable(Variable varialbe)
+	
+	def protected getVariableName(Variable variable) {
+		variable.name
+	}
+	
+	def protected boolean isLeaf(Object object) {
+		object instanceof VariableExpression
+			|| object instanceof LiteralExpression
+			|| object instanceof Operator
+	}
+	
+	def protected List<Object> getChildren(BinaryExpression expression) {
+		#[
+			expression.rightExpression,
+			expression.operator,
+			expression.leftExpression
+		]
+	}
+	
+	def protected void bail(Object object) {
 		throw new IllegalArgumentException(
-			String.format(illegalExpression, expression)
+			String.format(illegalObject, object)
 		)
 	}
 	
@@ -70,54 +132,6 @@ abstract class AbstractILPM2T {
 		throw new IllegalArgumentException(
 			String.format(illegalOperator, operator)
 		)
-	}
-	
-	def dispatch protected void emitExpression(Expression expression) {
-		bail(expression)
-	}
-	
-	def dispatch protected void emitExpression(ArithmeticExpression expression) {
-		emitExpression(expression.leftExpression)
-		emit(getArithmeticOperatorLiteral(expression.operator))
-		emitExpression(expression.rightExpression)
-	}
-	
-	def protected getArithmeticOperatorLiteral(Operator operator) {
-		switch (operator) {
-			case PLUS: ' + '
-			case MINUS: ' - '
-			case TIMES: '*'
-			default: bail(operator)
-		}
-	}
-	
-	def dispatch protected void emitExpression(LiteralExpression expression) {
-		emit(expression.value)
-	}
-	
-	def dispatch protected void emitExpression(VariableExpression expression) {
-		emit(getVariableName(expression.variable))
-	}
-	
-	def dispatch protected void emitExpression(ConstraintExpression expression) {
-		emitExpression(expression.leftExpression)
-		emit(getRelationalOperatorLiteral(expression.operator))
-		emitExpression(expression.rightExpression)
-	}
-	
-	def protected getRelationalOperatorLiteral(Operator operator) {
-		switch (operator) {
-			case EQUAL_TO: ' = '
-			case LESS_THAN_OR_EQUAL_TO: ' <= '
-			case GREATER_THAN_OR_EQUAL_TO: ' >= '
-			default: bail(operator)
-		}
-	}
-	
-	def protected abstract void emitVariable(Variable varialbe)
-	
-	def protected getVariableName(Variable variable) {
-		variable.name
 	}
 	
 }
