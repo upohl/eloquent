@@ -33,7 +33,7 @@
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.scip</module>
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.export</module>
     <module>plugins/org.muml.eloquent.algorithm.ilp.neos</module>
-    <!-- opt4j beginn-->
+    <!-- opt4j begin-->
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.opt4j</module>
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.opt4j.config</module>
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.opt4j.config.edit</module>
