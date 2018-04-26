@@ -22,7 +22,6 @@ abstract class AbstractILPM2T {
 	private OutputStream out
 	
 	def protected void emit(String data) {
-		print(data)
 		out.write(data.bytes)
 	}
 	
