@@ -1,7 +1,5 @@
 package org.muml.psm.allocation.algorithm.ilp.scip;
 
-import java.util.Map;
-
 import org.muml.psm.allocation.algorithm.qvto.QVToBasedAllocationComputationStrategy;
 
 /**
@@ -19,12 +17,6 @@ public class SCIPAllocationComputationStrategy extends
 	
 	public SCIPAllocationComputationStrategy() {
 		super(transformationURI);
-	}
-	
-	protected Map<String, Object> getConfigurationPropertyMap() {
-		Map<String, Object> map = super.getConfigurationPropertyMap();
-	//	map.put("STORE_ILP_MODEL", storeILPModel);
-		return map;
 	}
 
 }

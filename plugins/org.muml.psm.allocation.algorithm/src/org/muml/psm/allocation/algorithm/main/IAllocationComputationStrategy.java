@@ -20,14 +20,13 @@ public interface IAllocationComputationStrategy<T, V> {
 	 * 
 	 * @param allocationSpecification 	the allocation specification model element
 	 * @param oclContext				the oclContext object
-	 * @param storeILPModel				if true, store ilp model for debugging purposes
 	 * @param progressMonitor			progress monitor or <code>null</code>
 	 * @return							the IComputationResult<T>
 	 */
 	@NonNull
 	public IComputationResult<T> computeAllocation(
 			@NonNull EObject allocationSpecification,
-			@NonNull EObject oclContext, boolean storeILPModel,
+			@NonNull EObject oclContext,
 			@Nullable IProgressMonitor progressMonitor);
 	
 	/**

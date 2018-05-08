@@ -19,7 +19,6 @@ public class AllocationAlgorithm<T> {
 	private EObject allocationSpecification;
 	private EObject oclContext;
 	private IComputationResult<T> result;
-	private boolean storeILPModel;
 	
 	/**
 	 * Constructs a new <code>AllocationAlgorithm</code> instance.
@@ -29,10 +28,9 @@ public class AllocationAlgorithm<T> {
 	 * @param hpic						the hardware platform instance configuration model element
 	 */
 	public AllocationAlgorithm(EObject allocationSpecification,
-		EObject oclContext, boolean storeILPModel) {
+		EObject oclContext) {
 		this.allocationSpecification = allocationSpecification;
 		this.oclContext = oclContext;
-		this.storeILPModel = storeILPModel;
 	}
 	
 	/**
@@ -46,7 +44,7 @@ public class AllocationAlgorithm<T> {
 	@NonNull
 	public Diagnostic computeAllocation(@NonNull IAllocationComputationStrategy<T, ?> acs,
 			@Nullable IProgressMonitor progressMonitor) {
-		result = acs.computeAllocation(allocationSpecification, oclContext, storeILPModel, progressMonitor);
+		result = acs.computeAllocation(allocationSpecification, oclContext, progressMonitor);
 		return result.getDiagnostic();
 	}
 	

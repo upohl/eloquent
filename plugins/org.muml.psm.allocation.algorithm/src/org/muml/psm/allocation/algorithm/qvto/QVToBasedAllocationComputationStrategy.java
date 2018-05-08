@@ -26,14 +26,12 @@ public class QVToBasedAllocationComputationStrategy<V> implements
 	@NonNull
 	public IComputationResult<EObject> computeAllocation(
 			@NonNull EObject allocationSpecification,
-			@NonNull EObject oclContext, boolean storeILPModel,
+			@NonNull EObject oclContext,
 			@Nullable IProgressMonitor progressMonitor) {
-		Map<String, Object> config = getConfigurationPropertyMap();
-		config.put("STORE_ILP_MODEL", storeILPModel);
 		QVToSingleOutExtentTransformationRunner runner =
 				new QVToSingleOutExtentTransformationRunner(
 						transformationURI,
-						config,
+						getConfigurationPropertyMap(),
 						allocationSpecification,
 						oclContext);
 		ExecutionDiagnostic executionDiagnostic =

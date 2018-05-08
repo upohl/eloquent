@@ -1,7 +1,5 @@
 package org.muml.psm.allocation.algorithm.ilp.lpsolve;
 
-import java.util.Map;
-
 import org.muml.psm.allocation.algorithm.qvto.QVToBasedAllocationComputationStrategy;
 
 /**
@@ -19,12 +17,6 @@ public class LPSolveAllocationComputationStrategy extends
 	
 	public LPSolveAllocationComputationStrategy() {
 		super(transformationURI);
-	}
-	
-	protected Map<String, Object> getConfigurationPropertyMap() {
-		Map<String, Object> map = super.getConfigurationPropertyMap();
-	//	map.put("STORE_ILP_MODEL", storeILPModel);
-		return map;
 	}
 
 }

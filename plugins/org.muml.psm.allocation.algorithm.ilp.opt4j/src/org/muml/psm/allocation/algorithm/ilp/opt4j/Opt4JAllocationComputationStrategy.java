@@ -18,8 +18,6 @@ public class Opt4JAllocationComputationStrategy extends
 	
 	private Opt4jConfiguration configuration;
 	
-	private boolean storeILPModel;
-
 	public Opt4JAllocationComputationStrategy() {
 		super(transformationURI);
 	}
@@ -50,7 +48,6 @@ public class Opt4JAllocationComputationStrategy extends
 		}
 		builder.deleteCharAt(builder.length() - 1);
 		map.put(transformationConfigurationPropertyName, builder.toString());
-		map.put("STORE_ILP_MODEL", storeILPModel);
 		return map;
 	}
 	

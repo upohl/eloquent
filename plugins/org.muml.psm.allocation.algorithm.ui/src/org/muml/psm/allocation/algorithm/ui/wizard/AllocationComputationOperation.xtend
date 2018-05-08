@@ -26,8 +26,7 @@ class AllocationComputationOperation<T> implements IAllocationComputationOperati
 	def private AllocationAlgorithm<T> createAllocationAlgorithm() {
 		new AllocationAlgorithm<T>(
 			allocationSpecification,
-			oclContext, 
-			false // XXX
+			oclContext
 		)
 	}
 	
