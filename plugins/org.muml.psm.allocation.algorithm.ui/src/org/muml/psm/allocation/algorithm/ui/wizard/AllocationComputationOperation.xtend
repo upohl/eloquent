@@ -34,7 +34,7 @@ class AllocationComputationOperation<T> implements IAllocationComputationOperati
 		val SubMonitor monitor = SubMonitor.convert(progressMonitor, 100)
 		val AllocationAlgorithm<T> algorithm = createAllocationAlgorithm()
 		val Diagnostic diagnostic = algorithm.computeAllocation(
-				allocationComputationStrategy as IAllocationComputationStrategy<T, ?>, // this hurts to much...
+				allocationComputationStrategy as IAllocationComputationStrategy<T, ?>, // this hurts so much...
 				monitor.newChild(90))
 		if (diagnostic.severity != Diagnostic.OK) {
 			return diagnostic
