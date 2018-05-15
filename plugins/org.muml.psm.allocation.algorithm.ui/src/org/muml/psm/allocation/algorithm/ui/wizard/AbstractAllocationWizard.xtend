@@ -10,6 +10,7 @@ import org.eclipse.jface.wizard.Wizard
 import org.eclipse.ui.IExportWizard
 import org.eclipse.ui.IWorkbench
 import org.eclipse.xtend.lib.annotations.Accessors
+import org.muml.psm.allocation.algorithm.main.IAllocationComputationStrategy
 
 class AbstractAllocationWizard extends Wizard implements IExportWizard {
 	@Accessors(PROTECTED_GETTER)
@@ -61,7 +62,8 @@ class AbstractAllocationWizard extends Wizard implements IExportWizard {
 		override protected AllocationComputationOperation<Object> createAllocationComputationOperation() {
 			new AllocationComputationOperation<Object>(sourcePage.specificationCS,
 				sourcePage.oclContext,
-				strategyPage.allocationComputationStrategy
+				// hrm this really hurts...
+				strategyPage.allocationComputationStrategy as IAllocationComputationStrategy<Object, ?>
 			)
 		}
 		

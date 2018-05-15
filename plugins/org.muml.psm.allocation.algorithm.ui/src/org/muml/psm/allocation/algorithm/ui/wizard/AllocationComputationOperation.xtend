@@ -13,10 +13,10 @@ class AllocationComputationOperation<T> implements IAllocationComputationOperati
 	
 	private SpecificationCS allocationSpecification
 	private EObject oclContext
-	private IAllocationComputationStrategy<?, ?> allocationComputationStrategy
+	private IAllocationComputationStrategy<T, ?> allocationComputationStrategy
 	
 	new(SpecificationCS allocationSpecification, EObject oclContext,
-		IAllocationComputationStrategy<?, ?> allocationComputationStrategy
+		IAllocationComputationStrategy<T, ?> allocationComputationStrategy
 	) {
 		this.allocationSpecification = allocationSpecification
 		this.oclContext = oclContext
@@ -34,7 +34,7 @@ class AllocationComputationOperation<T> implements IAllocationComputationOperati
 		val SubMonitor monitor = SubMonitor.convert(progressMonitor, 100)
 		val AllocationAlgorithm<T> algorithm = createAllocationAlgorithm()
 		val Diagnostic diagnostic = algorithm.computeAllocation(
-				allocationComputationStrategy as IAllocationComputationStrategy<T, ?>, // this hurts so much...
+				allocationComputationStrategy,
 				monitor.newChild(90))
 		if (diagnostic.severity != Diagnostic.OK) {
 			return diagnostic
