@@ -1,11 +1,16 @@
 package org.muml.psm.allocation.algorithm.ui.wizard
 
+import java.util.List
 import org.eclipse.emf.ecore.EAttribute
 import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.EReference
+import org.eclipse.emf.ecore.EStructuralFeature
 import org.eclipse.emf.ecore.EcorePackage
 import org.eclipse.jface.layout.GridLayoutFactory
+import org.eclipse.jface.wizard.IWizardPage
 import org.eclipse.jface.wizard.WizardPage
 import org.eclipse.swt.SWT
+import org.eclipse.swt.events.ModifyEvent
 import org.eclipse.swt.events.ModifyListener
 import org.eclipse.swt.events.SelectionAdapter
 import org.eclipse.swt.events.SelectionEvent
@@ -16,7 +21,6 @@ import org.eclipse.swt.widgets.Control
 import org.eclipse.swt.widgets.Label
 import org.eclipse.swt.widgets.Spinner
 import org.eclipse.swt.widgets.Text
-import org.eclipse.swt.events.ModifyEvent
 
 class AllocationComputationStrategyConfigurationWizardPage extends WizardPage {
 	private static final String pageName = "Strategy Configuration"
@@ -24,15 +28,56 @@ class AllocationComputationStrategyConfigurationWizardPage extends WizardPage {
 	
 	private static final String unsupportedEAttributeType = "Add support for %s"
 	private EObject configuration
+	private IWizardPage nextPage
 	
+	/*
+	 * terminology: an AllocationComputationStrategyConfigurationWizardPage is called
+	 * "contained" iff it is in some containmentConfigPageList
+	 */
+	private List<AllocationComputationStrategyConfigurationWizardPage> containmentConfigPageList
+	
+	/*
+	 * This constructor is (usually) used to create a non contained page.
+	 * Also, it is crucial that a _non_ contained page is added to the wizard's
+	 * page list (e.g., via wizard.addPage etc.)
+	 */
 	new() {
+		// hmm we could improve the description for the non contained page,
+		// but well...
+		this(pageDescription)
+	}
+	
+	new(String pageDescription) {
 		super(pageName)
 		description = pageDescription
+		containmentConfigPageList = newArrayList
+	}
+	
+	protected new(EObject configuration, IWizardPage nextPage) {
+		this(String.format("%s: %s", pageDescription, configuration.eClass.name))
+		this.configuration = configuration
+		this.nextPage = nextPage
 	}
 	
 	override createControl(Composite parent) {
 		val Composite composite = new Composite(parent, SWT.NONE)
 		setControl(composite)
+		if (configuration !== null) {
+			/*
+			 * configuration !== null implies that this page contained.
+			 * Hence, we have to (and can) create all controls now
+			 * (since setConfiguration is never called for a contained
+			 * page).
+			 */
+			createControls
+		}
+	}
+	
+	override getNextPage() {
+		if (nextPage !== null) {
+			return nextPage
+		}
+		super.nextPage
 	}
 	
 	def setConfiguration(EObject configuration) {
@@ -40,13 +85,66 @@ class AllocationComputationStrategyConfigurationWizardPage extends WizardPage {
 			return
 		}
 		this.configuration = configuration
+		disposeContainmentConfigPages
 		disposeChildren
+		createControls
+	}
+	
+	def protected createControls() {
+		createContainmentPages
 		createAttributeControls
 	}
 	
-	def protected disposeChildren() {
+	override dispose() {
+		disposeContainmentConfigPages
+		disposeChildren
+		super.dispose
+	}
+	
+	def protected void disposeChildren() {
+		/*
+		 * If this page is contained, it is possible that createControls
+		 * was never called (hence, check for null)
+		 */
+		if (control === null) {
+			return
+		}
 		for (Control child : (control as Composite).children) {
+			// this also causes the child to be removed from the control
+			// (see org.eclipse.swt.widgets.Control.releaseParent())
 			child.dispose
+		}			
+	}
+	
+	def protected void disposeContainmentConfigPages() {
+		nextPage = null
+		for (IWizardPage page : containmentConfigPageList) {
+			page.dispose
+		}
+		containmentConfigPageList.clear
+	}
+	
+	def protected createContainmentPages() {
+		// each containment will be displayed in a separate page
+		var AllocationComputationStrategyConfigurationWizardPage current = this
+		val Iterable<EReference> features = configuration.eClass
+			.EAllContainments.reject[feature |
+				feature.many
+			]
+		for (EStructuralFeature feature : features) {
+			feature.isMany
+			val Object containment = configuration.eGet(feature)
+			if (containment !== null && containment instanceof EObject) {
+				val configPage = new AllocationComputationStrategyConfigurationWizardPage(
+					containment as EObject,
+					current.getNextPage
+				)
+				// setting the wizard is crucial for WizardDialog.updateForPage
+				configPage.wizard = current.wizard
+				current.nextPage = configPage
+				containmentConfigPageList += configPage
+				current = configPage
+			}
 		}
 	}
 	
