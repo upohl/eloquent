@@ -43,10 +43,6 @@
             id="Variables">
       </transformation>
       <transformation
-            file="transforms/HWUtil.qvto"
-            id="HWUtil">
-      </transformation>
-      <transformation
             file="transforms/TupleAccessor.qvto"
             id="TupleAccessor">
       </transformation>
