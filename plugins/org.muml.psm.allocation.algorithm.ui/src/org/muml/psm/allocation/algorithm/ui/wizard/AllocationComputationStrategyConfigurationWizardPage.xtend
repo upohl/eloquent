@@ -3,7 +3,6 @@ package org.muml.psm.allocation.algorithm.ui.wizard
 import java.util.List
 import org.eclipse.emf.ecore.EAttribute
 import org.eclipse.emf.ecore.EObject
-import org.eclipse.emf.ecore.EReference
 import org.eclipse.emf.ecore.EStructuralFeature
 import org.eclipse.emf.ecore.EcorePackage
 import org.eclipse.jface.dialogs.Dialog
@@ -135,12 +134,15 @@ class AllocationComputationStrategyConfigurationWizardPage extends WizardPage {
 	def protected createContainmentPages() {
 		// each containment will be displayed in a separate page
 		var AllocationComputationStrategyConfigurationWizardPage current = this
-		val Iterable<EReference> features = configuration.eClass
-			.EAllContainments.reject[feature |
-				feature.many
-			]
-		for (EStructuralFeature feature : features) {
-			feature.isMany
+		val List<EStructuralFeature> todo = newArrayList
+		// our CI xtend compiler complains if something like
+		// configuration.eClass.EAllContainments.reject[...] is used
+		for (EStructuralFeature feature : configuration.eClass.EAllContainments) {
+			if (!feature.many) {
+				todo += feature
+			}
+		}
+		for (EStructuralFeature feature : todo) {
 			val Object containment = configuration.eGet(feature)
 			if (containment !== null && containment instanceof EObject) {
 				val configPage = new AllocationComputationStrategyConfigurationWizardPage(
