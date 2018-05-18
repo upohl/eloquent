@@ -11,7 +11,7 @@ import org.eclipse.jdt.annotation.Nullable;
  * which contains the <code>SystemAllocation</code> and computation details
  *
  */
-public interface IAllocationComputationStrategy<T, V> {
+public interface IAllocationComputationStrategy<T, V> extends IStrategy<V> {
 	
 	/**
 	 * Computes an allocation using the specified parameters. It returns
@@ -29,14 +29,4 @@ public interface IAllocationComputationStrategy<T, V> {
 			@NonNull EObject oclContext,
 			@Nullable IProgressMonitor progressMonitor);
 	
-	/**
-	 * Returns a configuration object of type V, which can be used to
-	 * configure this <code>IAllocationComputationStrategy</code>,
-	 * or <code>null</code> (if this IAllocationComputationStrategy is not
-	 * configurable).
-	 * 
-	 * @return	a configuration object or <code>null</code>
-	 */
-	@Nullable
-	public V getConfiguration();
 }
