@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EReference
 import org.eclipse.emf.ecore.EStructuralFeature
 import org.eclipse.emf.ecore.EcorePackage
+import org.eclipse.jface.dialogs.Dialog
 import org.eclipse.jface.layout.GridLayoutFactory
 import org.eclipse.jface.wizard.IWizardPage
 import org.eclipse.jface.wizard.WizardPage
@@ -21,12 +22,19 @@ import org.eclipse.swt.widgets.Control
 import org.eclipse.swt.widgets.Label
 import org.eclipse.swt.widgets.Spinner
 import org.eclipse.swt.widgets.Text
+import org.eclipse.ui.dialogs.SaveAsDialog
 
 class AllocationComputationStrategyConfigurationWizardPage extends WizardPage {
 	private static final String pageName = "Strategy Configuration"
 	private static final String pageDescription = "Configure the Selected Strategy"
 	
 	private static final String unsupportedEAttributeType = "Add support for %s"
+	
+	private static final String fileChooserRegex = ".*Filename$";
+	private static final String fileChooserButtonName = "Choose a file"
+	private static final String currentFileChosen = "(current value: %s)"
+	private static final String noFileChosen = "None"
+	
 	private EObject configuration
 	private IWizardPage nextPage
 	
@@ -197,11 +205,45 @@ class AllocationComputationStrategyConfigurationWizardPage extends WizardPage {
 	}
 	
 	def protected createEStringControl(EAttribute attribute, Composite parent) {
+		if (attribute.name.matches(fileChooserRegex)) {
+			// offer a file chooser dialog instead of a text field
+			createFileChooserDialogButton(attribute, parent)
+			return
+		}
 		val Text text = new Text(parent, SWT.SINGLE)
 		text.text = (configuration.eGet(attribute) ?: "") as String
 		text.addModifyListener(new ModifyListener() {
 			override modifyText(ModifyEvent e) {
 				configuration.eSet(attribute, text.text)
+			}
+		})
+	}
+	
+	def protected createFileChooserDialogButton(EAttribute attribute, Composite parent) {
+		val Composite composite = new Composite(parent, SWT.NONE)
+		val GridLayout layout = new GridLayout(2, true)
+		composite.layout = layout
+		val Button button = new Button(composite, SWT.PUSH)
+		button.text = fileChooserButtonName
+		val Label label = new Label(composite, SWT.RIGHT)
+		val updateLabelText = [|
+			label.text = String.format(
+				currentFileChosen,
+				configuration.eGet(attribute) ?: noFileChosen as String
+			)
+		]
+		updateLabelText.apply()
+		 
+		button.addSelectionListener(new SelectionAdapter() {
+			override widgetSelected(SelectionEvent e) {
+				val SaveAsDialog dialog = new SaveAsDialog(shell)
+				var String filename
+				if (dialog.open === Dialog.OK) {
+					 filename = dialog.result.toPortableString
+				}
+				// we also allow null here (e.g., to "undo" a previous choice)
+				configuration.eSet(attribute, filename)
+				updateLabelText.apply()
 			}
 		})
 	}
