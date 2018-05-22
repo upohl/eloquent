@@ -16,6 +16,12 @@
             id="org.muml.psm.allocation.algorithm.ui.CreateASLFileCommand"
             name="Create Allocation Constraint and Optimization Specification">
       </command>
+      <command
+            categoryId="org.muml"
+            defaultHandler="org.muml.psm.allocation.algorithm.ui.OpenIntermediateModelExportWizardHandler"
+            id="org.muml.psm.allocation.algorithm.ui.IntermediateModelExport"
+            name="Intermediate Model Export">
+      </command>
    </extension>
    <extension
          point="org.eclipse.ui.menus">
@@ -42,6 +48,23 @@
          <command
                commandId="org.muml.psm.allocation.algorithm.ui.CreateASLFileCommand"
                label="Create ASL Specification"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <iterate>
+                  <adapt
+                        type="org.eclipse.core.resources.IFile">
+                  </adapt>
+               </iterate>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.navigator.ProjectExplorer#PopupMenu?after=additions">
+         <command
+               commandId="org.muml.psm.allocation.algorithm.ui.IntermediateModelExport"
+               label="Intermediate Model Export"
                style="push">
             <visibleWhen
                   checkEnabled="false">
