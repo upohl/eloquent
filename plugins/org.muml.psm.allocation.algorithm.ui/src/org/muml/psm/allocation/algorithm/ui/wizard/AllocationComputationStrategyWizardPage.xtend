@@ -19,12 +19,14 @@ import org.muml.psm.allocation.algorithm.main.AllocationComputationStrategyExten
 import org.muml.psm.allocation.algorithm.main.AllocationComputationStrategyExtension.AllocationComputationStrategyDescription
 import org.muml.psm.allocation.algorithm.main.IAllocationComputationStrategy
 import org.muml.psm.allocation.algorithm.main.IIntermediateModelExportStrategy
+import org.muml.psm.allocation.algorithm.main.MultiStrategyConfiguration
 
 class AllocationComputationStrategyWizardPage extends WizardPage {
 	private static final String pageName = "Strategy Selection"
 	private static final String pageDescription = "Select a Allocation Computation Strategy"
 	
 	private static final String noStrategyDescription = "No strategy selected (No registered allocation strategies?)"
+	private static final String illegalPageContext = "illegal page context: %s"
 	
 	private ListViewer listViewer
 	private IStructuredSelection structuredSelection
@@ -112,6 +114,19 @@ class AllocationComputationStrategyWizardPage extends WizardPage {
 		val IAllocationComputationStrategy<?, ?> strategy = getAllocationComputationStrategy()
 		if (strategy.configuration instanceof EObject) {
 			configPage.configuration = strategy.configuration as EObject
+			return configPage
+		} else if (strategy.configuration instanceof MultiStrategyConfiguration) {
+			val Class<?> strategyCls = switch (pageContext) {
+				case PageContext.AllocationComputation: typeof(IAllocationComputationStrategy)
+				case PageContext.IntermediateModelExport: typeof(IIntermediateModelExportStrategy)
+				default: throw new IllegalStateException(
+					String.format(illegalPageContext, pageContext)
+				)
+			}
+			val EObject configuration = (strategy.configuration
+				as MultiStrategyConfiguration
+			).getConfigurationFor(strategyCls, typeof(EObject))
+			configPage.configuration = configuration
 			return configPage
 		}
 	}
