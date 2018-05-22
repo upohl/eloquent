@@ -44,7 +44,6 @@ class AbstractAllocationWizard extends Wizard implements IExportWizard {
 				if (diagnostic.severity != Diagnostic.OK) {
 					return BasicDiagnostic.toIStatus(diagnostic)
 				}
-				Thread.sleep(5000)
 				if (monitor.isCanceled) {
 					return Status.CANCEL_STATUS
 				}
