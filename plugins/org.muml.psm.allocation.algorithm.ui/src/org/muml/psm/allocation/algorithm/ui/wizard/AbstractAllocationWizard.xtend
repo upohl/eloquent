@@ -35,10 +35,10 @@ class AbstractAllocationWizard extends Wizard implements IExportWizard {
 	}
 	
 	public abstract static class AbstractAllocationWizardPageProvider implements IAllocationWizardPageProvider {
-		def abstract protected IAllocationComputationOperation<?> createAllocationComputationOperation()
+		def abstract protected IAllocationOperation createOperation()
 			
 		override createJobFunction() {
-			val IAllocationComputationOperation<?> operation = createAllocationComputationOperation
+			val IAllocationOperation operation = createOperation
 			return [IProgressMonitor monitor |
 				val Diagnostic diagnostic = operation.execute(monitor)
 				if (diagnostic.severity != Diagnostic.OK) {
@@ -58,7 +58,7 @@ class AbstractAllocationWizard extends Wizard implements IExportWizard {
 		private AllocationComputationSourceWizardPage sourcePage
 		private AllocationComputationStrategyWizardPage strategyPage
 		
-		override protected AllocationComputationOperation<Object> createAllocationComputationOperation() {
+		override protected IAllocationOperation createOperation() {
 			new AllocationComputationOperation<Object>(sourcePage.specificationCS,
 				sourcePage.oclContext,
 				// hrm this really hurts...
