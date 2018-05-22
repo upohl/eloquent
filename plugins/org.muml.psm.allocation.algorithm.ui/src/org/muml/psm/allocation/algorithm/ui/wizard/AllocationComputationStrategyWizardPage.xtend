@@ -1,5 +1,6 @@
 package org.muml.psm.allocation.algorithm.ui.wizard
 
+import java.util.List
 import java.util.Map
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.jface.layout.GridLayoutFactory
@@ -17,6 +18,7 @@ import org.eclipse.swt.widgets.Label
 import org.muml.psm.allocation.algorithm.main.AllocationComputationStrategyExtension
 import org.muml.psm.allocation.algorithm.main.AllocationComputationStrategyExtension.AllocationComputationStrategyDescription
 import org.muml.psm.allocation.algorithm.main.IAllocationComputationStrategy
+import org.muml.psm.allocation.algorithm.main.IIntermediateModelExportStrategy
 
 class AllocationComputationStrategyWizardPage extends WizardPage {
 	private static final String pageName = "Strategy Selection"
@@ -31,13 +33,34 @@ class AllocationComputationStrategyWizardPage extends WizardPage {
 	private AllocationComputationStrategyDescription[] descriptions
 	private AllocationComputationStrategyConfigurationWizardPage configPage
 	private Map<AllocationComputationStrategyDescription, IAllocationComputationStrategy<?, ?>> strategyCache
+	private PageContext pageContext
 	
-	new(AllocationComputationStrategyConfigurationWizardPage configPage) {
+	new(PageContext pageContext, AllocationComputationStrategyConfigurationWizardPage configPage) {
 		super(pageName)
 		description = pageDescription
 		this.configPage = configPage
-		descriptions = AllocationComputationStrategyExtension.getDescriptions()
+		this.pageContext = pageContext
+		descriptions = filterDescriptions(
+			AllocationComputationStrategyExtension.getDescriptions()
+		)
 		strategyCache = newHashMap
+	}
+	
+	def protected AllocationComputationStrategyDescription[] filterDescriptions(
+		AllocationComputationStrategyDescription[] descriptions
+	) {
+		if (pageContext === PageContext.AllocationComputation) {
+			return descriptions
+		}
+		// assumption: pageContext === PageContext.IntermediateModelExport
+		// hrm each description is instantiated... *sigh*
+		val List<AllocationComputationStrategyDescription> filteredDescriptions = newArrayList
+		for (AllocationComputationStrategyDescription descr: descriptions) {
+			if (descr.allocationComputationStrategy instanceof IIntermediateModelExportStrategy<?>) {
+				filteredDescriptions.add(descr)
+			}
+		}
+		filteredDescriptions
 	}
 	
 	override createControl(Composite parent) {
@@ -73,7 +96,8 @@ class AllocationComputationStrategyWizardPage extends WizardPage {
 	def IAllocationComputationStrategy<?, ?> getAllocationComputationStrategy() {
 		if (strategyDescription === null) {
 			// this should never happen (except there were no
-			// strategies registered)
+			// strategies registered or they were filtered... (we should
+			// handle the latter case more gracefully))
 			throw new IllegalStateException(noStrategyDescription)
 		}
 		var IAllocationComputationStrategy<?, ?> strategy = strategyCache.get(strategyDescription)

@@ -86,7 +86,9 @@ class AllocationComputationSourceWizardPage extends WizardPage {
 	override createControl(Composite parent) {
 		val Composite composite = new Composite(parent, SWT.NONE)
 		setControl(composite)
-		if (pageContext === PageContext.AllocationComputation) {
+		if (pageContext === PageContext.AllocationComputation
+			|| pageContext === PageContext.IntermediateModelExport
+		) {
 			createSelectASLFileButton(composite)
 		}
 		val Button oclContextFileButton = createSelectOCLContextFileButton(composite)

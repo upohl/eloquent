@@ -11,6 +11,7 @@ import org.eclipse.ui.IExportWizard
 import org.eclipse.ui.IWorkbench
 import org.eclipse.xtend.lib.annotations.Accessors
 import org.muml.psm.allocation.algorithm.main.IAllocationComputationStrategy
+import org.muml.psm.allocation.algorithm.main.IIntermediateModelExportStrategy
 
 class AbstractAllocationWizard extends Wizard implements IExportWizard {
 	@Accessors(PROTECTED_GETTER)
@@ -57,12 +58,30 @@ class AbstractAllocationWizard extends Wizard implements IExportWizard {
 		
 		private AllocationComputationSourceWizardPage sourcePage
 		private AllocationComputationStrategyWizardPage strategyPage
+		private PageContext pageContext
 		
 		override protected IAllocationOperation createOperation() {
+			switch (pageContext) {
+				case PageContext.AllocationComputation: createAllocationComputationOperation
+				case PageContext.IntermediateModelExport: createIntermediateModelExportOperation
+				default: throw new IllegalStateException(
+					String.format(illegalPageContext, pageContext)
+				)
+			}
+		}
+		
+		def protected IAllocationOperation createAllocationComputationOperation() {
 			new AllocationComputationOperation<Object>(sourcePage.specificationCS,
 				sourcePage.oclContext,
 				// hrm this really hurts...
 				strategyPage.allocationComputationStrategy as IAllocationComputationStrategy<Object, ?>
+			)
+		}
+		
+		def protected IAllocationOperation createIntermediateModelExportOperation() {
+			new IntermediateModelExportOperation(sourcePage.specificationCS,
+				sourcePage.oclContext,
+				strategyPage.allocationComputationStrategy as IIntermediateModelExportStrategy<?>
 			)
 		}
 		
@@ -75,10 +94,14 @@ class AbstractAllocationWizard extends Wizard implements IExportWizard {
 		}
 		
 		override providePages(PageContext pageContext, IWorkbench workbench, IStructuredSelection selection) {
+			this.pageContext = pageContext
 			sourcePage = new AllocationComputationSourceWizardPage(pageContext)
 			val AllocationComputationStrategyConfigurationWizardPage configPage = new AllocationComputationStrategyConfigurationWizardPage()
-			strategyPage = new AllocationComputationStrategyWizardPage(configPage)
+			strategyPage = new AllocationComputationStrategyWizardPage(pageContext,
+				configPage
+			)
 			switch (pageContext) {
+				case PageContext.IntermediateModelExport,
 				case PageContext.AllocationComputation: #[sourcePage, strategyPage, configPage]
 				case PageContext.AllocationView: #[sourcePage]
 				default: throw new IllegalArgumentException(
