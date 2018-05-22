@@ -12,6 +12,7 @@ import org.eclipse.jdt.annotation.Nullable;
 import org.eclipse.m2m.qvt.oml.ExecutionDiagnostic;
 import org.muml.psm.allocation.algorithm.main.IAllocationComputationStrategy;
 import org.muml.psm.allocation.algorithm.main.IComputationResult;
+import org.muml.psm.allocation.algorithm.qvto.QVToBasedStrategyTransformationRunner.ExecutionResult;
 
 public class QVToBasedAllocationComputationStrategy<V> implements
 		IAllocationComputationStrategy<EObject, V> {
@@ -28,19 +29,14 @@ public class QVToBasedAllocationComputationStrategy<V> implements
 			@NonNull EObject allocationSpecification,
 			@NonNull EObject oclContext,
 			@Nullable IProgressMonitor progressMonitor) {
-		QVToSingleOutExtentTransformationRunner runner =
-				new QVToSingleOutExtentTransformationRunner(
-						transformationURI,
-						getConfigurationPropertyMap(),
-						allocationSpecification,
-						oclContext);
-		ExecutionDiagnostic executionDiagnostic =
-				runner.runTransformation(progressMonitor);
-		BasicDiagnostic rootDiagnostic = createDiagnostic(executionDiagnostic);
+		ExecutionResult executionResult = QVToBasedStrategyTransformationRunner.runTransformation(transformationURI,
+				allocationSpecification, oclContext,
+				getConfigurationPropertyMap(),				
+				progressMonitor);
+		BasicDiagnostic rootDiagnostic = createDiagnostic(executionResult.getDiagnostic());
 		EObject result = null;
-		if (runner.getOutExtent().getContents().size() == 1) {
-			result = runner.getOutExtent()
-					.getContents().get(0);
+		if (executionResult.getOutObjects().size() == 1) {
+			result = executionResult.getOutObjects().get(0);
 		}
 		return new IComputationResult.DefaultComputationResult<EObject>(
 				rootDiagnostic, result);
