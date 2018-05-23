@@ -3,6 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.muml.eloquent.algorithm.ilp.neos/src-gen"
     modelPluginID="org.muml.eloquent.algorithm.ilp.neos" modelName="Cplex" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../org.muml.psm.allocation.algorithm.ilp.config/model/config.genmodel#//configuration"
     operationReflection="true" importOrganizing="true">
   <foreignModel>cplex.ecore</foreignModel>
   <genPackages prefix="Config" basePackage="org.muml.eloquent.algorithm.ilp.neos.cplex"
@@ -10,5 +11,6 @@
     <genClasses ecoreClass="cplex.ecore#//CPLEXConfiguration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cplex.ecore#//CPLEXConfiguration/email"/>
     </genClasses>
+    <genClasses ecoreClass="cplex.ecore#//CPLEXExportConfiguration"/>
   </genPackages>
 </genmodel:GenModel>

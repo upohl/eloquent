@@ -31,6 +31,15 @@ public interface ConfigFactory extends EFactory {
 	CPLEXConfiguration createCPLEXConfiguration();
 
 	/**
+	 * Returns a new object of class '<em>CPLEX Export Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>CPLEX Export Configuration</em>'.
+	 * @generated
+	 */
+	CPLEXExportConfiguration createCPLEXExportConfiguration();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

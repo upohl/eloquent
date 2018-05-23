@@ -5,4 +5,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="CPLEXConfiguration">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CPLEXExportConfiguration">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../org.muml.psm.allocation.algorithm.ilp.config/model/config.ecore#//ILPExportConfiguration">
+      <eTypeArguments eClassifier="#//CPLEXConfiguration"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
 </ecore:EPackage>

@@ -57,6 +57,7 @@ public class ConfigFactoryImpl extends EFactoryImpl implements ConfigFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ConfigPackage.CPLEX_CONFIGURATION: return createCPLEXConfiguration();
+			case ConfigPackage.CPLEX_EXPORT_CONFIGURATION: return createCPLEXExportConfiguration();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -70,6 +71,16 @@ public class ConfigFactoryImpl extends EFactoryImpl implements ConfigFactory {
 	public CPLEXConfiguration createCPLEXConfiguration() {
 		CPLEXConfigurationImpl cplexConfiguration = new CPLEXConfigurationImpl();
 		return cplexConfiguration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CPLEXExportConfiguration createCPLEXExportConfiguration() {
+		CPLEXExportConfigurationImpl cplexExportConfiguration = new CPLEXExportConfigurationImpl();
+		return cplexExportConfiguration;
 	}
 
 	/**

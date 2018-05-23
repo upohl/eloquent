@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
 import org.muml.eloquent.algorithm.ilp.neos.cplex.config.*;
+import org.muml.psm.allocation.algorithm.ilp.configuration.ILPExportConfiguration;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +23,7 @@ import org.muml.eloquent.algorithm.ilp.neos.cplex.config.*;
  * @see org.muml.eloquent.algorithm.ilp.neos.cplex.config.ConfigPackage
  * @generated
  */
-public class ConfigSwitch<T> extends Switch<T> {
+public class ConfigSwitch<T1> extends Switch<T1> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -64,11 +65,18 @@ public class ConfigSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected T doSwitch(int classifierID, EObject theEObject) {
+	protected T1 doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case ConfigPackage.CPLEX_CONFIGURATION: {
 				CPLEXConfiguration cplexConfiguration = (CPLEXConfiguration)theEObject;
-				T result = caseCPLEXConfiguration(cplexConfiguration);
+				T1 result = caseCPLEXConfiguration(cplexConfiguration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ConfigPackage.CPLEX_EXPORT_CONFIGURATION: {
+				CPLEXExportConfiguration cplexExportConfiguration = (CPLEXExportConfiguration)theEObject;
+				T1 result = caseCPLEXExportConfiguration(cplexExportConfiguration);
+				if (result == null) result = caseILPExportConfiguration(cplexExportConfiguration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -87,7 +95,37 @@ public class ConfigSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCPLEXConfiguration(CPLEXConfiguration object) {
+	public T1 caseCPLEXConfiguration(CPLEXConfiguration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>CPLEX Export Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CPLEX Export Configuration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseCPLEXExportConfiguration(CPLEXExportConfiguration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ILP Export Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ILP Export Configuration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public <T> T1 caseILPExportConfiguration(ILPExportConfiguration<T> object) {
 		return null;
 	}
 
@@ -103,7 +141,7 @@ public class ConfigSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	public T defaultCase(EObject object) {
+	public T1 defaultCase(EObject object) {
 		return null;
 	}
 

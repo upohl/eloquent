@@ -5,6 +5,7 @@ package org.muml.eloquent.algorithm.ilp.neos.cplex.config;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.muml.psm.allocation.algorithm.ilp.configuration.ConfigurationPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -94,6 +95,53 @@ public interface ConfigPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link org.muml.eloquent.algorithm.ilp.neos.cplex.config.impl.CPLEXExportConfigurationImpl <em>CPLEX Export Configuration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.eloquent.algorithm.ilp.neos.cplex.config.impl.CPLEXExportConfigurationImpl
+	 * @see org.muml.eloquent.algorithm.ilp.neos.cplex.config.impl.ConfigPackageImpl#getCPLEXExportConfiguration()
+	 * @generated
+	 */
+	int CPLEX_EXPORT_CONFIGURATION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Export Filename</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CPLEX_EXPORT_CONFIGURATION__EXPORT_FILENAME = ConfigurationPackage.ILP_EXPORT_CONFIGURATION__EXPORT_FILENAME;
+
+	/**
+	 * The feature id for the '<em><b>Ilp Configuration</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CPLEX_EXPORT_CONFIGURATION__ILP_CONFIGURATION = ConfigurationPackage.ILP_EXPORT_CONFIGURATION__ILP_CONFIGURATION;
+
+	/**
+	 * The number of structural features of the '<em>CPLEX Export Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CPLEX_EXPORT_CONFIGURATION_FEATURE_COUNT = ConfigurationPackage.ILP_EXPORT_CONFIGURATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>CPLEX Export Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CPLEX_EXPORT_CONFIGURATION_OPERATION_COUNT = ConfigurationPackage.ILP_EXPORT_CONFIGURATION_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.muml.eloquent.algorithm.ilp.neos.cplex.config.CPLEXConfiguration <em>CPLEX Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -113,6 +161,16 @@ public interface ConfigPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCPLEXConfiguration_Email();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.eloquent.algorithm.ilp.neos.cplex.config.CPLEXExportConfiguration <em>CPLEX Export Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>CPLEX Export Configuration</em>'.
+	 * @see org.muml.eloquent.algorithm.ilp.neos.cplex.config.CPLEXExportConfiguration
+	 * @generated
+	 */
+	EClass getCPLEXExportConfiguration();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -154,6 +212,16 @@ public interface ConfigPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CPLEX_CONFIGURATION__EMAIL = eINSTANCE.getCPLEXConfiguration_Email();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.eloquent.algorithm.ilp.neos.cplex.config.impl.CPLEXExportConfigurationImpl <em>CPLEX Export Configuration</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.eloquent.algorithm.ilp.neos.cplex.config.impl.CPLEXExportConfigurationImpl
+		 * @see org.muml.eloquent.algorithm.ilp.neos.cplex.config.impl.ConfigPackageImpl#getCPLEXExportConfiguration()
+		 * @generated
+		 */
+		EClass CPLEX_EXPORT_CONFIGURATION = eINSTANCE.getCPLEXExportConfiguration();
 
 	}
 

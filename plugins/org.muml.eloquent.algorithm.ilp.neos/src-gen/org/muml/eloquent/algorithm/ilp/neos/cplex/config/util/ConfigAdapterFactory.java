@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
 import org.muml.eloquent.algorithm.ilp.neos.cplex.config.*;
+import org.muml.psm.allocation.algorithm.ilp.configuration.ILPExportConfiguration;
 
 /**
  * <!-- begin-user-doc -->
@@ -72,6 +73,14 @@ public class ConfigAdapterFactory extends AdapterFactoryImpl {
 				return createCPLEXConfigurationAdapter();
 			}
 			@Override
+			public Adapter caseCPLEXExportConfiguration(CPLEXExportConfiguration object) {
+				return createCPLEXExportConfigurationAdapter();
+			}
+			@Override
+			public <T> Adapter caseILPExportConfiguration(ILPExportConfiguration<T> object) {
+				return createILPExportConfigurationAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -102,6 +111,34 @@ public class ConfigAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCPLEXConfigurationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.eloquent.algorithm.ilp.neos.cplex.config.CPLEXExportConfiguration <em>CPLEX Export Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.eloquent.algorithm.ilp.neos.cplex.config.CPLEXExportConfiguration
+	 * @generated
+	 */
+	public Adapter createCPLEXExportConfigurationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.psm.allocation.algorithm.ilp.configuration.ILPExportConfiguration <em>ILP Export Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.psm.allocation.algorithm.ilp.configuration.ILPExportConfiguration
+	 * @generated
+	 */
+	public Adapter createILPExportConfigurationAdapter() {
 		return null;
 	}
 

@@ -4,13 +4,16 @@ package org.muml.eloquent.algorithm.ilp.neos.cplex.config.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.muml.eloquent.algorithm.ilp.neos.cplex.config.CPLEXConfiguration;
+import org.muml.eloquent.algorithm.ilp.neos.cplex.config.CPLEXExportConfiguration;
 import org.muml.eloquent.algorithm.ilp.neos.cplex.config.ConfigFactory;
 import org.muml.eloquent.algorithm.ilp.neos.cplex.config.ConfigPackage;
+import org.muml.psm.allocation.algorithm.ilp.configuration.ConfigurationPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,6 +28,13 @@ public class ConfigPackageImpl extends EPackageImpl implements ConfigPackage {
 	 * @generated
 	 */
 	private EClass cplexConfigurationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cplexExportConfigurationEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -72,6 +82,9 @@ public class ConfigPackageImpl extends EPackageImpl implements ConfigPackage {
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		ConfigurationPackage.eINSTANCE.eClass();
+
 		// Create package meta-data objects
 		theConfigPackage.createPackageContents();
 
@@ -110,6 +123,15 @@ public class ConfigPackageImpl extends EPackageImpl implements ConfigPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCPLEXExportConfiguration() {
+		return cplexExportConfigurationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ConfigFactory getConfigFactory() {
 		return (ConfigFactory)getEFactoryInstance();
 	}
@@ -135,6 +157,8 @@ public class ConfigPackageImpl extends EPackageImpl implements ConfigPackage {
 		// Create classes and their features
 		cplexConfigurationEClass = createEClass(CPLEX_CONFIGURATION);
 		createEAttribute(cplexConfigurationEClass, CPLEX_CONFIGURATION__EMAIL);
+
+		cplexExportConfigurationEClass = createEClass(CPLEX_EXPORT_CONFIGURATION);
 	}
 
 	/**
@@ -160,15 +184,24 @@ public class ConfigPackageImpl extends EPackageImpl implements ConfigPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		ConfigurationPackage theConfigurationPackage = (ConfigurationPackage)EPackage.Registry.INSTANCE.getEPackage(ConfigurationPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		EGenericType g1 = createEGenericType(theConfigurationPackage.getILPExportConfiguration());
+		EGenericType g2 = createEGenericType(this.getCPLEXConfiguration());
+		g1.getETypeArguments().add(g2);
+		cplexExportConfigurationEClass.getEGenericSuperTypes().add(g1);
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(cplexConfigurationEClass, CPLEXConfiguration.class, "CPLEXConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCPLEXConfiguration_Email(), ecorePackage.getEString(), "email", null, 1, 1, CPLEXConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(cplexExportConfigurationEClass, CPLEXExportConfiguration.class, "CPLEXExportConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
