@@ -29,6 +29,7 @@
     <module>plugins/org.muml.psm.allocation.language</module>  
     <module>plugins/org.muml.psm.allocation.algorithm</module>
     <module>plugins/org.muml.psm.allocation.algorithm.ilp</module>
+    <module>plugins/org.muml.psm.allocation.algorithm.ilp.config</module>
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.lpsolve</module>
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.scip</module>
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.export</module>
