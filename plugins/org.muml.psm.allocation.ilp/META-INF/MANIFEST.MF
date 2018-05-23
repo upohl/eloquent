@@ -17,5 +17,7 @@ Export-Package: org.muml.psm.allocation.ilp,
  org.muml.psm.allocation.ilp.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.xtext.xbase.lib;bundle-version="2.10.0"
+ org.eclipse.xtext.xbase.lib;bundle-version="2.10.0",
+ org.eclipse.jdt.annotation;bundle-version="2.1.100",
+ org.eclipse.core.resources;bundle-version="3.12.0"
 Bundle-ActivationPolicy: lazy
