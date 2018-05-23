@@ -57,8 +57,11 @@ public abstract class AbstractQVToBasedMultiConfigurationStrategy implements ISt
 				throw new IllegalStateException(
 						String.format(manyFeatureError, reference));
 			}
-			// hmm one big "dict"?
-			buildDictionaryString(builder, (EObject) eObject.eGet(reference));
+			eObject = (EObject) eObject.eGet(reference);
+			if (eObject != null) {
+				// hmm one big "dict"?
+				buildDictionaryString(builder, (EObject) eObject.eGet(reference));
+			}
 		}
 	}
 	
