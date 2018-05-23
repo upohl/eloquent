@@ -42,13 +42,14 @@ public abstract class AbstractILPExportableAllocationComputationStrategy
 		}
 		if (executionResult.getOutObjects().size() == 1) {
 			return exportILP((IntegerLinearProgram)
-					executionResult.getOutObjects().get(0));
+					executionResult.getOutObjects().get(0), progressMonitor);
 		}
 		// XXX: we should return an error instance here...
 		return Diagnostic.CANCEL_INSTANCE;
 	}
 	
-	public abstract Diagnostic exportILP(@NonNull IntegerLinearProgram ilp);
+	public abstract Diagnostic exportILP(@NonNull IntegerLinearProgram ilp,
+			@Nullable IProgressMonitor progressMonitor);
 
 	@Override
 	@NonNull
