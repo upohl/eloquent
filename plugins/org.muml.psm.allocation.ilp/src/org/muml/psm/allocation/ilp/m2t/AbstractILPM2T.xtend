@@ -95,7 +95,7 @@ abstract class AbstractILPM2T {
 		emit(opString)
 	}
 	
-	def protected abstract void emitVariable(Variable varialbe)
+	def protected abstract void emitVariable(Variable variable)
 	
 	def protected getVariableName(Variable variable) {
 		variable.name
