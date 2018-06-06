@@ -8,6 +8,19 @@ library Sort;
 
 // common sorting code
 
+property reproducibleILP : Boolean = true;
+
+helper initialize(reproducibleILP : Boolean) {
+	log("###");
+	log("reproducibleILP: " + reproducibleILP.toString());
+	log("###");
+	this.reproducibleILP := reproducibleILP;
+}
+
+query isReproducibleILP() : Boolean {
+	return reproducibleILP;
+}
+
 query Sequence(OclAny)::sortComponentResourceSequence() : Sequence(OclAny) {
 	return let indexes : OrderedSet(Integer) = getOddNumbers(1, self->size())
 	in
@@ -16,7 +29,11 @@ query Sequence(OclAny)::sortComponentResourceSequence() : Sequence(OclAny) {
 }
 
 query Sequence(TupleValue)::sortWeightingComponentResourceTuples(tupleDescriptor : WeightTupleDescriptor) : Sequence(TupleValue) {
-	return self->sortedBy(tv : TupleValue | tv.getWeightingComponentResourceTupleSortId(tupleDescriptor));
+	return if reproducibleILP then
+		self->sortedBy(tv : TupleValue | tv.getWeightingComponentResourceTupleSortId(tupleDescriptor))
+	else
+		self
+	endif;
 }
 
 query TupleValue::getWeightingComponentResourceTupleSortId(tupleDescriptor : WeightTupleDescriptor) : String {
@@ -30,4 +47,24 @@ query TupleValue::getWeightingComponentResourceTupleSortId(tupleDescriptor : Wei
 
 query TupleValue::getWeighting(tupleDescriptor : WeightTupleDescriptor) : String {
 	return self.get(tupleDescriptor.weight).oclAsType(Real).toString();
+}
+
+query Sequence(Sequence(OclAny))::sortedByVariableName() : Sequence(Sequence(OclAny)) {
+	return if reproducibleILP then
+		self->sortedBy(seq |
+			seq->getVariableName()
+		)
+	else
+		self
+	endif;
+}
+
+query OrderedSet(OclAny)::sortedByVariableName() : OrderedSet(OclAny) {
+	return if reproducibleILP then
+		self->sortedBy(
+			getVariableName()
+		)
+	else
+		self
+	endif;
 }

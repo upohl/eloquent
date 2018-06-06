@@ -23,9 +23,7 @@ helper ForbiddenLocationConstraint::createForbiddenLocationConstraint(inout ilp 
 	var comment : String := if self.name <> '' then self.name else null endif;
 	self.evaluateOCL(oclContext).asTupleValueSequence()->collectNested(tv : TupleValue |
 		tv.toSequence()->sortComponentResourceSequence()
-	)->sortedBy(seq |
-		seq->getVariableName()
-	)->createForbiddenLocationConstraintExpression(ilp, comment);
+	)->sortedByVariableName()->createForbiddenLocationConstraintExpression(ilp, comment);
 }
 
 helper Sequence(Sequence(OclAny))::createForbiddenLocationConstraintExpression(inout ilp : IntegerLinearProgram,

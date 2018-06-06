@@ -8,6 +8,7 @@ import ResourceConstraint;
 import ImplicationConstraint;
 import ForbiddenLocationConstraint;
 import ObjectiveFunction;
+import Sort;
 import Util;
 import Variables;
 import VariableHelper;
@@ -19,6 +20,8 @@ modeltype ecore uses ecore('http://www.eclipse.org/emf/2002/Ecore');
 
 transformation Specification2ILP(in specificationCS : allocationSpecificationCS, in oclContextIn : ecore, out ilpOut : ilptype);
 
+configuration property config : Dict(String, Boolean);
+
 main() {
 	var specification : Specification := specificationCS.getSpecification();
 	var oclContext : OclAny = oclContextIn.getOclContext();
@@ -27,6 +30,7 @@ main() {
 	var endTime : Integer;
 	startTime := getCurrentTime();
 	VariableHelper::initialize(specification.nameProvider);
+	Sort::initialize(config->defaultget('reproducibleILP', true));
 	specification.createRelationConstraints(ilp, oclContext);
 	endTime := getCurrentTime();
 	log("Time for create GeneralConstraints:"+((endTime-startTime)/1000).toString()+" seconds");

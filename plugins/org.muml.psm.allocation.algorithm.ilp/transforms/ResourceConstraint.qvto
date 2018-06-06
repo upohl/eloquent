@@ -34,7 +34,11 @@ helper ResourceConstraint::createResourceConstraint(inout ilp : IntegerLinearPro
 }
 
 query Sequence(TupleValue)::sortOuterResultSequence(constraint : ResourceConstraint) : Sequence(TupleValue) {
-	return self->sortedBy(tv : TupleValue | tv.getOuterId(constraint));
+	return if isReproducibleILP() then
+		self->sortedBy(tv : TupleValue | tv.getOuterId(constraint))
+	else
+		self
+	endif;
 }
 
 query TupleValue::getOuterId(constraint : ResourceConstraint) : String {

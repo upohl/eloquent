@@ -60,18 +60,20 @@ helper Sequence(Sequence(Sequence(OclAny)))::createImplicationConstraintExpressi
 query Sequence(Sequence(OclAny))::sortInnerSequence() : Sequence(Sequence(OclAny)) {
 	return self->collectNested(seq : Sequence(OclAny) |
 		seq->sortComponentResourceSequence() -- reorders the "inner sequence" seq
-	)->sortedBy(seq : Sequence(OclAny) |
-		seq->getVariableName() -- sort the "outer sequence"
-	);
+	)->sortedByVariableName();  -- sort the "outer sequence"
 }
 
 query Sequence(Sequence(Sequence(Sequence(OclAny))))::sortOuterSequence() : Sequence(Sequence(Sequence(Sequence(OclAny)))) {
-	return self->sortedBy(seq : Sequence(Sequence(Sequence(OclAny))) |
-		seq->at(1)->getSequenceId()
-			+ ILLEGAL_VARIABLE_CHARS()->at(1)
-			+ ILLEGAL_VARIABLE_CHARS()->at(1) -- two delimiters are needed
-			+ seq->at(2)->getSequenceId()
-	);
+	return if isReproducibleILP() then
+		self->sortedBy(seq : Sequence(Sequence(Sequence(OclAny))) |
+			seq->at(1)->getSequenceId()
+				+ ILLEGAL_VARIABLE_CHARS()->at(1)
+				+ ILLEGAL_VARIABLE_CHARS()->at(1) -- two delimiters are needed
+				+ seq->at(2)->getSequenceId()
+		)
+	else
+		self
+	endif;
 }
 
 query Sequence(Sequence(OclAny))::getSequenceId() : String {
