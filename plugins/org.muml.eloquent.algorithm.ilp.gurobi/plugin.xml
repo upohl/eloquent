@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.m2m.qvt.oml.javaBlackboxUnits">
+      <unit
+            name="GurobiBlackboxUnit"
+            namespace="org.muml.eloquent.algorithm.ilp.gurobi">
+         <library
+               class="org.muml.eloquent.algorithm.ilp.gurobi.GurobiBlackbox"
+               name="GurobiBlackbox">
+            <metamodel
+                  nsURI="http://www.muml.org/psm/allocation/ilp/1.0.0">
+            </metamodel>
+         </library>
+      </unit>
+   </extension>
+   <extension
+         point="org.muml.psm.allocation.algorithm.strategy">
+      <strategy
+            class="org.muml.eloquent.algorithm.ilp.gurobi.GurobiAllocationComputationStrategy"
+            description="A gurobi based allocation computation strategy"
+            name="Gurobi Allocation Computation Strategy">
+      </strategy>
+   </extension>
+
+</plugin>

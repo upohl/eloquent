@@ -1,0 +1,7 @@
+Maximize
+
+Subject To
+x_y_z + -9.999 a_b_c <= -5
+Binary
+x_y_z
+a_b_c

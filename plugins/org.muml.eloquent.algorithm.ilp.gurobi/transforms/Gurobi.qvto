@@ -1,0 +1,26 @@
+import org.muml.eloquent.algorithm.ilp.gurobi.GurobiBlackboxUnit;
+import SolverConstants;
+
+modeltype ilptype uses ilp('http://www.muml.org/psm/allocation/ilp/1.0.0');
+
+library Gurobi;
+
+helper gurobiSolve(ilp : IntegerLinearProgram, inout solution : Dict(Variable, Integer)) : Integer {
+	var completeSolution : Dict(String, Integer) := Dict{}; 
+	var ret : Integer := solve(ilp, completeSolution);
+	if (ret != SUCCESS()) then {
+		return ret;
+	} endif;
+	var name2variableDict : Dict(String, Variable) := Dict {};
+	ilp.variables->forEach(variable) {
+		name2variableDict->put(variable.name, variable);
+	};
+	var res : Dict(Variable, Integer) := Dict{};
+	completeSolution->keys()->forEach(k) {
+		var variable : Variable := name2variableDict->get(k);
+		assert fatal (not variable.oclIsUndefined())
+			with log("unknown variable: " + k);
+		solution->put(variable, completeSolution->get(k));
+	};
+	return SUCCESS();
+}

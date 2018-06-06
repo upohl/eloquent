@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Gurobi
+Bundle-SymbolicName: org.muml.eloquent.algorithm.ilp.gurobi;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Software Engineering Group, Heinz Nixdorf Institute, Paderborn University, and Fraunhofer Research Institution for Mechatronic Systems Design IEM, Germany
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.m2m.qvt.oml;bundle-version="3.7.0",
+ org.eclipse.core.runtime;bundle-version="3.13.0",
+ org.muml.psm.allocation.ilp;bundle-version="1.0.0",
+ org.muml.psm.allocation.algorithm;bundle-version="1.0.0",
+ org.muml.psm.allocation.algorithm.ilp;bundle-version="1.0.0"
+Export-Package: org.muml.eloquent.algorithm.ilp.gurobi
