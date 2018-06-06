@@ -13,6 +13,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.muml.psm.allocation.algorithm.ilp.tests.util.FixedStructureILPComparator;
+import org.muml.psm.allocation.algorithm.qvto.QVToTransformationRunner;
 import org.muml.psm.allocation.algorithm.tests.qvto.QVToTransformationSingleOutExtentTest;
 import org.muml.psm.allocation.ilp.IntegerLinearProgram;
 
@@ -48,7 +49,7 @@ public class UnorderedILPTest extends QVToTransformationSingleOutExtentTest {
 		return newTestData;
 	}
 	
-	protected static Map<String, Object> getConfigurationPropertyMap() {
+	public static Map<String, Object> getConfigurationPropertyMap() {
 		Map<String, Object> configurationPropertyMap = new HashMap<String, Object>();
 		configurationPropertyMap.put("config", "reproducibleILP=false");
 		return configurationPropertyMap;
@@ -56,6 +57,11 @@ public class UnorderedILPTest extends QVToTransformationSingleOutExtentTest {
 	
 	@Override
 	protected void checkTransformationResult() {
+		checkTransformationResult(runner, expectedList);
+	}
+	
+	public static void checkTransformationResult(QVToTransformationRunner runner,
+			List<ExpectedOutput> expectedList) {
 		List<ModelExtent> outExtentList = runner.getOutExtents();
 		Assert.assertEquals(1, outExtentList.size());
 		List<EObject> transformationResultList = outExtentList.get(0)
