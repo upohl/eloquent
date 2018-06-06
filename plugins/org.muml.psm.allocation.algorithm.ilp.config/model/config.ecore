@@ -10,4 +10,8 @@
       <eGenericType eTypeParameter="#//ILPExportConfiguration/T"/>
     </eStructuralFeatures>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ILPConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reproducibleILP" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
 </ecore:EPackage>

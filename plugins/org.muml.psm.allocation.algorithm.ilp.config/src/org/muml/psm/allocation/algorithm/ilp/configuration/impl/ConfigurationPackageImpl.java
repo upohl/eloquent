@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.muml.psm.allocation.algorithm.ilp.configuration.ConfigurationFactory;
 import org.muml.psm.allocation.algorithm.ilp.configuration.ConfigurationPackage;
+import org.muml.psm.allocation.algorithm.ilp.configuration.ILPConfiguration;
 import org.muml.psm.allocation.algorithm.ilp.configuration.ILPExportConfiguration;
 
 /**
@@ -28,6 +29,13 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 	 * @generated
 	 */
 	private EClass ilpExportConfigurationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ilpConfigurationEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -122,6 +130,24 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getILPConfiguration() {
+		return ilpConfigurationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getILPConfiguration_ReproducibleILP() {
+		return (EAttribute)ilpConfigurationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ConfigurationFactory getConfigurationFactory() {
 		return (ConfigurationFactory)getEFactoryInstance();
 	}
@@ -148,6 +174,9 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 		ilpExportConfigurationEClass = createEClass(ILP_EXPORT_CONFIGURATION);
 		createEAttribute(ilpExportConfigurationEClass, ILP_EXPORT_CONFIGURATION__EXPORT_FILENAME);
 		createEReference(ilpExportConfigurationEClass, ILP_EXPORT_CONFIGURATION__ILP_CONFIGURATION);
+
+		ilpConfigurationEClass = createEClass(ILP_CONFIGURATION);
+		createEAttribute(ilpConfigurationEClass, ILP_CONFIGURATION__REPRODUCIBLE_ILP);
 	}
 
 	/**
@@ -185,6 +214,9 @@ public class ConfigurationPackageImpl extends EPackageImpl implements Configurat
 		initEAttribute(getILPExportConfiguration_ExportFilename(), ecorePackage.getEString(), "exportFilename", null, 1, 1, ILPExportConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		EGenericType g1 = createEGenericType(ilpExportConfigurationEClass_T);
 		initEReference(getILPExportConfiguration_IlpConfiguration(), g1, null, "ilpConfiguration", null, 0, 1, ILPExportConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(ilpConfigurationEClass, ILPConfiguration.class, "ILPConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getILPConfiguration_ReproducibleILP(), ecorePackage.getEBoolean(), "reproducibleILP", "false", 0, 1, ILPConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

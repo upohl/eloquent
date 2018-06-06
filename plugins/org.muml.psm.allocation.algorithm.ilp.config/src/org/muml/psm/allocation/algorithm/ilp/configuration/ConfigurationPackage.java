@@ -104,6 +104,44 @@ public interface ConfigurationPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link org.muml.psm.allocation.algorithm.ilp.configuration.impl.ILPConfigurationImpl <em>ILP Configuration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.psm.allocation.algorithm.ilp.configuration.impl.ILPConfigurationImpl
+	 * @see org.muml.psm.allocation.algorithm.ilp.configuration.impl.ConfigurationPackageImpl#getILPConfiguration()
+	 * @generated
+	 */
+	int ILP_CONFIGURATION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Reproducible ILP</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ILP_CONFIGURATION__REPRODUCIBLE_ILP = 0;
+
+	/**
+	 * The number of structural features of the '<em>ILP Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ILP_CONFIGURATION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>ILP Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ILP_CONFIGURATION_OPERATION_COUNT = 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.muml.psm.allocation.algorithm.ilp.configuration.ILPExportConfiguration <em>ILP Export Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -134,6 +172,27 @@ public interface ConfigurationPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getILPExportConfiguration_IlpConfiguration();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.psm.allocation.algorithm.ilp.configuration.ILPConfiguration <em>ILP Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ILP Configuration</em>'.
+	 * @see org.muml.psm.allocation.algorithm.ilp.configuration.ILPConfiguration
+	 * @generated
+	 */
+	EClass getILPConfiguration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.muml.psm.allocation.algorithm.ilp.configuration.ILPConfiguration#isReproducibleILP <em>Reproducible ILP</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reproducible ILP</em>'.
+	 * @see org.muml.psm.allocation.algorithm.ilp.configuration.ILPConfiguration#isReproducibleILP()
+	 * @see #getILPConfiguration()
+	 * @generated
+	 */
+	EAttribute getILPConfiguration_ReproducibleILP();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -183,6 +242,24 @@ public interface ConfigurationPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ILP_EXPORT_CONFIGURATION__ILP_CONFIGURATION = eINSTANCE.getILPExportConfiguration_IlpConfiguration();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.psm.allocation.algorithm.ilp.configuration.impl.ILPConfigurationImpl <em>ILP Configuration</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.psm.allocation.algorithm.ilp.configuration.impl.ILPConfigurationImpl
+		 * @see org.muml.psm.allocation.algorithm.ilp.configuration.impl.ConfigurationPackageImpl#getILPConfiguration()
+		 * @generated
+		 */
+		EClass ILP_CONFIGURATION = eINSTANCE.getILPConfiguration();
+
+		/**
+		 * The meta object literal for the '<em><b>Reproducible ILP</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ILP_CONFIGURATION__REPRODUCIBLE_ILP = eINSTANCE.getILPConfiguration_ReproducibleILP();
 
 	}
 

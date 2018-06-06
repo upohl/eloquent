@@ -57,6 +57,7 @@ public class ConfigurationFactoryImpl extends EFactoryImpl implements Configurat
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ConfigurationPackage.ILP_EXPORT_CONFIGURATION: return createILPExportConfiguration();
+			case ConfigurationPackage.ILP_CONFIGURATION: return createILPConfiguration();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -70,6 +71,16 @@ public class ConfigurationFactoryImpl extends EFactoryImpl implements Configurat
 	public <T> ILPExportConfiguration<T> createILPExportConfiguration() {
 		ILPExportConfigurationImpl<T> ilpExportConfiguration = new ILPExportConfigurationImpl<T>();
 		return ilpExportConfiguration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ILPConfiguration createILPConfiguration() {
+		ILPConfigurationImpl ilpConfiguration = new ILPConfigurationImpl();
+		return ilpConfiguration;
 	}
 
 	/**

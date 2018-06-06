@@ -12,5 +12,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//ILPExportConfiguration/exportFilename"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//ILPExportConfiguration/ilpConfiguration"/>
     </genClasses>
+    <genClasses ecoreClass="config.ecore#//ILPConfiguration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//ILPConfiguration/reproducibleILP"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

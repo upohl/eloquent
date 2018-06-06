@@ -72,6 +72,12 @@ public class ConfigurationSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ConfigurationPackage.ILP_CONFIGURATION: {
+				ILPConfiguration ilpConfiguration = (ILPConfiguration)theEObject;
+				T1 result = caseILPConfiguration(ilpConfiguration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -88,6 +94,21 @@ public class ConfigurationSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public <T> T1 caseILPExportConfiguration(ILPExportConfiguration<T> object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ILP Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ILP Configuration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseILPConfiguration(ILPConfiguration object) {
 		return null;
 	}
 

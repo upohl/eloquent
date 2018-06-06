@@ -31,6 +31,15 @@ public interface ConfigurationFactory extends EFactory {
 	<T> ILPExportConfiguration<T> createILPExportConfiguration();
 
 	/**
+	 * Returns a new object of class '<em>ILP Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ILP Configuration</em>'.
+	 * @generated
+	 */
+	ILPConfiguration createILPConfiguration();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
