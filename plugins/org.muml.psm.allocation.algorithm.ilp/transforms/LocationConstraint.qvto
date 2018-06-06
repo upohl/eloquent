@@ -25,56 +25,77 @@ helper Specification::createLocationConstraints(inout ilp : IntegerLinearProgram
 
 helper LocationConstraint::createLocationConstraint(inout ilp : IntegerLinearProgram,
 	oclContext : OclAny) {
-	var groupedSequences : Sequence(Sequence(Sequence(OclAny))) := self.evaluateOCL(oclContext)
+	var td : Dict(Sequence(OclAny), Dict(Sequence(OclAny), Integer)) := self.evaluateOCL(oclContext)
 		.asTupleValueSequence()
 		->collectNested(toSequence())
-		->groupBySizeAndSort(); 
-	groupedSequences->forEach(sequences) {
-		sequences->forEach(seq) {
-			seq->createHelperVariableAndConstraints(ilp);
+		->computeTODO();
+	var groupedAndSortedKeys : Sequence(List(Sequence(OclAny))) := td->groupKeysBySizeAndSort();
+	groupedAndSortedKeys->forEach(group) {
+		group->forEach(sources) {
+			var todo : List(Sequence(OclAny)) := td->get(sources)->keys()
+				->sortedListByVariableName();
+			todo->forEach(seq) {
+				seq->createHelperVariableAndConstraints(ilp);
+			};
 		};
-		while (sequences->notEmpty()) {
-			var cur : Sequence(OclAny) := sequences->first();
-			// since createConstraintExpression generates an equality ("= 1"),
-			// we must get rid of duplicates (hence, we do the
-			// -> OrderedSet -> Sequence conversion)
-			// (actually, todo could be an OrderedSet(Sequence(OclAny)),
-			// but the other helpers/queries expect a Sequence...)
-			var todo : Sequence(Sequence(OclAny)) := cur->getAssociatedSequences(sequences)
-				->asOrderedSet()->asSequence();
-			sequences := sequences->reject(seq | todo->includes(seq));
-			todo->createConstraintExpression(ilp, self)
-		};
+		-- we do this in a separate loop, because we would need to adjust
+		-- the testcases otherwise...
+		group->forEach(sources) {
+			var todo : List(Sequence(OclAny)) := td->get(sources)->keys()
+				->sortedListByVariableName();
+			todo->createConstraintExpression(ilp, self);
+		}
 	};
+}
+
+helper Sequence(Sequence(OclAny))::computeTODO() : Dict(Sequence(OclAny), Dict(Sequence(OclAny), Integer)) {
+	var todo : Dict(Sequence(OclAny), Dict(Sequence(OclAny), Integer));
+	self->forEach(seq) {
+		seq := seq->sortComponentResourceSequence();
+		var sources : Sequence(OclAny) := getOddNumbers(1, seq->size())
+			->collect(i | seq->at(i));
+		var sourcesDict : Dict(Sequence(OclAny), Integer);
+		if (todo->hasKey(sources)) then {
+			sourcesDict := todo->get(sources);
+		} else {
+			sourcesDict := Dict{};
+			todo->put(sources, sourcesDict);
+		} endif;
+		sourcesDict->put(seq, 1);
+	};
+	return todo;
+}
+
+query Dict(Sequence(OclAny), Dict(Sequence(OclAny), Integer))::groupKeysBySizeAndSort() : Sequence(List(Sequence(OclAny))) {
+	return if isReproducibleILP() then
+		let data : List(Sequence(OclAny)) = self->values()->iterate(dict; acc : List(Sequence(OclAny)) = List {} |
+			acc->union(dict->keys())
+		)
+		in
+		data->collect(seq |
+			seq->size()
+		)->asSet()->sortedBy(seqSize |
+			seqSize
+		)->collectNested(seqSize |
+			data->select(seq |
+				seq->size() = seqSize
+			)->sortComponentResourceSequences()->collectNested(seq |
+				getOddNumbers(1, seq->size())->collect(i |
+					seq->at(i)
+				)
+			)->asOrderedSet()->asList()
+		)
+	else
+		Sequence {
+			self->keys()
+		}
+	endif;
 }
 
 query Sequence(Sequence(OclAny))::sortComponentResourceSequences() : Sequence(Sequence(OclAny)) {
 	return self->collectNested(seq |
 		seq->sortComponentResourceSequence()
 	)->sortedBy(seq | seq->getVariableName());
-}
-
-query Sequence(Sequence(OclAny))::groupBySizeAndSort() : Sequence(Sequence(Sequence(OclAny))) {
-	return self->collect(seq |
-		seq->size()
-	)->asSet()->sortedBy(seqSize : Integer |
-		seqSize
-	)->collectNested(seqSize : Integer |
-		self->select(seq |
-			seq->size() = seqSize
-		)->sortComponentResourceSequences()
-	)
-}
-
-query Sequence(OclAny)::getAssociatedSequences(sequence : Sequence(Sequence(OclAny)))
-	: Sequence(Sequence(OclAny)) {
-	return sequence->select(seq |
-		let indexes : OrderedSet(Integer) = getOddNumbers(1, self->size())
-		in
-		indexes->collect(i |
-			seq->at(i)
-		)->asBag() = indexes->collect(i | self->at(i))->asBag()
-	);
 }
 
 helper Sequence(Sequence(OclAny))::createConstraintExpression(inout ilp : IntegerLinearProgram,

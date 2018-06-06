@@ -68,3 +68,13 @@ query OrderedSet(OclAny)::sortedByVariableName() : OrderedSet(OclAny) {
 		self
 	endif;
 }
+
+query List(Sequence(OclAny))::sortedListByVariableName() : List(Sequence(OclAny)) {
+	return if reproducibleILP then 
+		self->sortedBy(seq |
+			seq->getVariableName()
+		)->asList()
+	else
+		self
+	endif;
+}
