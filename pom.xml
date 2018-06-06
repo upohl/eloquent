@@ -34,6 +34,7 @@
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.scip</module>
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.export</module>
     <module>plugins/org.muml.eloquent.algorithm.ilp.neos</module>
+    <module>plugins/org.muml.eloquent.algorithm.ilp.gurobi</module>
     <!-- opt4j begin-->
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.opt4j</module>
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.opt4j.config</module>
@@ -44,6 +45,7 @@
     <!-- opt4j end-->
     <module>tests/org.muml.psm.allocation.algorithm.ilp.tests</module>
     <module>tests/org.muml.psm.allocation.algorithm.ilp.lpsolve.tests</module>
+    <module>tests/org.muml.eloquent.algorithm.ilp.gurobi.tests</module>
     <module>tests/org.muml.psm.allocation.algorithm.tests</module>
     <module>plugins/org.muml.psm.allocation.algorithm.ui</module>
     <module>plugins/org.muml.psm.allocation.ilp</module>
