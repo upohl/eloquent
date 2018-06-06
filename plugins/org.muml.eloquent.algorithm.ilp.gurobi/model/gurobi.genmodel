@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/org.muml.eloquent.algorithm.ilp.gurobi/src-gen"
+    modelPluginID="org.muml.eloquent.algorithm.ilp.gurobi" modelName="Gurobi" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../org.muml.psm.allocation.algorithm.ilp.config/model/config.genmodel#//configuration"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>gurobi.ecore</foreignModel>
+  <genPackages prefix="Config" basePackage="org.muml.eloquent.algorithm.ilp.gurobi"
+      disposableProviderFactory="true" ecorePackage="gurobi.ecore#/">
+    <genClasses ecoreClass="gurobi.ecore#//GurobiExportConfiguration"/>
+  </genPackages>
+</genmodel:GenModel>

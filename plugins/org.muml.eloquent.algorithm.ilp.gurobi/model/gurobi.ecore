@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="config" nsURI="http://www.muml.org/eloquent/algorithm/ilp/gurobi/config/1.0.0"
+    nsPrefix="config">
+  <eClassifiers xsi:type="ecore:EClass" name="GurobiExportConfiguration">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../org.muml.psm.allocation.algorithm.ilp.config/model/config.ecore#//ILPExportConfiguration">
+      <eTypeArguments eClassifier="ecore:EClass ../../org.muml.psm.allocation.algorithm.ilp.config/model/config.ecore#//ILPConfiguration"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+</ecore:EPackage>

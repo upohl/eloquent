@@ -24,4 +24,12 @@
       </strategy>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated gurobi -->
+      <package
+            uri="http://www.muml.org/eloquent/algorithm/ilp/gurobi/config/1.0.0"
+            class="org.muml.eloquent.algorithm.ilp.gurobi.config.ConfigPackage"
+            genModel="model/gurobi.genmodel"/>
+   </extension>
+
 </plugin>
