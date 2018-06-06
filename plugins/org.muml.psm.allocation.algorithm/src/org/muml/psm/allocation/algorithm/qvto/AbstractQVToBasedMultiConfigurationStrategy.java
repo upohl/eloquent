@@ -77,7 +77,7 @@ public abstract class AbstractQVToBasedMultiConfigurationStrategy implements ISt
 			throw new IllegalArgumentException(nullValueError);
 		}
 		if (value instanceof Boolean) {
-			return (Boolean) value ? "1" : "0";
+			return (Boolean) value ? "true" : "false";
 		}
 		return value.toString();
 	}
