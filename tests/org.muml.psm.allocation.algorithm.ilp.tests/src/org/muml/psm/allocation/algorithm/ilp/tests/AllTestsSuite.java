@@ -13,6 +13,7 @@ import org.muml.psm.allocation.language.xtext.AllocationSpecificationLanguageSta
 	ImplicationConstraint2ILPTest.class,
 	ForbiddenLocationConstraint2ILPTest.class,
 	SequencePart2ILPTest.class,
+	UnorderedILPTest.class,
 	FixedStructureILPComparatorTest.class
 })
 public class AllTestsSuite {
