@@ -58,7 +58,7 @@ class AbstractAllocationWizard extends Wizard implements IExportWizard {
 		
 		private AllocationComputationSourceWizardPage sourcePage
 		private AllocationComputationStrategyWizardPage strategyPage
-		private PageContext pageContext
+		protected PageContext pageContext
 		
 		override protected IAllocationOperation createOperation() {
 			switch (pageContext) {
