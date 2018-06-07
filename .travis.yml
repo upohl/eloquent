@@ -5,8 +5,12 @@ jdk:
 
 deploy:
   provider: script
-  script: "mvn package -B"
-
+  script: 
+  wget https://svn-serv.cs.upb.de/mechatronicuml/trunk/DevelopmentTools/maven_pre_build.sh
+  sh maven_pre_build.sh
+  mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  mvn clean verify
+ 
   
   
 notifications:
