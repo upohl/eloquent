@@ -44,9 +44,9 @@ public class Gurobi {
 			finalTime = Double.valueOf(Double.valueOf(System.currentTimeMillis() - startTime)
 					.doubleValue() / 1000d);
 			
-			logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,"Time for solve the ILP Model Using Gurobi: "+finalTime+" seconds");
+			Status logSolvingTime = new Status(Status.INFO,Activator.PLUGIN_ID,"Time for solve the ILP Model Using Gurobi: "+finalTime+" seconds");
 			// writes log into the .log file within the .metadata folder of the workspace
-			Activator.getDefault().getLog().log(logTransformationTime);
+			Activator.getDefault().getLog().log(logSolvingTime);
 		
 			if (ret == success) {
 				parseSolution(solFile, solution);
