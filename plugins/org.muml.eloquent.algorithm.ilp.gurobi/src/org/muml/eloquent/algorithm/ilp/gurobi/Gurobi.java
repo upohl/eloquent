@@ -37,8 +37,17 @@ public class Gurobi {
 			// writes log into the .log file within the .metadata folder of the workspace
 			Activator.getDefault().getLog().log(logTransformationTime);
 		
+			startTime = System.currentTimeMillis();
 			ret = runGurobi(lpFile.getAbsolutePath(),
 					solFile.getAbsolutePath());
+
+			finalTime = Double.valueOf(Double.valueOf(System.currentTimeMillis() - startTime)
+					.doubleValue() / 1000d);
+			
+			logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,"Time for solve the ILP Model Using Gurobi: "+finalTime+" seconds");
+			// writes log into the .log file within the .metadata folder of the workspace
+			Activator.getDefault().getLog().log(logTransformationTime);
+		
 			if (ret == success) {
 				parseSolution(solFile, solution);
 			}
