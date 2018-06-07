@@ -12,6 +12,7 @@ import org.eclipse.ui.IWorkbench
 import org.eclipse.xtend.lib.annotations.Accessors
 import org.muml.psm.allocation.algorithm.main.IAllocationComputationStrategy
 import org.muml.psm.allocation.algorithm.main.IIntermediateModelExportStrategy
+import org.muml.psm.allocation.language.cs.SpecificationCS
 
 class AbstractAllocationWizard extends Wizard implements IExportWizard {
 	@Accessors(PROTECTED_GETTER)
@@ -71,18 +72,26 @@ class AbstractAllocationWizard extends Wizard implements IExportWizard {
 		}
 		
 		def protected IAllocationOperation createAllocationComputationOperation() {
-			new AllocationComputationOperation<Object>(sourcePage.specificationCS,
-				sourcePage.oclContext,
+			new AllocationComputationOperation<Object>(getSpecificationCS,
+				getOCLContext,
 				// hrm this really hurts...
-				strategyPage.allocationComputationStrategy as IAllocationComputationStrategy<Object, ?>
+				getAllocationComputationStrategy as IAllocationComputationStrategy<Object, ?>
 			)
 		}
 		
 		def protected IAllocationOperation createIntermediateModelExportOperation() {
-			new IntermediateModelExportOperation(sourcePage.specificationCS,
-				sourcePage.oclContext,
-				strategyPage.allocationComputationStrategy as IIntermediateModelExportStrategy<?>
+			new IntermediateModelExportOperation(getSpecificationCS,
+				getOCLContext,
+				getAllocationComputationStrategy as IIntermediateModelExportStrategy<?>
 			)
+		}
+		
+		def protected SpecificationCS getSpecificationCS() {
+			sourcePage.specificationCS
+		}
+		
+		def protected IAllocationComputationStrategy<?, ?> getAllocationComputationStrategy() {
+			strategyPage.allocationComputationStrategy
 		}
 		
 		override getOCLContext() {
