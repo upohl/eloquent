@@ -59,10 +59,11 @@ class AbstractAllocationWizard extends Wizard implements IExportWizard {
 		
 		private AllocationComputationSourceWizardPage sourcePage
 		private AllocationComputationStrategyWizardPage strategyPage
-		protected PageContext pageContext
+		@Accessors
+		private PageContext pageContext
 		
 		override protected IAllocationOperation createOperation() {
-			switch (pageContext) {
+			switch (getPageContext) {
 				case PageContext.AllocationComputation: createAllocationComputationOperation
 				case PageContext.IntermediateModelExport: createIntermediateModelExportOperation
 				default: throw new IllegalStateException(
@@ -103,7 +104,7 @@ class AbstractAllocationWizard extends Wizard implements IExportWizard {
 		}
 		
 		override providePages(PageContext pageContext, IWorkbench workbench, IStructuredSelection selection) {
-			this.pageContext = pageContext
+			setPageContext(pageContext)
 			sourcePage = new AllocationComputationSourceWizardPage(pageContext)
 			val AllocationComputationStrategyConfigurationWizardPage configPage = new AllocationComputationStrategyConfigurationWizardPage()
 			strategyPage = new AllocationComputationStrategyWizardPage(pageContext,
