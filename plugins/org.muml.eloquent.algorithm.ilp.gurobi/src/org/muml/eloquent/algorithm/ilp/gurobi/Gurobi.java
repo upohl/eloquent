@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.eclipse.core.runtime.Status;
 import org.eclipse.m2m.qvt.oml.util.Dictionary;
 import org.muml.psm.allocation.ilp.IntegerLinearProgram;
 
@@ -27,7 +28,15 @@ public class Gurobi {
 		try {
 			solFile = File.createTempFile("gurobi", solSuffix);
 			lpFile = File.createTempFile("gurobi", lpSuffix);
+			long startTime = System.currentTimeMillis();
 			serializeILP(ilp, lpFile);
+			Double finalTime = Double.valueOf(Double.valueOf(System.currentTimeMillis() - startTime)
+					.doubleValue() / 1000d);
+			
+			Status logTransformationTime = new Status(Status.INFO,Activator.PLUGIN_ID,"Time for serialize the ILP as Gurobi Input: "+finalTime+" seconds");
+			// writes log into the .log file within the .metadata folder of the workspace
+			Activator.getDefault().getLog().log(logTransformationTime);
+		
 			ret = runGurobi(lpFile.getAbsolutePath(),
 					solFile.getAbsolutePath());
 			if (ret == success) {
