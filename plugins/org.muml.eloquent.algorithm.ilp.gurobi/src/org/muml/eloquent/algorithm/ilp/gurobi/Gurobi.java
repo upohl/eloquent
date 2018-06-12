@@ -79,6 +79,7 @@ public class Gurobi {
 				"ResultFile=" + solFilename, lpFilename).start();
 		// make sure we read stdout/stderr to avoid a deadlock...
 		ThreadPool threadPool = new ThreadPool();
+		
 		threadPool.add(new StreamReader(process.getInputStream(), "stdout"));
 		threadPool.add(new StreamReader(process.getErrorStream(), "stderr"));
 		threadPool.join();
@@ -140,11 +141,17 @@ public class Gurobi {
 			BufferedReader reader = new BufferedReader(
 					new InputStreamReader(in));
 			String line = null;
+			StringBuilder stdout = new StringBuilder();
 			try {
 				while ((line = reader.readLine()) != null) {
-					System.out.print(String.format(printPrefix, name));
-					System.out.println(line);
+					//stdout.append(String.format(printPrefix, name));
+				//	System.out.println(line);
+					stdout.append(line);
+					stdout.append(System.getProperty("line.separator"));
+					// writes log into the .log file within the .metadata folder of the workspace
 				}
+				Status log= new Status(Status.INFO,Activator.PLUGIN_ID,name+":"+stdout.toString());;
+				Activator.getDefault().getLog().log(log);
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
