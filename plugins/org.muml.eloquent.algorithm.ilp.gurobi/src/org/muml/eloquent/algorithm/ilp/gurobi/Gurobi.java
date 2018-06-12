@@ -6,9 +6,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.stream.Collectors;
 
 import org.eclipse.core.runtime.Status;
 import org.eclipse.m2m.qvt.oml.util.Dictionary;
@@ -74,34 +71,10 @@ public class Gurobi {
 	}
 	
 	public static int runGurobi(String lpFilename, String solFilename) throws IOException, InterruptedException {
-		// we read stdout and stderr to avoid blocking
+		// keep fingers crossed that we do not eventually block,
+		// because we read neither stdout nor stderr
 		Process process = new ProcessBuilder(gurobiBinary,
 				"ResultFile=" + solFilename, lpFilename).start();
-		InputStream stdout = process.getInputStream();
-		InputStream stderr = process.getErrorStream();
-		
-
-        if(stderr.available()>0)
-        {
-	        String resultErr = new BufferedReader(new InputStreamReader(stderr))
-	        		  .lines().collect(Collectors.joining("\n"));
-	        
-			Status logError = new Status(Status.ERROR,Activator.PLUGIN_ID,resultErr);
-			// writes log into the .log file within the .metadata folder of the workspace
-			Activator.getDefault().getLog().log(logError);
-        }
-		
-        if(stdout.available()>0)
-        {
-	        String result = new BufferedReader(new InputStreamReader(stderr))
-	        		  .lines().collect(Collectors.joining("\n"));
-	        
-	        Status logGurobiOutput = new Status(Status.INFO,Activator.PLUGIN_ID,result);
-			// writes log into the .log file within the .metadata folder of the workspace
-			Activator.getDefault().getLog().log(logGurobiOutput);
-        }
-		
-				
 		return process.waitFor();
 	}
 	
