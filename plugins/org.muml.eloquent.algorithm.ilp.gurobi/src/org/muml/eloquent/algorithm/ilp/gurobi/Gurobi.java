@@ -150,8 +150,10 @@ public class Gurobi {
 					stdout.append(System.getProperty("line.separator"));
 					// writes log into the .log file within the .metadata folder of the workspace
 				}
-				Status log= new Status(Status.INFO,Activator.PLUGIN_ID,name+":"+stdout.toString());;
-				Activator.getDefault().getLog().log(log);
+				if(stdout != null && !stdout.toString().isEmpty()) {
+					Status log= new Status(Status.INFO,Activator.PLUGIN_ID,name+": "+stdout.toString());;
+					Activator.getDefault().getLog().log(log);
+				}
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
