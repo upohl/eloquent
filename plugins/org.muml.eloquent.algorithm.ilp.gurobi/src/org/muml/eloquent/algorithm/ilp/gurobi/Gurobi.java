@@ -6,6 +6,10 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.eclipse.core.runtime.Status;
 import org.eclipse.m2m.qvt.oml.util.Dictionary;
@@ -71,10 +75,13 @@ public class Gurobi {
 	}
 	
 	public static int runGurobi(String lpFilename, String solFilename) throws IOException, InterruptedException {
-		// keep fingers crossed that we do not eventually block,
-		// because we read neither stdout nor stderr
 		Process process = new ProcessBuilder(gurobiBinary,
 				"ResultFile=" + solFilename, lpFilename).start();
+		// make sure we read stdout/stderr to avoid a deadlock...
+		ThreadPool threadPool = new ThreadPool();
+		threadPool.add(new StreamReader(process.getInputStream(), "stdout"));
+		threadPool.add(new StreamReader(process.getErrorStream(), "stderr"));
+		threadPool.join();
 		return process.waitFor();
 	}
 	
@@ -101,6 +108,48 @@ public class Gurobi {
 				reader.close();
 			}
 		}
+	}
+	
+	public static class ThreadPool {
+		private List<Thread> pool = new ArrayList<Thread>();
+		
+		public void add(Runnable runnable) {
+			Thread thread = new Thread(runnable);
+			thread.start();
+			pool.add(thread);
+		}
+		
+		public void join() throws InterruptedException {
+			for (Thread thread : pool) {
+				thread.join();
+			}
+		}
+	}
+	
+	public static class StreamReader implements Runnable {
+		private static final String printPrefix = "Gurobi (%s): ";
+		private InputStream in;
+		private String name;
+		
+		public StreamReader(InputStream in, String name) {
+			this.in = in;
+			this.name = name;
+		}
+		
+		public void run() {
+			BufferedReader reader = new BufferedReader(
+					new InputStreamReader(in));
+			String line = null;
+			try {
+				while ((line = reader.readLine()) != null) {
+					System.out.print(String.format(printPrefix, name));
+					System.out.println(line);
+				}
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+		
 	}
 
 }
