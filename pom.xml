@@ -32,7 +32,6 @@
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.config</module>
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.lpsolve</module>
     <module>plugins/org.muml.psm.allocation.algorithm.ilp.scip</module>
-    <module>plugins/org.muml.psm.allocation.algorithm.ilp.export</module>
     <module>plugins/org.muml.eloquent.algorithm.ilp.neos</module>
     <module>plugins/org.muml.eloquent.algorithm.ilp.gurobi</module>
     <!-- opt4j begin-->
