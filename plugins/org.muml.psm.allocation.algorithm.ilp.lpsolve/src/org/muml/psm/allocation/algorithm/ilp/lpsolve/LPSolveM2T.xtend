@@ -42,10 +42,15 @@ class LPSolveM2T extends AbstractILPM2T {
 	}
 	
 	override protected void emitVariable(Variable variable) {
-		if (variable.dataType != ILPDataType.BINARY) {
+		var String variableType
+		if (variable.dataType == ILPDataType.BINARY) {
+			variableType = "bin"
+		} else if (variable.dataType == ILPDataType.INTEGER) {
+			variableType = "int"
+		} else {
 			bail(variable.dataType)
 		}
-		emit('bin ' + variable.name + ";\n");
+		emit(variableType + ' ' + variable.name + ";\n")
 	}
 	
 }
