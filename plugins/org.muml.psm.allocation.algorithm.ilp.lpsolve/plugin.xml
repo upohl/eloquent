@@ -23,5 +23,12 @@
             name="LPSolve Allocation Computation Strategy">
       </strategy>
    </extension>
+   <extension
+         point="org.eclipse.m2m.qvt.oml.runtime.qvtTransformation">
+      <library
+            file="transforms/LPSolve.qvto"
+            id="LPSolve">
+      </library>
+   </extension>
 
 </plugin>
