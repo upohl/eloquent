@@ -1,6 +1,11 @@
 # Eloquent
 <B>E</B>clipse <B>L</B>inear <B>O</B>ptimization, <B>Que</B>ry, '<B>n</B>' <B>T</B>ransformation
 
+Eloquent is an Eclipse feature that supports model-driven (language) engineers in specifing and solving constraint-driven allocation problem. Eloquent is useable for any EMF (Eclipse Modeling Framework)-based model.
+It supports engineers in two ways. First, it provides the ability to specify allocation constraints using the domain-specific Eloquent language, which embeds standard OCL (Object Constraint Language). 
+Second, it provides an automatic transformation to state of are constraint solvers like, LPSolve, SCIP, Gurobi, Neo Server, OPT4J. 
+Thereby, the constraint allocation problems are solved automatically and the solution is provided as an EMF model. 
+
 ## Dependency Update Site for Neon.3:
 * http://download.eclipse.org/modeling/mdt/ocl/updates/interim/
 
@@ -15,10 +20,15 @@ Eloquent is a plug-in for Eclipse Neon.3 and Oxygen. We develop and test it unde
 * For installing Eloquent, you need a Java Runtime Environment (JRE) or Java Development Kit (JDK) on your machine. We recommend using the latest version of Java 8 provided by Oracle.
 
 ### LPSolve
-For solving the allocation problem, you need LPSolve on your machine.
+For solving the allocation problem, you need LPSolve, SCIP, GUROBI, or OPT4J on your machine.
 * http://sourceforge.net/projects/lpsolve/
+* http://scip.zib.de/
+* http://www.gurobi.com
+* http://opt4j.org/
 
-Furthermore, the installed software must be referred within the PATH environment variable.  
+Alternatively, you can use the online solver https://neos-server.org. 
+
+The installed software must be referred within the PATH environment variable.  
 
 On Windows machines you need to do the following:
 
@@ -44,3 +54,5 @@ and unzip the contents of the zip-file into a folder of your choice.
 1. Click "Next" to accept the features to be installed.
 1. Click "Next" to accept the license agreements.
 1. Click "Finish".
+
+
