@@ -235,6 +235,11 @@
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/releases/oxygen</url>
          </repository>
+	           <repository>
+			<id>eclipse-photon</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/releases/photon</url>
+         </repository>
 		<repository>
 			<id>eclipse-updates</id>
 			<layout>p2</layout>
