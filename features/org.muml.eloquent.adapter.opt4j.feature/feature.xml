@@ -29,7 +29,7 @@
       <import plugin="org.eclipse.emf.ecore"/>
       <import plugin="org.eclipse.emf.edit"/>
       <import plugin="org.muml.psm.allocation.ilp"/>
-      <import plugin="org.eclipse.xtend.lib" version="2.14.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtend.lib" version="2.7.2" match="greaterOrEqual"/>
       <import plugin="org.muml.psm.allocation.algorithm"/>
       <import plugin="org.muml.external.opt4j"/>
       <import plugin="org.muml.external.guice"/>
